@@ -264,6 +264,30 @@ export interface DailyCardPrescription {
   reason: string;
 }
 
+export interface CodexWeaknessInsight {
+  dimension: MasteryDimension;
+  evidence: string;
+  action: string;
+}
+
+export interface CodexCardAdjustment {
+  targetQuestionCount?: number;
+  focusDimensions?: MasteryDimension[];
+  reason?: string;
+}
+
+export interface CodexDailyAnalysis {
+  schemaVersion?: string;
+  overallRisk: ForgettingRiskLevel;
+  summary: string;
+  focusDimensions: MasteryDimension[];
+  targetQuestionCount: number;
+  recommendedCardIds: string[];
+  weaknesses: CodexWeaknessInsight[];
+  strategy: string[];
+  cardAdjustments: Record<string, CodexCardAdjustment>;
+}
+
 export interface DailyRecommendation {
   date: string;
   generatedAt: string;
@@ -279,6 +303,10 @@ export interface DailyRecommendation {
   algorithmVersion: string;
   summary: string;
   analysis: Record<string, unknown>;
+  codexStatus: 'pending' | 'complete' | 'failed';
+  codexGeneratedAt?: string;
+  codexModel?: string;
+  codexAnalysis?: CodexDailyAnalysis;
 }
 
 export interface AppSnapshot {

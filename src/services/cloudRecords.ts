@@ -7,6 +7,7 @@ import type {
   AppSnapshot,
   Attempt,
   CardProgress,
+  CodexDailyAnalysis,
   DailyCardPrescription,
   DailyRecommendation,
   MasteryDimension,
@@ -15,11 +16,75 @@ import type {
 } from '../types';
 
 const CHUNK_SIZE = 250;
+const masteryDimensionValues: MasteryDimension[] = [
+  'meaningContext',
+  'activeRecall',
+  'collocation',
+  'grammar',
+  'naturalness'
+];
+const masteryDimensionSet = new Set<string>(masteryDimensionValues);
 
 function chunks<T>(items: T[]) {
   const result: T[][] = [];
   for (let index = 0; index < items.length; index += CHUNK_SIZE) result.push(items.slice(index, index + CHUNK_SIZE));
   return result;
+}
+
+function stringArray(value: unknown) {
+  return Array.isArray(value) ? value.map(String).filter(Boolean) : [];
+}
+
+function masteryDimensions(value: unknown): MasteryDimension[] {
+  return [...new Set(stringArray(value).filter((item): item is MasteryDimension => masteryDimensionSet.has(item)))];
+}
+
+function boundedQuestionCount(value: unknown, fallback: number) {
+  const parsed = Number(value);
+  return Number.isFinite(parsed) ? Math.max(5, Math.min(17, Math.round(parsed))) : fallback;
+}
+
+function parseCodexAnalysis(value: unknown): CodexDailyAnalysis | undefined {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) return undefined;
+  const raw = value as Record<string, unknown>;
+  const summary = String(raw.summary ?? '').trim();
+  if (!summary) return undefined;
+  const risk = String(raw.overallRisk ?? 'low');
+  const rawWeaknesses = Array.isArray(raw.weaknesses) ? raw.weaknesses : [];
+  const weaknesses = rawWeaknesses.flatMap((item) => {
+    if (!item || typeof item !== 'object' || Array.isArray(item)) return [];
+    const insight = item as Record<string, unknown>;
+    const dimensions = masteryDimensions([insight.dimension]);
+    if (!dimensions.length) return [];
+    return [{
+      dimension: dimensions[0],
+      evidence: String(insight.evidence ?? '').trim(),
+      action: String(insight.action ?? '').trim()
+    }];
+  }).filter((item) => item.evidence || item.action).slice(0, 5);
+  const rawAdjustments = raw.cardAdjustments && typeof raw.cardAdjustments === 'object' && !Array.isArray(raw.cardAdjustments)
+    ? raw.cardAdjustments as Record<string, unknown>
+    : {};
+  const cardAdjustments = Object.fromEntries(Object.entries(rawAdjustments).flatMap(([cardId, item]) => {
+    if (!item || typeof item !== 'object' || Array.isArray(item)) return [];
+    const adjustment = item as Record<string, unknown>;
+    return [[cardId, {
+      targetQuestionCount: boundedQuestionCount(adjustment.targetQuestionCount, 8),
+      focusDimensions: masteryDimensions(adjustment.focusDimensions),
+      reason: String(adjustment.reason ?? '').trim()
+    }]];
+  }));
+  return {
+    schemaVersion: raw.schemaVersion ? String(raw.schemaVersion) : undefined,
+    overallRisk: risk === 'high' || risk === 'medium' ? risk : 'low',
+    summary,
+    focusDimensions: masteryDimensions(raw.focusDimensions),
+    targetQuestionCount: boundedQuestionCount(raw.targetQuestionCount, 10),
+    recommendedCardIds: stringArray(raw.recommendedCardIds),
+    weaknesses,
+    strategy: stringArray(raw.strategy).map((item) => item.trim()).filter(Boolean).slice(0, 6),
+    cardAdjustments
+  };
 }
 
 async function fetchAll(client: SupabaseClient, table: string, userId: string) {
@@ -240,9 +305,35 @@ function rowToRecommendation(row: Record<string, unknown>): DailyRecommendation 
     };
     return [cardId, prescription];
   }));
-  const reviewCardIds = Array.isArray(row.review_card_ids)
+  const baselineReviewCardIds = Array.isArray(row.review_card_ids)
     ? row.review_card_ids.map(String)
     : Array.isArray(row.recommended_card_ids) ? row.recommended_card_ids.map(String) : [];
+  const rawCodexStatus = String(row.codex_status ?? 'pending');
+  const codexStatus = rawCodexStatus === 'complete' || rawCodexStatus === 'failed' ? rawCodexStatus : 'pending';
+  const codexAnalysis = codexStatus === 'complete' ? parseCodexAnalysis(row.codex_analysis) : undefined;
+  const requestedOrder = codexAnalysis?.recommendedCardIds
+    .filter((cardId, index, values) => baselineReviewCardIds.includes(cardId) && values.indexOf(cardId) === index) ?? [];
+  const reviewCardIds = [...requestedOrder, ...baselineReviewCardIds.filter((cardId) => !requestedOrder.includes(cardId))];
+  if (codexAnalysis) {
+    Object.entries(codexAnalysis.cardAdjustments).forEach(([cardId, adjustment]) => {
+      const baseline = cardPrescriptions[cardId];
+      if (!baseline || !baselineReviewCardIds.includes(cardId)) return;
+      cardPrescriptions[cardId] = {
+        ...baseline,
+        targetQuestionCount: Math.max(
+          baseline.targetQuestionCount,
+          boundedQuestionCount(adjustment.targetQuestionCount, baseline.targetQuestionCount)
+        ),
+        focusDimensions: [...new Set([...baseline.focusDimensions, ...(adjustment.focusDimensions ?? [])])],
+        reason: adjustment.reason || baseline.reason
+      };
+    });
+  }
+  const baselineFocusDimensions = (Array.isArray(row.focus_dimensions) ? row.focus_dimensions : []) as MasteryDimension[];
+  const focusDimensions = codexAnalysis?.focusDimensions.length
+    ? [...new Set([...baselineFocusDimensions, ...codexAnalysis.focusDimensions])]
+    : baselineFocusDimensions;
+  const baselineTargetQuestionCount = Number(row.target_question_count ?? 10);
   return {
     date: String(row.plan_date),
     generatedAt: String(row.generated_at),
@@ -251,13 +342,19 @@ function rowToRecommendation(row: Record<string, unknown>): DailyRecommendation 
     reviewCardIds,
     recommendedCardIds: reviewCardIds,
     cardPrescriptions,
-    focusDimensions: (Array.isArray(row.focus_dimensions) ? row.focus_dimensions : []) as MasteryDimension[],
-    targetQuestionCount: Number(row.target_question_count ?? 10),
+    focusDimensions,
+    targetQuestionCount: codexAnalysis
+      ? Math.max(baselineTargetQuestionCount, codexAnalysis.targetQuestionCount)
+      : baselineTargetQuestionCount,
     refreshAnchorAt: row.refresh_anchor_at ? String(row.refresh_anchor_at) : undefined,
     validUntilAt: row.valid_until_at ? String(row.valid_until_at) : undefined,
     algorithmVersion: String(row.algorithm_version ?? 'legacy'),
-    summary: String(row.summary ?? '按到期时间和薄弱项安排复习。'),
-    analysis: (row.analysis ?? {}) as Record<string, unknown>
+    summary: codexAnalysis?.summary || String(row.summary ?? '按到期时间和薄弱项安排复习。'),
+    analysis: (row.analysis ?? {}) as Record<string, unknown>,
+    codexStatus,
+    codexGeneratedAt: row.codex_generated_at ? String(row.codex_generated_at) : undefined,
+    codexModel: row.codex_model ? String(row.codex_model) : undefined,
+    codexAnalysis
   };
 }
 

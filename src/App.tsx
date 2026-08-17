@@ -485,6 +485,16 @@ function ReviewPage({
       {recommendation && (
         <section className="adaptive-plan-card">
           <div className="adaptive-plan-head"><Sparkles size={20} /><div><span>每日 05:00 自动分析</span><h3>今日针对性复习方案</h3></div></div>
+          <div className={'codex-plan-status ' + recommendation.codexStatus}>
+            {recommendation.codexStatus === 'complete' ? <Check size={15} /> : <RefreshCw size={15} />}
+            <span>
+              {recommendation.codexStatus === 'complete'
+                ? `Codex 深度分析已完成${recommendation.codexGeneratedAt ? ` · ${new Date(recommendation.codexGeneratedAt).toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' })}` : ''}`
+                : recommendation.codexStatus === 'failed'
+                  ? 'Codex 深度分析失败，当前使用数据库基础方案'
+                  : '数据库基础方案已就绪，等待 Codex 深度分析'}
+            </span>
+          </div>
           <p>{recommendation.summary}</p>
           <div className="adaptive-plan-meta">
             <span>新词 {recommendation.newCardIds?.length ?? 5} 个</span>
@@ -492,6 +502,28 @@ function ReviewPage({
             <span>建议 {recommendation.targetQuestionCount} 题/词</span>
             {recommendation.focusDimensions.map((dimension) => <span key={dimension}>加强{masteryDimensionLabels[dimension]}</span>)}
           </div>
+          {recommendation.codexAnalysis && (
+            <div className="codex-plan-details">
+              {recommendation.codexAnalysis.weaknesses.length > 0 && (
+                <div>
+                  <strong>薄弱点与调整</strong>
+                  {recommendation.codexAnalysis.weaknesses.map((item, index) => (
+                    <article key={`${item.dimension}-${index}`}>
+                      <span>{masteryDimensionLabels[item.dimension]}</span>
+                      <p>{item.evidence}</p>
+                      <small>{item.action}</small>
+                    </article>
+                  ))}
+                </div>
+              )}
+              {recommendation.codexAnalysis.strategy.length > 0 && (
+                <div className="codex-strategy-list">
+                  <strong>今日执行策略</strong>
+                  {recommendation.codexAnalysis.strategy.map((item, index) => <p key={`${item}-${index}`}><i>{index + 1}</i>{item}</p>)}
+                </div>
+              )}
+            </div>
+          )}
         </section>
       )}
 

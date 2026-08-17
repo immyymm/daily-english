@@ -449,6 +449,18 @@ h1 { font-family: Georgia, "Songti SC", serif; font-size: 21px; letter-spacing: 
 .adaptive-plan-card > p { color: #6d5a73; font-size: 14px; line-height: 1.65; margin-top: 11px; }
 .adaptive-plan-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 11px; }
 .adaptive-plan-meta span { padding: 6px 9px; border-radius: 999px; color: #78558a; background: rgba(255,255,255,.78); font-size: 11px; }
+.codex-plan-status { display: flex; align-items: center; gap: 7px; padding: 9px 11px; margin-top: 13px; border-radius: 14px; color: #806b8a; background: rgba(255,255,255,.68); font-size: 13px; font-weight: 700; line-height: 1.45; }
+.codex-plan-status svg { flex: 0 0 auto; }
+.codex-plan-status.complete { color: #527760; background: #eff9f1; }
+.codex-plan-status.failed { color: #9a5a55; background: #fff0ed; }
+.codex-plan-details { display: grid; gap: 13px; margin-top: 15px; padding-top: 14px; border-top: 1px solid rgba(128,91,148,.13); }
+.codex-plan-details > div > strong { display: block; color: #624970; font-size: 15px; margin-bottom: 8px; }
+.codex-plan-details article { padding: 11px 12px; margin-top: 8px; border-radius: 16px; background: rgba(255,255,255,.72); }
+.codex-plan-details article span { display: inline-flex; padding: 4px 8px; border-radius: 999px; color: #8a577e; background: #ffeaf3; font-size: 12px; font-weight: 800; }
+.codex-plan-details article p { color: #66556d; font-size: 14px; line-height: 1.65; margin-top: 7px; }
+.codex-plan-details article small { display: block; color: #8a718f; font-size: 13px; line-height: 1.6; margin-top: 5px; }
+.codex-strategy-list p { display: flex; align-items: flex-start; gap: 9px; color: #66556d; font-size: 14px; line-height: 1.6; margin-top: 8px; }
+.codex-strategy-list i { display: grid; place-items: center; flex: 0 0 22px; height: 22px; border-radius: 50%; color: #fff; background: #c78eb7; font-size: 12px; font-style: normal; font-weight: 800; }
 
 .empty-card {
   min-height: 160px;
