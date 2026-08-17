@@ -2,7 +2,7 @@ import type { IncomingMessage, ServerResponse } from 'node:http';
 import OpenAI from 'openai';
 import { zodTextFormat } from 'openai/helpers/zod';
 import { z } from 'zod';
-import { evaluationSchema } from '../src/schemas/evaluation';
+import { evaluationSchema } from '../src/schemas/evaluation.js';
 
 const requestSchema = z.object({
   requestId: z.string().min(6).max(100),
