@@ -378,7 +378,7 @@
   },
   "questions": [
     {
-      "id": "seem-v-meaning",
+      "id": "seem-v-meaning-core",
       "type": "meaning_choice",
       "prompt": "“seem”最核心的中文含义是？",
       "options": [
@@ -391,25 +391,150 @@
       "ai": false
     },
     {
-      "id": "seem-v-recall",
+      "id": "seem-v-meaning-english",
+      "type": "meaning_choice",
+      "prompt": "哪一项英文释义最符合词卡中的 “seem”？",
+      "options": [
+        "to decide which person or thing you want",
+        "people who live together or share an interest",
+        "to appear to be true"
+      ],
+      "answer": "to appear to be true",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "seem-v-structure-choice",
+      "type": "meaning_choice",
+      "prompt": "哪一个是词卡要求优先记住的 “seem” 核心结构？",
+      "options": [
+        "seem to be",
+        "choose between A and B",
+        "local community",
+        "seem likely"
+      ],
+      "answer": "seem to be",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "seem-v-synonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “seem” 最直接近义词？",
+      "options": [
+        "prove",
+        "choose",
+        "community",
+        "appear"
+      ],
+      "answer": "appear",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "seem-v-antonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “seem” 最直接反义词？",
+      "options": [
+        "choose",
+        "community",
+        "prove",
+        "appear"
+      ],
+      "answer": "prove",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "seem-v-contrast-choice",
+      "type": "meaning_choice",
+      "prompt": "根据本词卡辨析，哪个词被列为 “seem” 的派生词？",
+      "options": [
+        "choose",
+        "seemingly",
+        "appear",
+        "prove"
+      ],
+      "answer": "seemingly",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "seem-v-recall-definition",
       "type": "recall",
-      "prompt": "to appear to be true。请输入目标单词。",
+      "prompt": "根据英文释义写出目标词：to appear to be true",
       "answer": "seem",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "seem-v-collocation",
+      "id": "seem-v-recall-chinese",
+      "type": "recall",
+      "prompt": "写出符合“似乎；看起来”（v.）的本课目标词。",
+      "answer": "seem",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "seem-v-collocation-core",
       "type": "collocation",
       "prompt": "补全高频搭配：_____ to be",
+      "answer": "seem",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "seem-v-collocation-structure",
+      "type": "collocation",
+      "prompt": "补全核心结构：_____ to be",
+      "answer": "seem",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "seem-v-collocation-context",
+      "type": "collocation",
+      "prompt": "补全语境词组：_____ to be",
       "answer": "seem",
       "stage": "T2",
       "ai": false
     },
     {
-      "id": "seem-v-sentence",
+      "id": "seem-v-collocation-fixed-1",
+      "type": "collocation",
+      "prompt": "补全固定搭配：_____ to be",
+      "answer": "seem",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "seem-v-collocation-fixed-2",
+      "type": "collocation",
+      "prompt": "再补全一个固定搭配：_____ likely",
+      "answer": "seem",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "seem-v-example-cloze",
+      "type": "collocation",
+      "prompt": "补全词卡核心例句：The task _____ difficult at first.",
+      "answer": "seems",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "seem-v-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “seem” 写一个自然、真实的英文句子。",
+      "prompt": "请用 “seem” 写一个自然、真实的英文句子，含义必须符合词卡核心义“似乎；看起来”。",
+      "answer": "",
+      "stage": "T2",
+      "ai": true
+    },
+    {
+      "id": "seem-v-sentence-phrase",
+      "type": "free_sentence",
+      "prompt": "请用完整搭配 “seem to be” 写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -417,7 +542,7 @@
     {
       "id": "seem-v-dialogue",
       "type": "dialogue",
-      "prompt": "在一段真实对话中自然使用 “seem”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “seem” 和搭配 “seem to be”，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -430,37 +555,53 @@
       "free_sentence"
     ],
     "T1": [
+      "meaning_choice",
       "recall",
       "collocation"
     ],
     "T2": [
+      "meaning_choice",
       "recall",
       "collocation",
       "free_sentence"
     ],
     "T3": [
+      "meaning_choice",
       "recall",
+      "collocation",
       "dialogue"
     ],
     "T4": [
+      "meaning_choice",
       "recall",
+      "collocation",
+      "free_sentence",
       "dialogue"
     ],
     "T5": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T6": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T7": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.3",
+  "contentVersion": "2026.08.17.4",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

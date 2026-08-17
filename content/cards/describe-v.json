@@ -385,7 +385,7 @@
   },
   "questions": [
     {
-      "id": "describe-v-meaning",
+      "id": "describe-v-meaning-core",
       "type": "meaning_choice",
       "prompt": "“describe”最核心的中文含义是？",
       "options": [
@@ -398,25 +398,150 @@
       "ai": false
     },
     {
-      "id": "describe-v-recall",
+      "id": "describe-v-meaning-english",
+      "type": "meaning_choice",
+      "prompt": "哪一项英文释义最符合词卡中的 “describe”？",
+      "options": [
+        "the surroundings or conditions in which something exists",
+        "knowing that something exists or is true",
+        "to say what someone or something is like"
+      ],
+      "answer": "to say what someone or something is like",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "describe-v-structure-choice",
+      "type": "meaning_choice",
+      "prompt": "哪一个是词卡要求优先记住的 “describe” 核心结构？",
+      "options": [
+        "describe something as",
+        "learning environment",
+        "be aware of",
+        "describe what happened"
+      ],
+      "answer": "describe something as",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "describe-v-synonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “describe” 最直接近义词？",
+      "options": [
+        "conceal",
+        "environment",
+        "aware",
+        "portray"
+      ],
+      "answer": "portray",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "describe-v-antonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “describe” 最直接反义词？",
+      "options": [
+        "environment",
+        "aware",
+        "conceal",
+        "portray"
+      ],
+      "answer": "conceal",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "describe-v-contrast-choice",
+      "type": "meaning_choice",
+      "prompt": "根据本词卡辨析，哪个词被列为 “describe” 的派生词？",
+      "options": [
+        "environment",
+        "description",
+        "portray",
+        "conceal"
+      ],
+      "answer": "description",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "describe-v-recall-definition",
       "type": "recall",
-      "prompt": "to say what someone or something is like。请输入目标单词。",
+      "prompt": "根据英文释义写出目标词：to say what someone or something is like",
       "answer": "describe",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "describe-v-collocation",
+      "id": "describe-v-recall-chinese",
+      "type": "recall",
+      "prompt": "写出符合“描述”（v.）的本课目标词。",
+      "answer": "describe",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "describe-v-collocation-core",
       "type": "collocation",
       "prompt": "补全高频搭配：_____ something as",
+      "answer": "describe",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "describe-v-collocation-structure",
+      "type": "collocation",
+      "prompt": "补全核心结构：_____ something as",
+      "answer": "describe",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "describe-v-collocation-context",
+      "type": "collocation",
+      "prompt": "补全语境词组：_____ something as",
       "answer": "describe",
       "stage": "T2",
       "ai": false
     },
     {
-      "id": "describe-v-sentence",
+      "id": "describe-v-collocation-fixed-1",
+      "type": "collocation",
+      "prompt": "补全固定搭配：_____ something as",
+      "answer": "describe",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "describe-v-collocation-fixed-2",
+      "type": "collocation",
+      "prompt": "再补全一个固定搭配：_____ what happened",
+      "answer": "describe",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "describe-v-example-cloze",
+      "type": "collocation",
+      "prompt": "补全词卡核心例句：How would you _____ your ideal weekend?",
+      "answer": "describe",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "describe-v-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “describe” 写一个自然、真实的英文句子。",
+      "prompt": "请用 “describe” 写一个自然、真实的英文句子，含义必须符合词卡核心义“描述”。",
+      "answer": "",
+      "stage": "T2",
+      "ai": true
+    },
+    {
+      "id": "describe-v-sentence-phrase",
+      "type": "free_sentence",
+      "prompt": "请用完整搭配 “describe something as” 写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -424,7 +549,7 @@
     {
       "id": "describe-v-dialogue",
       "type": "dialogue",
-      "prompt": "在一段真实对话中自然使用 “describe”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “describe” 和搭配 “describe something as”，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -437,37 +562,53 @@
       "free_sentence"
     ],
     "T1": [
+      "meaning_choice",
       "recall",
       "collocation"
     ],
     "T2": [
+      "meaning_choice",
       "recall",
       "collocation",
       "free_sentence"
     ],
     "T3": [
+      "meaning_choice",
       "recall",
+      "collocation",
       "dialogue"
     ],
     "T4": [
+      "meaning_choice",
       "recall",
+      "collocation",
+      "free_sentence",
       "dialogue"
     ],
     "T5": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T6": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T7": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.3",
+  "contentVersion": "2026.08.17.4",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

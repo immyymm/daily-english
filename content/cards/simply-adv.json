@@ -385,7 +385,7 @@
   },
   "questions": [
     {
-      "id": "simply-adv-meaning",
+      "id": "simply-adv-meaning-core",
       "type": "meaning_choice",
       "prompt": "“simply”最核心的中文含义是？",
       "options": [
@@ -398,25 +398,150 @@
       "ai": false
     },
     {
-      "id": "simply-adv-recall",
+      "id": "simply-adv-meaning-english",
+      "type": "meaning_choice",
+      "prompt": "哪一项英文释义最符合词卡中的 “simply”？",
+      "options": [
+        "to form words on a surface or compose text",
+        "to become aware of something",
+        "in an easy or plain way"
+      ],
+      "answer": "in an easy or plain way",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "simply-adv-structure-choice",
+      "type": "meaning_choice",
+      "prompt": "哪一个是词卡要求优先记住的 “simply” 核心结构？",
+      "options": [
+        "notice a difference",
+        "simply because",
+        "simply put",
+        "write down"
+      ],
+      "answer": "simply put",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "simply-adv-synonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “simply” 最直接近义词？",
+      "options": [
+        "notice",
+        "plainly",
+        "in a complex way",
+        "write"
+      ],
+      "answer": "plainly",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "simply-adv-antonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “simply” 最直接反义词？",
+      "options": [
+        "in a complex way",
+        "plainly",
+        "write",
+        "notice"
+      ],
+      "answer": "in a complex way",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "simply-adv-contrast-choice",
+      "type": "meaning_choice",
+      "prompt": "根据本词卡辨析，哪个词被列为 “simply” 的派生词？",
+      "options": [
+        "plainly",
+        "in a complex way",
+        "write",
+        "simple"
+      ],
+      "answer": "simple",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "simply-adv-recall-definition",
       "type": "recall",
-      "prompt": "in an easy or plain way。请输入目标单词。",
+      "prompt": "根据英文释义写出目标词：in an easy or plain way",
       "answer": "simply",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "simply-adv-collocation",
+      "id": "simply-adv-recall-chinese",
+      "type": "recall",
+      "prompt": "写出符合“简单地；仅仅”（adv.）的本课目标词。",
+      "answer": "simply",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "simply-adv-collocation-core",
       "type": "collocation",
       "prompt": "补全高频搭配：_____ put",
+      "answer": "simply",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "simply-adv-collocation-structure",
+      "type": "collocation",
+      "prompt": "补全核心结构：_____ put",
+      "answer": "simply",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "simply-adv-collocation-context",
+      "type": "collocation",
+      "prompt": "补全语境词组：_____ put",
       "answer": "simply",
       "stage": "T2",
       "ai": false
     },
     {
-      "id": "simply-adv-sentence",
+      "id": "simply-adv-collocation-fixed-1",
+      "type": "collocation",
+      "prompt": "补全固定搭配：_____ put",
+      "answer": "simply",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "simply-adv-collocation-fixed-2",
+      "type": "collocation",
+      "prompt": "再补全一个固定搭配：_____ because",
+      "answer": "simply",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "simply-adv-example-cloze",
+      "type": "collocation",
+      "prompt": "补全词卡核心例句：_____ put, practice helps memory.",
+      "answer": "Simply",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "simply-adv-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “simply” 写一个自然、真实的英文句子。",
+      "prompt": "请用 “simply” 写一个自然、真实的英文句子，含义必须符合词卡核心义“简单地；仅仅”。",
+      "answer": "",
+      "stage": "T2",
+      "ai": true
+    },
+    {
+      "id": "simply-adv-sentence-phrase",
+      "type": "free_sentence",
+      "prompt": "请用完整搭配 “simply put” 写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -424,7 +549,7 @@
     {
       "id": "simply-adv-dialogue",
       "type": "dialogue",
-      "prompt": "在一段真实对话中自然使用 “simply”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “simply” 和搭配 “simply put”，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -437,37 +562,53 @@
       "free_sentence"
     ],
     "T1": [
+      "meaning_choice",
       "recall",
       "collocation"
     ],
     "T2": [
+      "meaning_choice",
       "recall",
       "collocation",
       "free_sentence"
     ],
     "T3": [
+      "meaning_choice",
       "recall",
+      "collocation",
       "dialogue"
     ],
     "T4": [
+      "meaning_choice",
       "recall",
+      "collocation",
+      "free_sentence",
       "dialogue"
     ],
     "T5": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T6": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T7": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.3",
+  "contentVersion": "2026.08.17.4",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

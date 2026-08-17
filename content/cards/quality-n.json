@@ -378,7 +378,7 @@
   },
   "questions": [
     {
-      "id": "quality-n-meaning",
+      "id": "quality-n-meaning-core",
       "type": "meaning_choice",
       "prompt": "“quality”最核心的中文含义是？",
       "options": [
@@ -391,25 +391,150 @@
       "ai": false
     },
     {
-      "id": "quality-n-recall",
+      "id": "quality-n-meaning-english",
+      "type": "meaning_choice",
+      "prompt": "哪一项英文释义最符合词卡中的 “quality”？",
+      "options": [
+        "as much as is needed",
+        "how good or bad something is",
+        "almost the same but not exactly"
+      ],
+      "answer": "how good or bad something is",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "quality-n-structure-choice",
+      "type": "meaning_choice",
+      "prompt": "哪一个是词卡要求优先记住的 “quality” 核心结构？",
+      "options": [
+        "good enough",
+        "quality of life",
+        "high quality",
+        "be similar to"
+      ],
+      "answer": "high quality",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "quality-n-synonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “quality” 最直接近义词？",
+      "options": [
+        "enough",
+        "standard",
+        "inferiority",
+        "similar"
+      ],
+      "answer": "standard",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "quality-n-antonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “quality” 最直接反义词？",
+      "options": [
+        "inferiority",
+        "standard",
+        "similar",
+        "enough"
+      ],
+      "answer": "inferiority",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "quality-n-contrast-choice",
+      "type": "meaning_choice",
+      "prompt": "根据本词卡辨析，哪个词被列为 “quality” 的派生词？",
+      "options": [
+        "standard",
+        "inferiority",
+        "similar",
+        "qualitative"
+      ],
+      "answer": "qualitative",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "quality-n-recall-definition",
       "type": "recall",
-      "prompt": "how good or bad something is。请输入目标单词。",
+      "prompt": "根据英文释义写出目标词：how good or bad something is",
       "answer": "quality",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "quality-n-collocation",
+      "id": "quality-n-recall-chinese",
+      "type": "recall",
+      "prompt": "写出符合“质量；品质”（n.）的本课目标词。",
+      "answer": "quality",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "quality-n-collocation-core",
       "type": "collocation",
       "prompt": "补全高频搭配：high _____",
+      "answer": "quality",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "quality-n-collocation-structure",
+      "type": "collocation",
+      "prompt": "补全核心结构：high _____",
+      "answer": "quality",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "quality-n-collocation-context",
+      "type": "collocation",
+      "prompt": "补全语境词组：high _____",
       "answer": "quality",
       "stage": "T2",
       "ai": false
     },
     {
-      "id": "quality-n-sentence",
+      "id": "quality-n-collocation-fixed-1",
+      "type": "collocation",
+      "prompt": "补全固定搭配：high _____",
+      "answer": "quality",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "quality-n-collocation-fixed-2",
+      "type": "collocation",
+      "prompt": "再补全一个固定搭配：_____ of life",
+      "answer": "quality",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "quality-n-example-cloze",
+      "type": "collocation",
+      "prompt": "补全词卡核心例句：Focus on the _____ of your practice.",
+      "answer": "quality",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "quality-n-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “quality” 写一个自然、真实的英文句子。",
+      "prompt": "请用 “quality” 写一个自然、真实的英文句子，含义必须符合词卡核心义“质量；品质”。",
+      "answer": "",
+      "stage": "T2",
+      "ai": true
+    },
+    {
+      "id": "quality-n-sentence-phrase",
+      "type": "free_sentence",
+      "prompt": "请用完整搭配 “high quality” 写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -417,7 +542,7 @@
     {
       "id": "quality-n-dialogue",
       "type": "dialogue",
-      "prompt": "在一段真实对话中自然使用 “quality”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “quality” 和搭配 “high quality”，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -430,37 +555,53 @@
       "free_sentence"
     ],
     "T1": [
+      "meaning_choice",
       "recall",
       "collocation"
     ],
     "T2": [
+      "meaning_choice",
       "recall",
       "collocation",
       "free_sentence"
     ],
     "T3": [
+      "meaning_choice",
       "recall",
+      "collocation",
       "dialogue"
     ],
     "T4": [
+      "meaning_choice",
       "recall",
+      "collocation",
+      "free_sentence",
       "dialogue"
     ],
     "T5": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T6": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T7": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.3",
+  "contentVersion": "2026.08.17.4",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

@@ -378,7 +378,7 @@
   },
   "questions": [
     {
-      "id": "environment-n-meaning",
+      "id": "environment-n-meaning-core",
       "type": "meaning_choice",
       "prompt": "“environment”最核心的中文含义是？",
       "options": [
@@ -391,25 +391,150 @@
       "ai": false
     },
     {
-      "id": "environment-n-recall",
+      "id": "environment-n-meaning-english",
+      "type": "meaning_choice",
+      "prompt": "哪一项英文释义最符合词卡中的 “environment”？",
+      "options": [
+        "the surroundings or conditions in which something exists",
+        "how good or bad something is",
+        "more than usual or more than others"
+      ],
+      "answer": "the surroundings or conditions in which something exists",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "environment-n-structure-choice",
+      "type": "meaning_choice",
+      "prompt": "哪一个是词卡要求优先记住的 “environment” 核心结构？",
+      "options": [
+        "high quality",
+        "especially useful",
+        "protect the environment",
+        "learning environment"
+      ],
+      "answer": "learning environment",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "environment-n-synonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “environment” 最直接近义词？",
+      "options": [
+        "quality",
+        "especially",
+        "surroundings",
+        "isolation"
+      ],
+      "answer": "surroundings",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "environment-n-antonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “environment” 最直接反义词？",
+      "options": [
+        "especially",
+        "isolation",
+        "surroundings",
+        "quality"
+      ],
+      "answer": "isolation",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "environment-n-contrast-choice",
+      "type": "meaning_choice",
+      "prompt": "根据本词卡辨析，哪个词被列为 “environment” 的派生词？",
+      "options": [
+        "environmental",
+        "surroundings",
+        "isolation",
+        "quality"
+      ],
+      "answer": "environmental",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "environment-n-recall-definition",
       "type": "recall",
-      "prompt": "the surroundings or conditions in which something exists。请输入目标单词。",
+      "prompt": "根据英文释义写出目标词：the surroundings or conditions in which something exists",
       "answer": "environment",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "environment-n-collocation",
+      "id": "environment-n-recall-chinese",
+      "type": "recall",
+      "prompt": "写出符合“环境”（n.）的本课目标词。",
+      "answer": "environment",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "environment-n-collocation-core",
       "type": "collocation",
       "prompt": "补全高频搭配：learning _____",
+      "answer": "environment",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "environment-n-collocation-structure",
+      "type": "collocation",
+      "prompt": "补全核心结构：learning _____",
+      "answer": "environment",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "environment-n-collocation-context",
+      "type": "collocation",
+      "prompt": "补全语境词组：learning _____",
       "answer": "environment",
       "stage": "T2",
       "ai": false
     },
     {
-      "id": "environment-n-sentence",
+      "id": "environment-n-collocation-fixed-1",
+      "type": "collocation",
+      "prompt": "补全固定搭配：learning _____",
+      "answer": "environment",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "environment-n-collocation-fixed-2",
+      "type": "collocation",
+      "prompt": "再补全一个固定搭配：protect the _____",
+      "answer": "environment",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "environment-n-example-cloze",
+      "type": "collocation",
+      "prompt": "补全词卡核心例句：A quiet _____ helps me focus.",
+      "answer": "environment",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "environment-n-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “environment” 写一个自然、真实的英文句子。",
+      "prompt": "请用 “environment” 写一个自然、真实的英文句子，含义必须符合词卡核心义“环境”。",
+      "answer": "",
+      "stage": "T2",
+      "ai": true
+    },
+    {
+      "id": "environment-n-sentence-phrase",
+      "type": "free_sentence",
+      "prompt": "请用完整搭配 “learning environment” 写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -417,7 +542,7 @@
     {
       "id": "environment-n-dialogue",
       "type": "dialogue",
-      "prompt": "在一段真实对话中自然使用 “environment”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “environment” 和搭配 “learning environment”，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -430,37 +555,53 @@
       "free_sentence"
     ],
     "T1": [
+      "meaning_choice",
       "recall",
       "collocation"
     ],
     "T2": [
+      "meaning_choice",
       "recall",
       "collocation",
       "free_sentence"
     ],
     "T3": [
+      "meaning_choice",
       "recall",
+      "collocation",
       "dialogue"
     ],
     "T4": [
+      "meaning_choice",
       "recall",
+      "collocation",
+      "free_sentence",
       "dialogue"
     ],
     "T5": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T6": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T7": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.3",
+  "contentVersion": "2026.08.17.4",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

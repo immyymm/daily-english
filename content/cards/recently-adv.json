@@ -378,7 +378,7 @@
   },
   "questions": [
     {
-      "id": "recently-adv-meaning",
+      "id": "recently-adv-meaning-core",
       "type": "meaning_choice",
       "prompt": "“recently”最核心的中文含义是？",
       "options": [
@@ -391,25 +391,150 @@
       "ai": false
     },
     {
-      "id": "recently-adv-recall",
+      "id": "recently-adv-meaning-english",
+      "type": "meaning_choice",
+      "prompt": "哪一项英文释义最符合词卡中的 “recently”？",
+      "options": [
+        "the set of conditions at a particular time",
+        "not long ago",
+        "the condition of body and mind"
+      ],
+      "answer": "not long ago",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "recently-adv-structure-choice",
+      "type": "meaning_choice",
+      "prompt": "哪一个是词卡要求优先记住的 “recently” 核心结构？",
+      "options": [
+        "mental health",
+        "deal with a situation",
+        "until recently",
+        "have recently done"
+      ],
+      "answer": "have recently done",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "recently-adv-synonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “recently” 最直接近义词？",
+      "options": [
+        "health",
+        "situation",
+        "lately",
+        "formerly"
+      ],
+      "answer": "lately",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "recently-adv-antonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “recently” 最直接反义词？",
+      "options": [
+        "situation",
+        "formerly",
+        "lately",
+        "health"
+      ],
+      "answer": "formerly",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "recently-adv-contrast-choice",
+      "type": "meaning_choice",
+      "prompt": "根据本词卡辨析，哪个词被列为 “recently” 的派生词？",
+      "options": [
+        "recent",
+        "lately",
+        "formerly",
+        "health"
+      ],
+      "answer": "recent",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "recently-adv-recall-definition",
       "type": "recall",
-      "prompt": "not long ago。请输入目标单词。",
+      "prompt": "根据英文释义写出目标词：not long ago",
       "answer": "recently",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "recently-adv-collocation",
+      "id": "recently-adv-recall-chinese",
+      "type": "recall",
+      "prompt": "写出符合“最近”（adv.）的本课目标词。",
+      "answer": "recently",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "recently-adv-collocation-core",
       "type": "collocation",
       "prompt": "补全高频搭配：have _____ done",
+      "answer": "recently",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "recently-adv-collocation-structure",
+      "type": "collocation",
+      "prompt": "补全核心结构：have _____ done",
+      "answer": "recently",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "recently-adv-collocation-context",
+      "type": "collocation",
+      "prompt": "补全语境词组：have _____ done",
       "answer": "recently",
       "stage": "T2",
       "ai": false
     },
     {
-      "id": "recently-adv-sentence",
+      "id": "recently-adv-collocation-fixed-1",
+      "type": "collocation",
+      "prompt": "补全固定搭配：have _____ done",
+      "answer": "recently",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "recently-adv-collocation-fixed-2",
+      "type": "collocation",
+      "prompt": "再补全一个固定搭配：until _____",
+      "answer": "recently",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "recently-adv-example-cloze",
+      "type": "collocation",
+      "prompt": "补全词卡核心例句：I have _____ started keeping a journal.",
+      "answer": "recently",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "recently-adv-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “recently” 写一个自然、真实的英文句子。",
+      "prompt": "请用 “recently” 写一个自然、真实的英文句子，含义必须符合词卡核心义“最近”。",
+      "answer": "",
+      "stage": "T2",
+      "ai": true
+    },
+    {
+      "id": "recently-adv-sentence-phrase",
+      "type": "free_sentence",
+      "prompt": "请用完整搭配 “have recently done” 写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -417,7 +542,7 @@
     {
       "id": "recently-adv-dialogue",
       "type": "dialogue",
-      "prompt": "在一段真实对话中自然使用 “recently”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “recently” 和搭配 “have recently done”，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -430,37 +555,53 @@
       "free_sentence"
     ],
     "T1": [
+      "meaning_choice",
       "recall",
       "collocation"
     ],
     "T2": [
+      "meaning_choice",
       "recall",
       "collocation",
       "free_sentence"
     ],
     "T3": [
+      "meaning_choice",
       "recall",
+      "collocation",
       "dialogue"
     ],
     "T4": [
+      "meaning_choice",
       "recall",
+      "collocation",
+      "free_sentence",
       "dialogue"
     ],
     "T5": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T6": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T7": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.3",
+  "contentVersion": "2026.08.17.4",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

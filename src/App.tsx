@@ -30,6 +30,7 @@ import { ModalShell } from './components/ModalShell';
 import { PrivacyConsentModal } from './components/PrivacyConsentModal';
 import { ReviewSessionModal } from './components/ReviewSessionModal';
 import { WeeklyTestModal } from './components/WeeklyTestModal';
+import { quoteForStudyDay } from './data/dailyQuotes';
 import { useAppData } from './hooks/useAppData';
 import { notifyLocalDataChanged, useCloudSync } from './hooks/useCloudSync';
 import { studyDaySince, toLocalDateKey } from './learning/reviewEngine';
@@ -347,13 +348,15 @@ function TodayPage({
   const completed = new Set(todayPlan.completedCardIds);
   const completedCount = completed.size;
   const progress = completedCount / 5 * 100;
+  const quote = quoteForStudyDay(todayPlan.studyDay);
   return (
     <>
       <section className="hero-card">
         <div className="hero-copy">
           <span className="soft-label"><Sparkles size={15} />第 {todayPlan.studyDay} 个学习日</span>
-          <h2>{completedCount === 5 ? <>今日花园<br />已经盛开。</> : <>五个词，慢慢长成<br />你的表达。</>}</h2>
-          <p>{todayPlan.cycle > 1 ? '这是第 ' + todayPlan.cycle + ' 轮巩固。' : '今天约 8 分钟。'} 学完后会自动安排下一次复习。</p>
+          <h2>{completedCount === 5 ? '今天的认真，已经开花。' : quote.title}</h2>
+          <p className="hero-message">{completedCount === 5 ? '五个词已经收入今天的记忆花园，记得按时回来复习。' : quote.body}</p>
+          <p className="hero-note">{todayPlan.cycle > 1 ? '第 ' + todayPlan.cycle + ' 轮巩固' : '今日约 8 分钟'} · 学完自动安排间隔复习</p>
         </div>
         <div className="progress-flower" aria-label={'今日进度 ' + completedCount + '/5'} style={{ '--progress': progress + '%' } as CSSProperties}>
           <span>{completedCount}<small>/5</small></span>

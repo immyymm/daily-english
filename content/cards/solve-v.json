@@ -385,7 +385,7 @@
   },
   "questions": [
     {
-      "id": "solve-v-meaning",
+      "id": "solve-v-meaning-core",
       "type": "meaning_choice",
       "prompt": "“solve”最核心的中文含义是？",
       "options": [
@@ -398,25 +398,150 @@
       "ai": false
     },
     {
-      "id": "solve-v-recall",
+      "id": "solve-v-meaning-english",
+      "type": "meaning_choice",
+      "prompt": "哪一项英文释义最符合词卡中的 “solve”？",
+      "options": [
+        "the importance or usefulness of something",
+        "easy to understand or see",
+        "to find an answer to a problem"
+      ],
+      "answer": "to find an answer to a problem",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "solve-v-structure-choice",
+      "type": "meaning_choice",
+      "prompt": "哪一个是词卡要求优先记住的 “solve” 核心结构？",
+      "options": [
+        "make something clear",
+        "solve an equation",
+        "solve a problem",
+        "great value"
+      ],
+      "answer": "solve a problem",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "solve-v-synonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “solve” 最直接近义词？",
+      "options": [
+        "clear",
+        "resolve",
+        "complicate",
+        "value"
+      ],
+      "answer": "resolve",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "solve-v-antonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “solve” 最直接反义词？",
+      "options": [
+        "complicate",
+        "resolve",
+        "value",
+        "clear"
+      ],
+      "answer": "complicate",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "solve-v-contrast-choice",
+      "type": "meaning_choice",
+      "prompt": "根据本词卡辨析，哪个词被列为 “solve” 的派生词？",
+      "options": [
+        "resolve",
+        "complicate",
+        "value",
+        "solution"
+      ],
+      "answer": "solution",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "solve-v-recall-definition",
       "type": "recall",
-      "prompt": "to find an answer to a problem。请输入目标单词。",
+      "prompt": "根据英文释义写出目标词：to find an answer to a problem",
       "answer": "solve",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "solve-v-collocation",
+      "id": "solve-v-recall-chinese",
+      "type": "recall",
+      "prompt": "写出符合“解决；解答”（v.）的本课目标词。",
+      "answer": "solve",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "solve-v-collocation-core",
       "type": "collocation",
       "prompt": "补全高频搭配：_____ a problem",
+      "answer": "solve",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "solve-v-collocation-structure",
+      "type": "collocation",
+      "prompt": "补全核心结构：_____ a problem",
+      "answer": "solve",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "solve-v-collocation-context",
+      "type": "collocation",
+      "prompt": "补全语境词组：_____ a problem",
       "answer": "solve",
       "stage": "T2",
       "ai": false
     },
     {
-      "id": "solve-v-sentence",
+      "id": "solve-v-collocation-fixed-1",
+      "type": "collocation",
+      "prompt": "补全固定搭配：_____ a problem",
+      "answer": "solve",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "solve-v-collocation-fixed-2",
+      "type": "collocation",
+      "prompt": "再补全一个固定搭配：_____ an equation",
+      "answer": "solve",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "solve-v-example-cloze",
+      "type": "collocation",
+      "prompt": "补全词卡核心例句：We need more information to _____ this problem.",
+      "answer": "solve",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "solve-v-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “solve” 写一个自然、真实的英文句子。",
+      "prompt": "请用 “solve” 写一个自然、真实的英文句子，含义必须符合词卡核心义“解决；解答”。",
+      "answer": "",
+      "stage": "T2",
+      "ai": true
+    },
+    {
+      "id": "solve-v-sentence-phrase",
+      "type": "free_sentence",
+      "prompt": "请用完整搭配 “solve a problem” 写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -424,7 +549,7 @@
     {
       "id": "solve-v-dialogue",
       "type": "dialogue",
-      "prompt": "在一段真实对话中自然使用 “solve”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “solve” 和搭配 “solve a problem”，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -437,37 +562,53 @@
       "free_sentence"
     ],
     "T1": [
+      "meaning_choice",
       "recall",
       "collocation"
     ],
     "T2": [
+      "meaning_choice",
       "recall",
       "collocation",
       "free_sentence"
     ],
     "T3": [
+      "meaning_choice",
       "recall",
+      "collocation",
       "dialogue"
     ],
     "T4": [
+      "meaning_choice",
       "recall",
+      "collocation",
+      "free_sentence",
       "dialogue"
     ],
     "T5": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T6": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T7": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.3",
+  "contentVersion": "2026.08.17.4",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

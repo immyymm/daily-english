@@ -378,7 +378,7 @@
   },
   "questions": [
     {
-      "id": "similar-adj-meaning",
+      "id": "similar-adj-meaning-core",
       "type": "meaning_choice",
       "prompt": "“similar”最核心的中文含义是？",
       "options": [
@@ -391,25 +391,150 @@
       "ai": false
     },
     {
-      "id": "similar-adj-recall",
+      "id": "similar-adj-meaning-english",
+      "type": "meaning_choice",
+      "prompt": "哪一项英文释义最符合词卡中的 “similar”？",
+      "options": [
+        "without anything in between",
+        "an account of events",
+        "almost the same but not exactly"
+      ],
+      "answer": "almost the same but not exactly",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "similar-adj-structure-choice",
+      "type": "meaning_choice",
+      "prompt": "哪一个是词卡要求优先记住的 “similar” 核心结构？",
+      "options": [
+        "very similar",
+        "be similar to",
+        "speak directly",
+        "tell a story"
+      ],
+      "answer": "be similar to",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "similar-adj-synonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “similar” 最直接近义词？",
+      "options": [
+        "alike",
+        "different",
+        "directly",
+        "story"
+      ],
+      "answer": "alike",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "similar-adj-antonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “similar” 最直接反义词？",
+      "options": [
+        "alike",
+        "directly",
+        "story",
+        "different"
+      ],
+      "answer": "different",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "similar-adj-contrast-choice",
+      "type": "meaning_choice",
+      "prompt": "根据本词卡辨析，哪个词被列为 “similar” 的派生词？",
+      "options": [
+        "different",
+        "directly",
+        "similarity",
+        "alike"
+      ],
+      "answer": "similarity",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "similar-adj-recall-definition",
       "type": "recall",
-      "prompt": "almost the same but not exactly。请输入目标单词。",
+      "prompt": "根据英文释义写出目标词：almost the same but not exactly",
       "answer": "similar",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "similar-adj-collocation",
+      "id": "similar-adj-recall-chinese",
+      "type": "recall",
+      "prompt": "写出符合“相似的”（adj.）的本课目标词。",
+      "answer": "similar",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "similar-adj-collocation-core",
       "type": "collocation",
       "prompt": "补全高频搭配：be _____ to",
+      "answer": "similar",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "similar-adj-collocation-structure",
+      "type": "collocation",
+      "prompt": "补全核心结构：be _____ to",
+      "answer": "similar",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "similar-adj-collocation-context",
+      "type": "collocation",
+      "prompt": "补全语境词组：be _____ to",
       "answer": "similar",
       "stage": "T2",
       "ai": false
     },
     {
-      "id": "similar-adj-sentence",
+      "id": "similar-adj-collocation-fixed-1",
+      "type": "collocation",
+      "prompt": "补全固定搭配：be _____ to",
+      "answer": "similar",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "similar-adj-collocation-fixed-2",
+      "type": "collocation",
+      "prompt": "再补全一个固定搭配：very _____",
+      "answer": "similar",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "similar-adj-example-cloze",
+      "type": "collocation",
+      "prompt": "补全词卡核心例句：This word is _____ to one we learned yesterday.",
+      "answer": "similar",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "similar-adj-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “similar” 写一个自然、真实的英文句子。",
+      "prompt": "请用 “similar” 写一个自然、真实的英文句子，含义必须符合词卡核心义“相似的”。",
+      "answer": "",
+      "stage": "T2",
+      "ai": true
+    },
+    {
+      "id": "similar-adj-sentence-phrase",
+      "type": "free_sentence",
+      "prompt": "请用完整搭配 “be similar to” 写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -417,7 +542,7 @@
     {
       "id": "similar-adj-dialogue",
       "type": "dialogue",
-      "prompt": "在一段真实对话中自然使用 “similar”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “similar” 和搭配 “be similar to”，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -430,37 +555,53 @@
       "free_sentence"
     ],
     "T1": [
+      "meaning_choice",
       "recall",
       "collocation"
     ],
     "T2": [
+      "meaning_choice",
       "recall",
       "collocation",
       "free_sentence"
     ],
     "T3": [
+      "meaning_choice",
       "recall",
+      "collocation",
       "dialogue"
     ],
     "T4": [
+      "meaning_choice",
       "recall",
+      "collocation",
+      "free_sentence",
       "dialogue"
     ],
     "T5": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T6": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T7": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.3",
+  "contentVersion": "2026.08.17.4",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

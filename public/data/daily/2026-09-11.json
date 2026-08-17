@@ -1,7 +1,7 @@
 {
   "date": "2026-09-11",
   "dayNumber": 26,
-  "contentVersion": "2026.08.17.3",
+  "contentVersion": "2026.08.17.4",
   "cards": [
     {
       "id": "write-v",
@@ -390,7 +390,7 @@
       },
       "questions": [
         {
-          "id": "write-v-meaning",
+          "id": "write-v-meaning-core",
           "type": "meaning_choice",
           "prompt": "“write”最核心的中文含义是？",
           "options": [
@@ -403,25 +403,150 @@
           "ai": false
         },
         {
-          "id": "write-v-recall",
+          "id": "write-v-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “write”？",
+          "options": [
+            "to form words on a surface or compose text",
+            "the time that has not happened yet",
+            "to appear to be true"
+          ],
+          "answer": "to form words on a surface or compose text",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "write-v-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “write” 核心结构？",
+          "options": [
+            "write about",
+            "write a message",
+            "in the future",
+            "seem to be"
+          ],
+          "answer": "write a message",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "write-v-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “write” 最直接近义词？",
+          "options": [
+            "compose",
+            "erase",
+            "future",
+            "seem"
+          ],
+          "answer": "compose",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "write-v-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “write” 最直接反义词？",
+          "options": [
+            "compose",
+            "future",
+            "seem",
+            "erase"
+          ],
+          "answer": "erase",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "write-v-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “write” 的派生词？",
+          "options": [
+            "erase",
+            "future",
+            "writer",
+            "compose"
+          ],
+          "answer": "writer",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "write-v-recall-definition",
           "type": "recall",
-          "prompt": "to form words on a surface or compose text。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：to form words on a surface or compose text",
           "answer": "write",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "write-v-collocation",
+          "id": "write-v-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“写；写作”（v.）的本课目标词。",
+          "answer": "write",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "write-v-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：_____ down",
+          "answer": "write",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "write-v-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：_____ a message",
+          "answer": "write",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "write-v-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：_____ a message",
           "answer": "write",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "write-v-sentence",
+          "id": "write-v-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：_____ a message",
+          "answer": "write",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "write-v-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：_____ about",
+          "answer": "write",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "write-v-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：_____ down one sentence using the new word.",
+          "answer": "Write",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "write-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “write” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “write” 写一个自然、真实的英文句子，含义必须符合词卡核心义“写；写作”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "write-v-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “write a message” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -429,7 +554,7 @@
         {
           "id": "write-v-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “write”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “write” 和搭配 “write a message”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -442,37 +567,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -863,7 +1004,7 @@
       },
       "questions": [
         {
-          "id": "read-v-meaning",
+          "id": "read-v-meaning-core",
           "type": "meaning_choice",
           "prompt": "“read”最核心的中文含义是？",
           "options": [
@@ -876,25 +1017,150 @@
           "ai": false
         },
         {
-          "id": "read-v-recall",
+          "id": "read-v-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “read”？",
+          "options": [
+            "a set of actions intended to achieve something",
+            "to express or have a particular meaning",
+            "to understand written words"
+          ],
+          "answer": "to understand written words",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "read-v-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “read” 核心结构？",
+          "options": [
+            "read a book",
+            "make a plan",
+            "mean a lot to someone",
+            "read about"
+          ],
+          "answer": "read a book",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "read-v-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “read” 最直接近义词？",
+          "options": [
+            "skip",
+            "plan",
+            "mean",
+            "review"
+          ],
+          "answer": "review",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "read-v-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “read” 最直接反义词？",
+          "options": [
+            "plan",
+            "mean",
+            "skip",
+            "review"
+          ],
+          "answer": "skip",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "read-v-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “read” 的派生词？",
+          "options": [
+            "plan",
+            "reader",
+            "review",
+            "skip"
+          ],
+          "answer": "reader",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "read-v-recall-definition",
           "type": "recall",
-          "prompt": "to understand written words。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：to understand written words",
           "answer": "read",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "read-v-collocation",
+          "id": "read-v-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“阅读；读懂”（v.）的本课目标词。",
+          "answer": "read",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "read-v-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：_____ aloud",
+          "answer": "read",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "read-v-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：_____ a book",
+          "answer": "read",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "read-v-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：_____ a book",
           "answer": "read",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "read-v-sentence",
+          "id": "read-v-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：_____ a book",
+          "answer": "read",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "read-v-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：_____ about",
+          "answer": "read",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "read-v-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：_____ the example aloud twice.",
+          "answer": "Read",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "read-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “read” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “read” 写一个自然、真实的英文句子，含义必须符合词卡核心义“阅读；读懂”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "read-v-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “read a book” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -902,7 +1168,7 @@
         {
           "id": "read-v-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “read”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “read” 和搭配 “read a book”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -915,37 +1181,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1337,7 +1619,7 @@
       },
       "questions": [
         {
-          "id": "listen-v-meaning",
+          "id": "listen-v-meaning-core",
           "type": "meaning_choice",
           "prompt": "“listen”最核心的中文含义是？",
           "options": [
@@ -1350,25 +1632,150 @@
           "ai": false
         },
         {
-          "id": "listen-v-recall",
+          "id": "listen-v-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “listen”？",
+          "options": [
+            "to say that you are willing to give something",
+            "to pay attention to sound",
+            "something that people do"
+          ],
+          "answer": "to pay attention to sound",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "listen-v-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “listen” 核心结构？",
+          "options": [
+            "daily activity",
+            "offer help",
+            "listen carefully",
+            "listen to"
+          ],
+          "answer": "listen to",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "listen-v-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “listen” 最直接近义词？",
+          "options": [
+            "activity",
+            "offer",
+            "hear",
+            "ignore"
+          ],
+          "answer": "hear",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "listen-v-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “listen” 最直接反义词？",
+          "options": [
+            "offer",
+            "ignore",
+            "hear",
+            "activity"
+          ],
+          "answer": "ignore",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "listen-v-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “listen” 的易混词？",
+          "options": [
+            "hear",
+            "ignore",
+            "activity",
+            "offer"
+          ],
+          "answer": "hear",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "listen-v-recall-definition",
           "type": "recall",
-          "prompt": "to pay attention to sound。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：to pay attention to sound",
           "answer": "listen",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "listen-v-collocation",
+          "id": "listen-v-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“听；倾听”（v.）的本课目标词。",
+          "answer": "listen",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "listen-v-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：_____ to",
+          "answer": "listen",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "listen-v-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：_____ to",
+          "answer": "listen",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "listen-v-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：_____ to",
           "answer": "listen",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "listen-v-sentence",
+          "id": "listen-v-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：_____ to",
+          "answer": "listen",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "listen-v-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：_____ carefully",
+          "answer": "listen",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "listen-v-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：_____ to the whole sentence before answering.",
+          "answer": "Listen",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "listen-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “listen” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “listen” 写一个自然、真实的英文句子，含义必须符合词卡核心义“听；倾听”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "listen-v-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “listen to” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1376,7 +1783,7 @@
         {
           "id": "listen-v-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “listen”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “listen” 和搭配 “listen to”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1389,37 +1796,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1824,7 +2247,7 @@
       },
       "questions": [
         {
-          "id": "travel-n-meaning",
+          "id": "travel-n-meaning-core",
           "type": "meaning_choice",
           "prompt": "“travel”最核心的中文含义是？",
           "options": [
@@ -1837,25 +2260,150 @@
           "ai": false
         },
         {
-          "id": "travel-n-recall",
+          "id": "travel-n-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “travel”？",
+          "options": [
+            "to go from one place to another",
+            "a very short period of time",
+            "to think carefully about something"
+          ],
+          "answer": "to go from one place to another",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "travel-n-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “travel” 核心结构？",
+          "options": [
+            "consider doing something",
+            "travel by train",
+            "travel abroad",
+            "at the moment"
+          ],
+          "answer": "travel abroad",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "travel-n-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “travel” 最直接近义词？",
+          "options": [
+            "moment",
+            "journey",
+            "stay",
+            "trip"
+          ],
+          "answer": "journey",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "travel-n-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “travel” 最直接反义词？",
+          "options": [
+            "stay",
+            "journey",
+            "trip",
+            "moment"
+          ],
+          "answer": "stay",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "travel-n-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “travel” 的易混词？",
+          "options": [
+            "journey",
+            "stay",
+            "moment",
+            "trip"
+          ],
+          "answer": "trip",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "travel-n-recall-definition",
           "type": "recall",
-          "prompt": "to go from one place to another。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：to go from one place to another",
           "answer": "travel",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "travel-n-collocation",
+          "id": "travel-n-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“旅行”（n. / v.）的本课目标词。",
+          "answer": "travel",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "travel-n-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：_____ abroad",
+          "answer": "travel",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "travel-n-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：_____ abroad",
+          "answer": "travel",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "travel-n-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：_____ abroad",
           "answer": "travel",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "travel-n-sentence",
+          "id": "travel-n-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：_____ abroad",
+          "answer": "travel",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "travel-n-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：_____ by train",
+          "answer": "travel",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "travel-n-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：She _____ abroad for work twice a year.",
+          "answer": "travels",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "travel-n-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “travel” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “travel” 写一个自然、真实的英文句子，含义必须符合词卡核心义“旅行”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "travel-n-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “travel abroad” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1863,7 +2411,7 @@
         {
           "id": "travel-n-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “travel”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “travel” 和搭配 “travel abroad”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1876,37 +2424,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2298,7 +2862,7 @@
       },
       "questions": [
         {
-          "id": "family-n-meaning",
+          "id": "family-n-meaning-core",
           "type": "meaning_choice",
           "prompt": "“family”最核心的中文含义是？",
           "options": [
@@ -2311,25 +2875,150 @@
           "ai": false
         },
         {
-          "id": "family-n-recall",
+          "id": "family-n-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “family”？",
+          "options": [
+            "the set of conditions at a particular time",
+            "to think that something will happen",
+            "a group of related people"
+          ],
+          "answer": "a group of related people",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "family-n-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “family” 核心结构？",
+          "options": [
+            "close family",
+            "family member",
+            "deal with a situation",
+            "expect someone to do something"
+          ],
+          "answer": "family member",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "family-n-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “family” 最直接近义词？",
+          "options": [
+            "household",
+            "stranger",
+            "familiar",
+            "situation"
+          ],
+          "answer": "household",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "family-n-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “family” 最直接反义词？",
+          "options": [
+            "household",
+            "familiar",
+            "situation",
+            "stranger"
+          ],
+          "answer": "stranger",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "family-n-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “family” 的易混词？",
+          "options": [
+            "stranger",
+            "situation",
+            "familiar",
+            "household"
+          ],
+          "answer": "familiar",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "family-n-recall-definition",
           "type": "recall",
-          "prompt": "a group of related people。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：a group of related people",
           "answer": "family",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "family-n-collocation",
+          "id": "family-n-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“家庭；家人”（n.）的本课目标词。",
+          "answer": "family",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "family-n-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：_____ member",
+          "answer": "family",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "family-n-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：_____ member",
+          "answer": "family",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "family-n-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：_____ member",
           "answer": "family",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "family-n-sentence",
+          "id": "family-n-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：_____ member",
+          "answer": "family",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "family-n-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：close _____",
+          "answer": "family",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "family-n-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：My _____ supports my learning plan.",
+          "answer": "family",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "family-n-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “family” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “family” 写一个自然、真实的英文句子，含义必须符合词卡核心义“家庭；家人”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "family-n-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “family member” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2337,7 +3026,7 @@
         {
           "id": "family-n-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “family”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “family” 和搭配 “family member”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2350,37 +3039,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

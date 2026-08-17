@@ -385,7 +385,7 @@
   },
   "questions": [
     {
-      "id": "aware-adj-meaning",
+      "id": "aware-adj-meaning-core",
       "type": "meaning_choice",
       "prompt": "“aware”最核心的中文含义是？",
       "options": [
@@ -398,25 +398,150 @@
       "ai": false
     },
     {
-      "id": "aware-adj-recall",
+      "id": "aware-adj-meaning-english",
+      "type": "meaning_choice",
+      "prompt": "哪一项英文释义最符合词卡中的 “aware”？",
+      "options": [
+        "to go from one place to another",
+        "knowing that something exists or is true",
+        "more than usual or more than others"
+      ],
+      "answer": "knowing that something exists or is true",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "aware-adj-structure-choice",
+      "type": "meaning_choice",
+      "prompt": "哪一个是词卡要求优先记住的 “aware” 核心结构？",
+      "options": [
+        "become aware that",
+        "be aware of",
+        "especially useful",
+        "travel abroad"
+      ],
+      "answer": "be aware of",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "aware-adj-synonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “aware” 最直接近义词？",
+      "options": [
+        "conscious",
+        "unaware",
+        "especially",
+        "travel"
+      ],
+      "answer": "conscious",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "aware-adj-antonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “aware” 最直接反义词？",
+      "options": [
+        "conscious",
+        "especially",
+        "travel",
+        "unaware"
+      ],
+      "answer": "unaware",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "aware-adj-contrast-choice",
+      "type": "meaning_choice",
+      "prompt": "根据本词卡辨析，哪个词被列为 “aware” 的派生词？",
+      "options": [
+        "unaware",
+        "especially",
+        "awareness",
+        "conscious"
+      ],
+      "answer": "awareness",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "aware-adj-recall-definition",
       "type": "recall",
-      "prompt": "knowing that something exists or is true。请输入目标单词。",
+      "prompt": "根据英文释义写出目标词：knowing that something exists or is true",
       "answer": "aware",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "aware-adj-collocation",
+      "id": "aware-adj-recall-chinese",
+      "type": "recall",
+      "prompt": "写出符合“意识到的；知晓的”（adj.）的本课目标词。",
+      "answer": "aware",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "aware-adj-collocation-core",
       "type": "collocation",
       "prompt": "补全高频搭配：be _____ of",
+      "answer": "aware",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "aware-adj-collocation-structure",
+      "type": "collocation",
+      "prompt": "补全核心结构：be _____ of",
+      "answer": "aware",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "aware-adj-collocation-context",
+      "type": "collocation",
+      "prompt": "补全语境词组：be _____ of",
       "answer": "aware",
       "stage": "T2",
       "ai": false
     },
     {
-      "id": "aware-adj-sentence",
+      "id": "aware-adj-collocation-fixed-1",
+      "type": "collocation",
+      "prompt": "补全固定搭配：be _____ of",
+      "answer": "aware",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "aware-adj-collocation-fixed-2",
+      "type": "collocation",
+      "prompt": "再补全一个固定搭配：become _____ that",
+      "answer": "aware",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "aware-adj-example-cloze",
+      "type": "collocation",
+      "prompt": "补全词卡核心例句：Be _____ of the difference in tone.",
+      "answer": "aware",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "aware-adj-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “aware” 写一个自然、真实的英文句子。",
+      "prompt": "请用 “aware” 写一个自然、真实的英文句子，含义必须符合词卡核心义“意识到的；知晓的”。",
+      "answer": "",
+      "stage": "T2",
+      "ai": true
+    },
+    {
+      "id": "aware-adj-sentence-phrase",
+      "type": "free_sentence",
+      "prompt": "请用完整搭配 “be aware of” 写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -424,7 +549,7 @@
     {
       "id": "aware-adj-dialogue",
       "type": "dialogue",
-      "prompt": "在一段真实对话中自然使用 “aware”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “aware” 和搭配 “be aware of”，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -437,37 +562,53 @@
       "free_sentence"
     ],
     "T1": [
+      "meaning_choice",
       "recall",
       "collocation"
     ],
     "T2": [
+      "meaning_choice",
       "recall",
       "collocation",
       "free_sentence"
     ],
     "T3": [
+      "meaning_choice",
       "recall",
+      "collocation",
       "dialogue"
     ],
     "T4": [
+      "meaning_choice",
       "recall",
+      "collocation",
+      "free_sentence",
       "dialogue"
     ],
     "T5": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T6": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T7": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.3",
+  "contentVersion": "2026.08.17.4",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

@@ -370,7 +370,7 @@
   },
   "questions": [
     {
-      "id": "however-adv-meaning",
+      "id": "however-adv-meaning-core",
       "type": "meaning_choice",
       "prompt": "“however”最核心的中文含义是？",
       "options": [
@@ -383,25 +383,150 @@
       "ai": false
     },
     {
-      "id": "however-adv-recall",
+      "id": "however-adv-meaning-english",
+      "type": "meaning_choice",
+      "prompt": "哪一项英文释义最符合词卡中的 “however”？",
+      "options": [
+        "an advantage or helpful effect",
+        "used to introduce a contrast",
+        "to gain knowledge or a skill"
+      ],
+      "answer": "used to introduce a contrast",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "however-adv-structure-choice",
+      "type": "meaning_choice",
+      "prompt": "哪一个是词卡要求优先记住的 “however” 核心结构？",
+      "options": [
+        "however, the result",
+        "learn from mistakes",
+        "benefit from",
+        "however difficult"
+      ],
+      "answer": "however, the result",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "however-adv-synonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “however” 最直接近义词？",
+      "options": [
+        "therefore",
+        "learn",
+        "benefit",
+        "nevertheless"
+      ],
+      "answer": "nevertheless",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "however-adv-antonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “however” 最直接反义词？",
+      "options": [
+        "learn",
+        "benefit",
+        "therefore",
+        "nevertheless"
+      ],
+      "answer": "therefore",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "however-adv-contrast-choice",
+      "type": "meaning_choice",
+      "prompt": "根据本词卡辨析，哪个词被列为 “however” 的相关近义词？",
+      "options": [
+        "benefit",
+        "nevertheless",
+        "therefore",
+        "learn"
+      ],
+      "answer": "nevertheless",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "however-adv-recall-definition",
       "type": "recall",
-      "prompt": "used to introduce a contrast。请输入目标单词。",
+      "prompt": "根据英文释义写出目标词：used to introduce a contrast",
       "answer": "however",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "however-adv-collocation",
+      "id": "however-adv-recall-chinese",
+      "type": "recall",
+      "prompt": "写出符合“然而；不过”（adv.）的本课目标词。",
+      "answer": "however",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "however-adv-collocation-core",
       "type": "collocation",
       "prompt": "补全高频搭配：_____ difficult",
+      "answer": "however",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "however-adv-collocation-structure",
+      "type": "collocation",
+      "prompt": "补全核心结构：_____, the result",
+      "answer": "however",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "however-adv-collocation-context",
+      "type": "collocation",
+      "prompt": "补全语境词组：_____, the result",
       "answer": "however",
       "stage": "T2",
       "ai": false
     },
     {
-      "id": "however-adv-sentence",
+      "id": "however-adv-collocation-fixed-1",
+      "type": "collocation",
+      "prompt": "补全固定搭配：_____, the result",
+      "answer": "however",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "however-adv-collocation-fixed-2",
+      "type": "collocation",
+      "prompt": "再补全一个固定搭配：_____ difficult",
+      "answer": "however",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "however-adv-example-cloze",
+      "type": "collocation",
+      "prompt": "补全词卡核心例句：The task is short; _____, it requires focus.",
+      "answer": "however",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "however-adv-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “however” 写一个自然、真实的英文句子。",
+      "prompt": "请用 “however” 写一个自然、真实的英文句子，含义必须符合词卡核心义“然而；不过”。",
+      "answer": "",
+      "stage": "T2",
+      "ai": true
+    },
+    {
+      "id": "however-adv-sentence-phrase",
+      "type": "free_sentence",
+      "prompt": "请用完整搭配 “however, the result” 写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -409,7 +534,7 @@
     {
       "id": "however-adv-dialogue",
       "type": "dialogue",
-      "prompt": "在一段真实对话中自然使用 “however”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “however” 和搭配 “however, the result”，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -422,37 +547,53 @@
       "free_sentence"
     ],
     "T1": [
+      "meaning_choice",
       "recall",
       "collocation"
     ],
     "T2": [
+      "meaning_choice",
       "recall",
       "collocation",
       "free_sentence"
     ],
     "T3": [
+      "meaning_choice",
       "recall",
+      "collocation",
       "dialogue"
     ],
     "T4": [
+      "meaning_choice",
       "recall",
+      "collocation",
+      "free_sentence",
       "dialogue"
     ],
     "T5": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T6": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T7": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.3",
+  "contentVersion": "2026.08.17.4",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

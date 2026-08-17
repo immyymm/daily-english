@@ -1,7 +1,7 @@
 {
   "date": "2026-09-02",
   "dayNumber": 17,
-  "contentVersion": "2026.08.17.3",
+  "contentVersion": "2026.08.17.4",
   "cards": [
     {
       "id": "important-adj",
@@ -383,7 +383,7 @@
       },
       "questions": [
         {
-          "id": "important-adj-meaning",
+          "id": "important-adj-meaning-core",
           "type": "meaning_choice",
           "prompt": "“important”最核心的中文含义是？",
           "options": [
@@ -396,25 +396,150 @@
           "ai": false
         },
         {
-          "id": "important-adj-recall",
+          "id": "important-adj-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “important”？",
+          "options": [
+            "having great value or effect",
+            "prepared for what will happen",
+            "to gain knowledge or a skill"
+          ],
+          "answer": "having great value or effect",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "important-adj-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “important” 核心结构？",
+          "options": [
+            "learn from mistakes",
+            "important for",
+            "important to remember",
+            "be ready to"
+          ],
+          "answer": "important to remember",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "important-adj-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “important” 最直接近义词？",
+          "options": [
+            "learn",
+            "significant",
+            "unimportant",
+            "ready"
+          ],
+          "answer": "significant",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "important-adj-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “important” 最直接反义词？",
+          "options": [
+            "unimportant",
+            "significant",
+            "ready",
+            "learn"
+          ],
+          "answer": "unimportant",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "important-adj-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “important” 的派生词？",
+          "options": [
+            "significant",
+            "unimportant",
+            "ready",
+            "importance"
+          ],
+          "answer": "importance",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "important-adj-recall-definition",
           "type": "recall",
-          "prompt": "having great value or effect。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：having great value or effect",
           "answer": "important",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "important-adj-collocation",
+          "id": "important-adj-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“重要的”（adj.）的本课目标词。",
+          "answer": "important",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "important-adj-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：_____ to remember",
+          "answer": "important",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "important-adj-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：_____ to remember",
+          "answer": "important",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "important-adj-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：_____ to remember",
           "answer": "important",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "important-adj-sentence",
+          "id": "important-adj-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：_____ to remember",
+          "answer": "important",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "important-adj-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：_____ for",
+          "answer": "important",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "important-adj-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：It is _____ to review mistakes.",
+          "answer": "important",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "important-adj-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “important” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “important” 写一个自然、真实的英文句子，含义必须符合词卡核心义“重要的”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "important-adj-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “important to remember” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -422,7 +547,7 @@
         {
           "id": "important-adj-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “important”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “important” 和搭配 “important to remember”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -435,37 +560,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -856,7 +997,7 @@
       },
       "questions": [
         {
-          "id": "available-adj-meaning",
+          "id": "available-adj-meaning-core",
           "type": "meaning_choice",
           "prompt": "“available”最核心的中文含义是？",
           "options": [
@@ -869,25 +1010,150 @@
           "ai": false
         },
         {
-          "id": "available-adj-recall",
+          "id": "available-adj-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “available”？",
+          "options": [
+            "sure or known without doubt",
+            "to say words or talk to someone",
+            "ready to be used or able to meet"
+          ],
+          "answer": "ready to be used or able to meet",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "available-adj-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “available” 核心结构？",
+          "options": [
+            "available online",
+            "be available to",
+            "be certain that",
+            "speak to someone"
+          ],
+          "answer": "be available to",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "available-adj-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “available” 最直接近义词？",
+          "options": [
+            "accessible",
+            "unavailable",
+            "certain",
+            "speak"
+          ],
+          "answer": "accessible",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "available-adj-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “available” 最直接反义词？",
+          "options": [
+            "accessible",
+            "certain",
+            "speak",
+            "unavailable"
+          ],
+          "answer": "unavailable",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "available-adj-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “available” 的派生词？",
+          "options": [
+            "unavailable",
+            "certain",
+            "availability",
+            "accessible"
+          ],
+          "answer": "availability",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "available-adj-recall-definition",
           "type": "recall",
-          "prompt": "ready to be used or able to meet。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：ready to be used or able to meet",
           "answer": "available",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "available-adj-collocation",
+          "id": "available-adj-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“可获得的；有空的”（adj.）的本课目标词。",
+          "answer": "available",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "available-adj-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：be _____ to",
+          "answer": "available",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "available-adj-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：be _____ to",
+          "answer": "available",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "available-adj-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：be _____ to",
           "answer": "available",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "available-adj-sentence",
+          "id": "available-adj-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：be _____ to",
+          "answer": "available",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "available-adj-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：_____ online",
+          "answer": "available",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "available-adj-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：The lesson is _____ offline.",
+          "answer": "available",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "available-adj-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “available” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “available” 写一个自然、真实的英文句子，含义必须符合词卡核心义“可获得的；有空的”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "available-adj-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “be available to” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -895,7 +1161,7 @@
         {
           "id": "available-adj-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “available”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “available” 和搭配 “be available to”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -908,37 +1174,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1329,7 +1611,7 @@
       },
       "questions": [
         {
-          "id": "possible-adj-meaning",
+          "id": "possible-adj-meaning-core",
           "type": "meaning_choice",
           "prompt": "“possible”最核心的中文含义是？",
           "options": [
@@ -1342,25 +1624,150 @@
           "ai": false
         },
         {
-          "id": "possible-adj-recall",
+          "id": "possible-adj-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “possible”？",
+          "options": [
+            "to form words on a surface or compose text",
+            "able to happen or be done",
+            "able to wait calmly"
+          ],
+          "answer": "able to happen or be done",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "possible-adj-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “possible” 核心结构？",
+          "options": [
+            "as soon as possible",
+            "be patient with",
+            "write down",
+            "if possible"
+          ],
+          "answer": "as soon as possible",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "possible-adj-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “possible” 最直接近义词？",
+          "options": [
+            "impossible",
+            "patient",
+            "write",
+            "feasible"
+          ],
+          "answer": "feasible",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "possible-adj-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “possible” 最直接反义词？",
+          "options": [
+            "patient",
+            "write",
+            "impossible",
+            "feasible"
+          ],
+          "answer": "impossible",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "possible-adj-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “possible” 的派生词？",
+          "options": [
+            "patient",
+            "possibility",
+            "feasible",
+            "impossible"
+          ],
+          "answer": "possibility",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "possible-adj-recall-definition",
           "type": "recall",
-          "prompt": "able to happen or be done。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：able to happen or be done",
           "answer": "possible",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "possible-adj-collocation",
+          "id": "possible-adj-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“可能的；可行的”（adj.）的本课目标词。",
+          "answer": "possible",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "possible-adj-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：as soon as _____",
+          "answer": "possible",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "possible-adj-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：as soon as _____",
+          "answer": "possible",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "possible-adj-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：as soon as _____",
           "answer": "possible",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "possible-adj-sentence",
+          "id": "possible-adj-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：as soon as _____",
+          "answer": "possible",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "possible-adj-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：if _____",
+          "answer": "possible",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "possible-adj-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：Please reply as soon as _____.",
+          "answer": "possible",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "possible-adj-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “possible” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “possible” 写一个自然、真实的英文句子，含义必须符合词卡核心义“可能的；可行的”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "possible-adj-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “as soon as possible” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1368,7 +1775,7 @@
         {
           "id": "possible-adj-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “possible”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “possible” 和搭配 “as soon as possible”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1381,37 +1788,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1795,7 +2218,7 @@
       },
       "questions": [
         {
-          "id": "difficult-adj-meaning",
+          "id": "difficult-adj-meaning-core",
           "type": "meaning_choice",
           "prompt": "“difficult”最核心的中文含义是？",
           "options": [
@@ -1808,25 +2231,150 @@
           "ai": false
         },
         {
-          "id": "difficult-adj-recall",
+          "id": "difficult-adj-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “difficult”？",
+          "options": [
+            "not easy to do or understand",
+            "used to state what is really true",
+            "to understand written words"
+          ],
+          "answer": "not easy to do or understand",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "difficult-adj-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “difficult” 核心结构？",
+          "options": [
+            "actually mean",
+            "read aloud",
+            "difficult to understand",
+            "find something difficult"
+          ],
+          "answer": "find something difficult",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "difficult-adj-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “difficult” 最直接近义词？",
+          "options": [
+            "actually",
+            "read",
+            "hard",
+            "easy"
+          ],
+          "answer": "hard",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "difficult-adj-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “difficult” 最直接反义词？",
+          "options": [
+            "read",
+            "easy",
+            "hard",
+            "actually"
+          ],
+          "answer": "easy",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "difficult-adj-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “difficult” 的派生词？",
+          "options": [
+            "difficulty",
+            "hard",
+            "easy",
+            "actually"
+          ],
+          "answer": "difficulty",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "difficult-adj-recall-definition",
           "type": "recall",
-          "prompt": "not easy to do or understand。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：not easy to do or understand",
           "answer": "difficult",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "difficult-adj-collocation",
+          "id": "difficult-adj-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“困难的”（adj.）的本课目标词。",
+          "answer": "difficult",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "difficult-adj-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：find something _____",
+          "answer": "difficult",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "difficult-adj-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：find something _____",
+          "answer": "difficult",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "difficult-adj-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：find something _____",
           "answer": "difficult",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "difficult-adj-sentence",
+          "id": "difficult-adj-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：find something _____",
+          "answer": "difficult",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "difficult-adj-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：_____ to understand",
+          "answer": "difficult",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "difficult-adj-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：I find this sound _____ to pronounce.",
+          "answer": "difficult",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "difficult-adj-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “difficult” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “difficult” 写一个自然、真实的英文句子，含义必须符合词卡核心义“困难的”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "difficult-adj-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “find something difficult” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1834,7 +2382,7 @@
         {
           "id": "difficult-adj-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “difficult”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “difficult” 和搭配 “find something difficult”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1847,37 +2395,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2268,7 +2832,7 @@
       },
       "questions": [
         {
-          "id": "responsible-adj-meaning",
+          "id": "responsible-adj-meaning-core",
           "type": "meaning_choice",
           "prompt": "“responsible”最核心的中文含义是？",
           "options": [
@@ -2281,25 +2845,150 @@
           "ai": false
         },
         {
-          "id": "responsible-adj-recall",
+          "id": "responsible-adj-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “responsible”？",
+          "options": [
+            "used when something is likely",
+            "to pay attention to sound",
+            "having a duty to deal with something"
+          ],
+          "answer": "having a duty to deal with something",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "responsible-adj-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “responsible” 核心结构？",
+          "options": [
+            "listen to",
+            "responsible for doing",
+            "be responsible for",
+            "will probably"
+          ],
+          "answer": "be responsible for",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "responsible-adj-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “responsible” 最直接近义词？",
+          "options": [
+            "listen",
+            "accountable",
+            "irresponsible",
+            "probably"
+          ],
+          "answer": "accountable",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "responsible-adj-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “responsible” 最直接反义词？",
+          "options": [
+            "irresponsible",
+            "accountable",
+            "probably",
+            "listen"
+          ],
+          "answer": "irresponsible",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "responsible-adj-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “responsible” 的派生词？",
+          "options": [
+            "accountable",
+            "irresponsible",
+            "probably",
+            "responsibility"
+          ],
+          "answer": "responsibility",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "responsible-adj-recall-definition",
           "type": "recall",
-          "prompt": "having a duty to deal with something。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：having a duty to deal with something",
           "answer": "responsible",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "responsible-adj-collocation",
+          "id": "responsible-adj-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“负责的；有责任的”（adj.）的本课目标词。",
+          "answer": "responsible",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "responsible-adj-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：be _____ for",
+          "answer": "responsible",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "responsible-adj-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：be _____ for",
+          "answer": "responsible",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "responsible-adj-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：be _____ for",
           "answer": "responsible",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "responsible-adj-sentence",
+          "id": "responsible-adj-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：be _____ for",
+          "answer": "responsible",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "responsible-adj-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：_____ for doing",
+          "answer": "responsible",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "responsible-adj-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：She is _____ for the final report.",
+          "answer": "responsible",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "responsible-adj-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “responsible” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “responsible” 写一个自然、真实的英文句子，含义必须符合词卡核心义“负责的；有责任的”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "responsible-adj-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “be responsible for” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2307,7 +2996,7 @@
         {
           "id": "responsible-adj-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “responsible”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “responsible” 和搭配 “be responsible for”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2320,37 +3009,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

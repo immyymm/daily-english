@@ -385,7 +385,7 @@
   },
   "questions": [
     {
-      "id": "write-v-meaning",
+      "id": "write-v-meaning-core",
       "type": "meaning_choice",
       "prompt": "“write”最核心的中文含义是？",
       "options": [
@@ -398,25 +398,150 @@
       "ai": false
     },
     {
-      "id": "write-v-recall",
+      "id": "write-v-meaning-english",
+      "type": "meaning_choice",
+      "prompt": "哪一项英文释义最符合词卡中的 “write”？",
+      "options": [
+        "to form words on a surface or compose text",
+        "the time that has not happened yet",
+        "to appear to be true"
+      ],
+      "answer": "to form words on a surface or compose text",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "write-v-structure-choice",
+      "type": "meaning_choice",
+      "prompt": "哪一个是词卡要求优先记住的 “write” 核心结构？",
+      "options": [
+        "write about",
+        "write a message",
+        "in the future",
+        "seem to be"
+      ],
+      "answer": "write a message",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "write-v-synonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “write” 最直接近义词？",
+      "options": [
+        "compose",
+        "erase",
+        "future",
+        "seem"
+      ],
+      "answer": "compose",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "write-v-antonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “write” 最直接反义词？",
+      "options": [
+        "compose",
+        "future",
+        "seem",
+        "erase"
+      ],
+      "answer": "erase",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "write-v-contrast-choice",
+      "type": "meaning_choice",
+      "prompt": "根据本词卡辨析，哪个词被列为 “write” 的派生词？",
+      "options": [
+        "erase",
+        "future",
+        "writer",
+        "compose"
+      ],
+      "answer": "writer",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "write-v-recall-definition",
       "type": "recall",
-      "prompt": "to form words on a surface or compose text。请输入目标单词。",
+      "prompt": "根据英文释义写出目标词：to form words on a surface or compose text",
       "answer": "write",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "write-v-collocation",
+      "id": "write-v-recall-chinese",
+      "type": "recall",
+      "prompt": "写出符合“写；写作”（v.）的本课目标词。",
+      "answer": "write",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "write-v-collocation-core",
       "type": "collocation",
       "prompt": "补全高频搭配：_____ down",
+      "answer": "write",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "write-v-collocation-structure",
+      "type": "collocation",
+      "prompt": "补全核心结构：_____ a message",
+      "answer": "write",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "write-v-collocation-context",
+      "type": "collocation",
+      "prompt": "补全语境词组：_____ a message",
       "answer": "write",
       "stage": "T2",
       "ai": false
     },
     {
-      "id": "write-v-sentence",
+      "id": "write-v-collocation-fixed-1",
+      "type": "collocation",
+      "prompt": "补全固定搭配：_____ a message",
+      "answer": "write",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "write-v-collocation-fixed-2",
+      "type": "collocation",
+      "prompt": "再补全一个固定搭配：_____ about",
+      "answer": "write",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "write-v-example-cloze",
+      "type": "collocation",
+      "prompt": "补全词卡核心例句：_____ down one sentence using the new word.",
+      "answer": "Write",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "write-v-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “write” 写一个自然、真实的英文句子。",
+      "prompt": "请用 “write” 写一个自然、真实的英文句子，含义必须符合词卡核心义“写；写作”。",
+      "answer": "",
+      "stage": "T2",
+      "ai": true
+    },
+    {
+      "id": "write-v-sentence-phrase",
+      "type": "free_sentence",
+      "prompt": "请用完整搭配 “write a message” 写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -424,7 +549,7 @@
     {
       "id": "write-v-dialogue",
       "type": "dialogue",
-      "prompt": "在一段真实对话中自然使用 “write”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “write” 和搭配 “write a message”，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -437,37 +562,53 @@
       "free_sentence"
     ],
     "T1": [
+      "meaning_choice",
       "recall",
       "collocation"
     ],
     "T2": [
+      "meaning_choice",
       "recall",
       "collocation",
       "free_sentence"
     ],
     "T3": [
+      "meaning_choice",
       "recall",
+      "collocation",
       "dialogue"
     ],
     "T4": [
+      "meaning_choice",
       "recall",
+      "collocation",
+      "free_sentence",
       "dialogue"
     ],
     "T5": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T6": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T7": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.3",
+  "contentVersion": "2026.08.17.4",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

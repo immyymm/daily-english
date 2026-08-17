@@ -1,7 +1,7 @@
 {
   "date": "2026-08-23",
   "dayNumber": 7,
-  "contentVersion": "2026.08.17.3",
+  "contentVersion": "2026.08.17.4",
   "cards": [
     {
       "id": "avoid-v",
@@ -390,7 +390,7 @@
       },
       "questions": [
         {
-          "id": "avoid-v-meaning",
+          "id": "avoid-v-meaning-core",
           "type": "meaning_choice",
           "prompt": "“avoid”最核心的中文含义是？",
           "options": [
@@ -403,25 +403,150 @@
           "ai": false
         },
         {
-          "id": "avoid-v-recall",
+          "id": "avoid-v-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “avoid”？",
+          "options": [
+            "to give someone confidence or support",
+            "something you want to achieve",
+            "to keep away from something"
+          ],
+          "answer": "to keep away from something",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "avoid-v-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “avoid” 核心结构？",
+          "options": [
+            "avoid making mistakes",
+            "encourage someone to do something",
+            "set a goal",
+            "avoid doing"
+          ],
+          "answer": "avoid making mistakes",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "avoid-v-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “avoid” 最直接近义词？",
+          "options": [
+            "seek",
+            "encourage",
+            "goal",
+            "prevent"
+          ],
+          "answer": "prevent",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "avoid-v-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “avoid” 最直接反义词？",
+          "options": [
+            "encourage",
+            "goal",
+            "seek",
+            "prevent"
+          ],
+          "answer": "seek",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "avoid-v-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “avoid” 的派生词？",
+          "options": [
+            "encourage",
+            "avoidance",
+            "prevent",
+            "seek"
+          ],
+          "answer": "avoidance",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "avoid-v-recall-definition",
           "type": "recall",
-          "prompt": "to keep away from something。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：to keep away from something",
           "answer": "avoid",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "avoid-v-collocation",
+          "id": "avoid-v-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“避免”（v.）的本课目标词。",
+          "answer": "avoid",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "avoid-v-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：_____ doing something",
+          "answer": "avoid",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "avoid-v-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：_____ making mistakes",
+          "answer": "avoid",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "avoid-v-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：_____ making mistakes",
           "answer": "avoid",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "avoid-v-sentence",
+          "id": "avoid-v-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：_____ making mistakes",
+          "answer": "avoid",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "avoid-v-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：_____ doing",
+          "answer": "avoid",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "avoid-v-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：_____ translating every sentence word for word.",
+          "answer": "Avoid",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "avoid-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “avoid” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “avoid” 写一个自然、真实的英文句子，含义必须符合词卡核心义“避免”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "avoid-v-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “avoid making mistakes” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -429,7 +554,7 @@
         {
           "id": "avoid-v-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “avoid”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “avoid” 和搭配 “avoid making mistakes”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -442,37 +567,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -863,7 +1004,7 @@
       },
       "questions": [
         {
-          "id": "compare-v-meaning",
+          "id": "compare-v-meaning-core",
           "type": "meaning_choice",
           "prompt": "“compare”最核心的中文含义是？",
           "options": [
@@ -876,25 +1017,150 @@
           "ai": false
         },
         {
-          "id": "compare-v-recall",
+          "id": "compare-v-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “compare”？",
+          "options": [
+            "a state in which different things have suitable amounts",
+            "to examine how things are alike or different",
+            "to find an answer to a problem"
+          ],
+          "answer": "to examine how things are alike or different",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "compare-v-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “compare” 核心结构？",
+          "options": [
+            "solve a problem",
+            "find a balance",
+            "compare A to B",
+            "compare A with B"
+          ],
+          "answer": "compare A with B",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "compare-v-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “compare” 最直接近义词？",
+          "options": [
+            "solve",
+            "balance",
+            "contrast",
+            "separate"
+          ],
+          "answer": "contrast",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "compare-v-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “compare” 最直接反义词？",
+          "options": [
+            "balance",
+            "separate",
+            "contrast",
+            "solve"
+          ],
+          "answer": "separate",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "compare-v-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “compare” 的派生词？",
+          "options": [
+            "comparison",
+            "contrast",
+            "separate",
+            "solve"
+          ],
+          "answer": "comparison",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "compare-v-recall-definition",
           "type": "recall",
-          "prompt": "to examine how things are alike or different。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：to examine how things are alike or different",
           "answer": "compare",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "compare-v-collocation",
+          "id": "compare-v-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“比较”（v.）的本课目标词。",
+          "answer": "compare",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "compare-v-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：_____ A with B",
+          "answer": "compare",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "compare-v-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：_____ A with B",
+          "answer": "compare",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "compare-v-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：_____ A with B",
           "answer": "compare",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "compare-v-sentence",
+          "id": "compare-v-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：_____ A with B",
+          "answer": "compare",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "compare-v-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：_____ A to B",
+          "answer": "compare",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "compare-v-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：_____ the two examples before you answer.",
+          "answer": "Compare",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "compare-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “compare” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “compare” 写一个自然、真实的英文句子，含义必须符合词卡核心义“比较”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "compare-v-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “compare A with B” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -902,7 +1168,7 @@
         {
           "id": "compare-v-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “compare”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “compare” 和搭配 “compare A with B”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -915,37 +1181,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1343,7 +1625,7 @@
       },
       "questions": [
         {
-          "id": "depend-v-meaning",
+          "id": "depend-v-meaning-core",
           "type": "meaning_choice",
           "prompt": "“depend”最核心的中文含义是？",
           "options": [
@@ -1356,25 +1638,150 @@
           "ai": false
         },
         {
-          "id": "depend-v-recall",
+          "id": "depend-v-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “depend”？",
+          "options": [
+            "to be decided by or need something",
+            "to show a thought or feeling in words or actions",
+            "belief in your own ability"
+          ],
+          "answer": "to be decided by or need something",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "depend-v-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “depend” 核心结构？",
+          "options": [
+            "build confidence",
+            "depend heavily on",
+            "depend on",
+            "express an opinion"
+          ],
+          "answer": "depend on",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "depend-v-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “depend” 最直接近义词？",
+          "options": [
+            "confidence",
+            "rely",
+            "be independent",
+            "express"
+          ],
+          "answer": "rely",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "depend-v-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “depend” 最直接反义词？",
+          "options": [
+            "be independent",
+            "rely",
+            "express",
+            "confidence"
+          ],
+          "answer": "be independent",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "depend-v-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “depend” 的派生词？",
+          "options": [
+            "rely",
+            "be independent",
+            "express",
+            "dependence"
+          ],
+          "answer": "dependence",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "depend-v-recall-definition",
           "type": "recall",
-          "prompt": "to be decided by or need something。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：to be decided by or need something",
           "answer": "depend",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "depend-v-collocation",
+          "id": "depend-v-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“依赖；取决于”（v.）的本课目标词。",
+          "answer": "depend",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "depend-v-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：_____ on",
+          "answer": "depend",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "depend-v-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：_____ on",
+          "answer": "depend",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "depend-v-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：_____ on",
           "answer": "depend",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "depend-v-sentence",
+          "id": "depend-v-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：_____ on",
+          "answer": "depend",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "depend-v-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：_____ heavily on",
+          "answer": "depend",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "depend-v-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：The best choice _____ on the situation.",
+          "answer": "depends",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "depend-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “depend” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “depend” 写一个自然、真实的英文句子，含义必须符合词卡核心义“依赖；取决于”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "depend-v-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “depend on” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1382,7 +1789,7 @@
         {
           "id": "depend-v-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “depend”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “depend” 和搭配 “depend on”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1395,37 +1802,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1822,7 +2245,7 @@
       },
       "questions": [
         {
-          "id": "increase-v-meaning",
+          "id": "increase-v-meaning-core",
           "type": "meaning_choice",
           "prompt": "“increase”最核心的中文含义是？",
           "options": [
@@ -1835,25 +2258,150 @@
           "ai": false
         },
         {
-          "id": "increase-v-recall",
+          "id": "increase-v-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “increase”？",
+          "options": [
+            "the power or skill to do something",
+            "how good or bad something is",
+            "to become or make something greater"
+          ],
+          "answer": "to become or make something greater",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "increase-v-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “increase” 核心结构？",
+          "options": [
+            "increase from A to B",
+            "increase by ten percent",
+            "ability to do something",
+            "high quality"
+          ],
+          "answer": "increase by ten percent",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "increase-v-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “increase” 最直接近义词？",
+          "options": [
+            "raise",
+            "decrease",
+            "ability",
+            "quality"
+          ],
+          "answer": "raise",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "increase-v-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “increase” 最直接反义词？",
+          "options": [
+            "raise",
+            "ability",
+            "quality",
+            "decrease"
+          ],
+          "answer": "decrease",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "increase-v-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “increase” 的派生词？",
+          "options": [
+            "decrease",
+            "ability",
+            "increasing",
+            "raise"
+          ],
+          "answer": "increasing",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "increase-v-recall-definition",
           "type": "recall",
-          "prompt": "to become or make something greater。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：to become or make something greater",
           "answer": "increase",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "increase-v-collocation",
+          "id": "increase-v-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“增加；增长”（v. / n.）的本课目标词。",
+          "answer": "increase",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "increase-v-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：_____ confidence",
+          "answer": "increase",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "increase-v-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：_____ by ten percent",
+          "answer": "increase",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "increase-v-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：_____ by ten percent",
           "answer": "increase",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "increase-v-sentence",
+          "id": "increase-v-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：_____ by ten percent",
+          "answer": "increase",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "increase-v-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：_____ from A to B",
+          "answer": "increase",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "increase-v-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：Regular speaking practice _____ confidence.",
+          "answer": "increases",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "increase-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “increase” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “increase” 写一个自然、真实的英文句子，含义必须符合词卡核心义“增加；增长”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "increase-v-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “increase by ten percent” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1861,7 +2409,7 @@
         {
           "id": "increase-v-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “increase”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “increase” 和搭配 “increase by ten percent”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1874,37 +2422,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2288,7 +2852,7 @@
       },
       "questions": [
         {
-          "id": "reduce-v-meaning",
+          "id": "reduce-v-meaning-core",
           "type": "meaning_choice",
           "prompt": "“reduce”最核心的中文含义是？",
           "options": [
@@ -2301,25 +2865,150 @@
           "ai": false
         },
         {
-          "id": "reduce-v-recall",
+          "id": "reduce-v-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “reduce”？",
+          "options": [
+            "the achievement of a desired result",
+            "to make something smaller or less",
+            "physical or mental energy used to do something"
+          ],
+          "answer": "to make something smaller or less",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "reduce-v-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “reduce” 核心结构？",
+          "options": [
+            "reduce the risk",
+            "make an effort",
+            "achieve success",
+            "reduce costs"
+          ],
+          "answer": "reduce the risk",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "reduce-v-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “reduce” 最直接近义词？",
+          "options": [
+            "increase",
+            "effort",
+            "success",
+            "decrease"
+          ],
+          "answer": "decrease",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "reduce-v-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “reduce” 最直接反义词？",
+          "options": [
+            "effort",
+            "success",
+            "increase",
+            "decrease"
+          ],
+          "answer": "increase",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "reduce-v-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “reduce” 的派生词？",
+          "options": [
+            "effort",
+            "reduction",
+            "decrease",
+            "increase"
+          ],
+          "answer": "reduction",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "reduce-v-recall-definition",
           "type": "recall",
-          "prompt": "to make something smaller or less。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：to make something smaller or less",
           "answer": "reduce",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "reduce-v-collocation",
+          "id": "reduce-v-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“减少；降低”（v.）的本课目标词。",
+          "answer": "reduce",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "reduce-v-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：_____ stress",
+          "answer": "reduce",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "reduce-v-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：_____ the risk",
+          "answer": "reduce",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "reduce-v-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：_____ the risk",
           "answer": "reduce",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "reduce-v-sentence",
+          "id": "reduce-v-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：_____ the risk",
+          "answer": "reduce",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "reduce-v-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：_____ costs",
+          "answer": "reduce",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "reduce-v-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：A clear plan can _____ unnecessary stress.",
+          "answer": "reduce",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "reduce-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “reduce” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “reduce” 写一个自然、真实的英文句子，含义必须符合词卡核心义“减少；降低”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "reduce-v-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “reduce the risk” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2327,7 +3016,7 @@
         {
           "id": "reduce-v-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “reduce”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “reduce” 和搭配 “reduce the risk”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2340,37 +3029,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

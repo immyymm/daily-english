@@ -398,7 +398,7 @@
   },
   "questions": [
     {
-      "id": "clear-adj-meaning",
+      "id": "clear-adj-meaning-core",
       "type": "meaning_choice",
       "prompt": "“clear”最核心的中文含义是？",
       "options": [
@@ -411,25 +411,150 @@
       "ai": false
     },
     {
-      "id": "clear-adj-recall",
+      "id": "clear-adj-meaning-english",
+      "type": "meaning_choice",
+      "prompt": "哪一项英文释义最符合词卡中的 “clear”？",
+      "options": [
+        "a situation that needs a solution",
+        "easy to understand or see",
+        "in an easy or plain way"
+      ],
+      "answer": "easy to understand or see",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "clear-adj-structure-choice",
+      "type": "meaning_choice",
+      "prompt": "哪一个是词卡要求优先记住的 “clear” 核心结构？",
+      "options": [
+        "simply put",
+        "solve a problem",
+        "clear to someone",
+        "make something clear"
+      ],
+      "answer": "make something clear",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "clear-adj-synonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “clear” 最直接近义词？",
+      "options": [
+        "simply",
+        "problem",
+        "obvious",
+        "unclear"
+      ],
+      "answer": "obvious",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "clear-adj-antonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “clear” 最直接反义词？",
+      "options": [
+        "problem",
+        "unclear",
+        "obvious",
+        "simply"
+      ],
+      "answer": "unclear",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "clear-adj-contrast-choice",
+      "type": "meaning_choice",
+      "prompt": "根据本词卡辨析，哪个词被列为 “clear” 的派生词？",
+      "options": [
+        "clearly",
+        "obvious",
+        "unclear",
+        "simply"
+      ],
+      "answer": "clearly",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "clear-adj-recall-definition",
       "type": "recall",
-      "prompt": "easy to understand or see。请输入目标单词。",
+      "prompt": "根据英文释义写出目标词：easy to understand or see",
       "answer": "clear",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "clear-adj-collocation",
+      "id": "clear-adj-recall-chinese",
+      "type": "recall",
+      "prompt": "写出符合“清楚的；清除”（adj. / v.）的本课目标词。",
+      "answer": "clear",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "clear-adj-collocation-core",
       "type": "collocation",
       "prompt": "补全高频搭配：make something _____",
+      "answer": "clear",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "clear-adj-collocation-structure",
+      "type": "collocation",
+      "prompt": "补全核心结构：make something _____",
+      "answer": "clear",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "clear-adj-collocation-context",
+      "type": "collocation",
+      "prompt": "补全语境词组：make something _____",
       "answer": "clear",
       "stage": "T2",
       "ai": false
     },
     {
-      "id": "clear-adj-sentence",
+      "id": "clear-adj-collocation-fixed-1",
+      "type": "collocation",
+      "prompt": "补全固定搭配：make something _____",
+      "answer": "clear",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "clear-adj-collocation-fixed-2",
+      "type": "collocation",
+      "prompt": "再补全一个固定搭配：_____ to someone",
+      "answer": "clear",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "clear-adj-example-cloze",
+      "type": "collocation",
+      "prompt": "补全词卡核心例句：Please make your main point _____.",
+      "answer": "clear",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "clear-adj-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “clear” 写一个自然、真实的英文句子。",
+      "prompt": "请用 “clear” 写一个自然、真实的英文句子，含义必须符合词卡核心义“清楚的；清除”。",
+      "answer": "",
+      "stage": "T2",
+      "ai": true
+    },
+    {
+      "id": "clear-adj-sentence-phrase",
+      "type": "free_sentence",
+      "prompt": "请用完整搭配 “make something clear” 写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -437,7 +562,7 @@
     {
       "id": "clear-adj-dialogue",
       "type": "dialogue",
-      "prompt": "在一段真实对话中自然使用 “clear”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “clear” 和搭配 “make something clear”，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -450,37 +575,53 @@
       "free_sentence"
     ],
     "T1": [
+      "meaning_choice",
       "recall",
       "collocation"
     ],
     "T2": [
+      "meaning_choice",
       "recall",
       "collocation",
       "free_sentence"
     ],
     "T3": [
+      "meaning_choice",
       "recall",
+      "collocation",
       "dialogue"
     ],
     "T4": [
+      "meaning_choice",
       "recall",
+      "collocation",
+      "free_sentence",
       "dialogue"
     ],
     "T5": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T6": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T7": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.3",
+  "contentVersion": "2026.08.17.4",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

@@ -1,7 +1,7 @@
 {
   "date": "2026-09-05",
   "dayNumber": 20,
-  "contentVersion": "2026.08.17.3",
+  "contentVersion": "2026.08.17.4",
   "cards": [
     {
       "id": "useful-adj",
@@ -390,7 +390,7 @@
       },
       "questions": [
         {
-          "id": "useful-adj-meaning",
+          "id": "useful-adj-meaning-core",
           "type": "meaning_choice",
           "prompt": "“useful”最核心的中文含义是？",
           "options": [
@@ -403,25 +403,150 @@
           "ai": false
         },
         {
-          "id": "useful-adj-recall",
+          "id": "useful-adj-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “useful”？",
+          "options": [
+            "helpful for doing or achieving something",
+            "in most situations or cases",
+            "a particular area or position"
+          ],
+          "answer": "helpful for doing or achieving something",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "useful-adj-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “useful” 核心结构？",
+          "options": [
+            "usually happens",
+            "take place",
+            "useful to someone",
+            "useful for"
+          ],
+          "answer": "useful for",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "useful-adj-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “useful” 最直接近义词？",
+          "options": [
+            "usually",
+            "place",
+            "helpful",
+            "useless"
+          ],
+          "answer": "helpful",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "useful-adj-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “useful” 最直接反义词？",
+          "options": [
+            "place",
+            "useless",
+            "helpful",
+            "usually"
+          ],
+          "answer": "useless",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "useful-adj-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “useful” 的派生词？",
+          "options": [
+            "usefulness",
+            "helpful",
+            "useless",
+            "usually"
+          ],
+          "answer": "usefulness",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "useful-adj-recall-definition",
           "type": "recall",
-          "prompt": "helpful for doing or achieving something。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：helpful for doing or achieving something",
           "answer": "useful",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "useful-adj-collocation",
+          "id": "useful-adj-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“有用的”（adj.）的本课目标词。",
+          "answer": "useful",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "useful-adj-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：_____ for",
+          "answer": "useful",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "useful-adj-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：_____ for",
+          "answer": "useful",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "useful-adj-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：_____ for",
           "answer": "useful",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "useful-adj-sentence",
+          "id": "useful-adj-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：_____ for",
+          "answer": "useful",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "useful-adj-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：_____ to someone",
+          "answer": "useful",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "useful-adj-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：This phrase is _____ for polite requests.",
+          "answer": "useful",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "useful-adj-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “useful” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “useful” 写一个自然、真实的英文句子，含义必须符合词卡核心义“有用的”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "useful-adj-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “useful for” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -429,7 +554,7 @@
         {
           "id": "useful-adj-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “useful”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “useful” 和搭配 “useful for”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -442,37 +567,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -863,7 +1004,7 @@
       },
       "questions": [
         {
-          "id": "careful-adj-meaning",
+          "id": "careful-adj-meaning-core",
           "type": "meaning_choice",
           "prompt": "“careful”最核心的中文含义是？",
           "options": [
@@ -876,25 +1017,150 @@
           "ai": false
         },
         {
-          "id": "careful-adj-recall",
+          "id": "careful-adj-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “careful”？",
+          "options": [
+            "used to say that something may be true",
+            "the measured flow in which events happen",
+            "giving attention to avoid mistakes"
+          ],
+          "answer": "giving attention to avoid mistakes",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "careful-adj-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “careful” 核心结构？",
+          "options": [
+            "on time",
+            "be careful not to",
+            "be careful with",
+            "perhaps because"
+          ],
+          "answer": "be careful with",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "careful-adj-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “careful” 最直接近义词？",
+          "options": [
+            "time",
+            "cautious",
+            "careless",
+            "perhaps"
+          ],
+          "answer": "cautious",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "careful-adj-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “careful” 最直接反义词？",
+          "options": [
+            "careless",
+            "cautious",
+            "perhaps",
+            "time"
+          ],
+          "answer": "careless",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "careful-adj-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “careful” 的派生词？",
+          "options": [
+            "cautious",
+            "careless",
+            "perhaps",
+            "carefully"
+          ],
+          "answer": "carefully",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "careful-adj-recall-definition",
           "type": "recall",
-          "prompt": "giving attention to avoid mistakes。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：giving attention to avoid mistakes",
           "answer": "careful",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "careful-adj-collocation",
+          "id": "careful-adj-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“小心的；仔细的”（adj.）的本课目标词。",
+          "answer": "careful",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "careful-adj-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：be _____ with",
+          "answer": "careful",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "careful-adj-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：be _____ with",
+          "answer": "careful",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "careful-adj-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：be _____ with",
           "answer": "careful",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "careful-adj-sentence",
+          "id": "careful-adj-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：be _____ with",
+          "answer": "careful",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "careful-adj-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：be _____ not to",
+          "answer": "careful",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "careful-adj-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：Be _____ with the word order.",
+          "answer": "careful",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "careful-adj-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “careful” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “careful” 写一个自然、真实的英文句子，含义必须符合词卡核心义“小心的；仔细的”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "careful-adj-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “be careful with” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -902,7 +1168,7 @@
         {
           "id": "careful-adj-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “careful”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “careful” 和搭配 “be careful with”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -915,37 +1181,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1329,7 +1611,7 @@
       },
       "questions": [
         {
-          "id": "ready-adj-meaning",
+          "id": "ready-adj-meaning-core",
           "type": "meaning_choice",
           "prompt": "“ready”最核心的中文含义是？",
           "options": [
@@ -1342,25 +1624,150 @@
           "ai": false
         },
         {
-          "id": "ready-adj-recall",
+          "id": "ready-adj-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “ready”？",
+          "options": [
+            "paid work or a particular task",
+            "prepared for what will happen",
+            "before now or earlier than expected"
+          ],
+          "answer": "prepared for what will happen",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "ready-adj-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “ready” 核心结构？",
+          "options": [
+            "get ready for",
+            "be ready to",
+            "have already done",
+            "do a good job"
+          ],
+          "answer": "be ready to",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "ready-adj-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “ready” 最直接近义词？",
+          "options": [
+            "prepared",
+            "unprepared",
+            "already",
+            "job"
+          ],
+          "answer": "prepared",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "ready-adj-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “ready” 最直接反义词？",
+          "options": [
+            "prepared",
+            "already",
+            "job",
+            "unprepared"
+          ],
+          "answer": "unprepared",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "ready-adj-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “ready” 的派生词？",
+          "options": [
+            "unprepared",
+            "already",
+            "readiness",
+            "prepared"
+          ],
+          "answer": "readiness",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "ready-adj-recall-definition",
           "type": "recall",
-          "prompt": "prepared for what will happen。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：prepared for what will happen",
           "answer": "ready",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "ready-adj-collocation",
+          "id": "ready-adj-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“准备好的”（adj.）的本课目标词。",
+          "answer": "ready",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "ready-adj-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：be _____ to",
+          "answer": "ready",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "ready-adj-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：be _____ to",
+          "answer": "ready",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "ready-adj-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：be _____ to",
           "answer": "ready",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "ready-adj-sentence",
+          "id": "ready-adj-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：be _____ to",
+          "answer": "ready",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "ready-adj-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：get _____ for",
+          "answer": "ready",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "ready-adj-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：I am _____ to try the next question.",
+          "answer": "ready",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "ready-adj-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “ready” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “ready” 写一个自然、真实的英文句子，含义必须符合词卡核心义“准备好的”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "ready-adj-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “be ready to” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1368,7 +1775,7 @@
         {
           "id": "ready-adj-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “ready”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “ready” 和搭配 “be ready to”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1381,37 +1788,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1802,7 +2225,7 @@
       },
       "questions": [
         {
-          "id": "certain-adj-meaning",
+          "id": "certain-adj-meaning-core",
           "type": "meaning_choice",
           "prompt": "“certain”最核心的中文含义是？",
           "options": [
@@ -1815,25 +2238,150 @@
           "ai": false
         },
         {
-          "id": "certain-adj-recall",
+          "id": "certain-adj-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “certain”？",
+          "options": [
+            "sure or known without doubt",
+            "continuing until now",
+            "a group that works or plays together"
+          ],
+          "answer": "sure or known without doubt",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "certain-adj-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “certain” 核心结构？",
+          "options": [
+            "be certain that",
+            "still need to",
+            "team member",
+            "certain of"
+          ],
+          "answer": "be certain that",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "certain-adj-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “certain” 最直接近义词？",
+          "options": [
+            "uncertain",
+            "still",
+            "team",
+            "sure"
+          ],
+          "answer": "sure",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "certain-adj-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “certain” 最直接反义词？",
+          "options": [
+            "still",
+            "team",
+            "uncertain",
+            "sure"
+          ],
+          "answer": "uncertain",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "certain-adj-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “certain” 的派生词？",
+          "options": [
+            "still",
+            "certainty",
+            "sure",
+            "uncertain"
+          ],
+          "answer": "certainty",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "certain-adj-recall-definition",
           "type": "recall",
-          "prompt": "sure or known without doubt。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：sure or known without doubt",
           "answer": "certain",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "certain-adj-collocation",
+          "id": "certain-adj-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“确定的；某个”（adj.）的本课目标词。",
+          "answer": "certain",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "certain-adj-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：be _____ that",
+          "answer": "certain",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "certain-adj-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：be _____ that",
+          "answer": "certain",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "certain-adj-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：be _____ that",
           "answer": "certain",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "certain-adj-sentence",
+          "id": "certain-adj-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：be _____ that",
+          "answer": "certain",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "certain-adj-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：_____ of",
+          "answer": "certain",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "certain-adj-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：I am not _____ that this answer is correct.",
+          "answer": "certain",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "certain-adj-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “certain” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “certain” 写一个自然、真实的英文句子，含义必须符合词卡核心义“确定的；某个”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "certain-adj-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “be certain that” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1841,7 +2389,7 @@
         {
           "id": "certain-adj-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “certain”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “certain” 和搭配 “be certain that”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1854,37 +2402,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2296,7 +2860,7 @@
       },
       "questions": [
         {
-          "id": "patient-adj-meaning",
+          "id": "patient-adj-meaning-core",
           "type": "meaning_choice",
           "prompt": "“patient”最核心的中文含义是？",
           "options": [
@@ -2309,25 +2873,150 @@
           "ai": false
         },
         {
-          "id": "patient-adj-recall",
+          "id": "patient-adj-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “patient”？",
+          "options": [
+            "many times",
+            "the time that has not happened yet",
+            "able to wait calmly"
+          ],
+          "answer": "able to wait calmly",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "patient-adj-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “patient” 核心结构？",
+          "options": [
+            "quite often",
+            "in the future",
+            "patient enough to",
+            "be patient with"
+          ],
+          "answer": "be patient with",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "patient-adj-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “patient” 最直接近义词？",
+          "options": [
+            "patience",
+            "often",
+            "tolerant",
+            "impatient"
+          ],
+          "answer": "tolerant",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "patient-adj-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “patient” 最直接反义词？",
+          "options": [
+            "often",
+            "impatient",
+            "tolerant",
+            "patience"
+          ],
+          "answer": "impatient",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "patient-adj-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “patient” 的易混词？",
+          "options": [
+            "patience",
+            "tolerant",
+            "impatient",
+            "often"
+          ],
+          "answer": "patience",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "patient-adj-recall-definition",
           "type": "recall",
-          "prompt": "able to wait calmly。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：able to wait calmly",
           "answer": "patient",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "patient-adj-collocation",
+          "id": "patient-adj-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“有耐心的；病人”（adj. / n.）的本课目标词。",
+          "answer": "patient",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "patient-adj-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：be _____ with",
+          "answer": "patient",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "patient-adj-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：be _____ with",
+          "answer": "patient",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "patient-adj-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：be _____ with",
           "answer": "patient",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "patient-adj-sentence",
+          "id": "patient-adj-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：be _____ with",
+          "answer": "patient",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "patient-adj-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：_____ enough to",
+          "answer": "patient",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "patient-adj-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：Be _____ with yourself while learning.",
+          "answer": "patient",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "patient-adj-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “patient” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “patient” 写一个自然、真实的英文句子，含义必须符合词卡核心义“有耐心的；病人”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "patient-adj-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “be patient with” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2335,7 +3024,7 @@
         {
           "id": "patient-adj-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “patient”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “patient” 和搭配 “be patient with”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2348,37 +3037,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

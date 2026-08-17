@@ -376,7 +376,7 @@
   },
   "questions": [
     {
-      "id": "instead-adv-meaning",
+      "id": "instead-adv-meaning-core",
       "type": "meaning_choice",
       "prompt": "“instead”最核心的中文含义是？",
       "options": [
@@ -389,25 +389,150 @@
       "ai": false
     },
     {
-      "id": "instead-adv-recall",
+      "id": "instead-adv-meaning-english",
+      "type": "meaning_choice",
+      "prompt": "哪一项英文释义最符合词卡中的 “instead”？",
+      "options": [
+        "to learn about a subject carefully",
+        "an ability learned through practice",
+        "in place of someone or something else"
+      ],
+      "answer": "in place of someone or something else",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "instead-adv-structure-choice",
+      "type": "meaning_choice",
+      "prompt": "哪一个是词卡要求优先记住的 “instead” 核心结构？",
+      "options": [
+        "do something instead",
+        "instead of",
+        "study for a test",
+        "develop a skill"
+      ],
+      "answer": "instead of",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "instead-adv-synonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “instead” 最直接近义词？",
+      "options": [
+        "alternatively",
+        "also",
+        "study",
+        "skill"
+      ],
+      "answer": "alternatively",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "instead-adv-antonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “instead” 最直接反义词？",
+      "options": [
+        "alternatively",
+        "study",
+        "skill",
+        "also"
+      ],
+      "answer": "also",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "instead-adv-contrast-choice",
+      "type": "meaning_choice",
+      "prompt": "根据本词卡辨析，哪个词被列为 “instead” 的相关近义词？",
+      "options": [
+        "study",
+        "skill",
+        "alternatively",
+        "also"
+      ],
+      "answer": "alternatively",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "instead-adv-recall-definition",
       "type": "recall",
-      "prompt": "in place of someone or something else。请输入目标单词。",
+      "prompt": "根据英文释义写出目标词：in place of someone or something else",
       "answer": "instead",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "instead-adv-collocation",
+      "id": "instead-adv-recall-chinese",
+      "type": "recall",
+      "prompt": "写出符合“代替；反而”（adv.）的本课目标词。",
+      "answer": "instead",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "instead-adv-collocation-core",
       "type": "collocation",
       "prompt": "补全高频搭配：_____ of",
+      "answer": "instead",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "instead-adv-collocation-structure",
+      "type": "collocation",
+      "prompt": "补全核心结构：_____ of",
+      "answer": "instead",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "instead-adv-collocation-context",
+      "type": "collocation",
+      "prompt": "补全语境词组：_____ of",
       "answer": "instead",
       "stage": "T2",
       "ai": false
     },
     {
-      "id": "instead-adv-sentence",
+      "id": "instead-adv-collocation-fixed-1",
+      "type": "collocation",
+      "prompt": "补全固定搭配：_____ of",
+      "answer": "instead",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "instead-adv-collocation-fixed-2",
+      "type": "collocation",
+      "prompt": "再补全一个固定搭配：do something _____",
+      "answer": "instead",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "instead-adv-example-cloze",
+      "type": "collocation",
+      "prompt": "补全词卡核心例句：Try using an English definition _____ of a translation.",
+      "answer": "instead",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "instead-adv-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “instead” 写一个自然、真实的英文句子。",
+      "prompt": "请用 “instead” 写一个自然、真实的英文句子，含义必须符合词卡核心义“代替；反而”。",
+      "answer": "",
+      "stage": "T2",
+      "ai": true
+    },
+    {
+      "id": "instead-adv-sentence-phrase",
+      "type": "free_sentence",
+      "prompt": "请用完整搭配 “instead of” 写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -415,7 +540,7 @@
     {
       "id": "instead-adv-dialogue",
       "type": "dialogue",
-      "prompt": "在一段真实对话中自然使用 “instead”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “instead” 和搭配 “instead of”，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -428,37 +553,53 @@
       "free_sentence"
     ],
     "T1": [
+      "meaning_choice",
       "recall",
       "collocation"
     ],
     "T2": [
+      "meaning_choice",
       "recall",
       "collocation",
       "free_sentence"
     ],
     "T3": [
+      "meaning_choice",
       "recall",
+      "collocation",
       "dialogue"
     ],
     "T4": [
+      "meaning_choice",
       "recall",
+      "collocation",
+      "free_sentence",
       "dialogue"
     ],
     "T5": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T6": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T7": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.3",
+  "contentVersion": "2026.08.17.4",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

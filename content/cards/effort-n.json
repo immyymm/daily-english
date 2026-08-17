@@ -378,7 +378,7 @@
   },
   "questions": [
     {
-      "id": "effort-n-meaning",
+      "id": "effort-n-meaning-core",
       "type": "meaning_choice",
       "prompt": "“effort”最核心的中文含义是？",
       "options": [
@@ -391,25 +391,150 @@
       "ai": false
     },
     {
-      "id": "effort-n-recall",
+      "id": "effort-n-meaning-english",
+      "type": "meaning_choice",
+      "prompt": "哪一项英文释义最符合词卡中的 “effort”？",
+      "options": [
+        "the reason why something is done",
+        "not the same",
+        "physical or mental energy used to do something"
+      ],
+      "answer": "physical or mental energy used to do something",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "effort-n-structure-choice",
+      "type": "meaning_choice",
+      "prompt": "哪一个是词卡要求优先记住的 “effort” 核心结构？",
+      "options": [
+        "main purpose",
+        "be different from",
+        "put effort into",
+        "make an effort"
+      ],
+      "answer": "make an effort",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "effort-n-synonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “effort” 最直接近义词？",
+      "options": [
+        "purpose",
+        "different",
+        "attempt",
+        "idleness"
+      ],
+      "answer": "attempt",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "effort-n-antonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “effort” 最直接反义词？",
+      "options": [
+        "different",
+        "idleness",
+        "attempt",
+        "purpose"
+      ],
+      "answer": "idleness",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "effort-n-contrast-choice",
+      "type": "meaning_choice",
+      "prompt": "根据本词卡辨析，哪个词被列为 “effort” 的派生词？",
+      "options": [
+        "effortless",
+        "attempt",
+        "idleness",
+        "purpose"
+      ],
+      "answer": "effortless",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "effort-n-recall-definition",
       "type": "recall",
-      "prompt": "physical or mental energy used to do something。请输入目标单词。",
+      "prompt": "根据英文释义写出目标词：physical or mental energy used to do something",
       "answer": "effort",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "effort-n-collocation",
+      "id": "effort-n-recall-chinese",
+      "type": "recall",
+      "prompt": "写出符合“努力”（n.）的本课目标词。",
+      "answer": "effort",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "effort-n-collocation-core",
       "type": "collocation",
       "prompt": "补全高频搭配：make an _____",
+      "answer": "effort",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "effort-n-collocation-structure",
+      "type": "collocation",
+      "prompt": "补全核心结构：make an _____",
+      "answer": "effort",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "effort-n-collocation-context",
+      "type": "collocation",
+      "prompt": "补全语境词组：make an _____",
       "answer": "effort",
       "stage": "T2",
       "ai": false
     },
     {
-      "id": "effort-n-sentence",
+      "id": "effort-n-collocation-fixed-1",
+      "type": "collocation",
+      "prompt": "补全固定搭配：make an _____",
+      "answer": "effort",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "effort-n-collocation-fixed-2",
+      "type": "collocation",
+      "prompt": "再补全一个固定搭配：put _____ into",
+      "answer": "effort",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "effort-n-example-cloze",
+      "type": "collocation",
+      "prompt": "补全词卡核心例句：Make an _____ to use the word today.",
+      "answer": "effort",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "effort-n-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “effort” 写一个自然、真实的英文句子。",
+      "prompt": "请用 “effort” 写一个自然、真实的英文句子，含义必须符合词卡核心义“努力”。",
+      "answer": "",
+      "stage": "T2",
+      "ai": true
+    },
+    {
+      "id": "effort-n-sentence-phrase",
+      "type": "free_sentence",
+      "prompt": "请用完整搭配 “make an effort” 写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -417,7 +542,7 @@
     {
       "id": "effort-n-dialogue",
       "type": "dialogue",
-      "prompt": "在一段真实对话中自然使用 “effort”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “effort” 和搭配 “make an effort”，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -430,37 +555,53 @@
       "free_sentence"
     ],
     "T1": [
+      "meaning_choice",
       "recall",
       "collocation"
     ],
     "T2": [
+      "meaning_choice",
       "recall",
       "collocation",
       "free_sentence"
     ],
     "T3": [
+      "meaning_choice",
       "recall",
+      "collocation",
       "dialogue"
     ],
     "T4": [
+      "meaning_choice",
       "recall",
+      "collocation",
+      "free_sentence",
       "dialogue"
     ],
     "T5": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T6": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T7": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.3",
+  "contentVersion": "2026.08.17.4",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

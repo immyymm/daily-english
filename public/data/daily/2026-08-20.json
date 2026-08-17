@@ -1,7 +1,7 @@
 {
   "date": "2026-08-20",
   "dayNumber": 4,
-  "contentVersion": "2026.08.17.3",
+  "contentVersion": "2026.08.17.4",
   "cards": [
     {
       "id": "follow-v",
@@ -390,7 +390,7 @@
       },
       "questions": [
         {
-          "id": "follow-v-meaning",
+          "id": "follow-v-meaning-core",
           "type": "meaning_choice",
           "prompt": "“follow”最核心的中文含义是？",
           "options": [
@@ -403,25 +403,150 @@
           "ai": false
         },
         {
-          "id": "follow-v-recall",
+          "id": "follow-v-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “follow”？",
+          "options": [
+            "to be decided by or need something",
+            "the way people or things are connected",
+            "to go after or act according to something"
+          ],
+          "answer": "to go after or act according to something",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "follow-v-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “follow” 核心结构？",
+          "options": [
+            "depend on",
+            "build a relationship",
+            "follow the rules",
+            "follow the instructions"
+          ],
+          "answer": "follow the instructions",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "follow-v-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “follow” 最直接近义词？",
+          "options": [
+            "depend",
+            "relationship",
+            "obey",
+            "lead"
+          ],
+          "answer": "obey",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "follow-v-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “follow” 最直接反义词？",
+          "options": [
+            "relationship",
+            "lead",
+            "obey",
+            "depend"
+          ],
+          "answer": "lead",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "follow-v-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “follow” 的派生词？",
+          "options": [
+            "follower",
+            "obey",
+            "lead",
+            "depend"
+          ],
+          "answer": "follower",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "follow-v-recall-definition",
           "type": "recall",
-          "prompt": "to go after or act according to something。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：to go after or act according to something",
           "answer": "follow",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "follow-v-collocation",
+          "id": "follow-v-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“跟随；遵循”（v.）的本课目标词。",
+          "answer": "follow",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "follow-v-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：_____ the instructions",
+          "answer": "follow",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "follow-v-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：_____ the instructions",
+          "answer": "follow",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "follow-v-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：_____ the instructions",
           "answer": "follow",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "follow-v-sentence",
+          "id": "follow-v-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：_____ the instructions",
+          "answer": "follow",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "follow-v-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：_____ the rules",
+          "answer": "follow",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "follow-v-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：_____ these steps to install the app.",
+          "answer": "Follow",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "follow-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “follow” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “follow” 写一个自然、真实的英文句子，含义必须符合词卡核心义“跟随；遵循”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "follow-v-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “follow the instructions” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -429,7 +554,7 @@
         {
           "id": "follow-v-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “follow”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “follow” 和搭配 “follow the instructions”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -442,37 +567,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -848,7 +989,7 @@
       },
       "questions": [
         {
-          "id": "happen-v-meaning",
+          "id": "happen-v-meaning-core",
           "type": "meaning_choice",
           "prompt": "“happen”最核心的中文含义是？",
           "options": [
@@ -861,25 +1002,150 @@
           "ai": false
         },
         {
-          "id": "happen-v-recall",
+          "id": "happen-v-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “happen”？",
+          "options": [
+            "the surroundings or conditions in which something exists",
+            "to take place",
+            "to become or make something greater"
+          ],
+          "answer": "to take place",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "happen-v-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “happen” 核心结构？",
+          "options": [
+            "learning environment",
+            "happen to someone",
+            "what happened",
+            "increase confidence"
+          ],
+          "answer": "what happened",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "happen-v-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “happen” 最直接近义词？",
+          "options": [
+            "environment",
+            "occur",
+            "prevent",
+            "increase"
+          ],
+          "answer": "occur",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "happen-v-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “happen” 最直接反义词？",
+          "options": [
+            "prevent",
+            "occur",
+            "increase",
+            "environment"
+          ],
+          "answer": "prevent",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "happen-v-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “happen” 的相关近义词？",
+          "options": [
+            "prevent",
+            "increase",
+            "environment",
+            "occur"
+          ],
+          "answer": "occur",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "happen-v-recall-definition",
           "type": "recall",
-          "prompt": "to take place。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：to take place",
           "answer": "happen",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "happen-v-collocation",
+          "id": "happen-v-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“发生”（v.）的本课目标词。",
+          "answer": "happen",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "happen-v-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：_____ to someone",
           "answer": "happen",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "happen-v-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：what _____",
+          "answer": "happened",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "happen-v-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：what _____",
+          "answer": "happened",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "happen-v-sentence",
+          "id": "happen-v-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：what _____",
+          "answer": "happened",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "happen-v-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：_____ to someone",
+          "answer": "happen",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "happen-v-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：What _____ during the meeting?",
+          "answer": "happened",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "happen-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “happen” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “happen” 写一个自然、真实的英文句子，含义必须符合词卡核心义“发生”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "happen-v-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “what happened” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -887,7 +1153,7 @@
         {
           "id": "happen-v-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “happen”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “happen” 和搭配 “what happened”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -900,37 +1166,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1306,7 +1588,7 @@
       },
       "questions": [
         {
-          "id": "become-v-meaning",
+          "id": "become-v-meaning-core",
           "type": "meaning_choice",
           "prompt": "“become”最核心的中文含义是？",
           "options": [
@@ -1319,25 +1601,150 @@
           "ai": false
         },
         {
-          "id": "become-v-recall",
+          "id": "become-v-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “become”？",
+          "options": [
+            "to begin to be something",
+            "to make something smaller or less",
+            "facts or details about something"
+          ],
+          "answer": "to begin to be something",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "become-v-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “become” 核心结构？",
+          "options": [
+            "become aware of",
+            "become more confident",
+            "reduce stress",
+            "useful information"
+          ],
+          "answer": "become more confident",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "become-v-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “become” 最直接近义词？",
+          "options": [
+            "grow",
+            "remain",
+            "reduce",
+            "information"
+          ],
+          "answer": "grow",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "become-v-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “become” 最直接反义词？",
+          "options": [
+            "grow",
+            "reduce",
+            "information",
+            "remain"
+          ],
+          "answer": "remain",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "become-v-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “become” 的相关近义词？",
+          "options": [
+            "reduce",
+            "information",
+            "grow",
+            "remain"
+          ],
+          "answer": "grow",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "become-v-recall-definition",
           "type": "recall",
-          "prompt": "to begin to be something。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：to begin to be something",
           "answer": "become",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "become-v-collocation",
+          "id": "become-v-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“变成；成为”（v.）的本课目标词。",
+          "answer": "become",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "become-v-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：_____ more confident",
+          "answer": "become",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "become-v-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：_____ more confident",
+          "answer": "become",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "become-v-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：_____ more confident",
           "answer": "become",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "become-v-sentence",
+          "id": "become-v-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：_____ more confident",
+          "answer": "become",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "become-v-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：_____ aware of",
+          "answer": "become",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "become-v-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：Speaking _____ easier with practice.",
+          "answer": "becomes",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "become-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “become” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “become” 写一个自然、真实的英文句子，含义必须符合词卡核心义“变成；成为”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "become-v-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “become more confident” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1345,7 +1752,7 @@
         {
           "id": "become-v-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “become”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “become” 和搭配 “become more confident”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1358,37 +1765,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1772,7 +2195,7 @@
       },
       "questions": [
         {
-          "id": "seem-v-meaning",
+          "id": "seem-v-meaning-core",
           "type": "meaning_choice",
           "prompt": "“seem”最核心的中文含义是？",
           "options": [
@@ -1785,25 +2208,150 @@
           "ai": false
         },
         {
-          "id": "seem-v-recall",
+          "id": "seem-v-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “seem”？",
+          "options": [
+            "to decide which person or thing you want",
+            "people who live together or share an interest",
+            "to appear to be true"
+          ],
+          "answer": "to appear to be true",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "seem-v-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “seem” 核心结构？",
+          "options": [
+            "seem to be",
+            "choose between A and B",
+            "local community",
+            "seem likely"
+          ],
+          "answer": "seem to be",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "seem-v-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “seem” 最直接近义词？",
+          "options": [
+            "prove",
+            "choose",
+            "community",
+            "appear"
+          ],
+          "answer": "appear",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "seem-v-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “seem” 最直接反义词？",
+          "options": [
+            "choose",
+            "community",
+            "prove",
+            "appear"
+          ],
+          "answer": "prove",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "seem-v-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “seem” 的派生词？",
+          "options": [
+            "choose",
+            "seemingly",
+            "appear",
+            "prove"
+          ],
+          "answer": "seemingly",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "seem-v-recall-definition",
           "type": "recall",
-          "prompt": "to appear to be true。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：to appear to be true",
           "answer": "seem",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "seem-v-collocation",
+          "id": "seem-v-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“似乎；看起来”（v.）的本课目标词。",
+          "answer": "seem",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "seem-v-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：_____ to be",
+          "answer": "seem",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "seem-v-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：_____ to be",
+          "answer": "seem",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "seem-v-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：_____ to be",
           "answer": "seem",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "seem-v-sentence",
+          "id": "seem-v-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：_____ to be",
+          "answer": "seem",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "seem-v-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：_____ likely",
+          "answer": "seem",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "seem-v-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：The task _____ difficult at first.",
+          "answer": "seems",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "seem-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “seem” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “seem” 写一个自然、真实的英文句子，含义必须符合词卡核心义“似乎；看起来”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "seem-v-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “seem to be” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1811,7 +2359,7 @@
         {
           "id": "seem-v-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “seem”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “seem” 和搭配 “seem to be”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1824,37 +2372,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2257,7 +2821,7 @@
       },
       "questions": [
         {
-          "id": "mean-v-meaning",
+          "id": "mean-v-meaning-core",
           "type": "meaning_choice",
           "prompt": "“mean”最核心的中文含义是？",
           "options": [
@@ -2270,25 +2834,150 @@
           "ai": false
         },
         {
-          "id": "mean-v-recall",
+          "id": "mean-v-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “mean”？",
+          "options": [
+            "work done to help or provide something for people",
+            "to express or have a particular meaning",
+            "to give part of something to others"
+          ],
+          "answer": "to express or have a particular meaning",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "mean-v-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “mean” 核心结构？",
+          "options": [
+            "share an idea",
+            "customer service",
+            "mean that",
+            "mean a lot to"
+          ],
+          "answer": "mean a lot to",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "mean-v-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “mean” 最直接近义词？",
+          "options": [
+            "share",
+            "service",
+            "signify",
+            "misrepresent"
+          ],
+          "answer": "signify",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "mean-v-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “mean” 最直接反义词？",
+          "options": [
+            "service",
+            "misrepresent",
+            "signify",
+            "share"
+          ],
+          "answer": "misrepresent",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "mean-v-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “mean” 的派生词？",
+          "options": [
+            "meaning",
+            "signify",
+            "misrepresent",
+            "share"
+          ],
+          "answer": "meaning",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "mean-v-recall-definition",
           "type": "recall",
-          "prompt": "to express or have a particular meaning。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：to express or have a particular meaning",
           "answer": "mean",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "mean-v-collocation",
+          "id": "mean-v-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“意思是；意味着”（v.）的本课目标词。",
+          "answer": "mean",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "mean-v-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：_____ a lot to someone",
+          "answer": "mean",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "mean-v-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：_____ a lot to",
+          "answer": "mean",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "mean-v-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：_____ a lot to",
           "answer": "mean",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "mean-v-sentence",
+          "id": "mean-v-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：_____ a lot to",
+          "answer": "mean",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "mean-v-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：_____ that",
+          "answer": "mean",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "mean-v-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：Your support _____ a lot to me.",
+          "answer": "means",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "mean-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “mean” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “mean” 写一个自然、真实的英文句子，含义必须符合词卡核心义“意思是；意味着”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "mean-v-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “mean a lot to” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2296,7 +2985,7 @@
         {
           "id": "mean-v-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “mean”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “mean” 和搭配 “mean a lot to”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2309,37 +2998,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

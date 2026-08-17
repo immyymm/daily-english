@@ -385,7 +385,7 @@
   },
   "questions": [
     {
-      "id": "serious-adj-meaning",
+      "id": "serious-adj-meaning-core",
       "type": "meaning_choice",
       "prompt": "“serious”最核心的中文含义是？",
       "options": [
@@ -398,25 +398,150 @@
       "ai": false
     },
     {
-      "id": "serious-adj-recall",
+      "id": "serious-adj-meaning-english",
+      "type": "meaning_choice",
+      "prompt": "哪一项英文释义最符合词卡中的 “serious”？",
+      "options": [
+        "important, dangerous, or not joking",
+        "used to introduce a contrast",
+        "a person you know and like"
+      ],
+      "answer": "important, dangerous, or not joking",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "serious-adj-structure-choice",
+      "type": "meaning_choice",
+      "prompt": "哪一个是词卡要求优先记住的 “serious” 核心结构？",
+      "options": [
+        "take something seriously",
+        "a serious problem",
+        "however difficult",
+        "close friend"
+      ],
+      "answer": "a serious problem",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "serious-adj-synonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “serious” 最直接近义词？",
+      "options": [
+        "grave",
+        "minor",
+        "however",
+        "friend"
+      ],
+      "answer": "grave",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "serious-adj-antonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “serious” 最直接反义词？",
+      "options": [
+        "grave",
+        "however",
+        "friend",
+        "minor"
+      ],
+      "answer": "minor",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "serious-adj-contrast-choice",
+      "type": "meaning_choice",
+      "prompt": "根据本词卡辨析，哪个词被列为 “serious” 的派生词？",
+      "options": [
+        "minor",
+        "however",
+        "seriously",
+        "grave"
+      ],
+      "answer": "seriously",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "serious-adj-recall-definition",
       "type": "recall",
-      "prompt": "important, dangerous, or not joking。请输入目标单词。",
+      "prompt": "根据英文释义写出目标词：important, dangerous, or not joking",
       "answer": "serious",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "serious-adj-collocation",
+      "id": "serious-adj-recall-chinese",
+      "type": "recall",
+      "prompt": "写出符合“严重的；认真的”（adj.）的本课目标词。",
+      "answer": "serious",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "serious-adj-collocation-core",
       "type": "collocation",
       "prompt": "补全高频搭配：a _____ problem",
+      "answer": "serious",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "serious-adj-collocation-structure",
+      "type": "collocation",
+      "prompt": "补全核心结构：a _____ problem",
+      "answer": "serious",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "serious-adj-collocation-context",
+      "type": "collocation",
+      "prompt": "补全语境词组：a _____ problem",
       "answer": "serious",
       "stage": "T2",
       "ai": false
     },
     {
-      "id": "serious-adj-sentence",
+      "id": "serious-adj-collocation-fixed-1",
+      "type": "collocation",
+      "prompt": "补全固定搭配：a _____ problem",
+      "answer": "serious",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "serious-adj-collocation-fixed-2",
+      "type": "collocation",
+      "prompt": "再补全一个固定搭配：take something seriously（填入目标词）",
+      "answer": "serious",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "serious-adj-example-cloze",
+      "type": "collocation",
+      "prompt": "补全词卡核心例句：Lack of sleep can become a _____ problem.",
+      "answer": "serious",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "serious-adj-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “serious” 写一个自然、真实的英文句子。",
+      "prompt": "请用 “serious” 写一个自然、真实的英文句子，含义必须符合词卡核心义“严重的；认真的”。",
+      "answer": "",
+      "stage": "T2",
+      "ai": true
+    },
+    {
+      "id": "serious-adj-sentence-phrase",
+      "type": "free_sentence",
+      "prompt": "请用完整搭配 “a serious problem” 写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -424,7 +549,7 @@
     {
       "id": "serious-adj-dialogue",
       "type": "dialogue",
-      "prompt": "在一段真实对话中自然使用 “serious”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “serious” 和搭配 “a serious problem”，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -437,37 +562,53 @@
       "free_sentence"
     ],
     "T1": [
+      "meaning_choice",
       "recall",
       "collocation"
     ],
     "T2": [
+      "meaning_choice",
       "recall",
       "collocation",
       "free_sentence"
     ],
     "T3": [
+      "meaning_choice",
       "recall",
+      "collocation",
       "dialogue"
     ],
     "T4": [
+      "meaning_choice",
       "recall",
+      "collocation",
+      "free_sentence",
       "dialogue"
     ],
     "T5": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T6": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T7": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.3",
+  "contentVersion": "2026.08.17.4",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

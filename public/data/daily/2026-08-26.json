@@ -1,7 +1,7 @@
 {
   "date": "2026-08-26",
   "dayNumber": 10,
-  "contentVersion": "2026.08.17.3",
+  "contentVersion": "2026.08.17.4",
   "cards": [
     {
       "id": "discover-v",
@@ -383,7 +383,7 @@
       },
       "questions": [
         {
-          "id": "discover-v-meaning",
+          "id": "discover-v-meaning-core",
           "type": "meaning_choice",
           "prompt": "“discover”最核心的中文含义是？",
           "options": [
@@ -396,25 +396,150 @@
           "ai": false
         },
         {
-          "id": "discover-v-recall",
+          "id": "discover-v-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “discover”？",
+          "options": [
+            "work done to help or provide something for people",
+            "producing the result that is wanted",
+            "to find something for the first time"
+          ],
+          "answer": "to find something for the first time",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "discover-v-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “discover” 核心结构？",
+          "options": [
+            "discover a new way",
+            "discover the truth",
+            "customer service",
+            "an effective way"
+          ],
+          "answer": "discover the truth",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "discover-v-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “discover” 最直接近义词？",
+          "options": [
+            "find",
+            "lose",
+            "service",
+            "effective"
+          ],
+          "answer": "find",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "discover-v-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “discover” 最直接反义词？",
+          "options": [
+            "find",
+            "service",
+            "effective",
+            "lose"
+          ],
+          "answer": "lose",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "discover-v-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “discover” 的派生词？",
+          "options": [
+            "lose",
+            "service",
+            "discovery",
+            "find"
+          ],
+          "answer": "discovery",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "discover-v-recall-definition",
           "type": "recall",
-          "prompt": "to find something for the first time。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：to find something for the first time",
           "answer": "discover",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "discover-v-collocation",
+          "id": "discover-v-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“发现”（v.）的本课目标词。",
+          "answer": "discover",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "discover-v-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：_____ a new way",
+          "answer": "discover",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "discover-v-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：_____ the truth",
+          "answer": "discover",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "discover-v-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：_____ the truth",
           "answer": "discover",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "discover-v-sentence",
+          "id": "discover-v-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：_____ the truth",
+          "answer": "discover",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "discover-v-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：_____ a new way",
+          "answer": "discover",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "discover-v-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：You may _____ a better way to remember it.",
+          "answer": "discover",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "discover-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “discover” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “discover” 写一个自然、真实的英文句子，含义必须符合词卡核心义“发现”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "discover-v-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “discover the truth” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -422,7 +547,7 @@
         {
           "id": "discover-v-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “discover”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “discover” 和搭配 “discover the truth”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -435,37 +560,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -856,7 +997,7 @@
       },
       "questions": [
         {
-          "id": "protect-v-meaning",
+          "id": "protect-v-meaning-core",
           "type": "meaning_choice",
           "prompt": "“protect”最核心的中文含义是？",
           "options": [
@@ -869,25 +1010,150 @@
           "ai": false
         },
         {
-          "id": "protect-v-recall",
+          "id": "protect-v-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “protect”？",
+          "options": [
+            "important, dangerous, or not joking",
+            "to keep someone or something safe",
+            "a set of connected parts that work together"
+          ],
+          "answer": "to keep someone or something safe",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "protect-v-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “protect” 核心结构？",
+          "options": [
+            "protect someone from",
+            "a simple system",
+            "a serious problem",
+            "protect the environment"
+          ],
+          "answer": "protect someone from",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "protect-v-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “protect” 最直接近义词？",
+          "options": [
+            "expose",
+            "system",
+            "serious",
+            "defend"
+          ],
+          "answer": "defend",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "protect-v-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “protect” 最直接反义词？",
+          "options": [
+            "system",
+            "serious",
+            "expose",
+            "defend"
+          ],
+          "answer": "expose",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "protect-v-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “protect” 的派生词？",
+          "options": [
+            "system",
+            "protection",
+            "defend",
+            "expose"
+          ],
+          "answer": "protection",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "protect-v-recall-definition",
           "type": "recall",
-          "prompt": "to keep someone or something safe。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：to keep someone or something safe",
           "answer": "protect",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "protect-v-collocation",
+          "id": "protect-v-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“保护”（v.）的本课目标词。",
+          "answer": "protect",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "protect-v-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：_____ someone from something",
+          "answer": "protect",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "protect-v-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：_____ someone from",
+          "answer": "protect",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "protect-v-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：_____ someone from",
           "answer": "protect",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "protect-v-sentence",
+          "id": "protect-v-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：_____ someone from",
+          "answer": "protect",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "protect-v-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：_____ the environment",
+          "answer": "protect",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "protect-v-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：A strong password _____ your account.",
+          "answer": "protects",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "protect-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “protect” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “protect” 写一个自然、真实的英文句子，含义必须符合词卡核心义“保护”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "protect-v-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “protect someone from” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -895,7 +1161,7 @@
         {
           "id": "protect-v-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “protect”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “protect” 和搭配 “protect someone from”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -908,37 +1174,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1322,7 +1604,7 @@
       },
       "questions": [
         {
-          "id": "encourage-v-meaning",
+          "id": "encourage-v-meaning-core",
           "type": "meaning_choice",
           "prompt": "“encourage”最核心的中文含义是？",
           "options": [
@@ -1335,25 +1617,150 @@
           "ai": false
         },
         {
-          "id": "encourage-v-recall",
+          "id": "encourage-v-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “encourage”？",
+          "options": [
+            "to give someone confidence or support",
+            "a position on a scale of amount or quality",
+            "normal and not forced"
+          ],
+          "answer": "to give someone confidence or support",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "encourage-v-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “encourage” 核心结构？",
+          "options": [
+            "skill level",
+            "sound natural",
+            "encourage discussion",
+            "encourage someone to do"
+          ],
+          "answer": "encourage someone to do",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "encourage-v-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “encourage” 最直接近义词？",
+          "options": [
+            "level",
+            "natural",
+            "motivate",
+            "discourage"
+          ],
+          "answer": "motivate",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "encourage-v-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “encourage” 最直接反义词？",
+          "options": [
+            "natural",
+            "discourage",
+            "motivate",
+            "level"
+          ],
+          "answer": "discourage",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "encourage-v-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “encourage” 的派生词？",
+          "options": [
+            "encouragement",
+            "motivate",
+            "discourage",
+            "level"
+          ],
+          "answer": "encouragement",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "encourage-v-recall-definition",
           "type": "recall",
-          "prompt": "to give someone confidence or support。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：to give someone confidence or support",
           "answer": "encourage",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "encourage-v-collocation",
+          "id": "encourage-v-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“鼓励；促进”（v.）的本课目标词。",
+          "answer": "encourage",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "encourage-v-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：_____ someone to do something",
+          "answer": "encourage",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "encourage-v-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：_____ someone to do",
+          "answer": "encourage",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "encourage-v-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：_____ someone to do",
           "answer": "encourage",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "encourage-v-sentence",
+          "id": "encourage-v-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：_____ someone to do",
+          "answer": "encourage",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "encourage-v-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：_____ discussion",
+          "answer": "encourage",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "encourage-v-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：The teacher encouraged us to speak more.（填入目标词）",
+          "answer": "encourage",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "encourage-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “encourage” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “encourage” 写一个自然、真实的英文句子，含义必须符合词卡核心义“鼓励；促进”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "encourage-v-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “encourage someone to do” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1361,7 +1768,7 @@
         {
           "id": "encourage-v-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “encourage”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “encourage” 和搭配 “encourage someone to do”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1374,37 +1781,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1795,7 +2218,7 @@
       },
       "questions": [
         {
-          "id": "solve-v-meaning",
+          "id": "solve-v-meaning-core",
           "type": "meaning_choice",
           "prompt": "“solve”最核心的中文含义是？",
           "options": [
@@ -1808,25 +2231,150 @@
           "ai": false
         },
         {
-          "id": "solve-v-recall",
+          "id": "solve-v-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “solve”？",
+          "options": [
+            "the importance or usefulness of something",
+            "easy to understand or see",
+            "to find an answer to a problem"
+          ],
+          "answer": "to find an answer to a problem",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "solve-v-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “solve” 核心结构？",
+          "options": [
+            "make something clear",
+            "solve an equation",
+            "solve a problem",
+            "great value"
+          ],
+          "answer": "solve a problem",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "solve-v-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “solve” 最直接近义词？",
+          "options": [
+            "clear",
+            "resolve",
+            "complicate",
+            "value"
+          ],
+          "answer": "resolve",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "solve-v-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “solve” 最直接反义词？",
+          "options": [
+            "complicate",
+            "resolve",
+            "value",
+            "clear"
+          ],
+          "answer": "complicate",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "solve-v-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “solve” 的派生词？",
+          "options": [
+            "resolve",
+            "complicate",
+            "value",
+            "solution"
+          ],
+          "answer": "solution",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "solve-v-recall-definition",
           "type": "recall",
-          "prompt": "to find an answer to a problem。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：to find an answer to a problem",
           "answer": "solve",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "solve-v-collocation",
+          "id": "solve-v-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“解决；解答”（v.）的本课目标词。",
+          "answer": "solve",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "solve-v-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：_____ a problem",
+          "answer": "solve",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "solve-v-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：_____ a problem",
+          "answer": "solve",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "solve-v-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：_____ a problem",
           "answer": "solve",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "solve-v-sentence",
+          "id": "solve-v-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：_____ a problem",
+          "answer": "solve",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "solve-v-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：_____ an equation",
+          "answer": "solve",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "solve-v-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：We need more information to _____ this problem.",
+          "answer": "solve",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "solve-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “solve” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “solve” 写一个自然、真实的英文句子，含义必须符合词卡核心义“解决；解答”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "solve-v-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “solve a problem” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1834,7 +2382,7 @@
         {
           "id": "solve-v-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “solve”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “solve” 和搭配 “solve a problem”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1847,37 +2395,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2268,7 +2832,7 @@
       },
       "questions": [
         {
-          "id": "express-v-meaning",
+          "id": "express-v-meaning-core",
           "type": "meaning_choice",
           "prompt": "“express”最核心的中文含义是？",
           "options": [
@@ -2281,25 +2845,150 @@
           "ai": false
         },
         {
-          "id": "express-v-recall",
+          "id": "express-v-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “express”？",
+          "options": [
+            "happening often or shared by many",
+            "to show a thought or feeling in words or actions",
+            "the way a person or thing acts"
+          ],
+          "answer": "to show a thought or feeling in words or actions",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "express-v-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “express” 核心结构？",
+          "options": [
+            "express your feelings",
+            "express an opinion",
+            "change behavior",
+            "a common mistake"
+          ],
+          "answer": "express an opinion",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "express-v-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “express” 最直接近义词？",
+          "options": [
+            "communicate",
+            "suppress",
+            "behavior",
+            "common"
+          ],
+          "answer": "communicate",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "express-v-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “express” 最直接反义词？",
+          "options": [
+            "communicate",
+            "behavior",
+            "common",
+            "suppress"
+          ],
+          "answer": "suppress",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "express-v-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “express” 的派生词？",
+          "options": [
+            "suppress",
+            "behavior",
+            "expression",
+            "communicate"
+          ],
+          "answer": "expression",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "express-v-recall-definition",
           "type": "recall",
-          "prompt": "to show a thought or feeling in words or actions。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：to show a thought or feeling in words or actions",
           "answer": "express",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "express-v-collocation",
+          "id": "express-v-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“表达”（v.）的本课目标词。",
+          "answer": "express",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "express-v-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：_____ an opinion",
+          "answer": "express",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "express-v-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：_____ an opinion",
+          "answer": "express",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "express-v-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：_____ an opinion",
           "answer": "express",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "express-v-sentence",
+          "id": "express-v-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：_____ an opinion",
+          "answer": "express",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "express-v-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：_____ your feelings",
+          "answer": "express",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "express-v-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：Try to _____ the idea in your own words.",
+          "answer": "express",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "express-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “express” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “express” 写一个自然、真实的英文句子，含义必须符合词卡核心义“表达”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "express-v-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “express an opinion” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2307,7 +2996,7 @@
         {
           "id": "express-v-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “express”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “express” 和搭配 “express an opinion”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2320,37 +3009,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

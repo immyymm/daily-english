@@ -514,7 +514,7 @@
   },
   "questions": [
     {
-      "id": "notice-v-meaning",
+      "id": "notice-v-meaning-core",
       "type": "meaning_choice",
       "prompt": "“notice”最核心的中文含义是？",
       "options": [
@@ -527,25 +527,150 @@
       "ai": false
     },
     {
-      "id": "notice-v-recall",
+      "id": "notice-v-meaning-english",
+      "type": "meaning_choice",
+      "prompt": "哪一项英文释义最符合词卡中的 “notice”？",
+      "options": [
+        "to like one thing more than another",
+        "to see, hear, or become aware of something",
+        "to appear to be true"
+      ],
+      "answer": "to see, hear, or become aware of something",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "notice-v-structure-choice",
+      "type": "meaning_choice",
+      "prompt": "哪一个是词卡要求优先记住的 “notice” 核心结构？",
+      "options": [
+        "notice that",
+        "notice something",
+        "seem to be",
+        "prefer A to B"
+      ],
+      "answer": "notice something",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "notice-v-synonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “notice” 最直接近义词？",
+      "options": [
+        "observe",
+        "ignore",
+        "note",
+        "seem"
+      ],
+      "answer": "observe",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "notice-v-antonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “notice” 最直接反义词？",
+      "options": [
+        "observe",
+        "note",
+        "seem",
+        "ignore"
+      ],
+      "answer": "ignore",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "notice-v-contrast-choice",
+      "type": "meaning_choice",
+      "prompt": "根据本词卡辨析，哪个词被列为 “notice” 的易混词？",
+      "options": [
+        "ignore",
+        "seem",
+        "note",
+        "observe"
+      ],
+      "answer": "note",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "notice-v-recall-definition",
       "type": "recall",
-      "prompt": "to become aware of something。请输入目标单词。",
+      "prompt": "根据英文释义写出目标词：to see, hear, or become aware of something",
       "answer": "notice",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "notice-v-collocation",
+      "id": "notice-v-recall-chinese",
+      "type": "recall",
+      "prompt": "写出符合“注意到；通知”（v. / n.）的本课目标词。",
+      "answer": "notice",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "notice-v-collocation-core",
       "type": "collocation",
       "prompt": "补全高频搭配：_____ a difference",
+      "answer": "notice",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "notice-v-collocation-structure",
+      "type": "collocation",
+      "prompt": "补全核心结构：_____ something",
+      "answer": "notice",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "notice-v-collocation-context",
+      "type": "collocation",
+      "prompt": "补全语境词组：_____ a difference",
       "answer": "notice",
       "stage": "T2",
       "ai": false
     },
     {
-      "id": "notice-v-sentence",
+      "id": "notice-v-collocation-fixed-1",
+      "type": "collocation",
+      "prompt": "补全固定搭配：_____ a difference",
+      "answer": "notice",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "notice-v-collocation-fixed-2",
+      "type": "collocation",
+      "prompt": "再补全一个固定搭配：_____ that",
+      "answer": "notice",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "notice-v-example-cloze",
+      "type": "collocation",
+      "prompt": "补全词卡核心例句：Did you _____ a change in her voice?",
+      "answer": "notice",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "notice-v-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “notice” 写一个自然、真实的英文句子。",
+      "prompt": "请用 “notice” 写一个自然、真实的英文句子，含义必须符合词卡核心义“注意到；通知”。",
+      "answer": "",
+      "stage": "T2",
+      "ai": true
+    },
+    {
+      "id": "notice-v-sentence-phrase",
+      "type": "free_sentence",
+      "prompt": "请用完整搭配 “notice a difference” 写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -553,7 +678,7 @@
     {
       "id": "notice-v-dialogue",
       "type": "dialogue",
-      "prompt": "在一段真实对话中自然使用 “notice”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “notice” 和搭配 “notice a difference”，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -566,37 +691,53 @@
       "free_sentence"
     ],
     "T1": [
+      "meaning_choice",
       "recall",
       "collocation"
     ],
     "T2": [
+      "meaning_choice",
       "recall",
       "collocation",
       "free_sentence"
     ],
     "T3": [
+      "meaning_choice",
       "recall",
+      "collocation",
       "dialogue"
     ],
     "T4": [
+      "meaning_choice",
       "recall",
+      "collocation",
+      "free_sentence",
       "dialogue"
     ],
     "T5": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T6": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T7": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.3",
+  "contentVersion": "2026.08.17.4",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；本卡依照用户词卡模板人工精校；音标为美式发音。"
 }

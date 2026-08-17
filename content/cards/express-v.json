@@ -385,7 +385,7 @@
   },
   "questions": [
     {
-      "id": "express-v-meaning",
+      "id": "express-v-meaning-core",
       "type": "meaning_choice",
       "prompt": "“express”最核心的中文含义是？",
       "options": [
@@ -398,25 +398,150 @@
       "ai": false
     },
     {
-      "id": "express-v-recall",
+      "id": "express-v-meaning-english",
+      "type": "meaning_choice",
+      "prompt": "哪一项英文释义最符合词卡中的 “express”？",
+      "options": [
+        "happening often or shared by many",
+        "to show a thought or feeling in words or actions",
+        "the way a person or thing acts"
+      ],
+      "answer": "to show a thought or feeling in words or actions",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "express-v-structure-choice",
+      "type": "meaning_choice",
+      "prompt": "哪一个是词卡要求优先记住的 “express” 核心结构？",
+      "options": [
+        "express your feelings",
+        "express an opinion",
+        "change behavior",
+        "a common mistake"
+      ],
+      "answer": "express an opinion",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "express-v-synonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “express” 最直接近义词？",
+      "options": [
+        "communicate",
+        "suppress",
+        "behavior",
+        "common"
+      ],
+      "answer": "communicate",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "express-v-antonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “express” 最直接反义词？",
+      "options": [
+        "communicate",
+        "behavior",
+        "common",
+        "suppress"
+      ],
+      "answer": "suppress",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "express-v-contrast-choice",
+      "type": "meaning_choice",
+      "prompt": "根据本词卡辨析，哪个词被列为 “express” 的派生词？",
+      "options": [
+        "suppress",
+        "behavior",
+        "expression",
+        "communicate"
+      ],
+      "answer": "expression",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "express-v-recall-definition",
       "type": "recall",
-      "prompt": "to show a thought or feeling in words or actions。请输入目标单词。",
+      "prompt": "根据英文释义写出目标词：to show a thought or feeling in words or actions",
       "answer": "express",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "express-v-collocation",
+      "id": "express-v-recall-chinese",
+      "type": "recall",
+      "prompt": "写出符合“表达”（v.）的本课目标词。",
+      "answer": "express",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "express-v-collocation-core",
       "type": "collocation",
       "prompt": "补全高频搭配：_____ an opinion",
+      "answer": "express",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "express-v-collocation-structure",
+      "type": "collocation",
+      "prompt": "补全核心结构：_____ an opinion",
+      "answer": "express",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "express-v-collocation-context",
+      "type": "collocation",
+      "prompt": "补全语境词组：_____ an opinion",
       "answer": "express",
       "stage": "T2",
       "ai": false
     },
     {
-      "id": "express-v-sentence",
+      "id": "express-v-collocation-fixed-1",
+      "type": "collocation",
+      "prompt": "补全固定搭配：_____ an opinion",
+      "answer": "express",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "express-v-collocation-fixed-2",
+      "type": "collocation",
+      "prompt": "再补全一个固定搭配：_____ your feelings",
+      "answer": "express",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "express-v-example-cloze",
+      "type": "collocation",
+      "prompt": "补全词卡核心例句：Try to _____ the idea in your own words.",
+      "answer": "express",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "express-v-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “express” 写一个自然、真实的英文句子。",
+      "prompt": "请用 “express” 写一个自然、真实的英文句子，含义必须符合词卡核心义“表达”。",
+      "answer": "",
+      "stage": "T2",
+      "ai": true
+    },
+    {
+      "id": "express-v-sentence-phrase",
+      "type": "free_sentence",
+      "prompt": "请用完整搭配 “express an opinion” 写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -424,7 +549,7 @@
     {
       "id": "express-v-dialogue",
       "type": "dialogue",
-      "prompt": "在一段真实对话中自然使用 “express”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “express” 和搭配 “express an opinion”，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -437,37 +562,53 @@
       "free_sentence"
     ],
     "T1": [
+      "meaning_choice",
       "recall",
       "collocation"
     ],
     "T2": [
+      "meaning_choice",
       "recall",
       "collocation",
       "free_sentence"
     ],
     "T3": [
+      "meaning_choice",
       "recall",
+      "collocation",
       "dialogue"
     ],
     "T4": [
+      "meaning_choice",
       "recall",
+      "collocation",
+      "free_sentence",
       "dialogue"
     ],
     "T5": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T6": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T7": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.3",
+  "contentVersion": "2026.08.17.4",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

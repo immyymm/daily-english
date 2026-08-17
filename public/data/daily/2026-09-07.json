@@ -1,7 +1,7 @@
 {
   "date": "2026-09-07",
   "dayNumber": 22,
-  "contentVersion": "2026.08.17.3",
+  "contentVersion": "2026.08.17.4",
   "cards": [
     {
       "id": "instead-adv",
@@ -381,7 +381,7 @@
       },
       "questions": [
         {
-          "id": "instead-adv-meaning",
+          "id": "instead-adv-meaning-core",
           "type": "meaning_choice",
           "prompt": "“instead”最核心的中文含义是？",
           "options": [
@@ -394,25 +394,150 @@
           "ai": false
         },
         {
-          "id": "instead-adv-recall",
+          "id": "instead-adv-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “instead”？",
+          "options": [
+            "to learn about a subject carefully",
+            "an ability learned through practice",
+            "in place of someone or something else"
+          ],
+          "answer": "in place of someone or something else",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "instead-adv-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “instead” 核心结构？",
+          "options": [
+            "do something instead",
+            "instead of",
+            "study for a test",
+            "develop a skill"
+          ],
+          "answer": "instead of",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "instead-adv-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “instead” 最直接近义词？",
+          "options": [
+            "alternatively",
+            "also",
+            "study",
+            "skill"
+          ],
+          "answer": "alternatively",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "instead-adv-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “instead” 最直接反义词？",
+          "options": [
+            "alternatively",
+            "study",
+            "skill",
+            "also"
+          ],
+          "answer": "also",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "instead-adv-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “instead” 的相关近义词？",
+          "options": [
+            "study",
+            "skill",
+            "alternatively",
+            "also"
+          ],
+          "answer": "alternatively",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "instead-adv-recall-definition",
           "type": "recall",
-          "prompt": "in place of someone or something else。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：in place of someone or something else",
           "answer": "instead",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "instead-adv-collocation",
+          "id": "instead-adv-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“代替；反而”（adv.）的本课目标词。",
+          "answer": "instead",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "instead-adv-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：_____ of",
+          "answer": "instead",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "instead-adv-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：_____ of",
+          "answer": "instead",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "instead-adv-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：_____ of",
           "answer": "instead",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "instead-adv-sentence",
+          "id": "instead-adv-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：_____ of",
+          "answer": "instead",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "instead-adv-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：do something _____",
+          "answer": "instead",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "instead-adv-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：Try using an English definition _____ of a translation.",
+          "answer": "instead",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "instead-adv-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “instead” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “instead” 写一个自然、真实的英文句子，含义必须符合词卡核心义“代替；反而”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "instead-adv-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “instead of” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -420,7 +545,7 @@
         {
           "id": "instead-adv-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “instead”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “instead” 和搭配 “instead of”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -433,37 +558,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -839,7 +980,7 @@
       },
       "questions": [
         {
-          "id": "however-adv-meaning",
+          "id": "however-adv-meaning-core",
           "type": "meaning_choice",
           "prompt": "“however”最核心的中文含义是？",
           "options": [
@@ -852,25 +993,150 @@
           "ai": false
         },
         {
-          "id": "however-adv-recall",
+          "id": "however-adv-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “however”？",
+          "options": [
+            "an advantage or helpful effect",
+            "used to introduce a contrast",
+            "to gain knowledge or a skill"
+          ],
+          "answer": "used to introduce a contrast",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "however-adv-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “however” 核心结构？",
+          "options": [
+            "however, the result",
+            "learn from mistakes",
+            "benefit from",
+            "however difficult"
+          ],
+          "answer": "however, the result",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "however-adv-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “however” 最直接近义词？",
+          "options": [
+            "therefore",
+            "learn",
+            "benefit",
+            "nevertheless"
+          ],
+          "answer": "nevertheless",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "however-adv-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “however” 最直接反义词？",
+          "options": [
+            "learn",
+            "benefit",
+            "therefore",
+            "nevertheless"
+          ],
+          "answer": "therefore",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "however-adv-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “however” 的相关近义词？",
+          "options": [
+            "benefit",
+            "nevertheless",
+            "therefore",
+            "learn"
+          ],
+          "answer": "nevertheless",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "however-adv-recall-definition",
           "type": "recall",
-          "prompt": "used to introduce a contrast。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：used to introduce a contrast",
           "answer": "however",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "however-adv-collocation",
+          "id": "however-adv-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“然而；不过”（adv.）的本课目标词。",
+          "answer": "however",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "however-adv-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：_____ difficult",
+          "answer": "however",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "however-adv-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：_____, the result",
+          "answer": "however",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "however-adv-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：_____, the result",
           "answer": "however",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "however-adv-sentence",
+          "id": "however-adv-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：_____, the result",
+          "answer": "however",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "however-adv-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：_____ difficult",
+          "answer": "however",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "however-adv-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：The task is short; _____, it requires focus.",
+          "answer": "however",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "however-adv-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “however” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “however” 写一个自然、真实的英文句子，含义必须符合词卡核心义“然而；不过”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "however-adv-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “however, the result” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -878,7 +1144,7 @@
         {
           "id": "however-adv-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “however”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “however” 和搭配 “however, the result”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -891,37 +1157,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1305,7 +1587,7 @@
       },
       "questions": [
         {
-          "id": "finally-adv-meaning",
+          "id": "finally-adv-meaning-core",
           "type": "meaning_choice",
           "prompt": "“finally”最核心的中文含义是？",
           "options": [
@@ -1318,25 +1600,150 @@
           "ai": false
         },
         {
-          "id": "finally-adv-recall",
+          "id": "finally-adv-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “finally”？",
+          "options": [
+            "after a long time or at the end",
+            "to say words or talk to someone",
+            "to make something better"
+          ],
+          "answer": "after a long time or at the end",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "finally-adv-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “finally” 核心结构？",
+          "options": [
+            "speak to someone",
+            "improve your skills",
+            "finally arrive",
+            "finally decide"
+          ],
+          "answer": "finally decide",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "finally-adv-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “finally” 最直接近义词？",
+          "options": [
+            "speak",
+            "improve",
+            "eventually",
+            "initially"
+          ],
+          "answer": "eventually",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "finally-adv-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “finally” 最直接反义词？",
+          "options": [
+            "improve",
+            "initially",
+            "eventually",
+            "speak"
+          ],
+          "answer": "initially",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "finally-adv-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “finally” 的派生词？",
+          "options": [
+            "final",
+            "eventually",
+            "initially",
+            "speak"
+          ],
+          "answer": "final",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "finally-adv-recall-definition",
           "type": "recall",
-          "prompt": "after a long time or at the end。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：after a long time or at the end",
           "answer": "finally",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "finally-adv-collocation",
+          "id": "finally-adv-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“最后；终于”（adv.）的本课目标词。",
+          "answer": "finally",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "finally-adv-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：_____ decide",
+          "answer": "finally",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "finally-adv-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：_____ decide",
+          "answer": "finally",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "finally-adv-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：_____ decide",
           "answer": "finally",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "finally-adv-sentence",
+          "id": "finally-adv-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：_____ decide",
+          "answer": "finally",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "finally-adv-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：_____ arrive",
+          "answer": "finally",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "finally-adv-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：I _____ found the word I needed.",
+          "answer": "finally",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "finally-adv-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “finally” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “finally” 写一个自然、真实的英文句子，含义必须符合词卡核心义“最后；终于”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "finally-adv-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “finally decide” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1344,7 +1751,7 @@
         {
           "id": "finally-adv-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “finally”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “finally” 和搭配 “finally decide”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1357,37 +1764,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1778,7 +2201,7 @@
       },
       "questions": [
         {
-          "id": "simply-adv-meaning",
+          "id": "simply-adv-meaning-core",
           "type": "meaning_choice",
           "prompt": "“simply”最核心的中文含义是？",
           "options": [
@@ -1791,25 +2214,150 @@
           "ai": false
         },
         {
-          "id": "simply-adv-recall",
+          "id": "simply-adv-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “simply”？",
+          "options": [
+            "to form words on a surface or compose text",
+            "to become aware of something",
+            "in an easy or plain way"
+          ],
+          "answer": "in an easy or plain way",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "simply-adv-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “simply” 核心结构？",
+          "options": [
+            "notice a difference",
+            "simply because",
+            "simply put",
+            "write down"
+          ],
+          "answer": "simply put",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "simply-adv-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “simply” 最直接近义词？",
+          "options": [
+            "notice",
+            "plainly",
+            "in a complex way",
+            "write"
+          ],
+          "answer": "plainly",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "simply-adv-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “simply” 最直接反义词？",
+          "options": [
+            "in a complex way",
+            "plainly",
+            "write",
+            "notice"
+          ],
+          "answer": "in a complex way",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "simply-adv-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “simply” 的派生词？",
+          "options": [
+            "plainly",
+            "in a complex way",
+            "write",
+            "simple"
+          ],
+          "answer": "simple",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "simply-adv-recall-definition",
           "type": "recall",
-          "prompt": "in an easy or plain way。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：in an easy or plain way",
           "answer": "simply",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "simply-adv-collocation",
+          "id": "simply-adv-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“简单地；仅仅”（adv.）的本课目标词。",
+          "answer": "simply",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "simply-adv-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：_____ put",
+          "answer": "simply",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "simply-adv-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：_____ put",
+          "answer": "simply",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "simply-adv-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：_____ put",
           "answer": "simply",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "simply-adv-sentence",
+          "id": "simply-adv-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：_____ put",
+          "answer": "simply",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "simply-adv-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：_____ because",
+          "answer": "simply",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "simply-adv-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：_____ put, practice helps memory.",
+          "answer": "Simply",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "simply-adv-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “simply” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “simply” 写一个自然、真实的英文句子，含义必须符合词卡核心义“简单地；仅仅”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "simply-adv-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “simply put” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1817,7 +2365,7 @@
         {
           "id": "simply-adv-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “simply”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “simply” 和搭配 “simply put”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1830,37 +2378,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2244,7 +2808,7 @@
       },
       "questions": [
         {
-          "id": "quickly-adv-meaning",
+          "id": "quickly-adv-meaning-core",
           "type": "meaning_choice",
           "prompt": "“quickly”最核心的中文含义是？",
           "options": [
@@ -2257,25 +2821,150 @@
           "ai": false
         },
         {
-          "id": "quickly-adv-recall",
+          "id": "quickly-adv-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “quickly”？",
+          "options": [
+            "to help someone or hold something up",
+            "at a fast speed",
+            "to understand written words"
+          ],
+          "answer": "at a fast speed",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "quickly-adv-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “quickly” 核心结构？",
+          "options": [
+            "learn quickly",
+            "respond quickly",
+            "read aloud",
+            "support a decision"
+          ],
+          "answer": "respond quickly",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "quickly-adv-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “quickly” 最直接近义词？",
+          "options": [
+            "rapidly",
+            "slowly",
+            "read",
+            "support"
+          ],
+          "answer": "rapidly",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "quickly-adv-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “quickly” 最直接反义词？",
+          "options": [
+            "rapidly",
+            "read",
+            "support",
+            "slowly"
+          ],
+          "answer": "slowly",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "quickly-adv-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “quickly” 的派生词？",
+          "options": [
+            "slowly",
+            "read",
+            "quick",
+            "rapidly"
+          ],
+          "answer": "quick",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "quickly-adv-recall-definition",
           "type": "recall",
-          "prompt": "at a fast speed。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：at a fast speed",
           "answer": "quickly",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "quickly-adv-collocation",
+          "id": "quickly-adv-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“迅速地”（adv.）的本课目标词。",
+          "answer": "quickly",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "quickly-adv-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：respond _____",
+          "answer": "quickly",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "quickly-adv-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：respond _____",
+          "answer": "quickly",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "quickly-adv-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：respond _____",
           "answer": "quickly",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "quickly-adv-sentence",
+          "id": "quickly-adv-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：respond _____",
+          "answer": "quickly",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "quickly-adv-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：learn _____",
+          "answer": "quickly",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "quickly-adv-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：Try to recall the word _____.",
+          "answer": "quickly",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "quickly-adv-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “quickly” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “quickly” 写一个自然、真实的英文句子，含义必须符合词卡核心义“迅速地”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "quickly-adv-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “respond quickly” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2283,7 +2972,7 @@
         {
           "id": "quickly-adv-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “quickly”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “quickly” 和搭配 “respond quickly”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2296,37 +2985,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

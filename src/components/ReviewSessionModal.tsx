@@ -1,6 +1,7 @@
 import { ArrowRight, Brain, CheckCircle2, CloudOff, LoaderCircle, RotateCcw, Sparkles } from 'lucide-react';
 import { useEffect, useMemo, useState } from 'react';
 import { objectiveScore } from '../learning/reviewEngine';
+import { selectReviewQuestions } from '../learning/questionSelection';
 import { evaluateAnswer } from '../services/ai';
 import type { AIEvaluation, Attempt, CardProgress, EvaluationResult, QuestionType, WordCard } from '../types';
 import { LocalRecorder } from './LocalRecorder';
@@ -20,16 +21,15 @@ const id = () => typeof crypto.randomUUID === 'function'
   ? crypto.randomUUID()
   : Date.now().toString(36) + Math.random().toString(36).slice(2);
 
-function buildQuestions(card: WordCard, progress: CardProgress) {
-  return card.reviewStages[progress.stage].map((type, index) => {
-    const source = card.questions.find((question) => question.type === type) ?? card.questions[0];
-    return {
-      ...source,
-      id: source.id + '-' + progress.stage + '-' + index,
-      stage: progress.stage
-    };
-  });
-}
+const questionLabels: Record<QuestionType, string> = {
+  meaning_choice: '词义与辨析',
+  recall: '主动回忆',
+  collocation: '搭配与例句',
+  free_sentence: '真实造句',
+  dialogue: '语境对话',
+  weekly_writing: '综合写作',
+  weekly_speaking: '即兴口语'
+};
 
 export function ReviewSessionModal({
   open,
@@ -41,7 +41,7 @@ export function ReviewSessionModal({
   onComplete
 }: ReviewSessionModalProps) {
   const questions = useMemo(
-    () => card && progress ? buildQuestions(card, progress) : [],
+    () => card && progress ? selectReviewQuestions(card, progress.stage) : [],
     [card, progress]
   );
   const [questionIndex, setQuestionIndex] = useState(0);
@@ -175,6 +175,7 @@ export function ReviewSessionModal({
 
   const isOpenAnswer = question.ai;
   const showRecorder = question.type === 'dialogue';
+  const hasOptions = Boolean(question.options?.length);
 
   return (
     <ModalShell
@@ -185,17 +186,26 @@ export function ReviewSessionModal({
     >
       <div className="quiz-progress"><span style={{ width: ((questionIndex + 1) / questions.length * 100) + '%' }} /></div>
       <section className="quiz-prompt">
-        <span className="quiz-type">{isOpenAnswer ? <Sparkles size={15} /> : <Brain size={15} />}{isOpenAnswer ? 'AI 辅助评分' : '本地评分'}</span>
+        <span className="quiz-type">{isOpenAnswer ? <Sparkles size={15} /> : <Brain size={15} />}{questionLabels[question.type]} · {isOpenAnswer ? 'AI 辅助评分' : '本地评分'}</span>
         <h3>{question.prompt}</h3>
-        {question.type === 'recall' && <p>{card.coreMemory.english}</p>}
+        <p>本题来自完整词卡内容；本阶段共抽取 {questions.length} 个不同考点。</p>
       </section>
 
       {showRecorder && <LocalRecorder shownAt={shownAt} onStarted={setSpeechLatency} />}
 
-      {question.type === 'meaning_choice' && !feedback ? (
+      {hasOptions ? (
         <div className="choice-list">
           {question.options?.map((option) => (
-            <button key={option} onClick={() => setAnswer(option)} className={answer === option ? 'selected' : ''}>
+            <button
+              key={option}
+              onClick={() => setAnswer(option)}
+              disabled={Boolean(feedback)}
+              className={[
+                answer === option ? 'selected' : '',
+                feedback && option === question.answer ? 'correct-option' : '',
+                feedback && answer === option && option !== question.answer ? 'wrong-option' : ''
+              ].filter(Boolean).join(' ')}
+            >
               <span>{option}</span>{answer === option && <CheckCircle2 size={18} />}
             </button>
           ))}

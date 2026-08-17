@@ -1,7 +1,7 @@
 {
   "date": "2026-09-06",
   "dayNumber": 21,
-  "contentVersion": "2026.08.17.3",
+  "contentVersion": "2026.08.17.4",
   "cards": [
     {
       "id": "actually-adv",
@@ -391,7 +391,7 @@
       },
       "questions": [
         {
-          "id": "actually-adv-meaning",
+          "id": "actually-adv-meaning-core",
           "type": "meaning_choice",
           "prompt": "“actually”最核心的中文含义是？",
           "options": [
@@ -404,25 +404,150 @@
           "ai": false
         },
         {
-          "id": "actually-adv-recall",
+          "id": "actually-adv-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “actually”？",
+          "options": [
+            "a set of actions intended to achieve something",
+            "used to state what is really true",
+            "with another person or thing"
+          ],
+          "answer": "used to state what is really true",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "actually-adv-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “actually” 核心结构？",
+          "options": [
+            "make a plan",
+            "actually happen",
+            "actually mean",
+            "work together"
+          ],
+          "answer": "actually mean",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "actually-adv-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “actually” 最直接近义词？",
+          "options": [
+            "together",
+            "really",
+            "supposedly",
+            "currently"
+          ],
+          "answer": "really",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "actually-adv-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “actually” 最直接反义词？",
+          "options": [
+            "supposedly",
+            "really",
+            "currently",
+            "together"
+          ],
+          "answer": "supposedly",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "actually-adv-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “actually” 的易混词？",
+          "options": [
+            "really",
+            "supposedly",
+            "together",
+            "currently"
+          ],
+          "answer": "currently",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "actually-adv-recall-definition",
           "type": "recall",
-          "prompt": "used to state what is really true。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：used to state what is really true",
           "answer": "actually",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "actually-adv-collocation",
+          "id": "actually-adv-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“实际上；其实”（adv.）的本课目标词。",
+          "answer": "actually",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "actually-adv-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：_____ mean",
+          "answer": "actually",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "actually-adv-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：_____ mean",
+          "answer": "actually",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "actually-adv-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：_____ mean",
           "answer": "actually",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "actually-adv-sentence",
+          "id": "actually-adv-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：_____ mean",
+          "answer": "actually",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "actually-adv-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：_____ happen",
+          "answer": "actually",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "actually-adv-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：I thought it was hard, but it was _____ simple.",
+          "answer": "actually",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "actually-adv-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “actually” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “actually” 写一个自然、真实的英文句子，含义必须符合词卡核心义“实际上；其实”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "actually-adv-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “actually mean” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -430,7 +555,7 @@
         {
           "id": "actually-adv-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “actually”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “actually” 和搭配 “actually mean”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -443,37 +568,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -864,7 +1005,7 @@
       },
       "questions": [
         {
-          "id": "probably-adv-meaning",
+          "id": "probably-adv-meaning-core",
           "type": "meaning_choice",
           "prompt": "“probably”最核心的中文含义是？",
           "options": [
@@ -877,25 +1018,150 @@
           "ai": false
         },
         {
-          "id": "probably-adv-recall",
+          "id": "probably-adv-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “probably”？",
+          "options": [
+            "used when something is likely",
+            "toward the front or future",
+            "something that people do"
+          ],
+          "answer": "used when something is likely",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "probably-adv-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “probably” 核心结构？",
+          "options": [
+            "probably because",
+            "will probably",
+            "look forward to",
+            "daily activity"
+          ],
+          "answer": "will probably",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "probably-adv-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “probably” 最直接近义词？",
+          "options": [
+            "likely",
+            "possibly not",
+            "forward",
+            "activity"
+          ],
+          "answer": "likely",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "probably-adv-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “probably” 最直接反义词？",
+          "options": [
+            "likely",
+            "forward",
+            "activity",
+            "possibly not"
+          ],
+          "answer": "possibly not",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "probably-adv-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “probably” 的派生词？",
+          "options": [
+            "possibly not",
+            "forward",
+            "probable",
+            "likely"
+          ],
+          "answer": "probable",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "probably-adv-recall-definition",
           "type": "recall",
-          "prompt": "used when something is likely。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：used when something is likely",
           "answer": "probably",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "probably-adv-collocation",
+          "id": "probably-adv-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“很可能”（adv.）的本课目标词。",
+          "answer": "probably",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "probably-adv-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：will _____",
+          "answer": "probably",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "probably-adv-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：will _____",
+          "answer": "probably",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "probably-adv-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：will _____",
           "answer": "probably",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "probably-adv-sentence",
+          "id": "probably-adv-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：will _____",
+          "answer": "probably",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "probably-adv-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：_____ because",
+          "answer": "probably",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "probably-adv-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：She will _____ arrive before noon.",
+          "answer": "probably",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "probably-adv-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “probably” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “probably” 写一个自然、真实的英文句子，含义必须符合词卡核心义“很可能”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "probably-adv-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “will probably” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -903,7 +1169,7 @@
         {
           "id": "probably-adv-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “probably”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “probably” 和搭配 “will probably”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -916,37 +1182,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1338,7 +1620,7 @@
       },
       "questions": [
         {
-          "id": "especially-adv-meaning",
+          "id": "especially-adv-meaning-core",
           "type": "meaning_choice",
           "prompt": "“especially”最核心的中文含义是？",
           "options": [
@@ -1351,25 +1633,150 @@
           "ai": false
         },
         {
-          "id": "especially-adv-recall",
+          "id": "especially-adv-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “especially”？",
+          "options": [
+            "as much as is needed",
+            "a very short period of time",
+            "more than usual or more than others"
+          ],
+          "answer": "more than usual or more than others",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "especially-adv-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “especially” 核心结构？",
+          "options": [
+            "especially useful",
+            "good enough",
+            "at the moment",
+            "especially important"
+          ],
+          "answer": "especially useful",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "especially-adv-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “especially” 最直接近义词？",
+          "options": [
+            "generally",
+            "specially",
+            "enough",
+            "particularly"
+          ],
+          "answer": "particularly",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "especially-adv-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “especially” 最直接反义词？",
+          "options": [
+            "specially",
+            "enough",
+            "generally",
+            "particularly"
+          ],
+          "answer": "generally",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "especially-adv-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “especially” 的易混词？",
+          "options": [
+            "enough",
+            "specially",
+            "particularly",
+            "generally"
+          ],
+          "answer": "specially",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "especially-adv-recall-definition",
           "type": "recall",
-          "prompt": "more than usual or more than others。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：more than usual or more than others",
           "answer": "especially",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "especially-adv-collocation",
+          "id": "especially-adv-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“尤其；特别”（adv.）的本课目标词。",
+          "answer": "especially",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "especially-adv-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：_____ useful",
+          "answer": "especially",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "especially-adv-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：_____ useful",
+          "answer": "especially",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "especially-adv-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：_____ useful",
           "answer": "especially",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "especially-adv-sentence",
+          "id": "especially-adv-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：_____ useful",
+          "answer": "especially",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "especially-adv-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：_____ important",
+          "answer": "especially",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "especially-adv-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：This tip is _____ useful for beginners.",
+          "answer": "especially",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "especially-adv-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “especially” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “especially” 写一个自然、真实的英文句子，含义必须符合词卡核心义“尤其；特别”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "especially-adv-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “especially useful” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1377,7 +1784,7 @@
         {
           "id": "especially-adv-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “especially”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “especially” 和搭配 “especially useful”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1390,37 +1797,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1804,7 +2227,7 @@
       },
       "questions": [
         {
-          "id": "recently-adv-meaning",
+          "id": "recently-adv-meaning-core",
           "type": "meaning_choice",
           "prompt": "“recently”最核心的中文含义是？",
           "options": [
@@ -1817,25 +2240,150 @@
           "ai": false
         },
         {
-          "id": "recently-adv-recall",
+          "id": "recently-adv-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “recently”？",
+          "options": [
+            "the set of conditions at a particular time",
+            "not long ago",
+            "the condition of body and mind"
+          ],
+          "answer": "not long ago",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "recently-adv-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “recently” 核心结构？",
+          "options": [
+            "mental health",
+            "deal with a situation",
+            "until recently",
+            "have recently done"
+          ],
+          "answer": "have recently done",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "recently-adv-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “recently” 最直接近义词？",
+          "options": [
+            "health",
+            "situation",
+            "lately",
+            "formerly"
+          ],
+          "answer": "lately",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "recently-adv-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “recently” 最直接反义词？",
+          "options": [
+            "situation",
+            "formerly",
+            "lately",
+            "health"
+          ],
+          "answer": "formerly",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "recently-adv-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “recently” 的派生词？",
+          "options": [
+            "recent",
+            "lately",
+            "formerly",
+            "health"
+          ],
+          "answer": "recent",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "recently-adv-recall-definition",
           "type": "recall",
-          "prompt": "not long ago。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：not long ago",
           "answer": "recently",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "recently-adv-collocation",
+          "id": "recently-adv-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“最近”（adv.）的本课目标词。",
+          "answer": "recently",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "recently-adv-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：have _____ done",
+          "answer": "recently",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "recently-adv-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：have _____ done",
+          "answer": "recently",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "recently-adv-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：have _____ done",
           "answer": "recently",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "recently-adv-sentence",
+          "id": "recently-adv-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：have _____ done",
+          "answer": "recently",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "recently-adv-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：until _____",
+          "answer": "recently",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "recently-adv-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：I have _____ started keeping a journal.",
+          "answer": "recently",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "recently-adv-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “recently” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “recently” 写一个自然、真实的英文句子，含义必须符合词卡核心义“最近”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "recently-adv-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “have recently done” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1843,7 +2391,7 @@
         {
           "id": "recently-adv-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “recently”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “recently” 和搭配 “have recently done”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1856,37 +2404,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2278,7 +2842,7 @@
       },
       "questions": [
         {
-          "id": "nearly-adv-meaning",
+          "id": "nearly-adv-meaning-core",
           "type": "meaning_choice",
           "prompt": "“nearly”最核心的中文含义是？",
           "options": [
@@ -2291,25 +2855,150 @@
           "ai": false
         },
         {
-          "id": "nearly-adv-recall",
+          "id": "nearly-adv-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “nearly”？",
+          "options": [
+            "almost but not completely",
+            "activity done for a purpose or job",
+            "a system people use to communicate"
+          ],
+          "answer": "almost but not completely",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "nearly-adv-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “nearly” 核心结构？",
+          "options": [
+            "language learning",
+            "nearly all",
+            "nearly finished",
+            "work on something"
+          ],
+          "answer": "nearly finished",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "nearly-adv-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “nearly” 最直接近义词？",
+          "options": [
+            "work",
+            "almost",
+            "exactly",
+            "near"
+          ],
+          "answer": "almost",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "nearly-adv-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “nearly” 最直接反义词？",
+          "options": [
+            "exactly",
+            "almost",
+            "near",
+            "work"
+          ],
+          "answer": "exactly",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "nearly-adv-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “nearly” 的易混词？",
+          "options": [
+            "almost",
+            "exactly",
+            "work",
+            "near"
+          ],
+          "answer": "near",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "nearly-adv-recall-definition",
           "type": "recall",
-          "prompt": "almost but not completely。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：almost but not completely",
           "answer": "nearly",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "nearly-adv-collocation",
+          "id": "nearly-adv-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“几乎；差不多”（adv.）的本课目标词。",
+          "answer": "nearly",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "nearly-adv-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：_____ finished",
+          "answer": "nearly",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "nearly-adv-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：_____ finished",
+          "answer": "nearly",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "nearly-adv-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：_____ finished",
           "answer": "nearly",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "nearly-adv-sentence",
+          "id": "nearly-adv-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：_____ finished",
+          "answer": "nearly",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "nearly-adv-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：_____ all",
+          "answer": "nearly",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "nearly-adv-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：I am _____ finished with the report.",
+          "answer": "nearly",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "nearly-adv-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “nearly” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “nearly” 写一个自然、真实的英文句子，含义必须符合词卡核心义“几乎；差不多”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "nearly-adv-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “nearly finished” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2317,7 +3006,7 @@
         {
           "id": "nearly-adv-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “nearly”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “nearly” 和搭配 “nearly finished”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2330,37 +3019,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

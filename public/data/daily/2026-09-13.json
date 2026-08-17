@@ -1,7 +1,7 @@
 {
   "date": "2026-09-13",
   "dayNumber": 28,
-  "contentVersion": "2026.08.17.3",
+  "contentVersion": "2026.08.17.4",
   "cards": [
     {
       "id": "question-n",
@@ -396,7 +396,7 @@
       },
       "questions": [
         {
-          "id": "question-n-meaning",
+          "id": "question-n-meaning-core",
           "type": "meaning_choice",
           "prompt": "“question”最核心的中文含义是？",
           "options": [
@@ -409,25 +409,150 @@
           "ai": false
         },
         {
-          "id": "question-n-recall",
+          "id": "question-n-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “question”？",
+          "options": [
+            "to help someone or hold something up",
+            "to make ready for something",
+            "a sentence used to ask for information"
+          ],
+          "answer": "a sentence used to ask for information",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "question-n-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “question” 核心结构？",
+          "options": [
+            "support a decision",
+            "prepare for a test",
+            "answer a question",
+            "ask a question"
+          ],
+          "answer": "ask a question",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "question-n-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “question” 最直接近义词？",
+          "options": [
+            "support",
+            "prepare",
+            "inquiry",
+            "answer"
+          ],
+          "answer": "inquiry",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "question-n-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “question” 最直接反义词？",
+          "options": [
+            "prepare",
+            "answer",
+            "inquiry",
+            "support"
+          ],
+          "answer": "answer",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "question-n-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “question” 的派生词？",
+          "options": [
+            "questionable",
+            "inquiry",
+            "answer",
+            "support"
+          ],
+          "answer": "questionable",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "question-n-recall-definition",
           "type": "recall",
-          "prompt": "a sentence used to ask for information。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：a sentence used to ask for information",
           "answer": "question",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "question-n-collocation",
+          "id": "question-n-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“问题；质疑”（n. / v.）的本课目标词。",
+          "answer": "question",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "question-n-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：ask a _____",
+          "answer": "question",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "question-n-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：ask a _____",
+          "answer": "question",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "question-n-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：ask a _____",
           "answer": "question",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "question-n-sentence",
+          "id": "question-n-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：ask a _____",
+          "answer": "question",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "question-n-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：answer a _____",
+          "answer": "question",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "question-n-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：Do not be afraid to ask a _____.",
+          "answer": "question",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "question-n-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “question” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “question” 写一个自然、真实的英文句子，含义必须符合词卡核心义“问题；质疑”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "question-n-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “ask a question” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -435,7 +560,7 @@
         {
           "id": "question-n-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “question”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “question” 和搭配 “ask a question”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -448,37 +573,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -870,7 +1011,7 @@
       },
       "questions": [
         {
-          "id": "story-n-meaning",
+          "id": "story-n-meaning-core",
           "type": "meaning_choice",
           "prompt": "“story”最核心的中文含义是？",
           "options": [
@@ -883,25 +1024,150 @@
           "ai": false
         },
         {
-          "id": "story-n-recall",
+          "id": "story-n-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “story”？",
+          "options": [
+            "to succeed in reaching a goal",
+            "an account of events",
+            "expected to happen or be true"
+          ],
+          "answer": "an account of events",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "story-n-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “story” 核心结构？",
+          "options": [
+            "achieve a goal",
+            "true story",
+            "tell a story",
+            "be likely to"
+          ],
+          "answer": "tell a story",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "story-n-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “story” 最直接近义词？",
+          "options": [
+            "likely",
+            "tale",
+            "fact",
+            "history"
+          ],
+          "answer": "tale",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "story-n-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “story” 最直接反义词？",
+          "options": [
+            "fact",
+            "tale",
+            "history",
+            "likely"
+          ],
+          "answer": "fact",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "story-n-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “story” 的易混词？",
+          "options": [
+            "tale",
+            "fact",
+            "likely",
+            "history"
+          ],
+          "answer": "history",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "story-n-recall-definition",
           "type": "recall",
-          "prompt": "an account of events。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：an account of events",
           "answer": "story",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "story-n-collocation",
+          "id": "story-n-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“故事；报道”（n.）的本课目标词。",
+          "answer": "story",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "story-n-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：tell a _____",
+          "answer": "story",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "story-n-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：tell a _____",
+          "answer": "story",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "story-n-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：tell a _____",
           "answer": "story",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "story-n-sentence",
+          "id": "story-n-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：tell a _____",
+          "answer": "story",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "story-n-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：true _____",
+          "answer": "story",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "story-n-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：Tell a short _____ using three new words.",
+          "answer": "story",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "story-n-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “story” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “story” 写一个自然、真实的英文句子，含义必须符合词卡核心义“故事；报道”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "story-n-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “tell a story” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -909,7 +1175,7 @@
         {
           "id": "story-n-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “story”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “story” 和搭配 “tell a story”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -922,37 +1188,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1344,7 +1626,7 @@
       },
       "questions": [
         {
-          "id": "idea-n-meaning",
+          "id": "idea-n-meaning-core",
           "type": "meaning_choice",
           "prompt": "“idea”最核心的中文含义是？",
           "options": [
@@ -1357,25 +1639,150 @@
           "ai": false
         },
         {
-          "id": "idea-n-recall",
+          "id": "idea-n-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “idea”？",
+          "options": [
+            "a thought or suggestion",
+            "to succeed in doing or controlling something",
+            "to keep away from something"
+          ],
+          "answer": "a thought or suggestion",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "idea-n-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “idea” 核心结构？",
+          "options": [
+            "good idea",
+            "have an idea",
+            "manage to do something",
+            "avoid doing something"
+          ],
+          "answer": "have an idea",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "idea-n-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “idea” 最直接近义词？",
+          "options": [
+            "thought",
+            "certainty",
+            "opinion",
+            "manage"
+          ],
+          "answer": "thought",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "idea-n-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “idea” 最直接反义词？",
+          "options": [
+            "thought",
+            "opinion",
+            "manage",
+            "certainty"
+          ],
+          "answer": "certainty",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "idea-n-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “idea” 的易混词？",
+          "options": [
+            "certainty",
+            "manage",
+            "opinion",
+            "thought"
+          ],
+          "answer": "opinion",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "idea-n-recall-definition",
           "type": "recall",
-          "prompt": "a thought or suggestion。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：a thought or suggestion",
           "answer": "idea",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "idea-n-collocation",
+          "id": "idea-n-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“想法；主意”（n.）的本课目标词。",
+          "answer": "idea",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "idea-n-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：have an _____",
+          "answer": "idea",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "idea-n-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：have an _____",
+          "answer": "idea",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "idea-n-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：have an _____",
           "answer": "idea",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "idea-n-sentence",
+          "id": "idea-n-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：have an _____",
+          "answer": "idea",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "idea-n-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：good _____",
+          "answer": "idea",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "idea-n-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：I have an _____ for the weekend.",
+          "answer": "idea",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "idea-n-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “idea” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “idea” 写一个自然、真实的英文句子，含义必须符合词卡核心义“想法；主意”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "idea-n-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “have an idea” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1383,7 +1790,7 @@
         {
           "id": "idea-n-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “idea”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “idea” 和搭配 “have an idea”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1396,37 +1803,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1823,7 +2246,7 @@
       },
       "questions": [
         {
-          "id": "place-n-meaning",
+          "id": "place-n-meaning-core",
           "type": "meaning_choice",
           "prompt": "“place”最核心的中文含义是？",
           "options": [
@@ -1836,25 +2259,150 @@
           "ai": false
         },
         {
-          "id": "place-n-recall",
+          "id": "place-n-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “place”？",
+          "options": [
+            "to give something that is needed",
+            "to examine how things are alike or different",
+            "a particular area or position"
+          ],
+          "answer": "a particular area or position",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "place-n-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “place” 核心结构？",
+          "options": [
+            "take place",
+            "provide someone with something",
+            "compare A with B",
+            "in the first place"
+          ],
+          "answer": "take place",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "place-n-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “place” 最直接近义词？",
+          "options": [
+            "nowhere",
+            "provide",
+            "compare",
+            "location"
+          ],
+          "answer": "location",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "place-n-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “place” 最直接反义词？",
+          "options": [
+            "provide",
+            "compare",
+            "nowhere",
+            "location"
+          ],
+          "answer": "nowhere",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "place-n-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “place” 的派生词？",
+          "options": [
+            "provide",
+            "placement",
+            "location",
+            "nowhere"
+          ],
+          "answer": "placement",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "place-n-recall-definition",
           "type": "recall",
-          "prompt": "a particular area or position。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：a particular area or position",
           "answer": "place",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "place-n-collocation",
+          "id": "place-n-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“地方；放置”（n. / v.）的本课目标词。",
+          "answer": "place",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "place-n-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：take _____",
+          "answer": "place",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "place-n-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：take _____",
+          "answer": "place",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "place-n-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：take _____",
           "answer": "place",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "place-n-sentence",
+          "id": "place-n-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：take _____",
+          "answer": "place",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "place-n-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：in the first _____",
+          "answer": "place",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "place-n-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：The meeting will take _____ on Friday.",
+          "answer": "place",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "place-n-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “place” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “place” 写一个自然、真实的英文句子，含义必须符合词卡核心义“地方；放置”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "place-n-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “take place” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1862,7 +2410,7 @@
         {
           "id": "place-n-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “place”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “place” 和搭配 “take place”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1875,37 +2423,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2302,7 +2866,7 @@
       },
       "questions": [
         {
-          "id": "time-n-meaning",
+          "id": "time-n-meaning-core",
           "type": "meaning_choice",
           "prompt": "“time”最核心的中文含义是？",
           "options": [
@@ -2315,25 +2879,150 @@
           "ai": false
         },
         {
-          "id": "time-n-recall",
+          "id": "time-n-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “time”？",
+          "options": [
+            "to be decided by or need something",
+            "the measured flow in which events happen",
+            "to know the meaning or reason for something"
+          ],
+          "answer": "the measured flow in which events happen",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "time-n-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “time” 核心结构？",
+          "options": [
+            "fully understand",
+            "depend on",
+            "in time",
+            "on time"
+          ],
+          "answer": "on time",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "time-n-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “time” 最直接近义词？",
+          "options": [
+            "understand",
+            "depend",
+            "period",
+            "timeless"
+          ],
+          "answer": "period",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "time-n-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “time” 最直接反义词？",
+          "options": [
+            "depend",
+            "timeless",
+            "period",
+            "understand"
+          ],
+          "answer": "timeless",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "time-n-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “time” 的派生词？",
+          "options": [
+            "timely",
+            "period",
+            "timeless",
+            "understand"
+          ],
+          "answer": "timely",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "time-n-recall-definition",
           "type": "recall",
-          "prompt": "the measured flow in which events happen。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：the measured flow in which events happen",
           "answer": "time",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "time-n-collocation",
+          "id": "time-n-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“时间；计时”（n. / v.）的本课目标词。",
+          "answer": "time",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "time-n-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：on _____",
+          "answer": "time",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "time-n-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：on _____",
+          "answer": "time",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "time-n-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：on _____",
           "answer": "time",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "time-n-sentence",
+          "id": "time-n-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：on _____",
+          "answer": "time",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "time-n-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：in _____",
+          "answer": "time",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "time-n-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：She arrived on _____ for the interview.",
+          "answer": "time",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "time-n-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “time” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “time” 写一个自然、真实的英文句子，含义必须符合词卡核心义“时间；计时”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "time-n-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “on time” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2341,7 +3030,7 @@
         {
           "id": "time-n-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “time”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “time” 和搭配 “on time”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2354,37 +3043,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

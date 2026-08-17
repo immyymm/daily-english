@@ -386,7 +386,7 @@
   },
   "questions": [
     {
-      "id": "different-adj-meaning",
+      "id": "different-adj-meaning-core",
       "type": "meaning_choice",
       "prompt": "“different”最核心的中文含义是？",
       "options": [
@@ -399,25 +399,150 @@
       "ai": false
     },
     {
-      "id": "different-adj-recall",
+      "id": "different-adj-meaning-english",
+      "type": "meaning_choice",
+      "prompt": "哪一项英文释义最符合词卡中的 “different”？",
+      "options": [
+        "a thought or suggestion",
+        "not the same",
+        "in a way that is easy to understand"
+      ],
+      "answer": "not the same",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "different-adj-structure-choice",
+      "type": "meaning_choice",
+      "prompt": "哪一个是词卡要求优先记住的 “different” 核心结构？",
+      "options": [
+        "be different from",
+        "explain clearly",
+        "have an idea",
+        "different kinds of"
+      ],
+      "answer": "be different from",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "different-adj-synonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “different” 最直接近义词？",
+      "options": [
+        "same",
+        "difference",
+        "clearly",
+        "distinct"
+      ],
+      "answer": "distinct",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "different-adj-antonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “different” 最直接反义词？",
+      "options": [
+        "difference",
+        "clearly",
+        "same",
+        "distinct"
+      ],
+      "answer": "same",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "different-adj-contrast-choice",
+      "type": "meaning_choice",
+      "prompt": "根据本词卡辨析，哪个词被列为 “different” 的易混词？",
+      "options": [
+        "clearly",
+        "difference",
+        "distinct",
+        "same"
+      ],
+      "answer": "difference",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "different-adj-recall-definition",
       "type": "recall",
-      "prompt": "not the same。请输入目标单词。",
+      "prompt": "根据英文释义写出目标词：not the same",
       "answer": "different",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "different-adj-collocation",
+      "id": "different-adj-recall-chinese",
+      "type": "recall",
+      "prompt": "写出符合“不同的”（adj.）的本课目标词。",
+      "answer": "different",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "different-adj-collocation-core",
       "type": "collocation",
       "prompt": "补全高频搭配：be _____ from",
+      "answer": "different",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "different-adj-collocation-structure",
+      "type": "collocation",
+      "prompt": "补全核心结构：be _____ from",
+      "answer": "different",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "different-adj-collocation-context",
+      "type": "collocation",
+      "prompt": "补全语境词组：be _____ from",
       "answer": "different",
       "stage": "T2",
       "ai": false
     },
     {
-      "id": "different-adj-sentence",
+      "id": "different-adj-collocation-fixed-1",
+      "type": "collocation",
+      "prompt": "补全固定搭配：be _____ from",
+      "answer": "different",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "different-adj-collocation-fixed-2",
+      "type": "collocation",
+      "prompt": "再补全一个固定搭配：_____ kinds of",
+      "answer": "different",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "different-adj-example-cloze",
+      "type": "collocation",
+      "prompt": "补全词卡核心例句：Spoken English is _____ from formal writing.",
+      "answer": "different",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "different-adj-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “different” 写一个自然、真实的英文句子。",
+      "prompt": "请用 “different” 写一个自然、真实的英文句子，含义必须符合词卡核心义“不同的”。",
+      "answer": "",
+      "stage": "T2",
+      "ai": true
+    },
+    {
+      "id": "different-adj-sentence-phrase",
+      "type": "free_sentence",
+      "prompt": "请用完整搭配 “be different from” 写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -425,7 +550,7 @@
     {
       "id": "different-adj-dialogue",
       "type": "dialogue",
-      "prompt": "在一段真实对话中自然使用 “different”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “different” 和搭配 “be different from”，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -438,37 +563,53 @@
       "free_sentence"
     ],
     "T1": [
+      "meaning_choice",
       "recall",
       "collocation"
     ],
     "T2": [
+      "meaning_choice",
       "recall",
       "collocation",
       "free_sentence"
     ],
     "T3": [
+      "meaning_choice",
       "recall",
+      "collocation",
       "dialogue"
     ],
     "T4": [
+      "meaning_choice",
       "recall",
+      "collocation",
+      "free_sentence",
       "dialogue"
     ],
     "T5": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T6": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T7": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.3",
+  "contentVersion": "2026.08.17.4",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

@@ -391,7 +391,7 @@
   },
   "questions": [
     {
-      "id": "question-n-meaning",
+      "id": "question-n-meaning-core",
       "type": "meaning_choice",
       "prompt": "“question”最核心的中文含义是？",
       "options": [
@@ -404,25 +404,150 @@
       "ai": false
     },
     {
-      "id": "question-n-recall",
+      "id": "question-n-meaning-english",
+      "type": "meaning_choice",
+      "prompt": "哪一项英文释义最符合词卡中的 “question”？",
+      "options": [
+        "to help someone or hold something up",
+        "to make ready for something",
+        "a sentence used to ask for information"
+      ],
+      "answer": "a sentence used to ask for information",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "question-n-structure-choice",
+      "type": "meaning_choice",
+      "prompt": "哪一个是词卡要求优先记住的 “question” 核心结构？",
+      "options": [
+        "support a decision",
+        "prepare for a test",
+        "answer a question",
+        "ask a question"
+      ],
+      "answer": "ask a question",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "question-n-synonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “question” 最直接近义词？",
+      "options": [
+        "support",
+        "prepare",
+        "inquiry",
+        "answer"
+      ],
+      "answer": "inquiry",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "question-n-antonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “question” 最直接反义词？",
+      "options": [
+        "prepare",
+        "answer",
+        "inquiry",
+        "support"
+      ],
+      "answer": "answer",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "question-n-contrast-choice",
+      "type": "meaning_choice",
+      "prompt": "根据本词卡辨析，哪个词被列为 “question” 的派生词？",
+      "options": [
+        "questionable",
+        "inquiry",
+        "answer",
+        "support"
+      ],
+      "answer": "questionable",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "question-n-recall-definition",
       "type": "recall",
-      "prompt": "a sentence used to ask for information。请输入目标单词。",
+      "prompt": "根据英文释义写出目标词：a sentence used to ask for information",
       "answer": "question",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "question-n-collocation",
+      "id": "question-n-recall-chinese",
+      "type": "recall",
+      "prompt": "写出符合“问题；质疑”（n. / v.）的本课目标词。",
+      "answer": "question",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "question-n-collocation-core",
       "type": "collocation",
       "prompt": "补全高频搭配：ask a _____",
+      "answer": "question",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "question-n-collocation-structure",
+      "type": "collocation",
+      "prompt": "补全核心结构：ask a _____",
+      "answer": "question",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "question-n-collocation-context",
+      "type": "collocation",
+      "prompt": "补全语境词组：ask a _____",
       "answer": "question",
       "stage": "T2",
       "ai": false
     },
     {
-      "id": "question-n-sentence",
+      "id": "question-n-collocation-fixed-1",
+      "type": "collocation",
+      "prompt": "补全固定搭配：ask a _____",
+      "answer": "question",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "question-n-collocation-fixed-2",
+      "type": "collocation",
+      "prompt": "再补全一个固定搭配：answer a _____",
+      "answer": "question",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "question-n-example-cloze",
+      "type": "collocation",
+      "prompt": "补全词卡核心例句：Do not be afraid to ask a _____.",
+      "answer": "question",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "question-n-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “question” 写一个自然、真实的英文句子。",
+      "prompt": "请用 “question” 写一个自然、真实的英文句子，含义必须符合词卡核心义“问题；质疑”。",
+      "answer": "",
+      "stage": "T2",
+      "ai": true
+    },
+    {
+      "id": "question-n-sentence-phrase",
+      "type": "free_sentence",
+      "prompt": "请用完整搭配 “ask a question” 写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -430,7 +555,7 @@
     {
       "id": "question-n-dialogue",
       "type": "dialogue",
-      "prompt": "在一段真实对话中自然使用 “question”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “question” 和搭配 “ask a question”，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -443,37 +568,53 @@
       "free_sentence"
     ],
     "T1": [
+      "meaning_choice",
       "recall",
       "collocation"
     ],
     "T2": [
+      "meaning_choice",
       "recall",
       "collocation",
       "free_sentence"
     ],
     "T3": [
+      "meaning_choice",
       "recall",
+      "collocation",
       "dialogue"
     ],
     "T4": [
+      "meaning_choice",
       "recall",
+      "collocation",
+      "free_sentence",
       "dialogue"
     ],
     "T5": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T6": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T7": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.3",
+  "contentVersion": "2026.08.17.4",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

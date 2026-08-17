@@ -386,7 +386,7 @@
   },
   "questions": [
     {
-      "id": "decision-n-meaning",
+      "id": "decision-n-meaning-core",
       "type": "meaning_choice",
       "prompt": "“decision”最核心的中文含义是？",
       "options": [
@@ -399,25 +399,150 @@
       "ai": false
     },
     {
-      "id": "decision-n-recall",
+      "id": "decision-n-meaning-english",
+      "type": "meaning_choice",
+      "prompt": "哪一项英文释义最符合词卡中的 “decision”？",
+      "options": [
+        "a state in which different things have suitable amounts",
+        "used to state what is really true",
+        "a choice made after thinking"
+      ],
+      "answer": "a choice made after thinking",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "decision-n-structure-choice",
+      "type": "meaning_choice",
+      "prompt": "哪一个是词卡要求优先记住的 “decision” 核心结构？",
+      "options": [
+        "reach a decision",
+        "make a decision",
+        "find a balance",
+        "actually mean"
+      ],
+      "answer": "make a decision",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "decision-n-synonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “decision” 最直接近义词？",
+      "options": [
+        "choice",
+        "indecision",
+        "decide",
+        "balance"
+      ],
+      "answer": "choice",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "decision-n-antonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “decision” 最直接反义词？",
+      "options": [
+        "choice",
+        "decide",
+        "balance",
+        "indecision"
+      ],
+      "answer": "indecision",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "decision-n-contrast-choice",
+      "type": "meaning_choice",
+      "prompt": "根据本词卡辨析，哪个词被列为 “decision” 的易混词？",
+      "options": [
+        "indecision",
+        "balance",
+        "decide",
+        "choice"
+      ],
+      "answer": "decide",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "decision-n-recall-definition",
       "type": "recall",
-      "prompt": "a choice made after thinking。请输入目标单词。",
+      "prompt": "根据英文释义写出目标词：a choice made after thinking",
       "answer": "decision",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "decision-n-collocation",
+      "id": "decision-n-recall-chinese",
+      "type": "recall",
+      "prompt": "写出符合“决定”（n.）的本课目标词。",
+      "answer": "decision",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "decision-n-collocation-core",
       "type": "collocation",
       "prompt": "补全高频搭配：make a _____",
+      "answer": "decision",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "decision-n-collocation-structure",
+      "type": "collocation",
+      "prompt": "补全核心结构：make a _____",
+      "answer": "decision",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "decision-n-collocation-context",
+      "type": "collocation",
+      "prompt": "补全语境词组：make a _____",
       "answer": "decision",
       "stage": "T2",
       "ai": false
     },
     {
-      "id": "decision-n-sentence",
+      "id": "decision-n-collocation-fixed-1",
+      "type": "collocation",
+      "prompt": "补全固定搭配：make a _____",
+      "answer": "decision",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "decision-n-collocation-fixed-2",
+      "type": "collocation",
+      "prompt": "再补全一个固定搭配：reach a _____",
+      "answer": "decision",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "decision-n-example-cloze",
+      "type": "collocation",
+      "prompt": "补全词卡核心例句：You do not need to make the _____ today.",
+      "answer": "decision",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "decision-n-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “decision” 写一个自然、真实的英文句子。",
+      "prompt": "请用 “decision” 写一个自然、真实的英文句子，含义必须符合词卡核心义“决定”。",
+      "answer": "",
+      "stage": "T2",
+      "ai": true
+    },
+    {
+      "id": "decision-n-sentence-phrase",
+      "type": "free_sentence",
+      "prompt": "请用完整搭配 “make a decision” 写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -425,7 +550,7 @@
     {
       "id": "decision-n-dialogue",
       "type": "dialogue",
-      "prompt": "在一段真实对话中自然使用 “decision”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “decision” 和搭配 “make a decision”，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -438,37 +563,53 @@
       "free_sentence"
     ],
     "T1": [
+      "meaning_choice",
       "recall",
       "collocation"
     ],
     "T2": [
+      "meaning_choice",
       "recall",
       "collocation",
       "free_sentence"
     ],
     "T3": [
+      "meaning_choice",
       "recall",
+      "collocation",
       "dialogue"
     ],
     "T4": [
+      "meaning_choice",
       "recall",
+      "collocation",
+      "free_sentence",
       "dialogue"
     ],
     "T5": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T6": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T7": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.3",
+  "contentVersion": "2026.08.17.4",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

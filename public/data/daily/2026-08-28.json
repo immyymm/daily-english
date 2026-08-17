@@ -1,7 +1,7 @@
 {
   "date": "2026-08-28",
   "dayNumber": 12,
-  "contentVersion": "2026.08.17.3",
+  "contentVersion": "2026.08.17.4",
   "cards": [
     {
       "id": "experience-n",
@@ -396,7 +396,7 @@
       },
       "questions": [
         {
-          "id": "experience-n-meaning",
+          "id": "experience-n-meaning-core",
           "type": "meaning_choice",
           "prompt": "“experience”最核心的中文含义是？",
           "options": [
@@ -409,25 +409,150 @@
           "ai": false
         },
         {
-          "id": "experience-n-recall",
+          "id": "experience-n-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “experience”？",
+          "options": [
+            "sure or known without doubt",
+            "knowledge gained by doing or seeing things",
+            "something you do regularly"
+          ],
+          "answer": "knowledge gained by doing or seeing things",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "experience-n-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “experience” 核心结构？",
+          "options": [
+            "form a habit",
+            "be certain that",
+            "have experience in",
+            "gain experience"
+          ],
+          "answer": "gain experience",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "experience-n-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “experience” 最直接近义词？",
+          "options": [
+            "habit",
+            "certain",
+            "practice",
+            "inexperience"
+          ],
+          "answer": "practice",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "experience-n-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “experience” 最直接反义词？",
+          "options": [
+            "certain",
+            "inexperience",
+            "practice",
+            "habit"
+          ],
+          "answer": "inexperience",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "experience-n-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “experience” 的派生词？",
+          "options": [
+            "experienced",
+            "practice",
+            "inexperience",
+            "habit"
+          ],
+          "answer": "experienced",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "experience-n-recall-definition",
           "type": "recall",
-          "prompt": "knowledge gained by doing or seeing things。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：knowledge gained by doing or seeing things",
           "answer": "experience",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "experience-n-collocation",
+          "id": "experience-n-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“经验；经历”（n. / v.）的本课目标词。",
+          "answer": "experience",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "experience-n-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：gain _____",
+          "answer": "experience",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "experience-n-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：gain _____",
+          "answer": "experience",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "experience-n-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：gain _____",
           "answer": "experience",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "experience-n-sentence",
+          "id": "experience-n-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：gain _____",
+          "answer": "experience",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "experience-n-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：have _____ in",
+          "answer": "experience",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "experience-n-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：Travel gave her valuable life _____.",
+          "answer": "experience",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "experience-n-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “experience” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “experience” 写一个自然、真实的英文句子，含义必须符合词卡核心义“经验；经历”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "experience-n-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “gain experience” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -435,7 +560,7 @@
         {
           "id": "experience-n-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “experience”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “experience” 和搭配 “gain experience”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -448,37 +573,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -862,7 +1003,7 @@
       },
       "questions": [
         {
-          "id": "opportunity-n-meaning",
+          "id": "opportunity-n-meaning-core",
           "type": "meaning_choice",
           "prompt": "“opportunity”最核心的中文含义是？",
           "options": [
@@ -875,25 +1016,150 @@
           "ai": false
         },
         {
-          "id": "opportunity-n-recall",
+          "id": "opportunity-n-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “opportunity”？",
+          "options": [
+            "a good chance to do something",
+            "something you want to achieve",
+            "able to wait calmly"
+          ],
+          "answer": "a good chance to do something",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "opportunity-n-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “opportunity” 核心结构？",
+          "options": [
+            "be patient with",
+            "take the opportunity to",
+            "have an opportunity to",
+            "set a goal"
+          ],
+          "answer": "have an opportunity to",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "opportunity-n-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “opportunity” 最直接近义词？",
+          "options": [
+            "patient",
+            "chance",
+            "obstacle",
+            "goal"
+          ],
+          "answer": "chance",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "opportunity-n-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “opportunity” 最直接反义词？",
+          "options": [
+            "obstacle",
+            "chance",
+            "goal",
+            "patient"
+          ],
+          "answer": "obstacle",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "opportunity-n-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “opportunity” 的派生词？",
+          "options": [
+            "chance",
+            "obstacle",
+            "goal",
+            "opportune"
+          ],
+          "answer": "opportune",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "opportunity-n-recall-definition",
           "type": "recall",
-          "prompt": "a good chance to do something。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：a good chance to do something",
           "answer": "opportunity",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "opportunity-n-collocation",
+          "id": "opportunity-n-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“机会”（n.）的本课目标词。",
+          "answer": "opportunity",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "opportunity-n-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：have an _____ to",
+          "answer": "opportunity",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "opportunity-n-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：have an _____ to",
+          "answer": "opportunity",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "opportunity-n-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：have an _____ to",
           "answer": "opportunity",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "opportunity-n-sentence",
+          "id": "opportunity-n-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：have an _____ to",
+          "answer": "opportunity",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "opportunity-n-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：take the _____ to",
+          "answer": "opportunity",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "opportunity-n-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：The meeting gave me an _____ to practice English.",
+          "answer": "opportunity",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "opportunity-n-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “opportunity” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “opportunity” 写一个自然、真实的英文句子，含义必须符合词卡核心义“机会”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "opportunity-n-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “have an opportunity to” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -901,7 +1167,7 @@
         {
           "id": "opportunity-n-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “opportunity”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “opportunity” 和搭配 “have an opportunity to”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -914,37 +1180,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1336,7 +1618,7 @@
       },
       "questions": [
         {
-          "id": "decision-n-meaning",
+          "id": "decision-n-meaning-core",
           "type": "meaning_choice",
           "prompt": "“decision”最核心的中文含义是？",
           "options": [
@@ -1349,25 +1631,150 @@
           "ai": false
         },
         {
-          "id": "decision-n-recall",
+          "id": "decision-n-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “decision”？",
+          "options": [
+            "a state in which different things have suitable amounts",
+            "used to state what is really true",
+            "a choice made after thinking"
+          ],
+          "answer": "a choice made after thinking",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "decision-n-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “decision” 核心结构？",
+          "options": [
+            "reach a decision",
+            "make a decision",
+            "find a balance",
+            "actually mean"
+          ],
+          "answer": "make a decision",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "decision-n-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “decision” 最直接近义词？",
+          "options": [
+            "choice",
+            "indecision",
+            "decide",
+            "balance"
+          ],
+          "answer": "choice",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "decision-n-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “decision” 最直接反义词？",
+          "options": [
+            "choice",
+            "decide",
+            "balance",
+            "indecision"
+          ],
+          "answer": "indecision",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "decision-n-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “decision” 的易混词？",
+          "options": [
+            "indecision",
+            "balance",
+            "decide",
+            "choice"
+          ],
+          "answer": "decide",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "decision-n-recall-definition",
           "type": "recall",
-          "prompt": "a choice made after thinking。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：a choice made after thinking",
           "answer": "decision",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "decision-n-collocation",
+          "id": "decision-n-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“决定”（n.）的本课目标词。",
+          "answer": "decision",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "decision-n-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：make a _____",
+          "answer": "decision",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "decision-n-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：make a _____",
+          "answer": "decision",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "decision-n-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：make a _____",
           "answer": "decision",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "decision-n-sentence",
+          "id": "decision-n-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：make a _____",
+          "answer": "decision",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "decision-n-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：reach a _____",
+          "answer": "decision",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "decision-n-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：You do not need to make the _____ today.",
+          "answer": "decision",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "decision-n-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “decision” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “decision” 写一个自然、真实的英文句子，含义必须符合词卡核心义“决定”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "decision-n-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “make a decision” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1375,7 +1782,7 @@
         {
           "id": "decision-n-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “decision”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “decision” 和搭配 “make a decision”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1388,37 +1795,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1802,7 +2225,7 @@
       },
       "questions": [
         {
-          "id": "relationship-n-meaning",
+          "id": "relationship-n-meaning-core",
           "type": "meaning_choice",
           "prompt": "“relationship”最核心的中文含义是？",
           "options": [
@@ -1815,25 +2238,150 @@
           "ai": false
         },
         {
-          "id": "relationship-n-recall",
+          "id": "relationship-n-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “relationship”？",
+          "options": [
+            "used when something is likely",
+            "the way people or things are connected",
+            "belief in your own ability"
+          ],
+          "answer": "the way people or things are connected",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "relationship-n-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “relationship” 核心结构？",
+          "options": [
+            "build a relationship",
+            "build confidence",
+            "will probably",
+            "close relationship"
+          ],
+          "answer": "build a relationship",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "relationship-n-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “relationship” 最直接近义词？",
+          "options": [
+            "separation",
+            "confidence",
+            "probably",
+            "connection"
+          ],
+          "answer": "connection",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "relationship-n-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “relationship” 最直接反义词？",
+          "options": [
+            "confidence",
+            "probably",
+            "separation",
+            "connection"
+          ],
+          "answer": "separation",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "relationship-n-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “relationship” 的派生词？",
+          "options": [
+            "confidence",
+            "related",
+            "connection",
+            "separation"
+          ],
+          "answer": "related",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "relationship-n-recall-definition",
           "type": "recall",
-          "prompt": "the way people or things are connected。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：the way people or things are connected",
           "answer": "relationship",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "relationship-n-collocation",
+          "id": "relationship-n-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“关系”（n.）的本课目标词。",
+          "answer": "relationship",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "relationship-n-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：build a _____",
+          "answer": "relationship",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "relationship-n-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：build a _____",
+          "answer": "relationship",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "relationship-n-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：build a _____",
           "answer": "relationship",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "relationship-n-sentence",
+          "id": "relationship-n-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：build a _____",
+          "answer": "relationship",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "relationship-n-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：close _____",
+          "answer": "relationship",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "relationship-n-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：Trust is important in any _____.",
+          "answer": "relationship",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "relationship-n-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “relationship” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “relationship” 写一个自然、真实的英文句子，含义必须符合词卡核心义“关系”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "relationship-n-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “build a relationship” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1841,7 +2389,7 @@
         {
           "id": "relationship-n-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “relationship”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “relationship” 和搭配 “build a relationship”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1854,37 +2402,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2268,7 +2832,7 @@
       },
       "questions": [
         {
-          "id": "environment-n-meaning",
+          "id": "environment-n-meaning-core",
           "type": "meaning_choice",
           "prompt": "“environment”最核心的中文含义是？",
           "options": [
@@ -2281,25 +2845,150 @@
           "ai": false
         },
         {
-          "id": "environment-n-recall",
+          "id": "environment-n-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “environment”？",
+          "options": [
+            "the surroundings or conditions in which something exists",
+            "how good or bad something is",
+            "more than usual or more than others"
+          ],
+          "answer": "the surroundings or conditions in which something exists",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "environment-n-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “environment” 核心结构？",
+          "options": [
+            "high quality",
+            "especially useful",
+            "protect the environment",
+            "learning environment"
+          ],
+          "answer": "learning environment",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "environment-n-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “environment” 最直接近义词？",
+          "options": [
+            "quality",
+            "especially",
+            "surroundings",
+            "isolation"
+          ],
+          "answer": "surroundings",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "environment-n-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “environment” 最直接反义词？",
+          "options": [
+            "especially",
+            "isolation",
+            "surroundings",
+            "quality"
+          ],
+          "answer": "isolation",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "environment-n-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “environment” 的派生词？",
+          "options": [
+            "environmental",
+            "surroundings",
+            "isolation",
+            "quality"
+          ],
+          "answer": "environmental",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "environment-n-recall-definition",
           "type": "recall",
-          "prompt": "the surroundings or conditions in which something exists。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：the surroundings or conditions in which something exists",
           "answer": "environment",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "environment-n-collocation",
+          "id": "environment-n-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“环境”（n.）的本课目标词。",
+          "answer": "environment",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "environment-n-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：learning _____",
+          "answer": "environment",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "environment-n-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：learning _____",
+          "answer": "environment",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "environment-n-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：learning _____",
           "answer": "environment",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "environment-n-sentence",
+          "id": "environment-n-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：learning _____",
+          "answer": "environment",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "environment-n-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：protect the _____",
+          "answer": "environment",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "environment-n-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：A quiet _____ helps me focus.",
+          "answer": "environment",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "environment-n-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “environment” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “environment” 写一个自然、真实的英文句子，含义必须符合词卡核心义“环境”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "environment-n-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “learning environment” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2307,7 +2996,7 @@
         {
           "id": "environment-n-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “environment”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “environment” 和搭配 “learning environment”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2320,37 +3009,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

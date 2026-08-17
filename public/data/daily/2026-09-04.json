@@ -1,7 +1,7 @@
 {
   "date": "2026-09-04",
   "dayNumber": 19,
-  "contentVersion": "2026.08.17.3",
+  "contentVersion": "2026.08.17.4",
   "cards": [
     {
       "id": "natural-adj",
@@ -383,7 +383,7 @@
       },
       "questions": [
         {
-          "id": "natural-adj-meaning",
+          "id": "natural-adj-meaning-core",
           "type": "meaning_choice",
           "prompt": "“natural”最核心的中文含义是？",
           "options": [
@@ -396,25 +396,150 @@
           "ai": false
         },
         {
-          "id": "natural-adj-recall",
+          "id": "natural-adj-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “natural”？",
+          "options": [
+            "after a long time or at the end",
+            "the place where you live",
+            "normal and not forced"
+          ],
+          "answer": "normal and not forced",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "natural-adj-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “natural” 核心结构？",
+          "options": [
+            "sound natural",
+            "finally decide",
+            "feel at home",
+            "natural ability"
+          ],
+          "answer": "sound natural",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "natural-adj-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “natural” 最直接近义词？",
+          "options": [
+            "artificial",
+            "finally",
+            "home",
+            "normal"
+          ],
+          "answer": "normal",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "natural-adj-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “natural” 最直接反义词？",
+          "options": [
+            "finally",
+            "home",
+            "artificial",
+            "normal"
+          ],
+          "answer": "artificial",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "natural-adj-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “natural” 的派生词？",
+          "options": [
+            "finally",
+            "naturally",
+            "normal",
+            "artificial"
+          ],
+          "answer": "naturally",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "natural-adj-recall-definition",
           "type": "recall",
-          "prompt": "normal and not forced。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：normal and not forced",
           "answer": "natural",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "natural-adj-collocation",
+          "id": "natural-adj-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“自然的；天生的”（adj.）的本课目标词。",
+          "answer": "natural",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "natural-adj-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：sound _____",
+          "answer": "natural",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "natural-adj-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：sound _____",
+          "answer": "natural",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "natural-adj-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：sound _____",
           "answer": "natural",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "natural-adj-sentence",
+          "id": "natural-adj-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：sound _____",
+          "answer": "natural",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "natural-adj-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：_____ ability",
+          "answer": "natural",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "natural-adj-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：This version sounds more _____ in conversation.",
+          "answer": "natural",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "natural-adj-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “natural” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “natural” 写一个自然、真实的英文句子，含义必须符合词卡核心义“自然的；天生的”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "natural-adj-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “sound natural” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -422,7 +547,7 @@
         {
           "id": "natural-adj-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “natural”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “natural” 和搭配 “sound natural”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -435,37 +560,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -869,7 +1010,7 @@
       },
       "questions": [
         {
-          "id": "clear-adj-meaning",
+          "id": "clear-adj-meaning-core",
           "type": "meaning_choice",
           "prompt": "“clear”最核心的中文含义是？",
           "options": [
@@ -882,25 +1023,150 @@
           "ai": false
         },
         {
-          "id": "clear-adj-recall",
+          "id": "clear-adj-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “clear”？",
+          "options": [
+            "a situation that needs a solution",
+            "easy to understand or see",
+            "in an easy or plain way"
+          ],
+          "answer": "easy to understand or see",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "clear-adj-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “clear” 核心结构？",
+          "options": [
+            "simply put",
+            "solve a problem",
+            "clear to someone",
+            "make something clear"
+          ],
+          "answer": "make something clear",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "clear-adj-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “clear” 最直接近义词？",
+          "options": [
+            "simply",
+            "problem",
+            "obvious",
+            "unclear"
+          ],
+          "answer": "obvious",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "clear-adj-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “clear” 最直接反义词？",
+          "options": [
+            "problem",
+            "unclear",
+            "obvious",
+            "simply"
+          ],
+          "answer": "unclear",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "clear-adj-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “clear” 的派生词？",
+          "options": [
+            "clearly",
+            "obvious",
+            "unclear",
+            "simply"
+          ],
+          "answer": "clearly",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "clear-adj-recall-definition",
           "type": "recall",
-          "prompt": "easy to understand or see。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：easy to understand or see",
           "answer": "clear",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "clear-adj-collocation",
+          "id": "clear-adj-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“清楚的；清除”（adj. / v.）的本课目标词。",
+          "answer": "clear",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "clear-adj-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：make something _____",
+          "answer": "clear",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "clear-adj-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：make something _____",
+          "answer": "clear",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "clear-adj-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：make something _____",
           "answer": "clear",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "clear-adj-sentence",
+          "id": "clear-adj-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：make something _____",
+          "answer": "clear",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "clear-adj-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：_____ to someone",
+          "answer": "clear",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "clear-adj-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：Please make your main point _____.",
+          "answer": "clear",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "clear-adj-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “clear” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “clear” 写一个自然、真实的英文句子，含义必须符合词卡核心义“清楚的；清除”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "clear-adj-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “make something clear” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -908,7 +1174,7 @@
         {
           "id": "clear-adj-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “clear”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “clear” 和搭配 “make something clear”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -921,37 +1187,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1335,7 +1617,7 @@
       },
       "questions": [
         {
-          "id": "common-adj-meaning",
+          "id": "common-adj-meaning-core",
           "type": "meaning_choice",
           "prompt": "“common”最核心的中文含义是？",
           "options": [
@@ -1348,25 +1630,150 @@
           "ai": false
         },
         {
-          "id": "common-adj-recall",
+          "id": "common-adj-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “common”？",
+          "options": [
+            "happening often or shared by many",
+            "at a fast speed",
+            "a sentence used to ask for information"
+          ],
+          "answer": "happening often or shared by many",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "common-adj-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “common” 核心结构？",
+          "options": [
+            "ask a question",
+            "have something in common",
+            "a common mistake",
+            "respond quickly"
+          ],
+          "answer": "a common mistake",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "common-adj-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “common” 最直接近义词？",
+          "options": [
+            "question",
+            "usual",
+            "rare",
+            "quickly"
+          ],
+          "answer": "usual",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "common-adj-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “common” 最直接反义词？",
+          "options": [
+            "rare",
+            "usual",
+            "quickly",
+            "question"
+          ],
+          "answer": "rare",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "common-adj-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “common” 的派生词？",
+          "options": [
+            "usual",
+            "rare",
+            "quickly",
+            "commonly"
+          ],
+          "answer": "commonly",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "common-adj-recall-definition",
           "type": "recall",
-          "prompt": "happening often or shared by many。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：happening often or shared by many",
           "answer": "common",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "common-adj-collocation",
+          "id": "common-adj-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“常见的；共同的”（adj.）的本课目标词。",
+          "answer": "common",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "common-adj-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：a _____ mistake",
+          "answer": "common",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "common-adj-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：a _____ mistake",
+          "answer": "common",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "common-adj-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：a _____ mistake",
           "answer": "common",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "common-adj-sentence",
+          "id": "common-adj-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：a _____ mistake",
+          "answer": "common",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "common-adj-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：have something in _____",
+          "answer": "common",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "common-adj-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：This is a _____ mistake among learners.",
+          "answer": "common",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "common-adj-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “common” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “common” 写一个自然、真实的英文句子，含义必须符合词卡核心义“常见的；共同的”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "common-adj-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “a common mistake” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1374,7 +1781,7 @@
         {
           "id": "common-adj-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “common”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “common” 和搭配 “a common mistake”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1387,37 +1794,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1801,7 +2224,7 @@
       },
       "questions": [
         {
-          "id": "similar-adj-meaning",
+          "id": "similar-adj-meaning-core",
           "type": "meaning_choice",
           "prompt": "“similar”最核心的中文含义是？",
           "options": [
@@ -1814,25 +2237,150 @@
           "ai": false
         },
         {
-          "id": "similar-adj-recall",
+          "id": "similar-adj-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “similar”？",
+          "options": [
+            "without anything in between",
+            "an account of events",
+            "almost the same but not exactly"
+          ],
+          "answer": "almost the same but not exactly",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "similar-adj-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “similar” 核心结构？",
+          "options": [
+            "very similar",
+            "be similar to",
+            "speak directly",
+            "tell a story"
+          ],
+          "answer": "be similar to",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "similar-adj-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “similar” 最直接近义词？",
+          "options": [
+            "alike",
+            "different",
+            "directly",
+            "story"
+          ],
+          "answer": "alike",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "similar-adj-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “similar” 最直接反义词？",
+          "options": [
+            "alike",
+            "directly",
+            "story",
+            "different"
+          ],
+          "answer": "different",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "similar-adj-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “similar” 的派生词？",
+          "options": [
+            "different",
+            "directly",
+            "similarity",
+            "alike"
+          ],
+          "answer": "similarity",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "similar-adj-recall-definition",
           "type": "recall",
-          "prompt": "almost the same but not exactly。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：almost the same but not exactly",
           "answer": "similar",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "similar-adj-collocation",
+          "id": "similar-adj-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“相似的”（adj.）的本课目标词。",
+          "answer": "similar",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "similar-adj-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：be _____ to",
+          "answer": "similar",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "similar-adj-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：be _____ to",
+          "answer": "similar",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "similar-adj-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：be _____ to",
           "answer": "similar",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "similar-adj-sentence",
+          "id": "similar-adj-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：be _____ to",
+          "answer": "similar",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "similar-adj-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：very _____",
+          "answer": "similar",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "similar-adj-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：This word is _____ to one we learned yesterday.",
+          "answer": "similar",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "similar-adj-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “similar” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “similar” 写一个自然、真实的英文句子，含义必须符合词卡核心义“相似的”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "similar-adj-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “be similar to” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1840,7 +2388,7 @@
         {
           "id": "similar-adj-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “similar”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “similar” 和搭配 “be similar to”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1853,37 +2401,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2275,7 +2839,7 @@
       },
       "questions": [
         {
-          "id": "different-adj-meaning",
+          "id": "different-adj-meaning-core",
           "type": "meaning_choice",
           "prompt": "“different”最核心的中文含义是？",
           "options": [
@@ -2288,25 +2852,150 @@
           "ai": false
         },
         {
-          "id": "different-adj-recall",
+          "id": "different-adj-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “different”？",
+          "options": [
+            "a thought or suggestion",
+            "not the same",
+            "in a way that is easy to understand"
+          ],
+          "answer": "not the same",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "different-adj-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “different” 核心结构？",
+          "options": [
+            "be different from",
+            "explain clearly",
+            "have an idea",
+            "different kinds of"
+          ],
+          "answer": "be different from",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "different-adj-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “different” 最直接近义词？",
+          "options": [
+            "same",
+            "difference",
+            "clearly",
+            "distinct"
+          ],
+          "answer": "distinct",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "different-adj-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “different” 最直接反义词？",
+          "options": [
+            "difference",
+            "clearly",
+            "same",
+            "distinct"
+          ],
+          "answer": "same",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "different-adj-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “different” 的易混词？",
+          "options": [
+            "clearly",
+            "difference",
+            "distinct",
+            "same"
+          ],
+          "answer": "difference",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "different-adj-recall-definition",
           "type": "recall",
-          "prompt": "not the same。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：not the same",
           "answer": "different",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "different-adj-collocation",
+          "id": "different-adj-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“不同的”（adj.）的本课目标词。",
+          "answer": "different",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "different-adj-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：be _____ from",
+          "answer": "different",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "different-adj-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：be _____ from",
+          "answer": "different",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "different-adj-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：be _____ from",
           "answer": "different",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "different-adj-sentence",
+          "id": "different-adj-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：be _____ from",
+          "answer": "different",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "different-adj-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：_____ kinds of",
+          "answer": "different",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "different-adj-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：Spoken English is _____ from formal writing.",
+          "answer": "different",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "different-adj-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “different” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “different” 写一个自然、真实的英文句子，含义必须符合词卡核心义“不同的”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "different-adj-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “be different from” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2314,7 +3003,7 @@
         {
           "id": "different-adj-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “different”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “different” 和搭配 “be different from”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2327,37 +3016,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

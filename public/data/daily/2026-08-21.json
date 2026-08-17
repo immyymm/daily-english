@@ -1,7 +1,7 @@
 {
   "date": "2026-08-21",
   "dayNumber": 5,
-  "contentVersion": "2026.08.17.3",
+  "contentVersion": "2026.08.17.4",
   "cards": [
     {
       "id": "offer-v",
@@ -396,7 +396,7 @@
       },
       "questions": [
         {
-          "id": "offer-v-meaning",
+          "id": "offer-v-meaning-core",
           "type": "meaning_choice",
           "prompt": "“offer”最核心的中文含义是？",
           "options": [
@@ -409,25 +409,150 @@
           "ai": false
         },
         {
-          "id": "offer-v-recall",
+          "id": "offer-v-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “offer”？",
+          "options": [
+            "to say that you are willing to give something",
+            "to arrive at a place or level",
+            "a set of connected parts that work together"
+          ],
+          "answer": "to say that you are willing to give something",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "offer-v-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “offer” 核心结构？",
+          "options": [
+            "a simple system",
+            "offer someone a job",
+            "offer help",
+            "reach an agreement"
+          ],
+          "answer": "offer help",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "offer-v-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “offer” 最直接近义词？",
+          "options": [
+            "system",
+            "propose",
+            "refuse",
+            "reach"
+          ],
+          "answer": "propose",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "offer-v-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “offer” 最直接反义词？",
+          "options": [
+            "refuse",
+            "propose",
+            "reach",
+            "system"
+          ],
+          "answer": "refuse",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "offer-v-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “offer” 的派生词？",
+          "options": [
+            "propose",
+            "refuse",
+            "reach",
+            "offering"
+          ],
+          "answer": "offering",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "offer-v-recall-definition",
           "type": "recall",
-          "prompt": "to say that you are willing to give something。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：to say that you are willing to give something",
           "answer": "offer",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "offer-v-collocation",
+          "id": "offer-v-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“提供；提议”（v. / n.）的本课目标词。",
+          "answer": "offer",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "offer-v-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：_____ help",
+          "answer": "offer",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "offer-v-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：_____ help",
+          "answer": "offer",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "offer-v-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：_____ help",
           "answer": "offer",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "offer-v-sentence",
+          "id": "offer-v-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：_____ help",
+          "answer": "offer",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "offer-v-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：_____ someone a job",
+          "answer": "offer",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "offer-v-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：He _____ to help me with the project.",
+          "answer": "offered",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "offer-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “offer” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “offer” 写一个自然、真实的英文句子，含义必须符合词卡核心义“提供；提议”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "offer-v-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “offer help” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -435,7 +560,7 @@
         {
           "id": "offer-v-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “offer”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “offer” 和搭配 “offer help”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -448,37 +573,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -862,7 +1003,7 @@
       },
       "questions": [
         {
-          "id": "consider-v-meaning",
+          "id": "consider-v-meaning-core",
           "type": "meaning_choice",
           "prompt": "“consider”最核心的中文含义是？",
           "options": [
@@ -875,25 +1016,150 @@
           "ai": false
         },
         {
-          "id": "consider-v-recall",
+          "id": "consider-v-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “consider”？",
+          "options": [
+            "to continue to be in the same state",
+            "a position on a scale of amount or quality",
+            "to think carefully about something"
+          ],
+          "answer": "to think carefully about something",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "consider-v-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “consider” 核心结构？",
+          "options": [
+            "consider the possibility",
+            "consider doing",
+            "remain calm",
+            "skill level"
+          ],
+          "answer": "consider doing",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "consider-v-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “consider” 最直接近义词？",
+          "options": [
+            "evaluate",
+            "dismiss",
+            "remain",
+            "level"
+          ],
+          "answer": "evaluate",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "consider-v-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “consider” 最直接反义词？",
+          "options": [
+            "evaluate",
+            "remain",
+            "level",
+            "dismiss"
+          ],
+          "answer": "dismiss",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "consider-v-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “consider” 的派生词？",
+          "options": [
+            "dismiss",
+            "remain",
+            "consideration",
+            "evaluate"
+          ],
+          "answer": "consideration",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "consider-v-recall-definition",
           "type": "recall",
-          "prompt": "to think carefully about something。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：to think carefully about something",
           "answer": "consider",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "consider-v-collocation",
+          "id": "consider-v-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“考虑；认为”（v.）的本课目标词。",
+          "answer": "consider",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "consider-v-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：_____ doing something",
+          "answer": "consider",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "consider-v-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：_____ doing",
+          "answer": "consider",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "consider-v-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：_____ doing",
           "answer": "consider",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "consider-v-sentence",
+          "id": "consider-v-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：_____ doing",
+          "answer": "consider",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "consider-v-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：_____ the possibility",
+          "answer": "consider",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "consider-v-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：You should _____ taking a short break.",
+          "answer": "consider",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "consider-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “consider” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “consider” 写一个自然、真实的英文句子，含义必须符合词卡核心义“考虑；认为”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "consider-v-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “consider doing” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -901,7 +1167,7 @@
         {
           "id": "consider-v-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “consider”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “consider” 和搭配 “consider doing”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -914,37 +1180,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1335,7 +1617,7 @@
       },
       "questions": [
         {
-          "id": "expect-v-meaning",
+          "id": "expect-v-meaning-core",
           "type": "meaning_choice",
           "prompt": "“expect”最核心的中文含义是？",
           "options": [
@@ -1348,25 +1630,150 @@
           "ai": false
         },
         {
-          "id": "expect-v-recall",
+          "id": "expect-v-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “expect”？",
+          "options": [
+            "the importance or usefulness of something",
+            "to think that something will happen",
+            "to deal with a situation or task"
+          ],
+          "answer": "to think that something will happen",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "expect-v-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “expect” 核心结构？",
+          "options": [
+            "expect someone to do",
+            "handle a problem",
+            "great value",
+            "expect to see"
+          ],
+          "answer": "expect someone to do",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "expect-v-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “expect” 最直接近义词？",
+          "options": [
+            "doubt",
+            "handle",
+            "value",
+            "anticipate"
+          ],
+          "answer": "anticipate",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "expect-v-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “expect” 最直接反义词？",
+          "options": [
+            "handle",
+            "value",
+            "doubt",
+            "anticipate"
+          ],
+          "answer": "doubt",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "expect-v-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “expect” 的派生词？",
+          "options": [
+            "handle",
+            "expectation",
+            "anticipate",
+            "doubt"
+          ],
+          "answer": "expectation",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "expect-v-recall-definition",
           "type": "recall",
-          "prompt": "to think that something will happen。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：to think that something will happen",
           "answer": "expect",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "expect-v-collocation",
+          "id": "expect-v-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“预期；期待”（v.）的本课目标词。",
+          "answer": "expect",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "expect-v-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：_____ someone to do something",
+          "answer": "expect",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "expect-v-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：_____ someone to do",
+          "answer": "expect",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "expect-v-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：_____ someone to do",
           "answer": "expect",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "expect-v-sentence",
+          "id": "expect-v-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：_____ someone to do",
+          "answer": "expect",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "expect-v-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：_____ to see",
+          "answer": "expect",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "expect-v-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：We _____ the results next week.",
+          "answer": "expect",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "expect-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “expect” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “expect” 写一个自然、真实的英文句子，含义必须符合词卡核心义“预期；期待”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "expect-v-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “expect someone to do” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1374,7 +1781,7 @@
         {
           "id": "expect-v-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “expect”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “expect” 和搭配 “expect someone to do”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1387,37 +1794,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1808,7 +2231,7 @@
       },
       "questions": [
         {
-          "id": "develop-v-meaning",
+          "id": "develop-v-meaning-core",
           "type": "meaning_choice",
           "prompt": "“develop”最核心的中文含义是？",
           "options": [
@@ -1821,25 +2244,150 @@
           "ai": false
         },
         {
-          "id": "develop-v-recall",
+          "id": "develop-v-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “develop”？",
+          "options": [
+            "to grow or cause something to grow",
+            "to cause a change in someone or something",
+            "the way a person or thing acts"
+          ],
+          "answer": "to grow or cause something to grow",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "develop-v-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “develop” 核心结构？",
+          "options": [
+            "affect your health",
+            "change behavior",
+            "develop a skill",
+            "develop a habit"
+          ],
+          "answer": "develop a habit",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "develop-v-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “develop” 最直接近义词？",
+          "options": [
+            "affect",
+            "behavior",
+            "build",
+            "decline"
+          ],
+          "answer": "build",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "develop-v-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “develop” 最直接反义词？",
+          "options": [
+            "behavior",
+            "decline",
+            "build",
+            "affect"
+          ],
+          "answer": "decline",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "develop-v-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “develop” 的派生词？",
+          "options": [
+            "development",
+            "build",
+            "decline",
+            "affect"
+          ],
+          "answer": "development",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "develop-v-recall-definition",
           "type": "recall",
-          "prompt": "to grow or cause something to grow。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：to grow or cause something to grow",
           "answer": "develop",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "develop-v-collocation",
+          "id": "develop-v-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“发展；培养”（v.）的本课目标词。",
+          "answer": "develop",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "develop-v-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：_____ a habit",
+          "answer": "develop",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "develop-v-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：_____ a habit",
+          "answer": "develop",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "develop-v-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：_____ a habit",
           "answer": "develop",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "develop-v-sentence",
+          "id": "develop-v-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：_____ a habit",
+          "answer": "develop",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "develop-v-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：_____ a skill",
+          "answer": "develop",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "develop-v-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：She _____ a habit of reading every night.",
+          "answer": "developed",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "develop-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “develop” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “develop” 写一个自然、真实的英文句子，含义必须符合词卡核心义“发展；培养”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "develop-v-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “develop a habit” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1847,7 +2395,7 @@
         {
           "id": "develop-v-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “develop”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “develop” 和搭配 “develop a habit”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1860,37 +2408,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2281,7 +2845,7 @@
       },
       "questions": [
         {
-          "id": "decide-v-meaning",
+          "id": "decide-v-meaning-core",
           "type": "meaning_choice",
           "prompt": "“decide”最核心的中文含义是？",
           "options": [
@@ -2294,25 +2858,150 @@
           "ai": false
         },
         {
-          "id": "decide-v-recall",
+          "id": "decide-v-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “decide”？",
+          "options": [
+            "to suddenly understand something clearly",
+            "the act of carefully noticing something",
+            "to make a choice after thinking"
+          ],
+          "answer": "to make a choice after thinking",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "decide-v-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “decide” 核心结构？",
+          "options": [
+            "pay attention to",
+            "decide against",
+            "decide to do",
+            "realize that"
+          ],
+          "answer": "decide to do",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "decide-v-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “decide” 最直接近义词？",
+          "options": [
+            "attention",
+            "determine",
+            "hesitate",
+            "realize"
+          ],
+          "answer": "determine",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "decide-v-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “decide” 最直接反义词？",
+          "options": [
+            "hesitate",
+            "determine",
+            "realize",
+            "attention"
+          ],
+          "answer": "hesitate",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "decide-v-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “decide” 的派生词？",
+          "options": [
+            "determine",
+            "hesitate",
+            "realize",
+            "decision"
+          ],
+          "answer": "decision",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "decide-v-recall-definition",
           "type": "recall",
-          "prompt": "to make a choice after thinking。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：to make a choice after thinking",
           "answer": "decide",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "decide-v-collocation",
+          "id": "decide-v-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“决定”（v.）的本课目标词。",
+          "answer": "decide",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "decide-v-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：_____ to do something",
+          "answer": "decide",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "decide-v-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：_____ to do",
+          "answer": "decide",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "decide-v-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：_____ to do",
           "answer": "decide",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "decide-v-sentence",
+          "id": "decide-v-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：_____ to do",
+          "answer": "decide",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "decide-v-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：_____ against",
+          "answer": "decide",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "decide-v-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：I decided to start with five words a day.（填入目标词）",
+          "answer": "decide",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "decide-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “decide” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “decide” 写一个自然、真实的英文句子，含义必须符合词卡核心义“决定”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "decide-v-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “decide to do” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2320,7 +3009,7 @@
         {
           "id": "decide-v-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “decide”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “decide” 和搭配 “decide to do”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2333,37 +3022,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

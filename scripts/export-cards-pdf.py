@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import html
 import json
+import re
 from pathlib import Path
 
 from reportlab.lib import colors
@@ -28,7 +29,7 @@ from reportlab.platypus.tableofcontents import TableOfContents
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "public" / "data" / "all-cards.json"
 OUTPUT_DIR = ROOT / "output" / "pdf"
-OUTPUT = OUTPUT_DIR / "每日英语-完整词卡合集.pdf"
+OUTPUT = OUTPUT_DIR / "每日英语-完整词卡合集-2026.08.17.4.pdf"
 
 PINK = colors.HexColor("#D987A5")
 DEEP_PINK = colors.HexColor("#A85575")
@@ -76,6 +77,13 @@ def join_items(values: list[str] | None, empty: str = "暂无") -> str:
 
 def ipa(value: object) -> str:
     return f"<font name='{FONT_PHONETIC}'>{esc(value)}</font>"
+
+
+def mixed_text(value: object) -> str:
+    """Escape mixed Chinese/English content and render slash-delimited IPA with its own font."""
+    normalized = str(value or "").replace("❌", "[Wrong]").replace("✅", "[Correct]")
+    parts = re.split(r"(/[^/\n]+/)", normalized)
+    return "".join(ipa(part) if part.startswith("/") and part.endswith("/") else esc(part) for part in parts)
 
 
 class CardDocTemplate(BaseDocTemplate):
@@ -218,7 +226,7 @@ def info_table(rows: list[tuple[str, object]]) -> Table:
     for label, value in rows:
         data.append([
             Paragraph(f"<b>{esc(label)}</b>", small),
-            P(value, base),
+            rich(mixed_text(value), base),
         ])
     table = Table(data, colWidths=[34 * mm, 132 * mm], hAlign="LEFT")
     table.setStyle(TableStyle([

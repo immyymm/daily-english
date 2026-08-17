@@ -391,7 +391,7 @@
   },
   "questions": [
     {
-      "id": "value-n-meaning",
+      "id": "value-n-meaning-core",
       "type": "meaning_choice",
       "prompt": "“value”最核心的中文含义是？",
       "options": [
@@ -404,25 +404,150 @@
       "ai": false
     },
     {
-      "id": "value-n-recall",
+      "id": "value-n-meaning-english",
+      "type": "meaning_choice",
+      "prompt": "哪一项英文释义最符合词卡中的 “value”？",
+      "options": [
+        "the importance or usefulness of something",
+        "able to happen or be done",
+        "in an easy or plain way"
+      ],
+      "answer": "the importance or usefulness of something",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "value-n-structure-choice",
+      "type": "meaning_choice",
+      "prompt": "哪一个是词卡要求优先记住的 “value” 核心结构？",
+      "options": [
+        "value for money",
+        "great value",
+        "as soon as possible",
+        "simply put"
+      ],
+      "answer": "great value",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "value-n-synonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “value” 最直接近义词？",
+      "options": [
+        "worth",
+        "lack of value",
+        "possible",
+        "simply"
+      ],
+      "answer": "worth",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "value-n-antonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “value” 最直接反义词？",
+      "options": [
+        "worth",
+        "possible",
+        "simply",
+        "lack of value"
+      ],
+      "answer": "lack of value",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "value-n-contrast-choice",
+      "type": "meaning_choice",
+      "prompt": "根据本词卡辨析，哪个词被列为 “value” 的派生词？",
+      "options": [
+        "lack of value",
+        "possible",
+        "valuable",
+        "worth"
+      ],
+      "answer": "valuable",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "value-n-recall-definition",
       "type": "recall",
-      "prompt": "the importance or usefulness of something。请输入目标单词。",
+      "prompt": "根据英文释义写出目标词：the importance or usefulness of something",
       "answer": "value",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "value-n-collocation",
+      "id": "value-n-recall-chinese",
+      "type": "recall",
+      "prompt": "写出符合“价值；重视”（n. / v.）的本课目标词。",
+      "answer": "value",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "value-n-collocation-core",
       "type": "collocation",
       "prompt": "补全高频搭配：great _____",
+      "answer": "value",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "value-n-collocation-structure",
+      "type": "collocation",
+      "prompt": "补全核心结构：great _____",
+      "answer": "value",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "value-n-collocation-context",
+      "type": "collocation",
+      "prompt": "补全语境词组：great _____",
       "answer": "value",
       "stage": "T2",
       "ai": false
     },
     {
-      "id": "value-n-sentence",
+      "id": "value-n-collocation-fixed-1",
+      "type": "collocation",
+      "prompt": "补全固定搭配：great _____",
+      "answer": "value",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "value-n-collocation-fixed-2",
+      "type": "collocation",
+      "prompt": "再补全一个固定搭配：_____ for money",
+      "answer": "value",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "value-n-example-cloze",
+      "type": "collocation",
+      "prompt": "补全词卡核心例句：I _____ honest feedback.",
+      "answer": "value",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "value-n-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “value” 写一个自然、真实的英文句子。",
+      "prompt": "请用 “value” 写一个自然、真实的英文句子，含义必须符合词卡核心义“价值；重视”。",
+      "answer": "",
+      "stage": "T2",
+      "ai": true
+    },
+    {
+      "id": "value-n-sentence-phrase",
+      "type": "free_sentence",
+      "prompt": "请用完整搭配 “great value” 写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -430,7 +555,7 @@
     {
       "id": "value-n-dialogue",
       "type": "dialogue",
-      "prompt": "在一段真实对话中自然使用 “value”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “value” 和搭配 “great value”，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -443,37 +568,53 @@
       "free_sentence"
     ],
     "T1": [
+      "meaning_choice",
       "recall",
       "collocation"
     ],
     "T2": [
+      "meaning_choice",
       "recall",
       "collocation",
       "free_sentence"
     ],
     "T3": [
+      "meaning_choice",
       "recall",
+      "collocation",
       "dialogue"
     ],
     "T4": [
+      "meaning_choice",
       "recall",
+      "collocation",
+      "free_sentence",
       "dialogue"
     ],
     "T5": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T6": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T7": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.3",
+  "contentVersion": "2026.08.17.4",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

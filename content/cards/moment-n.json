@@ -378,7 +378,7 @@
   },
   "questions": [
     {
-      "id": "moment-n-meaning",
+      "id": "moment-n-meaning-core",
       "type": "meaning_choice",
       "prompt": "“moment”最核心的中文含义是？",
       "options": [
@@ -391,25 +391,150 @@
       "ai": false
     },
     {
-      "id": "moment-n-recall",
+      "id": "moment-n-meaning-english",
+      "type": "meaning_choice",
+      "prompt": "哪一项英文释义最符合词卡中的 “moment”？",
+      "options": [
+        "to continue to be in the same state",
+        "a very short period of time",
+        "to keep doing something without stopping"
+      ],
+      "answer": "a very short period of time",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "moment-n-structure-choice",
+      "type": "meaning_choice",
+      "prompt": "哪一个是词卡要求优先记住的 “moment” 核心结构？",
+      "options": [
+        "for a moment",
+        "at the moment",
+        "continue to improve",
+        "remain calm"
+      ],
+      "answer": "at the moment",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "moment-n-synonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “moment” 最直接近义词？",
+      "options": [
+        "instant",
+        "eternity",
+        "continue",
+        "remain"
+      ],
+      "answer": "instant",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "moment-n-antonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “moment” 最直接反义词？",
+      "options": [
+        "instant",
+        "continue",
+        "remain",
+        "eternity"
+      ],
+      "answer": "eternity",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "moment-n-contrast-choice",
+      "type": "meaning_choice",
+      "prompt": "根据本词卡辨析，哪个词被列为 “moment” 的派生词？",
+      "options": [
+        "eternity",
+        "continue",
+        "momentary",
+        "instant"
+      ],
+      "answer": "momentary",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "moment-n-recall-definition",
       "type": "recall",
-      "prompt": "a very short period of time。请输入目标单词。",
+      "prompt": "根据英文释义写出目标词：a very short period of time",
       "answer": "moment",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "moment-n-collocation",
+      "id": "moment-n-recall-chinese",
+      "type": "recall",
+      "prompt": "写出符合“片刻；时刻”（n.）的本课目标词。",
+      "answer": "moment",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "moment-n-collocation-core",
       "type": "collocation",
       "prompt": "补全高频搭配：at the _____",
+      "answer": "moment",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "moment-n-collocation-structure",
+      "type": "collocation",
+      "prompt": "补全核心结构：at the _____",
+      "answer": "moment",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "moment-n-collocation-context",
+      "type": "collocation",
+      "prompt": "补全语境词组：at the _____",
       "answer": "moment",
       "stage": "T2",
       "ai": false
     },
     {
-      "id": "moment-n-sentence",
+      "id": "moment-n-collocation-fixed-1",
+      "type": "collocation",
+      "prompt": "补全固定搭配：at the _____",
+      "answer": "moment",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "moment-n-collocation-fixed-2",
+      "type": "collocation",
+      "prompt": "再补全一个固定搭配：for a _____",
+      "answer": "moment",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "moment-n-example-cloze",
+      "type": "collocation",
+      "prompt": "补全词卡核心例句：I am busy at the _____.",
+      "answer": "moment",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "moment-n-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “moment” 写一个自然、真实的英文句子。",
+      "prompt": "请用 “moment” 写一个自然、真实的英文句子，含义必须符合词卡核心义“片刻；时刻”。",
+      "answer": "",
+      "stage": "T2",
+      "ai": true
+    },
+    {
+      "id": "moment-n-sentence-phrase",
+      "type": "free_sentence",
+      "prompt": "请用完整搭配 “at the moment” 写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -417,7 +542,7 @@
     {
       "id": "moment-n-dialogue",
       "type": "dialogue",
-      "prompt": "在一段真实对话中自然使用 “moment”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “moment” 和搭配 “at the moment”，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -430,37 +555,53 @@
       "free_sentence"
     ],
     "T1": [
+      "meaning_choice",
       "recall",
       "collocation"
     ],
     "T2": [
+      "meaning_choice",
       "recall",
       "collocation",
       "free_sentence"
     ],
     "T3": [
+      "meaning_choice",
       "recall",
+      "collocation",
       "dialogue"
     ],
     "T4": [
+      "meaning_choice",
       "recall",
+      "collocation",
+      "free_sentence",
       "dialogue"
     ],
     "T5": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T6": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T7": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.3",
+  "contentVersion": "2026.08.17.4",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

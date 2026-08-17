@@ -1,7 +1,7 @@
 {
   "date": "2026-08-31",
   "dayNumber": 15,
-  "contentVersion": "2026.08.17.3",
+  "contentVersion": "2026.08.17.4",
   "cards": [
     {
       "id": "challenge-n",
@@ -396,7 +396,7 @@
       },
       "questions": [
         {
-          "id": "challenge-n-meaning",
+          "id": "challenge-n-meaning-core",
           "type": "meaning_choice",
           "prompt": "“challenge”最核心的中文含义是？",
           "options": [
@@ -409,25 +409,150 @@
           "ai": false
         },
         {
-          "id": "challenge-n-recall",
+          "id": "challenge-n-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “challenge”？",
+          "options": [
+            "used to say that something may be true",
+            "a difficult task that tests your ability",
+            "feeling relaxed and free from worry"
+          ],
+          "answer": "a difficult task that tests your ability",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "challenge-n-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “challenge” 核心结构？",
+          "options": [
+            "face a challenge",
+            "feel comfortable doing something",
+            "perhaps because",
+            "take on a challenge"
+          ],
+          "answer": "face a challenge",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "challenge-n-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “challenge” 最直接近义词？",
+          "options": [
+            "ease",
+            "comfortable",
+            "perhaps",
+            "test"
+          ],
+          "answer": "test",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "challenge-n-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “challenge” 最直接反义词？",
+          "options": [
+            "comfortable",
+            "perhaps",
+            "ease",
+            "test"
+          ],
+          "answer": "ease",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "challenge-n-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “challenge” 的派生词？",
+          "options": [
+            "comfortable",
+            "challenging",
+            "test",
+            "ease"
+          ],
+          "answer": "challenging",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "challenge-n-recall-definition",
           "type": "recall",
-          "prompt": "a difficult task that tests your ability。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：a difficult task that tests your ability",
           "answer": "challenge",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "challenge-n-collocation",
+          "id": "challenge-n-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“挑战”（n. / v.）的本课目标词。",
+          "answer": "challenge",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "challenge-n-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：face a _____",
+          "answer": "challenge",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "challenge-n-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：face a _____",
+          "answer": "challenge",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "challenge-n-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：face a _____",
           "answer": "challenge",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "challenge-n-sentence",
+          "id": "challenge-n-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：face a _____",
+          "answer": "challenge",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "challenge-n-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：take on a _____",
+          "answer": "challenge",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "challenge-n-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：Speaking without notes is a useful _____.",
+          "answer": "challenge",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "challenge-n-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “challenge” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “challenge” 写一个自然、真实的英文句子，含义必须符合词卡核心义“挑战”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "challenge-n-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “face a challenge” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -435,7 +560,7 @@
         {
           "id": "challenge-n-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “challenge”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “challenge” 和搭配 “face a challenge”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -448,37 +573,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -869,7 +1010,7 @@
       },
       "questions": [
         {
-          "id": "progress-n-meaning",
+          "id": "progress-n-meaning-core",
           "type": "meaning_choice",
           "prompt": "“progress”最核心的中文含义是？",
           "options": [
@@ -882,25 +1023,150 @@
           "ai": false
         },
         {
-          "id": "progress-n-recall",
+          "id": "progress-n-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “progress”？",
+          "options": [
+            "movement toward a better or more complete state",
+            "producing the result that is wanted",
+            "before now or earlier than expected"
+          ],
+          "answer": "movement toward a better or more complete state",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "progress-n-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “progress” 核心结构？",
+          "options": [
+            "an effective way",
+            "have already done",
+            "steady progress",
+            "make progress"
+          ],
+          "answer": "make progress",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "progress-n-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “progress” 最直接近义词？",
+          "options": [
+            "effective",
+            "already",
+            "advance",
+            "decline"
+          ],
+          "answer": "advance",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "progress-n-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “progress” 最直接反义词？",
+          "options": [
+            "already",
+            "decline",
+            "advance",
+            "effective"
+          ],
+          "answer": "decline",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "progress-n-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “progress” 的派生词？",
+          "options": [
+            "progressive",
+            "advance",
+            "decline",
+            "effective"
+          ],
+          "answer": "progressive",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "progress-n-recall-definition",
           "type": "recall",
-          "prompt": "movement toward a better or more complete state。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：movement toward a better or more complete state",
           "answer": "progress",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "progress-n-collocation",
+          "id": "progress-n-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“进步；进展”（n. / v.）的本课目标词。",
+          "answer": "progress",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "progress-n-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：make _____",
+          "answer": "progress",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "progress-n-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：make _____",
+          "answer": "progress",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "progress-n-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：make _____",
           "answer": "progress",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "progress-n-sentence",
+          "id": "progress-n-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：make _____",
+          "answer": "progress",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "progress-n-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：steady _____",
+          "answer": "progress",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "progress-n-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：You are making steady _____.",
+          "answer": "progress",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "progress-n-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “progress” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “progress” 写一个自然、真实的英文句子，含义必须符合词卡核心义“进步；进展”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "progress-n-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “make progress” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -908,7 +1174,7 @@
         {
           "id": "progress-n-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “progress”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “progress” 和搭配 “make progress”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -921,37 +1187,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1335,7 +1617,7 @@
       },
       "questions": [
         {
-          "id": "habit-n-meaning",
+          "id": "habit-n-meaning-core",
           "type": "meaning_choice",
           "prompt": "“habit”最核心的中文含义是？",
           "options": [
@@ -1348,25 +1630,150 @@
           "ai": false
         },
         {
-          "id": "habit-n-recall",
+          "id": "habit-n-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “habit”？",
+          "options": [
+            "important, dangerous, or not joking",
+            "continuing until now",
+            "something you do regularly"
+          ],
+          "answer": "something you do regularly",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "habit-n-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “habit” 核心结构？",
+          "options": [
+            "still need to",
+            "develop a habit",
+            "form a habit",
+            "a serious problem"
+          ],
+          "answer": "form a habit",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "habit-n-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “habit” 最直接近义词？",
+          "options": [
+            "still",
+            "routine",
+            "exception",
+            "serious"
+          ],
+          "answer": "routine",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "habit-n-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “habit” 最直接反义词？",
+          "options": [
+            "exception",
+            "routine",
+            "serious",
+            "still"
+          ],
+          "answer": "exception",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "habit-n-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “habit” 的派生词？",
+          "options": [
+            "routine",
+            "exception",
+            "serious",
+            "habitual"
+          ],
+          "answer": "habitual",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "habit-n-recall-definition",
           "type": "recall",
-          "prompt": "something you do regularly。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：something you do regularly",
           "answer": "habit",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "habit-n-collocation",
+          "id": "habit-n-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“习惯”（n.）的本课目标词。",
+          "answer": "habit",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "habit-n-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：form a _____",
+          "answer": "habit",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "habit-n-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：form a _____",
+          "answer": "habit",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "habit-n-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：form a _____",
           "answer": "habit",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "habit-n-sentence",
+          "id": "habit-n-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：form a _____",
+          "answer": "habit",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "habit-n-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：develop a _____",
+          "answer": "habit",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "habit-n-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：Reviewing before bed became a _____.",
+          "answer": "habit",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "habit-n-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “habit” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “habit” 写一个自然、真实的英文句子，含义必须符合词卡核心义“习惯”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "habit-n-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “form a habit” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1374,7 +1781,7 @@
         {
           "id": "habit-n-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “habit”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “habit” 和搭配 “form a habit”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1387,37 +1794,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1793,7 +2216,7 @@
       },
       "questions": [
         {
-          "id": "goal-n-meaning",
+          "id": "goal-n-meaning-core",
           "type": "meaning_choice",
           "prompt": "“goal”最核心的中文含义是？",
           "options": [
@@ -1806,25 +2229,150 @@
           "ai": false
         },
         {
-          "id": "goal-n-recall",
+          "id": "goal-n-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “goal”？",
+          "options": [
+            "many times",
+            "something you want to achieve",
+            "normal and not forced"
+          ],
+          "answer": "something you want to achieve",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "goal-n-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “goal” 核心结构？",
+          "options": [
+            "achieve a goal",
+            "set a goal",
+            "sound natural",
+            "quite often"
+          ],
+          "answer": "set a goal",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "goal-n-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “goal” 最直接近义词？",
+          "options": [
+            "aim",
+            "lack of direction",
+            "natural",
+            "often"
+          ],
+          "answer": "aim",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "goal-n-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “goal” 最直接反义词？",
+          "options": [
+            "aim",
+            "natural",
+            "often",
+            "lack of direction"
+          ],
+          "answer": "lack of direction",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "goal-n-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “goal” 的相关近义词？",
+          "options": [
+            "natural",
+            "often",
+            "aim",
+            "lack of direction"
+          ],
+          "answer": "aim",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "goal-n-recall-definition",
           "type": "recall",
-          "prompt": "something you want to achieve。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：something you want to achieve",
           "answer": "goal",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "goal-n-collocation",
+          "id": "goal-n-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“目标”（n.）的本课目标词。",
+          "answer": "goal",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "goal-n-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：set a _____",
+          "answer": "goal",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "goal-n-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：set a _____",
+          "answer": "goal",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "goal-n-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：set a _____",
           "answer": "goal",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "goal-n-sentence",
+          "id": "goal-n-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：set a _____",
+          "answer": "goal",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "goal-n-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：achieve a _____",
+          "answer": "goal",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "goal-n-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：Set a small _____ for this week.",
+          "answer": "goal",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "goal-n-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “goal” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “goal” 写一个自然、真实的英文句子，含义必须符合词卡核心义“目标”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "goal-n-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “set a goal” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1832,7 +2380,7 @@
         {
           "id": "goal-n-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “goal”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “goal” 和搭配 “set a goal”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1845,37 +2393,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2272,7 +2836,7 @@
       },
       "questions": [
         {
-          "id": "balance-n-meaning",
+          "id": "balance-n-meaning-core",
           "type": "meaning_choice",
           "prompt": "“balance”最核心的中文含义是？",
           "options": [
@@ -2285,25 +2849,150 @@
           "ai": false
         },
         {
-          "id": "balance-n-recall",
+          "id": "balance-n-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “balance”？",
+          "options": [
+            "a state in which different things have suitable amounts",
+            "easy to understand or see",
+            "with another person or thing"
+          ],
+          "answer": "a state in which different things have suitable amounts",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "balance-n-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “balance” 核心结构？",
+          "options": [
+            "find a balance",
+            "make something clear",
+            "work together",
+            "keep your balance"
+          ],
+          "answer": "find a balance",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "balance-n-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “balance” 最直接近义词？",
+          "options": [
+            "imbalance",
+            "clear",
+            "together",
+            "stability"
+          ],
+          "answer": "stability",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "balance-n-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “balance” 最直接反义词？",
+          "options": [
+            "clear",
+            "together",
+            "imbalance",
+            "stability"
+          ],
+          "answer": "imbalance",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "balance-n-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “balance” 的派生词？",
+          "options": [
+            "clear",
+            "balanced",
+            "stability",
+            "imbalance"
+          ],
+          "answer": "balanced",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "balance-n-recall-definition",
           "type": "recall",
-          "prompt": "a state in which different things have suitable amounts。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：a state in which different things have suitable amounts",
           "answer": "balance",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "balance-n-collocation",
+          "id": "balance-n-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“平衡”（n. / v.）的本课目标词。",
+          "answer": "balance",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "balance-n-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：find a _____",
+          "answer": "balance",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "balance-n-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：find a _____",
+          "answer": "balance",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "balance-n-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：find a _____",
           "answer": "balance",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "balance-n-sentence",
+          "id": "balance-n-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：find a _____",
+          "answer": "balance",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "balance-n-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：keep your _____",
+          "answer": "balance",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "balance-n-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：Try to find a _____ between study and rest.",
+          "answer": "balance",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "balance-n-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “balance” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “balance” 写一个自然、真实的英文句子，含义必须符合词卡核心义“平衡”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "balance-n-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “find a balance” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2311,7 +3000,7 @@
         {
           "id": "balance-n-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “balance”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “balance” 和搭配 “find a balance”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2324,37 +3013,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

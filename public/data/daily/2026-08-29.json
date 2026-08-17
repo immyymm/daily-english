@@ -1,7 +1,7 @@
 {
   "date": "2026-08-29",
   "dayNumber": 13,
-  "contentVersion": "2026.08.17.3",
+  "contentVersion": "2026.08.17.4",
   "cards": [
     {
       "id": "information-n",
@@ -383,7 +383,7 @@
       },
       "questions": [
         {
-          "id": "information-n-meaning",
+          "id": "information-n-meaning-core",
           "type": "meaning_choice",
           "prompt": "“information”最核心的中文含义是？",
           "options": [
@@ -396,25 +396,150 @@
           "ai": false
         },
         {
-          "id": "information-n-recall",
+          "id": "information-n-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “information”？",
+          "options": [
+            "the achievement of a desired result",
+            "not long ago",
+            "facts or details about something"
+          ],
+          "answer": "facts or details about something",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "information-n-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “information” 核心结构？",
+          "options": [
+            "have recently done",
+            "provide information",
+            "useful information",
+            "achieve success"
+          ],
+          "answer": "useful information",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "information-n-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “information” 最直接近义词？",
+          "options": [
+            "recently",
+            "data",
+            "misinformation",
+            "success"
+          ],
+          "answer": "data",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "information-n-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “information” 最直接反义词？",
+          "options": [
+            "misinformation",
+            "data",
+            "success",
+            "recently"
+          ],
+          "answer": "misinformation",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "information-n-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “information” 的派生词？",
+          "options": [
+            "data",
+            "misinformation",
+            "success",
+            "informative"
+          ],
+          "answer": "informative",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "information-n-recall-definition",
           "type": "recall",
-          "prompt": "facts or details about something。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：facts or details about something",
           "answer": "information",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "information-n-collocation",
+          "id": "information-n-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“信息”（n.）的本课目标词。",
+          "answer": "information",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "information-n-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：useful _____",
+          "answer": "information",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "information-n-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：useful _____",
+          "answer": "information",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "information-n-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：useful _____",
           "answer": "information",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "information-n-sentence",
+          "id": "information-n-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：useful _____",
+          "answer": "information",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "information-n-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：provide _____",
+          "answer": "information",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "information-n-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：This page provides practical _____ for travelers.",
+          "answer": "information",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "information-n-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “information” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “information” 写一个自然、真实的英文句子，含义必须符合词卡核心义“信息”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "information-n-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “useful information” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -422,7 +547,7 @@
         {
           "id": "information-n-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “information”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “information” 和搭配 “useful information”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -435,37 +560,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -849,7 +990,7 @@
       },
       "questions": [
         {
-          "id": "community-n-meaning",
+          "id": "community-n-meaning-core",
           "type": "meaning_choice",
           "prompt": "“community”最核心的中文含义是？",
           "options": [
@@ -862,25 +1003,150 @@
           "ai": false
         },
         {
-          "id": "community-n-recall",
+          "id": "community-n-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “community”？",
+          "options": [
+            "almost but not completely",
+            "people who live together or share an interest",
+            "an opinion about what someone should do"
+          ],
+          "answer": "people who live together or share an interest",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "community-n-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “community” 核心结构？",
+          "options": [
+            "online community",
+            "local community",
+            "give advice",
+            "nearly finished"
+          ],
+          "answer": "local community",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "community-n-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “community” 最直接近义词？",
+          "options": [
+            "group",
+            "individual",
+            "advice",
+            "nearly"
+          ],
+          "answer": "group",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "community-n-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “community” 最直接反义词？",
+          "options": [
+            "group",
+            "advice",
+            "nearly",
+            "individual"
+          ],
+          "answer": "individual",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "community-n-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “community” 的派生词？",
+          "options": [
+            "individual",
+            "advice",
+            "communal",
+            "group"
+          ],
+          "answer": "communal",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "community-n-recall-definition",
           "type": "recall",
-          "prompt": "people who live together or share an interest。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：people who live together or share an interest",
           "answer": "community",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "community-n-collocation",
+          "id": "community-n-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“社区；群体”（n.）的本课目标词。",
+          "answer": "community",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "community-n-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：local _____",
+          "answer": "community",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "community-n-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：local _____",
+          "answer": "community",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "community-n-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：local _____",
           "answer": "community",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "community-n-sentence",
+          "id": "community-n-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：local _____",
+          "answer": "community",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "community-n-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：online _____",
+          "answer": "community",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "community-n-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：The project brought the _____ together.",
+          "answer": "community",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "community-n-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “community” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “community” 写一个自然、真实的英文句子，含义必须符合词卡核心义“社区；群体”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "community-n-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “local community” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -888,7 +1154,7 @@
         {
           "id": "community-n-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “community”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “community” 和搭配 “local community”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -901,37 +1167,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1315,7 +1597,7 @@
       },
       "questions": [
         {
-          "id": "service-n-meaning",
+          "id": "service-n-meaning-core",
           "type": "meaning_choice",
           "prompt": "“service”最核心的中文含义是？",
           "options": [
@@ -1328,25 +1610,150 @@
           "ai": false
         },
         {
-          "id": "service-n-recall",
+          "id": "service-n-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “service”？",
+          "options": [
+            "work done to help or provide something for people",
+            "the way in which things are not the same",
+            "in place of someone or something else"
+          ],
+          "answer": "work done to help or provide something for people",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "service-n-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “service” 核心结构？",
+          "options": [
+            "customer service",
+            "make a difference",
+            "instead of",
+            "provide a service"
+          ],
+          "answer": "customer service",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "service-n-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “service” 最直接近义词？",
+          "options": [
+            "neglect",
+            "difference",
+            "instead",
+            "assistance"
+          ],
+          "answer": "assistance",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "service-n-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “service” 最直接反义词？",
+          "options": [
+            "difference",
+            "instead",
+            "neglect",
+            "assistance"
+          ],
+          "answer": "neglect",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "service-n-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “service” 的派生词？",
+          "options": [
+            "difference",
+            "serve",
+            "assistance",
+            "neglect"
+          ],
+          "answer": "serve",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "service-n-recall-definition",
           "type": "recall",
-          "prompt": "work done to help or provide something for people。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：work done to help or provide something for people",
           "answer": "service",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "service-n-collocation",
+          "id": "service-n-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“服务”（n.）的本课目标词。",
+          "answer": "service",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "service-n-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：customer _____",
+          "answer": "service",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "service-n-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：customer _____",
+          "answer": "service",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "service-n-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：customer _____",
           "answer": "service",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "service-n-sentence",
+          "id": "service-n-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：customer _____",
+          "answer": "service",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "service-n-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：provide a _____",
+          "answer": "service",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "service-n-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：The hotel offers excellent _____.",
+          "answer": "service",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "service-n-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “service” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “service” 写一个自然、真实的英文句子，含义必须符合词卡核心义“服务”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "service-n-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “customer service” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1354,7 +1761,7 @@
         {
           "id": "service-n-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “service”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “service” 和搭配 “customer service”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1367,37 +1774,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1781,7 +2204,7 @@
       },
       "questions": [
         {
-          "id": "system-n-meaning",
+          "id": "system-n-meaning-core",
           "type": "meaning_choice",
           "prompt": "“system”最核心的中文含义是？",
           "options": [
@@ -1794,25 +2217,150 @@
           "ai": false
         },
         {
-          "id": "system-n-recall",
+          "id": "system-n-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “system”？",
+          "options": [
+            "having great value or effect",
+            "used to introduce a contrast",
+            "a set of connected parts that work together"
+          ],
+          "answer": "a set of connected parts that work together",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "system-n-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “system” 核心结构？",
+          "options": [
+            "important to remember",
+            "however difficult",
+            "computer system",
+            "a simple system"
+          ],
+          "answer": "a simple system",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "system-n-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “system” 最直接近义词？",
+          "options": [
+            "important",
+            "however",
+            "structure",
+            "disorder"
+          ],
+          "answer": "structure",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "system-n-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “system” 最直接反义词？",
+          "options": [
+            "however",
+            "disorder",
+            "structure",
+            "important"
+          ],
+          "answer": "disorder",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "system-n-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “system” 的派生词？",
+          "options": [
+            "systematic",
+            "structure",
+            "disorder",
+            "important"
+          ],
+          "answer": "systematic",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "system-n-recall-definition",
           "type": "recall",
-          "prompt": "a set of connected parts that work together。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：a set of connected parts that work together",
           "answer": "system",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "system-n-collocation",
+          "id": "system-n-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“系统；体系”（n.）的本课目标词。",
+          "answer": "system",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "system-n-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：a simple _____",
+          "answer": "system",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "system-n-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：a simple _____",
+          "answer": "system",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "system-n-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：a simple _____",
           "answer": "system",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "system-n-sentence",
+          "id": "system-n-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：a simple _____",
+          "answer": "system",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "system-n-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：computer _____",
+          "answer": "system",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "system-n-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：This _____ helps you review words at the right time.",
+          "answer": "system",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "system-n-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “system” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “system” 写一个自然、真实的英文句子，含义必须符合词卡核心义“系统；体系”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "system-n-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “a simple system” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1820,7 +2368,7 @@
         {
           "id": "system-n-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “system”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “system” 和搭配 “a simple system”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1833,37 +2381,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2252,7 +2816,7 @@
       },
       "questions": [
         {
-          "id": "level-n-meaning",
+          "id": "level-n-meaning-core",
           "type": "meaning_choice",
           "prompt": "“level”最核心的中文含义是？",
           "options": [
@@ -2265,25 +2829,150 @@
           "ai": false
         },
         {
-          "id": "level-n-recall",
+          "id": "level-n-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “level”？",
+          "options": [
+            "after a long time or at the end",
+            "a position on a scale of amount or quality",
+            "ready to be used or able to meet"
+          ],
+          "answer": "a position on a scale of amount or quality",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "level-n-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “level” 核心结构？",
+          "options": [
+            "finally decide",
+            "high level of",
+            "skill level",
+            "be available to"
+          ],
+          "answer": "skill level",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "level-n-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “level” 最直接近义词？",
+          "options": [
+            "finally",
+            "standard",
+            "extreme",
+            "available"
+          ],
+          "answer": "standard",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "level-n-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “level” 最直接反义词？",
+          "options": [
+            "extreme",
+            "standard",
+            "available",
+            "finally"
+          ],
+          "answer": "extreme",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "level-n-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “level” 的相关近义词？",
+          "options": [
+            "extreme",
+            "available",
+            "finally",
+            "standard"
+          ],
+          "answer": "standard",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "level-n-recall-definition",
           "type": "recall",
-          "prompt": "a position on a scale of amount or quality。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：a position on a scale of amount or quality",
           "answer": "level",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "level-n-collocation",
+          "id": "level-n-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“水平；级别”（n. / v.）的本课目标词。",
+          "answer": "level",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "level-n-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：skill _____",
+          "answer": "level",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "level-n-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：skill _____",
+          "answer": "level",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "level-n-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：skill _____",
           "answer": "level",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "level-n-sentence",
+          "id": "level-n-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：skill _____",
+          "answer": "level",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "level-n-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：high _____ of",
+          "answer": "level",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "level-n-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：Choose a task that matches your current _____.",
+          "answer": "level",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "level-n-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “level” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “level” 写一个自然、真实的英文句子，含义必须符合词卡核心义“水平；级别”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "level-n-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “skill level” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2291,7 +2980,7 @@
         {
           "id": "level-n-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “level”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “level” 和搭配 “skill level”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2304,37 +2993,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

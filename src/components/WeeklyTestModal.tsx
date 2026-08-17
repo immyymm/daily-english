@@ -28,6 +28,11 @@ export function WeeklyTestModal({ open, cards, aiConsent, onNeedConsent, onClose
   const [result, setResult] = useState<EvaluationResult>();
   const [error, setError] = useState<string>();
   const targetWords = useMemo(() => cards.slice(0, 10), [cards]);
+  const requiredWords = useMemo(() => targetWords.slice(0, 5), [targetWords]);
+  const suggestedPhrases = useMemo(
+    () => targetWords.flatMap((card) => card.fixedPhrases.slice(0, 1).map((phrase) => phrase.phrase)).slice(0, 5),
+    [targetWords]
+  );
 
   useEffect(() => {
     if (open) {
@@ -43,8 +48,8 @@ export function WeeklyTestModal({ open, cards, aiConsent, onNeedConsent, onClose
   const representative = targetWords[0];
   const questionType = mode === 'writing' ? 'weekly_writing' : 'weekly_speaking';
   const prompt = mode === 'writing'
-    ? '写一段 150–200 词的英文短文，主题是“一个让生活变得更好的小改变”。自然使用合适的本周词汇，不要强行堆词。'
-    : '进行 2–3 分钟的即兴表达：描述你最近正在培养的一个习惯。录音后，请输入或确认文字稿。';
+    ? `写一段 180–240 词的英文短文，主题是“一个让生活变得更好的小改变”。至少自然使用 5 个本周词（${requiredWords.map((card) => card.word).join('、')}）和 2 个词卡搭配（${suggestedPhrases.join('、')}）；至少加入一次原因解释、一个具体例子和一句近义词或反义词对比。不要强行堆词。`
+    : `进行 2–3 分钟的即兴表达：描述你最近正在培养的一个习惯。至少自然使用 5 个本周词（${requiredWords.map((card) => card.word).join('、')}）和 2 个词卡搭配（${suggestedPhrases.join('、')}），并用一个具体场景说明效果。录音后，请输入或确认文字稿。`;
 
   const submit = async () => {
     if (!aiConsent) {
@@ -142,9 +147,17 @@ export function WeeklyTestModal({ open, cards, aiConsent, onNeedConsent, onClose
         <button className={mode === 'speaking' ? 'active' : ''} onClick={() => setMode('speaking')}><Mic2 size={17} />即兴口语</button>
       </div>
       <section className="weekly-prompt">
-        <span>本周建议词</span>
+        <span>来自完整词卡的本次考点</span>
         <div className="word-chip-list">{targetWords.map((card) => <b key={card.id}>{card.word}</b>)}</div>
         <p>{prompt}</p>
+        <div className="weekly-requirements">
+          <strong>评分会重点检查</strong>
+          <ul>
+            <li>目标词的词义和语境是否准确</li>
+            <li>固定搭配、介词和词性是否自然</li>
+            <li>是否避免中文直译，并形成连贯表达</li>
+          </ul>
+        </div>
       </section>
       {mode === 'speaking' && <LocalRecorder shownAt={shownAt} onStarted={setSpeechLatency} />}
       <label className="answer-field">

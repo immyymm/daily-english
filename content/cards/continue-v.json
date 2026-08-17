@@ -385,7 +385,7 @@
   },
   "questions": [
     {
-      "id": "continue-v-meaning",
+      "id": "continue-v-meaning-core",
       "type": "meaning_choice",
       "prompt": "“continue”最核心的中文含义是？",
       "options": [
@@ -398,25 +398,150 @@
       "ai": false
     },
     {
-      "id": "continue-v-recall",
+      "id": "continue-v-meaning-english",
+      "type": "meaning_choice",
+      "prompt": "哪一项英文释义最符合词卡中的 “continue”？",
+      "options": [
+        "to succeed in reaching a goal",
+        "knowledge gained by doing or seeing things",
+        "to keep doing something without stopping"
+      ],
+      "answer": "to keep doing something without stopping",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "continue-v-structure-choice",
+      "type": "meaning_choice",
+      "prompt": "哪一个是词卡要求优先记住的 “continue” 核心结构？",
+      "options": [
+        "gain experience",
+        "continue doing",
+        "continue to improve",
+        "achieve a goal"
+      ],
+      "answer": "continue to improve",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "continue-v-synonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “continue” 最直接近义词？",
+      "options": [
+        "experience",
+        "proceed",
+        "stop",
+        "achieve"
+      ],
+      "answer": "proceed",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "continue-v-antonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “continue” 最直接反义词？",
+      "options": [
+        "stop",
+        "proceed",
+        "achieve",
+        "experience"
+      ],
+      "answer": "stop",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "continue-v-contrast-choice",
+      "type": "meaning_choice",
+      "prompt": "根据本词卡辨析，哪个词被列为 “continue” 的派生词？",
+      "options": [
+        "proceed",
+        "stop",
+        "achieve",
+        "continuation"
+      ],
+      "answer": "continuation",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "continue-v-recall-definition",
       "type": "recall",
-      "prompt": "to keep doing something without stopping。请输入目标单词。",
+      "prompt": "根据英文释义写出目标词：to keep doing something without stopping",
       "answer": "continue",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "continue-v-collocation",
+      "id": "continue-v-recall-chinese",
+      "type": "recall",
+      "prompt": "写出符合“继续”（v.）的本课目标词。",
+      "answer": "continue",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "continue-v-collocation-core",
       "type": "collocation",
       "prompt": "补全高频搭配：_____ to improve",
+      "answer": "continue",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "continue-v-collocation-structure",
+      "type": "collocation",
+      "prompt": "补全核心结构：_____ to improve",
+      "answer": "continue",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "continue-v-collocation-context",
+      "type": "collocation",
+      "prompt": "补全语境词组：_____ to improve",
       "answer": "continue",
       "stage": "T2",
       "ai": false
     },
     {
-      "id": "continue-v-sentence",
+      "id": "continue-v-collocation-fixed-1",
+      "type": "collocation",
+      "prompt": "补全固定搭配：_____ to improve",
+      "answer": "continue",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "continue-v-collocation-fixed-2",
+      "type": "collocation",
+      "prompt": "再补全一个固定搭配：_____ doing",
+      "answer": "continue",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "continue-v-example-cloze",
+      "type": "collocation",
+      "prompt": "补全词卡核心例句：Please _____ reading from page ten.",
+      "answer": "continue",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "continue-v-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “continue” 写一个自然、真实的英文句子。",
+      "prompt": "请用 “continue” 写一个自然、真实的英文句子，含义必须符合词卡核心义“继续”。",
+      "answer": "",
+      "stage": "T2",
+      "ai": true
+    },
+    {
+      "id": "continue-v-sentence-phrase",
+      "type": "free_sentence",
+      "prompt": "请用完整搭配 “continue to improve” 写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -424,7 +549,7 @@
     {
       "id": "continue-v-dialogue",
       "type": "dialogue",
-      "prompt": "在一段真实对话中自然使用 “continue”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “continue” 和搭配 “continue to improve”，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -437,37 +562,53 @@
       "free_sentence"
     ],
     "T1": [
+      "meaning_choice",
       "recall",
       "collocation"
     ],
     "T2": [
+      "meaning_choice",
       "recall",
       "collocation",
       "free_sentence"
     ],
     "T3": [
+      "meaning_choice",
       "recall",
+      "collocation",
       "dialogue"
     ],
     "T4": [
+      "meaning_choice",
       "recall",
+      "collocation",
+      "free_sentence",
       "dialogue"
     ],
     "T5": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T6": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T7": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.3",
+  "contentVersion": "2026.08.17.4",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

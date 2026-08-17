@@ -1,7 +1,7 @@
 {
   "date": "2026-09-09",
   "dayNumber": 24,
-  "contentVersion": "2026.08.17.3",
+  "contentVersion": "2026.08.17.4",
   "cards": [
     {
       "id": "still-adv",
@@ -404,7 +404,7 @@
       },
       "questions": [
         {
-          "id": "still-adv-meaning",
+          "id": "still-adv-meaning-core",
           "type": "meaning_choice",
           "prompt": "“still”最核心的中文含义是？",
           "options": [
@@ -417,25 +417,150 @@
           "ai": false
         },
         {
-          "id": "still-adv-recall",
+          "id": "still-adv-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “still”？",
+          "options": [
+            "to make something new",
+            "continuing until now",
+            "a person you know and like"
+          ],
+          "answer": "continuing until now",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "still-adv-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “still” 核心结构？",
+          "options": [
+            "close friend",
+            "create an opportunity",
+            "still working",
+            "still need to"
+          ],
+          "answer": "still need to",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "still-adv-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “still” 最直接近义词？",
+          "options": [
+            "friend",
+            "create",
+            "yet",
+            "no longer"
+          ],
+          "answer": "yet",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "still-adv-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “still” 最直接反义词？",
+          "options": [
+            "create",
+            "no longer",
+            "yet",
+            "friend"
+          ],
+          "answer": "no longer",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "still-adv-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “still” 的易混词？",
+          "options": [
+            "yet",
+            "no longer",
+            "friend",
+            "create"
+          ],
+          "answer": "yet",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "still-adv-recall-definition",
           "type": "recall",
-          "prompt": "continuing until now。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：continuing until now",
           "answer": "still",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "still-adv-collocation",
+          "id": "still-adv-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“仍然；静止的”（adv. / adj.）的本课目标词。",
+          "answer": "still",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "still-adv-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：_____ need to",
+          "answer": "still",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "still-adv-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：_____ need to",
+          "answer": "still",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "still-adv-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：_____ need to",
           "answer": "still",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "still-adv-sentence",
+          "id": "still-adv-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：_____ need to",
+          "answer": "still",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "still-adv-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：_____ working",
+          "answer": "still",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "still-adv-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：I _____ need to review two words.",
+          "answer": "still",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "still-adv-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “still” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “still” 写一个自然、真实的英文句子，含义必须符合词卡核心义“仍然；静止的”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "still-adv-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “still need to” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -443,7 +568,7 @@
         {
           "id": "still-adv-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “still”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “still” 和搭配 “still need to”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -456,37 +581,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -862,7 +1003,7 @@
       },
       "questions": [
         {
-          "id": "often-adv-meaning",
+          "id": "often-adv-meaning-core",
           "type": "meaning_choice",
           "prompt": "“often”最核心的中文含义是？",
           "options": [
@@ -875,25 +1016,150 @@
           "ai": false
         },
         {
-          "id": "often-adv-recall",
+          "id": "often-adv-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “often”？",
+          "options": [
+            "many times",
+            "the place where you live",
+            "to have something as part of a whole"
+          ],
+          "answer": "many times",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "often-adv-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “often” 核心结构？",
+          "options": [
+            "include examples",
+            "often used",
+            "quite often",
+            "feel at home"
+          ],
+          "answer": "quite often",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "often-adv-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “often” 最直接近义词？",
+          "options": [
+            "include",
+            "frequently",
+            "seldom",
+            "home"
+          ],
+          "answer": "frequently",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "often-adv-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “often” 最直接反义词？",
+          "options": [
+            "seldom",
+            "frequently",
+            "home",
+            "include"
+          ],
+          "answer": "seldom",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "often-adv-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “often” 的相关近义词？",
+          "options": [
+            "seldom",
+            "home",
+            "include",
+            "frequently"
+          ],
+          "answer": "frequently",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "often-adv-recall-definition",
           "type": "recall",
-          "prompt": "many times。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：many times",
           "answer": "often",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "often-adv-collocation",
+          "id": "often-adv-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“经常”（adv.）的本课目标词。",
+          "answer": "often",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "often-adv-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：quite _____",
+          "answer": "often",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "often-adv-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：quite _____",
+          "answer": "often",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "often-adv-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：quite _____",
           "answer": "often",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "often-adv-sentence",
+          "id": "often-adv-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：quite _____",
+          "answer": "often",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "often-adv-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：_____ used",
+          "answer": "often",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "often-adv-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：This phrase _____ appears in conversation.",
+          "answer": "often",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "often-adv-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “often” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “often” 写一个自然、真实的英文句子，含义必须符合词卡核心义“经常”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "often-adv-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “quite often” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -901,7 +1167,7 @@
         {
           "id": "often-adv-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “often”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “often” 和搭配 “quite often”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -914,37 +1180,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1320,7 +1602,7 @@
       },
       "questions": [
         {
-          "id": "together-adv-meaning",
+          "id": "together-adv-meaning-core",
           "type": "meaning_choice",
           "prompt": "“together”最核心的中文含义是？",
           "options": [
@@ -1333,25 +1615,150 @@
           "ai": false
         },
         {
-          "id": "together-adv-recall",
+          "id": "together-adv-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “together”？",
+          "options": [
+            "a situation that needs a solution",
+            "to keep or bring something back to mind",
+            "with another person or thing"
+          ],
+          "answer": "with another person or thing",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "together-adv-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “together” 核心结构？",
+          "options": [
+            "learn together",
+            "work together",
+            "solve a problem",
+            "remember to do something"
+          ],
+          "answer": "work together",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "together-adv-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “together” 最直接近义词？",
+          "options": [
+            "jointly",
+            "apart",
+            "problem",
+            "remember"
+          ],
+          "answer": "jointly",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "together-adv-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “together” 最直接反义词？",
+          "options": [
+            "jointly",
+            "problem",
+            "remember",
+            "apart"
+          ],
+          "answer": "apart",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "together-adv-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “together” 的相关近义词？",
+          "options": [
+            "problem",
+            "remember",
+            "jointly",
+            "apart"
+          ],
+          "answer": "jointly",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "together-adv-recall-definition",
           "type": "recall",
-          "prompt": "with another person or thing。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：with another person or thing",
           "answer": "together",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "together-adv-collocation",
+          "id": "together-adv-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“一起；共同”（adv.）的本课目标词。",
+          "answer": "together",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "together-adv-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：work _____",
+          "answer": "together",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "together-adv-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：work _____",
+          "answer": "together",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "together-adv-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：work _____",
           "answer": "together",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "together-adv-sentence",
+          "id": "together-adv-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：work _____",
+          "answer": "together",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "together-adv-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：learn _____",
+          "answer": "together",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "together-adv-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：These words are often used _____.",
+          "answer": "together",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "together-adv-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “together” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “together” 写一个自然、真实的英文句子，含义必须符合词卡核心义“一起；共同”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "together-adv-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “work together” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1359,7 +1766,7 @@
         {
           "id": "together-adv-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “together”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “together” 和搭配 “work together”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1372,37 +1779,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1793,7 +2216,7 @@
       },
       "questions": [
         {
-          "id": "forward-adv-meaning",
+          "id": "forward-adv-meaning-core",
           "type": "meaning_choice",
           "prompt": "“forward”最核心的中文含义是？",
           "options": [
@@ -1806,25 +2229,150 @@
           "ai": false
         },
         {
-          "id": "forward-adv-recall",
+          "id": "forward-adv-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “forward”？",
+          "options": [
+            "to let someone do something",
+            "toward the front or future",
+            "a sentence used to ask for information"
+          ],
+          "answer": "toward the front or future",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "forward-adv-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “forward” 核心结构？",
+          "options": [
+            "look forward to",
+            "ask a question",
+            "allow someone to do something",
+            "move forward"
+          ],
+          "answer": "look forward to",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "forward-adv-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “forward” 最直接近义词？",
+          "options": [
+            "backward",
+            "question",
+            "allow",
+            "ahead"
+          ],
+          "answer": "ahead",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "forward-adv-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “forward” 最直接反义词？",
+          "options": [
+            "question",
+            "allow",
+            "backward",
+            "ahead"
+          ],
+          "answer": "backward",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "forward-adv-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “forward” 的派生词？",
+          "options": [
+            "question",
+            "forwarding",
+            "ahead",
+            "backward"
+          ],
+          "answer": "forwarding",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "forward-adv-recall-definition",
           "type": "recall",
-          "prompt": "toward the front or future。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：toward the front or future",
           "answer": "forward",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "forward-adv-collocation",
+          "id": "forward-adv-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“向前；前面的”（adv. / adj.）的本课目标词。",
+          "answer": "forward",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "forward-adv-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：look _____ to",
+          "answer": "forward",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "forward-adv-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：look _____ to",
+          "answer": "forward",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "forward-adv-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：look _____ to",
           "answer": "forward",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "forward-adv-sentence",
+          "id": "forward-adv-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：look _____ to",
+          "answer": "forward",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "forward-adv-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：move _____",
+          "answer": "forward",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "forward-adv-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：I look _____ to hearing from you.",
+          "answer": "forward",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "forward-adv-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “forward” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “forward” 写一个自然、真实的英文句子，含义必须符合词卡核心义“向前；前面的”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "forward-adv-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “look forward to” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1832,7 +2380,7 @@
         {
           "id": "forward-adv-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “forward”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “forward” 和搭配 “look forward to”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1845,37 +2393,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2272,7 +2836,7 @@
       },
       "questions": [
         {
-          "id": "enough-adv-meaning",
+          "id": "enough-adv-meaning-core",
           "type": "meaning_choice",
           "prompt": "“enough”最核心的中文含义是？",
           "options": [
@@ -2285,25 +2849,150 @@
           "ai": false
         },
         {
-          "id": "enough-adv-recall",
+          "id": "enough-adv-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “enough”？",
+          "options": [
+            "as much as is needed",
+            "an account of events",
+            "to keep doing something without stopping"
+          ],
+          "answer": "as much as is needed",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "enough-adv-structure-choice",
+          "type": "meaning_choice",
+          "prompt": "哪一个是词卡要求优先记住的 “enough” 核心结构？",
+          "options": [
+            "tell a story",
+            "continue to improve",
+            "enough time",
+            "good enough"
+          ],
+          "answer": "good enough",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "enough-adv-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “enough” 最直接近义词？",
+          "options": [
+            "too",
+            "story",
+            "sufficient",
+            "insufficient"
+          ],
+          "answer": "sufficient",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "enough-adv-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “enough” 最直接反义词？",
+          "options": [
+            "story",
+            "insufficient",
+            "sufficient",
+            "too"
+          ],
+          "answer": "insufficient",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "enough-adv-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “enough” 的易混词？",
+          "options": [
+            "too",
+            "sufficient",
+            "insufficient",
+            "story"
+          ],
+          "answer": "too",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "enough-adv-recall-definition",
           "type": "recall",
-          "prompt": "as much as is needed。请输入目标单词。",
+          "prompt": "根据英文释义写出目标词：as much as is needed",
           "answer": "enough",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "enough-adv-collocation",
+          "id": "enough-adv-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“足够地；足够的”（adv. / adj.）的本课目标词。",
+          "answer": "enough",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "enough-adv-collocation-core",
           "type": "collocation",
           "prompt": "补全高频搭配：good _____",
+          "answer": "enough",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "enough-adv-collocation-structure",
+          "type": "collocation",
+          "prompt": "补全核心结构：good _____",
+          "answer": "enough",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "enough-adv-collocation-context",
+          "type": "collocation",
+          "prompt": "补全语境词组：good _____",
           "answer": "enough",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "enough-adv-sentence",
+          "id": "enough-adv-collocation-fixed-1",
+          "type": "collocation",
+          "prompt": "补全固定搭配：good _____",
+          "answer": "enough",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "enough-adv-collocation-fixed-2",
+          "type": "collocation",
+          "prompt": "再补全一个固定搭配：_____ time",
+          "answer": "enough",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "enough-adv-example-cloze",
+          "type": "collocation",
+          "prompt": "补全词卡核心例句：Five focused minutes can be _____.",
+          "answer": "enough",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "enough-adv-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “enough” 写一个自然、真实的英文句子。",
+          "prompt": "请用 “enough” 写一个自然、真实的英文句子，含义必须符合词卡核心义“足够地；足够的”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "enough-adv-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请用完整搭配 “good enough” 写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2311,7 +3000,7 @@
         {
           "id": "enough-adv-dialogue",
           "type": "dialogue",
-          "prompt": "在一段真实对话中自然使用 “enough”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “enough” 和搭配 “good enough”，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2324,37 +3013,53 @@
           "free_sentence"
         ],
         "T1": [
+          "meaning_choice",
           "recall",
           "collocation"
         ],
         "T2": [
+          "meaning_choice",
           "recall",
           "collocation",
           "free_sentence"
         ],
         "T3": [
+          "meaning_choice",
           "recall",
+          "collocation",
           "dialogue"
         ],
         "T4": [
+          "meaning_choice",
           "recall",
+          "collocation",
+          "free_sentence",
           "dialogue"
         ],
         "T5": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T6": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ],
         "T7": [
-          "dialogue",
-          "free_sentence"
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.3",
+      "contentVersion": "2026.08.17.4",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

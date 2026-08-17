@@ -14,7 +14,7 @@ const contentCardsDir = path.join(root, 'content', 'cards');
 const publicDailyDir = path.join(root, 'public', 'data', 'daily');
 const publicDataDir = path.join(root, 'public', 'data');
 const launchDate = new Date('2026-08-17T12:00:00+08:00');
-const contentVersion = '2026.08.17.3';
+const contentVersion = '2026.08.17.4';
 
 const slug = (value) => value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const primaryPos = (value) => value.split('/')[0].trim().replace('.', '');
@@ -334,6 +334,31 @@ function normalizeExamples(item, override) {
   ];
 }
 
+function rotateOptions(options, seed) {
+  const unique = [...new Set(options.filter(Boolean))];
+  const start = unique.length ? seed % unique.length : 0;
+  return unique.slice(start).concat(unique.slice(0, start));
+}
+
+function relationOptions(answer, candidates, index) {
+  const distractors = [...new Set(candidates.filter((candidate) => candidate && candidate !== answer))].slice(0, 3);
+  return rotateOptions([answer, ...distractors], index);
+}
+
+function clozeQuestion(id, promptPrefix, text, targetWord, stage) {
+  const escaped = targetWord.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const pattern = new RegExp('\\b' + escaped + '(?:s|es|ed|ing)?\\b', 'i');
+  const matched = text.match(pattern)?.[0];
+  return {
+    id,
+    type: 'collocation',
+    prompt: promptPrefix + (matched ? text.replace(matched, '_____') : text + '（填入目标词）'),
+    answer: matched ?? targetWord,
+    stage,
+    ai: false
+  };
+}
+
 function makeCard(item, index) {
   const id = slug(item.w + '-' + primaryPos(item.p));
   const override = cardOverrides[item.w];
@@ -367,10 +392,38 @@ function makeCard(item, index) {
     : 'COCA 高频精选';
   const next = lexicon[(index + 17) % lexicon.length];
   const nextTwo = lexicon[(index + 43) % lexicon.length];
-  const meaningOptions = [item.zh, next.zh, nextTwo.zh];
-  const shift = index % meaningOptions.length;
-  const rotatedMeaningOptions = meaningOptions.slice(shift).concat(meaningOptions.slice(0, shift));
-  const cloze = item.coll.includes(item.w) ? item.coll.replace(item.w, '_____') : 'Use _____ naturally in this situation.';
+  const meaningOptions = rotateOptions([item.zh, next.zh, nextTwo.zh], index);
+  const englishMeaningOptions = rotateOptions([meanings[0].english, next.en, nextTwo.en], index + 1);
+  const structureOptions = relationOptions(structures[0].phrase, [next.coll, nextTwo.coll, fixedPhrases[1]?.phrase], index + 2);
+  const synonymAnswer = synonyms[0].word;
+  const antonymAnswer = antonyms[0].word;
+  const synonymOptions = relationOptions(synonymAnswer, [antonymAnswer, confusableItems[0]?.word, next.w, nextTwo.w], index + 3);
+  const antonymOptions = relationOptions(antonymAnswer, [synonymAnswer, confusableItems[0]?.word, next.w, nextTwo.w], index + 4);
+  const contrast = confusableItems[0] ?? derivatives[0] ?? synonyms[0];
+  const contrastKind = confusableItems[0] ? '易混词' : derivatives[0] ? '派生词' : '相关近义词';
+  const contrastOptions = relationOptions(contrast.word, [synonymAnswer, antonymAnswer, next.w, nextTwo.w], index + 5);
+  const firstContextPhrase = contextPhrases[0]?.items[0]?.phrase ?? item.coll;
+  const firstFixedPhrase = fixedPhrases[0]?.phrase ?? item.coll;
+  const secondFixedPhrase = fixedPhrases.find((entry) => entry.phrase !== firstFixedPhrase)?.phrase ?? structures[1]?.phrase ?? item.coll;
+  const questions = [
+    { id: id + '-meaning-core', type: 'meaning_choice', prompt: '“' + item.w + '”最核心的中文含义是？', options: meaningOptions, answer: item.zh, stage: 'T0', ai: false },
+    { id: id + '-meaning-english', type: 'meaning_choice', prompt: '哪一项英文释义最符合词卡中的 “' + item.w + '”？', options: englishMeaningOptions, answer: meanings[0].english, stage: 'T0', ai: false },
+    { id: id + '-structure-choice', type: 'meaning_choice', prompt: '哪一个是词卡要求优先记住的 “' + item.w + '” 核心结构？', options: structureOptions, answer: structures[0].phrase, stage: 'T1', ai: false },
+    { id: id + '-synonym-choice', type: 'meaning_choice', prompt: '哪个词是词卡中列出的 “' + item.w + '” 最直接近义词？', options: synonymOptions, answer: synonymAnswer, stage: 'T2', ai: false },
+    { id: id + '-antonym-choice', type: 'meaning_choice', prompt: '哪个词是词卡中列出的 “' + item.w + '” 最直接反义词？', options: antonymOptions, answer: antonymAnswer, stage: 'T2', ai: false },
+    { id: id + '-contrast-choice', type: 'meaning_choice', prompt: '根据本词卡辨析，哪个词被列为 “' + item.w + '” 的' + contrastKind + '？', options: contrastOptions, answer: contrast.word, stage: 'T3', ai: false },
+    { id: id + '-recall-definition', type: 'recall', prompt: '根据英文释义写出目标词：' + meanings[0].english, answer: item.w, stage: 'T1', ai: false },
+    { id: id + '-recall-chinese', type: 'recall', prompt: '写出符合“' + item.zh + '”（' + item.p + '）的本课目标词。', answer: item.w, stage: 'T1', ai: false },
+    clozeQuestion(id + '-collocation-core', '补全高频搭配：', item.coll, item.w, 'T0'),
+    clozeQuestion(id + '-collocation-structure', '补全核心结构：', structures[0].phrase, item.w, 'T1'),
+    clozeQuestion(id + '-collocation-context', '补全语境词组：', firstContextPhrase, item.w, 'T2'),
+    clozeQuestion(id + '-collocation-fixed-1', '补全固定搭配：', firstFixedPhrase, item.w, 'T2'),
+    clozeQuestion(id + '-collocation-fixed-2', '再补全一个固定搭配：', secondFixedPhrase, item.w, 'T3'),
+    clozeQuestion(id + '-example-cloze', '补全词卡核心例句：', item.ex, item.w, 'T3'),
+    { id: id + '-sentence-core', type: 'free_sentence', prompt: '请用 “' + item.w + '” 写一个自然、真实的英文句子，含义必须符合词卡核心义“' + item.zh + '”。', answer: '', stage: 'T2', ai: true },
+    { id: id + '-sentence-phrase', type: 'free_sentence', prompt: '请用完整搭配 “' + firstFixedPhrase + '” 写一个与自己有关的自然英文句子。', answer: '', stage: 'T3', ai: true },
+    { id: id + '-dialogue', type: 'dialogue', prompt: '写一段 2–4 轮真实对话，自然使用 “' + item.w + '” 和搭配 “' + firstContextPhrase + '”，并避免中文直译。', answer: '', stage: 'T4', ai: true }
+  ];
 
   return {
     id,
@@ -412,18 +465,14 @@ function makeCard(item, index) {
       commonMistake: focus[2],
       mustUseExample: focus[3]
     },
-    questions: [
-      { id: id + '-meaning', type: 'meaning_choice', prompt: '“' + item.w + '”最核心的中文含义是？', options: rotatedMeaningOptions, answer: item.zh, stage: 'T0', ai: false },
-      { id: id + '-recall', type: 'recall', prompt: item.en + '。请输入目标单词。', answer: item.w, stage: 'T1', ai: false },
-      { id: id + '-collocation', type: 'collocation', prompt: '补全高频搭配：' + cloze, answer: item.w, stage: 'T2', ai: false },
-      { id: id + '-sentence', type: 'free_sentence', prompt: '请用 “' + item.w + '” 写一个自然、真实的英文句子。', answer: '', stage: 'T3', ai: true },
-      { id: id + '-dialogue', type: 'dialogue', prompt: '在一段真实对话中自然使用 “' + item.w + '”，并避免中文直译。', answer: '', stage: 'T4', ai: true }
-    ],
+    questions,
     reviewStages: {
-      T0: ['meaning_choice', 'collocation', 'free_sentence'], T1: ['recall', 'collocation'],
-      T2: ['recall', 'collocation', 'free_sentence'], T3: ['recall', 'dialogue'],
-      T4: ['recall', 'dialogue'], T5: ['dialogue', 'free_sentence'],
-      T6: ['dialogue', 'free_sentence'], T7: ['dialogue', 'free_sentence']
+      T0: ['meaning_choice', 'collocation', 'free_sentence'], T1: ['meaning_choice', 'recall', 'collocation'],
+      T2: ['meaning_choice', 'recall', 'collocation', 'free_sentence'], T3: ['meaning_choice', 'recall', 'collocation', 'dialogue'],
+      T4: ['meaning_choice', 'recall', 'collocation', 'free_sentence', 'dialogue'],
+      T5: ['meaning_choice', 'recall', 'collocation', 'free_sentence', 'dialogue'],
+      T6: ['meaning_choice', 'recall', 'collocation', 'free_sentence', 'dialogue'],
+      T7: ['meaning_choice', 'recall', 'collocation', 'free_sentence', 'dialogue']
     },
     detailLevel: 'template-complete',
     contentVersion,

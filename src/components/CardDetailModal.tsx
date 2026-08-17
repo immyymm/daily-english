@@ -146,8 +146,22 @@ export function CardDetailModal({ card, progress, open, onClose, onLearn }: Card
             <div><span>词性</span><strong>{card.partOfSpeech}</strong></div>
             <div><span>中文核心义</span><strong>{card.coreMemory.chinese}</strong></div>
             <div><span>Simple English</span><p>{card.coreMemory.english}</p></div>
-            <div><span>最直接近义词</span><strong>{card.coreMemory.directSynonym}</strong></div>
-            <div><span>最直接反义词</span><strong>{card.coreMemory.directAntonym}</strong></div>
+            <div>
+              <span>最直接近义词</span>
+              <CoreRelationList
+                items={card.synonyms}
+                fallback={card.coreMemory.directSynonym}
+                relationLabel="近义词"
+              />
+            </div>
+            <div>
+              <span>最直接反义词</span>
+              <CoreRelationList
+                items={card.antonyms}
+                fallback={card.coreMemory.directAntonym}
+                relationLabel="反义词"
+              />
+            </div>
             <div><span>常用派生词</span><strong>{card.coreMemory.derivatives}</strong></div>
           </section>
           <section className="content-card">
@@ -284,6 +298,28 @@ function RelationRow({ word, phonetic, meta, note }: { word: string; phonetic: s
       <div className="relation-word"><div><strong>{word}</strong><small>{phonetic}</small></div><ListenButton text={word} label={'播放 ' + word} /></div>
       <p>{meta}</p>{note && <span>{note}</span>}
     </article>
+  );
+}
+
+function CoreRelationList({
+  items,
+  fallback,
+  relationLabel
+}: {
+  items: Array<{ word: string; phonetic: string; chinese: string }>;
+  fallback: string;
+  relationLabel: string;
+}) {
+  if (!items.length) return <strong>{fallback}</strong>;
+  return (
+    <div className="memory-relation-list">
+      {items.map((item) => (
+        <div className="memory-relation-item" key={item.word}>
+          <div><strong>{item.word}</strong><small>{item.phonetic} · {item.chinese}</small></div>
+          <ListenButton text={item.word} label={`播放${relationLabel} ${item.word} 的发音`} />
+        </div>
+      ))}
+    </div>
   );
 }
 

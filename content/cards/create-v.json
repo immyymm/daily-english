@@ -392,7 +392,7 @@
   },
   "questions": [
     {
-      "id": "create-v-meaning",
+      "id": "create-v-meaning-core",
       "type": "meaning_choice",
       "prompt": "“create”最核心的中文含义是？",
       "options": [
@@ -405,25 +405,150 @@
       "ai": false
     },
     {
-      "id": "create-v-recall",
+      "id": "create-v-meaning-english",
+      "type": "meaning_choice",
+      "prompt": "哪一项英文释义最符合词卡中的 “create”？",
+      "options": [
+        "to make something new",
+        "to make something clear",
+        "physical or mental energy used to do something"
+      ],
+      "answer": "to make something new",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "create-v-structure-choice",
+      "type": "meaning_choice",
+      "prompt": "哪一个是词卡要求优先记住的 “create” 核心结构？",
+      "options": [
+        "make an effort",
+        "create a problem",
+        "create an opportunity",
+        "explain something to someone"
+      ],
+      "answer": "create an opportunity",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "create-v-synonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “create” 最直接近义词？",
+      "options": [
+        "effort",
+        "produce",
+        "destroy",
+        "explain"
+      ],
+      "answer": "produce",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "create-v-antonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “create” 最直接反义词？",
+      "options": [
+        "destroy",
+        "produce",
+        "explain",
+        "effort"
+      ],
+      "answer": "destroy",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "create-v-contrast-choice",
+      "type": "meaning_choice",
+      "prompt": "根据本词卡辨析，哪个词被列为 “create” 的派生词？",
+      "options": [
+        "produce",
+        "destroy",
+        "explain",
+        "creation"
+      ],
+      "answer": "creation",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "create-v-recall-definition",
       "type": "recall",
-      "prompt": "to make something new。请输入目标单词。",
+      "prompt": "根据英文释义写出目标词：to make something new",
       "answer": "create",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "create-v-collocation",
+      "id": "create-v-recall-chinese",
+      "type": "recall",
+      "prompt": "写出符合“创造；创建”（v.）的本课目标词。",
+      "answer": "create",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "create-v-collocation-core",
       "type": "collocation",
       "prompt": "补全高频搭配：_____ an opportunity",
+      "answer": "create",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "create-v-collocation-structure",
+      "type": "collocation",
+      "prompt": "补全核心结构：_____ an opportunity",
+      "answer": "create",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "create-v-collocation-context",
+      "type": "collocation",
+      "prompt": "补全语境词组：_____ an opportunity",
       "answer": "create",
       "stage": "T2",
       "ai": false
     },
     {
-      "id": "create-v-sentence",
+      "id": "create-v-collocation-fixed-1",
+      "type": "collocation",
+      "prompt": "补全固定搭配：_____ an opportunity",
+      "answer": "create",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "create-v-collocation-fixed-2",
+      "type": "collocation",
+      "prompt": "再补全一个固定搭配：_____ a problem",
+      "answer": "create",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "create-v-example-cloze",
+      "type": "collocation",
+      "prompt": "补全词卡核心例句：Good questions can _____ meaningful conversations.",
+      "answer": "create",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "create-v-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “create” 写一个自然、真实的英文句子。",
+      "prompt": "请用 “create” 写一个自然、真实的英文句子，含义必须符合词卡核心义“创造；创建”。",
+      "answer": "",
+      "stage": "T2",
+      "ai": true
+    },
+    {
+      "id": "create-v-sentence-phrase",
+      "type": "free_sentence",
+      "prompt": "请用完整搭配 “create an opportunity” 写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -431,7 +556,7 @@
     {
       "id": "create-v-dialogue",
       "type": "dialogue",
-      "prompt": "在一段真实对话中自然使用 “create”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “create” 和搭配 “create an opportunity”，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -444,37 +569,53 @@
       "free_sentence"
     ],
     "T1": [
+      "meaning_choice",
       "recall",
       "collocation"
     ],
     "T2": [
+      "meaning_choice",
       "recall",
       "collocation",
       "free_sentence"
     ],
     "T3": [
+      "meaning_choice",
       "recall",
+      "collocation",
       "dialogue"
     ],
     "T4": [
+      "meaning_choice",
       "recall",
+      "collocation",
+      "free_sentence",
       "dialogue"
     ],
     "T5": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T6": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T7": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.3",
+  "contentVersion": "2026.08.17.4",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

@@ -391,7 +391,7 @@
   },
   "questions": [
     {
-      "id": "balance-n-meaning",
+      "id": "balance-n-meaning-core",
       "type": "meaning_choice",
       "prompt": "“balance”最核心的中文含义是？",
       "options": [
@@ -404,25 +404,150 @@
       "ai": false
     },
     {
-      "id": "balance-n-recall",
+      "id": "balance-n-meaning-english",
+      "type": "meaning_choice",
+      "prompt": "哪一项英文释义最符合词卡中的 “balance”？",
+      "options": [
+        "a state in which different things have suitable amounts",
+        "easy to understand or see",
+        "with another person or thing"
+      ],
+      "answer": "a state in which different things have suitable amounts",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "balance-n-structure-choice",
+      "type": "meaning_choice",
+      "prompt": "哪一个是词卡要求优先记住的 “balance” 核心结构？",
+      "options": [
+        "find a balance",
+        "make something clear",
+        "work together",
+        "keep your balance"
+      ],
+      "answer": "find a balance",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "balance-n-synonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “balance” 最直接近义词？",
+      "options": [
+        "imbalance",
+        "clear",
+        "together",
+        "stability"
+      ],
+      "answer": "stability",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "balance-n-antonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “balance” 最直接反义词？",
+      "options": [
+        "clear",
+        "together",
+        "imbalance",
+        "stability"
+      ],
+      "answer": "imbalance",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "balance-n-contrast-choice",
+      "type": "meaning_choice",
+      "prompt": "根据本词卡辨析，哪个词被列为 “balance” 的派生词？",
+      "options": [
+        "clear",
+        "balanced",
+        "stability",
+        "imbalance"
+      ],
+      "answer": "balanced",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "balance-n-recall-definition",
       "type": "recall",
-      "prompt": "a state in which different things have suitable amounts。请输入目标单词。",
+      "prompt": "根据英文释义写出目标词：a state in which different things have suitable amounts",
       "answer": "balance",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "balance-n-collocation",
+      "id": "balance-n-recall-chinese",
+      "type": "recall",
+      "prompt": "写出符合“平衡”（n. / v.）的本课目标词。",
+      "answer": "balance",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "balance-n-collocation-core",
       "type": "collocation",
       "prompt": "补全高频搭配：find a _____",
+      "answer": "balance",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "balance-n-collocation-structure",
+      "type": "collocation",
+      "prompt": "补全核心结构：find a _____",
+      "answer": "balance",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "balance-n-collocation-context",
+      "type": "collocation",
+      "prompt": "补全语境词组：find a _____",
       "answer": "balance",
       "stage": "T2",
       "ai": false
     },
     {
-      "id": "balance-n-sentence",
+      "id": "balance-n-collocation-fixed-1",
+      "type": "collocation",
+      "prompt": "补全固定搭配：find a _____",
+      "answer": "balance",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "balance-n-collocation-fixed-2",
+      "type": "collocation",
+      "prompt": "再补全一个固定搭配：keep your _____",
+      "answer": "balance",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "balance-n-example-cloze",
+      "type": "collocation",
+      "prompt": "补全词卡核心例句：Try to find a _____ between study and rest.",
+      "answer": "balance",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "balance-n-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “balance” 写一个自然、真实的英文句子。",
+      "prompt": "请用 “balance” 写一个自然、真实的英文句子，含义必须符合词卡核心义“平衡”。",
+      "answer": "",
+      "stage": "T2",
+      "ai": true
+    },
+    {
+      "id": "balance-n-sentence-phrase",
+      "type": "free_sentence",
+      "prompt": "请用完整搭配 “find a balance” 写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -430,7 +555,7 @@
     {
       "id": "balance-n-dialogue",
       "type": "dialogue",
-      "prompt": "在一段真实对话中自然使用 “balance”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “balance” 和搭配 “find a balance”，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -443,37 +568,53 @@
       "free_sentence"
     ],
     "T1": [
+      "meaning_choice",
       "recall",
       "collocation"
     ],
     "T2": [
+      "meaning_choice",
       "recall",
       "collocation",
       "free_sentence"
     ],
     "T3": [
+      "meaning_choice",
       "recall",
+      "collocation",
       "dialogue"
     ],
     "T4": [
+      "meaning_choice",
       "recall",
+      "collocation",
+      "free_sentence",
       "dialogue"
     ],
     "T5": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T6": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T7": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.3",
+  "contentVersion": "2026.08.17.4",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

@@ -378,7 +378,7 @@
   },
   "questions": [
     {
-      "id": "ready-adj-meaning",
+      "id": "ready-adj-meaning-core",
       "type": "meaning_choice",
       "prompt": "“ready”最核心的中文含义是？",
       "options": [
@@ -391,25 +391,150 @@
       "ai": false
     },
     {
-      "id": "ready-adj-recall",
+      "id": "ready-adj-meaning-english",
+      "type": "meaning_choice",
+      "prompt": "哪一项英文释义最符合词卡中的 “ready”？",
+      "options": [
+        "paid work or a particular task",
+        "prepared for what will happen",
+        "before now or earlier than expected"
+      ],
+      "answer": "prepared for what will happen",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "ready-adj-structure-choice",
+      "type": "meaning_choice",
+      "prompt": "哪一个是词卡要求优先记住的 “ready” 核心结构？",
+      "options": [
+        "get ready for",
+        "be ready to",
+        "have already done",
+        "do a good job"
+      ],
+      "answer": "be ready to",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "ready-adj-synonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “ready” 最直接近义词？",
+      "options": [
+        "prepared",
+        "unprepared",
+        "already",
+        "job"
+      ],
+      "answer": "prepared",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "ready-adj-antonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “ready” 最直接反义词？",
+      "options": [
+        "prepared",
+        "already",
+        "job",
+        "unprepared"
+      ],
+      "answer": "unprepared",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "ready-adj-contrast-choice",
+      "type": "meaning_choice",
+      "prompt": "根据本词卡辨析，哪个词被列为 “ready” 的派生词？",
+      "options": [
+        "unprepared",
+        "already",
+        "readiness",
+        "prepared"
+      ],
+      "answer": "readiness",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "ready-adj-recall-definition",
       "type": "recall",
-      "prompt": "prepared for what will happen。请输入目标单词。",
+      "prompt": "根据英文释义写出目标词：prepared for what will happen",
       "answer": "ready",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "ready-adj-collocation",
+      "id": "ready-adj-recall-chinese",
+      "type": "recall",
+      "prompt": "写出符合“准备好的”（adj.）的本课目标词。",
+      "answer": "ready",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "ready-adj-collocation-core",
       "type": "collocation",
       "prompt": "补全高频搭配：be _____ to",
+      "answer": "ready",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "ready-adj-collocation-structure",
+      "type": "collocation",
+      "prompt": "补全核心结构：be _____ to",
+      "answer": "ready",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "ready-adj-collocation-context",
+      "type": "collocation",
+      "prompt": "补全语境词组：be _____ to",
       "answer": "ready",
       "stage": "T2",
       "ai": false
     },
     {
-      "id": "ready-adj-sentence",
+      "id": "ready-adj-collocation-fixed-1",
+      "type": "collocation",
+      "prompt": "补全固定搭配：be _____ to",
+      "answer": "ready",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "ready-adj-collocation-fixed-2",
+      "type": "collocation",
+      "prompt": "再补全一个固定搭配：get _____ for",
+      "answer": "ready",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "ready-adj-example-cloze",
+      "type": "collocation",
+      "prompt": "补全词卡核心例句：I am _____ to try the next question.",
+      "answer": "ready",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "ready-adj-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “ready” 写一个自然、真实的英文句子。",
+      "prompt": "请用 “ready” 写一个自然、真实的英文句子，含义必须符合词卡核心义“准备好的”。",
+      "answer": "",
+      "stage": "T2",
+      "ai": true
+    },
+    {
+      "id": "ready-adj-sentence-phrase",
+      "type": "free_sentence",
+      "prompt": "请用完整搭配 “be ready to” 写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -417,7 +542,7 @@
     {
       "id": "ready-adj-dialogue",
       "type": "dialogue",
-      "prompt": "在一段真实对话中自然使用 “ready”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “ready” 和搭配 “be ready to”，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -430,37 +555,53 @@
       "free_sentence"
     ],
     "T1": [
+      "meaning_choice",
       "recall",
       "collocation"
     ],
     "T2": [
+      "meaning_choice",
       "recall",
       "collocation",
       "free_sentence"
     ],
     "T3": [
+      "meaning_choice",
       "recall",
+      "collocation",
       "dialogue"
     ],
     "T4": [
+      "meaning_choice",
       "recall",
+      "collocation",
+      "free_sentence",
       "dialogue"
     ],
     "T5": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T6": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T7": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.3",
+  "contentVersion": "2026.08.17.4",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

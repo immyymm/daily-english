@@ -386,7 +386,7 @@
   },
   "questions": [
     {
-      "id": "listen-v-meaning",
+      "id": "listen-v-meaning-core",
       "type": "meaning_choice",
       "prompt": "“listen”最核心的中文含义是？",
       "options": [
@@ -399,25 +399,150 @@
       "ai": false
     },
     {
-      "id": "listen-v-recall",
+      "id": "listen-v-meaning-english",
+      "type": "meaning_choice",
+      "prompt": "哪一项英文释义最符合词卡中的 “listen”？",
+      "options": [
+        "to say that you are willing to give something",
+        "to pay attention to sound",
+        "something that people do"
+      ],
+      "answer": "to pay attention to sound",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "listen-v-structure-choice",
+      "type": "meaning_choice",
+      "prompt": "哪一个是词卡要求优先记住的 “listen” 核心结构？",
+      "options": [
+        "daily activity",
+        "offer help",
+        "listen carefully",
+        "listen to"
+      ],
+      "answer": "listen to",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "listen-v-synonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “listen” 最直接近义词？",
+      "options": [
+        "activity",
+        "offer",
+        "hear",
+        "ignore"
+      ],
+      "answer": "hear",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "listen-v-antonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “listen” 最直接反义词？",
+      "options": [
+        "offer",
+        "ignore",
+        "hear",
+        "activity"
+      ],
+      "answer": "ignore",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "listen-v-contrast-choice",
+      "type": "meaning_choice",
+      "prompt": "根据本词卡辨析，哪个词被列为 “listen” 的易混词？",
+      "options": [
+        "hear",
+        "ignore",
+        "activity",
+        "offer"
+      ],
+      "answer": "hear",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "listen-v-recall-definition",
       "type": "recall",
-      "prompt": "to pay attention to sound。请输入目标单词。",
+      "prompt": "根据英文释义写出目标词：to pay attention to sound",
       "answer": "listen",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "listen-v-collocation",
+      "id": "listen-v-recall-chinese",
+      "type": "recall",
+      "prompt": "写出符合“听；倾听”（v.）的本课目标词。",
+      "answer": "listen",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "listen-v-collocation-core",
       "type": "collocation",
       "prompt": "补全高频搭配：_____ to",
+      "answer": "listen",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "listen-v-collocation-structure",
+      "type": "collocation",
+      "prompt": "补全核心结构：_____ to",
+      "answer": "listen",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "listen-v-collocation-context",
+      "type": "collocation",
+      "prompt": "补全语境词组：_____ to",
       "answer": "listen",
       "stage": "T2",
       "ai": false
     },
     {
-      "id": "listen-v-sentence",
+      "id": "listen-v-collocation-fixed-1",
+      "type": "collocation",
+      "prompt": "补全固定搭配：_____ to",
+      "answer": "listen",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "listen-v-collocation-fixed-2",
+      "type": "collocation",
+      "prompt": "再补全一个固定搭配：_____ carefully",
+      "answer": "listen",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "listen-v-example-cloze",
+      "type": "collocation",
+      "prompt": "补全词卡核心例句：_____ to the whole sentence before answering.",
+      "answer": "Listen",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "listen-v-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “listen” 写一个自然、真实的英文句子。",
+      "prompt": "请用 “listen” 写一个自然、真实的英文句子，含义必须符合词卡核心义“听；倾听”。",
+      "answer": "",
+      "stage": "T2",
+      "ai": true
+    },
+    {
+      "id": "listen-v-sentence-phrase",
+      "type": "free_sentence",
+      "prompt": "请用完整搭配 “listen to” 写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -425,7 +550,7 @@
     {
       "id": "listen-v-dialogue",
       "type": "dialogue",
-      "prompt": "在一段真实对话中自然使用 “listen”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “listen” 和搭配 “listen to”，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -438,37 +563,53 @@
       "free_sentence"
     ],
     "T1": [
+      "meaning_choice",
       "recall",
       "collocation"
     ],
     "T2": [
+      "meaning_choice",
       "recall",
       "collocation",
       "free_sentence"
     ],
     "T3": [
+      "meaning_choice",
       "recall",
+      "collocation",
       "dialogue"
     ],
     "T4": [
+      "meaning_choice",
       "recall",
+      "collocation",
+      "free_sentence",
       "dialogue"
     ],
     "T5": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T6": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T7": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.3",
+  "contentVersion": "2026.08.17.4",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

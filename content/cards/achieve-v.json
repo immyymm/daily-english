@@ -378,7 +378,7 @@
   },
   "questions": [
     {
-      "id": "achieve-v-meaning",
+      "id": "achieve-v-meaning-core",
       "type": "meaning_choice",
       "prompt": "“achieve”最核心的中文含义是？",
       "options": [
@@ -391,25 +391,150 @@
       "ai": false
     },
     {
-      "id": "achieve-v-recall",
+      "id": "achieve-v-meaning-english",
+      "type": "meaning_choice",
+      "prompt": "哪一项英文释义最符合词卡中的 “achieve”？",
+      "options": [
+        "to succeed in reaching a goal",
+        "to keep someone or something safe",
+        "something you do regularly"
+      ],
+      "answer": "to succeed in reaching a goal",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "achieve-v-structure-choice",
+      "type": "meaning_choice",
+      "prompt": "哪一个是词卡要求优先记住的 “achieve” 核心结构？",
+      "options": [
+        "achieve success",
+        "achieve a goal",
+        "protect someone from something",
+        "form a habit"
+      ],
+      "answer": "achieve a goal",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "achieve-v-synonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “achieve” 最直接近义词？",
+      "options": [
+        "accomplish",
+        "fail",
+        "protect",
+        "habit"
+      ],
+      "answer": "accomplish",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "achieve-v-antonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “achieve” 最直接反义词？",
+      "options": [
+        "accomplish",
+        "protect",
+        "habit",
+        "fail"
+      ],
+      "answer": "fail",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "achieve-v-contrast-choice",
+      "type": "meaning_choice",
+      "prompt": "根据本词卡辨析，哪个词被列为 “achieve” 的派生词？",
+      "options": [
+        "fail",
+        "protect",
+        "achievement",
+        "accomplish"
+      ],
+      "answer": "achievement",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "achieve-v-recall-definition",
       "type": "recall",
-      "prompt": "to succeed in reaching a goal。请输入目标单词。",
+      "prompt": "根据英文释义写出目标词：to succeed in reaching a goal",
       "answer": "achieve",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "achieve-v-collocation",
+      "id": "achieve-v-recall-chinese",
+      "type": "recall",
+      "prompt": "写出符合“实现；达到”（v.）的本课目标词。",
+      "answer": "achieve",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "achieve-v-collocation-core",
       "type": "collocation",
       "prompt": "补全高频搭配：_____ a goal",
+      "answer": "achieve",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "achieve-v-collocation-structure",
+      "type": "collocation",
+      "prompt": "补全核心结构：_____ a goal",
+      "answer": "achieve",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "achieve-v-collocation-context",
+      "type": "collocation",
+      "prompt": "补全语境词组：_____ a goal",
       "answer": "achieve",
       "stage": "T2",
       "ai": false
     },
     {
-      "id": "achieve-v-sentence",
+      "id": "achieve-v-collocation-fixed-1",
+      "type": "collocation",
+      "prompt": "补全固定搭配：_____ a goal",
+      "answer": "achieve",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "achieve-v-collocation-fixed-2",
+      "type": "collocation",
+      "prompt": "再补全一个固定搭配：_____ success",
+      "answer": "achieve",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "achieve-v-example-cloze",
+      "type": "collocation",
+      "prompt": "补全词卡核心例句：Small steps can help you _____ a big goal.",
+      "answer": "achieve",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "achieve-v-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “achieve” 写一个自然、真实的英文句子。",
+      "prompt": "请用 “achieve” 写一个自然、真实的英文句子，含义必须符合词卡核心义“实现；达到”。",
+      "answer": "",
+      "stage": "T2",
+      "ai": true
+    },
+    {
+      "id": "achieve-v-sentence-phrase",
+      "type": "free_sentence",
+      "prompt": "请用完整搭配 “achieve a goal” 写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -417,7 +542,7 @@
     {
       "id": "achieve-v-dialogue",
       "type": "dialogue",
-      "prompt": "在一段真实对话中自然使用 “achieve”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “achieve” 和搭配 “achieve a goal”，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -430,37 +555,53 @@
       "free_sentence"
     ],
     "T1": [
+      "meaning_choice",
       "recall",
       "collocation"
     ],
     "T2": [
+      "meaning_choice",
       "recall",
       "collocation",
       "free_sentence"
     ],
     "T3": [
+      "meaning_choice",
       "recall",
+      "collocation",
       "dialogue"
     ],
     "T4": [
+      "meaning_choice",
       "recall",
+      "collocation",
+      "free_sentence",
       "dialogue"
     ],
     "T5": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T6": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T7": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.3",
+  "contentVersion": "2026.08.17.4",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

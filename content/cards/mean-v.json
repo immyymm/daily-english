@@ -397,7 +397,7 @@
   },
   "questions": [
     {
-      "id": "mean-v-meaning",
+      "id": "mean-v-meaning-core",
       "type": "meaning_choice",
       "prompt": "“mean”最核心的中文含义是？",
       "options": [
@@ -410,25 +410,150 @@
       "ai": false
     },
     {
-      "id": "mean-v-recall",
+      "id": "mean-v-meaning-english",
+      "type": "meaning_choice",
+      "prompt": "哪一项英文释义最符合词卡中的 “mean”？",
+      "options": [
+        "work done to help or provide something for people",
+        "to express or have a particular meaning",
+        "to give part of something to others"
+      ],
+      "answer": "to express or have a particular meaning",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "mean-v-structure-choice",
+      "type": "meaning_choice",
+      "prompt": "哪一个是词卡要求优先记住的 “mean” 核心结构？",
+      "options": [
+        "share an idea",
+        "customer service",
+        "mean that",
+        "mean a lot to"
+      ],
+      "answer": "mean a lot to",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "mean-v-synonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “mean” 最直接近义词？",
+      "options": [
+        "share",
+        "service",
+        "signify",
+        "misrepresent"
+      ],
+      "answer": "signify",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "mean-v-antonym-choice",
+      "type": "meaning_choice",
+      "prompt": "哪个词是词卡中列出的 “mean” 最直接反义词？",
+      "options": [
+        "service",
+        "misrepresent",
+        "signify",
+        "share"
+      ],
+      "answer": "misrepresent",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "mean-v-contrast-choice",
+      "type": "meaning_choice",
+      "prompt": "根据本词卡辨析，哪个词被列为 “mean” 的派生词？",
+      "options": [
+        "meaning",
+        "signify",
+        "misrepresent",
+        "share"
+      ],
+      "answer": "meaning",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "mean-v-recall-definition",
       "type": "recall",
-      "prompt": "to express or have a particular meaning。请输入目标单词。",
+      "prompt": "根据英文释义写出目标词：to express or have a particular meaning",
       "answer": "mean",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "mean-v-collocation",
+      "id": "mean-v-recall-chinese",
+      "type": "recall",
+      "prompt": "写出符合“意思是；意味着”（v.）的本课目标词。",
+      "answer": "mean",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "mean-v-collocation-core",
       "type": "collocation",
       "prompt": "补全高频搭配：_____ a lot to someone",
+      "answer": "mean",
+      "stage": "T0",
+      "ai": false
+    },
+    {
+      "id": "mean-v-collocation-structure",
+      "type": "collocation",
+      "prompt": "补全核心结构：_____ a lot to",
+      "answer": "mean",
+      "stage": "T1",
+      "ai": false
+    },
+    {
+      "id": "mean-v-collocation-context",
+      "type": "collocation",
+      "prompt": "补全语境词组：_____ a lot to",
       "answer": "mean",
       "stage": "T2",
       "ai": false
     },
     {
-      "id": "mean-v-sentence",
+      "id": "mean-v-collocation-fixed-1",
+      "type": "collocation",
+      "prompt": "补全固定搭配：_____ a lot to",
+      "answer": "mean",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "mean-v-collocation-fixed-2",
+      "type": "collocation",
+      "prompt": "再补全一个固定搭配：_____ that",
+      "answer": "mean",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "mean-v-example-cloze",
+      "type": "collocation",
+      "prompt": "补全词卡核心例句：Your support _____ a lot to me.",
+      "answer": "means",
+      "stage": "T3",
+      "ai": false
+    },
+    {
+      "id": "mean-v-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “mean” 写一个自然、真实的英文句子。",
+      "prompt": "请用 “mean” 写一个自然、真实的英文句子，含义必须符合词卡核心义“意思是；意味着”。",
+      "answer": "",
+      "stage": "T2",
+      "ai": true
+    },
+    {
+      "id": "mean-v-sentence-phrase",
+      "type": "free_sentence",
+      "prompt": "请用完整搭配 “mean a lot to” 写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -436,7 +561,7 @@
     {
       "id": "mean-v-dialogue",
       "type": "dialogue",
-      "prompt": "在一段真实对话中自然使用 “mean”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “mean” 和搭配 “mean a lot to”，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -449,37 +574,53 @@
       "free_sentence"
     ],
     "T1": [
+      "meaning_choice",
       "recall",
       "collocation"
     ],
     "T2": [
+      "meaning_choice",
       "recall",
       "collocation",
       "free_sentence"
     ],
     "T3": [
+      "meaning_choice",
       "recall",
+      "collocation",
       "dialogue"
     ],
     "T4": [
+      "meaning_choice",
       "recall",
+      "collocation",
+      "free_sentence",
       "dialogue"
     ],
     "T5": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T6": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ],
     "T7": [
-      "dialogue",
-      "free_sentence"
+      "meaning_choice",
+      "recall",
+      "collocation",
+      "free_sentence",
+      "dialogue"
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.3",
+  "contentVersion": "2026.08.17.4",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }
