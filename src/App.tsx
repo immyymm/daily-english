@@ -484,7 +484,7 @@ function ReviewPage({
 
       {recommendation && (
         <section className="adaptive-plan-card">
-          <div className="adaptive-plan-head"><Sparkles size={20} /><div><span>每日 05:00 自动分析</span><h3>今日针对性复习方案</h3></div></div>
+          <div className="adaptive-plan-head"><Sparkles size={20} /><div><span>04:30 Codex 分析 · 05:00 生成计划</span><h3>今日针对性复习方案</h3></div></div>
           <div className={'codex-plan-status ' + recommendation.codexStatus}>
             {recommendation.codexStatus === 'complete' ? <Check size={15} /> : <RefreshCw size={15} />}
             <span>
