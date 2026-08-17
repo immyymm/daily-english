@@ -7,6 +7,7 @@ import type {
   AppSnapshot,
   Attempt,
   CardProgress,
+  DailyCardPrescription,
   DailyRecommendation,
   MasteryDimension,
   QuestionType,
@@ -223,12 +224,38 @@ function rowToProgress(row: Record<string, unknown>): CardProgress {
 }
 
 function rowToRecommendation(row: Record<string, unknown>): DailyRecommendation {
+  const rawPrescriptions = row.card_prescriptions && typeof row.card_prescriptions === 'object'
+    ? row.card_prescriptions as Record<string, Record<string, unknown>>
+    : {};
+  const cardPrescriptions = Object.fromEntries(Object.entries(rawPrescriptions).map(([cardId, value]) => {
+    const rawRiskLevel = String(value.riskLevel ?? 'low');
+    const prescription: DailyCardPrescription = {
+      riskScore: Number(value.riskScore ?? 0),
+      riskLevel: rawRiskLevel === 'high' || rawRiskLevel === 'medium' ? rawRiskLevel : 'low',
+      targetQuestionCount: Number(value.targetQuestionCount ?? 8),
+      focusDimensions: (Array.isArray(value.focusDimensions) ? value.focusDimensions : []) as MasteryDimension[],
+      dueAt: value.dueAt ? String(value.dueAt) : undefined,
+      overdueDays: Number(value.overdueDays ?? 0),
+      reason: String(value.reason ?? '按今日遗忘风险安排复习。')
+    };
+    return [cardId, prescription];
+  }));
+  const reviewCardIds = Array.isArray(row.review_card_ids)
+    ? row.review_card_ids.map(String)
+    : Array.isArray(row.recommended_card_ids) ? row.recommended_card_ids.map(String) : [];
   return {
     date: String(row.plan_date),
     generatedAt: String(row.generated_at),
-    recommendedCardIds: Array.isArray(row.recommended_card_ids) ? row.recommended_card_ids.map(String) : [],
+    studyDay: Number(row.study_day ?? 1),
+    newCardIds: Array.isArray(row.new_card_ids) ? row.new_card_ids.map(String) : [],
+    reviewCardIds,
+    recommendedCardIds: reviewCardIds,
+    cardPrescriptions,
     focusDimensions: (Array.isArray(row.focus_dimensions) ? row.focus_dimensions : []) as MasteryDimension[],
     targetQuestionCount: Number(row.target_question_count ?? 10),
+    refreshAnchorAt: row.refresh_anchor_at ? String(row.refresh_anchor_at) : undefined,
+    validUntilAt: row.valid_until_at ? String(row.valid_until_at) : undefined,
+    algorithmVersion: String(row.algorithm_version ?? 'legacy'),
     summary: String(row.summary ?? '按到期时间和薄弱项安排复习。'),
     analysis: (row.analysis ?? {}) as Record<string, unknown>
   };

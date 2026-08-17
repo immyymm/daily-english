@@ -1,13 +1,14 @@
 import { AlertCircle, Brain, CheckCircle2, Clock3, RefreshCw, Sparkles } from 'lucide-react';
 import { useMemo } from 'react';
 import { masteryDimensionLabels, masteryDimensions } from '../learning/mastery';
-import type { AIEvaluation, Attempt, CardProgress, WordCard } from '../types';
+import type { AIEvaluation, Attempt, CardProgress, DailyCardPrescription, WordCard } from '../types';
 import { ModalShell } from './ModalShell';
 
 interface MasteryDetailModalProps {
   open: boolean;
   card?: WordCard;
   progress?: CardProgress;
+  prescription?: DailyCardPrescription;
   attempts: Attempt[];
   evaluations: AIEvaluation[];
   onClose: () => void;
@@ -35,6 +36,7 @@ export function MasteryDetailModal({
   open,
   card,
   progress,
+  prescription,
   attempts,
   evaluations,
   onClose,
@@ -62,6 +64,14 @@ export function MasteryDetailModal({
           <p><Clock3 size={15} />下次复习：{formatTime(progress?.nextReviewAt)}</p>
         </div>
       </section>
+
+      {prescription && (
+        <section className={'forgetting-risk-card ' + prescription.riskLevel}>
+          <div><Sparkles size={18} /><strong>今日遗忘风险 {prescription.riskScore}/100</strong><span>{prescription.riskLevel === 'high' ? '高风险' : prescription.riskLevel === 'medium' ? '中风险' : '低风险'}</span></div>
+          <p>{prescription.reason}</p>
+          <small>今日处方：{prescription.targetQuestionCount} 题{prescription.focusDimensions.length ? ` · 加强${prescription.focusDimensions.map((dimension) => masteryDimensionLabels[dimension]).join('、')}` : ''}</small>
+        </section>
+      )}
 
       <section className="mastery-detail-section">
         <div className="mastery-section-title"><Brain size={18} /><div><h3>五维掌握画像</h3><p>低于 75 分的维度会自动增加题量和复习频率</p></div></div>

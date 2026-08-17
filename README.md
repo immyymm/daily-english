@@ -16,7 +16,7 @@
 - 录音只保留在当前页面和设备，不上传给评分接口
 - IndexedDB 本地保存进度，支持 JSON 导出、恢复和清除
 - 可选 Supabase 邮箱账户，多设备快照合并与 Realtime 实时同步；答题、五维掌握画像、AI 任务和每日方案使用独立结构化表保存
-- 每天北京时间 05:00 自动分析遗忘风险和薄弱维度，生成当天针对性复习方案；掌握状态可点开查看问题分布、最近答题和完整 AI 点评
+- 每天北京时间 05:00 由 Postgres 自动刷新当天 5 个新词和整日复习批次，并为每个复习词计算遗忘风险、薄弱维度、建议题量和安排原因；掌握状态可点开查看处方、问题分布、最近答题和完整 AI 点评
 - PWA 离线缓存、iPhone 安装引导和安全区适配
 - Vercel 正式站与 GitHub Pages 静态镜像构建配置
 
@@ -53,7 +53,7 @@ VITE_SUPABASE_URL=https://your-project.supabase.co
 VITE_SUPABASE_PUBLISHABLE_KEY=sb_publishable_your_key
 ```
 
-数据库迁移位于 `supabase/migrations/`。除快照表外，系统使用 `daily_english_attempts`、`daily_english_mastery`、`daily_english_ai_evaluations` 和 `daily_english_daily_plans` 保存可实时更新的明细。所有表都启用 RLS，只向 `authenticated` 角色开放用户自己的记录；未登录的 `anon` 角色没有表权限。05:00 分析由数据库内的 `pg_cron` 任务执行，不依赖用户打开网页。publishable key 会正常出现在浏览器构建中，它不是服务端密钥；切勿在前端使用 `service_role` key。
+数据库迁移位于 `supabase/migrations/`。除快照表外，系统使用 `daily_english_attempts`、`daily_english_mastery`、`daily_english_ai_evaluations` 和 `daily_english_daily_plans` 保存可实时更新的明细。所有表都启用 RLS，只向 `authenticated` 角色开放用户自己的记录；未登录的 `anon` 角色没有表权限。05:00 分析由数据库内的 `pg_cron` 任务执行，不依赖用户打开网页，也不调用 OpenAI：数据库直接写入今日新词、复习词和逐词处方，客户端通过 Supabase Data API + RLS 读取并由 Realtime 接收更新。学习后 20 分钟的 T0 即时复测仍会在当天动态补入，不必等到下一次 05:00。publishable key 会正常出现在浏览器构建中，它不是服务端密钥；切勿在前端使用 `service_role` key。
 
 ## AI 评分配置
 

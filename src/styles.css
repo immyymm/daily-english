@@ -634,6 +634,14 @@ h1 { font-family: Georgia, "Songti SC", serif; font-size: 21px; letter-spacing: 
 .mastery-score-ring span { font-size: 9px; margin-top: 4px; }
 .mastery-overview-card h3 { color: #60414d; font-size: 15px; line-height: 1.55; margin-top: 8px; }
 .mastery-overview-card p { display: flex; align-items: center; gap: 5px; color: #84606e; font-size: 12px; line-height: 1.5; margin-top: 5px; }
+.forgetting-risk-card { padding: 15px; margin-top: 13px; border: 1px solid #eadcf4; border-radius: 20px; color: #6c5577; background: #f9f2ff; }
+.forgetting-risk-card > div { display: flex; align-items: center; gap: 7px; }
+.forgetting-risk-card strong { font-size: 14px; }
+.forgetting-risk-card span { padding: 4px 7px; margin-left: auto; border-radius: 999px; background: rgba(255,255,255,.82); font-size: 10px; font-weight: 800; }
+.forgetting-risk-card p { margin-top: 9px; font-size: 13px; line-height: 1.6; }
+.forgetting-risk-card small { display: block; margin-top: 7px; color: #8a718f; font-size: 11px; line-height: 1.5; }
+.forgetting-risk-card.medium { border-color: #f1d8b9; color: #815f42; background: #fff7e9; }
+.forgetting-risk-card.high { border-color: #f0c7c1; color: #94534f; background: #fff0ed; }
 .mastery-detail-section { padding: 17px; margin-top: 13px; border: 1px solid #f0e0e6; border-radius: 22px; background: white; }
 .mastery-section-title { display: flex; align-items: flex-start; gap: 9px; color: #9c5871; }
 .mastery-section-title h3 { color: #604550; font-size: 16px; }

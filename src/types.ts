@@ -252,12 +252,31 @@ export interface DailyPlanRecord {
   contentVersion: string;
 }
 
+export type ForgettingRiskLevel = 'low' | 'medium' | 'high';
+
+export interface DailyCardPrescription {
+  riskScore: number;
+  riskLevel: ForgettingRiskLevel;
+  targetQuestionCount: number;
+  focusDimensions: MasteryDimension[];
+  dueAt?: string;
+  overdueDays: number;
+  reason: string;
+}
+
 export interface DailyRecommendation {
   date: string;
   generatedAt: string;
+  studyDay: number;
+  newCardIds: string[];
+  reviewCardIds: string[];
   recommendedCardIds: string[];
+  cardPrescriptions: Record<string, DailyCardPrescription>;
   focusDimensions: MasteryDimension[];
   targetQuestionCount: number;
+  refreshAnchorAt?: string;
+  validUntilAt?: string;
+  algorithmVersion: string;
   summary: string;
   analysis: Record<string, unknown>;
 }

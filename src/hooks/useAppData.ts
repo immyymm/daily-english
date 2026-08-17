@@ -52,15 +52,30 @@ export function useAppData() {
       const today = toLocalDateKey();
       const studyDay = studyDaySince(settings.firstUseDate);
       const dailyCards = cardsForStudyDay(content.cards, studyDay);
+      const currentRecommendation = dailyRecommendations.find((item) => item.date === today);
+      const knownCardIds = new Set(content.cards.map((card) => card.id));
+      const databaseCardIds = (currentRecommendation?.newCardIds ?? []).filter((id) => knownCardIds.has(id));
+      const selectedCardIds = databaseCardIds.length === 5
+        ? databaseCardIds
+        : dailyCards.map((card) => card.id);
       let todayPlan = await db.dailyPlans.get(today);
       if (!todayPlan) {
         todayPlan = {
           date: today,
-          studyDay,
-          cycle: Math.floor((studyDay - 1) / 30) + 1,
-          cardIds: dailyCards.map((card) => card.id),
+          studyDay: currentRecommendation?.studyDay ?? studyDay,
+          cycle: Math.floor(((currentRecommendation?.studyDay ?? studyDay) - 1) / 30) + 1,
+          cardIds: selectedCardIds,
           completedCardIds: [],
           contentVersion: content.contentVersion
+        };
+        await db.dailyPlans.put(todayPlan);
+      } else if (databaseCardIds.length === 5 && databaseCardIds.join('|') !== todayPlan.cardIds.join('|')) {
+        todayPlan = {
+          ...todayPlan,
+          studyDay: currentRecommendation?.studyDay ?? todayPlan.studyDay,
+          cycle: Math.floor(((currentRecommendation?.studyDay ?? todayPlan.studyDay) - 1) / 30) + 1,
+          cardIds: databaseCardIds,
+          completedCardIds: todayPlan.completedCardIds.filter((id) => databaseCardIds.includes(id))
         };
         await db.dailyPlans.put(todayPlan);
       }
@@ -78,9 +93,21 @@ export function useAppData() {
     void refresh();
   }, [refresh]);
 
+  const todayRecommendation = state.dailyRecommendations.find((item) => item.date === toLocalDateKey());
+
+  const prescribedProgress = useMemo(() => state.progress.map((item) => {
+    const prescription = todayRecommendation?.cardPrescriptions?.[item.cardId];
+    if (!prescription) return item;
+    return {
+      ...item,
+      targetQuestionCount: Math.max(item.targetQuestionCount ?? 0, prescription.targetQuestionCount),
+      weakDimensions: [...new Set([...(item.weakDimensions ?? []), ...prescription.focusDimensions])]
+    };
+  }), [state.progress, todayRecommendation]);
+
   const progressMap = useMemo(
-    () => new Map(state.progress.map((item) => [item.cardId, item])),
-    [state.progress]
+    () => new Map(prescribedProgress.map((item) => [item.cardId, item])),
+    [prescribedProgress]
   );
 
   const todayCards = useMemo(() => {
@@ -90,10 +117,14 @@ export function useAppData() {
   }, [state.cards, state.todayPlan]);
 
   const dueProgress = useMemo(
-    () => state.progress.filter((item) => isDue(item)).sort((a, b) => {
-      const todayRecommendation = state.dailyRecommendations.find((item) => item.date === toLocalDateKey());
-      const aPriority = todayRecommendation?.recommendedCardIds.indexOf(a.cardId) ?? -1;
-      const bPriority = todayRecommendation?.recommendedCardIds.indexOf(b.cardId) ?? -1;
+    () => prescribedProgress.filter((item) => {
+      const plannedIds = todayRecommendation?.reviewCardIds ?? todayRecommendation?.recommendedCardIds ?? [];
+      const planned = plannedIds.includes(item.cardId);
+      return planned || isDue(item);
+    }).sort((a, b) => {
+      const plannedIds = todayRecommendation?.reviewCardIds ?? todayRecommendation?.recommendedCardIds ?? [];
+      const aPriority = plannedIds.indexOf(a.cardId);
+      const bPriority = plannedIds.indexOf(b.cardId);
       if (aPriority >= 0 || bPriority >= 0) {
         if (aPriority < 0) return 1;
         if (bPriority < 0) return -1;
@@ -102,12 +133,10 @@ export function useAppData() {
       if (a.weak !== b.weak) return a.weak ? -1 : 1;
       return new Date(a.nextReviewAt).getTime() - new Date(b.nextReviewAt).getTime();
     }),
-    [state.dailyRecommendations, state.progress]
+    [prescribedProgress, todayRecommendation]
   );
 
-  const todayRecommendation = state.dailyRecommendations.find((item) => item.date === toLocalDateKey());
-
-  const learnedTodayCount = state.todayPlan?.completedCardIds.length ?? 0;
+  const learnedTodayCount = state.todayPlan?.completedCardIds.filter((id) => state.todayPlan?.cardIds.includes(id)).length ?? 0;
 
   const learnCard = useCallback(async (card: WordCard) => {
     const now = new Date();

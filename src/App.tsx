@@ -342,6 +342,7 @@ function App() {
         open={Boolean(masteryCard)}
         card={masteryCard}
         progress={masteryCard ? data.progressMap.get(masteryCard.id) : undefined}
+        prescription={masteryCard ? data.todayRecommendation?.cardPrescriptions?.[masteryCard.id] : undefined}
         attempts={data.attempts}
         evaluations={data.aiEvaluations}
         onClose={() => setMasteryCard(undefined)}
@@ -486,6 +487,8 @@ function ReviewPage({
           <div className="adaptive-plan-head"><Sparkles size={20} /><div><span>每日 05:00 自动分析</span><h3>今日针对性复习方案</h3></div></div>
           <p>{recommendation.summary}</p>
           <div className="adaptive-plan-meta">
+            <span>新词 {recommendation.newCardIds?.length ?? 5} 个</span>
+            <span>复习 {recommendation.reviewCardIds?.length ?? recommendation.recommendedCardIds.length} 个</span>
             <span>建议 {recommendation.targetQuestionCount} 题/词</span>
             {recommendation.focusDimensions.map((dimension) => <span key={dimension}>加强{masteryDimensionLabels[dimension]}</span>)}
           </div>
@@ -498,10 +501,11 @@ function ReviewPage({
           <div className="queue-list">
             {dueCards.slice(0, 8).map((card) => {
               const item = dueProgress.find((progressItem) => progressItem.cardId === card.id)!;
+              const prescription = recommendation?.cardPrescriptions?.[card.id];
               return (
                 <article className="queue-item" key={card.id}>
                   <span className={item.weak ? 'queue-dot weak' : 'queue-dot'} />
-                  <button className="queue-word-button" onClick={() => onOpenCard(card)}><strong>{card.word}</strong><p>{item.stage} · {item.status}</p></button>
+                  <button className="queue-word-button" onClick={() => onOpenCard(card)}><strong>{card.word}</strong><p>{item.stage} · {item.status}{prescription ? ` · 遗忘风险 ${prescription.riskScore}` : ''}</p></button>
                   <button className="queue-score" onClick={() => onOpenMastery(card)}>{item.masteryScore === undefined ? item.lastScore === undefined ? '未测试' : item.lastScore + ' 分' : Math.round(item.masteryScore) + ' 分'}<small>查看分析</small></button>
                   <ChevronRight size={17} />
                 </article>
