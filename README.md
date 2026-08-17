@@ -9,13 +9,14 @@
 - 30 天、150 张完整词卡，全部选自项目附带的 COCA 词表；每卡按附件模板拆为 10 个学习章节
 - 每日独立词卡文件与全部词卡汇总文件
 - 今日学习、翻卡、例句/搭配/辨析、浏览器发音
-- T0–T7 间隔复测、客观题本地评分、错因和熟练度统计
+- T0–T7 间隔复测，每词按阶段提供 8–12 道题；薄弱词会增加题量并优先抽取对应维度题型
 - 第 7 天解锁周测，支持作文和口语文字稿
 - 自由造句、开放对话、作文和口语文字稿使用服务器配置的 OpenAI 模型辅助评分
-- AI 评分前隐私确认；断网或接口失败时保存到本地待重试
+- AI 评分前隐私确认；登录同步账户后采用可恢复的后台点评队列，提交后可立即继续学习，结果完成后实时回传并永久可查
 - 录音只保留在当前页面和设备，不上传给评分接口
 - IndexedDB 本地保存进度，支持 JSON 导出、恢复和清除
-- 可选 Supabase 邮箱账户，多设备快照合并与 Realtime 实时同步；不开启同步不影响使用
+- 可选 Supabase 邮箱账户，多设备快照合并与 Realtime 实时同步；答题、五维掌握画像、AI 任务和每日方案使用独立结构化表保存
+- 每天北京时间 05:00 自动分析遗忘风险和薄弱维度，生成当天针对性复习方案；掌握状态可点开查看问题分布、最近答题和完整 AI 点评
 - PWA 离线缓存、iPhone 安装引导和安全区适配
 - Vercel 正式站与 GitHub Pages 静态镜像构建配置
 
@@ -52,7 +53,7 @@ VITE_SUPABASE_URL=https://your-project.supabase.co
 VITE_SUPABASE_PUBLISHABLE_KEY=sb_publishable_your_key
 ```
 
-数据库迁移位于 `supabase/migrations/`。`daily_english_snapshots` 表只向 `authenticated` 角色开放，未登录的 `anon` 角色没有表权限。publishable key 会正常出现在浏览器构建中，它不是服务端密钥；切勿在前端使用 `service_role` key。
+数据库迁移位于 `supabase/migrations/`。除快照表外，系统使用 `daily_english_attempts`、`daily_english_mastery`、`daily_english_ai_evaluations` 和 `daily_english_daily_plans` 保存可实时更新的明细。所有表都启用 RLS，只向 `authenticated` 角色开放用户自己的记录；未登录的 `anon` 角色没有表权限。05:00 分析由数据库内的 `pg_cron` 任务执行，不依赖用户打开网页。publishable key 会正常出现在浏览器构建中，它不是服务端密钥；切勿在前端使用 `service_role` key。
 
 ## AI 评分配置
 
@@ -81,7 +82,7 @@ VITE_SUPABASE_PUBLISHABLE_KEY=sb_publishable_your_key
 4. 在 Vercel Firewall 中为 `/api/evaluate` 增加速率限制，并在 OpenAI 项目中设置预算和用量提醒。
 5. 用正式 `*.vercel.app` HTTPS 地址在 iPhone Safari 打开，点“分享 → 添加到主屏幕”。
 
-服务端函数还包含来源白名单、请求体/字段限制、每 IP 每小时 20 次的尽力限流、25 秒超时和结构化输出校验。Vercel WAF 是公开无登录服务的第二层保护。
+服务端函数还包含来源白名单、用户 JWT 校验、请求体/字段限制、每 IP 每小时 30 次的尽力限流、40 秒模型超时、幂等请求号和结构化输出校验。登录同步账户时使用 Vercel `waitUntil` 在响应后继续处理并将结果写入数据库；未登录时仍保留同步评分兼容模式。Vercel WAF 是公开服务的第二层保护。
 
 ## 部署 GitHub Pages 镜像
 
