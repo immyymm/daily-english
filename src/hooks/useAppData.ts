@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { cardsForStudyDay, loadContent } from '../data/content';
-import { applyReviewScore, isDue, studyDaySince, toLocalDateKey } from '../learning/reviewEngine';
+import { calculateMasteryProfile, dimensionsFromEvaluation } from '../learning/mastery';
+import { applyLateEvaluation, applyReviewScore, isDue, studyDaySince, toLocalDateKey } from '../learning/reviewEngine';
 import { notifyLocalDataChanged } from './useCloudSync';
 import { db, getSettings, touchStudyStreak } from '../storage/db';
 import type {
@@ -9,6 +10,7 @@ import type {
   Attempt,
   CardProgress,
   DailyPlanRecord,
+  DailyRecommendation,
   EvaluationResult,
   WordCard
 } from '../types';
@@ -22,6 +24,7 @@ interface AppDataState {
   progress: CardProgress[];
   attempts: Attempt[];
   aiEvaluations: AIEvaluation[];
+  dailyRecommendations: DailyRecommendation[];
 }
 
 const initialState: AppDataState = {
@@ -29,7 +32,8 @@ const initialState: AppDataState = {
   cards: [],
   progress: [],
   attempts: [],
-  aiEvaluations: []
+  aiEvaluations: [],
+  dailyRecommendations: []
 };
 
 export function useAppData() {
@@ -37,12 +41,13 @@ export function useAppData() {
 
   const refresh = useCallback(async () => {
     try {
-      const [content, settings, progress, attempts, aiEvaluations] = await Promise.all([
+      const [content, settings, progress, attempts, aiEvaluations, dailyRecommendations] = await Promise.all([
         loadContent(),
         getSettings(),
         db.progress.toArray(),
         db.attempts.orderBy('createdAt').reverse().toArray(),
-        db.aiEvaluations.orderBy('createdAt').reverse().toArray()
+        db.aiEvaluations.orderBy('createdAt').reverse().toArray(),
+        db.dailyRecommendations.orderBy('generatedAt').reverse().toArray()
       ]);
       const today = toLocalDateKey();
       const studyDay = studyDaySince(settings.firstUseDate);
@@ -59,7 +64,7 @@ export function useAppData() {
         };
         await db.dailyPlans.put(todayPlan);
       }
-      setState({ loading: false, cards: content.cards, settings, todayPlan, progress, attempts, aiEvaluations });
+      setState({ loading: false, cards: content.cards, settings, todayPlan, progress, attempts, aiEvaluations, dailyRecommendations });
     } catch (error) {
       setState((current) => ({
         ...current,
@@ -86,11 +91,21 @@ export function useAppData() {
 
   const dueProgress = useMemo(
     () => state.progress.filter((item) => isDue(item)).sort((a, b) => {
+      const todayRecommendation = state.dailyRecommendations.find((item) => item.date === toLocalDateKey());
+      const aPriority = todayRecommendation?.recommendedCardIds.indexOf(a.cardId) ?? -1;
+      const bPriority = todayRecommendation?.recommendedCardIds.indexOf(b.cardId) ?? -1;
+      if (aPriority >= 0 || bPriority >= 0) {
+        if (aPriority < 0) return 1;
+        if (bPriority < 0) return -1;
+        if (aPriority !== bPriority) return aPriority - bPriority;
+      }
       if (a.weak !== b.weak) return a.weak ? -1 : 1;
       return new Date(a.nextReviewAt).getTime() - new Date(b.nextReviewAt).getTime();
     }),
-    [state.progress]
+    [state.dailyRecommendations, state.progress]
   );
+
+  const todayRecommendation = state.dailyRecommendations.find((item) => item.date === toLocalDateKey());
 
   const learnedTodayCount = state.todayPlan?.completedCardIds.length ?? 0;
 
@@ -127,11 +142,36 @@ export function useAppData() {
   const recordAttempt = useCallback(async (attempt: Attempt) => {
     await db.attempts.put(attempt);
     const progress = await db.progress.get(attempt.cardId);
-    if (progress) await db.progress.put(applyReviewScore(progress, attempt.score, new Date(attempt.createdAt)));
+    if (progress) {
+      const profile = calculateMasteryProfile(await db.attempts.where('cardId').equals(attempt.cardId).toArray());
+      await db.progress.put({
+        ...applyReviewScore({ ...progress, ...profile }, attempt.score, new Date(attempt.createdAt)),
+        ...profile
+      });
+    }
     if (state.settings) await touchStudyStreak(state.settings);
     notifyLocalDataChanged();
     await refresh();
   }, [refresh, state.settings]);
+
+  const saveSessionAttempt = useCallback(async (attempt: Attempt) => {
+    await db.transaction('rw', db.attempts, db.progress, async () => {
+      await db.attempts.put(attempt);
+      const progress = await db.progress.get(attempt.cardId);
+      if (!progress) return;
+      const profile = calculateMasteryProfile(await db.attempts.where('cardId').equals(attempt.cardId).toArray());
+      await db.progress.put({
+        ...progress,
+        ...profile,
+        weak: progress.weak || profile.weakDimensions.length > 0,
+        status: progress.weak || profile.weakDimensions.length > 0 ? '薄弱词' : progress.status,
+        targetQuestionCount: progress.weak || profile.weakDimensions.length > 0 ? 12 : Math.max(progress.targetQuestionCount ?? 0, 8),
+        lastAnalyzedAt: new Date().toISOString()
+      });
+    });
+    notifyLocalDataChanged();
+    await refresh();
+  }, [refresh]);
 
   const recordReviewSession = useCallback(async (
     cardId: string,
@@ -144,7 +184,8 @@ export function useAppData() {
       const progress = await db.progress.get(cardId);
       if (progress && attempts.length) {
         const average = Math.round(attempts.reduce((sum, item) => sum + item.score, 0) / attempts.length);
-        await db.progress.put(applyReviewScore(progress, average, new Date()));
+        const profile = calculateMasteryProfile(await db.attempts.where('cardId').equals(cardId).toArray());
+        await db.progress.put({ ...applyReviewScore({ ...progress, ...profile }, average, new Date()), ...profile });
       }
     });
     if (state.settings) await touchStudyStreak(state.settings);
@@ -180,7 +221,7 @@ export function useAppData() {
     model: string,
     attempt: Omit<Attempt, 'score' | 'correct' | 'errorTypes' | 'ai'>
   ) => {
-    const completed: AIEvaluation = { ...evaluation, status: 'complete', result, model };
+    const completed: AIEvaluation = { ...evaluation, status: 'complete', result, model, updatedAt: new Date().toISOString(), errorMessage: undefined };
     await db.transaction('rw', db.aiEvaluations, db.attempts, db.progress, async () => {
       await db.aiEvaluations.put(completed);
       const finalAttempt: Attempt = {
@@ -188,11 +229,19 @@ export function useAppData() {
         score: result.overallScore,
         correct: result.overallScore >= 75,
         errorTypes: result.errorTypes,
-        ai: true
+        ai: true,
+        dimensionScores: dimensionsFromEvaluation(result),
+        scheduleImpact: false
       };
       await db.attempts.put(finalAttempt);
       const progress = await db.progress.get(attempt.cardId);
-      if (progress) await db.progress.put(applyReviewScore(progress, result.overallScore, new Date(attempt.createdAt)));
+      if (progress) {
+        const profile = calculateMasteryProfile(await db.attempts.where('cardId').equals(attempt.cardId).toArray());
+        await db.progress.put({
+          ...applyLateEvaluation({ ...progress, ...profile }, result.overallScore, new Date(attempt.createdAt)),
+          ...profile
+        });
+      }
     });
     notifyLocalDataChanged();
     await refresh();
@@ -203,9 +252,11 @@ export function useAppData() {
     progressMap,
     todayCards,
     dueProgress,
+    todayRecommendation,
     learnedTodayCount,
     learnCard,
     recordAttempt,
+    saveSessionAttempt,
     recordReviewSession,
     recordWeeklyResult,
     updateSettings,

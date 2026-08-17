@@ -1,5 +1,5 @@
 import Dexie, { type EntityTable } from 'dexie';
-import type { AIEvaluation, AppSettings, AppSnapshot, Attempt, CardProgress, DailyPlanRecord } from '../types';
+import type { AIEvaluation, AppSettings, AppSnapshot, Attempt, CardProgress, DailyPlanRecord, DailyRecommendation } from '../types';
 import { toLocalDateKey } from '../learning/reviewEngine';
 
 class DailyEnglishDatabase extends Dexie {
@@ -8,6 +8,7 @@ class DailyEnglishDatabase extends Dexie {
   progress!: EntityTable<CardProgress, 'cardId'>;
   attempts!: EntityTable<Attempt, 'id'>;
   aiEvaluations!: EntityTable<AIEvaluation, 'requestId'>;
+  dailyRecommendations!: EntityTable<DailyRecommendation, 'date'>;
 
   constructor() {
     super('daily-english');
@@ -17,6 +18,14 @@ class DailyEnglishDatabase extends Dexie {
       progress: 'cardId, nextReviewAt, status, weak',
       attempts: 'id, cardId, createdAt, stage, questionType',
       aiEvaluations: 'requestId, cardId, createdAt, status'
+    });
+    this.version(2).stores({
+      settings: 'id',
+      dailyPlans: 'date, studyDay',
+      progress: 'cardId, nextReviewAt, status, weak',
+      attempts: 'id, cardId, createdAt, stage, questionType',
+      aiEvaluations: 'requestId, cardId, createdAt, status',
+      dailyRecommendations: 'date, generatedAt'
     });
   }
 }
@@ -60,28 +69,31 @@ export async function exportSnapshot(): Promise<AppSnapshot> {
     attempts: await db.attempts.toArray(),
     aiEvaluations: await db.aiEvaluations.toArray(),
     dailyPlans: await db.dailyPlans.toArray(),
+    dailyRecommendations: await db.dailyRecommendations.toArray(),
     exportedAt: new Date().toISOString(),
-    schemaVersion: 1
+    schemaVersion: 2
   };
 }
 
 export async function importSnapshot(snapshot: AppSnapshot): Promise<void> {
-  if (snapshot.schemaVersion !== 1 || !snapshot.settings || !Array.isArray(snapshot.progress)) {
+  if (![1, 2].includes(snapshot.schemaVersion) || !snapshot.settings || !Array.isArray(snapshot.progress)) {
     throw new Error('备份文件格式不正确');
   }
-  await db.transaction('rw', db.settings, db.progress, db.attempts, db.aiEvaluations, db.dailyPlans, async () => {
+  await db.transaction('rw', [db.settings, db.progress, db.attempts, db.aiEvaluations, db.dailyPlans, db.dailyRecommendations], async () => {
     await Promise.all([
       db.settings.clear(),
       db.progress.clear(),
       db.attempts.clear(),
       db.aiEvaluations.clear(),
-      db.dailyPlans.clear()
+      db.dailyPlans.clear(),
+      db.dailyRecommendations.clear()
     ]);
     await db.settings.put(snapshot.settings);
     await db.progress.bulkPut(snapshot.progress);
     await db.attempts.bulkPut(snapshot.attempts ?? []);
     await db.aiEvaluations.bulkPut(snapshot.aiEvaluations ?? []);
     await db.dailyPlans.bulkPut(snapshot.dailyPlans ?? []);
+    await db.dailyRecommendations.bulkPut(snapshot.dailyRecommendations ?? []);
   });
 }
 

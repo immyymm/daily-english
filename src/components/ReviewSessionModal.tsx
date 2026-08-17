@@ -1,9 +1,10 @@
-import { ArrowRight, Brain, CheckCircle2, CloudOff, LoaderCircle, RotateCcw, Sparkles } from 'lucide-react';
-import { useEffect, useMemo, useState } from 'react';
+import { ArrowRight, Brain, CheckCircle2, LoaderCircle, RotateCcw, Sparkles } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { dimensionForQuestionType } from '../learning/mastery';
 import { objectiveScore } from '../learning/reviewEngine';
 import { selectReviewQuestions } from '../learning/questionSelection';
 import { evaluateAnswer } from '../services/ai';
-import type { AIEvaluation, Attempt, CardProgress, EvaluationResult, QuestionType, WordCard } from '../types';
+import type { AIEvaluation, Attempt, CardProgress, CardQuestion, EvaluationResult, QuestionType, WordCard } from '../types';
 import { LocalRecorder } from './LocalRecorder';
 import { ModalShell } from './ModalShell';
 
@@ -15,6 +16,14 @@ interface ReviewSessionModalProps {
   onNeedConsent: () => void;
   onClose: () => void;
   onComplete: (cardId: string, attempts: Attempt[], evaluations: AIEvaluation[]) => Promise<void>;
+  onRecordAttempt: (attempt: Attempt) => Promise<void>;
+  onQueueEvaluation: (evaluation: AIEvaluation) => Promise<void>;
+  onCompleteEvaluation: (
+    evaluation: AIEvaluation,
+    result: EvaluationResult,
+    model: string,
+    attempt: Omit<Attempt, 'score' | 'correct' | 'errorTypes' | 'ai'>
+  ) => Promise<void>;
 }
 
 const id = () => typeof crypto.randomUUID === 'function'
@@ -38,31 +47,32 @@ export function ReviewSessionModal({
   aiConsent,
   onNeedConsent,
   onClose,
-  onComplete
+  onComplete,
+  onRecordAttempt,
+  onQueueEvaluation,
+  onCompleteEvaluation
 }: ReviewSessionModalProps) {
-  const questions = useMemo(
-    () => card && progress ? selectReviewQuestions(card, progress.stage) : [],
-    [card, progress]
-  );
+  const [questions, setQuestions] = useState<CardQuestion[]>([]);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [answer, setAnswer] = useState('');
   const [feedback, setFeedback] = useState<{ score?: number; correct?: boolean; result?: EvaluationResult; pending?: boolean; message?: string }>();
   const [submitting, setSubmitting] = useState(false);
   const [attempts, setAttempts] = useState<Attempt[]>([]);
-  const [evaluations, setEvaluations] = useState<AIEvaluation[]>([]);
   const [shownAt, setShownAt] = useState(Date.now());
   const [speechLatency, setSpeechLatency] = useState<number>();
+  const [sessionId, setSessionId] = useState(id());
 
   useEffect(() => {
     if (open) {
+      setQuestions(card && progress ? selectReviewQuestions(card, progress) : []);
       setQuestionIndex(0);
       setAnswer('');
       setFeedback(undefined);
       setSubmitting(false);
       setAttempts([]);
-      setEvaluations([]);
       setShownAt(Date.now());
       setSpeechLatency(undefined);
+      setSessionId(id());
     }
   }, [open, card?.id]);
 
@@ -70,8 +80,8 @@ export function ReviewSessionModal({
   const question = questions[questionIndex];
   const responseMs = speechLatency ?? Date.now() - shownAt;
 
-  const makeAttempt = (score: number, errors: string[], correctAnswer: string, ai: boolean): Attempt => ({
-    id: id(),
+  const makeAttempt = (score: number, errors: string[], correctAnswer: string, ai: boolean, attemptId = id()): Attempt => ({
+    id: attemptId,
     cardId: card.id,
     questionId: question.id,
     questionType: question.type,
@@ -84,7 +94,12 @@ export function ReviewSessionModal({
     responseMs,
     errorTypes: errors,
     createdAt: new Date().toISOString(),
-    ai
+    ai,
+    dimensionScores: dimensionForQuestionType(question.type)
+      ? { [dimensionForQuestionType(question.type)!]: score }
+      : undefined,
+    sessionId,
+    scheduleImpact: !ai
   });
 
   const submitObjective = () => {
@@ -95,10 +110,11 @@ export function ReviewSessionModal({
     const scored = objectiveScore(answer, question.answer, responseMs);
     const attempt = makeAttempt(scored.score, scored.errors, question.answer, false);
     setAttempts((current) => [...current, attempt]);
+    void onRecordAttempt(attempt);
     setFeedback({ score: scored.score, correct: scored.score >= 75, message: scored.score >= 75 ? '答对了，记忆正在变得更牢。' : '先看正确答案，再重新读一遍搭配。' });
   };
 
-  const submitAI = async () => {
+  const submitAI = () => {
     if (!aiConsent) {
       onNeedConsent();
       return;
@@ -108,50 +124,67 @@ export function ReviewSessionModal({
       return;
     }
     setSubmitting(true);
-    setFeedback(undefined);
     const requestId = id();
     const createdAt = new Date().toISOString();
+    const savedAnswer = answer.trim();
+    const savedResponseMs = responseMs;
     const baseEvaluation: AIEvaluation = {
       requestId,
       cardId: card.id,
       questionType: question.type,
       stage: progress.stage,
-      answer,
+      answer: savedAnswer,
       status: 'pending',
       createdAt,
-      rubricVersion: '2026.08.17'
+      updatedAt: createdAt,
+      rubricVersion: '2026.08.17.2',
+      prompt: question.prompt,
+      questionId: question.id,
+      correctAnswer: question.answer,
+      responseMs: savedResponseMs
     };
-    try {
-      const evaluated = await evaluateAnswer({
+    const attemptBase: Omit<Attempt, 'score' | 'correct' | 'errorTypes' | 'ai'> = {
+      id: requestId,
+      cardId: card.id,
+      questionId: question.id,
+      questionType: question.type,
+      stage: progress.stage,
+      prompt: question.prompt,
+      answer: savedAnswer,
+      correctAnswer: question.answer,
+      responseMs: savedResponseMs,
+      createdAt,
+      sessionId,
+      scheduleImpact: false
+    };
+
+    setFeedback({ pending: true, message: '答案已保存，AI 正在后台点评；你现在就可以继续下一题。完成后会自动出现在“掌握详情”中。' });
+    setSubmitting(false);
+    void onQueueEvaluation(baseEvaluation)
+      .then(() => evaluateAnswer({
         requestId,
         card,
+        questionId: question.id,
         questionType: question.type,
         stage: progress.stage,
         prompt: question.prompt,
-        answer,
-        responseMs
+        answer: savedAnswer,
+        correctAnswer: question.answer,
+        responseMs: savedResponseMs,
+        rubricVersion: baseEvaluation.rubricVersion
+      }))
+      .then(async (evaluated) => {
+        if (evaluated.status === 'complete') {
+          await onCompleteEvaluation(baseEvaluation, evaluated.result, evaluated.model, {
+            ...attemptBase,
+            correctAnswer: evaluated.result.correctedAnswer
+          });
+        }
+      })
+      .catch((error) => {
+        const message = error instanceof Error ? error.message : 'AI 评分暂时不可用';
+        void onQueueEvaluation({ ...baseEvaluation, status: 'failed', updatedAt: new Date().toISOString(), errorMessage: message });
       });
-      const completed: AIEvaluation = {
-        ...baseEvaluation,
-        status: 'complete',
-        model: evaluated.model,
-        result: evaluated.result
-      };
-      setEvaluations((current) => [...current, completed]);
-      setAttempts((current) => [...current, makeAttempt(
-        evaluated.result.overallScore,
-        evaluated.result.errorTypes,
-        evaluated.result.correctedAnswer,
-        true
-      )]);
-      setFeedback({ score: evaluated.result.overallScore, correct: evaluated.result.overallScore >= 75, result: evaluated.result });
-    } catch (error) {
-      const message = error instanceof Error ? error.message : 'AI 评分暂时不可用';
-      setEvaluations((current) => [...current, { ...baseEvaluation, status: 'pending', errorMessage: message }]);
-      setFeedback({ pending: true, message: '答案已留在本机待评分队列。联网或配置密钥后可以重试。' });
-    } finally {
-      setSubmitting(false);
-    }
   };
 
   const next = async () => {
@@ -163,7 +196,7 @@ export function ReviewSessionModal({
       setSpeechLatency(undefined);
       return;
     }
-    await onComplete(card.id, attempts, evaluations);
+    await onComplete(card.id, attempts, []);
     onClose();
   };
 
@@ -224,8 +257,8 @@ export function ReviewSessionModal({
       {feedback && (
         <section className={feedback.pending ? 'feedback-card pending' : feedback.correct ? 'feedback-card success' : 'feedback-card retry'}>
           <div className="feedback-title">
-            {feedback.pending ? <CloudOff size={20} /> : feedback.correct ? <CheckCircle2 size={20} /> : <RotateCcw size={20} />}
-            <strong>{feedback.pending ? '等待联网评分' : feedback.score !== undefined ? feedback.score + ' 分' : '再想一想'}</strong>
+            {feedback.pending ? <Sparkles size={20} /> : feedback.correct ? <CheckCircle2 size={20} /> : <RotateCcw size={20} />}
+            <strong>{feedback.pending ? '已进入后台点评' : feedback.score !== undefined ? feedback.score + ' 分' : '再想一想'}</strong>
           </div>
           {feedback.message && <p>{feedback.message}</p>}
           {!feedback.correct && !feedback.pending && !isOpenAnswer && <p><b>正确答案：</b>{question.answer}</p>}
@@ -242,7 +275,7 @@ export function ReviewSessionModal({
 
       <div className="quiz-actions">
         {!feedback && (
-          <button className="primary-button" disabled={submitting || !answer.trim()} onClick={() => isOpenAnswer ? void submitAI() : submitObjective()}>
+          <button className="primary-button" disabled={submitting || !answer.trim()} onClick={() => isOpenAnswer ? submitAI() : submitObjective()}>
             {submitting ? <LoaderCircle className="spin" size={18} /> : isOpenAnswer ? <Sparkles size={18} /> : <CheckCircle2 size={18} />}
             {submitting ? '正在点评…' : '提交答案'}
           </button>

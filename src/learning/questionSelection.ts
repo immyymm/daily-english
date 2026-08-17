@@ -1,6 +1,23 @@
-import type { CardQuestion, ReviewStage, WordCard } from '../types';
+import type { CardProgress, CardQuestion, MasteryDimension, QuestionType, ReviewStage, WordCard } from '../types';
 
-const SESSION_SIZE = 5;
+const stageSessionSize: Record<ReviewStage, number> = {
+  T0: 8,
+  T1: 8,
+  T2: 10,
+  T3: 10,
+  T4: 12,
+  T5: 12,
+  T6: 12,
+  T7: 12
+};
+
+const weaknessQuestionTypes: Record<MasteryDimension, QuestionType[]> = {
+  meaningContext: ['meaning_choice', 'recall'],
+  activeRecall: ['recall', 'free_sentence'],
+  collocation: ['collocation', 'free_sentence', 'dialogue'],
+  grammar: ['free_sentence', 'dialogue'],
+  naturalness: ['dialogue', 'free_sentence']
+};
 
 function stableHash(value: string) {
   let hash = 0;
@@ -16,12 +33,21 @@ function rotate<T>(items: T[], offset: number): T[] {
   return [...items.slice(start), ...items.slice(0, start)];
 }
 
-export function selectReviewQuestions(card: WordCard, stage: ReviewStage): CardQuestion[] {
+export function selectReviewQuestions(card: WordCard, progress: Pick<CardProgress, 'stage' | 'weak' | 'weakDimensions' | 'targetQuestionCount'>): CardQuestion[] {
+  const stage = progress.stage;
   const allowedTypes = card.reviewStages[stage];
   const seed = stableHash(card.id + '-' + stage);
   const selected: CardQuestion[] = [];
   const selectedIds = new Set<string>();
-  const orderedTypes = rotate(allowedTypes, seed);
+  const weaknessTypes = (progress.weakDimensions ?? [])
+    .flatMap((dimension) => weaknessQuestionTypes[dimension])
+    .filter((type) => allowedTypes.includes(type));
+  const orderedTypes = [...new Set([...weaknessTypes, ...rotate(allowedTypes, seed)])];
+  const baseSize = stageSessionSize[stage];
+  const targetSize = Math.min(
+    card.questions.filter((question) => allowedTypes.includes(question.type)).length,
+    Math.max(baseSize, progress.targetQuestionCount ?? 0, progress.weak ? baseSize + 2 : baseSize)
+  );
 
   orderedTypes.forEach((type, index) => {
     const candidates = card.questions.filter((question) => question.type === type);
@@ -37,14 +63,14 @@ export function selectReviewQuestions(card: WordCard, stage: ReviewStage): CardQ
     seed + stage.charCodeAt(1)
   );
   for (const question of remaining) {
-    if (selected.length >= SESSION_SIZE) break;
+    if (selected.length >= targetSize) break;
     if (!selectedIds.has(question.id)) {
       selected.push(question);
       selectedIds.add(question.id);
     }
   }
 
-  return selected.slice(0, SESSION_SIZE).map((question, index) => ({
+  return selected.slice(0, targetSize).map((question, index) => ({
     ...question,
     id: `${question.id}-${stage}-${index}`,
     stage

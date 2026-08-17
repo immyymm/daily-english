@@ -10,6 +10,15 @@ export type MasteryStatus =
   | '长期掌握'
   | '薄弱词';
 
+export type MasteryDimension =
+  | 'meaningContext'
+  | 'activeRecall'
+  | 'collocation'
+  | 'grammar'
+  | 'naturalness';
+
+export type MasteryDimensionScores = Record<MasteryDimension, number>;
+
 export type QuestionType =
   | 'meaning_choice'
   | 'recall'
@@ -166,6 +175,13 @@ export interface CardProgress {
   passedT7: boolean;
   passedT30: boolean;
   passedT60: boolean;
+  masteryScore?: number;
+  dimensionScores?: Partial<MasteryDimensionScores>;
+  weakDimensions?: MasteryDimension[];
+  errorCounts?: Record<string, number>;
+  attemptCount?: number;
+  targetQuestionCount?: number;
+  lastAnalyzedAt?: string;
 }
 
 export interface Attempt {
@@ -183,6 +199,9 @@ export interface Attempt {
   errorTypes: string[];
   createdAt: string;
   ai: boolean;
+  dimensionScores?: Partial<MasteryDimensionScores>;
+  sessionId?: string;
+  scheduleImpact?: boolean;
 }
 
 export interface AIEvaluation {
@@ -191,12 +210,19 @@ export interface AIEvaluation {
   questionType: QuestionType;
   stage: ReviewStage;
   answer: string;
-  status: 'complete' | 'pending' | 'failed';
+  status: 'complete' | 'pending' | 'processing' | 'failed';
   createdAt: string;
+  updatedAt?: string;
   model?: string;
   rubricVersion: string;
   result?: EvaluationResult;
   errorMessage?: string;
+  prompt?: string;
+  questionId?: string;
+  correctAnswer?: string;
+  responseMs?: number;
+  retryCount?: number;
+  tokenUsage?: Record<string, number>;
 }
 
 export interface EvaluationResult {
@@ -226,12 +252,23 @@ export interface DailyPlanRecord {
   contentVersion: string;
 }
 
+export interface DailyRecommendation {
+  date: string;
+  generatedAt: string;
+  recommendedCardIds: string[];
+  focusDimensions: MasteryDimension[];
+  targetQuestionCount: number;
+  summary: string;
+  analysis: Record<string, unknown>;
+}
+
 export interface AppSnapshot {
   settings: AppSettings;
   progress: CardProgress[];
   attempts: Attempt[];
   aiEvaluations: AIEvaluation[];
   dailyPlans: DailyPlanRecord[];
+  dailyRecommendations: DailyRecommendation[];
   exportedAt: string;
-  schemaVersion: 1;
+  schemaVersion: 1 | 2;
 }

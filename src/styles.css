@@ -418,7 +418,7 @@ h1 { font-family: Georgia, "Songti SC", serif; font-size: 21px; letter-spacing: 
 .metric-row span { display: block; color: #896c77; font-size: 12px; margin-top: 4px; white-space: nowrap; }
 
 .queue-list { display: grid; gap: 9px; }
-.queue-list button {
+.queue-item {
   width: 100%;
   min-height: 64px;
   padding: 11px 13px;
@@ -432,13 +432,23 @@ h1 { font-family: Georgia, "Songti SC", serif; font-size: 21px; letter-spacing: 
   gap: 10px;
   text-align: left;
 }
-.queue-list button > div { min-width: 0; }
+.queue-word-button { min-width: 0; padding: 0; border: 0; color: inherit; background: transparent; text-align: left; }
 .queue-list strong { font-family: Georgia, serif; font-size: 17px; }
 .queue-list p { color: var(--muted); font-size: 13px; margin-top: 4px; }
 .queue-list svg { color: #d1a0b2; }
 .queue-dot { width: 8px; height: 8px; border-radius: 50%; background: #e0a3b8; box-shadow: 0 0 0 5px #fbeaf0; }
 .queue-dot.weak { background: #e47b78; box-shadow: 0 0 0 5px #ffe9e5; }
-.queue-score { color: #805969; font-size: 12px; white-space: nowrap; }
+.queue-score { padding: 4px 7px; border: 0; border-radius: 10px; color: #805969; background: #fff0f5; font-size: 12px; white-space: nowrap; }
+.queue-score small { display: block; margin-top: 2px; color: #a7808f; font-size: 9px; }
+
+.adaptive-plan-card { padding: 18px; border: 1px solid #eadcf4; border-radius: 24px; background: linear-gradient(145deg, #f7efff, #fff4f8); box-shadow: 0 10px 28px rgba(105,66,126,.07); }
+.adaptive-plan-head { display: flex; align-items: center; gap: 10px; color: #8660a0; }
+.adaptive-plan-head > svg { flex: 0 0 auto; }
+.adaptive-plan-head span { color: #9b7aaa; font-size: 11px; font-weight: 800; }
+.adaptive-plan-head h3 { color: #624970; font: 700 18px Georgia, "Songti SC", serif; margin-top: 2px; }
+.adaptive-plan-card > p { color: #6d5a73; font-size: 14px; line-height: 1.65; margin-top: 11px; }
+.adaptive-plan-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 11px; }
+.adaptive-plan-meta span { padding: 6px 9px; border-radius: 999px; color: #78558a; background: rgba(255,255,255,.78); font-size: 11px; }
 
 .empty-card {
   min-height: 160px;
@@ -522,7 +532,7 @@ h1 { font-family: Georgia, "Songti SC", serif; font-size: 21px; letter-spacing: 
 .filter-scroll button.active { color: white; border-color: #cb6d8e; background: #cb6d8e; }
 .library-count { color: #806873; font-size: 13px; margin: -8px 3px -7px; }
 .library-list { display: grid; gap: 8px; }
-.library-list > button {
+.library-list > article {
   min-height: 75px;
   width: 100%;
   padding: 11px 12px;
@@ -531,18 +541,23 @@ h1 { font-family: Georgia, "Songti SC", serif; font-size: 21px; letter-spacing: 
   color: inherit;
   background: rgba(255,255,255,.7);
   display: grid;
-  grid-template-columns: 42px 1fr auto auto;
+  grid-template-columns: minmax(0, 1fr) auto auto;
   align-items: center;
   gap: 10px;
   text-align: left;
+  content-visibility: auto;
+  contain-intrinsic-size: 75px;
 }
+.library-card-button { min-width: 0; padding: 0; border: 0; display: grid; grid-template-columns: 42px minmax(0, 1fr); align-items: center; gap: 10px; color: inherit; background: transparent; text-align: left; }
 .library-letter { width: 42px; height: 42px; border-radius: 16px; display: grid; place-items: center; color: #a85e79; background: #ffedf3; font: 700 19px Georgia, serif; }
-.library-list > button > div:nth-child(2) { min-width: 0; }
+.library-card-button > div:nth-child(2) { min-width: 0; }
 .library-list p { color: #856572; font: 14px Georgia, serif; margin: 3px 0 4px; }
 .library-list small { display: block; color: #654b55; font-size: 14px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.library-list > button > svg { color: #d3a0b3; }
+.library-list > article > svg { color: #d3a0b3; }
 .status-tag { padding: 5px 8px; border-radius: 999px; color: #89596b; background: #fff0f5; font-size: 11px; white-space: nowrap; }
 .status-tag.weak { color: #b85f5f; background: #ffe7e4; }
+.mastery-link { border: 0; display: grid; gap: 2px; text-align: center; }
+.mastery-link small { color: inherit; font-size: 9px; opacity: .72; }
 
 .profile-hero { padding: 26px; border-radius: 30px; text-align: center; background: linear-gradient(145deg, #f8c6d6, #fae2e9); box-shadow: 0 16px 40px rgba(137,66,91,.11); }
 .profile-flower { width: 64px; height: 64px; margin: 0 auto 11px; border-radius: 23px; display: grid; place-items: center; color: #a55072; background: rgba(255,255,255,.68); box-shadow: 0 9px 22px rgba(137,66,91,.12); }
@@ -605,6 +620,55 @@ h1 { font-family: Georgia, "Songti SC", serif; font-size: 21px; letter-spacing: 
 .privacy-note { padding: 15px; border-radius: 20px; display: flex; gap: 10px; align-items: flex-start; color: #8f6776; background: rgba(255,255,255,.47); }
 .privacy-note svg { flex: 0 0 auto; margin-top: 2px; }
 .privacy-note p { font-size: 10px; line-height: 1.6; }
+
+.profile-evaluation-list { display: grid; }
+.profile-evaluation-list details { border-top: 1px solid #f4e6eb; }
+.profile-evaluation-list summary { min-height: 52px; padding: 11px 15px; display: flex; align-items: center; justify-content: space-between; gap: 12px; color: #674a56; font-size: 13px; cursor: pointer; }
+.profile-evaluation-list summary b { color: #9e5973; font-size: 12px; }
+.profile-evaluation-list details > div { display: grid; gap: 8px; padding: 2px 15px 15px; color: #6f5962; font-size: 13px; line-height: 1.65; }
+.profile-evaluation-list .secondary-button { width: fit-content; min-height: 40px; margin-top: 3px; }
+
+.mastery-overview-card { padding: 18px; border-radius: 24px; display: grid; grid-template-columns: 88px minmax(0, 1fr); align-items: center; gap: 15px; background: linear-gradient(145deg, #f8c8d7, #fbe5eb); }
+.mastery-score-ring { width: 84px; height: 84px; border: 7px solid rgba(255,255,255,.62); border-radius: 50%; display: grid; place-items: center; align-content: center; color: #744357; background: rgba(255,255,255,.42); }
+.mastery-score-ring strong { font-size: 26px; line-height: 1; }
+.mastery-score-ring span { font-size: 9px; margin-top: 4px; }
+.mastery-overview-card h3 { color: #60414d; font-size: 15px; line-height: 1.55; margin-top: 8px; }
+.mastery-overview-card p { display: flex; align-items: center; gap: 5px; color: #84606e; font-size: 12px; line-height: 1.5; margin-top: 5px; }
+.mastery-detail-section { padding: 17px; margin-top: 13px; border: 1px solid #f0e0e6; border-radius: 22px; background: white; }
+.mastery-section-title { display: flex; align-items: flex-start; gap: 9px; color: #9c5871; }
+.mastery-section-title h3 { color: #604550; font-size: 16px; }
+.mastery-section-title p { color: #967985; font-size: 11px; line-height: 1.45; margin-top: 3px; }
+.dimension-list { display: grid; gap: 11px; margin-top: 15px; }
+.dimension-row { display: grid; grid-template-columns: 76px minmax(0, 1fr) 34px; align-items: center; gap: 9px; font-size: 12px; }
+.dimension-row > span { color: #755964; }
+.dimension-row > div { height: 9px; overflow: hidden; border-radius: 999px; background: #f2e5ea; }
+.dimension-row i { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #eaa4ba, #c86385); }
+.dimension-row b { color: #765463; text-align: right; font-size: 11px; }
+.dimension-row.weak i { background: linear-gradient(90deg, #f0a37f, #d86f72); }
+.weak-focus-note { padding: 11px; margin-top: 14px; border-radius: 15px; display: flex; align-items: flex-start; gap: 8px; color: #9e5d52; background: #fff0e9; }
+.weak-focus-note svg { flex: 0 0 auto; margin-top: 2px; }
+.weak-focus-note p { font-size: 12px; line-height: 1.6; }
+.error-chip-list { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 14px; }
+.error-chip-list span { padding: 7px 9px; border-radius: 999px; color: #87576a; background: #ffedf3; font-size: 12px; }
+.error-chip-list b { margin-left: 6px; }
+.mastery-empty { color: #8d737d; font-size: 13px; line-height: 1.65; margin-top: 13px; }
+.evaluation-history { display: grid; gap: 8px; margin-top: 13px; }
+.evaluation-history details { overflow: hidden; border: 1px solid #f1e1e7; border-radius: 17px; background: #fffafb; }
+.evaluation-history summary { min-height: 51px; padding: 10px 12px; display: flex; align-items: center; justify-content: space-between; gap: 10px; cursor: pointer; }
+.evaluation-history summary strong { color: #805263; font-size: 12px; }
+.evaluation-state { display: flex; align-items: center; gap: 6px; color: #98707f; font-size: 12px; }
+.evaluation-state.complete { color: #528064; }
+.evaluation-state.failed { color: #ae5f5f; }
+.evaluation-body { display: grid; gap: 10px; padding: 3px 12px 13px; border-top: 1px solid #f3e5ea; }
+.evaluation-body p { color: #634d56; font-size: 13px; line-height: 1.65; }
+.evaluation-body p b { display: block; color: #9a5870; font-size: 11px; margin-bottom: 2px; }
+.mastery-retry { width: fit-content; min-height: 40px; }
+.attempt-history { display: grid; gap: 8px; margin-top: 13px; }
+.attempt-history article { padding: 10px; border-radius: 15px; display: grid; grid-template-columns: 38px minmax(0, 1fr); align-items: center; gap: 9px; background: #fff7fa; }
+.attempt-result { width: 38px; height: 38px; border-radius: 13px; display: grid; place-items: center; color: #a15359; background: #ffe8e5; font-size: 12px; font-weight: 800; }
+.attempt-result.correct { color: #4e7960; background: #e9f5ec; }
+.attempt-history strong { display: block; overflow: hidden; color: #5d464f; font-size: 12px; line-height: 1.45; text-overflow: ellipsis; white-space: nowrap; }
+.attempt-history p { overflow: hidden; color: #927681; font-size: 10px; line-height: 1.5; margin-top: 3px; text-overflow: ellipsis; white-space: nowrap; }
 
 .modal-open { overflow: hidden; }
 .modal-backdrop {
@@ -855,9 +919,10 @@ h1 { font-family: Georgia, "Songti SC", serif; font-size: 21px; letter-spacing: 
   .hero-card h2 { font-size: 25px; }
   .metric-row { gap: 5px; }
   .metric-row article { padding-inline: 3px; }
-  .word-status span, .status-tag { display: none; }
-  .library-list > button { grid-template-columns: 39px 1fr auto; }
-  .library-list > button > svg { display: none; }
+  .word-status span { display: none; }
+  .library-list > article { grid-template-columns: minmax(0, 1fr) auto; }
+  .library-card-button { grid-template-columns: 39px minmax(0, 1fr); }
+  .library-list > article > svg { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {

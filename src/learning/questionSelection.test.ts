@@ -21,14 +21,20 @@ const card = {
 } as WordCard;
 
 describe('rich review question selection', () => {
-  it('selects five unique questions and covers every allowed content type', () => {
-    const selected = selectReviewQuestions(card, 'T2');
-    expect(selected).toHaveLength(5);
-    expect(new Set(selected.map((question) => question.id)).size).toBe(5);
+  it('selects ten unique questions and covers every allowed content type at T2', () => {
+    const selected = selectReviewQuestions(card, { stage: 'T2', weak: false });
+    expect(selected).toHaveLength(10);
+    expect(new Set(selected.map((question) => question.id)).size).toBe(10);
     expect(new Set(selected.map((question) => question.type))).toEqual(new Set(['meaning_choice', 'recall', 'collocation', 'free_sentence']));
   });
 
   it('is stable for the same word and review stage', () => {
-    expect(selectReviewQuestions(card, 'T1')).toEqual(selectReviewQuestions(card, 'T1'));
+    const progress = { stage: 'T1' as const, weak: false };
+    expect(selectReviewQuestions(card, progress)).toEqual(selectReviewQuestions(card, progress));
+  });
+
+  it('uses all available questions for a weak word', () => {
+    const selected = selectReviewQuestions(card, { stage: 'T2', weak: true, weakDimensions: ['collocation'] });
+    expect(selected).toHaveLength(12);
   });
 });

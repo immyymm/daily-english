@@ -34,12 +34,13 @@ function snapshot(source: 'local' | 'remote'): AppSnapshot {
       responseMs: 800, errorTypes: [], createdAt: '2026-08-18T02:00:00.000Z', ai: false
     }] : [],
     aiEvaluations: [],
+    dailyRecommendations: [],
     dailyPlans: [{
       date: '2026-08-17', studyDay: 1, cycle: 1, cardIds: ['improve-v', 'notice-v'],
       completedCardIds: remote ? ['notice-v'] : ['improve-v'], contentVersion: '2026.08.17.2'
     }],
     exportedAt: remote ? '2026-08-18T03:00:00.000Z' : '2026-08-17T03:00:00.000Z',
-    schemaVersion: 1
+    schemaVersion: 2
   };
 }
 

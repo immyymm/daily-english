@@ -13,13 +13,14 @@ interface WeeklyTestModalProps {
   onNeedConsent: () => void;
   onClose: () => void;
   onSave: (attempt: Attempt, evaluation: AIEvaluation) => Promise<void>;
+  onQueueEvaluation: (evaluation: AIEvaluation) => Promise<void>;
 }
 
 const makeId = () => typeof crypto.randomUUID === 'function'
   ? crypto.randomUUID()
   : Date.now().toString(36) + Math.random().toString(36).slice(2);
 
-export function WeeklyTestModal({ open, cards, aiConsent, onNeedConsent, onClose, onSave }: WeeklyTestModalProps) {
+export function WeeklyTestModal({ open, cards, aiConsent, onNeedConsent, onClose, onSave, onQueueEvaluation }: WeeklyTestModalProps) {
   const [mode, setMode] = useState<'writing' | 'speaking'>('writing');
   const [answer, setAnswer] = useState('');
   const [shownAt, setShownAt] = useState(Date.now());
@@ -27,6 +28,7 @@ export function WeeklyTestModal({ open, cards, aiConsent, onNeedConsent, onClose
   const [submitting, setSubmitting] = useState(false);
   const [result, setResult] = useState<EvaluationResult>();
   const [error, setError] = useState<string>();
+  const [queued, setQueued] = useState(false);
   const targetWords = useMemo(() => cards.slice(0, 10), [cards]);
   const requiredWords = useMemo(() => targetWords.slice(0, 5), [targetWords]);
   const suggestedPhrases = useMemo(
@@ -39,6 +41,7 @@ export function WeeklyTestModal({ open, cards, aiConsent, onNeedConsent, onClose
       setAnswer('');
       setResult(undefined);
       setError(undefined);
+      setQueued(false);
       setShownAt(Date.now());
       setSpeechLatency(undefined);
     }
@@ -51,7 +54,7 @@ export function WeeklyTestModal({ open, cards, aiConsent, onNeedConsent, onClose
     ? `写一段 180–240 词的英文短文，主题是“一个让生活变得更好的小改变”。至少自然使用 5 个本周词（${requiredWords.map((card) => card.word).join('、')}）和 2 个词卡搭配（${suggestedPhrases.join('、')}）；至少加入一次原因解释、一个具体例子和一句近义词或反义词对比。不要强行堆词。`
     : `进行 2–3 分钟的即兴表达：描述你最近正在培养的一个习惯。至少自然使用 5 个本周词（${requiredWords.map((card) => card.word).join('、')}）和 2 个词卡搭配（${suggestedPhrases.join('、')}），并用一个具体场景说明效果。录音后，请输入或确认文字稿。`;
 
-  const submit = async () => {
+  const submit = () => {
     if (!aiConsent) {
       onNeedConsent();
       return;
@@ -64,80 +67,74 @@ export function WeeklyTestModal({ open, cards, aiConsent, onNeedConsent, onClose
     setError(undefined);
     const requestId = makeId();
     const createdAt = new Date().toISOString();
-    try {
-      const response = await evaluateAnswer({
+    const cardId = 'weekly-' + toLocalDateKey();
+    const questionId = cardId + '-' + mode;
+    const savedAnswer = answer.trim();
+    const responseMs = speechLatency ?? Date.now() - shownAt;
+    const pending: AIEvaluation = {
+      requestId,
+      cardId,
+      questionType,
+      stage: 'T5',
+      answer: savedAnswer,
+      status: 'pending',
+      createdAt,
+      updatedAt: createdAt,
+      rubricVersion: '2026.08.17.2',
+      prompt,
+      questionId,
+      correctAnswer: '',
+      responseMs
+    };
+    setQueued(true);
+    setSubmitting(false);
+    void onQueueEvaluation(pending)
+      .then(() => evaluateAnswer({
         requestId,
         card: representative,
+        questionId,
         questionType,
         stage: 'T5',
         prompt,
-        answer,
-        responseMs: speechLatency ?? Date.now() - shownAt,
+        answer: savedAnswer,
+        responseMs,
+        rubricVersion: pending.rubricVersion,
         weeklyWords: targetWords.map((card) => card.word)
+      }))
+      .then(async (response) => {
+        if (response.status !== 'complete') return;
+        const evaluation: AIEvaluation = {
+          ...pending,
+          status: 'complete',
+          updatedAt: new Date().toISOString(),
+          model: response.model,
+          result: response.result
+        };
+        const attempt: Attempt = {
+          id: requestId,
+          cardId,
+          questionId,
+          questionType,
+          stage: 'T5',
+          prompt,
+          answer: savedAnswer,
+          correctAnswer: response.result.correctedAnswer,
+          score: response.result.overallScore,
+          correct: response.result.overallScore >= 75,
+          responseMs,
+          errorTypes: response.result.errorTypes,
+          createdAt,
+          ai: true,
+          scheduleImpact: false
+        };
+        await onSave(attempt, evaluation);
+        setResult(response.result);
+      })
+      .catch((requestError) => {
+        const message = requestError instanceof Error ? requestError.message : 'AI 评分暂时不可用';
+        void onQueueEvaluation({ ...pending, status: 'failed', updatedAt: new Date().toISOString(), errorMessage: message });
+        setError('答案已保存；连接恢复后可在“我的”中重试，成功结果会保留。');
       });
-      const evaluation: AIEvaluation = {
-        requestId,
-        cardId: 'weekly-' + toLocalDateKey(),
-        questionType,
-        stage: 'T5',
-        answer,
-        status: 'complete',
-        createdAt,
-        model: response.model,
-        rubricVersion: '2026.08.17',
-        result: response.result
-      };
-      const attempt: Attempt = {
-        id: makeId(),
-        cardId: evaluation.cardId,
-        questionId: evaluation.cardId + '-' + mode,
-        questionType,
-        stage: 'T5',
-        prompt,
-        answer,
-        correctAnswer: response.result.correctedAnswer,
-        score: response.result.overallScore,
-        correct: response.result.overallScore >= 75,
-        responseMs: speechLatency ?? Date.now() - shownAt,
-        errorTypes: response.result.errorTypes,
-        createdAt,
-        ai: true
-      };
-      await onSave(attempt, evaluation);
-      setResult(response.result);
-    } catch (requestError) {
-      const message = requestError instanceof Error ? requestError.message : 'AI 评分暂时不可用';
-      const pending: AIEvaluation = {
-        requestId,
-        cardId: 'weekly-' + toLocalDateKey(),
-        questionType,
-        stage: 'T5',
-        answer,
-        status: 'pending',
-        createdAt,
-        rubricVersion: '2026.08.17',
-        errorMessage: message
-      };
-      await onSave({
-        id: makeId(),
-        cardId: pending.cardId,
-        questionId: pending.cardId + '-' + mode,
-        questionType,
-        stage: 'T5',
-        prompt,
-        answer,
-        correctAnswer: '',
-        score: 0,
-        correct: false,
-        responseMs: Date.now() - shownAt,
-        errorTypes: ['等待 AI 评分'],
-        createdAt,
-        ai: true
-      }, pending);
-      setError('内容已保存在本机待评分队列，配置密钥或联网后可再次提交。');
-    } finally {
-      setSubmitting(false);
-    }
   };
 
   return (
@@ -166,6 +163,12 @@ export function WeeklyTestModal({ open, cards, aiConsent, onNeedConsent, onClose
       </label>
       <div className="character-count">{answer.trim().split(/\s+/).filter(Boolean).length} words</div>
       {error && <p className="form-error">{error}</p>}
+      {queued && !result && !error && (
+        <section className="feedback-card pending">
+          <div className="feedback-title"><Sparkles size={20} /><strong>已进入后台点评</strong></div>
+          <p>现在可以关闭本页继续学习；完成后的详细点评会自动保存，可随时回来查看。</p>
+        </section>
+      )}
       {result && (
         <section className="feedback-card success">
           <div className="feedback-title"><CheckCircle2 size={20} /><strong>{result.overallScore} 分</strong></div>
@@ -174,8 +177,8 @@ export function WeeklyTestModal({ open, cards, aiConsent, onNeedConsent, onClose
           <p><b>需要关注：</b>{result.errorTypes.length ? result.errorTypes.join(' · ') : '表达自然，没有明显问题'}</p>
         </section>
       )}
-      {!result && (
-        <button className="primary-button" disabled={submitting} onClick={() => void submit()}>
+      {!result && !queued && (
+        <button className="primary-button" disabled={submitting} onClick={submit}>
           {submitting ? <LoaderCircle className="spin" size={18} /> : <Sparkles size={18} />}
           {submitting ? '正在综合点评…' : '交给 AI 点评'}
         </button>

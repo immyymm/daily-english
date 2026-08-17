@@ -1,6 +1,7 @@
 import type { Session } from '@supabase/supabase-js';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { exportSnapshot, importSnapshot } from '../storage/db';
+import { hydrateDetailedRecords, syncDetailedRecords } from '../services/cloudRecords';
 import { cloudSyncConfigured, getSupabase } from '../services/supabase';
 import type { AIEvaluation, AppSnapshot, CardProgress, DailyPlanRecord } from '../types';
 
@@ -64,6 +65,10 @@ function chooseEvaluation(local: AIEvaluation, remote: AIEvaluation) {
   return timestamp(remote.createdAt) >= timestamp(local.createdAt) ? remote : local;
 }
 
+function chooseRecommendation(local: AppSnapshot['dailyRecommendations'][number], remote: AppSnapshot['dailyRecommendations'][number]) {
+  return timestamp(remote.generatedAt) >= timestamp(local.generatedAt) ? remote : local;
+}
+
 export function mergeSnapshots(local: AppSnapshot, remote: AppSnapshot): AppSnapshot {
   const localNewer = timestamp(local.exportedAt) >= timestamp(remote.exportedAt);
   const newerSettings = localNewer ? local.settings : remote.settings;
@@ -81,8 +86,14 @@ export function mergeSnapshots(local: AppSnapshot, remote: AppSnapshot): AppSnap
     attempts: mergeByKey(local.attempts, remote.attempts, (item) => item.id, (a, b) => timestamp(b.createdAt) >= timestamp(a.createdAt) ? b : a),
     aiEvaluations: mergeByKey(local.aiEvaluations, remote.aiEvaluations, (item) => item.requestId, chooseEvaluation),
     dailyPlans: mergeByKey(local.dailyPlans, remote.dailyPlans, (item) => item.date, mergePlans),
+    dailyRecommendations: mergeByKey(
+      local.dailyRecommendations ?? [],
+      remote.dailyRecommendations ?? [],
+      (item) => item.date,
+      chooseRecommendation
+    ),
     exportedAt: new Date(Math.max(timestamp(local.exportedAt), timestamp(remote.exportedAt))).toISOString(),
-    schemaVersion: 1
+    schemaVersion: 2
   };
 }
 
@@ -119,6 +130,7 @@ export function useCloudSync(refresh: () => Promise<void>) {
         device_id: deviceIdRef.current
       }, { onConflict: 'user_id' });
       if (error) throw error;
+      await syncDetailedRecords(client, activeUserId, payload, deviceIdRef.current);
       revisionRef.current = revision;
       setLastSyncedAt(now);
       setState('synced');
@@ -160,6 +172,12 @@ export function useCloudSync(refresh: () => Promise<void>) {
     }
     if (data) await mergeRemote(data, activeSession.user.id, true);
     else await pushSnapshot(activeSession.user.id);
+    try {
+      await hydrateDetailedRecords(client, activeSession.user.id);
+      await refresh();
+    } catch (detailError) {
+      console.warn('DETAILED_SYNC_UNAVAILABLE', detailError);
+    }
   }, [mergeRemote, pushSnapshot]);
 
   useEffect(() => {
@@ -214,6 +232,42 @@ export function useCloudSync(refresh: () => Promise<void>) {
       cleanup?.();
     };
   }, [mergeRemote, session]);
+
+  useEffect(() => {
+    if (!session) return;
+    let cancelled = false;
+    let cleanup: (() => void) | undefined;
+    let refreshTimer: number | undefined;
+    void getSupabase().then((client) => {
+      if (!client || cancelled) return;
+      const hydrate = () => {
+        window.clearTimeout(refreshTimer);
+        refreshTimer = window.setTimeout(() => {
+          void hydrateDetailedRecords(client, session.user.id)
+            .then(refresh)
+            .catch((error) => console.warn('DETAILED_REALTIME_REFRESH_FAILED', error));
+        }, 250);
+      };
+      let channel = client.channel('daily-english-details-' + session.user.id);
+      for (const table of ['daily_english_mastery', 'daily_english_attempts', 'daily_english_ai_evaluations', 'daily_english_daily_plans']) {
+        channel = channel.on('postgres_changes', {
+          event: '*',
+          schema: 'public',
+          table,
+          filter: 'user_id=eq.' + session.user.id
+        }, hydrate);
+      }
+      channel = channel.subscribe();
+      cleanup = () => {
+        window.clearTimeout(refreshTimer);
+        void client.removeChannel(channel);
+      };
+    });
+    return () => {
+      cancelled = true;
+      cleanup?.();
+    };
+  }, [refresh, session]);
 
   useEffect(() => {
     if (!session) return;

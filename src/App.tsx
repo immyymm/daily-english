@@ -26,6 +26,7 @@ import {
 } from 'lucide-react';
 import { useEffect, useMemo, useRef, useState, type ChangeEvent, type CSSProperties, type ReactNode } from 'react';
 import { CardDetailModal } from './components/CardDetailModal';
+import { MasteryDetailModal } from './components/MasteryDetailModal';
 import { ModalShell } from './components/ModalShell';
 import { PrivacyConsentModal } from './components/PrivacyConsentModal';
 import { ReviewSessionModal } from './components/ReviewSessionModal';
@@ -33,10 +34,11 @@ import { WeeklyTestModal } from './components/WeeklyTestModal';
 import { quoteForStudyDay } from './data/dailyQuotes';
 import { useAppData } from './hooks/useAppData';
 import { notifyLocalDataChanged, useCloudSync } from './hooks/useCloudSync';
+import { masteryDimensionLabels } from './learning/mastery';
 import { studyDaySince, toLocalDateKey } from './learning/reviewEngine';
 import { evaluateAnswer } from './services/ai';
 import { clearLearningData, exportSnapshot, importSnapshot } from './storage/db';
-import type { AIEvaluation, AppSnapshot, Attempt, CardProgress, MasteryStatus, TabId, WordCard } from './types';
+import type { AIEvaluation, AppSnapshot, Attempt, CardProgress, DailyRecommendation, MasteryStatus, TabId, WordCard } from './types';
 
 interface InstallPromptEvent extends Event {
   prompt: () => Promise<void>;
@@ -50,6 +52,7 @@ function App() {
   const sync = useCloudSync(data.refresh);
   const [tab, setTab] = useState<TabId>('today');
   const [selectedCard, setSelectedCard] = useState<WordCard>();
+  const [masteryCard, setMasteryCard] = useState<WordCard>();
   const [reviewCard, setReviewCard] = useState<WordCard>();
   const [showConsent, setShowConsent] = useState(false);
   const [showWeekly, setShowWeekly] = useState(false);
@@ -188,29 +191,38 @@ function App() {
       const response = await evaluateAnswer({
         requestId: evaluation.requestId,
         card,
+        questionId: evaluation.questionId ?? question?.id ?? evaluation.requestId,
         questionType: evaluation.questionType,
         stage: evaluation.stage,
-        prompt: question?.prompt ?? '请综合评价这段英文表达。',
+        prompt: evaluation.prompt ?? question?.prompt ?? '请综合评价这段英文表达。',
         answer: evaluation.answer,
-        responseMs: 0,
+        correctAnswer: evaluation.correctAnswer ?? question?.answer ?? '',
+        responseMs: evaluation.responseMs ?? 0,
+        rubricVersion: evaluation.rubricVersion,
         weeklyWords: evaluation.cardId.startsWith('weekly-') ? learnedCards.slice(0, 10).map((item) => item.word) : undefined
       });
+      if (response.status !== 'complete') {
+        await data.saveAIEvaluation({ ...evaluation, status: response.status, updatedAt: new Date().toISOString(), errorMessage: undefined });
+        setToast('答案已重新进入后台点评，完成后会自动更新。');
+        return;
+      }
       const createdAt = new Date().toISOString();
       const attempt: Attempt = {
-        id: evaluation.requestId + '-retry',
+        id: evaluation.requestId,
         cardId: evaluation.cardId,
-        questionId: evaluation.requestId,
+        questionId: evaluation.questionId ?? evaluation.requestId,
         questionType: evaluation.questionType,
         stage: evaluation.stage,
-        prompt: question?.prompt ?? '周测综合表达',
+        prompt: evaluation.prompt ?? question?.prompt ?? '周测综合表达',
         answer: evaluation.answer,
         correctAnswer: response.result.correctedAnswer,
         score: response.result.overallScore,
         correct: response.result.overallScore >= 75,
-        responseMs: 0,
+        responseMs: evaluation.responseMs ?? 0,
         errorTypes: response.result.errorTypes,
         createdAt,
-        ai: true
+        ai: true,
+        scheduleImpact: false
       };
       if (evaluation.cardId.startsWith('weekly-')) {
         await data.recordWeeklyResult(attempt, { ...evaluation, status: 'complete', model: response.model, result: response.result, errorMessage: undefined });
@@ -263,11 +275,14 @@ function App() {
           onStart={startReview}
           onOpenCard={setSelectedCard}
           onWeekly={() => setShowWeekly(true)}
+          recommendation={data.todayRecommendation}
+          onOpenMastery={setMasteryCard}
         />
       )}
-      {tab === 'library' && <LibraryPage cards={data.cards} progressMap={data.progressMap} onOpenCard={setSelectedCard} />}
+      {tab === 'library' && <LibraryPage cards={data.cards} progressMap={data.progressMap} onOpenCard={setSelectedCard} onOpenMastery={setMasteryCard} />}
       {tab === 'profile' && (
         <ProfilePage
+          cards={data.cards}
           progress={data.progress}
           attempts={data.attempts}
           settings={data.settings}
@@ -309,6 +324,9 @@ function App() {
         onNeedConsent={requestAI}
         onClose={() => setReviewCard(undefined)}
         onComplete={data.recordReviewSession}
+        onRecordAttempt={data.saveSessionAttempt}
+        onQueueEvaluation={data.saveAIEvaluation}
+        onCompleteEvaluation={data.completeAIAttempt}
       />
       <PrivacyConsentModal open={showConsent} onClose={() => setShowConsent(false)} onAccept={acceptConsent} />
       <WeeklyTestModal
@@ -318,6 +336,16 @@ function App() {
         onNeedConsent={requestAI}
         onClose={() => setShowWeekly(false)}
         onSave={data.recordWeeklyResult}
+        onQueueEvaluation={data.saveAIEvaluation}
+      />
+      <MasteryDetailModal
+        open={Boolean(masteryCard)}
+        card={masteryCard}
+        progress={masteryCard ? data.progressMap.get(masteryCard.id) : undefined}
+        attempts={data.attempts}
+        evaluations={data.aiEvaluations}
+        onClose={() => setMasteryCard(undefined)}
+        onRetry={(evaluation) => void retryPending(evaluation)}
       />
       <InstallModal open={showInstall} onClose={() => setShowInstall(false)} />
       <input ref={fileInputRef} type="file" accept="application/json" hidden onChange={(event) => void restoreBackup(event)} />
@@ -415,7 +443,9 @@ function ReviewPage({
   dueCards,
   onStart,
   onOpenCard,
-  onWeekly
+  onOpenMastery,
+  onWeekly,
+  recommendation
 }: {
   cards: WordCard[];
   progress: CardProgress[];
@@ -425,7 +455,9 @@ function ReviewPage({
   dueCards: WordCard[];
   onStart: () => void;
   onOpenCard: (card: WordCard) => void;
+  onOpenMastery: (card: WordCard) => void;
   onWeekly: () => void;
+  recommendation?: DailyRecommendation;
 }) {
   const studyDay = studyDaySince(settings.firstUseDate);
   const overdue = dueProgress.filter((item) => new Date(item.nextReviewAt).getTime() < new Date(toLocalDateKey() + 'T00:00:00').getTime()).length;
@@ -449,6 +481,17 @@ function ReviewPage({
         <Brain size={20} />{dueProgress.length ? '开始优先复习' : '今天的复习已完成'}
       </button>
 
+      {recommendation && (
+        <section className="adaptive-plan-card">
+          <div className="adaptive-plan-head"><Sparkles size={20} /><div><span>每日 05:00 自动分析</span><h3>今日针对性复习方案</h3></div></div>
+          <p>{recommendation.summary}</p>
+          <div className="adaptive-plan-meta">
+            <span>建议 {recommendation.targetQuestionCount} 题/词</span>
+            {recommendation.focusDimensions.map((dimension) => <span key={dimension}>加强{masteryDimensionLabels[dimension]}</span>)}
+          </div>
+        </section>
+      )}
+
       <section className="section-block">
         <div className="section-heading"><div><p className="eyebrow">REVIEW QUEUE</p><h3>复习队列</h3></div><span className="pill">{dueProgress.length} 个</span></div>
         {dueCards.length ? (
@@ -456,12 +499,12 @@ function ReviewPage({
             {dueCards.slice(0, 8).map((card) => {
               const item = dueProgress.find((progressItem) => progressItem.cardId === card.id)!;
               return (
-                <button key={card.id} onClick={() => onOpenCard(card)}>
+                <article className="queue-item" key={card.id}>
                   <span className={item.weak ? 'queue-dot weak' : 'queue-dot'} />
-                  <div><strong>{card.word}</strong><p>{item.stage} · {item.status}</p></div>
-                  <span className="queue-score">{item.lastScore === undefined ? '未测试' : item.lastScore + ' 分'}</span>
+                  <button className="queue-word-button" onClick={() => onOpenCard(card)}><strong>{card.word}</strong><p>{item.stage} · {item.status}</p></button>
+                  <button className="queue-score" onClick={() => onOpenMastery(card)}>{item.masteryScore === undefined ? item.lastScore === undefined ? '未测试' : item.lastScore + ' 分' : Math.round(item.masteryScore) + ' 分'}<small>查看分析</small></button>
                   <ChevronRight size={17} />
-                </button>
+                </article>
               );
             })}
           </div>
@@ -491,7 +534,7 @@ function ReviewPage({
   );
 }
 
-function LibraryPage({ cards, progressMap, onOpenCard }: { cards: WordCard[]; progressMap: Map<string, CardProgress>; onOpenCard: (card: WordCard) => void }) {
+function LibraryPage({ cards, progressMap, onOpenCard, onOpenMastery }: { cards: WordCard[]; progressMap: Map<string, CardProgress>; onOpenCard: (card: WordCard) => void; onOpenMastery: (card: WordCard) => void }) {
   const [query, setQuery] = useState('');
   const [filter, setFilter] = useState<'全部' | MasteryStatus>('全部');
   const filtered = cards.filter((card) => {
@@ -515,12 +558,16 @@ function LibraryPage({ cards, progressMap, onOpenCard }: { cards: WordCard[]; pr
         {filtered.map((card) => {
           const item = progressMap.get(card.id);
           return (
-            <button key={card.id} onClick={() => onOpenCard(card)}>
-              <div className="library-letter">{card.word.slice(0, 1).toUpperCase()}</div>
-              <div><div className="word-title"><strong>{card.word}</strong><span>{card.partOfSpeech}</span></div><p>{card.phonetic}</p><small>{card.coreMemory.chinese}</small></div>
-              <span className={'status-tag ' + (item?.weak ? 'weak' : '')}>{item?.status ?? '未测试'}</span>
+            <article key={card.id}>
+              <button className="library-card-button" onClick={() => onOpenCard(card)}>
+                <div className="library-letter">{card.word.slice(0, 1).toUpperCase()}</div>
+                <div><div className="word-title"><strong>{card.word}</strong><span>{card.partOfSpeech}</span></div><p>{card.phonetic}</p><small>{card.coreMemory.chinese}</small></div>
+              </button>
+              <button className={'status-tag mastery-link ' + (item?.weak ? 'weak' : '')} onClick={() => onOpenMastery(card)}>
+                <span>{item?.status ?? '未测试'}</span><small>{item ? '查看分析' : '尚未学习'}</small>
+              </button>
               <ChevronRight size={17} />
-            </button>
+            </article>
           );
         })}
       </section>
@@ -529,6 +576,7 @@ function LibraryPage({ cards, progressMap, onOpenCard }: { cards: WordCard[]; pr
 }
 
 function ProfilePage({
+  cards,
   progress,
   attempts,
   settings,
@@ -543,6 +591,7 @@ function ProfilePage({
   onRetryPending,
   sync
 }: {
+  cards: WordCard[];
   progress: CardProgress[];
   attempts: Attempt[];
   settings: { streak: number; aiConsent: boolean; reduceMotion: boolean; dailyAiLimit: number };
@@ -563,7 +612,8 @@ function ProfilePage({
   const mastered = progress.filter((item) => item.status === '主动掌握' || item.status === '长期掌握').length;
   const weak = progress.filter((item) => item.weak).length;
   const accuracy = attempts.length ? Math.round(attempts.filter((item) => item.correct).length / attempts.length * 100) : 0;
-  const pending = aiEvaluations.filter((item) => item.status === 'pending');
+  const pending = aiEvaluations.filter((item) => item.status !== 'complete');
+  const wordNames = useMemo(() => new Map(cards.map((card) => [card.id, card.word])), [cards]);
 
   return (
     <div className="page-stack">
@@ -588,8 +638,33 @@ function ProfilePage({
 
       {pending.length > 0 && (
         <section className="pending-card">
-          <div><CloudOff size={20} /><div><strong>{pending.length} 条答案等待 AI 评分</strong><p>答案保存在本机，不会丢失。</p></div></div>
+          <div><CloudOff size={20} /><div><strong>{pending.length} 条答案正在处理或等待重试</strong><p>已登录时答案和结果都会保存在云端，不会因关闭页面而丢失。</p></div></div>
           <button onClick={() => onRetryPending(pending[0])}><RefreshCw size={16} />重试一条</button>
+        </section>
+      )}
+
+      {aiEvaluations.length > 0 && (
+        <section className="settings-card ai-history-card">
+          <div className="settings-title"><Sparkles size={19} /><h3>AI 点评记录</h3></div>
+          <div className="profile-evaluation-list">
+            {aiEvaluations.slice(0, 10).map((evaluation) => (
+              <details key={evaluation.requestId}>
+                <summary><span>{evaluation.cardId.startsWith('weekly-') ? '周测综合表达' : wordNames.get(evaluation.cardId) ?? evaluation.cardId}</span><b>{evaluation.result ? evaluation.result.overallScore + ' 分' : evaluation.status === 'failed' ? '待重试' : '处理中'}</b></summary>
+                <div>
+                  {evaluation.prompt && <p><strong>题目：</strong>{evaluation.prompt}</p>}
+                  <p><strong>你的回答：</strong>{evaluation.answer}</p>
+                  {evaluation.result ? (
+                    <>
+                      <p><strong>问题分析：</strong>{evaluation.result.reasonZh}</p>
+                      <p><strong>修正表达：</strong>{evaluation.result.correctedAnswer}</p>
+                      <p><strong>自然表达：</strong>{evaluation.result.naturalVersion}</p>
+                    </>
+                  ) : <p>{evaluation.errorMessage ?? '后台点评完成后会自动更新。'}</p>}
+                  {evaluation.status === 'failed' && <button className="secondary-button" onClick={() => onRetryPending(evaluation)}><RefreshCw size={16} />重新提交</button>}
+                </div>
+              </details>
+            ))}
+          </div>
         </section>
       )}
 
@@ -645,7 +720,7 @@ function ProfilePage({
         <button className="setting-row action danger" onClick={onReset}><span className="setting-icon"><Trash2 size={18} /></span><div><strong>清除本机学习记录</strong><p>建议先导出备份</p></div><ChevronRight size={17} /></button>
       </section>
 
-      <section className="privacy-note"><LockKeyhole size={18} /><p>不登录时，学习记录只保存在当前设备；开启同步后，加密传输的学习快照会保存到你的“每日英语”账户。开放题文字仅在你主动提交时发送给 OpenAI API，录音不会上传。</p></section>
+      <section className="privacy-note"><LockKeyhole size={18} /><p>不登录时，学习记录只保存在当前设备；开启同步后，答题、掌握画像和 AI 点评会加密传输并保存到你的“每日英语”账户。开放题文字仅在你主动提交时发送给 OpenAI API，录音不会上传。</p></section>
     </div>
   );
 }
