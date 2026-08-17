@@ -2,37 +2,98 @@
   "id": "likely-adj",
   "word": "likely",
   "lemma": "likely",
+  "cocaRanks": [
+    {
+      "rank": 651,
+      "pos": "j",
+      "frequency": 148216,
+      "partOfSpeech": "adj."
+    },
+    {
+      "rank": 2108,
+      "pos": "r",
+      "frequency": 41540,
+      "partOfSpeech": "adv."
+    }
+  ],
+  "cocaRankLabel": "adj. 第 651 名；adv. 第 2108 名",
   "phonetic": "/ˈlaɪkli/",
   "syllables": "like·ly",
   "partOfSpeech": "adj. / adv.",
-  "frequencyBand": "COCA 高频精选",
+  "frequencyBand": "COCA 高频精选 · adj. 第 651 名；adv. 第 2108 名",
   "difficulty": "基础",
   "tags": [
     "adj.",
+    "模板完整版",
     "高频表达"
   ],
   "coreMemory": {
     "chinese": "可能的；很可能",
-    "english": "expected to happen or be true",
-    "structure": "be likely to（很可能会）",
-    "commonError": "不要把不同词性混在一起；先确认句中需要的是 adj. 还是 adv.，并整体记住 “be likely to”。",
-    "directSynonym": "probable",
-    "directAntonym": "unlikely",
-    "derivatives": "likelihood · unlikely",
+    "english": "adj. expected to happen or probably true；adv. probably",
+    "structure": "be likely to do something /bi ˈlaɪkli tu du sʌmθɪŋ/（很可能做某事）；it is likely that + clause /ɪt ɪz ˈlaɪkli ðæt klɔz/（很可能……）；more or less likely /mɔr ɔr lɛs ˈlaɪkli/（更可能或不太可能）；the most likely explanation /ðə moʊst ˈlaɪkli ɛkspləneɪʃən/（最可能的解释）",
+    "structures": [
+      {
+        "phrase": "be likely to do something",
+        "phonetic": "/bi ˈlaɪkli tu du sʌmθɪŋ/",
+        "chinese": "很可能做某事"
+      },
+      {
+        "phrase": "it is likely that + clause",
+        "phonetic": "/ɪt ɪz ˈlaɪkli ðæt klɔz/",
+        "chinese": "很可能……"
+      },
+      {
+        "phrase": "more or less likely",
+        "phonetic": "/mɔr ɔr lɛs ˈlaɪkli/",
+        "chinese": "更可能或不太可能"
+      },
+      {
+        "phrase": "the most likely explanation",
+        "phonetic": "/ðə moʊst ˈlaɪkli ɛkspləneɪʃən/",
+        "chinese": "最可能的解释"
+      }
+    ],
+    "commonError": "❌ it likely to rain → ✅ it is likely to rain；❌ more likelier → ✅ more likely；❌ be likely of happening → ✅ be likely to happen",
+    "commonErrors": [
+      {
+        "wrong": "it likely to rain",
+        "wrongPhonetic": "/ɪt ˈlaɪkli tu reɪn/",
+        "right": "it is likely to rain",
+        "rightPhonetic": "/ɪt ɪz ˈlaɪkli tu reɪn/",
+        "note": "形容词 likely 前需要系动词 be。"
+      },
+      {
+        "wrong": "more likelier",
+        "wrongPhonetic": "/mɔr laɪkliɚ/",
+        "right": "more likely",
+        "rightPhonetic": "/mɔr ˈlaɪkli/",
+        "note": "likely 的比较级用 more likely，不重复加 -er。"
+      },
+      {
+        "wrong": "be likely of happening",
+        "wrongPhonetic": "/bi ˈlaɪkli ʌv hæpənɪŋ/",
+        "right": "be likely to happen",
+        "rightPhonetic": "/bi ˈlaɪkli tu hæpən/",
+        "note": "表示“可能发生”用 be likely to do。"
+      }
+    ],
+    "directSynonym": "probable /prɑbəbəl/（很可能的）；possible /pɑsəbəl/（可能的）；expected /ɪkspɛktəd/（预期的）；presumably /prəzuməbli/（大概；推测起来）",
+    "directAntonym": "unlikely /ənlaɪkli/（不太可能的；不太可能）；impossible /ɪmpɑsəbəl/（不可能的）；doubtful /daʊtfəl/（不确定的；可疑的）",
+    "derivatives": "likelihood · unlikely · likeliness",
     "example": "It is likely to rain this afternoon.",
     "exampleChinese": "今天下午很可能会下雨。"
   },
   "meanings": [
     {
       "partOfSpeech": "adj.",
-      "english": "expected to happen or be true",
-      "chinese": "可能的",
+      "english": "expected to happen or probably true",
+      "chinese": "可能的；有希望的",
       "example": "It is likely to rain this afternoon.",
       "translation": "今天下午很可能会下雨。"
     },
     {
       "partOfSpeech": "adv.",
-      "english": "probably; used to say what is expected to happen",
+      "english": "probably",
       "chinese": "很可能",
       "example": "She will most likely arrive before noon.",
       "translation": "她很可能会在中午前到达。"
@@ -40,22 +101,102 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "概率判断",
       "items": [
         {
-          "phrase": "be likely to",
-          "phonetic": "/bi ˈlaɪkli tu/",
-          "chinese": "很可能会"
+          "phrase": "highly likely",
+          "phonetic": "/haɪli ˈlaɪkli/",
+          "chinese": "极有可能"
+        },
+        {
+          "phrase": "quite likely",
+          "phonetic": "/kwaɪt ˈlaɪkli/",
+          "chinese": "很可能"
+        },
+        {
+          "phrase": "more likely",
+          "phonetic": "/mɔr ˈlaɪkli/",
+          "chinese": "更可能"
+        },
+        {
+          "phrase": "less likely",
+          "phonetic": "/lɛs ˈlaɪkli/",
+          "chinese": "不太可能"
         }
       ]
     },
     {
-      "category": "真实例句句块",
+      "category": "人物与行动",
       "items": [
         {
-          "phrase": "It is likely to rain",
-          "phonetic": "/ɪt ɪz ˈlaɪkli tu reɪn/",
-          "chinese": "核心例句片段：今天下午很可能会下雨。"
+          "phrase": "likely to happen",
+          "phonetic": "/ˈlaɪkli tu hæpən/",
+          "chinese": "可能发生"
+        },
+        {
+          "phrase": "likely to succeed",
+          "phonetic": "/ˈlaɪkli tu səksid/",
+          "chinese": "可能成功"
+        },
+        {
+          "phrase": "likely to change",
+          "phonetic": "/ˈlaɪkli tu tʃeɪndʒ/",
+          "chinese": "可能改变"
+        },
+        {
+          "phrase": "likely to become",
+          "phonetic": "/ˈlaɪkli tu bɪkʌm/",
+          "chinese": "可能变成"
+        }
+      ]
+    },
+    {
+      "category": "名词搭配",
+      "items": [
+        {
+          "phrase": "a likely cause",
+          "phonetic": "/ə ˈlaɪkli kɑz/",
+          "chinese": "可能的原因"
+        },
+        {
+          "phrase": "a likely outcome",
+          "phonetic": "/ə ˈlaɪkli aʊtkʌm/",
+          "chinese": "可能的结果"
+        },
+        {
+          "phrase": "a likely explanation",
+          "phonetic": "/ə ˈlaɪkli ɛkspləneɪʃən/",
+          "chinese": "可能的解释"
+        },
+        {
+          "phrase": "a likely candidate",
+          "phonetic": "/ə ˈlaɪkli kændədeɪt/",
+          "chinese": "很可能入选的人"
+        }
+      ]
+    },
+    {
+      "category": "副词位置",
+      "items": [
+        {
+          "phrase": "will likely continue",
+          "phonetic": "/wɪl ˈlaɪkli kəntɪnju/",
+          "chinese": "很可能会继续"
+        },
+        {
+          "phrase": "most likely",
+          "phonetic": "/moʊst ˈlaɪkli/",
+          "chinese": "很可能"
+        },
+        {
+          "phrase": "very likely",
+          "phonetic": "/vɛri ˈlaɪkli/",
+          "chinese": "非常可能"
+        },
+        {
+          "phrase": "likely because",
+          "phonetic": "/ˈlaɪkli bɪkɔz/",
+          "chinese": "很可能因为"
         }
       ]
     }
@@ -65,17 +206,87 @@
       "phrase": "be likely to",
       "phonetic": "/bi ˈlaɪkli tu/",
       "chinese": "很可能会",
-      "example": "It is likely to rain this afternoon.",
-      "translation": "今天下午很可能会下雨。"
+      "example": "Prices are likely to rise next year.",
+      "translation": "明年价格很可能上涨。"
+    },
+    {
+      "phrase": "it is likely that",
+      "phonetic": "/ɪt ɪz ˈlaɪkli ðæt/",
+      "chinese": "很可能……",
+      "example": "It is likely that the meeting will end early.",
+      "translation": "会议很可能会提前结束。"
+    },
+    {
+      "phrase": "more likely to",
+      "phonetic": "/mɔr ˈlaɪkli tu/",
+      "chinese": "更有可能……",
+      "example": "People are more likely to remember vivid examples.",
+      "translation": "人们更容易记住生动的例子。"
+    },
+    {
+      "phrase": "less likely to",
+      "phonetic": "/lɛs ˈlaɪkli tu/",
+      "chinese": "不太可能……",
+      "example": "A rested learner is less likely to make careless mistakes.",
+      "translation": "休息充分的学习者不太容易犯粗心错误。"
+    },
+    {
+      "phrase": "most likely",
+      "phonetic": "/moʊst ˈlaɪkli/",
+      "chinese": "很可能；最有可能",
+      "example": "She will most likely call tonight.",
+      "translation": "她今晚很可能会打电话。"
+    },
+    {
+      "phrase": "highly likely",
+      "phonetic": "/haɪli ˈlaɪkli/",
+      "chinese": "极有可能",
+      "example": "Further delays are highly likely.",
+      "translation": "进一步延误的可能性很高。"
+    },
+    {
+      "phrase": "a likely outcome",
+      "phonetic": "/ə ˈlaɪkli aʊtkʌm/",
+      "chinese": "可能的结果",
+      "example": "A likely outcome is that both sides will agree.",
+      "translation": "一个可能的结果是双方都会同意。"
+    },
+    {
+      "phrase": "as likely as not",
+      "phonetic": "/æz ˈlaɪkli æz nɑt/",
+      "chinese": "很可能；可能性各半偏高",
+      "example": "As likely as not, they will arrive late.",
+      "translation": "他们很可能会迟到。"
     }
   ],
   "synonyms": [
     {
       "word": "probable",
       "phonetic": "/prɑbəbəl/",
-      "partOfSpeech": "adj. / adv.",
-      "chinese": "与“可能的”意义接近",
-      "difference": "likely 在 “be likely to” 中是本卡需要主动掌握的表达；probable 含义接近，但宾语、语气和固定搭配不一定相同。"
+      "partOfSpeech": "adj.",
+      "chinese": "很可能的",
+      "difference": "只作形容词，语气较正式；likely 还能作副词，并常用于 be likely to。"
+    },
+    {
+      "word": "possible",
+      "phonetic": "/pɑsəbəl/",
+      "partOfSpeech": "adj.",
+      "chinese": "可能的",
+      "difference": "只表示“有可能”，概率可高可低；likely 通常暗示发生概率较高。"
+    },
+    {
+      "word": "expected",
+      "phonetic": "/ɪkspɛktəd/",
+      "partOfSpeech": "adj.",
+      "chinese": "预期的",
+      "difference": "强调根据计划、常态或已有信息而预计，不一定表示概率判断。"
+    },
+    {
+      "word": "presumably",
+      "phonetic": "/prəzuməbli/",
+      "partOfSpeech": "adv.",
+      "chinese": "大概；推测起来",
+      "difference": "强调根据现有信息作出的合理推测，语气比 likely 更带推断色彩。"
     }
   ],
   "antonyms": [
@@ -83,8 +294,22 @@
       "word": "unlikely",
       "phonetic": "/ənlaɪkli/",
       "partOfSpeech": "adj. / adv.",
-      "chinese": "与“可能的”意义相反",
-      "usage": "和 likely 的核心义形成对比；先在真实句子中判断是否确实构成反向关系。"
+      "chinese": "不太可能的；不太可能",
+      "usage": "最直接的反义词，结构同 be unlikely to。"
+    },
+    {
+      "word": "impossible",
+      "phonetic": "/ɪmpɑsəbəl/",
+      "partOfSpeech": "adj.",
+      "chinese": "不可能的",
+      "usage": "表示概率为零或无法做到，程度比 unlikely 强得多。"
+    },
+    {
+      "word": "doubtful",
+      "phonetic": "/daʊtfəl/",
+      "partOfSpeech": "adj.",
+      "chinese": "不确定的；可疑的",
+      "usage": "表示说话者怀疑某事是否会发生或是否真实。"
     }
   ],
   "derivatives": [
@@ -92,77 +317,193 @@
       "word": "likelihood",
       "phonetic": "/laɪklihʊd/",
       "partOfSpeech": "n.",
-      "chinese": "与“likely”同词族的常用词形",
-      "note": "这是 likely 的常用词族成员；先辨认词性，再放进完整句子中使用。"
+      "chinese": "可能性",
+      "note": "正式且常用；the likelihood of doing / that...。"
     },
     {
       "word": "unlikely",
       "phonetic": "/ənlaɪkli/",
-      "partOfSpeech": "adj.",
-      "chinese": "与“likely”同词族的常用词形",
-      "note": "这是 likely 的常用词族成员；先辨认词性，再放进完整句子中使用。"
+      "partOfSpeech": "adj. / adv.",
+      "chinese": "不太可能的；不太可能",
+      "note": "由否定前缀 un- 构成，是直接反义词。"
+    },
+    {
+      "word": "likeliness",
+      "phonetic": "/likeliness/",
+      "partOfSpeech": "n.",
+      "chinese": "可能性",
+      "note": "存在但不如 likelihood 常用，学习时优先记 likelihood。"
     }
   ],
   "confusables": [
     {
       "word": "like",
+      "phonetic": "/laɪk/",
       "partOfSpeech": "v. / prep.",
       "chinese": "喜欢；像",
-      "difference": "likely 表示“很可能”；like 表示“喜欢”或“像”，拼写相近但用法不同。",
-      "phonetic": "/laɪk/"
+      "difference": "like 表示“喜欢”或“像”；likely 表示“可能的、很可能”。"
+    },
+    {
+      "word": "lively",
+      "phonetic": "/laɪvli/",
+      "partOfSpeech": "adj.",
+      "chinese": "活泼的；生动的",
+      "difference": "lively 虽以 -ly 结尾，但主要是形容词，与 likely 含义不同。"
+    },
+    {
+      "word": "possibly",
+      "phonetic": "/pɑsəbli/",
+      "partOfSpeech": "adv.",
+      "chinese": "可能；也许",
+      "difference": "possibly 只说明存在可能；likely 往往表示概率更高。"
     }
   ],
   "relatedVocabulary": [
     {
-      "category": "语义坐标：近义与反义",
+      "category": "概率程度",
       "items": [
+        {
+          "word": "certain",
+          "phonetic": "/sɝtən/",
+          "partOfSpeech": "adj.",
+          "chinese": "确定的"
+        },
         {
           "word": "probable",
           "phonetic": "/prɑbəbəl/",
-          "partOfSpeech": "adj. / adv.",
-          "chinese": "与“可能的”意义接近"
+          "partOfSpeech": "adj.",
+          "chinese": "很可能的"
+        },
+        {
+          "word": "possible",
+          "phonetic": "/pɑsəbəl/",
+          "partOfSpeech": "adj.",
+          "chinese": "可能的"
         },
         {
           "word": "unlikely",
           "phonetic": "/ənlaɪkli/",
-          "partOfSpeech": "adj. / adv.",
-          "chinese": "与“可能的”意义相反"
+          "partOfSpeech": "adj.",
+          "chinese": "不太可能的"
+        }
+      ]
+    },
+    {
+      "category": "推测副词",
+      "items": [
+        {
+          "word": "probably",
+          "phonetic": "/prɑbəbli/",
+          "partOfSpeech": "adv.",
+          "chinese": "很可能"
+        },
+        {
+          "word": "perhaps",
+          "phonetic": "/pɚhæps/",
+          "partOfSpeech": "adv.",
+          "chinese": "也许"
+        },
+        {
+          "word": "possibly",
+          "phonetic": "/pɑsəbli/",
+          "partOfSpeech": "adv.",
+          "chinese": "可能"
+        },
+        {
+          "word": "presumably",
+          "phonetic": "/prəzuməbli/",
+          "partOfSpeech": "adv.",
+          "chinese": "推测起来"
+        }
+      ]
+    },
+    {
+      "category": "结果预测",
+      "items": [
+        {
+          "word": "expect",
+          "phonetic": "/ɪkspɛkt/",
+          "partOfSpeech": "v.",
+          "chinese": "预期"
+        },
+        {
+          "word": "predict",
+          "phonetic": "/prɪdɪkt/",
+          "partOfSpeech": "v.",
+          "chinese": "预测"
+        },
+        {
+          "word": "outcome",
+          "phonetic": "/aʊtkʌm/",
+          "partOfSpeech": "n.",
+          "chinese": "结果"
+        },
+        {
+          "word": "chance",
+          "phonetic": "/tʃæns/",
+          "partOfSpeech": "n.",
+          "chinese": "可能性；机会"
         }
       ]
     }
   ],
   "examples": [
     {
-      "scene": "日常 / 真实表达",
+      "scene": "天气预测",
       "english": "It is likely to rain this afternoon.",
       "chinese": "今天下午很可能会下雨。"
     },
     {
-      "scene": "学习 / 工作场景",
-      "english": "In today’s lesson, we practiced the word “likely” in a complete sentence.",
-      "chinese": "今天的课程里，我们练习了怎样在完整句子中使用 likely。"
+      "scene": "行动概率",
+      "english": "She is likely to accept the offer.",
+      "chinese": "她很可能会接受这个提议。"
     },
     {
-      "scene": "核心搭配复现",
-      "english": "“be likely to” is the key phrase I want to remember.",
-      "chinese": "“be likely to”是我想重点记住的搭配。"
+      "scene": "从句结构",
+      "english": "It is likely that prices will rise again.",
+      "chinese": "价格很可能会再次上涨。"
     },
     {
-      "scene": "常见错误提醒",
-      "english": "I checked the context before choosing “likely” instead of “probable”.",
-      "chinese": "我先检查语境，再决定用 likely 而不是 probable。"
+      "scene": "比较概率",
+      "english": "You are more likely to remember words you actively use.",
+      "chinese": "你更容易记住主动使用过的单词。"
     },
     {
-      "scene": "词义与近义辨析",
-      "english": "Here, “likely” means “expected to happen or be true”.",
-      "chinese": "在这里，likely 的意思是“可能的；很可能”。"
+      "scene": "降低风险",
+      "english": "Careful readers are less likely to miss the detail.",
+      "chinese": "细心的读者不太容易漏掉这个细节。"
+    },
+    {
+      "scene": "副词用法",
+      "english": "The train will likely be crowded tonight.",
+      "chinese": "今晚这趟火车很可能会很拥挤。"
+    },
+    {
+      "scene": "最高概率",
+      "english": "The keys are most likely in your bag.",
+      "chinese": "钥匙很可能在你的包里。"
+    },
+    {
+      "scene": "名词前修饰",
+      "english": "Stress is the most likely cause of the problem.",
+      "chinese": "压力是这个问题最可能的原因。"
+    },
+    {
+      "scene": "否定形式",
+      "english": "It is unlikely that we will finish before noon.",
+      "chinese": "我们不太可能在中午前完成。"
+    },
+    {
+      "scene": "主动输出",
+      "english": "What is likely to happen in your week?",
+      "chinese": "你这周最可能发生什么？"
     }
   ],
   "studyFocus": {
-    "coreMeaning": "可能的；很可能",
-    "keyCollocation": "be likely to：很可能会",
-    "commonMistake": "不要把不同词性混在一起；先确认句中需要的是 adj. 还是 adv.，并整体记住 “be likely to”。",
-    "mustUseExample": "It is likely to rain this afternoon."
+    "coreMeaning": "likely 表示概率较高，可作形容词；在美式英语中也常作副词。",
+    "keyCollocation": "重点掌握 be likely to 和 it is likely that。",
+    "commonMistake": "不要漏掉 be：说 It is likely to rain。",
+    "mustUseExample": "You are more likely to remember words you use."
   },
   "questions": [
     {
@@ -247,7 +588,8 @@
       "free_sentence"
     ]
   },
-  "contentVersion": "2026.08.17.2",
+  "detailLevel": "template-complete",
+  "contentVersion": "2026.08.17.3",
   "reviewed": true,
-  "sourceNote": "从用户提供的 COCA 词表筛选；释义、例句和搭配为本项目离线整理；关系词与词组音标来自 CMU 北美英语发音词典。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；本卡依照用户词卡模板人工精校；音标为美式发音。"
 }

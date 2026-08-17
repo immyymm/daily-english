@@ -1,28 +1,76 @@
 {
   "date": "2026-09-11",
   "dayNumber": 26,
-  "contentVersion": "2026.08.17.2",
+  "contentVersion": "2026.08.17.3",
   "cards": [
     {
       "id": "write-v",
       "word": "write",
       "lemma": "write",
+      "cocaRanks": [
+        {
+          "rank": 212,
+          "pos": "v",
+          "frequency": 439865,
+          "partOfSpeech": "v."
+        }
+      ],
+      "cocaRankLabel": "v. 第 212 名",
       "phonetic": "/raɪt/",
-      "syllables": "write",
+      "syllables": "write（单音节）",
       "partOfSpeech": "v.",
-      "frequencyBand": "COCA 高频精选",
+      "frequencyBand": "COCA 高频精选 · v. 第 212 名",
       "difficulty": "应用",
       "tags": [
         "v.",
+        "模板完整版",
         "主动词汇"
       ],
       "coreMemory": {
         "chinese": "写；写作",
-        "english": "to form words on a surface or compose text",
-        "structure": "write down（写下）",
-        "commonError": "不要只按中文逐字替换，也不要随意改动介词或语序；优先把 “write down” 当作一个完整句块记忆。",
-        "directSynonym": "compose",
-        "directAntonym": "erase",
+        "english": "v. to form words on a surface or compose text",
+        "structure": "write a message /raɪt ə mɛsədʒ/（写消息）；write about /raɪt əbaʊt/（写关于……）；write something down /raɪt sʌmθɪŋ daʊn/（写下某事）；write to someone /raɪt tu sʌmwʌn/（写信给某人）",
+        "structures": [
+          {
+            "phrase": "write a message",
+            "phonetic": "/raɪt ə mɛsədʒ/",
+            "chinese": "写消息"
+          },
+          {
+            "phrase": "write about",
+            "phonetic": "/raɪt əbaʊt/",
+            "chinese": "写关于……"
+          },
+          {
+            "phrase": "write something down",
+            "phonetic": "/raɪt sʌmθɪŋ daʊn/",
+            "chinese": "写下某事"
+          },
+          {
+            "phrase": "write to someone",
+            "phonetic": "/raɪt tu sʌmwʌn/",
+            "chinese": "写信给某人"
+          }
+        ],
+        "commonError": "❌ can to write → ✅ can write；❌ to writeing → ✅ to write",
+        "commonErrors": [
+          {
+            "wrong": "can to write",
+            "wrongPhonetic": "/kæn tu raɪt/",
+            "right": "can write",
+            "rightPhonetic": "/kæn raɪt/",
+            "note": "情态动词 can 后直接接动词原形，不加 to。"
+          },
+          {
+            "wrong": "to writeing",
+            "wrongPhonetic": "/tu writeing/",
+            "right": "to write",
+            "rightPhonetic": "/tu raɪt/",
+            "note": "不定式 to 后接动词原形；不要把不定式和 -ing 形式混合。"
+          }
+        ],
+        "directSynonym": "compose /kəmpoʊz/（与“写”意义接近）",
+        "directAntonym": "erase /ɪreɪs/（与“写”意义相反）",
         "derivatives": "writer · writing",
         "example": "Write down one sentence using the new word.",
         "exampleChinese": "写下一个使用新单词的句子。"
@@ -41,30 +89,139 @@
           "category": "核心高频搭配",
           "items": [
             {
-              "phrase": "write down",
-              "phonetic": "/raɪt daʊn/",
-              "chinese": "写下"
+              "phrase": "write a message",
+              "phonetic": "/raɪt ə mɛsədʒ/",
+              "chinese": "写消息"
+            },
+            {
+              "phrase": "write about",
+              "phonetic": "/raɪt əbaʊt/",
+              "chinese": "写关于……"
+            },
+            {
+              "phrase": "write something down",
+              "phonetic": "/raɪt sʌmθɪŋ daʊn/",
+              "chinese": "写下某事"
             }
           ]
         },
         {
-          "category": "真实例句句块",
+          "category": "句型与语法框架",
           "items": [
             {
-              "phrase": "Write down one",
-              "phonetic": "/raɪt daʊn wʌn/",
-              "chinese": "核心例句片段：写下一个使用新单词的句子。"
+              "phrase": "write to someone",
+              "phonetic": "/raɪt tu sʌmwʌn/",
+              "chinese": "写信给某人"
+            },
+            {
+              "phrase": "write in English",
+              "phonetic": "/raɪt ɪn ɪŋɡlɪʃ/",
+              "chinese": "用英语写"
+            },
+            {
+              "phrase": "well written",
+              "phonetic": "/wɛl rɪtən/",
+              "chinese": "写得好的"
+            }
+          ]
+        },
+        {
+          "category": "真实表达延伸",
+          "items": [
+            {
+              "phrase": "write down",
+              "phonetic": "/raɪt daʊn/",
+              "chinese": "写下"
+            },
+            {
+              "phrase": "to write down",
+              "phonetic": "/tu raɪt daʊn/",
+              "chinese": "去写下"
+            },
+            {
+              "phrase": "need to write down",
+              "phonetic": "/nid tu raɪt daʊn/",
+              "chinese": "需要写下"
+            }
+          ]
+        },
+        {
+          "category": "主动输出提示",
+          "items": [
+            {
+              "phrase": "try to write down",
+              "phonetic": "/traɪ tu raɪt daʊn/",
+              "chinese": "尝试写下"
+            },
+            {
+              "phrase": "can write down",
+              "phonetic": "/kæn raɪt daʊn/",
+              "chinese": "能够写下"
+            },
+            {
+              "phrase": "how to write down",
+              "phonetic": "/haʊ tu raɪt daʊn/",
+              "chinese": "如何写下"
             }
           ]
         }
       ],
       "fixedPhrases": [
         {
+          "phrase": "write a message",
+          "phonetic": "/raɪt ə mɛsədʒ/",
+          "chinese": "写消息",
+          "example": "Write down one sentence using the new word.",
+          "translation": "写下一个使用新单词的句子。"
+        },
+        {
+          "phrase": "write about",
+          "phonetic": "/raɪt əbaʊt/",
+          "chinese": "写关于……",
+          "example": "The phrase “write about” is useful in everyday English.",
+          "translation": "“write about”是日常英语中的实用表达。"
+        },
+        {
+          "phrase": "write something down",
+          "phonetic": "/raɪt sʌmθɪŋ daʊn/",
+          "chinese": "写下某事",
+          "example": "I added “write something down” to my vocabulary notebook.",
+          "translation": "我把“write something down”记进了词汇本。"
+        },
+        {
+          "phrase": "write to someone",
+          "phonetic": "/raɪt tu sʌmwʌn/",
+          "chinese": "写信给某人",
+          "example": "Listen for “write to someone” in real conversations.",
+          "translation": "在真实对话中留意“write to someone”。"
+        },
+        {
+          "phrase": "write in English",
+          "phonetic": "/raɪt ɪn ɪŋɡlɪʃ/",
+          "chinese": "用英语写",
+          "example": "Can you use “write in English” in a complete sentence?",
+          "translation": "你能用“write in English”说一个完整句子吗？"
+        },
+        {
+          "phrase": "well written",
+          "phonetic": "/wɛl rɪtən/",
+          "chinese": "写得好的",
+          "example": "We practiced “well written” aloud three times.",
+          "translation": "我们把“well written”大声练了三遍。"
+        },
+        {
           "phrase": "write down",
           "phonetic": "/raɪt daʊn/",
           "chinese": "写下",
-          "example": "Write down one sentence using the new word.",
-          "translation": "写下一个使用新单词的句子。"
+          "example": "The phrase “write down” is useful in everyday English.",
+          "translation": "“write down”是日常英语中的实用表达。"
+        },
+        {
+          "phrase": "to write down",
+          "phonetic": "/tu raɪt daʊn/",
+          "chinese": "去写下",
+          "example": "I added “to write down” to my vocabulary notebook.",
+          "translation": "我把“to write down”记进了词汇本。"
         }
       ],
       "synonyms": [
@@ -73,7 +230,7 @@
           "phonetic": "/kəmpoʊz/",
           "partOfSpeech": "v.",
           "chinese": "与“写”意义接近",
-          "difference": "write 在 “write down” 中是本卡需要主动掌握的表达；compose 含义接近，但宾语、语气和固定搭配不一定相同。"
+          "difference": "write 是本卡核心搭配 “write down” 中的中性常用选择；compose 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
         }
       ],
       "antonyms": [
@@ -82,7 +239,7 @@
           "phonetic": "/ɪreɪs/",
           "partOfSpeech": "v.",
           "chinese": "与“写”意义相反",
-          "usage": "和 write 的核心义形成对比；先在真实句子中判断是否确实构成反向关系。"
+          "usage": "在本卡核心义下与 write 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
         }
       ],
       "derivatives": [
@@ -90,14 +247,14 @@
           "word": "writer",
           "phonetic": "/raɪtɚ/",
           "partOfSpeech": "n.",
-          "chinese": "与“write”同词族的常用词形",
+          "chinese": "与 write 同词族的常用词形",
           "note": "这是 write 的常用词族成员；先辨认词性，再放进完整句子中使用。"
         },
         {
           "word": "writing",
           "phonetic": "/raɪtɪŋ/",
           "partOfSpeech": "adj.",
-          "chinese": "与“write”同词族的常用词形",
+          "chinese": "与 write 同词族的常用词形",
           "note": "这是 write 的常用词族成员；先辨认词性，再放进完整句子中使用。"
         }
       ],
@@ -109,49 +266,126 @@
             {
               "word": "compose",
               "phonetic": "/kəmpoʊz/",
-              "partOfSpeech": "v.",
-              "chinese": "与“写”意义接近"
+              "partOfSpeech": "word family",
+              "chinese": "与本词相关的常用表达"
             },
             {
               "word": "erase",
               "phonetic": "/ɪreɪs/",
+              "partOfSpeech": "word family",
+              "chinese": "与本词相关的常用表达"
+            }
+          ]
+        },
+        {
+          "category": "词族与构词联系",
+          "items": [
+            {
+              "word": "writer",
+              "phonetic": "/raɪtɚ/",
+              "partOfSpeech": "n.",
+              "chinese": "与本词相关的常用表达"
+            },
+            {
+              "word": "writing",
+              "phonetic": "/raɪtɪŋ/",
+              "partOfSpeech": "adj.",
+              "chinese": "与本词相关的常用表达"
+            },
+            {
+              "word": "learn",
+              "phonetic": "/lɜːrn/",
               "partOfSpeech": "v.",
-              "chinese": "与“写”意义相反"
+              "chinese": "学习"
+            }
+          ]
+        },
+        {
+          "category": "同一学习主题中的高频词",
+          "items": [
+            {
+              "word": "learn",
+              "phonetic": "/lɜːrn/",
+              "partOfSpeech": "v.",
+              "chinese": "学习"
+            },
+            {
+              "word": "speak",
+              "phonetic": "/spiːk/",
+              "partOfSpeech": "v.",
+              "chinese": "说话"
+            },
+            {
+              "word": "read",
+              "phonetic": "/riːd/",
+              "partOfSpeech": "v.",
+              "chinese": "阅读"
+            },
+            {
+              "word": "listen",
+              "phonetic": "/ˈlɪsən/",
+              "partOfSpeech": "v.",
+              "chinese": "听"
             }
           ]
         }
       ],
       "examples": [
         {
-          "scene": "日常 / 真实表达",
+          "scene": "核心真实用法",
           "english": "Write down one sentence using the new word.",
           "chinese": "写下一个使用新单词的句子。"
         },
         {
-          "scene": "学习 / 工作场景",
-          "english": "In today’s lesson, we practiced the word “write” in a complete sentence.",
-          "chinese": "今天的课程里，我们练习了怎样在完整句子中使用 write。"
+          "scene": "英文释义理解",
+          "english": "In this lesson, I learned that “write” means “to form words on a surface or compose text”.",
+          "chinese": "这节课里，我学到 write 的核心意思是“写；写作”。"
         },
         {
-          "scene": "核心搭配复现",
-          "english": "“write down” is the key phrase I want to remember.",
-          "chinese": "“write down”是我想重点记住的搭配。"
+          "scene": "高频搭配辨认",
+          "english": "The phrase “write down” is useful in everyday English.",
+          "chinese": "“write down”是日常英语中的实用表达。"
         },
         {
-          "scene": "常见错误提醒",
-          "english": "I checked the context before choosing “write” instead of “compose”.",
-          "chinese": "我先检查语境，再决定用 write 而不是 compose。"
+          "scene": "主动造句",
+          "english": "Can you use “write” in a sentence of your own?",
+          "chinese": "你能用 write 说一个自己的句子吗？"
         },
         {
-          "scene": "词义与近义辨析",
-          "english": "Here, “write” means “to form words on a surface or compose text”.",
-          "chinese": "在这里，write 的意思是“写；写作”。"
+          "scene": "词汇笔记",
+          "english": "I wrote “write” and its pronunciation in my notebook.",
+          "chinese": "我把 write 和它的发音记进了笔记本。"
+        },
+        {
+          "scene": "听力辨认",
+          "english": "Listen for “write” the next time you hear English.",
+          "chinese": "下次听英语时，留意辨认 write。"
+        },
+        {
+          "scene": "近义比较",
+          "english": "I compared “write” with “compose” before choosing the word.",
+          "chinese": "选词前，我比较了 write 和 compose。"
+        },
+        {
+          "scene": "反义对照",
+          "english": "The opposite idea is often expressed with “erase”.",
+          "chinese": "相反的意思常可用 erase 表达。"
+        },
+        {
+          "scene": "间隔复习",
+          "english": "I reviewed “write” again before going to bed.",
+          "chinese": "睡前我又复习了一遍 write。"
+        },
+        {
+          "scene": "口语输出",
+          "english": "Which real situation would make you use “write”?",
+          "chinese": "在什么真实情境中你会用到 write？"
         }
       ],
       "studyFocus": {
-        "coreMeaning": "写；写作",
-        "keyCollocation": "write down：写下",
-        "commonMistake": "不要只按中文逐字替换，也不要随意改动介词或语序；优先把 “write down” 当作一个完整句块记忆。",
+        "coreMeaning": "写；写作；英文核心释义：to form words on a surface or compose text。",
+        "keyCollocation": "把 “write down” 作为一个完整句块记忆。",
+        "commonMistake": "情态动词 can 后直接接动词原形，不加 to。",
         "mustUseExample": "Write down one sentence using the new word."
       },
       "questions": [
@@ -237,30 +471,79 @@
           "free_sentence"
         ]
       },
-      "contentVersion": "2026.08.17.2",
+      "detailLevel": "template-complete",
+      "contentVersion": "2026.08.17.3",
       "reviewed": true,
-      "sourceNote": "从用户提供的 COCA 词表筛选；释义、例句和搭配为本项目离线整理；关系词与词组音标来自 CMU 北美英语发音词典。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
     {
       "id": "read-v",
       "word": "read",
       "lemma": "read",
+      "cocaRanks": [
+        {
+          "rank": 244,
+          "pos": "v",
+          "frequency": 386137,
+          "partOfSpeech": "v."
+        }
+      ],
+      "cocaRankLabel": "v. 第 244 名",
       "phonetic": "/riːd/",
-      "syllables": "read",
+      "syllables": "read（单音节）",
       "partOfSpeech": "v.",
-      "frequencyBand": "COCA 高频精选",
+      "frequencyBand": "COCA 高频精选 · v. 第 244 名",
       "difficulty": "应用",
       "tags": [
         "v.",
+        "模板完整版",
         "主动词汇"
       ],
       "coreMemory": {
         "chinese": "阅读；读懂",
-        "english": "to understand written words",
-        "structure": "read aloud（大声朗读）",
-        "commonError": "不要只按中文逐字替换，也不要随意改动介词或语序；优先把 “read aloud” 当作一个完整句块记忆。",
-        "directSynonym": "review",
-        "directAntonym": "skip",
+        "english": "v. to understand written words",
+        "structure": "read a book /riːd ə bʊk/（读书）；read about /riːd əbaʊt/（阅读有关……的内容）；read aloud /riːd əlaʊd/（朗读）；read between the lines /riːd bɪtwin ðə laɪnz/（领会言外之意）",
+        "structures": [
+          {
+            "phrase": "read a book",
+            "phonetic": "/riːd ə bʊk/",
+            "chinese": "读书"
+          },
+          {
+            "phrase": "read about",
+            "phonetic": "/riːd əbaʊt/",
+            "chinese": "阅读有关……的内容"
+          },
+          {
+            "phrase": "read aloud",
+            "phonetic": "/riːd əlaʊd/",
+            "chinese": "朗读"
+          },
+          {
+            "phrase": "read between the lines",
+            "phonetic": "/riːd bɪtwin ðə laɪnz/",
+            "chinese": "领会言外之意"
+          }
+        ],
+        "commonError": "❌ can to read → ✅ can read；❌ to reading → ✅ to read",
+        "commonErrors": [
+          {
+            "wrong": "can to read",
+            "wrongPhonetic": "/kæn tu riːd/",
+            "right": "can read",
+            "rightPhonetic": "/kæn riːd/",
+            "note": "情态动词 can 后直接接动词原形，不加 to。"
+          },
+          {
+            "wrong": "to reading",
+            "wrongPhonetic": "/tu ridɪŋ/",
+            "right": "to read",
+            "rightPhonetic": "/tu riːd/",
+            "note": "不定式 to 后接动词原形；不要把不定式和 -ing 形式混合。"
+          }
+        ],
+        "directSynonym": "review /rivju/（与“阅读”意义接近）",
+        "directAntonym": "skip /skɪp/（与“阅读”意义相反）",
         "derivatives": "reader · reading",
         "example": "Read the example aloud twice.",
         "exampleChinese": "把例句大声读两遍。"
@@ -279,30 +562,139 @@
           "category": "核心高频搭配",
           "items": [
             {
+              "phrase": "read a book",
+              "phonetic": "/riːd ə bʊk/",
+              "chinese": "读书"
+            },
+            {
+              "phrase": "read about",
+              "phonetic": "/riːd əbaʊt/",
+              "chinese": "阅读有关……的内容"
+            },
+            {
               "phrase": "read aloud",
               "phonetic": "/riːd əlaʊd/",
-              "chinese": "大声朗读"
+              "chinese": "朗读"
             }
           ]
         },
         {
-          "category": "真实例句句块",
+          "category": "句型与语法框架",
           "items": [
             {
-              "phrase": "Read the example",
-              "phonetic": "/riːd ðə ɪɡzæmpəl/",
-              "chinese": "核心例句片段：把例句大声读两遍。"
+              "phrase": "read between the lines",
+              "phonetic": "/riːd bɪtwin ðə laɪnz/",
+              "chinese": "领会言外之意"
+            },
+            {
+              "phrase": "easy to read",
+              "phonetic": "/izi tu riːd/",
+              "chinese": "容易阅读"
+            },
+            {
+              "phrase": "read through",
+              "phonetic": "/riːd θru/",
+              "chinese": "从头到尾阅读"
+            }
+          ]
+        },
+        {
+          "category": "真实表达延伸",
+          "items": [
+            {
+              "phrase": "to read aloud",
+              "phonetic": "/tu riːd əlaʊd/",
+              "chinese": "去大声朗读"
+            },
+            {
+              "phrase": "need to read aloud",
+              "phonetic": "/nid tu riːd əlaʊd/",
+              "chinese": "需要大声朗读"
+            },
+            {
+              "phrase": "try to read aloud",
+              "phonetic": "/traɪ tu riːd əlaʊd/",
+              "chinese": "尝试大声朗读"
+            }
+          ]
+        },
+        {
+          "category": "主动输出提示",
+          "items": [
+            {
+              "phrase": "can read aloud",
+              "phonetic": "/kæn riːd əlaʊd/",
+              "chinese": "能够大声朗读"
+            },
+            {
+              "phrase": "how to read aloud",
+              "phonetic": "/haʊ tu riːd əlaʊd/",
+              "chinese": "如何大声朗读"
+            },
+            {
+              "phrase": "learn to read aloud",
+              "phonetic": "/lɝn tu riːd əlaʊd/",
+              "chinese": "学会大声朗读"
             }
           ]
         }
       ],
       "fixedPhrases": [
         {
-          "phrase": "read aloud",
-          "phonetic": "/riːd əlaʊd/",
-          "chinese": "大声朗读",
+          "phrase": "read a book",
+          "phonetic": "/riːd ə bʊk/",
+          "chinese": "读书",
           "example": "Read the example aloud twice.",
           "translation": "把例句大声读两遍。"
+        },
+        {
+          "phrase": "read about",
+          "phonetic": "/riːd əbaʊt/",
+          "chinese": "阅读有关……的内容",
+          "example": "The phrase “read about” is useful in everyday English.",
+          "translation": "“read about”是日常英语中的实用表达。"
+        },
+        {
+          "phrase": "read aloud",
+          "phonetic": "/riːd əlaʊd/",
+          "chinese": "朗读",
+          "example": "I added “read aloud” to my vocabulary notebook.",
+          "translation": "我把“read aloud”记进了词汇本。"
+        },
+        {
+          "phrase": "read between the lines",
+          "phonetic": "/riːd bɪtwin ðə laɪnz/",
+          "chinese": "领会言外之意",
+          "example": "Listen for “read between the lines” in real conversations.",
+          "translation": "在真实对话中留意“read between the lines”。"
+        },
+        {
+          "phrase": "easy to read",
+          "phonetic": "/izi tu riːd/",
+          "chinese": "容易阅读",
+          "example": "Can you use “easy to read” in a complete sentence?",
+          "translation": "你能用“easy to read”说一个完整句子吗？"
+        },
+        {
+          "phrase": "read through",
+          "phonetic": "/riːd θru/",
+          "chinese": "从头到尾阅读",
+          "example": "We practiced “read through” aloud three times.",
+          "translation": "我们把“read through”大声练了三遍。"
+        },
+        {
+          "phrase": "to read aloud",
+          "phonetic": "/tu riːd əlaʊd/",
+          "chinese": "去大声朗读",
+          "example": "The phrase “to read aloud” is useful in everyday English.",
+          "translation": "“to read aloud”是日常英语中的实用表达。"
+        },
+        {
+          "phrase": "need to read aloud",
+          "phonetic": "/nid tu riːd əlaʊd/",
+          "chinese": "需要大声朗读",
+          "example": "I added “need to read aloud” to my vocabulary notebook.",
+          "translation": "我把“need to read aloud”记进了词汇本。"
         }
       ],
       "synonyms": [
@@ -311,7 +703,7 @@
           "phonetic": "/rivju/",
           "partOfSpeech": "v.",
           "chinese": "与“阅读”意义接近",
-          "difference": "read 在 “read aloud” 中是本卡需要主动掌握的表达；review 含义接近，但宾语、语气和固定搭配不一定相同。"
+          "difference": "read 是本卡核心搭配 “read aloud” 中的中性常用选择；review 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
         }
       ],
       "antonyms": [
@@ -320,7 +712,7 @@
           "phonetic": "/skɪp/",
           "partOfSpeech": "v.",
           "chinese": "与“阅读”意义相反",
-          "usage": "和 read 的核心义形成对比；先在真实句子中判断是否确实构成反向关系。"
+          "usage": "在本卡核心义下与 read 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
         }
       ],
       "derivatives": [
@@ -328,14 +720,14 @@
           "word": "reader",
           "phonetic": "/ridɚ/",
           "partOfSpeech": "n.",
-          "chinese": "与“read”同词族的常用词形",
+          "chinese": "与 read 同词族的常用词形",
           "note": "这是 read 的常用词族成员；先辨认词性，再放进完整句子中使用。"
         },
         {
           "word": "reading",
           "phonetic": "/ridɪŋ/",
           "partOfSpeech": "adj.",
-          "chinese": "与“read”同词族的常用词形",
+          "chinese": "与 read 同词族的常用词形",
           "note": "这是 read 的常用词族成员；先辨认词性，再放进完整句子中使用。"
         }
       ],
@@ -347,49 +739,126 @@
             {
               "word": "review",
               "phonetic": "/rivju/",
-              "partOfSpeech": "v.",
-              "chinese": "与“阅读”意义接近"
+              "partOfSpeech": "word family",
+              "chinese": "与本词相关的常用表达"
             },
             {
               "word": "skip",
               "phonetic": "/skɪp/",
+              "partOfSpeech": "word family",
+              "chinese": "与本词相关的常用表达"
+            }
+          ]
+        },
+        {
+          "category": "词族与构词联系",
+          "items": [
+            {
+              "word": "reader",
+              "phonetic": "/ridɚ/",
+              "partOfSpeech": "n.",
+              "chinese": "与本词相关的常用表达"
+            },
+            {
+              "word": "reading",
+              "phonetic": "/ridɪŋ/",
+              "partOfSpeech": "adj.",
+              "chinese": "与本词相关的常用表达"
+            },
+            {
+              "word": "speak",
+              "phonetic": "/spiːk/",
               "partOfSpeech": "v.",
-              "chinese": "与“阅读”意义相反"
+              "chinese": "说话"
+            }
+          ]
+        },
+        {
+          "category": "同一学习主题中的高频词",
+          "items": [
+            {
+              "word": "speak",
+              "phonetic": "/spiːk/",
+              "partOfSpeech": "v.",
+              "chinese": "说话"
+            },
+            {
+              "word": "write",
+              "phonetic": "/raɪt/",
+              "partOfSpeech": "v.",
+              "chinese": "写"
+            },
+            {
+              "word": "listen",
+              "phonetic": "/ˈlɪsən/",
+              "partOfSpeech": "v.",
+              "chinese": "听"
+            },
+            {
+              "word": "travel",
+              "phonetic": "/ˈtrævəl/",
+              "partOfSpeech": "n. / v.",
+              "chinese": "旅行"
             }
           ]
         }
       ],
       "examples": [
         {
-          "scene": "日常 / 真实表达",
+          "scene": "核心真实用法",
           "english": "Read the example aloud twice.",
           "chinese": "把例句大声读两遍。"
         },
         {
-          "scene": "学习 / 工作场景",
-          "english": "In today’s lesson, we practiced the word “read” in a complete sentence.",
-          "chinese": "今天的课程里，我们练习了怎样在完整句子中使用 read。"
+          "scene": "英文释义理解",
+          "english": "In this lesson, I learned that “read” means “to understand written words”.",
+          "chinese": "这节课里，我学到 read 的核心意思是“阅读；读懂”。"
         },
         {
-          "scene": "核心搭配复现",
-          "english": "“read aloud” is the key phrase I want to remember.",
-          "chinese": "“read aloud”是我想重点记住的搭配。"
+          "scene": "高频搭配辨认",
+          "english": "The phrase “read aloud” is useful in everyday English.",
+          "chinese": "“read aloud”是日常英语中的实用表达。"
         },
         {
-          "scene": "常见错误提醒",
-          "english": "I checked the context before choosing “read” instead of “review”.",
-          "chinese": "我先检查语境，再决定用 read 而不是 review。"
+          "scene": "主动造句",
+          "english": "Can you use “read” in a sentence of your own?",
+          "chinese": "你能用 read 说一个自己的句子吗？"
         },
         {
-          "scene": "词义与近义辨析",
-          "english": "Here, “read” means “to understand written words”.",
-          "chinese": "在这里，read 的意思是“阅读；读懂”。"
+          "scene": "词汇笔记",
+          "english": "I wrote “read” and its pronunciation in my notebook.",
+          "chinese": "我把 read 和它的发音记进了笔记本。"
+        },
+        {
+          "scene": "听力辨认",
+          "english": "Listen for “read” the next time you hear English.",
+          "chinese": "下次听英语时，留意辨认 read。"
+        },
+        {
+          "scene": "近义比较",
+          "english": "I compared “read” with “review” before choosing the word.",
+          "chinese": "选词前，我比较了 read 和 review。"
+        },
+        {
+          "scene": "反义对照",
+          "english": "The opposite idea is often expressed with “skip”.",
+          "chinese": "相反的意思常可用 skip 表达。"
+        },
+        {
+          "scene": "间隔复习",
+          "english": "I reviewed “read” again before going to bed.",
+          "chinese": "睡前我又复习了一遍 read。"
+        },
+        {
+          "scene": "口语输出",
+          "english": "Which real situation would make you use “read”?",
+          "chinese": "在什么真实情境中你会用到 read？"
         }
       ],
       "studyFocus": {
-        "coreMeaning": "阅读；读懂",
-        "keyCollocation": "read aloud：大声朗读",
-        "commonMistake": "不要只按中文逐字替换，也不要随意改动介词或语序；优先把 “read aloud” 当作一个完整句块记忆。",
+        "coreMeaning": "阅读；读懂；英文核心释义：to understand written words。",
+        "keyCollocation": "把 “read aloud” 作为一个完整句块记忆。",
+        "commonMistake": "情态动词 can 后直接接动词原形，不加 to。",
         "mustUseExample": "Read the example aloud twice."
       },
       "questions": [
@@ -475,30 +944,79 @@
           "free_sentence"
         ]
       },
-      "contentVersion": "2026.08.17.2",
+      "detailLevel": "template-complete",
+      "contentVersion": "2026.08.17.3",
       "reviewed": true,
-      "sourceNote": "从用户提供的 COCA 词表筛选；释义、例句和搭配为本项目离线整理；关系词与词组音标来自 CMU 北美英语发音词典。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
     {
       "id": "listen-v",
       "word": "listen",
       "lemma": "listen",
+      "cocaRanks": [
+        {
+          "rank": 460,
+          "pos": "v",
+          "frequency": 208819,
+          "partOfSpeech": "v."
+        }
+      ],
+      "cocaRankLabel": "v. 第 460 名",
       "phonetic": "/ˈlɪsən/",
-      "syllables": "listen",
+      "syllables": "listen（约 2 音节）",
       "partOfSpeech": "v.",
-      "frequencyBand": "COCA 高频精选",
+      "frequencyBand": "COCA 高频精选 · v. 第 460 名",
       "difficulty": "应用",
       "tags": [
         "v.",
+        "模板完整版",
         "主动词汇"
       ],
       "coreMemory": {
         "chinese": "听；倾听",
-        "english": "to pay attention to sound",
-        "structure": "listen to（听……）",
-        "commonError": "不要只按中文逐字替换，也不要随意改动介词或语序；优先把 “listen to” 当作一个完整句块记忆。",
-        "directSynonym": "hear",
-        "directAntonym": "ignore",
+        "english": "v. to pay attention to sound",
+        "structure": "listen to /ˈlɪsən tu/（听……）；listen carefully /ˈlɪsən kɛrfəli/（仔细听）；listen for /ˈlɪsən fɔr/（留意听……）；listen to advice /ˈlɪsən tu ædvaɪs/（听取建议）",
+        "structures": [
+          {
+            "phrase": "listen to",
+            "phonetic": "/ˈlɪsən tu/",
+            "chinese": "听……"
+          },
+          {
+            "phrase": "listen carefully",
+            "phonetic": "/ˈlɪsən kɛrfəli/",
+            "chinese": "仔细听"
+          },
+          {
+            "phrase": "listen for",
+            "phonetic": "/ˈlɪsən fɔr/",
+            "chinese": "留意听……"
+          },
+          {
+            "phrase": "listen to advice",
+            "phonetic": "/ˈlɪsən tu ædvaɪs/",
+            "chinese": "听取建议"
+          }
+        ],
+        "commonError": "❌ can to listen → ✅ can listen；❌ to listening → ✅ to listen",
+        "commonErrors": [
+          {
+            "wrong": "can to listen",
+            "wrongPhonetic": "/kæn tu ˈlɪsən/",
+            "right": "can listen",
+            "rightPhonetic": "/kæn ˈlɪsən/",
+            "note": "情态动词 can 后直接接动词原形，不加 to。"
+          },
+          {
+            "wrong": "to listening",
+            "wrongPhonetic": "/tu lɪsənɪŋ/",
+            "right": "to listen",
+            "rightPhonetic": "/tu ˈlɪsən/",
+            "note": "不定式 to 后接动词原形；不要把不定式和 -ing 形式混合。"
+          }
+        ],
+        "directSynonym": "hear /hir/（与“听”意义接近）",
+        "directAntonym": "ignore /ɪɡnɔr/（与“听”意义相反）",
         "derivatives": "listener",
         "example": "Listen to the whole sentence before answering.",
         "exampleChinese": "回答前先听完整个句子。"
@@ -520,16 +1038,76 @@
               "phrase": "listen to",
               "phonetic": "/ˈlɪsən tu/",
               "chinese": "听……"
+            },
+            {
+              "phrase": "listen carefully",
+              "phonetic": "/ˈlɪsən kɛrfəli/",
+              "chinese": "仔细听"
+            },
+            {
+              "phrase": "listen for",
+              "phonetic": "/ˈlɪsən fɔr/",
+              "chinese": "留意听……"
             }
           ]
         },
         {
-          "category": "真实例句句块",
+          "category": "句型与语法框架",
           "items": [
             {
-              "phrase": "Listen to the",
-              "phonetic": "/ˈlɪsən tu ðə/",
-              "chinese": "核心例句片段：回答前先听完整个句子。"
+              "phrase": "listen to advice",
+              "phonetic": "/ˈlɪsən tu ædvaɪs/",
+              "chinese": "听取建议"
+            },
+            {
+              "phrase": "listen closely",
+              "phonetic": "/ˈlɪsən kloʊsli/",
+              "chinese": "认真听"
+            },
+            {
+              "phrase": "good listener",
+              "phonetic": "/ɡʊd lɪsənɚ/",
+              "chinese": "善于倾听的人"
+            }
+          ]
+        },
+        {
+          "category": "真实表达延伸",
+          "items": [
+            {
+              "phrase": "to listen to",
+              "phonetic": "/tu ˈlɪsən tu/",
+              "chinese": "去听……"
+            },
+            {
+              "phrase": "need to listen to",
+              "phonetic": "/nid tu ˈlɪsən tu/",
+              "chinese": "需要听……"
+            },
+            {
+              "phrase": "try to listen to",
+              "phonetic": "/traɪ tu ˈlɪsən tu/",
+              "chinese": "尝试听……"
+            }
+          ]
+        },
+        {
+          "category": "主动输出提示",
+          "items": [
+            {
+              "phrase": "can listen to",
+              "phonetic": "/kæn ˈlɪsən tu/",
+              "chinese": "能够听……"
+            },
+            {
+              "phrase": "how to listen to",
+              "phonetic": "/haʊ tu ˈlɪsən tu/",
+              "chinese": "如何听……"
+            },
+            {
+              "phrase": "learn to listen to",
+              "phonetic": "/lɝn tu ˈlɪsən tu/",
+              "chinese": "学会听……"
             }
           ]
         }
@@ -541,6 +1119,55 @@
           "chinese": "听……",
           "example": "Listen to the whole sentence before answering.",
           "translation": "回答前先听完整个句子。"
+        },
+        {
+          "phrase": "listen carefully",
+          "phonetic": "/ˈlɪsən kɛrfəli/",
+          "chinese": "仔细听",
+          "example": "The phrase “listen carefully” is useful in everyday English.",
+          "translation": "“listen carefully”是日常英语中的实用表达。"
+        },
+        {
+          "phrase": "listen for",
+          "phonetic": "/ˈlɪsən fɔr/",
+          "chinese": "留意听……",
+          "example": "I added “listen for” to my vocabulary notebook.",
+          "translation": "我把“listen for”记进了词汇本。"
+        },
+        {
+          "phrase": "listen to advice",
+          "phonetic": "/ˈlɪsən tu ædvaɪs/",
+          "chinese": "听取建议",
+          "example": "Listen for “listen to advice” in real conversations.",
+          "translation": "在真实对话中留意“listen to advice”。"
+        },
+        {
+          "phrase": "listen closely",
+          "phonetic": "/ˈlɪsən kloʊsli/",
+          "chinese": "认真听",
+          "example": "Can you use “listen closely” in a complete sentence?",
+          "translation": "你能用“listen closely”说一个完整句子吗？"
+        },
+        {
+          "phrase": "good listener",
+          "phonetic": "/ɡʊd lɪsənɚ/",
+          "chinese": "善于倾听的人",
+          "example": "We practiced “good listener” aloud three times.",
+          "translation": "我们把“good listener”大声练了三遍。"
+        },
+        {
+          "phrase": "to listen to",
+          "phonetic": "/tu ˈlɪsən tu/",
+          "chinese": "去听……",
+          "example": "The phrase “to listen to” is useful in everyday English.",
+          "translation": "“to listen to”是日常英语中的实用表达。"
+        },
+        {
+          "phrase": "need to listen to",
+          "phonetic": "/nid tu ˈlɪsən tu/",
+          "chinese": "需要听……",
+          "example": "I added “need to listen to” to my vocabulary notebook.",
+          "translation": "我把“need to listen to”记进了词汇本。"
         }
       ],
       "synonyms": [
@@ -549,7 +1176,7 @@
           "phonetic": "/hir/",
           "partOfSpeech": "v.",
           "chinese": "与“听”意义接近",
-          "difference": "listen 在 “listen to” 中是本卡需要主动掌握的表达；hear 含义接近，但宾语、语气和固定搭配不一定相同。"
+          "difference": "listen 是本卡核心搭配 “listen to” 中的中性常用选择；hear 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
         }
       ],
       "antonyms": [
@@ -558,7 +1185,7 @@
           "phonetic": "/ɪɡnɔr/",
           "partOfSpeech": "v.",
           "chinese": "与“听”意义相反",
-          "usage": "和 listen 的核心义形成对比；先在真实句子中判断是否确实构成反向关系。"
+          "usage": "在本卡核心义下与 listen 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
         }
       ],
       "derivatives": [
@@ -566,7 +1193,7 @@
           "word": "listener",
           "phonetic": "/lɪsənɚ/",
           "partOfSpeech": "n.",
-          "chinese": "与“listen”同词族的常用词形",
+          "chinese": "与 listen 同词族的常用词形",
           "note": "这是 listen 的常用词族成员；先辨认词性，再放进完整句子中使用。"
         }
       ],
@@ -586,49 +1213,126 @@
             {
               "word": "hear",
               "phonetic": "/hir/",
-              "partOfSpeech": "v.",
-              "chinese": "与“听”意义接近"
+              "partOfSpeech": "word family",
+              "chinese": "与本词相关的常用表达"
             },
             {
               "word": "ignore",
               "phonetic": "/ɪɡnɔr/",
+              "partOfSpeech": "word family",
+              "chinese": "与本词相关的常用表达"
+            }
+          ]
+        },
+        {
+          "category": "词族与构词联系",
+          "items": [
+            {
+              "word": "listener",
+              "phonetic": "/lɪsənɚ/",
+              "partOfSpeech": "n.",
+              "chinese": "与本词相关的常用表达"
+            },
+            {
+              "word": "write",
+              "phonetic": "/raɪt/",
               "partOfSpeech": "v.",
-              "chinese": "与“听”意义相反"
+              "chinese": "写"
+            },
+            {
+              "word": "read",
+              "phonetic": "/riːd/",
+              "partOfSpeech": "v.",
+              "chinese": "阅读"
+            }
+          ]
+        },
+        {
+          "category": "同一学习主题中的高频词",
+          "items": [
+            {
+              "word": "write",
+              "phonetic": "/raɪt/",
+              "partOfSpeech": "v.",
+              "chinese": "写"
+            },
+            {
+              "word": "read",
+              "phonetic": "/riːd/",
+              "partOfSpeech": "v.",
+              "chinese": "阅读"
+            },
+            {
+              "word": "travel",
+              "phonetic": "/ˈtrævəl/",
+              "partOfSpeech": "n. / v.",
+              "chinese": "旅行"
+            },
+            {
+              "word": "family",
+              "phonetic": "/ˈfæməli/",
+              "partOfSpeech": "n.",
+              "chinese": "家庭"
             }
           ]
         }
       ],
       "examples": [
         {
-          "scene": "日常 / 真实表达",
+          "scene": "核心真实用法",
           "english": "Listen to the whole sentence before answering.",
           "chinese": "回答前先听完整个句子。"
         },
         {
-          "scene": "学习 / 工作场景",
-          "english": "In today’s lesson, we practiced the word “listen” in a complete sentence.",
-          "chinese": "今天的课程里，我们练习了怎样在完整句子中使用 listen。"
+          "scene": "英文释义理解",
+          "english": "In this lesson, I learned that “listen” means “to pay attention to sound”.",
+          "chinese": "这节课里，我学到 listen 的核心意思是“听；倾听”。"
         },
         {
-          "scene": "核心搭配复现",
-          "english": "“listen to” is the key phrase I want to remember.",
-          "chinese": "“listen to”是我想重点记住的搭配。"
+          "scene": "高频搭配辨认",
+          "english": "The phrase “listen to” is useful in everyday English.",
+          "chinese": "“listen to”是日常英语中的实用表达。"
         },
         {
-          "scene": "常见错误提醒",
-          "english": "I checked the context before choosing “listen” instead of “hear”.",
-          "chinese": "我先检查语境，再决定用 listen 而不是 hear。"
+          "scene": "主动造句",
+          "english": "Can you use “listen” in a sentence of your own?",
+          "chinese": "你能用 listen 说一个自己的句子吗？"
         },
         {
-          "scene": "词义与近义辨析",
-          "english": "Here, “listen” means “to pay attention to sound”.",
-          "chinese": "在这里，listen 的意思是“听；倾听”。"
+          "scene": "词汇笔记",
+          "english": "I wrote “listen” and its pronunciation in my notebook.",
+          "chinese": "我把 listen 和它的发音记进了笔记本。"
+        },
+        {
+          "scene": "听力辨认",
+          "english": "Listen for “listen” the next time you hear English.",
+          "chinese": "下次听英语时，留意辨认 listen。"
+        },
+        {
+          "scene": "近义比较",
+          "english": "I compared “listen” with “hear” before choosing the word.",
+          "chinese": "选词前，我比较了 listen 和 hear。"
+        },
+        {
+          "scene": "反义对照",
+          "english": "The opposite idea is often expressed with “ignore”.",
+          "chinese": "相反的意思常可用 ignore 表达。"
+        },
+        {
+          "scene": "间隔复习",
+          "english": "I reviewed “listen” again before going to bed.",
+          "chinese": "睡前我又复习了一遍 listen。"
+        },
+        {
+          "scene": "口语输出",
+          "english": "Which real situation would make you use “listen”?",
+          "chinese": "在什么真实情境中你会用到 listen？"
         }
       ],
       "studyFocus": {
-        "coreMeaning": "听；倾听",
-        "keyCollocation": "listen to：听……",
-        "commonMistake": "不要只按中文逐字替换，也不要随意改动介词或语序；优先把 “listen to” 当作一个完整句块记忆。",
+        "coreMeaning": "听；倾听；英文核心释义：to pay attention to sound。",
+        "keyCollocation": "把 “listen to” 作为一个完整句块记忆。",
+        "commonMistake": "情态动词 can 后直接接动词原形，不加 to。",
         "mustUseExample": "Listen to the whole sentence before answering."
       },
       "questions": [
@@ -714,30 +1418,85 @@
           "free_sentence"
         ]
       },
-      "contentVersion": "2026.08.17.2",
+      "detailLevel": "template-complete",
+      "contentVersion": "2026.08.17.3",
       "reviewed": true,
-      "sourceNote": "从用户提供的 COCA 词表筛选；释义、例句和搭配为本项目离线整理；关系词与词组音标来自 CMU 北美英语发音词典。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
     {
       "id": "travel-n",
       "word": "travel",
       "lemma": "travel",
+      "cocaRanks": [
+        {
+          "rank": 1136,
+          "pos": "v",
+          "frequency": 85441,
+          "partOfSpeech": "v."
+        },
+        {
+          "rank": 2069,
+          "pos": "n",
+          "frequency": 42709,
+          "partOfSpeech": "n."
+        }
+      ],
+      "cocaRankLabel": "v. 第 1136 名；n. 第 2069 名",
       "phonetic": "/ˈtrævəl/",
-      "syllables": "travel",
+      "syllables": "travel（约 2 音节）",
       "partOfSpeech": "n. / v.",
-      "frequencyBand": "COCA 高频精选",
+      "frequencyBand": "COCA 高频精选 · v. 第 1136 名；n. 第 2069 名",
       "difficulty": "应用",
       "tags": [
         "n.",
+        "模板完整版",
         "主动词汇"
       ],
       "coreMemory": {
         "chinese": "旅行",
-        "english": "to go from one place to another",
-        "structure": "travel abroad（出国旅行）",
-        "commonError": "不要把不同词性混在一起；先确认句中需要的是 n. 还是 v.，并整体记住 “travel abroad”。",
-        "directSynonym": "journey",
-        "directAntonym": "stay",
+        "english": "n. to go from one place to another；v. to go from one place to another",
+        "structure": "travel abroad /ˈtrævəl əbrɔd/（出国旅行）；travel by train /ˈtrævəl baɪ treɪn/（乘火车旅行）；travel around /ˈtrævəl ɚaʊnd/（到处旅行）；business travel /bɪznəs ˈtrævəl/（商务旅行）",
+        "structures": [
+          {
+            "phrase": "travel abroad",
+            "phonetic": "/ˈtrævəl əbrɔd/",
+            "chinese": "出国旅行"
+          },
+          {
+            "phrase": "travel by train",
+            "phonetic": "/ˈtrævəl baɪ treɪn/",
+            "chinese": "乘火车旅行"
+          },
+          {
+            "phrase": "travel around",
+            "phonetic": "/ˈtrævəl ɚaʊnd/",
+            "chinese": "到处旅行"
+          },
+          {
+            "phrase": "business travel",
+            "phonetic": "/bɪznəs ˈtrævəl/",
+            "chinese": "商务旅行"
+          }
+        ],
+        "commonError": "❌ use travel with the same article in every context → ✅ check the countability of travel in context；❌ translate travel word by word → ✅ learn the complete phrase “travel abroad”",
+        "commonErrors": [
+          {
+            "wrong": "use travel with the same article in every context",
+            "wrongPhonetic": "/jus ˈtrævəl wɪð ðə seɪm ɑrtəkəl ɪn ɛvɚi kɑntɛkst/",
+            "right": "check the countability of travel in context",
+            "rightPhonetic": "/tʃɛk ðə countability ʌv ˈtrævəl ɪn kɑntɛkst/",
+            "note": "同一个名词在不同义项下可能有可数、不可数或单复数差异，不能机械套用冠词。"
+          },
+          {
+            "wrong": "translate travel word by word",
+            "wrongPhonetic": "/trænzleɪt ˈtrævəl wɝd baɪ wɝd/",
+            "right": "learn the complete phrase “travel abroad”",
+            "rightPhonetic": "/lɝn ðə kəmplit freɪz ˈtrævəl əbrɔd/",
+            "note": "不要只按中文逐字替换；优先把本卡高频搭配作为完整句块记忆。"
+          }
+        ],
+        "directSynonym": "journey /dʒɝni/（与“旅行”意义接近）",
+        "directAntonym": "stay /steɪ/（与“旅行”意义相反）",
         "derivatives": "traveler",
         "example": "She travels abroad for work twice a year.",
         "exampleChinese": "她每年因工作出国两次。"
@@ -766,16 +1525,76 @@
               "phrase": "travel abroad",
               "phonetic": "/ˈtrævəl əbrɔd/",
               "chinese": "出国旅行"
+            },
+            {
+              "phrase": "travel by train",
+              "phonetic": "/ˈtrævəl baɪ treɪn/",
+              "chinese": "乘火车旅行"
+            },
+            {
+              "phrase": "travel around",
+              "phonetic": "/ˈtrævəl ɚaʊnd/",
+              "chinese": "到处旅行"
             }
           ]
         },
         {
-          "category": "真实例句句块",
+          "category": "句型与语法框架",
           "items": [
             {
-              "phrase": "She travels abroad for",
-              "phonetic": "/ʃi trævəlz əbrɔd fɔr/",
-              "chinese": "核心例句片段：她每年因工作出国两次。"
+              "phrase": "business travel",
+              "phonetic": "/bɪznəs ˈtrævəl/",
+              "chinese": "商务旅行"
+            },
+            {
+              "phrase": "travel plans",
+              "phonetic": "/ˈtrævəl plænz/",
+              "chinese": "旅行计划"
+            },
+            {
+              "phrase": "air travel",
+              "phonetic": "/ɛr ˈtrævəl/",
+              "chinese": "航空旅行"
+            }
+          ]
+        },
+        {
+          "category": "真实表达延伸",
+          "items": [
+            {
+              "phrase": "travel in daily life",
+              "phonetic": "/ˈtrævəl ɪn deɪli laɪf/",
+              "chinese": "日常生活中的旅行"
+            },
+            {
+              "phrase": "travel at work",
+              "phonetic": "/ˈtrævəl æt wɝk/",
+              "chinese": "工作中的旅行"
+            },
+            {
+              "phrase": "the importance of travel",
+              "phonetic": "/ðə ɪmpɔrtəns ʌv ˈtrævəl/",
+              "chinese": "旅行的重要性"
+            }
+          ]
+        },
+        {
+          "category": "主动输出提示",
+          "items": [
+            {
+              "phrase": "focus on travel",
+              "phonetic": "/foʊkəs ɑn ˈtrævəl/",
+              "chinese": "关注旅行"
+            },
+            {
+              "phrase": "talk about travel",
+              "phonetic": "/tɔk əbaʊt ˈtrævəl/",
+              "chinese": "谈论旅行"
+            },
+            {
+              "phrase": "understand travel",
+              "phonetic": "/ʌndɚstænd ˈtrævəl/",
+              "chinese": "理解旅行"
             }
           ]
         }
@@ -787,6 +1606,55 @@
           "chinese": "出国旅行",
           "example": "She travels abroad for work twice a year.",
           "translation": "她每年因工作出国两次。"
+        },
+        {
+          "phrase": "travel by train",
+          "phonetic": "/ˈtrævəl baɪ treɪn/",
+          "chinese": "乘火车旅行",
+          "example": "The phrase “travel by train” is useful in everyday English.",
+          "translation": "“travel by train”是日常英语中的实用表达。"
+        },
+        {
+          "phrase": "travel around",
+          "phonetic": "/ˈtrævəl ɚaʊnd/",
+          "chinese": "到处旅行",
+          "example": "I added “travel around” to my vocabulary notebook.",
+          "translation": "我把“travel around”记进了词汇本。"
+        },
+        {
+          "phrase": "business travel",
+          "phonetic": "/bɪznəs ˈtrævəl/",
+          "chinese": "商务旅行",
+          "example": "Listen for “business travel” in real conversations.",
+          "translation": "在真实对话中留意“business travel”。"
+        },
+        {
+          "phrase": "travel plans",
+          "phonetic": "/ˈtrævəl plænz/",
+          "chinese": "旅行计划",
+          "example": "Can you use “travel plans” in a complete sentence?",
+          "translation": "你能用“travel plans”说一个完整句子吗？"
+        },
+        {
+          "phrase": "air travel",
+          "phonetic": "/ɛr ˈtrævəl/",
+          "chinese": "航空旅行",
+          "example": "We practiced “air travel” aloud three times.",
+          "translation": "我们把“air travel”大声练了三遍。"
+        },
+        {
+          "phrase": "travel in daily life",
+          "phonetic": "/ˈtrævəl ɪn deɪli laɪf/",
+          "chinese": "日常生活中的旅行",
+          "example": "The phrase “travel in daily life” is useful in everyday English.",
+          "translation": "“travel in daily life”是日常英语中的实用表达。"
+        },
+        {
+          "phrase": "travel at work",
+          "phonetic": "/ˈtrævəl æt wɝk/",
+          "chinese": "工作中的旅行",
+          "example": "I added “travel at work” to my vocabulary notebook.",
+          "translation": "我把“travel at work”记进了词汇本。"
         }
       ],
       "synonyms": [
@@ -795,7 +1663,7 @@
           "phonetic": "/dʒɝni/",
           "partOfSpeech": "n. / v.",
           "chinese": "与“旅行”意义接近",
-          "difference": "travel 在 “travel abroad” 中是本卡需要主动掌握的表达；journey 含义接近，但宾语、语气和固定搭配不一定相同。"
+          "difference": "travel 是本卡核心搭配 “travel abroad” 中的中性常用选择；journey 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
         }
       ],
       "antonyms": [
@@ -804,7 +1672,7 @@
           "phonetic": "/steɪ/",
           "partOfSpeech": "n. / v.",
           "chinese": "与“旅行”意义相反",
-          "usage": "和 travel 的核心义形成对比；先在真实句子中判断是否确实构成反向关系。"
+          "usage": "在本卡核心义下与 travel 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
         }
       ],
       "derivatives": [
@@ -812,7 +1680,7 @@
           "word": "traveler",
           "phonetic": "/trævəlɚ/",
           "partOfSpeech": "n.",
-          "chinese": "与“travel”同词族的常用词形",
+          "chinese": "与 travel 同词族的常用词形",
           "note": "这是 travel 的常用词族成员；先辨认词性，再放进完整句子中使用。"
         }
       ],
@@ -832,49 +1700,126 @@
             {
               "word": "journey",
               "phonetic": "/dʒɝni/",
-              "partOfSpeech": "n. / v.",
-              "chinese": "与“旅行”意义接近"
+              "partOfSpeech": "word family",
+              "chinese": "与本词相关的常用表达"
             },
             {
               "word": "stay",
               "phonetic": "/steɪ/",
-              "partOfSpeech": "n. / v.",
-              "chinese": "与“旅行”意义相反"
+              "partOfSpeech": "word family",
+              "chinese": "与本词相关的常用表达"
+            }
+          ]
+        },
+        {
+          "category": "词族与构词联系",
+          "items": [
+            {
+              "word": "traveler",
+              "phonetic": "/trævəlɚ/",
+              "partOfSpeech": "n.",
+              "chinese": "与本词相关的常用表达"
+            },
+            {
+              "word": "read",
+              "phonetic": "/riːd/",
+              "partOfSpeech": "v.",
+              "chinese": "阅读"
+            },
+            {
+              "word": "listen",
+              "phonetic": "/ˈlɪsən/",
+              "partOfSpeech": "v.",
+              "chinese": "听"
+            }
+          ]
+        },
+        {
+          "category": "同一学习主题中的高频词",
+          "items": [
+            {
+              "word": "read",
+              "phonetic": "/riːd/",
+              "partOfSpeech": "v.",
+              "chinese": "阅读"
+            },
+            {
+              "word": "listen",
+              "phonetic": "/ˈlɪsən/",
+              "partOfSpeech": "v.",
+              "chinese": "听"
+            },
+            {
+              "word": "family",
+              "phonetic": "/ˈfæməli/",
+              "partOfSpeech": "n.",
+              "chinese": "家庭"
+            },
+            {
+              "word": "money",
+              "phonetic": "/ˈmʌni/",
+              "partOfSpeech": "n.",
+              "chinese": "钱"
             }
           ]
         }
       ],
       "examples": [
         {
-          "scene": "日常 / 真实表达",
+          "scene": "核心真实用法",
           "english": "She travels abroad for work twice a year.",
           "chinese": "她每年因工作出国两次。"
         },
         {
-          "scene": "学习 / 工作场景",
-          "english": "In today’s lesson, we practiced the word “travel” in a complete sentence.",
-          "chinese": "今天的课程里，我们练习了怎样在完整句子中使用 travel。"
+          "scene": "英文释义理解",
+          "english": "In this lesson, I learned that “travel” means “to go from one place to another”.",
+          "chinese": "这节课里，我学到 travel 的核心意思是“旅行”。"
         },
         {
-          "scene": "核心搭配复现",
-          "english": "“travel abroad” is the key phrase I want to remember.",
-          "chinese": "“travel abroad”是我想重点记住的搭配。"
+          "scene": "高频搭配辨认",
+          "english": "The phrase “travel abroad” is useful in everyday English.",
+          "chinese": "“travel abroad”是日常英语中的实用表达。"
         },
         {
-          "scene": "常见错误提醒",
-          "english": "I checked the context before choosing “travel” instead of “journey”.",
-          "chinese": "我先检查语境，再决定用 travel 而不是 journey。"
+          "scene": "主动造句",
+          "english": "Can you use “travel” in a sentence of your own?",
+          "chinese": "你能用 travel 说一个自己的句子吗？"
         },
         {
-          "scene": "词义与近义辨析",
-          "english": "Here, “travel” means “to go from one place to another”.",
-          "chinese": "在这里，travel 的意思是“旅行”。"
+          "scene": "词汇笔记",
+          "english": "I wrote “travel” and its pronunciation in my notebook.",
+          "chinese": "我把 travel 和它的发音记进了笔记本。"
+        },
+        {
+          "scene": "听力辨认",
+          "english": "Listen for “travel” the next time you hear English.",
+          "chinese": "下次听英语时，留意辨认 travel。"
+        },
+        {
+          "scene": "近义比较",
+          "english": "I compared “travel” with “journey” before choosing the word.",
+          "chinese": "选词前，我比较了 travel 和 journey。"
+        },
+        {
+          "scene": "反义对照",
+          "english": "The opposite idea is often expressed with “stay”.",
+          "chinese": "相反的意思常可用 stay 表达。"
+        },
+        {
+          "scene": "间隔复习",
+          "english": "I reviewed “travel” again before going to bed.",
+          "chinese": "睡前我又复习了一遍 travel。"
+        },
+        {
+          "scene": "口语输出",
+          "english": "Which real situation would make you use “travel”?",
+          "chinese": "在什么真实情境中你会用到 travel？"
         }
       ],
       "studyFocus": {
-        "coreMeaning": "旅行",
-        "keyCollocation": "travel abroad：出国旅行",
-        "commonMistake": "不要把不同词性混在一起；先确认句中需要的是 n. 还是 v.，并整体记住 “travel abroad”。",
+        "coreMeaning": "旅行；英文核心释义：to go from one place to another。",
+        "keyCollocation": "把 “travel abroad” 作为一个完整句块记忆。",
+        "commonMistake": "同一个名词在不同义项下可能有可数、不可数或单复数差异，不能机械套用冠词。",
         "mustUseExample": "She travels abroad for work twice a year."
       },
       "questions": [
@@ -960,30 +1905,79 @@
           "free_sentence"
         ]
       },
-      "contentVersion": "2026.08.17.2",
+      "detailLevel": "template-complete",
+      "contentVersion": "2026.08.17.3",
       "reviewed": true,
-      "sourceNote": "从用户提供的 COCA 词表筛选；释义、例句和搭配为本项目离线整理；关系词与词组音标来自 CMU 北美英语发音词典。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
     {
       "id": "family-n",
       "word": "family",
       "lemma": "family",
+      "cocaRanks": [
+        {
+          "rank": 171,
+          "pos": "n",
+          "frequency": 544520,
+          "partOfSpeech": "n."
+        }
+      ],
+      "cocaRankLabel": "n. 第 171 名",
       "phonetic": "/ˈfæməli/",
-      "syllables": "fami·ly",
+      "syllables": "family（约 3 音节）",
       "partOfSpeech": "n.",
-      "frequencyBand": "COCA 高频精选",
+      "frequencyBand": "COCA 高频精选 · n. 第 171 名",
       "difficulty": "应用",
       "tags": [
         "n.",
+        "模板完整版",
         "主动词汇"
       ],
       "coreMemory": {
         "chinese": "家庭；家人",
-        "english": "a group of related people",
-        "structure": "family member（家庭成员）",
-        "commonError": "不要只按中文逐字替换，也不要随意改动介词或语序；优先把 “family member” 当作一个完整句块记忆。",
-        "directSynonym": "household",
-        "directAntonym": "stranger",
+        "english": "n. a group of related people",
+        "structure": "family member /ˈfæməli mɛmbɚ/（家庭成员）；close family /kloʊs ˈfæməli/（近亲）；family life /ˈfæməli laɪf/（家庭生活）；start a family /stɑrt ə ˈfæməli/（组建家庭）",
+        "structures": [
+          {
+            "phrase": "family member",
+            "phonetic": "/ˈfæməli mɛmbɚ/",
+            "chinese": "家庭成员"
+          },
+          {
+            "phrase": "close family",
+            "phonetic": "/kloʊs ˈfæməli/",
+            "chinese": "近亲"
+          },
+          {
+            "phrase": "family life",
+            "phonetic": "/ˈfæməli laɪf/",
+            "chinese": "家庭生活"
+          },
+          {
+            "phrase": "start a family",
+            "phonetic": "/stɑrt ə ˈfæməli/",
+            "chinese": "组建家庭"
+          }
+        ],
+        "commonError": "❌ use family with the same article in every context → ✅ check the countability of family in context；❌ translate family word by word → ✅ learn the complete phrase “family member”",
+        "commonErrors": [
+          {
+            "wrong": "use family with the same article in every context",
+            "wrongPhonetic": "/jus ˈfæməli wɪð ðə seɪm ɑrtəkəl ɪn ɛvɚi kɑntɛkst/",
+            "right": "check the countability of family in context",
+            "rightPhonetic": "/tʃɛk ðə countability ʌv ˈfæməli ɪn kɑntɛkst/",
+            "note": "同一个名词在不同义项下可能有可数、不可数或单复数差异，不能机械套用冠词。"
+          },
+          {
+            "wrong": "translate family word by word",
+            "wrongPhonetic": "/trænzleɪt ˈfæməli wɝd baɪ wɝd/",
+            "right": "learn the complete phrase “family member”",
+            "rightPhonetic": "/lɝn ðə kəmplit freɪz ˈfæməli mɛmbɚ/",
+            "note": "不要只按中文逐字替换；优先把本卡高频搭配作为完整句块记忆。"
+          }
+        ],
+        "directSynonym": "household /haʊshoʊld/（与“家庭”意义接近）",
+        "directAntonym": "stranger /streɪndʒɚ/（与“家庭”意义相反）",
         "derivatives": "familial",
         "example": "My family supports my learning plan.",
         "exampleChinese": "我的家人支持我的学习计划。"
@@ -1005,16 +1999,76 @@
               "phrase": "family member",
               "phonetic": "/ˈfæməli mɛmbɚ/",
               "chinese": "家庭成员"
+            },
+            {
+              "phrase": "close family",
+              "phonetic": "/kloʊs ˈfæməli/",
+              "chinese": "近亲"
+            },
+            {
+              "phrase": "family life",
+              "phonetic": "/ˈfæməli laɪf/",
+              "chinese": "家庭生活"
             }
           ]
         },
         {
-          "category": "真实例句句块",
+          "category": "句型与语法框架",
           "items": [
             {
-              "phrase": "My family supports my",
-              "phonetic": "/maɪ ˈfæməli səpɔrts maɪ/",
-              "chinese": "核心例句片段：我的家人支持我的学习计划。"
+              "phrase": "start a family",
+              "phonetic": "/stɑrt ə ˈfæməli/",
+              "chinese": "组建家庭"
+            },
+            {
+              "phrase": "family business",
+              "phonetic": "/ˈfæməli bɪznəs/",
+              "chinese": "家族企业"
+            },
+            {
+              "phrase": "the whole family",
+              "phonetic": "/ðə hoʊl ˈfæməli/",
+              "chinese": "全家人"
+            }
+          ]
+        },
+        {
+          "category": "真实表达延伸",
+          "items": [
+            {
+              "phrase": "the family in daily life",
+              "phonetic": "/ðə ˈfæməli ɪn deɪli laɪf/",
+              "chinese": "日常生活中的家庭"
+            },
+            {
+              "phrase": "the family at work",
+              "phonetic": "/ðə ˈfæməli æt wɝk/",
+              "chinese": "工作中的家庭"
+            },
+            {
+              "phrase": "the importance of family",
+              "phonetic": "/ðə ɪmpɔrtəns ʌv ˈfæməli/",
+              "chinese": "家庭的重要性"
+            }
+          ]
+        },
+        {
+          "category": "主动输出提示",
+          "items": [
+            {
+              "phrase": "focus on family",
+              "phonetic": "/foʊkəs ɑn ˈfæməli/",
+              "chinese": "关注家庭"
+            },
+            {
+              "phrase": "talk about family",
+              "phonetic": "/tɔk əbaʊt ˈfæməli/",
+              "chinese": "谈论家庭"
+            },
+            {
+              "phrase": "understand family",
+              "phonetic": "/ʌndɚstænd ˈfæməli/",
+              "chinese": "理解家庭"
             }
           ]
         }
@@ -1026,6 +2080,55 @@
           "chinese": "家庭成员",
           "example": "My family supports my learning plan.",
           "translation": "我的家人支持我的学习计划。"
+        },
+        {
+          "phrase": "close family",
+          "phonetic": "/kloʊs ˈfæməli/",
+          "chinese": "近亲",
+          "example": "The phrase “close family” is useful in everyday English.",
+          "translation": "“close family”是日常英语中的实用表达。"
+        },
+        {
+          "phrase": "family life",
+          "phonetic": "/ˈfæməli laɪf/",
+          "chinese": "家庭生活",
+          "example": "I added “family life” to my vocabulary notebook.",
+          "translation": "我把“family life”记进了词汇本。"
+        },
+        {
+          "phrase": "start a family",
+          "phonetic": "/stɑrt ə ˈfæməli/",
+          "chinese": "组建家庭",
+          "example": "Listen for “start a family” in real conversations.",
+          "translation": "在真实对话中留意“start a family”。"
+        },
+        {
+          "phrase": "family business",
+          "phonetic": "/ˈfæməli bɪznəs/",
+          "chinese": "家族企业",
+          "example": "Can you use “family business” in a complete sentence?",
+          "translation": "你能用“family business”说一个完整句子吗？"
+        },
+        {
+          "phrase": "the whole family",
+          "phonetic": "/ðə hoʊl ˈfæməli/",
+          "chinese": "全家人",
+          "example": "We practiced “the whole family” aloud three times.",
+          "translation": "我们把“the whole family”大声练了三遍。"
+        },
+        {
+          "phrase": "the family in daily life",
+          "phonetic": "/ðə ˈfæməli ɪn deɪli laɪf/",
+          "chinese": "日常生活中的家庭",
+          "example": "The phrase “the family in daily life” is useful in everyday English.",
+          "translation": "“the family in daily life”是日常英语中的实用表达。"
+        },
+        {
+          "phrase": "the family at work",
+          "phonetic": "/ðə ˈfæməli æt wɝk/",
+          "chinese": "工作中的家庭",
+          "example": "I added “the family at work” to my vocabulary notebook.",
+          "translation": "我把“the family at work”记进了词汇本。"
         }
       ],
       "synonyms": [
@@ -1034,7 +2137,7 @@
           "phonetic": "/haʊshoʊld/",
           "partOfSpeech": "n.",
           "chinese": "与“家庭”意义接近",
-          "difference": "family 在 “family member” 中是本卡需要主动掌握的表达；household 含义接近，但宾语、语气和固定搭配不一定相同。"
+          "difference": "family 是本卡核心搭配 “family member” 中的中性常用选择；household 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
         }
       ],
       "antonyms": [
@@ -1043,7 +2146,7 @@
           "phonetic": "/streɪndʒɚ/",
           "partOfSpeech": "n.",
           "chinese": "与“家庭”意义相反",
-          "usage": "和 family 的核心义形成对比；先在真实句子中判断是否确实构成反向关系。"
+          "usage": "在本卡核心义下与 family 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
         }
       ],
       "derivatives": [
@@ -1051,7 +2154,7 @@
           "word": "familial",
           "phonetic": "/fəmɪljəl/",
           "partOfSpeech": "adj.",
-          "chinese": "与“family”同词族的常用词形",
+          "chinese": "与 family 同词族的常用词形",
           "note": "这是 family 的常用词族成员；先辨认词性，再放进完整句子中使用。"
         }
       ],
@@ -1071,49 +2174,126 @@
             {
               "word": "household",
               "phonetic": "/haʊshoʊld/",
-              "partOfSpeech": "n.",
-              "chinese": "与“家庭”意义接近"
+              "partOfSpeech": "word family",
+              "chinese": "与本词相关的常用表达"
             },
             {
               "word": "stranger",
               "phonetic": "/streɪndʒɚ/",
               "partOfSpeech": "n.",
-              "chinese": "与“家庭”意义相反"
+              "chinese": "与本词相关的常用表达"
+            }
+          ]
+        },
+        {
+          "category": "词族与构词联系",
+          "items": [
+            {
+              "word": "familial",
+              "phonetic": "/fəmɪljəl/",
+              "partOfSpeech": "adj.",
+              "chinese": "与本词相关的常用表达"
+            },
+            {
+              "word": "listen",
+              "phonetic": "/ˈlɪsən/",
+              "partOfSpeech": "v.",
+              "chinese": "听"
+            },
+            {
+              "word": "travel",
+              "phonetic": "/ˈtrævəl/",
+              "partOfSpeech": "n. / v.",
+              "chinese": "旅行"
+            }
+          ]
+        },
+        {
+          "category": "同一学习主题中的高频词",
+          "items": [
+            {
+              "word": "listen",
+              "phonetic": "/ˈlɪsən/",
+              "partOfSpeech": "v.",
+              "chinese": "听"
+            },
+            {
+              "word": "travel",
+              "phonetic": "/ˈtrævəl/",
+              "partOfSpeech": "n. / v.",
+              "chinese": "旅行"
+            },
+            {
+              "word": "money",
+              "phonetic": "/ˈmʌni/",
+              "partOfSpeech": "n.",
+              "chinese": "钱"
+            },
+            {
+              "word": "business",
+              "phonetic": "/ˈbɪznəs/",
+              "partOfSpeech": "n.",
+              "chinese": "商业"
             }
           ]
         }
       ],
       "examples": [
         {
-          "scene": "日常 / 真实表达",
+          "scene": "核心真实用法",
           "english": "My family supports my learning plan.",
           "chinese": "我的家人支持我的学习计划。"
         },
         {
-          "scene": "学习 / 工作场景",
-          "english": "In today’s lesson, we practiced the word “family” in a complete sentence.",
-          "chinese": "今天的课程里，我们练习了怎样在完整句子中使用 family。"
+          "scene": "英文释义理解",
+          "english": "In this lesson, I learned that “family” means “a group of related people”.",
+          "chinese": "这节课里，我学到 family 的核心意思是“家庭；家人”。"
         },
         {
-          "scene": "核心搭配复现",
-          "english": "“family member” is the key phrase I want to remember.",
-          "chinese": "“family member”是我想重点记住的搭配。"
+          "scene": "高频搭配辨认",
+          "english": "The phrase “family member” is useful in everyday English.",
+          "chinese": "“family member”是日常英语中的实用表达。"
         },
         {
-          "scene": "常见错误提醒",
-          "english": "I checked the context before choosing “family” instead of “household”.",
-          "chinese": "我先检查语境，再决定用 family 而不是 household。"
+          "scene": "主动造句",
+          "english": "Can you use “family” in a sentence of your own?",
+          "chinese": "你能用 family 说一个自己的句子吗？"
         },
         {
-          "scene": "词义与近义辨析",
-          "english": "Here, “family” means “a group of related people”.",
-          "chinese": "在这里，family 的意思是“家庭；家人”。"
+          "scene": "词汇笔记",
+          "english": "I wrote “family” and its pronunciation in my notebook.",
+          "chinese": "我把 family 和它的发音记进了笔记本。"
+        },
+        {
+          "scene": "听力辨认",
+          "english": "Listen for “family” the next time you hear English.",
+          "chinese": "下次听英语时，留意辨认 family。"
+        },
+        {
+          "scene": "近义比较",
+          "english": "I compared “family” with “household” before choosing the word.",
+          "chinese": "选词前，我比较了 family 和 household。"
+        },
+        {
+          "scene": "反义对照",
+          "english": "The opposite idea is often expressed with “stranger”.",
+          "chinese": "相反的意思常可用 stranger 表达。"
+        },
+        {
+          "scene": "间隔复习",
+          "english": "I reviewed “family” again before going to bed.",
+          "chinese": "睡前我又复习了一遍 family。"
+        },
+        {
+          "scene": "口语输出",
+          "english": "Which real situation would make you use “family”?",
+          "chinese": "在什么真实情境中你会用到 family？"
         }
       ],
       "studyFocus": {
-        "coreMeaning": "家庭；家人",
-        "keyCollocation": "family member：家庭成员",
-        "commonMistake": "不要只按中文逐字替换，也不要随意改动介词或语序；优先把 “family member” 当作一个完整句块记忆。",
+        "coreMeaning": "家庭；家人；英文核心释义：a group of related people。",
+        "keyCollocation": "把 “family member” 作为一个完整句块记忆。",
+        "commonMistake": "同一个名词在不同义项下可能有可数、不可数或单复数差异，不能机械套用冠词。",
         "mustUseExample": "My family supports my learning plan."
       },
       "questions": [
@@ -1199,9 +2379,10 @@
           "free_sentence"
         ]
       },
-      "contentVersion": "2026.08.17.2",
+      "detailLevel": "template-complete",
+      "contentVersion": "2026.08.17.3",
       "reviewed": true,
-      "sourceNote": "从用户提供的 COCA 词表筛选；释义、例句和搭配为本项目离线整理；关系词与词组音标来自 CMU 北美英语发音词典。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }
   ]
 }

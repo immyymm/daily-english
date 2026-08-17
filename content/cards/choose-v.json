@@ -2,22 +2,70 @@
   "id": "choose-v",
   "word": "choose",
   "lemma": "choose",
+  "cocaRanks": [
+    {
+      "rank": 561,
+      "pos": "v",
+      "frequency": 170716,
+      "partOfSpeech": "v."
+    }
+  ],
+  "cocaRankLabel": "v. 第 561 名",
   "phonetic": "/tʃuːz/",
-  "syllables": "choose",
+  "syllables": "choose（单音节）",
   "partOfSpeech": "v.",
-  "frequencyBand": "COCA 高频精选",
+  "frequencyBand": "COCA 高频精选 · v. 第 561 名",
   "difficulty": "基础",
   "tags": [
     "v.",
+    "模板完整版",
     "高频表达"
   ],
   "coreMemory": {
     "chinese": "选择",
-    "english": "to decide which person or thing you want",
-    "structure": "choose between A and B（在 A 和 B 之间选择）",
-    "commonError": "不要只按中文逐字替换，也不要随意改动介词或语序；优先把 “choose between A and B” 当作一个完整句块记忆。",
-    "directSynonym": "select",
-    "directAntonym": "reject",
+    "english": "v. to decide which person or thing you want",
+    "structure": "choose to do /tʃuːz tu du/（选择做）；choose between A and B /tʃuːz bɪtwin ə ənd bi/（在 A 和 B 之间选择）；choose the right word /tʃuːz ðə raɪt wɝd/（选择正确的词）；carefully choose /kɛrfəli tʃuːz/（谨慎选择）",
+    "structures": [
+      {
+        "phrase": "choose to do",
+        "phonetic": "/tʃuːz tu du/",
+        "chinese": "选择做"
+      },
+      {
+        "phrase": "choose between A and B",
+        "phonetic": "/tʃuːz bɪtwin ə ənd bi/",
+        "chinese": "在 A 和 B 之间选择"
+      },
+      {
+        "phrase": "choose the right word",
+        "phonetic": "/tʃuːz ðə raɪt wɝd/",
+        "chinese": "选择正确的词"
+      },
+      {
+        "phrase": "carefully choose",
+        "phonetic": "/kɛrfəli tʃuːz/",
+        "chinese": "谨慎选择"
+      }
+    ],
+    "commonError": "❌ can to choose → ✅ can choose；❌ to chooseing → ✅ to choose",
+    "commonErrors": [
+      {
+        "wrong": "can to choose",
+        "wrongPhonetic": "/kæn tu tʃuːz/",
+        "right": "can choose",
+        "rightPhonetic": "/kæn tʃuːz/",
+        "note": "情态动词 can 后直接接动词原形，不加 to。"
+      },
+      {
+        "wrong": "to chooseing",
+        "wrongPhonetic": "/tu chooseing/",
+        "right": "to choose",
+        "rightPhonetic": "/tu tʃuːz/",
+        "note": "不定式 to 后接动词原形；不要把不定式和 -ing 形式混合。"
+      }
+    ],
+    "directSynonym": "select /səlɛkt/（与“选择”意义接近）",
+    "directAntonym": "reject /rɪdʒɛkt/（与“选择”意义相反）",
     "derivatives": "choice · chosen",
     "example": "Choose the most natural answer.",
     "exampleChinese": "选择最自然的答案。"
@@ -36,30 +84,139 @@
       "category": "核心高频搭配",
       "items": [
         {
+          "phrase": "choose to do",
+          "phonetic": "/tʃuːz tu du/",
+          "chinese": "选择做"
+        },
+        {
           "phrase": "choose between A and B",
           "phonetic": "/tʃuːz bɪtwin ə ənd bi/",
           "chinese": "在 A 和 B 之间选择"
+        },
+        {
+          "phrase": "choose the right word",
+          "phonetic": "/tʃuːz ðə raɪt wɝd/",
+          "chinese": "选择正确的词"
         }
       ]
     },
     {
-      "category": "真实例句句块",
+      "category": "句型与语法框架",
       "items": [
         {
-          "phrase": "Choose the most",
-          "phonetic": "/tʃuːz ðə moʊst/",
-          "chinese": "核心例句片段：选择最自然的答案。"
+          "phrase": "carefully choose",
+          "phonetic": "/kɛrfəli tʃuːz/",
+          "chinese": "谨慎选择"
+        },
+        {
+          "phrase": "have no choice but to",
+          "phonetic": "/hæv noʊ tʃɔɪs bʌt tu/",
+          "chinese": "别无选择只好"
+        },
+        {
+          "phrase": "choice of",
+          "phonetic": "/tʃɔɪs ʌv/",
+          "chinese": "……的选择"
+        }
+      ]
+    },
+    {
+      "category": "真实表达延伸",
+      "items": [
+        {
+          "phrase": "to choose between A and B",
+          "phonetic": "/tu tʃuːz bɪtwin ə ənd bi/",
+          "chinese": "去在 A 和 B 之间选择"
+        },
+        {
+          "phrase": "need to choose between A and B",
+          "phonetic": "/nid tu tʃuːz bɪtwin ə ənd bi/",
+          "chinese": "需要在 A 和 B 之间选择"
+        },
+        {
+          "phrase": "try to choose between A and B",
+          "phonetic": "/traɪ tu tʃuːz bɪtwin ə ənd bi/",
+          "chinese": "尝试在 A 和 B 之间选择"
+        }
+      ]
+    },
+    {
+      "category": "主动输出提示",
+      "items": [
+        {
+          "phrase": "can choose between A and B",
+          "phonetic": "/kæn tʃuːz bɪtwin ə ənd bi/",
+          "chinese": "能够在 A 和 B 之间选择"
+        },
+        {
+          "phrase": "how to choose between A and B",
+          "phonetic": "/haʊ tu tʃuːz bɪtwin ə ənd bi/",
+          "chinese": "如何在 A 和 B 之间选择"
+        },
+        {
+          "phrase": "learn to choose between A and B",
+          "phonetic": "/lɝn tu tʃuːz bɪtwin ə ənd bi/",
+          "chinese": "学会在 A 和 B 之间选择"
         }
       ]
     }
   ],
   "fixedPhrases": [
     {
+      "phrase": "choose to do",
+      "phonetic": "/tʃuːz tu du/",
+      "chinese": "选择做",
+      "example": "Choose the most natural answer.",
+      "translation": "选择最自然的答案。"
+    },
+    {
       "phrase": "choose between A and B",
       "phonetic": "/tʃuːz bɪtwin ə ənd bi/",
       "chinese": "在 A 和 B 之间选择",
-      "example": "Choose the most natural answer.",
-      "translation": "选择最自然的答案。"
+      "example": "The phrase “choose between A and B” is useful in everyday English.",
+      "translation": "“choose between A and B”是日常英语中的实用表达。"
+    },
+    {
+      "phrase": "choose the right word",
+      "phonetic": "/tʃuːz ðə raɪt wɝd/",
+      "chinese": "选择正确的词",
+      "example": "I added “choose the right word” to my vocabulary notebook.",
+      "translation": "我把“choose the right word”记进了词汇本。"
+    },
+    {
+      "phrase": "carefully choose",
+      "phonetic": "/kɛrfəli tʃuːz/",
+      "chinese": "谨慎选择",
+      "example": "Listen for “carefully choose” in real conversations.",
+      "translation": "在真实对话中留意“carefully choose”。"
+    },
+    {
+      "phrase": "have no choice but to",
+      "phonetic": "/hæv noʊ tʃɔɪs bʌt tu/",
+      "chinese": "别无选择只好",
+      "example": "Can you use “have no choice but to” in a complete sentence?",
+      "translation": "你能用“have no choice but to”说一个完整句子吗？"
+    },
+    {
+      "phrase": "choice of",
+      "phonetic": "/tʃɔɪs ʌv/",
+      "chinese": "……的选择",
+      "example": "We practiced “choice of” aloud three times.",
+      "translation": "我们把“choice of”大声练了三遍。"
+    },
+    {
+      "phrase": "to choose between A and B",
+      "phonetic": "/tu tʃuːz bɪtwin ə ənd bi/",
+      "chinese": "去在 A 和 B 之间选择",
+      "example": "The phrase “to choose between A and B” is useful in everyday English.",
+      "translation": "“to choose between A and B”是日常英语中的实用表达。"
+    },
+    {
+      "phrase": "need to choose between A and B",
+      "phonetic": "/nid tu tʃuːz bɪtwin ə ənd bi/",
+      "chinese": "需要在 A 和 B 之间选择",
+      "example": "I added “need to choose between A and B” to my vocabulary notebook.",
+      "translation": "我把“need to choose between A and B”记进了词汇本。"
     }
   ],
   "synonyms": [
@@ -68,7 +225,7 @@
       "phonetic": "/səlɛkt/",
       "partOfSpeech": "v.",
       "chinese": "与“选择”意义接近",
-      "difference": "choose 在 “choose between A and B” 中是本卡需要主动掌握的表达；select 含义接近，但宾语、语气和固定搭配不一定相同。"
+      "difference": "choose 是本卡核心搭配 “choose between A and B” 中的中性常用选择；select 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
   "antonyms": [
@@ -77,7 +234,7 @@
       "phonetic": "/rɪdʒɛkt/",
       "partOfSpeech": "v.",
       "chinese": "与“选择”意义相反",
-      "usage": "和 choose 的核心义形成对比；先在真实句子中判断是否确实构成反向关系。"
+      "usage": "在本卡核心义下与 choose 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
   "derivatives": [
@@ -92,7 +249,7 @@
       "word": "chosen",
       "phonetic": "/tʃoʊzən/",
       "partOfSpeech": "adj.",
-      "chinese": "与“choose”同词族的常用词形",
+      "chinese": "与 choose 同词族的常用词形",
       "note": "这是 choose 的常用词族成员；先辨认词性，再放进完整句子中使用。"
     }
   ],
@@ -112,49 +269,126 @@
         {
           "word": "select",
           "phonetic": "/səlɛkt/",
-          "partOfSpeech": "v.",
-          "chinese": "与“选择”意义接近"
+          "partOfSpeech": "word family",
+          "chinese": "与本词相关的常用表达"
         },
         {
           "word": "reject",
           "phonetic": "/rɪdʒɛkt/",
+          "partOfSpeech": "word family",
+          "chinese": "与本词相关的常用表达"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "choice",
+          "phonetic": "/tʃɔɪs/",
+          "partOfSpeech": "n.",
+          "chinese": "选择"
+        },
+        {
+          "word": "chosen",
+          "phonetic": "/tʃoʊzən/",
+          "partOfSpeech": "adj.",
+          "chinese": "与本词相关的常用表达"
+        },
+        {
+          "word": "increase",
+          "phonetic": "/ɪnˈkriːs/",
+          "partOfSpeech": "v. / n.",
+          "chinese": "增加"
+        }
+      ]
+    },
+    {
+      "category": "同一学习主题中的高频词",
+      "items": [
+        {
+          "word": "increase",
+          "phonetic": "/ɪnˈkriːs/",
+          "partOfSpeech": "v. / n.",
+          "chinese": "增加"
+        },
+        {
+          "word": "reduce",
+          "phonetic": "/rɪˈduːs/",
           "partOfSpeech": "v.",
-          "chinese": "与“选择”意义相反"
+          "chinese": "减少"
+        },
+        {
+          "word": "share",
+          "phonetic": "/ʃer/",
+          "partOfSpeech": "v. / n.",
+          "chinese": "分享"
+        },
+        {
+          "word": "reach",
+          "phonetic": "/riːtʃ/",
+          "partOfSpeech": "v.",
+          "chinese": "到达"
         }
       ]
     }
   ],
   "examples": [
     {
-      "scene": "日常 / 真实表达",
+      "scene": "核心真实用法",
       "english": "Choose the most natural answer.",
       "chinese": "选择最自然的答案。"
     },
     {
-      "scene": "学习 / 工作场景",
-      "english": "In today’s lesson, we practiced the word “choose” in a complete sentence.",
-      "chinese": "今天的课程里，我们练习了怎样在完整句子中使用 choose。"
+      "scene": "英文释义理解",
+      "english": "In this lesson, I learned that “choose” means “to decide which person or thing you want”.",
+      "chinese": "这节课里，我学到 choose 的核心意思是“选择”。"
     },
     {
-      "scene": "核心搭配复现",
-      "english": "“choose between A and B” is the key phrase I want to remember.",
-      "chinese": "“choose between A and B”是我想重点记住的搭配。"
+      "scene": "高频搭配辨认",
+      "english": "The phrase “choose between A and B” is useful in everyday English.",
+      "chinese": "“choose between A and B”是日常英语中的实用表达。"
     },
     {
-      "scene": "常见错误提醒",
-      "english": "I checked the context before choosing “choose” instead of “select”.",
-      "chinese": "我先检查语境，再决定用 choose 而不是 select。"
+      "scene": "主动造句",
+      "english": "Can you use “choose” in a sentence of your own?",
+      "chinese": "你能用 choose 说一个自己的句子吗？"
     },
     {
-      "scene": "词义与近义辨析",
-      "english": "Here, “choose” means “to decide which person or thing you want”.",
-      "chinese": "在这里，choose 的意思是“选择”。"
+      "scene": "词汇笔记",
+      "english": "I wrote “choose” and its pronunciation in my notebook.",
+      "chinese": "我把 choose 和它的发音记进了笔记本。"
+    },
+    {
+      "scene": "听力辨认",
+      "english": "Listen for “choose” the next time you hear English.",
+      "chinese": "下次听英语时，留意辨认 choose。"
+    },
+    {
+      "scene": "近义比较",
+      "english": "I compared “choose” with “select” before choosing the word.",
+      "chinese": "选词前，我比较了 choose 和 select。"
+    },
+    {
+      "scene": "反义对照",
+      "english": "The opposite idea is often expressed with “reject”.",
+      "chinese": "相反的意思常可用 reject 表达。"
+    },
+    {
+      "scene": "间隔复习",
+      "english": "I reviewed “choose” again before going to bed.",
+      "chinese": "睡前我又复习了一遍 choose。"
+    },
+    {
+      "scene": "口语输出",
+      "english": "Which real situation would make you use “choose”?",
+      "chinese": "在什么真实情境中你会用到 choose？"
     }
   ],
   "studyFocus": {
-    "coreMeaning": "选择",
-    "keyCollocation": "choose between A and B：在 A 和 B 之间选择",
-    "commonMistake": "不要只按中文逐字替换，也不要随意改动介词或语序；优先把 “choose between A and B” 当作一个完整句块记忆。",
+    "coreMeaning": "选择；英文核心释义：to decide which person or thing you want。",
+    "keyCollocation": "把 “choose between A and B” 作为一个完整句块记忆。",
+    "commonMistake": "情态动词 can 后直接接动词原形，不加 to。",
     "mustUseExample": "Choose the most natural answer."
   },
   "questions": [
@@ -240,7 +474,8 @@
       "free_sentence"
     ]
   },
-  "contentVersion": "2026.08.17.2",
+  "detailLevel": "template-complete",
+  "contentVersion": "2026.08.17.3",
   "reviewed": true,
-  "sourceNote": "从用户提供的 COCA 词表筛选；释义、例句和搭配为本项目离线整理；关系词与词组音标来自 CMU 北美英语发音词典。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

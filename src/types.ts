@@ -33,6 +33,13 @@ export interface WordCard {
   id: string;
   word: string;
   lemma: string;
+  cocaRanks?: Array<{
+    rank: number;
+    pos: string;
+    frequency: number;
+    partOfSpeech: string;
+  }>;
+  cocaRankLabel?: string;
   phonetic: string;
   syllables: string;
   partOfSpeech: string;
@@ -43,7 +50,19 @@ export interface WordCard {
     chinese: string;
     english: string;
     structure: string;
+    structures?: Array<{
+      phrase: string;
+      phonetic: string;
+      chinese: string;
+    }>;
     commonError: string;
+    commonErrors?: Array<{
+      wrong: string;
+      wrongPhonetic: string;
+      right: string;
+      rightPhonetic: string;
+      note: string;
+    }>;
     directSynonym: string;
     directAntonym: string;
     derivatives: string;
@@ -109,6 +128,7 @@ export interface WordCard {
   };
   questions: CardQuestion[];
   reviewStages: Record<ReviewStage, QuestionType[]>;
+  detailLevel?: 'template-complete' | 'standard';
   contentVersion: string;
   reviewed: boolean;
   sourceNote: string;

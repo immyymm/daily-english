@@ -1,28 +1,82 @@
 {
   "date": "2026-08-21",
   "dayNumber": 5,
-  "contentVersion": "2026.08.17.2",
+  "contentVersion": "2026.08.17.3",
   "cards": [
     {
       "id": "offer-v",
       "word": "offer",
       "lemma": "offer",
+      "cocaRanks": [
+        {
+          "rank": 418,
+          "pos": "v",
+          "frequency": 234189,
+          "partOfSpeech": "v."
+        },
+        {
+          "rank": 2062,
+          "pos": "n",
+          "frequency": 42944,
+          "partOfSpeech": "n."
+        }
+      ],
+      "cocaRankLabel": "v. 第 418 名；n. 第 2062 名",
       "phonetic": "/ˈɔːfər/",
-      "syllables": "offer",
+      "syllables": "offer（约 2 音节）",
       "partOfSpeech": "v. / n.",
-      "frequencyBand": "COCA 高频精选",
+      "frequencyBand": "COCA 高频精选 · v. 第 418 名；n. 第 2062 名",
       "difficulty": "基础",
       "tags": [
         "v.",
+        "模板完整版",
         "高频表达"
       ],
       "coreMemory": {
         "chinese": "提供；提议",
-        "english": "to say that you are willing to give something",
-        "structure": "offer help（主动提供帮助）",
-        "commonError": "不要把不同词性混在一起；先确认句中需要的是 v. 还是 n.，并整体记住 “offer help”。",
-        "directSynonym": "propose",
-        "directAntonym": "refuse",
+        "english": "v. to say that you are willing to give something；n. a proposal to give or do something",
+        "structure": "offer help /ˈɔːfər hɛlp/（主动提供帮助）；offer someone a job /ˈɔːfər sʌmwʌn ə dʒɑb/（给某人一份工作）；offer to do /ˈɔːfər tu du/（主动提出做）；make an offer /meɪk æn ˈɔːfər/（提出报价）",
+        "structures": [
+          {
+            "phrase": "offer help",
+            "phonetic": "/ˈɔːfər hɛlp/",
+            "chinese": "主动提供帮助"
+          },
+          {
+            "phrase": "offer someone a job",
+            "phonetic": "/ˈɔːfər sʌmwʌn ə dʒɑb/",
+            "chinese": "给某人一份工作"
+          },
+          {
+            "phrase": "offer to do",
+            "phonetic": "/ˈɔːfər tu du/",
+            "chinese": "主动提出做"
+          },
+          {
+            "phrase": "make an offer",
+            "phonetic": "/meɪk æn ˈɔːfər/",
+            "chinese": "提出报价"
+          }
+        ],
+        "commonError": "❌ can to offer → ✅ can offer；❌ to offering → ✅ to offer",
+        "commonErrors": [
+          {
+            "wrong": "can to offer",
+            "wrongPhonetic": "/kæn tu ˈɔːfər/",
+            "right": "can offer",
+            "rightPhonetic": "/kæn ˈɔːfər/",
+            "note": "情态动词 can 后直接接动词原形，不加 to。"
+          },
+          {
+            "wrong": "to offering",
+            "wrongPhonetic": "/tu ɔfɚɪŋ/",
+            "right": "to offer",
+            "rightPhonetic": "/tu ˈɔːfər/",
+            "note": "不定式 to 后接动词原形；不要把不定式和 -ing 形式混合。"
+          }
+        ],
+        "directSynonym": "propose /prəpoʊz/（与“提供”意义接近）",
+        "directAntonym": "refuse /rəfjuz/（与“提供”意义相反）",
         "derivatives": "offering",
         "example": "He offered to help me with the project.",
         "exampleChinese": "他主动提出帮我做这个项目。"
@@ -51,16 +105,76 @@
               "phrase": "offer help",
               "phonetic": "/ˈɔːfər hɛlp/",
               "chinese": "主动提供帮助"
+            },
+            {
+              "phrase": "offer someone a job",
+              "phonetic": "/ˈɔːfər sʌmwʌn ə dʒɑb/",
+              "chinese": "给某人一份工作"
+            },
+            {
+              "phrase": "offer to do",
+              "phonetic": "/ˈɔːfər tu du/",
+              "chinese": "主动提出做"
             }
           ]
         },
         {
-          "category": "真实例句句块",
+          "category": "句型与语法框架",
           "items": [
             {
-              "phrase": "He offered to help",
-              "phonetic": "/hi ɔfɚd tu hɛlp/",
-              "chinese": "核心例句片段：他主动提出帮我做这个项目。"
+              "phrase": "make an offer",
+              "phonetic": "/meɪk æn ˈɔːfər/",
+              "chinese": "提出报价"
+            },
+            {
+              "phrase": "accept an offer",
+              "phonetic": "/æksɛpt æn ˈɔːfər/",
+              "chinese": "接受提议"
+            },
+            {
+              "phrase": "on offer",
+              "phonetic": "/ɑn ˈɔːfər/",
+              "chinese": "可供选择；特价"
+            }
+          ]
+        },
+        {
+          "category": "真实表达延伸",
+          "items": [
+            {
+              "phrase": "to offer help",
+              "phonetic": "/tu ˈɔːfər hɛlp/",
+              "chinese": "去主动提供帮助"
+            },
+            {
+              "phrase": "need to offer help",
+              "phonetic": "/nid tu ˈɔːfər hɛlp/",
+              "chinese": "需要主动提供帮助"
+            },
+            {
+              "phrase": "try to offer help",
+              "phonetic": "/traɪ tu ˈɔːfər hɛlp/",
+              "chinese": "尝试主动提供帮助"
+            }
+          ]
+        },
+        {
+          "category": "主动输出提示",
+          "items": [
+            {
+              "phrase": "can offer help",
+              "phonetic": "/kæn ˈɔːfər hɛlp/",
+              "chinese": "能够主动提供帮助"
+            },
+            {
+              "phrase": "how to offer help",
+              "phonetic": "/haʊ tu ˈɔːfər hɛlp/",
+              "chinese": "如何主动提供帮助"
+            },
+            {
+              "phrase": "learn to offer help",
+              "phonetic": "/lɝn tu ˈɔːfər hɛlp/",
+              "chinese": "学会主动提供帮助"
             }
           ]
         }
@@ -72,6 +186,55 @@
           "chinese": "主动提供帮助",
           "example": "He offered to help me with the project.",
           "translation": "他主动提出帮我做这个项目。"
+        },
+        {
+          "phrase": "offer someone a job",
+          "phonetic": "/ˈɔːfər sʌmwʌn ə dʒɑb/",
+          "chinese": "给某人一份工作",
+          "example": "The phrase “offer someone a job” is useful in everyday English.",
+          "translation": "“offer someone a job”是日常英语中的实用表达。"
+        },
+        {
+          "phrase": "offer to do",
+          "phonetic": "/ˈɔːfər tu du/",
+          "chinese": "主动提出做",
+          "example": "I added “offer to do” to my vocabulary notebook.",
+          "translation": "我把“offer to do”记进了词汇本。"
+        },
+        {
+          "phrase": "make an offer",
+          "phonetic": "/meɪk æn ˈɔːfər/",
+          "chinese": "提出报价",
+          "example": "Listen for “make an offer” in real conversations.",
+          "translation": "在真实对话中留意“make an offer”。"
+        },
+        {
+          "phrase": "accept an offer",
+          "phonetic": "/æksɛpt æn ˈɔːfər/",
+          "chinese": "接受提议",
+          "example": "Can you use “accept an offer” in a complete sentence?",
+          "translation": "你能用“accept an offer”说一个完整句子吗？"
+        },
+        {
+          "phrase": "on offer",
+          "phonetic": "/ɑn ˈɔːfər/",
+          "chinese": "可供选择；特价",
+          "example": "We practiced “on offer” aloud three times.",
+          "translation": "我们把“on offer”大声练了三遍。"
+        },
+        {
+          "phrase": "to offer help",
+          "phonetic": "/tu ˈɔːfər hɛlp/",
+          "chinese": "去主动提供帮助",
+          "example": "The phrase “to offer help” is useful in everyday English.",
+          "translation": "“to offer help”是日常英语中的实用表达。"
+        },
+        {
+          "phrase": "need to offer help",
+          "phonetic": "/nid tu ˈɔːfər hɛlp/",
+          "chinese": "需要主动提供帮助",
+          "example": "I added “need to offer help” to my vocabulary notebook.",
+          "translation": "我把“need to offer help”记进了词汇本。"
         }
       ],
       "synonyms": [
@@ -80,7 +243,7 @@
           "phonetic": "/prəpoʊz/",
           "partOfSpeech": "v. / n.",
           "chinese": "与“提供”意义接近",
-          "difference": "offer 在 “offer help” 中是本卡需要主动掌握的表达；propose 含义接近，但宾语、语气和固定搭配不一定相同。"
+          "difference": "offer 是本卡核心搭配 “offer help” 中的中性常用选择；propose 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
         }
       ],
       "antonyms": [
@@ -89,7 +252,7 @@
           "phonetic": "/rəfjuz/",
           "partOfSpeech": "v. / n.",
           "chinese": "与“提供”意义相反",
-          "usage": "和 offer 的核心义形成对比；先在真实句子中判断是否确实构成反向关系。"
+          "usage": "在本卡核心义下与 offer 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
         }
       ],
       "derivatives": [
@@ -97,7 +260,7 @@
           "word": "offering",
           "phonetic": "/ɔfɚɪŋ/",
           "partOfSpeech": "adj.",
-          "chinese": "与“offer”同词族的常用词形",
+          "chinese": "与 offer 同词族的常用词形",
           "note": "这是 offer 的常用词族成员；先辨认词性，再放进完整句子中使用。"
         }
       ],
@@ -109,49 +272,126 @@
             {
               "word": "propose",
               "phonetic": "/prəpoʊz/",
-              "partOfSpeech": "v. / n.",
-              "chinese": "与“提供”意义接近"
+              "partOfSpeech": "word family",
+              "chinese": "与本词相关的常用表达"
             },
             {
               "word": "refuse",
               "phonetic": "/rəfjuz/",
-              "partOfSpeech": "v. / n.",
-              "chinese": "与“提供”意义相反"
+              "partOfSpeech": "word family",
+              "chinese": "与本词相关的常用表达"
+            }
+          ]
+        },
+        {
+          "category": "词族与构词联系",
+          "items": [
+            {
+              "word": "offering",
+              "phonetic": "/ɔfɚɪŋ/",
+              "partOfSpeech": "adj.",
+              "chinese": "与本词相关的常用表达"
+            },
+            {
+              "word": "seem",
+              "phonetic": "/siːm/",
+              "partOfSpeech": "v.",
+              "chinese": "似乎"
+            },
+            {
+              "word": "mean",
+              "phonetic": "/miːn/",
+              "partOfSpeech": "v.",
+              "chinese": "意思是"
+            }
+          ]
+        },
+        {
+          "category": "同一学习主题中的高频词",
+          "items": [
+            {
+              "word": "seem",
+              "phonetic": "/siːm/",
+              "partOfSpeech": "v.",
+              "chinese": "似乎"
+            },
+            {
+              "word": "mean",
+              "phonetic": "/miːn/",
+              "partOfSpeech": "v.",
+              "chinese": "意思是"
+            },
+            {
+              "word": "consider",
+              "phonetic": "/kənˈsɪdər/",
+              "partOfSpeech": "v.",
+              "chinese": "考虑"
+            },
+            {
+              "word": "expect",
+              "phonetic": "/ɪkˈspekt/",
+              "partOfSpeech": "v.",
+              "chinese": "预期"
             }
           ]
         }
       ],
       "examples": [
         {
-          "scene": "日常 / 真实表达",
+          "scene": "核心真实用法",
           "english": "He offered to help me with the project.",
           "chinese": "他主动提出帮我做这个项目。"
         },
         {
-          "scene": "学习 / 工作场景",
-          "english": "In today’s lesson, we practiced the word “offer” in a complete sentence.",
-          "chinese": "今天的课程里，我们练习了怎样在完整句子中使用 offer。"
+          "scene": "英文释义理解",
+          "english": "In this lesson, I learned that “offer” means “to say that you are willing to give something”.",
+          "chinese": "这节课里，我学到 offer 的核心意思是“提供；提议”。"
         },
         {
-          "scene": "核心搭配复现",
-          "english": "“offer help” is the key phrase I want to remember.",
-          "chinese": "“offer help”是我想重点记住的搭配。"
+          "scene": "高频搭配辨认",
+          "english": "The phrase “offer help” is useful in everyday English.",
+          "chinese": "“offer help”是日常英语中的实用表达。"
         },
         {
-          "scene": "常见错误提醒",
-          "english": "I checked the context before choosing “offer” instead of “propose”.",
-          "chinese": "我先检查语境，再决定用 offer 而不是 propose。"
+          "scene": "主动造句",
+          "english": "Can you use “offer” in a sentence of your own?",
+          "chinese": "你能用 offer 说一个自己的句子吗？"
         },
         {
-          "scene": "词义与近义辨析",
-          "english": "Here, “offer” means “to say that you are willing to give something”.",
-          "chinese": "在这里，offer 的意思是“提供；提议”。"
+          "scene": "词汇笔记",
+          "english": "I wrote “offer” and its pronunciation in my notebook.",
+          "chinese": "我把 offer 和它的发音记进了笔记本。"
+        },
+        {
+          "scene": "听力辨认",
+          "english": "Listen for “offer” the next time you hear English.",
+          "chinese": "下次听英语时，留意辨认 offer。"
+        },
+        {
+          "scene": "近义比较",
+          "english": "I compared “offer” with “propose” before choosing the word.",
+          "chinese": "选词前，我比较了 offer 和 propose。"
+        },
+        {
+          "scene": "反义对照",
+          "english": "The opposite idea is often expressed with “refuse”.",
+          "chinese": "相反的意思常可用 refuse 表达。"
+        },
+        {
+          "scene": "间隔复习",
+          "english": "I reviewed “offer” again before going to bed.",
+          "chinese": "睡前我又复习了一遍 offer。"
+        },
+        {
+          "scene": "口语输出",
+          "english": "Which real situation would make you use “offer”?",
+          "chinese": "在什么真实情境中你会用到 offer？"
         }
       ],
       "studyFocus": {
-        "coreMeaning": "提供；提议",
-        "keyCollocation": "offer help：主动提供帮助",
-        "commonMistake": "不要把不同词性混在一起；先确认句中需要的是 v. 还是 n.，并整体记住 “offer help”。",
+        "coreMeaning": "提供；提议；英文核心释义：to say that you are willing to give something。",
+        "keyCollocation": "把 “offer help” 作为一个完整句块记忆。",
+        "commonMistake": "情态动词 can 后直接接动词原形，不加 to。",
         "mustUseExample": "He offered to help me with the project."
       },
       "questions": [
@@ -237,30 +477,79 @@
           "free_sentence"
         ]
       },
-      "contentVersion": "2026.08.17.2",
+      "detailLevel": "template-complete",
+      "contentVersion": "2026.08.17.3",
       "reviewed": true,
-      "sourceNote": "从用户提供的 COCA 词表筛选；释义、例句和搭配为本项目离线整理；关系词与词组音标来自 CMU 北美英语发音词典。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
     {
       "id": "consider-v",
       "word": "consider",
       "lemma": "consider",
+      "cocaRanks": [
+        {
+          "rank": 395,
+          "pos": "v",
+          "frequency": 244644,
+          "partOfSpeech": "v."
+        }
+      ],
+      "cocaRankLabel": "v. 第 395 名",
       "phonetic": "/kənˈsɪdər/",
-      "syllables": "consider",
+      "syllables": "con·sid·er",
       "partOfSpeech": "v.",
-      "frequencyBand": "COCA 高频精选",
+      "frequencyBand": "COCA 高频精选 · v. 第 395 名",
       "difficulty": "基础",
       "tags": [
         "v.",
+        "模板完整版",
         "高频表达"
       ],
       "coreMemory": {
         "chinese": "考虑；认为",
-        "english": "to think carefully about something",
-        "structure": "consider doing something（考虑做某事）",
-        "commonError": "不要只按中文逐字替换，也不要随意改动介词或语序；优先把 “consider doing something” 当作一个完整句块记忆。",
-        "directSynonym": "evaluate",
-        "directAntonym": "dismiss",
+        "english": "v. to think carefully about something",
+        "structure": "consider doing /kənˈsɪdər duɪŋ/（考虑做）；consider the possibility /kənˈsɪdər ðə pɑsəbɪləti/（考虑可能性）；consider someone suitable /kənˈsɪdər sʌmwʌn sutəbəl/（认为某人合适）；carefully consider /kɛrfəli kənˈsɪdər/（认真考虑）",
+        "structures": [
+          {
+            "phrase": "consider doing",
+            "phonetic": "/kənˈsɪdər duɪŋ/",
+            "chinese": "考虑做"
+          },
+          {
+            "phrase": "consider the possibility",
+            "phonetic": "/kənˈsɪdər ðə pɑsəbɪləti/",
+            "chinese": "考虑可能性"
+          },
+          {
+            "phrase": "consider someone suitable",
+            "phonetic": "/kənˈsɪdər sʌmwʌn sutəbəl/",
+            "chinese": "认为某人合适"
+          },
+          {
+            "phrase": "carefully consider",
+            "phonetic": "/kɛrfəli kənˈsɪdər/",
+            "chinese": "认真考虑"
+          }
+        ],
+        "commonError": "❌ can to consider → ✅ can consider；❌ to considering → ✅ to consider",
+        "commonErrors": [
+          {
+            "wrong": "can to consider",
+            "wrongPhonetic": "/kæn tu kənˈsɪdər/",
+            "right": "can consider",
+            "rightPhonetic": "/kæn kənˈsɪdər/",
+            "note": "情态动词 can 后直接接动词原形，不加 to。"
+          },
+          {
+            "wrong": "to considering",
+            "wrongPhonetic": "/tu kənsɪdɚɪŋ/",
+            "right": "to consider",
+            "rightPhonetic": "/tu kənˈsɪdər/",
+            "note": "不定式 to 后接动词原形；不要把不定式和 -ing 形式混合。"
+          }
+        ],
+        "directSynonym": "evaluate /ɪvæljueɪt/（与“考虑”意义接近）",
+        "directAntonym": "dismiss /dɪsmɪs/（与“考虑”意义相反）",
         "derivatives": "consideration",
         "example": "You should consider taking a short break.",
         "exampleChinese": "你应该考虑短暂休息一下。"
@@ -279,30 +568,139 @@
           "category": "核心高频搭配",
           "items": [
             {
-              "phrase": "consider doing something",
-              "phonetic": "/kənˈsɪdər duɪŋ sʌmθɪŋ/",
-              "chinese": "考虑做某事"
+              "phrase": "consider doing",
+              "phonetic": "/kənˈsɪdər duɪŋ/",
+              "chinese": "考虑做"
+            },
+            {
+              "phrase": "consider the possibility",
+              "phonetic": "/kənˈsɪdər ðə pɑsəbɪləti/",
+              "chinese": "考虑可能性"
+            },
+            {
+              "phrase": "consider someone suitable",
+              "phonetic": "/kənˈsɪdər sʌmwʌn sutəbəl/",
+              "chinese": "认为某人合适"
             }
           ]
         },
         {
-          "category": "真实例句句块",
+          "category": "句型与语法框架",
           "items": [
             {
-              "phrase": "You should consider taking a",
-              "phonetic": "/ju ʃʊd kənˈsɪdər teɪkɪŋ ə/",
-              "chinese": "核心例句片段：你应该考虑短暂休息一下。"
+              "phrase": "carefully consider",
+              "phonetic": "/kɛrfəli kənˈsɪdər/",
+              "chinese": "认真考虑"
+            },
+            {
+              "phrase": "all things considered",
+              "phonetic": "/ɔl θɪŋz kənsɪdɚd/",
+              "chinese": "综合考虑"
+            },
+            {
+              "phrase": "take something into consideration",
+              "phonetic": "/teɪk sʌmθɪŋ ɪntu kənsɪdɚeɪʃən/",
+              "chinese": "把某事考虑进去"
+            }
+          ]
+        },
+        {
+          "category": "真实表达延伸",
+          "items": [
+            {
+              "phrase": "consider doing something",
+              "phonetic": "/kənˈsɪdər duɪŋ sʌmθɪŋ/",
+              "chinese": "考虑做某事"
+            },
+            {
+              "phrase": "to consider doing something",
+              "phonetic": "/tu kənˈsɪdər duɪŋ sʌmθɪŋ/",
+              "chinese": "去考虑做某事"
+            },
+            {
+              "phrase": "need to consider doing something",
+              "phonetic": "/nid tu kənˈsɪdər duɪŋ sʌmθɪŋ/",
+              "chinese": "需要考虑做某事"
+            }
+          ]
+        },
+        {
+          "category": "主动输出提示",
+          "items": [
+            {
+              "phrase": "try to consider doing something",
+              "phonetic": "/traɪ tu kənˈsɪdər duɪŋ sʌmθɪŋ/",
+              "chinese": "尝试考虑做某事"
+            },
+            {
+              "phrase": "can consider doing something",
+              "phonetic": "/kæn kənˈsɪdər duɪŋ sʌmθɪŋ/",
+              "chinese": "能够考虑做某事"
+            },
+            {
+              "phrase": "how to consider doing something",
+              "phonetic": "/haʊ tu kənˈsɪdər duɪŋ sʌmθɪŋ/",
+              "chinese": "如何考虑做某事"
             }
           ]
         }
       ],
       "fixedPhrases": [
         {
+          "phrase": "consider doing",
+          "phonetic": "/kənˈsɪdər duɪŋ/",
+          "chinese": "考虑做",
+          "example": "You should consider taking a short break.",
+          "translation": "你应该考虑短暂休息一下。"
+        },
+        {
+          "phrase": "consider the possibility",
+          "phonetic": "/kənˈsɪdər ðə pɑsəbɪləti/",
+          "chinese": "考虑可能性",
+          "example": "The phrase “consider the possibility” is useful in everyday English.",
+          "translation": "“consider the possibility”是日常英语中的实用表达。"
+        },
+        {
+          "phrase": "consider someone suitable",
+          "phonetic": "/kənˈsɪdər sʌmwʌn sutəbəl/",
+          "chinese": "认为某人合适",
+          "example": "I added “consider someone suitable” to my vocabulary notebook.",
+          "translation": "我把“consider someone suitable”记进了词汇本。"
+        },
+        {
+          "phrase": "carefully consider",
+          "phonetic": "/kɛrfəli kənˈsɪdər/",
+          "chinese": "认真考虑",
+          "example": "Listen for “carefully consider” in real conversations.",
+          "translation": "在真实对话中留意“carefully consider”。"
+        },
+        {
+          "phrase": "all things considered",
+          "phonetic": "/ɔl θɪŋz kənsɪdɚd/",
+          "chinese": "综合考虑",
+          "example": "Can you use “all things considered” in a complete sentence?",
+          "translation": "你能用“all things considered”说一个完整句子吗？"
+        },
+        {
+          "phrase": "take something into consideration",
+          "phonetic": "/teɪk sʌmθɪŋ ɪntu kənsɪdɚeɪʃən/",
+          "chinese": "把某事考虑进去",
+          "example": "We practiced “take something into consideration” aloud three times.",
+          "translation": "我们把“take something into consideration”大声练了三遍。"
+        },
+        {
           "phrase": "consider doing something",
           "phonetic": "/kənˈsɪdər duɪŋ sʌmθɪŋ/",
           "chinese": "考虑做某事",
-          "example": "You should consider taking a short break.",
-          "translation": "你应该考虑短暂休息一下。"
+          "example": "The phrase “consider doing something” is useful in everyday English.",
+          "translation": "“consider doing something”是日常英语中的实用表达。"
+        },
+        {
+          "phrase": "to consider doing something",
+          "phonetic": "/tu kənˈsɪdər duɪŋ sʌmθɪŋ/",
+          "chinese": "去考虑做某事",
+          "example": "I added “to consider doing something” to my vocabulary notebook.",
+          "translation": "我把“to consider doing something”记进了词汇本。"
         }
       ],
       "synonyms": [
@@ -311,7 +709,7 @@
           "phonetic": "/ɪvæljueɪt/",
           "partOfSpeech": "v.",
           "chinese": "与“考虑”意义接近",
-          "difference": "consider 在 “consider doing something” 中是本卡需要主动掌握的表达；evaluate 含义接近，但宾语、语气和固定搭配不一定相同。"
+          "difference": "consider 是本卡核心搭配 “consider doing something” 中的中性常用选择；evaluate 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
         }
       ],
       "antonyms": [
@@ -320,7 +718,7 @@
           "phonetic": "/dɪsmɪs/",
           "partOfSpeech": "v.",
           "chinese": "与“考虑”意义相反",
-          "usage": "和 consider 的核心义形成对比；先在真实句子中判断是否确实构成反向关系。"
+          "usage": "在本卡核心义下与 consider 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
         }
       ],
       "derivatives": [
@@ -328,7 +726,7 @@
           "word": "consideration",
           "phonetic": "/kənsɪdɚeɪʃən/",
           "partOfSpeech": "n.",
-          "chinese": "与“consider”同词族的常用词形",
+          "chinese": "与 consider 同词族的常用词形",
           "note": "这是 consider 的常用词族成员；先辨认词性，再放进完整句子中使用。"
         }
       ],
@@ -340,49 +738,126 @@
             {
               "word": "evaluate",
               "phonetic": "/ɪvæljueɪt/",
-              "partOfSpeech": "v.",
-              "chinese": "与“考虑”意义接近"
+              "partOfSpeech": "word family",
+              "chinese": "与本词相关的常用表达"
             },
             {
               "word": "dismiss",
               "phonetic": "/dɪsmɪs/",
+              "partOfSpeech": "word family",
+              "chinese": "与本词相关的常用表达"
+            }
+          ]
+        },
+        {
+          "category": "词族与构词联系",
+          "items": [
+            {
+              "word": "consideration",
+              "phonetic": "/kənsɪdɚeɪʃən/",
+              "partOfSpeech": "n.",
+              "chinese": "与本词相关的常用表达"
+            },
+            {
+              "word": "mean",
+              "phonetic": "/miːn/",
               "partOfSpeech": "v.",
-              "chinese": "与“考虑”意义相反"
+              "chinese": "意思是"
+            },
+            {
+              "word": "offer",
+              "phonetic": "/ˈɔːfər/",
+              "partOfSpeech": "v. / n.",
+              "chinese": "提供"
+            }
+          ]
+        },
+        {
+          "category": "同一学习主题中的高频词",
+          "items": [
+            {
+              "word": "mean",
+              "phonetic": "/miːn/",
+              "partOfSpeech": "v.",
+              "chinese": "意思是"
+            },
+            {
+              "word": "offer",
+              "phonetic": "/ˈɔːfər/",
+              "partOfSpeech": "v. / n.",
+              "chinese": "提供"
+            },
+            {
+              "word": "expect",
+              "phonetic": "/ɪkˈspekt/",
+              "partOfSpeech": "v.",
+              "chinese": "预期"
+            },
+            {
+              "word": "develop",
+              "phonetic": "/dɪˈveləp/",
+              "partOfSpeech": "v.",
+              "chinese": "发展"
             }
           ]
         }
       ],
       "examples": [
         {
-          "scene": "日常 / 真实表达",
+          "scene": "核心真实用法",
           "english": "You should consider taking a short break.",
           "chinese": "你应该考虑短暂休息一下。"
         },
         {
-          "scene": "学习 / 工作场景",
-          "english": "In today’s lesson, we practiced the word “consider” in a complete sentence.",
-          "chinese": "今天的课程里，我们练习了怎样在完整句子中使用 consider。"
+          "scene": "英文释义理解",
+          "english": "In this lesson, I learned that “consider” means “to think carefully about something”.",
+          "chinese": "这节课里，我学到 consider 的核心意思是“考虑；认为”。"
         },
         {
-          "scene": "核心搭配复现",
-          "english": "“consider doing something” is the key phrase I want to remember.",
-          "chinese": "“consider doing something”是我想重点记住的搭配。"
+          "scene": "高频搭配辨认",
+          "english": "The phrase “consider doing something” is useful in everyday English.",
+          "chinese": "“consider doing something”是日常英语中的实用表达。"
         },
         {
-          "scene": "常见错误提醒",
-          "english": "I checked the context before choosing “consider” instead of “evaluate”.",
-          "chinese": "我先检查语境，再决定用 consider 而不是 evaluate。"
+          "scene": "主动造句",
+          "english": "Can you use “consider” in a sentence of your own?",
+          "chinese": "你能用 consider 说一个自己的句子吗？"
         },
         {
-          "scene": "词义与近义辨析",
-          "english": "Here, “consider” means “to think carefully about something”.",
-          "chinese": "在这里，consider 的意思是“考虑；认为”。"
+          "scene": "词汇笔记",
+          "english": "I wrote “consider” and its pronunciation in my notebook.",
+          "chinese": "我把 consider 和它的发音记进了笔记本。"
+        },
+        {
+          "scene": "听力辨认",
+          "english": "Listen for “consider” the next time you hear English.",
+          "chinese": "下次听英语时，留意辨认 consider。"
+        },
+        {
+          "scene": "近义比较",
+          "english": "I compared “consider” with “evaluate” before choosing the word.",
+          "chinese": "选词前，我比较了 consider 和 evaluate。"
+        },
+        {
+          "scene": "反义对照",
+          "english": "The opposite idea is often expressed with “dismiss”.",
+          "chinese": "相反的意思常可用 dismiss 表达。"
+        },
+        {
+          "scene": "间隔复习",
+          "english": "I reviewed “consider” again before going to bed.",
+          "chinese": "睡前我又复习了一遍 consider。"
+        },
+        {
+          "scene": "口语输出",
+          "english": "Which real situation would make you use “consider”?",
+          "chinese": "在什么真实情境中你会用到 consider？"
         }
       ],
       "studyFocus": {
-        "coreMeaning": "考虑；认为",
-        "keyCollocation": "consider doing something：考虑做某事",
-        "commonMistake": "不要只按中文逐字替换，也不要随意改动介词或语序；优先把 “consider doing something” 当作一个完整句块记忆。",
+        "coreMeaning": "考虑；认为；英文核心释义：to think carefully about something。",
+        "keyCollocation": "把 “consider doing something” 作为一个完整句块记忆。",
+        "commonMistake": "情态动词 can 后直接接动词原形，不加 to。",
         "mustUseExample": "You should consider taking a short break."
       },
       "questions": [
@@ -468,30 +943,79 @@
           "free_sentence"
         ]
       },
-      "contentVersion": "2026.08.17.2",
+      "detailLevel": "template-complete",
+      "contentVersion": "2026.08.17.3",
       "reviewed": true,
-      "sourceNote": "从用户提供的 COCA 词表筛选；释义、例句和搭配为本项目离线整理；关系词与词组音标来自 CMU 北美英语发音词典。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
     {
       "id": "expect-v",
       "word": "expect",
       "lemma": "expect",
+      "cocaRanks": [
+        {
+          "rank": 426,
+          "pos": "v",
+          "frequency": 229855,
+          "partOfSpeech": "v."
+        }
+      ],
+      "cocaRankLabel": "v. 第 426 名",
       "phonetic": "/ɪkˈspekt/",
-      "syllables": "expect",
+      "syllables": "expect（约 2 音节）",
       "partOfSpeech": "v.",
-      "frequencyBand": "COCA 高频精选",
+      "frequencyBand": "COCA 高频精选 · v. 第 426 名",
       "difficulty": "基础",
       "tags": [
         "v.",
+        "模板完整版",
         "高频表达"
       ],
       "coreMemory": {
         "chinese": "预期；期待",
-        "english": "to think that something will happen",
-        "structure": "expect someone to do something（期待某人做某事）",
-        "commonError": "不要只按中文逐字替换，也不要随意改动介词或语序；优先把 “expect someone to do something” 当作一个完整句块记忆。",
-        "directSynonym": "anticipate",
-        "directAntonym": "doubt",
+        "english": "v. to think that something will happen",
+        "structure": "expect someone to do /ɪkˈspekt sʌmwʌn tu du/（期待某人做）；expect to see /ɪkˈspekt tu si/（预计会看到）；as expected /æz ɪkspɛktəd/（正如预期）；what to expect /wʌt tu ɪkˈspekt/（会发生什么）",
+        "structures": [
+          {
+            "phrase": "expect someone to do",
+            "phonetic": "/ɪkˈspekt sʌmwʌn tu du/",
+            "chinese": "期待某人做"
+          },
+          {
+            "phrase": "expect to see",
+            "phonetic": "/ɪkˈspekt tu si/",
+            "chinese": "预计会看到"
+          },
+          {
+            "phrase": "as expected",
+            "phonetic": "/æz ɪkspɛktəd/",
+            "chinese": "正如预期"
+          },
+          {
+            "phrase": "what to expect",
+            "phonetic": "/wʌt tu ɪkˈspekt/",
+            "chinese": "会发生什么"
+          }
+        ],
+        "commonError": "❌ can to expect → ✅ can expect；❌ to expecting → ✅ to expect",
+        "commonErrors": [
+          {
+            "wrong": "can to expect",
+            "wrongPhonetic": "/kæn tu ɪkˈspekt/",
+            "right": "can expect",
+            "rightPhonetic": "/kæn ɪkˈspekt/",
+            "note": "情态动词 can 后直接接动词原形，不加 to。"
+          },
+          {
+            "wrong": "to expecting",
+            "wrongPhonetic": "/tu ɪkspɛktɪŋ/",
+            "right": "to expect",
+            "rightPhonetic": "/tu ɪkˈspekt/",
+            "note": "不定式 to 后接动词原形；不要把不定式和 -ing 形式混合。"
+          }
+        ],
+        "directSynonym": "anticipate /æntɪsəpeɪt/（与“预期”意义接近）",
+        "directAntonym": "doubt /daʊt/（与“预期”意义相反）",
         "derivatives": "expectation · unexpected",
         "example": "We expect the results next week.",
         "exampleChinese": "我们预计下周会有结果。"
@@ -510,30 +1034,139 @@
           "category": "核心高频搭配",
           "items": [
             {
-              "phrase": "expect someone to do something",
-              "phonetic": "/ɪkˈspekt sʌmwʌn tu du sʌmθɪŋ/",
-              "chinese": "期待某人做某事"
+              "phrase": "expect someone to do",
+              "phonetic": "/ɪkˈspekt sʌmwʌn tu du/",
+              "chinese": "期待某人做"
+            },
+            {
+              "phrase": "expect to see",
+              "phonetic": "/ɪkˈspekt tu si/",
+              "chinese": "预计会看到"
+            },
+            {
+              "phrase": "as expected",
+              "phonetic": "/æz ɪkspɛktəd/",
+              "chinese": "正如预期"
             }
           ]
         },
         {
-          "category": "真实例句句块",
+          "category": "句型与语法框架",
           "items": [
             {
-              "phrase": "We expect the results",
-              "phonetic": "/wi ɪkˈspekt ðə rɪzʌlts/",
-              "chinese": "核心例句片段：我们预计下周会有结果。"
+              "phrase": "what to expect",
+              "phonetic": "/wʌt tu ɪkˈspekt/",
+              "chinese": "会发生什么"
+            },
+            {
+              "phrase": "expect the worst",
+              "phonetic": "/ɪkˈspekt ðə wɝst/",
+              "chinese": "做最坏打算"
+            },
+            {
+              "phrase": "be expected to",
+              "phonetic": "/bi ɪkspɛktəd tu/",
+              "chinese": "被期望；预计会"
+            }
+          ]
+        },
+        {
+          "category": "真实表达延伸",
+          "items": [
+            {
+              "phrase": "expect someone to do something",
+              "phonetic": "/ɪkˈspekt sʌmwʌn tu du sʌmθɪŋ/",
+              "chinese": "期待某人做某事"
+            },
+            {
+              "phrase": "to expect someone to do something",
+              "phonetic": "/tu ɪkˈspekt sʌmwʌn tu du sʌmθɪŋ/",
+              "chinese": "去期待某人做某事"
+            },
+            {
+              "phrase": "need to expect someone to do something",
+              "phonetic": "/nid tu ɪkˈspekt sʌmwʌn tu du sʌmθɪŋ/",
+              "chinese": "需要期待某人做某事"
+            }
+          ]
+        },
+        {
+          "category": "主动输出提示",
+          "items": [
+            {
+              "phrase": "try to expect someone to do something",
+              "phonetic": "/traɪ tu ɪkˈspekt sʌmwʌn tu du sʌmθɪŋ/",
+              "chinese": "尝试期待某人做某事"
+            },
+            {
+              "phrase": "can expect someone to do something",
+              "phonetic": "/kæn ɪkˈspekt sʌmwʌn tu du sʌmθɪŋ/",
+              "chinese": "能够期待某人做某事"
+            },
+            {
+              "phrase": "how to expect someone to do something",
+              "phonetic": "/haʊ tu ɪkˈspekt sʌmwʌn tu du sʌmθɪŋ/",
+              "chinese": "如何期待某人做某事"
             }
           ]
         }
       ],
       "fixedPhrases": [
         {
+          "phrase": "expect someone to do",
+          "phonetic": "/ɪkˈspekt sʌmwʌn tu du/",
+          "chinese": "期待某人做",
+          "example": "We expect the results next week.",
+          "translation": "我们预计下周会有结果。"
+        },
+        {
+          "phrase": "expect to see",
+          "phonetic": "/ɪkˈspekt tu si/",
+          "chinese": "预计会看到",
+          "example": "The phrase “expect to see” is useful in everyday English.",
+          "translation": "“expect to see”是日常英语中的实用表达。"
+        },
+        {
+          "phrase": "as expected",
+          "phonetic": "/æz ɪkspɛktəd/",
+          "chinese": "正如预期",
+          "example": "I added “as expected” to my vocabulary notebook.",
+          "translation": "我把“as expected”记进了词汇本。"
+        },
+        {
+          "phrase": "what to expect",
+          "phonetic": "/wʌt tu ɪkˈspekt/",
+          "chinese": "会发生什么",
+          "example": "Listen for “what to expect” in real conversations.",
+          "translation": "在真实对话中留意“what to expect”。"
+        },
+        {
+          "phrase": "expect the worst",
+          "phonetic": "/ɪkˈspekt ðə wɝst/",
+          "chinese": "做最坏打算",
+          "example": "Can you use “expect the worst” in a complete sentence?",
+          "translation": "你能用“expect the worst”说一个完整句子吗？"
+        },
+        {
+          "phrase": "be expected to",
+          "phonetic": "/bi ɪkspɛktəd tu/",
+          "chinese": "被期望；预计会",
+          "example": "We practiced “be expected to” aloud three times.",
+          "translation": "我们把“be expected to”大声练了三遍。"
+        },
+        {
           "phrase": "expect someone to do something",
           "phonetic": "/ɪkˈspekt sʌmwʌn tu du sʌmθɪŋ/",
           "chinese": "期待某人做某事",
-          "example": "We expect the results next week.",
-          "translation": "我们预计下周会有结果。"
+          "example": "The phrase “expect someone to do something” is useful in everyday English.",
+          "translation": "“expect someone to do something”是日常英语中的实用表达。"
+        },
+        {
+          "phrase": "to expect someone to do something",
+          "phonetic": "/tu ɪkˈspekt sʌmwʌn tu du sʌmθɪŋ/",
+          "chinese": "去期待某人做某事",
+          "example": "I added “to expect someone to do something” to my vocabulary notebook.",
+          "translation": "我把“to expect someone to do something”记进了词汇本。"
         }
       ],
       "synonyms": [
@@ -542,7 +1175,7 @@
           "phonetic": "/æntɪsəpeɪt/",
           "partOfSpeech": "v.",
           "chinese": "与“预期”意义接近",
-          "difference": "expect 在 “expect someone to do something” 中是本卡需要主动掌握的表达；anticipate 含义接近，但宾语、语气和固定搭配不一定相同。"
+          "difference": "expect 是本卡核心搭配 “expect someone to do something” 中的中性常用选择；anticipate 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
         }
       ],
       "antonyms": [
@@ -551,7 +1184,7 @@
           "phonetic": "/daʊt/",
           "partOfSpeech": "v.",
           "chinese": "与“预期”意义相反",
-          "usage": "和 expect 的核心义形成对比；先在真实句子中判断是否确实构成反向关系。"
+          "usage": "在本卡核心义下与 expect 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
         }
       ],
       "derivatives": [
@@ -559,14 +1192,14 @@
           "word": "expectation",
           "phonetic": "/ɛkspɛkteɪʃən/",
           "partOfSpeech": "n.",
-          "chinese": "与“expect”同词族的常用词形",
+          "chinese": "与 expect 同词族的常用词形",
           "note": "这是 expect 的常用词族成员；先辨认词性，再放进完整句子中使用。"
         },
         {
           "word": "unexpected",
           "phonetic": "/ʌnɪkspɛktɪd/",
           "partOfSpeech": "adj.",
-          "chinese": "与“expect”同词族的常用词形",
+          "chinese": "与 expect 同词族的常用词形",
           "note": "这是 expect 的常用词族成员；先辨认词性，再放进完整句子中使用。"
         }
       ],
@@ -578,49 +1211,126 @@
             {
               "word": "anticipate",
               "phonetic": "/æntɪsəpeɪt/",
-              "partOfSpeech": "v.",
-              "chinese": "与“预期”意义接近"
+              "partOfSpeech": "word family",
+              "chinese": "与本词相关的常用表达"
             },
             {
               "word": "doubt",
               "phonetic": "/daʊt/",
+              "partOfSpeech": "word family",
+              "chinese": "与本词相关的常用表达"
+            }
+          ]
+        },
+        {
+          "category": "词族与构词联系",
+          "items": [
+            {
+              "word": "expectation",
+              "phonetic": "/ɛkspɛkteɪʃən/",
+              "partOfSpeech": "n.",
+              "chinese": "与本词相关的常用表达"
+            },
+            {
+              "word": "unexpected",
+              "phonetic": "/ʌnɪkspɛktɪd/",
+              "partOfSpeech": "adj.",
+              "chinese": "与本词相关的常用表达"
+            },
+            {
+              "word": "offer",
+              "phonetic": "/ˈɔːfər/",
+              "partOfSpeech": "v. / n.",
+              "chinese": "提供"
+            }
+          ]
+        },
+        {
+          "category": "同一学习主题中的高频词",
+          "items": [
+            {
+              "word": "offer",
+              "phonetic": "/ˈɔːfər/",
+              "partOfSpeech": "v. / n.",
+              "chinese": "提供"
+            },
+            {
+              "word": "consider",
+              "phonetic": "/kənˈsɪdər/",
               "partOfSpeech": "v.",
-              "chinese": "与“预期”意义相反"
+              "chinese": "考虑"
+            },
+            {
+              "word": "develop",
+              "phonetic": "/dɪˈveləp/",
+              "partOfSpeech": "v.",
+              "chinese": "发展"
+            },
+            {
+              "word": "decide",
+              "phonetic": "/dɪˈsaɪd/",
+              "partOfSpeech": "v.",
+              "chinese": "决定"
             }
           ]
         }
       ],
       "examples": [
         {
-          "scene": "日常 / 真实表达",
+          "scene": "核心真实用法",
           "english": "We expect the results next week.",
           "chinese": "我们预计下周会有结果。"
         },
         {
-          "scene": "学习 / 工作场景",
-          "english": "In today’s lesson, we practiced the word “expect” in a complete sentence.",
-          "chinese": "今天的课程里，我们练习了怎样在完整句子中使用 expect。"
+          "scene": "英文释义理解",
+          "english": "In this lesson, I learned that “expect” means “to think that something will happen”.",
+          "chinese": "这节课里，我学到 expect 的核心意思是“预期；期待”。"
         },
         {
-          "scene": "核心搭配复现",
-          "english": "“expect someone to do something” is the key phrase I want to remember.",
-          "chinese": "“expect someone to do something”是我想重点记住的搭配。"
+          "scene": "高频搭配辨认",
+          "english": "The phrase “expect someone to do something” is useful in everyday English.",
+          "chinese": "“expect someone to do something”是日常英语中的实用表达。"
         },
         {
-          "scene": "常见错误提醒",
-          "english": "I checked the context before choosing “expect” instead of “anticipate”.",
-          "chinese": "我先检查语境，再决定用 expect 而不是 anticipate。"
+          "scene": "主动造句",
+          "english": "Can you use “expect” in a sentence of your own?",
+          "chinese": "你能用 expect 说一个自己的句子吗？"
         },
         {
-          "scene": "词义与近义辨析",
-          "english": "Here, “expect” means “to think that something will happen”.",
-          "chinese": "在这里，expect 的意思是“预期；期待”。"
+          "scene": "词汇笔记",
+          "english": "I wrote “expect” and its pronunciation in my notebook.",
+          "chinese": "我把 expect 和它的发音记进了笔记本。"
+        },
+        {
+          "scene": "听力辨认",
+          "english": "Listen for “expect” the next time you hear English.",
+          "chinese": "下次听英语时，留意辨认 expect。"
+        },
+        {
+          "scene": "近义比较",
+          "english": "I compared “expect” with “anticipate” before choosing the word.",
+          "chinese": "选词前，我比较了 expect 和 anticipate。"
+        },
+        {
+          "scene": "反义对照",
+          "english": "The opposite idea is often expressed with “doubt”.",
+          "chinese": "相反的意思常可用 doubt 表达。"
+        },
+        {
+          "scene": "间隔复习",
+          "english": "I reviewed “expect” again before going to bed.",
+          "chinese": "睡前我又复习了一遍 expect。"
+        },
+        {
+          "scene": "口语输出",
+          "english": "Which real situation would make you use “expect”?",
+          "chinese": "在什么真实情境中你会用到 expect？"
         }
       ],
       "studyFocus": {
-        "coreMeaning": "预期；期待",
-        "keyCollocation": "expect someone to do something：期待某人做某事",
-        "commonMistake": "不要只按中文逐字替换，也不要随意改动介词或语序；优先把 “expect someone to do something” 当作一个完整句块记忆。",
+        "coreMeaning": "预期；期待；英文核心释义：to think that something will happen。",
+        "keyCollocation": "把 “expect someone to do something” 作为一个完整句块记忆。",
+        "commonMistake": "情态动词 can 后直接接动词原形，不加 to。",
         "mustUseExample": "We expect the results next week."
       },
       "questions": [
@@ -706,30 +1416,79 @@
           "free_sentence"
         ]
       },
-      "contentVersion": "2026.08.17.2",
+      "detailLevel": "template-complete",
+      "contentVersion": "2026.08.17.3",
       "reviewed": true,
-      "sourceNote": "从用户提供的 COCA 词表筛选；释义、例句和搭配为本项目离线整理；关系词与词组音标来自 CMU 北美英语发音词典。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
     {
       "id": "develop-v",
       "word": "develop",
       "lemma": "develop",
+      "cocaRanks": [
+        {
+          "rank": 569,
+          "pos": "v",
+          "frequency": 168894,
+          "partOfSpeech": "v."
+        }
+      ],
+      "cocaRankLabel": "v. 第 569 名",
       "phonetic": "/dɪˈveləp/",
-      "syllables": "develop",
+      "syllables": "de·vel·op",
       "partOfSpeech": "v.",
-      "frequencyBand": "COCA 高频精选",
+      "frequencyBand": "COCA 高频精选 · v. 第 569 名",
       "difficulty": "基础",
       "tags": [
         "v.",
+        "模板完整版",
         "高频表达"
       ],
       "coreMemory": {
         "chinese": "发展；培养",
-        "english": "to grow or cause something to grow",
-        "structure": "develop a habit（养成习惯）",
-        "commonError": "不要只按中文逐字替换，也不要随意改动介词或语序；优先把 “develop a habit” 当作一个完整句块记忆。",
-        "directSynonym": "build",
-        "directAntonym": "decline",
+        "english": "v. to grow or cause something to grow",
+        "structure": "develop a habit /dɪˈveləp ə hæbət/（养成习惯）；develop a skill /dɪˈveləp ə skɪl/（培养技能）；develop a plan /dɪˈveləp ə plæn/（制定方案）；develop an interest in /dɪˈveləp æn ɪntrəst ɪn/（培养对……的兴趣）",
+        "structures": [
+          {
+            "phrase": "develop a habit",
+            "phonetic": "/dɪˈveləp ə hæbət/",
+            "chinese": "养成习惯"
+          },
+          {
+            "phrase": "develop a skill",
+            "phonetic": "/dɪˈveləp ə skɪl/",
+            "chinese": "培养技能"
+          },
+          {
+            "phrase": "develop a plan",
+            "phonetic": "/dɪˈveləp ə plæn/",
+            "chinese": "制定方案"
+          },
+          {
+            "phrase": "develop an interest in",
+            "phonetic": "/dɪˈveləp æn ɪntrəst ɪn/",
+            "chinese": "培养对……的兴趣"
+          }
+        ],
+        "commonError": "❌ can to develop → ✅ can develop；❌ to developing → ✅ to develop",
+        "commonErrors": [
+          {
+            "wrong": "can to develop",
+            "wrongPhonetic": "/kæn tu dɪˈveləp/",
+            "right": "can develop",
+            "rightPhonetic": "/kæn dɪˈveləp/",
+            "note": "情态动词 can 后直接接动词原形，不加 to。"
+          },
+          {
+            "wrong": "to developing",
+            "wrongPhonetic": "/tu dɪvɛləpɪŋ/",
+            "right": "to develop",
+            "rightPhonetic": "/tu dɪˈveləp/",
+            "note": "不定式 to 后接动词原形；不要把不定式和 -ing 形式混合。"
+          }
+        ],
+        "directSynonym": "build /bɪld/（与“发展”意义接近）",
+        "directAntonym": "decline /dɪklaɪn/（与“发展”意义相反）",
         "derivatives": "development · developer",
         "example": "She developed a habit of reading every night.",
         "exampleChinese": "她养成了每晚阅读的习惯。"
@@ -751,16 +1510,76 @@
               "phrase": "develop a habit",
               "phonetic": "/dɪˈveləp ə hæbət/",
               "chinese": "养成习惯"
+            },
+            {
+              "phrase": "develop a skill",
+              "phonetic": "/dɪˈveləp ə skɪl/",
+              "chinese": "培养技能"
+            },
+            {
+              "phrase": "develop a plan",
+              "phonetic": "/dɪˈveləp ə plæn/",
+              "chinese": "制定方案"
             }
           ]
         },
         {
-          "category": "真实例句句块",
+          "category": "句型与语法框架",
           "items": [
             {
-              "phrase": "She developed a habit",
-              "phonetic": "/ʃi dɪvɛləpt ə hæbət/",
-              "chinese": "核心例句片段：她养成了每晚阅读的习惯。"
+              "phrase": "develop an interest in",
+              "phonetic": "/dɪˈveləp æn ɪntrəst ɪn/",
+              "chinese": "培养对……的兴趣"
+            },
+            {
+              "phrase": "develop over time",
+              "phonetic": "/dɪˈveləp oʊvɚ taɪm/",
+              "chinese": "逐步发展"
+            },
+            {
+              "phrase": "research and development",
+              "phonetic": "/risɝtʃ ənd dɪvɛləpmənt/",
+              "chinese": "研究与开发"
+            }
+          ]
+        },
+        {
+          "category": "真实表达延伸",
+          "items": [
+            {
+              "phrase": "to develop a habit",
+              "phonetic": "/tu dɪˈveləp ə hæbət/",
+              "chinese": "去养成习惯"
+            },
+            {
+              "phrase": "need to develop a habit",
+              "phonetic": "/nid tu dɪˈveləp ə hæbət/",
+              "chinese": "需要养成习惯"
+            },
+            {
+              "phrase": "try to develop a habit",
+              "phonetic": "/traɪ tu dɪˈveləp ə hæbət/",
+              "chinese": "尝试养成习惯"
+            }
+          ]
+        },
+        {
+          "category": "主动输出提示",
+          "items": [
+            {
+              "phrase": "can develop a habit",
+              "phonetic": "/kæn dɪˈveləp ə hæbət/",
+              "chinese": "能够养成习惯"
+            },
+            {
+              "phrase": "how to develop a habit",
+              "phonetic": "/haʊ tu dɪˈveləp ə hæbət/",
+              "chinese": "如何养成习惯"
+            },
+            {
+              "phrase": "learn to develop a habit",
+              "phonetic": "/lɝn tu dɪˈveləp ə hæbət/",
+              "chinese": "学会养成习惯"
             }
           ]
         }
@@ -772,6 +1591,55 @@
           "chinese": "养成习惯",
           "example": "She developed a habit of reading every night.",
           "translation": "她养成了每晚阅读的习惯。"
+        },
+        {
+          "phrase": "develop a skill",
+          "phonetic": "/dɪˈveləp ə skɪl/",
+          "chinese": "培养技能",
+          "example": "The phrase “develop a skill” is useful in everyday English.",
+          "translation": "“develop a skill”是日常英语中的实用表达。"
+        },
+        {
+          "phrase": "develop a plan",
+          "phonetic": "/dɪˈveləp ə plæn/",
+          "chinese": "制定方案",
+          "example": "I added “develop a plan” to my vocabulary notebook.",
+          "translation": "我把“develop a plan”记进了词汇本。"
+        },
+        {
+          "phrase": "develop an interest in",
+          "phonetic": "/dɪˈveləp æn ɪntrəst ɪn/",
+          "chinese": "培养对……的兴趣",
+          "example": "Listen for “develop an interest in” in real conversations.",
+          "translation": "在真实对话中留意“develop an interest in”。"
+        },
+        {
+          "phrase": "develop over time",
+          "phonetic": "/dɪˈveləp oʊvɚ taɪm/",
+          "chinese": "逐步发展",
+          "example": "Can you use “develop over time” in a complete sentence?",
+          "translation": "你能用“develop over time”说一个完整句子吗？"
+        },
+        {
+          "phrase": "research and development",
+          "phonetic": "/risɝtʃ ənd dɪvɛləpmənt/",
+          "chinese": "研究与开发",
+          "example": "We practiced “research and development” aloud three times.",
+          "translation": "我们把“research and development”大声练了三遍。"
+        },
+        {
+          "phrase": "to develop a habit",
+          "phonetic": "/tu dɪˈveləp ə hæbət/",
+          "chinese": "去养成习惯",
+          "example": "The phrase “to develop a habit” is useful in everyday English.",
+          "translation": "“to develop a habit”是日常英语中的实用表达。"
+        },
+        {
+          "phrase": "need to develop a habit",
+          "phonetic": "/nid tu dɪˈveləp ə hæbət/",
+          "chinese": "需要养成习惯",
+          "example": "I added “need to develop a habit” to my vocabulary notebook.",
+          "translation": "我把“need to develop a habit”记进了词汇本。"
         }
       ],
       "synonyms": [
@@ -780,7 +1648,7 @@
           "phonetic": "/bɪld/",
           "partOfSpeech": "v.",
           "chinese": "与“发展”意义接近",
-          "difference": "develop 在 “develop a habit” 中是本卡需要主动掌握的表达；build 含义接近，但宾语、语气和固定搭配不一定相同。"
+          "difference": "develop 是本卡核心搭配 “develop a habit” 中的中性常用选择；build 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
         }
       ],
       "antonyms": [
@@ -789,7 +1657,7 @@
           "phonetic": "/dɪklaɪn/",
           "partOfSpeech": "v.",
           "chinese": "与“发展”意义相反",
-          "usage": "和 develop 的核心义形成对比；先在真实句子中判断是否确实构成反向关系。"
+          "usage": "在本卡核心义下与 develop 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
         }
       ],
       "derivatives": [
@@ -797,14 +1665,14 @@
           "word": "development",
           "phonetic": "/dɪvɛləpmənt/",
           "partOfSpeech": "n.",
-          "chinese": "与“develop”同词族的常用词形",
+          "chinese": "与 develop 同词族的常用词形",
           "note": "这是 develop 的常用词族成员；先辨认词性，再放进完整句子中使用。"
         },
         {
           "word": "developer",
           "phonetic": "/dɪvɛləpɚ/",
           "partOfSpeech": "n.",
-          "chinese": "与“develop”同词族的常用词形",
+          "chinese": "与 develop 同词族的常用词形",
           "note": "这是 develop 的常用词族成员；先辨认词性，再放进完整句子中使用。"
         }
       ],
@@ -816,49 +1684,126 @@
             {
               "word": "build",
               "phonetic": "/bɪld/",
-              "partOfSpeech": "v.",
-              "chinese": "与“发展”意义接近"
+              "partOfSpeech": "word family",
+              "chinese": "与本词相关的常用表达"
             },
             {
               "word": "decline",
               "phonetic": "/dɪklaɪn/",
+              "partOfSpeech": "word family",
+              "chinese": "与本词相关的常用表达"
+            }
+          ]
+        },
+        {
+          "category": "词族与构词联系",
+          "items": [
+            {
+              "word": "development",
+              "phonetic": "/dɪvɛləpmənt/",
+              "partOfSpeech": "n.",
+              "chinese": "与本词相关的常用表达"
+            },
+            {
+              "word": "developer",
+              "phonetic": "/dɪvɛləpɚ/",
+              "partOfSpeech": "n.",
+              "chinese": "与本词相关的常用表达"
+            },
+            {
+              "word": "consider",
+              "phonetic": "/kənˈsɪdər/",
               "partOfSpeech": "v.",
-              "chinese": "与“发展”意义相反"
+              "chinese": "考虑"
+            }
+          ]
+        },
+        {
+          "category": "同一学习主题中的高频词",
+          "items": [
+            {
+              "word": "consider",
+              "phonetic": "/kənˈsɪdər/",
+              "partOfSpeech": "v.",
+              "chinese": "考虑"
+            },
+            {
+              "word": "expect",
+              "phonetic": "/ɪkˈspekt/",
+              "partOfSpeech": "v.",
+              "chinese": "预期"
+            },
+            {
+              "word": "decide",
+              "phonetic": "/dɪˈsaɪd/",
+              "partOfSpeech": "v.",
+              "chinese": "决定"
+            },
+            {
+              "word": "explain",
+              "phonetic": "/ɪkˈspleɪn/",
+              "partOfSpeech": "v.",
+              "chinese": "解释"
             }
           ]
         }
       ],
       "examples": [
         {
-          "scene": "日常 / 真实表达",
+          "scene": "核心真实用法",
           "english": "She developed a habit of reading every night.",
           "chinese": "她养成了每晚阅读的习惯。"
         },
         {
-          "scene": "学习 / 工作场景",
-          "english": "In today’s lesson, we practiced the word “develop” in a complete sentence.",
-          "chinese": "今天的课程里，我们练习了怎样在完整句子中使用 develop。"
+          "scene": "英文释义理解",
+          "english": "In this lesson, I learned that “develop” means “to grow or cause something to grow”.",
+          "chinese": "这节课里，我学到 develop 的核心意思是“发展；培养”。"
         },
         {
-          "scene": "核心搭配复现",
-          "english": "“develop a habit” is the key phrase I want to remember.",
-          "chinese": "“develop a habit”是我想重点记住的搭配。"
+          "scene": "高频搭配辨认",
+          "english": "The phrase “develop a habit” is useful in everyday English.",
+          "chinese": "“develop a habit”是日常英语中的实用表达。"
         },
         {
-          "scene": "常见错误提醒",
-          "english": "I checked the context before choosing “develop” instead of “build”.",
-          "chinese": "我先检查语境，再决定用 develop 而不是 build。"
+          "scene": "主动造句",
+          "english": "Can you use “develop” in a sentence of your own?",
+          "chinese": "你能用 develop 说一个自己的句子吗？"
         },
         {
-          "scene": "词义与近义辨析",
-          "english": "Here, “develop” means “to grow or cause something to grow”.",
-          "chinese": "在这里，develop 的意思是“发展；培养”。"
+          "scene": "词汇笔记",
+          "english": "I wrote “develop” and its pronunciation in my notebook.",
+          "chinese": "我把 develop 和它的发音记进了笔记本。"
+        },
+        {
+          "scene": "听力辨认",
+          "english": "Listen for “develop” the next time you hear English.",
+          "chinese": "下次听英语时，留意辨认 develop。"
+        },
+        {
+          "scene": "近义比较",
+          "english": "I compared “develop” with “build” before choosing the word.",
+          "chinese": "选词前，我比较了 develop 和 build。"
+        },
+        {
+          "scene": "反义对照",
+          "english": "The opposite idea is often expressed with “decline”.",
+          "chinese": "相反的意思常可用 decline 表达。"
+        },
+        {
+          "scene": "间隔复习",
+          "english": "I reviewed “develop” again before going to bed.",
+          "chinese": "睡前我又复习了一遍 develop。"
+        },
+        {
+          "scene": "口语输出",
+          "english": "Which real situation would make you use “develop”?",
+          "chinese": "在什么真实情境中你会用到 develop？"
         }
       ],
       "studyFocus": {
-        "coreMeaning": "发展；培养",
-        "keyCollocation": "develop a habit：养成习惯",
-        "commonMistake": "不要只按中文逐字替换，也不要随意改动介词或语序；优先把 “develop a habit” 当作一个完整句块记忆。",
+        "coreMeaning": "发展；培养；英文核心释义：to grow or cause something to grow。",
+        "keyCollocation": "把 “develop a habit” 作为一个完整句块记忆。",
+        "commonMistake": "情态动词 can 后直接接动词原形，不加 to。",
         "mustUseExample": "She developed a habit of reading every night."
       },
       "questions": [
@@ -944,30 +1889,79 @@
           "free_sentence"
         ]
       },
-      "contentVersion": "2026.08.17.2",
+      "detailLevel": "template-complete",
+      "contentVersion": "2026.08.17.3",
       "reviewed": true,
-      "sourceNote": "从用户提供的 COCA 词表筛选；释义、例句和搭配为本项目离线整理；关系词与词组音标来自 CMU 北美英语发音词典。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
     {
       "id": "decide-v",
       "word": "decide",
       "lemma": "decide",
+      "cocaRanks": [
+        {
+          "rank": 468,
+          "pos": "v",
+          "frequency": 205447,
+          "partOfSpeech": "v."
+        }
+      ],
+      "cocaRankLabel": "v. 第 468 名",
       "phonetic": "/dɪˈsaɪd/",
-      "syllables": "decide",
+      "syllables": "decide（约 2 音节）",
       "partOfSpeech": "v.",
-      "frequencyBand": "COCA 高频精选",
+      "frequencyBand": "COCA 高频精选 · v. 第 468 名",
       "difficulty": "基础",
       "tags": [
         "v.",
+        "模板完整版",
         "高频表达"
       ],
       "coreMemory": {
         "chinese": "决定",
-        "english": "to make a choice after thinking",
-        "structure": "decide to do something（决定做某事）",
-        "commonError": "不要只按中文逐字替换，也不要随意改动介词或语序；优先把 “decide to do something” 当作一个完整句块记忆。",
-        "directSynonym": "determine",
-        "directAntonym": "hesitate",
+        "english": "v. to make a choice after thinking",
+        "structure": "decide to do /dɪˈsaɪd tu du/（决定做）；decide against /dɪˈsaɪd əɡɛnst/（决定不做）；decide between /dɪˈsaɪd bɪtwin/（在……之间决定）；decide whether /dɪˈsaɪd wɛðɚ/（决定是否）",
+        "structures": [
+          {
+            "phrase": "decide to do",
+            "phonetic": "/dɪˈsaɪd tu du/",
+            "chinese": "决定做"
+          },
+          {
+            "phrase": "decide against",
+            "phonetic": "/dɪˈsaɪd əɡɛnst/",
+            "chinese": "决定不做"
+          },
+          {
+            "phrase": "decide between",
+            "phonetic": "/dɪˈsaɪd bɪtwin/",
+            "chinese": "在……之间决定"
+          },
+          {
+            "phrase": "decide whether",
+            "phonetic": "/dɪˈsaɪd wɛðɚ/",
+            "chinese": "决定是否"
+          }
+        ],
+        "commonError": "❌ can to decide → ✅ can decide；❌ to decideing → ✅ to decide",
+        "commonErrors": [
+          {
+            "wrong": "can to decide",
+            "wrongPhonetic": "/kæn tu dɪˈsaɪd/",
+            "right": "can decide",
+            "rightPhonetic": "/kæn dɪˈsaɪd/",
+            "note": "情态动词 can 后直接接动词原形，不加 to。"
+          },
+          {
+            "wrong": "to decideing",
+            "wrongPhonetic": "/tu decideing/",
+            "right": "to decide",
+            "rightPhonetic": "/tu dɪˈsaɪd/",
+            "note": "不定式 to 后接动词原形；不要把不定式和 -ing 形式混合。"
+          }
+        ],
+        "directSynonym": "determine /dətɝmən/（与“决定”意义接近）",
+        "directAntonym": "hesitate /hɛzəteɪt/（与“决定”意义相反）",
         "derivatives": "decision · decisive",
         "example": "I decided to start with five words a day.",
         "exampleChinese": "我决定从每天五个单词开始。"
@@ -986,30 +1980,139 @@
           "category": "核心高频搭配",
           "items": [
             {
-              "phrase": "decide to do something",
-              "phonetic": "/dɪˈsaɪd tu du sʌmθɪŋ/",
-              "chinese": "决定做某事"
+              "phrase": "decide to do",
+              "phonetic": "/dɪˈsaɪd tu du/",
+              "chinese": "决定做"
+            },
+            {
+              "phrase": "decide against",
+              "phonetic": "/dɪˈsaɪd əɡɛnst/",
+              "chinese": "决定不做"
+            },
+            {
+              "phrase": "decide between",
+              "phonetic": "/dɪˈsaɪd bɪtwin/",
+              "chinese": "在……之间决定"
             }
           ]
         },
         {
-          "category": "真实例句句块",
+          "category": "句型与语法框架",
           "items": [
             {
-              "phrase": "I decided to start",
-              "phonetic": "/aɪ dɪsaɪdɪd tu stɑrt/",
-              "chinese": "核心例句片段：我决定从每天五个单词开始。"
+              "phrase": "decide whether",
+              "phonetic": "/dɪˈsaɪd wɛðɚ/",
+              "chinese": "决定是否"
+            },
+            {
+              "phrase": "make up your mind",
+              "phonetic": "/meɪk ʌp jɔr maɪnd/",
+              "chinese": "下定决心"
+            },
+            {
+              "phrase": "you decide",
+              "phonetic": "/ju dɪˈsaɪd/",
+              "chinese": "由你决定"
+            }
+          ]
+        },
+        {
+          "category": "真实表达延伸",
+          "items": [
+            {
+              "phrase": "decide to do something",
+              "phonetic": "/dɪˈsaɪd tu du sʌmθɪŋ/",
+              "chinese": "决定做某事"
+            },
+            {
+              "phrase": "to decide to do something",
+              "phonetic": "/tu dɪˈsaɪd tu du sʌmθɪŋ/",
+              "chinese": "去决定做某事"
+            },
+            {
+              "phrase": "need to decide to do something",
+              "phonetic": "/nid tu dɪˈsaɪd tu du sʌmθɪŋ/",
+              "chinese": "需要决定做某事"
+            }
+          ]
+        },
+        {
+          "category": "主动输出提示",
+          "items": [
+            {
+              "phrase": "try to decide to do something",
+              "phonetic": "/traɪ tu dɪˈsaɪd tu du sʌmθɪŋ/",
+              "chinese": "尝试决定做某事"
+            },
+            {
+              "phrase": "can decide to do something",
+              "phonetic": "/kæn dɪˈsaɪd tu du sʌmθɪŋ/",
+              "chinese": "能够决定做某事"
+            },
+            {
+              "phrase": "how to decide to do something",
+              "phonetic": "/haʊ tu dɪˈsaɪd tu du sʌmθɪŋ/",
+              "chinese": "如何决定做某事"
             }
           ]
         }
       ],
       "fixedPhrases": [
         {
+          "phrase": "decide to do",
+          "phonetic": "/dɪˈsaɪd tu du/",
+          "chinese": "决定做",
+          "example": "I decided to start with five words a day.",
+          "translation": "我决定从每天五个单词开始。"
+        },
+        {
+          "phrase": "decide against",
+          "phonetic": "/dɪˈsaɪd əɡɛnst/",
+          "chinese": "决定不做",
+          "example": "The phrase “decide against” is useful in everyday English.",
+          "translation": "“decide against”是日常英语中的实用表达。"
+        },
+        {
+          "phrase": "decide between",
+          "phonetic": "/dɪˈsaɪd bɪtwin/",
+          "chinese": "在……之间决定",
+          "example": "I added “decide between” to my vocabulary notebook.",
+          "translation": "我把“decide between”记进了词汇本。"
+        },
+        {
+          "phrase": "decide whether",
+          "phonetic": "/dɪˈsaɪd wɛðɚ/",
+          "chinese": "决定是否",
+          "example": "Listen for “decide whether” in real conversations.",
+          "translation": "在真实对话中留意“decide whether”。"
+        },
+        {
+          "phrase": "make up your mind",
+          "phonetic": "/meɪk ʌp jɔr maɪnd/",
+          "chinese": "下定决心",
+          "example": "Can you use “make up your mind” in a complete sentence?",
+          "translation": "你能用“make up your mind”说一个完整句子吗？"
+        },
+        {
+          "phrase": "you decide",
+          "phonetic": "/ju dɪˈsaɪd/",
+          "chinese": "由你决定",
+          "example": "We practiced “you decide” aloud three times.",
+          "translation": "我们把“you decide”大声练了三遍。"
+        },
+        {
           "phrase": "decide to do something",
           "phonetic": "/dɪˈsaɪd tu du sʌmθɪŋ/",
           "chinese": "决定做某事",
-          "example": "I decided to start with five words a day.",
-          "translation": "我决定从每天五个单词开始。"
+          "example": "The phrase “decide to do something” is useful in everyday English.",
+          "translation": "“decide to do something”是日常英语中的实用表达。"
+        },
+        {
+          "phrase": "to decide to do something",
+          "phonetic": "/tu dɪˈsaɪd tu du sʌmθɪŋ/",
+          "chinese": "去决定做某事",
+          "example": "I added “to decide to do something” to my vocabulary notebook.",
+          "translation": "我把“to decide to do something”记进了词汇本。"
         }
       ],
       "synonyms": [
@@ -1018,7 +2121,7 @@
           "phonetic": "/dətɝmən/",
           "partOfSpeech": "v.",
           "chinese": "与“决定”意义接近",
-          "difference": "decide 在 “decide to do something” 中是本卡需要主动掌握的表达；determine 含义接近，但宾语、语气和固定搭配不一定相同。"
+          "difference": "decide 是本卡核心搭配 “decide to do something” 中的中性常用选择；determine 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
         }
       ],
       "antonyms": [
@@ -1027,7 +2130,7 @@
           "phonetic": "/hɛzəteɪt/",
           "partOfSpeech": "v.",
           "chinese": "与“决定”意义相反",
-          "usage": "和 decide 的核心义形成对比；先在真实句子中判断是否确实构成反向关系。"
+          "usage": "在本卡核心义下与 decide 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
         }
       ],
       "derivatives": [
@@ -1042,7 +2145,7 @@
           "word": "decisive",
           "phonetic": "/dɪsaɪsɪv/",
           "partOfSpeech": "adj.",
-          "chinese": "与“decide”同词族的常用词形",
+          "chinese": "与 decide 同词族的常用词形",
           "note": "这是 decide 的常用词族成员；先辨认词性，再放进完整句子中使用。"
         }
       ],
@@ -1054,49 +2157,126 @@
             {
               "word": "determine",
               "phonetic": "/dətɝmən/",
-              "partOfSpeech": "v.",
-              "chinese": "与“决定”意义接近"
+              "partOfSpeech": "word family",
+              "chinese": "与本词相关的常用表达"
             },
             {
               "word": "hesitate",
               "phonetic": "/hɛzəteɪt/",
+              "partOfSpeech": "word family",
+              "chinese": "与本词相关的常用表达"
+            }
+          ]
+        },
+        {
+          "category": "词族与构词联系",
+          "items": [
+            {
+              "word": "decision",
+              "phonetic": "/dɪˈsɪʒən/",
+              "partOfSpeech": "n.",
+              "chinese": "决定"
+            },
+            {
+              "word": "decisive",
+              "phonetic": "/dɪsaɪsɪv/",
+              "partOfSpeech": "adj.",
+              "chinese": "与本词相关的常用表达"
+            },
+            {
+              "word": "expect",
+              "phonetic": "/ɪkˈspekt/",
               "partOfSpeech": "v.",
-              "chinese": "与“决定”意义相反"
+              "chinese": "预期"
+            }
+          ]
+        },
+        {
+          "category": "同一学习主题中的高频词",
+          "items": [
+            {
+              "word": "expect",
+              "phonetic": "/ɪkˈspekt/",
+              "partOfSpeech": "v.",
+              "chinese": "预期"
+            },
+            {
+              "word": "develop",
+              "phonetic": "/dɪˈveləp/",
+              "partOfSpeech": "v.",
+              "chinese": "发展"
+            },
+            {
+              "word": "explain",
+              "phonetic": "/ɪkˈspleɪn/",
+              "partOfSpeech": "v.",
+              "chinese": "解释"
+            },
+            {
+              "word": "suggest",
+              "phonetic": "/səˈdʒest/",
+              "partOfSpeech": "v.",
+              "chinese": "建议"
             }
           ]
         }
       ],
       "examples": [
         {
-          "scene": "日常 / 真实表达",
+          "scene": "核心真实用法",
           "english": "I decided to start with five words a day.",
           "chinese": "我决定从每天五个单词开始。"
         },
         {
-          "scene": "学习 / 工作场景",
-          "english": "In today’s lesson, we practiced the word “decide” in a complete sentence.",
-          "chinese": "今天的课程里，我们练习了怎样在完整句子中使用 decide。"
+          "scene": "英文释义理解",
+          "english": "In this lesson, I learned that “decide” means “to make a choice after thinking”.",
+          "chinese": "这节课里，我学到 decide 的核心意思是“决定”。"
         },
         {
-          "scene": "核心搭配复现",
-          "english": "“decide to do something” is the key phrase I want to remember.",
-          "chinese": "“decide to do something”是我想重点记住的搭配。"
+          "scene": "高频搭配辨认",
+          "english": "The phrase “decide to do something” is useful in everyday English.",
+          "chinese": "“decide to do something”是日常英语中的实用表达。"
         },
         {
-          "scene": "常见错误提醒",
-          "english": "I checked the context before choosing “decide” instead of “determine”.",
-          "chinese": "我先检查语境，再决定用 decide 而不是 determine。"
+          "scene": "主动造句",
+          "english": "Can you use “decide” in a sentence of your own?",
+          "chinese": "你能用 decide 说一个自己的句子吗？"
         },
         {
-          "scene": "词义与近义辨析",
-          "english": "Here, “decide” means “to make a choice after thinking”.",
-          "chinese": "在这里，decide 的意思是“决定”。"
+          "scene": "词汇笔记",
+          "english": "I wrote “decide” and its pronunciation in my notebook.",
+          "chinese": "我把 decide 和它的发音记进了笔记本。"
+        },
+        {
+          "scene": "听力辨认",
+          "english": "Listen for “decide” the next time you hear English.",
+          "chinese": "下次听英语时，留意辨认 decide。"
+        },
+        {
+          "scene": "近义比较",
+          "english": "I compared “decide” with “determine” before choosing the word.",
+          "chinese": "选词前，我比较了 decide 和 determine。"
+        },
+        {
+          "scene": "反义对照",
+          "english": "The opposite idea is often expressed with “hesitate”.",
+          "chinese": "相反的意思常可用 hesitate 表达。"
+        },
+        {
+          "scene": "间隔复习",
+          "english": "I reviewed “decide” again before going to bed.",
+          "chinese": "睡前我又复习了一遍 decide。"
+        },
+        {
+          "scene": "口语输出",
+          "english": "Which real situation would make you use “decide”?",
+          "chinese": "在什么真实情境中你会用到 decide？"
         }
       ],
       "studyFocus": {
-        "coreMeaning": "决定",
-        "keyCollocation": "decide to do something：决定做某事",
-        "commonMistake": "不要只按中文逐字替换，也不要随意改动介词或语序；优先把 “decide to do something” 当作一个完整句块记忆。",
+        "coreMeaning": "决定；英文核心释义：to make a choice after thinking。",
+        "keyCollocation": "把 “decide to do something” 作为一个完整句块记忆。",
+        "commonMistake": "情态动词 can 后直接接动词原形，不加 to。",
         "mustUseExample": "I decided to start with five words a day."
       },
       "questions": [
@@ -1182,9 +2362,10 @@
           "free_sentence"
         ]
       },
-      "contentVersion": "2026.08.17.2",
+      "detailLevel": "template-complete",
+      "contentVersion": "2026.08.17.3",
       "reviewed": true,
-      "sourceNote": "从用户提供的 COCA 词表筛选；释义、例句和搭配为本项目离线整理；关系词与词组音标来自 CMU 北美英语发音词典。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }
   ]
 }

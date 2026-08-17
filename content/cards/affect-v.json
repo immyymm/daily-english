@@ -2,22 +2,70 @@
   "id": "affect-v",
   "word": "affect",
   "lemma": "affect",
+  "cocaRanks": [
+    {
+      "rank": 984,
+      "pos": "v",
+      "frequency": 98073,
+      "partOfSpeech": "v."
+    }
+  ],
+  "cocaRankLabel": "v. 第 984 名",
   "phonetic": "/əˈfekt/",
-  "syllables": "affect",
+  "syllables": "affect（约 2 音节）",
   "partOfSpeech": "v.",
-  "frequencyBand": "COCA 高频精选",
+  "frequencyBand": "COCA 高频精选 · v. 第 984 名",
   "difficulty": "基础",
   "tags": [
     "v.",
+    "模板完整版",
     "高频表达"
   ],
   "coreMemory": {
     "chinese": "影响",
-    "english": "to cause a change in someone or something",
-    "structure": "affect your health（影响健康）",
-    "commonError": "不要只按中文逐字替换，也不要随意改动介词或语序；优先把 “affect your health” 当作一个完整句块记忆。",
-    "directSynonym": "influence",
-    "directAntonym": "leave unchanged",
+    "english": "v. to cause a change in someone or something",
+    "structure": "affect the result /əˈfekt ðə rɪzʌlt/（影响结果）；seriously affect /sɪriəsli əˈfekt/（严重影响）；be affected by /bi əfɛktɪd baɪ/（受到……影响）；affect your health /əˈfekt jɔr hɛlθ/（影响健康）",
+    "structures": [
+      {
+        "phrase": "affect the result",
+        "phonetic": "/əˈfekt ðə rɪzʌlt/",
+        "chinese": "影响结果"
+      },
+      {
+        "phrase": "seriously affect",
+        "phonetic": "/sɪriəsli əˈfekt/",
+        "chinese": "严重影响"
+      },
+      {
+        "phrase": "be affected by",
+        "phonetic": "/bi əfɛktɪd baɪ/",
+        "chinese": "受到……影响"
+      },
+      {
+        "phrase": "affect your health",
+        "phonetic": "/əˈfekt jɔr hɛlθ/",
+        "chinese": "影响健康"
+      }
+    ],
+    "commonError": "❌ can to affect → ✅ can affect；❌ to affecting → ✅ to affect",
+    "commonErrors": [
+      {
+        "wrong": "can to affect",
+        "wrongPhonetic": "/kæn tu əˈfekt/",
+        "right": "can affect",
+        "rightPhonetic": "/kæn əˈfekt/",
+        "note": "情态动词 can 后直接接动词原形，不加 to。"
+      },
+      {
+        "wrong": "to affecting",
+        "wrongPhonetic": "/tu əfɛktɪŋ/",
+        "right": "to affect",
+        "rightPhonetic": "/tu əˈfekt/",
+        "note": "不定式 to 后接动词原形；不要把不定式和 -ing 形式混合。"
+      }
+    ],
+    "directSynonym": "influence /ɪnfluəns/（与“影响”意义接近）",
+    "directAntonym": "leave unchanged /liv əntʃeɪndʒd/（与“影响”意义相反）",
     "derivatives": "effect · effective",
     "example": "Poor sleep can affect your memory.",
     "exampleChinese": "睡眠不足会影响记忆力。"
@@ -36,30 +84,139 @@
       "category": "核心高频搭配",
       "items": [
         {
-          "phrase": "affect your health",
-          "phonetic": "/əˈfekt jɔr hɛlθ/",
-          "chinese": "影响健康"
+          "phrase": "affect the result",
+          "phonetic": "/əˈfekt ðə rɪzʌlt/",
+          "chinese": "影响结果"
+        },
+        {
+          "phrase": "seriously affect",
+          "phonetic": "/sɪriəsli əˈfekt/",
+          "chinese": "严重影响"
+        },
+        {
+          "phrase": "be affected by",
+          "phonetic": "/bi əfɛktɪd baɪ/",
+          "chinese": "受到……影响"
         }
       ]
     },
     {
-      "category": "真实例句句块",
+      "category": "句型与语法框架",
       "items": [
         {
-          "phrase": "sleep can affect your memory",
-          "phonetic": "/slip kæn əˈfekt jɔr mɛmɚi/",
-          "chinese": "核心例句片段：睡眠不足会影响记忆力。"
+          "phrase": "affect your health",
+          "phonetic": "/əˈfekt jɔr hɛlθ/",
+          "chinese": "影响健康"
+        },
+        {
+          "phrase": "affect the way",
+          "phonetic": "/əˈfekt ðə weɪ/",
+          "chinese": "影响方式"
+        },
+        {
+          "phrase": "cause and effect",
+          "phonetic": "/kɑz ənd ɪfɛkt/",
+          "chinese": "因果"
+        }
+      ]
+    },
+    {
+      "category": "真实表达延伸",
+      "items": [
+        {
+          "phrase": "to affect your health",
+          "phonetic": "/tu əˈfekt jɔr hɛlθ/",
+          "chinese": "去影响健康"
+        },
+        {
+          "phrase": "need to affect your health",
+          "phonetic": "/nid tu əˈfekt jɔr hɛlθ/",
+          "chinese": "需要影响健康"
+        },
+        {
+          "phrase": "try to affect your health",
+          "phonetic": "/traɪ tu əˈfekt jɔr hɛlθ/",
+          "chinese": "尝试影响健康"
+        }
+      ]
+    },
+    {
+      "category": "主动输出提示",
+      "items": [
+        {
+          "phrase": "can affect your health",
+          "phonetic": "/kæn əˈfekt jɔr hɛlθ/",
+          "chinese": "能够影响健康"
+        },
+        {
+          "phrase": "how to affect your health",
+          "phonetic": "/haʊ tu əˈfekt jɔr hɛlθ/",
+          "chinese": "如何影响健康"
+        },
+        {
+          "phrase": "learn to affect your health",
+          "phonetic": "/lɝn tu əˈfekt jɔr hɛlθ/",
+          "chinese": "学会影响健康"
         }
       ]
     }
   ],
   "fixedPhrases": [
     {
+      "phrase": "affect the result",
+      "phonetic": "/əˈfekt ðə rɪzʌlt/",
+      "chinese": "影响结果",
+      "example": "Poor sleep can affect your memory.",
+      "translation": "睡眠不足会影响记忆力。"
+    },
+    {
+      "phrase": "seriously affect",
+      "phonetic": "/sɪriəsli əˈfekt/",
+      "chinese": "严重影响",
+      "example": "The phrase “seriously affect” is useful in everyday English.",
+      "translation": "“seriously affect”是日常英语中的实用表达。"
+    },
+    {
+      "phrase": "be affected by",
+      "phonetic": "/bi əfɛktɪd baɪ/",
+      "chinese": "受到……影响",
+      "example": "I added “be affected by” to my vocabulary notebook.",
+      "translation": "我把“be affected by”记进了词汇本。"
+    },
+    {
       "phrase": "affect your health",
       "phonetic": "/əˈfekt jɔr hɛlθ/",
       "chinese": "影响健康",
-      "example": "Poor sleep can affect your memory.",
-      "translation": "睡眠不足会影响记忆力。"
+      "example": "Listen for “affect your health” in real conversations.",
+      "translation": "在真实对话中留意“affect your health”。"
+    },
+    {
+      "phrase": "affect the way",
+      "phonetic": "/əˈfekt ðə weɪ/",
+      "chinese": "影响方式",
+      "example": "Can you use “affect the way” in a complete sentence?",
+      "translation": "你能用“affect the way”说一个完整句子吗？"
+    },
+    {
+      "phrase": "cause and effect",
+      "phonetic": "/kɑz ənd ɪfɛkt/",
+      "chinese": "因果",
+      "example": "We practiced “cause and effect” aloud three times.",
+      "translation": "我们把“cause and effect”大声练了三遍。"
+    },
+    {
+      "phrase": "to affect your health",
+      "phonetic": "/tu əˈfekt jɔr hɛlθ/",
+      "chinese": "去影响健康",
+      "example": "The phrase “to affect your health” is useful in everyday English.",
+      "translation": "“to affect your health”是日常英语中的实用表达。"
+    },
+    {
+      "phrase": "need to affect your health",
+      "phonetic": "/nid tu əˈfekt jɔr hɛlθ/",
+      "chinese": "需要影响健康",
+      "example": "I added “need to affect your health” to my vocabulary notebook.",
+      "translation": "我把“need to affect your health”记进了词汇本。"
     }
   ],
   "synonyms": [
@@ -68,7 +225,7 @@
       "phonetic": "/ɪnfluəns/",
       "partOfSpeech": "v.",
       "chinese": "与“影响”意义接近",
-      "difference": "affect 在 “affect your health” 中是本卡需要主动掌握的表达；influence 含义接近，但宾语、语气和固定搭配不一定相同。"
+      "difference": "affect 是本卡核心搭配 “affect your health” 中的中性常用选择；influence 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
   "antonyms": [
@@ -77,7 +234,7 @@
       "phonetic": "/liv əntʃeɪndʒd/",
       "partOfSpeech": "v.",
       "chinese": "与“影响”意义相反",
-      "usage": "和 affect 的核心义形成对比；先在真实句子中判断是否确实构成反向关系。"
+      "usage": "在本卡核心义下与 affect 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
   "derivatives": [
@@ -85,7 +242,7 @@
       "word": "effect",
       "phonetic": "/ɪfɛkt/",
       "partOfSpeech": "n.",
-      "chinese": "与“affect”同词族的常用词形",
+      "chinese": "与 affect 同词族的常用词形",
       "note": "这是 affect 的常用词族成员；先辨认词性，再放进完整句子中使用。"
     },
     {
@@ -112,49 +269,126 @@
         {
           "word": "influence",
           "phonetic": "/ɪnfluəns/",
-          "partOfSpeech": "v.",
-          "chinese": "与“影响”意义接近"
+          "partOfSpeech": "n.",
+          "chinese": "与本词相关的常用表达"
         },
         {
           "word": "leave unchanged",
           "phonetic": "/liv əntʃeɪndʒd/",
+          "partOfSpeech": "adj.",
+          "chinese": "与本词相关的常用表达"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "effect",
+          "phonetic": "/ɪfɛkt/",
+          "partOfSpeech": "n.",
+          "chinese": "与本词相关的常用表达"
+        },
+        {
+          "word": "effective",
+          "phonetic": "/ɪˈfektɪv/",
+          "partOfSpeech": "adj.",
+          "chinese": "有效的"
+        },
+        {
+          "word": "remain",
+          "phonetic": "/rɪˈmeɪn/",
           "partOfSpeech": "v.",
-          "chinese": "与“影响”意义相反"
+          "chinese": "保持"
+        }
+      ]
+    },
+    {
+      "category": "同一学习主题中的高频词",
+      "items": [
+        {
+          "word": "remain",
+          "phonetic": "/rɪˈmeɪn/",
+          "partOfSpeech": "v.",
+          "chinese": "保持"
+        },
+        {
+          "word": "handle",
+          "phonetic": "/ˈhændl/",
+          "partOfSpeech": "v. / n.",
+          "chinese": "处理"
+        },
+        {
+          "word": "realize",
+          "phonetic": "/ˈriːəlaɪz/",
+          "partOfSpeech": "v.",
+          "chinese": "意识到"
+        },
+        {
+          "word": "describe",
+          "phonetic": "/dɪˈskraɪb/",
+          "partOfSpeech": "v.",
+          "chinese": "描述"
         }
       ]
     }
   ],
   "examples": [
     {
-      "scene": "日常 / 真实表达",
+      "scene": "核心真实用法",
       "english": "Poor sleep can affect your memory.",
       "chinese": "睡眠不足会影响记忆力。"
     },
     {
-      "scene": "学习 / 工作场景",
-      "english": "In today’s lesson, we practiced the word “affect” in a complete sentence.",
-      "chinese": "今天的课程里，我们练习了怎样在完整句子中使用 affect。"
+      "scene": "英文释义理解",
+      "english": "In this lesson, I learned that “affect” means “to cause a change in someone or something”.",
+      "chinese": "这节课里，我学到 affect 的核心意思是“影响”。"
     },
     {
-      "scene": "核心搭配复现",
-      "english": "“affect your health” is the key phrase I want to remember.",
-      "chinese": "“affect your health”是我想重点记住的搭配。"
+      "scene": "高频搭配辨认",
+      "english": "The phrase “affect your health” is useful in everyday English.",
+      "chinese": "“affect your health”是日常英语中的实用表达。"
     },
     {
-      "scene": "常见错误提醒",
-      "english": "I checked the context before choosing “affect” instead of “influence”.",
-      "chinese": "我先检查语境，再决定用 affect 而不是 influence。"
+      "scene": "主动造句",
+      "english": "Can you use “affect” in a sentence of your own?",
+      "chinese": "你能用 affect 说一个自己的句子吗？"
     },
     {
-      "scene": "词义与近义辨析",
-      "english": "Here, “affect” means “to cause a change in someone or something”.",
-      "chinese": "在这里，affect 的意思是“影响”。"
+      "scene": "词汇笔记",
+      "english": "I wrote “affect” and its pronunciation in my notebook.",
+      "chinese": "我把 affect 和它的发音记进了笔记本。"
+    },
+    {
+      "scene": "听力辨认",
+      "english": "Listen for “affect” the next time you hear English.",
+      "chinese": "下次听英语时，留意辨认 affect。"
+    },
+    {
+      "scene": "近义比较",
+      "english": "I compared “affect” with “influence” before choosing the word.",
+      "chinese": "选词前，我比较了 affect 和 influence。"
+    },
+    {
+      "scene": "反义对照",
+      "english": "The opposite idea is often expressed with “leave unchanged”.",
+      "chinese": "相反的意思常可用 leave unchanged 表达。"
+    },
+    {
+      "scene": "间隔复习",
+      "english": "I reviewed “affect” again before going to bed.",
+      "chinese": "睡前我又复习了一遍 affect。"
+    },
+    {
+      "scene": "口语输出",
+      "english": "Which real situation would make you use “affect”?",
+      "chinese": "在什么真实情境中你会用到 affect？"
     }
   ],
   "studyFocus": {
-    "coreMeaning": "影响",
-    "keyCollocation": "affect your health：影响健康",
-    "commonMistake": "不要只按中文逐字替换，也不要随意改动介词或语序；优先把 “affect your health” 当作一个完整句块记忆。",
+    "coreMeaning": "影响；英文核心释义：to cause a change in someone or something。",
+    "keyCollocation": "把 “affect your health” 作为一个完整句块记忆。",
+    "commonMistake": "情态动词 can 后直接接动词原形，不加 to。",
     "mustUseExample": "Poor sleep can affect your memory."
   },
   "questions": [
@@ -240,7 +474,8 @@
       "free_sentence"
     ]
   },
-  "contentVersion": "2026.08.17.2",
+  "detailLevel": "template-complete",
+  "contentVersion": "2026.08.17.3",
   "reviewed": true,
-  "sourceNote": "从用户提供的 COCA 词表筛选；释义、例句和搭配为本项目离线整理；关系词与词组音标来自 CMU 北美英语发音词典。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

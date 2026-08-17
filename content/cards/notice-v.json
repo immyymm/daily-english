@@ -2,60 +2,208 @@
   "id": "notice-v",
   "word": "notice",
   "lemma": "notice",
+  "cocaRanks": [
+    {
+      "rank": 969,
+      "pos": "v",
+      "frequency": 99709,
+      "partOfSpeech": "v."
+    },
+    {
+      "rank": 3270,
+      "pos": "n",
+      "frequency": 22997,
+      "partOfSpeech": "n."
+    }
+  ],
+  "cocaRankLabel": "v. 第 969 名；n. 第 3270 名",
   "phonetic": "/ˈnoʊtɪs/",
   "syllables": "no·tice",
   "partOfSpeech": "v. / n.",
-  "frequencyBand": "COCA 高频精选",
+  "frequencyBand": "COCA 高频精选 · v. 第 969 名；n. 第 3270 名",
   "difficulty": "基础",
   "tags": [
     "v.",
+    "模板完整版",
     "高频表达"
   ],
   "coreMemory": {
     "chinese": "注意到；通知",
-    "english": "to become aware of something",
-    "structure": "notice a difference（注意到差异）",
-    "commonError": "不要把不同词性混在一起；先确认句中需要的是 v. 还是 n.，并整体记住 “notice a difference”。",
-    "directSynonym": "observe",
-    "directAntonym": "ignore",
-    "derivatives": "noticeable · unnoticed",
+    "english": "v. to see, hear, or become aware of something；n. a written or spoken announcement that gives information；n. advance warning that something will happen or end",
+    "structure": "notice something /ˈnoʊtɪs sʌmθɪŋ/（注意到某事）；notice that + clause /ˈnoʊtɪs ðæt klɔz/（注意到……）；notice someone do something /ˈnoʊtɪs sʌmwʌn du sʌmθɪŋ/（注意到某人做了某事（完整过程））；notice someone doing something /ˈnoʊtɪs sʌmwʌn duɪŋ sʌmθɪŋ/（注意到某人正在做某事）",
+    "structures": [
+      {
+        "phrase": "notice something",
+        "phonetic": "/ˈnoʊtɪs sʌmθɪŋ/",
+        "chinese": "注意到某事"
+      },
+      {
+        "phrase": "notice that + clause",
+        "phonetic": "/ˈnoʊtɪs ðæt klɔz/",
+        "chinese": "注意到……"
+      },
+      {
+        "phrase": "notice someone do something",
+        "phonetic": "/ˈnoʊtɪs sʌmwʌn du sʌmθɪŋ/",
+        "chinese": "注意到某人做了某事（完整过程）"
+      },
+      {
+        "phrase": "notice someone doing something",
+        "phonetic": "/ˈnoʊtɪs sʌmwʌn duɪŋ sʌmθɪŋ/",
+        "chinese": "注意到某人正在做某事"
+      }
+    ],
+    "commonError": "❌ notice to the change → ✅ notice the change；❌ notice him to leave → ✅ notice him leave；❌ a two weeks notice → ✅ two weeks’ notice",
+    "commonErrors": [
+      {
+        "wrong": "notice to the change",
+        "wrongPhonetic": "/ˈnoʊtɪs tu ðə tʃeɪndʒ/",
+        "right": "notice the change",
+        "rightPhonetic": "/ˈnoʊtɪs ðə tʃeɪndʒ/",
+        "note": "notice 作动词时直接接宾语，不加 to。"
+      },
+      {
+        "wrong": "notice him to leave",
+        "wrongPhonetic": "/ˈnoʊtɪs hɪm tu liv/",
+        "right": "notice him leave",
+        "rightPhonetic": "/ˈnoʊtɪs hɪm liv/",
+        "note": "感官动词 notice 后用宾语加动词原形，表示看见完整动作。"
+      },
+      {
+        "wrong": "a two weeks notice",
+        "wrongPhonetic": "/ə tu wiks ˈnoʊtɪs/",
+        "right": "two weeks’ notice",
+        "rightPhonetic": "/tu wiks ˈnoʊtɪs/",
+        "note": "表示“两周的通知期”用复数所有格 weeks’。"
+      }
+    ],
+    "directSynonym": "observe /əbzɝv/（观察到；观察）；detect /dɪtɛkt/（察觉；发现）；spot /spɑt/（发现；认出）；realize /riəlaɪz/（意识到）",
+    "directAntonym": "ignore /ɪɡnɔr/（忽视；不理会）；overlook /oʊvɚlʊk/（忽略；没注意到）；miss /mɪs/（没看见；错过）",
+    "derivatives": "noticeable · noticeably · unnoticed",
     "example": "Did you notice a change in her voice?",
     "exampleChinese": "你注意到她声音的变化了吗？"
   },
   "meanings": [
     {
       "partOfSpeech": "v.",
-      "english": "to become aware of something",
-      "chinese": "注意到",
+      "english": "to see, hear, or become aware of something",
+      "chinese": "注意到；察觉",
       "example": "Did you notice a change in her voice?",
       "translation": "你注意到她声音的变化了吗？"
     },
     {
       "partOfSpeech": "n.",
-      "english": "written or spoken information that warns or tells you about something",
+      "english": "a written or spoken announcement that gives information",
       "chinese": "通知；告示",
       "example": "The notice says the library will close early.",
       "translation": "通知上说图书馆会提前关门。"
+    },
+    {
+      "partOfSpeech": "n.",
+      "english": "advance warning that something will happen or end",
+      "chinese": "预先通知；通知期",
+      "example": "You must give two weeks’ notice before leaving.",
+      "translation": "离职前你必须提前两周通知。"
     }
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "观察变化",
       "items": [
         {
           "phrase": "notice a difference",
           "phonetic": "/ˈnoʊtɪs ə dɪfɚəns/",
           "chinese": "注意到差异"
+        },
+        {
+          "phrase": "notice a change",
+          "phonetic": "/ˈnoʊtɪs ə tʃeɪndʒ/",
+          "chinese": "注意到变化"
+        },
+        {
+          "phrase": "notice a pattern",
+          "phonetic": "/ˈnoʊtɪs ə pætɚn/",
+          "chinese": "注意到规律"
+        },
+        {
+          "phrase": "notice a mistake",
+          "phonetic": "/ˈnoʊtɪs ə mɪsteɪk/",
+          "chinese": "注意到错误"
         }
       ]
     },
     {
-      "category": "真实例句句块",
+      "category": "人物与动作",
       "items": [
         {
-          "phrase": "Did you notice a change",
-          "phonetic": "/dɪd ju ˈnoʊtɪs ə tʃeɪndʒ/",
-          "chinese": "核心例句片段：你注意到她声音的变化了吗？"
+          "phrase": "notice someone arrive",
+          "phonetic": "/ˈnoʊtɪs sʌmwʌn ɚaɪv/",
+          "chinese": "注意到某人到达"
+        },
+        {
+          "phrase": "notice someone looking",
+          "phonetic": "/ˈnoʊtɪs sʌmwʌn lʊkɪŋ/",
+          "chinese": "注意到某人正在看"
+        },
+        {
+          "phrase": "hardly notice",
+          "phonetic": "/hɑrdli ˈnoʊtɪs/",
+          "chinese": "几乎没注意到"
+        },
+        {
+          "phrase": "immediately notice",
+          "phonetic": "/ɪmidiətli ˈnoʊtɪs/",
+          "chinese": "立刻注意到"
+        }
+      ]
+    },
+    {
+      "category": "通知与告示",
+      "items": [
+        {
+          "phrase": "a public notice",
+          "phonetic": "/ə pʌblɪk ˈnoʊtɪs/",
+          "chinese": "公共告示"
+        },
+        {
+          "phrase": "a written notice",
+          "phonetic": "/ə rɪtən ˈnoʊtɪs/",
+          "chinese": "书面通知"
+        },
+        {
+          "phrase": "an official notice",
+          "phonetic": "/æn əfɪʃəl ˈnoʊtɪs/",
+          "chinese": "正式通知"
+        },
+        {
+          "phrase": "post a notice",
+          "phonetic": "/poʊst ə ˈnoʊtɪs/",
+          "chinese": "张贴通知"
+        }
+      ]
+    },
+    {
+      "category": "提前告知",
+      "items": [
+        {
+          "phrase": "give notice",
+          "phonetic": "/ɡɪv ˈnoʊtɪs/",
+          "chinese": "提前通知"
+        },
+        {
+          "phrase": "without notice",
+          "phonetic": "/wɪθaʊt ˈnoʊtɪs/",
+          "chinese": "未提前通知"
+        },
+        {
+          "phrase": "at short notice",
+          "phonetic": "/æt ʃɔrt ˈnoʊtɪs/",
+          "chinese": "临时；提前时间很短"
+        },
+        {
+          "phrase": "two weeks’ notice",
+          "phonetic": "/tu wiks ˈnoʊtɪs/",
+          "chinese": "提前两周通知"
         }
       ]
     }
@@ -65,26 +213,110 @@
       "phrase": "notice a difference",
       "phonetic": "/ˈnoʊtɪs ə dɪfɚəns/",
       "chinese": "注意到差异",
-      "example": "Did you notice a change in her voice?",
-      "translation": "你注意到她声音的变化了吗？"
+      "example": "You will notice a difference after a week of practice.",
+      "translation": "练习一周后你会注意到变化。"
+    },
+    {
+      "phrase": "notice that",
+      "phonetic": "/ˈnoʊtɪs ðæt/",
+      "chinese": "注意到……",
+      "example": "I noticed that the door was open.",
+      "translation": "我注意到门开着。"
+    },
+    {
+      "phrase": "take notice of",
+      "phonetic": "/teɪk ˈnoʊtɪs ʌv/",
+      "chinese": "注意；重视",
+      "example": "Please take notice of the safety instructions.",
+      "translation": "请留意安全说明。"
+    },
+    {
+      "phrase": "come to someone’s notice",
+      "phonetic": "/kʌm tu someone’s ˈnoʊtɪs/",
+      "chinese": "引起某人的注意",
+      "example": "The error came to my notice this morning.",
+      "translation": "我今天早上注意到了这个错误。"
+    },
+    {
+      "phrase": "give notice",
+      "phonetic": "/ɡɪv ˈnoʊtɪs/",
+      "chinese": "提前通知；提出离职",
+      "example": "She gave notice at the end of the month.",
+      "translation": "她在月底提出了离职。"
+    },
+    {
+      "phrase": "at short notice",
+      "phonetic": "/æt ʃɔrt ˈnoʊtɪs/",
+      "chinese": "在很短的提前时间内",
+      "example": "Thank you for meeting me at such short notice.",
+      "translation": "谢谢你临时抽时间见我。"
+    },
+    {
+      "phrase": "without notice",
+      "phonetic": "/wɪθaʊt ˈnoʊtɪs/",
+      "chinese": "未提前通知",
+      "example": "The schedule changed without notice.",
+      "translation": "日程在没有提前通知的情况下改变了。"
+    },
+    {
+      "phrase": "until further notice",
+      "phonetic": "/əntɪl fɝðɚ ˈnoʊtɪs/",
+      "chinese": "直到另行通知",
+      "example": "The room will remain closed until further notice.",
+      "translation": "该房间将关闭，直到另行通知。"
     }
   ],
   "synonyms": [
     {
       "word": "observe",
       "phonetic": "/əbzɝv/",
-      "partOfSpeech": "v. / n.",
-      "chinese": "与“注意到”意义接近",
-      "difference": "notice 在 “notice a difference” 中是本卡需要主动掌握的表达；observe 含义接近，但宾语、语气和固定搭配不一定相同。"
+      "partOfSpeech": "v.",
+      "chinese": "观察到；观察",
+      "difference": "较正式，常暗含有意识、仔细地观看；notice 可以是无意中察觉。"
+    },
+    {
+      "word": "detect",
+      "phonetic": "/dɪtɛkt/",
+      "partOfSpeech": "v.",
+      "chinese": "察觉；发现",
+      "difference": "强调发现不易看见的信号、错误或问题。"
+    },
+    {
+      "word": "spot",
+      "phonetic": "/spɑt/",
+      "partOfSpeech": "v.",
+      "chinese": "发现；认出",
+      "difference": "口语常用，强调在人群或复杂背景中很快看见。"
+    },
+    {
+      "word": "realize",
+      "phonetic": "/riəlaɪz/",
+      "partOfSpeech": "v.",
+      "chinese": "意识到",
+      "difference": "强调在思考后明白事实；notice 更侧重通过感官察觉。"
     }
   ],
   "antonyms": [
     {
       "word": "ignore",
       "phonetic": "/ɪɡnɔr/",
-      "partOfSpeech": "v. / n.",
-      "chinese": "与“注意到”意义相反",
-      "usage": "和 notice 的核心义形成对比；先在真实句子中判断是否确实构成反向关系。"
+      "partOfSpeech": "v.",
+      "chinese": "忽视；不理会",
+      "usage": "知道某事存在却故意不理，是最直接的反向表达。"
+    },
+    {
+      "word": "overlook",
+      "phonetic": "/oʊvɚlʊk/",
+      "partOfSpeech": "v.",
+      "chinese": "忽略；没注意到",
+      "usage": "常表示无意中漏掉细节或错误。"
+    },
+    {
+      "word": "miss",
+      "phonetic": "/mɪs/",
+      "partOfSpeech": "v.",
+      "chinese": "没看见；错过",
+      "usage": "表示未能看见、听见或抓住某个信息。"
     }
   ],
   "derivatives": [
@@ -92,77 +324,193 @@
       "word": "noticeable",
       "phonetic": "/noʊtəsəbəl/",
       "partOfSpeech": "adj.",
-      "chinese": "与“notice”同词族的常用词形",
-      "note": "这是 notice 的常用词族成员；先辨认词性，再放进完整句子中使用。"
+      "chinese": "明显的；值得注意的",
+      "note": "常修饰 change、difference 和 improvement。"
+    },
+    {
+      "word": "noticeably",
+      "phonetic": "/noʊtɪsəbli/",
+      "partOfSpeech": "adv.",
+      "chinese": "明显地",
+      "note": "说明变化达到能被察觉的程度。"
     },
     {
       "word": "unnoticed",
       "phonetic": "/ənnoʊtɪst/",
       "partOfSpeech": "adj.",
-      "chinese": "与“notice”同词族的常用词形",
-      "note": "这是 notice 的常用词族成员；先辨认词性，再放进完整句子中使用。"
+      "chinese": "未被注意的",
+      "note": "常见结构 go unnoticed。"
     }
   ],
   "confusables": [
     {
       "word": "note",
+      "phonetic": "/noʊt/",
       "partOfSpeech": "v. / n.",
       "chinese": "注意；笔记",
-      "difference": "notice 强调“注意到”或正式通知；note 常指“留意、记录”或一则笔记。",
-      "phonetic": "/noʊt/"
+      "difference": "note 作动词较正式，强调记录或特别指出；notice 更强调察觉。"
+    },
+    {
+      "word": "notify",
+      "phonetic": "/noʊtəfaɪ/",
+      "partOfSpeech": "v.",
+      "chinese": "通知",
+      "difference": "notify 是主动把信息告知某人；notice 是自己注意到，或名词“通知”。"
+    },
+    {
+      "word": "notion",
+      "phonetic": "/noʊʃən/",
+      "partOfSpeech": "n.",
+      "chinese": "概念；看法",
+      "difference": "notion 与 notice 拼写相近，但意义和发音不同。"
     }
   ],
   "relatedVocabulary": [
     {
-      "category": "语义坐标：近义与反义",
+      "category": "感知动作",
       "items": [
+        {
+          "word": "see",
+          "phonetic": "/si/",
+          "partOfSpeech": "v.",
+          "chinese": "看见"
+        },
+        {
+          "word": "hear",
+          "phonetic": "/hir/",
+          "partOfSpeech": "v.",
+          "chinese": "听见"
+        },
         {
           "word": "observe",
           "phonetic": "/əbzɝv/",
+          "partOfSpeech": "v.",
+          "chinese": "观察"
+        },
+        {
+          "word": "detect",
+          "phonetic": "/dɪtɛkt/",
+          "partOfSpeech": "v.",
+          "chinese": "察觉"
+        }
+      ]
+    },
+    {
+      "category": "注意与忽略",
+      "items": [
+        {
+          "word": "attention",
+          "phonetic": "/ətɛnʃən/",
+          "partOfSpeech": "n.",
+          "chinese": "注意力"
+        },
+        {
+          "word": "focus",
+          "phonetic": "/foʊkəs/",
           "partOfSpeech": "v. / n.",
-          "chinese": "与“注意到”意义接近"
+          "chinese": "专注"
         },
         {
           "word": "ignore",
           "phonetic": "/ɪɡnɔr/",
-          "partOfSpeech": "v. / n.",
-          "chinese": "与“注意到”意义相反"
+          "partOfSpeech": "v.",
+          "chinese": "忽视"
+        },
+        {
+          "word": "overlook",
+          "phonetic": "/oʊvɚlʊk/",
+          "partOfSpeech": "v.",
+          "chinese": "漏看"
+        }
+      ]
+    },
+    {
+      "category": "通知方式",
+      "items": [
+        {
+          "word": "announcement",
+          "phonetic": "/ənaʊnsmənt/",
+          "partOfSpeech": "n.",
+          "chinese": "公告"
+        },
+        {
+          "word": "message",
+          "phonetic": "/mɛsədʒ/",
+          "partOfSpeech": "n.",
+          "chinese": "消息"
+        },
+        {
+          "word": "warning",
+          "phonetic": "/wɔrnɪŋ/",
+          "partOfSpeech": "n.",
+          "chinese": "警告"
+        },
+        {
+          "word": "reminder",
+          "phonetic": "/rimaɪndɚ/",
+          "partOfSpeech": "n.",
+          "chinese": "提醒"
         }
       ]
     }
   ],
   "examples": [
     {
-      "scene": "日常 / 真实表达",
+      "scene": "声音变化",
       "english": "Did you notice a change in her voice?",
       "chinese": "你注意到她声音的变化了吗？"
     },
     {
-      "scene": "学习 / 工作场景",
-      "english": "In today’s lesson, we practiced the word “notice” in a complete sentence.",
-      "chinese": "今天的课程里，我们练习了怎样在完整句子中使用 notice。"
+      "scene": "发现错误",
+      "english": "I did not notice the spelling mistake at first.",
+      "chinese": "我一开始没有注意到那个拼写错误。"
     },
     {
-      "scene": "核心搭配复现",
-      "english": "“notice a difference” is the key phrase I want to remember.",
-      "chinese": "“notice a difference”是我想重点记住的搭配。"
+      "scene": "观察动作",
+      "english": "She noticed a man waiting near the door.",
+      "chinese": "她注意到一个男人正在门边等候。"
     },
     {
-      "scene": "常见错误提醒",
-      "english": "I checked the context before choosing “notice” instead of “observe”.",
-      "chinese": "我先检查语境，再决定用 notice 而不是 observe。"
+      "scene": "完整动作",
+      "english": "We noticed the lights go out one by one.",
+      "chinese": "我们看到灯一盏一盏地熄灭。"
     },
     {
-      "scene": "词义与近义辨析",
-      "english": "Here, “notice” means “to become aware of something”.",
-      "chinese": "在这里，notice 的意思是“注意到；通知”。"
+      "scene": "事实察觉",
+      "english": "I noticed that he seemed unusually quiet.",
+      "chinese": "我注意到他显得异常安静。"
+    },
+    {
+      "scene": "公共告示",
+      "english": "A notice on the wall explains the new rule.",
+      "chinese": "墙上的告示说明了新规定。"
+    },
+    {
+      "scene": "临时安排",
+      "english": "They canceled the meeting at short notice.",
+      "chinese": "他们临时取消了会议。"
+    },
+    {
+      "scene": "离职通知",
+      "english": "Employees are expected to give two weeks’ notice.",
+      "chinese": "员工通常需要提前两周提出离职。"
+    },
+    {
+      "scene": "引起注意",
+      "english": "The unusual payment came to the bank’s notice.",
+      "chinese": "那笔异常付款引起了银行的注意。"
+    },
+    {
+      "scene": "主动输出",
+      "english": "What small change did you notice today?",
+      "chinese": "你今天注意到了什么小变化？"
     }
   ],
   "studyFocus": {
-    "coreMeaning": "注意到；通知",
-    "keyCollocation": "notice a difference：注意到差异",
-    "commonMistake": "不要把不同词性混在一起；先确认句中需要的是 v. 还是 n.，并整体记住 “notice a difference”。",
-    "mustUseExample": "Did you notice a change in her voice?"
+    "coreMeaning": "notice 作动词表示“通过感官察觉”，作名词可表示“告示”或“提前通知”。",
+    "keyCollocation": "重点掌握 notice something、notice that 和 notice someone doing。",
+    "commonMistake": "notice 后直接接宾语，不说 notice to the change。",
+    "mustUseExample": "I noticed that the room had become quiet."
   },
   "questions": [
     {
@@ -247,7 +595,8 @@
       "free_sentence"
     ]
   },
-  "contentVersion": "2026.08.17.2",
+  "detailLevel": "template-complete",
+  "contentVersion": "2026.08.17.3",
   "reviewed": true,
-  "sourceNote": "从用户提供的 COCA 词表筛选；释义、例句和搭配为本项目离线整理；关系词与词组音标来自 CMU 北美英语发音词典。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；本卡依照用户词卡模板人工精校；音标为美式发音。"
 }

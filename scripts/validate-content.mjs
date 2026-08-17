@@ -22,16 +22,26 @@ for (const card of allCards.cards) {
   }
   if (card.meanings.length < 1) errors.push(card.id + ': expected at least one meaning.');
   if (card.partOfSpeech.includes('/') && card.meanings.length < 2) errors.push(card.id + ': multiple parts of speech need separate meanings.');
-  if (card.contextPhrases.reduce((sum, group) => sum + group.items.length, 0) < 2) errors.push(card.id + ': expected at least two context phrases.');
-  if (card.fixedPhrases.length < 1) errors.push(card.id + ': expected a fixed phrase.');
+  if (card.detailLevel !== 'template-complete') errors.push(card.id + ': card is not marked template-complete.');
+  if (!Array.isArray(card.cocaRanks) || card.cocaRanks.length < 1 || !card.cocaRankLabel) errors.push(card.id + ': missing exact COCA rank data.');
+  if (!Array.isArray(card.coreMemory.structures) || card.coreMemory.structures.length < 3) errors.push(card.id + ': expected at least three core structures.');
+  if (!Array.isArray(card.coreMemory.commonErrors) || card.coreMemory.commonErrors.length < 2) errors.push(card.id + ': expected at least two concrete error corrections.');
+  if (card.contextPhrases.length < 4) errors.push(card.id + ': expected four context categories.');
+  if (card.contextPhrases.reduce((sum, group) => sum + group.items.length, 0) < 12) errors.push(card.id + ': expected at least twelve context phrases.');
+  if (card.fixedPhrases.length < 8) errors.push(card.id + ': expected at least eight fixed phrases or usage frames.');
   if (card.synonyms.length < 1 || card.antonyms.length < 1) errors.push(card.id + ': missing semantic contrast.');
-  if (card.relatedVocabulary.reduce((sum, group) => sum + group.items.length, 0) < 2) errors.push(card.id + ': expected a related vocabulary group.');
-  if (card.examples.length < 5) errors.push(card.id + ': expected five learning-scene examples.');
+  if (card.relatedVocabulary.length < 3) errors.push(card.id + ': expected at least three related-vocabulary categories.');
+  if (card.relatedVocabulary.reduce((sum, group) => sum + group.items.length, 0) < 8) errors.push(card.id + ': expected at least eight related words.');
+  if (card.examples.length < 10) errors.push(card.id + ': expected ten learning-scene examples.');
   if (new Set(card.examples.map((example) => example.english)).size !== card.examples.length) errors.push(card.id + ': duplicate example sentences.');
   if (card.derivatives.some((item) => item.word.toLowerCase() === card.word.toLowerCase())) errors.push(card.id + ': target word repeated as a derivative.');
+  if (card.confusables.some((item) => item.word.toLowerCase() === card.word.toLowerCase())) errors.push(card.id + ': target word repeated as a confusable.');
+  if (card.coreMemory.commonErrors.some((item) => !item.wrong || !item.right || item.wrong === item.right)) errors.push(card.id + ': invalid error correction pair.');
 
   const phonetics = [
     card.phonetic,
+    ...card.coreMemory.structures.map((item) => item.phonetic),
+    ...card.coreMemory.commonErrors.flatMap((item) => [item.wrongPhonetic, item.rightPhonetic]),
     ...card.contextPhrases.flatMap((group) => group.items.map((item) => item.phonetic)),
     ...card.fixedPhrases.map((item) => item.phonetic),
     ...card.synonyms.map((item) => item.phonetic),
@@ -61,4 +71,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log('Content validation passed: 150 cards, 30 days, 5 unique cards per day.');
+console.log('Content validation passed: 150 template-complete cards, 30 days, 5 unique cards per day.');

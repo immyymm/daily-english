@@ -1,28 +1,76 @@
 {
   "date": "2026-09-03",
   "dayNumber": 18,
-  "contentVersion": "2026.08.17.2",
+  "contentVersion": "2026.08.17.3",
   "cards": [
     {
       "id": "aware-adj",
       "word": "aware",
       "lemma": "aware",
+      "cocaRanks": [
+        {
+          "rank": 1506,
+          "pos": "j",
+          "frequency": 63488,
+          "partOfSpeech": "adj."
+        }
+      ],
+      "cocaRankLabel": "adj. 第 1506 名",
       "phonetic": "/əˈwer/",
-      "syllables": "aware",
+      "syllables": "aware（约 2 音节）",
       "partOfSpeech": "adj.",
-      "frequencyBand": "COCA 高频精选",
+      "frequencyBand": "COCA 高频精选 · adj. 第 1506 名",
       "difficulty": "进阶",
       "tags": [
         "adj.",
+        "模板完整版",
         "主动词汇"
       ],
       "coreMemory": {
         "chinese": "意识到的；知晓的",
-        "english": "knowing that something exists or is true",
-        "structure": "be aware of（意识到……）",
-        "commonError": "不要只按中文逐字替换，也不要随意改动介词或语序；优先把 “be aware of” 当作一个完整句块记忆。",
-        "directSynonym": "conscious",
-        "directAntonym": "unaware",
+        "english": "adj. knowing that something exists or is true",
+        "structure": "be aware of /bi əˈwer ʌv/（意识到……）；become aware that /bɪkʌm əˈwer ðæt/（开始意识到……）；fully aware /fʊli əˈwer/（充分意识到）；make someone aware of /meɪk sʌmwʌn əˈwer ʌv/（使某人意识到）",
+        "structures": [
+          {
+            "phrase": "be aware of",
+            "phonetic": "/bi əˈwer ʌv/",
+            "chinese": "意识到……"
+          },
+          {
+            "phrase": "become aware that",
+            "phonetic": "/bɪkʌm əˈwer ðæt/",
+            "chinese": "开始意识到……"
+          },
+          {
+            "phrase": "fully aware",
+            "phonetic": "/fʊli əˈwer/",
+            "chinese": "充分意识到"
+          },
+          {
+            "phrase": "make someone aware of",
+            "phonetic": "/meɪk sʌmwʌn əˈwer ʌv/",
+            "chinese": "使某人意识到"
+          }
+        ],
+        "commonError": "❌ feel awarely → ✅ feel aware；❌ more awareer → ✅ more aware",
+        "commonErrors": [
+          {
+            "wrong": "feel awarely",
+            "wrongPhonetic": "/fil awarely/",
+            "right": "feel aware",
+            "rightPhonetic": "/fil əˈwer/",
+            "note": "系动词 feel 后接形容词作表语，不随意加 -ly。"
+          },
+          {
+            "wrong": "more awareer",
+            "wrongPhonetic": "/mɔr awareer/",
+            "right": "more aware",
+            "rightPhonetic": "/mɔr əˈwer/",
+            "note": "较长形容词通常用 more 构成比较级，不重复加 -er。"
+          }
+        ],
+        "directSynonym": "conscious /kɑnʃəs/（与“意识到的”意义接近）",
+        "directAntonym": "unaware /ʌnəwɛr/（与“意识到的”意义相反）",
         "derivatives": "awareness · unaware",
         "example": "Be aware of the difference in tone.",
         "exampleChinese": "注意语气上的差异。"
@@ -44,16 +92,76 @@
               "phrase": "be aware of",
               "phonetic": "/bi əˈwer ʌv/",
               "chinese": "意识到……"
+            },
+            {
+              "phrase": "become aware that",
+              "phonetic": "/bɪkʌm əˈwer ðæt/",
+              "chinese": "开始意识到……"
+            },
+            {
+              "phrase": "fully aware",
+              "phonetic": "/fʊli əˈwer/",
+              "chinese": "充分意识到"
             }
           ]
         },
         {
-          "category": "真实例句句块",
+          "category": "句型与语法框架",
           "items": [
             {
-              "phrase": "Be aware of the",
-              "phonetic": "/bi əˈwer ʌv ðə/",
-              "chinese": "核心例句片段：注意语气上的差异。"
+              "phrase": "make someone aware of",
+              "phonetic": "/meɪk sʌmwʌn əˈwer ʌv/",
+              "chinese": "使某人意识到"
+            },
+            {
+              "phrase": "well aware of",
+              "phonetic": "/wɛl əˈwer ʌv/",
+              "chinese": "很清楚……"
+            },
+            {
+              "phrase": "environmentally aware",
+              "phonetic": "/ɪnvaɪrənmɛntəli əˈwer/",
+              "chinese": "有环保意识的"
+            }
+          ]
+        },
+        {
+          "category": "真实表达延伸",
+          "items": [
+            {
+              "phrase": "be aware",
+              "phonetic": "/bi əˈwer/",
+              "chinese": "是意识到的的"
+            },
+            {
+              "phrase": "seem aware",
+              "phonetic": "/sim əˈwer/",
+              "chinese": "显得意识到的"
+            },
+            {
+              "phrase": "remain aware",
+              "phonetic": "/rɪmeɪn əˈwer/",
+              "chinese": "保持意识到的"
+            }
+          ]
+        },
+        {
+          "category": "主动输出提示",
+          "items": [
+            {
+              "phrase": "become aware",
+              "phonetic": "/bɪkʌm əˈwer/",
+              "chinese": "变得意识到的"
+            },
+            {
+              "phrase": "feel aware",
+              "phonetic": "/fil əˈwer/",
+              "chinese": "感觉意识到的"
+            },
+            {
+              "phrase": "very aware",
+              "phonetic": "/vɛri əˈwer/",
+              "chinese": "非常意识到的"
             }
           ]
         }
@@ -65,6 +173,55 @@
           "chinese": "意识到……",
           "example": "Be aware of the difference in tone.",
           "translation": "注意语气上的差异。"
+        },
+        {
+          "phrase": "become aware that",
+          "phonetic": "/bɪkʌm əˈwer ðæt/",
+          "chinese": "开始意识到……",
+          "example": "The phrase “become aware that” is useful in everyday English.",
+          "translation": "“become aware that”是日常英语中的实用表达。"
+        },
+        {
+          "phrase": "fully aware",
+          "phonetic": "/fʊli əˈwer/",
+          "chinese": "充分意识到",
+          "example": "I added “fully aware” to my vocabulary notebook.",
+          "translation": "我把“fully aware”记进了词汇本。"
+        },
+        {
+          "phrase": "make someone aware of",
+          "phonetic": "/meɪk sʌmwʌn əˈwer ʌv/",
+          "chinese": "使某人意识到",
+          "example": "Listen for “make someone aware of” in real conversations.",
+          "translation": "在真实对话中留意“make someone aware of”。"
+        },
+        {
+          "phrase": "well aware of",
+          "phonetic": "/wɛl əˈwer ʌv/",
+          "chinese": "很清楚……",
+          "example": "Can you use “well aware of” in a complete sentence?",
+          "translation": "你能用“well aware of”说一个完整句子吗？"
+        },
+        {
+          "phrase": "environmentally aware",
+          "phonetic": "/ɪnvaɪrənmɛntəli əˈwer/",
+          "chinese": "有环保意识的",
+          "example": "We practiced “environmentally aware” aloud three times.",
+          "translation": "我们把“environmentally aware”大声练了三遍。"
+        },
+        {
+          "phrase": "be aware",
+          "phonetic": "/bi əˈwer/",
+          "chinese": "是意识到的的",
+          "example": "The phrase “be aware” is useful in everyday English.",
+          "translation": "“be aware”是日常英语中的实用表达。"
+        },
+        {
+          "phrase": "seem aware",
+          "phonetic": "/sim əˈwer/",
+          "chinese": "显得意识到的",
+          "example": "I added “seem aware” to my vocabulary notebook.",
+          "translation": "我把“seem aware”记进了词汇本。"
         }
       ],
       "synonyms": [
@@ -73,7 +230,7 @@
           "phonetic": "/kɑnʃəs/",
           "partOfSpeech": "adj.",
           "chinese": "与“意识到的”意义接近",
-          "difference": "aware 在 “be aware of” 中是本卡需要主动掌握的表达；conscious 含义接近，但宾语、语气和固定搭配不一定相同。"
+          "difference": "aware 是本卡核心搭配 “be aware of” 中的中性常用选择；conscious 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
         }
       ],
       "antonyms": [
@@ -82,7 +239,7 @@
           "phonetic": "/ʌnəwɛr/",
           "partOfSpeech": "adj.",
           "chinese": "与“意识到的”意义相反",
-          "usage": "和 aware 的核心义形成对比；先在真实句子中判断是否确实构成反向关系。"
+          "usage": "在本卡核心义下与 aware 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
         }
       ],
       "derivatives": [
@@ -90,14 +247,14 @@
           "word": "awareness",
           "phonetic": "/əwɛrnəs/",
           "partOfSpeech": "n.",
-          "chinese": "与“aware”同词族的常用词形",
+          "chinese": "与 aware 同词族的常用词形",
           "note": "这是 aware 的常用词族成员；先辨认词性，再放进完整句子中使用。"
         },
         {
           "word": "unaware",
           "phonetic": "/ʌnəwɛr/",
           "partOfSpeech": "adj.",
-          "chinese": "与“aware”同词族的常用词形",
+          "chinese": "与 aware 同词族的常用词形",
           "note": "这是 aware 的常用词族成员；先辨认词性，再放进完整句子中使用。"
         }
       ],
@@ -110,48 +267,125 @@
               "word": "conscious",
               "phonetic": "/kɑnʃəs/",
               "partOfSpeech": "adj.",
-              "chinese": "与“意识到的”意义接近"
+              "chinese": "与本词相关的常用表达"
             },
             {
               "word": "unaware",
               "phonetic": "/ʌnəwɛr/",
               "partOfSpeech": "adj.",
-              "chinese": "与“意识到的”意义相反"
+              "chinese": "与本词相关的常用表达"
+            }
+          ]
+        },
+        {
+          "category": "词族与构词联系",
+          "items": [
+            {
+              "word": "awareness",
+              "phonetic": "/əwɛrnəs/",
+              "partOfSpeech": "n.",
+              "chinese": "与本词相关的常用表达"
+            },
+            {
+              "word": "unaware",
+              "phonetic": "/ʌnəwɛr/",
+              "partOfSpeech": "adj.",
+              "chinese": "与本词相关的常用表达"
+            },
+            {
+              "word": "difficult",
+              "phonetic": "/ˈdɪfɪkəlt/",
+              "partOfSpeech": "adj.",
+              "chinese": "困难的"
+            }
+          ]
+        },
+        {
+          "category": "同一学习主题中的高频词",
+          "items": [
+            {
+              "word": "difficult",
+              "phonetic": "/ˈdɪfɪkəlt/",
+              "partOfSpeech": "adj.",
+              "chinese": "困难的"
+            },
+            {
+              "word": "responsible",
+              "phonetic": "/rɪˈspɑːnsəbəl/",
+              "partOfSpeech": "adj.",
+              "chinese": "负责的"
+            },
+            {
+              "word": "familiar",
+              "phonetic": "/fəˈmɪliər/",
+              "partOfSpeech": "adj.",
+              "chinese": "熟悉的"
+            },
+            {
+              "word": "comfortable",
+              "phonetic": "/ˈkʌmftəbəl/",
+              "partOfSpeech": "adj.",
+              "chinese": "舒适的"
             }
           ]
         }
       ],
       "examples": [
         {
-          "scene": "日常 / 真实表达",
+          "scene": "核心真实用法",
           "english": "Be aware of the difference in tone.",
           "chinese": "注意语气上的差异。"
         },
         {
-          "scene": "学习 / 工作场景",
-          "english": "In today’s lesson, we practiced the word “aware” in a complete sentence.",
-          "chinese": "今天的课程里，我们练习了怎样在完整句子中使用 aware。"
+          "scene": "英文释义理解",
+          "english": "In this lesson, I learned that “aware” means “knowing that something exists or is true”.",
+          "chinese": "这节课里，我学到 aware 的核心意思是“意识到的；知晓的”。"
         },
         {
-          "scene": "核心搭配复现",
-          "english": "“be aware of” is the key phrase I want to remember.",
-          "chinese": "“be aware of”是我想重点记住的搭配。"
+          "scene": "高频搭配辨认",
+          "english": "The phrase “be aware of” is useful in everyday English.",
+          "chinese": "“be aware of”是日常英语中的实用表达。"
         },
         {
-          "scene": "常见错误提醒",
-          "english": "I checked the context before choosing “aware” instead of “conscious”.",
-          "chinese": "我先检查语境，再决定用 aware 而不是 conscious。"
+          "scene": "主动造句",
+          "english": "Can you use “aware” in a sentence of your own?",
+          "chinese": "你能用 aware 说一个自己的句子吗？"
         },
         {
-          "scene": "词义与近义辨析",
-          "english": "Here, “aware” means “knowing that something exists or is true”.",
-          "chinese": "在这里，aware 的意思是“意识到的；知晓的”。"
+          "scene": "词汇笔记",
+          "english": "I wrote “aware” and its pronunciation in my notebook.",
+          "chinese": "我把 aware 和它的发音记进了笔记本。"
+        },
+        {
+          "scene": "听力辨认",
+          "english": "Listen for “aware” the next time you hear English.",
+          "chinese": "下次听英语时，留意辨认 aware。"
+        },
+        {
+          "scene": "近义比较",
+          "english": "I compared “aware” with “conscious” before choosing the word.",
+          "chinese": "选词前，我比较了 aware 和 conscious。"
+        },
+        {
+          "scene": "反义对照",
+          "english": "The opposite idea is often expressed with “unaware”.",
+          "chinese": "相反的意思常可用 unaware 表达。"
+        },
+        {
+          "scene": "间隔复习",
+          "english": "I reviewed “aware” again before going to bed.",
+          "chinese": "睡前我又复习了一遍 aware。"
+        },
+        {
+          "scene": "口语输出",
+          "english": "Which real situation would make you use “aware”?",
+          "chinese": "在什么真实情境中你会用到 aware？"
         }
       ],
       "studyFocus": {
-        "coreMeaning": "意识到的；知晓的",
-        "keyCollocation": "be aware of：意识到……",
-        "commonMistake": "不要只按中文逐字替换，也不要随意改动介词或语序；优先把 “be aware of” 当作一个完整句块记忆。",
+        "coreMeaning": "意识到的；知晓的；英文核心释义：knowing that something exists or is true。",
+        "keyCollocation": "把 “be aware of” 作为一个完整句块记忆。",
+        "commonMistake": "系动词 feel 后接形容词作表语，不随意加 -ly。",
         "mustUseExample": "Be aware of the difference in tone."
       },
       "questions": [
@@ -237,30 +471,79 @@
           "free_sentence"
         ]
       },
-      "contentVersion": "2026.08.17.2",
+      "detailLevel": "template-complete",
+      "contentVersion": "2026.08.17.3",
       "reviewed": true,
-      "sourceNote": "从用户提供的 COCA 词表筛选；释义、例句和搭配为本项目离线整理；关系词与词组音标来自 CMU 北美英语发音词典。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
     {
       "id": "familiar-adj",
       "word": "familiar",
       "lemma": "familiar",
+      "cocaRanks": [
+        {
+          "rank": 1692,
+          "pos": "j",
+          "frequency": 54651,
+          "partOfSpeech": "adj."
+        }
+      ],
+      "cocaRankLabel": "adj. 第 1692 名",
       "phonetic": "/fəˈmɪliər/",
-      "syllables": "familiar",
+      "syllables": "familiar（约 3 音节）",
       "partOfSpeech": "adj.",
-      "frequencyBand": "COCA 高频精选",
+      "frequencyBand": "COCA 高频精选 · adj. 第 1692 名",
       "difficulty": "进阶",
       "tags": [
         "adj.",
+        "模板完整版",
         "主动词汇"
       ],
       "coreMemory": {
         "chinese": "熟悉的",
-        "english": "well known from past experience",
-        "structure": "be familiar with（熟悉……）",
-        "commonError": "不要只按中文逐字替换，也不要随意改动介词或语序；优先把 “be familiar with” 当作一个完整句块记忆。",
-        "directSynonym": "known",
-        "directAntonym": "unfamiliar",
+        "english": "adj. well known from past experience",
+        "structure": "be familiar with /bi fəˈmɪliər wɪð/（熟悉……）；look familiar /lʊk fəˈmɪliər/（看起来眼熟）；sound familiar /saʊnd fəˈmɪliər/（听起来耳熟）；familiar to someone /fəˈmɪliər tu sʌmwʌn/（为某人所熟悉）",
+        "structures": [
+          {
+            "phrase": "be familiar with",
+            "phonetic": "/bi fəˈmɪliər wɪð/",
+            "chinese": "熟悉……"
+          },
+          {
+            "phrase": "look familiar",
+            "phonetic": "/lʊk fəˈmɪliər/",
+            "chinese": "看起来眼熟"
+          },
+          {
+            "phrase": "sound familiar",
+            "phonetic": "/saʊnd fəˈmɪliər/",
+            "chinese": "听起来耳熟"
+          },
+          {
+            "phrase": "familiar to someone",
+            "phonetic": "/fəˈmɪliər tu sʌmwʌn/",
+            "chinese": "为某人所熟悉"
+          }
+        ],
+        "commonError": "❌ feel familiarly → ✅ feel familiar；❌ more familiarer → ✅ more familiar",
+        "commonErrors": [
+          {
+            "wrong": "feel familiarly",
+            "wrongPhonetic": "/fil familiarly/",
+            "right": "feel familiar",
+            "rightPhonetic": "/fil fəˈmɪliər/",
+            "note": "系动词 feel 后接形容词作表语，不随意加 -ly。"
+          },
+          {
+            "wrong": "more familiarer",
+            "wrongPhonetic": "/mɔr familiarer/",
+            "right": "more familiar",
+            "rightPhonetic": "/mɔr fəˈmɪliər/",
+            "note": "较长形容词通常用 more 构成比较级，不重复加 -er。"
+          }
+        ],
+        "directSynonym": "known /noʊn/（与“熟悉的”意义接近）",
+        "directAntonym": "unfamiliar /ʌnfəmɪljɚ/（与“熟悉的”意义相反）",
         "derivatives": "familiarity · unfamiliar",
         "example": "Are you familiar with this expression?",
         "exampleChinese": "你熟悉这个表达吗？"
@@ -282,16 +565,76 @@
               "phrase": "be familiar with",
               "phonetic": "/bi fəˈmɪliər wɪð/",
               "chinese": "熟悉……"
+            },
+            {
+              "phrase": "look familiar",
+              "phonetic": "/lʊk fəˈmɪliər/",
+              "chinese": "看起来眼熟"
+            },
+            {
+              "phrase": "sound familiar",
+              "phonetic": "/saʊnd fəˈmɪliər/",
+              "chinese": "听起来耳熟"
             }
           ]
         },
         {
-          "category": "真实例句句块",
+          "category": "句型与语法框架",
           "items": [
             {
-              "phrase": "Are you familiar with this",
-              "phonetic": "/ɑr ju fəˈmɪliər wɪð ðɪs/",
-              "chinese": "核心例句片段：你熟悉这个表达吗？"
+              "phrase": "familiar to someone",
+              "phonetic": "/fəˈmɪliər tu sʌmwʌn/",
+              "chinese": "为某人所熟悉"
+            },
+            {
+              "phrase": "a familiar face",
+              "phonetic": "/ə fəˈmɪliər feɪs/",
+              "chinese": "熟悉的面孔"
+            },
+            {
+              "phrase": "become familiar with",
+              "phonetic": "/bɪkʌm fəˈmɪliər wɪð/",
+              "chinese": "逐渐熟悉……"
+            }
+          ]
+        },
+        {
+          "category": "真实表达延伸",
+          "items": [
+            {
+              "phrase": "be familiar",
+              "phonetic": "/bi fəˈmɪliər/",
+              "chinese": "是熟悉的的"
+            },
+            {
+              "phrase": "seem familiar",
+              "phonetic": "/sim fəˈmɪliər/",
+              "chinese": "显得熟悉的"
+            },
+            {
+              "phrase": "remain familiar",
+              "phonetic": "/rɪmeɪn fəˈmɪliər/",
+              "chinese": "保持熟悉的"
+            }
+          ]
+        },
+        {
+          "category": "主动输出提示",
+          "items": [
+            {
+              "phrase": "become familiar",
+              "phonetic": "/bɪkʌm fəˈmɪliər/",
+              "chinese": "变得熟悉的"
+            },
+            {
+              "phrase": "feel familiar",
+              "phonetic": "/fil fəˈmɪliər/",
+              "chinese": "感觉熟悉的"
+            },
+            {
+              "phrase": "very familiar",
+              "phonetic": "/vɛri fəˈmɪliər/",
+              "chinese": "非常熟悉的"
             }
           ]
         }
@@ -303,6 +646,55 @@
           "chinese": "熟悉……",
           "example": "Are you familiar with this expression?",
           "translation": "你熟悉这个表达吗？"
+        },
+        {
+          "phrase": "look familiar",
+          "phonetic": "/lʊk fəˈmɪliər/",
+          "chinese": "看起来眼熟",
+          "example": "The phrase “look familiar” is useful in everyday English.",
+          "translation": "“look familiar”是日常英语中的实用表达。"
+        },
+        {
+          "phrase": "sound familiar",
+          "phonetic": "/saʊnd fəˈmɪliər/",
+          "chinese": "听起来耳熟",
+          "example": "I added “sound familiar” to my vocabulary notebook.",
+          "translation": "我把“sound familiar”记进了词汇本。"
+        },
+        {
+          "phrase": "familiar to someone",
+          "phonetic": "/fəˈmɪliər tu sʌmwʌn/",
+          "chinese": "为某人所熟悉",
+          "example": "Listen for “familiar to someone” in real conversations.",
+          "translation": "在真实对话中留意“familiar to someone”。"
+        },
+        {
+          "phrase": "a familiar face",
+          "phonetic": "/ə fəˈmɪliər feɪs/",
+          "chinese": "熟悉的面孔",
+          "example": "Can you use “a familiar face” in a complete sentence?",
+          "translation": "你能用“a familiar face”说一个完整句子吗？"
+        },
+        {
+          "phrase": "become familiar with",
+          "phonetic": "/bɪkʌm fəˈmɪliər wɪð/",
+          "chinese": "逐渐熟悉……",
+          "example": "We practiced “become familiar with” aloud three times.",
+          "translation": "我们把“become familiar with”大声练了三遍。"
+        },
+        {
+          "phrase": "be familiar",
+          "phonetic": "/bi fəˈmɪliər/",
+          "chinese": "是熟悉的的",
+          "example": "The phrase “be familiar” is useful in everyday English.",
+          "translation": "“be familiar”是日常英语中的实用表达。"
+        },
+        {
+          "phrase": "seem familiar",
+          "phonetic": "/sim fəˈmɪliər/",
+          "chinese": "显得熟悉的",
+          "example": "I added “seem familiar” to my vocabulary notebook.",
+          "translation": "我把“seem familiar”记进了词汇本。"
         }
       ],
       "synonyms": [
@@ -311,7 +703,7 @@
           "phonetic": "/noʊn/",
           "partOfSpeech": "adj.",
           "chinese": "与“熟悉的”意义接近",
-          "difference": "familiar 在 “be familiar with” 中是本卡需要主动掌握的表达；known 含义接近，但宾语、语气和固定搭配不一定相同。"
+          "difference": "familiar 是本卡核心搭配 “be familiar with” 中的中性常用选择；known 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
         }
       ],
       "antonyms": [
@@ -320,7 +712,7 @@
           "phonetic": "/ʌnfəmɪljɚ/",
           "partOfSpeech": "adj.",
           "chinese": "与“熟悉的”意义相反",
-          "usage": "和 familiar 的核心义形成对比；先在真实句子中判断是否确实构成反向关系。"
+          "usage": "在本卡核心义下与 familiar 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
         }
       ],
       "derivatives": [
@@ -328,14 +720,14 @@
           "word": "familiarity",
           "phonetic": "/fəmɪljɛrəti/",
           "partOfSpeech": "n.",
-          "chinese": "与“familiar”同词族的常用词形",
+          "chinese": "与 familiar 同词族的常用词形",
           "note": "这是 familiar 的常用词族成员；先辨认词性，再放进完整句子中使用。"
         },
         {
           "word": "unfamiliar",
           "phonetic": "/ʌnfəmɪljɚ/",
           "partOfSpeech": "adj.",
-          "chinese": "与“familiar”同词族的常用词形",
+          "chinese": "与 familiar 同词族的常用词形",
           "note": "这是 familiar 的常用词族成员；先辨认词性，再放进完整句子中使用。"
         }
       ],
@@ -347,49 +739,126 @@
             {
               "word": "known",
               "phonetic": "/noʊn/",
-              "partOfSpeech": "adj.",
-              "chinese": "与“熟悉的”意义接近"
+              "partOfSpeech": "word family",
+              "chinese": "与本词相关的常用表达"
             },
             {
               "word": "unfamiliar",
               "phonetic": "/ʌnfəmɪljɚ/",
               "partOfSpeech": "adj.",
-              "chinese": "与“熟悉的”意义相反"
+              "chinese": "与本词相关的常用表达"
+            }
+          ]
+        },
+        {
+          "category": "词族与构词联系",
+          "items": [
+            {
+              "word": "familiarity",
+              "phonetic": "/fəmɪljɛrəti/",
+              "partOfSpeech": "n.",
+              "chinese": "与本词相关的常用表达"
+            },
+            {
+              "word": "unfamiliar",
+              "phonetic": "/ʌnfəmɪljɚ/",
+              "partOfSpeech": "adj.",
+              "chinese": "与本词相关的常用表达"
+            },
+            {
+              "word": "responsible",
+              "phonetic": "/rɪˈspɑːnsəbəl/",
+              "partOfSpeech": "adj.",
+              "chinese": "负责的"
+            }
+          ]
+        },
+        {
+          "category": "同一学习主题中的高频词",
+          "items": [
+            {
+              "word": "responsible",
+              "phonetic": "/rɪˈspɑːnsəbəl/",
+              "partOfSpeech": "adj.",
+              "chinese": "负责的"
+            },
+            {
+              "word": "aware",
+              "phonetic": "/əˈwer/",
+              "partOfSpeech": "adj.",
+              "chinese": "意识到的"
+            },
+            {
+              "word": "comfortable",
+              "phonetic": "/ˈkʌmftəbəl/",
+              "partOfSpeech": "adj.",
+              "chinese": "舒适的"
+            },
+            {
+              "word": "effective",
+              "phonetic": "/ɪˈfektɪv/",
+              "partOfSpeech": "adj.",
+              "chinese": "有效的"
             }
           ]
         }
       ],
       "examples": [
         {
-          "scene": "日常 / 真实表达",
+          "scene": "核心真实用法",
           "english": "Are you familiar with this expression?",
           "chinese": "你熟悉这个表达吗？"
         },
         {
-          "scene": "学习 / 工作场景",
-          "english": "In today’s lesson, we practiced the word “familiar” in a complete sentence.",
-          "chinese": "今天的课程里，我们练习了怎样在完整句子中使用 familiar。"
+          "scene": "英文释义理解",
+          "english": "In this lesson, I learned that “familiar” means “well known from past experience”.",
+          "chinese": "这节课里，我学到 familiar 的核心意思是“熟悉的”。"
         },
         {
-          "scene": "核心搭配复现",
-          "english": "“be familiar with” is the key phrase I want to remember.",
-          "chinese": "“be familiar with”是我想重点记住的搭配。"
+          "scene": "高频搭配辨认",
+          "english": "The phrase “be familiar with” is useful in everyday English.",
+          "chinese": "“be familiar with”是日常英语中的实用表达。"
         },
         {
-          "scene": "常见错误提醒",
-          "english": "I checked the context before choosing “familiar” instead of “known”.",
-          "chinese": "我先检查语境，再决定用 familiar 而不是 known。"
+          "scene": "主动造句",
+          "english": "Can you use “familiar” in a sentence of your own?",
+          "chinese": "你能用 familiar 说一个自己的句子吗？"
         },
         {
-          "scene": "词义与近义辨析",
-          "english": "Here, “familiar” means “well known from past experience”.",
-          "chinese": "在这里，familiar 的意思是“熟悉的”。"
+          "scene": "词汇笔记",
+          "english": "I wrote “familiar” and its pronunciation in my notebook.",
+          "chinese": "我把 familiar 和它的发音记进了笔记本。"
+        },
+        {
+          "scene": "听力辨认",
+          "english": "Listen for “familiar” the next time you hear English.",
+          "chinese": "下次听英语时，留意辨认 familiar。"
+        },
+        {
+          "scene": "近义比较",
+          "english": "I compared “familiar” with “known” before choosing the word.",
+          "chinese": "选词前，我比较了 familiar 和 known。"
+        },
+        {
+          "scene": "反义对照",
+          "english": "The opposite idea is often expressed with “unfamiliar”.",
+          "chinese": "相反的意思常可用 unfamiliar 表达。"
+        },
+        {
+          "scene": "间隔复习",
+          "english": "I reviewed “familiar” again before going to bed.",
+          "chinese": "睡前我又复习了一遍 familiar。"
+        },
+        {
+          "scene": "口语输出",
+          "english": "Which real situation would make you use “familiar”?",
+          "chinese": "在什么真实情境中你会用到 familiar？"
         }
       ],
       "studyFocus": {
-        "coreMeaning": "熟悉的",
-        "keyCollocation": "be familiar with：熟悉……",
-        "commonMistake": "不要只按中文逐字替换，也不要随意改动介词或语序；优先把 “be familiar with” 当作一个完整句块记忆。",
+        "coreMeaning": "熟悉的；英文核心释义：well known from past experience。",
+        "keyCollocation": "把 “be familiar with” 作为一个完整句块记忆。",
+        "commonMistake": "系动词 feel 后接形容词作表语，不随意加 -ly。",
         "mustUseExample": "Are you familiar with this expression?"
       },
       "questions": [
@@ -475,30 +944,79 @@
           "free_sentence"
         ]
       },
-      "contentVersion": "2026.08.17.2",
+      "detailLevel": "template-complete",
+      "contentVersion": "2026.08.17.3",
       "reviewed": true,
-      "sourceNote": "从用户提供的 COCA 词表筛选；释义、例句和搭配为本项目离线整理；关系词与词组音标来自 CMU 北美英语发音词典。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
     {
       "id": "comfortable-adj",
       "word": "comfortable",
       "lemma": "comfortable",
+      "cocaRanks": [
+        {
+          "rank": 1833,
+          "pos": "j",
+          "frequency": 49532,
+          "partOfSpeech": "adj."
+        }
+      ],
+      "cocaRankLabel": "adj. 第 1833 名",
       "phonetic": "/ˈkʌmftəbəl/",
-      "syllables": "comfort·able",
+      "syllables": "comfortable（约 3 音节）",
       "partOfSpeech": "adj.",
-      "frequencyBand": "COCA 高频精选",
+      "frequencyBand": "COCA 高频精选 · adj. 第 1833 名",
       "difficulty": "进阶",
       "tags": [
         "adj.",
+        "模板完整版",
         "主动词汇"
       ],
       "coreMemory": {
         "chinese": "舒适的；自在的",
-        "english": "feeling relaxed and free from worry",
-        "structure": "feel comfortable doing something（做某事感到自在）",
-        "commonError": "不要只按中文逐字替换，也不要随意改动介词或语序；优先把 “feel comfortable doing something” 当作一个完整句块记忆。",
-        "directSynonym": "relaxed",
-        "directAntonym": "uncomfortable",
+        "english": "adj. feeling relaxed and free from worry",
+        "structure": "feel comfortable doing /fil ˈkʌmftəbəl duɪŋ/（做某事感到自在）；comfortable with /ˈkʌmftəbəl wɪð/（对……感到自在）；make yourself comfortable /meɪk jɚsɛlf ˈkʌmftəbəl/（让自己舒服些）；a comfortable chair /ə ˈkʌmftəbəl tʃɛr/（舒适的椅子）",
+        "structures": [
+          {
+            "phrase": "feel comfortable doing",
+            "phonetic": "/fil ˈkʌmftəbəl duɪŋ/",
+            "chinese": "做某事感到自在"
+          },
+          {
+            "phrase": "comfortable with",
+            "phonetic": "/ˈkʌmftəbəl wɪð/",
+            "chinese": "对……感到自在"
+          },
+          {
+            "phrase": "make yourself comfortable",
+            "phonetic": "/meɪk jɚsɛlf ˈkʌmftəbəl/",
+            "chinese": "让自己舒服些"
+          },
+          {
+            "phrase": "a comfortable chair",
+            "phonetic": "/ə ˈkʌmftəbəl tʃɛr/",
+            "chinese": "舒适的椅子"
+          }
+        ],
+        "commonError": "❌ feel comfortablely → ✅ feel comfortable；❌ more comfortableer → ✅ more comfortable",
+        "commonErrors": [
+          {
+            "wrong": "feel comfortablely",
+            "wrongPhonetic": "/fil comfortablely/",
+            "right": "feel comfortable",
+            "rightPhonetic": "/fil ˈkʌmftəbəl/",
+            "note": "系动词 feel 后接形容词作表语，不随意加 -ly。"
+          },
+          {
+            "wrong": "more comfortableer",
+            "wrongPhonetic": "/mɔr comfortableer/",
+            "right": "more comfortable",
+            "rightPhonetic": "/mɔr ˈkʌmftəbəl/",
+            "note": "较长形容词通常用 more 构成比较级，不重复加 -er。"
+          }
+        ],
+        "directSynonym": "relaxed /rɪlækst/（与“舒适的”意义接近）",
+        "directAntonym": "uncomfortable /ənkʌmfɚtəbəl/（与“舒适的”意义相反）",
         "derivatives": "comfort · uncomfortable",
         "example": "I feel comfortable asking her for help.",
         "exampleChinese": "我很自在地向她求助。"
@@ -517,30 +1035,139 @@
           "category": "核心高频搭配",
           "items": [
             {
-              "phrase": "feel comfortable doing something",
-              "phonetic": "/fil ˈkʌmftəbəl duɪŋ sʌmθɪŋ/",
+              "phrase": "feel comfortable doing",
+              "phonetic": "/fil ˈkʌmftəbəl duɪŋ/",
               "chinese": "做某事感到自在"
+            },
+            {
+              "phrase": "comfortable with",
+              "phonetic": "/ˈkʌmftəbəl wɪð/",
+              "chinese": "对……感到自在"
+            },
+            {
+              "phrase": "make yourself comfortable",
+              "phonetic": "/meɪk jɚsɛlf ˈkʌmftəbəl/",
+              "chinese": "让自己舒服些"
             }
           ]
         },
         {
-          "category": "真实例句句块",
+          "category": "句型与语法框架",
           "items": [
             {
-              "phrase": "I feel comfortable asking her",
-              "phonetic": "/aɪ fil ˈkʌmftəbəl æskɪŋ hɝ/",
-              "chinese": "核心例句片段：我很自在地向她求助。"
+              "phrase": "a comfortable chair",
+              "phonetic": "/ə ˈkʌmftəbəl tʃɛr/",
+              "chinese": "舒适的椅子"
+            },
+            {
+              "phrase": "comfortable temperature",
+              "phonetic": "/ˈkʌmftəbəl tɛmprətʃɚ/",
+              "chinese": "舒适温度"
+            },
+            {
+              "phrase": "financially comfortable",
+              "phonetic": "/fənænʃəli ˈkʌmftəbəl/",
+              "chinese": "经济宽裕的"
+            }
+          ]
+        },
+        {
+          "category": "真实表达延伸",
+          "items": [
+            {
+              "phrase": "feel comfortable doing something",
+              "phonetic": "/fil ˈkʌmftəbəl duɪŋ sʌmθɪŋ/",
+              "chinese": "做某事感到自在"
+            },
+            {
+              "phrase": "be comfortable",
+              "phonetic": "/bi ˈkʌmftəbəl/",
+              "chinese": "是舒适的的"
+            },
+            {
+              "phrase": "seem comfortable",
+              "phonetic": "/sim ˈkʌmftəbəl/",
+              "chinese": "显得舒适的"
+            }
+          ]
+        },
+        {
+          "category": "主动输出提示",
+          "items": [
+            {
+              "phrase": "remain comfortable",
+              "phonetic": "/rɪmeɪn ˈkʌmftəbəl/",
+              "chinese": "保持舒适的"
+            },
+            {
+              "phrase": "become comfortable",
+              "phonetic": "/bɪkʌm ˈkʌmftəbəl/",
+              "chinese": "变得舒适的"
+            },
+            {
+              "phrase": "feel comfortable",
+              "phonetic": "/fil ˈkʌmftəbəl/",
+              "chinese": "感觉舒适的"
             }
           ]
         }
       ],
       "fixedPhrases": [
         {
-          "phrase": "feel comfortable doing something",
-          "phonetic": "/fil ˈkʌmftəbəl duɪŋ sʌmθɪŋ/",
+          "phrase": "feel comfortable doing",
+          "phonetic": "/fil ˈkʌmftəbəl duɪŋ/",
           "chinese": "做某事感到自在",
           "example": "I feel comfortable asking her for help.",
           "translation": "我很自在地向她求助。"
+        },
+        {
+          "phrase": "comfortable with",
+          "phonetic": "/ˈkʌmftəbəl wɪð/",
+          "chinese": "对……感到自在",
+          "example": "The phrase “comfortable with” is useful in everyday English.",
+          "translation": "“comfortable with”是日常英语中的实用表达。"
+        },
+        {
+          "phrase": "make yourself comfortable",
+          "phonetic": "/meɪk jɚsɛlf ˈkʌmftəbəl/",
+          "chinese": "让自己舒服些",
+          "example": "I added “make yourself comfortable” to my vocabulary notebook.",
+          "translation": "我把“make yourself comfortable”记进了词汇本。"
+        },
+        {
+          "phrase": "a comfortable chair",
+          "phonetic": "/ə ˈkʌmftəbəl tʃɛr/",
+          "chinese": "舒适的椅子",
+          "example": "Listen for “a comfortable chair” in real conversations.",
+          "translation": "在真实对话中留意“a comfortable chair”。"
+        },
+        {
+          "phrase": "comfortable temperature",
+          "phonetic": "/ˈkʌmftəbəl tɛmprətʃɚ/",
+          "chinese": "舒适温度",
+          "example": "Can you use “comfortable temperature” in a complete sentence?",
+          "translation": "你能用“comfortable temperature”说一个完整句子吗？"
+        },
+        {
+          "phrase": "financially comfortable",
+          "phonetic": "/fənænʃəli ˈkʌmftəbəl/",
+          "chinese": "经济宽裕的",
+          "example": "We practiced “financially comfortable” aloud three times.",
+          "translation": "我们把“financially comfortable”大声练了三遍。"
+        },
+        {
+          "phrase": "feel comfortable doing something",
+          "phonetic": "/fil ˈkʌmftəbəl duɪŋ sʌmθɪŋ/",
+          "chinese": "做某事感到自在",
+          "example": "The phrase “feel comfortable doing something” is useful in everyday English.",
+          "translation": "“feel comfortable doing something”是日常英语中的实用表达。"
+        },
+        {
+          "phrase": "be comfortable",
+          "phonetic": "/bi ˈkʌmftəbəl/",
+          "chinese": "是舒适的的",
+          "example": "I added “be comfortable” to my vocabulary notebook.",
+          "translation": "我把“be comfortable”记进了词汇本。"
         }
       ],
       "synonyms": [
@@ -549,7 +1176,7 @@
           "phonetic": "/rɪlækst/",
           "partOfSpeech": "adj.",
           "chinese": "与“舒适的”意义接近",
-          "difference": "comfortable 在 “feel comfortable doing something” 中是本卡需要主动掌握的表达；relaxed 含义接近，但宾语、语气和固定搭配不一定相同。"
+          "difference": "comfortable 是本卡核心搭配 “feel comfortable doing something” 中的中性常用选择；relaxed 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
         }
       ],
       "antonyms": [
@@ -558,7 +1185,7 @@
           "phonetic": "/ənkʌmfɚtəbəl/",
           "partOfSpeech": "adj.",
           "chinese": "与“舒适的”意义相反",
-          "usage": "和 comfortable 的核心义形成对比；先在真实句子中判断是否确实构成反向关系。"
+          "usage": "在本卡核心义下与 comfortable 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
         }
       ],
       "derivatives": [
@@ -566,14 +1193,14 @@
           "word": "comfort",
           "phonetic": "/kʌmfɚt/",
           "partOfSpeech": "n.",
-          "chinese": "与“comfortable”同词族的常用词形",
+          "chinese": "与 comfortable 同词族的常用词形",
           "note": "这是 comfortable 的常用词族成员；先辨认词性，再放进完整句子中使用。"
         },
         {
           "word": "uncomfortable",
           "phonetic": "/ənkʌmfɚtəbəl/",
           "partOfSpeech": "adj.",
-          "chinese": "与“comfortable”同词族的常用词形",
+          "chinese": "与 comfortable 同词族的常用词形",
           "note": "这是 comfortable 的常用词族成员；先辨认词性，再放进完整句子中使用。"
         }
       ],
@@ -586,48 +1213,125 @@
               "word": "relaxed",
               "phonetic": "/rɪlækst/",
               "partOfSpeech": "adj.",
-              "chinese": "与“舒适的”意义接近"
+              "chinese": "与本词相关的常用表达"
             },
             {
               "word": "uncomfortable",
               "phonetic": "/ənkʌmfɚtəbəl/",
               "partOfSpeech": "adj.",
-              "chinese": "与“舒适的”意义相反"
+              "chinese": "与本词相关的常用表达"
+            }
+          ]
+        },
+        {
+          "category": "词族与构词联系",
+          "items": [
+            {
+              "word": "comfort",
+              "phonetic": "/kʌmfɚt/",
+              "partOfSpeech": "n.",
+              "chinese": "与本词相关的常用表达"
+            },
+            {
+              "word": "uncomfortable",
+              "phonetic": "/ənkʌmfɚtəbəl/",
+              "partOfSpeech": "adj.",
+              "chinese": "与本词相关的常用表达"
+            },
+            {
+              "word": "aware",
+              "phonetic": "/əˈwer/",
+              "partOfSpeech": "adj.",
+              "chinese": "意识到的"
+            }
+          ]
+        },
+        {
+          "category": "同一学习主题中的高频词",
+          "items": [
+            {
+              "word": "aware",
+              "phonetic": "/əˈwer/",
+              "partOfSpeech": "adj.",
+              "chinese": "意识到的"
+            },
+            {
+              "word": "familiar",
+              "phonetic": "/fəˈmɪliər/",
+              "partOfSpeech": "adj.",
+              "chinese": "熟悉的"
+            },
+            {
+              "word": "effective",
+              "phonetic": "/ɪˈfektɪv/",
+              "partOfSpeech": "adj.",
+              "chinese": "有效的"
+            },
+            {
+              "word": "serious",
+              "phonetic": "/ˈsɪriəs/",
+              "partOfSpeech": "adj.",
+              "chinese": "严重的"
             }
           ]
         }
       ],
       "examples": [
         {
-          "scene": "日常 / 真实表达",
+          "scene": "核心真实用法",
           "english": "I feel comfortable asking her for help.",
           "chinese": "我很自在地向她求助。"
         },
         {
-          "scene": "学习 / 工作场景",
-          "english": "In today’s lesson, we practiced the word “comfortable” in a complete sentence.",
-          "chinese": "今天的课程里，我们练习了怎样在完整句子中使用 comfortable。"
+          "scene": "英文释义理解",
+          "english": "In this lesson, I learned that “comfortable” means “feeling relaxed and free from worry”.",
+          "chinese": "这节课里，我学到 comfortable 的核心意思是“舒适的；自在的”。"
         },
         {
-          "scene": "核心搭配复现",
-          "english": "“feel comfortable doing something” is the key phrase I want to remember.",
-          "chinese": "“feel comfortable doing something”是我想重点记住的搭配。"
+          "scene": "高频搭配辨认",
+          "english": "The phrase “feel comfortable doing something” is useful in everyday English.",
+          "chinese": "“feel comfortable doing something”是日常英语中的实用表达。"
         },
         {
-          "scene": "常见错误提醒",
-          "english": "I checked the context before choosing “comfortable” instead of “relaxed”.",
-          "chinese": "我先检查语境，再决定用 comfortable 而不是 relaxed。"
+          "scene": "主动造句",
+          "english": "Can you use “comfortable” in a sentence of your own?",
+          "chinese": "你能用 comfortable 说一个自己的句子吗？"
         },
         {
-          "scene": "词义与近义辨析",
-          "english": "Here, “comfortable” means “feeling relaxed and free from worry”.",
-          "chinese": "在这里，comfortable 的意思是“舒适的；自在的”。"
+          "scene": "词汇笔记",
+          "english": "I wrote “comfortable” and its pronunciation in my notebook.",
+          "chinese": "我把 comfortable 和它的发音记进了笔记本。"
+        },
+        {
+          "scene": "听力辨认",
+          "english": "Listen for “comfortable” the next time you hear English.",
+          "chinese": "下次听英语时，留意辨认 comfortable。"
+        },
+        {
+          "scene": "近义比较",
+          "english": "I compared “comfortable” with “relaxed” before choosing the word.",
+          "chinese": "选词前，我比较了 comfortable 和 relaxed。"
+        },
+        {
+          "scene": "反义对照",
+          "english": "The opposite idea is often expressed with “uncomfortable”.",
+          "chinese": "相反的意思常可用 uncomfortable 表达。"
+        },
+        {
+          "scene": "间隔复习",
+          "english": "I reviewed “comfortable” again before going to bed.",
+          "chinese": "睡前我又复习了一遍 comfortable。"
+        },
+        {
+          "scene": "口语输出",
+          "english": "Which real situation would make you use “comfortable”?",
+          "chinese": "在什么真实情境中你会用到 comfortable？"
         }
       ],
       "studyFocus": {
-        "coreMeaning": "舒适的；自在的",
-        "keyCollocation": "feel comfortable doing something：做某事感到自在",
-        "commonMistake": "不要只按中文逐字替换，也不要随意改动介词或语序；优先把 “feel comfortable doing something” 当作一个完整句块记忆。",
+        "coreMeaning": "舒适的；自在的；英文核心释义：feeling relaxed and free from worry。",
+        "keyCollocation": "把 “feel comfortable doing something” 作为一个完整句块记忆。",
+        "commonMistake": "系动词 feel 后接形容词作表语，不随意加 -ly。",
         "mustUseExample": "I feel comfortable asking her for help."
       },
       "questions": [
@@ -713,30 +1417,79 @@
           "free_sentence"
         ]
       },
-      "contentVersion": "2026.08.17.2",
+      "detailLevel": "template-complete",
+      "contentVersion": "2026.08.17.3",
       "reviewed": true,
-      "sourceNote": "从用户提供的 COCA 词表筛选；释义、例句和搭配为本项目离线整理；关系词与词组音标来自 CMU 北美英语发音词典。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
     {
       "id": "effective-adj",
       "word": "effective",
       "lemma": "effective",
+      "cocaRanks": [
+        {
+          "rank": 1213,
+          "pos": "j",
+          "frequency": 79635,
+          "partOfSpeech": "adj."
+        }
+      ],
+      "cocaRankLabel": "adj. 第 1213 名",
       "phonetic": "/ɪˈfektɪv/",
-      "syllables": "effective",
+      "syllables": "ef·fec·tive",
       "partOfSpeech": "adj.",
-      "frequencyBand": "COCA 高频精选",
+      "frequencyBand": "COCA 高频精选 · adj. 第 1213 名",
       "difficulty": "进阶",
       "tags": [
         "adj.",
+        "模板完整版",
         "主动词汇"
       ],
       "coreMemory": {
         "chinese": "有效的",
-        "english": "producing the result that is wanted",
-        "structure": "an effective way（一种有效的方法）",
-        "commonError": "不要只按中文逐字替换，也不要随意改动介词或语序；优先把 “an effective way” 当作一个完整句块记忆。",
-        "directSynonym": "efficient",
-        "directAntonym": "ineffective",
+        "english": "adj. producing the result that is wanted",
+        "structure": "an effective way /æn ɪˈfektɪv weɪ/（有效方法）；highly effective /haɪli ɪˈfektɪv/（非常有效）；effective in doing /ɪˈfektɪv ɪn duɪŋ/（在做……方面有效）；effective against /ɪˈfektɪv əɡɛnst/（对……有效）",
+        "structures": [
+          {
+            "phrase": "an effective way",
+            "phonetic": "/æn ɪˈfektɪv weɪ/",
+            "chinese": "有效方法"
+          },
+          {
+            "phrase": "highly effective",
+            "phonetic": "/haɪli ɪˈfektɪv/",
+            "chinese": "非常有效"
+          },
+          {
+            "phrase": "effective in doing",
+            "phonetic": "/ɪˈfektɪv ɪn duɪŋ/",
+            "chinese": "在做……方面有效"
+          },
+          {
+            "phrase": "effective against",
+            "phonetic": "/ɪˈfektɪv əɡɛnst/",
+            "chinese": "对……有效"
+          }
+        ],
+        "commonError": "❌ feel effectively → ✅ feel effective；❌ more effectiveer → ✅ more effective",
+        "commonErrors": [
+          {
+            "wrong": "feel effectively",
+            "wrongPhonetic": "/fil ɪfɛktɪvli/",
+            "right": "feel effective",
+            "rightPhonetic": "/fil ɪˈfektɪv/",
+            "note": "系动词 feel 后接形容词作表语，不随意加 -ly。"
+          },
+          {
+            "wrong": "more effectiveer",
+            "wrongPhonetic": "/mɔr effectiveer/",
+            "right": "more effective",
+            "rightPhonetic": "/mɔr ɪˈfektɪv/",
+            "note": "较长形容词通常用 more 构成比较级，不重复加 -er。"
+          }
+        ],
+        "directSynonym": "efficient /ɪfɪʃənt/（与“有效的”意义接近）",
+        "directAntonym": "ineffective /ɪnɪfɛktɪv/（与“有效的”意义相反）",
         "derivatives": "effectively · effectiveness",
         "example": "Active recall is an effective way to learn.",
         "exampleChinese": "主动回忆是一种有效的学习方法。"
@@ -757,17 +1510,77 @@
             {
               "phrase": "an effective way",
               "phonetic": "/æn ɪˈfektɪv weɪ/",
-              "chinese": "一种有效的方法"
+              "chinese": "有效方法"
+            },
+            {
+              "phrase": "highly effective",
+              "phonetic": "/haɪli ɪˈfektɪv/",
+              "chinese": "非常有效"
+            },
+            {
+              "phrase": "effective in doing",
+              "phonetic": "/ɪˈfektɪv ɪn duɪŋ/",
+              "chinese": "在做……方面有效"
             }
           ]
         },
         {
-          "category": "真实例句句块",
+          "category": "句型与语法框架",
           "items": [
             {
-              "phrase": "is an effective way to",
-              "phonetic": "/ɪz æn ɪˈfektɪv weɪ tu/",
-              "chinese": "核心例句片段：主动回忆是一种有效的学习方法。"
+              "phrase": "effective against",
+              "phonetic": "/ɪˈfektɪv əɡɛnst/",
+              "chinese": "对……有效"
+            },
+            {
+              "phrase": "cost-effective",
+              "phonetic": "/kɑst-ɪˈfektɪv/",
+              "chinese": "性价比高的"
+            },
+            {
+              "phrase": "take effective action",
+              "phonetic": "/teɪk ɪˈfektɪv ækʃən/",
+              "chinese": "采取有效行动"
+            }
+          ]
+        },
+        {
+          "category": "真实表达延伸",
+          "items": [
+            {
+              "phrase": "be effective",
+              "phonetic": "/bi ɪˈfektɪv/",
+              "chinese": "是有效的的"
+            },
+            {
+              "phrase": "seem effective",
+              "phonetic": "/sim ɪˈfektɪv/",
+              "chinese": "显得有效的"
+            },
+            {
+              "phrase": "remain effective",
+              "phonetic": "/rɪmeɪn ɪˈfektɪv/",
+              "chinese": "保持有效的"
+            }
+          ]
+        },
+        {
+          "category": "主动输出提示",
+          "items": [
+            {
+              "phrase": "become effective",
+              "phonetic": "/bɪkʌm ɪˈfektɪv/",
+              "chinese": "变得有效的"
+            },
+            {
+              "phrase": "feel effective",
+              "phonetic": "/fil ɪˈfektɪv/",
+              "chinese": "感觉有效的"
+            },
+            {
+              "phrase": "very effective",
+              "phonetic": "/vɛri ɪˈfektɪv/",
+              "chinese": "非常有效的"
             }
           ]
         }
@@ -776,9 +1589,58 @@
         {
           "phrase": "an effective way",
           "phonetic": "/æn ɪˈfektɪv weɪ/",
-          "chinese": "一种有效的方法",
+          "chinese": "有效方法",
           "example": "Active recall is an effective way to learn.",
           "translation": "主动回忆是一种有效的学习方法。"
+        },
+        {
+          "phrase": "highly effective",
+          "phonetic": "/haɪli ɪˈfektɪv/",
+          "chinese": "非常有效",
+          "example": "The phrase “highly effective” is useful in everyday English.",
+          "translation": "“highly effective”是日常英语中的实用表达。"
+        },
+        {
+          "phrase": "effective in doing",
+          "phonetic": "/ɪˈfektɪv ɪn duɪŋ/",
+          "chinese": "在做……方面有效",
+          "example": "I added “effective in doing” to my vocabulary notebook.",
+          "translation": "我把“effective in doing”记进了词汇本。"
+        },
+        {
+          "phrase": "effective against",
+          "phonetic": "/ɪˈfektɪv əɡɛnst/",
+          "chinese": "对……有效",
+          "example": "Listen for “effective against” in real conversations.",
+          "translation": "在真实对话中留意“effective against”。"
+        },
+        {
+          "phrase": "cost-effective",
+          "phonetic": "/kɑst-ɪˈfektɪv/",
+          "chinese": "性价比高的",
+          "example": "Can you use “cost-effective” in a complete sentence?",
+          "translation": "你能用“cost-effective”说一个完整句子吗？"
+        },
+        {
+          "phrase": "take effective action",
+          "phonetic": "/teɪk ɪˈfektɪv ækʃən/",
+          "chinese": "采取有效行动",
+          "example": "We practiced “take effective action” aloud three times.",
+          "translation": "我们把“take effective action”大声练了三遍。"
+        },
+        {
+          "phrase": "be effective",
+          "phonetic": "/bi ɪˈfektɪv/",
+          "chinese": "是有效的的",
+          "example": "The phrase “be effective” is useful in everyday English.",
+          "translation": "“be effective”是日常英语中的实用表达。"
+        },
+        {
+          "phrase": "seem effective",
+          "phonetic": "/sim ɪˈfektɪv/",
+          "chinese": "显得有效的",
+          "example": "I added “seem effective” to my vocabulary notebook.",
+          "translation": "我把“seem effective”记进了词汇本。"
         }
       ],
       "synonyms": [
@@ -787,7 +1649,7 @@
           "phonetic": "/ɪfɪʃənt/",
           "partOfSpeech": "adj.",
           "chinese": "与“有效的”意义接近",
-          "difference": "effective 在 “an effective way” 中是本卡需要主动掌握的表达；efficient 含义接近，但宾语、语气和固定搭配不一定相同。"
+          "difference": "effective 是本卡核心搭配 “an effective way” 中的中性常用选择；efficient 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
         }
       ],
       "antonyms": [
@@ -796,7 +1658,7 @@
           "phonetic": "/ɪnɪfɛktɪv/",
           "partOfSpeech": "adj.",
           "chinese": "与“有效的”意义相反",
-          "usage": "和 effective 的核心义形成对比；先在真实句子中判断是否确实构成反向关系。"
+          "usage": "在本卡核心义下与 effective 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
         }
       ],
       "derivatives": [
@@ -804,14 +1666,14 @@
           "word": "effectively",
           "phonetic": "/ɪfɛktɪvli/",
           "partOfSpeech": "adv.",
-          "chinese": "与“effective”同词族的常用词形",
+          "chinese": "与 effective 同词族的常用词形",
           "note": "这是 effective 的常用词族成员；先辨认词性，再放进完整句子中使用。"
         },
         {
           "word": "effectiveness",
           "phonetic": "/ɪfɛktɪvnəs/",
           "partOfSpeech": "n.",
-          "chinese": "与“effective”同词族的常用词形",
+          "chinese": "与 effective 同词族的常用词形",
           "note": "这是 effective 的常用词族成员；先辨认词性，再放进完整句子中使用。"
         }
       ],
@@ -824,48 +1686,125 @@
               "word": "efficient",
               "phonetic": "/ɪfɪʃənt/",
               "partOfSpeech": "adj.",
-              "chinese": "与“有效的”意义接近"
+              "chinese": "与本词相关的常用表达"
             },
             {
               "word": "ineffective",
               "phonetic": "/ɪnɪfɛktɪv/",
               "partOfSpeech": "adj.",
-              "chinese": "与“有效的”意义相反"
+              "chinese": "与本词相关的常用表达"
+            }
+          ]
+        },
+        {
+          "category": "词族与构词联系",
+          "items": [
+            {
+              "word": "effectively",
+              "phonetic": "/ɪfɛktɪvli/",
+              "partOfSpeech": "adv.",
+              "chinese": "与本词相关的常用表达"
+            },
+            {
+              "word": "effectiveness",
+              "phonetic": "/ɪfɛktɪvnəs/",
+              "partOfSpeech": "n.",
+              "chinese": "与本词相关的常用表达"
+            },
+            {
+              "word": "familiar",
+              "phonetic": "/fəˈmɪliər/",
+              "partOfSpeech": "adj.",
+              "chinese": "熟悉的"
+            }
+          ]
+        },
+        {
+          "category": "同一学习主题中的高频词",
+          "items": [
+            {
+              "word": "familiar",
+              "phonetic": "/fəˈmɪliər/",
+              "partOfSpeech": "adj.",
+              "chinese": "熟悉的"
+            },
+            {
+              "word": "comfortable",
+              "phonetic": "/ˈkʌmftəbəl/",
+              "partOfSpeech": "adj.",
+              "chinese": "舒适的"
+            },
+            {
+              "word": "serious",
+              "phonetic": "/ˈsɪriəs/",
+              "partOfSpeech": "adj.",
+              "chinese": "严重的"
+            },
+            {
+              "word": "natural",
+              "phonetic": "/ˈnætʃərəl/",
+              "partOfSpeech": "adj.",
+              "chinese": "自然的"
             }
           ]
         }
       ],
       "examples": [
         {
-          "scene": "日常 / 真实表达",
+          "scene": "核心真实用法",
           "english": "Active recall is an effective way to learn.",
           "chinese": "主动回忆是一种有效的学习方法。"
         },
         {
-          "scene": "学习 / 工作场景",
-          "english": "In today’s lesson, we practiced the word “effective” in a complete sentence.",
-          "chinese": "今天的课程里，我们练习了怎样在完整句子中使用 effective。"
+          "scene": "英文释义理解",
+          "english": "In this lesson, I learned that “effective” means “producing the result that is wanted”.",
+          "chinese": "这节课里，我学到 effective 的核心意思是“有效的”。"
         },
         {
-          "scene": "核心搭配复现",
-          "english": "“an effective way” is the key phrase I want to remember.",
-          "chinese": "“an effective way”是我想重点记住的搭配。"
+          "scene": "高频搭配辨认",
+          "english": "The phrase “an effective way” is useful in everyday English.",
+          "chinese": "“an effective way”是日常英语中的实用表达。"
         },
         {
-          "scene": "常见错误提醒",
-          "english": "I checked the context before choosing “effective” instead of “efficient”.",
-          "chinese": "我先检查语境，再决定用 effective 而不是 efficient。"
+          "scene": "主动造句",
+          "english": "Can you use “effective” in a sentence of your own?",
+          "chinese": "你能用 effective 说一个自己的句子吗？"
         },
         {
-          "scene": "词义与近义辨析",
-          "english": "Here, “effective” means “producing the result that is wanted”.",
-          "chinese": "在这里，effective 的意思是“有效的”。"
+          "scene": "词汇笔记",
+          "english": "I wrote “effective” and its pronunciation in my notebook.",
+          "chinese": "我把 effective 和它的发音记进了笔记本。"
+        },
+        {
+          "scene": "听力辨认",
+          "english": "Listen for “effective” the next time you hear English.",
+          "chinese": "下次听英语时，留意辨认 effective。"
+        },
+        {
+          "scene": "近义比较",
+          "english": "I compared “effective” with “efficient” before choosing the word.",
+          "chinese": "选词前，我比较了 effective 和 efficient。"
+        },
+        {
+          "scene": "反义对照",
+          "english": "The opposite idea is often expressed with “ineffective”.",
+          "chinese": "相反的意思常可用 ineffective 表达。"
+        },
+        {
+          "scene": "间隔复习",
+          "english": "I reviewed “effective” again before going to bed.",
+          "chinese": "睡前我又复习了一遍 effective。"
+        },
+        {
+          "scene": "口语输出",
+          "english": "Which real situation would make you use “effective”?",
+          "chinese": "在什么真实情境中你会用到 effective？"
         }
       ],
       "studyFocus": {
-        "coreMeaning": "有效的",
-        "keyCollocation": "an effective way：一种有效的方法",
-        "commonMistake": "不要只按中文逐字替换，也不要随意改动介词或语序；优先把 “an effective way” 当作一个完整句块记忆。",
+        "coreMeaning": "有效的；英文核心释义：producing the result that is wanted。",
+        "keyCollocation": "把 “an effective way” 作为一个完整句块记忆。",
+        "commonMistake": "系动词 feel 后接形容词作表语，不随意加 -ly。",
         "mustUseExample": "Active recall is an effective way to learn."
       },
       "questions": [
@@ -951,30 +1890,79 @@
           "free_sentence"
         ]
       },
-      "contentVersion": "2026.08.17.2",
+      "detailLevel": "template-complete",
+      "contentVersion": "2026.08.17.3",
       "reviewed": true,
-      "sourceNote": "从用户提供的 COCA 词表筛选；释义、例句和搭配为本项目离线整理；关系词与词组音标来自 CMU 北美英语发音词典。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
     {
       "id": "serious-adj",
       "word": "serious",
       "lemma": "serious",
+      "cocaRanks": [
+        {
+          "rank": 795,
+          "pos": "j",
+          "frequency": 122251,
+          "partOfSpeech": "adj."
+        }
+      ],
+      "cocaRankLabel": "adj. 第 795 名",
       "phonetic": "/ˈsɪriəs/",
-      "syllables": "serious",
+      "syllables": "serious（约 2 音节）",
       "partOfSpeech": "adj.",
-      "frequencyBand": "COCA 高频精选",
+      "frequencyBand": "COCA 高频精选 · adj. 第 795 名",
       "difficulty": "进阶",
       "tags": [
         "adj.",
+        "模板完整版",
         "主动词汇"
       ],
       "coreMemory": {
         "chinese": "严重的；认真的",
-        "english": "important, dangerous, or not joking",
-        "structure": "a serious problem（严重的问题）",
-        "commonError": "不要只按中文逐字替换，也不要随意改动介词或语序；优先把 “a serious problem” 当作一个完整句块记忆。",
-        "directSynonym": "grave",
-        "directAntonym": "minor",
+        "english": "adj. important, dangerous, or not joking",
+        "structure": "a serious problem /ə ˈsɪriəs prɑbləm/（严重问题）；take something seriously /teɪk sʌmθɪŋ sɪriəsli/（认真对待某事）；serious about doing /ˈsɪriəs əbaʊt duɪŋ/（认真想做）；serious injury /ˈsɪriəs ɪndʒɚi/（重伤）",
+        "structures": [
+          {
+            "phrase": "a serious problem",
+            "phonetic": "/ə ˈsɪriəs prɑbləm/",
+            "chinese": "严重问题"
+          },
+          {
+            "phrase": "take something seriously",
+            "phonetic": "/teɪk sʌmθɪŋ sɪriəsli/",
+            "chinese": "认真对待某事"
+          },
+          {
+            "phrase": "serious about doing",
+            "phonetic": "/ˈsɪriəs əbaʊt duɪŋ/",
+            "chinese": "认真想做"
+          },
+          {
+            "phrase": "serious injury",
+            "phonetic": "/ˈsɪriəs ɪndʒɚi/",
+            "chinese": "重伤"
+          }
+        ],
+        "commonError": "❌ feel seriously → ✅ feel serious；❌ more seriouser → ✅ more serious",
+        "commonErrors": [
+          {
+            "wrong": "feel seriously",
+            "wrongPhonetic": "/fil sɪriəsli/",
+            "right": "feel serious",
+            "rightPhonetic": "/fil ˈsɪriəs/",
+            "note": "系动词 feel 后接形容词作表语，不随意加 -ly。"
+          },
+          {
+            "wrong": "more seriouser",
+            "wrongPhonetic": "/mɔr seriouser/",
+            "right": "more serious",
+            "rightPhonetic": "/mɔr ˈsɪriəs/",
+            "note": "较长形容词通常用 more 构成比较级，不重复加 -er。"
+          }
+        ],
+        "directSynonym": "grave /ɡreɪv/（与“严重的”意义接近）",
+        "directAntonym": "minor /maɪnɚ/（与“严重的”意义相反）",
         "derivatives": "seriously · seriousness",
         "example": "Lack of sleep can become a serious problem.",
         "exampleChinese": "睡眠不足可能变成一个严重问题。"
@@ -995,17 +1983,77 @@
             {
               "phrase": "a serious problem",
               "phonetic": "/ə ˈsɪriəs prɑbləm/",
-              "chinese": "严重的问题"
+              "chinese": "严重问题"
+            },
+            {
+              "phrase": "take something seriously",
+              "phonetic": "/teɪk sʌmθɪŋ sɪriəsli/",
+              "chinese": "认真对待某事"
+            },
+            {
+              "phrase": "serious about doing",
+              "phonetic": "/ˈsɪriəs əbaʊt duɪŋ/",
+              "chinese": "认真想做"
             }
           ]
         },
         {
-          "category": "真实例句句块",
+          "category": "句型与语法框架",
           "items": [
             {
-              "phrase": "become a serious problem",
-              "phonetic": "/bɪkʌm ə ˈsɪriəs prɑbləm/",
-              "chinese": "核心例句片段：睡眠不足可能变成一个严重问题。"
+              "phrase": "serious injury",
+              "phonetic": "/ˈsɪriəs ɪndʒɚi/",
+              "chinese": "重伤"
+            },
+            {
+              "phrase": "nothing serious",
+              "phonetic": "/nʌθɪŋ ˈsɪriəs/",
+              "chinese": "没什么严重的"
+            },
+            {
+              "phrase": "a serious discussion",
+              "phonetic": "/ə ˈsɪriəs dɪskʌʃən/",
+              "chinese": "严肃讨论"
+            }
+          ]
+        },
+        {
+          "category": "真实表达延伸",
+          "items": [
+            {
+              "phrase": "be serious",
+              "phonetic": "/bi ˈsɪriəs/",
+              "chinese": "是严重的的"
+            },
+            {
+              "phrase": "seem serious",
+              "phonetic": "/sim ˈsɪriəs/",
+              "chinese": "显得严重的"
+            },
+            {
+              "phrase": "remain serious",
+              "phonetic": "/rɪmeɪn ˈsɪriəs/",
+              "chinese": "保持严重的"
+            }
+          ]
+        },
+        {
+          "category": "主动输出提示",
+          "items": [
+            {
+              "phrase": "become serious",
+              "phonetic": "/bɪkʌm ˈsɪriəs/",
+              "chinese": "变得严重的"
+            },
+            {
+              "phrase": "feel serious",
+              "phonetic": "/fil ˈsɪriəs/",
+              "chinese": "感觉严重的"
+            },
+            {
+              "phrase": "very serious",
+              "phonetic": "/vɛri ˈsɪriəs/",
+              "chinese": "非常严重的"
             }
           ]
         }
@@ -1014,9 +2062,58 @@
         {
           "phrase": "a serious problem",
           "phonetic": "/ə ˈsɪriəs prɑbləm/",
-          "chinese": "严重的问题",
+          "chinese": "严重问题",
           "example": "Lack of sleep can become a serious problem.",
           "translation": "睡眠不足可能变成一个严重问题。"
+        },
+        {
+          "phrase": "take something seriously",
+          "phonetic": "/teɪk sʌmθɪŋ sɪriəsli/",
+          "chinese": "认真对待某事",
+          "example": "The phrase “take something seriously” is useful in everyday English.",
+          "translation": "“take something seriously”是日常英语中的实用表达。"
+        },
+        {
+          "phrase": "serious about doing",
+          "phonetic": "/ˈsɪriəs əbaʊt duɪŋ/",
+          "chinese": "认真想做",
+          "example": "I added “serious about doing” to my vocabulary notebook.",
+          "translation": "我把“serious about doing”记进了词汇本。"
+        },
+        {
+          "phrase": "serious injury",
+          "phonetic": "/ˈsɪriəs ɪndʒɚi/",
+          "chinese": "重伤",
+          "example": "Listen for “serious injury” in real conversations.",
+          "translation": "在真实对话中留意“serious injury”。"
+        },
+        {
+          "phrase": "nothing serious",
+          "phonetic": "/nʌθɪŋ ˈsɪriəs/",
+          "chinese": "没什么严重的",
+          "example": "Can you use “nothing serious” in a complete sentence?",
+          "translation": "你能用“nothing serious”说一个完整句子吗？"
+        },
+        {
+          "phrase": "a serious discussion",
+          "phonetic": "/ə ˈsɪriəs dɪskʌʃən/",
+          "chinese": "严肃讨论",
+          "example": "We practiced “a serious discussion” aloud three times.",
+          "translation": "我们把“a serious discussion”大声练了三遍。"
+        },
+        {
+          "phrase": "be serious",
+          "phonetic": "/bi ˈsɪriəs/",
+          "chinese": "是严重的的",
+          "example": "The phrase “be serious” is useful in everyday English.",
+          "translation": "“be serious”是日常英语中的实用表达。"
+        },
+        {
+          "phrase": "seem serious",
+          "phonetic": "/sim ˈsɪriəs/",
+          "chinese": "显得严重的",
+          "example": "I added “seem serious” to my vocabulary notebook.",
+          "translation": "我把“seem serious”记进了词汇本。"
         }
       ],
       "synonyms": [
@@ -1025,7 +2122,7 @@
           "phonetic": "/ɡreɪv/",
           "partOfSpeech": "adj.",
           "chinese": "与“严重的”意义接近",
-          "difference": "serious 在 “a serious problem” 中是本卡需要主动掌握的表达；grave 含义接近，但宾语、语气和固定搭配不一定相同。"
+          "difference": "serious 是本卡核心搭配 “a serious problem” 中的中性常用选择；grave 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
         }
       ],
       "antonyms": [
@@ -1034,7 +2131,7 @@
           "phonetic": "/maɪnɚ/",
           "partOfSpeech": "adj.",
           "chinese": "与“严重的”意义相反",
-          "usage": "和 serious 的核心义形成对比；先在真实句子中判断是否确实构成反向关系。"
+          "usage": "在本卡核心义下与 serious 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
         }
       ],
       "derivatives": [
@@ -1042,14 +2139,14 @@
           "word": "seriously",
           "phonetic": "/sɪriəsli/",
           "partOfSpeech": "adv.",
-          "chinese": "与“serious”同词族的常用词形",
+          "chinese": "与 serious 同词族的常用词形",
           "note": "这是 serious 的常用词族成员；先辨认词性，再放进完整句子中使用。"
         },
         {
           "word": "seriousness",
           "phonetic": "/sɪriəsnəs/",
           "partOfSpeech": "n.",
-          "chinese": "与“serious”同词族的常用词形",
+          "chinese": "与 serious 同词族的常用词形",
           "note": "这是 serious 的常用词族成员；先辨认词性，再放进完整句子中使用。"
         }
       ],
@@ -1061,49 +2158,126 @@
             {
               "word": "grave",
               "phonetic": "/ɡreɪv/",
-              "partOfSpeech": "adj.",
-              "chinese": "与“严重的”意义接近"
+              "partOfSpeech": "word family",
+              "chinese": "与本词相关的常用表达"
             },
             {
               "word": "minor",
               "phonetic": "/maɪnɚ/",
+              "partOfSpeech": "n.",
+              "chinese": "与本词相关的常用表达"
+            }
+          ]
+        },
+        {
+          "category": "词族与构词联系",
+          "items": [
+            {
+              "word": "seriously",
+              "phonetic": "/sɪriəsli/",
+              "partOfSpeech": "adv.",
+              "chinese": "与本词相关的常用表达"
+            },
+            {
+              "word": "seriousness",
+              "phonetic": "/sɪriəsnəs/",
+              "partOfSpeech": "n.",
+              "chinese": "与本词相关的常用表达"
+            },
+            {
+              "word": "comfortable",
+              "phonetic": "/ˈkʌmftəbəl/",
               "partOfSpeech": "adj.",
-              "chinese": "与“严重的”意义相反"
+              "chinese": "舒适的"
+            }
+          ]
+        },
+        {
+          "category": "同一学习主题中的高频词",
+          "items": [
+            {
+              "word": "comfortable",
+              "phonetic": "/ˈkʌmftəbəl/",
+              "partOfSpeech": "adj.",
+              "chinese": "舒适的"
+            },
+            {
+              "word": "effective",
+              "phonetic": "/ɪˈfektɪv/",
+              "partOfSpeech": "adj.",
+              "chinese": "有效的"
+            },
+            {
+              "word": "natural",
+              "phonetic": "/ˈnætʃərəl/",
+              "partOfSpeech": "adj.",
+              "chinese": "自然的"
+            },
+            {
+              "word": "clear",
+              "phonetic": "/klɪr/",
+              "partOfSpeech": "adj. / v.",
+              "chinese": "清楚的"
             }
           ]
         }
       ],
       "examples": [
         {
-          "scene": "日常 / 真实表达",
+          "scene": "核心真实用法",
           "english": "Lack of sleep can become a serious problem.",
           "chinese": "睡眠不足可能变成一个严重问题。"
         },
         {
-          "scene": "学习 / 工作场景",
-          "english": "In today’s lesson, we practiced the word “serious” in a complete sentence.",
-          "chinese": "今天的课程里，我们练习了怎样在完整句子中使用 serious。"
+          "scene": "英文释义理解",
+          "english": "In this lesson, I learned that “serious” means “important, dangerous, or not joking”.",
+          "chinese": "这节课里，我学到 serious 的核心意思是“严重的；认真的”。"
         },
         {
-          "scene": "核心搭配复现",
-          "english": "“a serious problem” is the key phrase I want to remember.",
-          "chinese": "“a serious problem”是我想重点记住的搭配。"
+          "scene": "高频搭配辨认",
+          "english": "The phrase “a serious problem” is useful in everyday English.",
+          "chinese": "“a serious problem”是日常英语中的实用表达。"
         },
         {
-          "scene": "常见错误提醒",
-          "english": "I checked the context before choosing “serious” instead of “grave”.",
-          "chinese": "我先检查语境，再决定用 serious 而不是 grave。"
+          "scene": "主动造句",
+          "english": "Can you use “serious” in a sentence of your own?",
+          "chinese": "你能用 serious 说一个自己的句子吗？"
         },
         {
-          "scene": "词义与近义辨析",
-          "english": "Here, “serious” means “important, dangerous, or not joking”.",
-          "chinese": "在这里，serious 的意思是“严重的；认真的”。"
+          "scene": "词汇笔记",
+          "english": "I wrote “serious” and its pronunciation in my notebook.",
+          "chinese": "我把 serious 和它的发音记进了笔记本。"
+        },
+        {
+          "scene": "听力辨认",
+          "english": "Listen for “serious” the next time you hear English.",
+          "chinese": "下次听英语时，留意辨认 serious。"
+        },
+        {
+          "scene": "近义比较",
+          "english": "I compared “serious” with “grave” before choosing the word.",
+          "chinese": "选词前，我比较了 serious 和 grave。"
+        },
+        {
+          "scene": "反义对照",
+          "english": "The opposite idea is often expressed with “minor”.",
+          "chinese": "相反的意思常可用 minor 表达。"
+        },
+        {
+          "scene": "间隔复习",
+          "english": "I reviewed “serious” again before going to bed.",
+          "chinese": "睡前我又复习了一遍 serious。"
+        },
+        {
+          "scene": "口语输出",
+          "english": "Which real situation would make you use “serious”?",
+          "chinese": "在什么真实情境中你会用到 serious？"
         }
       ],
       "studyFocus": {
-        "coreMeaning": "严重的；认真的",
-        "keyCollocation": "a serious problem：严重的问题",
-        "commonMistake": "不要只按中文逐字替换，也不要随意改动介词或语序；优先把 “a serious problem” 当作一个完整句块记忆。",
+        "coreMeaning": "严重的；认真的；英文核心释义：important, dangerous, or not joking。",
+        "keyCollocation": "把 “a serious problem” 作为一个完整句块记忆。",
+        "commonMistake": "系动词 feel 后接形容词作表语，不随意加 -ly。",
         "mustUseExample": "Lack of sleep can become a serious problem."
       },
       "questions": [
@@ -1189,9 +2363,10 @@
           "free_sentence"
         ]
       },
-      "contentVersion": "2026.08.17.2",
+      "detailLevel": "template-complete",
+      "contentVersion": "2026.08.17.3",
       "reviewed": true,
-      "sourceNote": "从用户提供的 COCA 词表筛选；释义、例句和搭配为本项目离线整理；关系词与词组音标来自 CMU 北美英语发音词典。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }
   ]
 }

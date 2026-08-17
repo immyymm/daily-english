@@ -2,89 +2,398 @@
   "id": "work-n",
   "word": "work",
   "lemma": "work",
+  "cocaRanks": [
+    {
+      "rank": 115,
+      "pos": "v",
+      "frequency": 854095,
+      "partOfSpeech": "v."
+    },
+    {
+      "rank": 207,
+      "pos": "n",
+      "frequency": 456169,
+      "partOfSpeech": "n."
+    }
+  ],
+  "cocaRankLabel": "v. 第 115 名；n. 第 207 名",
   "phonetic": "/wɜːrk/",
-  "syllables": "work",
+  "syllables": "work（单音节）",
   "partOfSpeech": "n. / v.",
-  "frequencyBand": "COCA 高频精选",
+  "frequencyBand": "COCA 高频精选 · v. 第 115 名；n. 第 207 名",
   "difficulty": "应用",
   "tags": [
     "n.",
+    "模板完整版",
     "主动词汇"
   ],
   "coreMemory": {
     "chinese": "工作；起作用",
-    "english": "activity done for a purpose or job",
-    "structure": "work on something（致力于某事）",
-    "commonError": "不要把不同词性混在一起；先确认句中需要的是 n. 还是 v.，并整体记住 “work on something”。",
-    "directSynonym": "labor",
-    "directAntonym": "rest",
-    "derivatives": "worker · workplace",
+    "english": "v. to do a job, especially to earn money；v. to spend time and effort doing something；v. to operate or function correctly；v. to produce the result you want；v. to gradually solve or move through something；n. a job or the activities you do in a job；n. effort used to achieve something；n. something produced by an artist, writer, or creator",
+    "structure": "work on something /wɜːrk ɑn sʌmθɪŋ/（从事；处理某事）；work for someone /wɜːrk fɔr sʌmwʌn/（为某人或某机构工作）；work as something /wɜːrk æz sʌmθɪŋ/（担任某种职业）；work with someone /wɜːrk wɪð sʌmwʌn/（与某人共事）",
+    "structures": [
+      {
+        "phrase": "work on something",
+        "phonetic": "/wɜːrk ɑn sʌmθɪŋ/",
+        "chinese": "从事；处理某事"
+      },
+      {
+        "phrase": "work for someone",
+        "phonetic": "/wɜːrk fɔr sʌmwʌn/",
+        "chinese": "为某人或某机构工作"
+      },
+      {
+        "phrase": "work as something",
+        "phonetic": "/wɜːrk æz sʌmθɪŋ/",
+        "chinese": "担任某种职业"
+      },
+      {
+        "phrase": "work with someone",
+        "phonetic": "/wɜːrk wɪð sʌmwʌn/",
+        "chinese": "与某人共事"
+      }
+    ],
+    "commonError": "❌ work a project → ✅ work on a project；❌ work as teacher → ✅ work as a teacher；❌ many works to do → ✅ a lot of work to do",
+    "commonErrors": [
+      {
+        "wrong": "work a project",
+        "wrongPhonetic": "/wɜːrk ə prɑdʒɛkt/",
+        "right": "work on a project",
+        "rightPhonetic": "/wɜːrk ɑn ə prɑdʒɛkt/",
+        "note": "表示“处理项目”要用 work on。"
+      },
+      {
+        "wrong": "work as teacher",
+        "wrongPhonetic": "/wɜːrk æz titʃɚ/",
+        "right": "work as a teacher",
+        "rightPhonetic": "/wɜːrk æz ə titʃɚ/",
+        "note": "可数职业名词单数前需要冠词。"
+      },
+      {
+        "wrong": "many works to do",
+        "wrongPhonetic": "/mɛni wɝks tu du/",
+        "right": "a lot of work to do",
+        "rightPhonetic": "/ə lɑt ʌv wɜːrk tu du/",
+        "note": "work 表示一般工作量时通常不可数；具体作品时 works 才可作复数。"
+      }
+    ],
+    "directSynonym": "labor /leɪbɚ/（劳动；劳作）；function /fʌŋkʃən/（运转；发挥作用）；operate /ɑpɚeɪt/（操作；运转）；job /dʒɑb/（工作；职位）；employment /ɛmplɔɪmənt/（就业；受雇）",
+    "directAntonym": "rest /rɛst/（休息）；relax /rɪlæks/（放松）；fail /feɪl/（失败；失灵）；unemployment /ʌnɪmplɔɪmənt/（失业）",
+    "derivatives": "worker · working · workable · workplace · workforce · workaholic · workmanship",
     "example": "I am working on my pronunciation.",
     "exampleChinese": "我正在练习发音。"
   },
   "meanings": [
     {
-      "partOfSpeech": "n.",
-      "english": "activity done for a purpose or job",
-      "chinese": "工作",
-      "example": "I am working on my pronunciation.",
-      "translation": "我正在练习发音。"
+      "partOfSpeech": "v.",
+      "english": "to do a job, especially to earn money",
+      "chinese": "工作；任职",
+      "example": "She works at a local hospital.",
+      "translation": "她在当地一家医院工作。"
     },
     {
       "partOfSpeech": "v.",
-      "english": "to do a job or function successfully",
-      "chinese": "工作；起作用",
-      "example": "This method works well for beginners.",
-      "translation": "这个方法对初学者很有效。"
+      "english": "to spend time and effort doing something",
+      "chinese": "做；处理；致力于",
+      "example": "We are working on a new website.",
+      "translation": "我们正在制作一个新网站。"
+    },
+    {
+      "partOfSpeech": "v.",
+      "english": "to operate or function correctly",
+      "chinese": "运转；运行",
+      "example": "The printer is not working.",
+      "translation": "打印机坏了。"
+    },
+    {
+      "partOfSpeech": "v.",
+      "english": "to produce the result you want",
+      "chinese": "奏效；起作用",
+      "example": "This method really works.",
+      "translation": "这个方法确实有效。"
+    },
+    {
+      "partOfSpeech": "v.",
+      "english": "to gradually solve or move through something",
+      "chinese": "努力解决；逐步完成",
+      "example": "We can work through the problem together.",
+      "translation": "我们可以一起逐步解决这个问题。"
+    },
+    {
+      "partOfSpeech": "n.",
+      "english": "a job or the activities you do in a job",
+      "chinese": "工作",
+      "example": "I have a lot of work today.",
+      "translation": "我今天有很多工作。"
+    },
+    {
+      "partOfSpeech": "n.",
+      "english": "effort used to achieve something",
+      "chinese": "劳动；努力",
+      "example": "Learning a language takes hard work.",
+      "translation": "学习一门语言需要努力。"
+    },
+    {
+      "partOfSpeech": "n.",
+      "english": "something produced by an artist, writer, or creator",
+      "chinese": "作品；成果",
+      "example": "This painting is one of her best works.",
+      "translation": "这幅画是她最好的作品之一。"
     }
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "工作与职场",
       "items": [
         {
-          "phrase": "work on something",
-          "phonetic": "/wɜːrk ɑn sʌmθɪŋ/",
-          "chinese": "致力于某事"
+          "phrase": "full-time work",
+          "phonetic": "/fʊl-taɪm wɜːrk/",
+          "chinese": "全职工作"
+        },
+        {
+          "phrase": "part-time work",
+          "phonetic": "/pɑrt-taɪm wɜːrk/",
+          "chinese": "兼职工作"
+        },
+        {
+          "phrase": "remote work",
+          "phonetic": "/rɪmoʊt wɜːrk/",
+          "chinese": "远程工作"
+        },
+        {
+          "phrase": "office work",
+          "phonetic": "/ɔfɪs wɜːrk/",
+          "chinese": "办公室工作"
         }
       ]
     },
     {
-      "category": "真实例句句块",
+      "category": "学习与项目",
       "items": [
         {
-          "phrase": "I am working on my",
-          "phonetic": "/aɪ æm wɝkɪŋ ɑn maɪ/",
-          "chinese": "核心例句片段：我正在练习发音。"
+          "phrase": "schoolwork",
+          "phonetic": "/skulwɝk/",
+          "chinese": "学校作业；课业"
+        },
+        {
+          "phrase": "research work",
+          "phonetic": "/risɝtʃ wɜːrk/",
+          "chinese": "研究工作"
+        },
+        {
+          "phrase": "project work",
+          "phonetic": "/prɑdʒɛkt wɜːrk/",
+          "chinese": "项目工作"
+        },
+        {
+          "phrase": "written work",
+          "phonetic": "/rɪtən wɜːrk/",
+          "chinese": "书面作业；书面作品"
+        }
+      ]
+    },
+    {
+      "category": "合作与表现",
+      "items": [
+        {
+          "phrase": "teamwork",
+          "phonetic": "/timwɝk/",
+          "chinese": "团队合作"
+        },
+        {
+          "phrase": "good work",
+          "phonetic": "/ɡʊd wɜːrk/",
+          "chinese": "出色的工作"
+        },
+        {
+          "phrase": "quality work",
+          "phonetic": "/kwɑləti wɜːrk/",
+          "chinese": "高质量的工作"
+        },
+        {
+          "phrase": "creative work",
+          "phonetic": "/krieɪtɪv wɜːrk/",
+          "chinese": "创造性工作"
+        }
+      ]
+    },
+    {
+      "category": "日常生活",
+      "items": [
+        {
+          "phrase": "housework",
+          "phonetic": "/haʊswɝk/",
+          "chinese": "家务"
+        },
+        {
+          "phrase": "yard work",
+          "phonetic": "/jɑrd wɜːrk/",
+          "chinese": "庭院劳动"
+        },
+        {
+          "phrase": "repair work",
+          "phonetic": "/rɪpɛr wɜːrk/",
+          "chinese": "维修工作"
+        },
+        {
+          "phrase": "volunteer work",
+          "phonetic": "/vɑləntɪr wɜːrk/",
+          "chinese": "志愿工作"
         }
       ]
     }
   ],
   "fixedPhrases": [
     {
-      "phrase": "work on something",
-      "phonetic": "/wɜːrk ɑn sʌmθɪŋ/",
-      "chinese": "致力于某事",
-      "example": "I am working on my pronunciation.",
-      "translation": "我正在练习发音。"
+      "phrase": "work for",
+      "phonetic": "/wɜːrk fɔr/",
+      "chinese": "为……工作；受雇于",
+      "example": "He works for an international bank.",
+      "translation": "他在一家国际银行工作。"
+    },
+    {
+      "phrase": "work at",
+      "phonetic": "/wɜːrk æt/",
+      "chinese": "在某个地点或机构工作",
+      "example": "Maya works at the front desk.",
+      "translation": "玛雅在前台工作。"
+    },
+    {
+      "phrase": "work as",
+      "phonetic": "/wɜːrk æz/",
+      "chinese": "担任；以……身份工作",
+      "example": "My brother works as a designer.",
+      "translation": "我哥哥是一名设计师。"
+    },
+    {
+      "phrase": "work on",
+      "phonetic": "/wɜːrk ɑn/",
+      "chinese": "从事；处理；改进",
+      "example": "I need to work on my pronunciation.",
+      "translation": "我需要改善我的发音。"
+    },
+    {
+      "phrase": "work with",
+      "phonetic": "/wɜːrk wɪð/",
+      "chinese": "与……共事；使用",
+      "example": "She works with young children.",
+      "translation": "她从事与幼儿有关的工作。"
+    },
+    {
+      "phrase": "work from home",
+      "phonetic": "/wɜːrk frʌm hoʊm/",
+      "chinese": "居家办公",
+      "example": "I work from home twice a week.",
+      "translation": "我每周居家办公两天。"
+    },
+    {
+      "phrase": "work out",
+      "phonetic": "/wɜːrk aʊt/",
+      "chinese": "成功解决；产生好结果；锻炼",
+      "example": "I hope everything works out.",
+      "translation": "我希望一切顺利。"
+    },
+    {
+      "phrase": "work through",
+      "phonetic": "/wɜːrk θru/",
+      "chinese": "逐步解决或完成",
+      "example": "Let’s work through the list together.",
+      "translation": "我们一起把这份清单逐项处理完吧。"
+    },
+    {
+      "phrase": "work toward",
+      "phonetic": "/wɜːrk təwɔrd/",
+      "chinese": "朝着……努力",
+      "example": "We are working toward the same goal.",
+      "translation": "我们正朝着同一个目标努力。"
+    },
+    {
+      "phrase": "get to work",
+      "phonetic": "/ɡɛt tu wɜːrk/",
+      "chinese": "开始工作",
+      "example": "We have a lot to do, so let’s get to work.",
+      "translation": "我们有很多事要做，开始干吧。"
+    },
+    {
+      "phrase": "at work",
+      "phonetic": "/æt wɜːrk/",
+      "chinese": "在工作；在起作用",
+      "example": "She is still at work.",
+      "translation": "她还在上班。"
+    },
+    {
+      "phrase": "out of work",
+      "phonetic": "/aʊt ʌv wɜːrk/",
+      "chinese": "失业",
+      "example": "He was out of work for two months.",
+      "translation": "他失业了两个月。"
     }
   ],
   "synonyms": [
     {
       "word": "labor",
       "phonetic": "/leɪbɚ/",
-      "partOfSpeech": "n. / v.",
-      "chinese": "与“工作”意义接近",
-      "difference": "work 在 “work on something” 中是本卡需要主动掌握的表达；labor 含义接近，但宾语、语气和固定搭配不一定相同。"
+      "partOfSpeech": "v. / n.",
+      "chinese": "劳动；劳作",
+      "difference": "强调费力的体力或艰苦劳动；语气比 work 更重，日常口语中作动词不如 work 常用。"
+    },
+    {
+      "word": "function",
+      "phonetic": "/fʌŋkʃən/",
+      "partOfSpeech": "v.",
+      "chinese": "运转；发挥作用",
+      "difference": "主要描述系统、组织或身体部位正常发挥功能，不能表示“任职”。"
+    },
+    {
+      "word": "operate",
+      "phonetic": "/ɑpɚeɪt/",
+      "partOfSpeech": "v.",
+      "chinese": "操作；运转",
+      "difference": "强调机器运行或人操作设备，比 work 更具体。"
+    },
+    {
+      "word": "job",
+      "phonetic": "/dʒɑb/",
+      "partOfSpeech": "n.",
+      "chinese": "工作；职位",
+      "difference": "可数名词，常指一份具体职位或任务；work 表示一般“工作”时通常不可数。"
+    },
+    {
+      "word": "employment",
+      "phonetic": "/ɛmplɔɪmənt/",
+      "partOfSpeech": "n.",
+      "chinese": "就业；受雇",
+      "difference": "较正式，强调受雇状态或就业关系，不指某项日常任务。"
     }
   ],
   "antonyms": [
     {
       "word": "rest",
       "phonetic": "/rɛst/",
-      "partOfSpeech": "n. / v.",
-      "chinese": "与“工作”意义相反",
-      "usage": "和 work 的核心义形成对比；先在真实句子中判断是否确实构成反向关系。"
+      "partOfSpeech": "v. / n.",
+      "chinese": "休息",
+      "usage": "与“工作、劳动”相对，是最直接、最常见的反义词。"
+    },
+    {
+      "word": "relax",
+      "phonetic": "/rɪlæks/",
+      "partOfSpeech": "v.",
+      "chinese": "放松",
+      "usage": "强调停止紧张或劳累，不一定表示完全停止工作。"
+    },
+    {
+      "word": "fail",
+      "phonetic": "/feɪl/",
+      "partOfSpeech": "v.",
+      "chinese": "失败；失灵",
+      "usage": "当 work 表示“奏效、运转”时，fail 是最直接的反义词。"
+    },
+    {
+      "word": "unemployment",
+      "phonetic": "/ʌnɪmplɔɪmənt/",
+      "partOfSpeech": "n.",
+      "chinese": "失业",
+      "usage": "与 employment 相对，表示没有工作的状态。"
     }
   ],
   "derivatives": [
@@ -92,77 +401,243 @@
       "word": "worker",
       "phonetic": "/wɝkɚ/",
       "partOfSpeech": "n.",
-      "chinese": "与“work”同词族的常用词形",
-      "note": "这是 work 的常用词族成员；先辨认词性，再放进完整句子中使用。"
+      "chinese": "工人；工作者",
+      "note": "非常常用，可泛指从事某类工作的人。"
+    },
+    {
+      "word": "working",
+      "phonetic": "/wɝkɪŋ/",
+      "partOfSpeech": "adj.",
+      "chinese": "工作的；可用的",
+      "note": "常见于 working hours 和 working model。"
+    },
+    {
+      "word": "workable",
+      "phonetic": "/wɝkəbəl/",
+      "partOfSpeech": "adj.",
+      "chinese": "可行的；行得通的",
+      "note": "常用于计划、方案和解决办法。"
     },
     {
       "word": "workplace",
       "phonetic": "/wɝkpleɪs/",
       "partOfSpeech": "n.",
-      "chinese": "与“work”同词族的常用词形",
-      "note": "这是 work 的常用词族成员；先辨认词性，再放进完整句子中使用。"
+      "chinese": "工作场所",
+      "note": "常用于职场制度和文化语境。"
+    },
+    {
+      "word": "workforce",
+      "phonetic": "/wɝkfɔrs/",
+      "partOfSpeech": "n.",
+      "chinese": "劳动力；全体员工",
+      "note": "常用于商业、经济和人力资源语境。"
+    },
+    {
+      "word": "workaholic",
+      "phonetic": "/wɝkəhɑlɪk/",
+      "partOfSpeech": "n.",
+      "chinese": "工作狂",
+      "note": "日常表达中常用，通常暗含工作过度。"
+    },
+    {
+      "word": "workmanship",
+      "phonetic": "/wɝkmənʃɪp/",
+      "partOfSpeech": "n.",
+      "chinese": "工艺；做工",
+      "note": "常见于产品质量语境。"
     }
   ],
   "confusables": [
     {
-      "word": "job",
+      "word": "walk",
+      "phonetic": "/wɔk/",
+      "partOfSpeech": "v. / n.",
+      "chinese": "走路；散步",
+      "difference": "与 work 拼写相近，但元音和含义完全不同；walk 中的 l 不发音。"
+    },
+    {
+      "word": "word",
+      "phonetic": "/wɝd/",
       "partOfSpeech": "n.",
-      "chinese": "工作；职位",
-      "difference": "work 表示工作这一活动时通常不可数；job 是可数名词，指具体职位或任务。",
-      "phonetic": "/dʒɑb/"
+      "chinese": "单词；话语",
+      "difference": "发音开头相近，但末尾是 /d/；work 的末尾是 /k/。"
+    },
+    {
+      "word": "world",
+      "phonetic": "/wɝld/",
+      "partOfSpeech": "n.",
+      "chinese": "世界",
+      "difference": "与 work 发音相近，但 world 多出 /ld/ 音。"
+    },
+    {
+      "word": "task",
+      "phonetic": "/tæsk/",
+      "partOfSpeech": "n.",
+      "chinese": "任务",
+      "difference": "指一项具体、可完成的任务；work 范围更广，表示工作时通常不可数。"
     }
   ],
   "relatedVocabulary": [
     {
-      "category": "语义坐标：近义与反义",
+      "category": "职业与事业",
       "items": [
         {
-          "word": "labor",
-          "phonetic": "/leɪbɚ/",
-          "partOfSpeech": "n. / v.",
-          "chinese": "与“工作”意义接近"
+          "word": "career",
+          "phonetic": "/kɚɪr/",
+          "partOfSpeech": "n.",
+          "chinese": "职业生涯"
         },
         {
-          "word": "rest",
-          "phonetic": "/rɛst/",
-          "partOfSpeech": "n. / v.",
-          "chinese": "与“工作”意义相反"
+          "word": "profession",
+          "phonetic": "/prəfɛʃən/",
+          "partOfSpeech": "n.",
+          "chinese": "专业；职业"
+        },
+        {
+          "word": "occupation",
+          "phonetic": "/ɑkjəpeɪʃən/",
+          "partOfSpeech": "n.",
+          "chinese": "职业"
+        }
+      ]
+    },
+    {
+      "category": "任务与项目",
+      "items": [
+        {
+          "word": "assignment",
+          "phonetic": "/əsaɪnmənt/",
+          "partOfSpeech": "n.",
+          "chinese": "任务；作业"
+        },
+        {
+          "word": "project",
+          "phonetic": "/prɑdʒɛkt/",
+          "partOfSpeech": "n.",
+          "chinese": "项目"
+        },
+        {
+          "word": "duty",
+          "phonetic": "/duti/",
+          "partOfSpeech": "n.",
+          "chinese": "职责；义务"
+        }
+      ]
+    },
+    {
+      "category": "成果与进展",
+      "items": [
+        {
+          "word": "result",
+          "phonetic": "/rɪzʌlt/",
+          "partOfSpeech": "n.",
+          "chinese": "结果"
+        },
+        {
+          "word": "progress",
+          "phonetic": "/prɑɡrɛs/",
+          "partOfSpeech": "n.",
+          "chinese": "进展"
+        },
+        {
+          "word": "achievement",
+          "phonetic": "/ətʃivmənt/",
+          "partOfSpeech": "n.",
+          "chinese": "成就"
+        }
+      ]
+    },
+    {
+      "category": "工作环境",
+      "items": [
+        {
+          "word": "office",
+          "phonetic": "/ɔfɪs/",
+          "partOfSpeech": "n.",
+          "chinese": "办公室"
+        },
+        {
+          "word": "company",
+          "phonetic": "/kʌmpəni/",
+          "partOfSpeech": "n.",
+          "chinese": "公司"
+        },
+        {
+          "word": "team",
+          "phonetic": "/tim/",
+          "partOfSpeech": "n.",
+          "chinese": "团队"
         }
       ]
     }
   ],
   "examples": [
     {
-      "scene": "日常 / 真实表达",
-      "english": "I am working on my pronunciation.",
-      "chinese": "我正在练习发音。"
+      "scene": "日常使用",
+      "english": "I have to work tomorrow.",
+      "chinese": "我明天得上班。"
     },
     {
-      "scene": "学习 / 工作场景",
-      "english": "In today’s lesson, we practiced the word “work” in a complete sentence.",
-      "chinese": "今天的课程里，我们练习了怎样在完整句子中使用 work。"
+      "scene": "工作场所",
+      "english": "She works at a small law firm.",
+      "chinese": "她在一家小型律师事务所工作。"
     },
     {
-      "scene": "核心搭配复现",
-      "english": "“work on something” is the key phrase I want to remember.",
-      "chinese": "“work on something”是我想重点记住的搭配。"
+      "scene": "职业身份",
+      "english": "He works as a nurse.",
+      "chinese": "他是一名护士。"
     },
     {
-      "scene": "常见错误提醒",
-      "english": "I checked the context before choosing “work” instead of “labor”.",
-      "chinese": "我先检查语境，再决定用 work 而不是 labor。"
+      "scene": "工作对象",
+      "english": "We are working on the budget now.",
+      "chinese": "我们现在正在处理预算。"
     },
     {
-      "scene": "词义与近义辨析",
-      "english": "Here, “work” means “activity done for a purpose or job”.",
-      "chinese": "在这里，work 的意思是“工作；起作用”。"
+      "scene": "学习改进",
+      "english": "You need to work on your writing.",
+      "chinese": "你需要提高写作能力。"
+    },
+    {
+      "scene": "与人合作",
+      "english": "I enjoy working with this team.",
+      "chinese": "我喜欢和这个团队共事。"
+    },
+    {
+      "scene": "机器运转",
+      "english": "Does the air conditioner work?",
+      "chinese": "空调能正常运转吗？"
+    },
+    {
+      "scene": "方法奏效",
+      "english": "That idea might work.",
+      "chinese": "那个主意也许行得通。"
+    },
+    {
+      "scene": "解决问题",
+      "english": "Do not worry—we will work it out.",
+      "chinese": "别担心，我们会解决的。"
+    },
+    {
+      "scene": "名词用法",
+      "english": "I finished my work early today.",
+      "chinese": "我今天提前完成了工作。"
+    },
+    {
+      "scene": "不可数名词",
+      "english": "I have a lot of work to do.",
+      "chinese": "我有很多工作要做。"
+    },
+    {
+      "scene": "艺术作品",
+      "english": "The museum displays her early work.",
+      "chinese": "博物馆展出了她的早期作品。"
     }
   ],
   "studyFocus": {
-    "coreMeaning": "工作；起作用",
-    "keyCollocation": "work on something：致力于某事",
-    "commonMistake": "不要把不同词性混在一起；先确认句中需要的是 n. 还是 v.，并整体记住 “work on something”。",
-    "mustUseExample": "I am working on my pronunciation."
+    "coreMeaning": "work 作动词表示“工作、运转、奏效”；作名词表示“工作、劳动或作品”。",
+    "keyCollocation": "重点掌握 work on、work for、work as 和 work out。",
+    "commonMistake": "表示一般工作量时说 a lot of work，不说 many works；具体职位用 job。",
+    "mustUseExample": "I’m working on it."
   },
   "questions": [
     {
@@ -247,7 +722,8 @@
       "free_sentence"
     ]
   },
-  "contentVersion": "2026.08.17.2",
+  "detailLevel": "template-complete",
+  "contentVersion": "2026.08.17.3",
   "reviewed": true,
-  "sourceNote": "从用户提供的 COCA 词表筛选；释义、例句和搭配为本项目离线整理；关系词与词组音标来自 CMU 北美英语发音词典。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；本卡依照用户词卡模板人工精校；音标为美式发音。"
 }

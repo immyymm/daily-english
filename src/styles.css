@@ -627,6 +627,24 @@ h1 { font-family: Georgia, "Songti SC", serif; font-size: 21px; letter-spacing: 
 .sound-button { width: 54px; height: 54px; border: 1px solid rgba(255,255,255,.8); border-radius: 20px; display: grid; place-items: center; color: #95516c; background: rgba(255,255,255,.55); box-shadow: 0 8px 18px rgba(126,63,84,.09); }
 .detail-progress { display: flex; justify-content: space-between; align-items: center; margin: 12px 2px -7px; color: #9c7c88; font-size: 9px; }
 .detail-progress b { color: #a2506f; font-size: 10px; }
+.detail-toolbar { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin: 12px 2px 8px; color: #8d6d79; }
+.detail-toolbar > div { display: flex; align-items: center; gap: 7px; font-size: 10px; font-weight: 700; }
+.expand-all-button { min-height: 34px; padding: 0 10px; border: 0; border-radius: 12px; display: flex; align-items: center; gap: 5px; color: #9a5770; background: #ffedf3; font-size: 9px; font-weight: 800; white-space: nowrap; }
+.detail-jump-list { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(70px, 1fr); gap: 6px; margin: 0 -18px 13px; padding: 4px 18px 9px; overflow-x: auto; scrollbar-width: none; scroll-snap-type: x proximity; }
+.detail-jump-list::-webkit-scrollbar { display: none; }
+.detail-jump-list button { min-height: 50px; padding: 7px 8px; border: 1px solid #f1dfe6; border-radius: 15px; display: grid; place-items: center; gap: 2px; color: #876673; background: white; box-shadow: 0 5px 14px rgba(109,63,79,.05); scroll-snap-align: start; }
+.detail-jump-list b { color: #b05e7b; font: 700 10px Georgia, serif; }
+.detail-jump-list span { font-size: 9px; white-space: nowrap; }
+.complete-card-sections { display: grid; gap: 10px; }
+.learning-section { scroll-margin-top: 14px; border: 1px solid #efdee5; border-radius: 22px; overflow: hidden; background: rgba(255,255,255,.55); box-shadow: 0 7px 19px rgba(109,63,79,.035); }
+.learning-section.expanded { background: #fffafb; border-color: #ecd5de; }
+.learning-section-toggle { width: 100%; min-height: 64px; padding: 10px 13px; border: 0; display: grid; grid-template-columns: 34px 1fr auto; align-items: center; gap: 10px; color: #644651; background: transparent; text-align: left; }
+.learning-section-toggle > svg { color: #b17a8e; transition: transform .2s ease; }
+.learning-section.expanded .learning-section-toggle > svg { transform: rotate(180deg); }
+.section-number { width: 34px; height: 34px; border-radius: 12px; display: grid; place-items: center; color: #a65d77; background: #ffeaf1; font: 700 10px Georgia, serif; }
+.section-name { display: grid; gap: 3px; font: 700 15px Georgia, "Songti SC", serif; }
+.section-name small { color: #a1848f; font: 500 9px -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif; }
+.learning-section-body { display: grid; gap: 10px; padding: 0 10px 12px; animation: fade-in .18s ease; }
 .detail-tabs { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; margin: 14px 0; padding: 5px; border-radius: 18px; background: #f6e9ee; }
 .detail-tabs button { min-height: 40px; border: 0; border-radius: 14px; display: flex; align-items: center; justify-content: center; gap: 4px; color: #957581; background: transparent; font-size: 11px; }
 .detail-tabs button.active { color: #934e68; background: white; box-shadow: 0 4px 13px rgba(106,59,76,.08); }
@@ -648,6 +666,15 @@ h1 { font-family: Georgia, "Songti SC", serif; font-size: 21px; letter-spacing: 
 .tip-card { color: #805366; background: #fff1e8; border-color: #f7dfd0; }
 .tip-card.warning { border-left: 4px solid #e7a36d; }
 .tip-card.focus { background: #f4efff; border-color: #e7dcf8; }
+.error-structure-list { display: grid; gap: 11px; margin-top: 10px; }
+.error-structure-list article { padding: 11px; border-radius: 15px; background: rgba(255,255,255,.68); }
+.error-structure-list article + article { border-top: 1px solid rgba(177,108,82,.12); }
+.error-structure-list p { display: grid; grid-template-columns: 1fr; gap: 2px; margin: 0; font: 14px/1.45 Georgia, serif; }
+.error-structure-list p + p { margin-top: 6px; }
+.error-structure-list small { color: #a78c84; font: 10px Georgia, serif; }
+.error-structure-list .wrong-structure { color: #a76868; text-decoration-color: rgba(167,104,104,.35); }
+.error-structure-list .right-structure { color: #55806a; }
+.error-structure-list article > span { display: block; color: #826f68; font-size: 10px; line-height: 1.6; margin-top: 8px; }
 .phrase-row { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
 .phrase-row + .phrase-row { padding-top: 12px; margin-top: 12px; border-top: 1px solid #f5e7ec; }
 .phrase-row small, .fixed-head small, .relation-word small { display: block; color: #ab8a96; font: 11px Georgia, serif; margin-top: 3px; }

@@ -2,64 +2,262 @@
   "id": "manage-v",
   "word": "manage",
   "lemma": "manage",
+  "cocaRanks": [
+    {
+      "rank": 992,
+      "pos": "v",
+      "frequency": 97135,
+      "partOfSpeech": "v."
+    }
+  ],
+  "cocaRankLabel": "v. 第 992 名",
   "phonetic": "/ˈmænɪdʒ/",
   "syllables": "man·age",
   "partOfSpeech": "v.",
-  "frequencyBand": "COCA 高频精选",
+  "frequencyBand": "COCA 高频精选 · v. 第 992 名",
   "difficulty": "基础",
   "tags": [
     "v.",
+    "模板完整版",
     "高频表达"
   ],
   "coreMemory": {
     "chinese": "设法做到；管理",
-    "english": "to succeed in doing or controlling something",
-    "structure": "manage to do something（设法做成某事）",
-    "commonError": "不要只按中文逐字替换，也不要随意改动介词或语序；优先把 “manage to do something” 当作一个完整句块记忆。",
-    "directSynonym": "handle",
-    "directAntonym": "fail",
-    "derivatives": "management · manager · manageable",
+    "english": "v. to succeed in doing something difficult；v. to control or be responsible for a business, team, or activity；v. to deal successfully with a situation or available resources",
+    "structure": "manage to do something /ˈmænɪdʒ tu du sʌmθɪŋ/（设法做成某事）；manage a team or project /ˈmænɪdʒ ə tim ɔr prɑdʒɛkt/（管理团队或项目）；manage without something /ˈmænɪdʒ wɪθaʊt sʌmθɪŋ/（没有某物也能应付）；manage on an amount of money /ˈmænɪdʒ ɑn æn əmaʊnt ʌv mʌni/（靠一定数额的钱维持生活）",
+    "structures": [
+      {
+        "phrase": "manage to do something",
+        "phonetic": "/ˈmænɪdʒ tu du sʌmθɪŋ/",
+        "chinese": "设法做成某事"
+      },
+      {
+        "phrase": "manage a team or project",
+        "phonetic": "/ˈmænɪdʒ ə tim ɔr prɑdʒɛkt/",
+        "chinese": "管理团队或项目"
+      },
+      {
+        "phrase": "manage without something",
+        "phonetic": "/ˈmænɪdʒ wɪθaʊt sʌmθɪŋ/",
+        "chinese": "没有某物也能应付"
+      },
+      {
+        "phrase": "manage on an amount of money",
+        "phonetic": "/ˈmænɪdʒ ɑn æn əmaʊnt ʌv mʌni/",
+        "chinese": "靠一定数额的钱维持生活"
+      }
+    ],
+    "commonError": "❌ manage doing it → ✅ manage to do it；❌ manage with a team → ✅ manage a team；❌ can manage to without help → ✅ can manage without help",
+    "commonErrors": [
+      {
+        "wrong": "manage doing it",
+        "wrongPhonetic": "/ˈmænɪdʒ duɪŋ ɪt/",
+        "right": "manage to do it",
+        "rightPhonetic": "/ˈmænɪdʒ tu du ɪt/",
+        "note": "表示“设法做成”时，manage 后接 to do，不接 doing。"
+      },
+      {
+        "wrong": "manage with a team",
+        "wrongPhonetic": "/ˈmænɪdʒ wɪð ə tim/",
+        "right": "manage a team",
+        "rightPhonetic": "/ˈmænɪdʒ ə tim/",
+        "note": "表示“管理团队”时直接接宾语，不加 with。"
+      },
+      {
+        "wrong": "can manage to without help",
+        "wrongPhonetic": "/kæn ˈmænɪdʒ tu wɪθaʊt hɛlp/",
+        "right": "can manage without help",
+        "rightPhonetic": "/kæn ˈmænɪdʒ wɪθaʊt hɛlp/",
+        "note": "manage without 后直接接名词；不需要 to。"
+      }
+    ],
+    "directSynonym": "handle /hændəl/（处理；应付）；run /rʌn/（经营；管理）；cope /koʊp/（应付；对付）；succeed /səksid/（成功）",
+    "directAntonym": "fail /feɪl/（未能；失败）；mismanage /mɪsmænɪdʒ/（管理不善）；neglect /nəɡlɛkt/（疏于管理；忽视）",
+    "derivatives": "manager · management · manageable · mismanage",
     "example": "She managed to finish the report on time.",
     "exampleChinese": "她设法按时完成了报告。"
   },
   "meanings": [
     {
       "partOfSpeech": "v.",
-      "english": "to succeed in doing or controlling something",
+      "english": "to succeed in doing something difficult",
       "chinese": "设法做到",
       "example": "She managed to finish the report on time.",
       "translation": "她设法按时完成了报告。"
+    },
+    {
+      "partOfSpeech": "v.",
+      "english": "to control or be responsible for a business, team, or activity",
+      "chinese": "管理；负责",
+      "example": "He manages a team of twelve people.",
+      "translation": "他管理一个十二人的团队。"
+    },
+    {
+      "partOfSpeech": "v.",
+      "english": "to deal successfully with a situation or available resources",
+      "chinese": "应付；处理；勉强维持",
+      "example": "Can you manage without a car?",
+      "translation": "没有汽车你能应付吗？"
     }
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "完成困难任务",
       "items": [
         {
-          "phrase": "manage to do something",
-          "phonetic": "/ˈmænɪdʒ tu du sʌmθɪŋ/",
-          "chinese": "设法做成某事"
+          "phrase": "manage to finish",
+          "phonetic": "/ˈmænɪdʒ tu fɪnɪʃ/",
+          "chinese": "设法完成"
+        },
+        {
+          "phrase": "manage to find",
+          "phonetic": "/ˈmænɪdʒ tu faɪnd/",
+          "chinese": "设法找到"
+        },
+        {
+          "phrase": "manage to avoid",
+          "phonetic": "/ˈmænɪdʒ tu əvɔɪd/",
+          "chinese": "设法避免"
+        },
+        {
+          "phrase": "somehow manage",
+          "phonetic": "/sʌmhaʊ ˈmænɪdʒ/",
+          "chinese": "不知怎么设法做到"
         }
       ]
     },
     {
-      "category": "真实例句句块",
+      "category": "人员与项目",
       "items": [
         {
-          "phrase": "She managed to finish",
-          "phonetic": "/ʃi mænədʒd tu fɪnɪʃ/",
-          "chinese": "核心例句片段：她设法按时完成了报告。"
+          "phrase": "manage a team",
+          "phonetic": "/ˈmænɪdʒ ə tim/",
+          "chinese": "管理团队"
+        },
+        {
+          "phrase": "manage a project",
+          "phonetic": "/ˈmænɪdʒ ə prɑdʒɛkt/",
+          "chinese": "管理项目"
+        },
+        {
+          "phrase": "manage a business",
+          "phonetic": "/ˈmænɪdʒ ə bɪznəs/",
+          "chinese": "经营企业"
+        },
+        {
+          "phrase": "manage staff",
+          "phonetic": "/ˈmænɪdʒ stæf/",
+          "chinese": "管理员工"
+        }
+      ]
+    },
+    {
+      "category": "时间与资源",
+      "items": [
+        {
+          "phrase": "manage your time",
+          "phonetic": "/ˈmænɪdʒ jɔr taɪm/",
+          "chinese": "管理时间"
+        },
+        {
+          "phrase": "manage money",
+          "phonetic": "/ˈmænɪdʒ mʌni/",
+          "chinese": "管理资金"
+        },
+        {
+          "phrase": "manage resources",
+          "phonetic": "/ˈmænɪdʒ risɔrsɪz/",
+          "chinese": "管理资源"
+        },
+        {
+          "phrase": "manage the workload",
+          "phonetic": "/ˈmænɪdʒ ðə wɝkloʊd/",
+          "chinese": "管理工作量"
+        }
+      ]
+    },
+    {
+      "category": "应对处境",
+      "items": [
+        {
+          "phrase": "manage without help",
+          "phonetic": "/ˈmænɪdʒ wɪθaʊt hɛlp/",
+          "chinese": "没有帮助也能应付"
+        },
+        {
+          "phrase": "manage on a small budget",
+          "phonetic": "/ˈmænɪdʒ ɑn ə smɔl bʌdʒɪt/",
+          "chinese": "靠小预算维持"
+        },
+        {
+          "phrase": "manage the situation",
+          "phonetic": "/ˈmænɪdʒ ðə sɪtʃueɪʃən/",
+          "chinese": "应对局面"
+        },
+        {
+          "phrase": "manage stress",
+          "phonetic": "/ˈmænɪdʒ strɛs/",
+          "chinese": "管理压力"
         }
       ]
     }
   ],
   "fixedPhrases": [
     {
-      "phrase": "manage to do something",
-      "phonetic": "/ˈmænɪdʒ tu du sʌmθɪŋ/",
+      "phrase": "manage to do",
+      "phonetic": "/ˈmænɪdʒ tu du/",
       "chinese": "设法做成某事",
-      "example": "She managed to finish the report on time.",
-      "translation": "她设法按时完成了报告。"
+      "example": "We managed to catch the last train.",
+      "translation": "我们设法赶上了末班车。"
+    },
+    {
+      "phrase": "manage a team",
+      "phonetic": "/ˈmænɪdʒ ə tim/",
+      "chinese": "管理团队",
+      "example": "She manages a small design team.",
+      "translation": "她管理一个小型设计团队。"
+    },
+    {
+      "phrase": "manage a project",
+      "phonetic": "/ˈmænɪdʒ ə prɑdʒɛkt/",
+      "chinese": "管理项目",
+      "example": "He was asked to manage the new project.",
+      "translation": "他被要求管理这个新项目。"
+    },
+    {
+      "phrase": "manage your time",
+      "phonetic": "/ˈmænɪdʒ jɔr taɪm/",
+      "chinese": "管理时间",
+      "example": "A short plan can help you manage your time.",
+      "translation": "一份简短的计划能帮助你管理时间。"
+    },
+    {
+      "phrase": "manage without",
+      "phonetic": "/ˈmænɪdʒ wɪθaʊt/",
+      "chinese": "没有……也能应付",
+      "example": "We can manage without a printer for one day.",
+      "translation": "没有打印机，我们也能应付一天。"
+    },
+    {
+      "phrase": "manage on",
+      "phonetic": "/ˈmænɪdʒ ɑn/",
+      "chinese": "靠……勉强维持",
+      "example": "It is difficult to manage on such a low income.",
+      "translation": "靠这么低的收入很难维持生活。"
+    },
+    {
+      "phrase": "manage the situation",
+      "phonetic": "/ˈmænɪdʒ ðə sɪtʃueɪʃən/",
+      "chinese": "应对局面",
+      "example": "She stayed calm and managed the situation well.",
+      "translation": "她保持冷静，很好地处理了局面。"
+    },
+    {
+      "phrase": "how did you manage?",
+      "phonetic": "/haʊ dɪd ju ˈmænɪdʒ/",
+      "chinese": "你是怎么做到的？",
+      "example": "You finished already—how did you manage?",
+      "translation": "你已经完成了——你是怎么做到的？"
     }
   ],
   "synonyms": [
@@ -67,8 +265,29 @@
       "word": "handle",
       "phonetic": "/hændəl/",
       "partOfSpeech": "v.",
-      "chinese": "处理",
-      "difference": "manage 在 “manage to do something” 中是本卡需要主动掌握的表达；handle 含义接近，但宾语、语气和固定搭配不一定相同。"
+      "chinese": "处理；应付",
+      "difference": "强调处理具体任务、问题或压力；manage 还可表示经营组织和设法成功。"
+    },
+    {
+      "word": "run",
+      "phonetic": "/rʌn/",
+      "partOfSpeech": "v.",
+      "chinese": "经营；管理",
+      "difference": "口语常用于企业、商店、项目或系统的日常运营。"
+    },
+    {
+      "word": "cope",
+      "phonetic": "/koʊp/",
+      "partOfSpeech": "v.",
+      "chinese": "应付；对付",
+      "difference": "常与 with 连用，强调在困难中坚持应对，不表示管理团队。"
+    },
+    {
+      "word": "succeed",
+      "phonetic": "/səksid/",
+      "partOfSpeech": "v.",
+      "chinese": "成功",
+      "difference": "强调结果成功；manage to do 常暗示过程有困难但最终做到了。"
     }
   ],
   "antonyms": [
@@ -76,37 +295,109 @@
       "word": "fail",
       "phonetic": "/feɪl/",
       "partOfSpeech": "v.",
-      "chinese": "与“设法做到”意义相反",
-      "usage": "和 manage 的核心义形成对比；先在真实句子中判断是否确实构成反向关系。"
+      "chinese": "未能；失败",
+      "usage": "与 manage to do 表示“设法成功”时直接相反。"
+    },
+    {
+      "word": "mismanage",
+      "phonetic": "/mɪsmænɪdʒ/",
+      "partOfSpeech": "v.",
+      "chinese": "管理不善",
+      "usage": "表示对企业、资金或局面管理得不好。"
+    },
+    {
+      "word": "neglect",
+      "phonetic": "/nəɡlɛkt/",
+      "partOfSpeech": "v.",
+      "chinese": "疏于管理；忽视",
+      "usage": "强调没有给予应有的注意或照料。"
     }
   ],
   "derivatives": [
     {
-      "word": "management",
-      "phonetic": "/mænədʒmənt/",
-      "partOfSpeech": "n.",
-      "chinese": "与“manage”同词族的常用词形",
-      "note": "这是 manage 的常用词族成员；先辨认词性，再放进完整句子中使用。"
-    },
-    {
       "word": "manager",
       "phonetic": "/mænədʒɚ/",
       "partOfSpeech": "n.",
-      "chinese": "与“manage”同词族的常用词形",
-      "note": "这是 manage 的常用词族成员；先辨认词性，再放进完整句子中使用。"
+      "chinese": "经理；管理者",
+      "note": "非常常用，指负责团队、商店或部门的人。"
+    },
+    {
+      "word": "management",
+      "phonetic": "/mænədʒmənt/",
+      "partOfSpeech": "n.",
+      "chinese": "管理；管理层",
+      "note": "既可指管理活动，也可集合指管理人员。"
     },
     {
       "word": "manageable",
       "phonetic": "/mænɪdʒəbəl/",
       "partOfSpeech": "adj.",
-      "chinese": "与“manage”同词族的常用词形",
-      "note": "这是 manage 的常用词族成员；先辨认词性，再放进完整句子中使用。"
+      "chinese": "可处理的；应付得来的",
+      "note": "常形容任务量、成本或问题。"
+    },
+    {
+      "word": "mismanage",
+      "phonetic": "/mɪsmænɪdʒ/",
+      "partOfSpeech": "v.",
+      "chinese": "管理不善",
+      "note": "否定前缀 mis- 表示“错误地”。"
     }
   ],
-  "confusables": [],
+  "confusables": [
+    {
+      "word": "management",
+      "phonetic": "/mænədʒmənt/",
+      "partOfSpeech": "n.",
+      "chinese": "管理；管理层",
+      "difference": "manage 是动词；management 是不可数名词或集合名词。"
+    },
+    {
+      "word": "manager",
+      "phonetic": "/mænədʒɚ/",
+      "partOfSpeech": "n.",
+      "chinese": "经理；管理者",
+      "difference": "manager 指人；manage 表示这个人所做的管理动作。"
+    },
+    {
+      "word": "arrange",
+      "phonetic": "/ɚeɪndʒ/",
+      "partOfSpeech": "v.",
+      "chinese": "安排",
+      "difference": "arrange 强调把时间或事物排好；manage 强调控制、负责或克服困难。"
+    }
+  ],
   "relatedVocabulary": [
     {
-      "category": "语义坐标：近义与反义",
+      "category": "管理动作",
+      "items": [
+        {
+          "word": "organize",
+          "phonetic": "/ɔrɡənaɪz/",
+          "partOfSpeech": "v.",
+          "chinese": "组织"
+        },
+        {
+          "word": "plan",
+          "phonetic": "/plæn/",
+          "partOfSpeech": "v. / n.",
+          "chinese": "计划"
+        },
+        {
+          "word": "lead",
+          "phonetic": "/lɛd/",
+          "partOfSpeech": "v.",
+          "chinese": "带领"
+        },
+        {
+          "word": "control",
+          "phonetic": "/kəntroʊl/",
+          "partOfSpeech": "v. / n.",
+          "chinese": "控制"
+        }
+      ]
+    },
+    {
+      "category": "处理困难",
       "items": [
         {
           "word": "handle",
@@ -115,46 +406,112 @@
           "chinese": "处理"
         },
         {
-          "word": "fail",
-          "phonetic": "/feɪl/",
+          "word": "cope",
+          "phonetic": "/koʊp/",
           "partOfSpeech": "v.",
-          "chinese": "与“设法做到”意义相反"
+          "chinese": "应付"
+        },
+        {
+          "word": "solve",
+          "phonetic": "/sɑlv/",
+          "partOfSpeech": "v.",
+          "chinese": "解决"
+        },
+        {
+          "word": "overcome",
+          "phonetic": "/oʊvɚkʌm/",
+          "partOfSpeech": "v.",
+          "chinese": "克服"
+        }
+      ]
+    },
+    {
+      "category": "组织角色",
+      "items": [
+        {
+          "word": "manager",
+          "phonetic": "/mænədʒɚ/",
+          "partOfSpeech": "n.",
+          "chinese": "经理"
+        },
+        {
+          "word": "leader",
+          "phonetic": "/lidɚ/",
+          "partOfSpeech": "n.",
+          "chinese": "领导者"
+        },
+        {
+          "word": "team",
+          "phonetic": "/tim/",
+          "partOfSpeech": "n.",
+          "chinese": "团队"
+        },
+        {
+          "word": "staff",
+          "phonetic": "/stæf/",
+          "partOfSpeech": "n.",
+          "chinese": "员工"
         }
       ]
     }
   ],
   "examples": [
     {
-      "scene": "日常 / 真实表达",
+      "scene": "困难任务",
       "english": "She managed to finish the report on time.",
       "chinese": "她设法按时完成了报告。"
     },
     {
-      "scene": "学习 / 工作场景",
-      "english": "In today’s lesson, we practiced the word “manage” in a complete sentence.",
-      "chinese": "今天的课程里，我们练习了怎样在完整句子中使用 manage。"
+      "scene": "赶上交通",
+      "english": "We managed to catch the last bus.",
+      "chinese": "我们设法赶上了末班车。"
     },
     {
-      "scene": "核心搭配复现",
-      "english": "“manage to do something” is the key phrase I want to remember.",
-      "chinese": "“manage to do something”是我想重点记住的搭配。"
+      "scene": "团队管理",
+      "english": "He manages a team of twelve people.",
+      "chinese": "他管理一个十二人的团队。"
     },
     {
-      "scene": "常见错误提醒",
-      "english": "I checked the context before choosing “manage” instead of “handle”.",
-      "chinese": "我先检查语境，再决定用 manage 而不是 handle。"
+      "scene": "项目负责",
+      "english": "Can you manage this project on your own?",
+      "chinese": "你能独自负责这个项目吗？"
     },
     {
-      "scene": "词义与近义辨析",
-      "english": "Here, “manage” means “to succeed in doing or controlling something”.",
-      "chinese": "在这里，manage 的意思是“设法做到；管理”。"
+      "scene": "时间规划",
+      "english": "I use a simple list to manage my time.",
+      "chinese": "我用一份简单的清单管理时间。"
+    },
+    {
+      "scene": "资金安排",
+      "english": "She manages the household budget carefully.",
+      "chinese": "她谨慎地管理家庭预算。"
+    },
+    {
+      "scene": "没有帮助",
+      "english": "Do you think you can manage without help?",
+      "chinese": "你觉得没有帮助也能应付吗？"
+    },
+    {
+      "scene": "收入维持",
+      "english": "They managed on very little money at first.",
+      "chinese": "起初他们靠很少的钱维持生活。"
+    },
+    {
+      "scene": "处理局面",
+      "english": "The nurse managed the emergency calmly.",
+      "chinese": "护士冷静地处理了紧急情况。"
+    },
+    {
+      "scene": "主动输出",
+      "english": "What difficult thing did you manage to do recently?",
+      "chinese": "你最近设法完成了什么困难的事情？"
     }
   ],
   "studyFocus": {
-    "coreMeaning": "设法做到；管理",
-    "keyCollocation": "manage to do something：设法做成某事",
-    "commonMistake": "不要只按中文逐字替换，也不要随意改动介词或语序；优先把 “manage to do something” 当作一个完整句块记忆。",
-    "mustUseExample": "She managed to finish the report on time."
+    "coreMeaning": "manage 的三条主线是“设法做到、管理、应付”。",
+    "keyCollocation": "最重要结构是 manage to do；管理人或项目时直接接宾语。",
+    "commonMistake": "不要说 manage doing；应说 manage to do。",
+    "mustUseExample": "We managed to solve the problem together."
   },
   "questions": [
     {
@@ -239,7 +596,8 @@
       "free_sentence"
     ]
   },
-  "contentVersion": "2026.08.17.2",
+  "detailLevel": "template-complete",
+  "contentVersion": "2026.08.17.3",
   "reviewed": true,
-  "sourceNote": "从用户提供的 COCA 词表筛选；释义、例句和搭配为本项目离线整理；关系词与词组音标来自 CMU 北美英语发音词典。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；本卡依照用户词卡模板人工精校；音标为美式发音。"
 }

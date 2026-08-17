@@ -2,89 +2,328 @@
   "id": "support-v",
   "word": "support",
   "lemma": "support",
+  "cocaRanks": [
+    {
+      "rank": 486,
+      "pos": "v",
+      "frequency": 198185,
+      "partOfSpeech": "v."
+    },
+    {
+      "rank": 634,
+      "pos": "n",
+      "frequency": 152769,
+      "partOfSpeech": "n."
+    }
+  ],
+  "cocaRankLabel": "v. 第 486 名；n. 第 634 名",
   "phonetic": "/səˈpɔːrt/",
   "syllables": "sup·port",
   "partOfSpeech": "v. / n.",
-  "frequencyBand": "COCA 高频精选",
+  "frequencyBand": "COCA 高频精选 · v. 第 486 名；n. 第 634 名",
   "difficulty": "基础",
   "tags": [
     "v.",
+    "模板完整版",
     "高频表达"
   ],
   "coreMemory": {
     "chinese": "支持；支撑",
-    "english": "to help someone or hold something up",
-    "structure": "support a decision（支持一项决定）",
-    "commonError": "不要把不同词性混在一起；先确认句中需要的是 v. 还是 n.，并整体记住 “support a decision”。",
-    "directSynonym": "assist",
-    "directAntonym": "oppose",
-    "derivatives": "supportive · supporter",
+    "english": "v. to help or encourage a person, idea, or activity；v. to hold the weight of something and keep it in position；v. to provide evidence that makes a statement believable；n. help, encouragement, or practical assistance",
+    "structure": "support someone or something /səˈpɔːrt sʌmwʌn ɔr sʌmθɪŋ/（支持某人或某事）；support someone in doing something /səˈpɔːrt sʌmwʌn ɪn duɪŋ sʌmθɪŋ/（支持某人做某事）；support a claim with evidence /səˈpɔːrt ə kleɪm wɪð ɛvədəns/（用证据支持观点）；provide support for something /prəvaɪd səˈpɔːrt fɔr sʌmθɪŋ/（为某事提供支持）",
+    "structures": [
+      {
+        "phrase": "support someone or something",
+        "phonetic": "/səˈpɔːrt sʌmwʌn ɔr sʌmθɪŋ/",
+        "chinese": "支持某人或某事"
+      },
+      {
+        "phrase": "support someone in doing something",
+        "phonetic": "/səˈpɔːrt sʌmwʌn ɪn duɪŋ sʌmθɪŋ/",
+        "chinese": "支持某人做某事"
+      },
+      {
+        "phrase": "support a claim with evidence",
+        "phonetic": "/səˈpɔːrt ə kleɪm wɪð ɛvədəns/",
+        "chinese": "用证据支持观点"
+      },
+      {
+        "phrase": "provide support for something",
+        "phonetic": "/prəvaɪd səˈpɔːrt fɔr sʌmθɪŋ/",
+        "chinese": "为某事提供支持"
+      }
+    ],
+    "commonError": "❌ support to this plan → ✅ support this plan；❌ support someone to doing something → ✅ support someone in doing something；❌ many support → ✅ a lot of support",
+    "commonErrors": [
+      {
+        "wrong": "support to this plan",
+        "wrongPhonetic": "/səˈpɔːrt tu ðɪs plæn/",
+        "right": "support this plan",
+        "rightPhonetic": "/səˈpɔːrt ðɪs plæn/",
+        "note": "support 作动词时直接接宾语，不加 to。"
+      },
+      {
+        "wrong": "support someone to doing something",
+        "wrongPhonetic": "/səˈpɔːrt sʌmwʌn tu duɪŋ sʌmθɪŋ/",
+        "right": "support someone in doing something",
+        "rightPhonetic": "/səˈpɔːrt sʌmwʌn ɪn duɪŋ sʌmθɪŋ/",
+        "note": "表示“支持某人做某事”常用 support someone in doing。"
+      },
+      {
+        "wrong": "many support",
+        "wrongPhonetic": "/mɛni səˈpɔːrt/",
+        "right": "a lot of support",
+        "rightPhonetic": "/ə lɑt ʌv səˈpɔːrt/",
+        "note": "support 表示“帮助、支持”时通常是不可数名词。"
+      }
+    ],
+    "directSynonym": "assist /əsɪst/（协助）；back /bæk/（支持；为……撑腰）；sustain /səsteɪn/（维持；支撑）；encourage /ɛnkɝɪdʒ/（鼓励）",
+    "directAntonym": "oppose /əpoʊz/（反对）；undermine /ʌndɚmaɪn/（削弱；暗中破坏）；abandon /əbændən/（抛弃；放弃支持）",
+    "derivatives": "supportive · supporter · supporting · unsupported",
     "example": "Her family supported her decision to study abroad.",
     "exampleChinese": "她的家人支持她出国学习的决定。"
   },
   "meanings": [
     {
       "partOfSpeech": "v.",
-      "english": "to help someone or hold something up",
-      "chinese": "支持",
+      "english": "to help or encourage a person, idea, or activity",
+      "chinese": "支持；帮助；赞成",
       "example": "Her family supported her decision to study abroad.",
       "translation": "她的家人支持她出国学习的决定。"
     },
     {
+      "partOfSpeech": "v.",
+      "english": "to hold the weight of something and keep it in position",
+      "chinese": "支撑；承受",
+      "example": "These columns support the roof.",
+      "translation": "这些柱子支撑着屋顶。"
+    },
+    {
+      "partOfSpeech": "v.",
+      "english": "to provide evidence that makes a statement believable",
+      "chinese": "证实；为……提供依据",
+      "example": "The data supports our conclusion.",
+      "translation": "这些数据支持我们的结论。"
+    },
+    {
       "partOfSpeech": "n.",
-      "english": "help, encouragement, or something that holds another thing up",
-      "chinese": "支持；支撑物",
+      "english": "help, encouragement, or practical assistance",
+      "chinese": "支持；帮助",
       "example": "Thank you for your support during the project.",
       "translation": "谢谢你在项目期间给予的支持。"
     }
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "人与情感",
       "items": [
         {
-          "phrase": "support a decision",
-          "phonetic": "/səˈpɔːrt ə dɪsɪʒən/",
-          "chinese": "支持一项决定"
+          "phrase": "support a friend",
+          "phonetic": "/səˈpɔːrt ə frɛnd/",
+          "chinese": "支持朋友"
+        },
+        {
+          "phrase": "emotional support",
+          "phonetic": "/ɪmoʊʃənəl səˈpɔːrt/",
+          "chinese": "情感支持"
+        },
+        {
+          "phrase": "family support",
+          "phonetic": "/fæməli səˈpɔːrt/",
+          "chinese": "家庭支持"
+        },
+        {
+          "phrase": "a strong support network",
+          "phonetic": "/ə strɔŋ səˈpɔːrt nɛtwɝk/",
+          "chinese": "强大的支持网络"
         }
       ]
     },
     {
-      "category": "真实例句句块",
+      "category": "观点与决定",
       "items": [
         {
-          "phrase": "Her family supported her decision",
-          "phonetic": "/hɝ fæməli səpɔrtɪd hɝ dɪsɪʒən/",
-          "chinese": "核心例句片段：她的家人支持她出国学习的决定。"
+          "phrase": "support a decision",
+          "phonetic": "/səˈpɔːrt ə dɪsɪʒən/",
+          "chinese": "支持决定"
+        },
+        {
+          "phrase": "support an idea",
+          "phonetic": "/səˈpɔːrt æn aɪdiə/",
+          "chinese": "支持想法"
+        },
+        {
+          "phrase": "support a proposal",
+          "phonetic": "/səˈpɔːrt ə prəpoʊzəl/",
+          "chinese": "支持提议"
+        },
+        {
+          "phrase": "public support",
+          "phonetic": "/pʌblɪk səˈpɔːrt/",
+          "chinese": "公众支持"
+        }
+      ]
+    },
+    {
+      "category": "证据与论证",
+      "items": [
+        {
+          "phrase": "support a claim",
+          "phonetic": "/səˈpɔːrt ə kleɪm/",
+          "chinese": "支持论点"
+        },
+        {
+          "phrase": "support the conclusion",
+          "phonetic": "/səˈpɔːrt ðə kənkluʒən/",
+          "chinese": "支持结论"
+        },
+        {
+          "phrase": "supporting evidence",
+          "phonetic": "/səpɔrtɪŋ ɛvədəns/",
+          "chinese": "支持性证据"
+        },
+        {
+          "phrase": "data support the finding",
+          "phonetic": "/deɪtə səˈpɔːrt ðə faɪndɪŋ/",
+          "chinese": "数据支持该发现"
+        }
+      ]
+    },
+    {
+      "category": "技术与结构",
+      "items": [
+        {
+          "phrase": "technical support",
+          "phonetic": "/tɛknɪkəl səˈpɔːrt/",
+          "chinese": "技术支持"
+        },
+        {
+          "phrase": "customer support",
+          "phonetic": "/kʌstəmɚ səˈpɔːrt/",
+          "chinese": "客户支持"
+        },
+        {
+          "phrase": "support the roof",
+          "phonetic": "/səˈpɔːrt ðə ruf/",
+          "chinese": "支撑屋顶"
+        },
+        {
+          "phrase": "financial support",
+          "phonetic": "/fənænʃəl səˈpɔːrt/",
+          "chinese": "资金支持"
         }
       ]
     }
   ],
   "fixedPhrases": [
     {
+      "phrase": "support someone in doing",
+      "phonetic": "/səˈpɔːrt sʌmwʌn ɪn duɪŋ/",
+      "chinese": "支持某人做某事",
+      "example": "Her parents support her in pursuing her goals.",
+      "translation": "她的父母支持她追求目标。"
+    },
+    {
       "phrase": "support a decision",
       "phonetic": "/səˈpɔːrt ə dɪsɪʒən/",
       "chinese": "支持一项决定",
-      "example": "Her family supported her decision to study abroad.",
-      "translation": "她的家人支持她出国学习的决定。"
+      "example": "The team supported the final decision.",
+      "translation": "团队支持最终决定。"
+    },
+    {
+      "phrase": "support a claim with evidence",
+      "phonetic": "/səˈpɔːrt ə kleɪm wɪð ɛvədəns/",
+      "chinese": "用证据支持论点",
+      "example": "You need to support your claim with evidence.",
+      "translation": "你需要用证据支持自己的论点。"
+    },
+    {
+      "phrase": "provide support for",
+      "phonetic": "/prəvaɪd səˈpɔːrt fɔr/",
+      "chinese": "为……提供支持",
+      "example": "The guide provides support for new learners.",
+      "translation": "这份指南为新学习者提供帮助。"
+    },
+    {
+      "phrase": "in support of",
+      "phonetic": "/ɪn səˈpɔːrt ʌv/",
+      "chinese": "支持；拥护",
+      "example": "Thousands marched in support of the proposal.",
+      "translation": "数千人游行支持这项提议。"
+    },
+    {
+      "phrase": "with the support of",
+      "phonetic": "/wɪð ðə səˈpɔːrt ʌv/",
+      "chinese": "在……的支持下",
+      "example": "She completed the project with the support of her team.",
+      "translation": "她在团队支持下完成了项目。"
+    },
+    {
+      "phrase": "technical support",
+      "phonetic": "/tɛknɪkəl səˈpɔːrt/",
+      "chinese": "技术支持",
+      "example": "Please contact technical support if the app stops working.",
+      "translation": "如果应用停止运行，请联系技术支持。"
+    },
+    {
+      "phrase": "a source of support",
+      "phonetic": "/ə sɔrs ʌv səˈpɔːrt/",
+      "chinese": "支持的来源；支柱",
+      "example": "Her friends were a major source of support.",
+      "translation": "她的朋友是她重要的精神支柱。"
     }
   ],
   "synonyms": [
     {
       "word": "assist",
       "phonetic": "/əsɪst/",
-      "partOfSpeech": "v. / n.",
-      "chinese": "与“支持”意义接近",
-      "difference": "support 在 “support a decision” 中是本卡需要主动掌握的表达；assist 含义接近，但宾语、语气和固定搭配不一定相同。"
+      "partOfSpeech": "v.",
+      "chinese": "协助",
+      "difference": "较正式，强调帮助完成具体任务；support 范围更广，也包括情感和立场。"
+    },
+    {
+      "word": "back",
+      "phonetic": "/bæk/",
+      "partOfSpeech": "v.",
+      "chinese": "支持；为……撑腰",
+      "difference": "口语常用，强调公开站在某人、计划或候选人一边。"
+    },
+    {
+      "word": "sustain",
+      "phonetic": "/səsteɪn/",
+      "partOfSpeech": "v.",
+      "chinese": "维持；支撑",
+      "difference": "强调让某物长时间继续存在或承受重量。"
+    },
+    {
+      "word": "encourage",
+      "phonetic": "/ɛnkɝɪdʒ/",
+      "partOfSpeech": "v.",
+      "chinese": "鼓励",
+      "difference": "主要给人信心或动力，不一定提供实际资源。"
     }
   ],
   "antonyms": [
     {
       "word": "oppose",
       "phonetic": "/əpoʊz/",
-      "partOfSpeech": "v. / n.",
-      "chinese": "与“支持”意义相反",
-      "usage": "和 support 的核心义形成对比；先在真实句子中判断是否确实构成反向关系。"
+      "partOfSpeech": "v.",
+      "chinese": "反对",
+      "usage": "用于立场、计划和政策，是 support 表示“赞成”时的直接反义词。"
+    },
+    {
+      "word": "undermine",
+      "phonetic": "/ʌndɚmaɪn/",
+      "partOfSpeech": "v.",
+      "chinese": "削弱；暗中破坏",
+      "usage": "表示逐渐削弱某人的信心、权威或某个体系。"
+    },
+    {
+      "word": "abandon",
+      "phonetic": "/əbændən/",
+      "partOfSpeech": "v.",
+      "chinese": "抛弃；放弃支持",
+      "usage": "强调在需要帮助时离开或停止支持。"
     }
   ],
   "derivatives": [
@@ -92,69 +331,193 @@
       "word": "supportive",
       "phonetic": "/səpɔrtɪv/",
       "partOfSpeech": "adj.",
-      "chinese": "与“support”同词族的常用词形",
-      "note": "这是 support 的常用词族成员；先辨认词性，再放进完整句子中使用。"
+      "chinese": "给予支持的",
+      "note": "常形容人、环境或态度，如 a supportive teacher。"
     },
     {
       "word": "supporter",
       "phonetic": "/səpɔrtɚ/",
       "partOfSpeech": "n.",
-      "chinese": "与“support”同词族的常用词形",
-      "note": "这是 support 的常用词族成员；先辨认词性，再放进完整句子中使用。"
+      "chinese": "支持者；拥护者",
+      "note": "指支持某人、球队、组织或观点的人。"
+    },
+    {
+      "word": "supporting",
+      "phonetic": "/səpɔrtɪŋ/",
+      "partOfSpeech": "adj.",
+      "chinese": "辅助的；支持性的",
+      "note": "如 supporting evidence、supporting role。"
+    },
+    {
+      "word": "unsupported",
+      "phonetic": "/ənsəpɔrtɪd/",
+      "partOfSpeech": "adj.",
+      "chinese": "无支持的；无证据的",
+      "note": "可指没有支撑，也可指说法缺少证据。"
     }
   ],
-  "confusables": [],
+  "confusables": [
+    {
+      "word": "suppose",
+      "phonetic": "/səpoʊz/",
+      "partOfSpeech": "v.",
+      "chinese": "认为；假设",
+      "difference": "suppose 和 support 开头相似，但 suppose 表示“认为、假设”。"
+    },
+    {
+      "word": "assist",
+      "phonetic": "/əsɪst/",
+      "partOfSpeech": "v.",
+      "chinese": "协助",
+      "difference": "assist 后常接 with 或 in；support 可直接接人、计划或论点。"
+    }
+  ],
   "relatedVocabulary": [
     {
-      "category": "语义坐标：近义与反义",
+      "category": "帮助方式",
       "items": [
+        {
+          "word": "help",
+          "phonetic": "/hɛlp/",
+          "partOfSpeech": "v. / n.",
+          "chinese": "帮助"
+        },
         {
           "word": "assist",
           "phonetic": "/əsɪst/",
-          "partOfSpeech": "v. / n.",
-          "chinese": "与“支持”意义接近"
+          "partOfSpeech": "v.",
+          "chinese": "协助"
+        },
+        {
+          "word": "encourage",
+          "phonetic": "/ɛnkɝɪdʒ/",
+          "partOfSpeech": "v.",
+          "chinese": "鼓励"
+        },
+        {
+          "word": "guide",
+          "phonetic": "/ɡaɪd/",
+          "partOfSpeech": "v.",
+          "chinese": "指导"
+        }
+      ]
+    },
+    {
+      "category": "立场表达",
+      "items": [
+        {
+          "word": "agree",
+          "phonetic": "/əɡri/",
+          "partOfSpeech": "v.",
+          "chinese": "同意"
+        },
+        {
+          "word": "approve",
+          "phonetic": "/əpruv/",
+          "partOfSpeech": "v.",
+          "chinese": "赞成；批准"
+        },
+        {
+          "word": "back",
+          "phonetic": "/bæk/",
+          "partOfSpeech": "v.",
+          "chinese": "支持"
         },
         {
           "word": "oppose",
           "phonetic": "/əpoʊz/",
-          "partOfSpeech": "v. / n.",
-          "chinese": "与“支持”意义相反"
+          "partOfSpeech": "v.",
+          "chinese": "反对"
+        }
+      ]
+    },
+    {
+      "category": "资源类型",
+      "items": [
+        {
+          "word": "evidence",
+          "phonetic": "/ɛvədəns/",
+          "partOfSpeech": "n.",
+          "chinese": "证据"
+        },
+        {
+          "word": "funding",
+          "phonetic": "/fʌndɪŋ/",
+          "partOfSpeech": "n.",
+          "chinese": "资金"
+        },
+        {
+          "word": "advice",
+          "phonetic": "/ædvaɪs/",
+          "partOfSpeech": "n.",
+          "chinese": "建议"
+        },
+        {
+          "word": "care",
+          "phonetic": "/kɛr/",
+          "partOfSpeech": "n.",
+          "chinese": "照顾"
         }
       ]
     }
   ],
   "examples": [
     {
-      "scene": "日常 / 真实表达",
+      "scene": "家庭选择",
       "english": "Her family supported her decision to study abroad.",
       "chinese": "她的家人支持她出国学习的决定。"
     },
     {
-      "scene": "学习 / 工作场景",
-      "english": "In today’s lesson, we practiced the word “support” in a complete sentence.",
-      "chinese": "今天的课程里，我们练习了怎样在完整句子中使用 support。"
+      "scene": "朋友鼓励",
+      "english": "Good friends support each other during difficult times.",
+      "chinese": "好朋友会在困难时期相互支持。"
     },
     {
-      "scene": "核心搭配复现",
-      "english": "“support a decision” is the key phrase I want to remember.",
-      "chinese": "“support a decision”是我想重点记住的搭配。"
+      "scene": "团队立场",
+      "english": "Most team members support the new plan.",
+      "chinese": "大多数团队成员支持新计划。"
     },
     {
-      "scene": "常见错误提醒",
-      "english": "I checked the context before choosing “support” instead of “assist”.",
-      "chinese": "我先检查语境，再决定用 support 而不是 assist。"
+      "scene": "证据论证",
+      "english": "The research does not support that claim.",
+      "chinese": "这项研究并不支持那个说法。"
     },
     {
-      "scene": "词义与近义辨析",
-      "english": "Here, “support” means “to help someone or hold something up”.",
-      "chinese": "在这里，support 的意思是“支持；支撑”。"
+      "scene": "结构支撑",
+      "english": "A metal frame supports the glass roof.",
+      "chinese": "金属框架支撑着玻璃屋顶。"
+    },
+    {
+      "scene": "客户服务",
+      "english": "Contact customer support if you cannot sign in.",
+      "chinese": "如果无法登录，请联系客户支持。"
+    },
+    {
+      "scene": "资金帮助",
+      "english": "The program offers financial support to students.",
+      "chinese": "该项目为学生提供经济援助。"
+    },
+    {
+      "scene": "不可数名词",
+      "english": "Thank you for all your support.",
+      "chinese": "感谢你给予的所有支持。"
+    },
+    {
+      "scene": "在支持下",
+      "english": "With her teacher’s support, she became more confident.",
+      "chinese": "在老师的支持下，她变得更自信。"
+    },
+    {
+      "scene": "主动输出",
+      "english": "Who supports you when learning becomes difficult?",
+      "chinese": "学习遇到困难时，谁会支持你？"
     }
   ],
   "studyFocus": {
-    "coreMeaning": "支持；支撑",
-    "keyCollocation": "support a decision：支持一项决定",
-    "commonMistake": "不要把不同词性混在一起；先确认句中需要的是 v. 还是 n.，并整体记住 “support a decision”。",
-    "mustUseExample": "Her family supported her decision to study abroad."
+    "coreMeaning": "support 可表示帮助人、赞成观点、支撑重量或用证据证实。",
+    "keyCollocation": "重点掌握 support someone in doing 和 support a claim with evidence。",
+    "commonMistake": "动词后不加 to；名词 support 表示“支持”时通常不可数。",
+    "mustUseExample": "The data supports our conclusion."
   },
   "questions": [
     {
@@ -239,7 +602,8 @@
       "free_sentence"
     ]
   },
-  "contentVersion": "2026.08.17.2",
+  "detailLevel": "template-complete",
+  "contentVersion": "2026.08.17.3",
   "reviewed": true,
-  "sourceNote": "从用户提供的 COCA 词表筛选；释义、例句和搭配为本项目离线整理；关系词与词组音标来自 CMU 北美英语发音词典。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；本卡依照用户词卡模板人工精校；音标为美式发音。"
 }
