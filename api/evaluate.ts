@@ -29,6 +29,7 @@ type Response = ServerResponse & { status?: (code: number) => Response; json?: (
 
 const RATE_WINDOW_MS = 60 * 60 * 1000;
 const RATE_LIMIT = 20;
+const EVALUATION_MODEL = process.env.OPENAI_MODEL?.trim() || 'gpt-5-nano';
 const requestBuckets = new Map<string, number[]>();
 
 function clientIp(request: IncomingMessage) {
@@ -141,7 +142,7 @@ export default async function handler(request: RequestWithBody, response: Respon
     const input = requestSchema.parse(await readBody(request));
     const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY, timeout: 25_000, maxRetries: 1 });
     const completion = await client.responses.parse({
-      model: 'gpt-5-mini',
+      model: EVALUATION_MODEL,
       input: [
         { role: 'system', content: systemPrompt },
         {
@@ -161,7 +162,7 @@ export default async function handler(request: RequestWithBody, response: Respon
       send(response, 502, { code: 'EMPTY_MODEL_RESULT', message: '本次点评没有得到有效结果，请重试。' }, origin);
       return;
     }
-    send(response, 200, { model: 'gpt-5-mini', requestId: input.requestId, result: completion.output_parsed }, origin);
+    send(response, 200, { model: EVALUATION_MODEL, requestId: input.requestId, result: completion.output_parsed }, origin);
   } catch (error) {
     if (error instanceof z.ZodError) {
       send(response, 400, { code: 'INVALID_REQUEST', message: '评分内容格式不正确。' }, origin);
@@ -189,7 +190,7 @@ export default async function handler(request: RequestWithBody, response: Respon
     if (upstreamStatus === 404 && diagnostic.code === 'model_not_found') {
       send(response, 503, {
         code: 'AI_MODEL_UNAVAILABLE',
-        message: 'AI 评分模型尚未完成服务端验证，答案已保存在本机。'
+        message: '当前 AI 评分模型不可用，答案已保存在本机。'
       }, origin);
       return;
     }

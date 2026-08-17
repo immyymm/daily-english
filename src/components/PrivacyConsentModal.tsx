@@ -23,7 +23,7 @@ export function PrivacyConsentModal({ open, onClose, onAccept }: PrivacyConsentM
     >
       <div className="consent-illustration"><LockKeyhole size={30} /></div>
       <div className="consent-copy">
-        <p>开放式回答无法只靠固定答案可靠判断。开启后，当前题目的文字答案、目标词和必要评分规则会发送到 OpenAI API，由 GPT-5 mini 辅助评分。</p>
+        <p>开放式回答无法只靠固定答案可靠判断。开启后，当前题目的文字答案、目标词和必要评分规则会发送到 OpenAI API，由服务器配置的低成本模型辅助评分。</p>
         <ul>
           <li>不会发送姓名、邮箱或全部学习历史。</li>
           <li>首版录音只保存在本机，不上传。</li>

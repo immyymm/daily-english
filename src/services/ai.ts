@@ -47,7 +47,7 @@ export async function evaluateAnswer(input: EvaluationRequest): Promise<{ model:
   }
 
   return {
-    model: payload.model ?? 'gpt-5-mini',
+    model: payload.model ?? 'server-configured',
     result: evaluationSchema.parse(payload.result)
   };
 }

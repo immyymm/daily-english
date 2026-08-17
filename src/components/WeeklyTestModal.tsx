@@ -164,7 +164,7 @@ export function WeeklyTestModal({ open, cards, aiConsent, onNeedConsent, onClose
       {!result && (
         <button className="primary-button" disabled={submitting} onClick={() => void submit()}>
           {submitting ? <LoaderCircle className="spin" size={18} /> : <Sparkles size={18} />}
-          {submitting ? '正在综合点评…' : '交给 GPT-5 mini 点评'}
+          {submitting ? '正在综合点评…' : '交给 AI 点评'}
         </button>
       )}
     </ModalShell>

@@ -469,7 +469,7 @@ function ReviewPage({
 
       <section className={studyDay >= 7 ? 'weekly-card' : 'weekly-card locked'}>
         <div className="weekly-icon"><Trophy size={26} /></div>
-        <div><span>每 7 个学习日</span><h3>本周综合测试</h3><p>短文、真实表达和口语文字稿由 GPT-5 mini 综合点评。</p></div>
+        <div><span>每 7 个学习日</span><h3>本周综合测试</h3><p>短文、真实表达和口语文字稿由 AI 综合点评。</p></div>
         <button onClick={onWeekly} disabled={studyDay < 7}>{studyDay < 7 ? '第 7 天解锁' : '开始周测'}</button>
       </section>
 
@@ -579,7 +579,7 @@ function ProfilePage({
 
       <section className="settings-card">
         <div className="settings-title"><Settings2 size={19} /><h3>学习设置</h3></div>
-        <SettingToggle icon={<Sparkles size={18} />} title="GPT-5 mini 辅助点评" description={'今天已用 ' + aiToday + ' / ' + settings.dailyAiLimit + ' 次'} checked={settings.aiConsent} onChange={onToggleAI} />
+        <SettingToggle icon={<Sparkles size={18} />} title="AI 辅助点评" description={'今天已用 ' + aiToday + ' / ' + settings.dailyAiLimit + ' 次'} checked={settings.aiConsent} onChange={onToggleAI} />
         <SettingToggle icon={<Flower2 size={18} />} title="减少动态效果" description="关闭翻卡和庆祝动效" checked={settings.reduceMotion} onChange={onToggleMotion} />
       </section>
 

@@ -11,7 +11,7 @@
 - 今日学习、翻卡、例句/搭配/辨析、浏览器发音
 - T0–T7 间隔复测、客观题本地评分、错因和熟练度统计
 - 第 7 天解锁周测，支持作文和口语文字稿
-- 自由造句、开放对话、作文和口语文字稿使用 GPT-5 mini 辅助评分
+- 自由造句、开放对话、作文和口语文字稿使用服务器配置的 OpenAI 模型辅助评分
 - AI 评分前隐私确认；断网或接口失败时保存到本地待重试
 - 录音只保留在当前页面和设备，不上传给评分接口
 - IndexedDB 本地保存进度，支持 JSON 导出、恢复和清除
@@ -60,15 +60,16 @@ VITE_SUPABASE_PUBLISHABLE_KEY=sb_publishable_your_key
 
 1. 打开 Vercel 项目的 **Settings → Environment Variables**。
 2. 新建 `OPENAI_API_KEY`，粘贴密钥，并应用到 Production；需要预览测试时再勾选 Preview。
-3. 新建 `ALLOWED_ORIGINS`，值为允许调用评分接口的完整域名，用英文逗号分隔，例如：
+3. 新建 `OPENAI_MODEL`，当前低成本测试值为 `gpt-5-nano`；后续可只更新此变量切换模型。
+4. 新建 `ALLOWED_ORIGINS`，值为允许调用评分接口的完整域名，用英文逗号分隔，例如：
 
    ```text
    https://daily-english.vercel.app,https://YOUR_NAME.github.io
    ```
 
-4. 保存后重新部署。
+5. 保存后重新部署。
 
-`gpt-5-mini` 还要求 OpenAI API 组织完成验证。若接口返回“AI 评分模型尚未完成服务端验证”，请进入 [OpenAI Organization settings](https://platform.openai.com/settings/organization/general) 点击 **Verify Organization**；验证结果可能需要约 15 分钟传播，通常不需要重新部署。
+当前默认模型为 `gpt-5-nano`，服务端会在成功响应中返回实际模型名。若接口返回“当前 AI 评分模型不可用”，应检查该模型是否受账户等级或组织验证限制。
 
 不要在聊天、代码、`VITE_*` 变量或 Git 仓库中放置 API 密钥。前端仅可配置公开接口地址 `VITE_AI_API_URL`。
 
@@ -76,7 +77,7 @@ VITE_SUPABASE_PUBLISHABLE_KEY=sb_publishable_your_key
 
 1. 将本目录推送到 GitHub 公共仓库。
 2. 在 Vercel 导入该仓库；框架会识别为 Vite，构建命令为 `pnpm run build`，输出目录为 `dist`。
-3. 按上一节设置 `OPENAI_API_KEY` 与 `ALLOWED_ORIGINS`，重新部署。
+3. 按上一节设置 `OPENAI_API_KEY`、`OPENAI_MODEL` 与 `ALLOWED_ORIGINS`，重新部署。
 4. 在 Vercel Firewall 中为 `/api/evaluate` 增加速率限制，并在 OpenAI 项目中设置预算和用量提醒。
 5. 用正式 `*.vercel.app` HTTPS 地址在 iPhone Safari 打开，点“分享 → 添加到主屏幕”。
 
@@ -95,7 +96,7 @@ GitHub Pages 只托管静态前端，不能保存 OpenAI 密钥。不开启同�
 
 ## 隐私与数据
 
-详见 [PRIVACY.md](./PRIVACY.md)。简要原则：词卡与学习记录本地优先；只有用户明确同意后的当前开放题文字和必要词卡上下文会发送到 Vercel，再由服务端交给 GPT-5 mini；录音文件、身份信息和完整学习历史不上传。
+详见 [PRIVACY.md](./PRIVACY.md)。简要原则：词卡与学习记录本地优先；只有用户明确同意后的当前开放题文字和必要词卡上下文会发送到 Vercel，再由服务端交给服务器配置的 OpenAI 模型；录音文件、身份信息和完整学习历史不上传。
 
 ## 项目资料
 
