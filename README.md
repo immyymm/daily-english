@@ -2,6 +2,8 @@
 
 “每日英语”是一款无需注册、可安装到 iPhone 主屏幕的网页 APP。它每天提供 5 张英语词卡，并依据间隔复测计划安排复习；学习记录默认只保存在当前设备。
 
+正式站：[https://daily-english-seven-ochre.vercel.app](https://daily-english-seven-ochre.vercel.app)
+
 ## 已实现功能
 
 - 30 天、150 张完整词卡，全部选自项目附带的 COCA 词表
@@ -53,6 +55,8 @@ pnpm run dev
    ```
 
 4. 保存后重新部署。
+
+`gpt-5-mini` 还要求 OpenAI API 组织完成验证。若接口返回“AI 评分模型尚未完成服务端验证”，请进入 [OpenAI Organization settings](https://platform.openai.com/settings/organization/general) 点击 **Verify Organization**；验证结果可能需要约 15 分钟传播，通常不需要重新部署。
 
 不要在聊天、代码、`VITE_*` 变量或 Git 仓库中放置 API 密钥。前端仅可配置公开接口地址 `VITE_AI_API_URL`。
 

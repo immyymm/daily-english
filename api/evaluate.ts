@@ -185,12 +185,22 @@ export default async function handler(request: RequestWithBody, response: Respon
       requestId: diagnostic.request_id,
       message: diagnostic.message
     });
-    const status = error instanceof OpenAI.APIError && error.status ? error.status : 502;
-    const message = status === 401
-      ? 'OpenAI API 密钥无效，请在 Vercel 检查配置。'
-      : status === 429
-        ? 'OpenAI 当前额度或速率受限，请稍后再试。'
-        : 'AI 评分暂时不可用，答案已保存在本机。';
-    send(response, status >= 400 && status < 600 ? status : 502, { code: 'AI_REQUEST_FAILED', message }, origin);
+    const upstreamStatus = error instanceof OpenAI.APIError && error.status ? error.status : 502;
+    if (upstreamStatus === 404 && diagnostic.code === 'model_not_found') {
+      send(response, 503, {
+        code: 'AI_MODEL_UNAVAILABLE',
+        message: 'AI 评分模型尚未完成服务端验证，答案已保存在本机。'
+      }, origin);
+      return;
+    }
+    if (upstreamStatus === 401) {
+      send(response, 503, { code: 'AI_KEY_INVALID', message: 'AI 评分密钥配置无效，答案已保存在本机。' }, origin);
+      return;
+    }
+    if (upstreamStatus === 429) {
+      send(response, 429, { code: 'AI_RATE_LIMITED', message: 'OpenAI 当前额度或速率受限，请稍后再试。' }, origin);
+      return;
+    }
+    send(response, 502, { code: 'AI_REQUEST_FAILED', message: 'AI 评分暂时不可用，答案已保存在本机。' }, origin);
   }
 }
