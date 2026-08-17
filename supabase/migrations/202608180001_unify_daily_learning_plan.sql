@@ -1,3 +1,34 @@
+create table if not exists public.daily_english_profiles (
+  user_id uuid primary key references auth.users(id) on delete cascade,
+  first_study_date date not null,
+  timezone text not null default 'Asia/Shanghai' check (timezone = 'Asia/Shanghai'),
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+alter table public.daily_english_profiles enable row level security;
+alter table public.daily_english_profiles force row level security;
+
+revoke all on public.daily_english_profiles from anon, authenticated;
+grant select, insert, update on public.daily_english_profiles to authenticated;
+
+create policy daily_english_profiles_select_own
+on public.daily_english_profiles for select to authenticated
+using ((select auth.uid()) = user_id);
+
+create policy daily_english_profiles_insert_own
+on public.daily_english_profiles for insert to authenticated
+with check ((select auth.uid()) = user_id);
+
+create policy daily_english_profiles_update_own
+on public.daily_english_profiles for update to authenticated
+using ((select auth.uid()) = user_id)
+with check ((select auth.uid()) = user_id);
+
+create trigger daily_english_profiles_touch_updated_at
+before update on public.daily_english_profiles
+for each row execute function private.daily_english_touch_updated_at();
+
 create table if not exists private.daily_english_card_catalog (
   card_id text primary key,
   sequence_no smallint not null unique check (sequence_no between 1 and 150),
@@ -77,6 +108,8 @@ begin
   v_valid_until := v_anchor + interval '1 day';
 
   with candidate_users as (
+    select user_id from public.daily_english_profiles
+    union
     select user_id from public.daily_english_snapshots
     union
     select user_id from public.daily_english_mastery
@@ -322,6 +355,24 @@ $$;
 
 revoke all on function private.daily_english_generate_daily_plans() from public, anon, authenticated;
 grant execute on function private.daily_english_generate_daily_plans() to postgres, service_role;
+
+create or replace function private.daily_english_generate_plan_after_profile_insert()
+returns trigger
+language plpgsql
+security definer
+set search_path = pg_catalog, public, private
+as $$
+begin
+  perform private.daily_english_generate_daily_plans();
+  return null;
+end
+$$;
+
+revoke all on function private.daily_english_generate_plan_after_profile_insert() from public, anon, authenticated;
+
+create trigger daily_english_profile_generate_initial_plan
+after insert on public.daily_english_profiles
+for each statement execute function private.daily_english_generate_plan_after_profile_insert();
 
 do $$
 declare

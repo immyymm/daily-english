@@ -1,6 +1,6 @@
 import type { Session } from '@supabase/supabase-js';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { exportSnapshot, importSnapshot } from '../storage/db';
+import { exportSnapshot, getSettings, importSnapshot } from '../storage/db';
 import { hydrateDetailedRecords, syncDetailedRecords } from '../services/cloudRecords';
 import { cloudSyncConfigured, getSupabase } from '../services/supabase';
 import type { AIEvaluation, AppSnapshot, CardProgress, DailyPlanRecord } from '../types';
@@ -160,6 +160,18 @@ export function useCloudSync(refresh: () => Promise<void>) {
     if (!client) return;
     setState('connecting');
     setMessage('正在合并云端和本机记录…');
+    const settings = await getSettings();
+    const { error: profileError } = await client.from('daily_english_profiles').upsert({
+      user_id: activeSession.user.id,
+      first_study_date: settings.firstUseDate,
+      timezone: 'Asia/Shanghai',
+      updated_at: new Date().toISOString()
+    }, { onConflict: 'user_id' });
+    if (profileError) {
+      setState('error');
+      setMessage(profileError.message);
+      return;
+    }
     const { data, error } = await client
       .from('daily_english_snapshots')
       .select('*')
