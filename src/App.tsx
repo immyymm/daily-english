@@ -31,6 +31,7 @@ import { PrivacyConsentModal } from './components/PrivacyConsentModal';
 import { ReviewSessionModal } from './components/ReviewSessionModal';
 import { WeeklyTestModal } from './components/WeeklyTestModal';
 import { useAppData } from './hooks/useAppData';
+import { notifyLocalDataChanged, useCloudSync } from './hooks/useCloudSync';
 import { studyDaySince, toLocalDateKey } from './learning/reviewEngine';
 import { evaluateAnswer } from './services/ai';
 import { clearLearningData, exportSnapshot, importSnapshot } from './storage/db';
@@ -45,6 +46,7 @@ const statusOrder: MasteryStatus[] = ['未测试', '学习中', '识别词汇', 
 
 function App() {
   const data = useAppData();
+  const sync = useCloudSync(data.refresh);
   const [tab, setTab] = useState<TabId>('today');
   const [selectedCard, setSelectedCard] = useState<WordCard>();
   const [reviewCard, setReviewCard] = useState<WordCard>();
@@ -139,6 +141,7 @@ function App() {
       const snapshot = JSON.parse(await file.text()) as AppSnapshot;
       await importSnapshot(snapshot);
       await data.refresh();
+      notifyLocalDataChanged();
       setToast('学习数据恢复成功。');
     } catch (error) {
       setToast(error instanceof Error ? error.message : '备份恢复失败。');
@@ -151,6 +154,7 @@ function App() {
     if (!window.confirm('确定清除本机全部学习记录吗？此操作无法撤销，建议先导出备份。')) return;
     await clearLearningData();
     await data.refresh();
+    notifyLocalDataChanged();
     setToast('本机学习记录已清除。');
   };
 
@@ -275,6 +279,7 @@ function App() {
           onReset={() => void resetData()}
           onInstall={() => void installApp()}
           onRetryPending={(evaluation) => void retryPending(evaluation)}
+          sync={sync}
         />
       )}
 
@@ -532,7 +537,8 @@ function ProfilePage({
   onImport,
   onReset,
   onInstall,
-  onRetryPending
+  onRetryPending,
+  sync
 }: {
   progress: CardProgress[];
   attempts: Attempt[];
@@ -546,7 +552,11 @@ function ProfilePage({
   onReset: () => void;
   onInstall: () => void;
   onRetryPending: (evaluation: AIEvaluation) => void;
+  sync: ReturnType<typeof useCloudSync>;
 }) {
+  const [syncEmail, setSyncEmail] = useState('');
+  const [syncPassword, setSyncPassword] = useState('');
+  const [sendingLink, setSendingLink] = useState(false);
   const mastered = progress.filter((item) => item.status === '主动掌握' || item.status === '长期掌握').length;
   const weak = progress.filter((item) => item.weak).length;
   const accuracy = attempts.length ? Math.round(attempts.filter((item) => item.correct).length / attempts.length * 100) : 0;
@@ -580,6 +590,50 @@ function ProfilePage({
         </section>
       )}
 
+      <section className="settings-card sync-card">
+        <div className="settings-title"><Wifi size={19} /><h3>多设备实时同步</h3></div>
+        {sync.session ? (
+          <div className="sync-panel">
+            <div className="sync-status-row">
+              <span className={'sync-dot ' + sync.state} />
+              <div><strong>{sync.session.user.email}</strong><p>{sync.message}</p></div>
+            </div>
+            {sync.lastSyncedAt && <small>最近同步：{new Intl.DateTimeFormat('zh-CN', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' }).format(new Date(sync.lastSyncedAt))}</small>}
+            <div className="sync-actions">
+              <button onClick={() => void sync.syncNow()} disabled={sync.state === 'connecting'}><RefreshCw size={15} />立即同步</button>
+              <button className="quiet" onClick={() => void sync.signOut()}>退出同步</button>
+            </div>
+          </div>
+        ) : (
+          <form className="sync-panel" onSubmit={async (event) => {
+            event.preventDefault();
+            if (!syncEmail.trim() || syncPassword.length < 8) return;
+            setSendingLink(true);
+            try {
+              await sync.signIn(syncEmail, syncPassword);
+            } finally {
+              setSendingLink(false);
+            }
+          }}>
+            <p>不登录也能继续使用。同一“每日英语”邮箱账户登录的 iPhone、iPad 和电脑会自动合并学习记录；它与 ChatGPT 账号无关。</p>
+            <label className="sync-email"><span>邮箱</span><input type="email" value={syncEmail} onChange={(event) => setSyncEmail(event.target.value)} placeholder="name@example.com" autoComplete="email" required /></label>
+            <label className="sync-email"><span>密码（至少 8 位）</span><input type="password" minLength={8} value={syncPassword} onChange={(event) => setSyncPassword(event.target.value)} placeholder="仅用于每日英语同步" autoComplete="current-password" required /></label>
+            <div className="sync-actions auth">
+              <button type="submit" disabled={!sync.configured || sendingLink || sync.state === 'connecting'}>{sendingLink ? <RefreshCw size={16} /> : <Wifi size={16} />}{sendingLink ? '登录中…' : '登录并同步'}</button>
+              <button className="quiet" type="button" disabled={!sync.configured || sendingLink || syncPassword.length < 8} onClick={async () => {
+                setSendingLink(true);
+                try {
+                  await sync.signUp(syncEmail, syncPassword);
+                } finally {
+                  setSendingLink(false);
+                }
+              }}>第一次使用，注册</button>
+            </div>
+            <small>{sync.message}</small>
+          </form>
+        )}
+      </section>
+
       <section className="settings-card">
         <div className="settings-title"><ShieldCheck size={19} /><h3>数据与隐私</h3></div>
         <button className="setting-row action" onClick={onExport}><span className="setting-icon"><Download size={18} /></span><div><strong>导出学习数据</strong><p>下载 JSON 备份文件</p></div><ChevronRight size={17} /></button>
@@ -588,7 +642,7 @@ function ProfilePage({
         <button className="setting-row action danger" onClick={onReset}><span className="setting-icon"><Trash2 size={18} /></span><div><strong>清除本机学习记录</strong><p>建议先导出备份</p></div><ChevronRight size={17} /></button>
       </section>
 
-      <section className="privacy-note"><LockKeyhole size={18} /><p>词卡与学习记录默认保存在当前设备。只有你主动提交的开放题文字和必要上下文会发送给 OpenAI API；录音不会上传。</p></section>
+      <section className="privacy-note"><LockKeyhole size={18} /><p>不登录时，学习记录只保存在当前设备；开启同步后，加密传输的学习快照会保存到你的“每日英语”账户。开放题文字仅在你主动提交时发送给 OpenAI API，录音不会上传。</p></section>
     </div>
   );
 }
@@ -616,7 +670,7 @@ function InstallModal({ open, onClose }: { open: boolean; onClose: () => void })
         <article><span>2</span><div><strong>点击底部“分享”按钮</strong><p>图标是一个向上的箭头。</p></div></article>
         <article><span>3</span><div><strong>选择“添加到主屏幕”</strong><p>确认名称“每日英语”，然后点击添加。</p></div></article>
       </div>
-      <div className="tip-card"><strong>小提醒</strong><p>请固定使用同一个正式域名学习，因为两个域名的本地记录不会自动同步。</p></div>
+      <div className="tip-card"><strong>小提醒</strong><p>在“我的 → 多设备实时同步”中用同一邮箱登录后，不同正式域名和设备的学习记录也会自动合并。</p></div>
     </ModalShell>
   );
 }

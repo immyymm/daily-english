@@ -1,7 +1,7 @@
 {
   "date": "2026-08-27",
   "dayNumber": 11,
-  "contentVersion": "2026.08.17",
+  "contentVersion": "2026.08.17.2",
   "cards": [
     {
       "id": "ability-n",
@@ -20,10 +20,10 @@
         "chinese": "能力",
         "english": "the power or skill to do something",
         "structure": "ability to do something（做某事的能力）",
-        "commonError": "注意可数性、冠词和常见固定搭配。",
+        "commonError": "不要只按中文逐字替换，也不要随意改动介词或语序；优先把 “ability to do something” 当作一个完整句块记忆。",
         "directSynonym": "skill",
         "directAntonym": "inability",
-        "derivatives": "在词卡中结合词性学习常用词形变化",
+        "derivatives": "able · unable",
         "example": "Practice improves your ability to recall words.",
         "exampleChinese": "练习会提高你回忆单词的能力。"
       },
@@ -38,22 +38,22 @@
       ],
       "contextPhrases": [
         {
-          "category": "日常与真实表达",
+          "category": "核心高频搭配",
           "items": [
             {
               "phrase": "ability to do something",
-              "phonetic": "/əˈbɪləti/",
+              "phonetic": "/əˈbɪləti tu du sʌmθɪŋ/",
               "chinese": "做某事的能力"
             }
           ]
         },
         {
-          "category": "学习与工作",
+          "category": "真实例句句块",
           "items": [
             {
-              "phrase": "ability",
-              "phonetic": "/əˈbɪləti/",
-              "chinese": "能力"
+              "phrase": "improves your ability to recall",
+              "phonetic": "/ɪmpruvz jɔr əˈbɪləti tu rikɔl/",
+              "chinese": "核心例句片段：练习会提高你回忆单词的能力。"
             }
           ]
         }
@@ -61,7 +61,7 @@
       "fixedPhrases": [
         {
           "phrase": "ability to do something",
-          "phonetic": "/əˈbɪləti/",
+          "phonetic": "/əˈbɪləti tu du sʌmθɪŋ/",
           "chinese": "做某事的能力",
           "example": "Practice improves your ability to recall words.",
           "translation": "练习会提高你回忆单词的能力。"
@@ -70,79 +70,88 @@
       "synonyms": [
         {
           "word": "skill",
-          "phonetic": "点击扬声器听美式发音",
+          "phonetic": "/skɪl/",
           "partOfSpeech": "n.",
-          "chinese": "近义表达",
-          "difference": "ability 是本卡核心词；skill 语义接近，但使用前要检查语境和搭配。"
+          "chinese": "技能",
+          "difference": "ability 在 “ability to do something” 中是本卡需要主动掌握的表达；skill 含义接近，但宾语、语气和固定搭配不一定相同。"
         }
       ],
       "antonyms": [
         {
           "word": "inability",
-          "phonetic": "点击扬声器听美式发音",
+          "phonetic": "/ɪnəbɪlɪti/",
           "partOfSpeech": "n.",
-          "chinese": "反向含义",
-          "usage": "用于对比记忆 ability 的核心意义。"
+          "chinese": "与“能力”意义相反",
+          "usage": "和 ability 的核心义形成对比；先在真实句子中判断是否确实构成反向关系。"
         }
       ],
       "derivatives": [
         {
-          "word": "ability",
-          "phonetic": "/əˈbɪləti/",
-          "partOfSpeech": "n.",
-          "chinese": "能力",
-          "note": "优先掌握本卡所列的高频词性；其他词形以实际语境为准。"
-        }
-      ],
-      "confusables": [
+          "word": "able",
+          "phonetic": "/eɪbəl/",
+          "partOfSpeech": "adj.",
+          "chinese": "与“ability”同词族的常用词形",
+          "note": "这是 ability 的常用词族成员；先辨认词性，再放进完整句子中使用。"
+        },
         {
-          "word": "skill",
-          "phonetic": "点击扬声器听美式发音",
-          "partOfSpeech": "n.",
-          "chinese": "相关近义词",
-          "difference": "不要只按中文对应；优先记住 ability to do something 这一自然搭配。"
+          "word": "unable",
+          "phonetic": "/əneɪbəl/",
+          "partOfSpeech": "adj.",
+          "chinese": "与“ability”同词族的常用词形",
+          "note": "这是 ability 的常用词族成员；先辨认词性，再放进完整句子中使用。"
         }
       ],
+      "confusables": [],
       "relatedVocabulary": [
         {
-          "category": "语义关联",
+          "category": "语义坐标：近义与反义",
           "items": [
             {
               "word": "skill",
-              "phonetic": "点击发音",
+              "phonetic": "/skɪl/",
               "partOfSpeech": "n.",
-              "chinese": "近义"
+              "chinese": "技能"
             },
             {
               "word": "inability",
-              "phonetic": "点击发音",
+              "phonetic": "/ɪnəbɪlɪti/",
               "partOfSpeech": "n.",
-              "chinese": "反义"
+              "chinese": "与“能力”意义相反"
             }
           ]
         }
       ],
       "examples": [
         {
-          "scene": "核心用法",
+          "scene": "日常 / 真实表达",
           "english": "Practice improves your ability to recall words.",
           "chinese": "练习会提高你回忆单词的能力。"
         },
         {
-          "scene": "主动回忆",
-          "english": "Can you use “ability to do something” in a sentence of your own?",
-          "chinese": "你能用“做某事的能力”自己造一个句子吗？"
+          "scene": "学习 / 工作场景",
+          "english": "In today’s lesson, we practiced the word “ability” in a complete sentence.",
+          "chinese": "今天的课程里，我们练习了怎样在完整句子中使用 ability。"
         },
         {
-          "scene": "语境辨析",
-          "english": "Explain when “ability” is more natural than “skill”.",
-          "chinese": "说明在什么情况下用 ability 比 skill 更自然。"
+          "scene": "核心搭配复现",
+          "english": "“ability to do something” is the key phrase I want to remember.",
+          "chinese": "“ability to do something”是我想重点记住的搭配。"
+        },
+        {
+          "scene": "常见错误提醒",
+          "english": "I checked the context before choosing “ability” instead of “skill”.",
+          "chinese": "我先检查语境，再决定用 ability 而不是 skill。"
+        },
+        {
+          "scene": "词义与近义辨析",
+          "english": "Here, “ability” means “the power or skill to do something”.",
+          "chinese": "在这里，ability 的意思是“能力”。"
         }
       ],
       "studyFocus": {
         "coreMeaning": "能力",
         "keyCollocation": "ability to do something：做某事的能力",
-        "commonMistake": "注意可数性、冠词和常见固定搭配。",
+        "commonMistake": "不要只按中文逐字替换，也不要随意改动介词或语序；优先把 “ability to do something” 当作一个完整句块记忆。",
         "mustUseExample": "Practice improves your ability to recall words."
       },
       "questions": [
@@ -228,9 +237,9 @@
           "free_sentence"
         ]
       },
-      "contentVersion": "2026.08.17",
+      "contentVersion": "2026.08.17.2",
       "reviewed": true,
-      "sourceNote": "从用户提供的 COCA 词表筛选；释义、例句和搭配为本项目离线整理。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；释义、例句和搭配为本项目离线整理；关系词与词组音标来自 CMU 北美英语发音词典。"
     },
     {
       "id": "effort-n",
@@ -249,10 +258,10 @@
         "chinese": "努力",
         "english": "physical or mental energy used to do something",
         "structure": "make an effort（付出努力）",
-        "commonError": "注意可数性、冠词和常见固定搭配。",
+        "commonError": "不要只按中文逐字替换，也不要随意改动介词或语序；优先把 “make an effort” 当作一个完整句块记忆。",
         "directSynonym": "attempt",
         "directAntonym": "idleness",
-        "derivatives": "在词卡中结合词性学习常用词形变化",
+        "derivatives": "effortless",
         "example": "Make an effort to use the word today.",
         "exampleChinese": "今天努力把这个词用出来。"
       },
@@ -267,22 +276,22 @@
       ],
       "contextPhrases": [
         {
-          "category": "日常与真实表达",
+          "category": "核心高频搭配",
           "items": [
             {
               "phrase": "make an effort",
-              "phonetic": "/ˈefərt/",
+              "phonetic": "/meɪk æn ˈefərt/",
               "chinese": "付出努力"
             }
           ]
         },
         {
-          "category": "学习与工作",
+          "category": "真实例句句块",
           "items": [
             {
-              "phrase": "effort",
-              "phonetic": "/ˈefərt/",
-              "chinese": "努力"
+              "phrase": "Make an effort to use",
+              "phonetic": "/meɪk æn ˈefərt tu jus/",
+              "chinese": "核心例句片段：今天努力把这个词用出来。"
             }
           ]
         }
@@ -290,7 +299,7 @@
       "fixedPhrases": [
         {
           "phrase": "make an effort",
-          "phonetic": "/ˈefərt/",
+          "phonetic": "/meɪk æn ˈefərt/",
           "chinese": "付出努力",
           "example": "Make an effort to use the word today.",
           "translation": "今天努力把这个词用出来。"
@@ -299,79 +308,81 @@
       "synonyms": [
         {
           "word": "attempt",
-          "phonetic": "点击扬声器听美式发音",
+          "phonetic": "/ətɛmpt/",
           "partOfSpeech": "n.",
-          "chinese": "近义表达",
-          "difference": "effort 是本卡核心词；attempt 语义接近，但使用前要检查语境和搭配。"
+          "chinese": "与“努力”意义接近",
+          "difference": "effort 在 “make an effort” 中是本卡需要主动掌握的表达；attempt 含义接近，但宾语、语气和固定搭配不一定相同。"
         }
       ],
       "antonyms": [
         {
           "word": "idleness",
-          "phonetic": "点击扬声器听美式发音",
+          "phonetic": "/aɪdəlnəs/",
           "partOfSpeech": "n.",
-          "chinese": "反向含义",
-          "usage": "用于对比记忆 effort 的核心意义。"
+          "chinese": "与“努力”意义相反",
+          "usage": "和 effort 的核心义形成对比；先在真实句子中判断是否确实构成反向关系。"
         }
       ],
       "derivatives": [
         {
-          "word": "effort",
-          "phonetic": "/ˈefərt/",
-          "partOfSpeech": "n.",
-          "chinese": "努力",
-          "note": "优先掌握本卡所列的高频词性；其他词形以实际语境为准。"
+          "word": "effortless",
+          "phonetic": "/ɛfɚtləs/",
+          "partOfSpeech": "adj.",
+          "chinese": "与“effort”同词族的常用词形",
+          "note": "这是 effort 的常用词族成员；先辨认词性，再放进完整句子中使用。"
         }
       ],
-      "confusables": [
-        {
-          "word": "attempt",
-          "phonetic": "点击扬声器听美式发音",
-          "partOfSpeech": "n.",
-          "chinese": "相关近义词",
-          "difference": "不要只按中文对应；优先记住 make an effort 这一自然搭配。"
-        }
-      ],
+      "confusables": [],
       "relatedVocabulary": [
         {
-          "category": "语义关联",
+          "category": "语义坐标：近义与反义",
           "items": [
             {
               "word": "attempt",
-              "phonetic": "点击发音",
+              "phonetic": "/ətɛmpt/",
               "partOfSpeech": "n.",
-              "chinese": "近义"
+              "chinese": "与“努力”意义接近"
             },
             {
               "word": "idleness",
-              "phonetic": "点击发音",
+              "phonetic": "/aɪdəlnəs/",
               "partOfSpeech": "n.",
-              "chinese": "反义"
+              "chinese": "与“努力”意义相反"
             }
           ]
         }
       ],
       "examples": [
         {
-          "scene": "核心用法",
+          "scene": "日常 / 真实表达",
           "english": "Make an effort to use the word today.",
           "chinese": "今天努力把这个词用出来。"
         },
         {
-          "scene": "主动回忆",
-          "english": "Can you use “make an effort” in a sentence of your own?",
-          "chinese": "你能用“付出努力”自己造一个句子吗？"
+          "scene": "学习 / 工作场景",
+          "english": "In today’s lesson, we practiced the word “effort” in a complete sentence.",
+          "chinese": "今天的课程里，我们练习了怎样在完整句子中使用 effort。"
         },
         {
-          "scene": "语境辨析",
-          "english": "Explain when “effort” is more natural than “attempt”.",
-          "chinese": "说明在什么情况下用 effort 比 attempt 更自然。"
+          "scene": "核心搭配复现",
+          "english": "“make an effort” is the key phrase I want to remember.",
+          "chinese": "“make an effort”是我想重点记住的搭配。"
+        },
+        {
+          "scene": "常见错误提醒",
+          "english": "I checked the context before choosing “effort” instead of “attempt”.",
+          "chinese": "我先检查语境，再决定用 effort 而不是 attempt。"
+        },
+        {
+          "scene": "词义与近义辨析",
+          "english": "Here, “effort” means “physical or mental energy used to do something”.",
+          "chinese": "在这里，effort 的意思是“努力”。"
         }
       ],
       "studyFocus": {
         "coreMeaning": "努力",
         "keyCollocation": "make an effort：付出努力",
-        "commonMistake": "注意可数性、冠词和常见固定搭配。",
+        "commonMistake": "不要只按中文逐字替换，也不要随意改动介词或语序；优先把 “make an effort” 当作一个完整句块记忆。",
         "mustUseExample": "Make an effort to use the word today."
       },
       "questions": [
@@ -457,9 +468,9 @@
           "free_sentence"
         ]
       },
-      "contentVersion": "2026.08.17",
+      "contentVersion": "2026.08.17.2",
       "reviewed": true,
-      "sourceNote": "从用户提供的 COCA 词表筛选；释义、例句和搭配为本项目离线整理。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；释义、例句和搭配为本项目离线整理；关系词与词组音标来自 CMU 北美英语发音词典。"
     },
     {
       "id": "reason-n",
@@ -478,40 +489,47 @@
         "chinese": "原因；推理",
         "english": "a cause or explanation for something",
         "structure": "the reason for（……的原因）",
-        "commonError": "注意动词后的固定结构和介词，不要按中文语序逐字拼接。",
+        "commonError": "不要把不同词性混在一起；先确认句中需要的是 n. 还是 v.，并整体记住 “the reason for”。",
         "directSynonym": "cause",
         "directAntonym": "result",
-        "derivatives": "在词卡中结合词性学习常用词形变化",
+        "derivatives": "reasonable · unreasonable",
         "example": "What is the main reason for your choice?",
         "exampleChinese": "你做出这个选择的主要原因是什么？"
       },
       "meanings": [
         {
-          "partOfSpeech": "n. / v.",
+          "partOfSpeech": "n.",
           "english": "a cause or explanation for something",
-          "chinese": "原因；推理",
+          "chinese": "原因",
           "example": "What is the main reason for your choice?",
           "translation": "你做出这个选择的主要原因是什么？"
+        },
+        {
+          "partOfSpeech": "v.",
+          "english": "to think carefully and form a judgment",
+          "chinese": "推理；推断",
+          "example": "She reasoned that it was safer to wait.",
+          "translation": "她推断等一等会更安全。"
         }
       ],
       "contextPhrases": [
         {
-          "category": "日常与真实表达",
+          "category": "核心高频搭配",
           "items": [
             {
               "phrase": "the reason for",
-              "phonetic": "/ˈriːzən/",
+              "phonetic": "/ðə ˈriːzən fɔr/",
               "chinese": "……的原因"
             }
           ]
         },
         {
-          "category": "学习与工作",
+          "category": "真实例句句块",
           "items": [
             {
-              "phrase": "reason",
-              "phonetic": "/ˈriːzən/",
-              "chinese": "原因；推理"
+              "phrase": "the main reason for your",
+              "phonetic": "/ðə meɪn ˈriːzən fɔr jɔr/",
+              "chinese": "核心例句片段：你做出这个选择的主要原因是什么？"
             }
           ]
         }
@@ -519,7 +537,7 @@
       "fixedPhrases": [
         {
           "phrase": "the reason for",
-          "phonetic": "/ˈriːzən/",
+          "phonetic": "/ðə ˈriːzən fɔr/",
           "chinese": "……的原因",
           "example": "What is the main reason for your choice?",
           "translation": "你做出这个选择的主要原因是什么？"
@@ -528,79 +546,88 @@
       "synonyms": [
         {
           "word": "cause",
-          "phonetic": "点击扬声器听美式发音",
+          "phonetic": "/kɑz/",
           "partOfSpeech": "n. / v.",
-          "chinese": "近义表达",
-          "difference": "reason 是本卡核心词；cause 语义接近，但使用前要检查语境和搭配。"
+          "chinese": "与“原因”意义接近",
+          "difference": "reason 在 “the reason for” 中是本卡需要主动掌握的表达；cause 含义接近，但宾语、语气和固定搭配不一定相同。"
         }
       ],
       "antonyms": [
         {
           "word": "result",
-          "phonetic": "点击扬声器听美式发音",
+          "phonetic": "/rɪzʌlt/",
           "partOfSpeech": "n. / v.",
-          "chinese": "反向含义",
-          "usage": "用于对比记忆 reason 的核心意义。"
+          "chinese": "结果",
+          "usage": "和 reason 的核心义形成对比；先在真实句子中判断是否确实构成反向关系。"
         }
       ],
       "derivatives": [
         {
-          "word": "reason",
-          "phonetic": "/ˈriːzən/",
-          "partOfSpeech": "n. / v.",
-          "chinese": "原因；推理",
-          "note": "优先掌握本卡所列的高频词性；其他词形以实际语境为准。"
-        }
-      ],
-      "confusables": [
+          "word": "reasonable",
+          "phonetic": "/rizənəbəl/",
+          "partOfSpeech": "adj.",
+          "chinese": "与“reason”同词族的常用词形",
+          "note": "这是 reason 的常用词族成员；先辨认词性，再放进完整句子中使用。"
+        },
         {
-          "word": "cause",
-          "phonetic": "点击扬声器听美式发音",
-          "partOfSpeech": "n. / v.",
-          "chinese": "相关近义词",
-          "difference": "不要只按中文对应；优先记住 the reason for 这一自然搭配。"
+          "word": "unreasonable",
+          "phonetic": "/ənriznəbəl/",
+          "partOfSpeech": "adj.",
+          "chinese": "与“reason”同词族的常用词形",
+          "note": "这是 reason 的常用词族成员；先辨认词性，再放进完整句子中使用。"
         }
       ],
+      "confusables": [],
       "relatedVocabulary": [
         {
-          "category": "语义关联",
+          "category": "语义坐标：近义与反义",
           "items": [
             {
               "word": "cause",
-              "phonetic": "点击发音",
+              "phonetic": "/kɑz/",
               "partOfSpeech": "n. / v.",
-              "chinese": "近义"
+              "chinese": "与“原因”意义接近"
             },
             {
               "word": "result",
-              "phonetic": "点击发音",
+              "phonetic": "/rɪzʌlt/",
               "partOfSpeech": "n. / v.",
-              "chinese": "反义"
+              "chinese": "结果"
             }
           ]
         }
       ],
       "examples": [
         {
-          "scene": "核心用法",
+          "scene": "日常 / 真实表达",
           "english": "What is the main reason for your choice?",
           "chinese": "你做出这个选择的主要原因是什么？"
         },
         {
-          "scene": "主动回忆",
-          "english": "Can you use “the reason for” in a sentence of your own?",
-          "chinese": "你能用“……的原因”自己造一个句子吗？"
+          "scene": "学习 / 工作场景",
+          "english": "In today’s lesson, we practiced the word “reason” in a complete sentence.",
+          "chinese": "今天的课程里，我们练习了怎样在完整句子中使用 reason。"
         },
         {
-          "scene": "语境辨析",
-          "english": "Explain when “reason” is more natural than “cause”.",
-          "chinese": "说明在什么情况下用 reason 比 cause 更自然。"
+          "scene": "核心搭配复现",
+          "english": "“the reason for” is the key phrase I want to remember.",
+          "chinese": "“the reason for”是我想重点记住的搭配。"
+        },
+        {
+          "scene": "常见错误提醒",
+          "english": "I checked the context before choosing “reason” instead of “cause”.",
+          "chinese": "我先检查语境，再决定用 reason 而不是 cause。"
+        },
+        {
+          "scene": "词义与近义辨析",
+          "english": "Here, “reason” means “a cause or explanation for something”.",
+          "chinese": "在这里，reason 的意思是“原因；推理”。"
         }
       ],
       "studyFocus": {
         "coreMeaning": "原因；推理",
         "keyCollocation": "the reason for：……的原因",
-        "commonMistake": "注意动词后的固定结构和介词，不要按中文语序逐字拼接。",
+        "commonMistake": "不要把不同词性混在一起；先确认句中需要的是 n. 还是 v.，并整体记住 “the reason for”。",
         "mustUseExample": "What is the main reason for your choice?"
       },
       "questions": [
@@ -686,9 +713,9 @@
           "free_sentence"
         ]
       },
-      "contentVersion": "2026.08.17",
+      "contentVersion": "2026.08.17.2",
       "reviewed": true,
-      "sourceNote": "从用户提供的 COCA 词表筛选；释义、例句和搭配为本项目离线整理。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；释义、例句和搭配为本项目离线整理；关系词与词组音标来自 CMU 北美英语发音词典。"
     },
     {
       "id": "issue-n",
@@ -707,40 +734,47 @@
         "chinese": "问题；议题",
         "english": "an important problem or topic",
         "structure": "deal with an issue（处理问题）",
-        "commonError": "注意动词后的固定结构和介词，不要按中文语序逐字拼接。",
+        "commonError": "不要把不同词性混在一起；先确认句中需要的是 n. 还是 v.，并整体记住 “deal with an issue”。",
         "directSynonym": "matter",
         "directAntonym": "solution",
-        "derivatives": "在词卡中结合词性学习常用词形变化",
+        "derivatives": "本词暂无需额外强记的高频派生词",
         "example": "We need to discuss this issue openly.",
         "exampleChinese": "我们需要公开讨论这个问题。"
       },
       "meanings": [
         {
-          "partOfSpeech": "n. / v.",
+          "partOfSpeech": "n.",
           "english": "an important problem or topic",
-          "chinese": "问题；议题",
+          "chinese": "问题",
           "example": "We need to discuss this issue openly.",
           "translation": "我们需要公开讨论这个问题。"
+        },
+        {
+          "partOfSpeech": "v.",
+          "english": "to officially give or announce something",
+          "chinese": "发布；签发",
+          "example": "The bank issued a new card yesterday.",
+          "translation": "银行昨天签发了一张新卡。"
         }
       ],
       "contextPhrases": [
         {
-          "category": "日常与真实表达",
+          "category": "核心高频搭配",
           "items": [
             {
               "phrase": "deal with an issue",
-              "phonetic": "/ˈɪʃuː/",
+              "phonetic": "/dil wɪð æn ˈɪʃuː/",
               "chinese": "处理问题"
             }
           ]
         },
         {
-          "category": "学习与工作",
+          "category": "真实例句句块",
           "items": [
             {
-              "phrase": "issue",
-              "phonetic": "/ˈɪʃuː/",
-              "chinese": "问题；议题"
+              "phrase": "discuss this issue openly",
+              "phonetic": "/dɪskʌs ðɪs ˈɪʃuː oʊpənli/",
+              "chinese": "核心例句片段：我们需要公开讨论这个问题。"
             }
           ]
         }
@@ -748,7 +782,7 @@
       "fixedPhrases": [
         {
           "phrase": "deal with an issue",
-          "phonetic": "/ˈɪʃuː/",
+          "phonetic": "/dil wɪð æn ˈɪʃuː/",
           "chinese": "处理问题",
           "example": "We need to discuss this issue openly.",
           "translation": "我们需要公开讨论这个问题。"
@@ -757,79 +791,73 @@
       "synonyms": [
         {
           "word": "matter",
-          "phonetic": "点击扬声器听美式发音",
+          "phonetic": "/mætɚ/",
           "partOfSpeech": "n. / v.",
-          "chinese": "近义表达",
-          "difference": "issue 是本卡核心词；matter 语义接近，但使用前要检查语境和搭配。"
+          "chinese": "与“问题”意义接近",
+          "difference": "issue 在 “deal with an issue” 中是本卡需要主动掌握的表达；matter 含义接近，但宾语、语气和固定搭配不一定相同。"
         }
       ],
       "antonyms": [
         {
           "word": "solution",
-          "phonetic": "点击扬声器听美式发音",
+          "phonetic": "/səluʃən/",
           "partOfSpeech": "n. / v.",
-          "chinese": "反向含义",
-          "usage": "用于对比记忆 issue 的核心意义。"
+          "chinese": "与“问题”意义相反",
+          "usage": "和 issue 的核心义形成对比；先在真实句子中判断是否确实构成反向关系。"
         }
       ],
-      "derivatives": [
-        {
-          "word": "issue",
-          "phonetic": "/ˈɪʃuː/",
-          "partOfSpeech": "n. / v.",
-          "chinese": "问题；议题",
-          "note": "优先掌握本卡所列的高频词性；其他词形以实际语境为准。"
-        }
-      ],
-      "confusables": [
-        {
-          "word": "matter",
-          "phonetic": "点击扬声器听美式发音",
-          "partOfSpeech": "n. / v.",
-          "chinese": "相关近义词",
-          "difference": "不要只按中文对应；优先记住 deal with an issue 这一自然搭配。"
-        }
-      ],
+      "derivatives": [],
+      "confusables": [],
       "relatedVocabulary": [
         {
-          "category": "语义关联",
+          "category": "语义坐标：近义与反义",
           "items": [
             {
               "word": "matter",
-              "phonetic": "点击发音",
+              "phonetic": "/mætɚ/",
               "partOfSpeech": "n. / v.",
-              "chinese": "近义"
+              "chinese": "与“问题”意义接近"
             },
             {
               "word": "solution",
-              "phonetic": "点击发音",
+              "phonetic": "/səluʃən/",
               "partOfSpeech": "n. / v.",
-              "chinese": "反义"
+              "chinese": "与“问题”意义相反"
             }
           ]
         }
       ],
       "examples": [
         {
-          "scene": "核心用法",
+          "scene": "日常 / 真实表达",
           "english": "We need to discuss this issue openly.",
           "chinese": "我们需要公开讨论这个问题。"
         },
         {
-          "scene": "主动回忆",
-          "english": "Can you use “deal with an issue” in a sentence of your own?",
-          "chinese": "你能用“处理问题”自己造一个句子吗？"
+          "scene": "学习 / 工作场景",
+          "english": "In today’s lesson, we practiced the word “issue” in a complete sentence.",
+          "chinese": "今天的课程里，我们练习了怎样在完整句子中使用 issue。"
         },
         {
-          "scene": "语境辨析",
-          "english": "Explain when “issue” is more natural than “matter”.",
-          "chinese": "说明在什么情况下用 issue 比 matter 更自然。"
+          "scene": "核心搭配复现",
+          "english": "“deal with an issue” is the key phrase I want to remember.",
+          "chinese": "“deal with an issue”是我想重点记住的搭配。"
+        },
+        {
+          "scene": "常见错误提醒",
+          "english": "I checked the context before choosing “issue” instead of “matter”.",
+          "chinese": "我先检查语境，再决定用 issue 而不是 matter。"
+        },
+        {
+          "scene": "词义与近义辨析",
+          "english": "Here, “issue” means “an important problem or topic”.",
+          "chinese": "在这里，issue 的意思是“问题；议题”。"
         }
       ],
       "studyFocus": {
         "coreMeaning": "问题；议题",
         "keyCollocation": "deal with an issue：处理问题",
-        "commonMistake": "注意动词后的固定结构和介词，不要按中文语序逐字拼接。",
+        "commonMistake": "不要把不同词性混在一起；先确认句中需要的是 n. 还是 v.，并整体记住 “deal with an issue”。",
         "mustUseExample": "We need to discuss this issue openly."
       },
       "questions": [
@@ -915,9 +943,9 @@
           "free_sentence"
         ]
       },
-      "contentVersion": "2026.08.17",
+      "contentVersion": "2026.08.17.2",
       "reviewed": true,
-      "sourceNote": "从用户提供的 COCA 词表筛选；释义、例句和搭配为本项目离线整理。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；释义、例句和搭配为本项目离线整理；关系词与词组音标来自 CMU 北美英语发音词典。"
     },
     {
       "id": "result-n",
@@ -936,40 +964,47 @@
         "chinese": "结果；导致",
         "english": "what happens because of an action",
         "structure": "as a result（因此；结果）",
-        "commonError": "注意动词后的固定结构和介词，不要按中文语序逐字拼接。",
+        "commonError": "不要把不同词性混在一起；先确认句中需要的是 n. 还是 v.，并整体记住 “as a result”。",
         "directSynonym": "outcome",
         "directAntonym": "cause",
-        "derivatives": "在词卡中结合词性学习常用词形变化",
+        "derivatives": "本词暂无需额外强记的高频派生词",
         "example": "She practiced daily and, as a result, spoke more naturally.",
         "exampleChinese": "她每天练习，因此说得更自然了。"
       },
       "meanings": [
         {
-          "partOfSpeech": "n. / v.",
+          "partOfSpeech": "n.",
           "english": "what happens because of an action",
-          "chinese": "结果；导致",
+          "chinese": "结果",
           "example": "She practiced daily and, as a result, spoke more naturally.",
           "translation": "她每天练习，因此说得更自然了。"
+        },
+        {
+          "partOfSpeech": "v.",
+          "english": "to happen because of something else",
+          "chinese": "导致；产生结果",
+          "example": "The mistake resulted in a long delay.",
+          "translation": "这个错误导致了长时间的延误。"
         }
       ],
       "contextPhrases": [
         {
-          "category": "日常与真实表达",
+          "category": "核心高频搭配",
           "items": [
             {
               "phrase": "as a result",
-              "phonetic": "/rɪˈzʌlt/",
+              "phonetic": "/æz ə rɪˈzʌlt/",
               "chinese": "因此；结果"
             }
           ]
         },
         {
-          "category": "学习与工作",
+          "category": "真实例句句块",
           "items": [
             {
-              "phrase": "result",
-              "phonetic": "/rɪˈzʌlt/",
-              "chinese": "结果；导致"
+              "phrase": "as a result spoke more",
+              "phonetic": "/æz ə rɪˈzʌlt spoʊk mɔr/",
+              "chinese": "核心例句片段：她每天练习，因此说得更自然了。"
             }
           ]
         }
@@ -977,7 +1012,7 @@
       "fixedPhrases": [
         {
           "phrase": "as a result",
-          "phonetic": "/rɪˈzʌlt/",
+          "phonetic": "/æz ə rɪˈzʌlt/",
           "chinese": "因此；结果",
           "example": "She practiced daily and, as a result, spoke more naturally.",
           "translation": "她每天练习，因此说得更自然了。"
@@ -986,79 +1021,73 @@
       "synonyms": [
         {
           "word": "outcome",
-          "phonetic": "点击扬声器听美式发音",
+          "phonetic": "/aʊtkʌm/",
           "partOfSpeech": "n. / v.",
-          "chinese": "近义表达",
-          "difference": "result 是本卡核心词；outcome 语义接近，但使用前要检查语境和搭配。"
+          "chinese": "与“结果”意义接近",
+          "difference": "result 在 “as a result” 中是本卡需要主动掌握的表达；outcome 含义接近，但宾语、语气和固定搭配不一定相同。"
         }
       ],
       "antonyms": [
         {
           "word": "cause",
-          "phonetic": "点击扬声器听美式发音",
+          "phonetic": "/kɑz/",
           "partOfSpeech": "n. / v.",
-          "chinese": "反向含义",
-          "usage": "用于对比记忆 result 的核心意义。"
+          "chinese": "与“结果”意义相反",
+          "usage": "和 result 的核心义形成对比；先在真实句子中判断是否确实构成反向关系。"
         }
       ],
-      "derivatives": [
-        {
-          "word": "result",
-          "phonetic": "/rɪˈzʌlt/",
-          "partOfSpeech": "n. / v.",
-          "chinese": "结果；导致",
-          "note": "优先掌握本卡所列的高频词性；其他词形以实际语境为准。"
-        }
-      ],
-      "confusables": [
-        {
-          "word": "outcome",
-          "phonetic": "点击扬声器听美式发音",
-          "partOfSpeech": "n. / v.",
-          "chinese": "相关近义词",
-          "difference": "不要只按中文对应；优先记住 as a result 这一自然搭配。"
-        }
-      ],
+      "derivatives": [],
+      "confusables": [],
       "relatedVocabulary": [
         {
-          "category": "语义关联",
+          "category": "语义坐标：近义与反义",
           "items": [
             {
               "word": "outcome",
-              "phonetic": "点击发音",
+              "phonetic": "/aʊtkʌm/",
               "partOfSpeech": "n. / v.",
-              "chinese": "近义"
+              "chinese": "与“结果”意义接近"
             },
             {
               "word": "cause",
-              "phonetic": "点击发音",
+              "phonetic": "/kɑz/",
               "partOfSpeech": "n. / v.",
-              "chinese": "反义"
+              "chinese": "与“结果”意义相反"
             }
           ]
         }
       ],
       "examples": [
         {
-          "scene": "核心用法",
+          "scene": "日常 / 真实表达",
           "english": "She practiced daily and, as a result, spoke more naturally.",
           "chinese": "她每天练习，因此说得更自然了。"
         },
         {
-          "scene": "主动回忆",
-          "english": "Can you use “as a result” in a sentence of your own?",
-          "chinese": "你能用“因此；结果”自己造一个句子吗？"
+          "scene": "学习 / 工作场景",
+          "english": "In today’s lesson, we practiced the word “result” in a complete sentence.",
+          "chinese": "今天的课程里，我们练习了怎样在完整句子中使用 result。"
         },
         {
-          "scene": "语境辨析",
-          "english": "Explain when “result” is more natural than “outcome”.",
-          "chinese": "说明在什么情况下用 result 比 outcome 更自然。"
+          "scene": "核心搭配复现",
+          "english": "“as a result” is the key phrase I want to remember.",
+          "chinese": "“as a result”是我想重点记住的搭配。"
+        },
+        {
+          "scene": "常见错误提醒",
+          "english": "I checked the context before choosing “result” instead of “outcome”.",
+          "chinese": "我先检查语境，再决定用 result 而不是 outcome。"
+        },
+        {
+          "scene": "词义与近义辨析",
+          "english": "Here, “result” means “what happens because of an action”.",
+          "chinese": "在这里，result 的意思是“结果；导致”。"
         }
       ],
       "studyFocus": {
         "coreMeaning": "结果；导致",
         "keyCollocation": "as a result：因此；结果",
-        "commonMistake": "注意动词后的固定结构和介词，不要按中文语序逐字拼接。",
+        "commonMistake": "不要把不同词性混在一起；先确认句中需要的是 n. 还是 v.，并整体记住 “as a result”。",
         "mustUseExample": "She practiced daily and, as a result, spoke more naturally."
       },
       "questions": [
@@ -1144,9 +1173,9 @@
           "free_sentence"
         ]
       },
-      "contentVersion": "2026.08.17",
+      "contentVersion": "2026.08.17.2",
       "reviewed": true,
-      "sourceNote": "从用户提供的 COCA 词表筛选；释义、例句和搭配为本项目离线整理。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；释义、例句和搭配为本项目离线整理；关系词与词组音标来自 CMU 北美英语发音词典。"
     }
   ]
 }

@@ -2,6 +2,8 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { lexicon } from './lexicon.mjs';
+import { confusables, families, secondarySenses } from './content-overrides.mjs';
+import { ipaFor } from './phonetics.mjs';
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(scriptDir, '..');
@@ -12,6 +14,69 @@ const launchDate = new Date('2026-08-17T12:00:00+08:00');
 
 const slug = (value) => value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const primaryPos = (value) => value.split('/')[0].trim().replace('.', '');
+const lexiconByWord = new Map(lexicon.map((item) => [item.w, item]));
+const familyPosOverrides = {
+  likelihood: 'n.', belief: 'n.', memory: 'n.', comparison: 'n.', chosen: 'adj.', effect: 'n.', discovery: 'n.',
+  opportune: 'adj.', serve: 'v.', advise: 'v.', difficulty: 'n.', unaware: 'adj.', unfamiliar: 'adj.', comfort: 'n.',
+  certainty: 'n.', uncertain: 'adj.', near: 'adj. / adv.', simple: 'adj.', quick: 'adj.', direct: 'adj. / adv.',
+  healthy: 'adj.', unhealthy: 'adj.', workplace: 'n.', speech: 'n.', businesslike: 'adj.', teamwork: 'n.', unlikely: 'adj.'
+};
+
+function firstMeaning(value) {
+  return value.split('；')[0];
+}
+
+function relatedChinese(word, item, relation) {
+  const known = lexiconByWord.get(word);
+  if (known) return firstMeaning(known.zh);
+  if (relation === 'synonym') return '与“' + firstMeaning(item.zh) + '”意义接近';
+  if (relation === 'antonym') return '与“' + firstMeaning(item.zh) + '”意义相反';
+  return '与“' + item.w + '”同词族的常用词形';
+}
+
+function familyPartOfSpeech(word) {
+  const known = lexiconByWord.get(word);
+  if (known) return known.p;
+  if (familyPosOverrides[word]) return familyPosOverrides[word];
+  if (/(tion|sion|ment|ness|ity|ance|ence|ship|er|or|ism|hood)$/.test(word)) return 'n.';
+  if (/ly$/.test(word)) return 'adv.';
+  if (/(able|ible|ive|ous|ful|less|al|ic|ed|ing|ent|ant|ary)$/.test(word)) return 'adj.';
+  return 'word family';
+}
+
+function extractExampleChunk(item) {
+  const words = item.ex.replace(/[.!?,;:]/g, '').split(/\s+/);
+  const stem = item.w.slice(0, Math.min(4, item.w.length)).toLowerCase();
+  const index = words.findIndex((word) => word.toLowerCase().startsWith(stem));
+  if (index < 0) return item.w;
+  return words.slice(Math.max(0, index - 2), Math.min(words.length, index + 3)).join(' ');
+}
+
+function makeExamples(item) {
+  return [
+    { scene: '日常 / 真实表达', english: item.ex, chinese: item.exZh },
+    {
+      scene: '学习 / 工作场景',
+      english: 'In today’s lesson, we practiced the word “' + item.w + '” in a complete sentence.',
+      chinese: '今天的课程里，我们练习了怎样在完整句子中使用 ' + item.w + '。'
+    },
+    {
+      scene: '核心搭配复现',
+      english: '“' + item.coll + '” is the key phrase I want to remember.',
+      chinese: '“' + item.coll + '”是我想重点记住的搭配。'
+    },
+    {
+      scene: '常见错误提醒',
+      english: 'I checked the context before choosing “' + item.w + '” instead of “' + item.syn + '”.',
+      chinese: '我先检查语境，再决定用 ' + item.w + ' 而不是 ' + item.syn + '。'
+    },
+    {
+      scene: '词义与近义辨析',
+      english: 'Here, “' + item.w + '” means “' + item.en + '”.',
+      chinese: '在这里，' + item.w + ' 的意思是“' + item.zh + '”。'
+    }
+  ];
+}
 
 function syllableHint(word) {
   const hints = {
@@ -29,13 +94,11 @@ function makeCard(item, index) {
   const cloze = item.coll.includes(item.w)
     ? item.coll.replace(item.w, '_____')
     : 'Use _____ naturally in this situation.';
-  const commonError = item.p.includes('v.')
-    ? '注意动词后的固定结构和介词，不要按中文语序逐字拼接。'
-    : item.p.includes('adj.')
-      ? '注意形容词常见搭配及其在句中的位置。'
-      : item.p.includes('adv.')
-        ? '注意副词在句中的位置以及它表达的语气。'
-        : '注意可数性、冠词和常见固定搭配。';
+  const secondary = secondarySenses[item.w];
+  const wordFamily = (families[item.w] ?? []).filter((word) => word !== item.w);
+  const commonError = secondary
+    ? '不要把不同词性混在一起；先确认句中需要的是 ' + item.p.split('/')[0].trim() + ' 还是 ' + secondary.partOfSpeech + '，并整体记住 “' + item.coll + '”。'
+    : '不要只按中文逐字替换，也不要随意改动介词或语序；优先把 “' + item.coll + '” 当作一个完整句块记忆。';
   const meaningOptions = [item.zh, next.zh, nextTwo.zh];
   const shift = index % meaningOptions.length;
   const rotatedMeaningOptions = meaningOptions.slice(shift).concat(meaningOptions.slice(0, shift));
@@ -57,33 +120,34 @@ function makeCard(item, index) {
       commonError,
       directSynonym: item.syn,
       directAntonym: item.ant,
-      derivatives: '在词卡中结合词性学习常用词形变化',
+      derivatives: wordFamily.length ? wordFamily.join(' · ') : '本词暂无需额外强记的高频派生词',
       example: item.ex,
       exampleChinese: item.exZh
     },
     meanings: [
       {
-        partOfSpeech: item.p,
+        partOfSpeech: item.p.split('/')[0].trim(),
         english: item.en,
-        chinese: item.zh,
+        chinese: firstMeaning(item.zh),
         example: item.ex,
         translation: item.exZh
-      }
+      },
+      ...(secondary ? [secondary] : [])
     ],
     contextPhrases: [
       {
-        category: '日常与真实表达',
-        items: [{ phrase: item.coll, phonetic: item.ipa, chinese: item.collZh }]
+        category: '核心高频搭配',
+        items: [{ phrase: item.coll, phonetic: ipaFor(item.coll, item.w, item.ipa), chinese: item.collZh }]
       },
       {
-        category: '学习与工作',
-        items: [{ phrase: item.w, phonetic: item.ipa, chinese: item.zh }]
+        category: '真实例句句块',
+        items: [{ phrase: extractExampleChunk(item), phonetic: ipaFor(extractExampleChunk(item), item.w, item.ipa), chinese: '核心例句片段：' + item.exZh }]
       }
     ],
     fixedPhrases: [
       {
         phrase: item.coll,
-        phonetic: item.ipa,
+        phonetic: ipaFor(item.coll, item.w, item.ipa),
         chinese: item.collZh,
         example: item.ex,
         translation: item.exZh
@@ -92,61 +156,42 @@ function makeCard(item, index) {
     synonyms: [
       {
         word: item.syn,
-        phonetic: '点击扬声器听美式发音',
+        phonetic: ipaFor(item.syn),
         partOfSpeech: item.p,
-        chinese: '近义表达',
-        difference: item.w + ' 是本卡核心词；' + item.syn + ' 语义接近，但使用前要检查语境和搭配。'
+        chinese: relatedChinese(item.syn, item, 'synonym'),
+        difference: item.w + ' 在 “' + item.coll + '” 中是本卡需要主动掌握的表达；' + item.syn + ' 含义接近，但宾语、语气和固定搭配不一定相同。'
       }
     ],
     antonyms: [
       {
         word: item.ant,
-        phonetic: '点击扬声器听美式发音',
+        phonetic: ipaFor(item.ant),
         partOfSpeech: item.p,
-        chinese: '反向含义',
-        usage: '用于对比记忆 ' + item.w + ' 的核心意义。'
+        chinese: relatedChinese(item.ant, item, 'antonym'),
+        usage: '和 ' + item.w + ' 的核心义形成对比；先在真实句子中判断是否确实构成反向关系。'
       }
     ],
-    derivatives: [
-      {
-        word: item.w,
-        phonetic: item.ipa,
-        partOfSpeech: item.p,
-        chinese: item.zh,
-        note: '优先掌握本卡所列的高频词性；其他词形以实际语境为准。'
-      }
-    ],
-    confusables: [
-      {
-        word: item.syn,
-        phonetic: '点击扬声器听美式发音',
-        partOfSpeech: item.p,
-        chinese: '相关近义词',
-        difference: '不要只按中文对应；优先记住 ' + item.coll + ' 这一自然搭配。'
-      }
-    ],
+    derivatives: wordFamily.map((word) => ({
+      word,
+      phonetic: ipaFor(word),
+      partOfSpeech: familyPartOfSpeech(word),
+      chinese: relatedChinese(word, item, 'family'),
+      note: '这是 ' + item.w + ' 的常用词族成员；先辨认词性，再放进完整句子中使用。'
+    })),
+    confusables: confusables[item.w] ? [{
+      ...confusables[item.w],
+      phonetic: ipaFor(confusables[item.w].word)
+    }] : [],
     relatedVocabulary: [
       {
-        category: '语义关联',
+        category: '语义坐标：近义与反义',
         items: [
-          { word: item.syn, phonetic: '点击发音', partOfSpeech: item.p, chinese: '近义' },
-          { word: item.ant, phonetic: '点击发音', partOfSpeech: item.p, chinese: '反义' }
+          { word: item.syn, phonetic: ipaFor(item.syn), partOfSpeech: item.p, chinese: relatedChinese(item.syn, item, 'synonym') },
+          { word: item.ant, phonetic: ipaFor(item.ant), partOfSpeech: item.p, chinese: relatedChinese(item.ant, item, 'antonym') }
         ]
       }
     ],
-    examples: [
-      { scene: '核心用法', english: item.ex, chinese: item.exZh },
-      {
-        scene: '主动回忆',
-        english: 'Can you use “' + item.coll + '” in a sentence of your own?',
-        chinese: '你能用“' + item.collZh + '”自己造一个句子吗？'
-      },
-      {
-        scene: '语境辨析',
-        english: 'Explain when “' + item.w + '” is more natural than “' + item.syn + '”.',
-        chinese: '说明在什么情况下用 ' + item.w + ' 比 ' + item.syn + ' 更自然。'
-      }
-    ],
+    examples: makeExamples(item),
     studyFocus: {
       coreMeaning: item.zh,
       keyCollocation: item.coll + '：' + item.collZh,
@@ -206,9 +251,9 @@ function makeCard(item, index) {
       T6: ['dialogue', 'free_sentence'],
       T7: ['dialogue', 'free_sentence']
     },
-    contentVersion: '2026.08.17',
+    contentVersion: '2026.08.17.2',
     reviewed: true,
-    sourceNote: '从用户提供的 COCA 词表筛选；释义、例句和搭配为本项目离线整理。'
+    sourceNote: '从用户提供的 COCA 词表筛选；释义、例句和搭配为本项目离线整理；关系词与词组音标来自 CMU 北美英语发音词典。'
   };
 }
 
@@ -243,7 +288,7 @@ for (let dayIndex = 0; dayIndex < 30; dayIndex += 1) {
   const dailyPack = {
     date: dateKey,
     dayNumber: dayIndex + 1,
-    contentVersion: '2026.08.17',
+    contentVersion: '2026.08.17.2',
     cards: dailyCards
   };
   await fs.writeFile(
@@ -256,7 +301,7 @@ for (let dayIndex = 0; dayIndex < 30; dayIndex += 1) {
 
 await fs.writeFile(
   path.join(publicDataDir, 'all-cards.json'),
-  JSON.stringify({ contentVersion: '2026.08.17', total: cards.length, cards }, null, 2) + '\n',
+  JSON.stringify({ contentVersion: '2026.08.17.2', total: cards.length, cards }, null, 2) + '\n',
   'utf8'
 );
 
@@ -264,7 +309,7 @@ await fs.writeFile(
   path.join(publicDataDir, 'manifest.json'),
   JSON.stringify({
     appName: '每日英语',
-    contentVersion: '2026.08.17',
+    contentVersion: '2026.08.17.2',
     totalCards: cards.length,
     totalDays: dailyFiles.length,
     cardsPerDay: 5,

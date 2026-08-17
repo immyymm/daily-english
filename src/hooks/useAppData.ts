@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { cardsForStudyDay, loadContent } from '../data/content';
 import { applyReviewScore, isDue, studyDaySince, toLocalDateKey } from '../learning/reviewEngine';
+import { notifyLocalDataChanged } from './useCloudSync';
 import { db, getSettings, touchStudyStreak } from '../storage/db';
 import type {
   AIEvaluation,
@@ -119,6 +120,7 @@ export function useAppData() {
       });
     }
     if (state.settings) await touchStudyStreak(state.settings);
+    notifyLocalDataChanged();
     await refresh();
   }, [refresh, state.settings, state.todayPlan]);
 
@@ -127,6 +129,7 @@ export function useAppData() {
     const progress = await db.progress.get(attempt.cardId);
     if (progress) await db.progress.put(applyReviewScore(progress, attempt.score, new Date(attempt.createdAt)));
     if (state.settings) await touchStudyStreak(state.settings);
+    notifyLocalDataChanged();
     await refresh();
   }, [refresh, state.settings]);
 
@@ -145,6 +148,7 @@ export function useAppData() {
       }
     });
     if (state.settings) await touchStudyStreak(state.settings);
+    notifyLocalDataChanged();
     await refresh();
   }, [refresh, state.settings]);
 
@@ -153,17 +157,20 @@ export function useAppData() {
       await db.attempts.put(attempt);
       await db.aiEvaluations.put(evaluation);
     });
+    notifyLocalDataChanged();
     await refresh();
   }, [refresh]);
 
   const updateSettings = useCallback(async (patch: Partial<AppSettings>) => {
     const settings = state.settings ?? await getSettings();
     await db.settings.put({ ...settings, ...patch, id: 'settings' });
+    notifyLocalDataChanged();
     await refresh();
   }, [refresh, state.settings]);
 
   const saveAIEvaluation = useCallback(async (evaluation: AIEvaluation) => {
     await db.aiEvaluations.put(evaluation);
+    notifyLocalDataChanged();
     await refresh();
   }, [refresh]);
 
@@ -187,6 +194,7 @@ export function useAppData() {
       const progress = await db.progress.get(attempt.cardId);
       if (progress) await db.progress.put(applyReviewScore(progress, result.overallScore, new Date(attempt.createdAt)));
     });
+    notifyLocalDataChanged();
     await refresh();
   }, [refresh]);
 

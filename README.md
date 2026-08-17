@@ -1,12 +1,12 @@
 # 每日英语
 
-“每日英语”是一款无需注册、可安装到 iPhone 主屏幕的网页 APP。它每天提供 5 张英语词卡，并依据间隔复测计划安排复习；学习记录默认只保存在当前设备。
+“每日英语”是一款无需登录即可使用、可安装到 iPhone 主屏幕的网页 APP。它每天提供 5 张英语词卡，并依据间隔复测计划安排复习；如需多设备实时同步，可另行注册一个与 ChatGPT 无关的“每日英语”邮箱账户。
 
 正式站：[https://daily-english-seven-ochre.vercel.app](https://daily-english-seven-ochre.vercel.app)
 
 ## 已实现功能
 
-- 30 天、150 张完整词卡，全部选自项目附带的 COCA 词表
+- 30 天、150 张完整词卡，全部选自项目附带的 COCA 词表；每卡按附件模板拆为 10 个学习章节
 - 每日独立词卡文件与全部词卡汇总文件
 - 今日学习、翻卡、例句/搭配/辨析、浏览器发音
 - T0–T7 间隔复测、客观题本地评分、错因和熟练度统计
@@ -15,6 +15,7 @@
 - AI 评分前隐私确认；断网或接口失败时保存到本地待重试
 - 录音只保留在当前页面和设备，不上传给评分接口
 - IndexedDB 本地保存进度，支持 JSON 导出、恢复和清除
+- 可选 Supabase 邮箱账户，多设备快照合并与 Realtime 实时同步；不开启同步不影响使用
 - PWA 离线缓存、iPhone 安装引导和安全区适配
 - Vercel 正式站与 GitHub Pages 静态镜像构建配置
 
@@ -40,7 +41,18 @@ pnpm run build
 pnpm run dev
 ```
 
-生产构建位于 `dist/`。构建命令会先验证内容文件，发现重复词卡、缺字段、日期缺失或每日不是 5 张时会直接失败。
+生产构建位于 `dist/`。构建命令会先验证内容文件，发现重复词卡、模板章节缺失、占位音标、例句不足、日期缺失或每日不是 5 张时会直接失败。关系词和词组的北美英语发音数据来自 CMU Pronouncing Dictionary，并在内容构建阶段转为 IPA；网页运行时不会调用词典 API。
+
+## 多设备同步配置
+
+同步前端使用 Supabase 的公开 Project URL 和 publishable key，数据库依靠 RLS 保证每个登录用户只能访问自己的快照。需要配置：
+
+```text
+VITE_SUPABASE_URL=https://your-project.supabase.co
+VITE_SUPABASE_PUBLISHABLE_KEY=sb_publishable_your_key
+```
+
+数据库迁移位于 `supabase/migrations/`。`daily_english_snapshots` 表只向 `authenticated` 角色开放，未登录的 `anon` 角色没有表权限。publishable key 会正常出现在浏览器构建中，它不是服务端密钥；切勿在前端使用 `service_role` key。
 
 ## AI 评分配置
 
@@ -76,10 +88,10 @@ pnpm run dev
 
 1. 打开 **Settings → Pages**，将 Source 设为 **GitHub Actions**。
 2. 打开 **Settings → Secrets and variables → Actions → Variables**。
-3. 添加公开变量 `VITE_AI_API_URL`，值为 Vercel 的完整评分地址，例如 `https://daily-english.vercel.app/api/evaluate`。
+3. 添加公开变量 `VITE_AI_API_URL`、`VITE_SUPABASE_URL` 和 `VITE_SUPABASE_PUBLISHABLE_KEY`。
 4. 推送到 `main` 后，工作流会验证内容、运行测试、构建并发布 Pages。
 
-GitHub Pages 只托管静态前端，不能保存 OpenAI 密钥。两个域名的学习记录分别保存在各自浏览器域下，不会自动同步。
+GitHub Pages 只托管静态前端，不能保存 OpenAI 密钥。不开启同步时，两个域名各自保留本地记录；用同一“每日英语”邮箱账户登录后，云端会合并并同步两个域名和不同设备的学习记录。
 
 ## 隐私与数据
 
@@ -95,3 +107,5 @@ GitHub Pages 只托管静态前端，不能保存 OpenAI 密钥。两个域名�
 - `每日英语APP完整实施方案.md`
 
 这些附件只作为产品内容与业务规则来源，不会被网页直接发布。
+
+第三方数据与软件许可见 [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md)。
