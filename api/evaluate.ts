@@ -171,6 +171,20 @@ export default async function handler(request: RequestWithBody, response: Respon
       send(response, 413, { code: 'REQUEST_TOO_LARGE', message: '回答内容过长。' }, origin);
       return;
     }
+    const diagnostic = error as Error & {
+      status?: number;
+      code?: string;
+      type?: string;
+      request_id?: string;
+    };
+    console.error('AI_REQUEST_FAILED', {
+      name: diagnostic.name,
+      status: diagnostic.status,
+      code: diagnostic.code,
+      type: diagnostic.type,
+      requestId: diagnostic.request_id,
+      message: diagnostic.message
+    });
     const status = error instanceof OpenAI.APIError && error.status ? error.status : 502;
     const message = status === 401
       ? 'OpenAI API 密钥无效，请在 Vercel 检查配置。'
