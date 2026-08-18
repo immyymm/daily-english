@@ -5,8 +5,11 @@ import type { AppSnapshot } from '../types';
 describe('syncDetailedRecords', () => {
   it('updates an existing AI evaluation instead of ignoring its completed result', async () => {
     const upsert = vi.fn().mockResolvedValue({ error: null });
+    const requestIds = vi.fn().mockResolvedValue({ data: [], error: null });
+    const eq = vi.fn(() => ({ in: requestIds }));
+    const select = vi.fn(() => ({ eq }));
     const client = {
-      from: vi.fn(() => ({ upsert }))
+      from: vi.fn(() => ({ upsert, select }))
     };
     const snapshot: AppSnapshot = {
       settings: {
@@ -32,7 +35,7 @@ describe('syncDetailedRecords', () => {
         status: 'complete',
         createdAt: '2026-08-18T00:00:00.000Z',
         updatedAt: '2026-08-18T00:00:01.000Z',
-        rubricVersion: '2026.08.18.7',
+        rubricVersion: '2026.08.18.8',
         result: {
           overallScore: 95,
           taskCompletionScore: 10,
@@ -82,6 +85,7 @@ describe('syncDetailedRecords', () => {
     await syncDetailedRecords(client as never, 'user-1', snapshot, 'device-1');
 
     expect(upsert).toHaveBeenCalledTimes(1);
+    expect(requestIds).toHaveBeenCalledWith('request_id', ['evaluation-1']);
     expect(upsert).toHaveBeenCalledWith(
       expect.arrayContaining([expect.objectContaining({
         request_id: 'evaluation-1',
@@ -89,6 +93,39 @@ describe('syncDetailedRecords', () => {
       })]),
       { onConflict: 'user_id,request_id' }
     );
+  });
+
+  it('does not let a stale completed evaluation overwrite a newer cloud correction', async () => {
+    const upsert = vi.fn().mockResolvedValue({ error: null });
+    const requestIds = vi.fn().mockResolvedValue({
+      data: [{ request_id: 'evaluation-stale', updated_at: '2026-08-18T03:00:00.000Z' }],
+      error: null
+    });
+    const eq = vi.fn(() => ({ in: requestIds }));
+    const select = vi.fn(() => ({ eq }));
+    const client = { from: vi.fn(() => ({ upsert, select })) };
+    const snapshot: AppSnapshot = {
+      settings: {
+        id: 'settings', firstUseDate: '2026-08-18', streak: 1, aiConsent: true,
+        reduceMotion: false, dailyAiLimit: 20
+      },
+      progress: [],
+      attempts: [],
+      aiEvaluations: [{
+        requestId: 'evaluation-stale', cardId: 'improve-v', questionType: 'free_sentence',
+        stage: 'T1', answer: 'answer', status: 'complete',
+        createdAt: '2026-08-18T00:00:00.000Z', updatedAt: '2026-08-18T02:00:00.000Z',
+        rubricVersion: '2026.08.18.8'
+      }],
+      dailyPlans: [],
+      dailyRecommendations: [],
+      exportedAt: '2026-08-18T02:00:00.000Z',
+      schemaVersion: 2
+    };
+
+    await syncDetailedRecords(client as never, 'user-1', snapshot, 'device-1');
+
+    expect(upsert).not.toHaveBeenCalled();
   });
 
   it('does not let a stale local pending row overwrite a completed cloud evaluation', async () => {
@@ -115,7 +152,7 @@ describe('syncDetailedRecords', () => {
         answer: 'I want to improve on my writing.',
         status: 'pending',
         createdAt: '2026-08-18T00:00:00.000Z',
-        rubricVersion: '2026.08.18.7'
+        rubricVersion: '2026.08.18.8'
       }],
       dailyPlans: [],
       dailyRecommendations: [],
@@ -181,4 +218,3 @@ describe('syncDetailedRecords', () => {
     ], { onConflict: 'user_id,id' });
   });
 });
-

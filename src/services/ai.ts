@@ -44,7 +44,7 @@ export async function evaluateAnswer(input: EvaluationRequest): Promise<Evaluati
       answer: input.answer,
       correctAnswer: input.correctAnswer ?? '',
       responseMs: input.responseMs,
-      rubricVersion: input.rubricVersion ?? '2026.08.18.7',
+      rubricVersion: input.rubricVersion ?? '2026.08.18.8',
       cardContext: {
         coreMeaning: input.card.coreMemory.chinese,
         englishDefinition: input.card.coreMemory.english,
@@ -92,4 +92,3 @@ export async function getEvaluationStatus(requestId: string): Promise<Evaluation
   if (payload.status === 'failed') return { status: 'failed', requestId, errorMessage: payload.errorMessage };
   return { status: payload.status === 'processing' ? 'processing' : 'pending', requestId };
 }
-
