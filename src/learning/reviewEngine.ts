@@ -108,6 +108,23 @@ export function isDue(progress: CardProgress, now = new Date()): boolean {
   return new Date(progress.nextReviewAt).getTime() <= now.getTime();
 }
 
+export function isPendingReview(
+  progress: CardProgress,
+  plannedForBatch: boolean,
+  batchAnchorAt?: string,
+  now = new Date()
+): boolean {
+  if (isDue(progress, now)) return true;
+  if (!plannedForBatch) return false;
+  if (!progress.lastReviewedAt) return true;
+
+  const parsedAnchor = batchAnchorAt ? new Date(batchAnchorAt).getTime() : Number.NaN;
+  const fallbackAnchor = new Date(now);
+  fallbackAnchor.setHours(0, 0, 0, 0);
+  const anchor = Number.isFinite(parsedAnchor) ? parsedAnchor : fallbackAnchor.getTime();
+  return new Date(progress.lastReviewedAt).getTime() < anchor;
+}
+
 export function normalizeAnswer(value: string): string {
   return value.trim().toLowerCase().replace(/[.,!?;:'"“”‘’]/g, '').replace(/\s+/g, ' ');
 }

@@ -25,6 +25,8 @@ interface ReviewSessionModalProps {
     model: string,
     attempt: Omit<Attempt, 'score' | 'correct' | 'errorTypes' | 'ai'>
   ) => Promise<void>;
+  batchPosition?: number;
+  batchTotal?: number;
 }
 
 const id = () => typeof crypto.randomUUID === 'function'
@@ -51,7 +53,9 @@ export function ReviewSessionModal({
   onComplete,
   onRecordAttempt,
   onQueueEvaluation,
-  onCompleteEvaluation
+  onCompleteEvaluation,
+  batchPosition = 1,
+  batchTotal = 1
 }: ReviewSessionModalProps) {
   const [questions, setQuestions] = useState<CardQuestion[]>([]);
   const [questionIndex, setQuestionIndex] = useState(0);
@@ -198,7 +202,6 @@ export function ReviewSessionModal({
       return;
     }
     await onComplete(card.id, attempts, []);
-    onClose();
   };
 
   const retry = () => {
@@ -215,7 +218,7 @@ export function ReviewSessionModal({
     <ModalShell
       open={open}
       title={card.word}
-      eyebrow={progress.stage + ' · ' + (questionIndex + 1) + ' / ' + questions.length}
+      eyebrow={`本次第 ${batchPosition} / ${batchTotal} 词 · ${progress.stage} · ${questionIndex + 1} / ${questions.length} 题`}
       onClose={onClose}
     >
       <div className="quiz-progress"><span style={{ width: ((questionIndex + 1) / questions.length * 100) + '%' }} /></div>
@@ -280,7 +283,9 @@ export function ReviewSessionModal({
           <>
             {!feedback.correct && !feedback.pending && <button className="secondary-button" onClick={retry}><RotateCcw size={17} />重新回答</button>}
             <button className="primary-button" onClick={() => void next()}>
-              {questionIndex === questions.length - 1 ? '完成本词复习' : '下一题'}<ArrowRight size={18} />
+              {questionIndex === questions.length - 1
+                ? batchPosition < batchTotal ? '完成本词，继续下一个' : '完成本次复习'
+                : '下一题'}<ArrowRight size={18} />
             </button>
           </>
         )}

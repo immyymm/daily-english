@@ -55,7 +55,8 @@ function App() {
   const [tab, setTab] = useState<TabId>('today');
   const [selectedCard, setSelectedCard] = useState<WordCard>();
   const [masteryCard, setMasteryCard] = useState<WordCard>();
-  const [reviewCard, setReviewCard] = useState<WordCard>();
+  const [reviewQueue, setReviewQueue] = useState<WordCard[]>([]);
+  const [reviewBatchTotal, setReviewBatchTotal] = useState(0);
   const [showConsent, setShowConsent] = useState(false);
   const [showWeekly, setShowWeekly] = useState(false);
   const [showInstall, setShowInstall] = useState(false);
@@ -96,6 +97,7 @@ function App() {
     () => data.dueProgress.map((item) => cardMap.get(item.cardId)).filter(Boolean) as WordCard[],
     [cardMap, data.dueProgress]
   );
+  const reviewCard = reviewQueue[0];
   const aiToday = data.aiEvaluations.filter((item) => item.createdAt.startsWith(toLocalDateKey())).length;
   const aiLimitReached = aiToday >= (data.settings?.dailyAiLimit ?? 20);
   const aiAllowed = Boolean(data.settings?.aiConsent) && !aiLimitReached;
@@ -115,12 +117,26 @@ function App() {
   };
 
   const startReview = () => {
-    const first = dueCards[0];
-    if (!first) {
+    if (!dueCards.length) {
       setToast('现在没有到期复习，先去学习今日新词吧。');
       return;
     }
-    setReviewCard(first);
+    setReviewBatchTotal(dueCards.length);
+    setReviewQueue([...dueCards]);
+  };
+
+  const completeReviewWord = async (cardId: string, attempts: Attempt[], evaluations: AIEvaluation[]) => {
+    await data.recordReviewSession(cardId, attempts, evaluations);
+    const remaining = reviewQueue[0]?.id === cardId
+      ? reviewQueue.slice(1)
+      : reviewQueue.filter((card) => card.id !== cardId);
+    setReviewQueue(remaining);
+    if (remaining.length) {
+      setToast(`已完成 ${cardMap.get(cardId)?.word ?? cardId}，继续复习剩余 ${remaining.length} 个词。`);
+    } else {
+      setReviewBatchTotal(0);
+      setToast('本次全部到期词已复习完成。');
+    }
   };
 
   const openNextWord = () => {
@@ -322,10 +338,12 @@ function App() {
         card={reviewCard}
         progress={reviewCard ? data.progressMap.get(reviewCard.id) : undefined}
         open={Boolean(reviewCard)}
+        batchPosition={reviewBatchTotal ? reviewBatchTotal - reviewQueue.length + 1 : 1}
+        batchTotal={reviewBatchTotal || 1}
         aiConsent={aiAllowed}
         onNeedConsent={requestAI}
-        onClose={() => setReviewCard(undefined)}
-        onComplete={data.recordReviewSession}
+        onClose={() => { setReviewQueue([]); setReviewBatchTotal(0); }}
+        onComplete={completeReviewWord}
         onRecordAttempt={data.saveSessionAttempt}
         onQueueEvaluation={data.saveAIEvaluation}
         onCompleteEvaluation={data.completeAIAttempt}
@@ -500,7 +518,7 @@ function ReviewPage({
           <p>{recommendation.summary}</p>
           <div className="adaptive-plan-meta">
             <span>新词 {recommendation.newCardIds?.length ?? 5} 个</span>
-            <span>复习 {recommendation.reviewCardIds?.length ?? recommendation.recommendedCardIds.length} 个</span>
+            <span>当前待复习 {dueProgress.length} 个</span>
             <span>建议 {recommendation.targetQuestionCount} 题/词</span>
             {recommendation.focusDimensions.map((dimension) => <span key={dimension}>加强{masteryDimensionLabels[dimension]}</span>)}
           </div>

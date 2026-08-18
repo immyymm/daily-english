@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { applyReviewScore, nextDueDate, normalizeAnswer, objectiveScore, studyDaySince, toLocalDateKey } from './reviewEngine';
+import { applyReviewScore, isPendingReview, nextDueDate, normalizeAnswer, objectiveScore, studyDaySince, toLocalDateKey } from './reviewEngine';
 import type { CardProgress } from '../types';
 
 const progress: CardProgress = {
@@ -38,6 +38,30 @@ describe('review schedule', () => {
     expect(next.stage).toBe('T3');
     expect(next.weak).toBe(true);
     expect(next.status).toBe('薄弱词');
+  });
+
+  it('keeps a planned preventive review until it is completed in the current batch', () => {
+    expect(isPendingReview({
+      ...progress,
+      nextReviewAt: '2026-08-20T08:00:00.000Z',
+      lastReviewedAt: '2026-08-17T08:00:00.000Z'
+    }, true, '2026-08-18T05:00:00.000Z', new Date('2026-08-18T10:00:00.000Z'))).toBe(true);
+  });
+
+  it('removes a planned word after it was reviewed in this batch and rescheduled', () => {
+    expect(isPendingReview({
+      ...progress,
+      nextReviewAt: '2026-08-19T08:00:00.000Z',
+      lastReviewedAt: '2026-08-18T09:00:00.000Z'
+    }, true, '2026-08-18T05:00:00.000Z', new Date('2026-08-18T10:00:00.000Z'))).toBe(false);
+  });
+
+  it('always includes a currently due word even when it was appended after the frozen plan', () => {
+    expect(isPendingReview({
+      ...progress,
+      nextReviewAt: '2026-08-18T09:00:00.000Z',
+      lastReviewedAt: undefined
+    }, false, '2026-08-18T05:00:00.000Z', new Date('2026-08-18T10:00:00.000Z'))).toBe(true);
   });
 });
 

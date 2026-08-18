@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { cardsForStudyDay, loadContent } from '../data/content';
 import { calculateMasteryProfile, dimensionsFromEvaluation } from '../learning/mastery';
-import { applyLateEvaluation, applyReviewScore, isDue, studyDaySince, toLocalDateKey } from '../learning/reviewEngine';
+import { applyLateEvaluation, applyReviewScore, isPendingReview, studyDaySince, toLocalDateKey } from '../learning/reviewEngine';
 import { evaluationSchema } from '../schemas/evaluation';
 import { finalizeEvaluationResult, normalizeEvaluationResultForHistory } from '../schemas/evaluationConstraints';
 import { notifyLocalDataChanged } from './useCloudSync';
@@ -148,7 +148,7 @@ export function useAppData() {
     () => prescribedProgress.filter((item) => {
       const plannedIds = todayRecommendation?.reviewCardIds ?? todayRecommendation?.recommendedCardIds ?? [];
       const planned = plannedIds.includes(item.cardId);
-      return planned || isDue(item);
+      return isPendingReview(item, planned, todayRecommendation?.refreshAnchorAt);
     }).sort((a, b) => {
       const plannedIds = todayRecommendation?.reviewCardIds ?? todayRecommendation?.recommendedCardIds ?? [];
       const aPriority = plannedIds.indexOf(a.cardId);
