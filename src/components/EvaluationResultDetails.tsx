@@ -1,4 +1,4 @@
-import { AlertCircle, CheckCircle2, GitCompareArrows, ListChecks, Sparkles } from 'lucide-react';
+import { GitCompareArrows, ListChecks, Sparkles } from 'lucide-react';
 import { masteryDimensionLabels, masteryDimensions } from '../learning/mastery';
 import type { EvaluationResult, MasteryDimension } from '../types';
 
@@ -13,26 +13,8 @@ const dimensionMaximum: Record<MasteryDimension, number> = {
 export function EvaluationResultDetails({ result, compact = false }: { result: EvaluationResult; compact?: boolean }) {
   return (
     <div className={compact ? 'evaluation-result-details compact' : 'evaluation-result-details'}>
-      <section className={result.taskCompliance.passed ? 'evaluation-compliance passed' : 'evaluation-compliance failed'}>
-        <div>
-          {result.taskCompliance.passed ? <CheckCircle2 size={17} /> : <AlertCircle size={17} />}
-          <strong>题目要求 {result.taskCompletionScore}/10</strong>
-        </div>
-        <p>{result.taskCompliance.summaryZh}</p>
-        {result.taskCompliance.checks.length > 0 && (
-          <ul>
-            {result.taskCompliance.checks.map((check) => (
-              <li className={check.passed ? 'passed' : 'failed'} key={check.id}>
-                {check.passed ? <CheckCircle2 size={14} /> : <AlertCircle size={14} />}
-                <span><b>{check.labelZh}</b><small>{check.evidenceZh}</small></span>
-              </li>
-            ))}
-          </ul>
-        )}
-      </section>
-
       <section className="evaluation-dimensions">
-        <div className="evaluation-subtitle"><ListChecks size={16} /><strong>评分依据</strong></div>
+        <div className="evaluation-subtitle"><ListChecks size={16} /><strong>能力分析</strong></div>
         {masteryDimensions.map((dimension) => {
           const score = result.dimensionScores[dimension];
           const maximum = dimensionMaximum[dimension];
@@ -65,18 +47,19 @@ export function EvaluationResultDetails({ result, compact = false }: { result: E
       </section>
 
       <section className="evaluation-natural-reason">
-        <div className="evaluation-subtitle"><GitCompareArrows size={16} /><strong>为什么更自然</strong></div>
-        <p>{result.naturalVersionReasonZh}</p>
+        <div className="evaluation-subtitle"><GitCompareArrows size={16} /><strong>具体改了什么，为什么更自然</strong></div>
         {result.naturalChanges.length > 0 && (
           <div className="natural-change-list">
             {result.naturalChanges.map((change, index) => (
               <article key={`${change.from}-${change.to}-${index}`}>
-                <div><del>{change.from}</del><span>→</span><ins>{change.to}</ins></div>
-                <p>{change.reasonZh}</p>
+                <strong>修改 {index + 1}</strong>
+                <div><span>把</span><del>{change.from}</del><span>改为</span><ins>{change.to}</ins></div>
+                <p><b>为什么：</b>{change.reasonZh}</p>
               </article>
             ))}
           </div>
         )}
+        {result.naturalChanges.length === 0 && <p>{result.naturalVersionReasonZh}</p>}
       </section>
 
       {result.collocationSuggestions.length > 0 && (
@@ -88,7 +71,6 @@ export function EvaluationResultDetails({ result, compact = false }: { result: E
 
       <footer className="evaluation-result-meta">
         <span>{result.needsRetry ? '建议重新作答' : '本题通过'}</span>
-        <span>AI 置信度 {Math.round(result.confidence * 100)}%</span>
       </footer>
     </div>
   );

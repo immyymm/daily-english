@@ -723,7 +723,6 @@ function ProfilePage({
                   <strong className={'evaluation-score ' + evaluation.status}>{evaluation.result ? evaluation.result.overallScore + ' 分' : evaluation.status === 'failed' ? '待重试' : evaluation.status === 'processing' ? '点评中' : '等待中'}</strong>
                 </summary>
                 <div className="profile-evaluation-body">
-                  <div className="evaluation-record-meta"><span>{evaluation.questionType}</span><span>{evaluation.stage}</span>{evaluation.model && <span>{evaluation.model}</span>}<span>规则 {evaluation.rubricVersion}</span></div>
                   {evaluation.prompt && <p className="evaluation-record-copy"><strong>题目</strong>{evaluation.prompt}</p>}
                   <p className="evaluation-record-copy"><strong>你的回答</strong><span lang="en">{evaluation.answer}</span></p>
                   {evaluation.result ? <EvaluationResultDetails result={evaluation.result} /> : <p className="evaluation-record-message">{evaluation.errorMessage ?? '后台点评完成后会自动更新到这里；切换设备或重新打开页面也会主动补拉。'}</p>}

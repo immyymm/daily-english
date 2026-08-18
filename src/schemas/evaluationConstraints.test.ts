@@ -90,6 +90,38 @@ describe('AI evaluation expression constraints', () => {
     expect(finalized.overallScore).toBe(82);
     expect(finalized.errorTypes).toContain('任务要求');
     expect(finalized.needsRetry).toBe(true);
+    expect(finalized.naturalVersionReasonZh).toContain('把“want to”改为“would like to”');
     expect(finalized.naturalVersionReasonZh).toContain('语气更柔和');
+  });
+
+  it('rejects vague explanations even when the changed words are valid', () => {
+    const validation = generatedEvaluationViolations({
+      ...result,
+      naturalChanges: [{ from: 'want to', to: 'would like to', reasonZh: '更自然。' }]
+    }, {
+      ...context,
+      answer: 'I want to improve on my last test score.'
+    });
+
+    expect(validation.valid).toBe(false);
+    expect(validation.invalidChanges).toBe(true);
+  });
+
+  it('requires the listed changes to explain the whole sentence difference', () => {
+    const validation = generatedEvaluationViolations({
+      ...result,
+      naturalVersion: 'I would really like to improve on my latest test score.',
+      naturalChanges: [{
+        from: 'want to',
+        to: 'would really like to',
+        reasonZh: 'would really like to 的语气更委婉，也加强了个人意愿。'
+      }]
+    }, {
+      ...context,
+      answer: 'I want to improve on my last test score.'
+    });
+
+    expect(validation.valid).toBe(false);
+    expect(validation.invalidChanges).toBe(true);
   });
 });

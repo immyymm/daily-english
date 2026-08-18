@@ -24,7 +24,7 @@ const requestSchema = z.object({
   answer: z.string().min(3).max(5000),
   correctAnswer: z.string().max(1000).default(''),
   responseMs: z.number().min(0).max(3600000),
-  rubricVersion: z.string().min(4).max(40).default('2026.08.18.5'),
+  rubricVersion: z.string().min(4).max(40).default('2026.08.18.6'),
   cardContext: z.object({
     coreMeaning: z.string().max(500),
     englishDefinition: z.string().max(500),
@@ -56,7 +56,9 @@ const systemPrompt = [
   'Keep correctedAnswer as a meaning-preserving correction of the learner answer. naturalVersion may be more idiomatic, but it must preserve the learner intent and satisfy every explicit requirement.',
   'Both correctedAnswer and naturalVersion must satisfy taskRequirements even when the learner answer does not. Never remove a required phrase such as improve on.',
   'For every concrete problem, add an issues item whose originalText is copied from the learner answer when possible, with an exact suggestion and Chinese explanation.',
-  'If naturalVersion differs from correctedAnswer, naturalChanges must list the real changed spans: from must occur in correctedAnswer, to must occur in naturalVersion, and reasonZh must explain that specific change. If they are identical, naturalChanges must be empty.',
+  'If naturalVersion differs from correctedAnswer, naturalChanges must list every real wording change in application order. Applying each from→to change once must transform correctedAnswer into naturalVersion exactly. Both from and to must be non-empty exact spans; for an insertion or deletion, include enough surrounding words to keep both spans non-empty. If the sentences are identical, naturalChanges must be empty.',
+  'Each naturalChanges.reasonZh must name what changed and the concrete English reason, such as collocation, word order, tone, reference, tense, preposition, clarity, or register, plus the effect in this sentence. Never use a vague reason such as only “更自然”“更地道” or “更口语”.',
+  'naturalVersionReasonZh must explicitly summarize the from→to changes and why each one is preferable in this context; do not expose hidden reasoning, rubric checks, confidence calculations, or model process.',
   'dimensionFeedback must briefly justify every dimension score using evidence from the learner answer. Return a conservative confidence value.',
   'Use only these error labels when relevant: 任务要求, 词义, 拼写, 词性, 介词, 搭配, 语法, 语境, 语气, 中文直译, 表达不自然.'
 ].join('\n');
@@ -202,7 +204,7 @@ async function runModel(input: EvaluationInput) {
       violations: {
         correctedAnswer: validation.correctedFailures,
         naturalVersion: validation.naturalFailures,
-        naturalChanges: validation.invalidChanges ? 'naturalChanges does not match the actual sentence differences' : undefined
+        naturalChanges: validation.invalidChanges ? 'naturalChanges must fully transform correctedAnswer into naturalVersion and every Chinese reason must explain a specific linguistic change' : undefined
       }
     });
     if (!completion.output_parsed) throw Object.assign(new Error('EMPTY_MODEL_RESULT'), { code: 'EMPTY_MODEL_RESULT' });

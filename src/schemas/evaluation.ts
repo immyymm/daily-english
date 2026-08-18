@@ -65,11 +65,11 @@ export const evaluationSchema = z.object({
   })).max(8).default([]),
   correctedAnswer: z.string(),
   naturalVersion: z.string(),
-  naturalVersionReasonZh: z.string().describe('用简体中文具体比较 naturalVersion 与 correctedAnswer，说明前者为何更自然；若两句相同则说明无需进一步改写。').default(''),
+  naturalVersionReasonZh: z.string().describe('用简体中文逐项说明 correctedAnswer 的哪些词被改成了什么，并解释对应的搭配、语序、语气或语境理由；禁止只写“更自然/更口语”。若两句相同则说明无需进一步改写。').default(''),
   naturalChanges: z.array(z.object({
     from: z.string(),
     to: z.string(),
-    reasonZh: z.string()
+    reasonZh: z.string().describe('说明这一处 from→to 修改对应的具体英语习惯及其在本句中的表达效果，禁止泛泛地说“更自然”。')
   })).max(8).default([]),
   reasonZh: z.string(),
   collocationSuggestions: z.array(z.string()).max(5),

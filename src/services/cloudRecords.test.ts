@@ -32,7 +32,7 @@ describe('syncDetailedRecords', () => {
         status: 'complete',
         createdAt: '2026-08-18T00:00:00.000Z',
         updatedAt: '2026-08-18T00:00:01.000Z',
-        rubricVersion: '2026.08.18.5',
+        rubricVersion: '2026.08.18.6',
         result: {
           overallScore: 95,
           taskCompletionScore: 10,
@@ -109,7 +109,7 @@ describe('syncDetailedRecords', () => {
         answer: 'I want to improve on my writing.',
         status: 'pending',
         createdAt: '2026-08-18T00:00:00.000Z',
-        rubricVersion: '2026.08.18.5'
+        rubricVersion: '2026.08.18.6'
       }],
       dailyPlans: [],
       dailyRecommendations: [],
@@ -123,5 +123,55 @@ describe('syncDetailedRecords', () => {
       expect.arrayContaining([expect.objectContaining({ request_id: 'evaluation-pending', status: 'pending' })]),
       { onConflict: 'user_id,request_id', ignoreDuplicates: true }
     );
+  });
+
+  it('normalizes legacy attempt values before uploading them', async () => {
+    const upsert = vi.fn().mockResolvedValue({ error: null });
+    const client = { from: vi.fn(() => ({ upsert })) };
+    const snapshot = {
+      settings: {
+        id: 'settings',
+        firstUseDate: '2026-08-18',
+        streak: 1,
+        aiConsent: true,
+        reduceMotion: false,
+        dailyAiLimit: 20
+      },
+      progress: [],
+      attempts: [{
+        id: 'legacy-attempt',
+        cardId: 'improve-v',
+        score: 120.8,
+        correct: true,
+        responseMs: -10,
+        errorTypes: ['拼写或答案不正确'],
+        createdAt: 'not-a-date',
+        ai: false,
+        dimensionScores: { grammar: Number.NaN, naturalness: 125 }
+      }],
+      aiEvaluations: [],
+      dailyPlans: [],
+      dailyRecommendations: [],
+      exportedAt: '2026-08-18T00:00:01.000Z',
+      schemaVersion: 2
+    } as unknown as AppSnapshot;
+
+    await syncDetailedRecords(client as never, 'user-1', snapshot, 'device-1');
+
+    expect(upsert).toHaveBeenCalledWith([
+      expect.objectContaining({
+        id: 'legacy-attempt',
+        question_id: 'legacy-question-legacy-attempt',
+        question_type: 'recall',
+        stage: 'T0',
+        prompt: '',
+        answer: '',
+        correct_answer: '',
+        score: 100,
+        response_ms: 0,
+        dimension_scores: { naturalness: 100 },
+        created_at: '2026-08-18T00:00:01.000Z'
+      })
+    ], { onConflict: 'user_id,id' });
   });
 });

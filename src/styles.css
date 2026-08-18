@@ -653,8 +653,6 @@ h1 { font-family: Georgia, "Songti SC", serif; font-size: 21px; letter-spacing: 
 .evaluation-score.processing, .evaluation-score.pending { color: #8d694b; background: #fff3df; }
 .profile-evaluation-list details > .profile-evaluation-body { display: grid; gap: 13px; padding: 4px 15px 18px; color: #6f5962; font-size: 14px; line-height: 1.65; }
 .profile-evaluation-list .secondary-button { width: fit-content; min-height: 40px; margin-top: 3px; }
-.evaluation-record-meta { display: flex; flex-wrap: wrap; gap: 6px; }
-.evaluation-record-meta span { padding: 5px 8px; border-radius: 999px; color: #8b6474; background: #f8ebf0; font-size: 11px; }
 .evaluation-record-copy { padding: 12px 13px; border-radius: 15px; color: #58424b; background: #fff7fa; font-size: 15px; line-height: 1.7; }
 .evaluation-record-copy strong { display: block; margin-bottom: 3px; color: #a05973; font-size: 12px; }
 .evaluation-record-copy span[lang="en"] { font-family: Georgia, "PingFang SC", serif; }
@@ -886,18 +884,8 @@ h1 { font-family: Georgia, "Songti SC", serif; font-size: 21px; letter-spacing: 
 
 .evaluation-result-details { display: grid; gap: 12px; color: #5e4851; }
 .evaluation-result-details > section { padding: 14px; border: 1px solid #f0dfe6; border-radius: 18px; background: white; }
-.evaluation-compliance { color: #4e765e; background: #f0f8f2 !important; border-color: #dceee1 !important; }
-.evaluation-compliance.failed { color: #955854; background: #fff1ee !important; border-color: #f3d5cf !important; }
-.evaluation-compliance > div, .evaluation-subtitle { display: flex; align-items: center; gap: 7px; }
-.evaluation-compliance > p, .evaluation-natural-reason > p { margin-top: 8px; font-size: 14px; line-height: 1.7; }
-.evaluation-compliance ul { display: grid; gap: 7px; margin: 11px 0 0; padding: 0; list-style: none; }
-.evaluation-compliance li { display: grid; grid-template-columns: 16px minmax(0, 1fr); align-items: start; gap: 7px; }
-.evaluation-compliance li.failed { color: #9e554f; }
-.evaluation-compliance li svg { margin-top: 3px; }
-.evaluation-compliance li span { display: grid; gap: 1px; }
-.evaluation-compliance li b { font-size: 13px; line-height: 1.5; }
-.evaluation-compliance li small { font-size: 12px; line-height: 1.55; opacity: .84; }
-.evaluation-subtitle { color: #8f5269; }
+.evaluation-subtitle { display: flex; align-items: center; gap: 7px; color: #8f5269; }
+.evaluation-natural-reason > p { margin-top: 8px; font-size: 14px; line-height: 1.7; }
 .evaluation-dimensions { display: grid; gap: 12px; }
 .evaluation-dimensions article { display: grid; gap: 6px; }
 .evaluation-dimensions article > div { display: flex; justify-content: space-between; gap: 10px; font-size: 13px; }
@@ -919,11 +907,13 @@ h1 { font-family: Georgia, "Songti SC", serif; font-size: 21px; letter-spacing: 
 .evaluation-issues article p { display: grid; grid-template-columns: 48px minmax(0, 1fr); gap: 5px; margin-top: 6px; color: #6a555d; font-size: 13px; line-height: 1.6; }
 .evaluation-issues article p b { color: #a06278; font-size: 12px; }
 .natural-change-list { display: grid; gap: 8px; margin-top: 11px; }
-.natural-change-list article { padding: 10px; border-radius: 13px; background: #fff6f9; }
-.natural-change-list article > div { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; font: 14px/1.5 Georgia, serif; }
+.natural-change-list article { padding: 12px; border: 1px solid #f1dce5; border-radius: 14px; background: #fff9fb; }
+.natural-change-list article > strong { display: block; margin-bottom: 7px; color: #a25773; font-size: 12px; }
+.natural-change-list article > div { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; color: #765b65; font: 14px/1.55 Georgia, "PingFang SC", serif; }
 .natural-change-list del { color: #a35e5e; }
 .natural-change-list ins { color: #4d7c61; text-decoration: none; font-weight: 700; }
-.natural-change-list article p { margin-top: 5px; color: #705b63; font-size: 13px; line-height: 1.6; }
+.natural-change-list article p { margin-top: 8px; color: #655159; font-size: 14px; line-height: 1.7; }
+.natural-change-list article p b { color: #9a5a71; }
 .evaluation-collocations > div:last-child { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
 .evaluation-collocations > div:last-child span { padding: 6px 9px; border-radius: 999px; color: #855168; background: #ffedf3; font: 13px Georgia, serif; }
 .evaluation-result-meta { padding: 0 3px; display: flex; justify-content: space-between; gap: 8px; color: #917681; font-size: 11px; }

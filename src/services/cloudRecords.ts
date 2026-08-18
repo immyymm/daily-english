@@ -25,6 +25,16 @@ const masteryDimensionValues: MasteryDimension[] = [
   'naturalness'
 ];
 const masteryDimensionSet = new Set<string>(masteryDimensionValues);
+const reviewStageSet = new Set<string>(['T0', 'T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7']);
+const questionTypeSet = new Set<string>([
+  'meaning_choice',
+  'recall',
+  'collocation',
+  'free_sentence',
+  'dialogue',
+  'weekly_writing',
+  'weekly_speaking'
+]);
 
 function chunks<T>(items: T[]) {
   const result: T[][] = [];
@@ -43,6 +53,54 @@ function masteryDimensions(value: unknown): MasteryDimension[] {
 function boundedQuestionCount(value: unknown, fallback: number) {
   const parsed = Number(value);
   return Number.isFinite(parsed) ? Math.max(5, Math.min(17, Math.round(parsed))) : fallback;
+}
+
+function textValue(value: unknown, fallback = '') {
+  return typeof value === 'string' ? value : value === null || value === undefined ? fallback : String(value);
+}
+
+function boundedInteger(value: unknown, minimum: number, maximum: number, fallback: number) {
+  const parsed = Number(value);
+  return Number.isFinite(parsed) ? Math.max(minimum, Math.min(maximum, Math.round(parsed))) : fallback;
+}
+
+function isoTimestamp(value: unknown, fallback: string) {
+  const parsed = new Date(textValue(value, fallback));
+  return Number.isFinite(parsed.getTime()) ? parsed.toISOString() : fallback;
+}
+
+function normalizedDimensionScores(value: unknown) {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) return {};
+  const raw = value as Record<string, unknown>;
+  return Object.fromEntries(masteryDimensionValues.flatMap((dimension) => {
+    const parsed = Number(raw[dimension]);
+    return Number.isFinite(parsed) ? [[dimension, Math.max(0, Math.min(100, parsed))]] : [];
+  }));
+}
+
+function nonNegativeCounts(value: unknown) {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) return {};
+  const raw = value as Record<string, unknown>;
+  return Object.fromEntries(Object.entries(raw).flatMap(([key, count]) => {
+    const parsed = Number(count);
+    return key && Number.isFinite(parsed) ? [[key, Math.max(0, Math.round(parsed))]] : [];
+  }));
+}
+
+function jsonObjectOrNull(value: unknown) {
+  return value && typeof value === 'object' && !Array.isArray(value) ? value : null;
+}
+
+function syncWriteError(tableLabel: string, error: unknown): never {
+  const detail = error as { code?: string; message?: string; details?: string; hint?: string };
+  console.error('CLOUD_RECORD_SYNC_FAILED', {
+    table: tableLabel,
+    code: detail.code,
+    message: detail.message,
+    details: detail.details,
+    hint: detail.hint
+  });
+  throw new Error(`${tableLabel}同步失败，记录仍安全保存在本机；刷新页面后系统会自动重试。`);
 }
 
 function parseCodexAnalysis(value: unknown): CodexDailyAnalysis | undefined {
@@ -106,63 +164,83 @@ export async function syncDetailedRecords(
   snapshot: AppSnapshot,
   deviceId?: string
 ) {
-  const attemptRows = snapshot.attempts.map((attempt) => ({
-    user_id: userId,
-    id: attempt.id,
-    card_id: attempt.cardId,
-    question_id: attempt.questionId,
-    question_type: attempt.questionType,
-    stage: attempt.stage,
-    prompt: attempt.prompt,
-    answer: attempt.answer,
-    correct_answer: attempt.correctAnswer,
-    score: attempt.score,
-    correct: attempt.correct,
-    response_ms: attempt.responseMs,
-    error_types: attempt.errorTypes,
-    dimension_scores: attempt.dimensionScores ?? {},
-    ai: attempt.ai,
-    session_id: attempt.sessionId ?? null,
-    schedule_impact: attempt.scheduleImpact ?? !attempt.ai,
-    created_at: attempt.createdAt,
-    device_id: deviceId ?? null
-  }));
+  const fallbackTimestamp = isoTimestamp(snapshot.exportedAt, '1970-01-01T00:00:00.000Z');
+  const attemptRows = snapshot.attempts.map((attempt, index) => {
+    const raw = attempt as unknown as Record<string, unknown>;
+    const cardId = textValue(raw.cardId, 'unknown-card').trim() || 'unknown-card';
+    const id = textValue(raw.id).trim() || `legacy-${cardId}-${index}`;
+    const score = boundedInteger(raw.score, 0, 100, 0);
+    const ai = typeof raw.ai === 'boolean' ? raw.ai : false;
+    const rawStage = textValue(raw.stage, 'T0');
+    const rawQuestionType = textValue(raw.questionType, 'recall');
+    return {
+      user_id: userId,
+      id,
+      card_id: cardId,
+      question_id: textValue(raw.questionId).trim() || `legacy-question-${id}`,
+      question_type: questionTypeSet.has(rawQuestionType) ? rawQuestionType : 'recall',
+      stage: reviewStageSet.has(rawStage) ? rawStage : 'T0',
+      prompt: textValue(raw.prompt),
+      answer: textValue(raw.answer),
+      correct_answer: textValue(raw.correctAnswer),
+      score,
+      correct: typeof raw.correct === 'boolean' ? raw.correct : score >= 75,
+      response_ms: boundedInteger(raw.responseMs, 0, 2_147_483_647, 0),
+      error_types: stringArray(raw.errorTypes),
+      dimension_scores: normalizedDimensionScores(raw.dimensionScores),
+      ai,
+      session_id: textValue(raw.sessionId).trim() || null,
+      schedule_impact: typeof raw.scheduleImpact === 'boolean' ? raw.scheduleImpact : !ai,
+      created_at: isoTimestamp(raw.createdAt, fallbackTimestamp),
+      device_id: deviceId ?? null
+    };
+  });
 
   for (const batch of chunks(attemptRows)) {
     const { error } = await client.from('daily_english_attempts').upsert(batch, { onConflict: 'user_id,id' });
-    if (error) throw error;
+    if (error) syncWriteError('学习记录', error);
   }
 
-  const evaluationRows = snapshot.aiEvaluations.map((evaluation) => ({
-    user_id: userId,
-    request_id: evaluation.requestId,
-    card_id: evaluation.cardId,
-    question_id: evaluation.questionId ?? evaluation.requestId,
-    question_type: evaluation.questionType,
-    stage: evaluation.stage,
-    prompt: evaluation.prompt ?? '',
-    answer: evaluation.answer,
-    correct_answer: evaluation.correctAnswer ?? '',
-    response_ms: evaluation.responseMs ?? 0,
-    status: evaluation.status,
-    request_payload: {
-      prompt: evaluation.prompt ?? '',
-      answer: evaluation.answer,
-      questionId: evaluation.questionId ?? evaluation.requestId,
-      correctAnswer: evaluation.correctAnswer ?? '',
-      responseMs: evaluation.responseMs ?? 0
-    },
-    result: evaluation.result ?? null,
-    model: evaluation.model ?? null,
-    rubric_version: evaluation.rubricVersion,
-    token_usage: evaluation.tokenUsage ?? null,
-    error_message: evaluation.errorMessage ?? null,
-    retry_count: evaluation.retryCount ?? 0,
-    queued_at: evaluation.createdAt,
-    completed_at: evaluation.status === 'complete' ? evaluation.updatedAt ?? evaluation.createdAt : null,
-    created_at: evaluation.createdAt,
-    updated_at: evaluation.updatedAt ?? evaluation.createdAt
-  }));
+  const evaluationRows = snapshot.aiEvaluations.map((evaluation, index) => {
+    const raw = evaluation as unknown as Record<string, unknown>;
+    const requestId = textValue(raw.requestId).trim() || `legacy-evaluation-${index}`;
+    const questionId = textValue(raw.questionId).trim() || requestId;
+    const questionType = textValue(raw.questionType, 'free_sentence');
+    const stage = textValue(raw.stage, 'T0');
+    const status = ['pending', 'processing', 'complete', 'failed'].includes(textValue(raw.status))
+      ? textValue(raw.status)
+      : 'failed';
+    const createdAt = isoTimestamp(raw.createdAt, fallbackTimestamp);
+    const updatedAt = isoTimestamp(raw.updatedAt, createdAt);
+    const responseMs = boundedInteger(raw.responseMs, 0, 2_147_483_647, 0);
+    const prompt = textValue(raw.prompt);
+    const answer = textValue(raw.answer);
+    const correctAnswer = textValue(raw.correctAnswer);
+    return {
+      user_id: userId,
+      request_id: requestId,
+      card_id: textValue(raw.cardId, 'unknown-card').trim() || 'unknown-card',
+      question_id: questionId,
+      question_type: questionTypeSet.has(questionType) ? questionType : 'free_sentence',
+      stage: reviewStageSet.has(stage) ? stage : 'T0',
+      prompt,
+      answer,
+      correct_answer: correctAnswer,
+      response_ms: responseMs,
+      status,
+      request_payload: { prompt, answer, questionId, correctAnswer, responseMs },
+      result: jsonObjectOrNull(raw.result),
+      model: textValue(raw.model).trim() || null,
+      rubric_version: textValue(raw.rubricVersion, '2026.08.18.6'),
+      token_usage: jsonObjectOrNull(raw.tokenUsage),
+      error_message: textValue(raw.errorMessage).trim() || null,
+      retry_count: boundedInteger(raw.retryCount, 0, 2_147_483_647, 0),
+      queued_at: createdAt,
+      completed_at: status === 'complete' ? updatedAt : null,
+      created_at: createdAt,
+      updated_at: updatedAt
+    };
+  });
 
   for (const batch of chunks(evaluationRows)) {
     const completeRows = batch.filter((row) => row.status === 'complete');
@@ -171,14 +249,14 @@ export async function syncDetailedRecords(
       const { error } = await client.from('daily_english_ai_evaluations').upsert(completeRows, {
         onConflict: 'user_id,request_id'
       });
-      if (error) throw error;
+      if (error) syncWriteError('AI 点评记录', error);
     }
     if (unfinishedRows.length) {
       const { error } = await client.from('daily_english_ai_evaluations').upsert(unfinishedRows, {
         onConflict: 'user_id,request_id',
         ignoreDuplicates: true
       });
-      if (error) throw error;
+      if (error) syncWriteError('AI 点评记录', error);
     }
   }
 
@@ -189,32 +267,43 @@ export async function syncDetailedRecords(
     attemptsByCard.set(attempt.cardId, list);
   });
   const masteryRows = snapshot.progress.map((progress) => {
+    const raw = progress as unknown as Record<string, unknown>;
     const profile = calculateMasteryProfile(attemptsByCard.get(progress.cardId) ?? []);
-    const dimensionScores = { ...profile.dimensionScores, ...progress.dimensionScores };
-    const weakDimensions = progress.weakDimensions ?? profile.weakDimensions;
+    const dimensionScores = {
+      ...normalizedDimensionScores(profile.dimensionScores),
+      ...normalizedDimensionScores(raw.dimensionScores)
+    };
+    const weakDimensions = masteryDimensions(raw.weakDimensions ?? profile.weakDimensions);
+    const stage = textValue(raw.stage, 'T0');
+    const lastScore = raw.lastScore === null || raw.lastScore === undefined
+      ? null
+      : boundedInteger(raw.lastScore, 0, 100, 0);
+    const masteryScore = Number.isFinite(Number(raw.masteryScore))
+      ? Math.max(0, Math.min(100, Number(raw.masteryScore)))
+      : Math.max(0, Math.min(100, Number(profile.masteryScore) || 0));
     return {
       user_id: userId,
-      card_id: progress.cardId,
-      learned_at: progress.learnedAt,
-      stage: progress.stage,
-      next_review_at: progress.nextReviewAt,
-      last_reviewed_at: progress.lastReviewedAt ?? null,
-      status: progress.status,
-      last_score: progress.lastScore ?? null,
-      correct_streak: progress.correctStreak,
-      wrong_count: progress.wrongCount,
-      unstable_count: progress.unstableCount,
-      weak: progress.weak || weakDimensions.length > 0,
-      passed_t7: progress.passedT7,
-      passed_t30: progress.passedT30,
-      passed_t60: progress.passedT60,
-      mastery_score: progress.masteryScore ?? profile.masteryScore,
+      card_id: textValue(raw.cardId, 'unknown-card').trim() || 'unknown-card',
+      learned_at: isoTimestamp(raw.learnedAt, fallbackTimestamp),
+      stage: reviewStageSet.has(stage) ? stage : 'T0',
+      next_review_at: isoTimestamp(raw.nextReviewAt, fallbackTimestamp),
+      last_reviewed_at: raw.lastReviewedAt ? isoTimestamp(raw.lastReviewedAt, fallbackTimestamp) : null,
+      status: textValue(raw.status, '学习中'),
+      last_score: lastScore,
+      correct_streak: boundedInteger(raw.correctStreak, 0, 2_147_483_647, 0),
+      wrong_count: boundedInteger(raw.wrongCount, 0, 2_147_483_647, 0),
+      unstable_count: boundedInteger(raw.unstableCount, 0, 2_147_483_647, 0),
+      weak: Boolean(raw.weak) || weakDimensions.length > 0,
+      passed_t7: Boolean(raw.passedT7),
+      passed_t30: Boolean(raw.passedT30),
+      passed_t60: Boolean(raw.passedT60),
+      mastery_score: masteryScore,
       dimension_scores: dimensionScores,
       weak_dimensions: weakDimensions,
-      error_counts: progress.errorCounts ?? profile.errorCounts,
-      attempt_count: progress.attemptCount ?? profile.attemptCount,
-      target_question_count: progress.targetQuestionCount ?? (progress.weak ? 12 : 8),
-      last_analyzed_at: progress.lastAnalyzedAt ?? null,
+      error_counts: nonNegativeCounts(raw.errorCounts ?? profile.errorCounts),
+      attempt_count: boundedInteger(raw.attemptCount ?? profile.attemptCount, 0, 2_147_483_647, 0),
+      target_question_count: boundedQuestionCount(raw.targetQuestionCount, Boolean(raw.weak) ? 12 : 8),
+      last_analyzed_at: raw.lastAnalyzedAt ? isoTimestamp(raw.lastAnalyzedAt, fallbackTimestamp) : null,
       device_id: deviceId ?? null,
       updated_at: new Date().toISOString()
     };
@@ -222,7 +311,7 @@ export async function syncDetailedRecords(
 
   for (const batch of chunks(masteryRows)) {
     const { error } = await client.from('daily_english_mastery').upsert(batch, { onConflict: 'user_id,card_id' });
-    if (error) throw error;
+    if (error) syncWriteError('掌握状态', error);
   }
 }
 
