@@ -64,6 +64,8 @@ export interface EvaluationIssue {
 export interface NaturalExpressionChange {
   from: string;
   to: string;
+  sourceIssueZh: string;
+  replacementReasonZh: string;
   reasonZh: string;
 }
 
@@ -377,3 +379,4 @@ export interface AppSnapshot {
   exportedAt: string;
   schemaVersion: 1 | 2;
 }
+

@@ -67,12 +67,15 @@ export const evaluationSchema = z.object({
   naturalVersion: z.string(),
   naturalVersionReasonZh: z.string().describe('用简体中文逐项说明 correctedAnswer 的哪些词被改成了什么，并解释对应的搭配、语序、语气或语境理由；禁止只写“更自然/更口语”。若两句相同则说明无需进一步改写。').default(''),
   naturalChanges: z.array(z.object({
-    from: z.string(),
-    to: z.string(),
-    reasonZh: z.string().describe('说明这一处 from→to 修改对应的具体英语习惯及其在本句中的表达效果，禁止泛泛地说“更自然”。')
-  })).max(8).default([]),
+    from: z.string().describe('correctedAnswer 中实际被替换的最短词或短语，禁止填写整句。'),
+    to: z.string().describe('naturalVersion 中对应的新词或短语，禁止填写整句。'),
+    sourceIssueZh: z.string().describe('具体说明原词或原短语在本句中的问题，例如搭配对象、词性、语序、介词、语气或语境不合适。').default(''),
+    replacementReasonZh: z.string().describe('具体说明为什么新词或新短语在本句中更合适，以及它带来的含义、搭配或语气效果。').default(''),
+    reasonZh: z.string().describe('把原表达问题和替换理由合并成一句完整的中文说明；禁止只说“更自然/更地道/更口语”。').default('')
+  })).max(10).default([]),
   reasonZh: z.string(),
   collocationSuggestions: z.array(z.string()).max(5),
   needsRetry: z.boolean(),
   confidence: z.number().min(0).max(1)
 });
+

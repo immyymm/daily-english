@@ -52,9 +52,16 @@ export function EvaluationResultDetails({ result, compact = false }: { result: E
           <div className="natural-change-list">
             {result.naturalChanges.map((change, index) => (
               <article key={`${change.from}-${change.to}-${index}`}>
-                <strong>修改 {index + 1}</strong>
-                <div><span>把</span><del>{change.from}</del><span>改为</span><ins>{change.to}</ins></div>
-                <p><b>为什么：</b>{change.reasonZh}</p>
+                <strong>词语修改 {index + 1}</strong>
+                <div className="natural-change-words">
+                  <span><small>原词 / 短语</small><del lang="en">{change.from}</del></span>
+                  <i aria-hidden="true">→</i>
+                  <span><small>改为</small><ins lang="en">{change.to}</ins></span>
+                </div>
+                <div className="natural-change-explanation">
+                  <p><b>原表达的问题</b>{change.sourceIssueZh}</p>
+                  <p><b>为什么改成“{change.to}”</b>{change.replacementReasonZh}</p>
+                </div>
               </article>
             ))}
           </div>
@@ -75,3 +82,4 @@ export function EvaluationResultDetails({ result, compact = false }: { result: E
     </div>
   );
 }
+

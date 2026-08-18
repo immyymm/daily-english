@@ -32,7 +32,7 @@ describe('syncDetailedRecords', () => {
         status: 'complete',
         createdAt: '2026-08-18T00:00:00.000Z',
         updatedAt: '2026-08-18T00:00:01.000Z',
-        rubricVersion: '2026.08.18.6',
+        rubricVersion: '2026.08.18.7',
         result: {
           overallScore: 95,
           taskCompletionScore: 10,
@@ -58,7 +58,13 @@ describe('syncDetailedRecords', () => {
           correctedAnswer: 'I want to improve on my writing.',
           naturalVersion: 'I want to improve on my writing skills.',
           naturalVersionReasonZh: '加入 skills 后，表达的改进对象更具体。',
-          naturalChanges: [{ from: 'writing', to: 'writing skills', reasonZh: '加入 skills 后，表达的改进对象更具体。' }],
+          naturalChanges: [{
+            from: 'writing',
+            to: 'writing skills',
+            sourceIssueZh: 'writing 单独出现时只表示写作活动，没有明确指出学习者想提升的是一项语言能力。',
+            replacementReasonZh: 'writing skills 把改进对象明确为写作能力，和 improve 的宾语搭配更具体清楚。',
+            reasonZh: '加入 skills 后，表达的改进对象从写作活动明确为写作能力。'
+          }],
           reasonZh: '表达正确且符合题目要求。',
           errorTypes: [],
           issues: [],
@@ -109,7 +115,7 @@ describe('syncDetailedRecords', () => {
         answer: 'I want to improve on my writing.',
         status: 'pending',
         createdAt: '2026-08-18T00:00:00.000Z',
-        rubricVersion: '2026.08.18.6'
+        rubricVersion: '2026.08.18.7'
       }],
       dailyPlans: [],
       dailyRecommendations: [],
@@ -175,3 +181,4 @@ describe('syncDetailedRecords', () => {
     ], { onConflict: 'user_id,id' });
   });
 });
+

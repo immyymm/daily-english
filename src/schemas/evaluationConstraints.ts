@@ -35,8 +35,30 @@ function sameText(left: string, right: string) {
 
 function isSpecificNaturalReason(reason: string) {
   const normalized = reason.replace(/\s+/g, ' ').trim();
-  if (normalized.length < 10) return false;
-  return /(搭配|语序|语气|指代|时态|介词|修饰|范围|对象|语境|口语|书面|礼貌|委婉|强调|具体|明确|准确|简洁|衔接|习惯|常用|歧义|重复)/.test(normalized);
+  if (normalized.length < 18) return false;
+  return /(搭配|语序|语气|指代|时态|介词|修饰|范围|对象|语境|词性|主语|宾语|口语|书面|礼貌|委婉|强调|具体|明确|准确|简洁|衔接|习惯|常用|歧义|重复|含义|比较|动作|状态)/.test(normalized);
+}
+
+function expressionWordCount(value: string) {
+  return comparable(value).trim().split(/\s+/).filter(Boolean).length;
+}
+
+function hasDetailedNaturalExplanation(change: NaturalExpressionChange) {
+  return change.sourceIssueZh.trim().length >= 18
+    && change.replacementReasonZh.trim().length >= 18
+    && isSpecificNaturalReason(`${change.sourceIssueZh} ${change.replacementReasonZh}`);
+}
+
+function isGranularNaturalChange(
+  change: NaturalExpressionChange,
+  correctedAnswer: string,
+  naturalVersion: string
+) {
+  const from = change.from.trim();
+  const to = change.to.trim();
+  if (!from || !to || sameText(from, to)) return false;
+  if (sameText(from, correctedAnswer) || sameText(to, naturalVersion)) return false;
+  return expressionWordCount(from) <= 8 && expressionWordCount(to) <= 8;
 }
 
 function replaceOnceCaseInsensitive(source: string, from: string, to: string) {
@@ -61,12 +83,33 @@ function transformedNaturalVersion(correctedAnswer: string, changes: NaturalExpr
 function clearNaturalReason(change: NaturalExpressionChange) {
   const reason = change.reasonZh.replace(/\s+/g, ' ').trim();
   if (isSpecificNaturalReason(reason)) return reason;
-  return `“${change.to.trim()}”在这里更符合英语常用搭配和语序，能更清楚地表达原意，避免译成中文后再逐字拼回英文的生硬感。`;
+  const combined = `${change.sourceIssueZh ?? ''} ${change.replacementReasonZh ?? ''}`.replace(/\s+/g, ' ').trim();
+  return isSpecificNaturalReason(combined) ? combined : '';
+}
+
+function normalizedChangeDetails(change: NaturalExpressionChange): NaturalExpressionChange {
+  const from = change.from.trim();
+  const to = change.to.trim();
+  const legacyReason = clearNaturalReason(change);
+  const sourceIssueZh = change.sourceIssueZh?.trim()
+    || (legacyReason
+      ? `旧版点评只保存了合并说明，未单独记录“${from}”在原句中的具体问题。`
+      : '旧版点评没有保存这一处原表达的具体问题。');
+  const replacementReasonZh = change.replacementReasonZh?.trim()
+    || legacyReason
+    || `旧版点评没有保存为什么要改成“${to}”的具体语言依据。`;
+  return {
+    from,
+    to,
+    sourceIssueZh,
+    replacementReasonZh,
+    reasonZh: legacyReason || `${sourceIssueZh} ${replacementReasonZh}`
+  };
 }
 
 function explicitNaturalSummary(changes: NaturalExpressionChange[]) {
   return changes
-    .map((change) => `把“${change.from.trim()}”改为“${change.to.trim()}”：${clearNaturalReason(change)}`)
+    .map((change) => `把“${change.from.trim()}”改为“${change.to.trim()}”。原表达的问题：${change.sourceIssueZh} 改后更合适的原因：${change.replacementReasonZh}`)
     .join('\n');
 }
 
@@ -77,20 +120,13 @@ function normalizeChangeList(
   fallbackReason = ''
 ) {
   if (sameText(correctedAnswer, naturalVersion)) return [];
-  const candidates = (changes ?? []).map((change) => ({
-    from: change.from.trim(),
-    to: change.to.trim(),
-    reasonZh: clearNaturalReason(change)
-  }));
+  const candidates = (changes ?? []).map(normalizedChangeDetails);
   const transformed = transformedNaturalVersion(correctedAnswer, candidates);
-  if (transformed && sameText(transformed, naturalVersion)) return candidates;
-  return [{
-    from: correctedAnswer,
-    to: naturalVersion,
-    reasonZh: isSpecificNaturalReason(fallbackReason)
-      ? fallbackReason.trim()
-      : '这个版本重新组织了整句措辞，使搭配和语序更符合英语表达习惯，同时保留原意和题目指定表达。'
-  }];
+  if (transformed
+    && sameText(transformed, naturalVersion)
+    && candidates.every((change) => isGranularNaturalChange(change, correctedAnswer, naturalVersion))) return candidates;
+  void fallbackReason;
+  return [];
 }
 
 export function includesRequiredExpression(text: string, expression: string) {
@@ -146,7 +182,11 @@ export function normalizeEvaluationResultForHistory<T extends EvaluationTextResu
         : '相比修正表达，这个版本使用了更常见的日常措辞或语序，因此读起来更自然。';
   }
 
-  if (naturalChanges.length > 0) naturalVersionReasonZh = explicitNaturalSummary(naturalChanges);
+  if (naturalChanges.length > 0) {
+    naturalVersionReasonZh = explicitNaturalSummary(naturalChanges);
+  } else if (!sameText(correctedAnswer, naturalVersion)) {
+    naturalVersionReasonZh = '这条旧版点评没有保存可验证的逐词或逐短语说明，系统已停止用“整句改整句”的笼统内容代替详细解释。';
+  }
 
   return { ...result, correctedAnswer, naturalVersion, naturalVersionReasonZh, naturalChanges };
 }
@@ -161,7 +201,10 @@ export function generatedEvaluationViolations(
   const invalidChanges = sameText(result.correctedAnswer, result.naturalVersion)
     ? result.naturalChanges.length > 0
     : result.naturalChanges.length === 0
-      || result.naturalChanges.some((change) => !isSpecificNaturalReason(change.reasonZh))
+      || result.naturalChanges.some((change) => (
+        !isGranularNaturalChange(change, result.correctedAnswer, result.naturalVersion)
+        || !hasDetailedNaturalExplanation(change)
+      ))
       || !sameText(transformedNaturalVersion(result.correctedAnswer, result.naturalChanges) ?? '', result.naturalVersion);
   return { requirements, correctedFailures, naturalFailures, invalidChanges, valid: correctedFailures.length === 0 && naturalFailures.length === 0 && !invalidChanges };
 }
@@ -220,3 +263,4 @@ export function finalizeEvaluationResult(
     needsRetry: input.needsRetry || !taskPassed || overallScore < 75
   };
 }
+

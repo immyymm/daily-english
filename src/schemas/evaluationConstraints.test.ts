@@ -31,7 +31,13 @@ describe('AI evaluation expression constraints', () => {
     correctedAnswer: 'I want to improve on my last test score.',
     naturalVersion: 'I would like to improve on my last test score.',
     naturalVersionReasonZh: 'would like to 语气更柔和。',
-    naturalChanges: [{ from: 'want to', to: 'would like to', reasonZh: 'would like to 语气更柔和。' }],
+    naturalChanges: [{
+      from: 'want to',
+      to: 'would like to',
+      sourceIssueZh: 'want to 在这里直接陈述个人意愿，语气比较强，和礼貌表达愿望的语境不完全匹配。',
+      replacementReasonZh: 'would like to 保留原来的愿望含义，同时用更委婉的情态表达让语气更礼貌柔和。',
+      reasonZh: '把 want to 改成 would like to，可以把直接意愿调整为更礼貌、委婉的语气。'
+    }],
     reasonZh: '基本正确。',
     collocationSuggestions: [],
     needsRetry: false,
@@ -69,7 +75,13 @@ describe('AI evaluation expression constraints', () => {
     const validation = generatedEvaluationViolations({
       ...result,
       naturalVersion: 'I would like to get a better score next time.',
-      naturalChanges: [{ from: 'want to improve on my last test score', to: 'would like to get a better score next time', reasonZh: '更口语。' }]
+      naturalChanges: [{
+        from: 'want to improve on my last test score',
+        to: 'would like to get a better score next time',
+        sourceIssueZh: '原短语在这里没有语法问题，但测试用于验证自然表达是否保留指定搭配。',
+        replacementReasonZh: '替换后虽然表达了相近目标，却删除了题目明确要求使用的 improve on。',
+        reasonZh: '替换后删除了题目要求的固定搭配。'
+      }]
     }, {
       ...context,
       answer: 'I want improve my score.'
@@ -91,13 +103,20 @@ describe('AI evaluation expression constraints', () => {
     expect(finalized.errorTypes).toContain('任务要求');
     expect(finalized.needsRetry).toBe(true);
     expect(finalized.naturalVersionReasonZh).toContain('把“want to”改为“would like to”');
-    expect(finalized.naturalVersionReasonZh).toContain('语气更柔和');
+    expect(finalized.naturalVersionReasonZh).toContain('原表达的问题');
+    expect(finalized.naturalVersionReasonZh).toContain('更礼貌柔和');
   });
 
   it('rejects vague explanations even when the changed words are valid', () => {
     const validation = generatedEvaluationViolations({
       ...result,
-      naturalChanges: [{ from: 'want to', to: 'would like to', reasonZh: '更自然。' }]
+      naturalChanges: [{
+        from: 'want to',
+        to: 'would like to',
+        sourceIssueZh: '不够自然。',
+        replacementReasonZh: '更加地道。',
+        reasonZh: '更自然。'
+      }]
     }, {
       ...context,
       answer: 'I want to improve on my last test score.'
@@ -114,6 +133,8 @@ describe('AI evaluation expression constraints', () => {
       naturalChanges: [{
         from: 'want to',
         to: 'would really like to',
+        sourceIssueZh: 'want to 在这里直接表达意愿，没有体现说话人希望语气更加委婉的交际目的。',
+        replacementReasonZh: 'would really like to 用 would 缓和语气，并用 really 加强个人意愿的程度。',
         reasonZh: 'would really like to 的语气更委婉，也加强了个人意愿。'
       }]
     }, {
@@ -124,4 +145,42 @@ describe('AI evaluation expression constraints', () => {
     expect(validation.valid).toBe(false);
     expect(validation.invalidChanges).toBe(true);
   });
+
+  it('rejects an entire-sentence replacement even when its explanation is long', () => {
+    const validation = generatedEvaluationViolations({
+      ...result,
+      naturalChanges: [{
+        from: result.correctedAnswer,
+        to: result.naturalVersion,
+        sourceIssueZh: '原句使用 want to 直接表达愿望，语气比较强，没有体现更礼貌委婉的交际效果。',
+        replacementReasonZh: '新句使用 would like to 保留原意并缓和语气，在这个语境中显得更加礼貌。',
+        reasonZh: '把直接的愿望表达调整成更加委婉的表达。'
+      }]
+    }, {
+      ...context,
+      answer: 'I want to improve on my last test score.'
+    });
+
+    expect(validation.valid).toBe(false);
+    expect(validation.invalidChanges).toBe(true);
+  });
+
+  it('hides an unverifiable whole-sentence explanation in old records', () => {
+    const normalized = normalizeEvaluationResultForHistory({
+      correctedAnswer: result.correctedAnswer,
+      naturalVersion: result.naturalVersion,
+      naturalVersionReasonZh: '整体换一种说法会更自然。',
+      naturalChanges: [{
+        from: result.correctedAnswer,
+        to: result.naturalVersion,
+        sourceIssueZh: '',
+        replacementReasonZh: '',
+        reasonZh: '整体换一种说法会更自然。'
+      }]
+    }, context);
+
+    expect(normalized.naturalChanges).toEqual([]);
+    expect(normalized.naturalVersionReasonZh).toContain('整句改整句');
+  });
 });
+

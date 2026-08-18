@@ -231,7 +231,7 @@ export async function syncDetailedRecords(
       request_payload: { prompt, answer, questionId, correctAnswer, responseMs },
       result: jsonObjectOrNull(raw.result),
       model: textValue(raw.model).trim() || null,
-      rubric_version: textValue(raw.rubricVersion, '2026.08.18.6'),
+      rubric_version: textValue(raw.rubricVersion, '2026.08.18.7'),
       token_usage: jsonObjectOrNull(raw.tokenUsage),
       error_message: textValue(raw.errorMessage).trim() || null,
       retry_count: boundedInteger(raw.retryCount, 0, 2_147_483_647, 0),
@@ -527,3 +527,4 @@ export async function countCloudRecords(client: SupabaseClient, userId: string):
   ]);
   return { snapshots, attempts, mastery, evaluations };
 }
+
