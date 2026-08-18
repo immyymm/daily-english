@@ -2,7 +2,8 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 import { cardsForStudyDay, loadContent } from '../data/content';
 import { calculateMasteryProfile, dimensionsFromEvaluation } from '../learning/mastery';
 import { applyLateEvaluation, applyReviewScore, isDue, studyDaySince, toLocalDateKey } from '../learning/reviewEngine';
-import { normalizeEvaluationResultForHistory } from '../schemas/evaluationConstraints';
+import { evaluationSchema } from '../schemas/evaluation';
+import { finalizeEvaluationResult, normalizeEvaluationResultForHistory } from '../schemas/evaluationConstraints';
 import { notifyLocalDataChanged } from './useCloudSync';
 import { db, getSettings, touchStudyStreak } from '../storage/db';
 import type {
@@ -58,14 +59,22 @@ export function useAppData() {
       const cardWords = new Map(content.cards.map((card) => [card.id, card.word]));
       const normalizedEvaluations = aiEvaluations.map((evaluation) => {
         if (!evaluation.result) return evaluation;
-        const result = normalizeEvaluationResultForHistory(evaluation.result, {
+        const parsed = evaluationSchema.safeParse(evaluation.result);
+        if (!parsed.success) return evaluation;
+        const normalizedText = normalizeEvaluationResultForHistory(parsed.data, {
           questionType: evaluation.questionType,
           prompt: evaluation.prompt ?? '',
           targetWord: cardWords.get(evaluation.cardId)
         });
-        const changed = result.correctedAnswer !== evaluation.result.correctedAnswer
-          || result.naturalVersion !== evaluation.result.naturalVersion
-          || result.naturalVersionReasonZh !== evaluation.result.naturalVersionReasonZh;
+        const result = evaluation.questionType === 'weekly_writing' || evaluation.questionType === 'weekly_speaking'
+          ? normalizedText
+          : finalizeEvaluationResult(normalizedText, {
+            questionType: evaluation.questionType,
+            prompt: evaluation.prompt ?? '',
+            targetWord: cardWords.get(evaluation.cardId) ?? '',
+            answer: evaluation.answer
+          });
+        const changed = JSON.stringify(result) !== JSON.stringify(evaluation.result);
         return changed ? { ...evaluation, result } : evaluation;
       });
       const repairedEvaluations = normalizedEvaluations.filter((evaluation, index) => evaluation !== aiEvaluations[index]);
@@ -275,7 +284,7 @@ export function useAppData() {
       const finalAttempt: Attempt = {
         ...attempt,
         score: result.overallScore,
-        correct: result.overallScore >= 75,
+        correct: result.overallScore >= 75 && !result.needsRetry,
         errorTypes: result.errorTypes,
         ai: true,
         dimensionScores: dimensionsFromEvaluation(result),

@@ -6,6 +6,7 @@ import { selectReviewQuestions } from '../learning/questionSelection';
 import { evaluateAnswer } from '../services/ai';
 import type { AIEvaluation, Attempt, CardProgress, CardQuestion, EvaluationResult, QuestionType, WordCard } from '../types';
 import { LocalRecorder } from './LocalRecorder';
+import { EvaluationResultDetails } from './EvaluationResultDetails';
 import { ModalShell } from './ModalShell';
 
 interface ReviewSessionModalProps {
@@ -137,7 +138,7 @@ export function ReviewSessionModal({
       status: 'pending',
       createdAt,
       updatedAt: createdAt,
-      rubricVersion: '2026.08.18.4',
+      rubricVersion: '2026.08.18.5',
       prompt: question.prompt,
       questionId: question.id,
       correctAnswer: question.answer,
@@ -263,13 +264,7 @@ export function ReviewSessionModal({
           {feedback.message && <p>{feedback.message}</p>}
           {!feedback.correct && !feedback.pending && !isOpenAnswer && <p><b>正确答案：</b>{question.answer}</p>}
           {feedback.result && (
-            <div className="ai-feedback">
-              <p><b>简短点评：</b>{feedback.result.reasonZh}</p>
-              <p><b>修正表达：</b>{feedback.result.correctedAnswer}</p>
-              <p><b>更自然地说：</b>{feedback.result.naturalVersion}</p>
-              <p><b>为什么更自然：</b>{feedback.result.naturalVersionReasonZh}</p>
-              {feedback.result.collocationSuggestions.length > 0 && <p><b>推荐搭配：</b>{feedback.result.collocationSuggestions.join(' · ')}</p>}
-            </div>
+            <EvaluationResultDetails result={feedback.result} compact />
           )}
         </section>
       )}

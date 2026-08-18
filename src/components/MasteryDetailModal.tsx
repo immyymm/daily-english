@@ -2,6 +2,7 @@ import { AlertCircle, Brain, CheckCircle2, Clock3, RefreshCw, Sparkles } from 'l
 import { useMemo } from 'react';
 import { masteryDimensionLabels, masteryDimensions } from '../learning/mastery';
 import type { AIEvaluation, Attempt, CardProgress, DailyCardPrescription, WordCard } from '../types';
+import { EvaluationResultDetails } from './EvaluationResultDetails';
 import { ModalShell } from './ModalShell';
 
 interface MasteryDetailModalProps {
@@ -117,14 +118,7 @@ export function MasteryDetailModal({
                   {evaluation.prompt && <p><b>题目</b>{evaluation.prompt}</p>}
                   <p><b>你的回答</b>{evaluation.answer}</p>
                   {evaluation.result ? (
-                    <>
-                      <p><b>问题分析</b>{evaluation.result.reasonZh}</p>
-                      <p><b>修正表达</b>{evaluation.result.correctedAnswer}</p>
-                      <p><b>自然表达</b>{evaluation.result.naturalVersion}</p>
-                      <p><b>为什么更自然</b>{evaluation.result.naturalVersionReasonZh}</p>
-                      <p><b>错误类型</b>{evaluation.result.errorTypes.length ? evaluation.result.errorTypes.join(' · ') : '没有明显问题'}</p>
-                      {evaluation.result.collocationSuggestions.length > 0 && <p><b>推荐搭配</b>{evaluation.result.collocationSuggestions.join(' · ')}</p>}
-                    </>
+                    <EvaluationResultDetails result={evaluation.result} />
                   ) : (
                     <>
                       <p><b>当前状态</b>{evaluation.errorMessage ?? (evaluation.status === 'processing' ? '模型正在分析，完成后会自动更新。' : '答案已经保存，等待后台处理。')}</p>

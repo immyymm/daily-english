@@ -1,7 +1,7 @@
 import type { Session } from '@supabase/supabase-js';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { exportSnapshot, getSettings, importSnapshot } from '../storage/db';
-import { hydrateDetailedRecords, syncDetailedRecords } from '../services/cloudRecords';
+import { countCloudRecords, hydrateDetailedRecords, syncDetailedRecords, type CloudRecordCounts } from '../services/cloudRecords';
 import { cloudSyncConfigured, getSupabase } from '../services/supabase';
 import type { AIEvaluation, AppSnapshot, CardProgress, DailyPlanRecord } from '../types';
 
@@ -97,14 +97,16 @@ export function mergeSnapshots(local: AppSnapshot, remote: AppSnapshot): AppSnap
   };
 }
 
-export function useCloudSync(refresh: () => Promise<void>) {
+export function useCloudSync(refresh: () => Promise<void>, hasPendingEvaluations = false) {
   const [session, setSession] = useState<Session | null>(null);
   const [state, setState] = useState<SyncState>(cloudSyncConfigured ? 'signed-out' : 'disabled');
   const [message, setMessage] = useState(cloudSyncConfigured ? '登录后可在多台设备间实时同步' : '云同步尚未配置');
   const [lastSyncedAt, setLastSyncedAt] = useState<string>();
+  const [cloudCounts, setCloudCounts] = useState<CloudRecordCounts>();
   const revisionRef = useRef(0);
   const deviceIdRef = useRef<string | undefined>(undefined);
   const syncingRef = useRef(false);
+  const queuedPushRef = useRef(false);
   const timerRef = useRef<number | undefined>(undefined);
 
   if (!deviceIdRef.current && typeof window !== 'undefined') deviceIdRef.current = getDeviceId();
@@ -112,7 +114,11 @@ export function useCloudSync(refresh: () => Promise<void>) {
   const pushSnapshot = useCallback(async (userId?: string) => {
     const activeUserId = userId ?? session?.user.id;
     const client = await getSupabase();
-    if (!client || !activeUserId || syncingRef.current) return;
+    if (!client || !activeUserId) return;
+    if (syncingRef.current) {
+      queuedPushRef.current = true;
+      return;
+    }
     syncingRef.current = true;
     setState('connecting');
     setMessage('正在同步学习记录…');
@@ -120,17 +126,24 @@ export function useCloudSync(refresh: () => Promise<void>) {
       const payload = await exportSnapshot();
       const now = new Date().toISOString();
       const revision = revisionRef.current + 1;
+      await syncDetailedRecords(client, activeUserId, payload, deviceIdRef.current);
+      const compactPayload: AppSnapshot = {
+        ...payload,
+        progress: [],
+        attempts: [],
+        aiEvaluations: []
+      };
       const { error } = await client.from('daily_english_snapshots').upsert({
         user_id: activeUserId,
-        payload,
-        schema_version: payload.schemaVersion,
+        payload: compactPayload,
+        schema_version: compactPayload.schemaVersion,
         client_updated_at: now,
         updated_at: now,
         revision,
         device_id: deviceIdRef.current
       }, { onConflict: 'user_id' });
       if (error) throw error;
-      await syncDetailedRecords(client, activeUserId, payload, deviceIdRef.current);
+      setCloudCounts(await countCloudRecords(client, activeUserId));
       revisionRef.current = revision;
       setLastSyncedAt(now);
       setState('synced');
@@ -140,6 +153,10 @@ export function useCloudSync(refresh: () => Promise<void>) {
       setMessage(error instanceof Error ? error.message : '同步失败，请稍后重试');
     } finally {
       syncingRef.current = false;
+      if (queuedPushRef.current) {
+        queuedPushRef.current = false;
+        window.setTimeout(() => window.dispatchEvent(new Event(LOCAL_DATA_CHANGED_EVENT)), 0);
+      }
     }
   }, [session?.user.id]);
 
@@ -182,13 +199,15 @@ export function useCloudSync(refresh: () => Promise<void>) {
       setMessage(error.message);
       return;
     }
-    if (data) await mergeRemote(data, activeSession.user.id, true);
-    else await pushSnapshot(activeSession.user.id);
+    if (data) await mergeRemote(data, activeSession.user.id, false);
     try {
       await hydrateDetailedRecords(client, activeSession.user.id);
       await refresh();
+      await pushSnapshot(activeSession.user.id);
     } catch (detailError) {
       console.warn('DETAILED_SYNC_UNAVAILABLE', detailError);
+      setState('error');
+      setMessage(detailError instanceof Error ? detailError.message : '详细学习记录同步失败');
     }
   }, [mergeRemote, pushSnapshot]);
 
@@ -206,6 +225,7 @@ export function useCloudSync(refresh: () => Promise<void>) {
         setSession(nextSession);
         if (nextSession) window.setTimeout(() => void connect(nextSession), 0);
         else {
+          setCloudCounts(undefined);
           setState('signed-out');
           setMessage('登录后可在多台设备间实时同步');
         }
@@ -236,7 +256,12 @@ export function useCloudSync(refresh: () => Promise<void>) {
           if (!row?.payload || row.device_id === deviceIdRef.current) return;
           void mergeRemote(row, session.user.id, false);
         })
-        .subscribe();
+        .subscribe((status, error) => {
+          if (status === 'CHANNEL_ERROR' || status === 'TIMED_OUT') {
+            setState('error');
+            setMessage(error?.message ?? '实时同步连接暂时中断，恢复网络后会自动补拉');
+          }
+        });
       cleanup = () => { void client.removeChannel(channel); };
     });
     return () => {
@@ -256,7 +281,10 @@ export function useCloudSync(refresh: () => Promise<void>) {
         window.clearTimeout(refreshTimer);
         refreshTimer = window.setTimeout(() => {
           void hydrateDetailedRecords(client, session.user.id)
-            .then(refresh)
+            .then(() => Promise.all([
+              refresh(),
+              countCloudRecords(client, session.user.id).then(setCloudCounts)
+            ]))
             .catch((error) => console.warn('DETAILED_REALTIME_REFRESH_FAILED', error));
         }, 250);
       };
@@ -269,7 +297,15 @@ export function useCloudSync(refresh: () => Promise<void>) {
           filter: 'user_id=eq.' + session.user.id
         }, hydrate);
       }
-      channel = channel.subscribe();
+      channel = channel.subscribe((status, error) => {
+        if (status === 'SUBSCRIBED') {
+          setState('synced');
+          setMessage('云端记录与实时通道均已连接');
+        } else if (status === 'CHANNEL_ERROR' || status === 'TIMED_OUT') {
+          setState('error');
+          setMessage(error?.message ?? '点评实时通道暂时中断，系统会主动补拉结果');
+        }
+      });
       cleanup = () => {
         window.clearTimeout(refreshTimer);
         void client.removeChannel(channel);
@@ -293,6 +329,26 @@ export function useCloudSync(refresh: () => Promise<void>) {
       window.clearTimeout(timerRef.current);
     };
   }, [pushSnapshot, session]);
+
+  useEffect(() => {
+    if (!session) return;
+    const synchronize = () => {
+      if (navigator.onLine && document.visibilityState !== 'hidden') void connect(session);
+    };
+    const handleVisibility = () => {
+      if (document.visibilityState === 'visible') synchronize();
+    };
+    window.addEventListener('online', synchronize);
+    window.addEventListener('pageshow', synchronize);
+    document.addEventListener('visibilitychange', handleVisibility);
+    const interval = hasPendingEvaluations ? window.setInterval(synchronize, 5000) : undefined;
+    return () => {
+      window.removeEventListener('online', synchronize);
+      window.removeEventListener('pageshow', synchronize);
+      document.removeEventListener('visibilitychange', handleVisibility);
+      if (interval !== undefined) window.clearInterval(interval);
+    };
+  }, [connect, hasPendingEvaluations, session]);
 
   const sendMagicLink = useCallback(async (email: string) => {
     const client = await getSupabase();
@@ -349,6 +405,7 @@ export function useCloudSync(refresh: () => Promise<void>) {
     if (!client) return;
     await client.auth.signOut();
     setSession(null);
+    setCloudCounts(undefined);
     setState('signed-out');
     setMessage('已退出；本机学习记录仍然保留');
   }, []);
@@ -359,6 +416,7 @@ export function useCloudSync(refresh: () => Promise<void>) {
     state,
     message,
     lastSyncedAt,
+    cloudCounts,
     sendMagicLink,
     signIn,
     signUp,

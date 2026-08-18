@@ -26,6 +26,7 @@ import {
 } from 'lucide-react';
 import { useEffect, useMemo, useRef, useState, type ChangeEvent, type CSSProperties, type ReactNode } from 'react';
 import { CardDetailModal } from './components/CardDetailModal';
+import { EvaluationResultDetails } from './components/EvaluationResultDetails';
 import { MasteryDetailModal } from './components/MasteryDetailModal';
 import { ModalShell } from './components/ModalShell';
 import { PrivacyConsentModal } from './components/PrivacyConsentModal';
@@ -46,10 +47,11 @@ interface InstallPromptEvent extends Event {
 }
 
 const statusOrder: MasteryStatus[] = ['未测试', '学习中', '识别词汇', '待巩固', '基本掌握', '主动掌握', '长期掌握', '薄弱词'];
+const evaluationTimeFormatter = new Intl.DateTimeFormat('zh-CN', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
 
 function App() {
   const data = useAppData();
-  const sync = useCloudSync(data.refresh);
+  const sync = useCloudSync(data.refresh, data.aiEvaluations.some((item) => item.status === 'pending' || item.status === 'processing'));
   const [tab, setTab] = useState<TabId>('today');
   const [selectedCard, setSelectedCard] = useState<WordCard>();
   const [masteryCard, setMasteryCard] = useState<WordCard>();
@@ -217,7 +219,7 @@ function App() {
         answer: evaluation.answer,
         correctAnswer: response.result.correctedAnswer,
         score: response.result.overallScore,
-        correct: response.result.overallScore >= 75,
+        correct: response.result.overallScore >= 75 && !response.result.needsRetry,
         responseMs: evaluation.responseMs ?? 0,
         errorTypes: response.result.errorTypes,
         createdAt,
@@ -645,11 +647,28 @@ function ProfilePage({
   const [syncEmail, setSyncEmail] = useState('');
   const [syncPassword, setSyncPassword] = useState('');
   const [sendingLink, setSendingLink] = useState(false);
+  const [evaluationQuery, setEvaluationQuery] = useState('');
+  const [evaluationStatus, setEvaluationStatus] = useState<'all' | AIEvaluation['status']>('all');
+  const [visibleEvaluationCount, setVisibleEvaluationCount] = useState(10);
   const mastered = progress.filter((item) => item.status === '主动掌握' || item.status === '长期掌握').length;
   const weak = progress.filter((item) => item.weak).length;
   const accuracy = attempts.length ? Math.round(attempts.filter((item) => item.correct).length / attempts.length * 100) : 0;
   const pending = aiEvaluations.filter((item) => item.status !== 'complete');
   const wordNames = useMemo(() => new Map(cards.map((card) => [card.id, card.word])), [cards]);
+  const filteredEvaluations = useMemo(() => {
+    const query = evaluationQuery.trim().toLocaleLowerCase();
+    return [...aiEvaluations]
+      .filter((evaluation) => evaluationStatus === 'all' || evaluation.status === evaluationStatus)
+      .filter((evaluation) => {
+        if (!query) return true;
+        const word = evaluation.cardId.startsWith('weekly-') ? '周测综合表达' : wordNames.get(evaluation.cardId) ?? evaluation.cardId;
+        return [word, evaluation.prompt, evaluation.answer, evaluation.result?.reasonZh]
+          .filter(Boolean)
+          .some((value) => String(value).toLocaleLowerCase().includes(query));
+      })
+      .sort((a, b) => new Date(b.updatedAt ?? b.createdAt).getTime() - new Date(a.updatedAt ?? a.createdAt).getTime());
+  }, [aiEvaluations, evaluationQuery, evaluationStatus, wordNames]);
+  const visibleEvaluations = filteredEvaluations.slice(0, visibleEvaluationCount);
 
   return (
     <div className="page-stack">
@@ -681,27 +700,40 @@ function ProfilePage({
 
       {aiEvaluations.length > 0 && (
         <section className="settings-card ai-history-card">
-          <div className="settings-title"><Sparkles size={19} /><h3>AI 点评记录</h3></div>
+          <div className="settings-title"><Sparkles size={19} /><h3>AI 点评记录</h3><span className="settings-count">{filteredEvaluations.length}/{aiEvaluations.length}</span></div>
+          <div className="evaluation-history-tools">
+            <label><Search size={16} /><input value={evaluationQuery} onChange={(event) => { setEvaluationQuery(event.target.value); setVisibleEvaluationCount(10); }} placeholder="搜索单词、题目或回答" /></label>
+            <div role="group" aria-label="筛选点评状态">
+              {([
+                ['all', '全部'],
+                ['complete', '已完成'],
+                ['pending', '等待中'],
+                ['processing', '点评中'],
+                ['failed', '待重试']
+              ] as const).map(([value, label]) => (
+                <button className={evaluationStatus === value ? 'active' : ''} key={value} onClick={() => { setEvaluationStatus(value); setVisibleEvaluationCount(10); }}>{label}</button>
+              ))}
+            </div>
+          </div>
           <div className="profile-evaluation-list">
-            {aiEvaluations.slice(0, 10).map((evaluation) => (
+            {visibleEvaluations.map((evaluation) => (
               <details key={evaluation.requestId}>
-                <summary><span>{evaluation.cardId.startsWith('weekly-') ? '周测综合表达' : wordNames.get(evaluation.cardId) ?? evaluation.cardId}</span><b>{evaluation.result ? evaluation.result.overallScore + ' 分' : evaluation.status === 'failed' ? '待重试' : '处理中'}</b></summary>
-                <div>
-                  {evaluation.prompt && <p><strong>题目：</strong>{evaluation.prompt}</p>}
-                  <p><strong>你的回答：</strong>{evaluation.answer}</p>
-                  {evaluation.result ? (
-                    <>
-                      <p><strong>问题分析：</strong>{evaluation.result.reasonZh}</p>
-                      <p><strong>修正表达：</strong>{evaluation.result.correctedAnswer}</p>
-                      <p><strong>自然表达：</strong>{evaluation.result.naturalVersion}</p>
-                      <p><strong>为什么更自然：</strong>{evaluation.result.naturalVersionReasonZh}</p>
-                    </>
-                  ) : <p>{evaluation.errorMessage ?? '后台点评完成后会自动更新。'}</p>}
+                <summary>
+                  <span><b>{evaluation.cardId.startsWith('weekly-') ? '周测综合表达' : wordNames.get(evaluation.cardId) ?? evaluation.cardId}</b><small>{evaluationTimeFormatter.format(new Date(evaluation.updatedAt ?? evaluation.createdAt))}</small></span>
+                  <strong className={'evaluation-score ' + evaluation.status}>{evaluation.result ? evaluation.result.overallScore + ' 分' : evaluation.status === 'failed' ? '待重试' : evaluation.status === 'processing' ? '点评中' : '等待中'}</strong>
+                </summary>
+                <div className="profile-evaluation-body">
+                  <div className="evaluation-record-meta"><span>{evaluation.questionType}</span><span>{evaluation.stage}</span>{evaluation.model && <span>{evaluation.model}</span>}<span>规则 {evaluation.rubricVersion}</span></div>
+                  {evaluation.prompt && <p className="evaluation-record-copy"><strong>题目</strong>{evaluation.prompt}</p>}
+                  <p className="evaluation-record-copy"><strong>你的回答</strong><span lang="en">{evaluation.answer}</span></p>
+                  {evaluation.result ? <EvaluationResultDetails result={evaluation.result} /> : <p className="evaluation-record-message">{evaluation.errorMessage ?? '后台点评完成后会自动更新到这里；切换设备或重新打开页面也会主动补拉。'}</p>}
                   {evaluation.status === 'failed' && <button className="secondary-button" onClick={() => onRetryPending(evaluation)}><RefreshCw size={16} />重新提交</button>}
                 </div>
               </details>
             ))}
+            {filteredEvaluations.length === 0 && <p className="evaluation-history-empty">没有符合筛选条件的点评。</p>}
           </div>
+          {visibleEvaluationCount < filteredEvaluations.length && <button className="evaluation-load-more" onClick={() => setVisibleEvaluationCount((count) => count + 10)}>再显示 10 条</button>}
         </section>
       )}
 
@@ -714,6 +746,11 @@ function ProfilePage({
               <div><strong>{sync.session.user.email}</strong><p>{sync.message}</p></div>
             </div>
             {sync.lastSyncedAt && <small>最近同步：{new Intl.DateTimeFormat('zh-CN', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' }).format(new Date(sync.lastSyncedAt))}</small>}
+            <div className="cloud-record-counts" aria-label="云端学习记录数量">
+              <article><span>词汇掌握</span><b>{sync.cloudCounts?.mastery ?? '—'}</b><small>本机 {progress.length}</small></article>
+              <article><span>答题记录</span><b>{sync.cloudCounts?.attempts ?? '—'}</b><small>本机 {attempts.length}</small></article>
+              <article><span>AI 点评</span><b>{sync.cloudCounts?.evaluations ?? '—'}</b><small>本机 {aiEvaluations.length}</small></article>
+            </div>
             <div className="sync-actions">
               <button onClick={() => void sync.syncNow()} disabled={sync.state === 'connecting'}><RefreshCw size={15} />立即同步</button>
               <button className="quiet" onClick={() => void sync.signOut()}>退出同步</button>

@@ -4,6 +4,7 @@ import { toLocalDateKey } from '../learning/reviewEngine';
 import { evaluateAnswer } from '../services/ai';
 import type { AIEvaluation, Attempt, EvaluationResult, WordCard } from '../types';
 import { LocalRecorder } from './LocalRecorder';
+import { EvaluationResultDetails } from './EvaluationResultDetails';
 import { ModalShell } from './ModalShell';
 
 interface WeeklyTestModalProps {
@@ -80,7 +81,7 @@ export function WeeklyTestModal({ open, cards, aiConsent, onNeedConsent, onClose
       status: 'pending',
       createdAt,
       updatedAt: createdAt,
-      rubricVersion: '2026.08.18.4',
+      rubricVersion: '2026.08.18.5',
       prompt,
       questionId,
       correctAnswer: '',
@@ -120,7 +121,7 @@ export function WeeklyTestModal({ open, cards, aiConsent, onNeedConsent, onClose
           answer: savedAnswer,
           correctAnswer: response.result.correctedAnswer,
           score: response.result.overallScore,
-          correct: response.result.overallScore >= 75,
+          correct: response.result.overallScore >= 75 && !response.result.needsRetry,
           responseMs,
           errorTypes: response.result.errorTypes,
           createdAt,
@@ -172,10 +173,7 @@ export function WeeklyTestModal({ open, cards, aiConsent, onNeedConsent, onClose
       {result && (
         <section className="feedback-card success">
           <div className="feedback-title"><CheckCircle2 size={20} /><strong>{result.overallScore} 分</strong></div>
-          <p>{result.reasonZh}</p>
-          <p><b>自然版本：</b>{result.naturalVersion}</p>
-          <p><b>为什么更自然：</b>{result.naturalVersionReasonZh}</p>
-          <p><b>需要关注：</b>{result.errorTypes.length ? result.errorTypes.join(' · ') : '表达自然，没有明显问题'}</p>
+          <EvaluationResultDetails result={result} />
         </section>
       )}
       {!result && !queued && (

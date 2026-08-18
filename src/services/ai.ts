@@ -44,7 +44,7 @@ export async function evaluateAnswer(input: EvaluationRequest): Promise<Evaluati
       answer: input.answer,
       correctAnswer: input.correctAnswer ?? '',
       responseMs: input.responseMs,
-      rubricVersion: input.rubricVersion ?? '2026.08.18.4',
+      rubricVersion: input.rubricVersion ?? '2026.08.18.5',
       cardContext: {
         coreMeaning: input.card.coreMemory.chinese,
         englishDefinition: input.card.coreMemory.english,

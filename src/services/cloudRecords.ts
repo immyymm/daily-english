@@ -165,10 +165,21 @@ export async function syncDetailedRecords(
   }));
 
   for (const batch of chunks(evaluationRows)) {
-    const { error } = await client.from('daily_english_ai_evaluations').upsert(batch, {
-      onConflict: 'user_id,request_id'
-    });
-    if (error) throw error;
+    const completeRows = batch.filter((row) => row.status === 'complete');
+    const unfinishedRows = batch.filter((row) => row.status !== 'complete');
+    if (completeRows.length) {
+      const { error } = await client.from('daily_english_ai_evaluations').upsert(completeRows, {
+        onConflict: 'user_id,request_id'
+      });
+      if (error) throw error;
+    }
+    if (unfinishedRows.length) {
+      const { error } = await client.from('daily_english_ai_evaluations').upsert(unfinishedRows, {
+        onConflict: 'user_id,request_id',
+        ignoreDuplicates: true
+      });
+      if (error) throw error;
+    }
   }
 
   const attemptsByCard = new Map<string, Attempt[]>();
@@ -373,6 +384,7 @@ export async function hydrateDetailedRecords(client: SupabaseClient, userId: str
   ]);
   const remoteProgress = masteryRows.map(rowToProgress);
   const existingProgress = new Map((await db.progress.toArray()).map((item) => [item.cardId, item]));
+  const existingEvaluations = new Map((await db.aiEvaluations.toArray()).map((item) => [item.requestId, item]));
   const mergedProgress = remoteProgress.map((remote) => {
     const local = existingProgress.get(remote.cardId);
     if (!local) return remote;
@@ -387,10 +399,42 @@ export async function hydrateDetailedRecords(client: SupabaseClient, userId: str
     };
   });
 
+  const mergedEvaluations = evaluationRows.map(rowToEvaluation).map((remote) => {
+    const local = existingEvaluations.get(remote.requestId);
+    if (!local) return remote;
+    if (local.status === 'complete' && remote.status !== 'complete') return local;
+    if (remote.status === 'complete' && local.status !== 'complete') return remote;
+    return new Date(remote.updatedAt ?? remote.createdAt).getTime() >= new Date(local.updatedAt ?? local.createdAt).getTime()
+      ? remote
+      : local;
+  });
+
   await db.transaction('rw', db.progress, db.attempts, db.aiEvaluations, db.dailyRecommendations, async () => {
     if (mergedProgress.length) await db.progress.bulkPut(mergedProgress);
     if (attemptRows.length) await db.attempts.bulkPut(attemptRows.map(rowToAttempt));
-    if (evaluationRows.length) await db.aiEvaluations.bulkPut(evaluationRows.map(rowToEvaluation));
+    if (mergedEvaluations.length) await db.aiEvaluations.bulkPut(mergedEvaluations);
     if (recommendationRows.length) await db.dailyRecommendations.bulkPut(recommendationRows.map(rowToRecommendation));
   });
+}
+
+export interface CloudRecordCounts {
+  snapshots: number;
+  attempts: number;
+  mastery: number;
+  evaluations: number;
+}
+
+export async function countCloudRecords(client: SupabaseClient, userId: string): Promise<CloudRecordCounts> {
+  const count = async (table: string) => {
+    const { count: value, error } = await client.from(table).select('*', { count: 'exact', head: true }).eq('user_id', userId);
+    if (error) throw error;
+    return value ?? 0;
+  };
+  const [snapshots, attempts, mastery, evaluations] = await Promise.all([
+    count('daily_english_snapshots'),
+    count('daily_english_attempts'),
+    count('daily_english_mastery'),
+    count('daily_english_ai_evaluations')
+  ]);
+  return { snapshots, attempts, mastery, evaluations };
 }

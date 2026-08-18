@@ -19,6 +19,54 @@ export type MasteryDimension =
 
 export type MasteryDimensionScores = Record<MasteryDimension, number>;
 
+export type EvaluationErrorType =
+  | '任务要求'
+  | '词义'
+  | '拼写'
+  | '词性'
+  | '介词'
+  | '搭配'
+  | '语法'
+  | '语境'
+  | '语气'
+  | '中文直译'
+  | '表达不自然';
+
+export interface TaskRequirements {
+  mustUseExact: string[];
+  mustUseLemma: string[];
+  mustAvoid: string[];
+  minTurns?: number;
+  maxTurns?: number;
+  minWords?: number;
+  maxWords?: number;
+  weeklyWords: string[];
+  minWeeklyWords?: number;
+  requiredCollocations: string[];
+  minCollocations?: number;
+}
+
+export interface TaskRequirementCheck {
+  id: string;
+  labelZh: string;
+  passed: boolean;
+  evidenceZh: string;
+}
+
+export interface EvaluationIssue {
+  category: EvaluationErrorType;
+  severity: 'minor' | 'major';
+  originalText: string;
+  suggestedText: string;
+  explanationZh: string;
+}
+
+export interface NaturalExpressionChange {
+  from: string;
+  to: string;
+  reasonZh: string;
+}
+
 export type QuestionType =
   | 'meaning_choice'
   | 'recall'
@@ -227,6 +275,12 @@ export interface AIEvaluation {
 
 export interface EvaluationResult {
   overallScore: number;
+  taskCompletionScore: number;
+  taskCompliance: {
+    passed: boolean;
+    summaryZh: string;
+    checks: TaskRequirementCheck[];
+  };
   dimensionScores: {
     meaningContext: number;
     activeRecall: number;
@@ -234,10 +288,13 @@ export interface EvaluationResult {
     grammar: number;
     naturalness: number;
   };
-  errorTypes: string[];
+  dimensionFeedback: Record<MasteryDimension, string>;
+  errorTypes: EvaluationErrorType[];
+  issues: EvaluationIssue[];
   correctedAnswer: string;
   naturalVersion: string;
   naturalVersionReasonZh: string;
+  naturalChanges: NaturalExpressionChange[];
   reasonZh: string;
   collocationSuggestions: string[];
   needsRetry: boolean;
