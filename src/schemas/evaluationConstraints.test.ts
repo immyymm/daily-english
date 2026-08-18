@@ -4,6 +4,7 @@ import {
   generatedEvaluationViolations,
   missingRequiredExpressions,
   normalizeEvaluationResultForHistory,
+  reconstructNaturalVersion,
   requiredExpressionsForEvaluation
 } from './evaluationConstraints';
 import type { EvaluationResult } from '../types';
@@ -146,6 +147,59 @@ describe('AI evaluation expression constraints', () => {
     expect(validation.invalidChanges).toBe(true);
   });
 
+  it('reconstructs the displayed natural expression from unique left-to-right phrase changes', () => {
+    const corrected = 'I review English daily and practice speaking regularly.';
+    const natural = 'I practice English daily and review speaking regularly.';
+    const changes = [
+      { from: 'review', to: 'practice' },
+      { from: 'practice', to: 'review' }
+    ];
+
+    expect(reconstructNaturalVersion(corrected, natural, changes)).toBe(natural);
+  });
+
+  it('rejects change text that is not copied from the displayed natural expression', () => {
+    expect(reconstructNaturalVersion(
+      'I improve my English every day.',
+      'I work on my English every day.',
+      [{ from: 'improve', to: 'get better at' }]
+    )).toBeUndefined();
+  });
+
+  it('rejects ambiguous repeated spans instead of claiming the wrong word was changed', () => {
+    expect(reconstructNaturalVersion(
+      'I practice English and practice speaking.',
+      'I review English and practice speaking.',
+      [{ from: 'practice', to: 'review' }]
+    )).toBeUndefined();
+  });
+
+  it('reconstructs the existing improve-on record from its displayed phrase changes', () => {
+    const natural = "I've been reviewing and practicing English every day this month, so I think I have improved on last month's spoken English performance";
+    expect(reconstructNaturalVersion(
+      'I review and practice English every day this month, so I think my English speaking has improved on last month',
+      natural,
+      [
+        { from: 'I review and practice', to: "I've been reviewing and practicing" },
+        { from: 'my English speaking has', to: 'I have' },
+        { from: 'last month', to: "last month's spoken English performance" }
+      ]
+    )).toBe(natural);
+  });
+
+  it('reconstructs the existing improve record from three directly traceable changes', () => {
+    const natural = 'I believe daily practice and regular review can help me improve my spoken English.';
+    expect(reconstructNaturalVersion(
+      'I believe daily review and regular practice can help me improve my English speaking.',
+      natural,
+      [
+        { from: 'daily review', to: 'daily practice' },
+        { from: 'regular practice', to: 'regular review' },
+        { from: 'English speaking', to: 'spoken English' }
+      ]
+    )).toBe(natural);
+  });
+
   it('rejects an entire-sentence replacement even when its explanation is long', () => {
     const validation = generatedEvaluationViolations({
       ...result,
@@ -183,4 +237,3 @@ describe('AI evaluation expression constraints', () => {
     expect(normalized.naturalVersionReasonZh).toContain('整句改整句');
   });
 });
-

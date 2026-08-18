@@ -919,6 +919,9 @@ h1 { font-family: Georgia, "Songti SC", serif; font-size: 21px; letter-spacing: 
 .natural-change-explanation { display: grid; gap: 8px; margin-top: 10px; }
 .natural-change-list .natural-change-explanation p { margin: 0; padding: 10px 11px; border-radius: 11px; background: #fff; color: #5f4c54; font-size: 15px; line-height: 1.75; }
 .natural-change-list .natural-change-explanation p b { display: block; margin-bottom: 3px; color: #9a5a71; font-size: 13px; }
+.natural-change-list .natural-change-verification { display: grid; gap: 7px; margin: 2px 0 0; padding: 12px; border: 1px solid #e6d2dc; border-radius: 13px; background: #fff; color: #634d56; }
+.natural-change-list .natural-change-verification b { color: #8e5269; font-size: 13px; }
+.natural-change-list .natural-change-verification span { overflow-wrap: anywhere; font: 700 16px/1.65 Georgia, "PingFang SC", serif; }
 .evaluation-collocations > div:last-child { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
 .evaluation-collocations > div:last-child span { padding: 6px 9px; border-radius: 999px; color: #855168; background: #ffedf3; font: 13px Georgia, serif; }
 .evaluation-result-meta { padding: 0 3px; display: flex; justify-content: space-between; gap: 8px; color: #917681; font-size: 11px; }
@@ -1014,4 +1017,3 @@ h1 { font-family: Georgia, "Songti SC", serif; font-size: 21px; letter-spacing: 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
-

@@ -53,4 +53,23 @@ describe('mergeSnapshots', () => {
     expect(merged.attempts.map((item) => item.id)).toEqual(['remote-attempt']);
     expect(merged.dailyPlans[0].completedCardIds).toEqual(['improve-v', 'notice-v']);
   });
+
+  it('uses the latest evaluation update instead of keeping stale wording from the original creation time', () => {
+    const local = snapshot('local');
+    const remote = snapshot('remote');
+    local.aiEvaluations = [{
+      requestId: 'same-request', cardId: 'improve-v', questionType: 'free_sentence', stage: 'T0',
+      answer: 'answer', status: 'complete', createdAt: '2026-08-18T01:00:00.000Z',
+      updatedAt: '2026-08-18T01:05:00.000Z', rubricVersion: 'old', errorMessage: 'stale'
+    }];
+    remote.aiEvaluations = [{
+      requestId: 'same-request', cardId: 'improve-v', questionType: 'free_sentence', stage: 'T0',
+      answer: 'answer', status: 'complete', createdAt: '2026-08-18T01:00:00.000Z',
+      updatedAt: '2026-08-18T02:00:00.000Z', rubricVersion: 'new', errorMessage: 'fresh'
+    }];
+
+    const merged = mergeSnapshots(local, remote);
+    expect(merged.aiEvaluations[0].rubricVersion).toBe('new');
+    expect(merged.aiEvaluations[0].errorMessage).toBe('fresh');
+  });
 });

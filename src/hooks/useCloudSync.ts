@@ -62,7 +62,7 @@ function mergePlans(local: DailyPlanRecord, remote: DailyPlanRecord): DailyPlanR
 function chooseEvaluation(local: AIEvaluation, remote: AIEvaluation) {
   if (local.status === 'complete' && remote.status !== 'complete') return local;
   if (remote.status === 'complete' && local.status !== 'complete') return remote;
-  return timestamp(remote.createdAt) >= timestamp(local.createdAt) ? remote : local;
+  return timestamp(remote.updatedAt ?? remote.createdAt) >= timestamp(local.updatedAt ?? local.createdAt) ? remote : local;
 }
 
 function chooseRecommendation(local: AppSnapshot['dailyRecommendations'][number], remote: AppSnapshot['dailyRecommendations'][number]) {

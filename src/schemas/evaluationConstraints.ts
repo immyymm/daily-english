@@ -33,6 +33,18 @@ function sameText(left: string, right: string) {
   return comparable(left) === comparable(right);
 }
 
+function surfaceText(value: string) {
+  return value
+    .replace(/[‘’]/g, "'")
+    .replace(/[“”]/g, '"')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function sameSurfaceText(left: string, right: string) {
+  return surfaceText(left) === surfaceText(right);
+}
+
 function isSpecificNaturalReason(reason: string) {
   const normalized = reason.replace(/\s+/g, ' ').trim();
   if (normalized.length < 18) return false;
@@ -61,23 +73,36 @@ function isGranularNaturalChange(
   return expressionWordCount(from) <= 8 && expressionWordCount(to) <= 8;
 }
 
-function replaceOnceCaseInsensitive(source: string, from: string, to: string) {
-  const index = source.toLocaleLowerCase('en-US').indexOf(from.toLocaleLowerCase('en-US'));
-  if (index < 0) return undefined;
-  return source.slice(0, index) + to + source.slice(index + from.length);
-}
+export function reconstructNaturalVersion(
+  correctedAnswer: string,
+  naturalVersion: string,
+  changes: Pick<NaturalExpressionChange, 'from' | 'to'>[]
+) {
+  if (sameSurfaceText(correctedAnswer, naturalVersion)) return changes.length === 0 ? correctedAnswer : undefined;
+  if (changes.length === 0) return undefined;
 
-function transformedNaturalVersion(correctedAnswer: string, changes: NaturalExpressionChange[]) {
-  let transformed = correctedAnswer;
+  let sourceCursor = 0;
+  let targetCursor = 0;
+  let reconstructed = '';
   for (const change of changes) {
     const from = change.from.trim();
     const to = change.to.trim();
-    if (!from || !to || sameText(from, to)) return undefined;
-    const next = replaceOnceCaseInsensitive(transformed, from, to);
-    if (next === undefined) return undefined;
-    transformed = next;
+    if (!from || !to || sameSurfaceText(from, to)) return undefined;
+
+    const sourceIndex = correctedAnswer.indexOf(from, sourceCursor);
+    const targetIndex = naturalVersion.indexOf(to, targetCursor);
+    if (sourceIndex < sourceCursor || targetIndex < targetCursor) return undefined;
+
+    // A phrase that occurs more than once cannot be tied unambiguously to the displayed sentence.
+    if (correctedAnswer.indexOf(from) !== correctedAnswer.lastIndexOf(from)
+      || naturalVersion.indexOf(to) !== naturalVersion.lastIndexOf(to)) return undefined;
+
+    reconstructed += correctedAnswer.slice(sourceCursor, sourceIndex) + to;
+    sourceCursor = sourceIndex + from.length;
+    targetCursor = targetIndex + to.length;
   }
-  return transformed;
+  reconstructed += correctedAnswer.slice(sourceCursor);
+  return sameSurfaceText(reconstructed, naturalVersion) ? reconstructed : undefined;
 }
 
 function clearNaturalReason(change: NaturalExpressionChange) {
@@ -121,9 +146,9 @@ function normalizeChangeList(
 ) {
   if (sameText(correctedAnswer, naturalVersion)) return [];
   const candidates = (changes ?? []).map(normalizedChangeDetails);
-  const transformed = transformedNaturalVersion(correctedAnswer, candidates);
+  const transformed = reconstructNaturalVersion(correctedAnswer, naturalVersion, candidates);
   if (transformed
-    && sameText(transformed, naturalVersion)
+    && sameSurfaceText(transformed, naturalVersion)
     && candidates.every((change) => isGranularNaturalChange(change, correctedAnswer, naturalVersion))) return candidates;
   void fallbackReason;
   return [];
@@ -205,7 +230,7 @@ export function generatedEvaluationViolations(
         !isGranularNaturalChange(change, result.correctedAnswer, result.naturalVersion)
         || !hasDetailedNaturalExplanation(change)
       ))
-      || !sameText(transformedNaturalVersion(result.correctedAnswer, result.naturalChanges) ?? '', result.naturalVersion);
+      || !reconstructNaturalVersion(result.correctedAnswer, result.naturalVersion, result.naturalChanges);
   return { requirements, correctedFailures, naturalFailures, invalidChanges, valid: correctedFailures.length === 0 && naturalFailures.length === 0 && !invalidChanges };
 }
 
@@ -263,4 +288,3 @@ export function finalizeEvaluationResult(
     needsRetry: input.needsRetry || !taskPassed || overallScore < 75
   };
 }
-

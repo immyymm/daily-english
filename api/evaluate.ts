@@ -24,7 +24,7 @@ const requestSchema = z.object({
   answer: z.string().min(3).max(5000),
   correctAnswer: z.string().max(1000).default(''),
   responseMs: z.number().min(0).max(3600000),
-  rubricVersion: z.string().min(4).max(40).default('2026.08.18.7'),
+  rubricVersion: z.string().min(4).max(40).default('2026.08.18.8'),
   cardContext: z.object({
     coreMeaning: z.string().max(500),
     englishDefinition: z.string().max(500),
@@ -56,7 +56,7 @@ const systemPrompt = [
   'Keep correctedAnswer as a meaning-preserving correction of the learner answer. naturalVersion may be more idiomatic, but it must preserve the learner intent and satisfy every explicit requirement.',
   'Both correctedAnswer and naturalVersion must satisfy taskRequirements even when the learner answer does not. Never remove a required phrase such as improve on.',
   'For every concrete problem, add an issues item whose originalText is copied from the learner answer when possible, with an exact suggestion and Chinese explanation.',
-  'If naturalVersion differs from correctedAnswer, naturalChanges must list every real wording change in application order. Each item must describe exactly ONE local word or short-phrase decision: from and to must each be the shortest exact span possible and no more than 8 English tokens. NEVER put the entire correctedAnswer or naturalVersion in a change item. Applying each from→to change once must transform correctedAnswer into naturalVersion exactly. For an insertion or deletion, include only the shortest surrounding words needed to keep both spans non-empty. If the sentences are identical, naturalChanges must be empty.',
+  'If naturalVersion differs from correctedAnswer, naturalChanges must list every real wording change from left to right. Each item must describe exactly ONE local word or short-phrase decision: from must be a unique exact substring copied from correctedAnswer, to must be a unique exact substring copied from naturalVersion, and both must be the shortest span possible with no more than 8 English tokens. Entries must not overlap or depend on text created by an earlier entry. NEVER put the entire correctedAnswer or naturalVersion in a change item. Replacing the listed original spans from left to right must reproduce naturalVersion character-for-character apart from normalized spaces and typographic quotes. For an insertion or deletion, include only the shortest surrounding words needed to keep both spans non-empty. If the sentences are identical, naturalChanges must be empty.',
   'For every naturalChanges item, sourceIssueZh must explain the precise problem with the original from span in this sentence; replacementReasonZh must separately explain why the to span fixes that problem and what meaning, collocation, grammar, tone, or clarity it adds. Each field must be a detailed Chinese explanation, not a label. reasonZh must combine both points. Never write only “更自然”“更地道”“更口语” or a generic whole-sentence explanation.',
   'Example of the required granularity: from="English speaking", to="spoken English", sourceIssueZh="English speaking 把动名词 speaking 放在名词 English 后面作类别名称，词序不符合这里表示语言能力的常用说法。", replacementReasonZh="spoken English 用过去分词 spoken 作定语，直接表示‘英语口语’，是描述语言能力时固定且清楚的名词搭配。". Do not combine unrelated edits into this item.',
   'naturalVersionReasonZh must summarize the word-level and phrase-level changes; do not expose hidden reasoning, rubric checks, confidence calculations, or model process.',
@@ -205,7 +205,7 @@ async function runModel(input: EvaluationInput) {
       violations: {
         correctedAnswer: validation.correctedFailures,
         naturalVersion: validation.naturalFailures,
-        naturalChanges: validation.invalidChanges ? 'naturalChanges must use only 1-to-8-token local spans, never whole sentences; every item needs separate, detailed sourceIssueZh and replacementReasonZh, and all items together must exactly transform correctedAnswer into naturalVersion' : undefined
+        naturalChanges: validation.invalidChanges ? 'naturalChanges must use unique, non-overlapping 1-to-8-token spans copied exactly from correctedAnswer and naturalVersion in left-to-right order; every item needs separate, detailed sourceIssueZh and replacementReasonZh, and replacing all original spans must reconstruct naturalVersion exactly' : undefined
       }
     });
     if (!completion.output_parsed) throw Object.assign(new Error('EMPTY_MODEL_RESULT'), { code: 'EMPTY_MODEL_RESULT' });
@@ -488,4 +488,3 @@ export default async function handler(request: RequestWithBody, response: Respon
     send(response, status, { code: diagnostic.code ?? 'AI_REQUEST_FAILED', message: friendlyError(error) }, origin);
   }
 }
-

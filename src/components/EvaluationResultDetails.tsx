@@ -1,5 +1,6 @@
 import { GitCompareArrows, ListChecks, Sparkles } from 'lucide-react';
 import { masteryDimensionLabels, masteryDimensions } from '../learning/mastery';
+import { reconstructNaturalVersion } from '../schemas/evaluationConstraints';
 import type { EvaluationResult, MasteryDimension } from '../types';
 
 const dimensionMaximum: Record<MasteryDimension, number> = {
@@ -11,6 +12,13 @@ const dimensionMaximum: Record<MasteryDimension, number> = {
 };
 
 export function EvaluationResultDetails({ result, compact = false }: { result: EvaluationResult; compact?: boolean }) {
+  const reconstructedNaturalVersion = reconstructNaturalVersion(
+    result.correctedAnswer,
+    result.naturalVersion,
+    result.naturalChanges
+  );
+  const verifiedNaturalChanges = reconstructedNaturalVersion ? result.naturalChanges : [];
+
   return (
     <div className={compact ? 'evaluation-result-details compact' : 'evaluation-result-details'}>
       <section className="evaluation-dimensions">
@@ -48,9 +56,9 @@ export function EvaluationResultDetails({ result, compact = false }: { result: E
 
       <section className="evaluation-natural-reason">
         <div className="evaluation-subtitle"><GitCompareArrows size={16} /><strong>具体改了什么，为什么更自然</strong></div>
-        {result.naturalChanges.length > 0 && (
+        {verifiedNaturalChanges.length > 0 && (
           <div className="natural-change-list">
-            {result.naturalChanges.map((change, index) => (
+            {verifiedNaturalChanges.map((change, index) => (
               <article key={`${change.from}-${change.to}-${index}`}>
                 <strong>词语修改 {index + 1}</strong>
                 <div className="natural-change-words">
@@ -64,9 +72,13 @@ export function EvaluationResultDetails({ result, compact = false }: { result: E
                 </div>
               </article>
             ))}
+            <p className="natural-change-verification">
+              <b>逐项替换后的完整句（与上方自然表达一致）</b>
+              <span lang="en">{reconstructedNaturalVersion}</span>
+            </p>
           </div>
         )}
-        {result.naturalChanges.length === 0 && <p>{result.naturalVersionReasonZh}</p>}
+        {verifiedNaturalChanges.length === 0 && <p>{result.naturalVersionReasonZh}</p>}
       </section>
 
       {result.collocationSuggestions.length > 0 && (
@@ -82,4 +94,3 @@ export function EvaluationResultDetails({ result, compact = false }: { result: E
     </div>
   );
 }
-
