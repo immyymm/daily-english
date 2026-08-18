@@ -237,6 +237,7 @@ export interface EvaluationResult {
   errorTypes: string[];
   correctedAnswer: string;
   naturalVersion: string;
+  naturalVersionReasonZh: string;
   reasonZh: string;
   collocationSuggestions: string[];
   needsRetry: boolean;

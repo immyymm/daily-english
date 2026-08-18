@@ -80,7 +80,7 @@ export function WeeklyTestModal({ open, cards, aiConsent, onNeedConsent, onClose
       status: 'pending',
       createdAt,
       updatedAt: createdAt,
-      rubricVersion: '2026.08.17.2',
+      rubricVersion: '2026.08.18.4',
       prompt,
       questionId,
       correctAnswer: '',
@@ -174,6 +174,7 @@ export function WeeklyTestModal({ open, cards, aiConsent, onNeedConsent, onClose
           <div className="feedback-title"><CheckCircle2 size={20} /><strong>{result.overallScore} 分</strong></div>
           <p>{result.reasonZh}</p>
           <p><b>自然版本：</b>{result.naturalVersion}</p>
+          <p><b>为什么更自然：</b>{result.naturalVersionReasonZh}</p>
           <p><b>需要关注：</b>{result.errorTypes.length ? result.errorTypes.join(' · ') : '表达自然，没有明显问题'}</p>
         </section>
       )}

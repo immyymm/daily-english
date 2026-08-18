@@ -1,6 +1,7 @@
 import type { SupabaseClient } from '@supabase/supabase-js';
 import { calculateMasteryProfile } from '../learning/mastery';
 import { evaluationSchema } from '../schemas/evaluation';
+import { normalizeEvaluationResultForHistory } from '../schemas/evaluationConstraints';
 import { db } from '../storage/db';
 import type {
   AIEvaluation,
@@ -240,10 +241,16 @@ function rowToAttempt(row: Record<string, unknown>): Attempt {
 function rowToEvaluation(row: Record<string, unknown>): AIEvaluation {
   const payload = (row.request_payload ?? {}) as Record<string, unknown>;
   const parsed = evaluationSchema.safeParse(row.result);
+  const questionType = row.question_type as QuestionType;
+  const prompt = String(row.prompt ?? payload.prompt ?? '');
+  const result = parsed.success ? normalizeEvaluationResultForHistory(parsed.data, {
+    questionType,
+    prompt
+  }) : undefined;
   return {
     requestId: String(row.request_id),
     cardId: String(row.card_id),
-    questionType: row.question_type as QuestionType,
+    questionType,
     stage: row.stage as ReviewStage,
     answer: String(row.answer ?? payload.answer ?? ''),
     status: row.status as AIEvaluation['status'],
@@ -251,9 +258,9 @@ function rowToEvaluation(row: Record<string, unknown>): AIEvaluation {
     updatedAt: String(row.updated_at ?? row.created_at),
     model: row.model ? String(row.model) : undefined,
     rubricVersion: String(row.rubric_version ?? '2026.08.17.2'),
-    result: parsed.success ? parsed.data : undefined,
+    result,
     errorMessage: row.error_message ? String(row.error_message) : undefined,
-    prompt: String(row.prompt ?? payload.prompt ?? ''),
+    prompt,
     questionId: String(row.question_id ?? payload.questionId ?? row.request_id),
     correctAnswer: String(row.correct_answer ?? payload.correctAnswer ?? ''),
     responseMs: Number(row.response_ms ?? payload.responseMs ?? 0),

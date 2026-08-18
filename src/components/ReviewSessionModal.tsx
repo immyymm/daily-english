@@ -137,7 +137,7 @@ export function ReviewSessionModal({
       status: 'pending',
       createdAt,
       updatedAt: createdAt,
-      rubricVersion: '2026.08.17.2',
+      rubricVersion: '2026.08.18.4',
       prompt: question.prompt,
       questionId: question.id,
       correctAnswer: question.answer,
@@ -267,6 +267,7 @@ export function ReviewSessionModal({
               <p><b>简短点评：</b>{feedback.result.reasonZh}</p>
               <p><b>修正表达：</b>{feedback.result.correctedAnswer}</p>
               <p><b>更自然地说：</b>{feedback.result.naturalVersion}</p>
+              <p><b>为什么更自然：</b>{feedback.result.naturalVersionReasonZh}</p>
               {feedback.result.collocationSuggestions.length > 0 && <p><b>推荐搭配：</b>{feedback.result.collocationSuggestions.join(' · ')}</p>}
             </div>
           )}

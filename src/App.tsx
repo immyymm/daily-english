@@ -694,6 +694,7 @@ function ProfilePage({
                       <p><strong>问题分析：</strong>{evaluation.result.reasonZh}</p>
                       <p><strong>修正表达：</strong>{evaluation.result.correctedAnswer}</p>
                       <p><strong>自然表达：</strong>{evaluation.result.naturalVersion}</p>
+                      <p><strong>为什么更自然：</strong>{evaluation.result.naturalVersionReasonZh}</p>
                     </>
                   ) : <p>{evaluation.errorMessage ?? '后台点评完成后会自动更新。'}</p>}
                   {evaluation.status === 'failed' && <button className="secondary-button" onClick={() => onRetryPending(evaluation)}><RefreshCw size={16} />重新提交</button>}

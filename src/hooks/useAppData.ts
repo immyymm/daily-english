@@ -2,6 +2,7 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 import { cardsForStudyDay, loadContent } from '../data/content';
 import { calculateMasteryProfile, dimensionsFromEvaluation } from '../learning/mastery';
 import { applyLateEvaluation, applyReviewScore, isDue, studyDaySince, toLocalDateKey } from '../learning/reviewEngine';
+import { normalizeEvaluationResultForHistory } from '../schemas/evaluationConstraints';
 import { notifyLocalDataChanged } from './useCloudSync';
 import { db, getSettings, touchStudyStreak } from '../storage/db';
 import type {
@@ -54,6 +55,21 @@ export function useAppData() {
       const dailyCards = cardsForStudyDay(content.cards, studyDay);
       const currentRecommendation = dailyRecommendations.find((item) => item.date === today);
       const knownCardIds = new Set(content.cards.map((card) => card.id));
+      const cardWords = new Map(content.cards.map((card) => [card.id, card.word]));
+      const normalizedEvaluations = aiEvaluations.map((evaluation) => {
+        if (!evaluation.result) return evaluation;
+        const result = normalizeEvaluationResultForHistory(evaluation.result, {
+          questionType: evaluation.questionType,
+          prompt: evaluation.prompt ?? '',
+          targetWord: cardWords.get(evaluation.cardId)
+        });
+        const changed = result.correctedAnswer !== evaluation.result.correctedAnswer
+          || result.naturalVersion !== evaluation.result.naturalVersion
+          || result.naturalVersionReasonZh !== evaluation.result.naturalVersionReasonZh;
+        return changed ? { ...evaluation, result } : evaluation;
+      });
+      const repairedEvaluations = normalizedEvaluations.filter((evaluation, index) => evaluation !== aiEvaluations[index]);
+      if (repairedEvaluations.length) await db.aiEvaluations.bulkPut(repairedEvaluations);
       const databaseCardIds = (currentRecommendation?.newCardIds ?? []).filter((id) => knownCardIds.has(id));
       const selectedCardIds = databaseCardIds.length === 5
         ? databaseCardIds
@@ -79,7 +95,7 @@ export function useAppData() {
         };
         await db.dailyPlans.put(todayPlan);
       }
-      setState({ loading: false, cards: content.cards, settings, todayPlan, progress, attempts, aiEvaluations, dailyRecommendations });
+      setState({ loading: false, cards: content.cards, settings, todayPlan, progress, attempts, aiEvaluations: normalizedEvaluations, dailyRecommendations });
     } catch (error) {
       setState((current) => ({
         ...current,

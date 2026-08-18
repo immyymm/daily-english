@@ -121,6 +121,7 @@ export function MasteryDetailModal({
                       <p><b>问题分析</b>{evaluation.result.reasonZh}</p>
                       <p><b>修正表达</b>{evaluation.result.correctedAnswer}</p>
                       <p><b>自然表达</b>{evaluation.result.naturalVersion}</p>
+                      <p><b>为什么更自然</b>{evaluation.result.naturalVersionReasonZh}</p>
                       <p><b>错误类型</b>{evaluation.result.errorTypes.length ? evaluation.result.errorTypes.join(' · ') : '没有明显问题'}</p>
                       {evaluation.result.collocationSuggestions.length > 0 && <p><b>推荐搭配</b>{evaluation.result.collocationSuggestions.join(' · ')}</p>}
                     </>
