@@ -69,7 +69,10 @@ export function useAppData() {
         return changed ? { ...evaluation, result } : evaluation;
       });
       const repairedEvaluations = normalizedEvaluations.filter((evaluation, index) => evaluation !== aiEvaluations[index]);
-      if (repairedEvaluations.length) await db.aiEvaluations.bulkPut(repairedEvaluations);
+      if (repairedEvaluations.length) {
+        await db.aiEvaluations.bulkPut(repairedEvaluations);
+        notifyLocalDataChanged();
+      }
       const databaseCardIds = (currentRecommendation?.newCardIds ?? []).filter((id) => knownCardIds.has(id));
       const selectedCardIds = databaseCardIds.length === 5
         ? databaseCardIds

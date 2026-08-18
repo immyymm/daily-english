@@ -166,8 +166,7 @@ export async function syncDetailedRecords(
 
   for (const batch of chunks(evaluationRows)) {
     const { error } = await client.from('daily_english_ai_evaluations').upsert(batch, {
-      onConflict: 'user_id,request_id',
-      ignoreDuplicates: true
+      onConflict: 'user_id,request_id'
     });
     if (error) throw error;
   }
