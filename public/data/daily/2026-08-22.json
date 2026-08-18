@@ -491,8 +491,8 @@
         {
           "id": "explain-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：explain _____ clearly；something 要替换成实际的事物或内容",
-          "answer": "something",
+          "prompt": "补全核心结构中的连接成分：explain something _____；something 要替换成实际的事物或内容",
+          "answer": "clearly",
           "stage": "T1",
           "ai": false
         },
@@ -507,7 +507,7 @@
         {
           "id": "explain-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“清楚解释某事”？；something 要替换成实际的事物或内容",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“清楚解释某事”？（提示：something 要替换成实际的事物或内容。）",
           "options": [
             "explain something to someone",
             "explain something clearly",
@@ -1110,23 +1110,23 @@
         {
           "id": "suggest-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：suggest _____；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing",
-          "answer": "doing",
+          "prompt": "补全核心结构中的连接成分：suggest _____",
+          "answer": "that",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "suggest-v-collocation-context",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：suggest _____；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing",
-          "answer": "doing",
+          "prompt": "根据语境补全搭配：suggest _____",
+          "answer": "that",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "suggest-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“建议做”？；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“建议做”？（提示：doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing。）",
           "options": [
             "suggest doing",
             "suggest that",
@@ -1178,7 +1178,7 @@
         {
           "id": "suggest-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “suggest” 和 “suggest doing” 结构，并避免中文直译；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “suggest” 和 “suggest that” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1729,23 +1729,23 @@
         {
           "id": "require-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：require _____ to do；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词",
-          "answer": "someone",
+          "prompt": "补全核心结构中的连接成分：require someone _____ do；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词",
+          "answer": "to",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "require-v-collocation-context",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：require someone to _____；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词",
-          "answer": "do",
+          "prompt": "根据语境补全搭配：require careful _____",
+          "answer": "planning",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "require-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“要求某人做”？；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“要求某人做”？（提示：do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词。）",
           "options": [
             "require careful planning",
             "be required to",
@@ -1797,7 +1797,7 @@
         {
           "id": "require-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “require” 和 “require someone to do” 结构，并避免中文直译；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “require” 和 “require careful planning” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2974,8 +2974,8 @@
         {
           "id": "achieve-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：achieve _____ goal",
-          "answer": "a",
+          "prompt": "补全核心结构中的连接成分：achieve a _____",
+          "answer": "goal",
           "stage": "T1",
           "ai": false
         },

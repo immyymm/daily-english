@@ -493,23 +493,23 @@
     {
       "id": "compare-v-collocation-structure",
       "type": "collocation",
-      "prompt": "补全核心结构中的连接成分：compare _____ with B；A、B 要替换成实际比较内容",
-      "answer": "A",
+      "prompt": "补全核心结构中的连接成分：compare A _____ B；A、B 要替换成实际比较内容",
+      "answer": "with",
       "stage": "T1",
       "ai": false
     },
     {
       "id": "compare-v-collocation-context",
       "type": "collocation",
-      "prompt": "根据语境补全搭配：compare A with _____；A、B 要替换成实际比较内容",
-      "answer": "B",
+      "prompt": "根据语境补全搭配：compare A _____ B；A、B 要替换成实际比较内容",
+      "answer": "with",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "compare-v-collocation-fixed-1",
       "type": "collocation",
-      "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“把 A 与 B 比较”？；A、B 要替换成实际比较内容",
+      "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“把 A 与 B 比较”？（提示：A、B 要替换成实际比较内容。）",
       "options": [
         "compare A to B",
         "compare prices",
@@ -523,7 +523,7 @@
     {
       "id": "compare-v-collocation-fixed-2",
       "type": "collocation",
-      "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“把 A 比作 B”？；A、B 要替换成实际比较内容",
+      "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“把 A 比作 B”？（提示：A、B 要替换成实际比较内容。）",
       "options": [
         "compare prices",
         "compared with",

@@ -509,15 +509,15 @@
     {
       "id": "choose-v-collocation-context",
       "type": "collocation",
-      "prompt": "根据语境补全搭配：choose to _____；do 代表任意合适的动词原形，不要求写出单词 do",
-      "answer": "do",
+      "prompt": "根据语境补全搭配：choose _____ A and B；A、B 要替换成实际比较内容",
+      "answer": "between",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "choose-v-collocation-fixed-1",
       "type": "collocation",
-      "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“选择做”？；do 代表任意合适的动词原形，不要求写出单词 do",
+      "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“选择做”？（提示：do 代表任意合适的动词原形，不要求写出单词 do。）",
       "options": [
         "choose between A and B",
         "choose the right word",
@@ -531,7 +531,7 @@
     {
       "id": "choose-v-collocation-fixed-2",
       "type": "collocation",
-      "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“在 A 和 B 之间选择”？；A、B 要替换成实际比较内容",
+      "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“在 A 和 B 之间选择”？（提示：A、B 要替换成实际比较内容。）",
       "options": [
         "choose the right word",
         "carefully choose",
@@ -569,7 +569,7 @@
     {
       "id": "choose-v-dialogue",
       "type": "dialogue",
-      "prompt": "写一段 2–4 轮真实对话，自然使用 “choose” 和 “choose to do” 结构，并避免中文直译；do 代表任意合适的动词原形，不要求写出单词 do。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “choose” 和 “choose between A and B” 结构，并避免中文直译；A、B 要替换成实际比较内容。",
       "answer": "",
       "stage": "T4",
       "ai": true

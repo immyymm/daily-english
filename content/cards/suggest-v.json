@@ -486,23 +486,23 @@
     {
       "id": "suggest-v-collocation-structure",
       "type": "collocation",
-      "prompt": "补全核心结构中的连接成分：suggest _____；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing",
-      "answer": "doing",
+      "prompt": "补全核心结构中的连接成分：suggest _____",
+      "answer": "that",
       "stage": "T1",
       "ai": false
     },
     {
       "id": "suggest-v-collocation-context",
       "type": "collocation",
-      "prompt": "根据语境补全搭配：suggest _____；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing",
-      "answer": "doing",
+      "prompt": "根据语境补全搭配：suggest _____",
+      "answer": "that",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "suggest-v-collocation-fixed-1",
       "type": "collocation",
-      "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“建议做”？；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing",
+      "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“建议做”？（提示：doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing。）",
       "options": [
         "suggest doing",
         "suggest that",
@@ -554,7 +554,7 @@
     {
       "id": "suggest-v-dialogue",
       "type": "dialogue",
-      "prompt": "写一段 2–4 轮真实对话，自然使用 “suggest” 和 “suggest doing” 结构，并避免中文直译；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “suggest” 和 “suggest that” 结构，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true

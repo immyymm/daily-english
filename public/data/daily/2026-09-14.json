@@ -491,16 +491,16 @@
         {
           "id": "job-n-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ a good job",
-          "answer": "do",
+          "prompt": "补全核心结构中的连接成分：do a _____ job",
+          "answer": "good",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "job-n-collocation-context",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ a good job",
-          "answer": "do",
+          "prompt": "根据语境补全搭配：do a _____ job",
+          "answer": "good",
           "stage": "T2",
           "ai": false
         },
@@ -1758,8 +1758,8 @@
         {
           "id": "future-n-collocation-context",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ the future",
-          "answer": "in",
+          "prompt": "根据语境补全搭配：_____ future",
+          "answer": "near",
           "stage": "T2",
           "ai": false
         },
@@ -1818,7 +1818,7 @@
         {
           "id": "future-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “future” 和 “in the future” 结构，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “future” 和 “near future” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2427,7 +2427,7 @@
         {
           "id": "plan-n-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“计划做”？；do 代表任意合适的动词原形，不要求写出单词 do",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“计划做”？（提示：do 代表任意合适的动词原形，不要求写出单词 do。）",
           "options": [
             "according to plan",
             "change of plan",

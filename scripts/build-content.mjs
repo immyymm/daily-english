@@ -399,20 +399,23 @@ function clozeTargetQuestion(id, promptPrefix, text, targetWord, stage) {
 function clozeStructureQuestion(id, promptPrefix, text, targetWord, stage, position) {
   const words = wordsWithOffsets(text);
   const forms = inflectedForms(targetWord.toLowerCase());
+  const placeholders = new Set(['do', 'doing', 'done', 'someone', 'something', 'yourself', 'a', 'b']);
   const targetIndex = words.findIndex((word) => forms.has(word.text.toLowerCase()));
   const preferredIndex = position === 'after-target' ? targetIndex + 1 : words.length - 1;
-  const selected = words[preferredIndex] && !forms.has(words[preferredIndex].text.toLowerCase())
+  const isValidAnswer = (word) => !forms.has(word.text.toLowerCase()) && !placeholders.has(word.text.toLowerCase());
+  const selected = words[preferredIndex] && isValidAnswer(words[preferredIndex])
     ? words[preferredIndex]
-    : words.find((word) => !forms.has(word.text.toLowerCase()));
+    : words.find(isValidAnswer);
   if (!selected) throw new Error(id + ': source phrase needs a non-target structure word');
   return { id, type: 'collocation', prompt: promptPrefix + blankWord(text, selected) + slotGuidance(text), answer: selected.text, stage, ai: false };
 }
 
 function phraseMeaningQuestion(id, entry, candidates, stage, index) {
+  const guidance = slotGuidance(entry.phrase).replace(/^；/, '');
   return {
     id,
     type: 'collocation',
-    prompt: '词卡结构辨义（' + (index % 2 === 0 ? '一' : '二') + '）：哪一个结构或搭配表示“' + entry.chinese + '”？' + slotGuidance(entry.phrase),
+    prompt: '词卡结构辨义（' + (index % 2 === 0 ? '一' : '二') + '）：哪一个结构或搭配表示“' + entry.chinese + '”？' + (guidance ? '（提示：' + guidance + '。）' : ''),
     options: relationOptions(entry.phrase, candidates.map((candidate) => candidate.phrase), index),
     answer: entry.phrase,
     stage,
@@ -430,6 +433,18 @@ function slotGuidance(phrase) {
   if (/\byourself\b/i.test(phrase)) notes.push('yourself 要替换成与主语一致的 myself、yourself、herself 等正确形式');
   if (/\bA\b/.test(phrase) || /\bB\b/.test(phrase)) notes.push('A、B 要替换成实际比较内容');
   return notes.length ? '；' + notes.join('；') : '';
+}
+
+function hasConcreteContextWord(phrase, targetWord) {
+  const ignored = new Set(['a', 'an', 'the', 'to', 'do', 'doing', 'done', 'someone', 'something', 'yourself', 'of', 'in', 'on', 'for', 'with', 'at', 'by', 'from', 'as', 'and', 'or']);
+  const forms = inflectedForms(targetWord.toLowerCase());
+  return wordsWithOffsets(phrase).some((word) => !forms.has(word.text.toLowerCase()) && !ignored.has(word.text.toLowerCase()));
+}
+
+function hasObjectiveStructureWord(phrase, targetWord) {
+  const placeholders = new Set(['do', 'doing', 'done', 'someone', 'something', 'yourself', 'a', 'b']);
+  const forms = inflectedForms(targetWord.toLowerCase());
+  return wordsWithOffsets(phrase).some((word) => !forms.has(word.text.toLowerCase()) && !placeholders.has(word.text.toLowerCase()));
 }
 
 function makeCard(item, index) {
@@ -475,8 +490,13 @@ function makeCard(item, index) {
   const contrast = confusableItems[0] ?? derivatives[0] ?? synonyms[0];
   const contrastKind = confusableItems[0] ? '易混词' : derivatives[0] ? '派生词' : '相关近义词';
   const contrastOptions = relationOptions(contrast.word, [synonymAnswer, antonymAnswer, next.w, nextTwo.w], index + 5);
-  const firstContextEntry = contextPhrases[0]?.items[0] ?? { phrase: item.coll, chinese: item.collZh };
+  const firstContextEntry = contextPhrases
+    .flatMap((group) => group.items)
+    .find((entry) => hasConcreteContextWord(entry.phrase, item.w))
+    ?? contextPhrases[0]?.items[0]
+    ?? { phrase: item.coll, chinese: item.collZh };
   const firstContextPhrase = firstContextEntry.phrase;
+  const objectiveStructure = structures.find((entry) => hasObjectiveStructureWord(entry.phrase, item.w)) ?? structures[0];
   const firstFixedEntry = fixedPhrases[0] ?? { phrase: item.coll, chinese: item.collZh };
   const firstFixedPhrase = firstFixedEntry.phrase;
   const secondFixedEntry = fixedPhrases.find((entry) => entry.phrase !== firstFixedPhrase)
@@ -491,7 +511,7 @@ function makeCard(item, index) {
     { id: id + '-recall-definition', type: 'recall', prompt: '根据英文释义写出目标词：' + meanings[0].english, answer: item.w, stage: 'T1', ai: false },
     { id: id + '-recall-chinese', type: 'recall', prompt: '写出符合“' + item.zh + '”（' + item.p + '）的本课目标词。', answer: item.w, stage: 'T1', ai: false },
     clozeTargetQuestion(id + '-collocation-core', '补全高频搭配：', item.coll, item.w, 'T0'),
-    clozeStructureQuestion(id + '-collocation-structure', '补全核心结构中的连接成分：', structures[0].phrase, item.w, 'T1', 'after-target'),
+    clozeStructureQuestion(id + '-collocation-structure', '补全核心结构中的连接成分：', objectiveStructure.phrase, item.w, 'T1', 'after-target'),
     clozeStructureQuestion(id + '-collocation-context', '根据语境补全搭配：', firstContextPhrase, item.w, 'T2', 'tail'),
     phraseMeaningQuestion(id + '-collocation-fixed-1', firstFixedEntry, fixedPhrases, 'T2', index + 6),
     phraseMeaningQuestion(id + '-collocation-fixed-2', secondFixedEntry, fixedPhrases, 'T3', index + 7),

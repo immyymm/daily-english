@@ -486,23 +486,23 @@
     {
       "id": "encourage-v-collocation-structure",
       "type": "collocation",
-      "prompt": "补全核心结构中的连接成分：encourage _____ to do；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词",
-      "answer": "someone",
+      "prompt": "补全核心结构中的连接成分：encourage someone _____ do；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词",
+      "answer": "to",
       "stage": "T1",
       "ai": false
     },
     {
       "id": "encourage-v-collocation-context",
       "type": "collocation",
-      "prompt": "根据语境补全搭配：encourage someone to _____；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词",
-      "answer": "do",
+      "prompt": "根据语境补全搭配：encourage _____",
+      "answer": "discussion",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "encourage-v-collocation-fixed-1",
       "type": "collocation",
-      "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“鼓励某人做”？；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词",
+      "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“鼓励某人做”？（提示：do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词。）",
       "options": [
         "encourage discussion",
         "strongly encourage",
@@ -554,7 +554,7 @@
     {
       "id": "encourage-v-dialogue",
       "type": "dialogue",
-      "prompt": "写一段 2–4 轮真实对话，自然使用 “encourage” 和 “encourage someone to do” 结构，并避免中文直译；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “encourage” 和 “encourage discussion” 结构，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true

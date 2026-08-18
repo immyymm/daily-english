@@ -51,6 +51,9 @@ for (const card of allCards.cards) {
   if (clozeQuestions.some((question) => !question.prompt.includes('_____') || !question.answer?.trim())) {
     errors.push(card.id + ': every non-choice collocation question needs one real blank and a non-empty answer.');
   }
+  if (clozeQuestions.some((question) => /^(do|doing|done|someone|something|yourself|A|B)$/i.test(question.answer.trim()))) {
+    errors.push(card.id + ': a grammar placeholder must never be the answer to an objective cloze.');
+  }
   if (card.questions.some((question) => question.id.includes('example-cloze') && !question.prompt.includes('（填写 ' + card.word + ' 的正确形式）'))) {
     errors.push(card.id + ': the example cloze must ask for the target word in its contextually correct form.');
   }

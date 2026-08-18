@@ -606,8 +606,8 @@
         {
           "id": "improve-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：improve _____；something 要替换成实际的事物或内容",
-          "answer": "something",
+          "prompt": "补全核心结构中的连接成分：improve _____ something；something 要替换成实际的事物或内容",
+          "answer": "on",
           "stage": "T1",
           "ai": false
         },
@@ -1361,8 +1361,8 @@
         {
           "id": "notice-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：notice _____；something 要替换成实际的事物或内容",
-          "answer": "something",
+          "prompt": "补全核心结构中的连接成分：notice _____ + clause",
+          "answer": "that",
           "stage": "T1",
           "ai": false
         },
@@ -2123,8 +2123,8 @@
         {
           "id": "support-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：support _____ or something；someone 要替换成实际的人或代词；something 要替换成实际的事物或内容",
-          "answer": "someone",
+          "prompt": "补全核心结构中的连接成分：support someone _____ something；someone 要替换成实际的人或代词；something 要替换成实际的事物或内容",
+          "answer": "or",
           "stage": "T1",
           "ai": false
         },
@@ -2139,7 +2139,7 @@
         {
           "id": "support-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“支持某人做某事”？；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing；someone 要替换成实际的人或代词",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“支持某人做某事”？（提示：doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing；someone 要替换成实际的人或代词。）",
           "options": [
             "support someone in doing",
             "support a decision",
@@ -3643,7 +3643,7 @@
         {
           "id": "manage-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“设法做成某事”？；do 代表任意合适的动词原形，不要求写出单词 do",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“设法做成某事”？（提示：do 代表任意合适的动词原形，不要求写出单词 do。）",
           "options": [
             "manage a project",
             "manage your time",
@@ -5529,15 +5529,15 @@
         {
           "id": "believe-v-collocation-context",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：believe in _____；yourself 要替换成与主语一致的 myself、yourself、herself 等正确形式",
-          "answer": "yourself",
+          "prompt": "根据语境补全搭配：believe _____",
+          "answer": "that",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "believe-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“相信自己”？；yourself 要替换成与主语一致的 myself、yourself、herself 等正确形式",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“相信自己”？（提示：yourself 要替换成与主语一致的 myself、yourself、herself 等正确形式。）",
           "options": [
             "believe that",
             "strongly believe",
@@ -5589,7 +5589,7 @@
         {
           "id": "believe-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “believe” 和 “believe in yourself” 结构，并避免中文直译；yourself 要替换成与主语一致的 myself、yourself、herself 等正确形式。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “believe” 和 “believe that” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -7414,15 +7414,15 @@
         {
           "id": "remember-v-collocation-context",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：remember to _____；do 代表任意合适的动词原形，不要求写出单词 do",
-          "answer": "do",
+          "prompt": "根据语境补全搭配：remember someone _____；someone 要替换成实际的人或代词",
+          "answer": "clearly",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "remember-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“记得去做”？；do 代表任意合适的动词原形，不要求写出单词 do",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“记得去做”？（提示：do 代表任意合适的动词原形，不要求写出单词 do。）",
           "options": [
             "remember to do",
             "remember doing",
@@ -7436,7 +7436,7 @@
         {
           "id": "remember-v-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“记得做过”？；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“记得做过”？（提示：doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing。）",
           "options": [
             "remember to do",
             "remember someone clearly",
@@ -7474,7 +7474,7 @@
         {
           "id": "remember-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “remember” 和 “remember to do” 结构，并避免中文直译；do 代表任意合适的动词原形，不要求写出单词 do。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “remember” 和 “remember someone clearly” 结构，并避免中文直译；someone 要替换成实际的人或代词。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -8032,23 +8032,23 @@
         {
           "id": "allow-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：allow _____ to do；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词",
-          "answer": "someone",
+          "prompt": "补全核心结构中的连接成分：allow someone _____ do；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词",
+          "answer": "to",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "allow-v-collocation-context",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：allow someone to _____；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词",
-          "answer": "do",
+          "prompt": "根据语境补全搭配：allow time _____",
+          "answer": "for",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "allow-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“允许某人做”？；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“允许某人做”？（提示：do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词。）",
           "options": [
             "allow time for",
             "allow access to",
@@ -8100,7 +8100,7 @@
         {
           "id": "allow-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “allow” 和 “allow someone to do” 结构，并避免中文直译；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “allow” 和 “allow time for” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -8688,7 +8688,7 @@
         {
           "id": "continue-v-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“继续做”？；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“继续做”？（提示：doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing。）",
           "options": [
             "continue the conversation",
             "continue doing",
@@ -9277,15 +9277,15 @@
         {
           "id": "spend-v-collocation-context",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：spend time _____；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing",
-          "answer": "doing",
+          "prompt": "根据语境补全搭配：spend _____ doing；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing",
+          "answer": "time",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "spend-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“花时间做”？；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“花时间做”？（提示：doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing。）",
           "options": [
             "spend too much",
             "spend time doing",
@@ -11175,7 +11175,7 @@
         {
           "id": "happen-v-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“发生在某人身上”？；someone 要替换成实际的人或代词",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“发生在某人身上”？（提示：someone 要替换成实际的人或代词。）",
           "options": [
             "happen by chance",
             "happen to someone",
@@ -13013,8 +13013,8 @@
         {
           "id": "mean-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：mean _____ lot to",
-          "answer": "a",
+          "prompt": "补全核心结构中的连接成分：mean a _____ to",
+          "answer": "lot",
           "stage": "T1",
           "ai": false
         },
@@ -13675,7 +13675,7 @@
         {
           "id": "offer-v-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“给某人一份工作”？；someone 要替换成实际的人或代词",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“给某人一份工作”？（提示：someone 要替换成实际的人或代词。）",
           "options": [
             "make an offer",
             "offer someone a job",
@@ -14264,23 +14264,23 @@
         {
           "id": "consider-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：consider _____；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing",
-          "answer": "doing",
+          "prompt": "补全核心结构中的连接成分：consider _____ possibility",
+          "answer": "the",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "consider-v-collocation-context",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：consider _____；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing",
-          "answer": "doing",
+          "prompt": "根据语境补全搭配：consider the _____",
+          "answer": "possibility",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "consider-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“考虑做”？；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“考虑做”？（提示：doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing。）",
           "options": [
             "carefully consider",
             "consider doing",
@@ -14332,7 +14332,7 @@
         {
           "id": "consider-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “consider” 和 “consider doing” 结构，并避免中文直译；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “consider” 和 “consider the possibility” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -14890,23 +14890,23 @@
         {
           "id": "expect-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：expect _____ to do；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词",
-          "answer": "someone",
+          "prompt": "补全核心结构中的连接成分：expect someone _____ do；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词",
+          "answer": "to",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "expect-v-collocation-context",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：expect someone to _____；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词",
-          "answer": "do",
+          "prompt": "根据语境补全搭配：expect to _____",
+          "answer": "see",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "expect-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“期待某人做”？；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“期待某人做”？（提示：do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词。）",
           "options": [
             "expect someone to do",
             "expect to see",
@@ -14958,7 +14958,7 @@
         {
           "id": "expect-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “expect” 和 “expect someone to do” 结构，并避免中文直译；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “expect” 和 “expect to see” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -15516,8 +15516,8 @@
         {
           "id": "develop-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：develop _____ habit",
-          "answer": "a",
+          "prompt": "补全核心结构中的连接成分：develop a _____",
+          "answer": "habit",
           "stage": "T1",
           "ai": false
         },
@@ -16150,15 +16150,15 @@
         {
           "id": "decide-v-collocation-context",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：decide to _____；do 代表任意合适的动词原形，不要求写出单词 do",
-          "answer": "do",
+          "prompt": "根据语境补全搭配：decide _____",
+          "answer": "against",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "decide-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“决定做”？；do 代表任意合适的动词原形，不要求写出单词 do",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“决定做”？（提示：do 代表任意合适的动词原形，不要求写出单词 do。）",
           "options": [
             "decide between",
             "decide whether",
@@ -16210,7 +16210,7 @@
         {
           "id": "decide-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “decide” 和 “decide to do” 结构，并避免中文直译；do 代表任意合适的动词原形，不要求写出单词 do。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “decide” 和 “decide against” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -16761,8 +16761,8 @@
         {
           "id": "explain-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：explain _____ clearly；something 要替换成实际的事物或内容",
-          "answer": "something",
+          "prompt": "补全核心结构中的连接成分：explain something _____；something 要替换成实际的事物或内容",
+          "answer": "clearly",
           "stage": "T1",
           "ai": false
         },
@@ -16777,7 +16777,7 @@
         {
           "id": "explain-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“清楚解释某事”？；something 要替换成实际的事物或内容",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“清楚解释某事”？（提示：something 要替换成实际的事物或内容。）",
           "options": [
             "explain something to someone",
             "explain something clearly",
@@ -17380,23 +17380,23 @@
         {
           "id": "suggest-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：suggest _____；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing",
-          "answer": "doing",
+          "prompt": "补全核心结构中的连接成分：suggest _____",
+          "answer": "that",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "suggest-v-collocation-context",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：suggest _____；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing",
-          "answer": "doing",
+          "prompt": "根据语境补全搭配：suggest _____",
+          "answer": "that",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "suggest-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“建议做”？；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“建议做”？（提示：doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing。）",
           "options": [
             "suggest doing",
             "suggest that",
@@ -17448,7 +17448,7 @@
         {
           "id": "suggest-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “suggest” 和 “suggest doing” 结构，并避免中文直译；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “suggest” 和 “suggest that” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -17999,23 +17999,23 @@
         {
           "id": "require-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：require _____ to do；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词",
-          "answer": "someone",
+          "prompt": "补全核心结构中的连接成分：require someone _____ do；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词",
+          "answer": "to",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "require-v-collocation-context",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：require someone to _____；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词",
-          "answer": "do",
+          "prompt": "根据语境补全搭配：require careful _____",
+          "answer": "planning",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "require-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“要求某人做”？；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“要求某人做”？（提示：do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词。）",
           "options": [
             "require careful planning",
             "be required to",
@@ -18067,7 +18067,7 @@
         {
           "id": "require-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “require” 和 “require someone to do” 结构，并避免中文直译；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “require” 和 “require careful planning” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -19244,8 +19244,8 @@
         {
           "id": "achieve-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：achieve _____ goal",
-          "answer": "a",
+          "prompt": "补全核心结构中的连接成分：achieve a _____",
+          "answer": "goal",
           "stage": "T1",
           "ai": false
         },
@@ -19900,7 +19900,7 @@
         {
           "id": "avoid-v-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“避免做”？；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“避免做”？（提示：doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing。）",
           "options": [
             "avoid making mistakes",
             "avoid unnecessary risk",
@@ -20496,23 +20496,23 @@
         {
           "id": "compare-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：compare _____ with B；A、B 要替换成实际比较内容",
-          "answer": "A",
+          "prompt": "补全核心结构中的连接成分：compare A _____ B；A、B 要替换成实际比较内容",
+          "answer": "with",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "compare-v-collocation-context",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：compare A with _____；A、B 要替换成实际比较内容",
-          "answer": "B",
+          "prompt": "根据语境补全搭配：compare A _____ B；A、B 要替换成实际比较内容",
+          "answer": "with",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "compare-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“把 A 与 B 比较”？；A、B 要替换成实际比较内容",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“把 A 与 B 比较”？（提示：A、B 要替换成实际比较内容。）",
           "options": [
             "compare A to B",
             "compare prices",
@@ -20526,7 +20526,7 @@
         {
           "id": "compare-v-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“把 A 比作 B”？；A、B 要替换成实际比较内容",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“把 A 比作 B”？（提示：A、B 要替换成实际比较内容。）",
           "options": [
             "compare prices",
             "compared with",
@@ -21137,7 +21137,7 @@
         {
           "id": "depend-v-collocation-context",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：depend _____",
+          "prompt": "根据语境补全搭配：depend heavily _____",
           "answer": "on",
           "stage": "T2",
           "ai": false
@@ -21197,7 +21197,7 @@
         {
           "id": "depend-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “depend” 和 “depend on” 结构，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “depend” 和 “depend heavily on” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -21791,7 +21791,7 @@
         {
           "id": "increase-v-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“从 A 增至 B”？；A、B 要替换成实际比较内容",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“从 A 增至 B”？（提示：A、B 要替换成实际比较内容。）",
           "options": [
             "increase from A to B",
             "increase by ten percent",
@@ -23022,15 +23022,15 @@
         {
           "id": "choose-v-collocation-context",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：choose to _____；do 代表任意合适的动词原形，不要求写出单词 do",
-          "answer": "do",
+          "prompt": "根据语境补全搭配：choose _____ A and B；A、B 要替换成实际比较内容",
+          "answer": "between",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "choose-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“选择做”？；do 代表任意合适的动词原形，不要求写出单词 do",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“选择做”？（提示：do 代表任意合适的动词原形，不要求写出单词 do。）",
           "options": [
             "choose between A and B",
             "choose the right word",
@@ -23044,7 +23044,7 @@
         {
           "id": "choose-v-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“在 A 和 B 之间选择”？；A、B 要替换成实际比较内容",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“在 A 和 B 之间选择”？（提示：A、B 要替换成实际比较内容。）",
           "options": [
             "choose the right word",
             "carefully choose",
@@ -23082,7 +23082,7 @@
         {
           "id": "choose-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “choose” 和 “choose to do” 结构，并避免中文直译；do 代表任意合适的动词原形，不要求写出单词 do。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “choose” 和 “choose between A and B” 结构，并避免中文直译；A、B 要替换成实际比较内容。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -23653,23 +23653,23 @@
         {
           "id": "share-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：share _____ with someone；someone 要替换成实际的人或代词；something 要替换成实际的事物或内容",
-          "answer": "something",
+          "prompt": "补全核心结构中的连接成分：share something _____ someone；someone 要替换成实际的人或代词；something 要替换成实际的事物或内容",
+          "answer": "with",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "share-v-collocation-context",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：share something with _____；someone 要替换成实际的人或代词；something 要替换成实际的事物或内容",
-          "answer": "someone",
+          "prompt": "根据语境补全搭配：share an _____",
+          "answer": "opinion",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "share-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“与某人分享某物”？；someone 要替换成实际的人或代词；something 要替换成实际的事物或内容",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“与某人分享某物”？（提示：someone 要替换成实际的人或代词；something 要替换成实际的事物或内容。）",
           "options": [
             "share the cost",
             "have something in common",
@@ -23721,7 +23721,7 @@
         {
           "id": "share-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “share” 和 “share something with someone” 结构，并避免中文直译；someone 要替换成实际的人或代词；something 要替换成实际的事物或内容。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “share” 和 “share an opinion” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -24278,8 +24278,8 @@
         {
           "id": "reach-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：reach _____ goal",
-          "answer": "a",
+          "prompt": "补全核心结构中的连接成分：reach a _____",
+          "answer": "goal",
           "stage": "T1",
           "ai": false
         },
@@ -25521,8 +25521,8 @@
         {
           "id": "handle-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：handle _____ problem",
-          "answer": "a",
+          "prompt": "补全核心结构中的连接成分：handle a _____",
+          "answer": "problem",
           "stage": "T1",
           "ai": false
         },
@@ -27400,23 +27400,23 @@
         {
           "id": "describe-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：describe _____ as；something 要替换成实际的事物或内容",
-          "answer": "something",
+          "prompt": "补全核心结构中的连接成分：describe something _____；something 要替换成实际的事物或内容",
+          "answer": "as",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "describe-v-collocation-context",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：describe something _____；something 要替换成实际的事物或内容",
-          "answer": "as",
+          "prompt": "根据语境补全搭配：describe what _____",
+          "answer": "happened",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "describe-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“把某物描述为”？；something 要替换成实际的事物或内容",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“把某物描述为”？（提示：something 要替换成实际的事物或内容。）",
           "options": [
             "describe something as",
             "describe what happened",
@@ -27468,7 +27468,7 @@
         {
           "id": "describe-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “describe” 和 “describe something as” 结构，并避免中文直译；something 要替换成实际的事物或内容。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “describe” 和 “describe what happened” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -28660,23 +28660,23 @@
         {
           "id": "prefer-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：prefer _____ to B；A、B 要替换成实际比较内容",
-          "answer": "A",
+          "prompt": "补全核心结构中的连接成分：prefer A _____ B；A、B 要替换成实际比较内容",
+          "answer": "to",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "prefer-v-collocation-context",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：prefer A to _____；A、B 要替换成实际比较内容",
-          "answer": "B",
+          "prompt": "根据语境补全搭配：prefer A _____ B；A、B 要替换成实际比较内容",
+          "answer": "to",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "prefer-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“比起 B 更喜欢 A”？；A、B 要替换成实际比较内容",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“比起 B 更喜欢 A”？（提示：A、B 要替换成实际比较内容。）",
           "options": [
             "would prefer",
             "personally prefer",
@@ -28690,7 +28690,7 @@
         {
           "id": "prefer-v-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“更愿意做”？；do 代表任意合适的动词原形，不要求写出单词 do",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“更愿意做”？（提示：do 代表任意合适的动词原形，不要求写出单词 do。）",
           "options": [
             "personally prefer",
             "prefer to do",
@@ -29905,23 +29905,23 @@
         {
           "id": "protect-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：protect _____ from；someone 要替换成实际的人或代词",
-          "answer": "someone",
+          "prompt": "补全核心结构中的连接成分：protect someone _____；someone 要替换成实际的人或代词",
+          "answer": "from",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "protect-v-collocation-context",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：protect someone _____；someone 要替换成实际的人或代词",
-          "answer": "from",
+          "prompt": "根据语境补全搭配：protect the _____",
+          "answer": "environment",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "protect-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“保护某人免受……”？；someone 要替换成实际的人或代词",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“保护某人免受……”？（提示：someone 要替换成实际的人或代词。）",
           "options": [
             "protect someone from",
             "protect the environment",
@@ -29973,7 +29973,7 @@
         {
           "id": "protect-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “protect” 和 “protect someone from” 结构，并避免中文直译；someone 要替换成实际的人或代词。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “protect” 和 “protect the environment” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -30524,23 +30524,23 @@
         {
           "id": "encourage-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：encourage _____ to do；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词",
-          "answer": "someone",
+          "prompt": "补全核心结构中的连接成分：encourage someone _____ do；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词",
+          "answer": "to",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "encourage-v-collocation-context",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：encourage someone to _____；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词",
-          "answer": "do",
+          "prompt": "根据语境补全搭配：encourage _____",
+          "answer": "discussion",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "encourage-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“鼓励某人做”？；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“鼓励某人做”？（提示：do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词。）",
           "options": [
             "encourage discussion",
             "strongly encourage",
@@ -30592,7 +30592,7 @@
         {
           "id": "encourage-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “encourage” 和 “encourage someone to do” 结构，并避免中文直译；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “encourage” 和 “encourage discussion” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -31150,8 +31150,8 @@
         {
           "id": "solve-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：solve _____ problem",
-          "answer": "a",
+          "prompt": "补全核心结构中的连接成分：solve a _____",
+          "answer": "problem",
           "stage": "T1",
           "ai": false
         },
@@ -32410,15 +32410,15 @@
         {
           "id": "ability-n-collocation-context",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：ability to _____；do 代表任意合适的动词原形，不要求写出单词 do",
-          "answer": "do",
+          "prompt": "根据语境补全搭配：_____ an ability",
+          "answer": "develop",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "ability-n-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“做某事的能力”？；do 代表任意合适的动词原形，不要求写出单词 do",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“做某事的能力”？（提示：do 代表任意合适的动词原形，不要求写出单词 do。）",
           "options": [
             "ability to do",
             "develop an ability",
@@ -32470,7 +32470,7 @@
         {
           "id": "ability-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “ability” 和 “ability to do” 结构，并避免中文直译；do 代表任意合适的动词原形，不要求写出单词 do。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “ability” 和 “develop an ability” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -33662,8 +33662,8 @@
         {
           "id": "reason-n-collocation-context",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：the reason _____",
-          "answer": "for",
+          "prompt": "根据语境补全搭配：reason _____",
+          "answer": "why",
           "stage": "T2",
           "ai": false
         },
@@ -33722,7 +33722,7 @@
         {
           "id": "reason-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “reason” 和 “the reason for” 结构，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “reason” 和 “reason why” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -34910,8 +34910,8 @@
         {
           "id": "result-n-collocation-context",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ a result",
-          "answer": "as",
+          "prompt": "根据语境补全搭配：_____ results",
+          "answer": "test",
           "stage": "T2",
           "ai": false
         },
@@ -34970,7 +34970,7 @@
         {
           "id": "result-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “result” 和 “as a result” 结构，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “result” 和 “test results” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -40494,16 +40494,16 @@
         {
           "id": "system-n-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ simple system",
-          "answer": "a",
+          "prompt": "补全核心结构中的连接成分：a _____ system",
+          "answer": "simple",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "system-n-collocation-context",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ simple system",
-          "answer": "a",
+          "prompt": "根据语境补全搭配：a _____ system",
+          "answer": "simple",
           "stage": "T2",
           "ai": false
         },
@@ -43637,7 +43637,7 @@
         {
           "id": "purpose-n-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“做……的目的”？；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“做……的目的”？（提示：doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing。）",
           "options": [
             "on purpose",
             "purpose of doing",
@@ -52969,7 +52969,7 @@
         {
           "id": "difficult-adj-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“觉得某事困难”？；something 要替换成实际的事物或内容",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“觉得某事困难”？（提示：something 要替换成实际的事物或内容。）",
           "options": [
             "difficult to understand",
             "difficult for someone",
@@ -53609,7 +53609,7 @@
         {
           "id": "responsible-adj-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“负责做”？；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“负责做”？（提示：doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing。）",
           "options": [
             "a responsible person",
             "responsible for doing",
@@ -55457,23 +55457,23 @@
         {
           "id": "comfortable-adj-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：feel comfortable _____；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing",
-          "answer": "doing",
+          "prompt": "补全核心结构中的连接成分：_____ comfortable doing；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing",
+          "answer": "feel",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "comfortable-adj-collocation-context",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：feel comfortable _____；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing",
-          "answer": "doing",
+          "prompt": "根据语境补全搭配：_____ comfortable doing；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing",
+          "answer": "feel",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "comfortable-adj-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“做某事感到自在”？；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“做某事感到自在”？（提示：doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing。）",
           "options": [
             "comfortable with",
             "make yourself comfortable",
@@ -56739,7 +56739,7 @@
         {
           "id": "serious-adj-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“认真对待某事”？；something 要替换成实际的事物或内容",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“认真对待某事”？（提示：something 要替换成实际的事物或内容。）",
           "options": [
             "take something seriously",
             "a serious problem",
@@ -57983,7 +57983,7 @@
         {
           "id": "clear-adj-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“把某事说清楚”？；something 要替换成实际的事物或内容",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“把某事说清楚”？（提示：something 要替换成实际的事物或内容。）",
           "options": [
             "clear to someone",
             "clear explanation",
@@ -57997,7 +57997,7 @@
         {
           "id": "clear-adj-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“对某人来说清楚”？；someone 要替换成实际的人或代词",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“对某人来说清楚”？（提示：someone 要替换成实际的人或代词。）",
           "options": [
             "clear explanation",
             "clear the table",
@@ -58616,7 +58616,7 @@
         {
           "id": "common-adj-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“有共同之处”？；something 要替换成实际的事物或内容",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“有共同之处”？（提示：something 要替换成实际的事物或内容。）",
           "options": [
             "common among",
             "have something in common",
@@ -60467,7 +60467,7 @@
           "id": "useful-adj-collocation-context",
           "type": "collocation",
           "prompt": "根据语境补全搭配：useful _____",
-          "answer": "for",
+          "answer": "information",
           "stage": "T2",
           "ai": false
         },
@@ -60488,7 +60488,7 @@
         {
           "id": "useful-adj-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“对某人有用”？；someone 要替换成实际的人或代词",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“对某人有用”？（提示：someone 要替换成实际的人或代词。）",
           "options": [
             "useful information",
             "find something useful",
@@ -60526,7 +60526,7 @@
         {
           "id": "useful-adj-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “useful” 和 “useful for” 结构，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “useful” 和 “useful information” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -65475,23 +65475,23 @@
         {
           "id": "recently-adv-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：have recently _____；done 代表符合语境的过去分词，不要求写出单词 done",
-          "answer": "done",
+          "prompt": "补全核心结构中的连接成分：_____ recently done；done 代表符合语境的过去分词，不要求写出单词 done",
+          "answer": "have",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "recently-adv-collocation-context",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：have recently _____；done 代表符合语境的过去分词，不要求写出单词 done",
-          "answer": "done",
+          "prompt": "根据语境补全搭配：_____ recently done；done 代表符合语境的过去分词，不要求写出单词 done",
+          "answer": "have",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "recently-adv-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“最近做过”？；done 代表符合语境的过去分词，不要求写出单词 done",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“最近做过”？（提示：done 代表符合语境的过去分词，不要求写出单词 done。）",
           "options": [
             "until recently",
             "more recently",
@@ -66727,8 +66727,8 @@
         {
           "id": "instead-adv-collocation-context",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：instead _____",
-          "answer": "of",
+          "prompt": "根据语境补全搭配：_____ A instead of B；A、B 要替换成实际比较内容",
+          "answer": "use",
           "stage": "T2",
           "ai": false
         },
@@ -66749,7 +66749,7 @@
         {
           "id": "instead-adv-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“改做某事”？；something 要替换成实际的事物或内容",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“改做某事”？（提示：something 要替换成实际的事物或内容。）",
           "options": [
             "do something instead",
             "instead of",
@@ -66787,7 +66787,7 @@
         {
           "id": "instead-adv-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “instead” 和 “instead of” 结构，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “instead” 和 “use A instead of B” 结构，并避免中文直译；A、B 要替换成实际比较内容。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -72295,23 +72295,23 @@
         {
           "id": "already-adv-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：have already _____；done 代表符合语境的过去分词，不要求写出单词 done",
-          "answer": "done",
+          "prompt": "补全核心结构中的连接成分：_____ already done；done 代表符合语境的过去分词，不要求写出单词 done",
+          "answer": "have",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "already-adv-collocation-context",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：have already _____；done 代表符合语境的过去分词，不要求写出单词 done",
-          "answer": "done",
+          "prompt": "根据语境补全搭配：_____ already done；done 代表符合语境的过去分词，不要求写出单词 done",
+          "answer": "have",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "already-adv-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“已经做过”？；done 代表符合语境的过去分词，不要求写出单词 done",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“已经做过”？（提示：done 代表符合语境的过去分词，不要求写出单词 done。）",
           "options": [
             "have already done",
             "already know",
@@ -78197,15 +78197,15 @@
         {
           "id": "learn-v-collocation-context",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：learn to _____；do 代表任意合适的动词原形，不要求写出单词 do",
-          "answer": "do",
+          "prompt": "根据语境补全搭配：learn _____",
+          "answer": "about",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "learn-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“学习做”？；do 代表任意合适的动词原形，不要求写出单词 do",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“学习做”？（提示：do 代表任意合适的动词原形，不要求写出单词 do。）",
           "options": [
             "learn about",
             "learn from mistakes",
@@ -78257,7 +78257,7 @@
         {
           "id": "learn-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “learn” 和 “learn to do” 结构，并避免中文直译；do 代表任意合适的动词原形，不要求写出单词 do。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “learn” 和 “learn about” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -78853,7 +78853,7 @@
         {
           "id": "speak-v-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“和某人说话”？；someone 要替换成实际的人或代词",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“和某人说话”？（提示：someone 要替换成实际的人或代词。）",
           "options": [
             "speak clearly",
             "speak to someone",
@@ -79449,8 +79449,8 @@
         {
           "id": "write-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：write _____ message",
-          "answer": "a",
+          "prompt": "补全核心结构中的连接成分：write a _____",
+          "answer": "message",
           "stage": "T1",
           "ai": false
         },
@@ -80075,8 +80075,8 @@
         {
           "id": "read-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：read _____ book",
-          "answer": "a",
+          "prompt": "补全核心结构中的连接成分：read a _____",
+          "answer": "book",
           "stage": "T1",
           "ai": false
         },
@@ -80711,7 +80711,7 @@
           "id": "listen-v-collocation-context",
           "type": "collocation",
           "prompt": "根据语境补全搭配：listen _____",
-          "answer": "to",
+          "answer": "carefully",
           "stage": "T2",
           "ai": false
         },
@@ -80770,7 +80770,7 @@
         {
           "id": "listen-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “listen” 和 “listen to” 结构，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “listen” 和 “listen carefully” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -88250,8 +88250,8 @@
         {
           "id": "time-n-collocation-context",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ time",
-          "answer": "on",
+          "prompt": "根据语境补全搭配：_____ time doing；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing",
+          "answer": "spend",
           "stage": "T2",
           "ai": false
         },
@@ -88310,7 +88310,7 @@
         {
           "id": "time-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “time” 和 “on time” 结构，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “time” 和 “spend time doing” 结构，并避免中文直译；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -88861,16 +88861,16 @@
         {
           "id": "job-n-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ a good job",
-          "answer": "do",
+          "prompt": "补全核心结构中的连接成分：do a _____ job",
+          "answer": "good",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "job-n-collocation-context",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ a good job",
-          "answer": "do",
+          "prompt": "根据语境补全搭配：do a _____ job",
+          "answer": "good",
           "stage": "T2",
           "ai": false
         },
@@ -90128,8 +90128,8 @@
         {
           "id": "future-n-collocation-context",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ the future",
-          "answer": "in",
+          "prompt": "根据语境补全搭配：_____ future",
+          "answer": "near",
           "stage": "T2",
           "ai": false
         },
@@ -90188,7 +90188,7 @@
         {
           "id": "future-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “future” 和 “in the future” 结构，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “future” 和 “near future” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -90797,7 +90797,7 @@
         {
           "id": "plan-n-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“计划做”？；do 代表任意合适的动词原形，不要求写出单词 do",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“计划做”？（提示：do 代表任意合适的动词原形，不要求写出单词 do。）",
           "options": [
             "according to plan",
             "change of plan",
@@ -92013,8 +92013,8 @@
         {
           "id": "moment-n-collocation-context",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ the moment",
-          "answer": "at",
+          "prompt": "根据语境补全搭配：_____ right moment",
+          "answer": "the",
           "stage": "T2",
           "ai": false
         },
@@ -92073,7 +92073,7 @@
         {
           "id": "moment-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “moment” 和 “at the moment” 结构，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “moment” 和 “the right moment” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -94525,8 +94525,8 @@
         {
           "id": "benefit-n-collocation-context",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：benefit _____",
-          "answer": "from",
+          "prompt": "根据语境补全搭配：_____ benefit",
+          "answer": "main",
           "stage": "T2",
           "ai": false
         },
@@ -94547,7 +94547,7 @@
         {
           "id": "benefit-n-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“使某人受益”？；someone 要替换成实际的人或代词",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“使某人受益”？（提示：someone 要替换成实际的人或代词。）",
           "options": [
             "benefit someone",
             "benefit from",
@@ -94585,7 +94585,7 @@
         {
           "id": "benefit-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “benefit” 和 “benefit from” 结构，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “benefit” 和 “main benefit” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true

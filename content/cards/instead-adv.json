@@ -492,8 +492,8 @@
     {
       "id": "instead-adv-collocation-context",
       "type": "collocation",
-      "prompt": "根据语境补全搭配：instead _____",
-      "answer": "of",
+      "prompt": "根据语境补全搭配：_____ A instead of B；A、B 要替换成实际比较内容",
+      "answer": "use",
       "stage": "T2",
       "ai": false
     },
@@ -514,7 +514,7 @@
     {
       "id": "instead-adv-collocation-fixed-2",
       "type": "collocation",
-      "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“改做某事”？；something 要替换成实际的事物或内容",
+      "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“改做某事”？（提示：something 要替换成实际的事物或内容。）",
       "options": [
         "do something instead",
         "instead of",
@@ -552,7 +552,7 @@
     {
       "id": "instead-adv-dialogue",
       "type": "dialogue",
-      "prompt": "写一段 2–4 轮真实对话，自然使用 “instead” 和 “instead of” 结构，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “instead” 和 “use A instead of B” 结构，并避免中文直译；A、B 要替换成实际比较内容。",
       "answer": "",
       "stage": "T4",
       "ai": true

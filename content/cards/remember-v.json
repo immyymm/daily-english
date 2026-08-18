@@ -501,15 +501,15 @@
     {
       "id": "remember-v-collocation-context",
       "type": "collocation",
-      "prompt": "根据语境补全搭配：remember to _____；do 代表任意合适的动词原形，不要求写出单词 do",
-      "answer": "do",
+      "prompt": "根据语境补全搭配：remember someone _____；someone 要替换成实际的人或代词",
+      "answer": "clearly",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "remember-v-collocation-fixed-1",
       "type": "collocation",
-      "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“记得去做”？；do 代表任意合适的动词原形，不要求写出单词 do",
+      "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“记得去做”？（提示：do 代表任意合适的动词原形，不要求写出单词 do。）",
       "options": [
         "remember to do",
         "remember doing",
@@ -523,7 +523,7 @@
     {
       "id": "remember-v-collocation-fixed-2",
       "type": "collocation",
-      "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“记得做过”？；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing",
+      "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“记得做过”？（提示：doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing。）",
       "options": [
         "remember to do",
         "remember someone clearly",
@@ -561,7 +561,7 @@
     {
       "id": "remember-v-dialogue",
       "type": "dialogue",
-      "prompt": "写一段 2–4 轮真实对话，自然使用 “remember” 和 “remember to do” 结构，并避免中文直译；do 代表任意合适的动词原形，不要求写出单词 do。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “remember” 和 “remember someone clearly” 结构，并避免中文直译；someone 要替换成实际的人或代词。",
       "answer": "",
       "stage": "T4",
       "ai": true
