@@ -10,6 +10,7 @@ import {
   generatedEvaluationViolations
 } from '../src/schemas/evaluationConstraints.js';
 import { deriveTaskRequirements } from '../src/schemas/taskRequirements.js';
+import type { EvaluationResult } from '../src/types.js';
 
 const requestSchema = z.object({
   requestId: z.string().min(6).max(100),
@@ -166,7 +167,7 @@ async function runModel(input: EvaluationInput) {
     answer: input.answer
   };
   const taskRequirements = deriveTaskRequirements(context);
-  const parseEvaluation = (repair?: { result: z.infer<typeof evaluationSchema>; violations: unknown }) => client.responses.parse({
+  const parseEvaluation = (repair?: { result: EvaluationResult; violations: unknown }) => client.responses.parse({
     model: EVALUATION_MODEL,
     input: [
       { role: 'system', content: systemPrompt },
@@ -192,7 +193,7 @@ async function runModel(input: EvaluationInput) {
     output_tokens: completion.usage.output_tokens,
     total_tokens: completion.usage.total_tokens
   } : undefined;
-  let rawResult: z.infer<typeof evaluationSchema> = evaluationSchema.parse(completion.output_parsed);
+  let rawResult = evaluationSchema.parse(completion.output_parsed) as EvaluationResult;
   let validation = generatedEvaluationViolations(rawResult, context);
 
   if (!validation.valid) {
@@ -218,7 +219,7 @@ async function runModel(input: EvaluationInput) {
         };
       }
     }
-    rawResult = evaluationSchema.parse(completion.output_parsed);
+    rawResult = evaluationSchema.parse(completion.output_parsed) as EvaluationResult;
     validation = generatedEvaluationViolations(rawResult, context);
   }
 

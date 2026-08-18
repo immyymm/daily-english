@@ -1,4 +1,4 @@
-import type { QuestionType, TaskRequirementCheck, TaskRequirements } from '../types';
+import type { QuestionType, TaskRequirementCheck, TaskRequirements } from '../types.js';
 
 export interface TaskRequirementContext {
   questionType: QuestionType;

@@ -1,5 +1,5 @@
-import type { EvaluationResult, TaskRequirements } from '../types';
-import { checkTaskRequirements, deriveTaskRequirements, failedTaskRequirements, type TaskRequirementContext } from './taskRequirements';
+import type { EvaluationResult, TaskRequirements } from '../types.js';
+import { checkTaskRequirements, deriveTaskRequirements, failedTaskRequirements, type TaskRequirementContext } from './taskRequirements.js';
 
 export interface EvaluationConstraintContext {
   questionType?: string;
