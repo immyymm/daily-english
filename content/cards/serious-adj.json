@@ -485,7 +485,7 @@
     {
       "id": "serious-adj-collocation-core",
       "type": "collocation",
-      "prompt": "补全高频搭配：a _____ problem",
+      "prompt": "补全高频搭配：a _____ problem（填写 serious 的正确形式）",
       "answer": "serious",
       "stage": "T0",
       "ai": false
@@ -493,39 +493,51 @@
     {
       "id": "serious-adj-collocation-structure",
       "type": "collocation",
-      "prompt": "补全核心结构：a _____ problem",
-      "answer": "serious",
+      "prompt": "补全核心结构中的连接成分：a serious _____",
+      "answer": "problem",
       "stage": "T1",
       "ai": false
     },
     {
       "id": "serious-adj-collocation-context",
       "type": "collocation",
-      "prompt": "补全语境词组：a _____ problem",
-      "answer": "serious",
+      "prompt": "根据语境补全搭配：a serious _____",
+      "answer": "problem",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "serious-adj-collocation-fixed-1",
       "type": "collocation",
-      "prompt": "补全固定搭配：a _____ problem",
-      "answer": "serious",
+      "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“严重问题”？",
+      "options": [
+        "serious injury",
+        "a serious problem",
+        "take something seriously",
+        "serious about doing"
+      ],
+      "answer": "a serious problem",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "serious-adj-collocation-fixed-2",
       "type": "collocation",
-      "prompt": "再补全一个固定搭配：take something seriously（填入目标词）",
-      "answer": "serious",
+      "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“认真对待某事”？；something 要替换成实际的事物或内容",
+      "options": [
+        "take something seriously",
+        "a serious problem",
+        "serious about doing",
+        "serious injury"
+      ],
+      "answer": "take something seriously",
       "stage": "T3",
       "ai": false
     },
     {
       "id": "serious-adj-example-cloze",
       "type": "collocation",
-      "prompt": "补全词卡核心例句：Lack of sleep can become a _____ problem.",
+      "prompt": "根据句意补全词卡核心例句：Lack of sleep can become a _____ problem.（填写 serious 的正确形式）",
       "answer": "serious",
       "stage": "T3",
       "ai": false
@@ -541,7 +553,7 @@
     {
       "id": "serious-adj-sentence-phrase",
       "type": "free_sentence",
-      "prompt": "请用完整搭配 “a serious problem” 写一个与自己有关的自然英文句子。",
+      "prompt": "请使用 “a serious problem” 结构写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -549,7 +561,7 @@
     {
       "id": "serious-adj-dialogue",
       "type": "dialogue",
-      "prompt": "写一段 2–4 轮真实对话，自然使用 “serious” 和搭配 “a serious problem”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “serious” 和 “a serious problem” 结构，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -608,7 +620,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.4",
+  "contentVersion": "2026.08.19.1",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

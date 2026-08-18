@@ -26,6 +26,11 @@ describe('rich review question selection', () => {
     expect(selected).toHaveLength(10);
     expect(new Set(selected.map((question) => question.id)).size).toBe(10);
     expect(new Set(selected.map((question) => question.type))).toEqual(new Set(['meaning_choice', 'recall', 'collocation', 'free_sentence']));
+    const counts = selected.reduce<Record<string, number>>((result, question) => {
+      result[question.type] = (result[question.type] ?? 0) + 1;
+      return result;
+    }, {});
+    expect(counts).toEqual({ meaning_choice: 3, recall: 3, collocation: 3, free_sentence: 1 });
   });
 
   it('is stable for the same word and review stage', () => {

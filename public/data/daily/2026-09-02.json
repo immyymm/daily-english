@@ -1,7 +1,7 @@
 {
   "date": "2026-09-02",
   "dayNumber": 17,
-  "contentVersion": "2026.08.17.4",
+  "contentVersion": "2026.08.19.1",
   "cards": [
     {
       "id": "important-adj",
@@ -483,7 +483,7 @@
         {
           "id": "important-adj-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ to remember",
+          "prompt": "补全高频搭配：_____ to remember（填写 important 的正确形式）",
           "answer": "important",
           "stage": "T0",
           "ai": false
@@ -491,39 +491,51 @@
         {
           "id": "important-adj-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ to remember",
-          "answer": "important",
+          "prompt": "补全核心结构中的连接成分：important _____ remember",
+          "answer": "to",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "important-adj-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ to remember",
-          "answer": "important",
+          "prompt": "根据语境补全搭配：important to _____",
+          "answer": "remember",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "important-adj-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ to remember",
-          "answer": "important",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“需要牢记”？",
+          "options": [
+            "it is important to",
+            "play an important role",
+            "important to remember",
+            "important for"
+          ],
+          "answer": "important to remember",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "important-adj-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ for",
-          "answer": "important",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“对……很重要”？",
+          "options": [
+            "play an important role",
+            "important for",
+            "important to remember",
+            "it is important to"
+          ],
+          "answer": "important for",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "important-adj-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：It is _____ to review mistakes.",
+          "prompt": "根据句意补全词卡核心例句：It is _____ to review mistakes.（填写 important 的正确形式）",
           "answer": "important",
           "stage": "T3",
           "ai": false
@@ -539,7 +551,7 @@
         {
           "id": "important-adj-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “important to remember” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “important to remember” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -547,7 +559,7 @@
         {
           "id": "important-adj-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “important” 和搭配 “important to remember”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “important” 和 “important to remember” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -606,7 +618,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1097,7 +1109,7 @@
         {
           "id": "available-adj-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：be _____ to",
+          "prompt": "补全高频搭配：be _____ to（填写 available 的正确形式）",
           "answer": "available",
           "stage": "T0",
           "ai": false
@@ -1105,39 +1117,51 @@
         {
           "id": "available-adj-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：be _____ to",
-          "answer": "available",
+          "prompt": "补全核心结构中的连接成分：be available _____",
+          "answer": "to",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "available-adj-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：be _____ to",
-          "answer": "available",
+          "prompt": "根据语境补全搭配：be available _____",
+          "answer": "to",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "available-adj-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：be _____ to",
-          "answer": "available",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“可供……使用”？",
+          "options": [
+            "available for download",
+            "be available to",
+            "available online",
+            "currently available"
+          ],
+          "answer": "be available to",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "available-adj-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ online",
-          "answer": "available",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“可在线获得”？",
+          "options": [
+            "available online",
+            "be available to",
+            "currently available",
+            "available for download"
+          ],
+          "answer": "available online",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "available-adj-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：The lesson is _____ offline.",
+          "prompt": "根据句意补全词卡核心例句：The lesson is _____ offline.（填写 available 的正确形式）",
           "answer": "available",
           "stage": "T3",
           "ai": false
@@ -1153,7 +1177,7 @@
         {
           "id": "available-adj-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “be available to” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “be available to” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1161,7 +1185,7 @@
         {
           "id": "available-adj-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “available” 和搭配 “be available to”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “available” 和 “be available to” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1220,7 +1244,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1711,7 +1735,7 @@
         {
           "id": "possible-adj-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：as soon as _____",
+          "prompt": "补全高频搭配：as soon as _____（填写 possible 的正确形式）",
           "answer": "possible",
           "stage": "T0",
           "ai": false
@@ -1719,39 +1743,51 @@
         {
           "id": "possible-adj-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：as soon as _____",
-          "answer": "possible",
+          "prompt": "补全核心结构中的连接成分：_____ soon as possible",
+          "answer": "as",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "possible-adj-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：as soon as _____",
-          "answer": "possible",
+          "prompt": "根据语境补全搭配：_____ soon as possible",
+          "answer": "as",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "possible-adj-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：as soon as _____",
-          "answer": "possible",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“尽快”？",
+          "options": [
+            "as soon as possible",
+            "if possible",
+            "make it possible to",
+            "possible solution"
+          ],
+          "answer": "as soon as possible",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "possible-adj-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：if _____",
-          "answer": "possible",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“如果可能”？",
+          "options": [
+            "as soon as possible",
+            "make it possible to",
+            "possible solution",
+            "if possible"
+          ],
+          "answer": "if possible",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "possible-adj-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：Please reply as soon as _____.",
+          "prompt": "根据句意补全词卡核心例句：Please reply as soon as _____.（填写 possible 的正确形式）",
           "answer": "possible",
           "stage": "T3",
           "ai": false
@@ -1767,7 +1803,7 @@
         {
           "id": "possible-adj-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “as soon as possible” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “as soon as possible” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1775,7 +1811,7 @@
         {
           "id": "possible-adj-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “possible” 和搭配 “as soon as possible”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “possible” 和 “as soon as possible” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1834,7 +1870,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2318,7 +2354,7 @@
         {
           "id": "difficult-adj-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：find something _____",
+          "prompt": "补全高频搭配：find something _____（填写 difficult 的正确形式）；something 要替换成实际的事物或内容",
           "answer": "difficult",
           "stage": "T0",
           "ai": false
@@ -2326,39 +2362,51 @@
         {
           "id": "difficult-adj-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：find something _____",
-          "answer": "difficult",
+          "prompt": "补全核心结构中的连接成分：_____ something difficult；something 要替换成实际的事物或内容",
+          "answer": "find",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "difficult-adj-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：find something _____",
-          "answer": "difficult",
+          "prompt": "根据语境补全搭配：_____ something difficult；something 要替换成实际的事物或内容",
+          "answer": "find",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "difficult-adj-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：find something _____",
-          "answer": "difficult",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“觉得某事困难”？；something 要替换成实际的事物或内容",
+          "options": [
+            "difficult to understand",
+            "difficult for someone",
+            "a difficult decision",
+            "find something difficult"
+          ],
+          "answer": "find something difficult",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "difficult-adj-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ to understand",
-          "answer": "difficult",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“难以理解”？",
+          "options": [
+            "difficult for someone",
+            "a difficult decision",
+            "difficult to understand",
+            "find something difficult"
+          ],
+          "answer": "difficult to understand",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "difficult-adj-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：I find this sound _____ to pronounce.",
+          "prompt": "根据句意补全词卡核心例句：I find this sound _____ to pronounce.（填写 difficult 的正确形式）",
           "answer": "difficult",
           "stage": "T3",
           "ai": false
@@ -2374,7 +2422,7 @@
         {
           "id": "difficult-adj-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “find something difficult” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “find something difficult” 结构写一个与自己有关的自然英文句子；something 要替换成实际的事物或内容。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2382,7 +2430,7 @@
         {
           "id": "difficult-adj-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “difficult” 和搭配 “find something difficult”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “difficult” 和 “find something difficult” 结构，并避免中文直译；something 要替换成实际的事物或内容。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2441,7 +2489,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2932,7 +2980,7 @@
         {
           "id": "responsible-adj-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：be _____ for",
+          "prompt": "补全高频搭配：be _____ for（填写 responsible 的正确形式）",
           "answer": "responsible",
           "stage": "T0",
           "ai": false
@@ -2940,39 +2988,51 @@
         {
           "id": "responsible-adj-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：be _____ for",
-          "answer": "responsible",
+          "prompt": "补全核心结构中的连接成分：be responsible _____",
+          "answer": "for",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "responsible-adj-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：be _____ for",
-          "answer": "responsible",
+          "prompt": "根据语境补全搭配：be responsible _____",
+          "answer": "for",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "responsible-adj-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：be _____ for",
-          "answer": "responsible",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“对……负责”？",
+          "options": [
+            "hold someone responsible",
+            "a responsible person",
+            "be responsible for",
+            "responsible for doing"
+          ],
+          "answer": "be responsible for",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "responsible-adj-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ for doing",
-          "answer": "responsible",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“负责做”？；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing",
+          "options": [
+            "a responsible person",
+            "responsible for doing",
+            "be responsible for",
+            "hold someone responsible"
+          ],
+          "answer": "responsible for doing",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "responsible-adj-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：She is _____ for the final report.",
+          "prompt": "根据句意补全词卡核心例句：She is _____ for the final report.（填写 responsible 的正确形式）",
           "answer": "responsible",
           "stage": "T3",
           "ai": false
@@ -2988,7 +3048,7 @@
         {
           "id": "responsible-adj-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “be responsible for” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “be responsible for” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2996,7 +3056,7 @@
         {
           "id": "responsible-adj-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “responsible” 和搭配 “be responsible for”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “responsible” 和 “be responsible for” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -3055,7 +3115,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

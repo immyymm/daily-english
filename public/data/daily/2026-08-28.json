@@ -1,7 +1,7 @@
 {
   "date": "2026-08-28",
   "dayNumber": 12,
-  "contentVersion": "2026.08.17.4",
+  "contentVersion": "2026.08.19.1",
   "cards": [
     {
       "id": "experience-n",
@@ -496,7 +496,7 @@
         {
           "id": "experience-n-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：gain _____",
+          "prompt": "补全高频搭配：gain _____（填写 experience 的正确形式）",
           "answer": "experience",
           "stage": "T0",
           "ai": false
@@ -504,39 +504,51 @@
         {
           "id": "experience-n-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：gain _____",
-          "answer": "experience",
+          "prompt": "补全核心结构中的连接成分：_____ experience",
+          "answer": "gain",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "experience-n-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：gain _____",
-          "answer": "experience",
+          "prompt": "根据语境补全搭配：_____ experience",
+          "answer": "gain",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "experience-n-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：gain _____",
-          "answer": "experience",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“积累经验”？",
+          "options": [
+            "have experience in",
+            "learning experience",
+            "from experience",
+            "gain experience"
+          ],
+          "answer": "gain experience",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "experience-n-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：have _____ in",
-          "answer": "experience",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“有……方面的经验”？",
+          "options": [
+            "learning experience",
+            "from experience",
+            "have experience in",
+            "gain experience"
+          ],
+          "answer": "have experience in",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "experience-n-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：Travel gave her valuable life _____.",
+          "prompt": "根据句意补全词卡核心例句：Travel gave her valuable life _____.（填写 experience 的正确形式）",
           "answer": "experience",
           "stage": "T3",
           "ai": false
@@ -552,7 +564,7 @@
         {
           "id": "experience-n-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “gain experience” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “gain experience” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -560,7 +572,7 @@
         {
           "id": "experience-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “experience” 和搭配 “gain experience”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “experience” 和 “gain experience” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -619,7 +631,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1103,7 +1115,7 @@
         {
           "id": "opportunity-n-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：have an _____ to",
+          "prompt": "补全高频搭配：have an _____ to（填写 opportunity 的正确形式）",
           "answer": "opportunity",
           "stage": "T0",
           "ai": false
@@ -1111,39 +1123,51 @@
         {
           "id": "opportunity-n-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：have an _____ to",
-          "answer": "opportunity",
+          "prompt": "补全核心结构中的连接成分：have an opportunity _____",
+          "answer": "to",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "opportunity-n-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：have an _____ to",
-          "answer": "opportunity",
+          "prompt": "根据语境补全搭配：have an opportunity _____",
+          "answer": "to",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "opportunity-n-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：have an _____ to",
-          "answer": "opportunity",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“有机会做”？",
+          "options": [
+            "a good opportunity",
+            "equal opportunities",
+            "have an opportunity to",
+            "take the opportunity to"
+          ],
+          "answer": "have an opportunity to",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "opportunity-n-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：take the _____ to",
-          "answer": "opportunity",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“借机做”？",
+          "options": [
+            "equal opportunities",
+            "take the opportunity to",
+            "have an opportunity to",
+            "a good opportunity"
+          ],
+          "answer": "take the opportunity to",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "opportunity-n-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：The meeting gave me an _____ to practice English.",
+          "prompt": "根据句意补全词卡核心例句：The meeting gave me an _____ to practice English.（填写 opportunity 的正确形式）",
           "answer": "opportunity",
           "stage": "T3",
           "ai": false
@@ -1159,7 +1183,7 @@
         {
           "id": "opportunity-n-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “have an opportunity to” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “have an opportunity to” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1167,7 +1191,7 @@
         {
           "id": "opportunity-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “opportunity” 和搭配 “have an opportunity to”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “opportunity” 和 “have an opportunity to” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1226,7 +1250,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1718,7 +1742,7 @@
         {
           "id": "decision-n-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：make a _____",
+          "prompt": "补全高频搭配：make a _____（填写 decision 的正确形式）",
           "answer": "decision",
           "stage": "T0",
           "ai": false
@@ -1726,39 +1750,51 @@
         {
           "id": "decision-n-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：make a _____",
-          "answer": "decision",
+          "prompt": "补全核心结构中的连接成分：_____ a decision",
+          "answer": "make",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "decision-n-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：make a _____",
-          "answer": "decision",
+          "prompt": "根据语境补全搭配：_____ a decision",
+          "answer": "make",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "decision-n-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：make a _____",
-          "answer": "decision",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“作出决定”？",
+          "options": [
+            "difficult decision",
+            "make a decision",
+            "reach a decision",
+            "final decision"
+          ],
+          "answer": "make a decision",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "decision-n-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：reach a _____",
-          "answer": "decision",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“作出决定”？",
+          "options": [
+            "reach a decision",
+            "make a decision",
+            "final decision",
+            "difficult decision"
+          ],
+          "answer": "reach a decision",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "decision-n-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：You do not need to make the _____ today.",
+          "prompt": "根据句意补全词卡核心例句：You do not need to make the _____ today.（填写 decision 的正确形式）",
           "answer": "decision",
           "stage": "T3",
           "ai": false
@@ -1774,7 +1810,7 @@
         {
           "id": "decision-n-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “make a decision” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “make a decision” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1782,7 +1818,7 @@
         {
           "id": "decision-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “decision” 和搭配 “make a decision”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “decision” 和 “make a decision” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1841,7 +1877,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2325,7 +2361,7 @@
         {
           "id": "relationship-n-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：build a _____",
+          "prompt": "补全高频搭配：build a _____（填写 relationship 的正确形式）",
           "answer": "relationship",
           "stage": "T0",
           "ai": false
@@ -2333,39 +2369,51 @@
         {
           "id": "relationship-n-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：build a _____",
-          "answer": "relationship",
+          "prompt": "补全核心结构中的连接成分：_____ a relationship",
+          "answer": "build",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "relationship-n-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：build a _____",
-          "answer": "relationship",
+          "prompt": "根据语境补全搭配：_____ a relationship",
+          "answer": "build",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "relationship-n-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：build a _____",
-          "answer": "relationship",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“建立关系”？",
+          "options": [
+            "build a relationship",
+            "close relationship",
+            "relationship between",
+            "working relationship"
+          ],
+          "answer": "build a relationship",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "relationship-n-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：close _____",
-          "answer": "relationship",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“亲密关系”？",
+          "options": [
+            "build a relationship",
+            "relationship between",
+            "working relationship",
+            "close relationship"
+          ],
+          "answer": "close relationship",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "relationship-n-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：Trust is important in any _____.",
+          "prompt": "根据句意补全词卡核心例句：Trust is important in any _____.（填写 relationship 的正确形式）",
           "answer": "relationship",
           "stage": "T3",
           "ai": false
@@ -2381,7 +2429,7 @@
         {
           "id": "relationship-n-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “build a relationship” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “build a relationship” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2389,7 +2437,7 @@
         {
           "id": "relationship-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “relationship” 和搭配 “build a relationship”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “relationship” 和 “build a relationship” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2448,7 +2496,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2932,7 +2980,7 @@
         {
           "id": "environment-n-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：learning _____",
+          "prompt": "补全高频搭配：learning _____（填写 environment 的正确形式）",
           "answer": "environment",
           "stage": "T0",
           "ai": false
@@ -2940,39 +2988,51 @@
         {
           "id": "environment-n-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：learning _____",
-          "answer": "environment",
+          "prompt": "补全核心结构中的连接成分：_____ environment",
+          "answer": "learning",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "environment-n-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：learning _____",
-          "answer": "environment",
+          "prompt": "根据语境补全搭配：_____ environment",
+          "answer": "learning",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "environment-n-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：learning _____",
-          "answer": "environment",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“学习环境”？",
+          "options": [
+            "protect the environment",
+            "safe environment",
+            "work environment",
+            "learning environment"
+          ],
+          "answer": "learning environment",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "environment-n-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：protect the _____",
-          "answer": "environment",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“保护环境”？",
+          "options": [
+            "safe environment",
+            "work environment",
+            "protect the environment",
+            "learning environment"
+          ],
+          "answer": "protect the environment",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "environment-n-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：A quiet _____ helps me focus.",
+          "prompt": "根据句意补全词卡核心例句：A quiet _____ helps me focus.（填写 environment 的正确形式）；A、B 要替换成实际比较内容",
           "answer": "environment",
           "stage": "T3",
           "ai": false
@@ -2988,7 +3048,7 @@
         {
           "id": "environment-n-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “learning environment” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “learning environment” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2996,7 +3056,7 @@
         {
           "id": "environment-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “environment” 和搭配 “learning environment”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “environment” 和 “learning environment” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -3055,7 +3115,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

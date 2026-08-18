@@ -1,7 +1,7 @@
 {
   "date": "2026-09-11",
   "dayNumber": 26,
-  "contentVersion": "2026.08.17.4",
+  "contentVersion": "2026.08.19.1",
   "cards": [
     {
       "id": "write-v",
@@ -490,7 +490,7 @@
         {
           "id": "write-v-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ down",
+          "prompt": "补全高频搭配：_____ down（填写 write 的正确形式）",
           "answer": "write",
           "stage": "T0",
           "ai": false
@@ -498,39 +498,51 @@
         {
           "id": "write-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ a message",
-          "answer": "write",
+          "prompt": "补全核心结构中的连接成分：write _____ message",
+          "answer": "a",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "write-v-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ a message",
-          "answer": "write",
+          "prompt": "根据语境补全搭配：write a _____",
+          "answer": "message",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "write-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ a message",
-          "answer": "write",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“写消息”？",
+          "options": [
+            "write to someone",
+            "write a message",
+            "write about",
+            "write something down"
+          ],
+          "answer": "write a message",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "write-v-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ about",
-          "answer": "write",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“写关于……”？",
+          "options": [
+            "write about",
+            "write a message",
+            "write something down",
+            "write to someone"
+          ],
+          "answer": "write about",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "write-v-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：_____ down one sentence using the new word.",
+          "prompt": "根据句意补全词卡核心例句：_____ down one sentence using the new word.（填写 write 的正确形式）",
           "answer": "Write",
           "stage": "T3",
           "ai": false
@@ -546,7 +558,7 @@
         {
           "id": "write-v-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “write a message” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “write a message” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -554,7 +566,7 @@
         {
           "id": "write-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “write” 和搭配 “write a message”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “write” 和 “write a message” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -613,7 +625,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1104,7 +1116,7 @@
         {
           "id": "read-v-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ aloud",
+          "prompt": "补全高频搭配：_____ aloud（填写 read 的正确形式）",
           "answer": "read",
           "stage": "T0",
           "ai": false
@@ -1112,39 +1124,51 @@
         {
           "id": "read-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ a book",
-          "answer": "read",
+          "prompt": "补全核心结构中的连接成分：read _____ book",
+          "answer": "a",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "read-v-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ a book",
-          "answer": "read",
+          "prompt": "根据语境补全搭配：read a _____",
+          "answer": "book",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "read-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ a book",
-          "answer": "read",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“读书”？",
+          "options": [
+            "read a book",
+            "read about",
+            "read aloud",
+            "read between the lines"
+          ],
+          "answer": "read a book",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "read-v-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ about",
-          "answer": "read",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“阅读有关……的内容”？",
+          "options": [
+            "read a book",
+            "read aloud",
+            "read between the lines",
+            "read about"
+          ],
+          "answer": "read about",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "read-v-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：_____ the example aloud twice.",
+          "prompt": "根据句意补全词卡核心例句：_____ the example aloud twice.（填写 read 的正确形式）",
           "answer": "Read",
           "stage": "T3",
           "ai": false
@@ -1160,7 +1184,7 @@
         {
           "id": "read-v-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “read a book” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “read a book” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1168,7 +1192,7 @@
         {
           "id": "read-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “read” 和搭配 “read a book”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “read” 和 “read a book” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1227,7 +1251,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1719,7 +1743,7 @@
         {
           "id": "listen-v-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ to",
+          "prompt": "补全高频搭配：_____ to（填写 listen 的正确形式）",
           "answer": "listen",
           "stage": "T0",
           "ai": false
@@ -1727,39 +1751,51 @@
         {
           "id": "listen-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ to",
-          "answer": "listen",
+          "prompt": "补全核心结构中的连接成分：listen _____",
+          "answer": "to",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "listen-v-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ to",
-          "answer": "listen",
+          "prompt": "根据语境补全搭配：listen _____",
+          "answer": "to",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "listen-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ to",
-          "answer": "listen",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“听……”？",
+          "options": [
+            "listen carefully",
+            "listen for",
+            "listen to advice",
+            "listen to"
+          ],
+          "answer": "listen to",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "listen-v-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ carefully",
-          "answer": "listen",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“仔细听”？",
+          "options": [
+            "listen for",
+            "listen to advice",
+            "listen carefully",
+            "listen to"
+          ],
+          "answer": "listen carefully",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "listen-v-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：_____ to the whole sentence before answering.",
+          "prompt": "根据句意补全词卡核心例句：_____ to the whole sentence before answering.（填写 listen 的正确形式）",
           "answer": "Listen",
           "stage": "T3",
           "ai": false
@@ -1775,7 +1811,7 @@
         {
           "id": "listen-v-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “listen to” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “listen to” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1783,7 +1819,7 @@
         {
           "id": "listen-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “listen” 和搭配 “listen to”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “listen” 和 “listen to” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1842,7 +1878,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2347,7 +2383,7 @@
         {
           "id": "travel-n-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ abroad",
+          "prompt": "补全高频搭配：_____ abroad（填写 travel 的正确形式）",
           "answer": "travel",
           "stage": "T0",
           "ai": false
@@ -2355,39 +2391,51 @@
         {
           "id": "travel-n-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ abroad",
-          "answer": "travel",
+          "prompt": "补全核心结构中的连接成分：travel _____",
+          "answer": "abroad",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "travel-n-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ abroad",
-          "answer": "travel",
+          "prompt": "根据语境补全搭配：travel _____",
+          "answer": "abroad",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "travel-n-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ abroad",
-          "answer": "travel",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“出国旅行”？",
+          "options": [
+            "travel around",
+            "business travel",
+            "travel abroad",
+            "travel by train"
+          ],
+          "answer": "travel abroad",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "travel-n-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ by train",
-          "answer": "travel",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“乘火车旅行”？",
+          "options": [
+            "business travel",
+            "travel by train",
+            "travel abroad",
+            "travel around"
+          ],
+          "answer": "travel by train",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "travel-n-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：She _____ abroad for work twice a year.",
+          "prompt": "根据句意补全词卡核心例句：She _____ abroad for work twice a year.（填写 travel 的正确形式）",
           "answer": "travels",
           "stage": "T3",
           "ai": false
@@ -2403,7 +2451,7 @@
         {
           "id": "travel-n-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “travel abroad” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “travel abroad” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2411,7 +2459,7 @@
         {
           "id": "travel-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “travel” 和搭配 “travel abroad”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “travel” 和 “travel abroad” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2470,7 +2518,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2962,7 +3010,7 @@
         {
           "id": "family-n-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ member",
+          "prompt": "补全高频搭配：_____ member（填写 family 的正确形式）",
           "answer": "family",
           "stage": "T0",
           "ai": false
@@ -2970,39 +3018,51 @@
         {
           "id": "family-n-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ member",
-          "answer": "family",
+          "prompt": "补全核心结构中的连接成分：family _____",
+          "answer": "member",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "family-n-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ member",
-          "answer": "family",
+          "prompt": "根据语境补全搭配：family _____",
+          "answer": "member",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "family-n-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ member",
-          "answer": "family",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“家庭成员”？",
+          "options": [
+            "start a family",
+            "family member",
+            "close family",
+            "family life"
+          ],
+          "answer": "family member",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "family-n-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：close _____",
-          "answer": "family",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“近亲”？",
+          "options": [
+            "close family",
+            "family member",
+            "family life",
+            "start a family"
+          ],
+          "answer": "close family",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "family-n-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：My _____ supports my learning plan.",
+          "prompt": "根据句意补全词卡核心例句：My _____ supports my learning plan.（填写 family 的正确形式）",
           "answer": "family",
           "stage": "T3",
           "ai": false
@@ -3018,7 +3078,7 @@
         {
           "id": "family-n-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “family member” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “family member” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -3026,7 +3086,7 @@
         {
           "id": "family-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “family” 和搭配 “family member”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “family” 和 “family member” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -3085,7 +3145,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

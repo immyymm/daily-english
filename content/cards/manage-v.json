@@ -615,7 +615,7 @@
     {
       "id": "manage-v-collocation-core",
       "type": "collocation",
-      "prompt": "补全高频搭配：_____ to do something",
+      "prompt": "补全高频搭配：_____ to do something（填写 manage 的正确形式）；do 代表任意合适的动词原形，不要求写出单词 do；something 要替换成实际的事物或内容",
       "answer": "manage",
       "stage": "T0",
       "ai": false
@@ -623,40 +623,52 @@
     {
       "id": "manage-v-collocation-structure",
       "type": "collocation",
-      "prompt": "补全核心结构：_____ to do something",
-      "answer": "manage",
+      "prompt": "补全核心结构中的连接成分：manage _____ do something；do 代表任意合适的动词原形，不要求写出单词 do；something 要替换成实际的事物或内容",
+      "answer": "to",
       "stage": "T1",
       "ai": false
     },
     {
       "id": "manage-v-collocation-context",
       "type": "collocation",
-      "prompt": "补全语境词组：_____ to finish",
-      "answer": "manage",
+      "prompt": "根据语境补全搭配：manage to _____",
+      "answer": "finish",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "manage-v-collocation-fixed-1",
       "type": "collocation",
-      "prompt": "补全固定搭配：_____ to do",
-      "answer": "manage",
+      "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“设法做成某事”？；do 代表任意合适的动词原形，不要求写出单词 do",
+      "options": [
+        "manage a project",
+        "manage your time",
+        "manage to do",
+        "manage a team"
+      ],
+      "answer": "manage to do",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "manage-v-collocation-fixed-2",
       "type": "collocation",
-      "prompt": "再补全一个固定搭配：_____ a team",
-      "answer": "manage",
+      "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“管理团队”？",
+      "options": [
+        "manage your time",
+        "manage a team",
+        "manage to do",
+        "manage a project"
+      ],
+      "answer": "manage a team",
       "stage": "T3",
       "ai": false
     },
     {
       "id": "manage-v-example-cloze",
       "type": "collocation",
-      "prompt": "补全词卡核心例句：She managed to finish the report on time.（填入目标词）",
-      "answer": "manage",
+      "prompt": "根据句意补全词卡核心例句：She _____ to finish the report on time.（填写 manage 的正确形式）",
+      "answer": "managed",
       "stage": "T3",
       "ai": false
     },
@@ -671,7 +683,7 @@
     {
       "id": "manage-v-sentence-phrase",
       "type": "free_sentence",
-      "prompt": "请用完整搭配 “manage to do” 写一个与自己有关的自然英文句子。",
+      "prompt": "请使用 “manage to do” 结构写一个与自己有关的自然英文句子；do 代表任意合适的动词原形，不要求写出单词 do。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -679,7 +691,7 @@
     {
       "id": "manage-v-dialogue",
       "type": "dialogue",
-      "prompt": "写一段 2–4 轮真实对话，自然使用 “manage” 和搭配 “manage to finish”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “manage” 和 “manage to finish” 结构，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -738,7 +750,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.4",
+  "contentVersion": "2026.08.19.1",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；本卡依照用户词卡模板人工精校；音标为美式发音。"
 }

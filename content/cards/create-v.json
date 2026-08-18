@@ -492,7 +492,7 @@
     {
       "id": "create-v-collocation-core",
       "type": "collocation",
-      "prompt": "补全高频搭配：_____ an opportunity",
+      "prompt": "补全高频搭配：_____ an opportunity（填写 create 的正确形式）",
       "answer": "create",
       "stage": "T0",
       "ai": false
@@ -500,39 +500,51 @@
     {
       "id": "create-v-collocation-structure",
       "type": "collocation",
-      "prompt": "补全核心结构：_____ an opportunity",
-      "answer": "create",
+      "prompt": "补全核心结构中的连接成分：create _____ opportunity",
+      "answer": "an",
       "stage": "T1",
       "ai": false
     },
     {
       "id": "create-v-collocation-context",
       "type": "collocation",
-      "prompt": "补全语境词组：_____ an opportunity",
-      "answer": "create",
+      "prompt": "根据语境补全搭配：create an _____",
+      "answer": "opportunity",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "create-v-collocation-fixed-1",
       "type": "collocation",
-      "prompt": "补全固定搭配：_____ an opportunity",
-      "answer": "create",
+      "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“创造机会”？",
+      "options": [
+        "create an account",
+        "create a plan",
+        "create an opportunity",
+        "create a problem"
+      ],
+      "answer": "create an opportunity",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "create-v-collocation-fixed-2",
       "type": "collocation",
-      "prompt": "再补全一个固定搭配：_____ a problem",
-      "answer": "create",
+      "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“造成问题”？",
+      "options": [
+        "create a plan",
+        "create a problem",
+        "create an opportunity",
+        "create an account"
+      ],
+      "answer": "create a problem",
       "stage": "T3",
       "ai": false
     },
     {
       "id": "create-v-example-cloze",
       "type": "collocation",
-      "prompt": "补全词卡核心例句：Good questions can _____ meaningful conversations.",
+      "prompt": "根据句意补全词卡核心例句：Good questions can _____ meaningful conversations.（填写 create 的正确形式）",
       "answer": "create",
       "stage": "T3",
       "ai": false
@@ -548,7 +560,7 @@
     {
       "id": "create-v-sentence-phrase",
       "type": "free_sentence",
-      "prompt": "请用完整搭配 “create an opportunity” 写一个与自己有关的自然英文句子。",
+      "prompt": "请使用 “create an opportunity” 结构写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -556,7 +568,7 @@
     {
       "id": "create-v-dialogue",
       "type": "dialogue",
-      "prompt": "写一段 2–4 轮真实对话，自然使用 “create” 和搭配 “create an opportunity”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “create” 和 “create an opportunity” 结构，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -615,7 +627,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.4",
+  "contentVersion": "2026.08.19.1",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

@@ -1,7 +1,7 @@
 {
   "date": "2026-09-08",
   "dayNumber": 23,
-  "contentVersion": "2026.08.17.4",
+  "contentVersion": "2026.08.19.1",
   "cards": [
     {
       "id": "directly-adv",
@@ -490,7 +490,7 @@
         {
           "id": "directly-adv-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：speak _____",
+          "prompt": "补全高频搭配：speak _____（填写 directly 的正确形式）",
           "answer": "directly",
           "stage": "T0",
           "ai": false
@@ -498,39 +498,51 @@
         {
           "id": "directly-adv-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：speak _____",
-          "answer": "directly",
+          "prompt": "补全核心结构中的连接成分：_____ directly",
+          "answer": "speak",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "directly-adv-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：speak _____",
-          "answer": "directly",
+          "prompt": "根据语境补全搭配：_____ directly",
+          "answer": "speak",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "directly-adv-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：speak _____",
-          "answer": "directly",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“直接表达”？",
+          "options": [
+            "speak directly",
+            "directly affect",
+            "go directly to",
+            "directly related to"
+          ],
+          "answer": "speak directly",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "directly-adv-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ affect",
-          "answer": "directly",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“直接影响”？",
+          "options": [
+            "speak directly",
+            "go directly to",
+            "directly related to",
+            "directly affect"
+          ],
+          "answer": "directly affect",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "directly-adv-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：Please answer the question _____.",
+          "prompt": "根据句意补全词卡核心例句：Please answer the question _____.（填写 directly 的正确形式）",
           "answer": "directly",
           "stage": "T3",
           "ai": false
@@ -546,7 +558,7 @@
         {
           "id": "directly-adv-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “speak directly” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “speak directly” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -554,7 +566,7 @@
         {
           "id": "directly-adv-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “directly” 和搭配 “speak directly”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “directly” 和 “speak directly” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -613,7 +625,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1104,7 +1116,7 @@
         {
           "id": "clearly-adv-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：explain _____",
+          "prompt": "补全高频搭配：explain _____（填写 clearly 的正确形式）",
           "answer": "clearly",
           "stage": "T0",
           "ai": false
@@ -1112,39 +1124,51 @@
         {
           "id": "clearly-adv-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：explain _____",
-          "answer": "clearly",
+          "prompt": "补全核心结构中的连接成分：_____ clearly",
+          "answer": "explain",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "clearly-adv-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：explain _____",
-          "answer": "clearly",
+          "prompt": "根据语境补全搭配：_____ clearly",
+          "answer": "explain",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "clearly-adv-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：explain _____",
-          "answer": "clearly",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“清楚解释”？",
+          "options": [
+            "speak clearly",
+            "clearly understand",
+            "clearly show",
+            "explain clearly"
+          ],
+          "answer": "explain clearly",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "clearly-adv-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：speak _____",
-          "answer": "clearly",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“说得清楚”？",
+          "options": [
+            "clearly understand",
+            "clearly show",
+            "speak clearly",
+            "explain clearly"
+          ],
+          "answer": "speak clearly",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "clearly-adv-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：She explained the rule _____.",
+          "prompt": "根据句意补全词卡核心例句：She explained the rule _____.（填写 clearly 的正确形式）",
           "answer": "clearly",
           "stage": "T3",
           "ai": false
@@ -1160,7 +1184,7 @@
         {
           "id": "clearly-adv-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “explain clearly” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “explain clearly” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1168,7 +1192,7 @@
         {
           "id": "clearly-adv-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “clearly” 和搭配 “explain clearly”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “clearly” 和 “explain clearly” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1227,7 +1251,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1711,7 +1735,7 @@
         {
           "id": "usually-adv-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ happens",
+          "prompt": "补全高频搭配：_____ happens（填写 usually 的正确形式）",
           "answer": "usually",
           "stage": "T0",
           "ai": false
@@ -1719,39 +1743,51 @@
         {
           "id": "usually-adv-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ happens",
-          "answer": "usually",
+          "prompt": "补全核心结构中的连接成分：usually _____",
+          "answer": "happens",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "usually-adv-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ happens",
-          "answer": "usually",
+          "prompt": "根据语境补全搭配：usually _____",
+          "answer": "happens",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "usually-adv-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ happens",
-          "answer": "usually",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“通常发生”？",
+          "options": [
+            "as usually happens",
+            "not usually",
+            "usually happens",
+            "usually take"
+          ],
+          "answer": "usually happens",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "usually-adv-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ take",
-          "answer": "usually",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“通常需要”？",
+          "options": [
+            "not usually",
+            "usually take",
+            "usually happens",
+            "as usually happens"
+          ],
+          "answer": "usually take",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "usually-adv-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：I _____ review words after breakfast.",
+          "prompt": "根据句意补全词卡核心例句：I _____ review words after breakfast.（填写 usually 的正确形式）",
           "answer": "usually",
           "stage": "T3",
           "ai": false
@@ -1767,7 +1803,7 @@
         {
           "id": "usually-adv-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “usually happens” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “usually happens” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1775,7 +1811,7 @@
         {
           "id": "usually-adv-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “usually” 和搭配 “usually happens”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “usually” 和 “usually happens” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1834,7 +1870,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2310,7 +2346,7 @@
         {
           "id": "perhaps-adv-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ because",
+          "prompt": "补全高频搭配：_____ because（填写 perhaps 的正确形式）",
           "answer": "perhaps",
           "stage": "T0",
           "ai": false
@@ -2318,39 +2354,51 @@
         {
           "id": "perhaps-adv-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ because",
-          "answer": "perhaps",
+          "prompt": "补全核心结构中的连接成分：perhaps _____",
+          "answer": "because",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "perhaps-adv-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ because",
-          "answer": "perhaps",
+          "prompt": "根据语境补全搭配：perhaps _____",
+          "answer": "because",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "perhaps-adv-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ because",
-          "answer": "perhaps",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“也许因为”？",
+          "options": [
+            "perhaps the most important",
+            "perhaps because",
+            "perhaps we should",
+            "perhaps not"
+          ],
+          "answer": "perhaps because",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "perhaps-adv-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ we should",
-          "answer": "perhaps",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“也许我们应该”？",
+          "options": [
+            "perhaps we should",
+            "perhaps because",
+            "perhaps not",
+            "perhaps the most important"
+          ],
+          "answer": "perhaps we should",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "perhaps-adv-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：_____ we should try a different approach.",
+          "prompt": "根据句意补全词卡核心例句：_____ we should try a different approach.（填写 perhaps 的正确形式）",
           "answer": "Perhaps",
           "stage": "T3",
           "ai": false
@@ -2366,7 +2414,7 @@
         {
           "id": "perhaps-adv-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “perhaps because” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “perhaps because” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2374,7 +2422,7 @@
         {
           "id": "perhaps-adv-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “perhaps” 和搭配 “perhaps because”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “perhaps” 和 “perhaps because” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2433,7 +2481,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2917,7 +2965,7 @@
         {
           "id": "already-adv-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：have _____ done",
+          "prompt": "补全高频搭配：have _____ done（填写 already 的正确形式）；done 代表符合语境的过去分词，不要求写出单词 done",
           "answer": "already",
           "stage": "T0",
           "ai": false
@@ -2925,39 +2973,51 @@
         {
           "id": "already-adv-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：have _____ done",
-          "answer": "already",
+          "prompt": "补全核心结构中的连接成分：have already _____；done 代表符合语境的过去分词，不要求写出单词 done",
+          "answer": "done",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "already-adv-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：have _____ done",
-          "answer": "already",
+          "prompt": "根据语境补全搭配：have already _____；done 代表符合语境的过去分词，不要求写出单词 done",
+          "answer": "done",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "already-adv-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：have _____ done",
-          "answer": "already",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“已经做过”？；done 代表符合语境的过去分词，不要求写出单词 done",
+          "options": [
+            "have already done",
+            "already know",
+            "already available",
+            "as you already know"
+          ],
+          "answer": "have already done",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "already-adv-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ know",
-          "answer": "already",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“已经知道”？",
+          "options": [
+            "have already done",
+            "already available",
+            "as you already know",
+            "already know"
+          ],
+          "answer": "already know",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "already-adv-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：I have _____ completed today’s lesson.",
+          "prompt": "根据句意补全词卡核心例句：I have _____ completed today’s lesson.（填写 already 的正确形式）",
           "answer": "already",
           "stage": "T3",
           "ai": false
@@ -2973,7 +3033,7 @@
         {
           "id": "already-adv-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “have already done” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “have already done” 结构写一个与自己有关的自然英文句子；done 代表符合语境的过去分词，不要求写出单词 done。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2981,7 +3041,7 @@
         {
           "id": "already-adv-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “already” 和搭配 “have already done”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “already” 和 “have already done” 结构，并避免中文直译；done 代表符合语境的过去分词，不要求写出单词 done。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -3040,7 +3100,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

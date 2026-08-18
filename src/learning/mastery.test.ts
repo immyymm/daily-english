@@ -44,4 +44,21 @@ describe('mastery diagnostics', () => {
     expect(profile.errorCounts).toEqual({ 拼写: 2, 搭配: 1 });
     expect(profile.attemptCount).toBe(3);
   });
+
+  it('excludes legacy cloze attempts whose prompt already exposed the answer', () => {
+    const attempts = [
+      {
+        ...attempt('4', 0, 'collocation', ['拼写或答案不正确']),
+        id: 'invalid-cloze',
+        questionId: 'manage-v-example-cloze-T0-3',
+        prompt: '补全词卡核心例句：She managed to finish the report on time.（填入目标词）'
+      },
+      { ...attempt('5', 100, 'meaning_choice'), id: 'valid', questionId: 'manage-v-meaning-T0-1', prompt: 'manage 的含义是？' }
+    ];
+
+    const profile = calculateMasteryProfile(attempts);
+    expect(profile.attemptCount).toBe(1);
+    expect(profile.masteryScore).toBe(100);
+    expect(profile.errorCounts).toEqual({});
+  });
 });

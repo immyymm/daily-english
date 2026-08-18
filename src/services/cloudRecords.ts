@@ -1,5 +1,5 @@
 import type { SupabaseClient } from '@supabase/supabase-js';
-import { calculateMasteryProfile } from '../learning/mastery';
+import { calculateMasteryProfile, isLegacyInvalidClozeAttempt } from '../learning/mastery';
 import { evaluationSchema } from '../schemas/evaluation';
 import { normalizeEvaluationResultForHistory } from '../schemas/evaluationConstraints';
 import { db } from '../storage/db';
@@ -231,7 +231,7 @@ export async function syncDetailedRecords(
       request_payload: { prompt, answer, questionId, correctAnswer, responseMs },
       result: jsonObjectOrNull(raw.result),
       model: textValue(raw.model).trim() || null,
-      rubric_version: textValue(raw.rubricVersion, '2026.08.18.8'),
+      rubric_version: textValue(raw.rubricVersion, '2026.08.19.1'),
       token_usage: jsonObjectOrNull(raw.tokenUsage),
       error_message: textValue(raw.errorMessage).trim() || null,
       retry_count: boundedInteger(raw.retryCount, 0, 2_147_483_647, 0),
@@ -371,7 +371,7 @@ function rowToEvaluation(row: Record<string, unknown>): AIEvaluation {
     createdAt: String(row.created_at ?? row.queued_at),
     updatedAt: String(row.updated_at ?? row.created_at),
     model: row.model ? String(row.model) : undefined,
-    rubricVersion: String(row.rubric_version ?? '2026.08.18.8'),
+    rubricVersion: String(row.rubric_version ?? '2026.08.19.1'),
     result,
     errorMessage: row.error_message ? String(row.error_message) : undefined,
     prompt,
@@ -487,8 +487,14 @@ export async function hydrateDetailedRecords(client: SupabaseClient, userId: str
     fetchAll(client, 'daily_english_daily_plans', userId)
   ]);
   const remoteProgress = masteryRows.map(rowToProgress);
+  const remoteAttempts = attemptRows.map(rowToAttempt);
   const existingProgress = new Map((await db.progress.toArray()).map((item) => [item.cardId, item]));
+  const existingAttempts = await db.attempts.toArray();
   const existingEvaluations = new Map((await db.aiEvaluations.toArray()).map((item) => [item.requestId, item]));
+  const legacyInvalidAttemptIds = [...new Set([
+    ...existingAttempts.filter(isLegacyInvalidClozeAttempt).map((item) => item.id),
+    ...remoteAttempts.filter(isLegacyInvalidClozeAttempt).map((item) => item.id)
+  ])];
   const mergedProgress = remoteProgress.map((remote) => {
     const local = existingProgress.get(remote.cardId);
     if (!local) return remote;
@@ -514,8 +520,10 @@ export async function hydrateDetailedRecords(client: SupabaseClient, userId: str
   });
 
   await db.transaction('rw', db.progress, db.attempts, db.aiEvaluations, db.dailyRecommendations, async () => {
+    if (legacyInvalidAttemptIds.length) await db.attempts.bulkDelete(legacyInvalidAttemptIds);
     if (mergedProgress.length) await db.progress.bulkPut(mergedProgress);
-    if (attemptRows.length) await db.attempts.bulkPut(attemptRows.map(rowToAttempt));
+    const validRemoteAttempts = remoteAttempts.filter((attempt) => !isLegacyInvalidClozeAttempt(attempt));
+    if (validRemoteAttempts.length) await db.attempts.bulkPut(validRemoteAttempts);
     if (mergedEvaluations.length) await db.aiEvaluations.bulkPut(mergedEvaluations);
     if (recommendationRows.length) await db.dailyRecommendations.bulkPut(recommendationRows.map(rowToRecommendation));
   });

@@ -1,7 +1,7 @@
 {
   "date": "2026-08-26",
   "dayNumber": 10,
-  "contentVersion": "2026.08.17.4",
+  "contentVersion": "2026.08.19.1",
   "cards": [
     {
       "id": "discover-v",
@@ -483,7 +483,7 @@
         {
           "id": "discover-v-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ a new way",
+          "prompt": "补全高频搭配：_____ a new way（填写 discover 的正确形式）",
           "answer": "discover",
           "stage": "T0",
           "ai": false
@@ -491,39 +491,51 @@
         {
           "id": "discover-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ the truth",
-          "answer": "discover",
+          "prompt": "补全核心结构中的连接成分：discover _____ truth",
+          "answer": "the",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "discover-v-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ the truth",
-          "answer": "discover",
+          "prompt": "根据语境补全搭配：discover the _____",
+          "answer": "truth",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "discover-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ the truth",
-          "answer": "discover",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“发现真相”？",
+          "options": [
+            "recently discovered",
+            "discover the truth",
+            "discover a new way",
+            "discover that"
+          ],
+          "answer": "discover the truth",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "discover-v-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ a new way",
-          "answer": "discover",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“发现新方法”？",
+          "options": [
+            "discover a new way",
+            "discover the truth",
+            "discover that",
+            "recently discovered"
+          ],
+          "answer": "discover a new way",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "discover-v-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：You may _____ a better way to remember it.",
+          "prompt": "根据句意补全词卡核心例句：You may _____ a better way to remember it.（填写 discover 的正确形式）",
           "answer": "discover",
           "stage": "T3",
           "ai": false
@@ -539,7 +551,7 @@
         {
           "id": "discover-v-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “discover the truth” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “discover the truth” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -547,7 +559,7 @@
         {
           "id": "discover-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “discover” 和搭配 “discover the truth”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “discover” 和 “discover the truth” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -606,7 +618,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1097,7 +1109,7 @@
         {
           "id": "protect-v-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ someone from something",
+          "prompt": "补全高频搭配：_____ someone from something（填写 protect 的正确形式）；someone 要替换成实际的人或代词；something 要替换成实际的事物或内容",
           "answer": "protect",
           "stage": "T0",
           "ai": false
@@ -1105,39 +1117,51 @@
         {
           "id": "protect-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ someone from",
-          "answer": "protect",
+          "prompt": "补全核心结构中的连接成分：protect _____ from；someone 要替换成实际的人或代词",
+          "answer": "someone",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "protect-v-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ someone from",
-          "answer": "protect",
+          "prompt": "根据语境补全搭配：protect someone _____；someone 要替换成实际的人或代词",
+          "answer": "from",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "protect-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ someone from",
-          "answer": "protect",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“保护某人免受……”？；someone 要替换成实际的人或代词",
+          "options": [
+            "protect someone from",
+            "protect the environment",
+            "protect your privacy",
+            "be protected by"
+          ],
+          "answer": "protect someone from",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "protect-v-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ the environment",
-          "answer": "protect",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“保护环境”？",
+          "options": [
+            "protect someone from",
+            "protect your privacy",
+            "be protected by",
+            "protect the environment"
+          ],
+          "answer": "protect the environment",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "protect-v-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：A strong password _____ your account.",
+          "prompt": "根据句意补全词卡核心例句：A strong password _____ your account.（填写 protect 的正确形式）；A、B 要替换成实际比较内容",
           "answer": "protects",
           "stage": "T3",
           "ai": false
@@ -1153,7 +1177,7 @@
         {
           "id": "protect-v-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “protect someone from” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “protect someone from” 结构写一个与自己有关的自然英文句子；someone 要替换成实际的人或代词。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1161,7 +1185,7 @@
         {
           "id": "protect-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “protect” 和搭配 “protect someone from”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “protect” 和 “protect someone from” 结构，并避免中文直译；someone 要替换成实际的人或代词。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1220,7 +1244,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1704,7 +1728,7 @@
         {
           "id": "encourage-v-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ someone to do something",
+          "prompt": "补全高频搭配：_____ someone to do something（填写 encourage 的正确形式）；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词；something 要替换成实际的事物或内容",
           "answer": "encourage",
           "stage": "T0",
           "ai": false
@@ -1712,40 +1736,52 @@
         {
           "id": "encourage-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ someone to do",
-          "answer": "encourage",
+          "prompt": "补全核心结构中的连接成分：encourage _____ to do；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词",
+          "answer": "someone",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "encourage-v-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ someone to do",
-          "answer": "encourage",
+          "prompt": "根据语境补全搭配：encourage someone to _____；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词",
+          "answer": "do",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "encourage-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ someone to do",
-          "answer": "encourage",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“鼓励某人做”？；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词",
+          "options": [
+            "encourage discussion",
+            "strongly encourage",
+            "encourage positive behavior",
+            "encourage someone to do"
+          ],
+          "answer": "encourage someone to do",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "encourage-v-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ discussion",
-          "answer": "encourage",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“鼓励讨论”？",
+          "options": [
+            "strongly encourage",
+            "encourage positive behavior",
+            "encourage discussion",
+            "encourage someone to do"
+          ],
+          "answer": "encourage discussion",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "encourage-v-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：The teacher encouraged us to speak more.（填入目标词）",
-          "answer": "encourage",
+          "prompt": "根据句意补全词卡核心例句：The teacher _____ us to speak more.（填写 encourage 的正确形式）",
+          "answer": "encouraged",
           "stage": "T3",
           "ai": false
         },
@@ -1760,7 +1796,7 @@
         {
           "id": "encourage-v-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “encourage someone to do” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “encourage someone to do” 结构写一个与自己有关的自然英文句子；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1768,7 +1804,7 @@
         {
           "id": "encourage-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “encourage” 和搭配 “encourage someone to do”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “encourage” 和 “encourage someone to do” 结构，并避免中文直译；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1827,7 +1863,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2318,7 +2354,7 @@
         {
           "id": "solve-v-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ a problem",
+          "prompt": "补全高频搭配：_____ a problem（填写 solve 的正确形式）",
           "answer": "solve",
           "stage": "T0",
           "ai": false
@@ -2326,39 +2362,51 @@
         {
           "id": "solve-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ a problem",
-          "answer": "solve",
+          "prompt": "补全核心结构中的连接成分：solve _____ problem",
+          "answer": "a",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "solve-v-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ a problem",
-          "answer": "solve",
+          "prompt": "根据语境补全搭配：solve a _____",
+          "answer": "problem",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "solve-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ a problem",
-          "answer": "solve",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“解决问题”？",
+          "options": [
+            "help solve",
+            "difficult to solve",
+            "solve a problem",
+            "solve an equation"
+          ],
+          "answer": "solve a problem",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "solve-v-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ an equation",
-          "answer": "solve",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“解方程”？",
+          "options": [
+            "difficult to solve",
+            "solve an equation",
+            "solve a problem",
+            "help solve"
+          ],
+          "answer": "solve an equation",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "solve-v-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：We need more information to _____ this problem.",
+          "prompt": "根据句意补全词卡核心例句：We need more information to _____ this problem.（填写 solve 的正确形式）",
           "answer": "solve",
           "stage": "T3",
           "ai": false
@@ -2374,7 +2422,7 @@
         {
           "id": "solve-v-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “solve a problem” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “solve a problem” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2382,7 +2430,7 @@
         {
           "id": "solve-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “solve” 和搭配 “solve a problem”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “solve” 和 “solve a problem” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2441,7 +2489,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2932,7 +2980,7 @@
         {
           "id": "express-v-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ an opinion",
+          "prompt": "补全高频搭配：_____ an opinion（填写 express 的正确形式）",
           "answer": "express",
           "stage": "T0",
           "ai": false
@@ -2940,39 +2988,51 @@
         {
           "id": "express-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ an opinion",
-          "answer": "express",
+          "prompt": "补全核心结构中的连接成分：express _____ opinion",
+          "answer": "an",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "express-v-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ an opinion",
-          "answer": "express",
+          "prompt": "根据语境补全搭配：express an _____",
+          "answer": "opinion",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "express-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ an opinion",
-          "answer": "express",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“表达观点”？",
+          "options": [
+            "clearly express",
+            "express an opinion",
+            "express your feelings",
+            "express concern about"
+          ],
+          "answer": "express an opinion",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "express-v-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ your feelings",
-          "answer": "express",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“表达感受”？",
+          "options": [
+            "express your feelings",
+            "express an opinion",
+            "express concern about",
+            "clearly express"
+          ],
+          "answer": "express your feelings",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "express-v-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：Try to _____ the idea in your own words.",
+          "prompt": "根据句意补全词卡核心例句：Try to _____ the idea in your own words.（填写 express 的正确形式）",
           "answer": "express",
           "stage": "T3",
           "ai": false
@@ -2988,7 +3048,7 @@
         {
           "id": "express-v-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “express an opinion” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “express an opinion” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2996,7 +3056,7 @@
         {
           "id": "express-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “express” 和搭配 “express an opinion”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “express” 和 “express an opinion” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -3055,7 +3115,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

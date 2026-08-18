@@ -142,7 +142,7 @@ export function ReviewSessionModal({
       status: 'pending',
       createdAt,
       updatedAt: createdAt,
-      rubricVersion: '2026.08.18.8',
+      rubricVersion: '2026.08.19.1',
       prompt: question.prompt,
       questionId: question.id,
       correctAnswer: question.answer,

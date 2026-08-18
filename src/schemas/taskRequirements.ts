@@ -14,8 +14,47 @@ function clean(value: string) {
     .replace(/\s+/g, ' ');
 }
 
-function normalizedWords(value: string) {
+function normalizedWords(value: string): string[] {
   return value.toLocaleLowerCase('en-US').match(/[a-z]+(?:'[a-z]+)?/g) ?? [];
+}
+
+const irregularLemmaForms: Record<string, string[]> = {
+  be: ['am', 'is', 'are', 'was', 'were', 'been', 'being'],
+  become: ['became', 'become', 'becoming'],
+  build: ['built', 'building'],
+  choose: ['chose', 'chosen', 'choosing'],
+  deal: ['dealt', 'dealing'],
+  do: ['does', 'did', 'done', 'doing'],
+  feel: ['felt', 'feeling'],
+  find: ['found', 'finding'],
+  give: ['gave', 'given', 'giving'],
+  go: ['went', 'gone', 'going'],
+  have: ['has', 'had', 'having'],
+  make: ['made', 'making'],
+  mean: ['meant', 'meaning'],
+  read: ['read', 'reading'],
+  run: ['ran', 'running'],
+  speak: ['spoke', 'spoken', 'speaking'],
+  spend: ['spent', 'spending'],
+  take: ['took', 'taken', 'taking'],
+  tell: ['told', 'telling'],
+  understand: ['understood', 'understanding'],
+  write: ['wrote', 'written', 'writing']
+};
+
+const patternHeadVerbs = new Set([
+  'accept', 'achieve', 'affect', 'allow', 'ask', 'avoid', 'be', 'become', 'believe', 'benefit', 'build',
+  'change', 'choose', 'compare', 'consider', 'continue', 'create', 'deal', 'decide', 'depend', 'describe',
+  'develop', 'discover', 'do', 'encourage', 'expect', 'explain', 'express', 'face', 'feel', 'find', 'follow',
+  'form', 'gain', 'give', 'handle', 'have', 'improve', 'include', 'increase', 'learn', 'listen', 'look',
+  'make', 'manage', 'mean', 'notice', 'offer', 'pay', 'prefer', 'prepare', 'protect', 'provide', 'reach',
+  'read', 'realize', 'reduce', 'remain', 'remember', 'require', 'respond', 'run', 'save', 'seem', 'set',
+  'share', 'solve', 'sound', 'speak', 'spend', 'study', 'suggest', 'support', 'take', 'tell', 'travel',
+  'work', 'write'
+]);
+
+function regexEscape(value: string) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
 function phrasePattern(value: string) {
@@ -38,12 +77,64 @@ function lemmaForms(lemma: string) {
     forms.add(`${word.slice(0, -1)}ies`);
     forms.add(`${word.slice(0, -1)}ied`);
   }
+  if (/[^aeiou][aeiou][^aeiouwxy]$/.test(word)) {
+    forms.add(`${word}${word.at(-1)}ed`);
+    forms.add(`${word}${word.at(-1)}ing`);
+  }
+  (irregularLemmaForms[word] ?? []).forEach((form) => forms.add(form));
   return forms;
 }
 
 export function includesLemma(text: string, lemma: string) {
   const words = new Set(normalizedWords(text));
   return [...lemmaForms(lemma)].some((form) => words.has(form));
+}
+
+function lemmaPattern(lemma: string) {
+  return `(?:${[...lemmaForms(lemma)].sort((left, right) => right.length - left.length).map(regexEscape).join('|')})`;
+}
+
+function patternTokens(value: string) {
+  return value.match(/[A-Za-z]+(?:'[A-Za-z]+)?/g) ?? [];
+}
+
+function usagePattern(value: string, targetWord = '') {
+  const tokens = patternTokens(value);
+  if (!tokens.length) return undefined;
+  const pieces = tokens.map((rawToken, index) => {
+    const token = rawToken.toLocaleLowerCase('en-US');
+    const previous = tokens[index - 1]?.toLocaleLowerCase('en-US');
+    if (rawToken === 'A' || rawToken === 'B' || token === 'someone' || token === 'something') {
+      return "(?:[a-z]+(?:'[a-z]+)?)(?:\\s+[a-z]+(?:'[a-z]+)?){0,5}";
+    }
+    if (token === 'yourself') return '(?:myself|yourself|himself|herself|itself|ourselves|yourselves|themselves)';
+    if (token === 'your') return '(?:my|your|his|her|its|our|their)';
+    if (token === 'doing') return "(?:[a-z]+ing)";
+    if (token === 'done') return "(?:[a-z]+(?:ed|en|n|t)?|done)";
+    if (token === 'do' && previous === 'to') return "(?:[a-z]+(?:'[a-z]+)?)";
+    if (token === targetWord.toLocaleLowerCase('en-US') || patternHeadVerbs.has(token) && index === 0) {
+      return lemmaPattern(token);
+    }
+    return regexEscape(token);
+  });
+  return new RegExp(`\\b${pieces.join('\\s+')}\\b`, 'i');
+}
+
+export function includesUsagePattern(text: string, pattern: string, targetWord = '') {
+  const normalizedText = normalizedWords(text).join(' ');
+  return usagePattern(pattern, targetWord)?.test(normalizedText) ?? false;
+}
+
+export function describeUsagePattern(pattern: string) {
+  return pattern
+    .replace(/\bto do\b/gi, 'to + 动词原形')
+    .replace(/\bdoing\b/gi, '动词 -ing 形式')
+    .replace(/\bdone\b/gi, '过去分词')
+    .replace(/\bsomeone\b/gi, '某人')
+    .replace(/\bsomething\b/gi, '某事/某物')
+    .replace(/\byourself\b/gi, '与主语一致的反身代词')
+    .replace(/\bA\b/g, '内容 A')
+    .replace(/\bB\b/g, '内容 B');
 }
 
 function unique(values: string[]) {
@@ -67,9 +158,13 @@ export function deriveTaskRequirements(context: TaskRequirementContext): TaskReq
   const quoted = unique(Array.from(context.prompt.matchAll(/[“"]([^”"]+)[”"]/g))
     .map((match) => clean(match[1]))
     .filter((value) => /[a-z]/i.test(value)));
-  const exact = quoted.filter((value) => value.split(/\s+/).length > 1 || context.prompt.includes(`完整搭配 “${value}”`));
-  const lemmas = quoted.filter((value) => value.split(/\s+/).length === 1 && !exact.some((phrase) => includesExactExpression(phrase, value)));
-  if (!weekly && !exact.some((phrase) => includesExactExpression(phrase, context.targetWord))) lemmas.push(context.targetWord);
+  const requiresLiteralText = /(逐字|原样|完全照写)/.test(context.prompt);
+  const multiword = quoted.filter((value) => normalizedWords(value).length > 1);
+  const exact: string[] = requiresLiteralText ? multiword : [];
+  const patterns: string[] = requiresLiteralText ? [] : multiword;
+  const lemmas = quoted.filter((value) => normalizedWords(value).length === 1);
+  const targetCovered = [...exact, ...patterns].some((phrase) => normalizedWords(phrase).includes(context.targetWord.toLocaleLowerCase('en-US')));
+  if (!weekly && !targetCovered) lemmas.push(context.targetWord);
 
   const turnRange = context.questionType === 'dialogue' ? numberRange(context.prompt, '轮') : undefined;
   const wordRange = context.questionType === 'weekly_writing' ? numberRange(context.prompt, '词') : undefined;
@@ -82,7 +177,8 @@ export function deriveTaskRequirements(context: TaskRequirementContext): TaskReq
 
   return {
     mustUseExact: unique(exact),
-    mustUseLemma: unique(lemmas).filter((lemma) => !exact.some((phrase) => includesExactExpression(phrase, lemma))),
+    mustUsePatterns: unique(patterns),
+    mustUseLemma: unique(lemmas).filter((lemma) => ![...exact, ...patterns].some((phrase) => normalizedWords(phrase).includes(lemma.toLocaleLowerCase('en-US')))),
     mustAvoid: [],
     minTurns: turnRange?.min,
     maxTurns: turnRange?.max,
@@ -109,6 +205,18 @@ export function checkTaskRequirements(answer: string, requirements: TaskRequirem
     const passed = includesExactExpression(answer, expression);
     checks.push({ id: `exact:${expression}`, labelZh: `使用指定表达“${expression}”`, passed, evidenceZh: passed ? `已使用“${expression}”。` : `没有找到完整表达“${expression}”。` });
   });
+  (requirements.mustUsePatterns ?? []).forEach((pattern) => {
+    const passed = includesUsagePattern(answer, pattern);
+    const described = describeUsagePattern(pattern);
+    checks.push({
+      id: `pattern:${pattern}`,
+      labelZh: `正确使用“${described}”结构`,
+      passed,
+      evidenceZh: passed
+        ? `已正确实例化“${described}”结构；模板中的 do、doing、someone、something、A/B 等只代表可替换成分。`
+        : `尚未检测到“${described}”结构；模板中的占位词不要求逐字写出。`
+    });
+  });
   requirements.mustUseLemma.forEach((lemma) => {
     const passed = includesLemma(answer, lemma);
     checks.push({ id: `lemma:${lemma}`, labelZh: `使用目标词“${lemma}”或合理变形`, passed, evidenceZh: passed ? `已使用“${lemma}”的合理形式。` : `没有使用“${lemma}”或其合理变形。` });
@@ -133,7 +241,7 @@ export function checkTaskRequirements(answer: string, requirements: TaskRequirem
     checks.push({ id: 'weekly-words', labelZh: `至少自然使用 ${requirements.minWeeklyWords} 个本周词`, passed, evidenceZh: used.length ? `检测到 ${used.length} 个：${used.join('、')}。` : '没有检测到本周目标词。' });
   }
   if (requirements.minCollocations !== undefined) {
-    const used = requirements.requiredCollocations.filter((phrase) => includesExactExpression(answer, phrase));
+    const used = requirements.requiredCollocations.filter((phrase) => includesUsagePattern(answer, phrase));
     const passed = used.length >= requirements.minCollocations;
     checks.push({ id: 'weekly-collocations', labelZh: `至少使用 ${requirements.minCollocations} 个指定搭配`, passed, evidenceZh: used.length ? `检测到 ${used.length} 个：${used.join('、')}。` : '没有检测到指定词卡搭配。' });
   }

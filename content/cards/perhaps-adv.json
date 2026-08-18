@@ -470,7 +470,7 @@
     {
       "id": "perhaps-adv-collocation-core",
       "type": "collocation",
-      "prompt": "补全高频搭配：_____ because",
+      "prompt": "补全高频搭配：_____ because（填写 perhaps 的正确形式）",
       "answer": "perhaps",
       "stage": "T0",
       "ai": false
@@ -478,39 +478,51 @@
     {
       "id": "perhaps-adv-collocation-structure",
       "type": "collocation",
-      "prompt": "补全核心结构：_____ because",
-      "answer": "perhaps",
+      "prompt": "补全核心结构中的连接成分：perhaps _____",
+      "answer": "because",
       "stage": "T1",
       "ai": false
     },
     {
       "id": "perhaps-adv-collocation-context",
       "type": "collocation",
-      "prompt": "补全语境词组：_____ because",
-      "answer": "perhaps",
+      "prompt": "根据语境补全搭配：perhaps _____",
+      "answer": "because",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "perhaps-adv-collocation-fixed-1",
       "type": "collocation",
-      "prompt": "补全固定搭配：_____ because",
-      "answer": "perhaps",
+      "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“也许因为”？",
+      "options": [
+        "perhaps the most important",
+        "perhaps because",
+        "perhaps we should",
+        "perhaps not"
+      ],
+      "answer": "perhaps because",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "perhaps-adv-collocation-fixed-2",
       "type": "collocation",
-      "prompt": "再补全一个固定搭配：_____ we should",
-      "answer": "perhaps",
+      "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“也许我们应该”？",
+      "options": [
+        "perhaps we should",
+        "perhaps because",
+        "perhaps not",
+        "perhaps the most important"
+      ],
+      "answer": "perhaps we should",
       "stage": "T3",
       "ai": false
     },
     {
       "id": "perhaps-adv-example-cloze",
       "type": "collocation",
-      "prompt": "补全词卡核心例句：_____ we should try a different approach.",
+      "prompt": "根据句意补全词卡核心例句：_____ we should try a different approach.（填写 perhaps 的正确形式）",
       "answer": "Perhaps",
       "stage": "T3",
       "ai": false
@@ -526,7 +538,7 @@
     {
       "id": "perhaps-adv-sentence-phrase",
       "type": "free_sentence",
-      "prompt": "请用完整搭配 “perhaps because” 写一个与自己有关的自然英文句子。",
+      "prompt": "请使用 “perhaps because” 结构写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -534,7 +546,7 @@
     {
       "id": "perhaps-adv-dialogue",
       "type": "dialogue",
-      "prompt": "写一段 2–4 轮真实对话，自然使用 “perhaps” 和搭配 “perhaps because”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “perhaps” 和 “perhaps because” 结构，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -593,7 +605,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.4",
+  "contentVersion": "2026.08.19.1",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

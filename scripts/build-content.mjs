@@ -14,7 +14,7 @@ const contentCardsDir = path.join(root, 'content', 'cards');
 const publicDailyDir = path.join(root, 'public', 'data', 'daily');
 const publicDataDir = path.join(root, 'public', 'data');
 const launchDate = new Date('2026-08-17T12:00:00+08:00');
-const contentVersion = '2026.08.17.4';
+const contentVersion = '2026.08.19.1';
 
 const slug = (value) => value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const primaryPos = (value) => value.split('/')[0].trim().replace('.', '');
@@ -345,18 +345,91 @@ function relationOptions(answer, candidates, index) {
   return rotateOptions([answer, ...distractors], index);
 }
 
-function clozeQuestion(id, promptPrefix, text, targetWord, stage) {
-  const escaped = targetWord.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  const pattern = new RegExp('\\b' + escaped + '(?:s|es|ed|ing)?\\b', 'i');
-  const matched = text.match(pattern)?.[0];
+const irregularForms = {
+  be: ['am', 'is', 'are', 'was', 'were', 'been', 'being'], become: ['became', 'becoming'], build: ['built'],
+  choose: ['chose', 'chosen'], deal: ['dealt'], do: ['does', 'did', 'done', 'doing'], feel: ['felt'], find: ['found'],
+  give: ['gave', 'given'], have: ['has', 'had'], make: ['made'], mean: ['meant'], run: ['ran', 'running'],
+  speak: ['spoke', 'spoken'], spend: ['spent'], take: ['took', 'taken'], tell: ['told'], understand: ['understood'],
+  write: ['wrote', 'written']
+};
+
+function inflectedForms(word) {
+  const forms = new Set([word, word + 's', word + 'es', word + 'ed', word + 'ing']);
+  if (word.endsWith('e')) {
+    forms.add(word + 'd');
+    forms.add(word.slice(0, -1) + 'ing');
+  }
+  if (/[^aeiou]y$/.test(word)) {
+    forms.add(word.slice(0, -1) + 'ies');
+    forms.add(word.slice(0, -1) + 'ied');
+  }
+  if (/[^aeiou][aeiou][^aeiouwxy]$/.test(word)) {
+    forms.add(word + word.at(-1) + 'ed');
+    forms.add(word + word.at(-1) + 'ing');
+  }
+  (irregularForms[word] ?? []).forEach((form) => forms.add(form));
+  return forms;
+}
+
+function wordsWithOffsets(text) {
+  return [...text.matchAll(/[A-Za-z]+(?:'[A-Za-z]+)?/g)].map((match) => ({
+    text: match[0],
+    index: match.index
+  }));
+}
+
+function blankWord(text, word) {
+  return text.slice(0, word.index) + '_____' + text.slice(word.index + word.text.length);
+}
+
+function clozeTargetQuestion(id, promptPrefix, text, targetWord, stage) {
+  const forms = inflectedForms(targetWord.toLowerCase());
+  const matched = wordsWithOffsets(text).find((word) => forms.has(word.text.toLowerCase()));
+  if (!matched) throw new Error(id + ': source text does not contain a valid form of ' + targetWord);
   return {
     id,
     type: 'collocation',
-    prompt: promptPrefix + (matched ? text.replace(matched, '_____') : text + '（填入目标词）'),
-    answer: matched ?? targetWord,
+    prompt: promptPrefix + blankWord(text, matched) + '（填写 ' + targetWord + ' 的正确形式）' + slotGuidance(text),
+    answer: matched.text,
     stage,
     ai: false
   };
+}
+
+function clozeStructureQuestion(id, promptPrefix, text, targetWord, stage, position) {
+  const words = wordsWithOffsets(text);
+  const forms = inflectedForms(targetWord.toLowerCase());
+  const targetIndex = words.findIndex((word) => forms.has(word.text.toLowerCase()));
+  const preferredIndex = position === 'after-target' ? targetIndex + 1 : words.length - 1;
+  const selected = words[preferredIndex] && !forms.has(words[preferredIndex].text.toLowerCase())
+    ? words[preferredIndex]
+    : words.find((word) => !forms.has(word.text.toLowerCase()));
+  if (!selected) throw new Error(id + ': source phrase needs a non-target structure word');
+  return { id, type: 'collocation', prompt: promptPrefix + blankWord(text, selected) + slotGuidance(text), answer: selected.text, stage, ai: false };
+}
+
+function phraseMeaningQuestion(id, entry, candidates, stage, index) {
+  return {
+    id,
+    type: 'collocation',
+    prompt: '词卡结构辨义（' + (index % 2 === 0 ? '一' : '二') + '）：哪一个结构或搭配表示“' + entry.chinese + '”？' + slotGuidance(entry.phrase),
+    options: relationOptions(entry.phrase, candidates.map((candidate) => candidate.phrase), index),
+    answer: entry.phrase,
+    stage,
+    ai: false
+  };
+}
+
+function slotGuidance(phrase) {
+  const notes = [];
+  if (/\bto do\b/i.test(phrase)) notes.push('do 代表任意合适的动词原形，不要求写出单词 do');
+  if (/\bdoing\b/i.test(phrase)) notes.push('doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing');
+  if (/\bdone\b/i.test(phrase)) notes.push('done 代表符合语境的过去分词，不要求写出单词 done');
+  if (/\bsomeone\b/i.test(phrase)) notes.push('someone 要替换成实际的人或代词');
+  if (/\bsomething\b/i.test(phrase)) notes.push('something 要替换成实际的事物或内容');
+  if (/\byourself\b/i.test(phrase)) notes.push('yourself 要替换成与主语一致的 myself、yourself、herself 等正确形式');
+  if (/\bA\b/.test(phrase) || /\bB\b/.test(phrase)) notes.push('A、B 要替换成实际比较内容');
+  return notes.length ? '；' + notes.join('；') : '';
 }
 
 function makeCard(item, index) {
@@ -402,9 +475,12 @@ function makeCard(item, index) {
   const contrast = confusableItems[0] ?? derivatives[0] ?? synonyms[0];
   const contrastKind = confusableItems[0] ? '易混词' : derivatives[0] ? '派生词' : '相关近义词';
   const contrastOptions = relationOptions(contrast.word, [synonymAnswer, antonymAnswer, next.w, nextTwo.w], index + 5);
-  const firstContextPhrase = contextPhrases[0]?.items[0]?.phrase ?? item.coll;
-  const firstFixedPhrase = fixedPhrases[0]?.phrase ?? item.coll;
-  const secondFixedPhrase = fixedPhrases.find((entry) => entry.phrase !== firstFixedPhrase)?.phrase ?? structures[1]?.phrase ?? item.coll;
+  const firstContextEntry = contextPhrases[0]?.items[0] ?? { phrase: item.coll, chinese: item.collZh };
+  const firstContextPhrase = firstContextEntry.phrase;
+  const firstFixedEntry = fixedPhrases[0] ?? { phrase: item.coll, chinese: item.collZh };
+  const firstFixedPhrase = firstFixedEntry.phrase;
+  const secondFixedEntry = fixedPhrases.find((entry) => entry.phrase !== firstFixedPhrase)
+    ?? { phrase: structures[1]?.phrase ?? item.coll, chinese: structures[1]?.chinese ?? item.collZh };
   const questions = [
     { id: id + '-meaning-core', type: 'meaning_choice', prompt: '“' + item.w + '”最核心的中文含义是？', options: meaningOptions, answer: item.zh, stage: 'T0', ai: false },
     { id: id + '-meaning-english', type: 'meaning_choice', prompt: '哪一项英文释义最符合词卡中的 “' + item.w + '”？', options: englishMeaningOptions, answer: meanings[0].english, stage: 'T0', ai: false },
@@ -414,15 +490,15 @@ function makeCard(item, index) {
     { id: id + '-contrast-choice', type: 'meaning_choice', prompt: '根据本词卡辨析，哪个词被列为 “' + item.w + '” 的' + contrastKind + '？', options: contrastOptions, answer: contrast.word, stage: 'T3', ai: false },
     { id: id + '-recall-definition', type: 'recall', prompt: '根据英文释义写出目标词：' + meanings[0].english, answer: item.w, stage: 'T1', ai: false },
     { id: id + '-recall-chinese', type: 'recall', prompt: '写出符合“' + item.zh + '”（' + item.p + '）的本课目标词。', answer: item.w, stage: 'T1', ai: false },
-    clozeQuestion(id + '-collocation-core', '补全高频搭配：', item.coll, item.w, 'T0'),
-    clozeQuestion(id + '-collocation-structure', '补全核心结构：', structures[0].phrase, item.w, 'T1'),
-    clozeQuestion(id + '-collocation-context', '补全语境词组：', firstContextPhrase, item.w, 'T2'),
-    clozeQuestion(id + '-collocation-fixed-1', '补全固定搭配：', firstFixedPhrase, item.w, 'T2'),
-    clozeQuestion(id + '-collocation-fixed-2', '再补全一个固定搭配：', secondFixedPhrase, item.w, 'T3'),
-    clozeQuestion(id + '-example-cloze', '补全词卡核心例句：', item.ex, item.w, 'T3'),
+    clozeTargetQuestion(id + '-collocation-core', '补全高频搭配：', item.coll, item.w, 'T0'),
+    clozeStructureQuestion(id + '-collocation-structure', '补全核心结构中的连接成分：', structures[0].phrase, item.w, 'T1', 'after-target'),
+    clozeStructureQuestion(id + '-collocation-context', '根据语境补全搭配：', firstContextPhrase, item.w, 'T2', 'tail'),
+    phraseMeaningQuestion(id + '-collocation-fixed-1', firstFixedEntry, fixedPhrases, 'T2', index + 6),
+    phraseMeaningQuestion(id + '-collocation-fixed-2', secondFixedEntry, fixedPhrases, 'T3', index + 7),
+    clozeTargetQuestion(id + '-example-cloze', '根据句意补全词卡核心例句：', item.ex, item.w, 'T3'),
     { id: id + '-sentence-core', type: 'free_sentence', prompt: '请用 “' + item.w + '” 写一个自然、真实的英文句子，含义必须符合词卡核心义“' + item.zh + '”。', answer: '', stage: 'T2', ai: true },
-    { id: id + '-sentence-phrase', type: 'free_sentence', prompt: '请用完整搭配 “' + firstFixedPhrase + '” 写一个与自己有关的自然英文句子。', answer: '', stage: 'T3', ai: true },
-    { id: id + '-dialogue', type: 'dialogue', prompt: '写一段 2–4 轮真实对话，自然使用 “' + item.w + '” 和搭配 “' + firstContextPhrase + '”，并避免中文直译。', answer: '', stage: 'T4', ai: true }
+    { id: id + '-sentence-phrase', type: 'free_sentence', prompt: '请使用 “' + firstFixedPhrase + '” 结构写一个与自己有关的自然英文句子' + slotGuidance(firstFixedPhrase) + '。', answer: '', stage: 'T3', ai: true },
+    { id: id + '-dialogue', type: 'dialogue', prompt: '写一段 2–4 轮真实对话，自然使用 “' + item.w + '” 和 “' + firstContextPhrase + '” 结构，并避免中文直译' + slotGuidance(firstContextPhrase) + '。', answer: '', stage: 'T4', ai: true }
   ];
 
   return {

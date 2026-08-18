@@ -1,7 +1,7 @@
 {
   "date": "2026-09-05",
   "dayNumber": 20,
-  "contentVersion": "2026.08.17.4",
+  "contentVersion": "2026.08.19.1",
   "cards": [
     {
       "id": "useful-adj",
@@ -490,7 +490,7 @@
         {
           "id": "useful-adj-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ for",
+          "prompt": "补全高频搭配：_____ for（填写 useful 的正确形式）",
           "answer": "useful",
           "stage": "T0",
           "ai": false
@@ -498,39 +498,51 @@
         {
           "id": "useful-adj-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ for",
-          "answer": "useful",
+          "prompt": "补全核心结构中的连接成分：useful _____",
+          "answer": "for",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "useful-adj-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ for",
-          "answer": "useful",
+          "prompt": "根据语境补全搭配：useful _____",
+          "answer": "for",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "useful-adj-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ for",
-          "answer": "useful",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“对……有用”？",
+          "options": [
+            "useful to someone",
+            "useful information",
+            "find something useful",
+            "useful for"
+          ],
+          "answer": "useful for",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "useful-adj-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ to someone",
-          "answer": "useful",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“对某人有用”？；someone 要替换成实际的人或代词",
+          "options": [
+            "useful information",
+            "find something useful",
+            "useful to someone",
+            "useful for"
+          ],
+          "answer": "useful to someone",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "useful-adj-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：This phrase is _____ for polite requests.",
+          "prompt": "根据句意补全词卡核心例句：This phrase is _____ for polite requests.（填写 useful 的正确形式）",
           "answer": "useful",
           "stage": "T3",
           "ai": false
@@ -546,7 +558,7 @@
         {
           "id": "useful-adj-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “useful for” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “useful for” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -554,7 +566,7 @@
         {
           "id": "useful-adj-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “useful” 和搭配 “useful for”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “useful” 和 “useful for” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -613,7 +625,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1104,7 +1116,7 @@
         {
           "id": "careful-adj-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：be _____ with",
+          "prompt": "补全高频搭配：be _____ with（填写 careful 的正确形式）",
           "answer": "careful",
           "stage": "T0",
           "ai": false
@@ -1112,39 +1124,51 @@
         {
           "id": "careful-adj-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：be _____ with",
-          "answer": "careful",
+          "prompt": "补全核心结构中的连接成分：be careful _____",
+          "answer": "with",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "careful-adj-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：be _____ with",
-          "answer": "careful",
+          "prompt": "根据语境补全搭配：be careful _____",
+          "answer": "with",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "careful-adj-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：be _____ with",
-          "answer": "careful",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“小心处理……”？",
+          "options": [
+            "careful planning",
+            "careful examination",
+            "be careful with",
+            "be careful not to"
+          ],
+          "answer": "be careful with",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "careful-adj-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：be _____ not to",
-          "answer": "careful",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“小心不要……”？",
+          "options": [
+            "careful examination",
+            "be careful not to",
+            "be careful with",
+            "careful planning"
+          ],
+          "answer": "be careful not to",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "careful-adj-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：Be _____ with the word order.",
+          "prompt": "根据句意补全词卡核心例句：Be _____ with the word order.（填写 careful 的正确形式）",
           "answer": "careful",
           "stage": "T3",
           "ai": false
@@ -1160,7 +1184,7 @@
         {
           "id": "careful-adj-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “be careful with” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “be careful with” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1168,7 +1192,7 @@
         {
           "id": "careful-adj-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “careful” 和搭配 “be careful with”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “careful” 和 “be careful with” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1227,7 +1251,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1711,7 +1735,7 @@
         {
           "id": "ready-adj-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：be _____ to",
+          "prompt": "补全高频搭配：be _____ to（填写 ready 的正确形式）",
           "answer": "ready",
           "stage": "T0",
           "ai": false
@@ -1719,39 +1743,51 @@
         {
           "id": "ready-adj-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：be _____ to",
-          "answer": "ready",
+          "prompt": "补全核心结构中的连接成分：be ready _____",
+          "answer": "to",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "ready-adj-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：be _____ to",
-          "answer": "ready",
+          "prompt": "根据语境补全搭配：be ready _____",
+          "answer": "to",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "ready-adj-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：be _____ to",
-          "answer": "ready",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“准备好做”？",
+          "options": [
+            "when you are ready",
+            "be ready to",
+            "get ready for",
+            "ready for use"
+          ],
+          "answer": "be ready to",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "ready-adj-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：get _____ for",
-          "answer": "ready",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“为……做准备”？",
+          "options": [
+            "get ready for",
+            "be ready to",
+            "ready for use",
+            "when you are ready"
+          ],
+          "answer": "get ready for",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "ready-adj-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：I am _____ to try the next question.",
+          "prompt": "根据句意补全词卡核心例句：I am _____ to try the next question.（填写 ready 的正确形式）",
           "answer": "ready",
           "stage": "T3",
           "ai": false
@@ -1767,7 +1803,7 @@
         {
           "id": "ready-adj-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “be ready to” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “be ready to” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1775,7 +1811,7 @@
         {
           "id": "ready-adj-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “ready” 和搭配 “be ready to”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “ready” 和 “be ready to” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1834,7 +1870,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2325,7 +2361,7 @@
         {
           "id": "certain-adj-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：be _____ that",
+          "prompt": "补全高频搭配：be _____ that（填写 certain 的正确形式）",
           "answer": "certain",
           "stage": "T0",
           "ai": false
@@ -2333,39 +2369,51 @@
         {
           "id": "certain-adj-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：be _____ that",
-          "answer": "certain",
+          "prompt": "补全核心结构中的连接成分：be certain _____",
+          "answer": "that",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "certain-adj-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：be _____ that",
-          "answer": "certain",
+          "prompt": "根据语境补全搭配：be certain _____",
+          "answer": "that",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "certain-adj-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：be _____ that",
-          "answer": "certain",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“确信……”？",
+          "options": [
+            "be certain that",
+            "certain of",
+            "make certain that",
+            "a certain amount of"
+          ],
+          "answer": "be certain that",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "certain-adj-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ of",
-          "answer": "certain",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“对……有把握”？",
+          "options": [
+            "be certain that",
+            "make certain that",
+            "a certain amount of",
+            "certain of"
+          ],
+          "answer": "certain of",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "certain-adj-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：I am not _____ that this answer is correct.",
+          "prompt": "根据句意补全词卡核心例句：I am not _____ that this answer is correct.（填写 certain 的正确形式）",
           "answer": "certain",
           "stage": "T3",
           "ai": false
@@ -2381,7 +2429,7 @@
         {
           "id": "certain-adj-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “be certain that” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “be certain that” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2389,7 +2437,7 @@
         {
           "id": "certain-adj-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “certain” 和搭配 “be certain that”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “certain” 和 “be certain that” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2448,7 +2496,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2960,7 +3008,7 @@
         {
           "id": "patient-adj-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：be _____ with",
+          "prompt": "补全高频搭配：be _____ with（填写 patient 的正确形式）",
           "answer": "patient",
           "stage": "T0",
           "ai": false
@@ -2968,39 +3016,51 @@
         {
           "id": "patient-adj-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：be _____ with",
-          "answer": "patient",
+          "prompt": "补全核心结构中的连接成分：be patient _____",
+          "answer": "with",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "patient-adj-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：be _____ with",
-          "answer": "patient",
+          "prompt": "根据语境补全搭配：be patient _____",
+          "answer": "with",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "patient-adj-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：be _____ with",
-          "answer": "patient",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“对……有耐心”？",
+          "options": [
+            "patient enough to",
+            "remain patient",
+            "hospital patient",
+            "be patient with"
+          ],
+          "answer": "be patient with",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "patient-adj-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ enough to",
-          "answer": "patient",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“有足够耐心做”？",
+          "options": [
+            "remain patient",
+            "hospital patient",
+            "patient enough to",
+            "be patient with"
+          ],
+          "answer": "patient enough to",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "patient-adj-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：Be _____ with yourself while learning.",
+          "prompt": "根据句意补全词卡核心例句：Be _____ with yourself while learning.（填写 patient 的正确形式）；yourself 要替换成与主语一致的 myself、yourself、herself 等正确形式",
           "answer": "patient",
           "stage": "T3",
           "ai": false
@@ -3016,7 +3076,7 @@
         {
           "id": "patient-adj-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “be patient with” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “be patient with” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -3024,7 +3084,7 @@
         {
           "id": "patient-adj-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “patient” 和搭配 “be patient with”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “patient” 和 “be patient with” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -3083,7 +3143,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

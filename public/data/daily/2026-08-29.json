@@ -1,7 +1,7 @@
 {
   "date": "2026-08-29",
   "dayNumber": 13,
-  "contentVersion": "2026.08.17.4",
+  "contentVersion": "2026.08.19.1",
   "cards": [
     {
       "id": "information-n",
@@ -483,7 +483,7 @@
         {
           "id": "information-n-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：useful _____",
+          "prompt": "补全高频搭配：useful _____（填写 information 的正确形式）",
           "answer": "information",
           "stage": "T0",
           "ai": false
@@ -491,39 +491,51 @@
         {
           "id": "information-n-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：useful _____",
-          "answer": "information",
+          "prompt": "补全核心结构中的连接成分：_____ information",
+          "answer": "useful",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "information-n-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：useful _____",
-          "answer": "information",
+          "prompt": "根据语境补全搭配：_____ information",
+          "answer": "useful",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "information-n-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：useful _____",
-          "answer": "information",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“有用信息”？",
+          "options": [
+            "personal information",
+            "information about",
+            "useful information",
+            "provide information"
+          ],
+          "answer": "useful information",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "information-n-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：provide _____",
-          "answer": "information",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“提供信息”？",
+          "options": [
+            "information about",
+            "provide information",
+            "useful information",
+            "personal information"
+          ],
+          "answer": "provide information",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "information-n-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：This page provides practical _____ for travelers.",
+          "prompt": "根据句意补全词卡核心例句：This page provides practical _____ for travelers.（填写 information 的正确形式）",
           "answer": "information",
           "stage": "T3",
           "ai": false
@@ -539,7 +551,7 @@
         {
           "id": "information-n-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “useful information” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “useful information” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -547,7 +559,7 @@
         {
           "id": "information-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “information” 和搭配 “useful information”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “information” 和 “useful information” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -606,7 +618,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1090,7 +1102,7 @@
         {
           "id": "community-n-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：local _____",
+          "prompt": "补全高频搭配：local _____（填写 community 的正确形式）",
           "answer": "community",
           "stage": "T0",
           "ai": false
@@ -1098,39 +1110,51 @@
         {
           "id": "community-n-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：local _____",
-          "answer": "community",
+          "prompt": "补全核心结构中的连接成分：_____ community",
+          "answer": "local",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "community-n-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：local _____",
-          "answer": "community",
+          "prompt": "根据语境补全搭配：_____ community",
+          "answer": "local",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "community-n-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：local _____",
-          "answer": "community",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“当地社区”？",
+          "options": [
+            "community members",
+            "local community",
+            "online community",
+            "community service"
+          ],
+          "answer": "local community",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "community-n-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：online _____",
-          "answer": "community",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“网络社区”？",
+          "options": [
+            "online community",
+            "local community",
+            "community service",
+            "community members"
+          ],
+          "answer": "online community",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "community-n-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：The project brought the _____ together.",
+          "prompt": "根据句意补全词卡核心例句：The project brought the _____ together.（填写 community 的正确形式）",
           "answer": "community",
           "stage": "T3",
           "ai": false
@@ -1146,7 +1170,7 @@
         {
           "id": "community-n-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “local community” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “local community” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1154,7 +1178,7 @@
         {
           "id": "community-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “community” 和搭配 “local community”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “community” 和 “local community” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1213,7 +1237,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1697,7 +1721,7 @@
         {
           "id": "service-n-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：customer _____",
+          "prompt": "补全高频搭配：customer _____（填写 service 的正确形式）",
           "answer": "service",
           "stage": "T0",
           "ai": false
@@ -1705,39 +1729,51 @@
         {
           "id": "service-n-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：customer _____",
-          "answer": "service",
+          "prompt": "补全核心结构中的连接成分：_____ service",
+          "answer": "customer",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "service-n-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：customer _____",
-          "answer": "service",
+          "prompt": "根据语境补全搭配：_____ service",
+          "answer": "customer",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "service-n-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：customer _____",
-          "answer": "service",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“客户服务”？",
+          "options": [
+            "customer service",
+            "provide a service",
+            "public service",
+            "in service"
+          ],
+          "answer": "customer service",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "service-n-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：provide a _____",
-          "answer": "service",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“提供服务”？",
+          "options": [
+            "customer service",
+            "public service",
+            "in service",
+            "provide a service"
+          ],
+          "answer": "provide a service",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "service-n-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：The hotel offers excellent _____.",
+          "prompt": "根据句意补全词卡核心例句：The hotel offers excellent _____.（填写 service 的正确形式）",
           "answer": "service",
           "stage": "T3",
           "ai": false
@@ -1753,7 +1789,7 @@
         {
           "id": "service-n-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “customer service” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “customer service” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1761,7 +1797,7 @@
         {
           "id": "service-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “service” 和搭配 “customer service”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “service” 和 “customer service” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1820,7 +1856,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2304,7 +2340,7 @@
         {
           "id": "system-n-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：a simple _____",
+          "prompt": "补全高频搭配：a simple _____（填写 system 的正确形式）",
           "answer": "system",
           "stage": "T0",
           "ai": false
@@ -2312,39 +2348,51 @@
         {
           "id": "system-n-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：a simple _____",
-          "answer": "system",
+          "prompt": "补全核心结构中的连接成分：_____ simple system",
+          "answer": "a",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "system-n-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：a simple _____",
-          "answer": "system",
+          "prompt": "根据语境补全搭配：_____ simple system",
+          "answer": "a",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "system-n-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：a simple _____",
-          "answer": "system",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“简单系统”？",
+          "options": [
+            "computer system",
+            "education system",
+            "system for doing",
+            "a simple system"
+          ],
+          "answer": "a simple system",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "system-n-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：computer _____",
-          "answer": "system",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“计算机系统”？",
+          "options": [
+            "education system",
+            "system for doing",
+            "computer system",
+            "a simple system"
+          ],
+          "answer": "computer system",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "system-n-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：This _____ helps you review words at the right time.",
+          "prompt": "根据句意补全词卡核心例句：This _____ helps you review words at the right time.（填写 system 的正确形式）",
           "answer": "system",
           "stage": "T3",
           "ai": false
@@ -2360,7 +2408,7 @@
         {
           "id": "system-n-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “a simple system” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “a simple system” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2368,7 +2416,7 @@
         {
           "id": "system-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “system” 和搭配 “a simple system”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “system” 和 “a simple system” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2427,7 +2475,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2916,7 +2964,7 @@
         {
           "id": "level-n-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：skill _____",
+          "prompt": "补全高频搭配：skill _____（填写 level 的正确形式）",
           "answer": "level",
           "stage": "T0",
           "ai": false
@@ -2924,39 +2972,51 @@
         {
           "id": "level-n-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：skill _____",
-          "answer": "level",
+          "prompt": "补全核心结构中的连接成分：_____ level",
+          "answer": "skill",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "level-n-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：skill _____",
-          "answer": "level",
+          "prompt": "根据语境补全搭配：_____ level",
+          "answer": "skill",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "level-n-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：skill _____",
-          "answer": "level",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“技能水平”？",
+          "options": [
+            "at this level",
+            "level of confidence",
+            "skill level",
+            "high level of"
+          ],
+          "answer": "skill level",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "level-n-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：high _____ of",
-          "answer": "level",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“高水平的……”？",
+          "options": [
+            "level of confidence",
+            "high level of",
+            "skill level",
+            "at this level"
+          ],
+          "answer": "high level of",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "level-n-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：Choose a task that matches your current _____.",
+          "prompt": "根据句意补全词卡核心例句：Choose a task that matches your current _____.（填写 level 的正确形式）",
           "answer": "level",
           "stage": "T3",
           "ai": false
@@ -2972,7 +3032,7 @@
         {
           "id": "level-n-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “skill level” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “skill level” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2980,7 +3040,7 @@
         {
           "id": "level-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “level” 和搭配 “skill level”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “level” 和 “skill level” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -3039,7 +3099,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

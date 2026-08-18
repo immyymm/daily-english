@@ -1,7 +1,7 @@
 {
   "date": "2026-09-12",
   "dayNumber": 27,
-  "contentVersion": "2026.08.17.4",
+  "contentVersion": "2026.08.19.1",
   "cards": [
     {
       "id": "money-n",
@@ -483,7 +483,7 @@
         {
           "id": "money-n-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：save _____",
+          "prompt": "补全高频搭配：save _____（填写 money 的正确形式）",
           "answer": "money",
           "stage": "T0",
           "ai": false
@@ -491,39 +491,51 @@
         {
           "id": "money-n-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：save _____",
-          "answer": "money",
+          "prompt": "补全核心结构中的连接成分：_____ money",
+          "answer": "save",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "money-n-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：save _____",
-          "answer": "money",
+          "prompt": "根据语境补全搭配：_____ money",
+          "answer": "save",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "money-n-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：save _____",
-          "answer": "money",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“省钱；存钱”？",
+          "options": [
+            "save money",
+            "spend money on",
+            "make money",
+            "borrow money"
+          ],
+          "answer": "save money",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "money-n-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：spend _____ on",
-          "answer": "money",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“在……上花钱”？",
+          "options": [
+            "save money",
+            "make money",
+            "borrow money",
+            "spend money on"
+          ],
+          "answer": "spend money on",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "money-n-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：Planning ahead can save time and _____.",
+          "prompt": "根据句意补全词卡核心例句：Planning ahead can save time and _____.（填写 money 的正确形式）",
           "answer": "money",
           "stage": "T3",
           "ai": false
@@ -539,7 +551,7 @@
         {
           "id": "money-n-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “save money” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “save money” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -547,7 +559,7 @@
         {
           "id": "money-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “money” 和搭配 “save money”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “money” 和 “save money” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -606,7 +618,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1090,7 +1102,7 @@
         {
           "id": "business-n-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：run a _____",
+          "prompt": "补全高频搭配：run a _____（填写 business 的正确形式）",
           "answer": "business",
           "stage": "T0",
           "ai": false
@@ -1098,39 +1110,51 @@
         {
           "id": "business-n-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：run a _____",
-          "answer": "business",
+          "prompt": "补全核心结构中的连接成分：_____ a business",
+          "answer": "run",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "business-n-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：run a _____",
-          "answer": "business",
+          "prompt": "根据语境补全搭配：_____ a business",
+          "answer": "run",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "business-n-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：run a _____",
-          "answer": "business",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“经营企业”？",
+          "options": [
+            "do business with",
+            "small business",
+            "business plan",
+            "run a business"
+          ],
+          "answer": "run a business",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "business-n-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：do _____ with",
-          "answer": "business",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“与……做生意”？",
+          "options": [
+            "small business",
+            "business plan",
+            "do business with",
+            "run a business"
+          ],
+          "answer": "do business with",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "business-n-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：She runs a small online _____.",
+          "prompt": "根据句意补全词卡核心例句：She runs a small online _____.（填写 business 的正确形式）",
           "answer": "business",
           "stage": "T3",
           "ai": false
@@ -1146,7 +1170,7 @@
         {
           "id": "business-n-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “run a business” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “run a business” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1154,7 +1178,7 @@
         {
           "id": "business-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “business” 和搭配 “run a business”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “business” 和 “run a business” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1213,7 +1237,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1704,7 +1728,7 @@
         {
           "id": "friend-n-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：close _____",
+          "prompt": "补全高频搭配：close _____（填写 friend 的正确形式）",
           "answer": "friend",
           "stage": "T0",
           "ai": false
@@ -1712,39 +1736,51 @@
         {
           "id": "friend-n-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：close _____",
-          "answer": "friend",
+          "prompt": "补全核心结构中的连接成分：_____ friend",
+          "answer": "close",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "friend-n-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：close _____",
-          "answer": "friend",
+          "prompt": "根据语境补全搭配：_____ friend",
+          "answer": "close",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "friend-n-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：close _____",
-          "answer": "friend",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“亲密朋友”？",
+          "options": [
+            "make friends with",
+            "a friend of mine",
+            "close friend",
+            "best friend"
+          ],
+          "answer": "close friend",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "friend-n-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：best _____",
-          "answer": "friend",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“最好的朋友”？",
+          "options": [
+            "a friend of mine",
+            "best friend",
+            "close friend",
+            "make friends with"
+          ],
+          "answer": "best friend",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "friend-n-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：I practiced the dialogue with a _____.",
+          "prompt": "根据句意补全词卡核心例句：I practiced the dialogue with a _____.（填写 friend 的正确形式）",
           "answer": "friend",
           "stage": "T3",
           "ai": false
@@ -1760,7 +1796,7 @@
         {
           "id": "friend-n-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “close friend” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “close friend” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1768,7 +1804,7 @@
         {
           "id": "friend-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “friend” 和搭配 “close friend”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “friend” 和 “close friend” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1827,7 +1863,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2324,7 +2360,7 @@
         {
           "id": "home-n-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：feel at _____",
+          "prompt": "补全高频搭配：feel at _____（填写 home 的正确形式）",
           "answer": "home",
           "stage": "T0",
           "ai": false
@@ -2332,39 +2368,51 @@
         {
           "id": "home-n-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：feel at _____",
-          "answer": "home",
+          "prompt": "补全核心结构中的连接成分：_____ at home",
+          "answer": "feel",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "home-n-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：feel at _____",
-          "answer": "home",
+          "prompt": "根据语境补全搭配：_____ at home",
+          "answer": "feel",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "home-n-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：feel at _____",
-          "answer": "home",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“感到自在”？",
+          "options": [
+            "work from home",
+            "feel at home",
+            "go home",
+            "stay at home"
+          ],
+          "answer": "feel at home",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "home-n-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：go _____",
-          "answer": "home",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“回家”？",
+          "options": [
+            "go home",
+            "feel at home",
+            "stay at home",
+            "work from home"
+          ],
+          "answer": "go home",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "home-n-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：Make yourself at _____.",
+          "prompt": "根据句意补全词卡核心例句：Make yourself at _____.（填写 home 的正确形式）；yourself 要替换成与主语一致的 myself、yourself、herself 等正确形式",
           "answer": "home",
           "stage": "T3",
           "ai": false
@@ -2380,7 +2428,7 @@
         {
           "id": "home-n-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “feel at home” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “feel at home” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2388,7 +2436,7 @@
         {
           "id": "home-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “home” 和搭配 “feel at home”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “home” 和 “feel at home” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2447,7 +2495,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2939,7 +2987,7 @@
         {
           "id": "problem-n-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：solve a _____",
+          "prompt": "补全高频搭配：solve a _____（填写 problem 的正确形式）",
           "answer": "problem",
           "stage": "T0",
           "ai": false
@@ -2947,39 +2995,51 @@
         {
           "id": "problem-n-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：solve a _____",
-          "answer": "problem",
+          "prompt": "补全核心结构中的连接成分：_____ a problem",
+          "answer": "solve",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "problem-n-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：solve a _____",
-          "answer": "problem",
+          "prompt": "根据语境补全搭配：_____ a problem",
+          "answer": "solve",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "problem-n-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：solve a _____",
-          "answer": "problem",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“解决问题”？",
+          "options": [
+            "solve a problem",
+            "serious problem",
+            "have a problem with",
+            "cause a problem"
+          ],
+          "answer": "solve a problem",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "problem-n-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：serious _____",
-          "answer": "problem",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“严重问题”？",
+          "options": [
+            "solve a problem",
+            "have a problem with",
+            "cause a problem",
+            "serious problem"
+          ],
+          "answer": "serious problem",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "problem-n-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：Breaking the task into steps solved the _____.",
+          "prompt": "根据句意补全词卡核心例句：Breaking the task into steps solved the _____.（填写 problem 的正确形式）",
           "answer": "problem",
           "stage": "T3",
           "ai": false
@@ -2995,7 +3055,7 @@
         {
           "id": "problem-n-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “solve a problem” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “solve a problem” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -3003,7 +3063,7 @@
         {
           "id": "problem-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “problem” 和搭配 “solve a problem”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “problem” 和 “solve a problem” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -3062,7 +3122,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

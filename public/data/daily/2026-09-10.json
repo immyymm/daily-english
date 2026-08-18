@@ -1,7 +1,7 @@
 {
   "date": "2026-09-10",
   "dayNumber": 25,
-  "contentVersion": "2026.08.17.4",
+  "contentVersion": "2026.08.19.1",
   "cards": [
     {
       "id": "health-n",
@@ -490,7 +490,7 @@
         {
           "id": "health-n-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：mental _____",
+          "prompt": "补全高频搭配：mental _____（填写 health 的正确形式）",
           "answer": "health",
           "stage": "T0",
           "ai": false
@@ -498,39 +498,51 @@
         {
           "id": "health-n-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：mental _____",
-          "answer": "health",
+          "prompt": "补全核心结构中的连接成分：_____ health",
+          "answer": "mental",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "health-n-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：mental _____",
-          "answer": "health",
+          "prompt": "根据语境补全搭配：_____ health",
+          "answer": "mental",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "health-n-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：mental _____",
-          "answer": "health",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“心理健康”？",
+          "options": [
+            "good health",
+            "health care",
+            "mental health",
+            "physical health"
+          ],
+          "answer": "mental health",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "health-n-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：physical _____",
-          "answer": "health",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“身体健康”？",
+          "options": [
+            "health care",
+            "physical health",
+            "mental health",
+            "good health"
+          ],
+          "answer": "physical health",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "health-n-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：Regular sleep is important for your _____.",
+          "prompt": "根据句意补全词卡核心例句：Regular sleep is important for your _____.（填写 health 的正确形式）",
           "answer": "health",
           "stage": "T3",
           "ai": false
@@ -546,7 +558,7 @@
         {
           "id": "health-n-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “mental health” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “mental health” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -554,7 +566,7 @@
         {
           "id": "health-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “health” 和搭配 “mental health”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “health” 和 “mental health” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -613,7 +625,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1360,7 +1372,7 @@
         {
           "id": "work-n-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ on something",
+          "prompt": "补全高频搭配：_____ on something（填写 work 的正确形式）；something 要替换成实际的事物或内容",
           "answer": "work",
           "stage": "T0",
           "ai": false
@@ -1368,39 +1380,51 @@
         {
           "id": "work-n-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ on something",
-          "answer": "work",
+          "prompt": "补全核心结构中的连接成分：work _____ something；something 要替换成实际的事物或内容",
+          "answer": "on",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "work-n-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：full-time _____",
-          "answer": "work",
+          "prompt": "根据语境补全搭配：_____-time work",
+          "answer": "full",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "work-n-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ for",
-          "answer": "work",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“为……工作；受雇于”？",
+          "options": [
+            "work on",
+            "work for",
+            "work at",
+            "work as"
+          ],
+          "answer": "work for",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "work-n-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ at",
-          "answer": "work",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“在某个地点或机构工作”？",
+          "options": [
+            "work at",
+            "work for",
+            "work as",
+            "work on"
+          ],
+          "answer": "work at",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "work-n-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：I am _____ on my pronunciation.",
+          "prompt": "根据句意补全词卡核心例句：I am _____ on my pronunciation.（填写 work 的正确形式）",
           "answer": "working",
           "stage": "T3",
           "ai": false
@@ -1416,7 +1440,7 @@
         {
           "id": "work-n-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “work for” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “work for” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1424,7 +1448,7 @@
         {
           "id": "work-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “work” 和搭配 “full-time work”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “work” 和 “full-time work” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1483,7 +1507,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；本卡依照用户词卡模板人工精校；音标为美式发音。"
     },
@@ -1988,7 +2012,7 @@
         {
           "id": "study-n-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ for a test",
+          "prompt": "补全高频搭配：_____ for a test（填写 study 的正确形式）",
           "answer": "study",
           "stage": "T0",
           "ai": false
@@ -1996,40 +2020,52 @@
         {
           "id": "study-n-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ for a test",
-          "answer": "study",
+          "prompt": "补全核心结构中的连接成分：study _____ a test",
+          "answer": "for",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "study-n-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ for a test",
-          "answer": "study",
+          "prompt": "根据语境补全搭配：study for a _____",
+          "answer": "test",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "study-n-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ for a test",
-          "answer": "study",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“为考试学习”？",
+          "options": [
+            "study for a test",
+            "study English",
+            "study abroad",
+            "a recent study"
+          ],
+          "answer": "study for a test",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "study-n-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ English",
-          "answer": "study",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“学习英语”？",
+          "options": [
+            "study for a test",
+            "study abroad",
+            "a recent study",
+            "study English"
+          ],
+          "answer": "study English",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "study-n-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：She studies English for half an hour every morning.（填入目标词）",
-          "answer": "study",
+          "prompt": "根据句意补全词卡核心例句：She _____ English for half an hour every morning.（填写 study 的正确形式）",
+          "answer": "studies",
           "stage": "T3",
           "ai": false
         },
@@ -2044,7 +2080,7 @@
         {
           "id": "study-n-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “study for a test” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “study for a test” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2052,7 +2088,7 @@
         {
           "id": "study-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “study” 和搭配 “study for a test”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “study” 和 “study for a test” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2111,7 +2147,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2602,7 +2638,7 @@
         {
           "id": "learn-v-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ from mistakes",
+          "prompt": "补全高频搭配：_____ from mistakes（填写 learn 的正确形式）",
           "answer": "learn",
           "stage": "T0",
           "ai": false
@@ -2610,39 +2646,51 @@
         {
           "id": "learn-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ to do",
-          "answer": "learn",
+          "prompt": "补全核心结构中的连接成分：learn _____ do；do 代表任意合适的动词原形，不要求写出单词 do",
+          "answer": "to",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "learn-v-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ to do",
-          "answer": "learn",
+          "prompt": "根据语境补全搭配：learn to _____；do 代表任意合适的动词原形，不要求写出单词 do",
+          "answer": "do",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "learn-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ to do",
-          "answer": "learn",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“学习做”？；do 代表任意合适的动词原形，不要求写出单词 do",
+          "options": [
+            "learn about",
+            "learn from mistakes",
+            "learn by doing",
+            "learn to do"
+          ],
+          "answer": "learn to do",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "learn-v-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ about",
-          "answer": "learn",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“了解……”？",
+          "options": [
+            "learn from mistakes",
+            "learn by doing",
+            "learn about",
+            "learn to do"
+          ],
+          "answer": "learn about",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "learn-v-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：We _____ faster when feedback is specific.",
+          "prompt": "根据句意补全词卡核心例句：We _____ faster when feedback is specific.（填写 learn 的正确形式）",
           "answer": "learn",
           "stage": "T3",
           "ai": false
@@ -2658,7 +2706,7 @@
         {
           "id": "learn-v-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “learn to do” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “learn to do” 结构写一个与自己有关的自然英文句子；do 代表任意合适的动词原形，不要求写出单词 do。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2666,7 +2714,7 @@
         {
           "id": "learn-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “learn” 和搭配 “learn to do”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “learn” 和 “learn to do” 结构，并避免中文直译；do 代表任意合适的动词原形，不要求写出单词 do。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2725,7 +2773,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -3224,7 +3272,7 @@
         {
           "id": "speak-v-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ to someone",
+          "prompt": "补全高频搭配：_____ to someone（填写 speak 的正确形式）；someone 要替换成实际的人或代词",
           "answer": "speak",
           "stage": "T0",
           "ai": false
@@ -3232,39 +3280,51 @@
         {
           "id": "speak-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ English",
-          "answer": "speak",
+          "prompt": "补全核心结构中的连接成分：speak _____",
+          "answer": "English",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "speak-v-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ English",
-          "answer": "speak",
+          "prompt": "根据语境补全搭配：speak _____",
+          "answer": "English",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "speak-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ English",
-          "answer": "speak",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“说英语”？",
+          "options": [
+            "speak about",
+            "speak clearly",
+            "speak English",
+            "speak to someone"
+          ],
+          "answer": "speak English",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "speak-v-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ to someone",
-          "answer": "speak",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“和某人说话”？；someone 要替换成实际的人或代词",
+          "options": [
+            "speak clearly",
+            "speak to someone",
+            "speak English",
+            "speak about"
+          ],
+          "answer": "speak to someone",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "speak-v-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：Try to _____ in complete sentences.",
+          "prompt": "根据句意补全词卡核心例句：Try to _____ in complete sentences.（填写 speak 的正确形式）",
           "answer": "speak",
           "stage": "T3",
           "ai": false
@@ -3280,7 +3340,7 @@
         {
           "id": "speak-v-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “speak English” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “speak English” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -3288,7 +3348,7 @@
         {
           "id": "speak-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “speak” 和搭配 “speak English”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “speak” 和 “speak English” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -3347,7 +3407,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

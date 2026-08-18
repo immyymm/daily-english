@@ -499,7 +499,7 @@
     {
       "id": "travel-n-collocation-core",
       "type": "collocation",
-      "prompt": "补全高频搭配：_____ abroad",
+      "prompt": "补全高频搭配：_____ abroad（填写 travel 的正确形式）",
       "answer": "travel",
       "stage": "T0",
       "ai": false
@@ -507,39 +507,51 @@
     {
       "id": "travel-n-collocation-structure",
       "type": "collocation",
-      "prompt": "补全核心结构：_____ abroad",
-      "answer": "travel",
+      "prompt": "补全核心结构中的连接成分：travel _____",
+      "answer": "abroad",
       "stage": "T1",
       "ai": false
     },
     {
       "id": "travel-n-collocation-context",
       "type": "collocation",
-      "prompt": "补全语境词组：_____ abroad",
-      "answer": "travel",
+      "prompt": "根据语境补全搭配：travel _____",
+      "answer": "abroad",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "travel-n-collocation-fixed-1",
       "type": "collocation",
-      "prompt": "补全固定搭配：_____ abroad",
-      "answer": "travel",
+      "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“出国旅行”？",
+      "options": [
+        "travel around",
+        "business travel",
+        "travel abroad",
+        "travel by train"
+      ],
+      "answer": "travel abroad",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "travel-n-collocation-fixed-2",
       "type": "collocation",
-      "prompt": "再补全一个固定搭配：_____ by train",
-      "answer": "travel",
+      "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“乘火车旅行”？",
+      "options": [
+        "business travel",
+        "travel by train",
+        "travel abroad",
+        "travel around"
+      ],
+      "answer": "travel by train",
       "stage": "T3",
       "ai": false
     },
     {
       "id": "travel-n-example-cloze",
       "type": "collocation",
-      "prompt": "补全词卡核心例句：She _____ abroad for work twice a year.",
+      "prompt": "根据句意补全词卡核心例句：She _____ abroad for work twice a year.（填写 travel 的正确形式）",
       "answer": "travels",
       "stage": "T3",
       "ai": false
@@ -555,7 +567,7 @@
     {
       "id": "travel-n-sentence-phrase",
       "type": "free_sentence",
-      "prompt": "请用完整搭配 “travel abroad” 写一个与自己有关的自然英文句子。",
+      "prompt": "请使用 “travel abroad” 结构写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -563,7 +575,7 @@
     {
       "id": "travel-n-dialogue",
       "type": "dialogue",
-      "prompt": "写一段 2–4 轮真实对话，自然使用 “travel” 和搭配 “travel abroad”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “travel” 和 “travel abroad” 结构，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -622,7 +634,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.4",
+  "contentVersion": "2026.08.19.1",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

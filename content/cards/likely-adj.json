@@ -607,7 +607,7 @@
     {
       "id": "likely-adj-collocation-core",
       "type": "collocation",
-      "prompt": "补全高频搭配：be _____ to",
+      "prompt": "补全高频搭配：be _____ to（填写 likely 的正确形式）",
       "answer": "likely",
       "stage": "T0",
       "ai": false
@@ -615,39 +615,51 @@
     {
       "id": "likely-adj-collocation-structure",
       "type": "collocation",
-      "prompt": "补全核心结构：be _____ to do something",
-      "answer": "likely",
+      "prompt": "补全核心结构中的连接成分：be likely _____ do something；do 代表任意合适的动词原形，不要求写出单词 do；something 要替换成实际的事物或内容",
+      "answer": "to",
       "stage": "T1",
       "ai": false
     },
     {
       "id": "likely-adj-collocation-context",
       "type": "collocation",
-      "prompt": "补全语境词组：highly _____",
-      "answer": "likely",
+      "prompt": "根据语境补全搭配：_____ likely",
+      "answer": "highly",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "likely-adj-collocation-fixed-1",
       "type": "collocation",
-      "prompt": "补全固定搭配：be _____ to",
-      "answer": "likely",
+      "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“很可能会”？",
+      "options": [
+        "it is likely that",
+        "more likely to",
+        "less likely to",
+        "be likely to"
+      ],
+      "answer": "be likely to",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "likely-adj-collocation-fixed-2",
       "type": "collocation",
-      "prompt": "再补全一个固定搭配：it is _____ that",
-      "answer": "likely",
+      "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“很可能……”？",
+      "options": [
+        "more likely to",
+        "less likely to",
+        "it is likely that",
+        "be likely to"
+      ],
+      "answer": "it is likely that",
       "stage": "T3",
       "ai": false
     },
     {
       "id": "likely-adj-example-cloze",
       "type": "collocation",
-      "prompt": "补全词卡核心例句：It is _____ to rain this afternoon.",
+      "prompt": "根据句意补全词卡核心例句：It is _____ to rain this afternoon.（填写 likely 的正确形式）",
       "answer": "likely",
       "stage": "T3",
       "ai": false
@@ -663,7 +675,7 @@
     {
       "id": "likely-adj-sentence-phrase",
       "type": "free_sentence",
-      "prompt": "请用完整搭配 “be likely to” 写一个与自己有关的自然英文句子。",
+      "prompt": "请使用 “be likely to” 结构写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -671,7 +683,7 @@
     {
       "id": "likely-adj-dialogue",
       "type": "dialogue",
-      "prompt": "写一段 2–4 轮真实对话，自然使用 “likely” 和搭配 “highly likely”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “likely” 和 “highly likely” 结构，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -730,7 +742,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.4",
+  "contentVersion": "2026.08.19.1",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；本卡依照用户词卡模板人工精校；音标为美式发音。"
 }

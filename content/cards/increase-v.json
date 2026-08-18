@@ -491,7 +491,7 @@
     {
       "id": "increase-v-collocation-core",
       "type": "collocation",
-      "prompt": "补全高频搭配：_____ confidence",
+      "prompt": "补全高频搭配：_____ confidence（填写 increase 的正确形式）",
       "answer": "increase",
       "stage": "T0",
       "ai": false
@@ -499,39 +499,51 @@
     {
       "id": "increase-v-collocation-structure",
       "type": "collocation",
-      "prompt": "补全核心结构：_____ by ten percent",
-      "answer": "increase",
+      "prompt": "补全核心结构中的连接成分：increase _____ ten percent",
+      "answer": "by",
       "stage": "T1",
       "ai": false
     },
     {
       "id": "increase-v-collocation-context",
       "type": "collocation",
-      "prompt": "补全语境词组：_____ by ten percent",
-      "answer": "increase",
+      "prompt": "根据语境补全搭配：increase by ten _____",
+      "answer": "percent",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "increase-v-collocation-fixed-1",
       "type": "collocation",
-      "prompt": "补全固定搭配：_____ by ten percent",
-      "answer": "increase",
+      "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“增加百分之十”？",
+      "options": [
+        "a sharp increase",
+        "increase by ten percent",
+        "increase from A to B",
+        "increase the risk of"
+      ],
+      "answer": "increase by ten percent",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "increase-v-collocation-fixed-2",
       "type": "collocation",
-      "prompt": "再补全一个固定搭配：_____ from A to B",
-      "answer": "increase",
+      "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“从 A 增至 B”？；A、B 要替换成实际比较内容",
+      "options": [
+        "increase from A to B",
+        "increase by ten percent",
+        "increase the risk of",
+        "a sharp increase"
+      ],
+      "answer": "increase from A to B",
       "stage": "T3",
       "ai": false
     },
     {
       "id": "increase-v-example-cloze",
       "type": "collocation",
-      "prompt": "补全词卡核心例句：Regular speaking practice _____ confidence.",
+      "prompt": "根据句意补全词卡核心例句：Regular speaking practice _____ confidence.（填写 increase 的正确形式）",
       "answer": "increases",
       "stage": "T3",
       "ai": false
@@ -547,7 +559,7 @@
     {
       "id": "increase-v-sentence-phrase",
       "type": "free_sentence",
-      "prompt": "请用完整搭配 “increase by ten percent” 写一个与自己有关的自然英文句子。",
+      "prompt": "请使用 “increase by ten percent” 结构写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -555,7 +567,7 @@
     {
       "id": "increase-v-dialogue",
       "type": "dialogue",
-      "prompt": "写一段 2–4 轮真实对话，自然使用 “increase” 和搭配 “increase by ten percent”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “increase” 和 “increase by ten percent” 结构，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -614,7 +626,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.4",
+  "contentVersion": "2026.08.19.1",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

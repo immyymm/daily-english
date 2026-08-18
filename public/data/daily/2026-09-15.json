@@ -1,7 +1,7 @@
 {
   "date": "2026-09-15",
   "dayNumber": 30,
-  "contentVersion": "2026.08.17.4",
+  "contentVersion": "2026.08.19.1",
   "cards": [
     {
       "id": "moment-n",
@@ -483,7 +483,7 @@
         {
           "id": "moment-n-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：at the _____",
+          "prompt": "补全高频搭配：at the _____（填写 moment 的正确形式）",
           "answer": "moment",
           "stage": "T0",
           "ai": false
@@ -491,39 +491,51 @@
         {
           "id": "moment-n-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：at the _____",
-          "answer": "moment",
+          "prompt": "补全核心结构中的连接成分：_____ the moment",
+          "answer": "at",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "moment-n-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：at the _____",
-          "answer": "moment",
+          "prompt": "根据语境补全搭配：_____ the moment",
+          "answer": "at",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "moment-n-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：at the _____",
-          "answer": "moment",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“目前；此刻”？",
+          "options": [
+            "wait a moment",
+            "at the moment",
+            "for a moment",
+            "the right moment"
+          ],
+          "answer": "at the moment",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "moment-n-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：for a _____",
-          "answer": "moment",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“一会儿”？",
+          "options": [
+            "for a moment",
+            "at the moment",
+            "the right moment",
+            "wait a moment"
+          ],
+          "answer": "for a moment",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "moment-n-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：I am busy at the _____.",
+          "prompt": "根据句意补全词卡核心例句：I am busy at the _____.（填写 moment 的正确形式）",
           "answer": "moment",
           "stage": "T3",
           "ai": false
@@ -539,7 +551,7 @@
         {
           "id": "moment-n-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “at the moment” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “at the moment” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -547,7 +559,7 @@
         {
           "id": "moment-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “moment” 和搭配 “at the moment”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “moment” 和 “at the moment” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -606,7 +618,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1090,7 +1102,7 @@
         {
           "id": "situation-n-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：deal with a _____",
+          "prompt": "补全高频搭配：deal with a _____（填写 situation 的正确形式）",
           "answer": "situation",
           "stage": "T0",
           "ai": false
@@ -1098,39 +1110,51 @@
         {
           "id": "situation-n-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：deal with a _____",
-          "answer": "situation",
+          "prompt": "补全核心结构中的连接成分：_____ with a situation",
+          "answer": "deal",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "situation-n-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：deal with a _____",
-          "answer": "situation",
+          "prompt": "根据语境补全搭配：_____ with a situation",
+          "answer": "deal",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "situation-n-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：deal with a _____",
-          "answer": "situation",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“应对情况”？",
+          "options": [
+            "deal with a situation",
+            "difficult situation",
+            "current situation",
+            "in this situation"
+          ],
+          "answer": "deal with a situation",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "situation-n-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：difficult _____",
-          "answer": "situation",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“困难局面”？",
+          "options": [
+            "deal with a situation",
+            "current situation",
+            "in this situation",
+            "difficult situation"
+          ],
+          "answer": "difficult situation",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "situation-n-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：The right response depends on the _____.",
+          "prompt": "根据句意补全词卡核心例句：The right response depends on the _____.（填写 situation 的正确形式）",
           "answer": "situation",
           "stage": "T3",
           "ai": false
@@ -1146,7 +1170,7 @@
         {
           "id": "situation-n-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “deal with a situation” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “deal with a situation” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1154,7 +1178,7 @@
         {
           "id": "situation-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “situation” 和搭配 “deal with a situation”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “situation” 和 “deal with a situation” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1213,7 +1237,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1705,7 +1729,7 @@
         {
           "id": "language-n-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ learning",
+          "prompt": "补全高频搭配：_____ learning（填写 language 的正确形式）",
           "answer": "language",
           "stage": "T0",
           "ai": false
@@ -1713,39 +1737,51 @@
         {
           "id": "language-n-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ learning",
-          "answer": "language",
+          "prompt": "补全核心结构中的连接成分：language _____",
+          "answer": "learning",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "language-n-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ learning",
-          "answer": "language",
+          "prompt": "根据语境补全搭配：language _____",
+          "answer": "learning",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "language-n-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ learning",
-          "answer": "language",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“语言学习”？",
+          "options": [
+            "foreign language",
+            "body language",
+            "spoken language",
+            "language learning"
+          ],
+          "answer": "language learning",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "language-n-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：foreign _____",
-          "answer": "language",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“外语”？",
+          "options": [
+            "body language",
+            "spoken language",
+            "foreign language",
+            "language learning"
+          ],
+          "answer": "foreign language",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "language-n-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：_____ learning takes time and practice.",
+          "prompt": "根据句意补全词卡核心例句：_____ learning takes time and practice.（填写 language 的正确形式）",
           "answer": "Language",
           "stage": "T3",
           "ai": false
@@ -1761,7 +1797,7 @@
         {
           "id": "language-n-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “language learning” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “language learning” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1769,7 +1805,7 @@
         {
           "id": "language-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “language” 和搭配 “language learning”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “language” 和 “language learning” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1828,7 +1864,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2319,7 +2355,7 @@
         {
           "id": "skill-n-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：develop a _____",
+          "prompt": "补全高频搭配：develop a _____（填写 skill 的正确形式）",
           "answer": "skill",
           "stage": "T0",
           "ai": false
@@ -2327,39 +2363,51 @@
         {
           "id": "skill-n-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：develop a _____",
-          "answer": "skill",
+          "prompt": "补全核心结构中的连接成分：_____ a skill",
+          "answer": "develop",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "skill-n-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：develop a _____",
-          "answer": "skill",
+          "prompt": "根据语境补全搭配：_____ a skill",
+          "answer": "develop",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "skill-n-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：develop a _____",
-          "answer": "skill",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“培养技能”？",
+          "options": [
+            "practical skills",
+            "skill in doing",
+            "develop a skill",
+            "communication skills"
+          ],
+          "answer": "develop a skill",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "skill-n-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：communication _____",
-          "answer": "skills",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“沟通技能”？",
+          "options": [
+            "skill in doing",
+            "communication skills",
+            "develop a skill",
+            "practical skills"
+          ],
+          "answer": "communication skills",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "skill-n-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：Conversation is a _____ you can practice.",
+          "prompt": "根据句意补全词卡核心例句：Conversation is a _____ you can practice.（填写 skill 的正确形式）",
           "answer": "skill",
           "stage": "T3",
           "ai": false
@@ -2375,7 +2423,7 @@
         {
           "id": "skill-n-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “develop a skill” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “develop a skill” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2383,7 +2431,7 @@
         {
           "id": "skill-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “skill” 和搭配 “develop a skill”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “skill” 和 “develop a skill” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2442,7 +2490,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2947,7 +2995,7 @@
         {
           "id": "benefit-n-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ from",
+          "prompt": "补全高频搭配：_____ from（填写 benefit 的正确形式）",
           "answer": "benefit",
           "stage": "T0",
           "ai": false
@@ -2955,39 +3003,51 @@
         {
           "id": "benefit-n-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ from",
-          "answer": "benefit",
+          "prompt": "补全核心结构中的连接成分：benefit _____",
+          "answer": "from",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "benefit-n-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ from",
-          "answer": "benefit",
+          "prompt": "根据语境补全搭配：benefit _____",
+          "answer": "from",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "benefit-n-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ from",
-          "answer": "benefit",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“从……中受益”？",
+          "options": [
+            "health benefits",
+            "benefit from",
+            "benefit someone",
+            "main benefit"
+          ],
+          "answer": "benefit from",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "benefit-n-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ someone",
-          "answer": "benefit",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“使某人受益”？；someone 要替换成实际的人或代词",
+          "options": [
+            "benefit someone",
+            "benefit from",
+            "main benefit",
+            "health benefits"
+          ],
+          "answer": "benefit someone",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "benefit-n-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：You will _____ from regular review.",
+          "prompt": "根据句意补全词卡核心例句：You will _____ from regular review.（填写 benefit 的正确形式）",
           "answer": "benefit",
           "stage": "T3",
           "ai": false
@@ -3003,7 +3063,7 @@
         {
           "id": "benefit-n-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “benefit from” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “benefit from” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -3011,7 +3071,7 @@
         {
           "id": "benefit-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “benefit” 和搭配 “benefit from”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “benefit” 和 “benefit from” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -3070,7 +3130,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

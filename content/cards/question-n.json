@@ -491,7 +491,7 @@
     {
       "id": "question-n-collocation-core",
       "type": "collocation",
-      "prompt": "补全高频搭配：ask a _____",
+      "prompt": "补全高频搭配：ask a _____（填写 question 的正确形式）",
       "answer": "question",
       "stage": "T0",
       "ai": false
@@ -499,39 +499,51 @@
     {
       "id": "question-n-collocation-structure",
       "type": "collocation",
-      "prompt": "补全核心结构：ask a _____",
-      "answer": "question",
+      "prompt": "补全核心结构中的连接成分：_____ a question",
+      "answer": "ask",
       "stage": "T1",
       "ai": false
     },
     {
       "id": "question-n-collocation-context",
       "type": "collocation",
-      "prompt": "补全语境词组：ask a _____",
-      "answer": "question",
+      "prompt": "根据语境补全搭配：_____ a question",
+      "answer": "ask",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "question-n-collocation-fixed-1",
       "type": "collocation",
-      "prompt": "补全固定搭配：ask a _____",
-      "answer": "question",
+      "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“提问”？",
+      "options": [
+        "answer a question",
+        "question whether",
+        "good question",
+        "ask a question"
+      ],
+      "answer": "ask a question",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "question-n-collocation-fixed-2",
       "type": "collocation",
-      "prompt": "再补全一个固定搭配：answer a _____",
-      "answer": "question",
+      "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“回答问题”？",
+      "options": [
+        "question whether",
+        "good question",
+        "answer a question",
+        "ask a question"
+      ],
+      "answer": "answer a question",
       "stage": "T3",
       "ai": false
     },
     {
       "id": "question-n-example-cloze",
       "type": "collocation",
-      "prompt": "补全词卡核心例句：Do not be afraid to ask a _____.",
+      "prompt": "根据句意补全词卡核心例句：Do not be afraid to ask a _____.（填写 question 的正确形式）",
       "answer": "question",
       "stage": "T3",
       "ai": false
@@ -547,7 +559,7 @@
     {
       "id": "question-n-sentence-phrase",
       "type": "free_sentence",
-      "prompt": "请用完整搭配 “ask a question” 写一个与自己有关的自然英文句子。",
+      "prompt": "请使用 “ask a question” 结构写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -555,7 +567,7 @@
     {
       "id": "question-n-dialogue",
       "type": "dialogue",
-      "prompt": "写一段 2–4 轮真实对话，自然使用 “question” 和搭配 “ask a question”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “question” 和 “ask a question” 结构，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -614,7 +626,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.4",
+  "contentVersion": "2026.08.19.1",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

@@ -1,7 +1,7 @@
 {
   "date": "2026-09-09",
   "dayNumber": 24,
-  "contentVersion": "2026.08.17.4",
+  "contentVersion": "2026.08.19.1",
   "cards": [
     {
       "id": "still-adv",
@@ -504,7 +504,7 @@
         {
           "id": "still-adv-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ need to",
+          "prompt": "补全高频搭配：_____ need to（填写 still 的正确形式）",
           "answer": "still",
           "stage": "T0",
           "ai": false
@@ -512,39 +512,51 @@
         {
           "id": "still-adv-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ need to",
-          "answer": "still",
+          "prompt": "补全核心结构中的连接成分：still _____ to",
+          "answer": "need",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "still-adv-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ need to",
-          "answer": "still",
+          "prompt": "根据语境补全搭配：still need _____",
+          "answer": "to",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "still-adv-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ need to",
-          "answer": "still",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“仍然需要”？",
+          "options": [
+            "still working",
+            "still possible",
+            "still not sure",
+            "still need to"
+          ],
+          "answer": "still need to",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "still-adv-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ working",
-          "answer": "still",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“仍在工作”？",
+          "options": [
+            "still possible",
+            "still not sure",
+            "still working",
+            "still need to"
+          ],
+          "answer": "still working",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "still-adv-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：I _____ need to review two words.",
+          "prompt": "根据句意补全词卡核心例句：I _____ need to review two words.（填写 still 的正确形式）",
           "answer": "still",
           "stage": "T3",
           "ai": false
@@ -560,7 +572,7 @@
         {
           "id": "still-adv-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “still need to” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “still need to” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -568,7 +580,7 @@
         {
           "id": "still-adv-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “still” 和搭配 “still need to”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “still” 和 “still need to” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -627,7 +639,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1103,7 +1115,7 @@
         {
           "id": "often-adv-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：quite _____",
+          "prompt": "补全高频搭配：quite _____（填写 often 的正确形式）",
           "answer": "often",
           "stage": "T0",
           "ai": false
@@ -1111,39 +1123,51 @@
         {
           "id": "often-adv-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：quite _____",
-          "answer": "often",
+          "prompt": "补全核心结构中的连接成分：_____ often",
+          "answer": "quite",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "often-adv-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：quite _____",
-          "answer": "often",
+          "prompt": "根据语境补全搭配：_____ often",
+          "answer": "quite",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "often-adv-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：quite _____",
-          "answer": "often",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“相当经常”？",
+          "options": [
+            "more often than not",
+            "how often",
+            "quite often",
+            "often used"
+          ],
+          "answer": "quite often",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "often-adv-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ used",
-          "answer": "often",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“经常使用”？",
+          "options": [
+            "how often",
+            "often used",
+            "quite often",
+            "more often than not"
+          ],
+          "answer": "often used",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "often-adv-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：This phrase _____ appears in conversation.",
+          "prompt": "根据句意补全词卡核心例句：This phrase _____ appears in conversation.（填写 often 的正确形式）",
           "answer": "often",
           "stage": "T3",
           "ai": false
@@ -1159,7 +1183,7 @@
         {
           "id": "often-adv-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “quite often” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “quite often” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1167,7 +1191,7 @@
         {
           "id": "often-adv-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “often” 和搭配 “quite often”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “often” 和 “quite often” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1226,7 +1250,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1702,7 +1726,7 @@
         {
           "id": "together-adv-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：work _____",
+          "prompt": "补全高频搭配：work _____（填写 together 的正确形式）",
           "answer": "together",
           "stage": "T0",
           "ai": false
@@ -1710,39 +1734,51 @@
         {
           "id": "together-adv-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：work _____",
-          "answer": "together",
+          "prompt": "补全核心结构中的连接成分：_____ together",
+          "answer": "work",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "together-adv-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：work _____",
-          "answer": "together",
+          "prompt": "根据语境补全搭配：_____ together",
+          "answer": "work",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "together-adv-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：work _____",
-          "answer": "together",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“一起工作”？",
+          "options": [
+            "get together",
+            "work together",
+            "learn together",
+            "live together"
+          ],
+          "answer": "work together",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "together-adv-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：learn _____",
-          "answer": "together",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“一起学习”？",
+          "options": [
+            "learn together",
+            "work together",
+            "live together",
+            "get together"
+          ],
+          "answer": "learn together",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "together-adv-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：These words are often used _____.",
+          "prompt": "根据句意补全词卡核心例句：These words are often used _____.（填写 together 的正确形式）",
           "answer": "together",
           "stage": "T3",
           "ai": false
@@ -1758,7 +1794,7 @@
         {
           "id": "together-adv-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “work together” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “work together” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1766,7 +1802,7 @@
         {
           "id": "together-adv-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “together” 和搭配 “work together”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “together” 和 “work together” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1825,7 +1861,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2316,7 +2352,7 @@
         {
           "id": "forward-adv-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：look _____ to",
+          "prompt": "补全高频搭配：look _____ to（填写 forward 的正确形式）",
           "answer": "forward",
           "stage": "T0",
           "ai": false
@@ -2324,39 +2360,51 @@
         {
           "id": "forward-adv-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：look _____ to",
-          "answer": "forward",
+          "prompt": "补全核心结构中的连接成分：look forward _____",
+          "answer": "to",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "forward-adv-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：look _____ to",
-          "answer": "forward",
+          "prompt": "根据语境补全搭配：look forward _____",
+          "answer": "to",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "forward-adv-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：look _____ to",
-          "answer": "forward",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“期待……”？",
+          "options": [
+            "look forward to",
+            "move forward",
+            "go forward with",
+            "a step forward"
+          ],
+          "answer": "look forward to",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "forward-adv-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：move _____",
-          "answer": "forward",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“向前推进”？",
+          "options": [
+            "look forward to",
+            "go forward with",
+            "a step forward",
+            "move forward"
+          ],
+          "answer": "move forward",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "forward-adv-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：I look _____ to hearing from you.",
+          "prompt": "根据句意补全词卡核心例句：I look _____ to hearing from you.（填写 forward 的正确形式）",
           "answer": "forward",
           "stage": "T3",
           "ai": false
@@ -2372,7 +2420,7 @@
         {
           "id": "forward-adv-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “look forward to” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “look forward to” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2380,7 +2428,7 @@
         {
           "id": "forward-adv-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “forward” 和搭配 “look forward to”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “forward” 和 “look forward to” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2439,7 +2487,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2936,7 +2984,7 @@
         {
           "id": "enough-adv-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：good _____",
+          "prompt": "补全高频搭配：good _____（填写 enough 的正确形式）",
           "answer": "enough",
           "stage": "T0",
           "ai": false
@@ -2944,39 +2992,51 @@
         {
           "id": "enough-adv-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：good _____",
-          "answer": "enough",
+          "prompt": "补全核心结构中的连接成分：_____ enough",
+          "answer": "good",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "enough-adv-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：good _____",
-          "answer": "enough",
+          "prompt": "根据语境补全搭配：_____ enough",
+          "answer": "good",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "enough-adv-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：good _____",
-          "answer": "enough",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“足够好”？",
+          "options": [
+            "enough time",
+            "old enough to",
+            "not enough",
+            "good enough"
+          ],
+          "answer": "good enough",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "enough-adv-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ time",
-          "answer": "enough",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“足够时间”？",
+          "options": [
+            "old enough to",
+            "not enough",
+            "enough time",
+            "good enough"
+          ],
+          "answer": "enough time",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "enough-adv-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：Five focused minutes can be _____.",
+          "prompt": "根据句意补全词卡核心例句：Five focused minutes can be _____.（填写 enough 的正确形式）",
           "answer": "enough",
           "stage": "T3",
           "ai": false
@@ -2992,7 +3052,7 @@
         {
           "id": "enough-adv-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “good enough” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “good enough” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -3000,7 +3060,7 @@
         {
           "id": "enough-adv-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “enough” 和搭配 “good enough”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “enough” 和 “good enough” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -3059,7 +3119,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

@@ -1,7 +1,7 @@
 {
   "date": "2026-08-30",
   "dayNumber": 14,
-  "contentVersion": "2026.08.17.4",
+  "contentVersion": "2026.08.19.1",
   "cards": [
     {
       "id": "value-n",
@@ -496,7 +496,7 @@
         {
           "id": "value-n-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：great _____",
+          "prompt": "补全高频搭配：great _____（填写 value 的正确形式）",
           "answer": "value",
           "stage": "T0",
           "ai": false
@@ -504,39 +504,51 @@
         {
           "id": "value-n-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：great _____",
-          "answer": "value",
+          "prompt": "补全核心结构中的连接成分：_____ value",
+          "answer": "great",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "value-n-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：great _____",
-          "answer": "value",
+          "prompt": "根据语境补全搭配：_____ value",
+          "answer": "great",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "value-n-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：great _____",
-          "answer": "value",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“很大价值”？",
+          "options": [
+            "core values",
+            "great value",
+            "value for money",
+            "place a value on"
+          ],
+          "answer": "great value",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "value-n-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ for money",
-          "answer": "value",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“物有所值”？",
+          "options": [
+            "value for money",
+            "great value",
+            "place a value on",
+            "core values"
+          ],
+          "answer": "value for money",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "value-n-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：I _____ honest feedback.",
+          "prompt": "根据句意补全词卡核心例句：I _____ honest feedback.（填写 value 的正确形式）",
           "answer": "value",
           "stage": "T3",
           "ai": false
@@ -552,7 +564,7 @@
         {
           "id": "value-n-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “great value” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “great value” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -560,7 +572,7 @@
         {
           "id": "value-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “value” 和搭配 “great value”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “value” 和 “great value” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -619,7 +631,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1103,7 +1115,7 @@
         {
           "id": "behavior-n-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：change _____",
+          "prompt": "补全高频搭配：change _____（填写 behavior 的正确形式）",
           "answer": "behavior",
           "stage": "T0",
           "ai": false
@@ -1111,39 +1123,51 @@
         {
           "id": "behavior-n-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：change _____",
-          "answer": "behavior",
+          "prompt": "补全核心结构中的连接成分：_____ behavior",
+          "answer": "change",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "behavior-n-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：change _____",
-          "answer": "behavior",
+          "prompt": "根据语境补全搭配：_____ behavior",
+          "answer": "change",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "behavior-n-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：change _____",
-          "answer": "behavior",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“改变行为”？",
+          "options": [
+            "change behavior",
+            "positive behavior",
+            "human behavior",
+            "pattern of behavior"
+          ],
+          "answer": "change behavior",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "behavior-n-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：positive _____",
-          "answer": "behavior",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“积极行为”？",
+          "options": [
+            "change behavior",
+            "human behavior",
+            "pattern of behavior",
+            "positive behavior"
+          ],
+          "answer": "positive behavior",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "behavior-n-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：Small rewards can encourage positive _____.",
+          "prompt": "根据句意补全词卡核心例句：Small rewards can encourage positive _____.（填写 behavior 的正确形式）",
           "answer": "behavior",
           "stage": "T3",
           "ai": false
@@ -1159,7 +1183,7 @@
         {
           "id": "behavior-n-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “change behavior” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “change behavior” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1167,7 +1191,7 @@
         {
           "id": "behavior-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “behavior” 和搭配 “change behavior”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “behavior” 和 “change behavior” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1226,7 +1250,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1710,7 +1734,7 @@
         {
           "id": "attention-n-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：pay _____ to",
+          "prompt": "补全高频搭配：pay _____ to（填写 attention 的正确形式）",
           "answer": "attention",
           "stage": "T0",
           "ai": false
@@ -1718,39 +1742,51 @@
         {
           "id": "attention-n-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：pay _____ to",
-          "answer": "attention",
+          "prompt": "补全核心结构中的连接成分：pay attention _____",
+          "answer": "to",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "attention-n-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：pay _____ to",
-          "answer": "attention",
+          "prompt": "根据语境补全搭配：pay attention _____",
+          "answer": "to",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "attention-n-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：pay _____ to",
-          "answer": "attention",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“注意……”？",
+          "options": [
+            "draw attention to",
+            "get someone’s attention",
+            "full attention",
+            "pay attention to"
+          ],
+          "answer": "pay attention to",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "attention-n-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：draw _____ to",
-          "answer": "attention",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“使人注意……”？",
+          "options": [
+            "get someone’s attention",
+            "full attention",
+            "draw attention to",
+            "pay attention to"
+          ],
+          "answer": "draw attention to",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "attention-n-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：Pay _____ to the preposition after the verb.",
+          "prompt": "根据句意补全词卡核心例句：Pay _____ to the preposition after the verb.（填写 attention 的正确形式）",
           "answer": "attention",
           "stage": "T3",
           "ai": false
@@ -1766,7 +1802,7 @@
         {
           "id": "attention-n-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “pay attention to” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “pay attention to” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1774,7 +1810,7 @@
         {
           "id": "attention-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “attention” 和搭配 “pay attention to”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “attention” 和 “pay attention to” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1833,7 +1869,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2317,7 +2353,7 @@
         {
           "id": "purpose-n-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：main _____",
+          "prompt": "补全高频搭配：main _____（填写 purpose 的正确形式）",
           "answer": "purpose",
           "stage": "T0",
           "ai": false
@@ -2325,39 +2361,51 @@
         {
           "id": "purpose-n-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：main _____",
-          "answer": "purpose",
+          "prompt": "补全核心结构中的连接成分：_____ purpose",
+          "answer": "main",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "purpose-n-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：main _____",
-          "answer": "purpose",
+          "prompt": "根据语境补全搭配：_____ purpose",
+          "answer": "main",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "purpose-n-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：main _____",
-          "answer": "purpose",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“主要目的”？",
+          "options": [
+            "serve a purpose",
+            "on purpose",
+            "main purpose",
+            "purpose of doing"
+          ],
+          "answer": "main purpose",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "purpose-n-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ of doing",
-          "answer": "purpose",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“做……的目的”？；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing",
+          "options": [
+            "on purpose",
+            "purpose of doing",
+            "main purpose",
+            "serve a purpose"
+          ],
+          "answer": "purpose of doing",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "purpose-n-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：The main _____ of the test is active recall.",
+          "prompt": "根据句意补全词卡核心例句：The main _____ of the test is active recall.（填写 purpose 的正确形式）",
           "answer": "purpose",
           "stage": "T3",
           "ai": false
@@ -2373,7 +2421,7 @@
         {
           "id": "purpose-n-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “main purpose” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “main purpose” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2381,7 +2429,7 @@
         {
           "id": "purpose-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “purpose” 和搭配 “main purpose”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “purpose” 和 “main purpose” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2440,7 +2488,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2924,7 +2972,7 @@
         {
           "id": "choice-n-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：make a _____",
+          "prompt": "补全高频搭配：make a _____（填写 choice 的正确形式）",
           "answer": "choice",
           "stage": "T0",
           "ai": false
@@ -2932,39 +2980,51 @@
         {
           "id": "choice-n-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：make a _____",
-          "answer": "choice",
+          "prompt": "补全核心结构中的连接成分：_____ a choice",
+          "answer": "make",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "choice-n-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：make a _____",
-          "answer": "choice",
+          "prompt": "根据语境补全搭配：_____ a choice",
+          "answer": "make",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "choice-n-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：make a _____",
-          "answer": "choice",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“作出选择”？",
+          "options": [
+            "choice between",
+            "make a choice",
+            "have no choice",
+            "a good choice"
+          ],
+          "answer": "make a choice",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "choice-n-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：have no _____",
-          "answer": "choice",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“别无选择”？",
+          "options": [
+            "have no choice",
+            "make a choice",
+            "a good choice",
+            "choice between"
+          ],
+          "answer": "have no choice",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "choice-n-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：Sometimes the natural _____ depends on context.",
+          "prompt": "根据句意补全词卡核心例句：Sometimes the natural _____ depends on context.（填写 choice 的正确形式）",
           "answer": "choice",
           "stage": "T3",
           "ai": false
@@ -2980,7 +3040,7 @@
         {
           "id": "choice-n-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “make a choice” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “make a choice” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2988,7 +3048,7 @@
         {
           "id": "choice-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “choice” 和搭配 “make a choice”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “choice” 和 “make a choice” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -3047,7 +3107,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

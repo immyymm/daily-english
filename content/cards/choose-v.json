@@ -493,7 +493,7 @@
     {
       "id": "choose-v-collocation-core",
       "type": "collocation",
-      "prompt": "补全高频搭配：_____ between A and B",
+      "prompt": "补全高频搭配：_____ between A and B（填写 choose 的正确形式）；A、B 要替换成实际比较内容",
       "answer": "choose",
       "stage": "T0",
       "ai": false
@@ -501,39 +501,51 @@
     {
       "id": "choose-v-collocation-structure",
       "type": "collocation",
-      "prompt": "补全核心结构：_____ to do",
-      "answer": "choose",
+      "prompt": "补全核心结构中的连接成分：choose _____ do；do 代表任意合适的动词原形，不要求写出单词 do",
+      "answer": "to",
       "stage": "T1",
       "ai": false
     },
     {
       "id": "choose-v-collocation-context",
       "type": "collocation",
-      "prompt": "补全语境词组：_____ to do",
-      "answer": "choose",
+      "prompt": "根据语境补全搭配：choose to _____；do 代表任意合适的动词原形，不要求写出单词 do",
+      "answer": "do",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "choose-v-collocation-fixed-1",
       "type": "collocation",
-      "prompt": "补全固定搭配：_____ to do",
-      "answer": "choose",
+      "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“选择做”？；do 代表任意合适的动词原形，不要求写出单词 do",
+      "options": [
+        "choose between A and B",
+        "choose the right word",
+        "carefully choose",
+        "choose to do"
+      ],
+      "answer": "choose to do",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "choose-v-collocation-fixed-2",
       "type": "collocation",
-      "prompt": "再补全一个固定搭配：_____ between A and B",
-      "answer": "choose",
+      "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“在 A 和 B 之间选择”？；A、B 要替换成实际比较内容",
+      "options": [
+        "choose the right word",
+        "carefully choose",
+        "choose between A and B",
+        "choose to do"
+      ],
+      "answer": "choose between A and B",
       "stage": "T3",
       "ai": false
     },
     {
       "id": "choose-v-example-cloze",
       "type": "collocation",
-      "prompt": "补全词卡核心例句：_____ the most natural answer.",
+      "prompt": "根据句意补全词卡核心例句：_____ the most natural answer.（填写 choose 的正确形式）",
       "answer": "Choose",
       "stage": "T3",
       "ai": false
@@ -549,7 +561,7 @@
     {
       "id": "choose-v-sentence-phrase",
       "type": "free_sentence",
-      "prompt": "请用完整搭配 “choose to do” 写一个与自己有关的自然英文句子。",
+      "prompt": "请使用 “choose to do” 结构写一个与自己有关的自然英文句子；do 代表任意合适的动词原形，不要求写出单词 do。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -557,7 +569,7 @@
     {
       "id": "choose-v-dialogue",
       "type": "dialogue",
-      "prompt": "写一段 2–4 轮真实对话，自然使用 “choose” 和搭配 “choose to do”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “choose” 和 “choose to do” 结构，并避免中文直译；do 代表任意合适的动词原形，不要求写出单词 do。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -616,7 +628,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.4",
+  "contentVersion": "2026.08.19.1",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

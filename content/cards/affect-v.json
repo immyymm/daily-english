@@ -493,7 +493,7 @@
     {
       "id": "affect-v-collocation-core",
       "type": "collocation",
-      "prompt": "补全高频搭配：_____ your health",
+      "prompt": "补全高频搭配：_____ your health（填写 affect 的正确形式）",
       "answer": "affect",
       "stage": "T0",
       "ai": false
@@ -501,39 +501,51 @@
     {
       "id": "affect-v-collocation-structure",
       "type": "collocation",
-      "prompt": "补全核心结构：_____ the result",
-      "answer": "affect",
+      "prompt": "补全核心结构中的连接成分：affect _____ result",
+      "answer": "the",
       "stage": "T1",
       "ai": false
     },
     {
       "id": "affect-v-collocation-context",
       "type": "collocation",
-      "prompt": "补全语境词组：_____ the result",
-      "answer": "affect",
+      "prompt": "根据语境补全搭配：affect the _____",
+      "answer": "result",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "affect-v-collocation-fixed-1",
       "type": "collocation",
-      "prompt": "补全固定搭配：_____ the result",
-      "answer": "affect",
+      "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“影响结果”？",
+      "options": [
+        "be affected by",
+        "affect your health",
+        "affect the result",
+        "seriously affect"
+      ],
+      "answer": "affect the result",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "affect-v-collocation-fixed-2",
       "type": "collocation",
-      "prompt": "再补全一个固定搭配：seriously _____",
-      "answer": "affect",
+      "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“严重影响”？",
+      "options": [
+        "affect your health",
+        "seriously affect",
+        "affect the result",
+        "be affected by"
+      ],
+      "answer": "seriously affect",
       "stage": "T3",
       "ai": false
     },
     {
       "id": "affect-v-example-cloze",
       "type": "collocation",
-      "prompt": "补全词卡核心例句：Poor sleep can _____ your memory.",
+      "prompt": "根据句意补全词卡核心例句：Poor sleep can _____ your memory.（填写 affect 的正确形式）",
       "answer": "affect",
       "stage": "T3",
       "ai": false
@@ -549,7 +561,7 @@
     {
       "id": "affect-v-sentence-phrase",
       "type": "free_sentence",
-      "prompt": "请用完整搭配 “affect the result” 写一个与自己有关的自然英文句子。",
+      "prompt": "请使用 “affect the result” 结构写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -557,7 +569,7 @@
     {
       "id": "affect-v-dialogue",
       "type": "dialogue",
-      "prompt": "写一段 2–4 轮真实对话，自然使用 “affect” 和搭配 “affect the result”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “affect” 和 “affect the result” 结构，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -616,7 +628,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.4",
+  "contentVersion": "2026.08.19.1",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

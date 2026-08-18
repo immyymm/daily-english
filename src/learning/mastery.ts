@@ -54,6 +54,12 @@ export interface MasteryProfile {
   attemptCount: number;
 }
 
+export function isLegacyInvalidClozeAttempt(attempt: Pick<Attempt, 'questionId' | 'prompt'>) {
+  return attempt.questionId.includes('-example-cloze-')
+    && attempt.prompt.includes('填入目标词')
+    && !attempt.prompt.includes('_____');
+}
+
 function recentAverage(values: number[]) {
   const recent = values.slice(-12);
   if (!recent.length) return undefined;
@@ -63,7 +69,9 @@ function recentAverage(values: number[]) {
 }
 
 export function calculateMasteryProfile(attempts: Attempt[]): MasteryProfile {
-  const sorted = [...attempts].sort((a, b) => a.createdAt.localeCompare(b.createdAt));
+  const sorted = attempts
+    .filter((attempt) => !isLegacyInvalidClozeAttempt(attempt))
+    .sort((a, b) => a.createdAt.localeCompare(b.createdAt));
   const buckets = Object.fromEntries(masteryDimensions.map((dimension) => [dimension, [] as number[]])) as Record<MasteryDimension, number[]>;
   const errorCounts: Record<string, number> = {};
 

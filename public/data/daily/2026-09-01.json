@@ -1,7 +1,7 @@
 {
   "date": "2026-09-01",
   "dayNumber": 16,
-  "contentVersion": "2026.08.17.4",
+  "contentVersion": "2026.08.19.1",
   "cards": [
     {
       "id": "confidence-n",
@@ -483,7 +483,7 @@
         {
           "id": "confidence-n-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：build _____",
+          "prompt": "补全高频搭配：build _____（填写 confidence 的正确形式）",
           "answer": "confidence",
           "stage": "T0",
           "ai": false
@@ -491,39 +491,51 @@
         {
           "id": "confidence-n-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：build _____",
-          "answer": "confidence",
+          "prompt": "补全核心结构中的连接成分：_____ confidence",
+          "answer": "build",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "confidence-n-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：build _____",
-          "answer": "confidence",
+          "prompt": "根据语境补全搭配：_____ confidence",
+          "answer": "build",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "confidence-n-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：build _____",
-          "answer": "confidence",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“建立信心”？",
+          "options": [
+            "gain confidence",
+            "have confidence in",
+            "with confidence",
+            "build confidence"
+          ],
+          "answer": "build confidence",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "confidence-n-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：gain _____",
-          "answer": "confidence",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“获得信心”？",
+          "options": [
+            "have confidence in",
+            "with confidence",
+            "gain confidence",
+            "build confidence"
+          ],
+          "answer": "gain confidence",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "confidence-n-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：Short conversations can build your _____.",
+          "prompt": "根据句意补全词卡核心例句：Short conversations can build your _____.（填写 confidence 的正确形式）",
           "answer": "confidence",
           "stage": "T3",
           "ai": false
@@ -539,7 +551,7 @@
         {
           "id": "confidence-n-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “build confidence” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “build confidence” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -547,7 +559,7 @@
         {
           "id": "confidence-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “confidence” 和搭配 “build confidence”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “confidence” 和 “build confidence” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -606,7 +618,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1090,7 +1102,7 @@
         {
           "id": "quality-n-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：high _____",
+          "prompt": "补全高频搭配：high _____（填写 quality 的正确形式）",
           "answer": "quality",
           "stage": "T0",
           "ai": false
@@ -1098,39 +1110,51 @@
         {
           "id": "quality-n-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：high _____",
-          "answer": "quality",
+          "prompt": "补全核心结构中的连接成分：_____ quality",
+          "answer": "high",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "quality-n-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：high _____",
-          "answer": "quality",
+          "prompt": "根据语境补全搭配：_____ quality",
+          "answer": "high",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "quality-n-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：high _____",
-          "answer": "quality",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“高质量”？",
+          "options": [
+            "improve the quality of",
+            "good-quality materials",
+            "high quality",
+            "quality of life"
+          ],
+          "answer": "high quality",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "quality-n-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ of life",
-          "answer": "quality",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“生活质量”？",
+          "options": [
+            "good-quality materials",
+            "quality of life",
+            "high quality",
+            "improve the quality of"
+          ],
+          "answer": "quality of life",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "quality-n-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：Focus on the _____ of your practice.",
+          "prompt": "根据句意补全词卡核心例句：Focus on the _____ of your practice.（填写 quality 的正确形式）",
           "answer": "quality",
           "stage": "T3",
           "ai": false
@@ -1146,7 +1170,7 @@
         {
           "id": "quality-n-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “high quality” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “high quality” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1154,7 +1178,7 @@
         {
           "id": "quality-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “quality” 和搭配 “high quality”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “quality” 和 “high quality” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1213,7 +1237,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1704,7 +1728,7 @@
         {
           "id": "success-n-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：achieve _____",
+          "prompt": "补全高频搭配：achieve _____（填写 success 的正确形式）",
           "answer": "success",
           "stage": "T0",
           "ai": false
@@ -1712,39 +1736,51 @@
         {
           "id": "success-n-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：achieve _____",
-          "answer": "success",
+          "prompt": "补全核心结构中的连接成分：_____ success",
+          "answer": "achieve",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "success-n-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：achieve _____",
-          "answer": "success",
+          "prompt": "根据语境补全搭配：_____ success",
+          "answer": "achieve",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "success-n-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：achieve _____",
-          "answer": "success",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“取得成功”？",
+          "options": [
+            "chance of success",
+            "achieve success",
+            "great success",
+            "key to success"
+          ],
+          "answer": "achieve success",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "success-n-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：great _____",
-          "answer": "success",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“巨大成功”？",
+          "options": [
+            "great success",
+            "achieve success",
+            "key to success",
+            "chance of success"
+          ],
+          "answer": "great success",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "success-n-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：Consistency is more important than quick _____.",
+          "prompt": "根据句意补全词卡核心例句：Consistency is more important than quick _____.（填写 success 的正确形式）",
           "answer": "success",
           "stage": "T3",
           "ai": false
@@ -1760,7 +1796,7 @@
         {
           "id": "success-n-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “achieve success” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “achieve success” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1768,7 +1804,7 @@
         {
           "id": "success-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “success” 和搭配 “achieve success”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “success” 和 “achieve success” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1827,7 +1863,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2326,7 +2362,7 @@
         {
           "id": "advice-n-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：give _____",
+          "prompt": "补全高频搭配：give _____（填写 advice 的正确形式）",
           "answer": "advice",
           "stage": "T0",
           "ai": false
@@ -2334,39 +2370,51 @@
         {
           "id": "advice-n-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：give _____",
-          "answer": "advice",
+          "prompt": "补全核心结构中的连接成分：_____ advice",
+          "answer": "give",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "advice-n-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：give _____",
-          "answer": "advice",
+          "prompt": "根据语境补全搭配：_____ advice",
+          "answer": "give",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "advice-n-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：give _____",
-          "answer": "advice",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“给建议”？",
+          "options": [
+            "give advice",
+            "ask for advice",
+            "follow someone’s advice",
+            "a piece of advice"
+          ],
+          "answer": "give advice",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "advice-n-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：ask for _____",
-          "answer": "advice",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“征求建议”？",
+          "options": [
+            "give advice",
+            "follow someone’s advice",
+            "a piece of advice",
+            "ask for advice"
+          ],
+          "answer": "ask for advice",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "advice-n-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：She gave me some practical _____.",
+          "prompt": "根据句意补全词卡核心例句：She gave me some practical _____.（填写 advice 的正确形式）",
           "answer": "advice",
           "stage": "T3",
           "ai": false
@@ -2382,7 +2430,7 @@
         {
           "id": "advice-n-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “give advice” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “give advice” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2390,7 +2438,7 @@
         {
           "id": "advice-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “advice” 和搭配 “give advice”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “advice” 和 “give advice” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2449,7 +2497,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2933,7 +2981,7 @@
         {
           "id": "difference-n-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：make a _____",
+          "prompt": "补全高频搭配：make a _____（填写 difference 的正确形式）",
           "answer": "difference",
           "stage": "T0",
           "ai": false
@@ -2941,39 +2989,51 @@
         {
           "id": "difference-n-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：make a _____",
-          "answer": "difference",
+          "prompt": "补全核心结构中的连接成分：_____ a difference",
+          "answer": "make",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "difference-n-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：make a _____",
-          "answer": "difference",
+          "prompt": "根据语境补全搭配：_____ a difference",
+          "answer": "make",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "difference-n-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：make a _____",
-          "answer": "difference",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“产生影响”？",
+          "options": [
+            "difference between",
+            "notice a difference",
+            "big difference",
+            "make a difference"
+          ],
+          "answer": "make a difference",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "difference-n-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ between",
-          "answer": "difference",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“……之间的差别”？",
+          "options": [
+            "notice a difference",
+            "big difference",
+            "difference between",
+            "make a difference"
+          ],
+          "answer": "difference between",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "difference-n-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：Ten focused minutes can make a _____.",
+          "prompt": "根据句意补全词卡核心例句：Ten focused minutes can make a _____.（填写 difference 的正确形式）",
           "answer": "difference",
           "stage": "T3",
           "ai": false
@@ -2989,7 +3049,7 @@
         {
           "id": "difference-n-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “make a difference” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “make a difference” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2997,7 +3057,7 @@
         {
           "id": "difference-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “difference” 和搭配 “make a difference”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “difference” 和 “make a difference” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -3056,7 +3116,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

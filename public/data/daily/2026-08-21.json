@@ -1,7 +1,7 @@
 {
   "date": "2026-08-21",
   "dayNumber": 5,
-  "contentVersion": "2026.08.17.4",
+  "contentVersion": "2026.08.19.1",
   "cards": [
     {
       "id": "offer-v",
@@ -496,7 +496,7 @@
         {
           "id": "offer-v-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ help",
+          "prompt": "补全高频搭配：_____ help（填写 offer 的正确形式）",
           "answer": "offer",
           "stage": "T0",
           "ai": false
@@ -504,39 +504,51 @@
         {
           "id": "offer-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ help",
-          "answer": "offer",
+          "prompt": "补全核心结构中的连接成分：offer _____",
+          "answer": "help",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "offer-v-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ help",
-          "answer": "offer",
+          "prompt": "根据语境补全搭配：offer _____",
+          "answer": "help",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "offer-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ help",
-          "answer": "offer",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“主动提供帮助”？",
+          "options": [
+            "offer to do",
+            "make an offer",
+            "offer help",
+            "offer someone a job"
+          ],
+          "answer": "offer help",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "offer-v-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ someone a job",
-          "answer": "offer",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“给某人一份工作”？；someone 要替换成实际的人或代词",
+          "options": [
+            "make an offer",
+            "offer someone a job",
+            "offer help",
+            "offer to do"
+          ],
+          "answer": "offer someone a job",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "offer-v-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：He _____ to help me with the project.",
+          "prompt": "根据句意补全词卡核心例句：He _____ to help me with the project.（填写 offer 的正确形式）",
           "answer": "offered",
           "stage": "T3",
           "ai": false
@@ -552,7 +564,7 @@
         {
           "id": "offer-v-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “offer help” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “offer help” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -560,7 +572,7 @@
         {
           "id": "offer-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “offer” 和搭配 “offer help”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “offer” 和 “offer help” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -619,7 +631,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1103,7 +1115,7 @@
         {
           "id": "consider-v-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ doing something",
+          "prompt": "补全高频搭配：_____ doing something（填写 consider 的正确形式）；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing；something 要替换成实际的事物或内容",
           "answer": "consider",
           "stage": "T0",
           "ai": false
@@ -1111,39 +1123,51 @@
         {
           "id": "consider-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ doing",
-          "answer": "consider",
+          "prompt": "补全核心结构中的连接成分：consider _____；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing",
+          "answer": "doing",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "consider-v-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ doing",
-          "answer": "consider",
+          "prompt": "根据语境补全搭配：consider _____；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing",
+          "answer": "doing",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "consider-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ doing",
-          "answer": "consider",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“考虑做”？；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing",
+          "options": [
+            "carefully consider",
+            "consider doing",
+            "consider the possibility",
+            "consider someone suitable"
+          ],
+          "answer": "consider doing",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "consider-v-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ the possibility",
-          "answer": "consider",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“考虑可能性”？",
+          "options": [
+            "consider the possibility",
+            "consider doing",
+            "consider someone suitable",
+            "carefully consider"
+          ],
+          "answer": "consider the possibility",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "consider-v-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：You should _____ taking a short break.",
+          "prompt": "根据句意补全词卡核心例句：You should _____ taking a short break.（填写 consider 的正确形式）",
           "answer": "consider",
           "stage": "T3",
           "ai": false
@@ -1159,7 +1183,7 @@
         {
           "id": "consider-v-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “consider doing” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “consider doing” 结构写一个与自己有关的自然英文句子；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1167,7 +1191,7 @@
         {
           "id": "consider-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “consider” 和搭配 “consider doing”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “consider” 和 “consider doing” 结构，并避免中文直译；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1226,7 +1250,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1717,7 +1741,7 @@
         {
           "id": "expect-v-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ someone to do something",
+          "prompt": "补全高频搭配：_____ someone to do something（填写 expect 的正确形式）；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词；something 要替换成实际的事物或内容",
           "answer": "expect",
           "stage": "T0",
           "ai": false
@@ -1725,39 +1749,51 @@
         {
           "id": "expect-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ someone to do",
-          "answer": "expect",
+          "prompt": "补全核心结构中的连接成分：expect _____ to do；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词",
+          "answer": "someone",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "expect-v-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ someone to do",
-          "answer": "expect",
+          "prompt": "根据语境补全搭配：expect someone to _____；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词",
+          "answer": "do",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "expect-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ someone to do",
-          "answer": "expect",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“期待某人做”？；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词",
+          "options": [
+            "expect someone to do",
+            "expect to see",
+            "as expected",
+            "what to expect"
+          ],
+          "answer": "expect someone to do",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "expect-v-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ to see",
-          "answer": "expect",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“预计会看到”？",
+          "options": [
+            "expect someone to do",
+            "as expected",
+            "what to expect",
+            "expect to see"
+          ],
+          "answer": "expect to see",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "expect-v-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：We _____ the results next week.",
+          "prompt": "根据句意补全词卡核心例句：We _____ the results next week.（填写 expect 的正确形式）",
           "answer": "expect",
           "stage": "T3",
           "ai": false
@@ -1773,7 +1809,7 @@
         {
           "id": "expect-v-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “expect someone to do” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “expect someone to do” 结构写一个与自己有关的自然英文句子；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1781,7 +1817,7 @@
         {
           "id": "expect-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “expect” 和搭配 “expect someone to do”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “expect” 和 “expect someone to do” 结构，并避免中文直译；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1840,7 +1876,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2331,7 +2367,7 @@
         {
           "id": "develop-v-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ a habit",
+          "prompt": "补全高频搭配：_____ a habit（填写 develop 的正确形式）",
           "answer": "develop",
           "stage": "T0",
           "ai": false
@@ -2339,39 +2375,51 @@
         {
           "id": "develop-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ a habit",
-          "answer": "develop",
+          "prompt": "补全核心结构中的连接成分：develop _____ habit",
+          "answer": "a",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "develop-v-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ a habit",
-          "answer": "develop",
+          "prompt": "根据语境补全搭配：develop a _____",
+          "answer": "habit",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "develop-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ a habit",
-          "answer": "develop",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“养成习惯”？",
+          "options": [
+            "develop a skill",
+            "develop a plan",
+            "develop an interest in",
+            "develop a habit"
+          ],
+          "answer": "develop a habit",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "develop-v-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ a skill",
-          "answer": "develop",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“培养技能”？",
+          "options": [
+            "develop a plan",
+            "develop an interest in",
+            "develop a skill",
+            "develop a habit"
+          ],
+          "answer": "develop a skill",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "develop-v-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：She _____ a habit of reading every night.",
+          "prompt": "根据句意补全词卡核心例句：She _____ a habit of reading every night.（填写 develop 的正确形式）",
           "answer": "developed",
           "stage": "T3",
           "ai": false
@@ -2387,7 +2435,7 @@
         {
           "id": "develop-v-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “develop a habit” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “develop a habit” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2395,7 +2443,7 @@
         {
           "id": "develop-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “develop” 和搭配 “develop a habit”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “develop” 和 “develop a habit” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2454,7 +2502,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2945,7 +2993,7 @@
         {
           "id": "decide-v-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ to do something",
+          "prompt": "补全高频搭配：_____ to do something（填写 decide 的正确形式）；do 代表任意合适的动词原形，不要求写出单词 do；something 要替换成实际的事物或内容",
           "answer": "decide",
           "stage": "T0",
           "ai": false
@@ -2953,40 +3001,52 @@
         {
           "id": "decide-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ to do",
-          "answer": "decide",
+          "prompt": "补全核心结构中的连接成分：decide _____ do；do 代表任意合适的动词原形，不要求写出单词 do",
+          "answer": "to",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "decide-v-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ to do",
-          "answer": "decide",
+          "prompt": "根据语境补全搭配：decide to _____；do 代表任意合适的动词原形，不要求写出单词 do",
+          "answer": "do",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "decide-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ to do",
-          "answer": "decide",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“决定做”？；do 代表任意合适的动词原形，不要求写出单词 do",
+          "options": [
+            "decide between",
+            "decide whether",
+            "decide to do",
+            "decide against"
+          ],
+          "answer": "decide to do",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "decide-v-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ against",
-          "answer": "decide",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“决定不做”？",
+          "options": [
+            "decide whether",
+            "decide against",
+            "decide to do",
+            "decide between"
+          ],
+          "answer": "decide against",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "decide-v-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：I decided to start with five words a day.（填入目标词）",
-          "answer": "decide",
+          "prompt": "根据句意补全词卡核心例句：I _____ to start with five words a day.（填写 decide 的正确形式）",
+          "answer": "decided",
           "stage": "T3",
           "ai": false
         },
@@ -3001,7 +3061,7 @@
         {
           "id": "decide-v-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “decide to do” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “decide to do” 结构写一个与自己有关的自然英文句子；do 代表任意合适的动词原形，不要求写出单词 do。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -3009,7 +3069,7 @@
         {
           "id": "decide-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “decide” 和搭配 “decide to do”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “decide” 和 “decide to do” 结构，并避免中文直译；do 代表任意合适的动词原形，不要求写出单词 do。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -3068,7 +3128,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

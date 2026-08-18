@@ -1,7 +1,7 @@
 {
   "date": "2026-08-22",
   "dayNumber": 6,
-  "contentVersion": "2026.08.17.4",
+  "contentVersion": "2026.08.19.1",
   "cards": [
     {
       "id": "explain-v",
@@ -483,7 +483,7 @@
         {
           "id": "explain-v-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ something to someone",
+          "prompt": "补全高频搭配：_____ something to someone（填写 explain 的正确形式）；someone 要替换成实际的人或代词；something 要替换成实际的事物或内容",
           "answer": "explain",
           "stage": "T0",
           "ai": false
@@ -491,39 +491,51 @@
         {
           "id": "explain-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ something clearly",
-          "answer": "explain",
+          "prompt": "补全核心结构中的连接成分：explain _____ clearly；something 要替换成实际的事物或内容",
+          "answer": "something",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "explain-v-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ something clearly",
-          "answer": "explain",
+          "prompt": "根据语境补全搭配：explain something _____；something 要替换成实际的事物或内容",
+          "answer": "clearly",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "explain-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ something clearly",
-          "answer": "explain",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“清楚解释某事”？；something 要替换成实际的事物或内容",
+          "options": [
+            "explain something to someone",
+            "explain something clearly",
+            "explain why",
+            "explain how"
+          ],
+          "answer": "explain something clearly",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "explain-v-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ why",
-          "answer": "explain",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“解释原因”？",
+          "options": [
+            "explain why",
+            "explain something clearly",
+            "explain how",
+            "explain something to someone"
+          ],
+          "answer": "explain why",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "explain-v-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：Could you _____ this phrase to me?",
+          "prompt": "根据句意补全词卡核心例句：Could you _____ this phrase to me?（填写 explain 的正确形式）",
           "answer": "explain",
           "stage": "T3",
           "ai": false
@@ -539,7 +551,7 @@
         {
           "id": "explain-v-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “explain something clearly” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “explain something clearly” 结构写一个与自己有关的自然英文句子；something 要替换成实际的事物或内容。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -547,7 +559,7 @@
         {
           "id": "explain-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “explain” 和搭配 “explain something clearly”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “explain” 和 “explain something clearly” 结构，并避免中文直译；something 要替换成实际的事物或内容。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -606,7 +618,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1090,7 +1102,7 @@
         {
           "id": "suggest-v-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ doing something",
+          "prompt": "补全高频搭配：_____ doing something（填写 suggest 的正确形式）；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing；something 要替换成实际的事物或内容",
           "answer": "suggest",
           "stage": "T0",
           "ai": false
@@ -1098,39 +1110,51 @@
         {
           "id": "suggest-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ doing",
-          "answer": "suggest",
+          "prompt": "补全核心结构中的连接成分：suggest _____；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing",
+          "answer": "doing",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "suggest-v-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ doing",
-          "answer": "suggest",
+          "prompt": "根据语境补全搭配：suggest _____；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing",
+          "answer": "doing",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "suggest-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ doing",
-          "answer": "suggest",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“建议做”？；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing",
+          "options": [
+            "suggest doing",
+            "suggest that",
+            "strongly suggest",
+            "evidence suggests"
+          ],
+          "answer": "suggest doing",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "suggest-v-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ that",
-          "answer": "suggest",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“建议；表明……”？",
+          "options": [
+            "suggest doing",
+            "strongly suggest",
+            "evidence suggests",
+            "suggest that"
+          ],
+          "answer": "suggest that",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "suggest-v-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：I _____ reviewing the difficult words first.",
+          "prompt": "根据句意补全词卡核心例句：I _____ reviewing the difficult words first.（填写 suggest 的正确形式）",
           "answer": "suggest",
           "stage": "T3",
           "ai": false
@@ -1146,7 +1170,7 @@
         {
           "id": "suggest-v-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “suggest doing” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “suggest doing” 结构写一个与自己有关的自然英文句子；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1154,7 +1178,7 @@
         {
           "id": "suggest-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “suggest” 和搭配 “suggest doing”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “suggest” 和 “suggest doing” 结构，并避免中文直译；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1213,7 +1237,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1697,7 +1721,7 @@
         {
           "id": "require-v-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ attention",
+          "prompt": "补全高频搭配：_____ attention（填写 require 的正确形式）",
           "answer": "require",
           "stage": "T0",
           "ai": false
@@ -1705,39 +1729,51 @@
         {
           "id": "require-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ someone to do",
-          "answer": "require",
+          "prompt": "补全核心结构中的连接成分：require _____ to do；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词",
+          "answer": "someone",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "require-v-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ someone to do",
-          "answer": "require",
+          "prompt": "根据语境补全搭配：require someone to _____；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词",
+          "answer": "do",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "require-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ someone to do",
-          "answer": "require",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“要求某人做”？；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词",
+          "options": [
+            "require careful planning",
+            "be required to",
+            "as required",
+            "require someone to do"
+          ],
+          "answer": "require someone to do",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "require-v-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ careful planning",
-          "answer": "require",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“需要周密计划”？",
+          "options": [
+            "be required to",
+            "as required",
+            "require careful planning",
+            "require someone to do"
+          ],
+          "answer": "require careful planning",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "require-v-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：This task _____ careful planning.",
+          "prompt": "根据句意补全词卡核心例句：This task _____ careful planning.（填写 require 的正确形式）",
           "answer": "requires",
           "stage": "T3",
           "ai": false
@@ -1753,7 +1789,7 @@
         {
           "id": "require-v-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “require someone to do” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “require someone to do” 结构写一个与自己有关的自然英文句子；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1761,7 +1797,7 @@
         {
           "id": "require-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “require” 和搭配 “require someone to do”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “require” 和 “require someone to do” 结构，并避免中文直译；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1820,7 +1856,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2311,7 +2347,7 @@
         {
           "id": "prepare-v-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ for a test",
+          "prompt": "补全高频搭配：_____ for a test（填写 prepare 的正确形式）",
           "answer": "prepare",
           "stage": "T0",
           "ai": false
@@ -2319,40 +2355,52 @@
         {
           "id": "prepare-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ for a test",
-          "answer": "prepare",
+          "prompt": "补全核心结构中的连接成分：prepare _____ a test",
+          "answer": "for",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "prepare-v-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ for a test",
-          "answer": "prepare",
+          "prompt": "根据语境补全搭配：prepare for a _____",
+          "answer": "test",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "prepare-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ for a test",
-          "answer": "prepare",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“备考”？",
+          "options": [
+            "prepare a report",
+            "prepare someone for",
+            "prepare for a test",
+            "prepare a meal"
+          ],
+          "answer": "prepare for a test",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "prepare-v-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ a meal",
-          "answer": "prepare",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“准备饭菜”？",
+          "options": [
+            "prepare someone for",
+            "prepare a meal",
+            "prepare for a test",
+            "prepare a report"
+          ],
+          "answer": "prepare a meal",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "prepare-v-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：She prepared for the interview by practicing aloud.（填入目标词）",
-          "answer": "prepare",
+          "prompt": "根据句意补全词卡核心例句：She _____ for the interview by practicing aloud.（填写 prepare 的正确形式）",
+          "answer": "prepared",
           "stage": "T3",
           "ai": false
         },
@@ -2367,7 +2415,7 @@
         {
           "id": "prepare-v-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “prepare for a test” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “prepare for a test” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2375,7 +2423,7 @@
         {
           "id": "prepare-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “prepare” 和搭配 “prepare for a test”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “prepare” 和 “prepare for a test” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2434,7 +2482,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2918,7 +2966,7 @@
         {
           "id": "achieve-v-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ a goal",
+          "prompt": "补全高频搭配：_____ a goal（填写 achieve 的正确形式）",
           "answer": "achieve",
           "stage": "T0",
           "ai": false
@@ -2926,39 +2974,51 @@
         {
           "id": "achieve-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ a goal",
-          "answer": "achieve",
+          "prompt": "补全核心结构中的连接成分：achieve _____ goal",
+          "answer": "a",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "achieve-v-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ a goal",
-          "answer": "achieve",
+          "prompt": "根据语境补全搭配：achieve a _____",
+          "answer": "goal",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "achieve-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ a goal",
-          "answer": "achieve",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“实现目标”？",
+          "options": [
+            "achieve better results",
+            "achieve a goal",
+            "achieve success",
+            "achieve a balance"
+          ],
+          "answer": "achieve a goal",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "achieve-v-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ success",
-          "answer": "achieve",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“取得成功”？",
+          "options": [
+            "achieve success",
+            "achieve a goal",
+            "achieve a balance",
+            "achieve better results"
+          ],
+          "answer": "achieve success",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "achieve-v-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：Small steps can help you _____ a big goal.",
+          "prompt": "根据句意补全词卡核心例句：Small steps can help you _____ a big goal.（填写 achieve 的正确形式）",
           "answer": "achieve",
           "stage": "T3",
           "ai": false
@@ -2974,7 +3034,7 @@
         {
           "id": "achieve-v-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “achieve a goal” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “achieve a goal” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2982,7 +3042,7 @@
         {
           "id": "achieve-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “achieve” 和搭配 “achieve a goal”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “achieve” 和 “achieve a goal” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -3041,7 +3101,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

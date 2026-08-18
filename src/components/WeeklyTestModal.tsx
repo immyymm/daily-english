@@ -81,7 +81,7 @@ export function WeeklyTestModal({ open, cards, aiConsent, onNeedConsent, onClose
       status: 'pending',
       createdAt,
       updatedAt: createdAt,
-      rubricVersion: '2026.08.18.8',
+      rubricVersion: '2026.08.19.1',
       prompt,
       questionId,
       correctAnswer: '',

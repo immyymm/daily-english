@@ -1,7 +1,7 @@
 {
   "date": "2026-09-07",
   "dayNumber": 22,
-  "contentVersion": "2026.08.17.4",
+  "contentVersion": "2026.08.19.1",
   "cards": [
     {
       "id": "instead-adv",
@@ -481,7 +481,7 @@
         {
           "id": "instead-adv-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ of",
+          "prompt": "补全高频搭配：_____ of（填写 instead 的正确形式）",
           "answer": "instead",
           "stage": "T0",
           "ai": false
@@ -489,39 +489,51 @@
         {
           "id": "instead-adv-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ of",
-          "answer": "instead",
+          "prompt": "补全核心结构中的连接成分：instead _____",
+          "answer": "of",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "instead-adv-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ of",
-          "answer": "instead",
+          "prompt": "根据语境补全搭配：instead _____",
+          "answer": "of",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "instead-adv-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ of",
-          "answer": "instead",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“而不是；代替”？",
+          "options": [
+            "choose this instead",
+            "instead of",
+            "do something instead",
+            "use A instead of B"
+          ],
+          "answer": "instead of",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "instead-adv-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：do something _____",
-          "answer": "instead",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“改做某事”？；something 要替换成实际的事物或内容",
+          "options": [
+            "do something instead",
+            "instead of",
+            "use A instead of B",
+            "choose this instead"
+          ],
+          "answer": "do something instead",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "instead-adv-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：Try using an English definition _____ of a translation.",
+          "prompt": "根据句意补全词卡核心例句：Try using an English definition _____ of a translation.（填写 instead 的正确形式）",
           "answer": "instead",
           "stage": "T3",
           "ai": false
@@ -537,7 +549,7 @@
         {
           "id": "instead-adv-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “instead of” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “instead of” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -545,7 +557,7 @@
         {
           "id": "instead-adv-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “instead” 和搭配 “instead of”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “instead” 和 “instead of” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -604,7 +616,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1080,7 +1092,7 @@
         {
           "id": "however-adv-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ difficult",
+          "prompt": "补全高频搭配：_____ difficult（填写 however 的正确形式）",
           "answer": "however",
           "stage": "T0",
           "ai": false
@@ -1088,39 +1100,51 @@
         {
           "id": "however-adv-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____, the result",
-          "answer": "however",
+          "prompt": "补全核心结构中的连接成分：however, _____ result",
+          "answer": "the",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "however-adv-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____, the result",
-          "answer": "however",
+          "prompt": "根据语境补全搭配：however, the _____",
+          "answer": "result",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "however-adv-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____, the result",
-          "answer": "however",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“然而，结果……”？",
+          "options": [
+            "however, the result",
+            "however difficult",
+            "however much",
+            "however long it takes"
+          ],
+          "answer": "however, the result",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "however-adv-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ difficult",
-          "answer": "however",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“无论多困难”？",
+          "options": [
+            "however, the result",
+            "however much",
+            "however long it takes",
+            "however difficult"
+          ],
+          "answer": "however difficult",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "however-adv-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：The task is short; _____, it requires focus.",
+          "prompt": "根据句意补全词卡核心例句：The task is short; _____, it requires focus.（填写 however 的正确形式）",
           "answer": "however",
           "stage": "T3",
           "ai": false
@@ -1136,7 +1160,7 @@
         {
           "id": "however-adv-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “however, the result” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “however, the result” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1144,7 +1168,7 @@
         {
           "id": "however-adv-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “however” 和搭配 “however, the result”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “however” 和 “however, the result” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1203,7 +1227,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1687,7 +1711,7 @@
         {
           "id": "finally-adv-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ decide",
+          "prompt": "补全高频搭配：_____ decide（填写 finally 的正确形式）",
           "answer": "finally",
           "stage": "T0",
           "ai": false
@@ -1695,39 +1719,51 @@
         {
           "id": "finally-adv-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ decide",
-          "answer": "finally",
+          "prompt": "补全核心结构中的连接成分：finally _____",
+          "answer": "decide",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "finally-adv-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ decide",
-          "answer": "finally",
+          "prompt": "根据语境补全搭配：finally _____",
+          "answer": "decide",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "finally-adv-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ decide",
-          "answer": "finally",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“终于决定”？",
+          "options": [
+            "finally arrive",
+            "finally understand",
+            "and finally",
+            "finally decide"
+          ],
+          "answer": "finally decide",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "finally-adv-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ arrive",
-          "answer": "finally",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“终于到达”？",
+          "options": [
+            "finally understand",
+            "and finally",
+            "finally arrive",
+            "finally decide"
+          ],
+          "answer": "finally arrive",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "finally-adv-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：I _____ found the word I needed.",
+          "prompt": "根据句意补全词卡核心例句：I _____ found the word I needed.（填写 finally 的正确形式）",
           "answer": "finally",
           "stage": "T3",
           "ai": false
@@ -1743,7 +1779,7 @@
         {
           "id": "finally-adv-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “finally decide” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “finally decide” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1751,7 +1787,7 @@
         {
           "id": "finally-adv-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “finally” 和搭配 “finally decide”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “finally” 和 “finally decide” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1810,7 +1846,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2301,7 +2337,7 @@
         {
           "id": "simply-adv-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ put",
+          "prompt": "补全高频搭配：_____ put（填写 simply 的正确形式）",
           "answer": "simply",
           "stage": "T0",
           "ai": false
@@ -2309,39 +2345,51 @@
         {
           "id": "simply-adv-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ put",
-          "answer": "simply",
+          "prompt": "补全核心结构中的连接成分：simply _____",
+          "answer": "put",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "simply-adv-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ put",
-          "answer": "simply",
+          "prompt": "根据语境补全搭配：simply _____",
+          "answer": "put",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "simply-adv-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ put",
-          "answer": "simply",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“简单来说”？",
+          "options": [
+            "quite simply",
+            "simply impossible",
+            "simply put",
+            "simply because"
+          ],
+          "answer": "simply put",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "simply-adv-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ because",
-          "answer": "simply",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“仅仅因为”？",
+          "options": [
+            "simply impossible",
+            "simply because",
+            "simply put",
+            "quite simply"
+          ],
+          "answer": "simply because",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "simply-adv-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：_____ put, practice helps memory.",
+          "prompt": "根据句意补全词卡核心例句：_____ put, practice helps memory.（填写 simply 的正确形式）",
           "answer": "Simply",
           "stage": "T3",
           "ai": false
@@ -2357,7 +2405,7 @@
         {
           "id": "simply-adv-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “simply put” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “simply put” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2365,7 +2413,7 @@
         {
           "id": "simply-adv-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “simply” 和搭配 “simply put”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “simply” 和 “simply put” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2424,7 +2472,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2908,7 +2956,7 @@
         {
           "id": "quickly-adv-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：respond _____",
+          "prompt": "补全高频搭配：respond _____（填写 quickly 的正确形式）",
           "answer": "quickly",
           "stage": "T0",
           "ai": false
@@ -2916,39 +2964,51 @@
         {
           "id": "quickly-adv-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：respond _____",
-          "answer": "quickly",
+          "prompt": "补全核心结构中的连接成分：_____ quickly",
+          "answer": "respond",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "quickly-adv-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：respond _____",
-          "answer": "quickly",
+          "prompt": "根据语境补全搭配：_____ quickly",
+          "answer": "respond",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "quickly-adv-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：respond _____",
-          "answer": "quickly",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“快速回应”？",
+          "options": [
+            "quickly become",
+            "respond quickly",
+            "learn quickly",
+            "as quickly as possible"
+          ],
+          "answer": "respond quickly",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "quickly-adv-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：learn _____",
-          "answer": "quickly",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“学得快”？",
+          "options": [
+            "learn quickly",
+            "respond quickly",
+            "as quickly as possible",
+            "quickly become"
+          ],
+          "answer": "learn quickly",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "quickly-adv-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：Try to recall the word _____.",
+          "prompt": "根据句意补全词卡核心例句：Try to recall the word _____.（填写 quickly 的正确形式）",
           "answer": "quickly",
           "stage": "T3",
           "ai": false
@@ -2964,7 +3024,7 @@
         {
           "id": "quickly-adv-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “respond quickly” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “respond quickly” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2972,7 +3032,7 @@
         {
           "id": "quickly-adv-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “quickly” 和搭配 “respond quickly”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “quickly” 和 “respond quickly” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -3031,7 +3091,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

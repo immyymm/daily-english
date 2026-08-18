@@ -47,6 +47,25 @@ for (const card of allCards.cards) {
   if (card.questions.filter((question) => question.type === 'meaning_choice').length < 5) errors.push(card.id + ': expected rich meaning and relation choices.');
   if (card.questions.filter((question) => question.type === 'collocation').length < 5) errors.push(card.id + ': expected collocation questions from several card sections.');
   if (card.questions.some((question) => question.options && (!question.options.includes(question.answer) || new Set(question.options).size !== question.options.length))) errors.push(card.id + ': invalid choice options.');
+  const clozeQuestions = card.questions.filter((question) => question.type === 'collocation' && !question.options);
+  if (clozeQuestions.some((question) => !question.prompt.includes('_____') || !question.answer?.trim())) {
+    errors.push(card.id + ': every non-choice collocation question needs one real blank and a non-empty answer.');
+  }
+  if (card.questions.some((question) => question.id.includes('example-cloze') && !question.prompt.includes('（填写 ' + card.word + ' 的正确形式）'))) {
+    errors.push(card.id + ': the example cloze must ask for the target word in its contextually correct form.');
+  }
+  if (card.questions.some((question) => question.prompt.includes('（填入目标词）'))) {
+    errors.push(card.id + ': obsolete target-word fallback prompt found.');
+  }
+  const slotPrompts = card.questions.filter((question) => question.ai && /\b(to do|doing|done|someone|something|yourself|A|B)\b/.test(question.prompt));
+  if (slotPrompts.some((question) => !/(代表|替换|不要求)/.test(question.prompt))) {
+    errors.push(card.id + ': an open question exposes grammar placeholders without explaining how to instantiate them.');
+  }
+  const collocationChoices = card.questions.filter((question) => question.type === 'collocation' && question.options);
+  if (collocationChoices.length < 2) errors.push(card.id + ': expected at least two fixed-phrase meaning checks.');
+  if (new Set(card.questions.filter((question) => question.type === 'collocation').map((question) => question.answer.toLocaleLowerCase('en-US'))).size < 4) {
+    errors.push(card.id + ': collocation questions repeat too few distinct answers.');
+  }
 
   const phonetics = [
     card.phonetic,

@@ -1,8 +1,8 @@
-import type { EvaluationResult, NaturalExpressionChange, TaskRequirements } from '../types.js';
-import { checkTaskRequirements, deriveTaskRequirements, failedTaskRequirements, type TaskRequirementContext } from './taskRequirements.js';
+import type { EvaluationResult, NaturalExpressionChange, QuestionType, TaskRequirements } from '../types.js';
+import { checkTaskRequirements, deriveTaskRequirements, failedTaskRequirements, includesLemma, includesUsagePattern, type TaskRequirementContext } from './taskRequirements.js';
 
 export interface EvaluationConstraintContext {
-  questionType?: string;
+  questionType?: QuestionType;
   prompt?: string;
   targetWord?: string;
 }
@@ -16,13 +16,6 @@ interface EvaluationTextResult {
   naturalVersion?: string;
   naturalVersionReasonZh?: string;
   naturalChanges?: NaturalExpressionChange[];
-}
-
-function cleanExpression(value: string) {
-  return value
-    .trim()
-    .replace(/^[\s“”"'.,!?;:，。！？；：]+|[\s“”"'.,!?;:，。！？；：]+$/g, '')
-    .replace(/\s+/g, ' ');
 }
 
 function comparable(value: string) {
@@ -160,24 +153,21 @@ export function includesRequiredExpression(text: string, expression: string) {
 }
 
 export function requiredExpressionsForEvaluation(context: EvaluationConstraintContext) {
-  if (context.questionType === 'weekly_writing' || context.questionType === 'weekly_speaking') return [];
-
-  const quotedExpressions = Array.from((context.prompt ?? '').matchAll(/[“"]([^”"]+)[”"]/g))
-    .map((match) => cleanExpression(match[1]))
-    .filter((value) => /[a-z]/i.test(value));
-  const candidates = [...quotedExpressions, cleanExpression(context.targetWord ?? '')]
-    .filter(Boolean)
-    .filter((value, index, values) => values.findIndex((item) => item.toLocaleLowerCase('en-US') === value.toLocaleLowerCase('en-US')) === index);
-
-  return candidates.filter((candidate) => !candidates.some((other) => (
-    other !== candidate
-    && other.split(/\s+/).length > candidate.split(/\s+/).length
-    && includesRequiredExpression(other, candidate)
-  )));
+  if (!context.questionType || !context.prompt || !context.targetWord) return [];
+  const requirements = deriveTaskRequirements({
+    questionType: context.questionType,
+    prompt: context.prompt,
+    targetWord: context.targetWord
+  });
+  return [...requirements.mustUseExact, ...requirements.mustUsePatterns, ...requirements.mustUseLemma];
 }
 
 export function missingRequiredExpressions(text: string, requiredExpressions: string[]) {
-  return requiredExpressions.filter((expression) => !includesRequiredExpression(text, expression));
+  return requiredExpressions.filter((expression) => (
+    expression.includes(' ')
+      ? !includesUsagePattern(text, expression)
+      : !includesLemma(text, expression)
+  ));
 }
 
 export function normalizeEvaluationResultForHistory<T extends EvaluationTextResult>(
@@ -262,16 +252,23 @@ export function finalizeEvaluationResult(
   const checks = checkTaskRequirements(context.answer, requirements);
   const passedChecks = checks.filter((check) => check.passed).length;
   const deterministicTaskScore = checks.length ? Math.round(passedChecks / checks.length * 10) : 10;
-  const taskCompletionScore = Math.min(input.taskCompletionScore, deterministicTaskScore);
+  const taskCompletionScore = deterministicTaskScore;
   const explicitPassed = checks.every((check) => check.passed);
-  const taskPassed = explicitPassed && input.taskCompliance.passed;
+  const taskPassed = explicitPassed;
   const failedEvidence = checks.filter((check) => !check.passed).map((check) => check.evidenceZh);
   const naturalChanges = normalizedNaturalChanges(input);
   const naturalVersionReasonZh = sameText(input.correctedAnswer, input.naturalVersion)
     ? '修正后的句子已经自然、清楚并符合题目要求，因此无需为了改写而另造一个版本。'
     : explicitNaturalSummary(naturalChanges);
-  const errorTypes = [...new Set([...input.errorTypes, ...(!taskPassed ? ['任务要求' as const] : [])])];
+  const errorTypes = [...new Set([
+    ...input.errorTypes.filter((type) => type !== '任务要求' || !taskPassed),
+    ...(!taskPassed ? ['任务要求' as const] : [])
+  ])];
+  const issues = taskPassed ? input.issues.filter((issue) => issue.category !== '任务要求') : input.issues;
   const overallScore = calculateEvaluationOverallScore({ ...input, taskCompletionScore });
+  const reasonZh = taskPassed && /(未满足|任务要求|必须短语|必须包含)/.test(input.reasonZh)
+    ? '已满足题目的目标词或结构要求；评分只反映回答本身在词义、搭配、语法和自然度上的实际表现。'
+    : input.reasonZh;
 
   return {
     ...input,
@@ -279,12 +276,18 @@ export function finalizeEvaluationResult(
     taskCompletionScore,
     taskCompliance: {
       passed: taskPassed,
-      summaryZh: failedEvidence.length ? failedEvidence.join('；') : input.taskCompliance.summaryZh,
+      summaryZh: failedEvidence.length
+        ? failedEvidence.join('；')
+        : checks.length
+          ? '已满足题目中可机械核验的目标词、结构和格式要求。'
+          : input.taskCompliance.summaryZh,
       checks
     },
     errorTypes,
+    issues,
+    reasonZh,
     naturalChanges,
     naturalVersionReasonZh,
-    needsRetry: input.needsRetry || !taskPassed || overallScore < 75
+    needsRetry: !taskPassed || overallScore < 75
   };
 }

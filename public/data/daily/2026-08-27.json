@@ -1,7 +1,7 @@
 {
   "date": "2026-08-27",
   "dayNumber": 11,
-  "contentVersion": "2026.08.17.4",
+  "contentVersion": "2026.08.19.1",
   "cards": [
     {
       "id": "ability-n",
@@ -490,7 +490,7 @@
         {
           "id": "ability-n-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ to do something",
+          "prompt": "补全高频搭配：_____ to do something（填写 ability 的正确形式）；do 代表任意合适的动词原形，不要求写出单词 do；something 要替换成实际的事物或内容",
           "answer": "ability",
           "stage": "T0",
           "ai": false
@@ -498,39 +498,51 @@
         {
           "id": "ability-n-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ to do",
-          "answer": "ability",
+          "prompt": "补全核心结构中的连接成分：ability _____ do；do 代表任意合适的动词原形，不要求写出单词 do",
+          "answer": "to",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "ability-n-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ to do",
-          "answer": "ability",
+          "prompt": "根据语境补全搭配：ability to _____；do 代表任意合适的动词原形，不要求写出单词 do",
+          "answer": "do",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "ability-n-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ to do",
-          "answer": "ability",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“做某事的能力”？；do 代表任意合适的动词原形，不要求写出单词 do",
+          "options": [
+            "ability to do",
+            "develop an ability",
+            "natural ability",
+            "academic ability"
+          ],
+          "answer": "ability to do",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "ability-n-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：develop an _____",
-          "answer": "ability",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“培养能力”？",
+          "options": [
+            "ability to do",
+            "natural ability",
+            "academic ability",
+            "develop an ability"
+          ],
+          "answer": "develop an ability",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "ability-n-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：Practice improves your _____ to recall words.",
+          "prompt": "根据句意补全词卡核心例句：Practice improves your _____ to recall words.（填写 ability 的正确形式）",
           "answer": "ability",
           "stage": "T3",
           "ai": false
@@ -546,7 +558,7 @@
         {
           "id": "ability-n-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “ability to do” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “ability to do” 结构写一个与自己有关的自然英文句子；do 代表任意合适的动词原形，不要求写出单词 do。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -554,7 +566,7 @@
         {
           "id": "ability-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “ability” 和搭配 “ability to do”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “ability” 和 “ability to do” 结构，并避免中文直译；do 代表任意合适的动词原形，不要求写出单词 do。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -613,7 +625,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1097,7 +1109,7 @@
         {
           "id": "effort-n-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：make an _____",
+          "prompt": "补全高频搭配：make an _____（填写 effort 的正确形式）",
           "answer": "effort",
           "stage": "T0",
           "ai": false
@@ -1105,39 +1117,51 @@
         {
           "id": "effort-n-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：make an _____",
-          "answer": "effort",
+          "prompt": "补全核心结构中的连接成分：_____ an effort",
+          "answer": "make",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "effort-n-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：make an _____",
-          "answer": "effort",
+          "prompt": "根据语境补全搭配：_____ an effort",
+          "answer": "make",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "effort-n-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：make an _____",
-          "answer": "effort",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“付出努力”？",
+          "options": [
+            "put effort into",
+            "a great deal of effort",
+            "with little effort",
+            "make an effort"
+          ],
+          "answer": "make an effort",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "effort-n-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：put _____ into",
-          "answer": "effort",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“投入精力”？",
+          "options": [
+            "a great deal of effort",
+            "with little effort",
+            "put effort into",
+            "make an effort"
+          ],
+          "answer": "put effort into",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "effort-n-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：Make an _____ to use the word today.",
+          "prompt": "根据句意补全词卡核心例句：Make an _____ to use the word today.（填写 effort 的正确形式）",
           "answer": "effort",
           "stage": "T3",
           "ai": false
@@ -1153,7 +1177,7 @@
         {
           "id": "effort-n-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “make an effort” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “make an effort” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1161,7 +1185,7 @@
         {
           "id": "effort-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “effort” 和搭配 “make an effort”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “effort” 和 “make an effort” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1220,7 +1244,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1718,7 +1742,7 @@
         {
           "id": "reason-n-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：the _____ for",
+          "prompt": "补全高频搭配：the _____ for（填写 reason 的正确形式）",
           "answer": "reason",
           "stage": "T0",
           "ai": false
@@ -1726,39 +1750,51 @@
         {
           "id": "reason-n-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：the _____ for",
-          "answer": "reason",
+          "prompt": "补全核心结构中的连接成分：the reason _____",
+          "answer": "for",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "reason-n-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：the _____ for",
-          "answer": "reason",
+          "prompt": "根据语境补全搭配：the reason _____",
+          "answer": "for",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "reason-n-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：the _____ for",
-          "answer": "reason",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“……的原因”？",
+          "options": [
+            "main reason",
+            "for some reason",
+            "the reason for",
+            "reason why"
+          ],
+          "answer": "the reason for",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "reason-n-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ why",
-          "answer": "reason",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“……的理由”？",
+          "options": [
+            "for some reason",
+            "reason why",
+            "the reason for",
+            "main reason"
+          ],
+          "answer": "reason why",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "reason-n-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：What is the main _____ for your choice?",
+          "prompt": "根据句意补全词卡核心例句：What is the main _____ for your choice?（填写 reason 的正确形式）",
           "answer": "reason",
           "stage": "T3",
           "ai": false
@@ -1774,7 +1810,7 @@
         {
           "id": "reason-n-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “the reason for” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “the reason for” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1782,7 +1818,7 @@
         {
           "id": "reason-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “reason” 和搭配 “the reason for”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “reason” 和 “the reason for” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1841,7 +1877,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2330,7 +2366,7 @@
         {
           "id": "issue-n-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：deal with an _____",
+          "prompt": "补全高频搭配：deal with an _____（填写 issue 的正确形式）",
           "answer": "issue",
           "stage": "T0",
           "ai": false
@@ -2338,39 +2374,51 @@
         {
           "id": "issue-n-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：deal with an _____",
-          "answer": "issue",
+          "prompt": "补全核心结构中的连接成分：_____ with an issue",
+          "answer": "deal",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "issue-n-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：deal with an _____",
-          "answer": "issue",
+          "prompt": "根据语境补全搭配：_____ with an issue",
+          "answer": "deal",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "issue-n-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：deal with an _____",
-          "answer": "issue",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“处理问题”？",
+          "options": [
+            "key issue",
+            "deal with an issue",
+            "raise an issue",
+            "a serious issue"
+          ],
+          "answer": "deal with an issue",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "issue-n-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：raise an _____",
-          "answer": "issue",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“提出问题”？",
+          "options": [
+            "raise an issue",
+            "deal with an issue",
+            "a serious issue",
+            "key issue"
+          ],
+          "answer": "raise an issue",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "issue-n-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：We need to discuss this _____ openly.",
+          "prompt": "根据句意补全词卡核心例句：We need to discuss this _____ openly.（填写 issue 的正确形式）",
           "answer": "issue",
           "stage": "T3",
           "ai": false
@@ -2386,7 +2434,7 @@
         {
           "id": "issue-n-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “deal with an issue” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “deal with an issue” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2394,7 +2442,7 @@
         {
           "id": "issue-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “issue” 和搭配 “deal with an issue”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “issue” 和 “deal with an issue” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2453,7 +2501,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2942,7 +2990,7 @@
         {
           "id": "result-n-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：as a _____",
+          "prompt": "补全高频搭配：as a _____（填写 result 的正确形式）",
           "answer": "result",
           "stage": "T0",
           "ai": false
@@ -2950,39 +2998,51 @@
         {
           "id": "result-n-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：as a _____",
-          "answer": "result",
+          "prompt": "补全核心结构中的连接成分：_____ a result",
+          "answer": "as",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "result-n-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：as a _____",
-          "answer": "result",
+          "prompt": "根据语境补全搭配：_____ a result",
+          "answer": "as",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "result-n-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：as a _____",
-          "answer": "result",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“因此”？",
+          "options": [
+            "as a result",
+            "result in",
+            "result from",
+            "test results"
+          ],
+          "answer": "as a result",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "result-n-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ in",
-          "answer": "result",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“导致”？",
+          "options": [
+            "as a result",
+            "result from",
+            "test results",
+            "result in"
+          ],
+          "answer": "result in",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "result-n-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：She practiced daily and, as a _____, spoke more naturally.",
+          "prompt": "根据句意补全词卡核心例句：She practiced daily and, as a _____, spoke more naturally.（填写 result 的正确形式）",
           "answer": "result",
           "stage": "T3",
           "ai": false
@@ -2998,7 +3058,7 @@
         {
           "id": "result-n-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “as a result” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “as a result” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -3006,7 +3066,7 @@
         {
           "id": "result-n-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “result” 和搭配 “as a result”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “result” 和 “as a result” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -3065,7 +3125,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

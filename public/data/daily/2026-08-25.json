@@ -1,7 +1,7 @@
 {
   "date": "2026-08-25",
   "dayNumber": 9,
-  "contentVersion": "2026.08.17.4",
+  "contentVersion": "2026.08.19.1",
   "cards": [
     {
       "id": "affect-v",
@@ -498,7 +498,7 @@
         {
           "id": "affect-v-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ your health",
+          "prompt": "补全高频搭配：_____ your health（填写 affect 的正确形式）",
           "answer": "affect",
           "stage": "T0",
           "ai": false
@@ -506,39 +506,51 @@
         {
           "id": "affect-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ the result",
-          "answer": "affect",
+          "prompt": "补全核心结构中的连接成分：affect _____ result",
+          "answer": "the",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "affect-v-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ the result",
-          "answer": "affect",
+          "prompt": "根据语境补全搭配：affect the _____",
+          "answer": "result",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "affect-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ the result",
-          "answer": "affect",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“影响结果”？",
+          "options": [
+            "be affected by",
+            "affect your health",
+            "affect the result",
+            "seriously affect"
+          ],
+          "answer": "affect the result",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "affect-v-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：seriously _____",
-          "answer": "affect",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“严重影响”？",
+          "options": [
+            "affect your health",
+            "seriously affect",
+            "affect the result",
+            "be affected by"
+          ],
+          "answer": "seriously affect",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "affect-v-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：Poor sleep can _____ your memory.",
+          "prompt": "根据句意补全词卡核心例句：Poor sleep can _____ your memory.（填写 affect 的正确形式）",
           "answer": "affect",
           "stage": "T3",
           "ai": false
@@ -554,7 +566,7 @@
         {
           "id": "affect-v-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “affect the result” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “affect the result” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -562,7 +574,7 @@
         {
           "id": "affect-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “affect” 和搭配 “affect the result”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “affect” 和 “affect the result” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -621,7 +633,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1105,7 +1117,7 @@
         {
           "id": "realize-v-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ that",
+          "prompt": "补全高频搭配：_____ that（填写 realize 的正确形式）",
           "answer": "realize",
           "stage": "T0",
           "ai": false
@@ -1113,40 +1125,52 @@
         {
           "id": "realize-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ that",
-          "answer": "realize",
+          "prompt": "补全核心结构中的连接成分：realize _____",
+          "answer": "that",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "realize-v-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ that",
-          "answer": "realize",
+          "prompt": "根据语境补全搭配：realize _____",
+          "answer": "that",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "realize-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ that",
-          "answer": "realize",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“意识到……”？",
+          "options": [
+            "fail to realize",
+            "realize that",
+            "realize a dream",
+            "suddenly realize"
+          ],
+          "answer": "realize that",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "realize-v-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ a dream",
-          "answer": "realize",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“实现梦想”？",
+          "options": [
+            "realize a dream",
+            "realize that",
+            "suddenly realize",
+            "fail to realize"
+          ],
+          "answer": "realize a dream",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "realize-v-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：I realized that I had used the wrong word.（填入目标词）",
-          "answer": "realize",
+          "prompt": "根据句意补全词卡核心例句：I _____ that I had used the wrong word.（填写 realize 的正确形式）",
+          "answer": "realized",
           "stage": "T3",
           "ai": false
         },
@@ -1161,7 +1185,7 @@
         {
           "id": "realize-v-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “realize that” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “realize that” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1169,7 +1193,7 @@
         {
           "id": "realize-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “realize” 和搭配 “realize that”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “realize” 和 “realize that” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1228,7 +1252,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1719,7 +1743,7 @@
         {
           "id": "describe-v-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ something as",
+          "prompt": "补全高频搭配：_____ something as（填写 describe 的正确形式）；something 要替换成实际的事物或内容",
           "answer": "describe",
           "stage": "T0",
           "ai": false
@@ -1727,39 +1751,51 @@
         {
           "id": "describe-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ something as",
-          "answer": "describe",
+          "prompt": "补全核心结构中的连接成分：describe _____ as；something 要替换成实际的事物或内容",
+          "answer": "something",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "describe-v-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ something as",
-          "answer": "describe",
+          "prompt": "根据语境补全搭配：describe something _____；something 要替换成实际的事物或内容",
+          "answer": "as",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "describe-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ something as",
-          "answer": "describe",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“把某物描述为”？；something 要替换成实际的事物或内容",
+          "options": [
+            "describe something as",
+            "describe what happened",
+            "describe in detail",
+            "difficult to describe"
+          ],
+          "answer": "describe something as",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "describe-v-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ what happened",
-          "answer": "describe",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“描述发生了什么”？",
+          "options": [
+            "describe something as",
+            "describe in detail",
+            "difficult to describe",
+            "describe what happened"
+          ],
+          "answer": "describe what happened",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "describe-v-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：How would you _____ your ideal weekend?",
+          "prompt": "根据句意补全词卡核心例句：How would you _____ your ideal weekend?（填写 describe 的正确形式）",
           "answer": "describe",
           "stage": "T3",
           "ai": false
@@ -1775,7 +1811,7 @@
         {
           "id": "describe-v-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “describe something as” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “describe something as” 结构写一个与自己有关的自然英文句子；something 要替换成实际的事物或内容。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1783,7 +1819,7 @@
         {
           "id": "describe-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “describe” 和搭配 “describe something as”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “describe” 和 “describe something as” 结构，并避免中文直译；something 要替换成实际的事物或内容。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1842,7 +1878,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2341,7 +2377,7 @@
         {
           "id": "accept-v-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ responsibility",
+          "prompt": "补全高频搭配：_____ responsibility（填写 accept 的正确形式）",
           "answer": "accept",
           "stage": "T0",
           "ai": false
@@ -2349,39 +2385,51 @@
         {
           "id": "accept-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ an offer",
-          "answer": "accept",
+          "prompt": "补全核心结构中的连接成分：accept _____ offer",
+          "answer": "an",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "accept-v-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ an offer",
-          "answer": "accept",
+          "prompt": "根据语境补全搭配：accept an _____",
+          "answer": "offer",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "accept-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ an offer",
-          "answer": "accept",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“接受提议”？",
+          "options": [
+            "accept responsibility",
+            "accept the fact that",
+            "widely accepted",
+            "accept an offer"
+          ],
+          "answer": "accept an offer",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "accept-v-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ responsibility",
-          "answer": "accept",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“承担责任”？",
+          "options": [
+            "accept the fact that",
+            "widely accepted",
+            "accept responsibility",
+            "accept an offer"
+          ],
+          "answer": "accept responsibility",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "accept-v-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：He _____ responsibility for the mistake.",
+          "prompt": "根据句意补全词卡核心例句：He _____ responsibility for the mistake.（填写 accept 的正确形式）",
           "answer": "accepted",
           "stage": "T3",
           "ai": false
@@ -2397,7 +2445,7 @@
         {
           "id": "accept-v-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “accept an offer” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “accept an offer” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2405,7 +2453,7 @@
         {
           "id": "accept-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “accept” 和搭配 “accept an offer”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “accept” 和 “accept an offer” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2464,7 +2512,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2955,7 +3003,7 @@
         {
           "id": "prefer-v-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ A to B",
+          "prompt": "补全高频搭配：_____ A to B（填写 prefer 的正确形式）；A、B 要替换成实际比较内容",
           "answer": "prefer",
           "stage": "T0",
           "ai": false
@@ -2963,39 +3011,51 @@
         {
           "id": "prefer-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ A to B",
-          "answer": "prefer",
+          "prompt": "补全核心结构中的连接成分：prefer _____ to B；A、B 要替换成实际比较内容",
+          "answer": "A",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "prefer-v-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ A to B",
-          "answer": "prefer",
+          "prompt": "根据语境补全搭配：prefer A to _____；A、B 要替换成实际比较内容",
+          "answer": "B",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "prefer-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ A to B",
-          "answer": "prefer",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“比起 B 更喜欢 A”？；A、B 要替换成实际比较内容",
+          "options": [
+            "would prefer",
+            "personally prefer",
+            "prefer A to B",
+            "prefer to do"
+          ],
+          "answer": "prefer A to B",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "prefer-v-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ to do",
-          "answer": "prefer",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“更愿意做”？；do 代表任意合适的动词原形，不要求写出单词 do",
+          "options": [
+            "personally prefer",
+            "prefer to do",
+            "prefer A to B",
+            "would prefer"
+          ],
+          "answer": "prefer to do",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "prefer-v-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：I _____ walking to taking a taxi.",
+          "prompt": "根据句意补全词卡核心例句：I _____ walking to taking a taxi.（填写 prefer 的正确形式）",
           "answer": "prefer",
           "stage": "T3",
           "ai": false
@@ -3011,7 +3071,7 @@
         {
           "id": "prefer-v-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “prefer A to B” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “prefer A to B” 结构写一个与自己有关的自然英文句子；A、B 要替换成实际比较内容。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -3019,7 +3079,7 @@
         {
           "id": "prefer-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “prefer” 和搭配 “prefer A to B”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “prefer” 和 “prefer A to B” 结构，并避免中文直译；A、B 要替换成实际比较内容。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -3078,7 +3138,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

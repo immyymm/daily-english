@@ -485,7 +485,7 @@
     {
       "id": "forward-adv-collocation-core",
       "type": "collocation",
-      "prompt": "补全高频搭配：look _____ to",
+      "prompt": "补全高频搭配：look _____ to（填写 forward 的正确形式）",
       "answer": "forward",
       "stage": "T0",
       "ai": false
@@ -493,39 +493,51 @@
     {
       "id": "forward-adv-collocation-structure",
       "type": "collocation",
-      "prompt": "补全核心结构：look _____ to",
-      "answer": "forward",
+      "prompt": "补全核心结构中的连接成分：look forward _____",
+      "answer": "to",
       "stage": "T1",
       "ai": false
     },
     {
       "id": "forward-adv-collocation-context",
       "type": "collocation",
-      "prompt": "补全语境词组：look _____ to",
-      "answer": "forward",
+      "prompt": "根据语境补全搭配：look forward _____",
+      "answer": "to",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "forward-adv-collocation-fixed-1",
       "type": "collocation",
-      "prompt": "补全固定搭配：look _____ to",
-      "answer": "forward",
+      "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“期待……”？",
+      "options": [
+        "look forward to",
+        "move forward",
+        "go forward with",
+        "a step forward"
+      ],
+      "answer": "look forward to",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "forward-adv-collocation-fixed-2",
       "type": "collocation",
-      "prompt": "再补全一个固定搭配：move _____",
-      "answer": "forward",
+      "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“向前推进”？",
+      "options": [
+        "look forward to",
+        "go forward with",
+        "a step forward",
+        "move forward"
+      ],
+      "answer": "move forward",
       "stage": "T3",
       "ai": false
     },
     {
       "id": "forward-adv-example-cloze",
       "type": "collocation",
-      "prompt": "补全词卡核心例句：I look _____ to hearing from you.",
+      "prompt": "根据句意补全词卡核心例句：I look _____ to hearing from you.（填写 forward 的正确形式）",
       "answer": "forward",
       "stage": "T3",
       "ai": false
@@ -541,7 +553,7 @@
     {
       "id": "forward-adv-sentence-phrase",
       "type": "free_sentence",
-      "prompt": "请用完整搭配 “look forward to” 写一个与自己有关的自然英文句子。",
+      "prompt": "请使用 “look forward to” 结构写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -549,7 +561,7 @@
     {
       "id": "forward-adv-dialogue",
       "type": "dialogue",
-      "prompt": "写一段 2–4 轮真实对话，自然使用 “forward” 和搭配 “look forward to”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “forward” 和 “look forward to” 结构，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -608,7 +620,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.4",
+  "contentVersion": "2026.08.19.1",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

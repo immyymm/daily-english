@@ -485,7 +485,7 @@
     {
       "id": "avoid-v-collocation-core",
       "type": "collocation",
-      "prompt": "补全高频搭配：_____ doing something",
+      "prompt": "补全高频搭配：_____ doing something（填写 avoid 的正确形式）；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing；something 要替换成实际的事物或内容",
       "answer": "avoid",
       "stage": "T0",
       "ai": false
@@ -493,39 +493,51 @@
     {
       "id": "avoid-v-collocation-structure",
       "type": "collocation",
-      "prompt": "补全核心结构：_____ making mistakes",
-      "answer": "avoid",
+      "prompt": "补全核心结构中的连接成分：avoid _____ mistakes",
+      "answer": "making",
       "stage": "T1",
       "ai": false
     },
     {
       "id": "avoid-v-collocation-context",
       "type": "collocation",
-      "prompt": "补全语境词组：_____ making mistakes",
-      "answer": "avoid",
+      "prompt": "根据语境补全搭配：avoid making _____",
+      "answer": "mistakes",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "avoid-v-collocation-fixed-1",
       "type": "collocation",
-      "prompt": "补全固定搭配：_____ making mistakes",
-      "answer": "avoid",
+      "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“避免犯错”？",
+      "options": [
+        "avoid making mistakes",
+        "avoid doing",
+        "avoid unnecessary risk",
+        "avoid eye contact"
+      ],
+      "answer": "avoid making mistakes",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "avoid-v-collocation-fixed-2",
       "type": "collocation",
-      "prompt": "再补全一个固定搭配：_____ doing",
-      "answer": "avoid",
+      "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“避免做”？；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing",
+      "options": [
+        "avoid making mistakes",
+        "avoid unnecessary risk",
+        "avoid eye contact",
+        "avoid doing"
+      ],
+      "answer": "avoid doing",
       "stage": "T3",
       "ai": false
     },
     {
       "id": "avoid-v-example-cloze",
       "type": "collocation",
-      "prompt": "补全词卡核心例句：_____ translating every sentence word for word.",
+      "prompt": "根据句意补全词卡核心例句：_____ translating every sentence word for word.（填写 avoid 的正确形式）",
       "answer": "Avoid",
       "stage": "T3",
       "ai": false
@@ -541,7 +553,7 @@
     {
       "id": "avoid-v-sentence-phrase",
       "type": "free_sentence",
-      "prompt": "请用完整搭配 “avoid making mistakes” 写一个与自己有关的自然英文句子。",
+      "prompt": "请使用 “avoid making mistakes” 结构写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -549,7 +561,7 @@
     {
       "id": "avoid-v-dialogue",
       "type": "dialogue",
-      "prompt": "写一段 2–4 轮真实对话，自然使用 “avoid” 和搭配 “avoid making mistakes”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “avoid” 和 “avoid making mistakes” 结构，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -608,7 +620,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.4",
+  "contentVersion": "2026.08.19.1",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

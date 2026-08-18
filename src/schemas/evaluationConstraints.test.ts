@@ -89,7 +89,38 @@ describe('AI evaluation expression constraints', () => {
     });
 
     expect(validation.valid).toBe(false);
-    expect(validation.naturalFailures.map((item) => item.id)).toContain('exact:improve on');
+    expect(validation.naturalFailures.map((item) => item.id)).toContain('pattern:improve on');
+  });
+
+  it('treats do as a grammar placeholder and overrides a false model task failure', () => {
+    const finalized = finalizeEvaluationResult({
+      ...result,
+      overallScore: 25,
+      taskCompletionScore: 0,
+      taskCompliance: { passed: false, summaryZh: '没有逐字写出 manage to do。', checks: [] },
+      errorTypes: ['任务要求', '搭配'],
+      issues: [
+        { category: '任务要求', severity: 'major', originalText: 'manage to save', explanationZh: '没有使用 manage to do。', suggestedText: 'manage to do well' },
+        { category: '搭配', severity: 'minor', originalText: 'manage on a little money', explanationZh: '表达生硬。', suggestedText: 'manage on very little money' }
+      ],
+      correctedAnswer: 'I manage to save money, so I can manage on very little money.',
+      naturalVersion: 'I manage to save money, so I can manage on very little money.',
+      naturalChanges: [],
+      reasonZh: '未满足任务要求，必须包含 manage to do。',
+      needsRetry: true
+    }, {
+      questionType: 'free_sentence',
+      prompt: '请使用 “manage to do” 结构写一个与自己有关的自然英文句子；do 代表任意合适的动词原形，不要求写出单词 do。',
+      targetWord: 'manage',
+      answer: 'I manage to save money so I manage on a little money'
+    });
+
+    expect(finalized.taskCompliance.passed).toBe(true);
+    expect(finalized.taskCompliance.checks[0]).toMatchObject({ id: 'pattern:manage to do', passed: true });
+    expect(finalized.taskCompletionScore).toBe(10);
+    expect(finalized.errorTypes).not.toContain('任务要求');
+    expect(finalized.issues.map((issue) => issue.category)).not.toContain('任务要求');
+    expect(finalized.reasonZh).toContain('已满足');
   });
 
   it('recalculates score and retry from deterministic task compliance', () => {

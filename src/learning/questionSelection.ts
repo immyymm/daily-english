@@ -58,16 +58,25 @@ export function selectReviewQuestions(card: WordCard, progress: Pick<CardProgres
     }
   });
 
-  const remaining = rotate(
-    card.questions.filter((question) => allowedTypes.includes(question.type)),
-    seed + stage.charCodeAt(1)
-  );
-  for (const question of remaining) {
-    if (selected.length >= targetSize) break;
-    if (!selectedIds.has(question.id)) {
-      selected.push(question);
-      selectedIds.add(question.id);
+  let addedInRound = true;
+  let round = 1;
+  while (selected.length < targetSize && addedInRound) {
+    addedInRound = false;
+    for (const [typeIndex, type] of orderedTypes.entries()) {
+      const candidates = rotate(
+        card.questions.filter((question) => question.type === type),
+        seed + typeIndex * 7
+      );
+      const next = candidates.find((question) => !selectedIds.has(question.id));
+      if (next) {
+        selected.push(next);
+        selectedIds.add(next.id);
+        addedInRound = true;
+      }
+      if (selected.length >= targetSize) break;
     }
+    round += 1;
+    if (round > card.questions.length) break;
   }
 
   return selected.slice(0, targetSize).map((question, index) => ({

@@ -34,6 +34,7 @@ export type EvaluationErrorType =
 
 export interface TaskRequirements {
   mustUseExact: string[];
+  mustUsePatterns: string[];
   mustUseLemma: string[];
   mustAvoid: string[];
   minTurns?: number;

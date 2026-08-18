@@ -491,7 +491,7 @@
     {
       "id": "offer-v-collocation-core",
       "type": "collocation",
-      "prompt": "补全高频搭配：_____ help",
+      "prompt": "补全高频搭配：_____ help（填写 offer 的正确形式）",
       "answer": "offer",
       "stage": "T0",
       "ai": false
@@ -499,39 +499,51 @@
     {
       "id": "offer-v-collocation-structure",
       "type": "collocation",
-      "prompt": "补全核心结构：_____ help",
-      "answer": "offer",
+      "prompt": "补全核心结构中的连接成分：offer _____",
+      "answer": "help",
       "stage": "T1",
       "ai": false
     },
     {
       "id": "offer-v-collocation-context",
       "type": "collocation",
-      "prompt": "补全语境词组：_____ help",
-      "answer": "offer",
+      "prompt": "根据语境补全搭配：offer _____",
+      "answer": "help",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "offer-v-collocation-fixed-1",
       "type": "collocation",
-      "prompt": "补全固定搭配：_____ help",
-      "answer": "offer",
+      "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“主动提供帮助”？",
+      "options": [
+        "offer to do",
+        "make an offer",
+        "offer help",
+        "offer someone a job"
+      ],
+      "answer": "offer help",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "offer-v-collocation-fixed-2",
       "type": "collocation",
-      "prompt": "再补全一个固定搭配：_____ someone a job",
-      "answer": "offer",
+      "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“给某人一份工作”？；someone 要替换成实际的人或代词",
+      "options": [
+        "make an offer",
+        "offer someone a job",
+        "offer help",
+        "offer to do"
+      ],
+      "answer": "offer someone a job",
       "stage": "T3",
       "ai": false
     },
     {
       "id": "offer-v-example-cloze",
       "type": "collocation",
-      "prompt": "补全词卡核心例句：He _____ to help me with the project.",
+      "prompt": "根据句意补全词卡核心例句：He _____ to help me with the project.（填写 offer 的正确形式）",
       "answer": "offered",
       "stage": "T3",
       "ai": false
@@ -547,7 +559,7 @@
     {
       "id": "offer-v-sentence-phrase",
       "type": "free_sentence",
-      "prompt": "请用完整搭配 “offer help” 写一个与自己有关的自然英文句子。",
+      "prompt": "请使用 “offer help” 结构写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -555,7 +567,7 @@
     {
       "id": "offer-v-dialogue",
       "type": "dialogue",
-      "prompt": "写一段 2–4 轮真实对话，自然使用 “offer” 和搭配 “offer help”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “offer” 和 “offer help” 结构，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -614,7 +626,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.4",
+  "contentVersion": "2026.08.19.1",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

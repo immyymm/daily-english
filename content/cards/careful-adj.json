@@ -485,7 +485,7 @@
     {
       "id": "careful-adj-collocation-core",
       "type": "collocation",
-      "prompt": "补全高频搭配：be _____ with",
+      "prompt": "补全高频搭配：be _____ with（填写 careful 的正确形式）",
       "answer": "careful",
       "stage": "T0",
       "ai": false
@@ -493,39 +493,51 @@
     {
       "id": "careful-adj-collocation-structure",
       "type": "collocation",
-      "prompt": "补全核心结构：be _____ with",
-      "answer": "careful",
+      "prompt": "补全核心结构中的连接成分：be careful _____",
+      "answer": "with",
       "stage": "T1",
       "ai": false
     },
     {
       "id": "careful-adj-collocation-context",
       "type": "collocation",
-      "prompt": "补全语境词组：be _____ with",
-      "answer": "careful",
+      "prompt": "根据语境补全搭配：be careful _____",
+      "answer": "with",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "careful-adj-collocation-fixed-1",
       "type": "collocation",
-      "prompt": "补全固定搭配：be _____ with",
-      "answer": "careful",
+      "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“小心处理……”？",
+      "options": [
+        "careful planning",
+        "careful examination",
+        "be careful with",
+        "be careful not to"
+      ],
+      "answer": "be careful with",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "careful-adj-collocation-fixed-2",
       "type": "collocation",
-      "prompt": "再补全一个固定搭配：be _____ not to",
-      "answer": "careful",
+      "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“小心不要……”？",
+      "options": [
+        "careful examination",
+        "be careful not to",
+        "be careful with",
+        "careful planning"
+      ],
+      "answer": "be careful not to",
       "stage": "T3",
       "ai": false
     },
     {
       "id": "careful-adj-example-cloze",
       "type": "collocation",
-      "prompt": "补全词卡核心例句：Be _____ with the word order.",
+      "prompt": "根据句意补全词卡核心例句：Be _____ with the word order.（填写 careful 的正确形式）",
       "answer": "careful",
       "stage": "T3",
       "ai": false
@@ -541,7 +553,7 @@
     {
       "id": "careful-adj-sentence-phrase",
       "type": "free_sentence",
-      "prompt": "请用完整搭配 “be careful with” 写一个与自己有关的自然英文句子。",
+      "prompt": "请使用 “be careful with” 结构写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -549,7 +561,7 @@
     {
       "id": "careful-adj-dialogue",
       "type": "dialogue",
-      "prompt": "写一段 2–4 轮真实对话，自然使用 “careful” 和搭配 “be careful with”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “careful” 和 “be careful with” 结构，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -608,7 +620,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.4",
+  "contentVersion": "2026.08.19.1",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

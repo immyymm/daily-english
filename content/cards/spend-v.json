@@ -470,7 +470,7 @@
     {
       "id": "spend-v-collocation-core",
       "type": "collocation",
-      "prompt": "补全高频搭配：_____ time doing something",
+      "prompt": "补全高频搭配：_____ time doing something（填写 spend 的正确形式）；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing；something 要替换成实际的事物或内容",
       "answer": "spend",
       "stage": "T0",
       "ai": false
@@ -478,39 +478,51 @@
     {
       "id": "spend-v-collocation-structure",
       "type": "collocation",
-      "prompt": "补全核心结构：_____ time doing",
-      "answer": "spend",
+      "prompt": "补全核心结构中的连接成分：spend _____ doing；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing",
+      "answer": "time",
       "stage": "T1",
       "ai": false
     },
     {
       "id": "spend-v-collocation-context",
       "type": "collocation",
-      "prompt": "补全语境词组：_____ time doing",
-      "answer": "spend",
+      "prompt": "根据语境补全搭配：spend time _____；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing",
+      "answer": "doing",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "spend-v-collocation-fixed-1",
       "type": "collocation",
-      "prompt": "补全固定搭配：_____ time doing",
-      "answer": "spend",
+      "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“花时间做”？；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing",
+      "options": [
+        "spend too much",
+        "spend time doing",
+        "spend money on",
+        "spend the day with"
+      ],
+      "answer": "spend time doing",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "spend-v-collocation-fixed-2",
       "type": "collocation",
-      "prompt": "再补全一个固定搭配：_____ money on",
-      "answer": "spend",
+      "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“在……上花钱”？",
+      "options": [
+        "spend money on",
+        "spend time doing",
+        "spend the day with",
+        "spend too much"
+      ],
+      "answer": "spend money on",
       "stage": "T3",
       "ai": false
     },
     {
       "id": "spend-v-example-cloze",
       "type": "collocation",
-      "prompt": "补全词卡核心例句：I _____ twenty minutes reviewing words each day.",
+      "prompt": "根据句意补全词卡核心例句：I _____ twenty minutes reviewing words each day.（填写 spend 的正确形式）",
       "answer": "spend",
       "stage": "T3",
       "ai": false
@@ -526,7 +538,7 @@
     {
       "id": "spend-v-sentence-phrase",
       "type": "free_sentence",
-      "prompt": "请用完整搭配 “spend time doing” 写一个与自己有关的自然英文句子。",
+      "prompt": "请使用 “spend time doing” 结构写一个与自己有关的自然英文句子；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -534,7 +546,7 @@
     {
       "id": "spend-v-dialogue",
       "type": "dialogue",
-      "prompt": "写一段 2–4 轮真实对话，自然使用 “spend” 和搭配 “spend time doing”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “spend” 和 “spend time doing” 结构，并避免中文直译；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -593,7 +605,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.4",
+  "contentVersion": "2026.08.19.1",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

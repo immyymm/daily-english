@@ -1,7 +1,7 @@
 {
   "date": "2026-08-18",
   "dayNumber": 2,
-  "contentVersion": "2026.08.17.4",
+  "contentVersion": "2026.08.19.1",
   "cards": [
     {
       "id": "provide-v",
@@ -498,7 +498,7 @@
         {
           "id": "provide-v-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ someone with something",
+          "prompt": "补全高频搭配：_____ someone with something（填写 provide 的正确形式）；someone 要替换成实际的人或代词；something 要替换成实际的事物或内容",
           "answer": "provide",
           "stage": "T0",
           "ai": false
@@ -506,39 +506,51 @@
         {
           "id": "provide-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ information",
-          "answer": "provide",
+          "prompt": "补全核心结构中的连接成分：provide _____",
+          "answer": "information",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "provide-v-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ information",
-          "answer": "provide",
+          "prompt": "根据语境补全搭配：provide _____",
+          "answer": "information",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "provide-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ information",
-          "answer": "provide",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“提供信息”？",
+          "options": [
+            "provide access to",
+            "provide information",
+            "provide support",
+            "provide a service"
+          ],
+          "answer": "provide information",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "provide-v-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ support",
-          "answer": "provide",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“提供支持”？",
+          "options": [
+            "provide support",
+            "provide information",
+            "provide a service",
+            "provide access to"
+          ],
+          "answer": "provide support",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "provide-v-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：The course _____ students with useful tools.",
+          "prompt": "根据句意补全词卡核心例句：The course _____ students with useful tools.（填写 provide 的正确形式）",
           "answer": "provides",
           "stage": "T3",
           "ai": false
@@ -554,7 +566,7 @@
         {
           "id": "provide-v-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “provide information” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “provide information” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -562,7 +574,7 @@
         {
           "id": "provide-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “provide” 和搭配 “provide information”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “provide” 和 “provide information” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -621,7 +633,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1112,7 +1124,7 @@
         {
           "id": "understand-v-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：fully _____",
+          "prompt": "补全高频搭配：fully _____（填写 understand 的正确形式）",
           "answer": "understand",
           "stage": "T0",
           "ai": false
@@ -1120,39 +1132,51 @@
         {
           "id": "understand-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：fully _____",
-          "answer": "understand",
+          "prompt": "补全核心结构中的连接成分：_____ understand",
+          "answer": "fully",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "understand-v-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：fully _____",
-          "answer": "understand",
+          "prompt": "根据语境补全搭配：_____ understand",
+          "answer": "fully",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "understand-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：fully _____",
-          "answer": "understand",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“完全理解”？",
+          "options": [
+            "fully understand",
+            "understand why",
+            "understand how",
+            "understand the difference"
+          ],
+          "answer": "fully understand",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "understand-v-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ why",
-          "answer": "understand",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“理解为什么”？",
+          "options": [
+            "fully understand",
+            "understand how",
+            "understand the difference",
+            "understand why"
+          ],
+          "answer": "understand why",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "understand-v-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：I _____ why you need more time.",
+          "prompt": "根据句意补全词卡核心例句：I _____ why you need more time.（填写 understand 的正确形式）",
           "answer": "understand",
           "stage": "T3",
           "ai": false
@@ -1168,7 +1192,7 @@
         {
           "id": "understand-v-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “fully understand” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “fully understand” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1176,7 +1200,7 @@
         {
           "id": "understand-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “understand” 和搭配 “fully understand”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “understand” 和 “fully understand” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1235,7 +1259,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1734,7 +1758,7 @@
         {
           "id": "believe-v-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ in yourself",
+          "prompt": "补全高频搭配：_____ in yourself（填写 believe 的正确形式）；yourself 要替换成与主语一致的 myself、yourself、herself 等正确形式",
           "answer": "believe",
           "stage": "T0",
           "ai": false
@@ -1742,39 +1766,51 @@
         {
           "id": "believe-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ in yourself",
-          "answer": "believe",
+          "prompt": "补全核心结构中的连接成分：believe _____ yourself；yourself 要替换成与主语一致的 myself、yourself、herself 等正确形式",
+          "answer": "in",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "believe-v-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ in yourself",
-          "answer": "believe",
+          "prompt": "根据语境补全搭配：believe in _____；yourself 要替换成与主语一致的 myself、yourself、herself 等正确形式",
+          "answer": "yourself",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "believe-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ in yourself",
-          "answer": "believe",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“相信自己”？；yourself 要替换成与主语一致的 myself、yourself、herself 等正确形式",
+          "options": [
+            "believe that",
+            "strongly believe",
+            "hard to believe",
+            "believe in yourself"
+          ],
+          "answer": "believe in yourself",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "believe-v-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ that",
-          "answer": "believe",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“相信……”？",
+          "options": [
+            "strongly believe",
+            "hard to believe",
+            "believe that",
+            "believe in yourself"
+          ],
+          "answer": "believe that",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "believe-v-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：I _____ this plan can work.",
+          "prompt": "根据句意补全词卡核心例句：I _____ this plan can work.（填写 believe 的正确形式）",
           "answer": "believe",
           "stage": "T3",
           "ai": false
@@ -1790,7 +1826,7 @@
         {
           "id": "believe-v-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “believe in yourself” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “believe in yourself” 结构写一个与自己有关的自然英文句子；yourself 要替换成与主语一致的 myself、yourself、herself 等正确形式。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1798,7 +1834,7 @@
         {
           "id": "believe-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “believe” 和搭配 “believe in yourself”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “believe” 和 “believe in yourself” 结构，并避免中文直译；yourself 要替换成与主语一致的 myself、yourself、herself 等正确形式。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1857,7 +1893,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2355,7 +2391,7 @@
         {
           "id": "create-v-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ an opportunity",
+          "prompt": "补全高频搭配：_____ an opportunity（填写 create 的正确形式）",
           "answer": "create",
           "stage": "T0",
           "ai": false
@@ -2363,39 +2399,51 @@
         {
           "id": "create-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ an opportunity",
-          "answer": "create",
+          "prompt": "补全核心结构中的连接成分：create _____ opportunity",
+          "answer": "an",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "create-v-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ an opportunity",
-          "answer": "create",
+          "prompt": "根据语境补全搭配：create an _____",
+          "answer": "opportunity",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "create-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ an opportunity",
-          "answer": "create",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“创造机会”？",
+          "options": [
+            "create an account",
+            "create a plan",
+            "create an opportunity",
+            "create a problem"
+          ],
+          "answer": "create an opportunity",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "create-v-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ a problem",
-          "answer": "create",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“造成问题”？",
+          "options": [
+            "create a plan",
+            "create a problem",
+            "create an opportunity",
+            "create an account"
+          ],
+          "answer": "create a problem",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "create-v-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：Good questions can _____ meaningful conversations.",
+          "prompt": "根据句意补全词卡核心例句：Good questions can _____ meaningful conversations.（填写 create 的正确形式）",
           "answer": "create",
           "stage": "T3",
           "ai": false
@@ -2411,7 +2459,7 @@
         {
           "id": "create-v-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “create an opportunity” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “create an opportunity” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2419,7 +2467,7 @@
         {
           "id": "create-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “create” 和搭配 “create an opportunity”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “create” 和 “create an opportunity” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2478,7 +2526,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2969,7 +3017,7 @@
         {
           "id": "include-v-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ examples",
+          "prompt": "补全高频搭配：_____ examples（填写 include 的正确形式）",
           "answer": "include",
           "stage": "T0",
           "ai": false
@@ -2977,39 +3025,51 @@
         {
           "id": "include-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ examples",
-          "answer": "include",
+          "prompt": "补全核心结构中的连接成分：include _____",
+          "answer": "examples",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "include-v-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ examples",
-          "answer": "include",
+          "prompt": "根据语境补全搭配：include _____",
+          "answer": "examples",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "include-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ examples",
-          "answer": "include",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“包括例子”？",
+          "options": [
+            "price includes tax",
+            "include examples",
+            "include information about",
+            "include someone in"
+          ],
+          "answer": "include examples",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "include-v-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ information about",
-          "answer": "include",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“包含有关……的信息”？",
+          "options": [
+            "include information about",
+            "include examples",
+            "include someone in",
+            "price includes tax"
+          ],
+          "answer": "include information about",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "include-v-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：The price _____ breakfast and Wi-Fi.",
+          "prompt": "根据句意补全词卡核心例句：The price _____ breakfast and Wi-Fi.（填写 include 的正确形式）",
           "answer": "includes",
           "stage": "T3",
           "ai": false
@@ -3025,7 +3085,7 @@
         {
           "id": "include-v-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “include examples” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “include examples” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -3033,7 +3093,7 @@
         {
           "id": "include-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “include” 和搭配 “include examples”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “include” 和 “include examples” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -3092,7 +3152,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

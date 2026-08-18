@@ -485,7 +485,7 @@
     {
       "id": "clearly-adv-collocation-core",
       "type": "collocation",
-      "prompt": "补全高频搭配：explain _____",
+      "prompt": "补全高频搭配：explain _____（填写 clearly 的正确形式）",
       "answer": "clearly",
       "stage": "T0",
       "ai": false
@@ -493,39 +493,51 @@
     {
       "id": "clearly-adv-collocation-structure",
       "type": "collocation",
-      "prompt": "补全核心结构：explain _____",
-      "answer": "clearly",
+      "prompt": "补全核心结构中的连接成分：_____ clearly",
+      "answer": "explain",
       "stage": "T1",
       "ai": false
     },
     {
       "id": "clearly-adv-collocation-context",
       "type": "collocation",
-      "prompt": "补全语境词组：explain _____",
-      "answer": "clearly",
+      "prompt": "根据语境补全搭配：_____ clearly",
+      "answer": "explain",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "clearly-adv-collocation-fixed-1",
       "type": "collocation",
-      "prompt": "补全固定搭配：explain _____",
-      "answer": "clearly",
+      "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“清楚解释”？",
+      "options": [
+        "speak clearly",
+        "clearly understand",
+        "clearly show",
+        "explain clearly"
+      ],
+      "answer": "explain clearly",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "clearly-adv-collocation-fixed-2",
       "type": "collocation",
-      "prompt": "再补全一个固定搭配：speak _____",
-      "answer": "clearly",
+      "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“说得清楚”？",
+      "options": [
+        "clearly understand",
+        "clearly show",
+        "speak clearly",
+        "explain clearly"
+      ],
+      "answer": "speak clearly",
       "stage": "T3",
       "ai": false
     },
     {
       "id": "clearly-adv-example-cloze",
       "type": "collocation",
-      "prompt": "补全词卡核心例句：She explained the rule _____.",
+      "prompt": "根据句意补全词卡核心例句：She explained the rule _____.（填写 clearly 的正确形式）",
       "answer": "clearly",
       "stage": "T3",
       "ai": false
@@ -541,7 +553,7 @@
     {
       "id": "clearly-adv-sentence-phrase",
       "type": "free_sentence",
-      "prompt": "请用完整搭配 “explain clearly” 写一个与自己有关的自然英文句子。",
+      "prompt": "请使用 “explain clearly” 结构写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -549,7 +561,7 @@
     {
       "id": "clearly-adv-dialogue",
       "type": "dialogue",
-      "prompt": "写一段 2–4 轮真实对话，自然使用 “clearly” 和搭配 “explain clearly”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “clearly” 和 “explain clearly” 结构，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -608,7 +620,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.4",
+  "contentVersion": "2026.08.19.1",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

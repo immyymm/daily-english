@@ -621,7 +621,7 @@
     {
       "id": "support-v-collocation-core",
       "type": "collocation",
-      "prompt": "补全高频搭配：_____ a decision",
+      "prompt": "补全高频搭配：_____ a decision（填写 support 的正确形式）",
       "answer": "support",
       "stage": "T0",
       "ai": false
@@ -629,39 +629,51 @@
     {
       "id": "support-v-collocation-structure",
       "type": "collocation",
-      "prompt": "补全核心结构：_____ someone or something",
-      "answer": "support",
+      "prompt": "补全核心结构中的连接成分：support _____ or something；someone 要替换成实际的人或代词；something 要替换成实际的事物或内容",
+      "answer": "someone",
       "stage": "T1",
       "ai": false
     },
     {
       "id": "support-v-collocation-context",
       "type": "collocation",
-      "prompt": "补全语境词组：_____ a friend",
-      "answer": "support",
+      "prompt": "根据语境补全搭配：support a _____",
+      "answer": "friend",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "support-v-collocation-fixed-1",
       "type": "collocation",
-      "prompt": "补全固定搭配：_____ someone in doing",
-      "answer": "support",
+      "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“支持某人做某事”？；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing；someone 要替换成实际的人或代词",
+      "options": [
+        "support someone in doing",
+        "support a decision",
+        "support a claim with evidence",
+        "provide support for"
+      ],
+      "answer": "support someone in doing",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "support-v-collocation-fixed-2",
       "type": "collocation",
-      "prompt": "再补全一个固定搭配：_____ a decision",
-      "answer": "support",
+      "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“支持一项决定”？",
+      "options": [
+        "support someone in doing",
+        "support a claim with evidence",
+        "provide support for",
+        "support a decision"
+      ],
+      "answer": "support a decision",
       "stage": "T3",
       "ai": false
     },
     {
       "id": "support-v-example-cloze",
       "type": "collocation",
-      "prompt": "补全词卡核心例句：Her family _____ her decision to study abroad.",
+      "prompt": "根据句意补全词卡核心例句：Her family _____ her decision to study abroad.（填写 support 的正确形式）",
       "answer": "supported",
       "stage": "T3",
       "ai": false
@@ -677,7 +689,7 @@
     {
       "id": "support-v-sentence-phrase",
       "type": "free_sentence",
-      "prompt": "请用完整搭配 “support someone in doing” 写一个与自己有关的自然英文句子。",
+      "prompt": "请使用 “support someone in doing” 结构写一个与自己有关的自然英文句子；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing；someone 要替换成实际的人或代词。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -685,7 +697,7 @@
     {
       "id": "support-v-dialogue",
       "type": "dialogue",
-      "prompt": "写一段 2–4 轮真实对话，自然使用 “support” 和搭配 “support a friend”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “support” 和 “support a friend” 结构，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -744,7 +756,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.4",
+  "contentVersion": "2026.08.19.1",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；本卡依照用户词卡模板人工精校；音标为美式发音。"
 }

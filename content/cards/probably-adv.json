@@ -485,7 +485,7 @@
     {
       "id": "probably-adv-collocation-core",
       "type": "collocation",
-      "prompt": "补全高频搭配：will _____",
+      "prompt": "补全高频搭配：will _____（填写 probably 的正确形式）",
       "answer": "probably",
       "stage": "T0",
       "ai": false
@@ -493,39 +493,51 @@
     {
       "id": "probably-adv-collocation-structure",
       "type": "collocation",
-      "prompt": "补全核心结构：will _____",
-      "answer": "probably",
+      "prompt": "补全核心结构中的连接成分：_____ probably",
+      "answer": "will",
       "stage": "T1",
       "ai": false
     },
     {
       "id": "probably-adv-collocation-context",
       "type": "collocation",
-      "prompt": "补全语境词组：will _____",
-      "answer": "probably",
+      "prompt": "根据语境补全搭配：_____ probably",
+      "answer": "will",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "probably-adv-collocation-fixed-1",
       "type": "collocation",
-      "prompt": "补全固定搭配：will _____",
-      "answer": "probably",
+      "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“很可能会”？",
+      "options": [
+        "probably not",
+        "will probably",
+        "probably because",
+        "most probably"
+      ],
+      "answer": "will probably",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "probably-adv-collocation-fixed-2",
       "type": "collocation",
-      "prompt": "再补全一个固定搭配：_____ because",
-      "answer": "probably",
+      "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“可能因为”？",
+      "options": [
+        "probably because",
+        "will probably",
+        "most probably",
+        "probably not"
+      ],
+      "answer": "probably because",
       "stage": "T3",
       "ai": false
     },
     {
       "id": "probably-adv-example-cloze",
       "type": "collocation",
-      "prompt": "补全词卡核心例句：She will _____ arrive before noon.",
+      "prompt": "根据句意补全词卡核心例句：She will _____ arrive before noon.（填写 probably 的正确形式）",
       "answer": "probably",
       "stage": "T3",
       "ai": false
@@ -541,7 +553,7 @@
     {
       "id": "probably-adv-sentence-phrase",
       "type": "free_sentence",
-      "prompt": "请用完整搭配 “will probably” 写一个与自己有关的自然英文句子。",
+      "prompt": "请使用 “will probably” 结构写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -549,7 +561,7 @@
     {
       "id": "probably-adv-dialogue",
       "type": "dialogue",
-      "prompt": "写一段 2–4 轮真实对话，自然使用 “probably” 和搭配 “will probably”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “probably” 和 “will probably” 结构，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -608,7 +620,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.4",
+  "contentVersion": "2026.08.19.1",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

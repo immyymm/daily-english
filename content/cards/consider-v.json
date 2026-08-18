@@ -478,7 +478,7 @@
     {
       "id": "consider-v-collocation-core",
       "type": "collocation",
-      "prompt": "补全高频搭配：_____ doing something",
+      "prompt": "补全高频搭配：_____ doing something（填写 consider 的正确形式）；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing；something 要替换成实际的事物或内容",
       "answer": "consider",
       "stage": "T0",
       "ai": false
@@ -486,39 +486,51 @@
     {
       "id": "consider-v-collocation-structure",
       "type": "collocation",
-      "prompt": "补全核心结构：_____ doing",
-      "answer": "consider",
+      "prompt": "补全核心结构中的连接成分：consider _____；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing",
+      "answer": "doing",
       "stage": "T1",
       "ai": false
     },
     {
       "id": "consider-v-collocation-context",
       "type": "collocation",
-      "prompt": "补全语境词组：_____ doing",
-      "answer": "consider",
+      "prompt": "根据语境补全搭配：consider _____；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing",
+      "answer": "doing",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "consider-v-collocation-fixed-1",
       "type": "collocation",
-      "prompt": "补全固定搭配：_____ doing",
-      "answer": "consider",
+      "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“考虑做”？；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing",
+      "options": [
+        "carefully consider",
+        "consider doing",
+        "consider the possibility",
+        "consider someone suitable"
+      ],
+      "answer": "consider doing",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "consider-v-collocation-fixed-2",
       "type": "collocation",
-      "prompt": "再补全一个固定搭配：_____ the possibility",
-      "answer": "consider",
+      "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“考虑可能性”？",
+      "options": [
+        "consider the possibility",
+        "consider doing",
+        "consider someone suitable",
+        "carefully consider"
+      ],
+      "answer": "consider the possibility",
       "stage": "T3",
       "ai": false
     },
     {
       "id": "consider-v-example-cloze",
       "type": "collocation",
-      "prompt": "补全词卡核心例句：You should _____ taking a short break.",
+      "prompt": "根据句意补全词卡核心例句：You should _____ taking a short break.（填写 consider 的正确形式）",
       "answer": "consider",
       "stage": "T3",
       "ai": false
@@ -534,7 +546,7 @@
     {
       "id": "consider-v-sentence-phrase",
       "type": "free_sentence",
-      "prompt": "请用完整搭配 “consider doing” 写一个与自己有关的自然英文句子。",
+      "prompt": "请使用 “consider doing” 结构写一个与自己有关的自然英文句子；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -542,7 +554,7 @@
     {
       "id": "consider-v-dialogue",
       "type": "dialogue",
-      "prompt": "写一段 2–4 轮真实对话，自然使用 “consider” 和搭配 “consider doing”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “consider” 和 “consider doing” 结构，并避免中文直译；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -601,7 +613,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.4",
+  "contentVersion": "2026.08.19.1",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

@@ -741,7 +741,7 @@
     {
       "id": "work-n-collocation-core",
       "type": "collocation",
-      "prompt": "补全高频搭配：_____ on something",
+      "prompt": "补全高频搭配：_____ on something（填写 work 的正确形式）；something 要替换成实际的事物或内容",
       "answer": "work",
       "stage": "T0",
       "ai": false
@@ -749,39 +749,51 @@
     {
       "id": "work-n-collocation-structure",
       "type": "collocation",
-      "prompt": "补全核心结构：_____ on something",
-      "answer": "work",
+      "prompt": "补全核心结构中的连接成分：work _____ something；something 要替换成实际的事物或内容",
+      "answer": "on",
       "stage": "T1",
       "ai": false
     },
     {
       "id": "work-n-collocation-context",
       "type": "collocation",
-      "prompt": "补全语境词组：full-time _____",
-      "answer": "work",
+      "prompt": "根据语境补全搭配：_____-time work",
+      "answer": "full",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "work-n-collocation-fixed-1",
       "type": "collocation",
-      "prompt": "补全固定搭配：_____ for",
-      "answer": "work",
+      "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“为……工作；受雇于”？",
+      "options": [
+        "work on",
+        "work for",
+        "work at",
+        "work as"
+      ],
+      "answer": "work for",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "work-n-collocation-fixed-2",
       "type": "collocation",
-      "prompt": "再补全一个固定搭配：_____ at",
-      "answer": "work",
+      "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“在某个地点或机构工作”？",
+      "options": [
+        "work at",
+        "work for",
+        "work as",
+        "work on"
+      ],
+      "answer": "work at",
       "stage": "T3",
       "ai": false
     },
     {
       "id": "work-n-example-cloze",
       "type": "collocation",
-      "prompt": "补全词卡核心例句：I am _____ on my pronunciation.",
+      "prompt": "根据句意补全词卡核心例句：I am _____ on my pronunciation.（填写 work 的正确形式）",
       "answer": "working",
       "stage": "T3",
       "ai": false
@@ -797,7 +809,7 @@
     {
       "id": "work-n-sentence-phrase",
       "type": "free_sentence",
-      "prompt": "请用完整搭配 “work for” 写一个与自己有关的自然英文句子。",
+      "prompt": "请使用 “work for” 结构写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -805,7 +817,7 @@
     {
       "id": "work-n-dialogue",
       "type": "dialogue",
-      "prompt": "写一段 2–4 轮真实对话，自然使用 “work” 和搭配 “full-time work”，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “work” 和 “full-time work” 结构，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -864,7 +876,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.17.4",
+  "contentVersion": "2026.08.19.1",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；本卡依照用户词卡模板人工精校；音标为美式发音。"
 }

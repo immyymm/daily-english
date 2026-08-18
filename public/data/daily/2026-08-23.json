@@ -1,7 +1,7 @@
 {
   "date": "2026-08-23",
   "dayNumber": 7,
-  "contentVersion": "2026.08.17.4",
+  "contentVersion": "2026.08.19.1",
   "cards": [
     {
       "id": "avoid-v",
@@ -490,7 +490,7 @@
         {
           "id": "avoid-v-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ doing something",
+          "prompt": "补全高频搭配：_____ doing something（填写 avoid 的正确形式）；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing；something 要替换成实际的事物或内容",
           "answer": "avoid",
           "stage": "T0",
           "ai": false
@@ -498,39 +498,51 @@
         {
           "id": "avoid-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ making mistakes",
-          "answer": "avoid",
+          "prompt": "补全核心结构中的连接成分：avoid _____ mistakes",
+          "answer": "making",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "avoid-v-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ making mistakes",
-          "answer": "avoid",
+          "prompt": "根据语境补全搭配：avoid making _____",
+          "answer": "mistakes",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "avoid-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ making mistakes",
-          "answer": "avoid",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“避免犯错”？",
+          "options": [
+            "avoid making mistakes",
+            "avoid doing",
+            "avoid unnecessary risk",
+            "avoid eye contact"
+          ],
+          "answer": "avoid making mistakes",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "avoid-v-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ doing",
-          "answer": "avoid",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“避免做”？；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing",
+          "options": [
+            "avoid making mistakes",
+            "avoid unnecessary risk",
+            "avoid eye contact",
+            "avoid doing"
+          ],
+          "answer": "avoid doing",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "avoid-v-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：_____ translating every sentence word for word.",
+          "prompt": "根据句意补全词卡核心例句：_____ translating every sentence word for word.（填写 avoid 的正确形式）",
           "answer": "Avoid",
           "stage": "T3",
           "ai": false
@@ -546,7 +558,7 @@
         {
           "id": "avoid-v-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “avoid making mistakes” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “avoid making mistakes” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -554,7 +566,7 @@
         {
           "id": "avoid-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “avoid” 和搭配 “avoid making mistakes”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “avoid” 和 “avoid making mistakes” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -613,7 +625,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1104,7 +1116,7 @@
         {
           "id": "compare-v-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ A with B",
+          "prompt": "补全高频搭配：_____ A with B（填写 compare 的正确形式）；A、B 要替换成实际比较内容",
           "answer": "compare",
           "stage": "T0",
           "ai": false
@@ -1112,39 +1124,51 @@
         {
           "id": "compare-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ A with B",
-          "answer": "compare",
+          "prompt": "补全核心结构中的连接成分：compare _____ with B；A、B 要替换成实际比较内容",
+          "answer": "A",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "compare-v-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ A with B",
-          "answer": "compare",
+          "prompt": "根据语境补全搭配：compare A with _____；A、B 要替换成实际比较内容",
+          "answer": "B",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "compare-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ A with B",
-          "answer": "compare",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“把 A 与 B 比较”？；A、B 要替换成实际比较内容",
+          "options": [
+            "compare A to B",
+            "compare prices",
+            "compared with",
+            "compare A with B"
+          ],
+          "answer": "compare A with B",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "compare-v-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ A to B",
-          "answer": "compare",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“把 A 比作 B”？；A、B 要替换成实际比较内容",
+          "options": [
+            "compare prices",
+            "compared with",
+            "compare A to B",
+            "compare A with B"
+          ],
+          "answer": "compare A to B",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "compare-v-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：_____ the two examples before you answer.",
+          "prompt": "根据句意补全词卡核心例句：_____ the two examples before you answer.（填写 compare 的正确形式）",
           "answer": "Compare",
           "stage": "T3",
           "ai": false
@@ -1160,7 +1184,7 @@
         {
           "id": "compare-v-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “compare A with B” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “compare A with B” 结构写一个与自己有关的自然英文句子；A、B 要替换成实际比较内容。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1168,7 +1192,7 @@
         {
           "id": "compare-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “compare” 和搭配 “compare A with B”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “compare” 和 “compare A with B” 结构，并避免中文直译；A、B 要替换成实际比较内容。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1227,7 +1251,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1725,7 +1749,7 @@
         {
           "id": "depend-v-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ on",
+          "prompt": "补全高频搭配：_____ on（填写 depend 的正确形式）",
           "answer": "depend",
           "stage": "T0",
           "ai": false
@@ -1733,39 +1757,51 @@
         {
           "id": "depend-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ on",
-          "answer": "depend",
+          "prompt": "补全核心结构中的连接成分：depend _____",
+          "answer": "on",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "depend-v-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ on",
-          "answer": "depend",
+          "prompt": "根据语境补全搭配：depend _____",
+          "answer": "on",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "depend-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ on",
-          "answer": "depend",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“取决于；依靠”？",
+          "options": [
+            "it depends",
+            "depend on whether",
+            "depend on",
+            "depend heavily on"
+          ],
+          "answer": "depend on",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "depend-v-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ heavily on",
-          "answer": "depend",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“严重依赖”？",
+          "options": [
+            "depend on whether",
+            "depend heavily on",
+            "depend on",
+            "it depends"
+          ],
+          "answer": "depend heavily on",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "depend-v-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：The best choice _____ on the situation.",
+          "prompt": "根据句意补全词卡核心例句：The best choice _____ on the situation.（填写 depend 的正确形式）",
           "answer": "depends",
           "stage": "T3",
           "ai": false
@@ -1781,7 +1817,7 @@
         {
           "id": "depend-v-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “depend on” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “depend on” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1789,7 +1825,7 @@
         {
           "id": "depend-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “depend” 和搭配 “depend on”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “depend” 和 “depend on” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1848,7 +1884,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2345,7 +2381,7 @@
         {
           "id": "increase-v-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ confidence",
+          "prompt": "补全高频搭配：_____ confidence（填写 increase 的正确形式）",
           "answer": "increase",
           "stage": "T0",
           "ai": false
@@ -2353,39 +2389,51 @@
         {
           "id": "increase-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ by ten percent",
-          "answer": "increase",
+          "prompt": "补全核心结构中的连接成分：increase _____ ten percent",
+          "answer": "by",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "increase-v-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ by ten percent",
-          "answer": "increase",
+          "prompt": "根据语境补全搭配：increase by ten _____",
+          "answer": "percent",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "increase-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ by ten percent",
-          "answer": "increase",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“增加百分之十”？",
+          "options": [
+            "a sharp increase",
+            "increase by ten percent",
+            "increase from A to B",
+            "increase the risk of"
+          ],
+          "answer": "increase by ten percent",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "increase-v-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ from A to B",
-          "answer": "increase",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“从 A 增至 B”？；A、B 要替换成实际比较内容",
+          "options": [
+            "increase from A to B",
+            "increase by ten percent",
+            "increase the risk of",
+            "a sharp increase"
+          ],
+          "answer": "increase from A to B",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "increase-v-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：Regular speaking practice _____ confidence.",
+          "prompt": "根据句意补全词卡核心例句：Regular speaking practice _____ confidence.（填写 increase 的正确形式）",
           "answer": "increases",
           "stage": "T3",
           "ai": false
@@ -2401,7 +2449,7 @@
         {
           "id": "increase-v-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “increase by ten percent” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “increase by ten percent” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2409,7 +2457,7 @@
         {
           "id": "increase-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “increase” 和搭配 “increase by ten percent”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “increase” 和 “increase by ten percent” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2468,7 +2516,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2952,7 +3000,7 @@
         {
           "id": "reduce-v-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ stress",
+          "prompt": "补全高频搭配：_____ stress（填写 reduce 的正确形式）",
           "answer": "reduce",
           "stage": "T0",
           "ai": false
@@ -2960,39 +3008,51 @@
         {
           "id": "reduce-v-collocation-structure",
           "type": "collocation",
-          "prompt": "补全核心结构：_____ the risk",
-          "answer": "reduce",
+          "prompt": "补全核心结构中的连接成分：reduce _____ risk",
+          "answer": "the",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "reduce-v-collocation-context",
           "type": "collocation",
-          "prompt": "补全语境词组：_____ the risk",
-          "answer": "reduce",
+          "prompt": "根据语境补全搭配：reduce the _____",
+          "answer": "risk",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "reduce-v-collocation-fixed-1",
           "type": "collocation",
-          "prompt": "补全固定搭配：_____ the risk",
-          "answer": "reduce",
+          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“降低风险”？",
+          "options": [
+            "reduce the risk",
+            "reduce costs",
+            "reduce stress",
+            "reduce by half"
+          ],
+          "answer": "reduce the risk",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "reduce-v-collocation-fixed-2",
           "type": "collocation",
-          "prompt": "再补全一个固定搭配：_____ costs",
-          "answer": "reduce",
+          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“降低成本”？",
+          "options": [
+            "reduce the risk",
+            "reduce stress",
+            "reduce by half",
+            "reduce costs"
+          ],
+          "answer": "reduce costs",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "reduce-v-example-cloze",
           "type": "collocation",
-          "prompt": "补全词卡核心例句：A clear plan can _____ unnecessary stress.",
+          "prompt": "根据句意补全词卡核心例句：A clear plan can _____ unnecessary stress.（填写 reduce 的正确形式）；A、B 要替换成实际比较内容",
           "answer": "reduce",
           "stage": "T3",
           "ai": false
@@ -3008,7 +3068,7 @@
         {
           "id": "reduce-v-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请用完整搭配 “reduce the risk” 写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “reduce the risk” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -3016,7 +3076,7 @@
         {
           "id": "reduce-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “reduce” 和搭配 “reduce the risk”，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “reduce” 和 “reduce the risk” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -3075,7 +3135,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.17.4",
+      "contentVersion": "2026.08.19.1",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }
