@@ -1,7 +1,7 @@
 {
   "date": "2026-09-11",
   "dayNumber": 26,
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "templateVersion": "learning-template-2026.08.19.1",
   "cards": [
     {
@@ -24,7 +24,7 @@
       "difficulty": "应用",
       "tags": [
         "v.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -87,7 +87,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心动作与结构",
           "items": [
             {
               "phrase": "write a message",
@@ -98,22 +98,27 @@
               "phrase": "write about",
               "phonetic": "/raɪt əˈbaʊt/",
               "chinese": "写关于……"
-            },
-            {
-              "phrase": "write something down",
-              "phonetic": "/raɪt ˈsʌmθɪŋ ˈdaʊn/",
-              "chinese": "写下某事"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "write something down",
+              "phonetic": "/raɪt ˈsʌmθɪŋ ˈdaʊn/",
+              "chinese": "写下某事"
+            },
             {
               "phrase": "write to someone",
               "phonetic": "/raɪt ˈtuː ˈsʌˌmwʌn/",
               "chinese": "写信给某人"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "write in English",
               "phonetic": "/raɪt ɪn ˈɪŋɡlɪʃ/",
@@ -125,6 +130,16 @@
               "chinese": "写得好的"
             }
           ]
+        },
+        {
+          "category": "补充常用语境",
+          "items": [
+            {
+              "phrase": "write down",
+              "phonetic": "/raɪt ˈdaʊn/",
+              "chinese": "写下"
+            }
+          ]
         }
       ],
       "fixedPhrases": [
@@ -132,8 +147,43 @@
           "phrase": "write a message",
           "phonetic": "/raɪt ə ˈmɛsədʒ/",
           "chinese": "写消息",
-          "example": "Write down one sentence using the new word.",
-          "translation": "写下一个使用新单词的句子。"
+          "example": "I wrote a short message to confirm the booking.",
+          "translation": "我写了一条短消息确认预订。"
+        },
+        {
+          "phrase": "write about",
+          "phonetic": "/raɪt əˈbaʊt/",
+          "chinese": "写关于……",
+          "example": "She is writing about her travel experience.",
+          "translation": "她正在写自己的旅行经历。"
+        },
+        {
+          "phrase": "write something down",
+          "phonetic": "/raɪt ˈsʌmθɪŋ ˈdaʊn/",
+          "chinese": "写下某事",
+          "example": "Write the new expression down before you forget it.",
+          "translation": "在忘记前把新表达写下来。"
+        },
+        {
+          "phrase": "write to someone",
+          "phonetic": "/raɪt ˈtuː ˈsʌˌmwʌn/",
+          "chinese": "写信给某人",
+          "example": "I wrote to the company about the problem.",
+          "translation": "我写信给公司说明了这个问题。"
+        },
+        {
+          "phrase": "write in English",
+          "phonetic": "/raɪt ɪn ˈɪŋɡlɪʃ/",
+          "chinese": "用英语写",
+          "example": "Try to write one sentence in English each day.",
+          "translation": "每天尽量用英语写一个句子。"
+        },
+        {
+          "phrase": "well written",
+          "phonetic": "/ˈwɛl ˈrɪtən/",
+          "chinese": "写得好的",
+          "example": "The instructions are clear and well written.",
+          "translation": "这些说明清晰且写得很好。"
         }
       ],
       "synonyms": [
@@ -180,6 +230,36 @@
           "scene": "核心真实用法",
           "english": "Write down one sentence using the new word.",
           "chinese": "写下一个使用新单词的句子。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "I wrote a short message to confirm the booking.",
+          "chinese": "我写了一条短消息确认预订。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "She is writing about her travel experience.",
+          "chinese": "她正在写自己的旅行经历。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "Write the new expression down before you forget it.",
+          "chinese": "在忘记前把新表达写下来。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "I wrote to the company about the problem.",
+          "chinese": "我写信给公司说明了这个问题。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "Try to write one sentence in English each day.",
+          "chinese": "每天尽量用英语写一个句子。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "The instructions are clear and well written.",
+          "chinese": "这些说明清晰且写得很好。"
         }
       ],
       "studyFocus": {
@@ -328,7 +408,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“写消息”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "write a message"
+            "write to someone",
+            "write a message",
+            "write about",
+            "write something down"
           ],
           "answer": "write a message",
           "stage": "T2",
@@ -340,7 +423,9 @@
           "prompt": "搭配辨析：哪一项既表示“写关于……”，又符合这个形式线索：完整搭配中使用介词 about？",
           "options": [
             "write about",
-            "write a message"
+            "write a message",
+            "write something down",
+            "write to someone"
           ],
           "answer": "write about",
           "stage": "T3",
@@ -431,11 +516,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "read-v",
@@ -457,7 +542,7 @@
       "difficulty": "应用",
       "tags": [
         "v.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -520,7 +605,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心动作与结构",
           "items": [
             {
               "phrase": "read a book",
@@ -531,22 +616,27 @@
               "phrase": "read about",
               "phonetic": "/riːd əˈbaʊt/",
               "chinese": "阅读有关……的内容"
-            },
-            {
-              "phrase": "read aloud",
-              "phonetic": "/riːd əˈlaʊd/",
-              "chinese": "朗读"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "read aloud",
+              "phonetic": "/riːd əˈlaʊd/",
+              "chinese": "朗读"
+            },
             {
               "phrase": "read between the lines",
               "phonetic": "/riːd bɪˈtwiːn ðə ˈlaɪnz/",
               "chinese": "领会言外之意"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "easy to read",
               "phonetic": "/ˈiːziː ˈtuː riːd/",
@@ -565,8 +655,43 @@
           "phrase": "read a book",
           "phonetic": "/riːd ə ˈbʊk/",
           "chinese": "读书",
-          "example": "Read the example aloud twice.",
-          "translation": "把例句大声读两遍。"
+          "example": "I read a book on the train every morning.",
+          "translation": "我每天早上在火车上读书。"
+        },
+        {
+          "phrase": "read about",
+          "phonetic": "/riːd əˈbaʊt/",
+          "chinese": "阅读有关……的内容",
+          "example": "She read about the event online.",
+          "translation": "她在网上读到了这次活动。"
+        },
+        {
+          "phrase": "read aloud",
+          "phonetic": "/riːd əˈlaʊd/",
+          "chinese": "朗读",
+          "example": "Reading aloud helps improve pronunciation.",
+          "translation": "朗读有助于改善发音。"
+        },
+        {
+          "phrase": "read between the lines",
+          "phonetic": "/riːd bɪˈtwiːn ðə ˈlaɪnz/",
+          "chinese": "领会言外之意",
+          "example": "You have to read between the lines to understand his message.",
+          "translation": "你必须领会言外之意才能理解他的消息。"
+        },
+        {
+          "phrase": "easy to read",
+          "phonetic": "/ˈiːziː ˈtuː riːd/",
+          "chinese": "容易阅读",
+          "example": "The large text makes the guide easy to read.",
+          "translation": "大号文字让这份指南容易阅读。"
+        },
+        {
+          "phrase": "read through",
+          "phonetic": "/riːd ˈθruː/",
+          "chinese": "从头到尾阅读",
+          "example": "Please read through the contract before signing it.",
+          "translation": "签字前请把合同从头到尾读一遍。"
         }
       ],
       "synonyms": [
@@ -613,6 +738,36 @@
           "scene": "核心真实用法",
           "english": "Read the example aloud twice.",
           "chinese": "把例句大声读两遍。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "I read a book on the train every morning.",
+          "chinese": "我每天早上在火车上读书。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "She read about the event online.",
+          "chinese": "她在网上读到了这次活动。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "Reading aloud helps improve pronunciation.",
+          "chinese": "朗读有助于改善发音。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "You have to read between the lines to understand his message.",
+          "chinese": "你必须领会言外之意才能理解他的消息。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "The large text makes the guide easy to read.",
+          "chinese": "大号文字让这份指南容易阅读。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "Please read through the contract before signing it.",
+          "chinese": "签字前请把合同从头到尾读一遍。"
         }
       ],
       "studyFocus": {
@@ -761,7 +916,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“读书”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "read a book"
+            "read a book",
+            "read about",
+            "read aloud",
+            "read between the lines"
           ],
           "answer": "read a book",
           "stage": "T2",
@@ -773,6 +931,8 @@
           "prompt": "用法辨析：哪一项既表示“阅读有关……的内容”，又符合这个形式线索：完整搭配中使用介词 about？",
           "options": [
             "read a book",
+            "read aloud",
+            "read between the lines",
             "read about"
           ],
           "answer": "read about",
@@ -864,11 +1024,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "listen-v",
@@ -890,7 +1050,7 @@
       "difficulty": "应用",
       "tags": [
         "v.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -953,7 +1113,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心动作与结构",
           "items": [
             {
               "phrase": "listen to",
@@ -964,22 +1124,27 @@
               "phrase": "listen carefully",
               "phonetic": "/ˈlɪsən ˈkɛrfəliː/",
               "chinese": "仔细听"
-            },
-            {
-              "phrase": "listen for",
-              "phonetic": "/ˈlɪsən ˈfɔːr/",
-              "chinese": "留意听……"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "listen for",
+              "phonetic": "/ˈlɪsən ˈfɔːr/",
+              "chinese": "留意听……"
+            },
             {
               "phrase": "listen to advice",
               "phonetic": "/ˈlɪsən ˈtuː æˈdvaɪs/",
               "chinese": "听取建议"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "listen closely",
               "phonetic": "/ˈlɪsən ˈkloʊsliː/",
@@ -998,8 +1163,43 @@
           "phrase": "listen to",
           "phonetic": "/ˈlɪsən ˈtuː/",
           "chinese": "听……",
-          "example": "Listen to the whole sentence before answering.",
-          "translation": "回答前先听完整个句子。"
+          "example": "I listen to an English podcast on my way to work.",
+          "translation": "我上班路上听英语播客。"
+        },
+        {
+          "phrase": "listen carefully",
+          "phonetic": "/ˈlɪsən ˈkɛrfəliː/",
+          "chinese": "仔细听",
+          "example": "Listen carefully before you choose an answer.",
+          "translation": "选择答案前请仔细听。"
+        },
+        {
+          "phrase": "listen for",
+          "phonetic": "/ˈlɪsən ˈfɔːr/",
+          "chinese": "留意听……",
+          "example": "Listen for the difference between the two vowel sounds.",
+          "translation": "留意听这两个元音的区别。"
+        },
+        {
+          "phrase": "listen to advice",
+          "phonetic": "/ˈlɪsən ˈtuː æˈdvaɪs/",
+          "chinese": "听取建议",
+          "example": "You should listen to your doctor’s advice.",
+          "translation": "你应该听取医生的建议。"
+        },
+        {
+          "phrase": "listen closely",
+          "phonetic": "/ˈlɪsən ˈkloʊsliː/",
+          "chinese": "认真听",
+          "example": "Everyone listened closely to the announcement.",
+          "translation": "每个人都认真听了通知。"
+        },
+        {
+          "phrase": "good listener",
+          "phonetic": "/ˈɡʊd ˈlɪsənɚ/",
+          "chinese": "善于倾听的人",
+          "example": "A good listener asks thoughtful questions.",
+          "translation": "善于倾听的人会提出有思考的问题。"
         }
       ],
       "synonyms": [
@@ -1054,6 +1254,36 @@
           "scene": "核心真实用法",
           "english": "Listen to the whole sentence before answering.",
           "chinese": "回答前先听完整个句子。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "I listen to an English podcast on my way to work.",
+          "chinese": "我上班路上听英语播客。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "Listen carefully before you choose an answer.",
+          "chinese": "选择答案前请仔细听。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "Listen for the difference between the two vowel sounds.",
+          "chinese": "留意听这两个元音的区别。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "You should listen to your doctor’s advice.",
+          "chinese": "你应该听取医生的建议。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "Everyone listened closely to the announcement.",
+          "chinese": "每个人都认真听了通知。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "A good listener asks thoughtful questions.",
+          "chinese": "善于倾听的人会提出有思考的问题。"
         }
       ],
       "studyFocus": {
@@ -1202,6 +1432,9 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“听……”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "listen carefully",
+            "listen for",
+            "listen to advice",
             "listen to"
           ],
           "answer": "listen to",
@@ -1213,6 +1446,8 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“仔细听”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "listen for",
+            "listen to advice",
             "listen carefully",
             "listen to"
           ],
@@ -1305,11 +1540,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "travel-n",
@@ -1337,7 +1572,7 @@
       "difficulty": "应用",
       "tags": [
         "n.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -1407,7 +1642,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心名词搭配",
           "items": [
             {
               "phrase": "travel abroad",
@@ -1418,22 +1653,27 @@
               "phrase": "travel by train",
               "phonetic": "/ˈtrævəl ˈbaɪ ˈtreɪn/",
               "chinese": "乘火车旅行"
-            },
-            {
-              "phrase": "travel around",
-              "phonetic": "/ˈtrævəl ɚˈaʊnd/",
-              "chinese": "到处旅行"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "travel around",
+              "phonetic": "/ˈtrævəl ɚˈaʊnd/",
+              "chinese": "到处旅行"
+            },
             {
               "phrase": "business travel",
               "phonetic": "/ˈbɪznəs ˈtrævəl/",
               "chinese": "商务旅行"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "travel plans",
               "phonetic": "/ˈtrævəl ˈplænz/",
@@ -1452,8 +1692,43 @@
           "phrase": "travel abroad",
           "phonetic": "/ˈtrævəl əˈbrɔːd/",
           "chinese": "出国旅行",
-          "example": "She travels abroad for work twice a year.",
-          "translation": "她每年因工作出国两次。"
+          "example": "She traveled abroad for the first time last summer.",
+          "translation": "去年夏天她第一次出国旅行。"
+        },
+        {
+          "phrase": "travel by train",
+          "phonetic": "/ˈtrævəl ˈbaɪ ˈtreɪn/",
+          "chinese": "乘火车旅行",
+          "example": "We prefer to travel by train.",
+          "translation": "我们更喜欢乘火车旅行。"
+        },
+        {
+          "phrase": "travel around",
+          "phonetic": "/ˈtrævəl ɚˈaʊnd/",
+          "chinese": "到处旅行",
+          "example": "He spent a year traveling around South America.",
+          "translation": "他花了一年时间周游南美洲。"
+        },
+        {
+          "phrase": "business travel",
+          "phonetic": "/ˈbɪznəs ˈtrævəl/",
+          "chinese": "商务旅行",
+          "example": "Business travel has increased again.",
+          "translation": "商务旅行再次增加。"
+        },
+        {
+          "phrase": "travel plans",
+          "phonetic": "/ˈtrævəl ˈplænz/",
+          "chinese": "旅行计划",
+          "example": "Our travel plans changed because of the weather.",
+          "translation": "我们的旅行计划因天气而改变。"
+        },
+        {
+          "phrase": "air travel",
+          "phonetic": "/ˈɛr ˈtrævəl/",
+          "chinese": "航空旅行",
+          "example": "Air travel is faster but usually more expensive.",
+          "translation": "航空旅行更快，但通常更贵。"
         }
       ],
       "synonyms": [
@@ -1508,6 +1783,36 @@
           "scene": "核心真实用法",
           "english": "She travels abroad for work twice a year.",
           "chinese": "她每年因工作出国两次。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "She traveled abroad for the first time last summer.",
+          "chinese": "去年夏天她第一次出国旅行。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "We prefer to travel by train.",
+          "chinese": "我们更喜欢乘火车旅行。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "He spent a year traveling around South America.",
+          "chinese": "他花了一年时间周游南美洲。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "Business travel has increased again.",
+          "chinese": "商务旅行再次增加。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "Our travel plans changed because of the weather.",
+          "chinese": "我们的旅行计划因天气而改变。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "Air travel is faster but usually more expensive.",
+          "chinese": "航空旅行更快，但通常更贵。"
         }
       ],
       "studyFocus": {
@@ -1656,7 +1961,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“出国旅行”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "travel abroad"
+            "travel around",
+            "business travel",
+            "travel abroad",
+            "travel by train"
           ],
           "answer": "travel abroad",
           "stage": "T2",
@@ -1667,8 +1975,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“乘火车旅行”，又符合这个形式线索：完整搭配中使用介词 by？",
           "options": [
+            "business travel",
+            "travel by train",
             "travel abroad",
-            "travel by train"
+            "travel around"
           ],
           "answer": "travel by train",
           "stage": "T3",
@@ -1759,11 +2069,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "family-n",
@@ -1785,7 +2095,7 @@
       "difficulty": "应用",
       "tags": [
         "n.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -1848,7 +2158,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心名词搭配",
           "items": [
             {
               "phrase": "family member",
@@ -1859,22 +2169,27 @@
               "phrase": "close family",
               "phonetic": "/ˈkloʊs ˈfæməli/",
               "chinese": "近亲"
-            },
-            {
-              "phrase": "family life",
-              "phonetic": "/ˈfæməli ˈlaɪf/",
-              "chinese": "家庭生活"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "family life",
+              "phonetic": "/ˈfæməli ˈlaɪf/",
+              "chinese": "家庭生活"
+            },
             {
               "phrase": "start a family",
               "phonetic": "/ˈstɑrt ə ˈfæməli/",
               "chinese": "组建家庭"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "family business",
               "phonetic": "/ˈfæməli ˈbɪznəs/",
@@ -1893,8 +2208,43 @@
           "phrase": "family member",
           "phonetic": "/ˈfæməli ˈmɛmbɚ/",
           "chinese": "家庭成员",
-          "example": "My family supports my learning plan.",
-          "translation": "我的家人支持我的学习计划。"
+          "example": "Every family member brought a different dish.",
+          "translation": "每位家庭成员都带了不同的菜。"
+        },
+        {
+          "phrase": "close family",
+          "phonetic": "/ˈkloʊs ˈfæməli/",
+          "chinese": "近亲",
+          "example": "Only close family attended the small wedding.",
+          "translation": "只有近亲参加了这场小型婚礼。"
+        },
+        {
+          "phrase": "family life",
+          "phonetic": "/ˈfæməli ˈlaɪf/",
+          "chinese": "家庭生活",
+          "example": "Flexible work has improved our family life.",
+          "translation": "弹性工作改善了我们的家庭生活。"
+        },
+        {
+          "phrase": "start a family",
+          "phonetic": "/ˈstɑrt ə ˈfæməli/",
+          "chinese": "组建家庭",
+          "example": "They hope to start a family soon.",
+          "translation": "他们希望不久后组建家庭。"
+        },
+        {
+          "phrase": "family business",
+          "phonetic": "/ˈfæməli ˈbɪznəs/",
+          "chinese": "家族企业",
+          "example": "The restaurant began as a small family business.",
+          "translation": "这家餐馆起初是一家小型家族企业。"
+        },
+        {
+          "phrase": "the whole family",
+          "phonetic": "/ðə ˈhoʊl ˈfæməli/",
+          "chinese": "全家人",
+          "example": "The whole family gathered for dinner.",
+          "translation": "全家人聚在一起吃晚饭。"
         }
       ],
       "synonyms": [
@@ -1949,6 +2299,36 @@
           "scene": "核心真实用法",
           "english": "My family supports my learning plan.",
           "chinese": "我的家人支持我的学习计划。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "Every family member brought a different dish.",
+          "chinese": "每位家庭成员都带了不同的菜。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "Only close family attended the small wedding.",
+          "chinese": "只有近亲参加了这场小型婚礼。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "Flexible work has improved our family life.",
+          "chinese": "弹性工作改善了我们的家庭生活。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "They hope to start a family soon.",
+          "chinese": "他们希望不久后组建家庭。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "The restaurant began as a small family business.",
+          "chinese": "这家餐馆起初是一家小型家族企业。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "The whole family gathered for dinner.",
+          "chinese": "全家人聚在一起吃晚饭。"
         }
       ],
       "studyFocus": {
@@ -2097,7 +2477,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“家庭成员”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "family member"
+            "start a family",
+            "family member",
+            "close family",
+            "family life"
           ],
           "answer": "family member",
           "stage": "T2",
@@ -2109,7 +2492,9 @@
           "prompt": "搭配辨析：哪一项既表示“近亲”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "close family",
-            "family member"
+            "family member",
+            "family life",
+            "start a family"
           ],
           "answer": "close family",
           "stage": "T3",
@@ -2200,11 +2585,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     }
   ]
 }

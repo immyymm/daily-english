@@ -5,6 +5,7 @@ import { lexicon } from './lexicon.mjs';
 import { confusables, families, secondarySenses } from './content-overrides.mjs';
 import { cardOverrides } from './card-overrides.mjs';
 import { curatedPhrases } from './curated-phrases.mjs';
+import { curatedExamples } from './curated-examples.mjs';
 import { ipaFor } from './phonetics.mjs';
 import cocaRankData from './coca-ranks.json' with { type: 'json' };
 
@@ -14,7 +15,7 @@ const contentCardsDir = path.join(root, 'content', 'cards');
 const publicDailyDir = path.join(root, 'public', 'data', 'daily');
 const publicDataDir = path.join(root, 'public', 'data');
 const launchDate = new Date('2026-08-17T12:00:00+08:00');
-const contentVersion = '2026.08.19.4';
+const contentVersion = '2026.08.19.5';
 const templateVersion = 'learning-template-2026.08.19.1';
 
 const slug = (value) => value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
@@ -109,10 +110,16 @@ function normalizeErrors(item, override) {
 }
 
 function normalizeContexts(item, override, tuples) {
-  const source = override?.contexts ?? [
-    ['核心高频搭配', tuples.slice(0, 3)],
-    ['常见结构与语境', tuples.slice(3, 6)]
-  ];
+  const contextLabels = item.p.startsWith('v.')
+    ? ['核心动作与结构', '日常与工作语境', '高频扩展表达', '补充常用语境']
+    : item.p.startsWith('n.')
+      ? ['核心名词搭配', '日常与工作语境', '高频扩展表达', '补充常用语境']
+      : ['核心用法', '日常与工作语境', '高频扩展表达', '补充常用语境'];
+  const generatedGroups = Array.from({ length: Math.ceil(tuples.length / 2) }, (_, index) => [
+    contextLabels[index] ?? '补充常用语境',
+    tuples.slice(index * 2, index * 2 + 2)
+  ]);
+  const source = override?.contexts ?? generatedGroups;
   return source.filter(([, items]) => items.length).map(([category, items]) => ({
     category,
     items: items.map(([phrase, chinese]) => ({ phrase, phonetic: ipaFor(phrase, item.w, item.ipa), chinese }))
@@ -120,7 +127,13 @@ function normalizeContexts(item, override, tuples) {
 }
 
 function normalizeFixedPhrases(item, override, tuples) {
-  const source = override?.phrases ?? tuples.slice(0, 1).map(([phrase, chinese]) => [phrase, chinese, item.ex, item.exZh]);
+  const examples = curatedExamples[item.w] ?? [[item.ex, item.exZh]];
+  const source = override?.phrases ?? tuples.slice(0, examples.length).map(([phrase, chinese], index) => [
+    phrase,
+    chinese,
+    examples[index][0],
+    examples[index][1]
+  ]);
   return source.map(([phrase, chinese, example, translation]) => ({
     phrase,
     phonetic: ipaFor(phrase, item.w, item.ipa),
@@ -217,7 +230,15 @@ function normalizeExamples(item, override) {
   if (override?.examples) {
     return override.examples.map(([scene, english, chinese]) => ({ scene, english, chinese }));
   }
-  return [{ scene: '核心真实用法', english: item.ex, chinese: item.exZh }];
+  const generated = (curatedExamples[item.w] ?? []).map(([english, chinese], index) => ({
+    scene: ['日常使用', '工作或学习', '常见搭配', '真实语境', '易错结构', '主动表达'][index] ?? '高频表达',
+    english,
+    chinese
+  }));
+  return [
+    { scene: '核心真实用法', english: item.ex, chinese: item.exZh },
+    ...generated.filter((entry) => entry.english !== item.ex)
+  ];
 }
 
 function rotateOptions(options, seed) {
@@ -390,6 +411,12 @@ function hasObjectiveStructureWord(phrase, targetWord) {
 function makeCard(item, index) {
   const id = slug(item.w + '-' + primaryPos(item.p));
   const override = cardOverrides[item.w];
+  if (!override && (curatedPhrases[item.w]?.length ?? 0) < 6) {
+    throw new Error(item.w + ': template-complete generation requires at least six curated phrase entries.');
+  }
+  if (!override && (curatedExamples[item.w]?.length ?? 0) < 6) {
+    throw new Error(item.w + ': template-complete generation requires at least six curated bilingual examples.');
+  }
   const tuples = [...(curatedPhrases[item.w] ?? []), [item.coll, item.collZh]]
     .filter(([phrase], tupleIndex, source) => source.findIndex(([candidate]) => candidate === phrase) === tupleIndex)
     .slice(0, 12);
@@ -479,7 +506,7 @@ function makeCard(item, index) {
     partOfSpeech: item.p,
     frequencyBand: 'COCA 高频精选 · ' + cocaRankLabel,
     difficulty: index < 50 ? '基础' : index < 110 ? '进阶' : '应用',
-    tags: [item.p.split('/')[0].trim(), override ? '人工精校' : '待精校', index < 50 ? '高频表达' : '主动词汇'],
+    tags: [item.p.split('/')[0].trim(), override ? '人工精校' : '模板详卡', index < 50 ? '高频表达' : '主动词汇'],
     coreMemory: {
       chinese: item.zh,
       english: meanings.map((meaning) => meaning.partOfSpeech + ' ' + meaning.english).join('；'),
@@ -517,13 +544,13 @@ function makeCard(item, index) {
       T6: ['meaning_choice', 'recall', 'collocation', 'free_sentence', 'dialogue'],
       T7: ['meaning_choice', 'recall', 'collocation', 'free_sentence', 'dialogue']
     },
-    detailLevel: override ? 'template-complete' : 'standard',
+    detailLevel: 'template-complete',
     templateVersion,
     contentVersion,
     reviewed: Boolean(override),
     sourceNote: override
       ? '从用户提供的 COCA 词表筛选；本卡依照用户词卡模板人工精校；音标为美式发音。'
-      : '从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。'
+      : '从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。'
   };
 }
 
@@ -558,10 +585,10 @@ await fs.writeFile(path.join(publicDataDir, 'manifest.json'), JSON.stringify({
 }, null, 2) + '\n', 'utf8');
 await fs.writeFile(path.join(root, 'content', 'content-manifest.json'), JSON.stringify({
   source: 'COCA词频单词表.xlsx', generatedAt: '2026-08-19', contentVersion, templateVersion,
-  detailLevel: 'mixed-reviewed',
+  detailLevel: 'template-complete',
   reviewedCardIds: cards.filter((card) => card.reviewed).map((card) => card.id),
-  standardCardIds: cards.filter((card) => !card.reviewed).map((card) => card.id),
+  templateDetailedCardIds: cards.filter((card) => !card.reviewed).map((card) => card.id),
   cardIds: cards.map((card) => card.id)
 }, null, 2) + '\n', 'utf8');
 
-console.log('Generated ' + cards.length + ' cards (' + cards.filter((card) => card.reviewed).length + ' template-complete, ' + cards.filter((card) => !card.reviewed).length + ' standard) and ' + dailyFiles.length + ' daily files.');
+console.log('Generated ' + cards.length + ' template-complete cards (' + cards.filter((card) => card.reviewed).length + ' manually curated, ' + cards.filter((card) => !card.reviewed).length + ' template-detailed) and ' + dailyFiles.length + ' daily files.');

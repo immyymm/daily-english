@@ -18,7 +18,7 @@
   "difficulty": "应用",
   "tags": [
     "adv.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心用法",
       "items": [
         {
           "phrase": "perhaps because",
@@ -92,22 +92,27 @@
           "phrase": "perhaps we should",
           "phonetic": "/pərˈhæps ˈwiː ˈʃʊd/",
           "chinese": "也许我们应该"
-        },
-        {
-          "phrase": "perhaps not",
-          "phonetic": "/pərˈhæps ˈnɑt/",
-          "chinese": "也许不会"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "perhaps not",
+          "phonetic": "/pərˈhæps ˈnɑt/",
+          "chinese": "也许不会"
+        },
         {
           "phrase": "perhaps the most important",
           "phonetic": "/pərˈhæps ðə ˈmoʊst ˌɪˈmpɔːrtənt/",
           "chinese": "也许最重要的"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "or perhaps",
           "phonetic": "/ˈɔːr pərˈhæps/",
@@ -119,6 +124,21 @@
           "chinese": "也许有一天"
         }
       ]
+    },
+    {
+      "category": "补充常用语境",
+      "items": [
+        {
+          "phrase": "perhaps even",
+          "phonetic": "/pərˈhæps ˈiːvɪn/",
+          "chinese": "甚至也许"
+        },
+        {
+          "phrase": "perhaps surprisingly",
+          "phonetic": "/pərˈhæps sɚˈpraɪzɪŋliː/",
+          "chinese": "也许令人意外的是"
+        }
+      ]
     }
   ],
   "fixedPhrases": [
@@ -126,8 +146,43 @@
       "phrase": "perhaps because",
       "phonetic": "/pərˈhæps bɪˈkɔːz/",
       "chinese": "也许因为",
-      "example": "Perhaps we should try a different approach.",
-      "translation": "也许我们应该尝试不同的方法。"
+      "example": "She was quiet, perhaps because she was tired.",
+      "translation": "她很安静，也许是因为累了。"
+    },
+    {
+      "phrase": "perhaps we should",
+      "phonetic": "/pərˈhæps ˈwiː ˈʃʊd/",
+      "chinese": "也许我们应该",
+      "example": "Perhaps we should ask for more information.",
+      "translation": "也许我们应该询问更多信息。"
+    },
+    {
+      "phrase": "perhaps not",
+      "phonetic": "/pərˈhæps ˈnɑt/",
+      "chinese": "也许不会",
+      "example": "“Will the price fall?” “Perhaps not.”",
+      "translation": "“价格会下降吗？”“也许不会。”"
+    },
+    {
+      "phrase": "perhaps the most important",
+      "phonetic": "/pərˈhæps ðə ˈmoʊst ˌɪˈmpɔːrtənt/",
+      "chinese": "也许最重要的",
+      "example": "Patience is perhaps the most important skill here.",
+      "translation": "耐心也许是这里最重要的技能。"
+    },
+    {
+      "phrase": "or perhaps",
+      "phonetic": "/ˈɔːr pərˈhæps/",
+      "chinese": "或者也许",
+      "example": "We could walk, or perhaps take the bus.",
+      "translation": "我们可以步行，或者也许坐公交车。"
+    },
+    {
+      "phrase": "perhaps one day",
+      "phonetic": "/pərˈhæps ˈwʌn ˈdeɪ/",
+      "chinese": "也许有一天",
+      "example": "Perhaps one day I will work abroad.",
+      "translation": "也许有一天我会在国外工作。"
     }
   ],
   "synonyms": [
@@ -174,6 +229,36 @@
       "scene": "核心真实用法",
       "english": "Perhaps we should try a different approach.",
       "chinese": "也许我们应该尝试不同的方法。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "She was quiet, perhaps because she was tired.",
+      "chinese": "她很安静，也许是因为累了。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "Perhaps we should ask for more information.",
+      "chinese": "也许我们应该询问更多信息。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "“Will the price fall?” “Perhaps not.”",
+      "chinese": "“价格会下降吗？”“也许不会。”"
+    },
+    {
+      "scene": "真实语境",
+      "english": "Patience is perhaps the most important skill here.",
+      "chinese": "耐心也许是这里最重要的技能。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "We could walk, or perhaps take the bus.",
+      "chinese": "我们可以步行，或者也许坐公交车。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "Perhaps one day I will work abroad.",
+      "chinese": "也许有一天我会在国外工作。"
     }
   ],
   "studyFocus": {
@@ -322,7 +407,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“也许因为”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "perhaps because"
+        "perhaps the most important",
+        "perhaps because",
+        "perhaps we should",
+        "perhaps not"
       ],
       "answer": "perhaps because",
       "stage": "T2",
@@ -334,7 +422,9 @@
       "prompt": "搭配辨析：哪一项既表示“也许我们应该”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "perhaps we should",
-        "perhaps because"
+        "perhaps because",
+        "perhaps not",
+        "perhaps the most important"
       ],
       "answer": "perhaps we should",
       "stage": "T3",
@@ -425,9 +515,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

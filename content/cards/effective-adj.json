@@ -18,7 +18,7 @@
   "difficulty": "进阶",
   "tags": [
     "adj.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心用法",
       "items": [
         {
           "phrase": "an effective way",
@@ -92,22 +92,27 @@
           "phrase": "highly effective",
           "phonetic": "/ˈhaɪliː ɪˈfektɪv/",
           "chinese": "非常有效"
-        },
-        {
-          "phrase": "effective in doing",
-          "phonetic": "/ɪˈfektɪv ɪn ˈduːɪŋ/",
-          "chinese": "在做……方面有效"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "effective in doing",
+          "phonetic": "/ɪˈfektɪv ɪn ˈduːɪŋ/",
+          "chinese": "在做……方面有效"
+        },
         {
           "phrase": "effective against",
           "phonetic": "/ɪˈfektɪv əˈɡɛnst/",
           "chinese": "对……有效"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "cost-effective",
           "phonetic": "/ˈkɑst-ɪˈfektɪv/",
@@ -126,8 +131,43 @@
       "phrase": "an effective way",
       "phonetic": "/ˈæn ɪˈfektɪv ˈweɪ/",
       "chinese": "有效方法",
-      "example": "Active recall is an effective way to learn.",
-      "translation": "主动回忆是一种有效的学习方法。"
+      "example": "Daily review is an effective way to remember vocabulary.",
+      "translation": "每日复习是记忆词汇的有效方法。"
+    },
+    {
+      "phrase": "highly effective",
+      "phonetic": "/ˈhaɪliː ɪˈfektɪv/",
+      "chinese": "非常有效",
+      "example": "The new treatment is highly effective.",
+      "translation": "这种新疗法非常有效。"
+    },
+    {
+      "phrase": "effective in doing",
+      "phonetic": "/ɪˈfektɪv ɪn ˈduːɪŋ/",
+      "chinese": "在做……方面有效",
+      "example": "The method is effective in reducing errors.",
+      "translation": "这个方法在减少错误方面很有效。"
+    },
+    {
+      "phrase": "effective against",
+      "phonetic": "/ɪˈfektɪv əˈɡɛnst/",
+      "chinese": "对……有效",
+      "example": "This medicine is effective against the infection.",
+      "translation": "这种药对这种感染有效。"
+    },
+    {
+      "phrase": "cost-effective",
+      "phonetic": "/ˈkɑst-ɪˈfektɪv/",
+      "chinese": "性价比高的",
+      "example": "Online meetings can be cost-effective for small teams.",
+      "translation": "在线会议对小团队来说性价比很高。"
+    },
+    {
+      "phrase": "take effective action",
+      "phonetic": "/ˈteɪk ɪˈfektɪv ˈækʃən/",
+      "chinese": "采取有效行动",
+      "example": "We need to take effective action now.",
+      "translation": "我们现在需要采取有效行动。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "Active recall is an effective way to learn.",
       "chinese": "主动回忆是一种有效的学习方法。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "Daily review is an effective way to remember vocabulary.",
+      "chinese": "每日复习是记忆词汇的有效方法。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "The new treatment is highly effective.",
+      "chinese": "这种新疗法非常有效。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "The method is effective in reducing errors.",
+      "chinese": "这个方法在减少错误方面很有效。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "This medicine is effective against the infection.",
+      "chinese": "这种药对这种感染有效。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "Online meetings can be cost-effective for small teams.",
+      "chinese": "在线会议对小团队来说性价比很高。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "We need to take effective action now.",
+      "chinese": "我们现在需要采取有效行动。"
     }
   ],
   "studyFocus": {
@@ -322,7 +392,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“有效方法”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "an effective way"
+        "effective in doing",
+        "effective against",
+        "an effective way",
+        "highly effective"
       ],
       "answer": "an effective way",
       "stage": "T2",
@@ -333,8 +406,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“非常有效”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "effective against",
+        "highly effective",
         "an effective way",
-        "highly effective"
+        "effective in doing"
       ],
       "answer": "highly effective",
       "stage": "T3",
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

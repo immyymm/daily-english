@@ -18,7 +18,7 @@
   "difficulty": "进阶",
   "tags": [
     "n.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心名词搭配",
       "items": [
         {
           "phrase": "make a decision",
@@ -92,22 +92,27 @@
           "phrase": "reach a decision",
           "phonetic": "/ˈriːtʃ ə dɪˈsɪʒən/",
           "chinese": "作出决定"
-        },
-        {
-          "phrase": "final decision",
-          "phonetic": "/ˈfaɪnəl dɪˈsɪʒən/",
-          "chinese": "最终决定"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "final decision",
+          "phonetic": "/ˈfaɪnəl dɪˈsɪʒən/",
+          "chinese": "最终决定"
+        },
         {
           "phrase": "difficult decision",
           "phonetic": "/ˈdɪfəkəlt dɪˈsɪʒən/",
           "chinese": "艰难决定"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "decision-making process",
           "phonetic": "/dɪˈsɪʒən-ˈmeɪkɪŋ ˈprɑˌsɛs/",
@@ -126,8 +131,43 @@
       "phrase": "make a decision",
       "phonetic": "/ˈmeɪk ə dɪˈsɪʒən/",
       "chinese": "作出决定",
-      "example": "You do not need to make the decision today.",
-      "translation": "你不必今天就做决定。"
+      "example": "We need to make a decision by Friday.",
+      "translation": "我们需要在星期五前作出决定。"
+    },
+    {
+      "phrase": "reach a decision",
+      "phonetic": "/ˈriːtʃ ə dɪˈsɪʒən/",
+      "chinese": "作出决定",
+      "example": "After a long discussion, they reached a decision.",
+      "translation": "经过长时间讨论，他们作出了决定。"
+    },
+    {
+      "phrase": "final decision",
+      "phonetic": "/ˈfaɪnəl dɪˈsɪʒən/",
+      "chinese": "最终决定",
+      "example": "The final decision belongs to the manager.",
+      "translation": "最终决定由经理作出。"
+    },
+    {
+      "phrase": "difficult decision",
+      "phonetic": "/ˈdɪfəkəlt dɪˈsɪʒən/",
+      "chinese": "艰难决定",
+      "example": "Leaving the team was a difficult decision.",
+      "translation": "离开团队是一个艰难的决定。"
+    },
+    {
+      "phrase": "decision-making process",
+      "phonetic": "/dɪˈsɪʒən-ˈmeɪkɪŋ ˈprɑˌsɛs/",
+      "chinese": "决策过程",
+      "example": "Everyone should understand the decision-making process.",
+      "translation": "每个人都应该了解决策过程。"
+    },
+    {
+      "phrase": "reverse a decision",
+      "phonetic": "/rɪˈvɝːs ə dɪˈsɪʒən/",
+      "chinese": "撤销决定",
+      "example": "The board later reversed its decision.",
+      "translation": "董事会后来撤销了决定。"
     }
   ],
   "synonyms": [
@@ -182,6 +222,36 @@
       "scene": "核心真实用法",
       "english": "You do not need to make the decision today.",
       "chinese": "你不必今天就做决定。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "We need to make a decision by Friday.",
+      "chinese": "我们需要在星期五前作出决定。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "After a long discussion, they reached a decision.",
+      "chinese": "经过长时间讨论，他们作出了决定。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "The final decision belongs to the manager.",
+      "chinese": "最终决定由经理作出。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "Leaving the team was a difficult decision.",
+      "chinese": "离开团队是一个艰难的决定。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "Everyone should understand the decision-making process.",
+      "chinese": "每个人都应该了解决策过程。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "The board later reversed its decision.",
+      "chinese": "董事会后来撤销了决定。"
     }
   ],
   "studyFocus": {
@@ -330,7 +400,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“作出决定”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "make a decision"
+        "difficult decision",
+        "make a decision",
+        "reach a decision",
+        "final decision"
       ],
       "answer": "make a decision",
       "stage": "T2",
@@ -342,7 +415,9 @@
       "prompt": "搭配辨析：哪一项既表示“作出决定”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "reach a decision",
-        "make a decision"
+        "make a decision",
+        "final decision",
+        "difficult decision"
       ],
       "answer": "reach a decision",
       "stage": "T3",
@@ -433,9 +508,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

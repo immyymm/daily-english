@@ -1,7 +1,7 @@
 {
   "date": "2026-09-14",
   "dayNumber": 29,
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "templateVersion": "learning-template-2026.08.19.1",
   "cards": [
     {
@@ -24,7 +24,7 @@
       "difficulty": "应用",
       "tags": [
         "n.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -87,7 +87,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心名词搭配",
           "items": [
             {
               "phrase": "do a good job",
@@ -98,22 +98,27 @@
               "phrase": "get a job",
               "phonetic": "/ˈɡɛt ə dʒɑːb/",
               "chinese": "找到工作"
-            },
-            {
-              "phrase": "apply for a job",
-              "phonetic": "/əˈplaɪ ˈfɔːr ə dʒɑːb/",
-              "chinese": "申请工作"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "apply for a job",
+              "phonetic": "/əˈplaɪ ˈfɔːr ə dʒɑːb/",
+              "chinese": "申请工作"
+            },
             {
               "phrase": "full-time job",
               "phonetic": "/ˈfʊl-ˈtaɪm dʒɑːb/",
               "chinese": "全职工作"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "job interview",
               "phonetic": "/dʒɑːb ˈɪntɚˌvjuː/",
@@ -132,8 +137,43 @@
           "phrase": "do a good job",
           "phonetic": "/ˈduː ə ˈɡʊd dʒɑːb/",
           "chinese": "做得好",
-          "example": "You did a good job explaining your opinion.",
-          "translation": "你很好地解释了自己的观点。"
+          "example": "You did a good job on the presentation.",
+          "translation": "你的演讲做得很好。"
+        },
+        {
+          "phrase": "get a job",
+          "phonetic": "/ˈɡɛt ə dʒɑːb/",
+          "chinese": "找到工作",
+          "example": "It took him three months to get a job.",
+          "translation": "他花了三个月找到工作。"
+        },
+        {
+          "phrase": "apply for a job",
+          "phonetic": "/əˈplaɪ ˈfɔːr ə dʒɑːb/",
+          "chinese": "申请工作",
+          "example": "She applied for a job at the university.",
+          "translation": "她申请了大学的一份工作。"
+        },
+        {
+          "phrase": "full-time job",
+          "phonetic": "/ˈfʊl-ˈtaɪm dʒɑːb/",
+          "chinese": "全职工作",
+          "example": "He left his full-time job to start a business.",
+          "translation": "他辞去全职工作去创业。"
+        },
+        {
+          "phrase": "job interview",
+          "phonetic": "/dʒɑːb ˈɪntɚˌvjuː/",
+          "chinese": "工作面试",
+          "example": "I have a job interview tomorrow morning.",
+          "translation": "我明天早上有工作面试。"
+        },
+        {
+          "phrase": "lose your job",
+          "phonetic": "/ˈluːz ˈjɔːr dʒɑːb/",
+          "chinese": "失业",
+          "example": "Many workers were afraid they would lose their jobs.",
+          "translation": "许多工人担心会失业。"
         }
       ],
       "synonyms": [
@@ -180,6 +220,36 @@
           "scene": "核心真实用法",
           "english": "You did a good job explaining your opinion.",
           "chinese": "你很好地解释了自己的观点。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "You did a good job on the presentation.",
+          "chinese": "你的演讲做得很好。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "It took him three months to get a job.",
+          "chinese": "他花了三个月找到工作。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "She applied for a job at the university.",
+          "chinese": "她申请了大学的一份工作。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "He left his full-time job to start a business.",
+          "chinese": "他辞去全职工作去创业。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "I have a job interview tomorrow morning.",
+          "chinese": "我明天早上有工作面试。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "Many workers were afraid they would lose their jobs.",
+          "chinese": "许多工人担心会失业。"
         }
       ],
       "studyFocus": {
@@ -328,7 +398,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“做得好”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "do a good job"
+            "apply for a job",
+            "full-time job",
+            "do a good job",
+            "get a job"
           ],
           "answer": "do a good job",
           "stage": "T2",
@@ -339,8 +412,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“找到工作”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "full-time job",
+            "get a job",
             "do a good job",
-            "get a job"
+            "apply for a job"
           ],
           "answer": "get a job",
           "stage": "T3",
@@ -431,11 +506,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "team-n",
@@ -457,7 +532,7 @@
       "difficulty": "应用",
       "tags": [
         "n.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -520,7 +595,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心名词搭配",
           "items": [
             {
               "phrase": "team member",
@@ -531,22 +606,27 @@
               "phrase": "work as a team",
               "phonetic": "/ˈwɝːk ˈæz ə tiːm/",
               "chinese": "作为团队合作"
-            },
-            {
-              "phrase": "join a team",
-              "phonetic": "/ˈdʒɔɪn ə tiːm/",
-              "chinese": "加入团队"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "join a team",
+              "phonetic": "/ˈdʒɔɪn ə tiːm/",
+              "chinese": "加入团队"
+            },
             {
               "phrase": "team leader",
               "phonetic": "/tiːm ˈliːdɚ/",
               "chinese": "团队负责人"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "team spirit",
               "phonetic": "/tiːm ˈspɪrət/",
@@ -565,8 +645,43 @@
           "phrase": "team member",
           "phonetic": "/tiːm ˈmɛmbɚ/",
           "chinese": "团队成员",
-          "example": "Our team meets every Monday morning.",
-          "translation": "我们的团队每周一早上开会。"
+          "example": "Every team member has a clear role.",
+          "translation": "每位团队成员都有明确职责。"
+        },
+        {
+          "phrase": "work as a team",
+          "phonetic": "/ˈwɝːk ˈæz ə tiːm/",
+          "chinese": "作为团队合作",
+          "example": "We work better when we act as a team.",
+          "translation": "作为团队合作时，我们工作得更好。"
+        },
+        {
+          "phrase": "join a team",
+          "phonetic": "/ˈdʒɔɪn ə tiːm/",
+          "chinese": "加入团队",
+          "example": "She joined the design team last month.",
+          "translation": "她上个月加入了设计团队。"
+        },
+        {
+          "phrase": "team leader",
+          "phonetic": "/tiːm ˈliːdɚ/",
+          "chinese": "团队负责人",
+          "example": "A good team leader listens carefully.",
+          "translation": "优秀的团队负责人会认真倾听。"
+        },
+        {
+          "phrase": "team spirit",
+          "phonetic": "/tiːm ˈspɪrət/",
+          "chinese": "团队精神",
+          "example": "The activity helped build team spirit.",
+          "translation": "这项活动有助于培养团队精神。"
+        },
+        {
+          "phrase": "a strong team",
+          "phonetic": "/ə ˈstrɔːŋ tiːm/",
+          "chinese": "强大的团队",
+          "example": "Different skills can create a strong team.",
+          "translation": "不同技能可以组成强大的团队。"
         }
       ],
       "synonyms": [
@@ -613,6 +728,36 @@
           "scene": "核心真实用法",
           "english": "Our team meets every Monday morning.",
           "chinese": "我们的团队每周一早上开会。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "Every team member has a clear role.",
+          "chinese": "每位团队成员都有明确职责。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "We work better when we act as a team.",
+          "chinese": "作为团队合作时，我们工作得更好。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "She joined the design team last month.",
+          "chinese": "她上个月加入了设计团队。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "A good team leader listens carefully.",
+          "chinese": "优秀的团队负责人会认真倾听。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "The activity helped build team spirit.",
+          "chinese": "这项活动有助于培养团队精神。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "Different skills can create a strong team.",
+          "chinese": "不同技能可以组成强大的团队。"
         }
       ],
       "studyFocus": {
@@ -761,7 +906,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“团队成员”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "team member"
+            "team leader",
+            "team member",
+            "work as a team",
+            "join a team"
           ],
           "answer": "team member",
           "stage": "T2",
@@ -773,7 +921,9 @@
           "prompt": "搭配辨析：哪一项既表示“作为团队合作”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "work as a team",
-            "team member"
+            "team member",
+            "join a team",
+            "team leader"
           ],
           "answer": "work as a team",
           "stage": "T3",
@@ -864,11 +1014,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "future-n",
@@ -896,7 +1046,7 @@
       "difficulty": "应用",
       "tags": [
         "n.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -966,7 +1116,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心名词搭配",
           "items": [
             {
               "phrase": "in the future",
@@ -977,22 +1127,27 @@
               "phrase": "near future",
               "phonetic": "/ˈnɪr ˈfjuːtʃər/",
               "chinese": "不久的将来"
-            },
-            {
-              "phrase": "future plans",
-              "phonetic": "/ˈfjuːtʃər ˈplænz/",
-              "chinese": "未来计划"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "future plans",
+              "phonetic": "/ˈfjuːtʃər ˈplænz/",
+              "chinese": "未来计划"
+            },
             {
               "phrase": "for future use",
               "phonetic": "/ˈfɔːr ˈfjuːtʃər ˈjuːs/",
               "chinese": "供将来使用"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "bright future",
               "phonetic": "/ˈbraɪt ˈfjuːtʃər/",
@@ -1011,8 +1166,43 @@
           "phrase": "in the future",
           "phonetic": "/ɪn ðə ˈfjuːtʃər/",
           "chinese": "将来",
-          "example": "This skill will be useful in the future.",
-          "translation": "这项技能将来会很有用。"
+          "example": "I hope to work abroad in the future.",
+          "translation": "我希望将来能在国外工作。"
+        },
+        {
+          "phrase": "near future",
+          "phonetic": "/ˈnɪr ˈfjuːtʃər/",
+          "chinese": "不久的将来",
+          "example": "We plan to move in the near future.",
+          "translation": "我们计划在不久的将来搬家。"
+        },
+        {
+          "phrase": "future plans",
+          "phonetic": "/ˈfjuːtʃər ˈplænz/",
+          "chinese": "未来计划",
+          "example": "The interview changed her future plans.",
+          "translation": "这次面试改变了她的未来计划。"
+        },
+        {
+          "phrase": "for future use",
+          "phonetic": "/ˈfɔːr ˈfjuːtʃər ˈjuːs/",
+          "chinese": "供将来使用",
+          "example": "Save a copy of the document for future use.",
+          "translation": "保存一份文件副本供将来使用。"
+        },
+        {
+          "phrase": "bright future",
+          "phonetic": "/ˈbraɪt ˈfjuːtʃər/",
+          "chinese": "光明的未来",
+          "example": "With her skills, she has a bright future.",
+          "translation": "凭借她的技能，她有光明的未来。"
+        },
+        {
+          "phrase": "future generations",
+          "phonetic": "/ˈfjuːtʃər ˌdʒɛnɚˈeɪʃənz/",
+          "chinese": "后代",
+          "example": "We should protect these resources for future generations.",
+          "translation": "我们应该为后代保护这些资源。"
         }
       ],
       "synonyms": [
@@ -1067,6 +1257,36 @@
           "scene": "核心真实用法",
           "english": "This skill will be useful in the future.",
           "chinese": "这项技能将来会很有用。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "I hope to work abroad in the future.",
+          "chinese": "我希望将来能在国外工作。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "We plan to move in the near future.",
+          "chinese": "我们计划在不久的将来搬家。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "The interview changed her future plans.",
+          "chinese": "这次面试改变了她的未来计划。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "Save a copy of the document for future use.",
+          "chinese": "保存一份文件副本供将来使用。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "With her skills, she has a bright future.",
+          "chinese": "凭借她的技能，她有光明的未来。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "We should protect these resources for future generations.",
+          "chinese": "我们应该为后代保护这些资源。"
         }
       ],
       "studyFocus": {
@@ -1215,7 +1435,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“将来”，又符合这个形式线索：完整搭配中使用介词 in？",
           "options": [
-            "in the future"
+            "in the future",
+            "near future",
+            "future plans",
+            "for future use"
           ],
           "answer": "in the future",
           "stage": "T2",
@@ -1227,6 +1450,8 @@
           "prompt": "用法辨析：哪一项既表示“不久的将来”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "in the future",
+            "future plans",
+            "for future use",
             "near future"
           ],
           "answer": "near future",
@@ -1318,11 +1543,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "plan-n",
@@ -1350,7 +1575,7 @@
       "difficulty": "应用",
       "tags": [
         "n.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -1420,7 +1645,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心名词搭配",
           "items": [
             {
               "phrase": "make a plan",
@@ -1431,22 +1656,27 @@
               "phrase": "plan to do",
               "phonetic": "/plæn ˈtuː ˈduː/",
               "chinese": "计划做"
-            },
-            {
-              "phrase": "according to plan",
-              "phonetic": "/əˈkɔːrdɪŋ ˈtuː plæn/",
-              "chinese": "按计划"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "according to plan",
+              "phonetic": "/əˈkɔːrdɪŋ ˈtuː plæn/",
+              "chinese": "按计划"
+            },
             {
               "phrase": "change of plan",
               "phonetic": "/ˈtʃeɪndʒ ˈʌv plæn/",
               "chinese": "计划改变"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "business plan",
               "phonetic": "/ˈbɪznəs plæn/",
@@ -1465,8 +1695,43 @@
           "phrase": "make a plan",
           "phonetic": "/ˈmeɪk ə plæn/",
           "chinese": "制定计划",
-          "example": "Let us make a simple plan for the week.",
-          "translation": "让我们为这一周制定一个简单计划。"
+          "example": "Let us make a plan before we begin.",
+          "translation": "开始前让我们制定一个计划。"
+        },
+        {
+          "phrase": "plan to do",
+          "phonetic": "/plæn ˈtuː ˈduː/",
+          "chinese": "计划做",
+          "example": "I plan to study for an hour tonight.",
+          "translation": "我计划今晚学习一小时。"
+        },
+        {
+          "phrase": "according to plan",
+          "phonetic": "/əˈkɔːrdɪŋ ˈtuː plæn/",
+          "chinese": "按计划",
+          "example": "Everything went according to plan.",
+          "translation": "一切按计划进行。"
+        },
+        {
+          "phrase": "change of plan",
+          "phonetic": "/ˈtʃeɪndʒ ˈʌv plæn/",
+          "chinese": "计划改变",
+          "example": "There has been a change of plan.",
+          "translation": "计划有变。"
+        },
+        {
+          "phrase": "business plan",
+          "phonetic": "/ˈbɪznəs plæn/",
+          "chinese": "商业计划",
+          "example": "The bank asked to see our business plan.",
+          "translation": "银行要求查看我们的商业计划。"
+        },
+        {
+          "phrase": "have no plans to",
+          "phonetic": "/ˈhæv ˈnoʊ ˈplænz ˈtuː/",
+          "chinese": "没有做……的计划",
+          "example": "We have no plans to close the store.",
+          "translation": "我们没有关闭商店的计划。"
         }
       ],
       "synonyms": [
@@ -1521,6 +1786,36 @@
           "scene": "核心真实用法",
           "english": "Let us make a simple plan for the week.",
           "chinese": "让我们为这一周制定一个简单计划。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "Let us make a plan before we begin.",
+          "chinese": "开始前让我们制定一个计划。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "I plan to study for an hour tonight.",
+          "chinese": "我计划今晚学习一小时。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "Everything went according to plan.",
+          "chinese": "一切按计划进行。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "There has been a change of plan.",
+          "chinese": "计划有变。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "The bank asked to see our business plan.",
+          "chinese": "银行要求查看我们的商业计划。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "We have no plans to close the store.",
+          "chinese": "我们没有关闭商店的计划。"
         }
       ],
       "studyFocus": {
@@ -1669,6 +1964,9 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“制定计划”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "plan to do",
+            "according to plan",
+            "change of plan",
             "make a plan"
           ],
           "answer": "make a plan",
@@ -1680,6 +1978,8 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“计划做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
           "options": [
+            "according to plan",
+            "change of plan",
             "plan to do",
             "make a plan"
           ],
@@ -1772,11 +2072,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "activity-n",
@@ -1798,7 +2098,7 @@
       "difficulty": "应用",
       "tags": [
         "n.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -1861,7 +2161,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心名词搭配",
           "items": [
             {
               "phrase": "daily activity",
@@ -1872,22 +2172,27 @@
               "phrase": "physical activity",
               "phonetic": "/ˈfɪzɪkəl ækˈtɪvəti/",
               "chinese": "体育活动"
-            },
-            {
-              "phrase": "outdoor activity",
-              "phonetic": "/ˈaʊˌtdɔːr ækˈtɪvəti/",
-              "chinese": "户外活动"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "outdoor activity",
+              "phonetic": "/ˈaʊˌtdɔːr ækˈtɪvəti/",
+              "chinese": "户外活动"
+            },
             {
               "phrase": "take part in an activity",
               "phonetic": "/ˈteɪk ˈpɑrt ɪn ˈæn ækˈtɪvəti/",
               "chinese": "参加活动"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "learning activity",
               "phonetic": "/ˈlɝːnɪŋ ækˈtɪvəti/",
@@ -1906,8 +2211,43 @@
           "phrase": "daily activity",
           "phonetic": "/ˈdeɪliː ækˈtɪvəti/",
           "chinese": "日常活动",
-          "example": "Walking is my favorite outdoor activity.",
-          "translation": "散步是我最喜欢的户外活动。"
+          "example": "Walking is part of my daily activity.",
+          "translation": "步行是我日常活动的一部分。"
+        },
+        {
+          "phrase": "physical activity",
+          "phonetic": "/ˈfɪzɪkəl ækˈtɪvəti/",
+          "chinese": "体育活动",
+          "example": "Regular physical activity supports good health.",
+          "translation": "规律体育活动有益健康。"
+        },
+        {
+          "phrase": "outdoor activity",
+          "phonetic": "/ˈaʊˌtdɔːr ækˈtɪvəti/",
+          "chinese": "户外活动",
+          "example": "Hiking is our favorite outdoor activity.",
+          "translation": "徒步是我们最喜欢的户外活动。"
+        },
+        {
+          "phrase": "take part in an activity",
+          "phonetic": "/ˈteɪk ˈpɑrt ɪn ˈæn ækˈtɪvəti/",
+          "chinese": "参加活动",
+          "example": "Every student took part in the activity.",
+          "translation": "每位学生都参加了这项活动。"
+        },
+        {
+          "phrase": "learning activity",
+          "phonetic": "/ˈlɝːnɪŋ ækˈtɪvəti/",
+          "chinese": "学习活动",
+          "example": "The teacher designed a short learning activity.",
+          "translation": "老师设计了一项简短的学习活动。"
+        },
+        {
+          "phrase": "range of activities",
+          "phonetic": "/ˈreɪndʒ ˈʌv æˈktɪvətiːz/",
+          "chinese": "一系列活动",
+          "example": "The center offers a wide range of activities.",
+          "translation": "这个中心提供多种活动。"
         }
       ],
       "synonyms": [
@@ -1954,6 +2294,36 @@
           "scene": "核心真实用法",
           "english": "Walking is my favorite outdoor activity.",
           "chinese": "散步是我最喜欢的户外活动。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "Walking is part of my daily activity.",
+          "chinese": "步行是我日常活动的一部分。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "Regular physical activity supports good health.",
+          "chinese": "规律体育活动有益健康。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "Hiking is our favorite outdoor activity.",
+          "chinese": "徒步是我们最喜欢的户外活动。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "Every student took part in the activity.",
+          "chinese": "每位学生都参加了这项活动。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "The teacher designed a short learning activity.",
+          "chinese": "老师设计了一项简短的学习活动。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "The center offers a wide range of activities.",
+          "chinese": "这个中心提供多种活动。"
         }
       ],
       "studyFocus": {
@@ -2102,7 +2472,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“日常活动”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "daily activity"
+            "outdoor activity",
+            "take part in an activity",
+            "daily activity",
+            "physical activity"
           ],
           "answer": "daily activity",
           "stage": "T2",
@@ -2113,8 +2486,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“体育活动”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "take part in an activity",
+            "physical activity",
             "daily activity",
-            "physical activity"
+            "outdoor activity"
           ],
           "answer": "physical activity",
           "stage": "T3",
@@ -2205,11 +2580,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     }
   ]
 }

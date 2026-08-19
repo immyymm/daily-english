@@ -24,7 +24,7 @@
   "difficulty": "进阶",
   "tags": [
     "adj.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -94,7 +94,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心用法",
       "items": [
         {
           "phrase": "be patient with",
@@ -105,22 +105,27 @@
           "phrase": "patient enough to",
           "phonetic": "/ˈpeɪʃənt ɪˈnʌf ˈtuː/",
           "chinese": "有足够耐心做"
-        },
-        {
-          "phrase": "remain patient",
-          "phonetic": "/rɪˈmeɪn ˈpeɪʃənt/",
-          "chinese": "保持耐心"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "remain patient",
+          "phonetic": "/rɪˈmeɪn ˈpeɪʃənt/",
+          "chinese": "保持耐心"
+        },
         {
           "phrase": "hospital patient",
           "phonetic": "/ˈhɑˌspɪtəl ˈpeɪʃənt/",
           "chinese": "住院病人"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "treat a patient",
           "phonetic": "/ˈtriːt ə ˈpeɪʃənt/",
@@ -139,8 +144,43 @@
       "phrase": "be patient with",
       "phonetic": "/ˈbiː ˈpeɪʃənt ˈwɪð/",
       "chinese": "对……有耐心",
-      "example": "Be patient with yourself while learning.",
-      "translation": "学习时要对自己有耐心。"
+      "example": "Please be patient with new learners.",
+      "translation": "请对新学习者有耐心。"
+    },
+    {
+      "phrase": "patient enough to",
+      "phonetic": "/ˈpeɪʃənt ɪˈnʌf ˈtuː/",
+      "chinese": "有足够耐心做",
+      "example": "She was patient enough to explain it twice.",
+      "translation": "她很有耐心，把它解释了两遍。"
+    },
+    {
+      "phrase": "remain patient",
+      "phonetic": "/rɪˈmeɪn ˈpeɪʃənt/",
+      "chinese": "保持耐心",
+      "example": "Try to remain patient while the page loads.",
+      "translation": "页面加载时请尽量保持耐心。"
+    },
+    {
+      "phrase": "hospital patient",
+      "phonetic": "/ˈhɑˌspɪtəl ˈpeɪʃənt/",
+      "chinese": "住院病人",
+      "example": "The hospital patient is recovering well.",
+      "translation": "这位住院病人恢复得很好。"
+    },
+    {
+      "phrase": "treat a patient",
+      "phonetic": "/ˈtriːt ə ˈpeɪʃənt/",
+      "chinese": "治疗病人",
+      "example": "The doctor treated each patient with respect.",
+      "translation": "医生尊重地对待每位病人。"
+    },
+    {
+      "phrase": "patient care",
+      "phonetic": "/ˈpeɪʃənt ˈkɛr/",
+      "chinese": "病患护理",
+      "example": "Good patient care depends on clear communication.",
+      "translation": "良好的病患护理依赖清晰沟通。"
     }
   ],
   "synonyms": [
@@ -195,6 +235,36 @@
       "scene": "核心真实用法",
       "english": "Be patient with yourself while learning.",
       "chinese": "学习时要对自己有耐心。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "Please be patient with new learners.",
+      "chinese": "请对新学习者有耐心。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "She was patient enough to explain it twice.",
+      "chinese": "她很有耐心，把它解释了两遍。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "Try to remain patient while the page loads.",
+      "chinese": "页面加载时请尽量保持耐心。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "The hospital patient is recovering well.",
+      "chinese": "这位住院病人恢复得很好。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "The doctor treated each patient with respect.",
+      "chinese": "医生尊重地对待每位病人。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "Good patient care depends on clear communication.",
+      "chinese": "良好的病患护理依赖清晰沟通。"
     }
   ],
   "studyFocus": {
@@ -343,6 +413,9 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“对……有耐心”，又符合这个形式线索：完整搭配中使用介词 with？",
       "options": [
+        "patient enough to",
+        "remain patient",
+        "hospital patient",
         "be patient with"
       ],
       "answer": "be patient with",
@@ -354,6 +427,8 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“有足够耐心做”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "remain patient",
+        "hospital patient",
         "patient enough to",
         "be patient with"
       ],
@@ -446,9 +521,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

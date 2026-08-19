@@ -96,7 +96,7 @@ export function CardDetailModal({ card, progress, open, onClose, onLearn }: Card
   return (
     <ModalShell
       open={open}
-      title={card.detailLevel === 'template-complete' ? '完整单词词卡' : '标准单词词卡'}
+      title="完整单词词卡"
       eyebrow={progress?.status ?? '今日新词'}
       onClose={onClose}
       footer={
@@ -113,7 +113,7 @@ export function CardDetailModal({ card, progress, open, onClose, onLearn }: Card
           <p className="word-meaning">{card.coreMemory.chinese}</p>
           <div className="word-meta">
             <span>{card.cocaRankLabel ?? card.frequencyBand}</span>
-            <span>{card.detailLevel === 'template-complete' ? '模板完整版' : '已核实基础版'}</span>
+            <span>模板完整版</span>
             <span>{card.difficulty}</span>
             {card.tags.slice(0, 2).map((tag) => <span key={tag}>{tag}</span>)}
           </div>

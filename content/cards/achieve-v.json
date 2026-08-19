@@ -18,7 +18,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "待精校",
+    "模板详卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心动作与结构",
       "items": [
         {
           "phrase": "achieve a goal",
@@ -92,22 +92,27 @@
           "phrase": "achieve success",
           "phonetic": "/əˈtʃiːv səˈksɛs/",
           "chinese": "取得成功"
-        },
-        {
-          "phrase": "achieve a balance",
-          "phonetic": "/əˈtʃiːv ə ˈbæləns/",
-          "chinese": "达到平衡"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "achieve a balance",
+          "phonetic": "/əˈtʃiːv ə ˈbæləns/",
+          "chinese": "达到平衡"
+        },
         {
           "phrase": "achieve better results",
           "phonetic": "/əˈtʃiːv ˈbɛtɚ rɪˈzʌlts/",
           "chinese": "取得更好结果"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "work hard to achieve",
           "phonetic": "/ˈwɝːk ˈhɑrd ˈtuː əˈtʃiːv/",
@@ -126,8 +131,43 @@
       "phrase": "achieve a goal",
       "phonetic": "/əˈtʃiːv ə ˈɡoʊl/",
       "chinese": "实现目标",
-      "example": "Small steps can help you achieve a big goal.",
-      "translation": "小步前进可以帮助你实现大目标。"
+      "example": "Consistent practice can help you achieve your goal.",
+      "translation": "持续练习可以帮助你实现目标。"
+    },
+    {
+      "phrase": "achieve success",
+      "phonetic": "/əˈtʃiːv səˈksɛs/",
+      "chinese": "取得成功",
+      "example": "The team achieved success through patient work.",
+      "translation": "团队通过耐心工作取得了成功。"
+    },
+    {
+      "phrase": "achieve a balance",
+      "phonetic": "/əˈtʃiːv ə ˈbæləns/",
+      "chinese": "达到平衡",
+      "example": "It is difficult to achieve a balance between work and rest.",
+      "translation": "在工作和休息之间取得平衡并不容易。"
+    },
+    {
+      "phrase": "achieve better results",
+      "phonetic": "/əˈtʃiːv ˈbɛtɚ rɪˈzʌlts/",
+      "chinese": "取得更好结果",
+      "example": "A clearer process helped us achieve better results.",
+      "translation": "更清晰的流程帮助我们取得了更好的结果。"
+    },
+    {
+      "phrase": "work hard to achieve",
+      "phonetic": "/ˈwɝːk ˈhɑrd ˈtuː əˈtʃiːv/",
+      "chinese": "努力实现",
+      "example": "She worked hard to achieve her dream.",
+      "translation": "她为实现梦想而努力。"
+    },
+    {
+      "phrase": "a sense of achievement",
+      "phonetic": "/ə ˈsɛns ˈʌv əˈtʃiːvmənt/",
+      "chinese": "成就感",
+      "example": "Finishing the course gave me a real sense of achievement.",
+      "translation": "完成课程给了我真正的成就感。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "Small steps can help you achieve a big goal.",
       "chinese": "小步前进可以帮助你实现大目标。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "Consistent practice can help you achieve your goal.",
+      "chinese": "持续练习可以帮助你实现目标。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "The team achieved success through patient work.",
+      "chinese": "团队通过耐心工作取得了成功。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "It is difficult to achieve a balance between work and rest.",
+      "chinese": "在工作和休息之间取得平衡并不容易。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "A clearer process helped us achieve better results.",
+      "chinese": "更清晰的流程帮助我们取得了更好的结果。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "She worked hard to achieve her dream.",
+      "chinese": "她为实现梦想而努力。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "Finishing the course gave me a real sense of achievement.",
+      "chinese": "完成课程给了我真正的成就感。"
     }
   ],
   "studyFocus": {
@@ -322,7 +392,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“实现目标”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "achieve a goal"
+        "achieve better results",
+        "achieve a goal",
+        "achieve success",
+        "achieve a balance"
       ],
       "answer": "achieve a goal",
       "stage": "T2",
@@ -334,7 +407,9 @@
       "prompt": "搭配辨析：哪一项既表示“取得成功”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "achieve success",
-        "achieve a goal"
+        "achieve a goal",
+        "achieve a balance",
+        "achieve better results"
       ],
       "answer": "achieve success",
       "stage": "T3",
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

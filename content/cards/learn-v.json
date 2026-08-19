@@ -18,7 +18,7 @@
   "difficulty": "应用",
   "tags": [
     "v.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心动作与结构",
       "items": [
         {
           "phrase": "learn to do",
@@ -92,22 +92,27 @@
           "phrase": "learn about",
           "phonetic": "/lɜːrn əˈbaʊt/",
           "chinese": "了解……"
-        },
-        {
-          "phrase": "learn from mistakes",
-          "phonetic": "/lɜːrn ˈfrʌm mɪˈsteɪks/",
-          "chinese": "从错误中学习"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "learn from mistakes",
+          "phonetic": "/lɜːrn ˈfrʌm mɪˈsteɪks/",
+          "chinese": "从错误中学习"
+        },
         {
           "phrase": "learn by doing",
           "phonetic": "/lɜːrn ˈbaɪ ˈduːɪŋ/",
           "chinese": "从实践中学习"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "never stop learning",
           "phonetic": "/ˈnɛvɚ ˈstɑp ˈlɝːnɪŋ/",
@@ -126,8 +131,43 @@
       "phrase": "learn to do",
       "phonetic": "/lɜːrn ˈtuː ˈduː/",
       "chinese": "学习做",
-      "example": "We learn faster when feedback is specific.",
-      "translation": "反馈具体时，我们学得更快。"
+      "example": "Children learn to speak by listening to others.",
+      "translation": "孩子通过听别人说话来学习说话。"
+    },
+    {
+      "phrase": "learn about",
+      "phonetic": "/lɜːrn əˈbaʊt/",
+      "chinese": "了解……",
+      "example": "I want to learn more about local history.",
+      "translation": "我想进一步了解当地历史。"
+    },
+    {
+      "phrase": "learn from mistakes",
+      "phonetic": "/lɜːrn ˈfrʌm mɪˈsteɪks/",
+      "chinese": "从错误中学习",
+      "example": "Good teams learn from their mistakes.",
+      "translation": "优秀的团队会从错误中学习。"
+    },
+    {
+      "phrase": "learn by doing",
+      "phonetic": "/lɜːrn ˈbaɪ ˈduːɪŋ/",
+      "chinese": "从实践中学习",
+      "example": "Many practical skills are best learned by doing.",
+      "translation": "许多实用技能最好从实践中学习。"
+    },
+    {
+      "phrase": "never stop learning",
+      "phonetic": "/ˈnɛvɚ ˈstɑp ˈlɝːnɪŋ/",
+      "chinese": "永不停止学习",
+      "example": "Curious people never stop learning.",
+      "translation": "好奇的人永不停止学习。"
+    },
+    {
+      "phrase": "lesson learned",
+      "phonetic": "/ˈlɛsən ˈlɝːnd/",
+      "chinese": "吸取的教训",
+      "example": "The lesson learned was to check every detail.",
+      "translation": "吸取的教训是要检查每个细节。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "We learn faster when feedback is specific.",
       "chinese": "反馈具体时，我们学得更快。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "Children learn to speak by listening to others.",
+      "chinese": "孩子通过听别人说话来学习说话。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "I want to learn more about local history.",
+      "chinese": "我想进一步了解当地历史。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "Good teams learn from their mistakes.",
+      "chinese": "优秀的团队会从错误中学习。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "Many practical skills are best learned by doing.",
+      "chinese": "许多实用技能最好从实践中学习。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "Curious people never stop learning.",
+      "chinese": "好奇的人永不停止学习。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "The lesson learned was to check every detail.",
+      "chinese": "吸取的教训是要检查每个细节。"
     }
   ],
   "studyFocus": {
@@ -322,6 +392,9 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“学习做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
       "options": [
+        "learn about",
+        "learn from mistakes",
+        "learn by doing",
         "learn to do"
       ],
       "answer": "learn to do",
@@ -333,6 +406,8 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“了解……”，又符合这个形式线索：完整搭配中使用介词 about？",
       "options": [
+        "learn from mistakes",
+        "learn by doing",
         "learn about",
         "learn to do"
       ],
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

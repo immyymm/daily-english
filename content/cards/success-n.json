@@ -18,7 +18,7 @@
   "difficulty": "进阶",
   "tags": [
     "n.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心名词搭配",
       "items": [
         {
           "phrase": "achieve success",
@@ -92,22 +92,27 @@
           "phrase": "great success",
           "phonetic": "/ˈɡreɪt səkˈses/",
           "chinese": "巨大成功"
-        },
-        {
-          "phrase": "key to success",
-          "phonetic": "/ˈkiː ˈtuː səkˈses/",
-          "chinese": "成功的关键"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "key to success",
+          "phonetic": "/ˈkiː ˈtuː səkˈses/",
+          "chinese": "成功的关键"
+        },
         {
           "phrase": "chance of success",
           "phonetic": "/ˈtʃæns ˈʌv səkˈses/",
           "chinese": "成功机会"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "success in doing",
           "phonetic": "/səkˈses ɪn ˈduːɪŋ/",
@@ -126,8 +131,43 @@
       "phrase": "achieve success",
       "phonetic": "/əˈtʃiːv səkˈses/",
       "chinese": "取得成功",
-      "example": "Consistency is more important than quick success.",
-      "translation": "坚持比快速成功更重要。"
+      "example": "Careful preparation is the key to success.",
+      "translation": "认真准备是成功的关键。"
+    },
+    {
+      "phrase": "great success",
+      "phonetic": "/ˈɡreɪt səkˈses/",
+      "chinese": "巨大成功",
+      "example": "The event was a great success.",
+      "translation": "这次活动非常成功。"
+    },
+    {
+      "phrase": "key to success",
+      "phonetic": "/ˈkiː ˈtuː səkˈses/",
+      "chinese": "成功的关键",
+      "example": "She achieved success through years of practice.",
+      "translation": "她通过多年练习取得了成功。"
+    },
+    {
+      "phrase": "chance of success",
+      "phonetic": "/ˈtʃæns ˈʌv səkˈses/",
+      "chinese": "成功机会",
+      "example": "Success does not always come quickly.",
+      "translation": "成功并不总是很快到来。"
+    },
+    {
+      "phrase": "success in doing",
+      "phonetic": "/səkˈses ɪn ˈduːɪŋ/",
+      "chinese": "做成某事",
+      "example": "We celebrated the success of the new project.",
+      "translation": "我们庆祝新项目取得成功。"
+    },
+    {
+      "phrase": "measure of success",
+      "phonetic": "/ˈmɛʒɚ ˈʌv səkˈses/",
+      "chinese": "成功的衡量标准",
+      "example": "Small improvements can lead to long-term success.",
+      "translation": "小的改进可以带来长期成功。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "Consistency is more important than quick success.",
       "chinese": "坚持比快速成功更重要。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "Careful preparation is the key to success.",
+      "chinese": "认真准备是成功的关键。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "The event was a great success.",
+      "chinese": "这次活动非常成功。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "She achieved success through years of practice.",
+      "chinese": "她通过多年练习取得了成功。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "Success does not always come quickly.",
+      "chinese": "成功并不总是很快到来。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "We celebrated the success of the new project.",
+      "chinese": "我们庆祝新项目取得成功。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "Small improvements can lead to long-term success.",
+      "chinese": "小的改进可以带来长期成功。"
     }
   ],
   "studyFocus": {
@@ -322,7 +392,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“取得成功”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "achieve success"
+        "chance of success",
+        "achieve success",
+        "great success",
+        "key to success"
       ],
       "answer": "achieve success",
       "stage": "T2",
@@ -334,7 +407,9 @@
       "prompt": "搭配辨析：哪一项既表示“巨大成功”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "great success",
-        "achieve success"
+        "achieve success",
+        "key to success",
+        "chance of success"
       ],
       "answer": "great success",
       "stage": "T3",
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

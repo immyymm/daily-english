@@ -18,7 +18,7 @@
   "difficulty": "应用",
   "tags": [
     "v.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心动作与结构",
       "items": [
         {
           "phrase": "listen to",
@@ -92,22 +92,27 @@
           "phrase": "listen carefully",
           "phonetic": "/ˈlɪsən ˈkɛrfəliː/",
           "chinese": "仔细听"
-        },
-        {
-          "phrase": "listen for",
-          "phonetic": "/ˈlɪsən ˈfɔːr/",
-          "chinese": "留意听……"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "listen for",
+          "phonetic": "/ˈlɪsən ˈfɔːr/",
+          "chinese": "留意听……"
+        },
         {
           "phrase": "listen to advice",
           "phonetic": "/ˈlɪsən ˈtuː æˈdvaɪs/",
           "chinese": "听取建议"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "listen closely",
           "phonetic": "/ˈlɪsən ˈkloʊsliː/",
@@ -126,8 +131,43 @@
       "phrase": "listen to",
       "phonetic": "/ˈlɪsən ˈtuː/",
       "chinese": "听……",
-      "example": "Listen to the whole sentence before answering.",
-      "translation": "回答前先听完整个句子。"
+      "example": "I listen to an English podcast on my way to work.",
+      "translation": "我上班路上听英语播客。"
+    },
+    {
+      "phrase": "listen carefully",
+      "phonetic": "/ˈlɪsən ˈkɛrfəliː/",
+      "chinese": "仔细听",
+      "example": "Listen carefully before you choose an answer.",
+      "translation": "选择答案前请仔细听。"
+    },
+    {
+      "phrase": "listen for",
+      "phonetic": "/ˈlɪsən ˈfɔːr/",
+      "chinese": "留意听……",
+      "example": "Listen for the difference between the two vowel sounds.",
+      "translation": "留意听这两个元音的区别。"
+    },
+    {
+      "phrase": "listen to advice",
+      "phonetic": "/ˈlɪsən ˈtuː æˈdvaɪs/",
+      "chinese": "听取建议",
+      "example": "You should listen to your doctor’s advice.",
+      "translation": "你应该听取医生的建议。"
+    },
+    {
+      "phrase": "listen closely",
+      "phonetic": "/ˈlɪsən ˈkloʊsliː/",
+      "chinese": "认真听",
+      "example": "Everyone listened closely to the announcement.",
+      "translation": "每个人都认真听了通知。"
+    },
+    {
+      "phrase": "good listener",
+      "phonetic": "/ˈɡʊd ˈlɪsənɚ/",
+      "chinese": "善于倾听的人",
+      "example": "A good listener asks thoughtful questions.",
+      "translation": "善于倾听的人会提出有思考的问题。"
     }
   ],
   "synonyms": [
@@ -182,6 +222,36 @@
       "scene": "核心真实用法",
       "english": "Listen to the whole sentence before answering.",
       "chinese": "回答前先听完整个句子。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "I listen to an English podcast on my way to work.",
+      "chinese": "我上班路上听英语播客。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "Listen carefully before you choose an answer.",
+      "chinese": "选择答案前请仔细听。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "Listen for the difference between the two vowel sounds.",
+      "chinese": "留意听这两个元音的区别。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "You should listen to your doctor’s advice.",
+      "chinese": "你应该听取医生的建议。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "Everyone listened closely to the announcement.",
+      "chinese": "每个人都认真听了通知。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "A good listener asks thoughtful questions.",
+      "chinese": "善于倾听的人会提出有思考的问题。"
     }
   ],
   "studyFocus": {
@@ -330,6 +400,9 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“听……”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "listen carefully",
+        "listen for",
+        "listen to advice",
         "listen to"
       ],
       "answer": "listen to",
@@ -341,6 +414,8 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“仔细听”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "listen for",
+        "listen to advice",
         "listen carefully",
         "listen to"
       ],
@@ -433,9 +508,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

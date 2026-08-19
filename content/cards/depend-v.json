@@ -18,7 +18,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "待精校",
+    "模板详卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心动作与结构",
       "items": [
         {
           "phrase": "depend on",
@@ -92,22 +92,27 @@
           "phrase": "depend heavily on",
           "phonetic": "/dɪˈpend ˈhɛvəliː ˈɑn/",
           "chinese": "严重依赖"
-        },
-        {
-          "phrase": "it depends",
-          "phonetic": "/ˈɪt dɪˈpɛndz/",
-          "chinese": "视情况而定"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "it depends",
+          "phonetic": "/ˈɪt dɪˈpɛndz/",
+          "chinese": "视情况而定"
+        },
         {
           "phrase": "depend on whether",
           "phonetic": "/dɪˈpend ˈɑn ˈwɛðɚ/",
           "chinese": "取决于是否"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "you can depend on me",
           "phonetic": "/ˈjuː ˈkæn dɪˈpend ˈɑn ˈmiː/",
@@ -126,8 +131,43 @@
       "phrase": "depend on",
       "phonetic": "/dɪˈpend ˈɑn/",
       "chinese": "取决于；依靠",
-      "example": "The best choice depends on the situation.",
-      "translation": "最好的选择取决于具体情况。"
+      "example": "The final cost will depend on the size of the project.",
+      "translation": "最终费用将取决于项目规模。"
+    },
+    {
+      "phrase": "depend heavily on",
+      "phonetic": "/dɪˈpend ˈhɛvəliː ˈɑn/",
+      "chinese": "严重依赖",
+      "example": "Many small businesses depend heavily on local customers.",
+      "translation": "许多小企业严重依赖本地顾客。"
+    },
+    {
+      "phrase": "it depends",
+      "phonetic": "/ˈɪt dɪˈpɛndz/",
+      "chinese": "视情况而定",
+      "example": "“Will it work?” “It depends.”",
+      "translation": "“这能行吗？”“要看情况。”"
+    },
+    {
+      "phrase": "depend on whether",
+      "phonetic": "/dɪˈpend ˈɑn ˈwɛðɚ/",
+      "chinese": "取决于是否",
+      "example": "Our start time depends on whether the train is delayed.",
+      "translation": "我们的出发时间取决于火车是否晚点。"
+    },
+    {
+      "phrase": "you can depend on me",
+      "phonetic": "/ˈjuː ˈkæn dɪˈpend ˈɑn ˈmiː/",
+      "chinese": "你可以依靠我",
+      "example": "If you need help, you can depend on me.",
+      "translation": "如果你需要帮助，可以依靠我。"
+    },
+    {
+      "phrase": "depending on",
+      "phonetic": "/dɪˈpɛndɪŋ ˈɑn/",
+      "chinese": "根据；视……而定",
+      "example": "The route changes depending on the weather.",
+      "translation": "路线会根据天气而变化。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "The best choice depends on the situation.",
       "chinese": "最好的选择取决于具体情况。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "The final cost will depend on the size of the project.",
+      "chinese": "最终费用将取决于项目规模。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "Many small businesses depend heavily on local customers.",
+      "chinese": "许多小企业严重依赖本地顾客。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "“Will it work?” “It depends.”",
+      "chinese": "“这能行吗？”“要看情况。”"
+    },
+    {
+      "scene": "真实语境",
+      "english": "Our start time depends on whether the train is delayed.",
+      "chinese": "我们的出发时间取决于火车是否晚点。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "If you need help, you can depend on me.",
+      "chinese": "如果你需要帮助，可以依靠我。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "The route changes depending on the weather.",
+      "chinese": "路线会根据天气而变化。"
     }
   ],
   "studyFocus": {
@@ -322,7 +392,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“取决于；依靠”，又符合这个形式线索：完整搭配中使用介词 on？",
       "options": [
-        "depend on"
+        "it depends",
+        "depend on whether",
+        "depend on",
+        "depend heavily on"
       ],
       "answer": "depend on",
       "stage": "T2",
@@ -333,8 +406,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“严重依赖”，又符合这个形式线索：完整搭配中使用介词 on？",
       "options": [
+        "depend on whether",
+        "depend heavily on",
         "depend on",
-        "depend heavily on"
+        "it depends"
       ],
       "answer": "depend heavily on",
       "stage": "T3",
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

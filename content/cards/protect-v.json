@@ -18,7 +18,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "待精校",
+    "模板详卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心动作与结构",
       "items": [
         {
           "phrase": "protect someone from",
@@ -92,22 +92,27 @@
           "phrase": "protect the environment",
           "phonetic": "/prəˈtekt ðə ɪˈnvaɪrənmənt/",
           "chinese": "保护环境"
-        },
-        {
-          "phrase": "protect your privacy",
-          "phonetic": "/prəˈtekt ˈjɔːr ˈpraɪvəsiː/",
-          "chinese": "保护隐私"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "protect your privacy",
+          "phonetic": "/prəˈtekt ˈjɔːr ˈpraɪvəsiː/",
+          "chinese": "保护隐私"
+        },
         {
           "phrase": "be protected by",
           "phonetic": "/ˈbiː prəˈtɛktɪd ˈbaɪ/",
           "chinese": "受到……保护"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "protect against damage",
           "phonetic": "/prəˈtekt əˈɡɛnst ˈdæmədʒ/",
@@ -119,6 +124,16 @@
           "chinese": "消费者保护"
         }
       ]
+    },
+    {
+      "category": "补充常用语境",
+      "items": [
+        {
+          "phrase": "protect someone from something",
+          "phonetic": "/prəˈtekt ˈsʌˌmwʌn ˈfrʌm ˈsʌmθɪŋ/",
+          "chinese": "保护某人免受某事伤害"
+        }
+      ]
     }
   ],
   "fixedPhrases": [
@@ -126,8 +141,43 @@
       "phrase": "protect someone from",
       "phonetic": "/prəˈtekt ˈsʌˌmwʌn ˈfrʌm/",
       "chinese": "保护某人免受……",
-      "example": "A strong password protects your account.",
-      "translation": "强密码可以保护你的账户。"
+      "example": "Warm clothing protects you from the cold.",
+      "translation": "保暖衣物可以保护你免受寒冷。"
+    },
+    {
+      "phrase": "protect the environment",
+      "phonetic": "/prəˈtekt ðə ɪˈnvaɪrənmənt/",
+      "chinese": "保护环境",
+      "example": "We all have a duty to protect the environment.",
+      "translation": "我们都有保护环境的责任。"
+    },
+    {
+      "phrase": "protect your privacy",
+      "phonetic": "/prəˈtekt ˈjɔːr ˈpraɪvəsiː/",
+      "chinese": "保护隐私",
+      "example": "Use a strong password to protect your privacy.",
+      "translation": "使用强密码保护你的隐私。"
+    },
+    {
+      "phrase": "be protected by",
+      "phonetic": "/ˈbiː prəˈtɛktɪd ˈbaɪ/",
+      "chinese": "受到……保护",
+      "example": "The files are protected by encryption.",
+      "translation": "这些文件受到加密保护。"
+    },
+    {
+      "phrase": "protect against damage",
+      "phonetic": "/prəˈtekt əˈɡɛnst ˈdæmədʒ/",
+      "chinese": "防止损坏",
+      "example": "The case protects the phone against damage.",
+      "translation": "这个保护壳可以防止手机受损。"
+    },
+    {
+      "phrase": "consumer protection",
+      "phonetic": "/kəˈnsuːmɚ prəˈtɛkʃən/",
+      "chinese": "消费者保护",
+      "example": "The law provides basic consumer protection.",
+      "translation": "这项法律提供基本的消费者保护。"
     }
   ],
   "synonyms": [
@@ -174,6 +224,36 @@
       "scene": "核心真实用法",
       "english": "A strong password protects your account.",
       "chinese": "强密码可以保护你的账户。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "Warm clothing protects you from the cold.",
+      "chinese": "保暖衣物可以保护你免受寒冷。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "We all have a duty to protect the environment.",
+      "chinese": "我们都有保护环境的责任。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "Use a strong password to protect your privacy.",
+      "chinese": "使用强密码保护你的隐私。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "The files are protected by encryption.",
+      "chinese": "这些文件受到加密保护。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "The case protects the phone against damage.",
+      "chinese": "这个保护壳可以防止手机受损。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "The law provides basic consumer protection.",
+      "chinese": "这项法律提供基本的消费者保护。"
     }
   ],
   "studyFocus": {
@@ -322,7 +402,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“保护某人免受……”，又符合这个形式线索：完整搭配中使用介词 from？",
       "options": [
-        "protect someone from"
+        "protect someone from",
+        "protect the environment",
+        "protect your privacy",
+        "be protected by"
       ],
       "answer": "protect someone from",
       "stage": "T2",
@@ -334,6 +417,8 @@
       "prompt": "用法辨析：哪一项既表示“保护环境”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "protect someone from",
+        "protect your privacy",
+        "be protected by",
         "protect the environment"
       ],
       "answer": "protect the environment",
@@ -425,9 +510,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

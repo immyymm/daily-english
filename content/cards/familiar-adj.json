@@ -18,7 +18,7 @@
   "difficulty": "进阶",
   "tags": [
     "adj.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心用法",
       "items": [
         {
           "phrase": "be familiar with",
@@ -92,22 +92,27 @@
           "phrase": "look familiar",
           "phonetic": "/ˈlʊk fəˈmɪliər/",
           "chinese": "看起来眼熟"
-        },
-        {
-          "phrase": "sound familiar",
-          "phonetic": "/ˈsaʊnd fəˈmɪliər/",
-          "chinese": "听起来耳熟"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "sound familiar",
+          "phonetic": "/ˈsaʊnd fəˈmɪliər/",
+          "chinese": "听起来耳熟"
+        },
         {
           "phrase": "familiar to someone",
           "phonetic": "/fəˈmɪliər ˈtuː ˈsʌˌmwʌn/",
           "chinese": "为某人所熟悉"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "a familiar face",
           "phonetic": "/ə fəˈmɪliər ˈfeɪs/",
@@ -126,8 +131,43 @@
       "phrase": "be familiar with",
       "phonetic": "/ˈbiː fəˈmɪliər ˈwɪð/",
       "chinese": "熟悉……",
-      "example": "Are you familiar with this expression?",
-      "translation": "你熟悉这个表达吗？"
+      "example": "Are you familiar with this software?",
+      "translation": "你熟悉这个软件吗？"
+    },
+    {
+      "phrase": "look familiar",
+      "phonetic": "/ˈlʊk fəˈmɪliər/",
+      "chinese": "看起来眼熟",
+      "example": "That man looks familiar, but I cannot remember his name.",
+      "translation": "那个男人看起来很眼熟，但我想不起他的名字。"
+    },
+    {
+      "phrase": "sound familiar",
+      "phonetic": "/ˈsaʊnd fəˈmɪliər/",
+      "chinese": "听起来耳熟",
+      "example": "Does this song sound familiar?",
+      "translation": "这首歌听起来耳熟吗？"
+    },
+    {
+      "phrase": "familiar to someone",
+      "phonetic": "/fəˈmɪliər ˈtuː ˈsʌˌmwʌn/",
+      "chinese": "为某人所熟悉",
+      "example": "The story is familiar to most local children.",
+      "translation": "大多数当地孩子都熟悉这个故事。"
+    },
+    {
+      "phrase": "a familiar face",
+      "phonetic": "/ə fəˈmɪliər ˈfeɪs/",
+      "chinese": "熟悉的面孔",
+      "example": "I saw a familiar face in the crowd.",
+      "translation": "我在人群中看到了一张熟悉的面孔。"
+    },
+    {
+      "phrase": "become familiar with",
+      "phonetic": "/bɪˈkʌm fəˈmɪliər ˈwɪð/",
+      "chinese": "逐渐熟悉……",
+      "example": "You will become familiar with the process after a few days.",
+      "translation": "几天后你就会熟悉这个流程。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "Are you familiar with this expression?",
       "chinese": "你熟悉这个表达吗？"
+    },
+    {
+      "scene": "日常使用",
+      "english": "Are you familiar with this software?",
+      "chinese": "你熟悉这个软件吗？"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "That man looks familiar, but I cannot remember his name.",
+      "chinese": "那个男人看起来很眼熟，但我想不起他的名字。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "Does this song sound familiar?",
+      "chinese": "这首歌听起来耳熟吗？"
+    },
+    {
+      "scene": "真实语境",
+      "english": "The story is familiar to most local children.",
+      "chinese": "大多数当地孩子都熟悉这个故事。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "I saw a familiar face in the crowd.",
+      "chinese": "我在人群中看到了一张熟悉的面孔。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "You will become familiar with the process after a few days.",
+      "chinese": "几天后你就会熟悉这个流程。"
     }
   ],
   "studyFocus": {
@@ -322,7 +392,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“熟悉……”，又符合这个形式线索：完整搭配中使用介词 with？",
       "options": [
-        "be familiar with"
+        "be familiar with",
+        "look familiar",
+        "sound familiar",
+        "familiar to someone"
       ],
       "answer": "be familiar with",
       "stage": "T2",
@@ -334,6 +407,8 @@
       "prompt": "用法辨析：哪一项既表示“看起来眼熟”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "be familiar with",
+        "sound familiar",
+        "familiar to someone",
         "look familiar"
       ],
       "answer": "look familiar",
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

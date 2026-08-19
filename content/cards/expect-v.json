@@ -18,7 +18,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "待精校",
+    "模板详卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心动作与结构",
       "items": [
         {
           "phrase": "expect someone to do",
@@ -92,22 +92,27 @@
           "phrase": "expect to see",
           "phonetic": "/ɪkˈspekt ˈtuː ˈsiː/",
           "chinese": "预计会看到"
-        },
-        {
-          "phrase": "as expected",
-          "phonetic": "/ˈæz ɪˈkspɛktəd/",
-          "chinese": "正如预期"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "as expected",
+          "phonetic": "/ˈæz ɪˈkspɛktəd/",
+          "chinese": "正如预期"
+        },
         {
           "phrase": "what to expect",
           "phonetic": "/ˈwʌt ˈtuː ɪkˈspekt/",
           "chinese": "会发生什么"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "expect the worst",
           "phonetic": "/ɪkˈspekt ðə ˈwɝːst/",
@@ -119,6 +124,16 @@
           "chinese": "被期望；预计会"
         }
       ]
+    },
+    {
+      "category": "补充常用语境",
+      "items": [
+        {
+          "phrase": "expect someone to do something",
+          "phonetic": "/ɪkˈspekt ˈsʌˌmwʌn ˈtuː ˈduː ˈsʌmθɪŋ/",
+          "chinese": "期待某人做某事"
+        }
+      ]
     }
   ],
   "fixedPhrases": [
@@ -126,8 +141,43 @@
       "phrase": "expect someone to do",
       "phonetic": "/ɪkˈspekt ˈsʌˌmwʌn ˈtuː ˈduː/",
       "chinese": "期待某人做",
-      "example": "We expect the results next week.",
-      "translation": "我们预计下周会有结果。"
+      "example": "I expect everyone to arrive on time.",
+      "translation": "我希望每个人都准时到达。"
+    },
+    {
+      "phrase": "expect to see",
+      "phonetic": "/ɪkˈspekt ˈtuː ˈsiː/",
+      "chinese": "预计会看到",
+      "example": "We expect to see better results next month.",
+      "translation": "我们预计下个月会看到更好的结果。"
+    },
+    {
+      "phrase": "as expected",
+      "phonetic": "/ˈæz ɪˈkspɛktəd/",
+      "chinese": "正如预期",
+      "example": "As expected, the morning train was crowded.",
+      "translation": "不出所料，早班火车很拥挤。"
+    },
+    {
+      "phrase": "what to expect",
+      "phonetic": "/ˈwʌt ˈtuː ɪkˈspekt/",
+      "chinese": "会发生什么",
+      "example": "The guide explains what to expect on the first day.",
+      "translation": "指南说明了第一天可能会遇到什么。"
+    },
+    {
+      "phrase": "expect the worst",
+      "phonetic": "/ɪkˈspekt ðə ˈwɝːst/",
+      "chinese": "做最坏打算",
+      "example": "Prepare carefully, but do not always expect the worst.",
+      "translation": "认真准备，但不要总做最坏的打算。"
+    },
+    {
+      "phrase": "be expected to",
+      "phonetic": "/ˈbiː ɪˈkspɛktəd ˈtuː/",
+      "chinese": "被期望；预计会",
+      "example": "All applicants are expected to provide two references.",
+      "translation": "所有申请人都需要提供两名推荐人。"
     }
   ],
   "synonyms": [
@@ -174,6 +224,36 @@
       "scene": "核心真实用法",
       "english": "We expect the results next week.",
       "chinese": "我们预计下周会有结果。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "I expect everyone to arrive on time.",
+      "chinese": "我希望每个人都准时到达。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "We expect to see better results next month.",
+      "chinese": "我们预计下个月会看到更好的结果。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "As expected, the morning train was crowded.",
+      "chinese": "不出所料，早班火车很拥挤。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "The guide explains what to expect on the first day.",
+      "chinese": "指南说明了第一天可能会遇到什么。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "Prepare carefully, but do not always expect the worst.",
+      "chinese": "认真准备，但不要总做最坏的打算。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "All applicants are expected to provide two references.",
+      "chinese": "所有申请人都需要提供两名推荐人。"
     }
   ],
   "studyFocus": {
@@ -322,7 +402,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“期待某人做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
       "options": [
-        "expect someone to do"
+        "expect someone to do",
+        "expect to see",
+        "as expected",
+        "what to expect"
       ],
       "answer": "expect someone to do",
       "stage": "T2",
@@ -334,6 +417,8 @@
       "prompt": "用法辨析：哪一项既表示“预计会看到”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "expect someone to do",
+        "as expected",
+        "what to expect",
         "expect to see"
       ],
       "answer": "expect to see",
@@ -425,9 +510,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

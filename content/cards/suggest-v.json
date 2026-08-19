@@ -18,7 +18,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "待精校",
+    "模板详卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心动作与结构",
       "items": [
         {
           "phrase": "suggest doing",
@@ -92,22 +92,27 @@
           "phrase": "suggest that",
           "phonetic": "/səˈdʒest ˈðæt/",
           "chinese": "建议；表明……"
-        },
-        {
-          "phrase": "strongly suggest",
-          "phonetic": "/ˈstrɔːŋliː səˈdʒest/",
-          "chinese": "强烈建议"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "strongly suggest",
+          "phonetic": "/ˈstrɔːŋliː səˈdʒest/",
+          "chinese": "强烈建议"
+        },
         {
           "phrase": "evidence suggests",
           "phonetic": "/ˈɛvədəns səˈdʒɛsts/",
           "chinese": "证据表明"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "suggest an alternative",
           "phonetic": "/səˈdʒest ˈæn ɔːˈltɝːnətɪv/",
@@ -119,6 +124,16 @@
           "chinese": "我可以建议……吗"
         }
       ]
+    },
+    {
+      "category": "补充常用语境",
+      "items": [
+        {
+          "phrase": "suggest doing something",
+          "phonetic": "/səˈdʒest ˈduːɪŋ ˈsʌmθɪŋ/",
+          "chinese": "建议做某事"
+        }
+      ]
     }
   ],
   "fixedPhrases": [
@@ -126,8 +141,43 @@
       "phrase": "suggest doing",
       "phonetic": "/səˈdʒest ˈduːɪŋ/",
       "chinese": "建议做",
-      "example": "I suggest reviewing the difficult words first.",
-      "translation": "我建议先复习困难的单词。"
+      "example": "I suggest taking a short break before we continue.",
+      "translation": "我建议我们继续之前短暂休息一下。"
+    },
+    {
+      "phrase": "suggest that",
+      "phonetic": "/səˈdʒest ˈðæt/",
+      "chinese": "建议；表明……",
+      "example": "The doctor suggested that I get more sleep.",
+      "translation": "医生建议我多睡一会儿。"
+    },
+    {
+      "phrase": "strongly suggest",
+      "phonetic": "/ˈstrɔːŋliː səˈdʒest/",
+      "chinese": "强烈建议",
+      "example": "I strongly suggest checking the details again.",
+      "translation": "我强烈建议再核对一遍细节。"
+    },
+    {
+      "phrase": "evidence suggests",
+      "phonetic": "/ˈɛvədəns səˈdʒɛsts/",
+      "chinese": "证据表明",
+      "example": "The evidence suggests that the method is effective.",
+      "translation": "证据表明这个方法有效。"
+    },
+    {
+      "phrase": "suggest an alternative",
+      "phonetic": "/səˈdʒest ˈæn ɔːˈltɝːnətɪv/",
+      "chinese": "提出替代方案",
+      "example": "Could you suggest an alternative to this route?",
+      "translation": "你能为这条路线提出一个替代方案吗？"
+    },
+    {
+      "phrase": "may I suggest",
+      "phonetic": "/ˈmeɪ ˈaɪ səˈdʒest/",
+      "chinese": "我可以建议……吗",
+      "example": "May I suggest a simpler way to organize the notes?",
+      "translation": "我可以建议一种更简单的笔记整理方法吗？"
     }
   ],
   "synonyms": [
@@ -174,6 +224,36 @@
       "scene": "核心真实用法",
       "english": "I suggest reviewing the difficult words first.",
       "chinese": "我建议先复习困难的单词。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "I suggest taking a short break before we continue.",
+      "chinese": "我建议我们继续之前短暂休息一下。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "The doctor suggested that I get more sleep.",
+      "chinese": "医生建议我多睡一会儿。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "I strongly suggest checking the details again.",
+      "chinese": "我强烈建议再核对一遍细节。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "The evidence suggests that the method is effective.",
+      "chinese": "证据表明这个方法有效。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "Could you suggest an alternative to this route?",
+      "chinese": "你能为这条路线提出一个替代方案吗？"
+    },
+    {
+      "scene": "主动表达",
+      "english": "May I suggest a simpler way to organize the notes?",
+      "chinese": "我可以建议一种更简单的笔记整理方法吗？"
     }
   ],
   "studyFocus": {
@@ -322,7 +402,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“建议做”，又符合这个形式线索：目标词后的 doing 表示要换成符合语境的动词 -ing 形式？",
       "options": [
-        "suggest doing"
+        "suggest doing",
+        "suggest that",
+        "strongly suggest",
+        "evidence suggests"
       ],
       "answer": "suggest doing",
       "stage": "T2",
@@ -334,6 +417,8 @@
       "prompt": "用法辨析：哪一项既表示“建议；表明……”，又符合这个形式线索：使用 that 引导一个主谓完整的从句？",
       "options": [
         "suggest doing",
+        "strongly suggest",
+        "evidence suggests",
         "suggest that"
       ],
       "answer": "suggest that",
@@ -425,9 +510,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

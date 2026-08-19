@@ -24,7 +24,7 @@
   "difficulty": "应用",
   "tags": [
     "n.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -94,7 +94,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心名词搭配",
       "items": [
         {
           "phrase": "on time",
@@ -105,22 +105,27 @@
           "phrase": "in time",
           "phonetic": "/ɪn taɪm/",
           "chinese": "及时"
-        },
-        {
-          "phrase": "spend time doing",
-          "phonetic": "/ˈspɛnd taɪm ˈduːɪŋ/",
-          "chinese": "花时间做"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "spend time doing",
+          "phonetic": "/ˈspɛnd taɪm ˈduːɪŋ/",
+          "chinese": "花时间做"
+        },
         {
           "phrase": "from time to time",
           "phonetic": "/ˈfrʌm taɪm ˈtuː taɪm/",
           "chinese": "不时"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "at the same time",
           "phonetic": "/ˈæt ðə ˈseɪm taɪm/",
@@ -139,8 +144,43 @@
       "phrase": "on time",
       "phonetic": "/ˈɑn taɪm/",
       "chinese": "准时",
-      "example": "She arrived on time for the interview.",
-      "translation": "她准时到达面试地点。"
+      "example": "The train arrived exactly on time.",
+      "translation": "火车准时到达。"
+    },
+    {
+      "phrase": "in time",
+      "phonetic": "/ɪn taɪm/",
+      "chinese": "及时",
+      "example": "We reached the station just in time.",
+      "translation": "我们刚好及时赶到车站。"
+    },
+    {
+      "phrase": "spend time doing",
+      "phonetic": "/ˈspɛnd taɪm ˈduːɪŋ/",
+      "chinese": "花时间做",
+      "example": "I spend time reviewing vocabulary every evening.",
+      "translation": "我每天晚上花时间复习词汇。"
+    },
+    {
+      "phrase": "from time to time",
+      "phonetic": "/ˈfrʌm taɪm ˈtuː taɪm/",
+      "chinese": "不时",
+      "example": "We meet for coffee from time to time.",
+      "translation": "我们不时见面喝咖啡。"
+    },
+    {
+      "phrase": "at the same time",
+      "phonetic": "/ˈæt ðə ˈseɪm taɪm/",
+      "chinese": "同时",
+      "example": "She studies and works at the same time.",
+      "translation": "她同时学习和工作。"
+    },
+    {
+      "phrase": "take your time",
+      "phonetic": "/ˈteɪk ˈjɔːr taɪm/",
+      "chinese": "慢慢来",
+      "example": "Take your time; there is no need to hurry.",
+      "translation": "慢慢来，不必着急。"
     }
   ],
   "synonyms": [
@@ -187,6 +227,36 @@
       "scene": "核心真实用法",
       "english": "She arrived on time for the interview.",
       "chinese": "她准时到达面试地点。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "The train arrived exactly on time.",
+      "chinese": "火车准时到达。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "We reached the station just in time.",
+      "chinese": "我们刚好及时赶到车站。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "I spend time reviewing vocabulary every evening.",
+      "chinese": "我每天晚上花时间复习词汇。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "We meet for coffee from time to time.",
+      "chinese": "我们不时见面喝咖啡。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "She studies and works at the same time.",
+      "chinese": "她同时学习和工作。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "Take your time; there is no need to hurry.",
+      "chinese": "慢慢来，不必着急。"
     }
   ],
   "studyFocus": {
@@ -335,6 +405,9 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“准时”，又符合这个形式线索：完整搭配中使用介词 on？",
       "options": [
+        "in time",
+        "spend time doing",
+        "from time to time",
         "on time"
       ],
       "answer": "on time",
@@ -346,6 +419,8 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“及时”，又符合这个形式线索：完整搭配中使用介词 in？",
       "options": [
+        "spend time doing",
+        "from time to time",
         "in time",
         "on time"
       ],
@@ -438,9 +513,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

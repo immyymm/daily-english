@@ -18,7 +18,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "待精校",
+    "模板详卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心动作与结构",
       "items": [
         {
           "phrase": "discover the truth",
@@ -92,22 +92,27 @@
           "phrase": "discover a new way",
           "phonetic": "/dɪˈskʌvər ə ˈnuː ˈweɪ/",
           "chinese": "发现新方法"
-        },
-        {
-          "phrase": "discover that",
-          "phonetic": "/dɪˈskʌvər ˈðæt/",
-          "chinese": "发现……"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "discover that",
+          "phonetic": "/dɪˈskʌvər ˈðæt/",
+          "chinese": "发现……"
+        },
         {
           "phrase": "recently discovered",
           "phonetic": "/ˈriːsəntliː dɪˈskʌvɚd/",
           "chinese": "最近发现的"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "discover by accident",
           "phonetic": "/dɪˈskʌvər ˈbaɪ ˈæksədənt/",
@@ -126,8 +131,43 @@
       "phrase": "discover the truth",
       "phonetic": "/dɪˈskʌvər ðə ˈtruːθ/",
       "chinese": "发现真相",
-      "example": "You may discover a better way to remember it.",
-      "translation": "你可能会发现更好的记忆方法。"
+      "example": "The investigation helped them discover the truth.",
+      "translation": "调查帮助他们发现了真相。"
+    },
+    {
+      "phrase": "discover a new way",
+      "phonetic": "/dɪˈskʌvər ə ˈnuː ˈweɪ/",
+      "chinese": "发现新方法",
+      "example": "I discovered a new way to organize my notes.",
+      "translation": "我发现了一种整理笔记的新方法。"
+    },
+    {
+      "phrase": "discover that",
+      "phonetic": "/dɪˈskʌvər ˈðæt/",
+      "chinese": "发现……",
+      "example": "She discovered that the shop closed early on Sundays.",
+      "translation": "她发现这家店星期日很早就关门。"
+    },
+    {
+      "phrase": "recently discovered",
+      "phonetic": "/ˈriːsəntliː dɪˈskʌvɚd/",
+      "chinese": "最近发现的",
+      "example": "Scientists recently discovered a new species in the area.",
+      "translation": "科学家最近在该地区发现了一个新物种。"
+    },
+    {
+      "phrase": "discover by accident",
+      "phonetic": "/dɪˈskʌvər ˈbaɪ ˈæksədənt/",
+      "chinese": "偶然发现",
+      "example": "He discovered the old photograph by accident.",
+      "translation": "他偶然发现了那张旧照片。"
+    },
+    {
+      "phrase": "make a discovery",
+      "phonetic": "/ˈmeɪk ə dɪˈskʌvɚiː/",
+      "chinese": "作出发现",
+      "example": "The research team made an important discovery.",
+      "translation": "研究团队取得了一项重要发现。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "You may discover a better way to remember it.",
       "chinese": "你可能会发现更好的记忆方法。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "The investigation helped them discover the truth.",
+      "chinese": "调查帮助他们发现了真相。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "I discovered a new way to organize my notes.",
+      "chinese": "我发现了一种整理笔记的新方法。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "She discovered that the shop closed early on Sundays.",
+      "chinese": "她发现这家店星期日很早就关门。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "Scientists recently discovered a new species in the area.",
+      "chinese": "科学家最近在该地区发现了一个新物种。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "He discovered the old photograph by accident.",
+      "chinese": "他偶然发现了那张旧照片。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "The research team made an important discovery.",
+      "chinese": "研究团队取得了一项重要发现。"
     }
   ],
   "studyFocus": {
@@ -322,7 +392,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“发现真相”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "discover the truth"
+        "recently discovered",
+        "discover the truth",
+        "discover a new way",
+        "discover that"
       ],
       "answer": "discover the truth",
       "stage": "T2",
@@ -334,7 +407,9 @@
       "prompt": "搭配辨析：哪一项既表示“发现新方法”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "discover a new way",
-        "discover the truth"
+        "discover the truth",
+        "discover that",
+        "recently discovered"
       ],
       "answer": "discover a new way",
       "stage": "T3",
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

@@ -18,7 +18,7 @@
   "difficulty": "应用",
   "tags": [
     "n.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心名词搭配",
       "items": [
         {
           "phrase": "save money",
@@ -92,22 +92,27 @@
           "phrase": "spend money on",
           "phonetic": "/ˈspɛnd ˈmʌni ˈɑn/",
           "chinese": "在……上花钱"
-        },
-        {
-          "phrase": "make money",
-          "phonetic": "/ˈmeɪk ˈmʌni/",
-          "chinese": "赚钱"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "make money",
+          "phonetic": "/ˈmeɪk ˈmʌni/",
+          "chinese": "赚钱"
+        },
         {
           "phrase": "borrow money",
           "phonetic": "/ˈbɑˌroʊ ˈmʌni/",
           "chinese": "借钱"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "a waste of money",
           "phonetic": "/ə ˈweɪst ˈʌv ˈmʌni/",
@@ -126,8 +131,43 @@
       "phrase": "save money",
       "phonetic": "/ˈseɪv ˈmʌni/",
       "chinese": "省钱；存钱",
-      "example": "Planning ahead can save time and money.",
-      "translation": "提前规划可以节省时间和金钱。"
+      "example": "Cooking at home is a good way to save money.",
+      "translation": "在家做饭是省钱的好方法。"
+    },
+    {
+      "phrase": "spend money on",
+      "phonetic": "/ˈspɛnd ˈmʌni ˈɑn/",
+      "chinese": "在……上花钱",
+      "example": "I do not want to spend money on things I never use.",
+      "translation": "我不想把钱花在从不使用的东西上。"
+    },
+    {
+      "phrase": "make money",
+      "phonetic": "/ˈmeɪk ˈmʌni/",
+      "chinese": "赚钱",
+      "example": "She makes money by selling handmade bags.",
+      "translation": "她靠出售手工包赚钱。"
+    },
+    {
+      "phrase": "borrow money",
+      "phonetic": "/ˈbɑˌroʊ ˈmʌni/",
+      "chinese": "借钱",
+      "example": "He had to borrow money to repair the car.",
+      "translation": "他不得不借钱修车。"
+    },
+    {
+      "phrase": "a waste of money",
+      "phonetic": "/ə ˈweɪst ˈʌv ˈmʌni/",
+      "chinese": "浪费钱",
+      "example": "The expensive tool was a waste of money.",
+      "translation": "这个昂贵的工具是在浪费钱。"
+    },
+    {
+      "phrase": "value for money",
+      "phonetic": "/ˈvæljuː ˈfɔːr ˈmʌni/",
+      "chinese": "物有所值",
+      "example": "The lunch menu offers good value for money.",
+      "translation": "午餐菜单物有所值。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "Planning ahead can save time and money.",
       "chinese": "提前规划可以节省时间和金钱。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "Cooking at home is a good way to save money.",
+      "chinese": "在家做饭是省钱的好方法。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "I do not want to spend money on things I never use.",
+      "chinese": "我不想把钱花在从不使用的东西上。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "She makes money by selling handmade bags.",
+      "chinese": "她靠出售手工包赚钱。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "He had to borrow money to repair the car.",
+      "chinese": "他不得不借钱修车。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "The expensive tool was a waste of money.",
+      "chinese": "这个昂贵的工具是在浪费钱。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "The lunch menu offers good value for money.",
+      "chinese": "午餐菜单物有所值。"
     }
   ],
   "studyFocus": {
@@ -322,7 +392,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“省钱；存钱”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "save money"
+        "save money",
+        "spend money on",
+        "make money",
+        "borrow money"
       ],
       "answer": "save money",
       "stage": "T2",
@@ -334,6 +407,8 @@
       "prompt": "用法辨析：哪一项既表示“在……上花钱”，又符合这个形式线索：完整搭配中使用介词 on？",
       "options": [
         "save money",
+        "make money",
+        "borrow money",
         "spend money on"
       ],
       "answer": "spend money on",
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

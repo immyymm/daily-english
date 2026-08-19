@@ -18,7 +18,7 @@
   "difficulty": "应用",
   "tags": [
     "n.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心名词搭配",
       "items": [
         {
           "phrase": "tell a story",
@@ -92,22 +92,27 @@
           "phrase": "true story",
           "phonetic": "/ˈtruː ˈstɔːri/",
           "chinese": "真实故事"
-        },
-        {
-          "phrase": "short story",
-          "phonetic": "/ˈʃɔːrt ˈstɔːri/",
-          "chinese": "短篇小说"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "short story",
+          "phonetic": "/ˈʃɔːrt ˈstɔːri/",
+          "chinese": "短篇小说"
+        },
         {
           "phrase": "news story",
           "phonetic": "/ˈnuːz ˈstɔːri/",
           "chinese": "新闻报道"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "the whole story",
           "phonetic": "/ðə ˈhoʊl ˈstɔːri/",
@@ -126,8 +131,43 @@
       "phrase": "tell a story",
       "phonetic": "/ˈtɛl ə ˈstɔːri/",
       "chinese": "讲故事",
-      "example": "Tell a short story using three new words.",
-      "translation": "用三个新单词讲一个短故事。"
+      "example": "My grandfather told us a funny story.",
+      "translation": "祖父给我们讲了一个有趣的故事。"
+    },
+    {
+      "phrase": "true story",
+      "phonetic": "/ˈtruː ˈstɔːri/",
+      "chinese": "真实故事",
+      "example": "The film is based on a true story.",
+      "translation": "这部电影根据真实故事改编。"
+    },
+    {
+      "phrase": "short story",
+      "phonetic": "/ˈʃɔːrt ˈstɔːri/",
+      "chinese": "短篇小说",
+      "example": "She published her first short story at college.",
+      "translation": "她在大学时发表了第一篇短篇小说。"
+    },
+    {
+      "phrase": "news story",
+      "phonetic": "/ˈnuːz ˈstɔːri/",
+      "chinese": "新闻报道",
+      "example": "The news story appeared online this morning.",
+      "translation": "这篇新闻报道今天早上在网上发布。"
+    },
+    {
+      "phrase": "the whole story",
+      "phonetic": "/ðə ˈhoʊl ˈstɔːri/",
+      "chinese": "完整经过",
+      "example": "I do not think we have heard the whole story.",
+      "translation": "我认为我们还没有听到完整经过。"
+    },
+    {
+      "phrase": "a different story",
+      "phonetic": "/ə ˈdɪfɚənt ˈstɔːri/",
+      "chinese": "另一回事",
+      "example": "Working there every day is a different story.",
+      "translation": "每天在那里工作就是另一回事了。"
     }
   ],
   "synonyms": [
@@ -182,6 +222,36 @@
       "scene": "核心真实用法",
       "english": "Tell a short story using three new words.",
       "chinese": "用三个新单词讲一个短故事。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "My grandfather told us a funny story.",
+      "chinese": "祖父给我们讲了一个有趣的故事。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "The film is based on a true story.",
+      "chinese": "这部电影根据真实故事改编。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "She published her first short story at college.",
+      "chinese": "她在大学时发表了第一篇短篇小说。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "The news story appeared online this morning.",
+      "chinese": "这篇新闻报道今天早上在网上发布。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "I do not think we have heard the whole story.",
+      "chinese": "我认为我们还没有听到完整经过。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "Working there every day is a different story.",
+      "chinese": "每天在那里工作就是另一回事了。"
     }
   ],
   "studyFocus": {
@@ -330,7 +400,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“讲故事”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "tell a story"
+        "short story",
+        "news story",
+        "tell a story",
+        "true story"
       ],
       "answer": "tell a story",
       "stage": "T2",
@@ -341,8 +414,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“真实故事”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "news story",
+        "true story",
         "tell a story",
-        "true story"
+        "short story"
       ],
       "answer": "true story",
       "stage": "T3",
@@ -433,9 +508,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

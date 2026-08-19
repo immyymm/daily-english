@@ -24,7 +24,7 @@
   "difficulty": "应用",
   "tags": [
     "adv.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -94,7 +94,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心用法",
       "items": [
         {
           "phrase": "still need to",
@@ -105,22 +105,27 @@
           "phrase": "still working",
           "phonetic": "/stɪl ˈwɝːkɪŋ/",
           "chinese": "仍在工作"
-        },
-        {
-          "phrase": "still possible",
-          "phonetic": "/stɪl ˈpɑsəbəl/",
-          "chinese": "仍有可能"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "still possible",
+          "phonetic": "/stɪl ˈpɑsəbəl/",
+          "chinese": "仍有可能"
+        },
         {
           "phrase": "still not sure",
           "phonetic": "/stɪl ˈnɑt ˈʃʊr/",
           "chinese": "仍不确定"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "stand still",
           "phonetic": "/ˈstænd stɪl/",
@@ -132,6 +137,21 @@
           "chinese": "保持不动"
         }
       ]
+    },
+    {
+      "category": "补充常用语境",
+      "items": [
+        {
+          "phrase": "still available",
+          "phonetic": "/stɪl əˈveɪləbəl/",
+          "chinese": "仍然可用"
+        },
+        {
+          "phrase": "still remember",
+          "phonetic": "/stɪl rɪˈmɛmbɚ/",
+          "chinese": "仍然记得"
+        }
+      ]
     }
   ],
   "fixedPhrases": [
@@ -139,8 +159,43 @@
       "phrase": "still need to",
       "phonetic": "/stɪl ˈniːd ˈtuː/",
       "chinese": "仍然需要",
-      "example": "I still need to review two words.",
-      "translation": "我还需要复习两个单词。"
+      "example": "I still need to check two details.",
+      "translation": "我仍然需要检查两个细节。"
+    },
+    {
+      "phrase": "still working",
+      "phonetic": "/stɪl ˈwɝːkɪŋ/",
+      "chinese": "仍在工作",
+      "example": "She is still working on the report.",
+      "translation": "她仍在撰写报告。"
+    },
+    {
+      "phrase": "still possible",
+      "phonetic": "/stɪl ˈpɑsəbəl/",
+      "chinese": "仍有可能",
+      "example": "It is still possible to change the booking.",
+      "translation": "仍然可以更改预订。"
+    },
+    {
+      "phrase": "still not sure",
+      "phonetic": "/stɪl ˈnɑt ˈʃʊr/",
+      "chinese": "仍不确定",
+      "example": "I am still not sure which option is better.",
+      "translation": "我仍不确定哪个选择更好。"
+    },
+    {
+      "phrase": "stand still",
+      "phonetic": "/ˈstænd stɪl/",
+      "chinese": "站着不动",
+      "example": "Stand still while I take the photo.",
+      "translation": "我拍照时请站着别动。"
+    },
+    {
+      "phrase": "keep still",
+      "phonetic": "/ˈkiːp stɪl/",
+      "chinese": "保持不动",
+      "example": "Keep still for a few seconds.",
+      "translation": "保持不动几秒钟。"
     }
   ],
   "synonyms": [
@@ -195,6 +250,36 @@
       "scene": "核心真实用法",
       "english": "I still need to review two words.",
       "chinese": "我还需要复习两个单词。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "I still need to check two details.",
+      "chinese": "我仍然需要检查两个细节。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "She is still working on the report.",
+      "chinese": "她仍在撰写报告。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "It is still possible to change the booking.",
+      "chinese": "仍然可以更改预订。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "I am still not sure which option is better.",
+      "chinese": "我仍不确定哪个选择更好。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "Stand still while I take the photo.",
+      "chinese": "我拍照时请站着别动。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "Keep still for a few seconds.",
+      "chinese": "保持不动几秒钟。"
     }
   ],
   "studyFocus": {
@@ -343,6 +428,9 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“仍然需要”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "still working",
+        "still possible",
+        "still not sure",
         "still need to"
       ],
       "answer": "still need to",
@@ -354,6 +442,8 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“仍在工作”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "still possible",
+        "still not sure",
         "still working",
         "still need to"
       ],
@@ -446,9 +536,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

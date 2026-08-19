@@ -18,7 +18,7 @@
   "difficulty": "进阶",
   "tags": [
     "adj.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心用法",
       "items": [
         {
           "phrase": "important to remember",
@@ -92,22 +92,27 @@
           "phrase": "important for",
           "phonetic": "/ɪmˈpɔːrtənt ˈfɔːr/",
           "chinese": "对……很重要"
-        },
-        {
-          "phrase": "it is important to",
-          "phonetic": "/ˈɪt ˈɪz ɪmˈpɔːrtənt ˈtuː/",
-          "chinese": "做……很重要"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "it is important to",
+          "phonetic": "/ˈɪt ˈɪz ɪmˈpɔːrtənt ˈtuː/",
+          "chinese": "做……很重要"
+        },
         {
           "phrase": "play an important role",
           "phonetic": "/ˈpleɪ ˈæn ɪmˈpɔːrtənt ˈroʊl/",
           "chinese": "发挥重要作用"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "most important",
           "phonetic": "/ˈmoʊst ɪmˈpɔːrtənt/",
@@ -126,8 +131,43 @@
       "phrase": "important to remember",
       "phonetic": "/ɪmˈpɔːrtənt ˈtuː rɪˈmɛmbɚ/",
       "chinese": "需要牢记",
-      "example": "It is important to review mistakes.",
-      "translation": "复习错误很重要。"
+      "example": "It is important to remember that progress takes time.",
+      "translation": "需要牢记，进步需要时间。"
+    },
+    {
+      "phrase": "important for",
+      "phonetic": "/ɪmˈpɔːrtənt ˈfɔːr/",
+      "chinese": "对……很重要",
+      "example": "Regular sleep is important for your health.",
+      "translation": "规律睡眠对健康很重要。"
+    },
+    {
+      "phrase": "it is important to",
+      "phonetic": "/ˈɪt ˈɪz ɪmˈpɔːrtənt ˈtuː/",
+      "chinese": "做……很重要",
+      "example": "It is important to check the context before answering.",
+      "translation": "回答前检查语境很重要。"
+    },
+    {
+      "phrase": "play an important role",
+      "phonetic": "/ˈpleɪ ˈæn ɪmˈpɔːrtənt ˈroʊl/",
+      "chinese": "发挥重要作用",
+      "example": "Trust plays an important role in a strong team.",
+      "translation": "信任在优秀团队中发挥重要作用。"
+    },
+    {
+      "phrase": "most important",
+      "phonetic": "/ˈmoʊst ɪmˈpɔːrtənt/",
+      "chinese": "最重要的",
+      "example": "The most important thing is to keep practicing.",
+      "translation": "最重要的是坚持练习。"
+    },
+    {
+      "phrase": "equally important",
+      "phonetic": "/ˈiːkwəliː ɪmˈpɔːrtənt/",
+      "chinese": "同样重要",
+      "example": "Accuracy is equally important.",
+      "translation": "准确性同样重要。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "It is important to review mistakes.",
       "chinese": "复习错误很重要。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "It is important to remember that progress takes time.",
+      "chinese": "需要牢记，进步需要时间。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "Regular sleep is important for your health.",
+      "chinese": "规律睡眠对健康很重要。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "It is important to check the context before answering.",
+      "chinese": "回答前检查语境很重要。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "Trust plays an important role in a strong team.",
+      "chinese": "信任在优秀团队中发挥重要作用。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "The most important thing is to keep practicing.",
+      "chinese": "最重要的是坚持练习。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "Accuracy is equally important.",
+      "chinese": "准确性同样重要。"
     }
   ],
   "studyFocus": {
@@ -322,7 +392,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“需要牢记”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "important to remember"
+        "it is important to",
+        "play an important role",
+        "important to remember",
+        "important for"
       ],
       "answer": "important to remember",
       "stage": "T2",
@@ -333,8 +406,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“对……很重要”，又符合这个形式线索：完整搭配中使用介词 for？",
       "options": [
+        "play an important role",
+        "important for",
         "important to remember",
-        "important for"
+        "it is important to"
       ],
       "answer": "important for",
       "stage": "T3",
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

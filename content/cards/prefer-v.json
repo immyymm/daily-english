@@ -18,7 +18,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "待精校",
+    "模板详卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心动作与结构",
       "items": [
         {
           "phrase": "prefer A to B",
@@ -92,22 +92,27 @@
           "phrase": "prefer to do",
           "phonetic": "/prɪˈfɜːr ˈtuː ˈduː/",
           "chinese": "更愿意做"
-        },
-        {
-          "phrase": "would prefer",
-          "phonetic": "/ˈwʊd prɪˈfɜːr/",
-          "chinese": "更希望"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "would prefer",
+          "phonetic": "/ˈwʊd prɪˈfɜːr/",
+          "chinese": "更希望"
+        },
         {
           "phrase": "personally prefer",
           "phonetic": "/ˈpɝːsənəliː prɪˈfɜːr/",
           "chinese": "个人更喜欢"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "if you prefer",
           "phonetic": "/ˈɪf ˈjuː prɪˈfɜːr/",
@@ -126,8 +131,43 @@
       "phrase": "prefer A to B",
       "phonetic": "/prɪˈfɜːr ə ˈtuː ˈbiː/",
       "chinese": "比起 B 更喜欢 A",
-      "example": "I prefer walking to taking a taxi.",
-      "translation": "比起乘出租车，我更喜欢走路。"
+      "example": "I prefer tea to coffee in the morning.",
+      "translation": "早上比起咖啡我更喜欢茶。"
+    },
+    {
+      "phrase": "prefer to do",
+      "phonetic": "/prɪˈfɜːr ˈtuː ˈduː/",
+      "chinese": "更愿意做",
+      "example": "She prefers to work in a quiet room.",
+      "translation": "她更喜欢在安静的房间里工作。"
+    },
+    {
+      "phrase": "would prefer",
+      "phonetic": "/ˈwʊd prɪˈfɜːr/",
+      "chinese": "更希望",
+      "example": "I would prefer a window seat, please.",
+      "translation": "如果可以，我更想要靠窗的座位。"
+    },
+    {
+      "phrase": "personally prefer",
+      "phonetic": "/ˈpɝːsənəliː prɪˈfɜːr/",
+      "chinese": "个人更喜欢",
+      "example": "I personally prefer the simpler design.",
+      "translation": "我个人更喜欢更简洁的设计。"
+    },
+    {
+      "phrase": "if you prefer",
+      "phonetic": "/ˈɪf ˈjuː prɪˈfɜːr/",
+      "chinese": "如果你愿意",
+      "example": "We can meet online if you prefer.",
+      "translation": "如果你愿意，我们可以在线见面。"
+    },
+    {
+      "phrase": "preferred choice",
+      "phonetic": "/prəˈfɝːd ˈtʃɔɪs/",
+      "chinese": "首选",
+      "example": "Email is the preferred choice for formal communication.",
+      "translation": "电子邮件是正式沟通的首选。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "I prefer walking to taking a taxi.",
       "chinese": "比起乘出租车，我更喜欢走路。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "I prefer tea to coffee in the morning.",
+      "chinese": "早上比起咖啡我更喜欢茶。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "She prefers to work in a quiet room.",
+      "chinese": "她更喜欢在安静的房间里工作。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "I would prefer a window seat, please.",
+      "chinese": "如果可以，我更想要靠窗的座位。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "I personally prefer the simpler design.",
+      "chinese": "我个人更喜欢更简洁的设计。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "We can meet online if you prefer.",
+      "chinese": "如果你愿意，我们可以在线见面。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "Email is the preferred choice for formal communication.",
+      "chinese": "电子邮件是正式沟通的首选。"
     }
   ],
   "studyFocus": {
@@ -322,7 +392,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“比起 B 更喜欢 A”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "prefer A to B"
+        "would prefer",
+        "personally prefer",
+        "prefer A to B",
+        "prefer to do"
       ],
       "answer": "prefer A to B",
       "stage": "T2",
@@ -333,8 +406,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“更愿意做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
       "options": [
+        "personally prefer",
+        "prefer to do",
         "prefer A to B",
-        "prefer to do"
+        "would prefer"
       ],
       "answer": "prefer to do",
       "stage": "T3",
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

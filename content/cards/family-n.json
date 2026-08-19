@@ -18,7 +18,7 @@
   "difficulty": "应用",
   "tags": [
     "n.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心名词搭配",
       "items": [
         {
           "phrase": "family member",
@@ -92,22 +92,27 @@
           "phrase": "close family",
           "phonetic": "/ˈkloʊs ˈfæməli/",
           "chinese": "近亲"
-        },
-        {
-          "phrase": "family life",
-          "phonetic": "/ˈfæməli ˈlaɪf/",
-          "chinese": "家庭生活"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "family life",
+          "phonetic": "/ˈfæməli ˈlaɪf/",
+          "chinese": "家庭生活"
+        },
         {
           "phrase": "start a family",
           "phonetic": "/ˈstɑrt ə ˈfæməli/",
           "chinese": "组建家庭"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "family business",
           "phonetic": "/ˈfæməli ˈbɪznəs/",
@@ -126,8 +131,43 @@
       "phrase": "family member",
       "phonetic": "/ˈfæməli ˈmɛmbɚ/",
       "chinese": "家庭成员",
-      "example": "My family supports my learning plan.",
-      "translation": "我的家人支持我的学习计划。"
+      "example": "Every family member brought a different dish.",
+      "translation": "每位家庭成员都带了不同的菜。"
+    },
+    {
+      "phrase": "close family",
+      "phonetic": "/ˈkloʊs ˈfæməli/",
+      "chinese": "近亲",
+      "example": "Only close family attended the small wedding.",
+      "translation": "只有近亲参加了这场小型婚礼。"
+    },
+    {
+      "phrase": "family life",
+      "phonetic": "/ˈfæməli ˈlaɪf/",
+      "chinese": "家庭生活",
+      "example": "Flexible work has improved our family life.",
+      "translation": "弹性工作改善了我们的家庭生活。"
+    },
+    {
+      "phrase": "start a family",
+      "phonetic": "/ˈstɑrt ə ˈfæməli/",
+      "chinese": "组建家庭",
+      "example": "They hope to start a family soon.",
+      "translation": "他们希望不久后组建家庭。"
+    },
+    {
+      "phrase": "family business",
+      "phonetic": "/ˈfæməli ˈbɪznəs/",
+      "chinese": "家族企业",
+      "example": "The restaurant began as a small family business.",
+      "translation": "这家餐馆起初是一家小型家族企业。"
+    },
+    {
+      "phrase": "the whole family",
+      "phonetic": "/ðə ˈhoʊl ˈfæməli/",
+      "chinese": "全家人",
+      "example": "The whole family gathered for dinner.",
+      "translation": "全家人聚在一起吃晚饭。"
     }
   ],
   "synonyms": [
@@ -182,6 +222,36 @@
       "scene": "核心真实用法",
       "english": "My family supports my learning plan.",
       "chinese": "我的家人支持我的学习计划。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "Every family member brought a different dish.",
+      "chinese": "每位家庭成员都带了不同的菜。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "Only close family attended the small wedding.",
+      "chinese": "只有近亲参加了这场小型婚礼。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "Flexible work has improved our family life.",
+      "chinese": "弹性工作改善了我们的家庭生活。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "They hope to start a family soon.",
+      "chinese": "他们希望不久后组建家庭。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "The restaurant began as a small family business.",
+      "chinese": "这家餐馆起初是一家小型家族企业。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "The whole family gathered for dinner.",
+      "chinese": "全家人聚在一起吃晚饭。"
     }
   ],
   "studyFocus": {
@@ -330,7 +400,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“家庭成员”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "family member"
+        "start a family",
+        "family member",
+        "close family",
+        "family life"
       ],
       "answer": "family member",
       "stage": "T2",
@@ -342,7 +415,9 @@
       "prompt": "搭配辨析：哪一项既表示“近亲”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "close family",
-        "family member"
+        "family member",
+        "family life",
+        "start a family"
       ],
       "answer": "close family",
       "stage": "T3",
@@ -433,9 +508,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

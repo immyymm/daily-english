@@ -18,7 +18,7 @@
   "difficulty": "进阶",
   "tags": [
     "adv.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心用法",
       "items": [
         {
           "phrase": "nearly finished",
@@ -92,22 +92,27 @@
           "phrase": "nearly all",
           "phonetic": "/ˈnɪrli ˈɔːl/",
           "chinese": "几乎全部"
-        },
-        {
-          "phrase": "nearly impossible",
-          "phonetic": "/ˈnɪrli ˌɪˈmpɑsəbəl/",
-          "chinese": "几乎不可能"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "nearly impossible",
+          "phonetic": "/ˈnɪrli ˌɪˈmpɑsəbəl/",
+          "chinese": "几乎不可能"
+        },
         {
           "phrase": "not nearly enough",
           "phonetic": "/ˈnɑt ˈnɪrli ɪˈnʌf/",
           "chinese": "远远不够"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "nearly every day",
           "phonetic": "/ˈnɪrli ˈɛvɚiː ˈdeɪ/",
@@ -119,6 +124,21 @@
           "chinese": "几乎是两倍"
         }
       ]
+    },
+    {
+      "category": "补充常用语境",
+      "items": [
+        {
+          "phrase": "nearly always",
+          "phonetic": "/ˈnɪrli ˈɔːˌlweɪz/",
+          "chinese": "几乎总是"
+        },
+        {
+          "phrase": "very nearly",
+          "phonetic": "/ˈvɛriː ˈnɪrli/",
+          "chinese": "差一点就"
+        }
+      ]
     }
   ],
   "fixedPhrases": [
@@ -127,7 +147,42 @@
       "phonetic": "/ˈnɪrli ˈfɪnɪʃt/",
       "chinese": "快完成了",
       "example": "I am nearly finished with the report.",
-      "translation": "我的报告快完成了。"
+      "translation": "我的报告快写完了。"
+    },
+    {
+      "phrase": "nearly all",
+      "phonetic": "/ˈnɪrli ˈɔːl/",
+      "chinese": "几乎全部",
+      "example": "Nearly all the seats were taken.",
+      "translation": "几乎所有座位都有人了。"
+    },
+    {
+      "phrase": "nearly impossible",
+      "phonetic": "/ˈnɪrli ˌɪˈmpɑsəbəl/",
+      "chinese": "几乎不可能",
+      "example": "It is nearly impossible to hear him from here.",
+      "translation": "从这里几乎听不到他说话。"
+    },
+    {
+      "phrase": "not nearly enough",
+      "phonetic": "/ˈnɑt ˈnɪrli ɪˈnʌf/",
+      "chinese": "远远不够",
+      "example": "Ten minutes is not nearly enough.",
+      "translation": "十分钟远远不够。"
+    },
+    {
+      "phrase": "nearly every day",
+      "phonetic": "/ˈnɪrli ˈɛvɚiː ˈdeɪ/",
+      "chinese": "几乎每天",
+      "example": "She practices speaking nearly every day.",
+      "translation": "她几乎每天都练习口语。"
+    },
+    {
+      "phrase": "nearly twice as much",
+      "phonetic": "/ˈnɪrli ˈtwaɪs ˈæz ˈmʌtʃ/",
+      "chinese": "几乎是两倍",
+      "example": "This room costs nearly twice as much as that one.",
+      "translation": "这个房间的价格几乎是那个房间的两倍。"
     }
   ],
   "synonyms": [
@@ -182,6 +237,31 @@
       "scene": "核心真实用法",
       "english": "I am nearly finished with the report.",
       "chinese": "我的报告快完成了。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "Nearly all the seats were taken.",
+      "chinese": "几乎所有座位都有人了。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "It is nearly impossible to hear him from here.",
+      "chinese": "从这里几乎听不到他说话。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "Ten minutes is not nearly enough.",
+      "chinese": "十分钟远远不够。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "She practices speaking nearly every day.",
+      "chinese": "她几乎每天都练习口语。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "This room costs nearly twice as much as that one.",
+      "chinese": "这个房间的价格几乎是那个房间的两倍。"
     }
   ],
   "studyFocus": {
@@ -330,7 +410,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“快完成了”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "nearly finished"
+        "nearly impossible",
+        "not nearly enough",
+        "nearly finished",
+        "nearly all"
       ],
       "answer": "nearly finished",
       "stage": "T2",
@@ -341,8 +424,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“几乎全部”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "not nearly enough",
+        "nearly all",
         "nearly finished",
-        "nearly all"
+        "nearly impossible"
       ],
       "answer": "nearly all",
       "stage": "T3",
@@ -433,9 +518,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

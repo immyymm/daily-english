@@ -24,7 +24,7 @@
   "difficulty": "进阶",
   "tags": [
     "adv.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -87,7 +87,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心用法",
       "items": [
         {
           "phrase": "instead of",
@@ -98,22 +98,27 @@
           "phrase": "do something instead",
           "phonetic": "/ˈduː ˈsʌmθɪŋ ɪnˈsted/",
           "chinese": "改做某事"
-        },
-        {
-          "phrase": "use A instead of B",
-          "phonetic": "/ˈjuːs ə ɪnˈsted ˈʌv ˈbiː/",
-          "chinese": "用 A 代替 B"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "use A instead of B",
+          "phonetic": "/ˈjuːs ə ɪnˈsted ˈʌv ˈbiː/",
+          "chinese": "用 A 代替 B"
+        },
         {
           "phrase": "choose this instead",
           "phonetic": "/ˈtʃuːz ˈðɪs ɪnˈsted/",
           "chinese": "改选这个"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "or instead",
           "phonetic": "/ˈɔːr ɪnˈsted/",
@@ -125,6 +130,21 @@
           "chinese": "为什么不改试这个"
         }
       ]
+    },
+    {
+      "category": "补充常用语境",
+      "items": [
+        {
+          "phrase": "go there instead",
+          "phonetic": "/ˈɡoʊ ˈðɛr ɪnˈsted/",
+          "chinese": "改去那里"
+        },
+        {
+          "phrase": "use this instead",
+          "phonetic": "/ˈjuːs ˈðɪs ɪnˈsted/",
+          "chinese": "改用这个"
+        }
+      ]
     }
   ],
   "fixedPhrases": [
@@ -132,8 +152,43 @@
       "phrase": "instead of",
       "phonetic": "/ɪnˈsted ˈʌv/",
       "chinese": "而不是；代替",
-      "example": "Try using an English definition instead of a translation.",
-      "translation": "试着使用英文释义而不是翻译。"
+      "example": "We walked instead of taking a taxi.",
+      "translation": "我们步行了，而不是坐出租车。"
+    },
+    {
+      "phrase": "do something instead",
+      "phonetic": "/ˈduː ˈsʌmθɪŋ ɪnˈsted/",
+      "chinese": "改做某事",
+      "example": "The café was closed, so we ate at home instead.",
+      "translation": "咖啡馆关门了，所以我们改在家里吃。"
+    },
+    {
+      "phrase": "use A instead of B",
+      "phonetic": "/ˈjuːs ə ɪnˈsted ˈʌv ˈbiː/",
+      "chinese": "用 A 代替 B",
+      "example": "Use olive oil instead of butter.",
+      "translation": "用橄榄油代替黄油。"
+    },
+    {
+      "phrase": "choose this instead",
+      "phonetic": "/ˈtʃuːz ˈðɪs ɪnˈsted/",
+      "chinese": "改选这个",
+      "example": "The first option is expensive; choose this one instead.",
+      "translation": "第一个选择很贵，改选这个吧。"
+    },
+    {
+      "phrase": "or instead",
+      "phonetic": "/ˈɔːr ɪnˈsted/",
+      "chinese": "或者改为",
+      "example": "We could meet Friday, or instead wait until Monday.",
+      "translation": "我们可以星期五见，或者改到星期一。"
+    },
+    {
+      "phrase": "why not try this instead",
+      "phonetic": "/ˈwaɪ ˈnɑt ˈtraɪ ˈðɪs ɪnˈsted/",
+      "chinese": "为什么不改试这个",
+      "example": "Why not try this simpler method instead?",
+      "translation": "为什么不改试这个更简单的方法？"
     }
   ],
   "synonyms": [
@@ -180,6 +235,36 @@
       "scene": "核心真实用法",
       "english": "Try using an English definition instead of a translation.",
       "chinese": "试着使用英文释义而不是翻译。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "We walked instead of taking a taxi.",
+      "chinese": "我们步行了，而不是坐出租车。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "The café was closed, so we ate at home instead.",
+      "chinese": "咖啡馆关门了，所以我们改在家里吃。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "Use olive oil instead of butter.",
+      "chinese": "用橄榄油代替黄油。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "The first option is expensive; choose this one instead.",
+      "chinese": "第一个选择很贵，改选这个吧。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "We could meet Friday, or instead wait until Monday.",
+      "chinese": "我们可以星期五见，或者改到星期一。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "Why not try this simpler method instead?",
+      "chinese": "为什么不改试这个更简单的方法？"
     }
   ],
   "studyFocus": {
@@ -328,7 +413,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“而不是；代替”，又符合这个形式线索：完整搭配中使用介词 of？",
       "options": [
-        "instead of"
+        "choose this instead",
+        "instead of",
+        "do something instead",
+        "use A instead of B"
       ],
       "answer": "instead of",
       "stage": "T2",
@@ -340,7 +428,9 @@
       "prompt": "搭配辨析：哪一项既表示“改做某事”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
       "options": [
         "do something instead",
-        "instead of"
+        "instead of",
+        "use A instead of B",
+        "choose this instead"
       ],
       "answer": "do something instead",
       "stage": "T3",
@@ -431,9 +521,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

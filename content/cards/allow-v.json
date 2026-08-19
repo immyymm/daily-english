@@ -18,7 +18,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "待精校",
+    "模板详卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心动作与结构",
       "items": [
         {
           "phrase": "allow someone to do",
@@ -92,22 +92,27 @@
           "phrase": "allow time for",
           "phonetic": "/əˈlaʊ ˈtaɪm ˈfɔːr/",
           "chinese": "为……留出时间"
-        },
-        {
-          "phrase": "allow access to",
-          "phonetic": "/əˈlaʊ ˈæˌksɛs ˈtuː/",
-          "chinese": "允许访问"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "allow access to",
+          "phonetic": "/əˈlaʊ ˈæˌksɛs ˈtuː/",
+          "chinese": "允许访问"
+        },
         {
           "phrase": "not allow smoking",
           "phonetic": "/ˈnɑt əˈlaʊ ˈsmoʊkɪŋ/",
           "chinese": "不允许吸烟"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "allow for delays",
           "phonetic": "/əˈlaʊ ˈfɔːr dɪˈleɪz/",
@@ -119,6 +124,16 @@
           "chinese": "获准做……"
         }
       ]
+    },
+    {
+      "category": "补充常用语境",
+      "items": [
+        {
+          "phrase": "allow someone to do something",
+          "phonetic": "/əˈlaʊ ˈsʌˌmwʌn ˈtuː ˈduː ˈsʌmθɪŋ/",
+          "chinese": "允许某人做某事"
+        }
+      ]
     }
   ],
   "fixedPhrases": [
@@ -126,8 +141,43 @@
       "phrase": "allow someone to do",
       "phonetic": "/əˈlaʊ ˈsʌˌmwʌn ˈtuː ˈduː/",
       "chinese": "允许某人做",
-      "example": "The app allows you to study offline.",
-      "translation": "这个应用允许你离线学习。"
+      "example": "The new schedule allows me to study before work.",
+      "translation": "新的时间安排让我可以在上班前学习。"
+    },
+    {
+      "phrase": "allow time for",
+      "phonetic": "/əˈlaʊ ˈtaɪm ˈfɔːr/",
+      "chinese": "为……留出时间",
+      "example": "Please allow enough time for traffic this morning.",
+      "translation": "今天早上请为交通拥堵留出足够时间。"
+    },
+    {
+      "phrase": "allow access to",
+      "phonetic": "/əˈlaʊ ˈæˌksɛs ˈtuː/",
+      "chinese": "允许访问",
+      "example": "This password allows access to the shared folder.",
+      "translation": "这个密码允许访问共享文件夹。"
+    },
+    {
+      "phrase": "not allow smoking",
+      "phonetic": "/ˈnɑt əˈlaʊ ˈsmoʊkɪŋ/",
+      "chinese": "不允许吸烟",
+      "example": "The building does not allow smoking indoors.",
+      "translation": "这栋楼不允许在室内吸烟。"
+    },
+    {
+      "phrase": "allow for delays",
+      "phonetic": "/əˈlaʊ ˈfɔːr dɪˈleɪz/",
+      "chinese": "把延误考虑在内",
+      "example": "We should allow for possible delays in the plan.",
+      "translation": "我们应该在计划中把可能的延误考虑进去。"
+    },
+    {
+      "phrase": "be allowed to",
+      "phonetic": "/ˈbiː əˈlaʊd ˈtuː/",
+      "chinese": "获准做……",
+      "example": "Students are allowed to use a dictionary during the test.",
+      "translation": "考试期间学生可以使用词典。"
     }
   ],
   "synonyms": [
@@ -174,6 +224,36 @@
       "scene": "核心真实用法",
       "english": "The app allows you to study offline.",
       "chinese": "这个应用允许你离线学习。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "The new schedule allows me to study before work.",
+      "chinese": "新的时间安排让我可以在上班前学习。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "Please allow enough time for traffic this morning.",
+      "chinese": "今天早上请为交通拥堵留出足够时间。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "This password allows access to the shared folder.",
+      "chinese": "这个密码允许访问共享文件夹。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "The building does not allow smoking indoors.",
+      "chinese": "这栋楼不允许在室内吸烟。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "We should allow for possible delays in the plan.",
+      "chinese": "我们应该在计划中把可能的延误考虑进去。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "Students are allowed to use a dictionary during the test.",
+      "chinese": "考试期间学生可以使用词典。"
     }
   ],
   "studyFocus": {
@@ -322,6 +402,9 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“允许某人做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
       "options": [
+        "allow time for",
+        "allow access to",
+        "not allow smoking",
         "allow someone to do"
       ],
       "answer": "allow someone to do",
@@ -333,6 +416,8 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“为……留出时间”，又符合这个形式线索：完整搭配中使用介词 for？",
       "options": [
+        "allow access to",
+        "not allow smoking",
         "allow time for",
         "allow someone to do"
       ],
@@ -425,9 +510,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

@@ -18,7 +18,7 @@
   "difficulty": "进阶",
   "tags": [
     "n.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心名词搭配",
       "items": [
         {
           "phrase": "main purpose",
@@ -92,22 +92,27 @@
           "phrase": "purpose of doing",
           "phonetic": "/ˈpɜːrpəs ˈʌv ˈduːɪŋ/",
           "chinese": "做……的目的"
-        },
-        {
-          "phrase": "serve a purpose",
-          "phonetic": "/ˈsɝːv ə ˈpɜːrpəs/",
-          "chinese": "起作用；有用途"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "serve a purpose",
+          "phonetic": "/ˈsɝːv ə ˈpɜːrpəs/",
+          "chinese": "起作用；有用途"
+        },
         {
           "phrase": "on purpose",
           "phonetic": "/ˈɑn ˈpɜːrpəs/",
           "chinese": "故意地"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "for this purpose",
           "phonetic": "/ˈfɔːr ˈðɪs ˈpɜːrpəs/",
@@ -126,8 +131,43 @@
       "phrase": "main purpose",
       "phonetic": "/ˈmeɪn ˈpɜːrpəs/",
       "chinese": "主要目的",
-      "example": "The main purpose of the test is active recall.",
-      "translation": "这个测试的主要目的是主动回忆。"
+      "example": "The main purpose of the meeting is to share information.",
+      "translation": "会议的主要目的是分享信息。"
+    },
+    {
+      "phrase": "purpose of doing",
+      "phonetic": "/ˈpɜːrpəs ˈʌv ˈduːɪŋ/",
+      "chinese": "做……的目的",
+      "example": "The purpose of reviewing is to strengthen memory.",
+      "translation": "复习的目的是加强记忆。"
+    },
+    {
+      "phrase": "serve a purpose",
+      "phonetic": "/ˈsɝːv ə ˈpɜːrpəs/",
+      "chinese": "起作用；有用途",
+      "example": "This small pocket serves a useful purpose.",
+      "translation": "这个小口袋很实用。"
+    },
+    {
+      "phrase": "on purpose",
+      "phonetic": "/ˈɑn ˈpɜːrpəs/",
+      "chinese": "故意地",
+      "example": "He left the document at home on purpose.",
+      "translation": "他故意把文件留在了家里。"
+    },
+    {
+      "phrase": "for this purpose",
+      "phonetic": "/ˈfɔːr ˈðɪs ˈpɜːrpəs/",
+      "chinese": "为此目的",
+      "example": "We created a separate account for this purpose.",
+      "translation": "我们为此创建了一个单独账户。"
+    },
+    {
+      "phrase": "sense of purpose",
+      "phonetic": "/ˈsɛns ˈʌv ˈpɜːrpəs/",
+      "chinese": "目标感",
+      "example": "Volunteering gave her a strong sense of purpose.",
+      "translation": "志愿服务给了她强烈的目标感。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "The main purpose of the test is active recall.",
       "chinese": "这个测试的主要目的是主动回忆。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "The main purpose of the meeting is to share information.",
+      "chinese": "会议的主要目的是分享信息。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "The purpose of reviewing is to strengthen memory.",
+      "chinese": "复习的目的是加强记忆。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "This small pocket serves a useful purpose.",
+      "chinese": "这个小口袋很实用。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "He left the document at home on purpose.",
+      "chinese": "他故意把文件留在了家里。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "We created a separate account for this purpose.",
+      "chinese": "我们为此创建了一个单独账户。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "Volunteering gave her a strong sense of purpose.",
+      "chinese": "志愿服务给了她强烈的目标感。"
     }
   ],
   "studyFocus": {
@@ -322,7 +392,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“主要目的”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "main purpose"
+        "serve a purpose",
+        "on purpose",
+        "main purpose",
+        "purpose of doing"
       ],
       "answer": "main purpose",
       "stage": "T2",
@@ -333,8 +406,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“做……的目的”，又符合这个形式线索：目标词后的 doing 表示要换成符合语境的动词 -ing 形式？",
       "options": [
+        "on purpose",
+        "purpose of doing",
         "main purpose",
-        "purpose of doing"
+        "serve a purpose"
       ],
       "answer": "purpose of doing",
       "stage": "T3",
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

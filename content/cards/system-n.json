@@ -18,7 +18,7 @@
   "difficulty": "进阶",
   "tags": [
     "n.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心名词搭配",
       "items": [
         {
           "phrase": "a simple system",
@@ -92,22 +92,27 @@
           "phrase": "computer system",
           "phonetic": "/kəˈmpjuːtɚ ˈsɪstəm/",
           "chinese": "计算机系统"
-        },
-        {
-          "phrase": "education system",
-          "phonetic": "/ˌɛdʒəˈkeɪʃən ˈsɪstəm/",
-          "chinese": "教育体系"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "education system",
+          "phonetic": "/ˌɛdʒəˈkeɪʃən ˈsɪstəm/",
+          "chinese": "教育体系"
+        },
         {
           "phrase": "system for doing",
           "phonetic": "/ˈsɪstəm ˈfɔːr ˈduːɪŋ/",
           "chinese": "用于做……的系统"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "the entire system",
           "phonetic": "/ðə ɪˈntaɪɚ ˈsɪstəm/",
@@ -126,8 +131,43 @@
       "phrase": "a simple system",
       "phonetic": "/ə ˈsɪmpəl ˈsɪstəm/",
       "chinese": "简单系统",
-      "example": "This system helps you review words at the right time.",
-      "translation": "这个系统帮助你在合适的时间复习单词。"
+      "example": "We use a simple system to organize tasks.",
+      "translation": "我们使用一个简单的系统来整理任务。"
+    },
+    {
+      "phrase": "computer system",
+      "phonetic": "/kəˈmpjuːtɚ ˈsɪstəm/",
+      "chinese": "计算机系统",
+      "example": "The computer system is being updated tonight.",
+      "translation": "计算机系统今晚正在更新。"
+    },
+    {
+      "phrase": "education system",
+      "phonetic": "/ˌɛdʒəˈkeɪʃən ˈsɪstəm/",
+      "chinese": "教育体系",
+      "example": "The education system differs from country to country.",
+      "translation": "教育体系因国家而异。"
+    },
+    {
+      "phrase": "system for doing",
+      "phonetic": "/ˈsɪstəm ˈfɔːr ˈduːɪŋ/",
+      "chinese": "用于做……的系统",
+      "example": "We need a system for tracking daily progress.",
+      "translation": "我们需要一个记录每日进度的系统。"
+    },
+    {
+      "phrase": "the entire system",
+      "phonetic": "/ðə ɪˈntaɪɚ ˈsɪstəm/",
+      "chinese": "整个系统",
+      "example": "A power failure shut down the entire system.",
+      "translation": "停电导致整个系统关闭。"
+    },
+    {
+      "phrase": "system failure",
+      "phonetic": "/ˈsɪstəm ˈfeɪljɚ/",
+      "chinese": "系统故障",
+      "example": "The delay was caused by a system failure.",
+      "translation": "延误是由系统故障造成的。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "This system helps you review words at the right time.",
       "chinese": "这个系统帮助你在合适的时间复习单词。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "We use a simple system to organize tasks.",
+      "chinese": "我们使用一个简单的系统来整理任务。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "The computer system is being updated tonight.",
+      "chinese": "计算机系统今晚正在更新。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "The education system differs from country to country.",
+      "chinese": "教育体系因国家而异。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "We need a system for tracking daily progress.",
+      "chinese": "我们需要一个记录每日进度的系统。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "A power failure shut down the entire system.",
+      "chinese": "停电导致整个系统关闭。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "The delay was caused by a system failure.",
+      "chinese": "延误是由系统故障造成的。"
     }
   ],
   "studyFocus": {
@@ -322,6 +392,9 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“简单系统”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "computer system",
+        "education system",
+        "system for doing",
         "a simple system"
       ],
       "answer": "a simple system",
@@ -333,6 +406,8 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“计算机系统”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "education system",
+        "system for doing",
         "computer system",
         "a simple system"
       ],
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

@@ -24,7 +24,7 @@
   "difficulty": "应用",
   "tags": [
     "adv.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -94,7 +94,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心用法",
       "items": [
         {
           "phrase": "good enough",
@@ -105,22 +105,27 @@
           "phrase": "enough time",
           "phonetic": "/ɪˈnʌf ˈtaɪm/",
           "chinese": "足够时间"
-        },
-        {
-          "phrase": "old enough to",
-          "phonetic": "/ˈoʊld ɪˈnʌf ˈtuː/",
-          "chinese": "年龄够大可以……"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "old enough to",
+          "phonetic": "/ˈoʊld ɪˈnʌf ˈtuː/",
+          "chinese": "年龄够大可以……"
+        },
         {
           "phrase": "not enough",
           "phonetic": "/ˈnɑt ɪˈnʌf/",
           "chinese": "不够"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "more than enough",
           "phonetic": "/ˈmɔːr ˈðæn ɪˈnʌf/",
@@ -132,6 +137,21 @@
           "chinese": "说来也奇怪"
         }
       ]
+    },
+    {
+      "category": "补充常用语境",
+      "items": [
+        {
+          "phrase": "enough for everyone",
+          "phonetic": "/ɪˈnʌf ˈfɔːr ˈɛvriːˌwʌn/",
+          "chinese": "够每个人用"
+        },
+        {
+          "phrase": "enough to do",
+          "phonetic": "/ɪˈnʌf ˈtuː ˈduː/",
+          "chinese": "足以做……"
+        }
+      ]
     }
   ],
   "fixedPhrases": [
@@ -139,8 +159,43 @@
       "phrase": "good enough",
       "phonetic": "/ˈɡʊd ɪˈnʌf/",
       "chinese": "足够好",
-      "example": "Five focused minutes can be enough.",
-      "translation": "专注的五分钟也可能足够。"
+      "example": "Your first draft is good enough to share.",
+      "translation": "你的初稿已经足够好，可以分享。"
+    },
+    {
+      "phrase": "enough time",
+      "phonetic": "/ɪˈnʌf ˈtaɪm/",
+      "chinese": "足够时间",
+      "example": "Do we have enough time to finish?",
+      "translation": "我们有足够时间完成吗？"
+    },
+    {
+      "phrase": "old enough to",
+      "phonetic": "/ˈoʊld ɪˈnʌf ˈtuː/",
+      "chinese": "年龄够大可以……",
+      "example": "She is old enough to travel alone.",
+      "translation": "她年龄够大，可以独自旅行。"
+    },
+    {
+      "phrase": "not enough",
+      "phonetic": "/ˈnɑt ɪˈnʌf/",
+      "chinese": "不够",
+      "example": "One example is not enough.",
+      "translation": "一个例子不够。"
+    },
+    {
+      "phrase": "more than enough",
+      "phonetic": "/ˈmɔːr ˈðæn ɪˈnʌf/",
+      "chinese": "绰绰有余",
+      "example": "We brought more than enough food.",
+      "translation": "我们带的食物绰绰有余。"
+    },
+    {
+      "phrase": "strangely enough",
+      "phonetic": "/ˈstreɪndʒliː ɪˈnʌf/",
+      "chinese": "说来也奇怪",
+      "example": "Strangely enough, the second attempt worked.",
+      "translation": "说来也奇怪，第二次尝试成功了。"
     }
   ],
   "synonyms": [
@@ -195,6 +250,36 @@
       "scene": "核心真实用法",
       "english": "Five focused minutes can be enough.",
       "chinese": "专注的五分钟也可能足够。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "Your first draft is good enough to share.",
+      "chinese": "你的初稿已经足够好，可以分享。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "Do we have enough time to finish?",
+      "chinese": "我们有足够时间完成吗？"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "She is old enough to travel alone.",
+      "chinese": "她年龄够大，可以独自旅行。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "One example is not enough.",
+      "chinese": "一个例子不够。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "We brought more than enough food.",
+      "chinese": "我们带的食物绰绰有余。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "Strangely enough, the second attempt worked.",
+      "chinese": "说来也奇怪，第二次尝试成功了。"
     }
   ],
   "studyFocus": {
@@ -343,6 +428,9 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“足够好”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "enough time",
+        "old enough to",
+        "not enough",
         "good enough"
       ],
       "answer": "good enough",
@@ -354,6 +442,8 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“足够时间”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "old enough to",
+        "not enough",
         "enough time",
         "good enough"
       ],
@@ -446,9 +536,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

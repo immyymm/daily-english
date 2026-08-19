@@ -18,7 +18,7 @@
   "difficulty": "进阶",
   "tags": [
     "adv.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心用法",
       "items": [
         {
           "phrase": "will probably",
@@ -92,22 +92,27 @@
           "phrase": "probably because",
           "phonetic": "/ˈprɑːbəbli bɪˈkɔːz/",
           "chinese": "可能因为"
-        },
-        {
-          "phrase": "most probably",
-          "phonetic": "/ˈmoʊst ˈprɑːbəbli/",
-          "chinese": "很可能"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "most probably",
+          "phonetic": "/ˈmoʊst ˈprɑːbəbli/",
+          "chinese": "很可能"
+        },
         {
           "phrase": "probably not",
           "phonetic": "/ˈprɑːbəbli ˈnɑt/",
           "chinese": "可能不会"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "quite probably",
           "phonetic": "/ˈkwaɪt ˈprɑːbəbli/",
@@ -119,6 +124,21 @@
           "chinese": "可能是真的"
         }
       ]
+    },
+    {
+      "category": "补充常用语境",
+      "items": [
+        {
+          "phrase": "probably happen",
+          "phonetic": "/ˈprɑːbəbli ˈhæpən/",
+          "chinese": "很可能发生"
+        },
+        {
+          "phrase": "probably enough",
+          "phonetic": "/ˈprɑːbəbli ɪˈnʌf/",
+          "chinese": "可能足够"
+        }
+      ]
     }
   ],
   "fixedPhrases": [
@@ -126,8 +146,43 @@
       "phrase": "will probably",
       "phonetic": "/ˈwɪl ˈprɑːbəbli/",
       "chinese": "很可能会",
-      "example": "She will probably arrive before noon.",
-      "translation": "她很可能在中午前到。"
+      "example": "The train will probably be crowded.",
+      "translation": "火车很可能会很拥挤。"
+    },
+    {
+      "phrase": "probably because",
+      "phonetic": "/ˈprɑːbəbli bɪˈkɔːz/",
+      "chinese": "可能因为",
+      "example": "She left early, probably because she felt tired.",
+      "translation": "她提前离开了，可能是因为累了。"
+    },
+    {
+      "phrase": "most probably",
+      "phonetic": "/ˈmoʊst ˈprɑːbəbli/",
+      "chinese": "很可能",
+      "example": "The package will most probably arrive tomorrow.",
+      "translation": "包裹很可能明天到。"
+    },
+    {
+      "phrase": "probably not",
+      "phonetic": "/ˈprɑːbəbli ˈnɑt/",
+      "chinese": "可能不会",
+      "example": "“Will he join us?” “Probably not.”",
+      "translation": "“他会加入我们吗？”“可能不会。”"
+    },
+    {
+      "phrase": "quite probably",
+      "phonetic": "/ˈkwaɪt ˈprɑːbəbli/",
+      "chinese": "很可能",
+      "example": "This is quite probably the easiest route.",
+      "translation": "这很可能是最简单的路线。"
+    },
+    {
+      "phrase": "probably true",
+      "phonetic": "/ˈprɑːbəbli ˈtruː/",
+      "chinese": "可能是真的",
+      "example": "What he said is probably true.",
+      "translation": "他说的话可能是真的。"
     }
   ],
   "synonyms": [
@@ -174,6 +229,36 @@
       "scene": "核心真实用法",
       "english": "She will probably arrive before noon.",
       "chinese": "她很可能在中午前到。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "The train will probably be crowded.",
+      "chinese": "火车很可能会很拥挤。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "She left early, probably because she felt tired.",
+      "chinese": "她提前离开了，可能是因为累了。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "The package will most probably arrive tomorrow.",
+      "chinese": "包裹很可能明天到。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "“Will he join us?” “Probably not.”",
+      "chinese": "“他会加入我们吗？”“可能不会。”"
+    },
+    {
+      "scene": "易错结构",
+      "english": "This is quite probably the easiest route.",
+      "chinese": "这很可能是最简单的路线。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "What he said is probably true.",
+      "chinese": "他说的话可能是真的。"
     }
   ],
   "studyFocus": {
@@ -322,7 +407,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“很可能会”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "will probably"
+        "probably not",
+        "will probably",
+        "probably because",
+        "most probably"
       ],
       "answer": "will probably",
       "stage": "T2",
@@ -334,7 +422,9 @@
       "prompt": "搭配辨析：哪一项既表示“可能因为”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "probably because",
-        "will probably"
+        "will probably",
+        "most probably",
+        "probably not"
       ],
       "answer": "probably because",
       "stage": "T3",
@@ -425,9 +515,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

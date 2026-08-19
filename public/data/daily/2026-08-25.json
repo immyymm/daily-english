@@ -1,7 +1,7 @@
 {
   "date": "2026-08-25",
   "dayNumber": 9,
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "templateVersion": "learning-template-2026.08.19.1",
   "cards": [
     {
@@ -24,7 +24,7 @@
       "difficulty": "基础",
       "tags": [
         "v.",
-        "待精校",
+        "模板详卡",
         "高频表达"
       ],
       "coreMemory": {
@@ -87,7 +87,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心动作与结构",
           "items": [
             {
               "phrase": "affect the result",
@@ -98,22 +98,27 @@
               "phrase": "seriously affect",
               "phonetic": "/ˈsɪriːəsliː əˈfekt/",
               "chinese": "严重影响"
-            },
-            {
-              "phrase": "be affected by",
-              "phonetic": "/ˈbiː əˈfɛktɪd ˈbaɪ/",
-              "chinese": "受到……影响"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "be affected by",
+              "phonetic": "/ˈbiː əˈfɛktɪd ˈbaɪ/",
+              "chinese": "受到……影响"
+            },
             {
               "phrase": "affect your health",
               "phonetic": "/əˈfekt ˈjɔːr ˈhɛlθ/",
               "chinese": "影响健康"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "affect the way",
               "phonetic": "/əˈfekt ðə ˈweɪ/",
@@ -132,8 +137,43 @@
           "phrase": "affect the result",
           "phonetic": "/əˈfekt ðə rɪˈzʌlt/",
           "chinese": "影响结果",
-          "example": "Poor sleep can affect your memory.",
-          "translation": "睡眠不足会影响记忆力。"
+          "example": "One missing detail could affect the result.",
+          "translation": "一个缺失的细节可能会影响结果。"
+        },
+        {
+          "phrase": "seriously affect",
+          "phonetic": "/ˈsɪriːəsliː əˈfekt/",
+          "chinese": "严重影响",
+          "example": "The storm seriously affected local transport.",
+          "translation": "暴风雨严重影响了当地交通。"
+        },
+        {
+          "phrase": "be affected by",
+          "phonetic": "/ˈbiː əˈfɛktɪd ˈbaɪ/",
+          "chinese": "受到……影响",
+          "example": "Several flights were affected by the fog.",
+          "translation": "几趟航班受到大雾影响。"
+        },
+        {
+          "phrase": "affect your health",
+          "phonetic": "/əˈfekt ˈjɔːr ˈhɛlθ/",
+          "chinese": "影响健康",
+          "example": "Too much stress can affect your health.",
+          "translation": "压力过大会影响健康。"
+        },
+        {
+          "phrase": "affect the way",
+          "phonetic": "/əˈfekt ðə ˈweɪ/",
+          "chinese": "影响方式",
+          "example": "Culture affects the way people communicate.",
+          "translation": "文化会影响人们的沟通方式。"
+        },
+        {
+          "phrase": "cause and effect",
+          "phonetic": "/ˈkɑz ənd ɪˈfɛkt/",
+          "chinese": "因果",
+          "example": "The lesson shows how one event affects another through cause and effect.",
+          "translation": "这节课通过因果关系说明一个事件如何影响另一个事件。"
         }
       ],
       "synonyms": [
@@ -207,6 +247,36 @@
           "scene": "核心真实用法",
           "english": "Poor sleep can affect your memory.",
           "chinese": "睡眠不足会影响记忆力。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "One missing detail could affect the result.",
+          "chinese": "一个缺失的细节可能会影响结果。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "The storm seriously affected local transport.",
+          "chinese": "暴风雨严重影响了当地交通。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "Several flights were affected by the fog.",
+          "chinese": "几趟航班受到大雾影响。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "Too much stress can affect your health.",
+          "chinese": "压力过大会影响健康。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "Culture affects the way people communicate.",
+          "chinese": "文化会影响人们的沟通方式。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "The lesson shows how one event affects another through cause and effect.",
+          "chinese": "这节课通过因果关系说明一个事件如何影响另一个事件。"
         }
       ],
       "studyFocus": {
@@ -355,7 +425,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“影响结果”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "affect the result"
+            "be affected by",
+            "affect your health",
+            "affect the result",
+            "seriously affect"
           ],
           "answer": "affect the result",
           "stage": "T2",
@@ -366,8 +439,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“严重影响”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "affect your health",
+            "seriously affect",
             "affect the result",
-            "seriously affect"
+            "be affected by"
           ],
           "answer": "seriously affect",
           "stage": "T3",
@@ -458,11 +533,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "realize-v",
@@ -484,7 +559,7 @@
       "difficulty": "基础",
       "tags": [
         "v.",
-        "待精校",
+        "模板详卡",
         "高频表达"
       ],
       "coreMemory": {
@@ -547,7 +622,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心动作与结构",
           "items": [
             {
               "phrase": "realize that",
@@ -558,22 +633,27 @@
               "phrase": "realize a dream",
               "phonetic": "/ˈriːəlaɪz ə ˈdriːm/",
               "chinese": "实现梦想"
-            },
-            {
-              "phrase": "suddenly realize",
-              "phonetic": "/ˈsʌdənliː ˈriːəlaɪz/",
-              "chinese": "突然意识到"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "suddenly realize",
+              "phonetic": "/ˈsʌdənliː ˈriːəlaɪz/",
+              "chinese": "突然意识到"
+            },
             {
               "phrase": "fail to realize",
               "phonetic": "/ˈfeɪl ˈtuː ˈriːəlaɪz/",
               "chinese": "没有意识到"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "make someone realize",
               "phonetic": "/ˈmeɪk ˈsʌˌmwʌn ˈriːəlaɪz/",
@@ -592,8 +672,43 @@
           "phrase": "realize that",
           "phonetic": "/ˈriːəlaɪz ˈðæt/",
           "chinese": "意识到……",
-          "example": "I realized that I had used the wrong word.",
-          "translation": "我意识到自己用错了词。"
+          "example": "I realized that I had left my keys at home.",
+          "translation": "我意识到自己把钥匙落在家里了。"
+        },
+        {
+          "phrase": "realize a dream",
+          "phonetic": "/ˈriːəlaɪz ə ˈdriːm/",
+          "chinese": "实现梦想",
+          "example": "She worked for years to realize her dream.",
+          "translation": "她努力多年以实现梦想。"
+        },
+        {
+          "phrase": "suddenly realize",
+          "phonetic": "/ˈsʌdənliː ˈriːəlaɪz/",
+          "chinese": "突然意识到",
+          "example": "He suddenly realized why the door was locked.",
+          "translation": "他突然明白门为什么锁着。"
+        },
+        {
+          "phrase": "fail to realize",
+          "phonetic": "/ˈfeɪl ˈtuː ˈriːəlaɪz/",
+          "chinese": "没有意识到",
+          "example": "Many people fail to realize how much time the task takes.",
+          "translation": "许多人没有意识到这项任务要花多少时间。"
+        },
+        {
+          "phrase": "make someone realize",
+          "phonetic": "/ˈmeɪk ˈsʌˌmwʌn ˈriːəlaɪz/",
+          "chinese": "使某人明白",
+          "example": "The mistake made me realize the value of checking my work.",
+          "translation": "这个错误让我意识到检查工作的重要性。"
+        },
+        {
+          "phrase": "fully realize the importance",
+          "phonetic": "/ˈfʊliː ˈriːəlaɪz ðə ˌɪˈmpɔːrtəns/",
+          "chinese": "充分认识重要性",
+          "example": "We fully realize the importance of data privacy.",
+          "translation": "我们充分认识到数据隐私的重要性。"
         }
       ],
       "synonyms": [
@@ -640,6 +755,36 @@
           "scene": "核心真实用法",
           "english": "I realized that I had used the wrong word.",
           "chinese": "我意识到自己用错了词。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "I realized that I had left my keys at home.",
+          "chinese": "我意识到自己把钥匙落在家里了。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "She worked for years to realize her dream.",
+          "chinese": "她努力多年以实现梦想。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "He suddenly realized why the door was locked.",
+          "chinese": "他突然明白门为什么锁着。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "Many people fail to realize how much time the task takes.",
+          "chinese": "许多人没有意识到这项任务要花多少时间。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "The mistake made me realize the value of checking my work.",
+          "chinese": "这个错误让我意识到检查工作的重要性。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "We fully realize the importance of data privacy.",
+          "chinese": "我们充分认识到数据隐私的重要性。"
         }
       ],
       "studyFocus": {
@@ -788,7 +933,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“意识到……”，又符合这个形式线索：使用 that 引导一个主谓完整的从句？",
           "options": [
-            "realize that"
+            "fail to realize",
+            "realize that",
+            "realize a dream",
+            "suddenly realize"
           ],
           "answer": "realize that",
           "stage": "T2",
@@ -800,7 +948,9 @@
           "prompt": "搭配辨析：哪一项既表示“实现梦想”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "realize a dream",
-            "realize that"
+            "realize that",
+            "suddenly realize",
+            "fail to realize"
           ],
           "answer": "realize a dream",
           "stage": "T3",
@@ -891,11 +1041,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "describe-v",
@@ -917,7 +1067,7 @@
       "difficulty": "基础",
       "tags": [
         "v.",
-        "待精校",
+        "模板详卡",
         "高频表达"
       ],
       "coreMemory": {
@@ -980,7 +1130,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心动作与结构",
           "items": [
             {
               "phrase": "describe something as",
@@ -991,22 +1141,27 @@
               "phrase": "describe what happened",
               "phonetic": "/dɪˈskraɪb ˈwʌt ˈhæpənd/",
               "chinese": "描述发生了什么"
-            },
-            {
-              "phrase": "describe in detail",
-              "phonetic": "/dɪˈskraɪb ɪn dɪˈteɪl/",
-              "chinese": "详细描述"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "describe in detail",
+              "phonetic": "/dɪˈskraɪb ɪn dɪˈteɪl/",
+              "chinese": "详细描述"
+            },
             {
               "phrase": "difficult to describe",
               "phonetic": "/ˈdɪfəkəlt ˈtuː dɪˈskraɪb/",
               "chinese": "难以描述"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "accurately describe",
               "phonetic": "/ˈækjɚətliː dɪˈskraɪb/",
@@ -1025,8 +1180,43 @@
           "phrase": "describe something as",
           "phonetic": "/dɪˈskraɪb ˈsʌmθɪŋ ˈæz/",
           "chinese": "把某物描述为",
-          "example": "How would you describe your ideal weekend?",
-          "translation": "你会怎样描述理想的周末？"
+          "example": "She described the room as bright and comfortable.",
+          "translation": "她把这个房间描述为明亮舒适。"
+        },
+        {
+          "phrase": "describe what happened",
+          "phonetic": "/dɪˈskraɪb ˈwʌt ˈhæpənd/",
+          "chinese": "描述发生了什么",
+          "example": "Can you describe what happened?",
+          "translation": "你能描述一下发生了什么吗？"
+        },
+        {
+          "phrase": "describe in detail",
+          "phonetic": "/dɪˈskraɪb ɪn dɪˈteɪl/",
+          "chinese": "详细描述",
+          "example": "The report describes the process in detail.",
+          "translation": "报告详细描述了这个过程。"
+        },
+        {
+          "phrase": "difficult to describe",
+          "phonetic": "/ˈdɪfəkəlt ˈtuː dɪˈskraɪb/",
+          "chinese": "难以描述",
+          "example": "The feeling is difficult to describe.",
+          "translation": "这种感觉很难描述。"
+        },
+        {
+          "phrase": "accurately describe",
+          "phonetic": "/ˈækjɚətliː dɪˈskraɪb/",
+          "chinese": "准确描述",
+          "example": "The label accurately describes the product.",
+          "translation": "标签准确地描述了产品。"
+        },
+        {
+          "phrase": "a detailed description",
+          "phonetic": "/ə dɪˈteɪld dɪˈskrɪpʃən/",
+          "chinese": "详细描述",
+          "example": "Please give a detailed description of the problem.",
+          "translation": "请详细描述这个问题。"
         }
       ],
       "synonyms": [
@@ -1073,6 +1263,36 @@
           "scene": "核心真实用法",
           "english": "How would you describe your ideal weekend?",
           "chinese": "你会怎样描述理想的周末？"
+        },
+        {
+          "scene": "日常使用",
+          "english": "She described the room as bright and comfortable.",
+          "chinese": "她把这个房间描述为明亮舒适。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "Can you describe what happened?",
+          "chinese": "你能描述一下发生了什么吗？"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "The report describes the process in detail.",
+          "chinese": "报告详细描述了这个过程。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "The feeling is difficult to describe.",
+          "chinese": "这种感觉很难描述。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "The label accurately describes the product.",
+          "chinese": "标签准确地描述了产品。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "Please give a detailed description of the problem.",
+          "chinese": "请详细描述这个问题。"
         }
       ],
       "studyFocus": {
@@ -1221,7 +1441,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“把某物描述为”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
           "options": [
-            "describe something as"
+            "describe something as",
+            "describe what happened",
+            "describe in detail",
+            "difficult to describe"
           ],
           "answer": "describe something as",
           "stage": "T2",
@@ -1233,6 +1456,8 @@
           "prompt": "用法辨析：哪一项既表示“描述发生了什么”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "describe something as",
+            "describe in detail",
+            "difficult to describe",
             "describe what happened"
           ],
           "answer": "describe what happened",
@@ -1324,11 +1549,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "accept-v",
@@ -1350,7 +1575,7 @@
       "difficulty": "基础",
       "tags": [
         "v.",
-        "待精校",
+        "模板详卡",
         "高频表达"
       ],
       "coreMemory": {
@@ -1413,7 +1638,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心动作与结构",
           "items": [
             {
               "phrase": "accept an offer",
@@ -1424,22 +1649,27 @@
               "phrase": "accept responsibility",
               "phonetic": "/əkˈsept riːˌspɑnsəˈbɪlətiː/",
               "chinese": "承担责任"
-            },
-            {
-              "phrase": "accept the fact that",
-              "phonetic": "/əkˈsept ðə ˈfækt ˈðæt/",
-              "chinese": "接受……这一事实"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "accept the fact that",
+              "phonetic": "/əkˈsept ðə ˈfækt ˈðæt/",
+              "chinese": "接受……这一事实"
+            },
             {
               "phrase": "widely accepted",
               "phonetic": "/ˈwaɪdliː æˈksɛptɪd/",
               "chinese": "被广泛接受"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "accept someone as",
               "phonetic": "/əkˈsept ˈsʌˌmwʌn ˈæz/",
@@ -1458,8 +1688,43 @@
           "phrase": "accept an offer",
           "phonetic": "/əkˈsept ˈæn ˈɔːfɚ/",
           "chinese": "接受提议",
-          "example": "He accepted responsibility for the mistake.",
+          "example": "She accepted the offer after careful thought.",
+          "translation": "她仔细考虑后接受了这份提议。"
+        },
+        {
+          "phrase": "accept responsibility",
+          "phonetic": "/əkˈsept riːˌspɑnsəˈbɪlətiː/",
+          "chinese": "承担责任",
+          "example": "He accepted responsibility for the error.",
           "translation": "他为这个错误承担了责任。"
+        },
+        {
+          "phrase": "accept the fact that",
+          "phonetic": "/əkˈsept ðə ˈfækt ˈðæt/",
+          "chinese": "接受……这一事实",
+          "example": "We have to accept the fact that plans can change.",
+          "translation": "我们必须接受计划可能改变这一事实。"
+        },
+        {
+          "phrase": "widely accepted",
+          "phonetic": "/ˈwaɪdliː æˈksɛptɪd/",
+          "chinese": "被广泛接受",
+          "example": "Online learning is now widely accepted.",
+          "translation": "在线学习现在已被广泛接受。"
+        },
+        {
+          "phrase": "accept someone as",
+          "phonetic": "/əkˈsept ˈsʌˌmwʌn ˈæz/",
+          "chinese": "接受某人为……",
+          "example": "The group accepted him as a full member.",
+          "translation": "这个团体接纳他为正式成员。"
+        },
+        {
+          "phrase": "cannot accept",
+          "phonetic": "/ˈkænɑt əkˈsept/",
+          "chinese": "无法接受",
+          "example": "I cannot accept that explanation without evidence.",
+          "translation": "没有证据，我无法接受那个解释。"
         }
       ],
       "synonyms": [
@@ -1514,6 +1779,36 @@
           "scene": "核心真实用法",
           "english": "He accepted responsibility for the mistake.",
           "chinese": "他为这个错误承担了责任。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "She accepted the offer after careful thought.",
+          "chinese": "她仔细考虑后接受了这份提议。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "He accepted responsibility for the error.",
+          "chinese": "他为这个错误承担了责任。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "We have to accept the fact that plans can change.",
+          "chinese": "我们必须接受计划可能改变这一事实。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "Online learning is now widely accepted.",
+          "chinese": "在线学习现在已被广泛接受。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "The group accepted him as a full member.",
+          "chinese": "这个团体接纳他为正式成员。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "I cannot accept that explanation without evidence.",
+          "chinese": "没有证据，我无法接受那个解释。"
         }
       ],
       "studyFocus": {
@@ -1662,6 +1957,9 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“接受提议”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "accept responsibility",
+            "accept the fact that",
+            "widely accepted",
             "accept an offer"
           ],
           "answer": "accept an offer",
@@ -1673,6 +1971,8 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“承担责任”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "accept the fact that",
+            "widely accepted",
             "accept responsibility",
             "accept an offer"
           ],
@@ -1765,11 +2065,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "prefer-v",
@@ -1791,7 +2091,7 @@
       "difficulty": "基础",
       "tags": [
         "v.",
-        "待精校",
+        "模板详卡",
         "高频表达"
       ],
       "coreMemory": {
@@ -1854,7 +2154,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心动作与结构",
           "items": [
             {
               "phrase": "prefer A to B",
@@ -1865,22 +2165,27 @@
               "phrase": "prefer to do",
               "phonetic": "/prɪˈfɜːr ˈtuː ˈduː/",
               "chinese": "更愿意做"
-            },
-            {
-              "phrase": "would prefer",
-              "phonetic": "/ˈwʊd prɪˈfɜːr/",
-              "chinese": "更希望"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "would prefer",
+              "phonetic": "/ˈwʊd prɪˈfɜːr/",
+              "chinese": "更希望"
+            },
             {
               "phrase": "personally prefer",
               "phonetic": "/ˈpɝːsənəliː prɪˈfɜːr/",
               "chinese": "个人更喜欢"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "if you prefer",
               "phonetic": "/ˈɪf ˈjuː prɪˈfɜːr/",
@@ -1899,8 +2204,43 @@
           "phrase": "prefer A to B",
           "phonetic": "/prɪˈfɜːr ə ˈtuː ˈbiː/",
           "chinese": "比起 B 更喜欢 A",
-          "example": "I prefer walking to taking a taxi.",
-          "translation": "比起乘出租车，我更喜欢走路。"
+          "example": "I prefer tea to coffee in the morning.",
+          "translation": "早上比起咖啡我更喜欢茶。"
+        },
+        {
+          "phrase": "prefer to do",
+          "phonetic": "/prɪˈfɜːr ˈtuː ˈduː/",
+          "chinese": "更愿意做",
+          "example": "She prefers to work in a quiet room.",
+          "translation": "她更喜欢在安静的房间里工作。"
+        },
+        {
+          "phrase": "would prefer",
+          "phonetic": "/ˈwʊd prɪˈfɜːr/",
+          "chinese": "更希望",
+          "example": "I would prefer a window seat, please.",
+          "translation": "如果可以，我更想要靠窗的座位。"
+        },
+        {
+          "phrase": "personally prefer",
+          "phonetic": "/ˈpɝːsənəliː prɪˈfɜːr/",
+          "chinese": "个人更喜欢",
+          "example": "I personally prefer the simpler design.",
+          "translation": "我个人更喜欢更简洁的设计。"
+        },
+        {
+          "phrase": "if you prefer",
+          "phonetic": "/ˈɪf ˈjuː prɪˈfɜːr/",
+          "chinese": "如果你愿意",
+          "example": "We can meet online if you prefer.",
+          "translation": "如果你愿意，我们可以在线见面。"
+        },
+        {
+          "phrase": "preferred choice",
+          "phonetic": "/prəˈfɝːd ˈtʃɔɪs/",
+          "chinese": "首选",
+          "example": "Email is the preferred choice for formal communication.",
+          "translation": "电子邮件是正式沟通的首选。"
         }
       ],
       "synonyms": [
@@ -1947,6 +2287,36 @@
           "scene": "核心真实用法",
           "english": "I prefer walking to taking a taxi.",
           "chinese": "比起乘出租车，我更喜欢走路。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "I prefer tea to coffee in the morning.",
+          "chinese": "早上比起咖啡我更喜欢茶。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "She prefers to work in a quiet room.",
+          "chinese": "她更喜欢在安静的房间里工作。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "I would prefer a window seat, please.",
+          "chinese": "如果可以，我更想要靠窗的座位。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "I personally prefer the simpler design.",
+          "chinese": "我个人更喜欢更简洁的设计。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "We can meet online if you prefer.",
+          "chinese": "如果你愿意，我们可以在线见面。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "Email is the preferred choice for formal communication.",
+          "chinese": "电子邮件是正式沟通的首选。"
         }
       ],
       "studyFocus": {
@@ -2095,7 +2465,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“比起 B 更喜欢 A”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "prefer A to B"
+            "would prefer",
+            "personally prefer",
+            "prefer A to B",
+            "prefer to do"
           ],
           "answer": "prefer A to B",
           "stage": "T2",
@@ -2106,8 +2479,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“更愿意做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
           "options": [
+            "personally prefer",
+            "prefer to do",
             "prefer A to B",
-            "prefer to do"
+            "would prefer"
           ],
           "answer": "prefer to do",
           "stage": "T3",
@@ -2198,11 +2573,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     }
   ]
 }

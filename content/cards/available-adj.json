@@ -18,7 +18,7 @@
   "difficulty": "进阶",
   "tags": [
     "adj.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心用法",
       "items": [
         {
           "phrase": "be available to",
@@ -92,22 +92,27 @@
           "phrase": "available online",
           "phonetic": "/əˈveɪləbəl ˈɔːˌnlaɪn/",
           "chinese": "可在线获得"
-        },
-        {
-          "phrase": "currently available",
-          "phonetic": "/ˈkɝːəntliː əˈveɪləbəl/",
-          "chinese": "目前可用"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "currently available",
+          "phonetic": "/ˈkɝːəntliː əˈveɪləbəl/",
+          "chinese": "目前可用"
+        },
         {
           "phrase": "available for download",
           "phonetic": "/əˈveɪləbəl ˈfɔːr ˈdaʊˌnloʊd/",
           "chinese": "可供下载"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "make something available",
           "phonetic": "/ˈmeɪk ˈsʌmθɪŋ əˈveɪləbəl/",
@@ -126,8 +131,43 @@
       "phrase": "be available to",
       "phonetic": "/ˈbiː əˈveɪləbəl ˈtuː/",
       "chinese": "可供……使用",
-      "example": "The lesson is available offline.",
-      "translation": "这节课可以离线使用。"
+      "example": "The guide is available to all registered users.",
+      "translation": "所有注册用户都可以使用这份指南。"
+    },
+    {
+      "phrase": "available online",
+      "phonetic": "/əˈveɪləbəl ˈɔːˌnlaɪn/",
+      "chinese": "可在线获得",
+      "example": "The full report is available online.",
+      "translation": "完整报告可在线获取。"
+    },
+    {
+      "phrase": "currently available",
+      "phonetic": "/ˈkɝːəntliː əˈveɪləbəl/",
+      "chinese": "目前可用",
+      "example": "Only two seats are currently available.",
+      "translation": "目前只有两个座位可用。"
+    },
+    {
+      "phrase": "available for download",
+      "phonetic": "/əˈveɪləbəl ˈfɔːr ˈdaʊˌnloʊd/",
+      "chinese": "可供下载",
+      "example": "The update is available for download now.",
+      "translation": "更新现在可供下载。"
+    },
+    {
+      "phrase": "make something available",
+      "phonetic": "/ˈmeɪk ˈsʌmθɪŋ əˈveɪləbəl/",
+      "chinese": "使某物可获得",
+      "example": "We made the recording available after the meeting.",
+      "translation": "会议后我们开放了录音。"
+    },
+    {
+      "phrase": "available time slot",
+      "phonetic": "/əˈveɪləbəl ˈtaɪm ˈslɑt/",
+      "chinese": "可用时间段",
+      "example": "Is there an available time slot on Friday?",
+      "translation": "星期五有可用的时间段吗？"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "The lesson is available offline.",
       "chinese": "这节课可以离线使用。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "The guide is available to all registered users.",
+      "chinese": "所有注册用户都可以使用这份指南。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "The full report is available online.",
+      "chinese": "完整报告可在线获取。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "Only two seats are currently available.",
+      "chinese": "目前只有两个座位可用。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "The update is available for download now.",
+      "chinese": "更新现在可供下载。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "We made the recording available after the meeting.",
+      "chinese": "会议后我们开放了录音。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "Is there an available time slot on Friday?",
+      "chinese": "星期五有可用的时间段吗？"
     }
   ],
   "studyFocus": {
@@ -322,7 +392,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“可供……使用”，又符合这个形式线索：使用 be 的正确形式后接目标表达？",
       "options": [
-        "be available to"
+        "available for download",
+        "be available to",
+        "available online",
+        "currently available"
       ],
       "answer": "be available to",
       "stage": "T2",
@@ -334,7 +407,9 @@
       "prompt": "搭配辨析：哪一项既表示“可在线获得”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "available online",
-        "be available to"
+        "be available to",
+        "currently available",
+        "available for download"
       ],
       "answer": "available online",
       "stage": "T3",
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

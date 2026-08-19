@@ -18,7 +18,7 @@
   "difficulty": "进阶",
   "tags": [
     "n.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心名词搭配",
       "items": [
         {
           "phrase": "give advice",
@@ -92,22 +92,27 @@
           "phrase": "ask for advice",
           "phonetic": "/ˈæsk ˈfɔːr ədˈvaɪs/",
           "chinese": "征求建议"
-        },
-        {
-          "phrase": "follow someone’s advice",
-          "phonetic": "/ˈfɑloʊ someone’s ədˈvaɪs/",
-          "chinese": "听从某人建议"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "follow someone’s advice",
+          "phonetic": "/ˈfɑloʊ someone’s ədˈvaɪs/",
+          "chinese": "听从某人建议"
+        },
         {
           "phrase": "a piece of advice",
           "phonetic": "/ə ˈpiːs ˈʌv ədˈvaɪs/",
           "chinese": "一条建议"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "professional advice",
           "phonetic": "/prəˈfɛʃənəl ədˈvaɪs/",
@@ -126,8 +131,43 @@
       "phrase": "give advice",
       "phonetic": "/ˈɡɪv ədˈvaɪs/",
       "chinese": "给建议",
-      "example": "She gave me some practical advice.",
-      "translation": "她给了我一些实用建议。"
+      "example": "Can you give me some advice about the interview?",
+      "translation": "你能给我一些面试建议吗？"
+    },
+    {
+      "phrase": "ask for advice",
+      "phonetic": "/ˈæsk ˈfɔːr ədˈvaɪs/",
+      "chinese": "征求建议",
+      "example": "She followed her doctor’s advice.",
+      "translation": "她听从了医生的建议。"
+    },
+    {
+      "phrase": "follow someone’s advice",
+      "phonetic": "/ˈfɑloʊ someone’s ədˈvaɪs/",
+      "chinese": "听从某人建议",
+      "example": "My best advice is to practice a little every day.",
+      "translation": "我最好的建议是每天练习一点。"
+    },
+    {
+      "phrase": "a piece of advice",
+      "phonetic": "/ə ˈpiːs ˈʌv ədˈvaɪs/",
+      "chinese": "一条建议",
+      "example": "He asked a colleague for advice.",
+      "translation": "他向同事征求建议。"
+    },
+    {
+      "phrase": "professional advice",
+      "phonetic": "/prəˈfɛʃənəl ədˈvaɪs/",
+      "chinese": "专业建议",
+      "example": "That was a useful piece of advice.",
+      "translation": "那是一条有用的建议。"
+    },
+    {
+      "phrase": "advice on",
+      "phonetic": "/ədˈvaɪs ˈɑn/",
+      "chinese": "关于……的建议",
+      "example": "I took your advice and changed the plan.",
+      "translation": "我听取了你的建议并修改了计划。"
     }
   ],
   "synonyms": [
@@ -182,6 +222,36 @@
       "scene": "核心真实用法",
       "english": "She gave me some practical advice.",
       "chinese": "她给了我一些实用建议。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "Can you give me some advice about the interview?",
+      "chinese": "你能给我一些面试建议吗？"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "She followed her doctor’s advice.",
+      "chinese": "她听从了医生的建议。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "My best advice is to practice a little every day.",
+      "chinese": "我最好的建议是每天练习一点。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "He asked a colleague for advice.",
+      "chinese": "他向同事征求建议。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "That was a useful piece of advice.",
+      "chinese": "那是一条有用的建议。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "I took your advice and changed the plan.",
+      "chinese": "我听取了你的建议并修改了计划。"
     }
   ],
   "studyFocus": {
@@ -330,7 +400,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“给建议”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "give advice"
+        "give advice",
+        "ask for advice",
+        "follow someone’s advice",
+        "a piece of advice"
       ],
       "answer": "give advice",
       "stage": "T2",
@@ -342,6 +415,8 @@
       "prompt": "用法辨析：哪一项既表示“征求建议”，又符合这个形式线索：完整搭配中使用介词 for？",
       "options": [
         "give advice",
+        "follow someone’s advice",
+        "a piece of advice",
         "ask for advice"
       ],
       "answer": "ask for advice",
@@ -433,9 +508,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

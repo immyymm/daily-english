@@ -18,7 +18,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "待精校",
+    "模板详卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心动作与结构",
       "items": [
         {
           "phrase": "avoid making mistakes",
@@ -92,22 +92,27 @@
           "phrase": "avoid doing",
           "phonetic": "/əˈvɔɪd ˈduːɪŋ/",
           "chinese": "避免做"
-        },
-        {
-          "phrase": "avoid unnecessary risk",
-          "phonetic": "/əˈvɔɪd əˈnnɛsəˌsɛriː ˈrɪsk/",
-          "chinese": "避免不必要的风险"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "avoid unnecessary risk",
+          "phonetic": "/əˈvɔɪd əˈnnɛsəˌsɛriː ˈrɪsk/",
+          "chinese": "避免不必要的风险"
+        },
         {
           "phrase": "avoid eye contact",
           "phonetic": "/əˈvɔɪd ˈaɪ ˈkɑˌntækt/",
           "chinese": "避免目光接触"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "difficult to avoid",
           "phonetic": "/ˈdɪfəkəlt ˈtuː əˈvɔɪd/",
@@ -119,6 +124,16 @@
           "chinese": "不惜一切代价避免"
         }
       ]
+    },
+    {
+      "category": "补充常用语境",
+      "items": [
+        {
+          "phrase": "avoid doing something",
+          "phonetic": "/əˈvɔɪd ˈduːɪŋ ˈsʌmθɪŋ/",
+          "chinese": "避免做某事"
+        }
+      ]
     }
   ],
   "fixedPhrases": [
@@ -126,8 +141,43 @@
       "phrase": "avoid making mistakes",
       "phonetic": "/əˈvɔɪd ˈmeɪkɪŋ mɪˈsteɪks/",
       "chinese": "避免犯错",
-      "example": "Avoid translating every sentence word for word.",
-      "translation": "避免逐字翻译每个句子。"
+      "example": "Read the instructions carefully to avoid making mistakes.",
+      "translation": "仔细阅读说明，避免犯错。"
+    },
+    {
+      "phrase": "avoid doing",
+      "phonetic": "/əˈvɔɪd ˈduːɪŋ/",
+      "chinese": "避免做",
+      "example": "Try to avoid checking your phone while studying.",
+      "translation": "学习时尽量避免查看手机。"
+    },
+    {
+      "phrase": "avoid unnecessary risk",
+      "phonetic": "/əˈvɔɪd əˈnnɛsəˌsɛriː ˈrɪsk/",
+      "chinese": "避免不必要的风险",
+      "example": "A backup can help you avoid unnecessary risk.",
+      "translation": "备份可以帮助你避免不必要的风险。"
+    },
+    {
+      "phrase": "avoid eye contact",
+      "phonetic": "/əˈvɔɪd ˈaɪ ˈkɑˌntækt/",
+      "chinese": "避免目光接触",
+      "example": "He avoided eye contact during the conversation.",
+      "translation": "谈话时他避免目光接触。"
+    },
+    {
+      "phrase": "difficult to avoid",
+      "phonetic": "/ˈdɪfəkəlt ˈtuː əˈvɔɪd/",
+      "chinese": "难以避免",
+      "example": "Some delays are difficult to avoid.",
+      "translation": "有些延误很难避免。"
+    },
+    {
+      "phrase": "at all costs",
+      "phonetic": "/ˈæt ˈɔːl ˈkɑsts/",
+      "chinese": "不惜一切代价避免",
+      "example": "We must avoid losing this customer at all costs.",
+      "translation": "我们必须不惜一切代价避免失去这位客户。"
     }
   ],
   "synonyms": [
@@ -174,6 +224,36 @@
       "scene": "核心真实用法",
       "english": "Avoid translating every sentence word for word.",
       "chinese": "避免逐字翻译每个句子。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "Read the instructions carefully to avoid making mistakes.",
+      "chinese": "仔细阅读说明，避免犯错。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "Try to avoid checking your phone while studying.",
+      "chinese": "学习时尽量避免查看手机。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "A backup can help you avoid unnecessary risk.",
+      "chinese": "备份可以帮助你避免不必要的风险。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "He avoided eye contact during the conversation.",
+      "chinese": "谈话时他避免目光接触。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "Some delays are difficult to avoid.",
+      "chinese": "有些延误很难避免。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "We must avoid losing this customer at all costs.",
+      "chinese": "我们必须不惜一切代价避免失去这位客户。"
     }
   ],
   "studyFocus": {
@@ -322,7 +402,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“避免犯错”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "avoid making mistakes"
+        "avoid making mistakes",
+        "avoid doing",
+        "avoid unnecessary risk",
+        "avoid eye contact"
       ],
       "answer": "avoid making mistakes",
       "stage": "T2",
@@ -334,6 +417,8 @@
       "prompt": "用法辨析：哪一项既表示“避免做”，又符合这个形式线索：目标词后的 doing 表示要换成符合语境的动词 -ing 形式？",
       "options": [
         "avoid making mistakes",
+        "avoid unnecessary risk",
+        "avoid eye contact",
         "avoid doing"
       ],
       "answer": "avoid doing",
@@ -425,9 +510,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

@@ -18,7 +18,7 @@
   "difficulty": "应用",
   "tags": [
     "adv.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心用法",
       "items": [
         {
           "phrase": "explain clearly",
@@ -92,22 +92,27 @@
           "phrase": "speak clearly",
           "phonetic": "/ˈspiːk ˈklɪrli/",
           "chinese": "说得清楚"
-        },
-        {
-          "phrase": "clearly understand",
-          "phonetic": "/ˈklɪrli ˌʌndɚˈstænd/",
-          "chinese": "清楚理解"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "clearly understand",
+          "phonetic": "/ˈklɪrli ˌʌndɚˈstænd/",
+          "chinese": "清楚理解"
+        },
         {
           "phrase": "clearly show",
           "phonetic": "/ˈklɪrli ˈʃoʊ/",
           "chinese": "清楚表明"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "clearly different",
           "phonetic": "/ˈklɪrli ˈdɪfɚənt/",
@@ -119,6 +124,21 @@
           "chinese": "很明显"
         }
       ]
+    },
+    {
+      "category": "补充常用语境",
+      "items": [
+        {
+          "phrase": "see clearly",
+          "phonetic": "/ˈsiː ˈklɪrli/",
+          "chinese": "看得清楚"
+        },
+        {
+          "phrase": "clearly visible",
+          "phonetic": "/ˈklɪrli ˈvɪzəbəl/",
+          "chinese": "清晰可见"
+        }
+      ]
     }
   ],
   "fixedPhrases": [
@@ -126,8 +146,43 @@
       "phrase": "explain clearly",
       "phonetic": "/ɪˈkspleɪn ˈklɪrli/",
       "chinese": "清楚解释",
-      "example": "She explained the rule clearly.",
-      "translation": "她清楚地解释了这条规则。"
+      "example": "Please explain the difference clearly.",
+      "translation": "请清楚地解释这个区别。"
+    },
+    {
+      "phrase": "speak clearly",
+      "phonetic": "/ˈspiːk ˈklɪrli/",
+      "chinese": "说得清楚",
+      "example": "Speak clearly so everyone can hear you.",
+      "translation": "说清楚一点，让每个人都能听到。"
+    },
+    {
+      "phrase": "clearly understand",
+      "phonetic": "/ˈklɪrli ˌʌndɚˈstænd/",
+      "chinese": "清楚理解",
+      "example": "I clearly understand what you need.",
+      "translation": "我清楚地了解你的需求。"
+    },
+    {
+      "phrase": "clearly show",
+      "phonetic": "/ˈklɪrli ˈʃoʊ/",
+      "chinese": "清楚表明",
+      "example": "The results clearly show that the method works.",
+      "translation": "结果清楚表明这个方法有效。"
+    },
+    {
+      "phrase": "clearly different",
+      "phonetic": "/ˈklɪrli ˈdɪfɚənt/",
+      "chinese": "明显不同",
+      "example": "The two meanings are clearly different.",
+      "translation": "这两个含义明显不同。"
+    },
+    {
+      "phrase": "quite clearly",
+      "phonetic": "/ˈkwaɪt ˈklɪrli/",
+      "chinese": "很明显",
+      "example": "Quite clearly, we need a better plan.",
+      "translation": "很明显，我们需要一个更好的计划。"
     }
   ],
   "synonyms": [
@@ -193,6 +248,36 @@
       "scene": "核心真实用法",
       "english": "She explained the rule clearly.",
       "chinese": "她清楚地解释了这条规则。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "Please explain the difference clearly.",
+      "chinese": "请清楚地解释这个区别。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "Speak clearly so everyone can hear you.",
+      "chinese": "说清楚一点，让每个人都能听到。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "I clearly understand what you need.",
+      "chinese": "我清楚地了解你的需求。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "The results clearly show that the method works.",
+      "chinese": "结果清楚表明这个方法有效。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "The two meanings are clearly different.",
+      "chinese": "这两个含义明显不同。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "Quite clearly, we need a better plan.",
+      "chinese": "很明显，我们需要一个更好的计划。"
     }
   ],
   "studyFocus": {
@@ -341,6 +426,9 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“清楚解释”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "speak clearly",
+        "clearly understand",
+        "clearly show",
         "explain clearly"
       ],
       "answer": "explain clearly",
@@ -352,6 +440,8 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“说得清楚”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "clearly understand",
+        "clearly show",
         "speak clearly",
         "explain clearly"
       ],
@@ -444,9 +534,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

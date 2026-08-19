@@ -18,7 +18,7 @@
   "difficulty": "进阶",
   "tags": [
     "n.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -88,7 +88,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心名词搭配",
       "items": [
         {
           "phrase": "the reason for",
@@ -99,22 +99,27 @@
           "phrase": "reason why",
           "phonetic": "/ˈriːzən ˈwaɪ/",
           "chinese": "……的理由"
-        },
-        {
-          "phrase": "main reason",
-          "phonetic": "/ˈmeɪn ˈriːzən/",
-          "chinese": "主要原因"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "main reason",
+          "phonetic": "/ˈmeɪn ˈriːzən/",
+          "chinese": "主要原因"
+        },
         {
           "phrase": "for some reason",
           "phonetic": "/ˈfɔːr ˈsʌm ˈriːzən/",
           "chinese": "出于某种原因"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "have reason to believe",
           "phonetic": "/ˈhæv ˈriːzən ˈtuː bɪˈliːv/",
@@ -133,8 +138,43 @@
       "phrase": "the reason for",
       "phonetic": "/ðə ˈriːzən ˈfɔːr/",
       "chinese": "……的原因",
-      "example": "What is the main reason for your choice?",
-      "translation": "你做出这个选择的主要原因是什么？"
+      "example": "Do you know the reason for the delay?",
+      "translation": "你知道延误的原因吗？"
+    },
+    {
+      "phrase": "reason why",
+      "phonetic": "/ˈriːzən ˈwaɪ/",
+      "chinese": "……的理由",
+      "example": "That is the main reason why I called.",
+      "translation": "那就是我打电话的主要原因。"
+    },
+    {
+      "phrase": "main reason",
+      "phonetic": "/ˈmeɪn ˈriːzən/",
+      "chinese": "主要原因",
+      "example": "Cost was the main reason for our decision.",
+      "translation": "费用是我们作出决定的主要原因。"
+    },
+    {
+      "phrase": "for some reason",
+      "phonetic": "/ˈfɔːr ˈsʌm ˈriːzən/",
+      "chinese": "出于某种原因",
+      "example": "For some reason, the file will not open.",
+      "translation": "不知什么原因，这个文件打不开。"
+    },
+    {
+      "phrase": "have reason to believe",
+      "phonetic": "/ˈhæv ˈriːzən ˈtuː bɪˈliːv/",
+      "chinese": "有理由相信",
+      "example": "We have reason to believe the information is accurate.",
+      "translation": "我们有理由相信这些信息是准确的。"
+    },
+    {
+      "phrase": "within reason",
+      "phonetic": "/wɪˈðɪn ˈriːzən/",
+      "chinese": "合理范围内",
+      "example": "You can change the design within reason.",
+      "translation": "在合理范围内，你可以修改设计。"
     }
   ],
   "synonyms": [
@@ -181,6 +221,36 @@
       "scene": "核心真实用法",
       "english": "What is the main reason for your choice?",
       "chinese": "你做出这个选择的主要原因是什么？"
+    },
+    {
+      "scene": "日常使用",
+      "english": "Do you know the reason for the delay?",
+      "chinese": "你知道延误的原因吗？"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "That is the main reason why I called.",
+      "chinese": "那就是我打电话的主要原因。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "Cost was the main reason for our decision.",
+      "chinese": "费用是我们作出决定的主要原因。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "For some reason, the file will not open.",
+      "chinese": "不知什么原因，这个文件打不开。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "We have reason to believe the information is accurate.",
+      "chinese": "我们有理由相信这些信息是准确的。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "You can change the design within reason.",
+      "chinese": "在合理范围内，你可以修改设计。"
     }
   ],
   "studyFocus": {
@@ -329,7 +399,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“……的原因”，又符合这个形式线索：完整搭配中使用介词 for？",
       "options": [
-        "the reason for"
+        "main reason",
+        "for some reason",
+        "the reason for",
+        "reason why"
       ],
       "answer": "the reason for",
       "stage": "T2",
@@ -340,8 +413,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“……的理由”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "for some reason",
+        "reason why",
         "the reason for",
-        "reason why"
+        "main reason"
       ],
       "answer": "reason why",
       "stage": "T3",
@@ -432,9 +507,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

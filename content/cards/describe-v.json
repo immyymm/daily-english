@@ -18,7 +18,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "待精校",
+    "模板详卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心动作与结构",
       "items": [
         {
           "phrase": "describe something as",
@@ -92,22 +92,27 @@
           "phrase": "describe what happened",
           "phonetic": "/dɪˈskraɪb ˈwʌt ˈhæpənd/",
           "chinese": "描述发生了什么"
-        },
-        {
-          "phrase": "describe in detail",
-          "phonetic": "/dɪˈskraɪb ɪn dɪˈteɪl/",
-          "chinese": "详细描述"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "describe in detail",
+          "phonetic": "/dɪˈskraɪb ɪn dɪˈteɪl/",
+          "chinese": "详细描述"
+        },
         {
           "phrase": "difficult to describe",
           "phonetic": "/ˈdɪfəkəlt ˈtuː dɪˈskraɪb/",
           "chinese": "难以描述"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "accurately describe",
           "phonetic": "/ˈækjɚətliː dɪˈskraɪb/",
@@ -126,8 +131,43 @@
       "phrase": "describe something as",
       "phonetic": "/dɪˈskraɪb ˈsʌmθɪŋ ˈæz/",
       "chinese": "把某物描述为",
-      "example": "How would you describe your ideal weekend?",
-      "translation": "你会怎样描述理想的周末？"
+      "example": "She described the room as bright and comfortable.",
+      "translation": "她把这个房间描述为明亮舒适。"
+    },
+    {
+      "phrase": "describe what happened",
+      "phonetic": "/dɪˈskraɪb ˈwʌt ˈhæpənd/",
+      "chinese": "描述发生了什么",
+      "example": "Can you describe what happened?",
+      "translation": "你能描述一下发生了什么吗？"
+    },
+    {
+      "phrase": "describe in detail",
+      "phonetic": "/dɪˈskraɪb ɪn dɪˈteɪl/",
+      "chinese": "详细描述",
+      "example": "The report describes the process in detail.",
+      "translation": "报告详细描述了这个过程。"
+    },
+    {
+      "phrase": "difficult to describe",
+      "phonetic": "/ˈdɪfəkəlt ˈtuː dɪˈskraɪb/",
+      "chinese": "难以描述",
+      "example": "The feeling is difficult to describe.",
+      "translation": "这种感觉很难描述。"
+    },
+    {
+      "phrase": "accurately describe",
+      "phonetic": "/ˈækjɚətliː dɪˈskraɪb/",
+      "chinese": "准确描述",
+      "example": "The label accurately describes the product.",
+      "translation": "标签准确地描述了产品。"
+    },
+    {
+      "phrase": "a detailed description",
+      "phonetic": "/ə dɪˈteɪld dɪˈskrɪpʃən/",
+      "chinese": "详细描述",
+      "example": "Please give a detailed description of the problem.",
+      "translation": "请详细描述这个问题。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "How would you describe your ideal weekend?",
       "chinese": "你会怎样描述理想的周末？"
+    },
+    {
+      "scene": "日常使用",
+      "english": "She described the room as bright and comfortable.",
+      "chinese": "她把这个房间描述为明亮舒适。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "Can you describe what happened?",
+      "chinese": "你能描述一下发生了什么吗？"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "The report describes the process in detail.",
+      "chinese": "报告详细描述了这个过程。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "The feeling is difficult to describe.",
+      "chinese": "这种感觉很难描述。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "The label accurately describes the product.",
+      "chinese": "标签准确地描述了产品。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "Please give a detailed description of the problem.",
+      "chinese": "请详细描述这个问题。"
     }
   ],
   "studyFocus": {
@@ -322,7 +392,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“把某物描述为”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
       "options": [
-        "describe something as"
+        "describe something as",
+        "describe what happened",
+        "describe in detail",
+        "difficult to describe"
       ],
       "answer": "describe something as",
       "stage": "T2",
@@ -334,6 +407,8 @@
       "prompt": "用法辨析：哪一项既表示“描述发生了什么”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "describe something as",
+        "describe in detail",
+        "difficult to describe",
         "describe what happened"
       ],
       "answer": "describe what happened",
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

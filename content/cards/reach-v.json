@@ -24,7 +24,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "待精校",
+    "模板详卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -87,7 +87,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心动作与结构",
       "items": [
         {
           "phrase": "reach a goal",
@@ -98,22 +98,27 @@
           "phrase": "reach an agreement",
           "phonetic": "/riːtʃ ˈæn əˈɡriːmənt/",
           "chinese": "达成协议"
-        },
-        {
-          "phrase": "reach a decision",
-          "phonetic": "/riːtʃ ə dɪˈsɪʒən/",
-          "chinese": "作出决定"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "reach a decision",
+          "phonetic": "/riːtʃ ə dɪˈsɪʒən/",
+          "chinese": "作出决定"
+        },
         {
           "phrase": "reach out to",
           "phonetic": "/riːtʃ ˈaʊt ˈtuː/",
           "chinese": "主动联系"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "within reach",
           "phonetic": "/wɪˈðɪn riːtʃ/",
@@ -132,8 +137,43 @@
       "phrase": "reach a goal",
       "phonetic": "/riːtʃ ə ˈɡoʊl/",
       "chinese": "达到目标",
-      "example": "We finally reached an agreement.",
-      "translation": "我们终于达成了协议。"
+      "example": "She reached her goal after months of practice.",
+      "translation": "经过几个月练习，她达成了目标。"
+    },
+    {
+      "phrase": "reach an agreement",
+      "phonetic": "/riːtʃ ˈæn əˈɡriːmənt/",
+      "chinese": "达成协议",
+      "example": "Both sides finally reached an agreement.",
+      "translation": "双方终于达成了协议。"
+    },
+    {
+      "phrase": "reach a decision",
+      "phonetic": "/riːtʃ ə dɪˈsɪʒən/",
+      "chinese": "作出决定",
+      "example": "We need more information before we reach a decision.",
+      "translation": "作出决定前我们需要更多信息。"
+    },
+    {
+      "phrase": "reach out to",
+      "phonetic": "/riːtʃ ˈaʊt ˈtuː/",
+      "chinese": "主动联系",
+      "example": "Do not hesitate to reach out to me for help.",
+      "translation": "需要帮助时请随时联系我。"
+    },
+    {
+      "phrase": "within reach",
+      "phonetic": "/wɪˈðɪn riːtʃ/",
+      "chinese": "够得着；可实现",
+      "example": "The top shelf is just within reach.",
+      "translation": "最上面的架子刚好够得着。"
+    },
+    {
+      "phrase": "reach the top",
+      "phonetic": "/riːtʃ ðə ˈtɑp/",
+      "chinese": "到达顶端",
+      "example": "They reached the top of the mountain before noon.",
+      "translation": "他们中午前到达了山顶。"
     }
   ],
   "synonyms": [
@@ -180,6 +220,36 @@
       "scene": "核心真实用法",
       "english": "We finally reached an agreement.",
       "chinese": "我们终于达成了协议。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "She reached her goal after months of practice.",
+      "chinese": "经过几个月练习，她达成了目标。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "Both sides finally reached an agreement.",
+      "chinese": "双方终于达成了协议。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "We need more information before we reach a decision.",
+      "chinese": "作出决定前我们需要更多信息。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "Do not hesitate to reach out to me for help.",
+      "chinese": "需要帮助时请随时联系我。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "The top shelf is just within reach.",
+      "chinese": "最上面的架子刚好够得着。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "They reached the top of the mountain before noon.",
+      "chinese": "他们中午前到达了山顶。"
     }
   ],
   "studyFocus": {
@@ -328,7 +398,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“达到目标”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "reach a goal"
+        "reach out to",
+        "reach a goal",
+        "reach an agreement",
+        "reach a decision"
       ],
       "answer": "reach a goal",
       "stage": "T2",
@@ -340,7 +413,9 @@
       "prompt": "搭配辨析：哪一项既表示“达成协议”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "reach an agreement",
-        "reach a goal"
+        "reach a goal",
+        "reach a decision",
+        "reach out to"
       ],
       "answer": "reach an agreement",
       "stage": "T3",
@@ -431,9 +506,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

@@ -24,7 +24,7 @@
   "difficulty": "进阶",
   "tags": [
     "n.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -94,7 +94,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心名词搭配",
       "items": [
         {
           "phrase": "face a challenge",
@@ -105,22 +105,27 @@
           "phrase": "take on a challenge",
           "phonetic": "/ˈteɪk ˈɑn ə ˈtʃælɪndʒ/",
           "chinese": "接受挑战"
-        },
-        {
-          "phrase": "major challenge",
-          "phonetic": "/ˈmeɪdʒɚ ˈtʃælɪndʒ/",
-          "chinese": "重大挑战"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "major challenge",
+          "phonetic": "/ˈmeɪdʒɚ ˈtʃælɪndʒ/",
+          "chinese": "重大挑战"
+        },
         {
           "phrase": "challenge someone to",
           "phonetic": "/ˈtʃælɪndʒ ˈsʌˌmwʌn ˈtuː/",
           "chinese": "向某人挑战做……"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "rise to the challenge",
           "phonetic": "/ˈraɪz ˈtuː ðə ˈtʃælɪndʒ/",
@@ -139,8 +144,43 @@
       "phrase": "face a challenge",
       "phonetic": "/ˈfeɪs ə ˈtʃælɪndʒ/",
       "chinese": "面对挑战",
-      "example": "Speaking without notes is a useful challenge.",
-      "translation": "不看笔记说话是一项有用的挑战。"
+      "example": "Small businesses face a difficult challenge.",
+      "translation": "小企业面临一项艰巨挑战。"
+    },
+    {
+      "phrase": "take on a challenge",
+      "phonetic": "/ˈteɪk ˈɑn ə ˈtʃælɪndʒ/",
+      "chinese": "接受挑战",
+      "example": "She decided to take on a new challenge.",
+      "translation": "她决定接受一项新挑战。"
+    },
+    {
+      "phrase": "major challenge",
+      "phonetic": "/ˈmeɪdʒɚ ˈtʃælɪndʒ/",
+      "chinese": "重大挑战",
+      "example": "Finding enough staff is a major challenge.",
+      "translation": "找到足够员工是一项重大挑战。"
+    },
+    {
+      "phrase": "challenge someone to",
+      "phonetic": "/ˈtʃælɪndʒ ˈsʌˌmwʌn ˈtuː/",
+      "chinese": "向某人挑战做……",
+      "example": "The coach challenged us to run farther.",
+      "translation": "教练向我们发起挑战，让我们跑得更远。"
+    },
+    {
+      "phrase": "rise to the challenge",
+      "phonetic": "/ˈraɪz ˈtuː ðə ˈtʃælɪndʒ/",
+      "chinese": "迎接挑战",
+      "example": "The team rose to the challenge and finished on time.",
+      "translation": "团队迎接挑战并按时完成了任务。"
+    },
+    {
+      "phrase": "a real challenge",
+      "phonetic": "/ə ˈriːl ˈtʃælɪndʒ/",
+      "chinese": "真正的挑战",
+      "example": "Speaking without notes was a real challenge for me.",
+      "translation": "不看笔记讲话对我来说是真正的挑战。"
     }
   ],
   "synonyms": [
@@ -187,6 +227,36 @@
       "scene": "核心真实用法",
       "english": "Speaking without notes is a useful challenge.",
       "chinese": "不看笔记说话是一项有用的挑战。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "Small businesses face a difficult challenge.",
+      "chinese": "小企业面临一项艰巨挑战。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "She decided to take on a new challenge.",
+      "chinese": "她决定接受一项新挑战。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "Finding enough staff is a major challenge.",
+      "chinese": "找到足够员工是一项重大挑战。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "The coach challenged us to run farther.",
+      "chinese": "教练向我们发起挑战，让我们跑得更远。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "The team rose to the challenge and finished on time.",
+      "chinese": "团队迎接挑战并按时完成了任务。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "Speaking without notes was a real challenge for me.",
+      "chinese": "不看笔记讲话对我来说是真正的挑战。"
     }
   ],
   "studyFocus": {
@@ -335,7 +405,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“面对挑战”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "face a challenge"
+        "face a challenge",
+        "take on a challenge",
+        "major challenge",
+        "challenge someone to"
       ],
       "answer": "face a challenge",
       "stage": "T2",
@@ -347,6 +420,8 @@
       "prompt": "用法辨析：哪一项既表示“接受挑战”，又符合这个形式线索：完整搭配中使用介词 on？",
       "options": [
         "face a challenge",
+        "major challenge",
+        "challenge someone to",
         "take on a challenge"
       ],
       "answer": "take on a challenge",
@@ -438,9 +513,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

@@ -24,7 +24,7 @@
   "difficulty": "应用",
   "tags": [
     "n.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -94,7 +94,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心名词搭配",
       "items": [
         {
           "phrase": "benefit from",
@@ -105,22 +105,27 @@
           "phrase": "benefit someone",
           "phonetic": "/ˈbenəfɪt ˈsʌˌmwʌn/",
           "chinese": "使某人受益"
-        },
-        {
-          "phrase": "main benefit",
-          "phonetic": "/ˈmeɪn ˈbenəfɪt/",
-          "chinese": "主要好处"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "main benefit",
+          "phonetic": "/ˈmeɪn ˈbenəfɪt/",
+          "chinese": "主要好处"
+        },
         {
           "phrase": "health benefits",
           "phonetic": "/ˈhɛlθ ˈbɛnəfɪts/",
           "chinese": "健康益处"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "for the benefit of",
           "phonetic": "/ˈfɔːr ðə ˈbenəfɪt ˈʌv/",
@@ -139,8 +144,43 @@
       "phrase": "benefit from",
       "phonetic": "/ˈbenəfɪt ˈfrʌm/",
       "chinese": "从……中受益",
-      "example": "You will benefit from regular review.",
-      "translation": "你会从定期复习中受益。"
+      "example": "Everyone can benefit from regular exercise.",
+      "translation": "每个人都能从规律运动中受益。"
+    },
+    {
+      "phrase": "benefit someone",
+      "phonetic": "/ˈbenəfɪt ˈsʌˌmwʌn/",
+      "chinese": "使某人受益",
+      "example": "The new schedule benefits both staff and customers.",
+      "translation": "新的时间安排让员工和顾客都受益。"
+    },
+    {
+      "phrase": "main benefit",
+      "phonetic": "/ˈmeɪn ˈbenəfɪt/",
+      "chinese": "主要好处",
+      "example": "The main benefit is that the system saves time.",
+      "translation": "主要好处是这个系统节省时间。"
+    },
+    {
+      "phrase": "health benefits",
+      "phonetic": "/ˈhɛlθ ˈbɛnəfɪts/",
+      "chinese": "健康益处",
+      "example": "Walking every day has many health benefits.",
+      "translation": "每天步行有许多健康益处。"
+    },
+    {
+      "phrase": "for the benefit of",
+      "phonetic": "/ˈfɔːr ðə ˈbenəfɪt ˈʌv/",
+      "chinese": "为了……的利益",
+      "example": "The changes were made for the benefit of users.",
+      "translation": "这些改变是为了用户的利益。"
+    },
+    {
+      "phrase": "cost-benefit analysis",
+      "phonetic": "/ˈkɑst-ˈbenəfɪt əˈnæləsəs/",
+      "chinese": "成本效益分析",
+      "example": "We completed a cost-benefit analysis before deciding.",
+      "translation": "决定前我们完成了成本效益分析。"
     }
   ],
   "synonyms": [
@@ -195,6 +235,36 @@
       "scene": "核心真实用法",
       "english": "You will benefit from regular review.",
       "chinese": "你会从定期复习中受益。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "Everyone can benefit from regular exercise.",
+      "chinese": "每个人都能从规律运动中受益。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "The new schedule benefits both staff and customers.",
+      "chinese": "新的时间安排让员工和顾客都受益。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "The main benefit is that the system saves time.",
+      "chinese": "主要好处是这个系统节省时间。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "Walking every day has many health benefits.",
+      "chinese": "每天步行有许多健康益处。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "The changes were made for the benefit of users.",
+      "chinese": "这些改变是为了用户的利益。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "We completed a cost-benefit analysis before deciding.",
+      "chinese": "决定前我们完成了成本效益分析。"
     }
   ],
   "studyFocus": {
@@ -343,7 +413,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“从……中受益”，又符合这个形式线索：完整搭配中使用介词 from？",
       "options": [
-        "benefit from"
+        "health benefits",
+        "benefit from",
+        "benefit someone",
+        "main benefit"
       ],
       "answer": "benefit from",
       "stage": "T2",
@@ -355,7 +428,9 @@
       "prompt": "搭配辨析：哪一项既表示“使某人受益”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "benefit someone",
-        "benefit from"
+        "benefit from",
+        "main benefit",
+        "health benefits"
       ],
       "answer": "benefit someone",
       "stage": "T3",
@@ -446,9 +521,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

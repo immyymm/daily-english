@@ -18,7 +18,7 @@
   "difficulty": "应用",
   "tags": [
     "n.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心名词搭配",
       "items": [
         {
           "phrase": "language learning",
@@ -92,22 +92,27 @@
           "phrase": "foreign language",
           "phonetic": "/ˈfɔːrən ˈlæŋɡwɪdʒ/",
           "chinese": "外语"
-        },
-        {
-          "phrase": "body language",
-          "phonetic": "/ˈbɑdiː ˈlæŋɡwɪdʒ/",
-          "chinese": "肢体语言"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "body language",
+          "phonetic": "/ˈbɑdiː ˈlæŋɡwɪdʒ/",
+          "chinese": "肢体语言"
+        },
         {
           "phrase": "spoken language",
           "phonetic": "/ˈspoʊkən ˈlæŋɡwɪdʒ/",
           "chinese": "口语"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "language skills",
           "phonetic": "/ˈlæŋɡwɪdʒ ˈskɪlz/",
@@ -126,8 +131,43 @@
       "phrase": "language learning",
       "phonetic": "/ˈlæŋɡwɪdʒ ˈlɝːnɪŋ/",
       "chinese": "语言学习",
-      "example": "Language learning takes time and practice.",
-      "translation": "语言学习需要时间和练习。"
+      "example": "Daily practice makes language learning easier.",
+      "translation": "每日练习让语言学习更容易。"
+    },
+    {
+      "phrase": "foreign language",
+      "phonetic": "/ˈfɔːrən ˈlæŋɡwɪdʒ/",
+      "chinese": "外语",
+      "example": "She can speak more than one foreign language.",
+      "translation": "她会说不止一门外语。"
+    },
+    {
+      "phrase": "body language",
+      "phonetic": "/ˈbɑdiː ˈlæŋɡwɪdʒ/",
+      "chinese": "肢体语言",
+      "example": "His body language showed that he was nervous.",
+      "translation": "他的肢体语言表明他很紧张。"
+    },
+    {
+      "phrase": "spoken language",
+      "phonetic": "/ˈspoʊkən ˈlæŋɡwɪdʒ/",
+      "chinese": "口语",
+      "example": "Spoken language is often less formal than writing.",
+      "translation": "口语通常没有书面语正式。"
+    },
+    {
+      "phrase": "language skills",
+      "phonetic": "/ˈlæŋɡwɪdʒ ˈskɪlz/",
+      "chinese": "语言技能",
+      "example": "The job requires strong language skills.",
+      "translation": "这份工作要求较强的语言技能。"
+    },
+    {
+      "phrase": "use simple language",
+      "phonetic": "/ˈjuːs ˈsɪmpəl ˈlæŋɡwɪdʒ/",
+      "chinese": "使用简单语言",
+      "example": "Use simple language when you explain the rule.",
+      "translation": "解释规则时使用简单语言。"
     }
   ],
   "synonyms": [
@@ -182,6 +222,36 @@
       "scene": "核心真实用法",
       "english": "Language learning takes time and practice.",
       "chinese": "语言学习需要时间和练习。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "Daily practice makes language learning easier.",
+      "chinese": "每日练习让语言学习更容易。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "She can speak more than one foreign language.",
+      "chinese": "她会说不止一门外语。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "His body language showed that he was nervous.",
+      "chinese": "他的肢体语言表明他很紧张。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "Spoken language is often less formal than writing.",
+      "chinese": "口语通常没有书面语正式。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "The job requires strong language skills.",
+      "chinese": "这份工作要求较强的语言技能。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "Use simple language when you explain the rule.",
+      "chinese": "解释规则时使用简单语言。"
     }
   ],
   "studyFocus": {
@@ -330,6 +400,9 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“语言学习”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "foreign language",
+        "body language",
+        "spoken language",
         "language learning"
       ],
       "answer": "language learning",
@@ -341,6 +414,8 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“外语”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "body language",
+        "spoken language",
         "foreign language",
         "language learning"
       ],
@@ -433,9 +508,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

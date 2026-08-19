@@ -18,7 +18,7 @@
   "difficulty": "进阶",
   "tags": [
     "adj.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心用法",
       "items": [
         {
           "phrase": "be ready to",
@@ -92,22 +92,27 @@
           "phrase": "get ready for",
           "phonetic": "/ˈɡɛt ˈredi ˈfɔːr/",
           "chinese": "为……做准备"
-        },
-        {
-          "phrase": "ready for use",
-          "phonetic": "/ˈredi ˈfɔːr ˈjuːs/",
-          "chinese": "可供使用"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "ready for use",
+          "phonetic": "/ˈredi ˈfɔːr ˈjuːs/",
+          "chinese": "可供使用"
+        },
         {
           "phrase": "when you are ready",
           "phonetic": "/ˈwɛn ˈjuː ˈɑr ˈredi/",
           "chinese": "你准备好时"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "have something ready",
           "phonetic": "/ˈhæv ˈsʌmθɪŋ ˈredi/",
@@ -126,8 +131,43 @@
       "phrase": "be ready to",
       "phonetic": "/ˈbiː ˈredi ˈtuː/",
       "chinese": "准备好做",
-      "example": "I am ready to try the next question.",
-      "translation": "我准备好尝试下一题了。"
+      "example": "I am ready to begin the next lesson.",
+      "translation": "我准备好开始下一课了。"
+    },
+    {
+      "phrase": "get ready for",
+      "phonetic": "/ˈɡɛt ˈredi ˈfɔːr/",
+      "chinese": "为……做准备",
+      "example": "We need to get ready for the meeting.",
+      "translation": "我们需要为会议做准备。"
+    },
+    {
+      "phrase": "ready for use",
+      "phonetic": "/ˈredi ˈfɔːr ˈjuːs/",
+      "chinese": "可供使用",
+      "example": "The room will be ready for use tomorrow.",
+      "translation": "房间明天可以使用。"
+    },
+    {
+      "phrase": "when you are ready",
+      "phonetic": "/ˈwɛn ˈjuː ˈɑr ˈredi/",
+      "chinese": "你准备好时",
+      "example": "Call me when you are ready.",
+      "translation": "你准备好时给我打电话。"
+    },
+    {
+      "phrase": "have something ready",
+      "phonetic": "/ˈhæv ˈsʌmθɪŋ ˈredi/",
+      "chinese": "把某物准备好",
+      "example": "Please have your passport ready at the desk.",
+      "translation": "请在柜台前准备好护照。"
+    },
+    {
+      "phrase": "ready-made",
+      "phonetic": "/ˈredi-ˈmeɪd/",
+      "chinese": "现成的",
+      "example": "We bought ready-made food for the trip.",
+      "translation": "我们为旅行买了现成的食物。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "I am ready to try the next question.",
       "chinese": "我准备好尝试下一题了。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "I am ready to begin the next lesson.",
+      "chinese": "我准备好开始下一课了。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "We need to get ready for the meeting.",
+      "chinese": "我们需要为会议做准备。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "The room will be ready for use tomorrow.",
+      "chinese": "房间明天可以使用。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "Call me when you are ready.",
+      "chinese": "你准备好时给我打电话。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "Please have your passport ready at the desk.",
+      "chinese": "请在柜台前准备好护照。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "We bought ready-made food for the trip.",
+      "chinese": "我们为旅行买了现成的食物。"
     }
   ],
   "studyFocus": {
@@ -322,7 +392,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“准备好做”，又符合这个形式线索：使用 be 的正确形式后接目标表达？",
       "options": [
-        "be ready to"
+        "when you are ready",
+        "be ready to",
+        "get ready for",
+        "ready for use"
       ],
       "answer": "be ready to",
       "stage": "T2",
@@ -334,7 +407,9 @@
       "prompt": "搭配辨析：哪一项既表示“为……做准备”，又符合这个形式线索：完整搭配中使用介词 for？",
       "options": [
         "get ready for",
-        "be ready to"
+        "be ready to",
+        "ready for use",
+        "when you are ready"
       ],
       "answer": "get ready for",
       "stage": "T3",
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

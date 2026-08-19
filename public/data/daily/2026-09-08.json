@@ -1,7 +1,7 @@
 {
   "date": "2026-09-08",
   "dayNumber": 23,
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "templateVersion": "learning-template-2026.08.19.1",
   "cards": [
     {
@@ -24,7 +24,7 @@
       "difficulty": "应用",
       "tags": [
         "adv.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -87,7 +87,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心用法",
           "items": [
             {
               "phrase": "speak directly",
@@ -98,22 +98,27 @@
               "phrase": "directly affect",
               "phonetic": "/dəˈrektli əˈfɛkt/",
               "chinese": "直接影响"
-            },
-            {
-              "phrase": "go directly to",
-              "phonetic": "/ˈɡoʊ dəˈrektli ˈtuː/",
-              "chinese": "直接去……"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "go directly to",
+              "phonetic": "/ˈɡoʊ dəˈrektli ˈtuː/",
+              "chinese": "直接去……"
+            },
             {
               "phrase": "directly related to",
               "phonetic": "/dəˈrektli rɪˈleɪtɪd ˈtuː/",
               "chinese": "与……直接相关"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "contact someone directly",
               "phonetic": "/ˈkɑˌntækt ˈsʌˌmwʌn dəˈrektli/",
@@ -125,6 +130,21 @@
               "chinese": "完全相反"
             }
           ]
+        },
+        {
+          "category": "补充常用语境",
+          "items": [
+            {
+              "phrase": "answer directly",
+              "phonetic": "/ˈænsɚ dəˈrektli/",
+              "chinese": "直接回答"
+            },
+            {
+              "phrase": "directly involved",
+              "phonetic": "/dəˈrektli ˌɪˈnvɑlvd/",
+              "chinese": "直接参与"
+            }
+          ]
         }
       ],
       "fixedPhrases": [
@@ -132,8 +152,43 @@
           "phrase": "speak directly",
           "phonetic": "/ˈspiːk dəˈrektli/",
           "chinese": "直接表达",
-          "example": "Please answer the question directly.",
-          "translation": "请直接回答问题。"
+          "example": "If you disagree, speak directly but politely.",
+          "translation": "如果你不同意，要直接但礼貌地表达。"
+        },
+        {
+          "phrase": "directly affect",
+          "phonetic": "/dəˈrektli əˈfɛkt/",
+          "chinese": "直接影响",
+          "example": "Poor sleep directly affects concentration.",
+          "translation": "睡眠不足会直接影响注意力。"
+        },
+        {
+          "phrase": "go directly to",
+          "phonetic": "/ˈɡoʊ dəˈrektli ˈtuː/",
+          "chinese": "直接去……",
+          "example": "After the station, go directly to the hotel.",
+          "translation": "到站后直接去酒店。"
+        },
+        {
+          "phrase": "directly related to",
+          "phonetic": "/dəˈrektli rɪˈleɪtɪd ˈtuː/",
+          "chinese": "与……直接相关",
+          "example": "The two problems are directly related.",
+          "translation": "这两个问题直接相关。"
+        },
+        {
+          "phrase": "contact someone directly",
+          "phonetic": "/ˈkɑˌntækt ˈsʌˌmwʌn dəˈrektli/",
+          "chinese": "直接联系某人",
+          "example": "You can contact the manager directly.",
+          "translation": "你可以直接联系经理。"
+        },
+        {
+          "phrase": "directly opposite",
+          "phonetic": "/dəˈrektli ˈɑpəzət/",
+          "chinese": "完全相反",
+          "example": "Her answer was directly opposite to mine.",
+          "translation": "她的答案和我的完全相反。"
         }
       ],
       "synonyms": [
@@ -180,6 +235,36 @@
           "scene": "核心真实用法",
           "english": "Please answer the question directly.",
           "chinese": "请直接回答问题。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "If you disagree, speak directly but politely.",
+          "chinese": "如果你不同意，要直接但礼貌地表达。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "Poor sleep directly affects concentration.",
+          "chinese": "睡眠不足会直接影响注意力。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "After the station, go directly to the hotel.",
+          "chinese": "到站后直接去酒店。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "The two problems are directly related.",
+          "chinese": "这两个问题直接相关。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "You can contact the manager directly.",
+          "chinese": "你可以直接联系经理。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "Her answer was directly opposite to mine.",
+          "chinese": "她的答案和我的完全相反。"
         }
       ],
       "studyFocus": {
@@ -328,7 +413,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“直接表达”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "speak directly"
+            "speak directly",
+            "directly affect",
+            "go directly to",
+            "directly related to"
           ],
           "answer": "speak directly",
           "stage": "T2",
@@ -340,6 +428,8 @@
           "prompt": "用法辨析：哪一项既表示“直接影响”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "speak directly",
+            "go directly to",
+            "directly related to",
             "directly affect"
           ],
           "answer": "directly affect",
@@ -431,11 +521,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "clearly-adv",
@@ -457,7 +547,7 @@
       "difficulty": "应用",
       "tags": [
         "adv.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -520,7 +610,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心用法",
           "items": [
             {
               "phrase": "explain clearly",
@@ -531,22 +621,27 @@
               "phrase": "speak clearly",
               "phonetic": "/ˈspiːk ˈklɪrli/",
               "chinese": "说得清楚"
-            },
-            {
-              "phrase": "clearly understand",
-              "phonetic": "/ˈklɪrli ˌʌndɚˈstænd/",
-              "chinese": "清楚理解"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "clearly understand",
+              "phonetic": "/ˈklɪrli ˌʌndɚˈstænd/",
+              "chinese": "清楚理解"
+            },
             {
               "phrase": "clearly show",
               "phonetic": "/ˈklɪrli ˈʃoʊ/",
               "chinese": "清楚表明"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "clearly different",
               "phonetic": "/ˈklɪrli ˈdɪfɚənt/",
@@ -558,6 +653,21 @@
               "chinese": "很明显"
             }
           ]
+        },
+        {
+          "category": "补充常用语境",
+          "items": [
+            {
+              "phrase": "see clearly",
+              "phonetic": "/ˈsiː ˈklɪrli/",
+              "chinese": "看得清楚"
+            },
+            {
+              "phrase": "clearly visible",
+              "phonetic": "/ˈklɪrli ˈvɪzəbəl/",
+              "chinese": "清晰可见"
+            }
+          ]
         }
       ],
       "fixedPhrases": [
@@ -565,8 +675,43 @@
           "phrase": "explain clearly",
           "phonetic": "/ɪˈkspleɪn ˈklɪrli/",
           "chinese": "清楚解释",
-          "example": "She explained the rule clearly.",
-          "translation": "她清楚地解释了这条规则。"
+          "example": "Please explain the difference clearly.",
+          "translation": "请清楚地解释这个区别。"
+        },
+        {
+          "phrase": "speak clearly",
+          "phonetic": "/ˈspiːk ˈklɪrli/",
+          "chinese": "说得清楚",
+          "example": "Speak clearly so everyone can hear you.",
+          "translation": "说清楚一点，让每个人都能听到。"
+        },
+        {
+          "phrase": "clearly understand",
+          "phonetic": "/ˈklɪrli ˌʌndɚˈstænd/",
+          "chinese": "清楚理解",
+          "example": "I clearly understand what you need.",
+          "translation": "我清楚地了解你的需求。"
+        },
+        {
+          "phrase": "clearly show",
+          "phonetic": "/ˈklɪrli ˈʃoʊ/",
+          "chinese": "清楚表明",
+          "example": "The results clearly show that the method works.",
+          "translation": "结果清楚表明这个方法有效。"
+        },
+        {
+          "phrase": "clearly different",
+          "phonetic": "/ˈklɪrli ˈdɪfɚənt/",
+          "chinese": "明显不同",
+          "example": "The two meanings are clearly different.",
+          "translation": "这两个含义明显不同。"
+        },
+        {
+          "phrase": "quite clearly",
+          "phonetic": "/ˈkwaɪt ˈklɪrli/",
+          "chinese": "很明显",
+          "example": "Quite clearly, we need a better plan.",
+          "translation": "很明显，我们需要一个更好的计划。"
         }
       ],
       "synonyms": [
@@ -632,6 +777,36 @@
           "scene": "核心真实用法",
           "english": "She explained the rule clearly.",
           "chinese": "她清楚地解释了这条规则。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "Please explain the difference clearly.",
+          "chinese": "请清楚地解释这个区别。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "Speak clearly so everyone can hear you.",
+          "chinese": "说清楚一点，让每个人都能听到。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "I clearly understand what you need.",
+          "chinese": "我清楚地了解你的需求。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "The results clearly show that the method works.",
+          "chinese": "结果清楚表明这个方法有效。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "The two meanings are clearly different.",
+          "chinese": "这两个含义明显不同。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "Quite clearly, we need a better plan.",
+          "chinese": "很明显，我们需要一个更好的计划。"
         }
       ],
       "studyFocus": {
@@ -780,6 +955,9 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“清楚解释”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "speak clearly",
+            "clearly understand",
+            "clearly show",
             "explain clearly"
           ],
           "answer": "explain clearly",
@@ -791,6 +969,8 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“说得清楚”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "clearly understand",
+            "clearly show",
             "speak clearly",
             "explain clearly"
           ],
@@ -883,11 +1063,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "usually-adv",
@@ -909,7 +1089,7 @@
       "difficulty": "应用",
       "tags": [
         "adv.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -972,7 +1152,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心用法",
           "items": [
             {
               "phrase": "usually happens",
@@ -983,22 +1163,27 @@
               "phrase": "usually take",
               "phonetic": "/ˈjuːʒuəli ˈteɪk/",
               "chinese": "通常需要"
-            },
-            {
-              "phrase": "as usually happens",
-              "phonetic": "/ˈæz ˈjuːʒuəli ˈhæpənz/",
-              "chinese": "正如通常发生的那样"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "as usually happens",
+              "phonetic": "/ˈæz ˈjuːʒuəli ˈhæpənz/",
+              "chinese": "正如通常发生的那样"
+            },
             {
               "phrase": "not usually",
               "phonetic": "/ˈnɑt ˈjuːʒuəli/",
               "chinese": "通常不"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "usually available",
               "phonetic": "/ˈjuːʒuəli əˈveɪləbəl/",
@@ -1010,6 +1195,21 @@
               "chinese": "通常会发生什么"
             }
           ]
+        },
+        {
+          "category": "补充常用语境",
+          "items": [
+            {
+              "phrase": "usually mean",
+              "phonetic": "/ˈjuːʒuəli ˈmiːn/",
+              "chinese": "通常表示"
+            },
+            {
+              "phrase": "usually found in",
+              "phonetic": "/ˈjuːʒuəli ˈfaʊnd ɪn/",
+              "chinese": "通常见于"
+            }
+          ]
         }
       ],
       "fixedPhrases": [
@@ -1017,8 +1217,43 @@
           "phrase": "usually happens",
           "phonetic": "/ˈjuːʒuəli ˈhæpənz/",
           "chinese": "通常发生",
-          "example": "I usually review words after breakfast.",
-          "translation": "我通常在早餐后复习单词。"
+          "example": "This usually happens when the connection is weak.",
+          "translation": "网络连接较弱时通常会发生这种情况。"
+        },
+        {
+          "phrase": "usually take",
+          "phonetic": "/ˈjuːʒuəli ˈteɪk/",
+          "chinese": "通常需要",
+          "example": "The journey usually takes about an hour.",
+          "translation": "这段旅程通常需要大约一小时。"
+        },
+        {
+          "phrase": "as usually happens",
+          "phonetic": "/ˈæz ˈjuːʒuəli ˈhæpənz/",
+          "chinese": "正如通常发生的那样",
+          "example": "As usually happens in August, the city was crowded.",
+          "translation": "正如八月通常的情况一样，这座城市很拥挤。"
+        },
+        {
+          "phrase": "not usually",
+          "phonetic": "/ˈnɑt ˈjuːʒuəli/",
+          "chinese": "通常不",
+          "example": "I do not usually drink coffee at night.",
+          "translation": "我通常晚上不喝咖啡。"
+        },
+        {
+          "phrase": "usually available",
+          "phonetic": "/ˈjuːʒuəli əˈveɪləbəl/",
+          "chinese": "通常可用",
+          "example": "Support is usually available during business hours.",
+          "translation": "工作时间通常可以获得支持。"
+        },
+        {
+          "phrase": "what usually happens",
+          "phonetic": "/ˈwʌt ˈjuːʒuəli ˈhæpənz/",
+          "chinese": "通常会发生什么",
+          "example": "What usually happens after you submit the form?",
+          "translation": "提交表格后通常会发生什么？"
         }
       ],
       "synonyms": [
@@ -1065,6 +1300,36 @@
           "scene": "核心真实用法",
           "english": "I usually review words after breakfast.",
           "chinese": "我通常在早餐后复习单词。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "This usually happens when the connection is weak.",
+          "chinese": "网络连接较弱时通常会发生这种情况。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "The journey usually takes about an hour.",
+          "chinese": "这段旅程通常需要大约一小时。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "As usually happens in August, the city was crowded.",
+          "chinese": "正如八月通常的情况一样，这座城市很拥挤。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "I do not usually drink coffee at night.",
+          "chinese": "我通常晚上不喝咖啡。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "Support is usually available during business hours.",
+          "chinese": "工作时间通常可以获得支持。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "What usually happens after you submit the form?",
+          "chinese": "提交表格后通常会发生什么？"
         }
       ],
       "studyFocus": {
@@ -1213,7 +1478,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“通常发生”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "usually happens"
+            "as usually happens",
+            "not usually",
+            "usually happens",
+            "usually take"
           ],
           "answer": "usually happens",
           "stage": "T2",
@@ -1224,8 +1492,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“通常需要”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "not usually",
+            "usually take",
             "usually happens",
-            "usually take"
+            "as usually happens"
           ],
           "answer": "usually take",
           "stage": "T3",
@@ -1316,11 +1586,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "perhaps-adv",
@@ -1342,7 +1612,7 @@
       "difficulty": "应用",
       "tags": [
         "adv.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -1405,7 +1675,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心用法",
           "items": [
             {
               "phrase": "perhaps because",
@@ -1416,22 +1686,27 @@
               "phrase": "perhaps we should",
               "phonetic": "/pərˈhæps ˈwiː ˈʃʊd/",
               "chinese": "也许我们应该"
-            },
-            {
-              "phrase": "perhaps not",
-              "phonetic": "/pərˈhæps ˈnɑt/",
-              "chinese": "也许不会"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "perhaps not",
+              "phonetic": "/pərˈhæps ˈnɑt/",
+              "chinese": "也许不会"
+            },
             {
               "phrase": "perhaps the most important",
               "phonetic": "/pərˈhæps ðə ˈmoʊst ˌɪˈmpɔːrtənt/",
               "chinese": "也许最重要的"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "or perhaps",
               "phonetic": "/ˈɔːr pərˈhæps/",
@@ -1443,6 +1718,21 @@
               "chinese": "也许有一天"
             }
           ]
+        },
+        {
+          "category": "补充常用语境",
+          "items": [
+            {
+              "phrase": "perhaps even",
+              "phonetic": "/pərˈhæps ˈiːvɪn/",
+              "chinese": "甚至也许"
+            },
+            {
+              "phrase": "perhaps surprisingly",
+              "phonetic": "/pərˈhæps sɚˈpraɪzɪŋliː/",
+              "chinese": "也许令人意外的是"
+            }
+          ]
         }
       ],
       "fixedPhrases": [
@@ -1450,8 +1740,43 @@
           "phrase": "perhaps because",
           "phonetic": "/pərˈhæps bɪˈkɔːz/",
           "chinese": "也许因为",
-          "example": "Perhaps we should try a different approach.",
-          "translation": "也许我们应该尝试不同的方法。"
+          "example": "She was quiet, perhaps because she was tired.",
+          "translation": "她很安静，也许是因为累了。"
+        },
+        {
+          "phrase": "perhaps we should",
+          "phonetic": "/pərˈhæps ˈwiː ˈʃʊd/",
+          "chinese": "也许我们应该",
+          "example": "Perhaps we should ask for more information.",
+          "translation": "也许我们应该询问更多信息。"
+        },
+        {
+          "phrase": "perhaps not",
+          "phonetic": "/pərˈhæps ˈnɑt/",
+          "chinese": "也许不会",
+          "example": "“Will the price fall?” “Perhaps not.”",
+          "translation": "“价格会下降吗？”“也许不会。”"
+        },
+        {
+          "phrase": "perhaps the most important",
+          "phonetic": "/pərˈhæps ðə ˈmoʊst ˌɪˈmpɔːrtənt/",
+          "chinese": "也许最重要的",
+          "example": "Patience is perhaps the most important skill here.",
+          "translation": "耐心也许是这里最重要的技能。"
+        },
+        {
+          "phrase": "or perhaps",
+          "phonetic": "/ˈɔːr pərˈhæps/",
+          "chinese": "或者也许",
+          "example": "We could walk, or perhaps take the bus.",
+          "translation": "我们可以步行，或者也许坐公交车。"
+        },
+        {
+          "phrase": "perhaps one day",
+          "phonetic": "/pərˈhæps ˈwʌn ˈdeɪ/",
+          "chinese": "也许有一天",
+          "example": "Perhaps one day I will work abroad.",
+          "translation": "也许有一天我会在国外工作。"
         }
       ],
       "synonyms": [
@@ -1498,6 +1823,36 @@
           "scene": "核心真实用法",
           "english": "Perhaps we should try a different approach.",
           "chinese": "也许我们应该尝试不同的方法。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "She was quiet, perhaps because she was tired.",
+          "chinese": "她很安静，也许是因为累了。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "Perhaps we should ask for more information.",
+          "chinese": "也许我们应该询问更多信息。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "“Will the price fall?” “Perhaps not.”",
+          "chinese": "“价格会下降吗？”“也许不会。”"
+        },
+        {
+          "scene": "真实语境",
+          "english": "Patience is perhaps the most important skill here.",
+          "chinese": "耐心也许是这里最重要的技能。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "We could walk, or perhaps take the bus.",
+          "chinese": "我们可以步行，或者也许坐公交车。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "Perhaps one day I will work abroad.",
+          "chinese": "也许有一天我会在国外工作。"
         }
       ],
       "studyFocus": {
@@ -1646,7 +2001,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“也许因为”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "perhaps because"
+            "perhaps the most important",
+            "perhaps because",
+            "perhaps we should",
+            "perhaps not"
           ],
           "answer": "perhaps because",
           "stage": "T2",
@@ -1658,7 +2016,9 @@
           "prompt": "搭配辨析：哪一项既表示“也许我们应该”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "perhaps we should",
-            "perhaps because"
+            "perhaps because",
+            "perhaps not",
+            "perhaps the most important"
           ],
           "answer": "perhaps we should",
           "stage": "T3",
@@ -1749,11 +2109,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "already-adv",
@@ -1775,7 +2135,7 @@
       "difficulty": "应用",
       "tags": [
         "adv.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -1838,7 +2198,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心用法",
           "items": [
             {
               "phrase": "have already done",
@@ -1849,22 +2209,27 @@
               "phrase": "already know",
               "phonetic": "/ɔːlˈredi ˈnoʊ/",
               "chinese": "已经知道"
-            },
-            {
-              "phrase": "already available",
-              "phonetic": "/ɔːlˈredi əˈveɪləbəl/",
-              "chinese": "已经可用"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "already available",
+              "phonetic": "/ɔːlˈredi əˈveɪləbəl/",
+              "chinese": "已经可用"
+            },
             {
               "phrase": "as you already know",
               "phonetic": "/ˈæz ˈjuː ɔːlˈredi ˈnoʊ/",
               "chinese": "正如你已经知道的"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "already too late",
               "phonetic": "/ɔːlˈredi ˈtuː ˈleɪt/",
@@ -1876,6 +2241,21 @@
               "chinese": "已经在进行中"
             }
           ]
+        },
+        {
+          "category": "补充常用语境",
+          "items": [
+            {
+              "phrase": "already finished",
+              "phonetic": "/ɔːlˈredi ˈfɪnɪʃt/",
+              "chinese": "已经完成"
+            },
+            {
+              "phrase": "already enough",
+              "phonetic": "/ɔːlˈredi ɪˈnʌf/",
+              "chinese": "已经足够"
+            }
+          ]
         }
       ],
       "fixedPhrases": [
@@ -1883,8 +2263,43 @@
           "phrase": "have already done",
           "phonetic": "/ˈhæv ɔːlˈredi ˈdʌn/",
           "chinese": "已经做过",
-          "example": "I have already completed today’s lesson.",
-          "translation": "我已经完成了今天的课程。"
+          "example": "I have already completed the first lesson.",
+          "translation": "我已经完成了第一课。"
+        },
+        {
+          "phrase": "already know",
+          "phonetic": "/ɔːlˈredi ˈnoʊ/",
+          "chinese": "已经知道",
+          "example": "You already know most of these words.",
+          "translation": "这些词你已经认识大部分了。"
+        },
+        {
+          "phrase": "already available",
+          "phonetic": "/ɔːlˈredi əˈveɪləbəl/",
+          "chinese": "已经可用",
+          "example": "The new version is already available.",
+          "translation": "新版本已经可以使用。"
+        },
+        {
+          "phrase": "as you already know",
+          "phonetic": "/ˈæz ˈjuː ɔːlˈredi ˈnoʊ/",
+          "chinese": "正如你已经知道的",
+          "example": "As you already know, the meeting starts at nine.",
+          "translation": "正如你已经知道的，会议九点开始。"
+        },
+        {
+          "phrase": "already too late",
+          "phonetic": "/ɔːlˈredi ˈtuː ˈleɪt/",
+          "chinese": "已经太迟",
+          "example": "By the time we arrived, it was already too late.",
+          "translation": "我们到达时已经太晚了。"
+        },
+        {
+          "phrase": "already in progress",
+          "phonetic": "/ɔːlˈredi ɪn ˈprɑˌɡrɛs/",
+          "chinese": "已经在进行中",
+          "example": "The repairs are already in progress.",
+          "translation": "维修工作已经在进行中。"
         }
       ],
       "synonyms": [
@@ -1939,6 +2354,36 @@
           "scene": "核心真实用法",
           "english": "I have already completed today’s lesson.",
           "chinese": "我已经完成了今天的课程。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "I have already completed the first lesson.",
+          "chinese": "我已经完成了第一课。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "You already know most of these words.",
+          "chinese": "这些词你已经认识大部分了。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "The new version is already available.",
+          "chinese": "新版本已经可以使用。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "As you already know, the meeting starts at nine.",
+          "chinese": "正如你已经知道的，会议九点开始。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "By the time we arrived, it was already too late.",
+          "chinese": "我们到达时已经太晚了。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "The repairs are already in progress.",
+          "chinese": "维修工作已经在进行中。"
         }
       ],
       "studyFocus": {
@@ -2087,7 +2532,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“已经做过”，又符合这个形式线索：目标词后的 done 表示要换成符合语境的过去分词？",
           "options": [
-            "have already done"
+            "have already done",
+            "already know",
+            "already available",
+            "as you already know"
           ],
           "answer": "have already done",
           "stage": "T2",
@@ -2099,6 +2547,8 @@
           "prompt": "用法辨析：哪一项既表示“已经知道”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "have already done",
+            "already available",
+            "as you already know",
             "already know"
           ],
           "answer": "already know",
@@ -2190,11 +2640,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     }
   ]
 }

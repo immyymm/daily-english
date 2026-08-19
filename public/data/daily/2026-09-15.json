@@ -1,7 +1,7 @@
 {
   "date": "2026-09-15",
   "dayNumber": 30,
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "templateVersion": "learning-template-2026.08.19.1",
   "cards": [
     {
@@ -24,7 +24,7 @@
       "difficulty": "应用",
       "tags": [
         "n.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -87,7 +87,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心名词搭配",
           "items": [
             {
               "phrase": "at the moment",
@@ -98,22 +98,27 @@
               "phrase": "for a moment",
               "phonetic": "/ˈfɔːr ə ˈmoʊmənt/",
               "chinese": "一会儿"
-            },
-            {
-              "phrase": "the right moment",
-              "phonetic": "/ðə ˈraɪt ˈmoʊmənt/",
-              "chinese": "合适时机"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "the right moment",
+              "phonetic": "/ðə ˈraɪt ˈmoʊmənt/",
+              "chinese": "合适时机"
+            },
             {
               "phrase": "wait a moment",
               "phonetic": "/ˈweɪt ə ˈmoʊmənt/",
               "chinese": "等一下"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "from that moment on",
               "phonetic": "/ˈfrʌm ˈðæt ˈmoʊmənt ˈɑn/",
@@ -133,7 +138,42 @@
           "phonetic": "/ˈæt ðə ˈmoʊmənt/",
           "chinese": "目前；此刻",
           "example": "I am busy at the moment.",
-          "translation": "我现在很忙。"
+          "translation": "我目前很忙。"
+        },
+        {
+          "phrase": "for a moment",
+          "phonetic": "/ˈfɔːr ə ˈmoʊmənt/",
+          "chinese": "一会儿",
+          "example": "Please wait here for a moment.",
+          "translation": "请在这里等一会儿。"
+        },
+        {
+          "phrase": "the right moment",
+          "phonetic": "/ðə ˈraɪt ˈmoʊmənt/",
+          "chinese": "合适时机",
+          "example": "This is the right moment to ask for help.",
+          "translation": "现在是寻求帮助的合适时机。"
+        },
+        {
+          "phrase": "wait a moment",
+          "phonetic": "/ˈweɪt ə ˈmoʊmənt/",
+          "chinese": "等一下",
+          "example": "Wait a moment while I check the details.",
+          "translation": "等一下，我来检查细节。"
+        },
+        {
+          "phrase": "from that moment on",
+          "phonetic": "/ˈfrʌm ˈðæt ˈmoʊmənt ˈɑn/",
+          "chinese": "从那一刻起",
+          "example": "From that moment on, everything changed.",
+          "translation": "从那一刻起，一切都改变了。"
+        },
+        {
+          "phrase": "a moment of silence",
+          "phonetic": "/ə ˈmoʊmənt ˈʌv ˈsaɪləns/",
+          "chinese": "片刻安静",
+          "example": "The room observed a moment of silence.",
+          "translation": "房间里的人默哀了片刻。"
         }
       ],
       "synonyms": [
@@ -180,6 +220,31 @@
           "scene": "核心真实用法",
           "english": "I am busy at the moment.",
           "chinese": "我现在很忙。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "Please wait here for a moment.",
+          "chinese": "请在这里等一会儿。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "This is the right moment to ask for help.",
+          "chinese": "现在是寻求帮助的合适时机。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "Wait a moment while I check the details.",
+          "chinese": "等一下，我来检查细节。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "From that moment on, everything changed.",
+          "chinese": "从那一刻起，一切都改变了。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "The room observed a moment of silence.",
+          "chinese": "房间里的人默哀了片刻。"
         }
       ],
       "studyFocus": {
@@ -328,7 +393,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“目前；此刻”，又符合这个形式线索：完整搭配中使用介词 at？",
           "options": [
-            "at the moment"
+            "wait a moment",
+            "at the moment",
+            "for a moment",
+            "the right moment"
           ],
           "answer": "at the moment",
           "stage": "T2",
@@ -340,7 +408,9 @@
           "prompt": "搭配辨析：哪一项既表示“一会儿”，又符合这个形式线索：完整搭配中使用介词 for？",
           "options": [
             "for a moment",
-            "at the moment"
+            "at the moment",
+            "the right moment",
+            "wait a moment"
           ],
           "answer": "for a moment",
           "stage": "T3",
@@ -431,11 +501,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "situation-n",
@@ -457,7 +527,7 @@
       "difficulty": "应用",
       "tags": [
         "n.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -520,7 +590,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心名词搭配",
           "items": [
             {
               "phrase": "deal with a situation",
@@ -531,22 +601,27 @@
               "phrase": "difficult situation",
               "phonetic": "/ˈdɪfəkəlt ˌsɪtʃuˈeɪʃən/",
               "chinese": "困难局面"
-            },
-            {
-              "phrase": "current situation",
-              "phonetic": "/ˈkɝːənt ˌsɪtʃuˈeɪʃən/",
-              "chinese": "当前情况"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "current situation",
+              "phonetic": "/ˈkɝːənt ˌsɪtʃuˈeɪʃən/",
+              "chinese": "当前情况"
+            },
             {
               "phrase": "in this situation",
               "phonetic": "/ɪn ˈðɪs ˌsɪtʃuˈeɪʃən/",
               "chinese": "在这种情况下"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "improve the situation",
               "phonetic": "/ˌɪˈmpruːv ðə ˌsɪtʃuˈeɪʃən/",
@@ -565,8 +640,43 @@
           "phrase": "deal with a situation",
           "phonetic": "/ˈdiːl ˈwɪð ə ˌsɪtʃuˈeɪʃən/",
           "chinese": "应对情况",
-          "example": "The right response depends on the situation.",
-          "translation": "正确的回应取决于具体情况。"
+          "example": "She remained calm and dealt with the situation.",
+          "translation": "她保持冷静并应对了这种情况。"
+        },
+        {
+          "phrase": "difficult situation",
+          "phonetic": "/ˈdɪfəkəlt ˌsɪtʃuˈeɪʃən/",
+          "chinese": "困难局面",
+          "example": "Many families are in a difficult situation.",
+          "translation": "许多家庭处于困难局面。"
+        },
+        {
+          "phrase": "current situation",
+          "phonetic": "/ˈkɝːənt ˌsɪtʃuˈeɪʃən/",
+          "chinese": "当前情况",
+          "example": "The report describes the current situation.",
+          "translation": "报告描述了当前情况。"
+        },
+        {
+          "phrase": "in this situation",
+          "phonetic": "/ɪn ˈðɪs ˌsɪtʃuˈeɪʃən/",
+          "chinese": "在这种情况下",
+          "example": "In this situation, waiting may be safer.",
+          "translation": "在这种情况下，等待可能更安全。"
+        },
+        {
+          "phrase": "improve the situation",
+          "phonetic": "/ˌɪˈmpruːv ðə ˌsɪtʃuˈeɪʃən/",
+          "chinese": "改善局面",
+          "example": "Clear communication could improve the situation.",
+          "translation": "清晰沟通可以改善局面。"
+        },
+        {
+          "phrase": "depending on the situation",
+          "phonetic": "/dɪˈpɛndɪŋ ˈɑn ðə ˌsɪtʃuˈeɪʃən/",
+          "chinese": "视情况而定",
+          "example": "The answer changes depending on the situation.",
+          "translation": "答案会视情况而变化。"
         }
       ],
       "synonyms": [
@@ -613,6 +723,36 @@
           "scene": "核心真实用法",
           "english": "The right response depends on the situation.",
           "chinese": "正确的回应取决于具体情况。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "She remained calm and dealt with the situation.",
+          "chinese": "她保持冷静并应对了这种情况。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "Many families are in a difficult situation.",
+          "chinese": "许多家庭处于困难局面。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "The report describes the current situation.",
+          "chinese": "报告描述了当前情况。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "In this situation, waiting may be safer.",
+          "chinese": "在这种情况下，等待可能更安全。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "Clear communication could improve the situation.",
+          "chinese": "清晰沟通可以改善局面。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "The answer changes depending on the situation.",
+          "chinese": "答案会视情况而变化。"
         }
       ],
       "studyFocus": {
@@ -761,7 +901,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“应对情况”，又符合这个形式线索：完整搭配中使用介词 with？",
           "options": [
-            "deal with a situation"
+            "deal with a situation",
+            "difficult situation",
+            "current situation",
+            "in this situation"
           ],
           "answer": "deal with a situation",
           "stage": "T2",
@@ -773,6 +916,8 @@
           "prompt": "用法辨析：哪一项既表示“困难局面”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "deal with a situation",
+            "current situation",
+            "in this situation",
             "difficult situation"
           ],
           "answer": "difficult situation",
@@ -864,11 +1009,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "language-n",
@@ -890,7 +1035,7 @@
       "difficulty": "应用",
       "tags": [
         "n.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -953,7 +1098,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心名词搭配",
           "items": [
             {
               "phrase": "language learning",
@@ -964,22 +1109,27 @@
               "phrase": "foreign language",
               "phonetic": "/ˈfɔːrən ˈlæŋɡwɪdʒ/",
               "chinese": "外语"
-            },
-            {
-              "phrase": "body language",
-              "phonetic": "/ˈbɑdiː ˈlæŋɡwɪdʒ/",
-              "chinese": "肢体语言"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "body language",
+              "phonetic": "/ˈbɑdiː ˈlæŋɡwɪdʒ/",
+              "chinese": "肢体语言"
+            },
             {
               "phrase": "spoken language",
               "phonetic": "/ˈspoʊkən ˈlæŋɡwɪdʒ/",
               "chinese": "口语"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "language skills",
               "phonetic": "/ˈlæŋɡwɪdʒ ˈskɪlz/",
@@ -998,8 +1148,43 @@
           "phrase": "language learning",
           "phonetic": "/ˈlæŋɡwɪdʒ ˈlɝːnɪŋ/",
           "chinese": "语言学习",
-          "example": "Language learning takes time and practice.",
-          "translation": "语言学习需要时间和练习。"
+          "example": "Daily practice makes language learning easier.",
+          "translation": "每日练习让语言学习更容易。"
+        },
+        {
+          "phrase": "foreign language",
+          "phonetic": "/ˈfɔːrən ˈlæŋɡwɪdʒ/",
+          "chinese": "外语",
+          "example": "She can speak more than one foreign language.",
+          "translation": "她会说不止一门外语。"
+        },
+        {
+          "phrase": "body language",
+          "phonetic": "/ˈbɑdiː ˈlæŋɡwɪdʒ/",
+          "chinese": "肢体语言",
+          "example": "His body language showed that he was nervous.",
+          "translation": "他的肢体语言表明他很紧张。"
+        },
+        {
+          "phrase": "spoken language",
+          "phonetic": "/ˈspoʊkən ˈlæŋɡwɪdʒ/",
+          "chinese": "口语",
+          "example": "Spoken language is often less formal than writing.",
+          "translation": "口语通常没有书面语正式。"
+        },
+        {
+          "phrase": "language skills",
+          "phonetic": "/ˈlæŋɡwɪdʒ ˈskɪlz/",
+          "chinese": "语言技能",
+          "example": "The job requires strong language skills.",
+          "translation": "这份工作要求较强的语言技能。"
+        },
+        {
+          "phrase": "use simple language",
+          "phonetic": "/ˈjuːs ˈsɪmpəl ˈlæŋɡwɪdʒ/",
+          "chinese": "使用简单语言",
+          "example": "Use simple language when you explain the rule.",
+          "translation": "解释规则时使用简单语言。"
         }
       ],
       "synonyms": [
@@ -1054,6 +1239,36 @@
           "scene": "核心真实用法",
           "english": "Language learning takes time and practice.",
           "chinese": "语言学习需要时间和练习。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "Daily practice makes language learning easier.",
+          "chinese": "每日练习让语言学习更容易。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "She can speak more than one foreign language.",
+          "chinese": "她会说不止一门外语。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "His body language showed that he was nervous.",
+          "chinese": "他的肢体语言表明他很紧张。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "Spoken language is often less formal than writing.",
+          "chinese": "口语通常没有书面语正式。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "The job requires strong language skills.",
+          "chinese": "这份工作要求较强的语言技能。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "Use simple language when you explain the rule.",
+          "chinese": "解释规则时使用简单语言。"
         }
       ],
       "studyFocus": {
@@ -1202,6 +1417,9 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“语言学习”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "foreign language",
+            "body language",
+            "spoken language",
             "language learning"
           ],
           "answer": "language learning",
@@ -1213,6 +1431,8 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“外语”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "body language",
+            "spoken language",
             "foreign language",
             "language learning"
           ],
@@ -1305,11 +1525,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "skill-n",
@@ -1331,7 +1551,7 @@
       "difficulty": "应用",
       "tags": [
         "n.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -1394,7 +1614,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心名词搭配",
           "items": [
             {
               "phrase": "develop a skill",
@@ -1405,22 +1625,27 @@
               "phrase": "communication skills",
               "phonetic": "/kəˌmjuːnəˈkeɪʃən ˈskɪlz/",
               "chinese": "沟通技能"
-            },
-            {
-              "phrase": "practical skills",
-              "phonetic": "/ˈpræktəkəl ˈskɪlz/",
-              "chinese": "实用技能"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "practical skills",
+              "phonetic": "/ˈpræktəkəl ˈskɪlz/",
+              "chinese": "实用技能"
+            },
             {
               "phrase": "skill in doing",
               "phonetic": "/skɪl ɪn ˈduːɪŋ/",
               "chinese": "做……的技能"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "learn a new skill",
               "phonetic": "/ˈlɝːn ə ˈnuː skɪl/",
@@ -1439,8 +1664,43 @@
           "phrase": "develop a skill",
           "phonetic": "/dɪˈvɛləp ə skɪl/",
           "chinese": "培养技能",
-          "example": "Conversation is a skill you can practice.",
-          "translation": "对话是一项可以练习的技能。"
+          "example": "Learning to listen is a skill you can develop.",
+          "translation": "倾听是一项可以培养的技能。"
+        },
+        {
+          "phrase": "communication skills",
+          "phonetic": "/kəˌmjuːnəˈkeɪʃən ˈskɪlz/",
+          "chinese": "沟通技能",
+          "example": "Good communication skills are important at work.",
+          "translation": "良好的沟通技能在工作中很重要。"
+        },
+        {
+          "phrase": "practical skills",
+          "phonetic": "/ˈpræktəkəl ˈskɪlz/",
+          "chinese": "实用技能",
+          "example": "The course teaches practical skills for daily life.",
+          "translation": "这门课程教授日常生活实用技能。"
+        },
+        {
+          "phrase": "skill in doing",
+          "phonetic": "/skɪl ɪn ˈduːɪŋ/",
+          "chinese": "做……的技能",
+          "example": "She has great skill in explaining difficult ideas.",
+          "translation": "她很擅长解释复杂想法。"
+        },
+        {
+          "phrase": "learn a new skill",
+          "phonetic": "/ˈlɝːn ə ˈnuː skɪl/",
+          "chinese": "学习新技能",
+          "example": "I want to learn a new skill this year.",
+          "translation": "我今年想学习一项新技能。"
+        },
+        {
+          "phrase": "highly skilled",
+          "phonetic": "/ˈhaɪliː ˈskɪld/",
+          "chinese": "技术熟练的",
+          "example": "The repair requires a highly skilled worker.",
+          "translation": "这项维修需要技术熟练的工人。"
         }
       ],
       "synonyms": [
@@ -1487,6 +1747,36 @@
           "scene": "核心真实用法",
           "english": "Conversation is a skill you can practice.",
           "chinese": "对话是一项可以练习的技能。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "Learning to listen is a skill you can develop.",
+          "chinese": "倾听是一项可以培养的技能。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "Good communication skills are important at work.",
+          "chinese": "良好的沟通技能在工作中很重要。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "The course teaches practical skills for daily life.",
+          "chinese": "这门课程教授日常生活实用技能。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "She has great skill in explaining difficult ideas.",
+          "chinese": "她很擅长解释复杂想法。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "I want to learn a new skill this year.",
+          "chinese": "我今年想学习一项新技能。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "The repair requires a highly skilled worker.",
+          "chinese": "这项维修需要技术熟练的工人。"
         }
       ],
       "studyFocus": {
@@ -1635,7 +1925,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“培养技能”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "develop a skill"
+            "practical skills",
+            "skill in doing",
+            "develop a skill",
+            "communication skills"
           ],
           "answer": "develop a skill",
           "stage": "T2",
@@ -1646,8 +1939,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“沟通技能”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "skill in doing",
+            "communication skills",
             "develop a skill",
-            "communication skills"
+            "practical skills"
           ],
           "answer": "communication skills",
           "stage": "T3",
@@ -1738,11 +2033,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "benefit-n",
@@ -1770,7 +2065,7 @@
       "difficulty": "应用",
       "tags": [
         "n.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -1840,7 +2135,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心名词搭配",
           "items": [
             {
               "phrase": "benefit from",
@@ -1851,22 +2146,27 @@
               "phrase": "benefit someone",
               "phonetic": "/ˈbenəfɪt ˈsʌˌmwʌn/",
               "chinese": "使某人受益"
-            },
-            {
-              "phrase": "main benefit",
-              "phonetic": "/ˈmeɪn ˈbenəfɪt/",
-              "chinese": "主要好处"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "main benefit",
+              "phonetic": "/ˈmeɪn ˈbenəfɪt/",
+              "chinese": "主要好处"
+            },
             {
               "phrase": "health benefits",
               "phonetic": "/ˈhɛlθ ˈbɛnəfɪts/",
               "chinese": "健康益处"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "for the benefit of",
               "phonetic": "/ˈfɔːr ðə ˈbenəfɪt ˈʌv/",
@@ -1885,8 +2185,43 @@
           "phrase": "benefit from",
           "phonetic": "/ˈbenəfɪt ˈfrʌm/",
           "chinese": "从……中受益",
-          "example": "You will benefit from regular review.",
-          "translation": "你会从定期复习中受益。"
+          "example": "Everyone can benefit from regular exercise.",
+          "translation": "每个人都能从规律运动中受益。"
+        },
+        {
+          "phrase": "benefit someone",
+          "phonetic": "/ˈbenəfɪt ˈsʌˌmwʌn/",
+          "chinese": "使某人受益",
+          "example": "The new schedule benefits both staff and customers.",
+          "translation": "新的时间安排让员工和顾客都受益。"
+        },
+        {
+          "phrase": "main benefit",
+          "phonetic": "/ˈmeɪn ˈbenəfɪt/",
+          "chinese": "主要好处",
+          "example": "The main benefit is that the system saves time.",
+          "translation": "主要好处是这个系统节省时间。"
+        },
+        {
+          "phrase": "health benefits",
+          "phonetic": "/ˈhɛlθ ˈbɛnəfɪts/",
+          "chinese": "健康益处",
+          "example": "Walking every day has many health benefits.",
+          "translation": "每天步行有许多健康益处。"
+        },
+        {
+          "phrase": "for the benefit of",
+          "phonetic": "/ˈfɔːr ðə ˈbenəfɪt ˈʌv/",
+          "chinese": "为了……的利益",
+          "example": "The changes were made for the benefit of users.",
+          "translation": "这些改变是为了用户的利益。"
+        },
+        {
+          "phrase": "cost-benefit analysis",
+          "phonetic": "/ˈkɑst-ˈbenəfɪt əˈnæləsəs/",
+          "chinese": "成本效益分析",
+          "example": "We completed a cost-benefit analysis before deciding.",
+          "translation": "决定前我们完成了成本效益分析。"
         }
       ],
       "synonyms": [
@@ -1941,6 +2276,36 @@
           "scene": "核心真实用法",
           "english": "You will benefit from regular review.",
           "chinese": "你会从定期复习中受益。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "Everyone can benefit from regular exercise.",
+          "chinese": "每个人都能从规律运动中受益。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "The new schedule benefits both staff and customers.",
+          "chinese": "新的时间安排让员工和顾客都受益。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "The main benefit is that the system saves time.",
+          "chinese": "主要好处是这个系统节省时间。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "Walking every day has many health benefits.",
+          "chinese": "每天步行有许多健康益处。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "The changes were made for the benefit of users.",
+          "chinese": "这些改变是为了用户的利益。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "We completed a cost-benefit analysis before deciding.",
+          "chinese": "决定前我们完成了成本效益分析。"
         }
       ],
       "studyFocus": {
@@ -2089,7 +2454,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“从……中受益”，又符合这个形式线索：完整搭配中使用介词 from？",
           "options": [
-            "benefit from"
+            "health benefits",
+            "benefit from",
+            "benefit someone",
+            "main benefit"
           ],
           "answer": "benefit from",
           "stage": "T2",
@@ -2101,7 +2469,9 @@
           "prompt": "搭配辨析：哪一项既表示“使某人受益”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "benefit someone",
-            "benefit from"
+            "benefit from",
+            "main benefit",
+            "health benefits"
           ],
           "answer": "benefit someone",
           "stage": "T3",
@@ -2192,11 +2562,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     }
   ]
 }

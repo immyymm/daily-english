@@ -18,7 +18,7 @@
   "difficulty": "进阶",
   "tags": [
     "n.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心名词搭配",
       "items": [
         {
           "phrase": "form a habit",
@@ -92,22 +92,27 @@
           "phrase": "develop a habit",
           "phonetic": "/dɪˈvɛləp ə ˈhæbɪt/",
           "chinese": "养成习惯"
-        },
-        {
-          "phrase": "break a habit",
-          "phonetic": "/ˈbreɪk ə ˈhæbɪt/",
-          "chinese": "改掉习惯"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "break a habit",
+          "phonetic": "/ˈbreɪk ə ˈhæbɪt/",
+          "chinese": "改掉习惯"
+        },
         {
           "phrase": "good study habits",
           "phonetic": "/ˈɡʊd ˈstʌdiː ˈhæbəts/",
           "chinese": "良好学习习惯"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "out of habit",
           "phonetic": "/ˈaʊt ˈʌv ˈhæbɪt/",
@@ -126,8 +131,43 @@
       "phrase": "form a habit",
       "phonetic": "/ˈfɔːrm ə ˈhæbɪt/",
       "chinese": "养成习惯",
-      "example": "Reviewing before bed became a habit.",
-      "translation": "睡前复习成了一种习惯。"
+      "example": "Repeating the phrase can help form a habit.",
+      "translation": "重复这个短语有助于形成习惯。"
+    },
+    {
+      "phrase": "develop a habit",
+      "phonetic": "/dɪˈvɛləp ə ˈhæbɪt/",
+      "chinese": "养成习惯",
+      "example": "She developed a habit of reading before bed.",
+      "translation": "她养成了睡前阅读的习惯。"
+    },
+    {
+      "phrase": "break a habit",
+      "phonetic": "/ˈbreɪk ə ˈhæbɪt/",
+      "chinese": "改掉习惯",
+      "example": "It can be difficult to break an old habit.",
+      "translation": "改掉旧习惯可能很难。"
+    },
+    {
+      "phrase": "good study habits",
+      "phonetic": "/ˈɡʊd ˈstʌdiː ˈhæbəts/",
+      "chinese": "良好学习习惯",
+      "example": "Good study habits save time in the long run.",
+      "translation": "良好的学习习惯长远来看会节省时间。"
+    },
+    {
+      "phrase": "out of habit",
+      "phonetic": "/ˈaʊt ˈʌv ˈhæbɪt/",
+      "chinese": "出于习惯",
+      "example": "I checked my phone out of habit.",
+      "translation": "我出于习惯查看了手机。"
+    },
+    {
+      "phrase": "get into the habit of",
+      "phonetic": "/ˈɡɛt ˈɪntuː ðə ˈhæbɪt ˈʌv/",
+      "chinese": "养成做……的习惯",
+      "example": "Try to get into the habit of reviewing daily.",
+      "translation": "尽量养成每天复习的习惯。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "Reviewing before bed became a habit.",
       "chinese": "睡前复习成了一种习惯。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "Repeating the phrase can help form a habit.",
+      "chinese": "重复这个短语有助于形成习惯。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "She developed a habit of reading before bed.",
+      "chinese": "她养成了睡前阅读的习惯。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "It can be difficult to break an old habit.",
+      "chinese": "改掉旧习惯可能很难。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "Good study habits save time in the long run.",
+      "chinese": "良好的学习习惯长远来看会节省时间。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "I checked my phone out of habit.",
+      "chinese": "我出于习惯查看了手机。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "Try to get into the habit of reviewing daily.",
+      "chinese": "尽量养成每天复习的习惯。"
     }
   ],
   "studyFocus": {
@@ -322,7 +392,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“养成习惯”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "form a habit"
+        "break a habit",
+        "good study habits",
+        "form a habit",
+        "develop a habit"
       ],
       "answer": "form a habit",
       "stage": "T2",
@@ -333,8 +406,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“养成习惯”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "good study habits",
+        "develop a habit",
         "form a habit",
-        "develop a habit"
+        "break a habit"
       ],
       "answer": "develop a habit",
       "stage": "T3",
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

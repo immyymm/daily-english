@@ -18,7 +18,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "待精校",
+    "模板详卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心动作与结构",
       "items": [
         {
           "phrase": "decide to do",
@@ -92,22 +92,27 @@
           "phrase": "decide against",
           "phonetic": "/dɪˈsaɪd əˈɡɛnst/",
           "chinese": "决定不做"
-        },
-        {
-          "phrase": "decide between",
-          "phonetic": "/dɪˈsaɪd bɪˈtwiːn/",
-          "chinese": "在……之间决定"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "decide between",
+          "phonetic": "/dɪˈsaɪd bɪˈtwiːn/",
+          "chinese": "在……之间决定"
+        },
         {
           "phrase": "decide whether",
           "phonetic": "/dɪˈsaɪd ˈwɛðɚ/",
           "chinese": "决定是否"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "make up your mind",
           "phonetic": "/ˈmeɪk ˈʌp ˈjɔːr ˈmaɪnd/",
@@ -119,6 +124,16 @@
           "chinese": "由你决定"
         }
       ]
+    },
+    {
+      "category": "补充常用语境",
+      "items": [
+        {
+          "phrase": "decide to do something",
+          "phonetic": "/dɪˈsaɪd ˈtuː ˈduː ˈsʌmθɪŋ/",
+          "chinese": "决定做某事"
+        }
+      ]
     }
   ],
   "fixedPhrases": [
@@ -126,8 +141,43 @@
       "phrase": "decide to do",
       "phonetic": "/dɪˈsaɪd ˈtuː ˈduː/",
       "chinese": "决定做",
-      "example": "I decided to start with five words a day.",
-      "translation": "我决定从每天五个单词开始。"
+      "example": "I decided to review the difficult words first.",
+      "translation": "我决定先复习难词。"
+    },
+    {
+      "phrase": "decide against",
+      "phonetic": "/dɪˈsaɪd əˈɡɛnst/",
+      "chinese": "决定不做",
+      "example": "We decided against driving in the heavy snow.",
+      "translation": "我们决定不在大雪中开车。"
+    },
+    {
+      "phrase": "decide between",
+      "phonetic": "/dɪˈsaɪd bɪˈtwiːn/",
+      "chinese": "在……之间决定",
+      "example": "She could not decide between the blue coat and the black one.",
+      "translation": "她无法在蓝色外套和黑色外套之间作出选择。"
+    },
+    {
+      "phrase": "decide whether",
+      "phonetic": "/dɪˈsaɪd ˈwɛðɚ/",
+      "chinese": "决定是否",
+      "example": "You need to decide whether the plan is realistic.",
+      "translation": "你需要判断这个计划是否现实。"
+    },
+    {
+      "phrase": "make up your mind",
+      "phonetic": "/ˈmeɪk ˈʌp ˈjɔːr ˈmaɪnd/",
+      "chinese": "下定决心",
+      "example": "She could not decide at first, but she finally made up her mind.",
+      "translation": "她起初无法决定，但最终下定了决心。"
+    },
+    {
+      "phrase": "you decide",
+      "phonetic": "/ˈjuː dɪˈsaɪd/",
+      "chinese": "由你决定",
+      "example": "We can eat at home or go out—you decide.",
+      "translation": "我们可以在家吃或出去吃——你决定。"
     }
   ],
   "synonyms": [
@@ -193,6 +243,36 @@
       "scene": "核心真实用法",
       "english": "I decided to start with five words a day.",
       "chinese": "我决定从每天五个单词开始。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "I decided to review the difficult words first.",
+      "chinese": "我决定先复习难词。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "We decided against driving in the heavy snow.",
+      "chinese": "我们决定不在大雪中开车。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "She could not decide between the blue coat and the black one.",
+      "chinese": "她无法在蓝色外套和黑色外套之间作出选择。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "You need to decide whether the plan is realistic.",
+      "chinese": "你需要判断这个计划是否现实。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "She could not decide at first, but she finally made up her mind.",
+      "chinese": "她起初无法决定，但最终下定了决心。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "We can eat at home or go out—you decide.",
+      "chinese": "我们可以在家吃或出去吃——你决定。"
     }
   ],
   "studyFocus": {
@@ -341,7 +421,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“决定做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
       "options": [
-        "decide to do"
+        "decide between",
+        "decide whether",
+        "decide to do",
+        "decide against"
       ],
       "answer": "decide to do",
       "stage": "T2",
@@ -352,8 +435,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“决定不做”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "decide whether",
+        "decide against",
         "decide to do",
-        "decide against"
+        "decide between"
       ],
       "answer": "decide against",
       "stage": "T3",
@@ -444,9 +529,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

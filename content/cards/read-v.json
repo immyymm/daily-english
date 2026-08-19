@@ -18,7 +18,7 @@
   "difficulty": "应用",
   "tags": [
     "v.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心动作与结构",
       "items": [
         {
           "phrase": "read a book",
@@ -92,22 +92,27 @@
           "phrase": "read about",
           "phonetic": "/riːd əˈbaʊt/",
           "chinese": "阅读有关……的内容"
-        },
-        {
-          "phrase": "read aloud",
-          "phonetic": "/riːd əˈlaʊd/",
-          "chinese": "朗读"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "read aloud",
+          "phonetic": "/riːd əˈlaʊd/",
+          "chinese": "朗读"
+        },
         {
           "phrase": "read between the lines",
           "phonetic": "/riːd bɪˈtwiːn ðə ˈlaɪnz/",
           "chinese": "领会言外之意"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "easy to read",
           "phonetic": "/ˈiːziː ˈtuː riːd/",
@@ -126,8 +131,43 @@
       "phrase": "read a book",
       "phonetic": "/riːd ə ˈbʊk/",
       "chinese": "读书",
-      "example": "Read the example aloud twice.",
-      "translation": "把例句大声读两遍。"
+      "example": "I read a book on the train every morning.",
+      "translation": "我每天早上在火车上读书。"
+    },
+    {
+      "phrase": "read about",
+      "phonetic": "/riːd əˈbaʊt/",
+      "chinese": "阅读有关……的内容",
+      "example": "She read about the event online.",
+      "translation": "她在网上读到了这次活动。"
+    },
+    {
+      "phrase": "read aloud",
+      "phonetic": "/riːd əˈlaʊd/",
+      "chinese": "朗读",
+      "example": "Reading aloud helps improve pronunciation.",
+      "translation": "朗读有助于改善发音。"
+    },
+    {
+      "phrase": "read between the lines",
+      "phonetic": "/riːd bɪˈtwiːn ðə ˈlaɪnz/",
+      "chinese": "领会言外之意",
+      "example": "You have to read between the lines to understand his message.",
+      "translation": "你必须领会言外之意才能理解他的消息。"
+    },
+    {
+      "phrase": "easy to read",
+      "phonetic": "/ˈiːziː ˈtuː riːd/",
+      "chinese": "容易阅读",
+      "example": "The large text makes the guide easy to read.",
+      "translation": "大号文字让这份指南容易阅读。"
+    },
+    {
+      "phrase": "read through",
+      "phonetic": "/riːd ˈθruː/",
+      "chinese": "从头到尾阅读",
+      "example": "Please read through the contract before signing it.",
+      "translation": "签字前请把合同从头到尾读一遍。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "Read the example aloud twice.",
       "chinese": "把例句大声读两遍。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "I read a book on the train every morning.",
+      "chinese": "我每天早上在火车上读书。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "She read about the event online.",
+      "chinese": "她在网上读到了这次活动。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "Reading aloud helps improve pronunciation.",
+      "chinese": "朗读有助于改善发音。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "You have to read between the lines to understand his message.",
+      "chinese": "你必须领会言外之意才能理解他的消息。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "The large text makes the guide easy to read.",
+      "chinese": "大号文字让这份指南容易阅读。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "Please read through the contract before signing it.",
+      "chinese": "签字前请把合同从头到尾读一遍。"
     }
   ],
   "studyFocus": {
@@ -322,7 +392,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“读书”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "read a book"
+        "read a book",
+        "read about",
+        "read aloud",
+        "read between the lines"
       ],
       "answer": "read a book",
       "stage": "T2",
@@ -334,6 +407,8 @@
       "prompt": "用法辨析：哪一项既表示“阅读有关……的内容”，又符合这个形式线索：完整搭配中使用介词 about？",
       "options": [
         "read a book",
+        "read aloud",
+        "read between the lines",
         "read about"
       ],
       "answer": "read about",
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

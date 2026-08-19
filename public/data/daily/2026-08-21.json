@@ -1,7 +1,7 @@
 {
   "date": "2026-08-21",
   "dayNumber": 5,
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "templateVersion": "learning-template-2026.08.19.1",
   "cards": [
     {
@@ -30,7 +30,7 @@
       "difficulty": "基础",
       "tags": [
         "v.",
-        "待精校",
+        "模板详卡",
         "高频表达"
       ],
       "coreMemory": {
@@ -100,7 +100,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心动作与结构",
           "items": [
             {
               "phrase": "offer help",
@@ -111,22 +111,27 @@
               "phrase": "offer someone a job",
               "phonetic": "/ˈɔːfər ˈsʌˌmwʌn ə ˈdʒɑb/",
               "chinese": "给某人一份工作"
-            },
-            {
-              "phrase": "offer to do",
-              "phonetic": "/ˈɔːfər ˈtuː ˈduː/",
-              "chinese": "主动提出做"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "offer to do",
+              "phonetic": "/ˈɔːfər ˈtuː ˈduː/",
+              "chinese": "主动提出做"
+            },
             {
               "phrase": "make an offer",
               "phonetic": "/ˈmeɪk ˈæn ˈɔːfər/",
               "chinese": "提出报价"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "accept an offer",
               "phonetic": "/æˈksɛpt ˈæn ˈɔːfər/",
@@ -145,8 +150,43 @@
           "phrase": "offer help",
           "phonetic": "/ˈɔːfər ˈhɛlp/",
           "chinese": "主动提供帮助",
-          "example": "He offered to help me with the project.",
-          "translation": "他主动提出帮我做这个项目。"
+          "example": "A neighbor offered help when our car broke down.",
+          "translation": "我们的车坏时，一位邻居主动提供了帮助。"
+        },
+        {
+          "phrase": "offer someone a job",
+          "phonetic": "/ˈɔːfər ˈsʌˌmwʌn ə ˈdʒɑb/",
+          "chinese": "给某人一份工作",
+          "example": "The company offered her a job in Beijing.",
+          "translation": "公司给了她一份在北京的工作。"
+        },
+        {
+          "phrase": "offer to do",
+          "phonetic": "/ˈɔːfər ˈtuː ˈduː/",
+          "chinese": "主动提出做",
+          "example": "He offered to carry my bag.",
+          "translation": "他主动提出帮我拿包。"
+        },
+        {
+          "phrase": "make an offer",
+          "phonetic": "/ˈmeɪk ˈæn ˈɔːfər/",
+          "chinese": "提出报价",
+          "example": "They made an offer on the apartment yesterday.",
+          "translation": "他们昨天对那套公寓提出了报价。"
+        },
+        {
+          "phrase": "accept an offer",
+          "phonetic": "/æˈksɛpt ˈæn ˈɔːfər/",
+          "chinese": "接受提议",
+          "example": "She accepted the offer after reading the contract.",
+          "translation": "她看完合同后接受了这份提议。"
+        },
+        {
+          "phrase": "on offer",
+          "phonetic": "/ˈɑn ˈɔːfər/",
+          "chinese": "可供选择；特价",
+          "example": "Several courses are on offer this summer.",
+          "translation": "今年夏天有几门课程可供选择。"
         }
       ],
       "synonyms": [
@@ -193,6 +233,36 @@
           "scene": "核心真实用法",
           "english": "He offered to help me with the project.",
           "chinese": "他主动提出帮我做这个项目。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "A neighbor offered help when our car broke down.",
+          "chinese": "我们的车坏时，一位邻居主动提供了帮助。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "The company offered her a job in Beijing.",
+          "chinese": "公司给了她一份在北京的工作。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "He offered to carry my bag.",
+          "chinese": "他主动提出帮我拿包。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "They made an offer on the apartment yesterday.",
+          "chinese": "他们昨天对那套公寓提出了报价。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "She accepted the offer after reading the contract.",
+          "chinese": "她看完合同后接受了这份提议。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "Several courses are on offer this summer.",
+          "chinese": "今年夏天有几门课程可供选择。"
         }
       ],
       "studyFocus": {
@@ -341,7 +411,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“主动提供帮助”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "offer help"
+            "offer to do",
+            "make an offer",
+            "offer help",
+            "offer someone a job"
           ],
           "answer": "offer help",
           "stage": "T2",
@@ -352,8 +425,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“给某人一份工作”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "make an offer",
+            "offer someone a job",
             "offer help",
-            "offer someone a job"
+            "offer to do"
           ],
           "answer": "offer someone a job",
           "stage": "T3",
@@ -444,11 +519,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "consider-v",
@@ -470,7 +545,7 @@
       "difficulty": "基础",
       "tags": [
         "v.",
-        "待精校",
+        "模板详卡",
         "高频表达"
       ],
       "coreMemory": {
@@ -533,7 +608,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心动作与结构",
           "items": [
             {
               "phrase": "consider doing",
@@ -544,22 +619,27 @@
               "phrase": "consider the possibility",
               "phonetic": "/kənˈsɪdər ðə ˌpɑsəˈbɪləˌtiː/",
               "chinese": "考虑可能性"
-            },
-            {
-              "phrase": "consider someone suitable",
-              "phonetic": "/kənˈsɪdər ˈsʌˌmwʌn ˈsuːtəbəl/",
-              "chinese": "认为某人合适"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "consider someone suitable",
+              "phonetic": "/kənˈsɪdər ˈsʌˌmwʌn ˈsuːtəbəl/",
+              "chinese": "认为某人合适"
+            },
             {
               "phrase": "carefully consider",
               "phonetic": "/ˈkɛrfəliː kənˈsɪdər/",
               "chinese": "认真考虑"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "all things considered",
               "phonetic": "/ˈɔːl ˈθɪŋz kəˈnsɪdɚd/",
@@ -571,6 +651,16 @@
               "chinese": "把某事考虑进去"
             }
           ]
+        },
+        {
+          "category": "补充常用语境",
+          "items": [
+            {
+              "phrase": "consider doing something",
+              "phonetic": "/kənˈsɪdər ˈduːɪŋ ˈsʌmθɪŋ/",
+              "chinese": "考虑做某事"
+            }
+          ]
         }
       ],
       "fixedPhrases": [
@@ -578,8 +668,43 @@
           "phrase": "consider doing",
           "phonetic": "/kənˈsɪdər ˈduːɪŋ/",
           "chinese": "考虑做",
-          "example": "You should consider taking a short break.",
-          "translation": "你应该考虑短暂休息一下。"
+          "example": "I am considering taking an evening class.",
+          "translation": "我正在考虑上夜校。"
+        },
+        {
+          "phrase": "consider the possibility",
+          "phonetic": "/kənˈsɪdər ðə ˌpɑsəˈbɪləˌtiː/",
+          "chinese": "考虑可能性",
+          "example": "We should consider every possibility before deciding.",
+          "translation": "决定前我们应该考虑每一种可能性。"
+        },
+        {
+          "phrase": "consider someone suitable",
+          "phonetic": "/kənˈsɪdər ˈsʌˌmwʌn ˈsuːtəbəl/",
+          "chinese": "认为某人合适",
+          "example": "The manager considers her suitable for the role.",
+          "translation": "经理认为她适合这个职位。"
+        },
+        {
+          "phrase": "carefully consider",
+          "phonetic": "/ˈkɛrfəliː kənˈsɪdər/",
+          "chinese": "认真考虑",
+          "example": "Please carefully consider the long-term cost.",
+          "translation": "请认真考虑长期成本。"
+        },
+        {
+          "phrase": "all things considered",
+          "phonetic": "/ˈɔːl ˈθɪŋz kəˈnsɪdɚd/",
+          "chinese": "综合考虑",
+          "example": "All things considered, staying home was the best choice.",
+          "translation": "综合考虑，待在家里是最好的选择。"
+        },
+        {
+          "phrase": "take something into consideration",
+          "phonetic": "/ˈteɪk ˈsʌmθɪŋ ˈɪntuː kəˌnsɪdɚˈeɪʃən/",
+          "chinese": "把某事考虑进去",
+          "example": "We need to take the weather into consideration.",
+          "translation": "我们需要把天气考虑进去。"
         }
       ],
       "synonyms": [
@@ -626,6 +751,36 @@
           "scene": "核心真实用法",
           "english": "You should consider taking a short break.",
           "chinese": "你应该考虑短暂休息一下。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "I am considering taking an evening class.",
+          "chinese": "我正在考虑上夜校。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "We should consider every possibility before deciding.",
+          "chinese": "决定前我们应该考虑每一种可能性。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "The manager considers her suitable for the role.",
+          "chinese": "经理认为她适合这个职位。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "Please carefully consider the long-term cost.",
+          "chinese": "请认真考虑长期成本。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "All things considered, staying home was the best choice.",
+          "chinese": "综合考虑，待在家里是最好的选择。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "We need to take the weather into consideration.",
+          "chinese": "我们需要把天气考虑进去。"
         }
       ],
       "studyFocus": {
@@ -774,7 +929,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“考虑做”，又符合这个形式线索：目标词后的 doing 表示要换成符合语境的动词 -ing 形式？",
           "options": [
-            "consider doing"
+            "carefully consider",
+            "consider doing",
+            "consider the possibility",
+            "consider someone suitable"
           ],
           "answer": "consider doing",
           "stage": "T2",
@@ -786,7 +944,9 @@
           "prompt": "搭配辨析：哪一项既表示“考虑可能性”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "consider the possibility",
-            "consider doing"
+            "consider doing",
+            "consider someone suitable",
+            "carefully consider"
           ],
           "answer": "consider the possibility",
           "stage": "T3",
@@ -877,11 +1037,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "expect-v",
@@ -903,7 +1063,7 @@
       "difficulty": "基础",
       "tags": [
         "v.",
-        "待精校",
+        "模板详卡",
         "高频表达"
       ],
       "coreMemory": {
@@ -966,7 +1126,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心动作与结构",
           "items": [
             {
               "phrase": "expect someone to do",
@@ -977,22 +1137,27 @@
               "phrase": "expect to see",
               "phonetic": "/ɪkˈspekt ˈtuː ˈsiː/",
               "chinese": "预计会看到"
-            },
-            {
-              "phrase": "as expected",
-              "phonetic": "/ˈæz ɪˈkspɛktəd/",
-              "chinese": "正如预期"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "as expected",
+              "phonetic": "/ˈæz ɪˈkspɛktəd/",
+              "chinese": "正如预期"
+            },
             {
               "phrase": "what to expect",
               "phonetic": "/ˈwʌt ˈtuː ɪkˈspekt/",
               "chinese": "会发生什么"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "expect the worst",
               "phonetic": "/ɪkˈspekt ðə ˈwɝːst/",
@@ -1004,6 +1169,16 @@
               "chinese": "被期望；预计会"
             }
           ]
+        },
+        {
+          "category": "补充常用语境",
+          "items": [
+            {
+              "phrase": "expect someone to do something",
+              "phonetic": "/ɪkˈspekt ˈsʌˌmwʌn ˈtuː ˈduː ˈsʌmθɪŋ/",
+              "chinese": "期待某人做某事"
+            }
+          ]
         }
       ],
       "fixedPhrases": [
@@ -1011,8 +1186,43 @@
           "phrase": "expect someone to do",
           "phonetic": "/ɪkˈspekt ˈsʌˌmwʌn ˈtuː ˈduː/",
           "chinese": "期待某人做",
-          "example": "We expect the results next week.",
-          "translation": "我们预计下周会有结果。"
+          "example": "I expect everyone to arrive on time.",
+          "translation": "我希望每个人都准时到达。"
+        },
+        {
+          "phrase": "expect to see",
+          "phonetic": "/ɪkˈspekt ˈtuː ˈsiː/",
+          "chinese": "预计会看到",
+          "example": "We expect to see better results next month.",
+          "translation": "我们预计下个月会看到更好的结果。"
+        },
+        {
+          "phrase": "as expected",
+          "phonetic": "/ˈæz ɪˈkspɛktəd/",
+          "chinese": "正如预期",
+          "example": "As expected, the morning train was crowded.",
+          "translation": "不出所料，早班火车很拥挤。"
+        },
+        {
+          "phrase": "what to expect",
+          "phonetic": "/ˈwʌt ˈtuː ɪkˈspekt/",
+          "chinese": "会发生什么",
+          "example": "The guide explains what to expect on the first day.",
+          "translation": "指南说明了第一天可能会遇到什么。"
+        },
+        {
+          "phrase": "expect the worst",
+          "phonetic": "/ɪkˈspekt ðə ˈwɝːst/",
+          "chinese": "做最坏打算",
+          "example": "Prepare carefully, but do not always expect the worst.",
+          "translation": "认真准备，但不要总做最坏的打算。"
+        },
+        {
+          "phrase": "be expected to",
+          "phonetic": "/ˈbiː ɪˈkspɛktəd ˈtuː/",
+          "chinese": "被期望；预计会",
+          "example": "All applicants are expected to provide two references.",
+          "translation": "所有申请人都需要提供两名推荐人。"
         }
       ],
       "synonyms": [
@@ -1059,6 +1269,36 @@
           "scene": "核心真实用法",
           "english": "We expect the results next week.",
           "chinese": "我们预计下周会有结果。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "I expect everyone to arrive on time.",
+          "chinese": "我希望每个人都准时到达。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "We expect to see better results next month.",
+          "chinese": "我们预计下个月会看到更好的结果。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "As expected, the morning train was crowded.",
+          "chinese": "不出所料，早班火车很拥挤。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "The guide explains what to expect on the first day.",
+          "chinese": "指南说明了第一天可能会遇到什么。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "Prepare carefully, but do not always expect the worst.",
+          "chinese": "认真准备，但不要总做最坏的打算。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "All applicants are expected to provide two references.",
+          "chinese": "所有申请人都需要提供两名推荐人。"
         }
       ],
       "studyFocus": {
@@ -1207,7 +1447,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“期待某人做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
           "options": [
-            "expect someone to do"
+            "expect someone to do",
+            "expect to see",
+            "as expected",
+            "what to expect"
           ],
           "answer": "expect someone to do",
           "stage": "T2",
@@ -1219,6 +1462,8 @@
           "prompt": "用法辨析：哪一项既表示“预计会看到”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "expect someone to do",
+            "as expected",
+            "what to expect",
             "expect to see"
           ],
           "answer": "expect to see",
@@ -1310,11 +1555,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "develop-v",
@@ -1336,7 +1581,7 @@
       "difficulty": "基础",
       "tags": [
         "v.",
-        "待精校",
+        "模板详卡",
         "高频表达"
       ],
       "coreMemory": {
@@ -1399,7 +1644,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心动作与结构",
           "items": [
             {
               "phrase": "develop a habit",
@@ -1410,22 +1655,27 @@
               "phrase": "develop a skill",
               "phonetic": "/dɪˈveləp ə ˈskɪl/",
               "chinese": "培养技能"
-            },
-            {
-              "phrase": "develop a plan",
-              "phonetic": "/dɪˈveləp ə ˈplæn/",
-              "chinese": "制定方案"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "develop a plan",
+              "phonetic": "/dɪˈveləp ə ˈplæn/",
+              "chinese": "制定方案"
+            },
             {
               "phrase": "develop an interest in",
               "phonetic": "/dɪˈveləp ˈæn ˈɪntrəst ɪn/",
               "chinese": "培养对……的兴趣"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "develop over time",
               "phonetic": "/dɪˈveləp ˈoʊvɚ ˈtaɪm/",
@@ -1444,8 +1694,43 @@
           "phrase": "develop a habit",
           "phonetic": "/dɪˈveləp ə ˈhæbət/",
           "chinese": "养成习惯",
-          "example": "She developed a habit of reading every night.",
-          "translation": "她养成了每晚阅读的习惯。"
+          "example": "It takes time to develop a healthy habit.",
+          "translation": "养成健康习惯需要时间。"
+        },
+        {
+          "phrase": "develop a skill",
+          "phonetic": "/dɪˈveləp ə ˈskɪl/",
+          "chinese": "培养技能",
+          "example": "Daily conversation can help you develop speaking skills.",
+          "translation": "每天对话可以帮助你培养口语技能。"
+        },
+        {
+          "phrase": "develop a plan",
+          "phonetic": "/dɪˈveləp ə ˈplæn/",
+          "chinese": "制定方案",
+          "example": "The team developed a practical plan for the next stage.",
+          "translation": "团队为下一阶段制定了一个切实可行的计划。"
+        },
+        {
+          "phrase": "develop an interest in",
+          "phonetic": "/dɪˈveləp ˈæn ˈɪntrəst ɪn/",
+          "chinese": "培养对……的兴趣",
+          "example": "She developed an interest in photography at college.",
+          "translation": "她在大学时培养了对摄影的兴趣。"
+        },
+        {
+          "phrase": "develop over time",
+          "phonetic": "/dɪˈveləp ˈoʊvɚ ˈtaɪm/",
+          "chinese": "逐步发展",
+          "example": "Trust develops over time.",
+          "translation": "信任是逐步建立起来的。"
+        },
+        {
+          "phrase": "research and development",
+          "phonetic": "/riːˈsɝːtʃ ənd dɪˈvɛləpmənt/",
+          "chinese": "研究与开发",
+          "example": "The company invests heavily in research and development.",
+          "translation": "公司在研发方面投入了大量资金。"
         }
       ],
       "synonyms": [
@@ -1492,6 +1777,36 @@
           "scene": "核心真实用法",
           "english": "She developed a habit of reading every night.",
           "chinese": "她养成了每晚阅读的习惯。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "It takes time to develop a healthy habit.",
+          "chinese": "养成健康习惯需要时间。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "Daily conversation can help you develop speaking skills.",
+          "chinese": "每天对话可以帮助你培养口语技能。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "The team developed a practical plan for the next stage.",
+          "chinese": "团队为下一阶段制定了一个切实可行的计划。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "She developed an interest in photography at college.",
+          "chinese": "她在大学时培养了对摄影的兴趣。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "Trust develops over time.",
+          "chinese": "信任是逐步建立起来的。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "The company invests heavily in research and development.",
+          "chinese": "公司在研发方面投入了大量资金。"
         }
       ],
       "studyFocus": {
@@ -1640,6 +1955,9 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“养成习惯”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "develop a skill",
+            "develop a plan",
+            "develop an interest in",
             "develop a habit"
           ],
           "answer": "develop a habit",
@@ -1651,6 +1969,8 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“培养技能”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "develop a plan",
+            "develop an interest in",
             "develop a skill",
             "develop a habit"
           ],
@@ -1743,11 +2063,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "decide-v",
@@ -1769,7 +2089,7 @@
       "difficulty": "基础",
       "tags": [
         "v.",
-        "待精校",
+        "模板详卡",
         "高频表达"
       ],
       "coreMemory": {
@@ -1832,7 +2152,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心动作与结构",
           "items": [
             {
               "phrase": "decide to do",
@@ -1843,22 +2163,27 @@
               "phrase": "decide against",
               "phonetic": "/dɪˈsaɪd əˈɡɛnst/",
               "chinese": "决定不做"
-            },
-            {
-              "phrase": "decide between",
-              "phonetic": "/dɪˈsaɪd bɪˈtwiːn/",
-              "chinese": "在……之间决定"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "decide between",
+              "phonetic": "/dɪˈsaɪd bɪˈtwiːn/",
+              "chinese": "在……之间决定"
+            },
             {
               "phrase": "decide whether",
               "phonetic": "/dɪˈsaɪd ˈwɛðɚ/",
               "chinese": "决定是否"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "make up your mind",
               "phonetic": "/ˈmeɪk ˈʌp ˈjɔːr ˈmaɪnd/",
@@ -1870,6 +2195,16 @@
               "chinese": "由你决定"
             }
           ]
+        },
+        {
+          "category": "补充常用语境",
+          "items": [
+            {
+              "phrase": "decide to do something",
+              "phonetic": "/dɪˈsaɪd ˈtuː ˈduː ˈsʌmθɪŋ/",
+              "chinese": "决定做某事"
+            }
+          ]
         }
       ],
       "fixedPhrases": [
@@ -1877,8 +2212,43 @@
           "phrase": "decide to do",
           "phonetic": "/dɪˈsaɪd ˈtuː ˈduː/",
           "chinese": "决定做",
-          "example": "I decided to start with five words a day.",
-          "translation": "我决定从每天五个单词开始。"
+          "example": "I decided to review the difficult words first.",
+          "translation": "我决定先复习难词。"
+        },
+        {
+          "phrase": "decide against",
+          "phonetic": "/dɪˈsaɪd əˈɡɛnst/",
+          "chinese": "决定不做",
+          "example": "We decided against driving in the heavy snow.",
+          "translation": "我们决定不在大雪中开车。"
+        },
+        {
+          "phrase": "decide between",
+          "phonetic": "/dɪˈsaɪd bɪˈtwiːn/",
+          "chinese": "在……之间决定",
+          "example": "She could not decide between the blue coat and the black one.",
+          "translation": "她无法在蓝色外套和黑色外套之间作出选择。"
+        },
+        {
+          "phrase": "decide whether",
+          "phonetic": "/dɪˈsaɪd ˈwɛðɚ/",
+          "chinese": "决定是否",
+          "example": "You need to decide whether the plan is realistic.",
+          "translation": "你需要判断这个计划是否现实。"
+        },
+        {
+          "phrase": "make up your mind",
+          "phonetic": "/ˈmeɪk ˈʌp ˈjɔːr ˈmaɪnd/",
+          "chinese": "下定决心",
+          "example": "She could not decide at first, but she finally made up her mind.",
+          "translation": "她起初无法决定，但最终下定了决心。"
+        },
+        {
+          "phrase": "you decide",
+          "phonetic": "/ˈjuː dɪˈsaɪd/",
+          "chinese": "由你决定",
+          "example": "We can eat at home or go out—you decide.",
+          "translation": "我们可以在家吃或出去吃——你决定。"
         }
       ],
       "synonyms": [
@@ -1944,6 +2314,36 @@
           "scene": "核心真实用法",
           "english": "I decided to start with five words a day.",
           "chinese": "我决定从每天五个单词开始。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "I decided to review the difficult words first.",
+          "chinese": "我决定先复习难词。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "We decided against driving in the heavy snow.",
+          "chinese": "我们决定不在大雪中开车。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "She could not decide between the blue coat and the black one.",
+          "chinese": "她无法在蓝色外套和黑色外套之间作出选择。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "You need to decide whether the plan is realistic.",
+          "chinese": "你需要判断这个计划是否现实。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "She could not decide at first, but she finally made up her mind.",
+          "chinese": "她起初无法决定，但最终下定了决心。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "We can eat at home or go out—you decide.",
+          "chinese": "我们可以在家吃或出去吃——你决定。"
         }
       ],
       "studyFocus": {
@@ -2092,7 +2492,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“决定做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
           "options": [
-            "decide to do"
+            "decide between",
+            "decide whether",
+            "decide to do",
+            "decide against"
           ],
           "answer": "decide to do",
           "stage": "T2",
@@ -2103,8 +2506,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“决定不做”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "decide whether",
+            "decide against",
             "decide to do",
-            "decide against"
+            "decide between"
           ],
           "answer": "decide against",
           "stage": "T3",
@@ -2195,11 +2600,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     }
   ]
 }

@@ -18,7 +18,7 @@
   "difficulty": "进阶",
   "tags": [
     "n.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心名词搭配",
       "items": [
         {
           "phrase": "have an opportunity to",
@@ -92,22 +92,27 @@
           "phrase": "take the opportunity to",
           "phonetic": "/ˈteɪk ðə ˌɑːpərˈtuːnəti ˈtuː/",
           "chinese": "借机做"
-        },
-        {
-          "phrase": "a good opportunity",
-          "phonetic": "/ə ˈɡʊd ˌɑːpərˈtuːnəti/",
-          "chinese": "好机会"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "a good opportunity",
+          "phonetic": "/ə ˈɡʊd ˌɑːpərˈtuːnəti/",
+          "chinese": "好机会"
+        },
         {
           "phrase": "equal opportunities",
           "phonetic": "/ˈiːkwəl ˌɑpɚˈtuːnətiːz/",
           "chinese": "平等机会"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "miss an opportunity",
           "phonetic": "/ˈmɪs ˈæn ˌɑːpərˈtuːnəti/",
@@ -126,8 +131,43 @@
       "phrase": "have an opportunity to",
       "phonetic": "/ˈhæv ˈæn ˌɑːpərˈtuːnəti ˈtuː/",
       "chinese": "有机会做",
-      "example": "The meeting gave me an opportunity to practice English.",
-      "translation": "这次会议给了我练习英语的机会。"
+      "example": "I had an opportunity to practice English at work.",
+      "translation": "我有机会在工作中练习英语。"
+    },
+    {
+      "phrase": "take the opportunity to",
+      "phonetic": "/ˈteɪk ðə ˌɑːpərˈtuːnəti ˈtuː/",
+      "chinese": "借机做",
+      "example": "She took the opportunity to ask a question.",
+      "translation": "她借机问了一个问题。"
+    },
+    {
+      "phrase": "a good opportunity",
+      "phonetic": "/ə ˈɡʊd ˌɑːpərˈtuːnəti/",
+      "chinese": "好机会",
+      "example": "This is a good opportunity to learn something new.",
+      "translation": "这是学习新知识的好机会。"
+    },
+    {
+      "phrase": "equal opportunities",
+      "phonetic": "/ˈiːkwəl ˌɑpɚˈtuːnətiːz/",
+      "chinese": "平等机会",
+      "example": "The company is committed to equal opportunities.",
+      "translation": "公司致力于提供平等机会。"
+    },
+    {
+      "phrase": "miss an opportunity",
+      "phonetic": "/ˈmɪs ˈæn ˌɑːpərˈtuːnəti/",
+      "chinese": "错失机会",
+      "example": "Do not miss the opportunity to speak with her.",
+      "translation": "不要错过和她交谈的机会。"
+    },
+    {
+      "phrase": "job opportunity",
+      "phonetic": "/ˈdʒɑb ˌɑːpərˈtuːnəti/",
+      "chinese": "工作机会",
+      "example": "The move created new job opportunities.",
+      "translation": "这次搬迁创造了新的工作机会。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "The meeting gave me an opportunity to practice English.",
       "chinese": "这次会议给了我练习英语的机会。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "I had an opportunity to practice English at work.",
+      "chinese": "我有机会在工作中练习英语。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "She took the opportunity to ask a question.",
+      "chinese": "她借机问了一个问题。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "This is a good opportunity to learn something new.",
+      "chinese": "这是学习新知识的好机会。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "The company is committed to equal opportunities.",
+      "chinese": "公司致力于提供平等机会。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "Do not miss the opportunity to speak with her.",
+      "chinese": "不要错过和她交谈的机会。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "The move created new job opportunities.",
+      "chinese": "这次搬迁创造了新的工作机会。"
     }
   ],
   "studyFocus": {
@@ -322,7 +392,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“有机会做”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "have an opportunity to"
+        "a good opportunity",
+        "equal opportunities",
+        "have an opportunity to",
+        "take the opportunity to"
       ],
       "answer": "have an opportunity to",
       "stage": "T2",
@@ -333,8 +406,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“借机做”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "equal opportunities",
+        "take the opportunity to",
         "have an opportunity to",
-        "take the opportunity to"
+        "a good opportunity"
       ],
       "answer": "take the opportunity to",
       "stage": "T3",
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

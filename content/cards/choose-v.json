@@ -18,7 +18,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "待精校",
+    "模板详卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心动作与结构",
       "items": [
         {
           "phrase": "choose to do",
@@ -92,22 +92,27 @@
           "phrase": "choose between A and B",
           "phonetic": "/tʃuːz bɪˈtwiːn ə ənd ˈbiː/",
           "chinese": "在 A 和 B 之间选择"
-        },
-        {
-          "phrase": "choose the right word",
-          "phonetic": "/tʃuːz ðə ˈraɪt ˈwɝːd/",
-          "chinese": "选择正确的词"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "choose the right word",
+          "phonetic": "/tʃuːz ðə ˈraɪt ˈwɝːd/",
+          "chinese": "选择正确的词"
+        },
         {
           "phrase": "carefully choose",
           "phonetic": "/ˈkɛrfəliː tʃuːz/",
           "chinese": "谨慎选择"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "have no choice but to",
           "phonetic": "/ˈhæv ˈnoʊ ˈtʃɔɪs ˈbʌt ˈtuː/",
@@ -126,8 +131,43 @@
       "phrase": "choose to do",
       "phonetic": "/tʃuːz ˈtuː ˈduː/",
       "chinese": "选择做",
-      "example": "Choose the most natural answer.",
-      "translation": "选择最自然的答案。"
+      "example": "She chose to stay home and rest.",
+      "translation": "她选择待在家里休息。"
+    },
+    {
+      "phrase": "choose between A and B",
+      "phonetic": "/tʃuːz bɪˈtwiːn ə ənd ˈbiː/",
+      "chinese": "在 A 和 B 之间选择",
+      "example": "You must choose between speed and accuracy.",
+      "translation": "你必须在速度和准确性之间作出选择。"
+    },
+    {
+      "phrase": "choose the right word",
+      "phonetic": "/tʃuːz ðə ˈraɪt ˈwɝːd/",
+      "chinese": "选择正确的词",
+      "example": "Read the sentence before you choose the right word.",
+      "translation": "选择正确单词前先读句子。"
+    },
+    {
+      "phrase": "carefully choose",
+      "phonetic": "/ˈkɛrfəliː tʃuːz/",
+      "chinese": "谨慎选择",
+      "example": "Carefully choose the information you share online.",
+      "translation": "请谨慎选择你在网上分享的信息。"
+    },
+    {
+      "phrase": "have no choice but to",
+      "phonetic": "/ˈhæv ˈnoʊ ˈtʃɔɪs ˈbʌt ˈtuː/",
+      "chinese": "别无选择只好",
+      "example": "I had no choice but to cancel the trip.",
+      "translation": "我别无选择，只能取消旅行。"
+    },
+    {
+      "phrase": "choice of",
+      "phonetic": "/ˈtʃɔɪs ˈʌv/",
+      "chinese": "……的选择",
+      "example": "This hotel offers a wide choice of rooms.",
+      "translation": "这家酒店提供多种房型选择。"
     }
   ],
   "synonyms": [
@@ -201,6 +241,36 @@
       "scene": "核心真实用法",
       "english": "Choose the most natural answer.",
       "chinese": "选择最自然的答案。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "She chose to stay home and rest.",
+      "chinese": "她选择待在家里休息。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "You must choose between speed and accuracy.",
+      "chinese": "你必须在速度和准确性之间作出选择。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "Read the sentence before you choose the right word.",
+      "chinese": "选择正确单词前先读句子。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "Carefully choose the information you share online.",
+      "chinese": "请谨慎选择你在网上分享的信息。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "I had no choice but to cancel the trip.",
+      "chinese": "我别无选择，只能取消旅行。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "This hotel offers a wide choice of rooms.",
+      "chinese": "这家酒店提供多种房型选择。"
     }
   ],
   "studyFocus": {
@@ -349,6 +419,9 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“选择做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
       "options": [
+        "choose between A and B",
+        "choose the right word",
+        "carefully choose",
         "choose to do"
       ],
       "answer": "choose to do",
@@ -360,6 +433,8 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“在 A 和 B 之间选择”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "choose the right word",
+        "carefully choose",
         "choose between A and B",
         "choose to do"
       ],
@@ -452,9 +527,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

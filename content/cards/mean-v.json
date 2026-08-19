@@ -30,7 +30,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "待精校",
+    "模板详卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -93,7 +93,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心动作与结构",
       "items": [
         {
           "phrase": "mean a lot to",
@@ -104,22 +104,27 @@
           "phrase": "mean that",
           "phonetic": "/miːn ˈðæt/",
           "chinese": "意味着……"
-        },
-        {
-          "phrase": "mean to do",
-          "phonetic": "/miːn ˈtuː ˈduː/",
-          "chinese": "打算做"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "mean to do",
+          "phonetic": "/miːn ˈtuː ˈduː/",
+          "chinese": "打算做"
+        },
         {
           "phrase": "what do you mean",
           "phonetic": "/ˈwʌt ˈduː ˈjuː miːn/",
           "chinese": "你是什么意思"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "by all means",
           "phonetic": "/ˈbaɪ ˈɔːl ˈmiːnz/",
@@ -131,6 +136,16 @@
           "chinese": "出于好意"
         }
       ]
+    },
+    {
+      "category": "补充常用语境",
+      "items": [
+        {
+          "phrase": "mean a lot to someone",
+          "phonetic": "/miːn ə ˈlɑt ˈtuː ˈsʌˌmwʌn/",
+          "chinese": "对某人意义重大"
+        }
+      ]
     }
   ],
   "fixedPhrases": [
@@ -138,8 +153,43 @@
       "phrase": "mean a lot to",
       "phonetic": "/miːn ə ˈlɑt ˈtuː/",
       "chinese": "对……意义重大",
-      "example": "Your support means a lot to me.",
-      "translation": "你的支持对我意义重大。"
+      "example": "Your encouragement means a lot to me.",
+      "translation": "你的鼓励对我意义重大。"
+    },
+    {
+      "phrase": "mean that",
+      "phonetic": "/miːn ˈðæt/",
+      "chinese": "意味着……",
+      "example": "A red light usually means that you should stop.",
+      "translation": "红灯通常意味着你应该停下。"
+    },
+    {
+      "phrase": "mean to do",
+      "phonetic": "/miːn ˈtuː ˈduː/",
+      "chinese": "打算做",
+      "example": "I meant to call you yesterday, but I forgot.",
+      "translation": "我昨天本来打算给你打电话，但忘了。"
+    },
+    {
+      "phrase": "what do you mean",
+      "phonetic": "/ˈwʌt ˈduː ˈjuː miːn/",
+      "chinese": "你是什么意思",
+      "example": "What do you mean by “active recall”?",
+      "translation": "你说“主动回忆”是什么意思？"
+    },
+    {
+      "phrase": "by all means",
+      "phonetic": "/ˈbaɪ ˈɔːl ˈmiːnz/",
+      "chinese": "当然；务必",
+      "example": "By all means, ask questions whenever you are unsure.",
+      "translation": "当然可以，不确定时随时提问。"
+    },
+    {
+      "phrase": "mean well",
+      "phonetic": "/miːn ˈwɛl/",
+      "chinese": "出于好意",
+      "example": "I know his comment sounded rude, but he meant well.",
+      "translation": "我知道他的话听起来不礼貌，但他是出于好意。"
     }
   ],
   "synonyms": [
@@ -186,6 +236,36 @@
       "scene": "核心真实用法",
       "english": "Your support means a lot to me.",
       "chinese": "你的支持对我意义重大。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "Your encouragement means a lot to me.",
+      "chinese": "你的鼓励对我意义重大。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "A red light usually means that you should stop.",
+      "chinese": "红灯通常意味着你应该停下。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "I meant to call you yesterday, but I forgot.",
+      "chinese": "我昨天本来打算给你打电话，但忘了。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "What do you mean by “active recall”?",
+      "chinese": "你说“主动回忆”是什么意思？"
+    },
+    {
+      "scene": "易错结构",
+      "english": "By all means, ask questions whenever you are unsure.",
+      "chinese": "当然可以，不确定时随时提问。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "I know his comment sounded rude, but he meant well.",
+      "chinese": "我知道他的话听起来不礼貌，但他是出于好意。"
     }
   ],
   "studyFocus": {
@@ -334,6 +414,9 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“对……意义重大”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "mean that",
+        "mean to do",
+        "what do you mean",
         "mean a lot to"
       ],
       "answer": "mean a lot to",
@@ -345,6 +428,8 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“意味着……”，又符合这个形式线索：使用 that 引导一个主谓完整的从句？",
       "options": [
+        "mean to do",
+        "what do you mean",
         "mean that",
         "mean a lot to"
       ],
@@ -437,9 +522,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

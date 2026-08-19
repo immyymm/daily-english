@@ -18,7 +18,7 @@
   "difficulty": "进阶",
   "tags": [
     "adj.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心用法",
       "items": [
         {
           "phrase": "be different from",
@@ -92,22 +92,27 @@
           "phrase": "different kinds of",
           "phonetic": "/ˈdɪfrənt ˈkaɪndz ˈʌv/",
           "chinese": "不同种类的……"
-        },
-        {
-          "phrase": "look different",
-          "phonetic": "/ˈlʊk ˈdɪfrənt/",
-          "chinese": "看起来不同"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "look different",
+          "phonetic": "/ˈlʊk ˈdɪfrənt/",
+          "chinese": "看起来不同"
+        },
         {
           "phrase": "something completely different",
           "phonetic": "/ˈsʌmθɪŋ kəˈmpliːtliː ˈdɪfrənt/",
           "chinese": "完全不同的事物"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "different approach",
           "phonetic": "/ˈdɪfrənt əˈproʊtʃ/",
@@ -126,8 +131,43 @@
       "phrase": "be different from",
       "phonetic": "/ˈbiː ˈdɪfrənt ˈfrʌm/",
       "chinese": "与……不同",
-      "example": "Spoken English is different from formal writing.",
-      "translation": "英语口语与正式写作不同。"
+      "example": "British English is sometimes different from American English.",
+      "translation": "英式英语有时与美式英语不同。"
+    },
+    {
+      "phrase": "different kinds of",
+      "phonetic": "/ˈdɪfrənt ˈkaɪndz ˈʌv/",
+      "chinese": "不同种类的……",
+      "example": "The shop sells many different kinds of tea.",
+      "translation": "这家店出售许多不同种类的茶。"
+    },
+    {
+      "phrase": "look different",
+      "phonetic": "/ˈlʊk ˈdɪfrənt/",
+      "chinese": "看起来不同",
+      "example": "You look different with shorter hair.",
+      "translation": "你留短发看起来不一样。"
+    },
+    {
+      "phrase": "something completely different",
+      "phonetic": "/ˈsʌmθɪŋ kəˈmpliːtliː ˈdɪfrənt/",
+      "chinese": "完全不同的事物",
+      "example": "Let us try something completely different.",
+      "translation": "让我们试试完全不同的东西。"
+    },
+    {
+      "phrase": "different approach",
+      "phonetic": "/ˈdɪfrənt əˈproʊtʃ/",
+      "chinese": "不同方法",
+      "example": "We need a different approach to this problem.",
+      "translation": "我们需要用不同的方法处理这个问题。"
+    },
+    {
+      "phrase": "no different from",
+      "phonetic": "/ˈnoʊ ˈdɪfrənt ˈfrʌm/",
+      "chinese": "与……没有区别",
+      "example": "This version is no different from the old one.",
+      "translation": "这个版本和旧版没有区别。"
     }
   ],
   "synonyms": [
@@ -201,6 +241,36 @@
       "scene": "核心真实用法",
       "english": "Spoken English is different from formal writing.",
       "chinese": "英语口语与正式写作不同。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "British English is sometimes different from American English.",
+      "chinese": "英式英语有时与美式英语不同。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "The shop sells many different kinds of tea.",
+      "chinese": "这家店出售许多不同种类的茶。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "You look different with shorter hair.",
+      "chinese": "你留短发看起来不一样。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "Let us try something completely different.",
+      "chinese": "让我们试试完全不同的东西。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "We need a different approach to this problem.",
+      "chinese": "我们需要用不同的方法处理这个问题。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "This version is no different from the old one.",
+      "chinese": "这个版本和旧版没有区别。"
     }
   ],
   "studyFocus": {
@@ -349,7 +419,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“与……不同”，又符合这个形式线索：完整搭配中使用介词 from？",
       "options": [
-        "be different from"
+        "be different from",
+        "different kinds of",
+        "look different",
+        "something completely different"
       ],
       "answer": "be different from",
       "stage": "T2",
@@ -361,6 +434,8 @@
       "prompt": "用法辨析：哪一项既表示“不同种类的……”，又符合这个形式线索：完整搭配中使用介词 of？",
       "options": [
         "be different from",
+        "look different",
+        "something completely different",
         "different kinds of"
       ],
       "answer": "different kinds of",
@@ -452,9 +527,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

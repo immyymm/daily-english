@@ -18,7 +18,7 @@
   "difficulty": "应用",
   "tags": [
     "n.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心名词搭配",
       "items": [
         {
           "phrase": "team member",
@@ -92,22 +92,27 @@
           "phrase": "work as a team",
           "phonetic": "/ˈwɝːk ˈæz ə tiːm/",
           "chinese": "作为团队合作"
-        },
-        {
-          "phrase": "join a team",
-          "phonetic": "/ˈdʒɔɪn ə tiːm/",
-          "chinese": "加入团队"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "join a team",
+          "phonetic": "/ˈdʒɔɪn ə tiːm/",
+          "chinese": "加入团队"
+        },
         {
           "phrase": "team leader",
           "phonetic": "/tiːm ˈliːdɚ/",
           "chinese": "团队负责人"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "team spirit",
           "phonetic": "/tiːm ˈspɪrət/",
@@ -126,8 +131,43 @@
       "phrase": "team member",
       "phonetic": "/tiːm ˈmɛmbɚ/",
       "chinese": "团队成员",
-      "example": "Our team meets every Monday morning.",
-      "translation": "我们的团队每周一早上开会。"
+      "example": "Every team member has a clear role.",
+      "translation": "每位团队成员都有明确职责。"
+    },
+    {
+      "phrase": "work as a team",
+      "phonetic": "/ˈwɝːk ˈæz ə tiːm/",
+      "chinese": "作为团队合作",
+      "example": "We work better when we act as a team.",
+      "translation": "作为团队合作时，我们工作得更好。"
+    },
+    {
+      "phrase": "join a team",
+      "phonetic": "/ˈdʒɔɪn ə tiːm/",
+      "chinese": "加入团队",
+      "example": "She joined the design team last month.",
+      "translation": "她上个月加入了设计团队。"
+    },
+    {
+      "phrase": "team leader",
+      "phonetic": "/tiːm ˈliːdɚ/",
+      "chinese": "团队负责人",
+      "example": "A good team leader listens carefully.",
+      "translation": "优秀的团队负责人会认真倾听。"
+    },
+    {
+      "phrase": "team spirit",
+      "phonetic": "/tiːm ˈspɪrət/",
+      "chinese": "团队精神",
+      "example": "The activity helped build team spirit.",
+      "translation": "这项活动有助于培养团队精神。"
+    },
+    {
+      "phrase": "a strong team",
+      "phonetic": "/ə ˈstrɔːŋ tiːm/",
+      "chinese": "强大的团队",
+      "example": "Different skills can create a strong team.",
+      "translation": "不同技能可以组成强大的团队。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "Our team meets every Monday morning.",
       "chinese": "我们的团队每周一早上开会。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "Every team member has a clear role.",
+      "chinese": "每位团队成员都有明确职责。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "We work better when we act as a team.",
+      "chinese": "作为团队合作时，我们工作得更好。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "She joined the design team last month.",
+      "chinese": "她上个月加入了设计团队。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "A good team leader listens carefully.",
+      "chinese": "优秀的团队负责人会认真倾听。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "The activity helped build team spirit.",
+      "chinese": "这项活动有助于培养团队精神。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "Different skills can create a strong team.",
+      "chinese": "不同技能可以组成强大的团队。"
     }
   ],
   "studyFocus": {
@@ -322,7 +392,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“团队成员”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "team member"
+        "team leader",
+        "team member",
+        "work as a team",
+        "join a team"
       ],
       "answer": "team member",
       "stage": "T2",
@@ -334,7 +407,9 @@
       "prompt": "搭配辨析：哪一项既表示“作为团队合作”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "work as a team",
-        "team member"
+        "team member",
+        "join a team",
+        "team leader"
       ],
       "answer": "work as a team",
       "stage": "T3",
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

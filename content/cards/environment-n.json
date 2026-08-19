@@ -18,7 +18,7 @@
   "difficulty": "进阶",
   "tags": [
     "n.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心名词搭配",
       "items": [
         {
           "phrase": "learning environment",
@@ -92,22 +92,27 @@
           "phrase": "protect the environment",
           "phonetic": "/prəˈtɛkt ðə ɪnˈvaɪrənmənt/",
           "chinese": "保护环境"
-        },
-        {
-          "phrase": "safe environment",
-          "phonetic": "/ˈseɪf ɪnˈvaɪrənmənt/",
-          "chinese": "安全环境"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "safe environment",
+          "phonetic": "/ˈseɪf ɪnˈvaɪrənmənt/",
+          "chinese": "安全环境"
+        },
         {
           "phrase": "work environment",
           "phonetic": "/ˈwɝːk ɪnˈvaɪrənmənt/",
           "chinese": "工作环境"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "natural environment",
           "phonetic": "/ˈnætʃɚəl ɪnˈvaɪrənmənt/",
@@ -126,8 +131,43 @@
       "phrase": "learning environment",
       "phonetic": "/ˈlɝːnɪŋ ɪnˈvaɪrənmənt/",
       "chinese": "学习环境",
-      "example": "A quiet environment helps me focus.",
-      "translation": "安静的环境有助于我集中注意力。"
+      "example": "A quiet learning environment helps me concentrate.",
+      "translation": "安静的学习环境有助于我集中注意力。"
+    },
+    {
+      "phrase": "protect the environment",
+      "phonetic": "/prəˈtɛkt ðə ɪnˈvaɪrənmənt/",
+      "chinese": "保护环境",
+      "example": "Everyone can do something to protect the environment.",
+      "translation": "每个人都可以为保护环境做些事。"
+    },
+    {
+      "phrase": "safe environment",
+      "phonetic": "/ˈseɪf ɪnˈvaɪrənmənt/",
+      "chinese": "安全环境",
+      "example": "The school provides a safe environment for children.",
+      "translation": "学校为孩子们提供安全的环境。"
+    },
+    {
+      "phrase": "work environment",
+      "phonetic": "/ˈwɝːk ɪnˈvaɪrənmənt/",
+      "chinese": "工作环境",
+      "example": "A supportive work environment improves motivation.",
+      "translation": "有支持性的工作环境能提升积极性。"
+    },
+    {
+      "phrase": "natural environment",
+      "phonetic": "/ˈnætʃɚəl ɪnˈvaɪrənmənt/",
+      "chinese": "自然环境",
+      "example": "The animals were returned to their natural environment.",
+      "translation": "这些动物被送回了自然环境。"
+    },
+    {
+      "phrase": "create an environment",
+      "phonetic": "/kriːˈeɪt ˈæn ɪnˈvaɪrənmənt/",
+      "chinese": "营造环境",
+      "example": "Good leaders create an environment where people can speak openly.",
+      "translation": "优秀的领导者会营造让人们坦诚发言的环境。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "A quiet environment helps me focus.",
       "chinese": "安静的环境有助于我集中注意力。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "A quiet learning environment helps me concentrate.",
+      "chinese": "安静的学习环境有助于我集中注意力。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "Everyone can do something to protect the environment.",
+      "chinese": "每个人都可以为保护环境做些事。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "The school provides a safe environment for children.",
+      "chinese": "学校为孩子们提供安全的环境。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "A supportive work environment improves motivation.",
+      "chinese": "有支持性的工作环境能提升积极性。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "The animals were returned to their natural environment.",
+      "chinese": "这些动物被送回了自然环境。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "Good leaders create an environment where people can speak openly.",
+      "chinese": "优秀的领导者会营造让人们坦诚发言的环境。"
     }
   ],
   "studyFocus": {
@@ -322,6 +392,9 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“学习环境”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "protect the environment",
+        "safe environment",
+        "work environment",
         "learning environment"
       ],
       "answer": "learning environment",
@@ -333,6 +406,8 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“保护环境”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "safe environment",
+        "work environment",
         "protect the environment",
         "learning environment"
       ],
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

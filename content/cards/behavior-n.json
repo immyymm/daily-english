@@ -18,7 +18,7 @@
   "difficulty": "进阶",
   "tags": [
     "n.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心名词搭配",
       "items": [
         {
           "phrase": "change behavior",
@@ -92,22 +92,27 @@
           "phrase": "positive behavior",
           "phonetic": "/ˈpɑzətɪv bɪˈheɪvjər/",
           "chinese": "积极行为"
-        },
-        {
-          "phrase": "human behavior",
-          "phonetic": "/ˈhjuːmən bɪˈheɪvjər/",
-          "chinese": "人类行为"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "human behavior",
+          "phonetic": "/ˈhjuːmən bɪˈheɪvjər/",
+          "chinese": "人类行为"
+        },
         {
           "phrase": "pattern of behavior",
           "phonetic": "/ˈpætɚn ˈʌv bɪˈheɪvjər/",
           "chinese": "行为模式"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "acceptable behavior",
           "phonetic": "/æˈksɛptəbəl bɪˈheɪvjər/",
@@ -126,8 +131,43 @@
       "phrase": "change behavior",
       "phonetic": "/ˈtʃeɪndʒ bɪˈheɪvjər/",
       "chinese": "改变行为",
-      "example": "Small rewards can encourage positive behavior.",
-      "translation": "小奖励可以鼓励积极行为。"
+      "example": "Positive feedback can change behavior.",
+      "translation": "积极反馈可以改变行为。"
+    },
+    {
+      "phrase": "positive behavior",
+      "phonetic": "/ˈpɑzətɪv bɪˈheɪvjər/",
+      "chinese": "积极行为",
+      "example": "The teacher praised the child’s positive behavior.",
+      "translation": "老师表扬了孩子的积极行为。"
+    },
+    {
+      "phrase": "human behavior",
+      "phonetic": "/ˈhjuːmən bɪˈheɪvjər/",
+      "chinese": "人类行为",
+      "example": "The course examines human behavior in groups.",
+      "translation": "这门课程研究群体中的人类行为。"
+    },
+    {
+      "phrase": "pattern of behavior",
+      "phonetic": "/ˈpætɚn ˈʌv bɪˈheɪvjər/",
+      "chinese": "行为模式",
+      "example": "We noticed a clear pattern of behavior.",
+      "translation": "我们注意到一种明显的行为模式。"
+    },
+    {
+      "phrase": "acceptable behavior",
+      "phonetic": "/æˈksɛptəbəl bɪˈheɪvjər/",
+      "chinese": "可接受的行为",
+      "example": "Shouting is not acceptable behavior in the office.",
+      "translation": "在办公室大喊不是可接受的行为。"
+    },
+    {
+      "phrase": "behavior toward others",
+      "phonetic": "/bɪˈheɪvjər təˈwɔːrd ˈʌðɚz/",
+      "chinese": "对他人的行为",
+      "example": "His behavior toward the staff was respectful.",
+      "translation": "他对员工的态度很尊重。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "Small rewards can encourage positive behavior.",
       "chinese": "小奖励可以鼓励积极行为。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "Positive feedback can change behavior.",
+      "chinese": "积极反馈可以改变行为。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "The teacher praised the child’s positive behavior.",
+      "chinese": "老师表扬了孩子的积极行为。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "The course examines human behavior in groups.",
+      "chinese": "这门课程研究群体中的人类行为。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "We noticed a clear pattern of behavior.",
+      "chinese": "我们注意到一种明显的行为模式。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "Shouting is not acceptable behavior in the office.",
+      "chinese": "在办公室大喊不是可接受的行为。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "His behavior toward the staff was respectful.",
+      "chinese": "他对员工的态度很尊重。"
     }
   ],
   "studyFocus": {
@@ -322,7 +392,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“改变行为”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "change behavior"
+        "change behavior",
+        "positive behavior",
+        "human behavior",
+        "pattern of behavior"
       ],
       "answer": "change behavior",
       "stage": "T2",
@@ -334,6 +407,8 @@
       "prompt": "用法辨析：哪一项既表示“积极行为”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "change behavior",
+        "human behavior",
+        "pattern of behavior",
         "positive behavior"
       ],
       "answer": "positive behavior",
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

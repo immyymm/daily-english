@@ -24,7 +24,7 @@
   "difficulty": "应用",
   "tags": [
     "n.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -94,7 +94,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心名词搭配",
       "items": [
         {
           "phrase": "ask a question",
@@ -105,22 +105,27 @@
           "phrase": "answer a question",
           "phonetic": "/ˈænsɚ ə ˈkwestʃən/",
           "chinese": "回答问题"
-        },
-        {
-          "phrase": "question whether",
-          "phonetic": "/ˈkwestʃən ˈwɛðɚ/",
-          "chinese": "质疑是否……"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "question whether",
+          "phonetic": "/ˈkwestʃən ˈwɛðɚ/",
+          "chinese": "质疑是否……"
+        },
         {
           "phrase": "good question",
           "phonetic": "/ˈɡʊd ˈkwestʃən/",
           "chinese": "好问题"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "out of the question",
           "phonetic": "/ˈaʊt ˈʌv ðə ˈkwestʃən/",
@@ -139,8 +144,43 @@
       "phrase": "ask a question",
       "phonetic": "/ˈæsk ə ˈkwestʃən/",
       "chinese": "提问",
-      "example": "Do not be afraid to ask a question.",
-      "translation": "不要害怕提问。"
+      "example": "Please ask a question if anything is unclear.",
+      "translation": "如果有不清楚的地方，请提问。"
+    },
+    {
+      "phrase": "answer a question",
+      "phonetic": "/ˈænsɚ ə ˈkwestʃən/",
+      "chinese": "回答问题",
+      "example": "She answered every question carefully.",
+      "translation": "她认真回答了每个问题。"
+    },
+    {
+      "phrase": "question whether",
+      "phonetic": "/ˈkwestʃən ˈwɛðɚ/",
+      "chinese": "质疑是否……",
+      "example": "Some experts question whether the plan is practical.",
+      "translation": "一些专家质疑这个计划是否可行。"
+    },
+    {
+      "phrase": "good question",
+      "phonetic": "/ˈɡʊd ˈkwestʃən/",
+      "chinese": "好问题",
+      "example": "That is a good question, and I need time to think.",
+      "translation": "这是个好问题，我需要时间思考。"
+    },
+    {
+      "phrase": "out of the question",
+      "phonetic": "/ˈaʊt ˈʌv ðə ˈkwestʃən/",
+      "chinese": "不可能",
+      "example": "Canceling the project is out of the question.",
+      "translation": "取消这个项目是不可能的。"
+    },
+    {
+      "phrase": "without question",
+      "phonetic": "/wɪˈθaʊt ˈkwestʃən/",
+      "chinese": "毫无疑问",
+      "example": "She is without question the best person for the job.",
+      "translation": "毫无疑问，她是最适合这份工作的人。"
     }
   ],
   "synonyms": [
@@ -187,6 +227,36 @@
       "scene": "核心真实用法",
       "english": "Do not be afraid to ask a question.",
       "chinese": "不要害怕提问。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "Please ask a question if anything is unclear.",
+      "chinese": "如果有不清楚的地方，请提问。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "She answered every question carefully.",
+      "chinese": "她认真回答了每个问题。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "Some experts question whether the plan is practical.",
+      "chinese": "一些专家质疑这个计划是否可行。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "That is a good question, and I need time to think.",
+      "chinese": "这是个好问题，我需要时间思考。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "Canceling the project is out of the question.",
+      "chinese": "取消这个项目是不可能的。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "She is without question the best person for the job.",
+      "chinese": "毫无疑问，她是最适合这份工作的人。"
     }
   ],
   "studyFocus": {
@@ -335,6 +405,9 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“提问”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "answer a question",
+        "question whether",
+        "good question",
         "ask a question"
       ],
       "answer": "ask a question",
@@ -346,6 +419,8 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“回答问题”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "question whether",
+        "good question",
         "answer a question",
         "ask a question"
       ],
@@ -438,9 +513,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

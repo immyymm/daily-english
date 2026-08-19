@@ -1,7 +1,7 @@
 {
   "date": "2026-08-31",
   "dayNumber": 15,
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "templateVersion": "learning-template-2026.08.19.1",
   "cards": [
     {
@@ -30,7 +30,7 @@
       "difficulty": "进阶",
       "tags": [
         "n.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -100,7 +100,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心名词搭配",
           "items": [
             {
               "phrase": "face a challenge",
@@ -111,22 +111,27 @@
               "phrase": "take on a challenge",
               "phonetic": "/ˈteɪk ˈɑn ə ˈtʃælɪndʒ/",
               "chinese": "接受挑战"
-            },
-            {
-              "phrase": "major challenge",
-              "phonetic": "/ˈmeɪdʒɚ ˈtʃælɪndʒ/",
-              "chinese": "重大挑战"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "major challenge",
+              "phonetic": "/ˈmeɪdʒɚ ˈtʃælɪndʒ/",
+              "chinese": "重大挑战"
+            },
             {
               "phrase": "challenge someone to",
               "phonetic": "/ˈtʃælɪndʒ ˈsʌˌmwʌn ˈtuː/",
               "chinese": "向某人挑战做……"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "rise to the challenge",
               "phonetic": "/ˈraɪz ˈtuː ðə ˈtʃælɪndʒ/",
@@ -145,8 +150,43 @@
           "phrase": "face a challenge",
           "phonetic": "/ˈfeɪs ə ˈtʃælɪndʒ/",
           "chinese": "面对挑战",
-          "example": "Speaking without notes is a useful challenge.",
-          "translation": "不看笔记说话是一项有用的挑战。"
+          "example": "Small businesses face a difficult challenge.",
+          "translation": "小企业面临一项艰巨挑战。"
+        },
+        {
+          "phrase": "take on a challenge",
+          "phonetic": "/ˈteɪk ˈɑn ə ˈtʃælɪndʒ/",
+          "chinese": "接受挑战",
+          "example": "She decided to take on a new challenge.",
+          "translation": "她决定接受一项新挑战。"
+        },
+        {
+          "phrase": "major challenge",
+          "phonetic": "/ˈmeɪdʒɚ ˈtʃælɪndʒ/",
+          "chinese": "重大挑战",
+          "example": "Finding enough staff is a major challenge.",
+          "translation": "找到足够员工是一项重大挑战。"
+        },
+        {
+          "phrase": "challenge someone to",
+          "phonetic": "/ˈtʃælɪndʒ ˈsʌˌmwʌn ˈtuː/",
+          "chinese": "向某人挑战做……",
+          "example": "The coach challenged us to run farther.",
+          "translation": "教练向我们发起挑战，让我们跑得更远。"
+        },
+        {
+          "phrase": "rise to the challenge",
+          "phonetic": "/ˈraɪz ˈtuː ðə ˈtʃælɪndʒ/",
+          "chinese": "迎接挑战",
+          "example": "The team rose to the challenge and finished on time.",
+          "translation": "团队迎接挑战并按时完成了任务。"
+        },
+        {
+          "phrase": "a real challenge",
+          "phonetic": "/ə ˈriːl ˈtʃælɪndʒ/",
+          "chinese": "真正的挑战",
+          "example": "Speaking without notes was a real challenge for me.",
+          "translation": "不看笔记讲话对我来说是真正的挑战。"
         }
       ],
       "synonyms": [
@@ -193,6 +233,36 @@
           "scene": "核心真实用法",
           "english": "Speaking without notes is a useful challenge.",
           "chinese": "不看笔记说话是一项有用的挑战。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "Small businesses face a difficult challenge.",
+          "chinese": "小企业面临一项艰巨挑战。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "She decided to take on a new challenge.",
+          "chinese": "她决定接受一项新挑战。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "Finding enough staff is a major challenge.",
+          "chinese": "找到足够员工是一项重大挑战。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "The coach challenged us to run farther.",
+          "chinese": "教练向我们发起挑战，让我们跑得更远。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "The team rose to the challenge and finished on time.",
+          "chinese": "团队迎接挑战并按时完成了任务。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "Speaking without notes was a real challenge for me.",
+          "chinese": "不看笔记讲话对我来说是真正的挑战。"
         }
       ],
       "studyFocus": {
@@ -341,7 +411,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“面对挑战”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "face a challenge"
+            "face a challenge",
+            "take on a challenge",
+            "major challenge",
+            "challenge someone to"
           ],
           "answer": "face a challenge",
           "stage": "T2",
@@ -353,6 +426,8 @@
           "prompt": "用法辨析：哪一项既表示“接受挑战”，又符合这个形式线索：完整搭配中使用介词 on？",
           "options": [
             "face a challenge",
+            "major challenge",
+            "challenge someone to",
             "take on a challenge"
           ],
           "answer": "take on a challenge",
@@ -444,11 +519,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "progress-n",
@@ -470,7 +545,7 @@
       "difficulty": "进阶",
       "tags": [
         "n.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -540,7 +615,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心名词搭配",
           "items": [
             {
               "phrase": "make progress",
@@ -551,22 +626,27 @@
               "phrase": "steady progress",
               "phonetic": "/ˈstɛdiː ˈprɑːɡres/",
               "chinese": "稳步进展"
-            },
-            {
-              "phrase": "progress toward",
-              "phonetic": "/ˈprɑːɡres təˈwɔːrd/",
-              "chinese": "朝……的进展"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "progress toward",
+              "phonetic": "/ˈprɑːɡres təˈwɔːrd/",
+              "chinese": "朝……的进展"
+            },
             {
               "phrase": "in progress",
               "phonetic": "/ɪn ˈprɑːɡres/",
               "chinese": "进行中"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "track your progress",
               "phonetic": "/ˈtræk ˈjɔːr ˈprɑːɡres/",
@@ -585,8 +665,43 @@
           "phrase": "make progress",
           "phonetic": "/ˈmeɪk ˈprɑːɡres/",
           "chinese": "取得进步",
-          "example": "You are making steady progress.",
-          "translation": "你正在稳步进步。"
+          "example": "You will make progress if you practice consistently.",
+          "translation": "如果持续练习，你会取得进步。"
+        },
+        {
+          "phrase": "steady progress",
+          "phonetic": "/ˈstɛdiː ˈprɑːɡres/",
+          "chinese": "稳步进展",
+          "example": "The project is making steady progress.",
+          "translation": "这个项目正在稳步推进。"
+        },
+        {
+          "phrase": "progress toward",
+          "phonetic": "/ˈprɑːɡres təˈwɔːrd/",
+          "chinese": "朝……的进展",
+          "example": "We reviewed our progress toward the monthly goal.",
+          "translation": "我们回顾了朝月度目标取得的进展。"
+        },
+        {
+          "phrase": "in progress",
+          "phonetic": "/ɪn ˈprɑːɡres/",
+          "chinese": "进行中",
+          "example": "Repairs to the road are still in progress.",
+          "translation": "道路维修仍在进行中。"
+        },
+        {
+          "phrase": "track your progress",
+          "phonetic": "/ˈtræk ˈjɔːr ˈprɑːɡres/",
+          "chinese": "记录进度",
+          "example": "The app helps you track your progress.",
+          "translation": "这个应用帮助你记录进度。"
+        },
+        {
+          "phrase": "sign of progress",
+          "phonetic": "/ˈsaɪn ˈʌv ˈprɑːɡres/",
+          "chinese": "进步的迹象",
+          "example": "Finishing the first chapter is a good sign of progress.",
+          "translation": "完成第一章是取得进步的好迹象。"
         }
       ],
       "synonyms": [
@@ -633,6 +748,36 @@
           "scene": "核心真实用法",
           "english": "You are making steady progress.",
           "chinese": "你正在稳步进步。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "You will make progress if you practice consistently.",
+          "chinese": "如果持续练习，你会取得进步。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "The project is making steady progress.",
+          "chinese": "这个项目正在稳步推进。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "We reviewed our progress toward the monthly goal.",
+          "chinese": "我们回顾了朝月度目标取得的进展。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "Repairs to the road are still in progress.",
+          "chinese": "道路维修仍在进行中。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "The app helps you track your progress.",
+          "chinese": "这个应用帮助你记录进度。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "Finishing the first chapter is a good sign of progress.",
+          "chinese": "完成第一章是取得进步的好迹象。"
         }
       ],
       "studyFocus": {
@@ -781,6 +926,9 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“取得进步”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "steady progress",
+            "progress toward",
+            "in progress",
             "make progress"
           ],
           "answer": "make progress",
@@ -792,6 +940,8 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“稳步进展”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "progress toward",
+            "in progress",
             "steady progress",
             "make progress"
           ],
@@ -884,11 +1034,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "habit-n",
@@ -910,7 +1060,7 @@
       "difficulty": "进阶",
       "tags": [
         "n.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -973,7 +1123,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心名词搭配",
           "items": [
             {
               "phrase": "form a habit",
@@ -984,22 +1134,27 @@
               "phrase": "develop a habit",
               "phonetic": "/dɪˈvɛləp ə ˈhæbɪt/",
               "chinese": "养成习惯"
-            },
-            {
-              "phrase": "break a habit",
-              "phonetic": "/ˈbreɪk ə ˈhæbɪt/",
-              "chinese": "改掉习惯"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "break a habit",
+              "phonetic": "/ˈbreɪk ə ˈhæbɪt/",
+              "chinese": "改掉习惯"
+            },
             {
               "phrase": "good study habits",
               "phonetic": "/ˈɡʊd ˈstʌdiː ˈhæbəts/",
               "chinese": "良好学习习惯"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "out of habit",
               "phonetic": "/ˈaʊt ˈʌv ˈhæbɪt/",
@@ -1018,8 +1173,43 @@
           "phrase": "form a habit",
           "phonetic": "/ˈfɔːrm ə ˈhæbɪt/",
           "chinese": "养成习惯",
-          "example": "Reviewing before bed became a habit.",
-          "translation": "睡前复习成了一种习惯。"
+          "example": "Repeating the phrase can help form a habit.",
+          "translation": "重复这个短语有助于形成习惯。"
+        },
+        {
+          "phrase": "develop a habit",
+          "phonetic": "/dɪˈvɛləp ə ˈhæbɪt/",
+          "chinese": "养成习惯",
+          "example": "She developed a habit of reading before bed.",
+          "translation": "她养成了睡前阅读的习惯。"
+        },
+        {
+          "phrase": "break a habit",
+          "phonetic": "/ˈbreɪk ə ˈhæbɪt/",
+          "chinese": "改掉习惯",
+          "example": "It can be difficult to break an old habit.",
+          "translation": "改掉旧习惯可能很难。"
+        },
+        {
+          "phrase": "good study habits",
+          "phonetic": "/ˈɡʊd ˈstʌdiː ˈhæbəts/",
+          "chinese": "良好学习习惯",
+          "example": "Good study habits save time in the long run.",
+          "translation": "良好的学习习惯长远来看会节省时间。"
+        },
+        {
+          "phrase": "out of habit",
+          "phonetic": "/ˈaʊt ˈʌv ˈhæbɪt/",
+          "chinese": "出于习惯",
+          "example": "I checked my phone out of habit.",
+          "translation": "我出于习惯查看了手机。"
+        },
+        {
+          "phrase": "get into the habit of",
+          "phonetic": "/ˈɡɛt ˈɪntuː ðə ˈhæbɪt ˈʌv/",
+          "chinese": "养成做……的习惯",
+          "example": "Try to get into the habit of reviewing daily.",
+          "translation": "尽量养成每天复习的习惯。"
         }
       ],
       "synonyms": [
@@ -1066,6 +1256,36 @@
           "scene": "核心真实用法",
           "english": "Reviewing before bed became a habit.",
           "chinese": "睡前复习成了一种习惯。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "Repeating the phrase can help form a habit.",
+          "chinese": "重复这个短语有助于形成习惯。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "She developed a habit of reading before bed.",
+          "chinese": "她养成了睡前阅读的习惯。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "It can be difficult to break an old habit.",
+          "chinese": "改掉旧习惯可能很难。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "Good study habits save time in the long run.",
+          "chinese": "良好的学习习惯长远来看会节省时间。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "I checked my phone out of habit.",
+          "chinese": "我出于习惯查看了手机。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "Try to get into the habit of reviewing daily.",
+          "chinese": "尽量养成每天复习的习惯。"
         }
       ],
       "studyFocus": {
@@ -1214,7 +1434,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“养成习惯”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "form a habit"
+            "break a habit",
+            "good study habits",
+            "form a habit",
+            "develop a habit"
           ],
           "answer": "form a habit",
           "stage": "T2",
@@ -1225,8 +1448,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“养成习惯”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "good study habits",
+            "develop a habit",
             "form a habit",
-            "develop a habit"
+            "break a habit"
           ],
           "answer": "develop a habit",
           "stage": "T3",
@@ -1317,11 +1542,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "goal-n",
@@ -1343,7 +1568,7 @@
       "difficulty": "进阶",
       "tags": [
         "n.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -1406,7 +1631,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心名词搭配",
           "items": [
             {
               "phrase": "set a goal",
@@ -1417,22 +1642,27 @@
               "phrase": "achieve a goal",
               "phonetic": "/əˈtʃiːv ə ɡoʊl/",
               "chinese": "实现目标"
-            },
-            {
-              "phrase": "long-term goal",
-              "phonetic": "/ˈlɔːŋ-ˈtɝːm ɡoʊl/",
-              "chinese": "长期目标"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "long-term goal",
+              "phonetic": "/ˈlɔːŋ-ˈtɝːm ɡoʊl/",
+              "chinese": "长期目标"
+            },
             {
               "phrase": "work toward a goal",
               "phonetic": "/ˈwɝːk təˈwɔːrd ə ɡoʊl/",
               "chinese": "朝目标努力"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "reach your goal",
               "phonetic": "/ˈriːtʃ ˈjɔːr ɡoʊl/",
@@ -1451,8 +1681,43 @@
           "phrase": "set a goal",
           "phonetic": "/ˈsɛt ə ɡoʊl/",
           "chinese": "设定目标",
-          "example": "Set a small goal for this week.",
-          "translation": "为本周设定一个小目标。"
+          "example": "Set a clear goal for each study session.",
+          "translation": "为每次学习设定一个明确目标。"
+        },
+        {
+          "phrase": "achieve a goal",
+          "phonetic": "/əˈtʃiːv ə ɡoʊl/",
+          "chinese": "实现目标",
+          "example": "She achieved her goal of speaking more confidently.",
+          "translation": "她实现了更自信表达的目标。"
+        },
+        {
+          "phrase": "long-term goal",
+          "phonetic": "/ˈlɔːŋ-ˈtɝːm ɡoʊl/",
+          "chinese": "长期目标",
+          "example": "Learning another language is a long-term goal.",
+          "translation": "学习另一门语言是一个长期目标。"
+        },
+        {
+          "phrase": "work toward a goal",
+          "phonetic": "/ˈwɝːk təˈwɔːrd ə ɡoʊl/",
+          "chinese": "朝目标努力",
+          "example": "We are working toward the same goal.",
+          "translation": "我们正朝着同一个目标努力。"
+        },
+        {
+          "phrase": "reach your goal",
+          "phonetic": "/ˈriːtʃ ˈjɔːr ɡoʊl/",
+          "chinese": "达到目标",
+          "example": "Small daily actions can help you reach your goal.",
+          "translation": "每天的小行动可以帮助你实现目标。"
+        },
+        {
+          "phrase": "common goal",
+          "phonetic": "/ˈkɑmən ɡoʊl/",
+          "chinese": "共同目标",
+          "example": "The whole team shares a common goal.",
+          "translation": "整个团队有一个共同目标。"
         }
       ],
       "synonyms": [
@@ -1499,6 +1764,36 @@
           "scene": "核心真实用法",
           "english": "Set a small goal for this week.",
           "chinese": "为本周设定一个小目标。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "Set a clear goal for each study session.",
+          "chinese": "为每次学习设定一个明确目标。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "She achieved her goal of speaking more confidently.",
+          "chinese": "她实现了更自信表达的目标。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "Learning another language is a long-term goal.",
+          "chinese": "学习另一门语言是一个长期目标。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "We are working toward the same goal.",
+          "chinese": "我们正朝着同一个目标努力。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "Small daily actions can help you reach your goal.",
+          "chinese": "每天的小行动可以帮助你实现目标。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "The whole team shares a common goal.",
+          "chinese": "整个团队有一个共同目标。"
         }
       ],
       "studyFocus": {
@@ -1647,7 +1942,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“设定目标”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "set a goal"
+            "work toward a goal",
+            "set a goal",
+            "achieve a goal",
+            "long-term goal"
           ],
           "answer": "set a goal",
           "stage": "T2",
@@ -1659,7 +1957,9 @@
           "prompt": "搭配辨析：哪一项既表示“实现目标”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "achieve a goal",
-            "set a goal"
+            "set a goal",
+            "long-term goal",
+            "work toward a goal"
           ],
           "answer": "achieve a goal",
           "stage": "T3",
@@ -1750,11 +2050,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "balance-n",
@@ -1782,7 +2082,7 @@
       "difficulty": "进阶",
       "tags": [
         "n.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -1852,7 +2152,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心名词搭配",
           "items": [
             {
               "phrase": "find a balance",
@@ -1863,22 +2163,27 @@
               "phrase": "keep your balance",
               "phonetic": "/ˈkiːp ˈjɔːr ˈbæləns/",
               "chinese": "保持平衡"
-            },
-            {
-              "phrase": "work-life balance",
-              "phonetic": "/ˈwɝːk-ˈlaɪf ˈbæləns/",
-              "chinese": "工作与生活平衡"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "work-life balance",
+              "phonetic": "/ˈwɝːk-ˈlaɪf ˈbæləns/",
+              "chinese": "工作与生活平衡"
+            },
             {
               "phrase": "balance A with B",
               "phonetic": "/ˈbæləns ə ˈwɪð ˈbiː/",
               "chinese": "平衡 A 与 B"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "on balance",
               "phonetic": "/ˈɑn ˈbæləns/",
@@ -1897,8 +2202,43 @@
           "phrase": "find a balance",
           "phonetic": "/ˈfaɪnd ə ˈbæləns/",
           "chinese": "找到平衡",
-          "example": "Try to find a balance between study and rest.",
-          "translation": "试着在学习和休息之间找到平衡。"
+          "example": "It took time to find a balance between work and study.",
+          "translation": "在工作和学习之间找到平衡需要时间。"
+        },
+        {
+          "phrase": "keep your balance",
+          "phonetic": "/ˈkiːp ˈjɔːr ˈbæləns/",
+          "chinese": "保持平衡",
+          "example": "Hold the rail to keep your balance.",
+          "translation": "抓住栏杆以保持平衡。"
+        },
+        {
+          "phrase": "work-life balance",
+          "phonetic": "/ˈwɝːk-ˈlaɪf ˈbæləns/",
+          "chinese": "工作与生活平衡",
+          "example": "Flexible hours improved her work-life balance.",
+          "translation": "弹性工作时间改善了她的工作生活平衡。"
+        },
+        {
+          "phrase": "balance A with B",
+          "phonetic": "/ˈbæləns ə ˈwɪð ˈbiː/",
+          "chinese": "平衡 A 与 B",
+          "example": "Good managers balance speed with quality.",
+          "translation": "优秀的管理者会平衡速度与质量。"
+        },
+        {
+          "phrase": "on balance",
+          "phonetic": "/ˈɑn ˈbæləns/",
+          "chinese": "总的来说",
+          "example": "On balance, the advantages are greater than the risks.",
+          "translation": "总的来说，优势大于风险。"
+        },
+        {
+          "phrase": "bank balance",
+          "phonetic": "/ˈbæŋk ˈbæləns/",
+          "chinese": "银行账户余额",
+          "example": "I checked my bank balance before booking the trip.",
+          "translation": "预订旅行前我查看了银行账户余额。"
         }
       ],
       "synonyms": [
@@ -1945,6 +2285,36 @@
           "scene": "核心真实用法",
           "english": "Try to find a balance between study and rest.",
           "chinese": "试着在学习和休息之间找到平衡。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "It took time to find a balance between work and study.",
+          "chinese": "在工作和学习之间找到平衡需要时间。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "Hold the rail to keep your balance.",
+          "chinese": "抓住栏杆以保持平衡。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "Flexible hours improved her work-life balance.",
+          "chinese": "弹性工作时间改善了她的工作生活平衡。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "Good managers balance speed with quality.",
+          "chinese": "优秀的管理者会平衡速度与质量。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "On balance, the advantages are greater than the risks.",
+          "chinese": "总的来说，优势大于风险。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "I checked my bank balance before booking the trip.",
+          "chinese": "预订旅行前我查看了银行账户余额。"
         }
       ],
       "studyFocus": {
@@ -2093,7 +2463,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“找到平衡”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "find a balance"
+            "find a balance",
+            "keep your balance",
+            "work-life balance",
+            "balance A with B"
           ],
           "answer": "find a balance",
           "stage": "T2",
@@ -2105,6 +2478,8 @@
           "prompt": "用法辨析：哪一项既表示“保持平衡”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "find a balance",
+            "work-life balance",
+            "balance A with B",
             "keep your balance"
           ],
           "answer": "keep your balance",
@@ -2196,11 +2571,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     }
   ]
 }

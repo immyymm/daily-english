@@ -18,7 +18,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "待精校",
+    "模板详卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心动作与结构",
       "items": [
         {
           "phrase": "remember to do",
@@ -92,22 +92,27 @@
           "phrase": "remember doing",
           "phonetic": "/rɪˈmembər ˈduːɪŋ/",
           "chinese": "记得做过"
-        },
-        {
-          "phrase": "remember someone clearly",
-          "phonetic": "/rɪˈmembər ˈsʌˌmwʌn ˈklɪrliː/",
-          "chinese": "清楚地记得某人"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "remember someone clearly",
+          "phonetic": "/rɪˈmembər ˈsʌˌmwʌn ˈklɪrliː/",
+          "chinese": "清楚地记得某人"
+        },
         {
           "phrase": "remember the difference",
           "phonetic": "/rɪˈmembər ðə ˈdɪfɚəns/",
           "chinese": "记住差别"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "if I remember correctly",
           "phonetic": "/ˈɪf ˈaɪ rɪˈmembər kɚˈɛktliː/",
@@ -119,6 +124,16 @@
           "chinese": "值得记住的事情"
         }
       ]
+    },
+    {
+      "category": "补充常用语境",
+      "items": [
+        {
+          "phrase": "remember to do something",
+          "phonetic": "/rɪˈmembər ˈtuː ˈduː ˈsʌmθɪŋ/",
+          "chinese": "记得去做某事"
+        }
+      ]
     }
   ],
   "fixedPhrases": [
@@ -126,8 +141,43 @@
       "phrase": "remember to do",
       "phonetic": "/rɪˈmembər ˈtuː ˈduː/",
       "chinese": "记得去做",
-      "example": "Remember to save your work before you leave.",
-      "translation": "离开前记得保存工作。"
+      "example": "Remember to lock the door before you leave.",
+      "translation": "离开前记得锁门。"
+    },
+    {
+      "phrase": "remember doing",
+      "phonetic": "/rɪˈmembər ˈduːɪŋ/",
+      "chinese": "记得做过",
+      "example": "I remember meeting her at a conference in Shanghai.",
+      "translation": "我记得曾在上海的一次会议上见过她。"
+    },
+    {
+      "phrase": "remember someone clearly",
+      "phonetic": "/rɪˈmembər ˈsʌˌmwʌn ˈklɪrliː/",
+      "chinese": "清楚地记得某人",
+      "example": "I still remember my first English teacher clearly.",
+      "translation": "我仍然清楚地记得我的第一位英语老师。"
+    },
+    {
+      "phrase": "remember the difference",
+      "phonetic": "/rɪˈmembər ðə ˈdɪfɚəns/",
+      "chinese": "记住差别",
+      "example": "A simple example can help you remember the difference.",
+      "translation": "一个简单的例子可以帮助你记住区别。"
+    },
+    {
+      "phrase": "if I remember correctly",
+      "phonetic": "/ˈɪf ˈaɪ rɪˈmembər kɚˈɛktliː/",
+      "chinese": "如果我没记错",
+      "example": "If I remember correctly, the meeting starts at nine.",
+      "translation": "如果我没记错，会议九点开始。"
+    },
+    {
+      "phrase": "something to remember",
+      "phonetic": "/ˈsʌmθɪŋ ˈtuː rɪˈmembər/",
+      "chinese": "值得记住的事情",
+      "example": "Her advice gave me something important to remember.",
+      "translation": "她的建议让我记住了一件重要的事。"
     }
   ],
   "synonyms": [
@@ -174,6 +224,36 @@
       "scene": "核心真实用法",
       "english": "Remember to save your work before you leave.",
       "chinese": "离开前记得保存工作。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "Remember to lock the door before you leave.",
+      "chinese": "离开前记得锁门。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "I remember meeting her at a conference in Shanghai.",
+      "chinese": "我记得曾在上海的一次会议上见过她。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "I still remember my first English teacher clearly.",
+      "chinese": "我仍然清楚地记得我的第一位英语老师。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "A simple example can help you remember the difference.",
+      "chinese": "一个简单的例子可以帮助你记住区别。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "If I remember correctly, the meeting starts at nine.",
+      "chinese": "如果我没记错，会议九点开始。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "Her advice gave me something important to remember.",
+      "chinese": "她的建议让我记住了一件重要的事。"
     }
   ],
   "studyFocus": {
@@ -322,7 +402,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“记得去做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
       "options": [
-        "remember to do"
+        "remember to do",
+        "remember doing",
+        "remember someone clearly",
+        "remember the difference"
       ],
       "answer": "remember to do",
       "stage": "T2",
@@ -334,6 +417,8 @@
       "prompt": "用法辨析：哪一项既表示“记得做过”，又符合这个形式线索：目标词后的 doing 表示要换成符合语境的动词 -ing 形式？",
       "options": [
         "remember to do",
+        "remember someone clearly",
+        "remember the difference",
         "remember doing"
       ],
       "answer": "remember doing",
@@ -425,9 +510,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

@@ -18,7 +18,7 @@
   "difficulty": "进阶",
   "tags": [
     "adj.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心用法",
       "items": [
         {
           "phrase": "be responsible for",
@@ -92,22 +92,27 @@
           "phrase": "responsible for doing",
           "phonetic": "/rɪˈspɑːnsəbəl ˈfɔːr ˈduːɪŋ/",
           "chinese": "负责做"
-        },
-        {
-          "phrase": "hold someone responsible",
-          "phonetic": "/ˈhoʊld ˈsʌˌmwʌn rɪˈspɑːnsəbəl/",
-          "chinese": "追究某人责任"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "hold someone responsible",
+          "phonetic": "/ˈhoʊld ˈsʌˌmwʌn rɪˈspɑːnsəbəl/",
+          "chinese": "追究某人责任"
+        },
         {
           "phrase": "a responsible person",
           "phonetic": "/ə rɪˈspɑːnsəbəl ˈpɝːsən/",
           "chinese": "负责任的人"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "socially responsible",
           "phonetic": "/ˈsoʊʃəliː rɪˈspɑːnsəbəl/",
@@ -126,8 +131,43 @@
       "phrase": "be responsible for",
       "phonetic": "/ˈbiː rɪˈspɑːnsəbəl ˈfɔːr/",
       "chinese": "对……负责",
-      "example": "She is responsible for the final report.",
-      "translation": "她负责最终报告。"
+      "example": "Who is responsible for this project?",
+      "translation": "谁对这个项目负责？"
+    },
+    {
+      "phrase": "responsible for doing",
+      "phonetic": "/rɪˈspɑːnsəbəl ˈfɔːr ˈduːɪŋ/",
+      "chinese": "负责做",
+      "example": "She is responsible for training new employees.",
+      "translation": "她负责培训新员工。"
+    },
+    {
+      "phrase": "hold someone responsible",
+      "phonetic": "/ˈhoʊld ˈsʌˌmwʌn rɪˈspɑːnsəbəl/",
+      "chinese": "追究某人责任",
+      "example": "The company was held responsible for the damage.",
+      "translation": "公司被追究了造成损失的责任。"
+    },
+    {
+      "phrase": "a responsible person",
+      "phonetic": "/ə rɪˈspɑːnsəbəl ˈpɝːsən/",
+      "chinese": "负责任的人",
+      "example": "A responsible person admits mistakes.",
+      "translation": "负责任的人会承认错误。"
+    },
+    {
+      "phrase": "socially responsible",
+      "phonetic": "/ˈsoʊʃəliː rɪˈspɑːnsəbəl/",
+      "chinese": "对社会负责的",
+      "example": "Customers increasingly prefer socially responsible businesses.",
+      "translation": "顾客越来越青睐对社会负责的企业。"
+    },
+    {
+      "phrase": "feel responsible for",
+      "phonetic": "/ˈfiːl rɪˈspɑːnsəbəl ˈfɔːr/",
+      "chinese": "觉得对……有责任",
+      "example": "I feel responsible for keeping the information safe.",
+      "translation": "我觉得自己有责任保护这些信息。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "She is responsible for the final report.",
       "chinese": "她负责最终报告。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "Who is responsible for this project?",
+      "chinese": "谁对这个项目负责？"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "She is responsible for training new employees.",
+      "chinese": "她负责培训新员工。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "The company was held responsible for the damage.",
+      "chinese": "公司被追究了造成损失的责任。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "A responsible person admits mistakes.",
+      "chinese": "负责任的人会承认错误。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "Customers increasingly prefer socially responsible businesses.",
+      "chinese": "顾客越来越青睐对社会负责的企业。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "I feel responsible for keeping the information safe.",
+      "chinese": "我觉得自己有责任保护这些信息。"
     }
   ],
   "studyFocus": {
@@ -322,7 +392,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“对……负责”，又符合这个形式线索：完整搭配中使用介词 for？",
       "options": [
-        "be responsible for"
+        "hold someone responsible",
+        "a responsible person",
+        "be responsible for",
+        "responsible for doing"
       ],
       "answer": "be responsible for",
       "stage": "T2",
@@ -333,8 +406,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“负责做”，又符合这个形式线索：目标词后的 doing 表示要换成符合语境的动词 -ing 形式？",
       "options": [
+        "a responsible person",
+        "responsible for doing",
         "be responsible for",
-        "responsible for doing"
+        "hold someone responsible"
       ],
       "answer": "responsible for doing",
       "stage": "T3",
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

@@ -18,7 +18,7 @@
   "difficulty": "进阶",
   "tags": [
     "adv.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心用法",
       "items": [
         {
           "phrase": "respond quickly",
@@ -92,22 +92,27 @@
           "phrase": "learn quickly",
           "phonetic": "/ˈlɝːn ˈkwɪkli/",
           "chinese": "学得快"
-        },
-        {
-          "phrase": "as quickly as possible",
-          "phonetic": "/ˈæz ˈkwɪkli ˈæz ˈpɑsəbəl/",
-          "chinese": "尽快"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "as quickly as possible",
+          "phonetic": "/ˈæz ˈkwɪkli ˈæz ˈpɑsəbəl/",
+          "chinese": "尽快"
+        },
         {
           "phrase": "quickly become",
           "phonetic": "/ˈkwɪkli bɪˈkʌm/",
           "chinese": "很快变成"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "move quickly",
           "phonetic": "/ˈmuːv ˈkwɪkli/",
@@ -119,6 +124,21 @@
           "chinese": "很快意识到"
         }
       ]
+    },
+    {
+      "category": "补充常用语境",
+      "items": [
+        {
+          "phrase": "improve quickly",
+          "phonetic": "/ˌɪˈmpruːv ˈkwɪkli/",
+          "chinese": "迅速提高"
+        },
+        {
+          "phrase": "act quickly",
+          "phonetic": "/ˈækt ˈkwɪkli/",
+          "chinese": "迅速行动"
+        }
+      ]
     }
   ],
   "fixedPhrases": [
@@ -126,8 +146,43 @@
       "phrase": "respond quickly",
       "phonetic": "/rɪˈspɑnd ˈkwɪkli/",
       "chinese": "快速回应",
-      "example": "Try to recall the word quickly.",
-      "translation": "试着快速回忆这个词。"
+      "example": "Please respond quickly if the problem returns.",
+      "translation": "如果问题再次出现，请迅速回应。"
+    },
+    {
+      "phrase": "learn quickly",
+      "phonetic": "/ˈlɝːn ˈkwɪkli/",
+      "chinese": "学得快",
+      "example": "Children often learn new sounds quickly.",
+      "translation": "孩子们往往很快学会新的语音。"
+    },
+    {
+      "phrase": "as quickly as possible",
+      "phonetic": "/ˈæz ˈkwɪkli ˈæz ˈpɑsəbəl/",
+      "chinese": "尽快",
+      "example": "We need to finish this as quickly as possible.",
+      "translation": "我们需要尽快完成这件事。"
+    },
+    {
+      "phrase": "quickly become",
+      "phonetic": "/ˈkwɪkli bɪˈkʌm/",
+      "chinese": "很快变成",
+      "example": "A small issue can quickly become a serious problem.",
+      "translation": "小问题很快可能变成严重问题。"
+    },
+    {
+      "phrase": "move quickly",
+      "phonetic": "/ˈmuːv ˈkwɪkli/",
+      "chinese": "快速移动",
+      "example": "The line began to move quickly.",
+      "translation": "队伍开始快速移动。"
+    },
+    {
+      "phrase": "quickly realize",
+      "phonetic": "/ˈkwɪkli ˈriːəˌlaɪz/",
+      "chinese": "很快意识到",
+      "example": "She quickly realized that she had the wrong bag.",
+      "translation": "她很快意识到自己拿错了包。"
     }
   ],
   "synonyms": [
@@ -174,6 +229,36 @@
       "scene": "核心真实用法",
       "english": "Try to recall the word quickly.",
       "chinese": "试着快速回忆这个词。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "Please respond quickly if the problem returns.",
+      "chinese": "如果问题再次出现，请迅速回应。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "Children often learn new sounds quickly.",
+      "chinese": "孩子们往往很快学会新的语音。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "We need to finish this as quickly as possible.",
+      "chinese": "我们需要尽快完成这件事。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "A small issue can quickly become a serious problem.",
+      "chinese": "小问题很快可能变成严重问题。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "The line began to move quickly.",
+      "chinese": "队伍开始快速移动。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "She quickly realized that she had the wrong bag.",
+      "chinese": "她很快意识到自己拿错了包。"
     }
   ],
   "studyFocus": {
@@ -322,7 +407,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“快速回应”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "respond quickly"
+        "quickly become",
+        "respond quickly",
+        "learn quickly",
+        "as quickly as possible"
       ],
       "answer": "respond quickly",
       "stage": "T2",
@@ -334,7 +422,9 @@
       "prompt": "搭配辨析：哪一项既表示“学得快”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "learn quickly",
-        "respond quickly"
+        "respond quickly",
+        "as quickly as possible",
+        "quickly become"
       ],
       "answer": "learn quickly",
       "stage": "T3",
@@ -425,9 +515,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

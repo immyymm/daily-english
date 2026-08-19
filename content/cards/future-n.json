@@ -24,7 +24,7 @@
   "difficulty": "应用",
   "tags": [
     "n.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -94,7 +94,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心名词搭配",
       "items": [
         {
           "phrase": "in the future",
@@ -105,22 +105,27 @@
           "phrase": "near future",
           "phonetic": "/ˈnɪr ˈfjuːtʃər/",
           "chinese": "不久的将来"
-        },
-        {
-          "phrase": "future plans",
-          "phonetic": "/ˈfjuːtʃər ˈplænz/",
-          "chinese": "未来计划"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "future plans",
+          "phonetic": "/ˈfjuːtʃər ˈplænz/",
+          "chinese": "未来计划"
+        },
         {
           "phrase": "for future use",
           "phonetic": "/ˈfɔːr ˈfjuːtʃər ˈjuːs/",
           "chinese": "供将来使用"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "bright future",
           "phonetic": "/ˈbraɪt ˈfjuːtʃər/",
@@ -139,8 +144,43 @@
       "phrase": "in the future",
       "phonetic": "/ɪn ðə ˈfjuːtʃər/",
       "chinese": "将来",
-      "example": "This skill will be useful in the future.",
-      "translation": "这项技能将来会很有用。"
+      "example": "I hope to work abroad in the future.",
+      "translation": "我希望将来能在国外工作。"
+    },
+    {
+      "phrase": "near future",
+      "phonetic": "/ˈnɪr ˈfjuːtʃər/",
+      "chinese": "不久的将来",
+      "example": "We plan to move in the near future.",
+      "translation": "我们计划在不久的将来搬家。"
+    },
+    {
+      "phrase": "future plans",
+      "phonetic": "/ˈfjuːtʃər ˈplænz/",
+      "chinese": "未来计划",
+      "example": "The interview changed her future plans.",
+      "translation": "这次面试改变了她的未来计划。"
+    },
+    {
+      "phrase": "for future use",
+      "phonetic": "/ˈfɔːr ˈfjuːtʃər ˈjuːs/",
+      "chinese": "供将来使用",
+      "example": "Save a copy of the document for future use.",
+      "translation": "保存一份文件副本供将来使用。"
+    },
+    {
+      "phrase": "bright future",
+      "phonetic": "/ˈbraɪt ˈfjuːtʃər/",
+      "chinese": "光明的未来",
+      "example": "With her skills, she has a bright future.",
+      "translation": "凭借她的技能，她有光明的未来。"
+    },
+    {
+      "phrase": "future generations",
+      "phonetic": "/ˈfjuːtʃər ˌdʒɛnɚˈeɪʃənz/",
+      "chinese": "后代",
+      "example": "We should protect these resources for future generations.",
+      "translation": "我们应该为后代保护这些资源。"
     }
   ],
   "synonyms": [
@@ -195,6 +235,36 @@
       "scene": "核心真实用法",
       "english": "This skill will be useful in the future.",
       "chinese": "这项技能将来会很有用。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "I hope to work abroad in the future.",
+      "chinese": "我希望将来能在国外工作。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "We plan to move in the near future.",
+      "chinese": "我们计划在不久的将来搬家。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "The interview changed her future plans.",
+      "chinese": "这次面试改变了她的未来计划。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "Save a copy of the document for future use.",
+      "chinese": "保存一份文件副本供将来使用。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "With her skills, she has a bright future.",
+      "chinese": "凭借她的技能，她有光明的未来。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "We should protect these resources for future generations.",
+      "chinese": "我们应该为后代保护这些资源。"
     }
   ],
   "studyFocus": {
@@ -343,7 +413,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“将来”，又符合这个形式线索：完整搭配中使用介词 in？",
       "options": [
-        "in the future"
+        "in the future",
+        "near future",
+        "future plans",
+        "for future use"
       ],
       "answer": "in the future",
       "stage": "T2",
@@ -355,6 +428,8 @@
       "prompt": "用法辨析：哪一项既表示“不久的将来”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "in the future",
+        "future plans",
+        "for future use",
         "near future"
       ],
       "answer": "near future",
@@ -446,9 +521,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

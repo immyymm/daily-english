@@ -18,7 +18,7 @@
   "difficulty": "应用",
   "tags": [
     "v.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心动作与结构",
       "items": [
         {
           "phrase": "speak English",
@@ -92,22 +92,27 @@
           "phrase": "speak to someone",
           "phonetic": "/spiːk ˈtuː ˈsʌˌmwʌn/",
           "chinese": "和某人说话"
-        },
-        {
-          "phrase": "speak about",
-          "phonetic": "/spiːk əˈbaʊt/",
-          "chinese": "谈论……"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "speak about",
+          "phonetic": "/spiːk əˈbaʊt/",
+          "chinese": "谈论……"
+        },
         {
           "phrase": "speak clearly",
           "phonetic": "/spiːk ˈklɪrliː/",
           "chinese": "说得清楚"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "generally speaking",
           "phonetic": "/ˈdʒɛnɚəliː ˈspiːkɪŋ/",
@@ -126,8 +131,43 @@
       "phrase": "speak English",
       "phonetic": "/spiːk ˈɪŋɡlɪʃ/",
       "chinese": "说英语",
-      "example": "Try to speak in complete sentences.",
-      "translation": "试着用完整句子说话。"
+      "example": "I try to speak English for a few minutes every day.",
+      "translation": "我每天尽量说几分钟英语。"
+    },
+    {
+      "phrase": "speak to someone",
+      "phonetic": "/spiːk ˈtuː ˈsʌˌmwʌn/",
+      "chinese": "和某人说话",
+      "example": "Could I speak to the manager, please?",
+      "translation": "我可以和经理说话吗？"
+    },
+    {
+      "phrase": "speak about",
+      "phonetic": "/spiːk əˈbaʊt/",
+      "chinese": "谈论……",
+      "example": "She spoke about her experience abroad.",
+      "translation": "她谈到了自己的海外经历。"
+    },
+    {
+      "phrase": "speak clearly",
+      "phonetic": "/spiːk ˈklɪrliː/",
+      "chinese": "说得清楚",
+      "example": "Please speak clearly and not too quickly.",
+      "translation": "请说清楚一点，不要太快。"
+    },
+    {
+      "phrase": "generally speaking",
+      "phonetic": "/ˈdʒɛnɚəliː ˈspiːkɪŋ/",
+      "chinese": "一般来说",
+      "example": "Generally speaking, the earlier train is less crowded.",
+      "translation": "一般来说，较早的火车没那么拥挤。"
+    },
+    {
+      "phrase": "speak for yourself",
+      "phonetic": "/spiːk ˈfɔːr jɚˈsɛlf/",
+      "chinese": "只代表你自己",
+      "example": "“Everyone agrees.” “Speak for yourself.”",
+      "translation": "“每个人都同意。”“那只代表你自己。”"
     }
   ],
   "synonyms": [
@@ -182,6 +222,36 @@
       "scene": "核心真实用法",
       "english": "Try to speak in complete sentences.",
       "chinese": "试着用完整句子说话。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "I try to speak English for a few minutes every day.",
+      "chinese": "我每天尽量说几分钟英语。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "Could I speak to the manager, please?",
+      "chinese": "我可以和经理说话吗？"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "She spoke about her experience abroad.",
+      "chinese": "她谈到了自己的海外经历。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "Please speak clearly and not too quickly.",
+      "chinese": "请说清楚一点，不要太快。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "Generally speaking, the earlier train is less crowded.",
+      "chinese": "一般来说，较早的火车没那么拥挤。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "“Everyone agrees.” “Speak for yourself.”",
+      "chinese": "“每个人都同意。”“那只代表你自己。”"
     }
   ],
   "studyFocus": {
@@ -330,7 +400,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“说英语”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "speak English"
+        "speak about",
+        "speak clearly",
+        "speak English",
+        "speak to someone"
       ],
       "answer": "speak English",
       "stage": "T2",
@@ -341,8 +414,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“和某人说话”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "speak clearly",
+        "speak to someone",
         "speak English",
-        "speak to someone"
+        "speak about"
       ],
       "answer": "speak to someone",
       "stage": "T3",
@@ -433,9 +508,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

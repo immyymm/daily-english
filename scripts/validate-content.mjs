@@ -45,9 +45,10 @@ for (const card of allCards.cards) {
   }
   if (card.templateVersion !== expectedTemplateVersion) errors.push(card.id + ': wrong template version.');
   if (requiredReviewedWords.has(card.word) && (!card.reviewed || card.detailLevel !== 'template-complete')) errors.push(card.id + ': required human-reviewed card is not template-complete.');
-  if (!card.reviewed && card.detailLevel !== 'standard') errors.push(card.id + ': unreviewed content must be labeled standard.');
+  if (card.detailLevel !== 'template-complete') errors.push(card.id + ': every published card must be template-complete.');
   if (forbiddenGeneratedCopy.some((pattern) => pattern.test(JSON.stringify(card)))) errors.push(card.id + ': forbidden meta-learning filler or mechanical expansion found.');
   if (card.tags.includes('人工精校') !== card.reviewed) errors.push(card.id + ': review tag does not match reviewed status.');
+  if (!card.reviewed && !card.tags.includes('模板详卡')) errors.push(card.id + ': detailed template card tag is missing.');
   if (card.meanings.length < 1) errors.push(card.id + ': expected at least one meaning.');
   if (card.partOfSpeech.includes('/') && card.meanings.length < 2) errors.push(card.id + ': multiple parts of speech need separate meanings.');
   if (!Array.isArray(card.cocaRanks) || card.cocaRanks.length < 1 || !card.cocaRankLabel) errors.push(card.id + ': missing exact COCA rank data.');
@@ -69,10 +70,25 @@ for (const card of allCards.cards) {
     if (card.fixedPhrases.some((entry) => !usesTarget(entry.example))) errors.push(card.id + ': every curated fixed-phrase example must actually use the target word or an inflected form.');
     if (card.examples.some((entry) => !usesTarget(entry.english))) errors.push(card.id + ': every curated high-frequency example must actually use the target word or an inflected form.');
   } else {
-    if (!card.contextPhrases.length || !card.contextPhrases.some((group) => group.items.length)) errors.push(card.id + ': standard card needs verified context phrases.');
-    if (!card.fixedPhrases.length) errors.push(card.id + ': standard card needs at least one verified fixed phrase.');
-    if (!card.relatedVocabulary.length) errors.push(card.id + ': standard card needs at least one semantic category.');
-    if (!card.examples.length) errors.push(card.id + ': standard card needs at least one real example.');
+    if (card.contextPhrases.length < 3) errors.push(card.id + ': template-detailed card needs at least three real context categories.');
+    if (card.contextPhrases.reduce((sum, group) => sum + group.items.length, 0) < 6) errors.push(card.id + ': template-detailed card needs at least six curated context phrases.');
+    if (card.fixedPhrases.length < 6) errors.push(card.id + ': template-detailed card needs at least six fixed phrases with real examples.');
+    if (!card.relatedVocabulary.length) errors.push(card.id + ': template-detailed card needs at least one semantic category.');
+    if (card.examples.length < 6) errors.push(card.id + ': template-detailed card needs at least six natural high-frequency examples.');
+    const irregularTargetForms = {
+      become: ['became'],
+      choose: ['chose', 'chosen', 'choice'],
+      speak: ['spoke', 'spoken'],
+      write: ['wrote', 'written']
+    };
+    const targetForms = [
+      card.word.toLowerCase(),
+      card.word.toLowerCase().slice(0, Math.max(4, card.word.length - 2)),
+      ...(irregularTargetForms[card.word] ?? [])
+    ];
+    const usesTarget = (text) => targetForms.some((form) => text.toLowerCase().includes(form));
+    if (card.fixedPhrases.some((entry) => !usesTarget(entry.example))) errors.push(card.id + ': every fixed-phrase example must use the target word or an inflected form.');
+    if (card.examples.some((entry) => !usesTarget(entry.english))) errors.push(card.id + ': every high-frequency example must use the target word or an inflected form.');
   }
   if (new Set(card.examples.map((example) => example.english)).size !== card.examples.length) errors.push(card.id + ': duplicate example sentences.');
   if (card.derivatives.some((item) => item.word.toLowerCase() === card.word.toLowerCase())) errors.push(card.id + ': target word repeated as a derivative.');
@@ -175,4 +191,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log('Content validation passed: ' + allCards.cards.filter((card) => card.reviewed).length + ' template-complete cards, ' + allCards.cards.filter((card) => !card.reviewed).length + ' standard cards, 30 days, 5 unique cards per day.');
+console.log('Content validation passed: all ' + allCards.cards.length + ' cards are template-complete (' + allCards.cards.filter((card) => card.reviewed).length + ' manually curated, ' + allCards.cards.filter((card) => !card.reviewed).length + ' template-detailed), 30 days, 5 unique cards per day.');

@@ -18,7 +18,7 @@
   "difficulty": "应用",
   "tags": [
     "n.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心名词搭配",
       "items": [
         {
           "phrase": "mental health",
@@ -92,22 +92,27 @@
           "phrase": "physical health",
           "phonetic": "/ˈfɪzɪkəl helθ/",
           "chinese": "身体健康"
-        },
-        {
-          "phrase": "good health",
-          "phonetic": "/ˈɡʊd helθ/",
-          "chinese": "健康状况良好"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "good health",
+          "phonetic": "/ˈɡʊd helθ/",
+          "chinese": "健康状况良好"
+        },
         {
           "phrase": "health care",
           "phonetic": "/helθ ˈkɛr/",
           "chinese": "医疗保健"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "health problem",
           "phonetic": "/helθ ˈprɑbləm/",
@@ -126,8 +131,43 @@
       "phrase": "mental health",
       "phonetic": "/ˈmɛntəl helθ/",
       "chinese": "心理健康",
-      "example": "Regular sleep is important for your health.",
-      "translation": "规律睡眠对健康很重要。"
+      "example": "Regular rest is important for mental health.",
+      "translation": "规律休息对心理健康很重要。"
+    },
+    {
+      "phrase": "physical health",
+      "phonetic": "/ˈfɪzɪkəl helθ/",
+      "chinese": "身体健康",
+      "example": "Walking every day can improve physical health.",
+      "translation": "每天步行可以改善身体健康。"
+    },
+    {
+      "phrase": "good health",
+      "phonetic": "/ˈɡʊd helθ/",
+      "chinese": "健康状况良好",
+      "example": "She is eighty and still in good health.",
+      "translation": "她八十岁了，身体状况仍然很好。"
+    },
+    {
+      "phrase": "health care",
+      "phonetic": "/helθ ˈkɛr/",
+      "chinese": "医疗保健",
+      "example": "Everyone should have access to basic health care.",
+      "translation": "每个人都应该获得基本医疗保健。"
+    },
+    {
+      "phrase": "health problem",
+      "phonetic": "/helθ ˈprɑbləm/",
+      "chinese": "健康问题",
+      "example": "Back pain can become a serious health problem.",
+      "translation": "背痛可能成为严重的健康问题。"
+    },
+    {
+      "phrase": "be good for your health",
+      "phonetic": "/ˈbiː ˈɡʊd ˈfɔːr ˈjɔːr helθ/",
+      "chinese": "有益健康",
+      "example": "Fresh food and exercise are good for your health.",
+      "translation": "新鲜食物和运动有益健康。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "Regular sleep is important for your health.",
       "chinese": "规律睡眠对健康很重要。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "Regular rest is important for mental health.",
+      "chinese": "规律休息对心理健康很重要。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "Walking every day can improve physical health.",
+      "chinese": "每天步行可以改善身体健康。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "She is eighty and still in good health.",
+      "chinese": "她八十岁了，身体状况仍然很好。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "Everyone should have access to basic health care.",
+      "chinese": "每个人都应该获得基本医疗保健。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "Back pain can become a serious health problem.",
+      "chinese": "背痛可能成为严重的健康问题。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "Fresh food and exercise are good for your health.",
+      "chinese": "新鲜食物和运动有益健康。"
     }
   ],
   "studyFocus": {
@@ -322,7 +392,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“心理健康”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "mental health"
+        "good health",
+        "health care",
+        "mental health",
+        "physical health"
       ],
       "answer": "mental health",
       "stage": "T2",
@@ -333,8 +406,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“身体健康”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "health care",
+        "physical health",
         "mental health",
-        "physical health"
+        "good health"
       ],
       "answer": "physical health",
       "stage": "T3",
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

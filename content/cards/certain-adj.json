@@ -18,7 +18,7 @@
   "difficulty": "进阶",
   "tags": [
     "adj.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心用法",
       "items": [
         {
           "phrase": "be certain that",
@@ -92,22 +92,27 @@
           "phrase": "certain of",
           "phonetic": "/ˈsɜːrtən ˈʌv/",
           "chinese": "对……有把握"
-        },
-        {
-          "phrase": "make certain that",
-          "phonetic": "/ˈmeɪk ˈsɜːrtən ˈðæt/",
-          "chinese": "确保……"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "make certain that",
+          "phonetic": "/ˈmeɪk ˈsɜːrtən ˈðæt/",
+          "chinese": "确保……"
+        },
         {
           "phrase": "a certain amount of",
           "phonetic": "/ə ˈsɜːrtən əˈmaʊnt ˈʌv/",
           "chinese": "一定数量的……"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "to a certain extent",
           "phonetic": "/ˈtuː ə ˈsɜːrtən ɪˈkstɛnt/",
@@ -126,8 +131,43 @@
       "phrase": "be certain that",
       "phonetic": "/ˈbiː ˈsɜːrtən ˈðæt/",
       "chinese": "确信……",
-      "example": "I am not certain that this answer is correct.",
-      "translation": "我不确定这个答案是否正确。"
+      "example": "I am certain that I locked the door.",
+      "translation": "我确信自己锁了门。"
+    },
+    {
+      "phrase": "certain of",
+      "phonetic": "/ˈsɜːrtən ˈʌv/",
+      "chinese": "对……有把握",
+      "example": "Are you certain of the date?",
+      "translation": "你确定日期吗？"
+    },
+    {
+      "phrase": "make certain that",
+      "phonetic": "/ˈmeɪk ˈsɜːrtən ˈðæt/",
+      "chinese": "确保……",
+      "example": "Make certain that your name is on the form.",
+      "translation": "确保表格上写有你的名字。"
+    },
+    {
+      "phrase": "a certain amount of",
+      "phonetic": "/ə ˈsɜːrtən əˈmaʊnt ˈʌv/",
+      "chinese": "一定数量的……",
+      "example": "The job requires a certain amount of patience.",
+      "translation": "这份工作需要一定的耐心。"
+    },
+    {
+      "phrase": "to a certain extent",
+      "phonetic": "/ˈtuː ə ˈsɜːrtən ɪˈkstɛnt/",
+      "chinese": "在一定程度上",
+      "example": "The plan worked to a certain extent.",
+      "translation": "这个计划在一定程度上奏效了。"
+    },
+    {
+      "phrase": "for certain",
+      "phonetic": "/ˈfɔːr ˈsɜːrtən/",
+      "chinese": "确切地",
+      "example": "No one knows for certain what happened.",
+      "translation": "没有人确切知道发生了什么。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "I am not certain that this answer is correct.",
       "chinese": "我不确定这个答案是否正确。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "I am certain that I locked the door.",
+      "chinese": "我确信自己锁了门。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "Are you certain of the date?",
+      "chinese": "你确定日期吗？"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "Make certain that your name is on the form.",
+      "chinese": "确保表格上写有你的名字。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "The job requires a certain amount of patience.",
+      "chinese": "这份工作需要一定的耐心。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "The plan worked to a certain extent.",
+      "chinese": "这个计划在一定程度上奏效了。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "No one knows for certain what happened.",
+      "chinese": "没有人确切知道发生了什么。"
     }
   ],
   "studyFocus": {
@@ -322,7 +392,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“确信……”，又符合这个形式线索：使用 that 引导一个主谓完整的从句？",
       "options": [
-        "be certain that"
+        "be certain that",
+        "certain of",
+        "make certain that",
+        "a certain amount of"
       ],
       "answer": "be certain that",
       "stage": "T2",
@@ -334,6 +407,8 @@
       "prompt": "用法辨析：哪一项既表示“对……有把握”，又符合这个形式线索：完整搭配中使用介词 of？",
       "options": [
         "be certain that",
+        "make certain that",
+        "a certain amount of",
         "certain of"
       ],
       "answer": "certain of",
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

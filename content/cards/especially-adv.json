@@ -18,7 +18,7 @@
   "difficulty": "进阶",
   "tags": [
     "adv.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心用法",
       "items": [
         {
           "phrase": "especially useful",
@@ -92,22 +92,27 @@
           "phrase": "especially important",
           "phonetic": "/ɪˈspeʃəli ˌɪˈmpɔːrtənt/",
           "chinese": "尤其重要"
-        },
-        {
-          "phrase": "especially for",
-          "phonetic": "/ɪˈspeʃəli ˈfɔːr/",
-          "chinese": "尤其对……"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "especially for",
+          "phonetic": "/ɪˈspeʃəli ˈfɔːr/",
+          "chinese": "尤其对……"
+        },
         {
           "phrase": "not especially",
           "phonetic": "/ˈnɑt ɪˈspeʃəli/",
           "chinese": "并不特别"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "especially when",
           "phonetic": "/ɪˈspeʃəli ˈwɛn/",
@@ -119,6 +124,21 @@
           "chinese": "尤其擅长"
         }
       ]
+    },
+    {
+      "category": "补充常用语境",
+      "items": [
+        {
+          "phrase": "especially common",
+          "phonetic": "/ɪˈspeʃəli ˈkɑmən/",
+          "chinese": "尤其常见"
+        },
+        {
+          "phrase": "especially among",
+          "phonetic": "/ɪˈspeʃəli əˈmʌŋ/",
+          "chinese": "尤其在……当中"
+        }
+      ]
     }
   ],
   "fixedPhrases": [
@@ -126,8 +146,43 @@
       "phrase": "especially useful",
       "phonetic": "/ɪˈspeʃəli ˈjuːsfəl/",
       "chinese": "尤其有用",
-      "example": "This tip is especially useful for beginners.",
-      "translation": "这个技巧对初学者尤其有用。"
+      "example": "The examples are especially useful for beginners.",
+      "translation": "这些例子对初学者尤其有用。"
+    },
+    {
+      "phrase": "especially important",
+      "phonetic": "/ɪˈspeʃəli ˌɪˈmpɔːrtənt/",
+      "chinese": "尤其重要",
+      "example": "Sleep is especially important before an exam.",
+      "translation": "考试前睡眠尤其重要。"
+    },
+    {
+      "phrase": "especially for",
+      "phonetic": "/ɪˈspeʃəli ˈfɔːr/",
+      "chinese": "尤其对……",
+      "example": "This discount is especially helpful for students.",
+      "translation": "这项折扣对学生尤其有帮助。"
+    },
+    {
+      "phrase": "not especially",
+      "phonetic": "/ˈnɑt ɪˈspeʃəli/",
+      "chinese": "并不特别",
+      "example": "I am not especially interested in sports.",
+      "translation": "我对体育并不是特别感兴趣。"
+    },
+    {
+      "phrase": "especially when",
+      "phonetic": "/ɪˈspeʃəli ˈwɛn/",
+      "chinese": "尤其当……时",
+      "example": "Drive carefully, especially when the road is wet.",
+      "translation": "小心驾驶，尤其是路面湿滑时。"
+    },
+    {
+      "phrase": "especially good at",
+      "phonetic": "/ɪˈspeʃəli ˈɡʊd ˈæt/",
+      "chinese": "尤其擅长",
+      "example": "She is especially good at explaining grammar.",
+      "translation": "她尤其擅长解释语法。"
     }
   ],
   "synonyms": [
@@ -182,6 +237,36 @@
       "scene": "核心真实用法",
       "english": "This tip is especially useful for beginners.",
       "chinese": "这个技巧对初学者尤其有用。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "The examples are especially useful for beginners.",
+      "chinese": "这些例子对初学者尤其有用。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "Sleep is especially important before an exam.",
+      "chinese": "考试前睡眠尤其重要。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "This discount is especially helpful for students.",
+      "chinese": "这项折扣对学生尤其有帮助。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "I am not especially interested in sports.",
+      "chinese": "我对体育并不是特别感兴趣。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "Drive carefully, especially when the road is wet.",
+      "chinese": "小心驾驶，尤其是路面湿滑时。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "She is especially good at explaining grammar.",
+      "chinese": "她尤其擅长解释语法。"
     }
   ],
   "studyFocus": {
@@ -330,7 +415,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“尤其有用”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "especially useful"
+        "especially useful",
+        "especially important",
+        "especially for",
+        "not especially"
       ],
       "answer": "especially useful",
       "stage": "T2",
@@ -342,6 +430,8 @@
       "prompt": "用法辨析：哪一项既表示“尤其重要”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "especially useful",
+        "especially for",
+        "not especially",
         "especially important"
       ],
       "answer": "especially important",
@@ -433,9 +523,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

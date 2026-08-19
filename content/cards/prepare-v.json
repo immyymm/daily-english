@@ -18,7 +18,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "待精校",
+    "模板详卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心动作与结构",
       "items": [
         {
           "phrase": "prepare for a test",
@@ -92,22 +92,27 @@
           "phrase": "prepare a meal",
           "phonetic": "/prɪˈper ə ˈmiːl/",
           "chinese": "准备饭菜"
-        },
-        {
-          "phrase": "prepare a report",
-          "phonetic": "/prɪˈper ə riːˈpɔːrt/",
-          "chinese": "准备报告"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "prepare a report",
+          "phonetic": "/prɪˈper ə riːˈpɔːrt/",
+          "chinese": "准备报告"
+        },
         {
           "phrase": "prepare someone for",
           "phonetic": "/prɪˈper ˈsʌˌmwʌn ˈfɔːr/",
           "chinese": "使某人为……做好准备"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "be prepared to",
           "phonetic": "/ˈbiː priːˈpɛrd ˈtuː/",
@@ -126,8 +131,43 @@
       "phrase": "prepare for a test",
       "phonetic": "/prɪˈper ˈfɔːr ə ˈtɛst/",
       "chinese": "备考",
-      "example": "She prepared for the interview by practicing aloud.",
-      "translation": "她通过大声练习为面试做准备。"
+      "example": "I am preparing for an English test next week.",
+      "translation": "我正在为下周的英语考试做准备。"
+    },
+    {
+      "phrase": "prepare a meal",
+      "phonetic": "/prɪˈper ə ˈmiːl/",
+      "chinese": "准备饭菜",
+      "example": "He prepared a simple meal for the children.",
+      "translation": "他为孩子们准备了一顿简单的饭。"
+    },
+    {
+      "phrase": "prepare a report",
+      "phonetic": "/prɪˈper ə riːˈpɔːrt/",
+      "chinese": "准备报告",
+      "example": "We need to prepare a report before Friday.",
+      "translation": "我们需要在星期五前准备一份报告。"
+    },
+    {
+      "phrase": "prepare someone for",
+      "phonetic": "/prɪˈper ˈsʌˌmwʌn ˈfɔːr/",
+      "chinese": "使某人为……做好准备",
+      "example": "The training prepared her for the new role.",
+      "translation": "培训让她为新职位做好了准备。"
+    },
+    {
+      "phrase": "be prepared to",
+      "phonetic": "/ˈbiː priːˈpɛrd ˈtuː/",
+      "chinese": "准备好做",
+      "example": "Be prepared to answer a few detailed questions.",
+      "translation": "准备好回答几个详细问题。"
+    },
+    {
+      "phrase": "well prepared",
+      "phonetic": "/ˈwɛl priːˈpɛrd/",
+      "chinese": "准备充分的",
+      "example": "She felt well prepared for the interview.",
+      "translation": "她觉得自己为面试准备得很充分。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "She prepared for the interview by practicing aloud.",
       "chinese": "她通过大声练习为面试做准备。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "I am preparing for an English test next week.",
+      "chinese": "我正在为下周的英语考试做准备。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "He prepared a simple meal for the children.",
+      "chinese": "他为孩子们准备了一顿简单的饭。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "We need to prepare a report before Friday.",
+      "chinese": "我们需要在星期五前准备一份报告。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "The training prepared her for the new role.",
+      "chinese": "培训让她为新职位做好了准备。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "Be prepared to answer a few detailed questions.",
+      "chinese": "准备好回答几个详细问题。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "She felt well prepared for the interview.",
+      "chinese": "她觉得自己为面试准备得很充分。"
     }
   ],
   "studyFocus": {
@@ -322,7 +392,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“备考”，又符合这个形式线索：完整搭配中使用介词 for？",
       "options": [
-        "prepare for a test"
+        "prepare a report",
+        "prepare someone for",
+        "prepare for a test",
+        "prepare a meal"
       ],
       "answer": "prepare for a test",
       "stage": "T2",
@@ -333,8 +406,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“准备饭菜”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "prepare someone for",
+        "prepare a meal",
         "prepare for a test",
-        "prepare a meal"
+        "prepare a report"
       ],
       "answer": "prepare a meal",
       "stage": "T3",
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

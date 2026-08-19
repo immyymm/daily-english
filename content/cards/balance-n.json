@@ -24,7 +24,7 @@
   "difficulty": "进阶",
   "tags": [
     "n.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -94,7 +94,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心名词搭配",
       "items": [
         {
           "phrase": "find a balance",
@@ -105,22 +105,27 @@
           "phrase": "keep your balance",
           "phonetic": "/ˈkiːp ˈjɔːr ˈbæləns/",
           "chinese": "保持平衡"
-        },
-        {
-          "phrase": "work-life balance",
-          "phonetic": "/ˈwɝːk-ˈlaɪf ˈbæləns/",
-          "chinese": "工作与生活平衡"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "work-life balance",
+          "phonetic": "/ˈwɝːk-ˈlaɪf ˈbæləns/",
+          "chinese": "工作与生活平衡"
+        },
         {
           "phrase": "balance A with B",
           "phonetic": "/ˈbæləns ə ˈwɪð ˈbiː/",
           "chinese": "平衡 A 与 B"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "on balance",
           "phonetic": "/ˈɑn ˈbæləns/",
@@ -139,8 +144,43 @@
       "phrase": "find a balance",
       "phonetic": "/ˈfaɪnd ə ˈbæləns/",
       "chinese": "找到平衡",
-      "example": "Try to find a balance between study and rest.",
-      "translation": "试着在学习和休息之间找到平衡。"
+      "example": "It took time to find a balance between work and study.",
+      "translation": "在工作和学习之间找到平衡需要时间。"
+    },
+    {
+      "phrase": "keep your balance",
+      "phonetic": "/ˈkiːp ˈjɔːr ˈbæləns/",
+      "chinese": "保持平衡",
+      "example": "Hold the rail to keep your balance.",
+      "translation": "抓住栏杆以保持平衡。"
+    },
+    {
+      "phrase": "work-life balance",
+      "phonetic": "/ˈwɝːk-ˈlaɪf ˈbæləns/",
+      "chinese": "工作与生活平衡",
+      "example": "Flexible hours improved her work-life balance.",
+      "translation": "弹性工作时间改善了她的工作生活平衡。"
+    },
+    {
+      "phrase": "balance A with B",
+      "phonetic": "/ˈbæləns ə ˈwɪð ˈbiː/",
+      "chinese": "平衡 A 与 B",
+      "example": "Good managers balance speed with quality.",
+      "translation": "优秀的管理者会平衡速度与质量。"
+    },
+    {
+      "phrase": "on balance",
+      "phonetic": "/ˈɑn ˈbæləns/",
+      "chinese": "总的来说",
+      "example": "On balance, the advantages are greater than the risks.",
+      "translation": "总的来说，优势大于风险。"
+    },
+    {
+      "phrase": "bank balance",
+      "phonetic": "/ˈbæŋk ˈbæləns/",
+      "chinese": "银行账户余额",
+      "example": "I checked my bank balance before booking the trip.",
+      "translation": "预订旅行前我查看了银行账户余额。"
     }
   ],
   "synonyms": [
@@ -187,6 +227,36 @@
       "scene": "核心真实用法",
       "english": "Try to find a balance between study and rest.",
       "chinese": "试着在学习和休息之间找到平衡。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "It took time to find a balance between work and study.",
+      "chinese": "在工作和学习之间找到平衡需要时间。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "Hold the rail to keep your balance.",
+      "chinese": "抓住栏杆以保持平衡。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "Flexible hours improved her work-life balance.",
+      "chinese": "弹性工作时间改善了她的工作生活平衡。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "Good managers balance speed with quality.",
+      "chinese": "优秀的管理者会平衡速度与质量。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "On balance, the advantages are greater than the risks.",
+      "chinese": "总的来说，优势大于风险。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "I checked my bank balance before booking the trip.",
+      "chinese": "预订旅行前我查看了银行账户余额。"
     }
   ],
   "studyFocus": {
@@ -335,7 +405,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“找到平衡”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "find a balance"
+        "find a balance",
+        "keep your balance",
+        "work-life balance",
+        "balance A with B"
       ],
       "answer": "find a balance",
       "stage": "T2",
@@ -347,6 +420,8 @@
       "prompt": "用法辨析：哪一项既表示“保持平衡”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "find a balance",
+        "work-life balance",
+        "balance A with B",
         "keep your balance"
       ],
       "answer": "keep your balance",
@@ -438,9 +513,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

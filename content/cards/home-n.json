@@ -24,7 +24,7 @@
   "difficulty": "应用",
   "tags": [
     "n.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -94,7 +94,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心名词搭配",
       "items": [
         {
           "phrase": "feel at home",
@@ -105,22 +105,27 @@
           "phrase": "go home",
           "phonetic": "/ˈɡoʊ hoʊm/",
           "chinese": "回家"
-        },
-        {
-          "phrase": "stay at home",
-          "phonetic": "/ˈsteɪ ˈæt hoʊm/",
-          "chinese": "待在家"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "stay at home",
+          "phonetic": "/ˈsteɪ ˈæt hoʊm/",
+          "chinese": "待在家"
+        },
         {
           "phrase": "work from home",
           "phonetic": "/ˈwɝːk ˈfrʌm hoʊm/",
           "chinese": "居家办公"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "make yourself at home",
           "phonetic": "/ˈmeɪk jɚˈsɛlf ˈæt hoʊm/",
@@ -139,8 +144,43 @@
       "phrase": "feel at home",
       "phonetic": "/ˈfiːl ˈæt hoʊm/",
       "chinese": "感到自在",
-      "example": "Make yourself at home.",
-      "translation": "请不要拘束，就像在自己家一样。"
+      "example": "The warm welcome made me feel at home.",
+      "translation": "热情的欢迎让我感到自在。"
+    },
+    {
+      "phrase": "go home",
+      "phonetic": "/ˈɡoʊ hoʊm/",
+      "chinese": "回家",
+      "example": "I usually go home around six.",
+      "translation": "我通常六点左右回家。"
+    },
+    {
+      "phrase": "stay at home",
+      "phonetic": "/ˈsteɪ ˈæt hoʊm/",
+      "chinese": "待在家",
+      "example": "She stayed at home because she felt ill.",
+      "translation": "她因为不舒服待在家里。"
+    },
+    {
+      "phrase": "work from home",
+      "phonetic": "/ˈwɝːk ˈfrʌm hoʊm/",
+      "chinese": "居家办公",
+      "example": "I work from home twice a week.",
+      "translation": "我每周居家办公两天。"
+    },
+    {
+      "phrase": "make yourself at home",
+      "phonetic": "/ˈmeɪk jɚˈsɛlf ˈæt hoʊm/",
+      "chinese": "请不要拘束",
+      "example": "Please come in and make yourself at home.",
+      "translation": "请进，不要拘束。"
+    },
+    {
+      "phrase": "home address",
+      "phonetic": "/hoʊm ˈæˌdrɛs/",
+      "chinese": "家庭住址",
+      "example": "The bank asked me to confirm my home address.",
+      "translation": "银行要求我确认家庭住址。"
     }
   ],
   "synonyms": [
@@ -187,6 +227,36 @@
       "scene": "核心真实用法",
       "english": "Make yourself at home.",
       "chinese": "请不要拘束，就像在自己家一样。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "The warm welcome made me feel at home.",
+      "chinese": "热情的欢迎让我感到自在。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "I usually go home around six.",
+      "chinese": "我通常六点左右回家。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "She stayed at home because she felt ill.",
+      "chinese": "她因为不舒服待在家里。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "I work from home twice a week.",
+      "chinese": "我每周居家办公两天。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "Please come in and make yourself at home.",
+      "chinese": "请进，不要拘束。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "The bank asked me to confirm my home address.",
+      "chinese": "银行要求我确认家庭住址。"
     }
   ],
   "studyFocus": {
@@ -335,7 +405,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“感到自在”，又符合这个形式线索：完整搭配中使用介词 at？",
       "options": [
-        "feel at home"
+        "work from home",
+        "feel at home",
+        "go home",
+        "stay at home"
       ],
       "answer": "feel at home",
       "stage": "T2",
@@ -347,7 +420,9 @@
       "prompt": "搭配辨析：哪一项既表示“回家”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "go home",
-        "feel at home"
+        "feel at home",
+        "stay at home",
+        "work from home"
       ],
       "answer": "go home",
       "stage": "T3",
@@ -438,9 +513,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

@@ -18,7 +18,7 @@
   "difficulty": "应用",
   "tags": [
     "n.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心名词搭配",
       "items": [
         {
           "phrase": "daily activity",
@@ -92,22 +92,27 @@
           "phrase": "physical activity",
           "phonetic": "/ˈfɪzɪkəl ækˈtɪvəti/",
           "chinese": "体育活动"
-        },
-        {
-          "phrase": "outdoor activity",
-          "phonetic": "/ˈaʊˌtdɔːr ækˈtɪvəti/",
-          "chinese": "户外活动"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "outdoor activity",
+          "phonetic": "/ˈaʊˌtdɔːr ækˈtɪvəti/",
+          "chinese": "户外活动"
+        },
         {
           "phrase": "take part in an activity",
           "phonetic": "/ˈteɪk ˈpɑrt ɪn ˈæn ækˈtɪvəti/",
           "chinese": "参加活动"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "learning activity",
           "phonetic": "/ˈlɝːnɪŋ ækˈtɪvəti/",
@@ -126,8 +131,43 @@
       "phrase": "daily activity",
       "phonetic": "/ˈdeɪliː ækˈtɪvəti/",
       "chinese": "日常活动",
-      "example": "Walking is my favorite outdoor activity.",
-      "translation": "散步是我最喜欢的户外活动。"
+      "example": "Walking is part of my daily activity.",
+      "translation": "步行是我日常活动的一部分。"
+    },
+    {
+      "phrase": "physical activity",
+      "phonetic": "/ˈfɪzɪkəl ækˈtɪvəti/",
+      "chinese": "体育活动",
+      "example": "Regular physical activity supports good health.",
+      "translation": "规律体育活动有益健康。"
+    },
+    {
+      "phrase": "outdoor activity",
+      "phonetic": "/ˈaʊˌtdɔːr ækˈtɪvəti/",
+      "chinese": "户外活动",
+      "example": "Hiking is our favorite outdoor activity.",
+      "translation": "徒步是我们最喜欢的户外活动。"
+    },
+    {
+      "phrase": "take part in an activity",
+      "phonetic": "/ˈteɪk ˈpɑrt ɪn ˈæn ækˈtɪvəti/",
+      "chinese": "参加活动",
+      "example": "Every student took part in the activity.",
+      "translation": "每位学生都参加了这项活动。"
+    },
+    {
+      "phrase": "learning activity",
+      "phonetic": "/ˈlɝːnɪŋ ækˈtɪvəti/",
+      "chinese": "学习活动",
+      "example": "The teacher designed a short learning activity.",
+      "translation": "老师设计了一项简短的学习活动。"
+    },
+    {
+      "phrase": "range of activities",
+      "phonetic": "/ˈreɪndʒ ˈʌv æˈktɪvətiːz/",
+      "chinese": "一系列活动",
+      "example": "The center offers a wide range of activities.",
+      "translation": "这个中心提供多种活动。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "Walking is my favorite outdoor activity.",
       "chinese": "散步是我最喜欢的户外活动。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "Walking is part of my daily activity.",
+      "chinese": "步行是我日常活动的一部分。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "Regular physical activity supports good health.",
+      "chinese": "规律体育活动有益健康。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "Hiking is our favorite outdoor activity.",
+      "chinese": "徒步是我们最喜欢的户外活动。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "Every student took part in the activity.",
+      "chinese": "每位学生都参加了这项活动。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "The teacher designed a short learning activity.",
+      "chinese": "老师设计了一项简短的学习活动。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "The center offers a wide range of activities.",
+      "chinese": "这个中心提供多种活动。"
     }
   ],
   "studyFocus": {
@@ -322,7 +392,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“日常活动”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "daily activity"
+        "outdoor activity",
+        "take part in an activity",
+        "daily activity",
+        "physical activity"
       ],
       "answer": "daily activity",
       "stage": "T2",
@@ -333,8 +406,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“体育活动”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "take part in an activity",
+        "physical activity",
         "daily activity",
-        "physical activity"
+        "outdoor activity"
       ],
       "answer": "physical activity",
       "stage": "T3",
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

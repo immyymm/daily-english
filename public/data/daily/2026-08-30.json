@@ -1,7 +1,7 @@
 {
   "date": "2026-08-30",
   "dayNumber": 14,
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "templateVersion": "learning-template-2026.08.19.1",
   "cards": [
     {
@@ -30,7 +30,7 @@
       "difficulty": "进阶",
       "tags": [
         "n.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -100,7 +100,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心名词搭配",
           "items": [
             {
               "phrase": "great value",
@@ -111,22 +111,27 @@
               "phrase": "value for money",
               "phonetic": "/ˈvæljuː ˈfɔːr ˈmʌniː/",
               "chinese": "物有所值"
-            },
-            {
-              "phrase": "place a value on",
-              "phonetic": "/ˈpleɪs ə ˈvæljuː ˈɑn/",
-              "chinese": "为……估价；重视"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "place a value on",
+              "phonetic": "/ˈpleɪs ə ˈvæljuː ˈɑn/",
+              "chinese": "为……估价；重视"
+            },
             {
               "phrase": "core values",
               "phonetic": "/ˈkɔːr ˈvæljuːz/",
               "chinese": "核心价值观"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "value your opinion",
               "phonetic": "/ˈvæljuː ˈjɔːr əˈpɪnjən/",
@@ -145,8 +150,43 @@
           "phrase": "great value",
           "phonetic": "/ˈɡreɪt ˈvæljuː/",
           "chinese": "很大价值",
-          "example": "I value honest feedback.",
-          "translation": "我重视诚实的反馈。"
+          "example": "Her practical advice was of great value.",
+          "translation": "她的实用建议很有价值。"
+        },
+        {
+          "phrase": "value for money",
+          "phonetic": "/ˈvæljuː ˈfɔːr ˈmʌniː/",
+          "chinese": "物有所值",
+          "example": "The meal offers good value for money.",
+          "translation": "这顿饭物有所值。"
+        },
+        {
+          "phrase": "place a value on",
+          "phonetic": "/ˈpleɪs ə ˈvæljuː ˈɑn/",
+          "chinese": "为……估价；重视",
+          "example": "It is difficult to place a value on free time.",
+          "translation": "很难为自由时间估价。"
+        },
+        {
+          "phrase": "core values",
+          "phonetic": "/ˈkɔːr ˈvæljuːz/",
+          "chinese": "核心价值观",
+          "example": "Honesty is one of our core values.",
+          "translation": "诚实是我们的核心价值观之一。"
+        },
+        {
+          "phrase": "value your opinion",
+          "phonetic": "/ˈvæljuː ˈjɔːr əˈpɪnjən/",
+          "chinese": "重视你的意见",
+          "example": "I value your opinion, even when we disagree.",
+          "translation": "即使我们意见不同，我也重视你的看法。"
+        },
+        {
+          "phrase": "of little value",
+          "phonetic": "/ˈʌv ˈlɪtəl ˈvæljuː/",
+          "chinese": "价值不大",
+          "example": "The old equipment is now of little value.",
+          "translation": "这些旧设备现在价值不大。"
         }
       ],
       "synonyms": [
@@ -193,6 +233,36 @@
           "scene": "核心真实用法",
           "english": "I value honest feedback.",
           "chinese": "我重视诚实的反馈。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "Her practical advice was of great value.",
+          "chinese": "她的实用建议很有价值。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "The meal offers good value for money.",
+          "chinese": "这顿饭物有所值。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "It is difficult to place a value on free time.",
+          "chinese": "很难为自由时间估价。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "Honesty is one of our core values.",
+          "chinese": "诚实是我们的核心价值观之一。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "I value your opinion, even when we disagree.",
+          "chinese": "即使我们意见不同，我也重视你的看法。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "The old equipment is now of little value.",
+          "chinese": "这些旧设备现在价值不大。"
         }
       ],
       "studyFocus": {
@@ -341,7 +411,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“很大价值”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "great value"
+            "core values",
+            "great value",
+            "value for money",
+            "place a value on"
           ],
           "answer": "great value",
           "stage": "T2",
@@ -353,7 +426,9 @@
           "prompt": "搭配辨析：哪一项既表示“物有所值”，又符合这个形式线索：完整搭配中使用介词 for？",
           "options": [
             "value for money",
-            "great value"
+            "great value",
+            "place a value on",
+            "core values"
           ],
           "answer": "value for money",
           "stage": "T3",
@@ -444,11 +519,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "behavior-n",
@@ -470,7 +545,7 @@
       "difficulty": "进阶",
       "tags": [
         "n.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -533,7 +608,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心名词搭配",
           "items": [
             {
               "phrase": "change behavior",
@@ -544,22 +619,27 @@
               "phrase": "positive behavior",
               "phonetic": "/ˈpɑzətɪv bɪˈheɪvjər/",
               "chinese": "积极行为"
-            },
-            {
-              "phrase": "human behavior",
-              "phonetic": "/ˈhjuːmən bɪˈheɪvjər/",
-              "chinese": "人类行为"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "human behavior",
+              "phonetic": "/ˈhjuːmən bɪˈheɪvjər/",
+              "chinese": "人类行为"
+            },
             {
               "phrase": "pattern of behavior",
               "phonetic": "/ˈpætɚn ˈʌv bɪˈheɪvjər/",
               "chinese": "行为模式"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "acceptable behavior",
               "phonetic": "/æˈksɛptəbəl bɪˈheɪvjər/",
@@ -578,8 +658,43 @@
           "phrase": "change behavior",
           "phonetic": "/ˈtʃeɪndʒ bɪˈheɪvjər/",
           "chinese": "改变行为",
-          "example": "Small rewards can encourage positive behavior.",
-          "translation": "小奖励可以鼓励积极行为。"
+          "example": "Positive feedback can change behavior.",
+          "translation": "积极反馈可以改变行为。"
+        },
+        {
+          "phrase": "positive behavior",
+          "phonetic": "/ˈpɑzətɪv bɪˈheɪvjər/",
+          "chinese": "积极行为",
+          "example": "The teacher praised the child’s positive behavior.",
+          "translation": "老师表扬了孩子的积极行为。"
+        },
+        {
+          "phrase": "human behavior",
+          "phonetic": "/ˈhjuːmən bɪˈheɪvjər/",
+          "chinese": "人类行为",
+          "example": "The course examines human behavior in groups.",
+          "translation": "这门课程研究群体中的人类行为。"
+        },
+        {
+          "phrase": "pattern of behavior",
+          "phonetic": "/ˈpætɚn ˈʌv bɪˈheɪvjər/",
+          "chinese": "行为模式",
+          "example": "We noticed a clear pattern of behavior.",
+          "translation": "我们注意到一种明显的行为模式。"
+        },
+        {
+          "phrase": "acceptable behavior",
+          "phonetic": "/æˈksɛptəbəl bɪˈheɪvjər/",
+          "chinese": "可接受的行为",
+          "example": "Shouting is not acceptable behavior in the office.",
+          "translation": "在办公室大喊不是可接受的行为。"
+        },
+        {
+          "phrase": "behavior toward others",
+          "phonetic": "/bɪˈheɪvjər təˈwɔːrd ˈʌðɚz/",
+          "chinese": "对他人的行为",
+          "example": "His behavior toward the staff was respectful.",
+          "translation": "他对员工的态度很尊重。"
         }
       ],
       "synonyms": [
@@ -626,6 +741,36 @@
           "scene": "核心真实用法",
           "english": "Small rewards can encourage positive behavior.",
           "chinese": "小奖励可以鼓励积极行为。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "Positive feedback can change behavior.",
+          "chinese": "积极反馈可以改变行为。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "The teacher praised the child’s positive behavior.",
+          "chinese": "老师表扬了孩子的积极行为。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "The course examines human behavior in groups.",
+          "chinese": "这门课程研究群体中的人类行为。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "We noticed a clear pattern of behavior.",
+          "chinese": "我们注意到一种明显的行为模式。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "Shouting is not acceptable behavior in the office.",
+          "chinese": "在办公室大喊不是可接受的行为。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "His behavior toward the staff was respectful.",
+          "chinese": "他对员工的态度很尊重。"
         }
       ],
       "studyFocus": {
@@ -774,7 +919,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“改变行为”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "change behavior"
+            "change behavior",
+            "positive behavior",
+            "human behavior",
+            "pattern of behavior"
           ],
           "answer": "change behavior",
           "stage": "T2",
@@ -786,6 +934,8 @@
           "prompt": "用法辨析：哪一项既表示“积极行为”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "change behavior",
+            "human behavior",
+            "pattern of behavior",
             "positive behavior"
           ],
           "answer": "positive behavior",
@@ -877,11 +1027,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "attention-n",
@@ -903,7 +1053,7 @@
       "difficulty": "进阶",
       "tags": [
         "n.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -966,7 +1116,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心名词搭配",
           "items": [
             {
               "phrase": "pay attention to",
@@ -977,22 +1127,27 @@
               "phrase": "draw attention to",
               "phonetic": "/ˈdrɔː əˈtenʃən ˈtuː/",
               "chinese": "使人注意……"
-            },
-            {
-              "phrase": "get someone’s attention",
-              "phonetic": "/ˈɡɛt someone’s əˈtenʃən/",
-              "chinese": "引起某人注意"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "get someone’s attention",
+              "phonetic": "/ˈɡɛt someone’s əˈtenʃən/",
+              "chinese": "引起某人注意"
+            },
             {
               "phrase": "full attention",
               "phonetic": "/ˈfʊl əˈtenʃən/",
               "chinese": "全部注意力"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "attention to detail",
               "phonetic": "/əˈtenʃən ˈtuː dɪˈteɪl/",
@@ -1011,8 +1166,43 @@
           "phrase": "pay attention to",
           "phonetic": "/ˈpeɪ əˈtenʃən ˈtuː/",
           "chinese": "注意……",
-          "example": "Pay attention to the preposition after the verb.",
-          "translation": "注意这个动词后面的介词。"
+          "example": "Pay attention to the verb form in this sentence.",
+          "translation": "注意这个句子中的动词形式。"
+        },
+        {
+          "phrase": "draw attention to",
+          "phonetic": "/ˈdrɔː əˈtenʃən ˈtuː/",
+          "chinese": "使人注意……",
+          "example": "The report draws attention to a serious problem.",
+          "translation": "报告使人们注意到一个严重问题。"
+        },
+        {
+          "phrase": "get someone’s attention",
+          "phonetic": "/ˈɡɛt someone’s əˈtenʃən/",
+          "chinese": "引起某人注意",
+          "example": "I waved to get the waiter’s attention.",
+          "translation": "我挥手引起服务员注意。"
+        },
+        {
+          "phrase": "full attention",
+          "phonetic": "/ˈfʊl əˈtenʃən/",
+          "chinese": "全部注意力",
+          "example": "Please give the speaker your full attention.",
+          "translation": "请全神贯注听发言者讲话。"
+        },
+        {
+          "phrase": "attention to detail",
+          "phonetic": "/əˈtenʃən ˈtuː dɪˈteɪl/",
+          "chinese": "对细节的关注",
+          "example": "Her attention to detail prevents many mistakes.",
+          "translation": "她对细节的关注避免了许多错误。"
+        },
+        {
+          "phrase": "medical attention",
+          "phonetic": "/ˈmɛdəkəl əˈtenʃən/",
+          "chinese": "医疗救治",
+          "example": "The injured driver needed medical attention.",
+          "translation": "受伤的司机需要医疗救治。"
         }
       ],
       "synonyms": [
@@ -1059,6 +1249,36 @@
           "scene": "核心真实用法",
           "english": "Pay attention to the preposition after the verb.",
           "chinese": "注意这个动词后面的介词。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "Pay attention to the verb form in this sentence.",
+          "chinese": "注意这个句子中的动词形式。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "The report draws attention to a serious problem.",
+          "chinese": "报告使人们注意到一个严重问题。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "I waved to get the waiter’s attention.",
+          "chinese": "我挥手引起服务员注意。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "Please give the speaker your full attention.",
+          "chinese": "请全神贯注听发言者讲话。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "Her attention to detail prevents many mistakes.",
+          "chinese": "她对细节的关注避免了许多错误。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "The injured driver needed medical attention.",
+          "chinese": "受伤的司机需要医疗救治。"
         }
       ],
       "studyFocus": {
@@ -1207,6 +1427,9 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“注意……”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "draw attention to",
+            "get someone’s attention",
+            "full attention",
             "pay attention to"
           ],
           "answer": "pay attention to",
@@ -1218,6 +1441,8 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“使人注意……”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "get someone’s attention",
+            "full attention",
             "draw attention to",
             "pay attention to"
           ],
@@ -1310,11 +1535,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "purpose-n",
@@ -1336,7 +1561,7 @@
       "difficulty": "进阶",
       "tags": [
         "n.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -1399,7 +1624,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心名词搭配",
           "items": [
             {
               "phrase": "main purpose",
@@ -1410,22 +1635,27 @@
               "phrase": "purpose of doing",
               "phonetic": "/ˈpɜːrpəs ˈʌv ˈduːɪŋ/",
               "chinese": "做……的目的"
-            },
-            {
-              "phrase": "serve a purpose",
-              "phonetic": "/ˈsɝːv ə ˈpɜːrpəs/",
-              "chinese": "起作用；有用途"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "serve a purpose",
+              "phonetic": "/ˈsɝːv ə ˈpɜːrpəs/",
+              "chinese": "起作用；有用途"
+            },
             {
               "phrase": "on purpose",
               "phonetic": "/ˈɑn ˈpɜːrpəs/",
               "chinese": "故意地"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "for this purpose",
               "phonetic": "/ˈfɔːr ˈðɪs ˈpɜːrpəs/",
@@ -1444,8 +1674,43 @@
           "phrase": "main purpose",
           "phonetic": "/ˈmeɪn ˈpɜːrpəs/",
           "chinese": "主要目的",
-          "example": "The main purpose of the test is active recall.",
-          "translation": "这个测试的主要目的是主动回忆。"
+          "example": "The main purpose of the meeting is to share information.",
+          "translation": "会议的主要目的是分享信息。"
+        },
+        {
+          "phrase": "purpose of doing",
+          "phonetic": "/ˈpɜːrpəs ˈʌv ˈduːɪŋ/",
+          "chinese": "做……的目的",
+          "example": "The purpose of reviewing is to strengthen memory.",
+          "translation": "复习的目的是加强记忆。"
+        },
+        {
+          "phrase": "serve a purpose",
+          "phonetic": "/ˈsɝːv ə ˈpɜːrpəs/",
+          "chinese": "起作用；有用途",
+          "example": "This small pocket serves a useful purpose.",
+          "translation": "这个小口袋很实用。"
+        },
+        {
+          "phrase": "on purpose",
+          "phonetic": "/ˈɑn ˈpɜːrpəs/",
+          "chinese": "故意地",
+          "example": "He left the document at home on purpose.",
+          "translation": "他故意把文件留在了家里。"
+        },
+        {
+          "phrase": "for this purpose",
+          "phonetic": "/ˈfɔːr ˈðɪs ˈpɜːrpəs/",
+          "chinese": "为此目的",
+          "example": "We created a separate account for this purpose.",
+          "translation": "我们为此创建了一个单独账户。"
+        },
+        {
+          "phrase": "sense of purpose",
+          "phonetic": "/ˈsɛns ˈʌv ˈpɜːrpəs/",
+          "chinese": "目标感",
+          "example": "Volunteering gave her a strong sense of purpose.",
+          "translation": "志愿服务给了她强烈的目标感。"
         }
       ],
       "synonyms": [
@@ -1492,6 +1757,36 @@
           "scene": "核心真实用法",
           "english": "The main purpose of the test is active recall.",
           "chinese": "这个测试的主要目的是主动回忆。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "The main purpose of the meeting is to share information.",
+          "chinese": "会议的主要目的是分享信息。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "The purpose of reviewing is to strengthen memory.",
+          "chinese": "复习的目的是加强记忆。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "This small pocket serves a useful purpose.",
+          "chinese": "这个小口袋很实用。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "He left the document at home on purpose.",
+          "chinese": "他故意把文件留在了家里。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "We created a separate account for this purpose.",
+          "chinese": "我们为此创建了一个单独账户。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "Volunteering gave her a strong sense of purpose.",
+          "chinese": "志愿服务给了她强烈的目标感。"
         }
       ],
       "studyFocus": {
@@ -1640,7 +1935,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“主要目的”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "main purpose"
+            "serve a purpose",
+            "on purpose",
+            "main purpose",
+            "purpose of doing"
           ],
           "answer": "main purpose",
           "stage": "T2",
@@ -1651,8 +1949,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“做……的目的”，又符合这个形式线索：目标词后的 doing 表示要换成符合语境的动词 -ing 形式？",
           "options": [
+            "on purpose",
+            "purpose of doing",
             "main purpose",
-            "purpose of doing"
+            "serve a purpose"
           ],
           "answer": "purpose of doing",
           "stage": "T3",
@@ -1743,11 +2043,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "choice-n",
@@ -1769,7 +2069,7 @@
       "difficulty": "进阶",
       "tags": [
         "n.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -1832,7 +2132,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心名词搭配",
           "items": [
             {
               "phrase": "make a choice",
@@ -1843,22 +2143,27 @@
               "phrase": "have no choice",
               "phonetic": "/ˈhæv ˈnoʊ tʃɔɪs/",
               "chinese": "别无选择"
-            },
-            {
-              "phrase": "a good choice",
-              "phonetic": "/ə ˈɡʊd tʃɔɪs/",
-              "chinese": "好选择"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "a good choice",
+              "phonetic": "/ə ˈɡʊd tʃɔɪs/",
+              "chinese": "好选择"
+            },
             {
               "phrase": "choice between",
               "phonetic": "/tʃɔɪs bɪˈtwiːn/",
               "chinese": "……之间的选择"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "by choice",
               "phonetic": "/ˈbaɪ tʃɔɪs/",
@@ -1877,8 +2182,43 @@
           "phrase": "make a choice",
           "phonetic": "/ˈmeɪk ə tʃɔɪs/",
           "chinese": "作出选择",
-          "example": "Sometimes the natural choice depends on context.",
-          "translation": "有时自然的选择取决于语境。"
+          "example": "You need to make a choice before noon.",
+          "translation": "你需要在中午前作出选择。"
+        },
+        {
+          "phrase": "have no choice",
+          "phonetic": "/ˈhæv ˈnoʊ tʃɔɪs/",
+          "chinese": "别无选择",
+          "example": "We had no choice but to wait.",
+          "translation": "我们别无选择，只能等待。"
+        },
+        {
+          "phrase": "a good choice",
+          "phonetic": "/ə ˈɡʊd tʃɔɪs/",
+          "chinese": "好选择",
+          "example": "Taking the earlier train was a good choice.",
+          "translation": "乘较早的火车是个好选择。"
+        },
+        {
+          "phrase": "choice between",
+          "phonetic": "/tʃɔɪs bɪˈtwiːn/",
+          "chinese": "……之间的选择",
+          "example": "It is a choice between saving time and saving money.",
+          "translation": "这是在节省时间和节省金钱之间作选择。"
+        },
+        {
+          "phrase": "by choice",
+          "phonetic": "/ˈbaɪ tʃɔɪs/",
+          "chinese": "出于自愿",
+          "example": "She works part-time by choice.",
+          "translation": "她自愿选择做兼职。"
+        },
+        {
+          "phrase": "first choice",
+          "phonetic": "/ˈfɝːst tʃɔɪs/",
+          "chinese": "首选",
+          "example": "This course was my first choice.",
+          "translation": "这门课程是我的首选。"
         }
       ],
       "synonyms": [
@@ -1944,6 +2284,36 @@
           "scene": "核心真实用法",
           "english": "Sometimes the natural choice depends on context.",
           "chinese": "有时自然的选择取决于语境。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "You need to make a choice before noon.",
+          "chinese": "你需要在中午前作出选择。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "We had no choice but to wait.",
+          "chinese": "我们别无选择，只能等待。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "Taking the earlier train was a good choice.",
+          "chinese": "乘较早的火车是个好选择。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "It is a choice between saving time and saving money.",
+          "chinese": "这是在节省时间和节省金钱之间作选择。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "She works part-time by choice.",
+          "chinese": "她自愿选择做兼职。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "This course was my first choice.",
+          "chinese": "这门课程是我的首选。"
         }
       ],
       "studyFocus": {
@@ -2092,7 +2462,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“作出选择”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "make a choice"
+            "choice between",
+            "make a choice",
+            "have no choice",
+            "a good choice"
           ],
           "answer": "make a choice",
           "stage": "T2",
@@ -2104,7 +2477,9 @@
           "prompt": "搭配辨析：哪一项既表示“别无选择”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "have no choice",
-            "make a choice"
+            "make a choice",
+            "a good choice",
+            "choice between"
           ],
           "answer": "have no choice",
           "stage": "T3",
@@ -2195,11 +2570,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     }
   ]
 }

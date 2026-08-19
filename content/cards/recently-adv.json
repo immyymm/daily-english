@@ -18,7 +18,7 @@
   "difficulty": "进阶",
   "tags": [
     "adv.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心用法",
       "items": [
         {
           "phrase": "have recently done",
@@ -92,22 +92,27 @@
           "phrase": "until recently",
           "phonetic": "/əˈntɪl ˈriːsəntli/",
           "chinese": "直到最近"
-        },
-        {
-          "phrase": "more recently",
-          "phonetic": "/ˈmɔːr ˈriːsəntli/",
-          "chinese": "更近些时候"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "more recently",
+          "phonetic": "/ˈmɔːr ˈriːsəntli/",
+          "chinese": "更近些时候"
+        },
         {
           "phrase": "recently published",
           "phonetic": "/ˈriːsəntli ˈpʌblɪʃt/",
           "chinese": "最近发布的"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "only recently",
           "phonetic": "/ˈoʊnliː ˈriːsəntli/",
@@ -119,6 +124,21 @@
           "chinese": "最近一次"
         }
       ]
+    },
+    {
+      "category": "补充常用语境",
+      "items": [
+        {
+          "phrase": "as recently as",
+          "phonetic": "/ˈæz ˈriːsəntli ˈæz/",
+          "chinese": "就在最近……"
+        },
+        {
+          "phrase": "relatively recently",
+          "phonetic": "/ˈrɛlətɪvliː ˈriːsəntli/",
+          "chinese": "相对较近的时候"
+        }
+      ]
     }
   ],
   "fixedPhrases": [
@@ -126,8 +146,43 @@
       "phrase": "have recently done",
       "phonetic": "/ˈhæv ˈriːsəntli ˈdʌn/",
       "chinese": "最近做过",
-      "example": "I have recently started keeping a journal.",
-      "translation": "我最近开始写日记了。"
+      "example": "I have recently started learning Spanish.",
+      "translation": "我最近开始学习西班牙语。"
+    },
+    {
+      "phrase": "until recently",
+      "phonetic": "/əˈntɪl ˈriːsəntli/",
+      "chinese": "直到最近",
+      "example": "Until recently, the building was used as a school.",
+      "translation": "直到最近，这栋楼还被用作学校。"
+    },
+    {
+      "phrase": "more recently",
+      "phonetic": "/ˈmɔːr ˈriːsəntli/",
+      "chinese": "更近些时候",
+      "example": "More recently, the company has focused on mobile apps.",
+      "translation": "更近些时候，公司开始专注于移动应用。"
+    },
+    {
+      "phrase": "recently published",
+      "phonetic": "/ˈriːsəntli ˈpʌblɪʃt/",
+      "chinese": "最近发布的",
+      "example": "The study was recently published online.",
+      "translation": "这项研究最近在网上发表了。"
+    },
+    {
+      "phrase": "only recently",
+      "phonetic": "/ˈoʊnliː ˈriːsəntli/",
+      "chinese": "最近才",
+      "example": "I only recently learned about the change.",
+      "translation": "我最近才知道这个变化。"
+    },
+    {
+      "phrase": "most recently",
+      "phonetic": "/ˈmoʊst ˈriːsəntli/",
+      "chinese": "最近一次",
+      "example": "Her most recently completed project won an award.",
+      "translation": "她最近完成的项目获得了奖项。"
     }
   ],
   "synonyms": [
@@ -174,6 +229,36 @@
       "scene": "核心真实用法",
       "english": "I have recently started keeping a journal.",
       "chinese": "我最近开始写日记了。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "I have recently started learning Spanish.",
+      "chinese": "我最近开始学习西班牙语。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "Until recently, the building was used as a school.",
+      "chinese": "直到最近，这栋楼还被用作学校。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "More recently, the company has focused on mobile apps.",
+      "chinese": "更近些时候，公司开始专注于移动应用。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "The study was recently published online.",
+      "chinese": "这项研究最近在网上发表了。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "I only recently learned about the change.",
+      "chinese": "我最近才知道这个变化。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "Her most recently completed project won an award.",
+      "chinese": "她最近完成的项目获得了奖项。"
     }
   ],
   "studyFocus": {
@@ -322,6 +407,9 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“最近做过”，又符合这个形式线索：目标词后的 done 表示要换成符合语境的过去分词？",
       "options": [
+        "until recently",
+        "more recently",
+        "recently published",
         "have recently done"
       ],
       "answer": "have recently done",
@@ -333,6 +421,8 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“直到最近”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "more recently",
+        "recently published",
         "until recently",
         "have recently done"
       ],
@@ -425,9 +515,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

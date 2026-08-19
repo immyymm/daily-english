@@ -1,7 +1,7 @@
 {
   "date": "2026-08-26",
   "dayNumber": 10,
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "templateVersion": "learning-template-2026.08.19.1",
   "cards": [
     {
@@ -24,7 +24,7 @@
       "difficulty": "基础",
       "tags": [
         "v.",
-        "待精校",
+        "模板详卡",
         "高频表达"
       ],
       "coreMemory": {
@@ -87,7 +87,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心动作与结构",
           "items": [
             {
               "phrase": "discover the truth",
@@ -98,22 +98,27 @@
               "phrase": "discover a new way",
               "phonetic": "/dɪˈskʌvər ə ˈnuː ˈweɪ/",
               "chinese": "发现新方法"
-            },
-            {
-              "phrase": "discover that",
-              "phonetic": "/dɪˈskʌvər ˈðæt/",
-              "chinese": "发现……"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "discover that",
+              "phonetic": "/dɪˈskʌvər ˈðæt/",
+              "chinese": "发现……"
+            },
             {
               "phrase": "recently discovered",
               "phonetic": "/ˈriːsəntliː dɪˈskʌvɚd/",
               "chinese": "最近发现的"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "discover by accident",
               "phonetic": "/dɪˈskʌvər ˈbaɪ ˈæksədənt/",
@@ -132,8 +137,43 @@
           "phrase": "discover the truth",
           "phonetic": "/dɪˈskʌvər ðə ˈtruːθ/",
           "chinese": "发现真相",
-          "example": "You may discover a better way to remember it.",
-          "translation": "你可能会发现更好的记忆方法。"
+          "example": "The investigation helped them discover the truth.",
+          "translation": "调查帮助他们发现了真相。"
+        },
+        {
+          "phrase": "discover a new way",
+          "phonetic": "/dɪˈskʌvər ə ˈnuː ˈweɪ/",
+          "chinese": "发现新方法",
+          "example": "I discovered a new way to organize my notes.",
+          "translation": "我发现了一种整理笔记的新方法。"
+        },
+        {
+          "phrase": "discover that",
+          "phonetic": "/dɪˈskʌvər ˈðæt/",
+          "chinese": "发现……",
+          "example": "She discovered that the shop closed early on Sundays.",
+          "translation": "她发现这家店星期日很早就关门。"
+        },
+        {
+          "phrase": "recently discovered",
+          "phonetic": "/ˈriːsəntliː dɪˈskʌvɚd/",
+          "chinese": "最近发现的",
+          "example": "Scientists recently discovered a new species in the area.",
+          "translation": "科学家最近在该地区发现了一个新物种。"
+        },
+        {
+          "phrase": "discover by accident",
+          "phonetic": "/dɪˈskʌvər ˈbaɪ ˈæksədənt/",
+          "chinese": "偶然发现",
+          "example": "He discovered the old photograph by accident.",
+          "translation": "他偶然发现了那张旧照片。"
+        },
+        {
+          "phrase": "make a discovery",
+          "phonetic": "/ˈmeɪk ə dɪˈskʌvɚiː/",
+          "chinese": "作出发现",
+          "example": "The research team made an important discovery.",
+          "translation": "研究团队取得了一项重要发现。"
         }
       ],
       "synonyms": [
@@ -180,6 +220,36 @@
           "scene": "核心真实用法",
           "english": "You may discover a better way to remember it.",
           "chinese": "你可能会发现更好的记忆方法。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "The investigation helped them discover the truth.",
+          "chinese": "调查帮助他们发现了真相。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "I discovered a new way to organize my notes.",
+          "chinese": "我发现了一种整理笔记的新方法。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "She discovered that the shop closed early on Sundays.",
+          "chinese": "她发现这家店星期日很早就关门。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "Scientists recently discovered a new species in the area.",
+          "chinese": "科学家最近在该地区发现了一个新物种。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "He discovered the old photograph by accident.",
+          "chinese": "他偶然发现了那张旧照片。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "The research team made an important discovery.",
+          "chinese": "研究团队取得了一项重要发现。"
         }
       ],
       "studyFocus": {
@@ -328,7 +398,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“发现真相”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "discover the truth"
+            "recently discovered",
+            "discover the truth",
+            "discover a new way",
+            "discover that"
           ],
           "answer": "discover the truth",
           "stage": "T2",
@@ -340,7 +413,9 @@
           "prompt": "搭配辨析：哪一项既表示“发现新方法”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "discover a new way",
-            "discover the truth"
+            "discover the truth",
+            "discover that",
+            "recently discovered"
           ],
           "answer": "discover a new way",
           "stage": "T3",
@@ -431,11 +506,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "protect-v",
@@ -457,7 +532,7 @@
       "difficulty": "基础",
       "tags": [
         "v.",
-        "待精校",
+        "模板详卡",
         "高频表达"
       ],
       "coreMemory": {
@@ -520,7 +595,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心动作与结构",
           "items": [
             {
               "phrase": "protect someone from",
@@ -531,22 +606,27 @@
               "phrase": "protect the environment",
               "phonetic": "/prəˈtekt ðə ɪˈnvaɪrənmənt/",
               "chinese": "保护环境"
-            },
-            {
-              "phrase": "protect your privacy",
-              "phonetic": "/prəˈtekt ˈjɔːr ˈpraɪvəsiː/",
-              "chinese": "保护隐私"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "protect your privacy",
+              "phonetic": "/prəˈtekt ˈjɔːr ˈpraɪvəsiː/",
+              "chinese": "保护隐私"
+            },
             {
               "phrase": "be protected by",
               "phonetic": "/ˈbiː prəˈtɛktɪd ˈbaɪ/",
               "chinese": "受到……保护"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "protect against damage",
               "phonetic": "/prəˈtekt əˈɡɛnst ˈdæmədʒ/",
@@ -558,6 +638,16 @@
               "chinese": "消费者保护"
             }
           ]
+        },
+        {
+          "category": "补充常用语境",
+          "items": [
+            {
+              "phrase": "protect someone from something",
+              "phonetic": "/prəˈtekt ˈsʌˌmwʌn ˈfrʌm ˈsʌmθɪŋ/",
+              "chinese": "保护某人免受某事伤害"
+            }
+          ]
         }
       ],
       "fixedPhrases": [
@@ -565,8 +655,43 @@
           "phrase": "protect someone from",
           "phonetic": "/prəˈtekt ˈsʌˌmwʌn ˈfrʌm/",
           "chinese": "保护某人免受……",
-          "example": "A strong password protects your account.",
-          "translation": "强密码可以保护你的账户。"
+          "example": "Warm clothing protects you from the cold.",
+          "translation": "保暖衣物可以保护你免受寒冷。"
+        },
+        {
+          "phrase": "protect the environment",
+          "phonetic": "/prəˈtekt ðə ɪˈnvaɪrənmənt/",
+          "chinese": "保护环境",
+          "example": "We all have a duty to protect the environment.",
+          "translation": "我们都有保护环境的责任。"
+        },
+        {
+          "phrase": "protect your privacy",
+          "phonetic": "/prəˈtekt ˈjɔːr ˈpraɪvəsiː/",
+          "chinese": "保护隐私",
+          "example": "Use a strong password to protect your privacy.",
+          "translation": "使用强密码保护你的隐私。"
+        },
+        {
+          "phrase": "be protected by",
+          "phonetic": "/ˈbiː prəˈtɛktɪd ˈbaɪ/",
+          "chinese": "受到……保护",
+          "example": "The files are protected by encryption.",
+          "translation": "这些文件受到加密保护。"
+        },
+        {
+          "phrase": "protect against damage",
+          "phonetic": "/prəˈtekt əˈɡɛnst ˈdæmədʒ/",
+          "chinese": "防止损坏",
+          "example": "The case protects the phone against damage.",
+          "translation": "这个保护壳可以防止手机受损。"
+        },
+        {
+          "phrase": "consumer protection",
+          "phonetic": "/kəˈnsuːmɚ prəˈtɛkʃən/",
+          "chinese": "消费者保护",
+          "example": "The law provides basic consumer protection.",
+          "translation": "这项法律提供基本的消费者保护。"
         }
       ],
       "synonyms": [
@@ -613,6 +738,36 @@
           "scene": "核心真实用法",
           "english": "A strong password protects your account.",
           "chinese": "强密码可以保护你的账户。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "Warm clothing protects you from the cold.",
+          "chinese": "保暖衣物可以保护你免受寒冷。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "We all have a duty to protect the environment.",
+          "chinese": "我们都有保护环境的责任。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "Use a strong password to protect your privacy.",
+          "chinese": "使用强密码保护你的隐私。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "The files are protected by encryption.",
+          "chinese": "这些文件受到加密保护。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "The case protects the phone against damage.",
+          "chinese": "这个保护壳可以防止手机受损。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "The law provides basic consumer protection.",
+          "chinese": "这项法律提供基本的消费者保护。"
         }
       ],
       "studyFocus": {
@@ -761,7 +916,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“保护某人免受……”，又符合这个形式线索：完整搭配中使用介词 from？",
           "options": [
-            "protect someone from"
+            "protect someone from",
+            "protect the environment",
+            "protect your privacy",
+            "be protected by"
           ],
           "answer": "protect someone from",
           "stage": "T2",
@@ -773,6 +931,8 @@
           "prompt": "用法辨析：哪一项既表示“保护环境”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "protect someone from",
+            "protect your privacy",
+            "be protected by",
             "protect the environment"
           ],
           "answer": "protect the environment",
@@ -864,11 +1024,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "encourage-v",
@@ -890,7 +1050,7 @@
       "difficulty": "基础",
       "tags": [
         "v.",
-        "待精校",
+        "模板详卡",
         "高频表达"
       ],
       "coreMemory": {
@@ -953,7 +1113,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心动作与结构",
           "items": [
             {
               "phrase": "encourage someone to do",
@@ -964,22 +1124,27 @@
               "phrase": "encourage discussion",
               "phonetic": "/ɪnˈkɜːrɪdʒ dɪˈskʌʃən/",
               "chinese": "鼓励讨论"
-            },
-            {
-              "phrase": "strongly encourage",
-              "phonetic": "/ˈstrɔːŋliː ɪnˈkɜːrɪdʒ/",
-              "chinese": "大力鼓励"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "strongly encourage",
+              "phonetic": "/ˈstrɔːŋliː ɪnˈkɜːrɪdʒ/",
+              "chinese": "大力鼓励"
+            },
             {
               "phrase": "encourage positive behavior",
               "phonetic": "/ɪnˈkɜːrɪdʒ ˈpɑzətɪv bɪˈheɪvjɚ/",
               "chinese": "鼓励积极行为"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "words of encouragement",
               "phonetic": "/ˈwɝːdz ˈʌv ɛˈnkɝːɪdʒmənt/",
@@ -991,6 +1156,16 @@
               "chinese": "受到鼓舞"
             }
           ]
+        },
+        {
+          "category": "补充常用语境",
+          "items": [
+            {
+              "phrase": "encourage someone to do something",
+              "phonetic": "/ɪnˈkɜːrɪdʒ ˈsʌˌmwʌn ˈtuː ˈduː ˈsʌmθɪŋ/",
+              "chinese": "鼓励某人做某事"
+            }
+          ]
         }
       ],
       "fixedPhrases": [
@@ -998,8 +1173,43 @@
           "phrase": "encourage someone to do",
           "phonetic": "/ɪnˈkɜːrɪdʒ ˈsʌˌmwʌn ˈtuː ˈduː/",
           "chinese": "鼓励某人做",
-          "example": "The teacher encouraged us to speak more.",
-          "translation": "老师鼓励我们多开口说。"
+          "example": "My teacher encouraged me to speak more confidently.",
+          "translation": "老师鼓励我更自信地说话。"
+        },
+        {
+          "phrase": "encourage discussion",
+          "phonetic": "/ɪnˈkɜːrɪdʒ dɪˈskʌʃən/",
+          "chinese": "鼓励讨论",
+          "example": "Open questions encourage discussion.",
+          "translation": "开放式问题可以促进讨论。"
+        },
+        {
+          "phrase": "strongly encourage",
+          "phonetic": "/ˈstrɔːŋliː ɪnˈkɜːrɪdʒ/",
+          "chinese": "大力鼓励",
+          "example": "We strongly encourage users to update the app.",
+          "translation": "我们强烈建议用户更新应用。"
+        },
+        {
+          "phrase": "encourage positive behavior",
+          "phonetic": "/ɪnˈkɜːrɪdʒ ˈpɑzətɪv bɪˈheɪvjɚ/",
+          "chinese": "鼓励积极行为",
+          "example": "Clear praise can encourage positive behavior.",
+          "translation": "明确的表扬可以鼓励积极行为。"
+        },
+        {
+          "phrase": "words of encouragement",
+          "phonetic": "/ˈwɝːdz ˈʌv ɛˈnkɝːɪdʒmənt/",
+          "chinese": "鼓励的话",
+          "example": "Her words of encouragement helped me continue.",
+          "translation": "她鼓励的话帮助我坚持了下去。"
+        },
+        {
+          "phrase": "feel encouraged",
+          "phonetic": "/ˈfiːl ɛˈnkɝːɪdʒd/",
+          "chinese": "受到鼓舞",
+          "example": "I felt encouraged by the progress I had made.",
+          "translation": "我的进步让我受到了鼓舞。"
         }
       ],
       "synonyms": [
@@ -1046,6 +1256,36 @@
           "scene": "核心真实用法",
           "english": "The teacher encouraged us to speak more.",
           "chinese": "老师鼓励我们多开口说。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "My teacher encouraged me to speak more confidently.",
+          "chinese": "老师鼓励我更自信地说话。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "Open questions encourage discussion.",
+          "chinese": "开放式问题可以促进讨论。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "We strongly encourage users to update the app.",
+          "chinese": "我们强烈建议用户更新应用。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "Clear praise can encourage positive behavior.",
+          "chinese": "明确的表扬可以鼓励积极行为。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "Her words of encouragement helped me continue.",
+          "chinese": "她鼓励的话帮助我坚持了下去。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "I felt encouraged by the progress I had made.",
+          "chinese": "我的进步让我受到了鼓舞。"
         }
       ],
       "studyFocus": {
@@ -1194,6 +1434,9 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“鼓励某人做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
           "options": [
+            "encourage discussion",
+            "strongly encourage",
+            "encourage positive behavior",
             "encourage someone to do"
           ],
           "answer": "encourage someone to do",
@@ -1205,6 +1448,8 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“鼓励讨论”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "strongly encourage",
+            "encourage positive behavior",
             "encourage discussion",
             "encourage someone to do"
           ],
@@ -1297,11 +1542,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "solve-v",
@@ -1323,7 +1568,7 @@
       "difficulty": "基础",
       "tags": [
         "v.",
-        "待精校",
+        "模板详卡",
         "高频表达"
       ],
       "coreMemory": {
@@ -1386,7 +1631,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心动作与结构",
           "items": [
             {
               "phrase": "solve a problem",
@@ -1397,22 +1642,27 @@
               "phrase": "solve an equation",
               "phonetic": "/sɑːlv ˈæn ɪˈkweɪʒən/",
               "chinese": "解方程"
-            },
-            {
-              "phrase": "help solve",
-              "phonetic": "/ˈhɛlp sɑːlv/",
-              "chinese": "帮助解决"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "help solve",
+              "phonetic": "/ˈhɛlp sɑːlv/",
+              "chinese": "帮助解决"
+            },
             {
               "phrase": "difficult to solve",
               "phonetic": "/ˈdɪfəkəlt ˈtuː sɑːlv/",
               "chinese": "难以解决"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "solve the mystery",
               "phonetic": "/sɑːlv ðə ˈmɪstɚiː/",
@@ -1431,8 +1681,43 @@
           "phrase": "solve a problem",
           "phonetic": "/sɑːlv ə ˈprɑbləm/",
           "chinese": "解决问题",
-          "example": "We need more information to solve this problem.",
-          "translation": "我们需要更多信息来解决这个问题。"
+          "example": "We need to solve this problem before Friday.",
+          "translation": "我们需要在星期五前解决这个问题。"
+        },
+        {
+          "phrase": "solve an equation",
+          "phonetic": "/sɑːlv ˈæn ɪˈkweɪʒən/",
+          "chinese": "解方程",
+          "example": "The students learned how to solve the equation.",
+          "translation": "学生们学会了如何解这个方程。"
+        },
+        {
+          "phrase": "help solve",
+          "phonetic": "/ˈhɛlp sɑːlv/",
+          "chinese": "帮助解决",
+          "example": "Better communication could help solve the conflict.",
+          "translation": "更好的沟通可能有助于解决冲突。"
+        },
+        {
+          "phrase": "difficult to solve",
+          "phonetic": "/ˈdɪfəkəlt ˈtuː sɑːlv/",
+          "chinese": "难以解决",
+          "example": "Some technical problems are difficult to solve remotely.",
+          "translation": "有些技术问题很难远程解决。"
+        },
+        {
+          "phrase": "solve the mystery",
+          "phonetic": "/sɑːlv ðə ˈmɪstɚiː/",
+          "chinese": "揭开谜团",
+          "example": "The detective finally solved the mystery.",
+          "translation": "侦探终于解开了谜团。"
+        },
+        {
+          "phrase": "problem-solving skills",
+          "phonetic": "/ˈprɑbləm-ˈsɑlvɪŋ ˈskɪlz/",
+          "chinese": "解决问题的能力",
+          "example": "This activity develops problem-solving skills.",
+          "translation": "这项活动培养解决问题的能力。"
         }
       ],
       "synonyms": [
@@ -1479,6 +1764,36 @@
           "scene": "核心真实用法",
           "english": "We need more information to solve this problem.",
           "chinese": "我们需要更多信息来解决这个问题。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "We need to solve this problem before Friday.",
+          "chinese": "我们需要在星期五前解决这个问题。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "The students learned how to solve the equation.",
+          "chinese": "学生们学会了如何解这个方程。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "Better communication could help solve the conflict.",
+          "chinese": "更好的沟通可能有助于解决冲突。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "Some technical problems are difficult to solve remotely.",
+          "chinese": "有些技术问题很难远程解决。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "The detective finally solved the mystery.",
+          "chinese": "侦探终于解开了谜团。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "This activity develops problem-solving skills.",
+          "chinese": "这项活动培养解决问题的能力。"
         }
       ],
       "studyFocus": {
@@ -1627,7 +1942,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“解决问题”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "solve a problem"
+            "help solve",
+            "difficult to solve",
+            "solve a problem",
+            "solve an equation"
           ],
           "answer": "solve a problem",
           "stage": "T2",
@@ -1638,8 +1956,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“解方程”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "difficult to solve",
+            "solve an equation",
             "solve a problem",
-            "solve an equation"
+            "help solve"
           ],
           "answer": "solve an equation",
           "stage": "T3",
@@ -1730,11 +2050,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "express-v",
@@ -1756,7 +2076,7 @@
       "difficulty": "基础",
       "tags": [
         "v.",
-        "待精校",
+        "模板详卡",
         "高频表达"
       ],
       "coreMemory": {
@@ -1819,7 +2139,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心动作与结构",
           "items": [
             {
               "phrase": "express an opinion",
@@ -1830,22 +2150,27 @@
               "phrase": "express your feelings",
               "phonetic": "/ɪkˈspres ˈjɔːr ˈfiːlɪŋz/",
               "chinese": "表达感受"
-            },
-            {
-              "phrase": "express concern about",
-              "phonetic": "/ɪkˈspres kəˈnsɝːn əˈbaʊt/",
-              "chinese": "表达对……的担忧"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "express concern about",
+              "phonetic": "/ɪkˈspres kəˈnsɝːn əˈbaʊt/",
+              "chinese": "表达对……的担忧"
+            },
             {
               "phrase": "clearly express",
               "phonetic": "/ˈklɪrliː ɪkˈspres/",
               "chinese": "清楚表达"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "express yourself",
               "phonetic": "/ɪkˈspres jɚˈsɛlf/",
@@ -1864,8 +2189,43 @@
           "phrase": "express an opinion",
           "phonetic": "/ɪkˈspres ˈæn əˈpɪnjən/",
           "chinese": "表达观点",
-          "example": "Try to express the idea in your own words.",
-          "translation": "试着用自己的话表达这个想法。"
+          "example": "Everyone had a chance to express an opinion.",
+          "translation": "每个人都有机会表达意见。"
+        },
+        {
+          "phrase": "express your feelings",
+          "phonetic": "/ɪkˈspres ˈjɔːr ˈfiːlɪŋz/",
+          "chinese": "表达感受",
+          "example": "It is healthy to express your feelings honestly.",
+          "translation": "诚实表达感受有益健康。"
+        },
+        {
+          "phrase": "express concern about",
+          "phonetic": "/ɪkˈspres kəˈnsɝːn əˈbaʊt/",
+          "chinese": "表达对……的担忧",
+          "example": "Residents expressed concern about the noise.",
+          "translation": "居民表达了对噪音的担忧。"
+        },
+        {
+          "phrase": "clearly express",
+          "phonetic": "/ˈklɪrliː ɪkˈspres/",
+          "chinese": "清楚表达",
+          "example": "Please clearly express what you need.",
+          "translation": "请清楚表达你的需求。"
+        },
+        {
+          "phrase": "express yourself",
+          "phonetic": "/ɪkˈspres jɚˈsɛlf/",
+          "chinese": "表达自己",
+          "example": "Writing can help you express yourself.",
+          "translation": "写作可以帮助你表达自己。"
+        },
+        {
+          "phrase": "facial expression",
+          "phonetic": "/ˈfeɪʃəl ɪˈksprɛʃən/",
+          "chinese": "面部表情",
+          "example": "I could tell from her facial expression that she was surprised.",
+          "translation": "我从她的面部表情看出她很惊讶。"
         }
       ],
       "synonyms": [
@@ -1912,6 +2272,36 @@
           "scene": "核心真实用法",
           "english": "Try to express the idea in your own words.",
           "chinese": "试着用自己的话表达这个想法。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "Everyone had a chance to express an opinion.",
+          "chinese": "每个人都有机会表达意见。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "It is healthy to express your feelings honestly.",
+          "chinese": "诚实表达感受有益健康。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "Residents expressed concern about the noise.",
+          "chinese": "居民表达了对噪音的担忧。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "Please clearly express what you need.",
+          "chinese": "请清楚表达你的需求。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "Writing can help you express yourself.",
+          "chinese": "写作可以帮助你表达自己。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "I could tell from her facial expression that she was surprised.",
+          "chinese": "我从她的面部表情看出她很惊讶。"
         }
       ],
       "studyFocus": {
@@ -2060,7 +2450,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“表达观点”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "express an opinion"
+            "clearly express",
+            "express an opinion",
+            "express your feelings",
+            "express concern about"
           ],
           "answer": "express an opinion",
           "stage": "T2",
@@ -2072,7 +2465,9 @@
           "prompt": "搭配辨析：哪一项既表示“表达感受”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "express your feelings",
-            "express an opinion"
+            "express an opinion",
+            "express concern about",
+            "clearly express"
           ],
           "answer": "express your feelings",
           "stage": "T3",
@@ -2163,11 +2558,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     }
   ]
 }

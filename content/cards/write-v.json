@@ -18,7 +18,7 @@
   "difficulty": "应用",
   "tags": [
     "v.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心动作与结构",
       "items": [
         {
           "phrase": "write a message",
@@ -92,22 +92,27 @@
           "phrase": "write about",
           "phonetic": "/raɪt əˈbaʊt/",
           "chinese": "写关于……"
-        },
-        {
-          "phrase": "write something down",
-          "phonetic": "/raɪt ˈsʌmθɪŋ ˈdaʊn/",
-          "chinese": "写下某事"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "write something down",
+          "phonetic": "/raɪt ˈsʌmθɪŋ ˈdaʊn/",
+          "chinese": "写下某事"
+        },
         {
           "phrase": "write to someone",
           "phonetic": "/raɪt ˈtuː ˈsʌˌmwʌn/",
           "chinese": "写信给某人"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "write in English",
           "phonetic": "/raɪt ɪn ˈɪŋɡlɪʃ/",
@@ -119,6 +124,16 @@
           "chinese": "写得好的"
         }
       ]
+    },
+    {
+      "category": "补充常用语境",
+      "items": [
+        {
+          "phrase": "write down",
+          "phonetic": "/raɪt ˈdaʊn/",
+          "chinese": "写下"
+        }
+      ]
     }
   ],
   "fixedPhrases": [
@@ -126,8 +141,43 @@
       "phrase": "write a message",
       "phonetic": "/raɪt ə ˈmɛsədʒ/",
       "chinese": "写消息",
-      "example": "Write down one sentence using the new word.",
-      "translation": "写下一个使用新单词的句子。"
+      "example": "I wrote a short message to confirm the booking.",
+      "translation": "我写了一条短消息确认预订。"
+    },
+    {
+      "phrase": "write about",
+      "phonetic": "/raɪt əˈbaʊt/",
+      "chinese": "写关于……",
+      "example": "She is writing about her travel experience.",
+      "translation": "她正在写自己的旅行经历。"
+    },
+    {
+      "phrase": "write something down",
+      "phonetic": "/raɪt ˈsʌmθɪŋ ˈdaʊn/",
+      "chinese": "写下某事",
+      "example": "Write the new expression down before you forget it.",
+      "translation": "在忘记前把新表达写下来。"
+    },
+    {
+      "phrase": "write to someone",
+      "phonetic": "/raɪt ˈtuː ˈsʌˌmwʌn/",
+      "chinese": "写信给某人",
+      "example": "I wrote to the company about the problem.",
+      "translation": "我写信给公司说明了这个问题。"
+    },
+    {
+      "phrase": "write in English",
+      "phonetic": "/raɪt ɪn ˈɪŋɡlɪʃ/",
+      "chinese": "用英语写",
+      "example": "Try to write one sentence in English each day.",
+      "translation": "每天尽量用英语写一个句子。"
+    },
+    {
+      "phrase": "well written",
+      "phonetic": "/ˈwɛl ˈrɪtən/",
+      "chinese": "写得好的",
+      "example": "The instructions are clear and well written.",
+      "translation": "这些说明清晰且写得很好。"
     }
   ],
   "synonyms": [
@@ -174,6 +224,36 @@
       "scene": "核心真实用法",
       "english": "Write down one sentence using the new word.",
       "chinese": "写下一个使用新单词的句子。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "I wrote a short message to confirm the booking.",
+      "chinese": "我写了一条短消息确认预订。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "She is writing about her travel experience.",
+      "chinese": "她正在写自己的旅行经历。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "Write the new expression down before you forget it.",
+      "chinese": "在忘记前把新表达写下来。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "I wrote to the company about the problem.",
+      "chinese": "我写信给公司说明了这个问题。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "Try to write one sentence in English each day.",
+      "chinese": "每天尽量用英语写一个句子。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "The instructions are clear and well written.",
+      "chinese": "这些说明清晰且写得很好。"
     }
   ],
   "studyFocus": {
@@ -322,7 +402,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“写消息”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "write a message"
+        "write to someone",
+        "write a message",
+        "write about",
+        "write something down"
       ],
       "answer": "write a message",
       "stage": "T2",
@@ -334,7 +417,9 @@
       "prompt": "搭配辨析：哪一项既表示“写关于……”，又符合这个形式线索：完整搭配中使用介词 about？",
       "options": [
         "write about",
-        "write a message"
+        "write a message",
+        "write something down",
+        "write to someone"
       ],
       "answer": "write about",
       "stage": "T3",
@@ -425,9 +510,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

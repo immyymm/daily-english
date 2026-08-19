@@ -1,7 +1,7 @@
 {
   "date": "2026-09-09",
   "dayNumber": 24,
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "templateVersion": "learning-template-2026.08.19.1",
   "cards": [
     {
@@ -30,7 +30,7 @@
       "difficulty": "应用",
       "tags": [
         "adv.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -100,7 +100,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心用法",
           "items": [
             {
               "phrase": "still need to",
@@ -111,22 +111,27 @@
               "phrase": "still working",
               "phonetic": "/stɪl ˈwɝːkɪŋ/",
               "chinese": "仍在工作"
-            },
-            {
-              "phrase": "still possible",
-              "phonetic": "/stɪl ˈpɑsəbəl/",
-              "chinese": "仍有可能"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "still possible",
+              "phonetic": "/stɪl ˈpɑsəbəl/",
+              "chinese": "仍有可能"
+            },
             {
               "phrase": "still not sure",
               "phonetic": "/stɪl ˈnɑt ˈʃʊr/",
               "chinese": "仍不确定"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "stand still",
               "phonetic": "/ˈstænd stɪl/",
@@ -138,6 +143,21 @@
               "chinese": "保持不动"
             }
           ]
+        },
+        {
+          "category": "补充常用语境",
+          "items": [
+            {
+              "phrase": "still available",
+              "phonetic": "/stɪl əˈveɪləbəl/",
+              "chinese": "仍然可用"
+            },
+            {
+              "phrase": "still remember",
+              "phonetic": "/stɪl rɪˈmɛmbɚ/",
+              "chinese": "仍然记得"
+            }
+          ]
         }
       ],
       "fixedPhrases": [
@@ -145,8 +165,43 @@
           "phrase": "still need to",
           "phonetic": "/stɪl ˈniːd ˈtuː/",
           "chinese": "仍然需要",
-          "example": "I still need to review two words.",
-          "translation": "我还需要复习两个单词。"
+          "example": "I still need to check two details.",
+          "translation": "我仍然需要检查两个细节。"
+        },
+        {
+          "phrase": "still working",
+          "phonetic": "/stɪl ˈwɝːkɪŋ/",
+          "chinese": "仍在工作",
+          "example": "She is still working on the report.",
+          "translation": "她仍在撰写报告。"
+        },
+        {
+          "phrase": "still possible",
+          "phonetic": "/stɪl ˈpɑsəbəl/",
+          "chinese": "仍有可能",
+          "example": "It is still possible to change the booking.",
+          "translation": "仍然可以更改预订。"
+        },
+        {
+          "phrase": "still not sure",
+          "phonetic": "/stɪl ˈnɑt ˈʃʊr/",
+          "chinese": "仍不确定",
+          "example": "I am still not sure which option is better.",
+          "translation": "我仍不确定哪个选择更好。"
+        },
+        {
+          "phrase": "stand still",
+          "phonetic": "/ˈstænd stɪl/",
+          "chinese": "站着不动",
+          "example": "Stand still while I take the photo.",
+          "translation": "我拍照时请站着别动。"
+        },
+        {
+          "phrase": "keep still",
+          "phonetic": "/ˈkiːp stɪl/",
+          "chinese": "保持不动",
+          "example": "Keep still for a few seconds.",
+          "translation": "保持不动几秒钟。"
         }
       ],
       "synonyms": [
@@ -201,6 +256,36 @@
           "scene": "核心真实用法",
           "english": "I still need to review two words.",
           "chinese": "我还需要复习两个单词。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "I still need to check two details.",
+          "chinese": "我仍然需要检查两个细节。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "She is still working on the report.",
+          "chinese": "她仍在撰写报告。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "It is still possible to change the booking.",
+          "chinese": "仍然可以更改预订。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "I am still not sure which option is better.",
+          "chinese": "我仍不确定哪个选择更好。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "Stand still while I take the photo.",
+          "chinese": "我拍照时请站着别动。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "Keep still for a few seconds.",
+          "chinese": "保持不动几秒钟。"
         }
       ],
       "studyFocus": {
@@ -349,6 +434,9 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“仍然需要”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "still working",
+            "still possible",
+            "still not sure",
             "still need to"
           ],
           "answer": "still need to",
@@ -360,6 +448,8 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“仍在工作”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "still possible",
+            "still not sure",
             "still working",
             "still need to"
           ],
@@ -452,11 +542,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "often-adv",
@@ -478,7 +568,7 @@
       "difficulty": "应用",
       "tags": [
         "adv.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -541,7 +631,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心用法",
           "items": [
             {
               "phrase": "quite often",
@@ -552,22 +642,27 @@
               "phrase": "often used",
               "phonetic": "/ˈɔːfən ˈjuːzd/",
               "chinese": "经常使用"
-            },
-            {
-              "phrase": "more often than not",
-              "phonetic": "/ˈmɔːr ˈɔːfən ˈðæn ˈnɑt/",
-              "chinese": "往往；通常"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "more often than not",
+              "phonetic": "/ˈmɔːr ˈɔːfən ˈðæn ˈnɑt/",
+              "chinese": "往往；通常"
+            },
             {
               "phrase": "how often",
               "phonetic": "/ˈhaʊ ˈɔːfən/",
               "chinese": "多久一次"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "as often as possible",
               "phonetic": "/ˈæz ˈɔːfən ˈæz ˈpɑsəbəl/",
@@ -579,6 +674,21 @@
               "chinese": "足够频繁"
             }
           ]
+        },
+        {
+          "category": "补充常用语境",
+          "items": [
+            {
+              "phrase": "very often",
+              "phonetic": "/ˈvɛriː ˈɔːfən/",
+              "chinese": "非常经常"
+            },
+            {
+              "phrase": "all too often",
+              "phonetic": "/ˈɔːl ˈtuː ˈɔːfən/",
+              "chinese": "常常，甚至太常"
+            }
+          ]
         }
       ],
       "fixedPhrases": [
@@ -586,8 +696,43 @@
           "phrase": "quite often",
           "phonetic": "/ˈkwaɪt ˈɔːfən/",
           "chinese": "相当经常",
-          "example": "This phrase often appears in conversation.",
-          "translation": "这个短语经常出现在对话中。"
+          "example": "We eat at that small restaurant quite often.",
+          "translation": "我们相当经常去那家小餐馆吃饭。"
+        },
+        {
+          "phrase": "often used",
+          "phonetic": "/ˈɔːfən ˈjuːzd/",
+          "chinese": "经常使用",
+          "example": "This expression is often used in formal writing.",
+          "translation": "这个表达经常用于正式写作。"
+        },
+        {
+          "phrase": "more often than not",
+          "phonetic": "/ˈmɔːr ˈɔːfən ˈðæn ˈnɑt/",
+          "chinese": "往往；通常",
+          "example": "More often than not, a simple answer is best.",
+          "translation": "通常，简单的答案最好。"
+        },
+        {
+          "phrase": "how often",
+          "phonetic": "/ˈhaʊ ˈɔːfən/",
+          "chinese": "多久一次",
+          "example": "How often do you review new words?",
+          "translation": "你多久复习一次新单词？"
+        },
+        {
+          "phrase": "as often as possible",
+          "phonetic": "/ˈæz ˈɔːfən ˈæz ˈpɑsəbəl/",
+          "chinese": "尽可能经常",
+          "example": "Try to speak English as often as possible.",
+          "translation": "尽可能经常说英语。"
+        },
+        {
+          "phrase": "often enough",
+          "phonetic": "/ˈɔːfən ɪˈnʌf/",
+          "chinese": "足够频繁",
+          "example": "Once a week is not often enough for me.",
+          "translation": "对我来说，每周一次不够频繁。"
         }
       ],
       "synonyms": [
@@ -634,6 +779,36 @@
           "scene": "核心真实用法",
           "english": "This phrase often appears in conversation.",
           "chinese": "这个短语经常出现在对话中。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "We eat at that small restaurant quite often.",
+          "chinese": "我们相当经常去那家小餐馆吃饭。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "This expression is often used in formal writing.",
+          "chinese": "这个表达经常用于正式写作。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "More often than not, a simple answer is best.",
+          "chinese": "通常，简单的答案最好。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "How often do you review new words?",
+          "chinese": "你多久复习一次新单词？"
+        },
+        {
+          "scene": "易错结构",
+          "english": "Try to speak English as often as possible.",
+          "chinese": "尽可能经常说英语。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "Once a week is not often enough for me.",
+          "chinese": "对我来说，每周一次不够频繁。"
         }
       ],
       "studyFocus": {
@@ -782,7 +957,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“相当经常”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "quite often"
+            "more often than not",
+            "how often",
+            "quite often",
+            "often used"
           ],
           "answer": "quite often",
           "stage": "T2",
@@ -793,8 +971,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“经常使用”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "how often",
+            "often used",
             "quite often",
-            "often used"
+            "more often than not"
           ],
           "answer": "often used",
           "stage": "T3",
@@ -885,11 +1065,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "together-adv",
@@ -911,7 +1091,7 @@
       "difficulty": "应用",
       "tags": [
         "adv.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -974,7 +1154,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心用法",
           "items": [
             {
               "phrase": "work together",
@@ -985,22 +1165,27 @@
               "phrase": "learn together",
               "phonetic": "/ˈlɝːn təˈɡeðər/",
               "chinese": "一起学习"
-            },
-            {
-              "phrase": "live together",
-              "phonetic": "/ˈlaɪv təˈɡeðər/",
-              "chinese": "一起生活"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "live together",
+              "phonetic": "/ˈlaɪv təˈɡeðər/",
+              "chinese": "一起生活"
+            },
             {
               "phrase": "get together",
               "phonetic": "/ˈɡɛt təˈɡeðər/",
               "chinese": "聚会；相聚"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "put something together",
               "phonetic": "/ˈpʊt ˈsʌmθɪŋ təˈɡeðər/",
@@ -1012,6 +1197,21 @@
               "chinese": "使人们团结"
             }
           ]
+        },
+        {
+          "category": "补充常用语境",
+          "items": [
+            {
+              "phrase": "stick together",
+              "phonetic": "/ˈstɪk təˈɡeðər/",
+              "chinese": "团结在一起"
+            },
+            {
+              "phrase": "come together",
+              "phonetic": "/ˈkʌm təˈɡeðər/",
+              "chinese": "汇聚；联合"
+            }
+          ]
         }
       ],
       "fixedPhrases": [
@@ -1019,8 +1219,43 @@
           "phrase": "work together",
           "phonetic": "/ˈwɝːk təˈɡeðər/",
           "chinese": "一起工作",
-          "example": "These words are often used together.",
-          "translation": "这些词经常搭配使用。"
+          "example": "The two teams worked together on the project.",
+          "translation": "两个团队共同完成这个项目。"
+        },
+        {
+          "phrase": "learn together",
+          "phonetic": "/ˈlɝːn təˈɡeðər/",
+          "chinese": "一起学习",
+          "example": "We learn faster when we practice together.",
+          "translation": "一起练习时我们学得更快。"
+        },
+        {
+          "phrase": "live together",
+          "phonetic": "/ˈlaɪv təˈɡeðər/",
+          "chinese": "一起生活",
+          "example": "They have lived together for three years.",
+          "translation": "他们一起生活了三年。"
+        },
+        {
+          "phrase": "get together",
+          "phonetic": "/ˈɡɛt təˈɡeðər/",
+          "chinese": "聚会；相聚",
+          "example": "Let us get together for lunch next week.",
+          "translation": "我们下周一起吃午饭吧。"
+        },
+        {
+          "phrase": "put something together",
+          "phonetic": "/ˈpʊt ˈsʌmθɪŋ təˈɡeðər/",
+          "chinese": "组装；整理",
+          "example": "It took an hour to put the shelf together.",
+          "translation": "组装这个架子花了一个小时。"
+        },
+        {
+          "phrase": "bring people together",
+          "phonetic": "/ˈbrɪŋ ˈpiːpəl təˈɡeðər/",
+          "chinese": "使人们团结",
+          "example": "Music can bring people together.",
+          "translation": "音乐可以把人们团结在一起。"
         }
       ],
       "synonyms": [
@@ -1067,6 +1302,36 @@
           "scene": "核心真实用法",
           "english": "These words are often used together.",
           "chinese": "这些词经常搭配使用。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "The two teams worked together on the project.",
+          "chinese": "两个团队共同完成这个项目。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "We learn faster when we practice together.",
+          "chinese": "一起练习时我们学得更快。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "They have lived together for three years.",
+          "chinese": "他们一起生活了三年。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "Let us get together for lunch next week.",
+          "chinese": "我们下周一起吃午饭吧。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "It took an hour to put the shelf together.",
+          "chinese": "组装这个架子花了一个小时。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "Music can bring people together.",
+          "chinese": "音乐可以把人们团结在一起。"
         }
       ],
       "studyFocus": {
@@ -1215,7 +1480,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“一起工作”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "work together"
+            "get together",
+            "work together",
+            "learn together",
+            "live together"
           ],
           "answer": "work together",
           "stage": "T2",
@@ -1227,7 +1495,9 @@
           "prompt": "搭配辨析：哪一项既表示“一起学习”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "learn together",
-            "work together"
+            "work together",
+            "live together",
+            "get together"
           ],
           "answer": "learn together",
           "stage": "T3",
@@ -1318,11 +1588,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "forward-adv",
@@ -1344,7 +1614,7 @@
       "difficulty": "应用",
       "tags": [
         "adv.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -1414,7 +1684,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心用法",
           "items": [
             {
               "phrase": "look forward to",
@@ -1425,22 +1695,27 @@
               "phrase": "move forward",
               "phonetic": "/ˈmuːv ˈfɔːrwərd/",
               "chinese": "向前推进"
-            },
-            {
-              "phrase": "go forward with",
-              "phonetic": "/ˈɡoʊ ˈfɔːrwərd ˈwɪð/",
-              "chinese": "继续推进"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "go forward with",
+              "phonetic": "/ˈɡoʊ ˈfɔːrwərd ˈwɪð/",
+              "chinese": "继续推进"
+            },
             {
               "phrase": "a step forward",
               "phonetic": "/ə ˈstɛp ˈfɔːrwərd/",
               "chinese": "向前一步；进展"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "from this day forward",
               "phonetic": "/ˈfrʌm ˈðɪs ˈdeɪ ˈfɔːrwərd/",
@@ -1452,6 +1727,21 @@
               "chinese": "身体前倾"
             }
           ]
+        },
+        {
+          "category": "补充常用语境",
+          "items": [
+            {
+              "phrase": "push forward",
+              "phonetic": "/ˈpʊʃ ˈfɔːrwərd/",
+              "chinese": "推动前进"
+            },
+            {
+              "phrase": "step forward",
+              "phonetic": "/ˈstɛp ˈfɔːrwərd/",
+              "chinese": "向前一步；挺身而出"
+            }
+          ]
         }
       ],
       "fixedPhrases": [
@@ -1460,7 +1750,42 @@
           "phonetic": "/ˈlʊk ˈfɔːrwərd ˈtuː/",
           "chinese": "期待……",
           "example": "I look forward to hearing from you.",
-          "translation": "我期待收到你的消息。"
+          "translation": "我期待收到你的回复。"
+        },
+        {
+          "phrase": "move forward",
+          "phonetic": "/ˈmuːv ˈfɔːrwərd/",
+          "chinese": "向前推进",
+          "example": "We are ready to move forward with the plan.",
+          "translation": "我们准备好推进计划了。"
+        },
+        {
+          "phrase": "go forward with",
+          "phonetic": "/ˈɡoʊ ˈfɔːrwərd ˈwɪð/",
+          "chinese": "继续推进",
+          "example": "The company decided to go forward with the project.",
+          "translation": "公司决定继续推进这个项目。"
+        },
+        {
+          "phrase": "a step forward",
+          "phonetic": "/ə ˈstɛp ˈfɔːrwərd/",
+          "chinese": "向前一步；进展",
+          "example": "The agreement is an important step forward.",
+          "translation": "这项协议是重要进展。"
+        },
+        {
+          "phrase": "from this day forward",
+          "phonetic": "/ˈfrʌm ˈðɪs ˈdeɪ ˈfɔːrwərd/",
+          "chinese": "从今以后",
+          "example": "From this day forward, we will keep better records.",
+          "translation": "从今以后，我们会更好地保存记录。"
+        },
+        {
+          "phrase": "lean forward",
+          "phonetic": "/ˈliːn ˈfɔːrwərd/",
+          "chinese": "身体前倾",
+          "example": "She leaned forward to hear the question.",
+          "translation": "她身体前倾以听清问题。"
         }
       ],
       "synonyms": [
@@ -1507,6 +1832,31 @@
           "scene": "核心真实用法",
           "english": "I look forward to hearing from you.",
           "chinese": "我期待收到你的消息。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "We are ready to move forward with the plan.",
+          "chinese": "我们准备好推进计划了。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "The company decided to go forward with the project.",
+          "chinese": "公司决定继续推进这个项目。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "The agreement is an important step forward.",
+          "chinese": "这项协议是重要进展。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "From this day forward, we will keep better records.",
+          "chinese": "从今以后，我们会更好地保存记录。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "She leaned forward to hear the question.",
+          "chinese": "她身体前倾以听清问题。"
         }
       ],
       "studyFocus": {
@@ -1655,7 +2005,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“期待……”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "look forward to"
+            "look forward to",
+            "move forward",
+            "go forward with",
+            "a step forward"
           ],
           "answer": "look forward to",
           "stage": "T2",
@@ -1667,6 +2020,8 @@
           "prompt": "用法辨析：哪一项既表示“向前推进”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "look forward to",
+            "go forward with",
+            "a step forward",
             "move forward"
           ],
           "answer": "move forward",
@@ -1758,11 +2113,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "enough-adv",
@@ -1790,7 +2145,7 @@
       "difficulty": "应用",
       "tags": [
         "adv.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -1860,7 +2215,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心用法",
           "items": [
             {
               "phrase": "good enough",
@@ -1871,22 +2226,27 @@
               "phrase": "enough time",
               "phonetic": "/ɪˈnʌf ˈtaɪm/",
               "chinese": "足够时间"
-            },
-            {
-              "phrase": "old enough to",
-              "phonetic": "/ˈoʊld ɪˈnʌf ˈtuː/",
-              "chinese": "年龄够大可以……"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "old enough to",
+              "phonetic": "/ˈoʊld ɪˈnʌf ˈtuː/",
+              "chinese": "年龄够大可以……"
+            },
             {
               "phrase": "not enough",
               "phonetic": "/ˈnɑt ɪˈnʌf/",
               "chinese": "不够"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "more than enough",
               "phonetic": "/ˈmɔːr ˈðæn ɪˈnʌf/",
@@ -1898,6 +2258,21 @@
               "chinese": "说来也奇怪"
             }
           ]
+        },
+        {
+          "category": "补充常用语境",
+          "items": [
+            {
+              "phrase": "enough for everyone",
+              "phonetic": "/ɪˈnʌf ˈfɔːr ˈɛvriːˌwʌn/",
+              "chinese": "够每个人用"
+            },
+            {
+              "phrase": "enough to do",
+              "phonetic": "/ɪˈnʌf ˈtuː ˈduː/",
+              "chinese": "足以做……"
+            }
+          ]
         }
       ],
       "fixedPhrases": [
@@ -1905,8 +2280,43 @@
           "phrase": "good enough",
           "phonetic": "/ˈɡʊd ɪˈnʌf/",
           "chinese": "足够好",
-          "example": "Five focused minutes can be enough.",
-          "translation": "专注的五分钟也可能足够。"
+          "example": "Your first draft is good enough to share.",
+          "translation": "你的初稿已经足够好，可以分享。"
+        },
+        {
+          "phrase": "enough time",
+          "phonetic": "/ɪˈnʌf ˈtaɪm/",
+          "chinese": "足够时间",
+          "example": "Do we have enough time to finish?",
+          "translation": "我们有足够时间完成吗？"
+        },
+        {
+          "phrase": "old enough to",
+          "phonetic": "/ˈoʊld ɪˈnʌf ˈtuː/",
+          "chinese": "年龄够大可以……",
+          "example": "She is old enough to travel alone.",
+          "translation": "她年龄够大，可以独自旅行。"
+        },
+        {
+          "phrase": "not enough",
+          "phonetic": "/ˈnɑt ɪˈnʌf/",
+          "chinese": "不够",
+          "example": "One example is not enough.",
+          "translation": "一个例子不够。"
+        },
+        {
+          "phrase": "more than enough",
+          "phonetic": "/ˈmɔːr ˈðæn ɪˈnʌf/",
+          "chinese": "绰绰有余",
+          "example": "We brought more than enough food.",
+          "translation": "我们带的食物绰绰有余。"
+        },
+        {
+          "phrase": "strangely enough",
+          "phonetic": "/ˈstreɪndʒliː ɪˈnʌf/",
+          "chinese": "说来也奇怪",
+          "example": "Strangely enough, the second attempt worked.",
+          "translation": "说来也奇怪，第二次尝试成功了。"
         }
       ],
       "synonyms": [
@@ -1961,6 +2371,36 @@
           "scene": "核心真实用法",
           "english": "Five focused minutes can be enough.",
           "chinese": "专注的五分钟也可能足够。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "Your first draft is good enough to share.",
+          "chinese": "你的初稿已经足够好，可以分享。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "Do we have enough time to finish?",
+          "chinese": "我们有足够时间完成吗？"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "She is old enough to travel alone.",
+          "chinese": "她年龄够大，可以独自旅行。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "One example is not enough.",
+          "chinese": "一个例子不够。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "We brought more than enough food.",
+          "chinese": "我们带的食物绰绰有余。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "Strangely enough, the second attempt worked.",
+          "chinese": "说来也奇怪，第二次尝试成功了。"
         }
       ],
       "studyFocus": {
@@ -2109,6 +2549,9 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“足够好”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "enough time",
+            "old enough to",
+            "not enough",
             "good enough"
           ],
           "answer": "good enough",
@@ -2120,6 +2563,8 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“足够时间”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "old enough to",
+            "not enough",
             "enough time",
             "good enough"
           ],
@@ -2212,11 +2657,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     }
   ]
 }

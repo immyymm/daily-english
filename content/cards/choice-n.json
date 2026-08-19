@@ -18,7 +18,7 @@
   "difficulty": "进阶",
   "tags": [
     "n.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心名词搭配",
       "items": [
         {
           "phrase": "make a choice",
@@ -92,22 +92,27 @@
           "phrase": "have no choice",
           "phonetic": "/ˈhæv ˈnoʊ tʃɔɪs/",
           "chinese": "别无选择"
-        },
-        {
-          "phrase": "a good choice",
-          "phonetic": "/ə ˈɡʊd tʃɔɪs/",
-          "chinese": "好选择"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "a good choice",
+          "phonetic": "/ə ˈɡʊd tʃɔɪs/",
+          "chinese": "好选择"
+        },
         {
           "phrase": "choice between",
           "phonetic": "/tʃɔɪs bɪˈtwiːn/",
           "chinese": "……之间的选择"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "by choice",
           "phonetic": "/ˈbaɪ tʃɔɪs/",
@@ -126,8 +131,43 @@
       "phrase": "make a choice",
       "phonetic": "/ˈmeɪk ə tʃɔɪs/",
       "chinese": "作出选择",
-      "example": "Sometimes the natural choice depends on context.",
-      "translation": "有时自然的选择取决于语境。"
+      "example": "You need to make a choice before noon.",
+      "translation": "你需要在中午前作出选择。"
+    },
+    {
+      "phrase": "have no choice",
+      "phonetic": "/ˈhæv ˈnoʊ tʃɔɪs/",
+      "chinese": "别无选择",
+      "example": "We had no choice but to wait.",
+      "translation": "我们别无选择，只能等待。"
+    },
+    {
+      "phrase": "a good choice",
+      "phonetic": "/ə ˈɡʊd tʃɔɪs/",
+      "chinese": "好选择",
+      "example": "Taking the earlier train was a good choice.",
+      "translation": "乘较早的火车是个好选择。"
+    },
+    {
+      "phrase": "choice between",
+      "phonetic": "/tʃɔɪs bɪˈtwiːn/",
+      "chinese": "……之间的选择",
+      "example": "It is a choice between saving time and saving money.",
+      "translation": "这是在节省时间和节省金钱之间作选择。"
+    },
+    {
+      "phrase": "by choice",
+      "phonetic": "/ˈbaɪ tʃɔɪs/",
+      "chinese": "出于自愿",
+      "example": "She works part-time by choice.",
+      "translation": "她自愿选择做兼职。"
+    },
+    {
+      "phrase": "first choice",
+      "phonetic": "/ˈfɝːst tʃɔɪs/",
+      "chinese": "首选",
+      "example": "This course was my first choice.",
+      "translation": "这门课程是我的首选。"
     }
   ],
   "synonyms": [
@@ -193,6 +233,36 @@
       "scene": "核心真实用法",
       "english": "Sometimes the natural choice depends on context.",
       "chinese": "有时自然的选择取决于语境。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "You need to make a choice before noon.",
+      "chinese": "你需要在中午前作出选择。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "We had no choice but to wait.",
+      "chinese": "我们别无选择，只能等待。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "Taking the earlier train was a good choice.",
+      "chinese": "乘较早的火车是个好选择。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "It is a choice between saving time and saving money.",
+      "chinese": "这是在节省时间和节省金钱之间作选择。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "She works part-time by choice.",
+      "chinese": "她自愿选择做兼职。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "This course was my first choice.",
+      "chinese": "这门课程是我的首选。"
     }
   ],
   "studyFocus": {
@@ -341,7 +411,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“作出选择”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "make a choice"
+        "choice between",
+        "make a choice",
+        "have no choice",
+        "a good choice"
       ],
       "answer": "make a choice",
       "stage": "T2",
@@ -353,7 +426,9 @@
       "prompt": "搭配辨析：哪一项既表示“别无选择”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "have no choice",
-        "make a choice"
+        "make a choice",
+        "a good choice",
+        "choice between"
       ],
       "answer": "have no choice",
       "stage": "T3",
@@ -444,9 +519,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

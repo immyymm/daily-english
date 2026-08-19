@@ -18,7 +18,7 @@
   "difficulty": "进阶",
   "tags": [
     "n.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心名词搭配",
       "items": [
         {
           "phrase": "local community",
@@ -92,22 +92,27 @@
           "phrase": "online community",
           "phonetic": "/ˈɔːˌnlaɪn kəˈmjuːnəti/",
           "chinese": "网络社区"
-        },
-        {
-          "phrase": "community service",
-          "phonetic": "/kəˈmjuːnəti ˈsɝːvəs/",
-          "chinese": "社区服务"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "community service",
+          "phonetic": "/kəˈmjuːnəti ˈsɝːvəs/",
+          "chinese": "社区服务"
+        },
         {
           "phrase": "community members",
           "phonetic": "/kəˈmjuːnəti ˈmɛmbɚz/",
           "chinese": "社区成员"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "serve the community",
           "phonetic": "/ˈsɝːv ðə kəˈmjuːnəti/",
@@ -126,8 +131,43 @@
       "phrase": "local community",
       "phonetic": "/ˈloʊkəl kəˈmjuːnəti/",
       "chinese": "当地社区",
-      "example": "The project brought the community together.",
-      "translation": "这个项目让社区团结在一起。"
+      "example": "The local community raised money for the library.",
+      "translation": "当地社区为图书馆筹集了资金。"
+    },
+    {
+      "phrase": "online community",
+      "phonetic": "/ˈɔːˌnlaɪn kəˈmjuːnəti/",
+      "chinese": "网络社区",
+      "example": "I joined an online community for language learners.",
+      "translation": "我加入了一个语言学习者网络社区。"
+    },
+    {
+      "phrase": "community service",
+      "phonetic": "/kəˈmjuːnəti ˈsɝːvəs/",
+      "chinese": "社区服务",
+      "example": "Students completed twenty hours of community service.",
+      "translation": "学生完成了二十小时的社区服务。"
+    },
+    {
+      "phrase": "community members",
+      "phonetic": "/kəˈmjuːnəti ˈmɛmbɚz/",
+      "chinese": "社区成员",
+      "example": "Community members meet here every month.",
+      "translation": "社区成员每月在这里见面。"
+    },
+    {
+      "phrase": "serve the community",
+      "phonetic": "/ˈsɝːv ðə kəˈmjuːnəti/",
+      "chinese": "服务社区",
+      "example": "The new clinic will serve the whole community.",
+      "translation": "新诊所将为整个社区服务。"
+    },
+    {
+      "phrase": "sense of community",
+      "phonetic": "/ˈsɛns ˈʌv kəˈmjuːnəti/",
+      "chinese": "社区归属感",
+      "example": "The event created a strong sense of community.",
+      "translation": "这项活动增强了社区归属感。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "The project brought the community together.",
       "chinese": "这个项目让社区团结在一起。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "The local community raised money for the library.",
+      "chinese": "当地社区为图书馆筹集了资金。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "I joined an online community for language learners.",
+      "chinese": "我加入了一个语言学习者网络社区。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "Students completed twenty hours of community service.",
+      "chinese": "学生完成了二十小时的社区服务。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "Community members meet here every month.",
+      "chinese": "社区成员每月在这里见面。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "The new clinic will serve the whole community.",
+      "chinese": "新诊所将为整个社区服务。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "The event created a strong sense of community.",
+      "chinese": "这项活动增强了社区归属感。"
     }
   ],
   "studyFocus": {
@@ -322,7 +392,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“当地社区”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "local community"
+        "community members",
+        "local community",
+        "online community",
+        "community service"
       ],
       "answer": "local community",
       "stage": "T2",
@@ -334,7 +407,9 @@
       "prompt": "搭配辨析：哪一项既表示“网络社区”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "online community",
-        "local community"
+        "local community",
+        "community service",
+        "community members"
       ],
       "answer": "online community",
       "stage": "T3",
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

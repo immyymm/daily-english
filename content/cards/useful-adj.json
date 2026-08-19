@@ -18,7 +18,7 @@
   "difficulty": "进阶",
   "tags": [
     "adj.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心用法",
       "items": [
         {
           "phrase": "useful for",
@@ -92,22 +92,27 @@
           "phrase": "useful to someone",
           "phonetic": "/ˈjuːsfəl ˈtuː ˈsʌˌmwʌn/",
           "chinese": "对某人有用"
-        },
-        {
-          "phrase": "useful information",
-          "phonetic": "/ˈjuːsfəl ˌɪnfɚˈmeɪʃən/",
-          "chinese": "有用信息"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "useful information",
+          "phonetic": "/ˈjuːsfəl ˌɪnfɚˈmeɪʃən/",
+          "chinese": "有用信息"
+        },
         {
           "phrase": "find something useful",
           "phonetic": "/ˈfaɪnd ˈsʌmθɪŋ ˈjuːsfəl/",
           "chinese": "觉得某物有用"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "a useful way to",
           "phonetic": "/ə ˈjuːsfəl ˈweɪ ˈtuː/",
@@ -126,8 +131,43 @@
       "phrase": "useful for",
       "phonetic": "/ˈjuːsfəl ˈfɔːr/",
       "chinese": "对……有用",
-      "example": "This phrase is useful for polite requests.",
-      "translation": "这个短语适合用于礼貌请求。"
+      "example": "This phrase is useful for everyday conversations.",
+      "translation": "这个短语对日常对话很有用。"
+    },
+    {
+      "phrase": "useful to someone",
+      "phonetic": "/ˈjuːsfəl ˈtuː ˈsʌˌmwʌn/",
+      "chinese": "对某人有用",
+      "example": "The guide will be useful to new employees.",
+      "translation": "这份指南对新员工会有帮助。"
+    },
+    {
+      "phrase": "useful information",
+      "phonetic": "/ˈjuːsfəl ˌɪnfɚˈmeɪʃən/",
+      "chinese": "有用信息",
+      "example": "The website provides useful information.",
+      "translation": "这个网站提供有用信息。"
+    },
+    {
+      "phrase": "find something useful",
+      "phonetic": "/ˈfaɪnd ˈsʌmθɪŋ ˈjuːsfəl/",
+      "chinese": "觉得某物有用",
+      "example": "I found her feedback very useful.",
+      "translation": "我觉得她的反馈非常有用。"
+    },
+    {
+      "phrase": "a useful way to",
+      "phonetic": "/ə ˈjuːsfəl ˈweɪ ˈtuː/",
+      "chinese": "做……的实用方法",
+      "example": "A checklist is a useful way to prevent mistakes.",
+      "translation": "清单是避免错误的实用方法。"
+    },
+    {
+      "phrase": "come in useful",
+      "phonetic": "/ˈkʌm ɪn ˈjuːsfəl/",
+      "chinese": "派上用场",
+      "example": "Keep the receipt; it may come in useful later.",
+      "translation": "留好收据，以后可能会派上用场。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "This phrase is useful for polite requests.",
       "chinese": "这个短语适合用于礼貌请求。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "This phrase is useful for everyday conversations.",
+      "chinese": "这个短语对日常对话很有用。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "The guide will be useful to new employees.",
+      "chinese": "这份指南对新员工会有帮助。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "The website provides useful information.",
+      "chinese": "这个网站提供有用信息。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "I found her feedback very useful.",
+      "chinese": "我觉得她的反馈非常有用。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "A checklist is a useful way to prevent mistakes.",
+      "chinese": "清单是避免错误的实用方法。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "Keep the receipt; it may come in useful later.",
+      "chinese": "留好收据，以后可能会派上用场。"
     }
   ],
   "studyFocus": {
@@ -322,6 +392,9 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“对……有用”，又符合这个形式线索：完整搭配中使用介词 for？",
       "options": [
+        "useful to someone",
+        "useful information",
+        "find something useful",
         "useful for"
       ],
       "answer": "useful for",
@@ -333,6 +406,8 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“对某人有用”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "useful information",
+        "find something useful",
         "useful to someone",
         "useful for"
       ],
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

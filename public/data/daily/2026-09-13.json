@@ -1,7 +1,7 @@
 {
   "date": "2026-09-13",
   "dayNumber": 28,
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "templateVersion": "learning-template-2026.08.19.1",
   "cards": [
     {
@@ -30,7 +30,7 @@
       "difficulty": "应用",
       "tags": [
         "n.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -100,7 +100,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心名词搭配",
           "items": [
             {
               "phrase": "ask a question",
@@ -111,22 +111,27 @@
               "phrase": "answer a question",
               "phonetic": "/ˈænsɚ ə ˈkwestʃən/",
               "chinese": "回答问题"
-            },
-            {
-              "phrase": "question whether",
-              "phonetic": "/ˈkwestʃən ˈwɛðɚ/",
-              "chinese": "质疑是否……"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "question whether",
+              "phonetic": "/ˈkwestʃən ˈwɛðɚ/",
+              "chinese": "质疑是否……"
+            },
             {
               "phrase": "good question",
               "phonetic": "/ˈɡʊd ˈkwestʃən/",
               "chinese": "好问题"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "out of the question",
               "phonetic": "/ˈaʊt ˈʌv ðə ˈkwestʃən/",
@@ -145,8 +150,43 @@
           "phrase": "ask a question",
           "phonetic": "/ˈæsk ə ˈkwestʃən/",
           "chinese": "提问",
-          "example": "Do not be afraid to ask a question.",
-          "translation": "不要害怕提问。"
+          "example": "Please ask a question if anything is unclear.",
+          "translation": "如果有不清楚的地方，请提问。"
+        },
+        {
+          "phrase": "answer a question",
+          "phonetic": "/ˈænsɚ ə ˈkwestʃən/",
+          "chinese": "回答问题",
+          "example": "She answered every question carefully.",
+          "translation": "她认真回答了每个问题。"
+        },
+        {
+          "phrase": "question whether",
+          "phonetic": "/ˈkwestʃən ˈwɛðɚ/",
+          "chinese": "质疑是否……",
+          "example": "Some experts question whether the plan is practical.",
+          "translation": "一些专家质疑这个计划是否可行。"
+        },
+        {
+          "phrase": "good question",
+          "phonetic": "/ˈɡʊd ˈkwestʃən/",
+          "chinese": "好问题",
+          "example": "That is a good question, and I need time to think.",
+          "translation": "这是个好问题，我需要时间思考。"
+        },
+        {
+          "phrase": "out of the question",
+          "phonetic": "/ˈaʊt ˈʌv ðə ˈkwestʃən/",
+          "chinese": "不可能",
+          "example": "Canceling the project is out of the question.",
+          "translation": "取消这个项目是不可能的。"
+        },
+        {
+          "phrase": "without question",
+          "phonetic": "/wɪˈθaʊt ˈkwestʃən/",
+          "chinese": "毫无疑问",
+          "example": "She is without question the best person for the job.",
+          "translation": "毫无疑问，她是最适合这份工作的人。"
         }
       ],
       "synonyms": [
@@ -193,6 +233,36 @@
           "scene": "核心真实用法",
           "english": "Do not be afraid to ask a question.",
           "chinese": "不要害怕提问。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "Please ask a question if anything is unclear.",
+          "chinese": "如果有不清楚的地方，请提问。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "She answered every question carefully.",
+          "chinese": "她认真回答了每个问题。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "Some experts question whether the plan is practical.",
+          "chinese": "一些专家质疑这个计划是否可行。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "That is a good question, and I need time to think.",
+          "chinese": "这是个好问题，我需要时间思考。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "Canceling the project is out of the question.",
+          "chinese": "取消这个项目是不可能的。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "She is without question the best person for the job.",
+          "chinese": "毫无疑问，她是最适合这份工作的人。"
         }
       ],
       "studyFocus": {
@@ -341,6 +411,9 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“提问”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "answer a question",
+            "question whether",
+            "good question",
             "ask a question"
           ],
           "answer": "ask a question",
@@ -352,6 +425,8 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“回答问题”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "question whether",
+            "good question",
             "answer a question",
             "ask a question"
           ],
@@ -444,11 +519,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "story-n",
@@ -470,7 +545,7 @@
       "difficulty": "应用",
       "tags": [
         "n.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -533,7 +608,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心名词搭配",
           "items": [
             {
               "phrase": "tell a story",
@@ -544,22 +619,27 @@
               "phrase": "true story",
               "phonetic": "/ˈtruː ˈstɔːri/",
               "chinese": "真实故事"
-            },
-            {
-              "phrase": "short story",
-              "phonetic": "/ˈʃɔːrt ˈstɔːri/",
-              "chinese": "短篇小说"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "short story",
+              "phonetic": "/ˈʃɔːrt ˈstɔːri/",
+              "chinese": "短篇小说"
+            },
             {
               "phrase": "news story",
               "phonetic": "/ˈnuːz ˈstɔːri/",
               "chinese": "新闻报道"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "the whole story",
               "phonetic": "/ðə ˈhoʊl ˈstɔːri/",
@@ -578,8 +658,43 @@
           "phrase": "tell a story",
           "phonetic": "/ˈtɛl ə ˈstɔːri/",
           "chinese": "讲故事",
-          "example": "Tell a short story using three new words.",
-          "translation": "用三个新单词讲一个短故事。"
+          "example": "My grandfather told us a funny story.",
+          "translation": "祖父给我们讲了一个有趣的故事。"
+        },
+        {
+          "phrase": "true story",
+          "phonetic": "/ˈtruː ˈstɔːri/",
+          "chinese": "真实故事",
+          "example": "The film is based on a true story.",
+          "translation": "这部电影根据真实故事改编。"
+        },
+        {
+          "phrase": "short story",
+          "phonetic": "/ˈʃɔːrt ˈstɔːri/",
+          "chinese": "短篇小说",
+          "example": "She published her first short story at college.",
+          "translation": "她在大学时发表了第一篇短篇小说。"
+        },
+        {
+          "phrase": "news story",
+          "phonetic": "/ˈnuːz ˈstɔːri/",
+          "chinese": "新闻报道",
+          "example": "The news story appeared online this morning.",
+          "translation": "这篇新闻报道今天早上在网上发布。"
+        },
+        {
+          "phrase": "the whole story",
+          "phonetic": "/ðə ˈhoʊl ˈstɔːri/",
+          "chinese": "完整经过",
+          "example": "I do not think we have heard the whole story.",
+          "translation": "我认为我们还没有听到完整经过。"
+        },
+        {
+          "phrase": "a different story",
+          "phonetic": "/ə ˈdɪfɚənt ˈstɔːri/",
+          "chinese": "另一回事",
+          "example": "Working there every day is a different story.",
+          "translation": "每天在那里工作就是另一回事了。"
         }
       ],
       "synonyms": [
@@ -634,6 +749,36 @@
           "scene": "核心真实用法",
           "english": "Tell a short story using three new words.",
           "chinese": "用三个新单词讲一个短故事。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "My grandfather told us a funny story.",
+          "chinese": "祖父给我们讲了一个有趣的故事。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "The film is based on a true story.",
+          "chinese": "这部电影根据真实故事改编。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "She published her first short story at college.",
+          "chinese": "她在大学时发表了第一篇短篇小说。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "The news story appeared online this morning.",
+          "chinese": "这篇新闻报道今天早上在网上发布。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "I do not think we have heard the whole story.",
+          "chinese": "我认为我们还没有听到完整经过。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "Working there every day is a different story.",
+          "chinese": "每天在那里工作就是另一回事了。"
         }
       ],
       "studyFocus": {
@@ -782,7 +927,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“讲故事”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "tell a story"
+            "short story",
+            "news story",
+            "tell a story",
+            "true story"
           ],
           "answer": "tell a story",
           "stage": "T2",
@@ -793,8 +941,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“真实故事”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "news story",
+            "true story",
             "tell a story",
-            "true story"
+            "short story"
           ],
           "answer": "true story",
           "stage": "T3",
@@ -885,11 +1035,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "idea-n",
@@ -911,7 +1061,7 @@
       "difficulty": "应用",
       "tags": [
         "n.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -974,7 +1124,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心名词搭配",
           "items": [
             {
               "phrase": "have an idea",
@@ -985,22 +1135,27 @@
               "phrase": "good idea",
               "phonetic": "/ˈɡʊd aɪˈdiːə/",
               "chinese": "好主意"
-            },
-            {
-              "phrase": "idea of doing",
-              "phonetic": "/aɪˈdiːə ˈʌv ˈduːɪŋ/",
-              "chinese": "做……的想法"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "idea of doing",
+              "phonetic": "/aɪˈdiːə ˈʌv ˈduːɪŋ/",
+              "chinese": "做……的想法"
+            },
             {
               "phrase": "get the idea",
               "phonetic": "/ˈɡɛt ðə aɪˈdiːə/",
               "chinese": "理解意思"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "have no idea",
               "phonetic": "/ˈhæv ˈnoʊ aɪˈdiːə/",
@@ -1019,8 +1174,43 @@
           "phrase": "have an idea",
           "phonetic": "/ˈhæv ˈæn aɪˈdiːə/",
           "chinese": "有一个想法",
-          "example": "I have an idea for the weekend.",
-          "translation": "我对周末有个主意。"
+          "example": "I have an idea for improving the app.",
+          "translation": "我有一个改进应用的想法。"
+        },
+        {
+          "phrase": "good idea",
+          "phonetic": "/ˈɡʊd aɪˈdiːə/",
+          "chinese": "好主意",
+          "example": "Taking a short break is a good idea.",
+          "translation": "短暂休息是个好主意。"
+        },
+        {
+          "phrase": "idea of doing",
+          "phonetic": "/aɪˈdiːə ˈʌv ˈduːɪŋ/",
+          "chinese": "做……的想法",
+          "example": "She dislikes the idea of moving again.",
+          "translation": "她不喜欢再次搬家的想法。"
+        },
+        {
+          "phrase": "get the idea",
+          "phonetic": "/ˈɡɛt ðə aɪˈdiːə/",
+          "chinese": "理解意思",
+          "example": "Read the examples until you get the idea.",
+          "translation": "阅读这些例子，直到你理解意思。"
+        },
+        {
+          "phrase": "have no idea",
+          "phonetic": "/ˈhæv ˈnoʊ aɪˈdiːə/",
+          "chinese": "不知道",
+          "example": "I have no idea where he went.",
+          "translation": "我不知道他去了哪里。"
+        },
+        {
+          "phrase": "exchange ideas",
+          "phonetic": "/ɪˈkstʃeɪndʒ aɪˈdiːəz/",
+          "chinese": "交流想法",
+          "example": "The meeting gave everyone time to exchange ideas.",
+          "translation": "会议给了大家交流想法的时间。"
         }
       ],
       "synonyms": [
@@ -1075,6 +1265,36 @@
           "scene": "核心真实用法",
           "english": "I have an idea for the weekend.",
           "chinese": "我对周末有个主意。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "I have an idea for improving the app.",
+          "chinese": "我有一个改进应用的想法。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "Taking a short break is a good idea.",
+          "chinese": "短暂休息是个好主意。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "She dislikes the idea of moving again.",
+          "chinese": "她不喜欢再次搬家的想法。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "Read the examples until you get the idea.",
+          "chinese": "阅读这些例子，直到你理解意思。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "I have no idea where he went.",
+          "chinese": "我不知道他去了哪里。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "The meeting gave everyone time to exchange ideas.",
+          "chinese": "会议给了大家交流想法的时间。"
         }
       ],
       "studyFocus": {
@@ -1223,7 +1443,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“有一个想法”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "have an idea"
+            "get the idea",
+            "have an idea",
+            "good idea",
+            "idea of doing"
           ],
           "answer": "have an idea",
           "stage": "T2",
@@ -1235,7 +1458,9 @@
           "prompt": "搭配辨析：哪一项既表示“好主意”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "good idea",
-            "have an idea"
+            "have an idea",
+            "idea of doing",
+            "get the idea"
           ],
           "answer": "good idea",
           "stage": "T3",
@@ -1326,11 +1551,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "place-n",
@@ -1358,7 +1583,7 @@
       "difficulty": "应用",
       "tags": [
         "n.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -1428,7 +1653,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心名词搭配",
           "items": [
             {
               "phrase": "take place",
@@ -1439,22 +1664,27 @@
               "phrase": "in the first place",
               "phonetic": "/ɪn ðə ˈfɝːst pleɪs/",
               "chinese": "首先；本来"
-            },
-            {
-              "phrase": "a safe place",
-              "phonetic": "/ə ˈseɪf pleɪs/",
-              "chinese": "安全地点"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "a safe place",
+              "phonetic": "/ə ˈseɪf pleɪs/",
+              "chinese": "安全地点"
+            },
             {
               "phrase": "place something on",
               "phonetic": "/pleɪs ˈsʌmθɪŋ ˈɑn/",
               "chinese": "把某物放在……上"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "out of place",
               "phonetic": "/ˈaʊt ˈʌv pleɪs/",
@@ -1473,8 +1703,43 @@
           "phrase": "take place",
           "phonetic": "/ˈteɪk pleɪs/",
           "chinese": "发生；举行",
-          "example": "The meeting will take place on Friday.",
-          "translation": "会议将在星期五举行。"
+          "example": "The conference will take place in October.",
+          "translation": "会议将在十月举行。"
+        },
+        {
+          "phrase": "in the first place",
+          "phonetic": "/ɪn ðə ˈfɝːst pleɪs/",
+          "chinese": "首先；本来",
+          "example": "Why did you agree in the first place?",
+          "translation": "你当初为什么同意？"
+        },
+        {
+          "phrase": "a safe place",
+          "phonetic": "/ə ˈseɪf pleɪs/",
+          "chinese": "安全地点",
+          "example": "Keep your passport in a safe place.",
+          "translation": "把护照放在安全的地方。"
+        },
+        {
+          "phrase": "place something on",
+          "phonetic": "/pleɪs ˈsʌmθɪŋ ˈɑn/",
+          "chinese": "把某物放在……上",
+          "example": "Please place the package on the table.",
+          "translation": "请把包裹放在桌上。"
+        },
+        {
+          "phrase": "out of place",
+          "phonetic": "/ˈaʊt ˈʌv pleɪs/",
+          "chinese": "不合适；位置不对",
+          "example": "That formal jacket looks out of place at the beach.",
+          "translation": "那件正式外套在海滩上显得不合适。"
+        },
+        {
+          "phrase": "take someone’s place",
+          "phonetic": "/ˈteɪk someone’s pleɪs/",
+          "chinese": "代替某人",
+          "example": "Maya will take my place at the meeting.",
+          "translation": "玛雅将在会议上代替我。"
         }
       ],
       "synonyms": [
@@ -1521,6 +1786,36 @@
           "scene": "核心真实用法",
           "english": "The meeting will take place on Friday.",
           "chinese": "会议将在星期五举行。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "The conference will take place in October.",
+          "chinese": "会议将在十月举行。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "Why did you agree in the first place?",
+          "chinese": "你当初为什么同意？"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "Keep your passport in a safe place.",
+          "chinese": "把护照放在安全的地方。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "Please place the package on the table.",
+          "chinese": "请把包裹放在桌上。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "That formal jacket looks out of place at the beach.",
+          "chinese": "那件正式外套在海滩上显得不合适。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "Maya will take my place at the meeting.",
+          "chinese": "玛雅将在会议上代替我。"
         }
       ],
       "studyFocus": {
@@ -1669,7 +1964,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“发生；举行”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "take place"
+            "take place",
+            "in the first place",
+            "a safe place",
+            "place something on"
           ],
           "answer": "take place",
           "stage": "T2",
@@ -1681,6 +1979,8 @@
           "prompt": "用法辨析：哪一项既表示“首先；本来”，又符合这个形式线索：完整搭配中使用介词 in？",
           "options": [
             "take place",
+            "a safe place",
+            "place something on",
             "in the first place"
           ],
           "answer": "in the first place",
@@ -1772,11 +2072,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "time-n",
@@ -1804,7 +2104,7 @@
       "difficulty": "应用",
       "tags": [
         "n.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -1874,7 +2174,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心名词搭配",
           "items": [
             {
               "phrase": "on time",
@@ -1885,22 +2185,27 @@
               "phrase": "in time",
               "phonetic": "/ɪn taɪm/",
               "chinese": "及时"
-            },
-            {
-              "phrase": "spend time doing",
-              "phonetic": "/ˈspɛnd taɪm ˈduːɪŋ/",
-              "chinese": "花时间做"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "spend time doing",
+              "phonetic": "/ˈspɛnd taɪm ˈduːɪŋ/",
+              "chinese": "花时间做"
+            },
             {
               "phrase": "from time to time",
               "phonetic": "/ˈfrʌm taɪm ˈtuː taɪm/",
               "chinese": "不时"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "at the same time",
               "phonetic": "/ˈæt ðə ˈseɪm taɪm/",
@@ -1919,8 +2224,43 @@
           "phrase": "on time",
           "phonetic": "/ˈɑn taɪm/",
           "chinese": "准时",
-          "example": "She arrived on time for the interview.",
-          "translation": "她准时到达面试地点。"
+          "example": "The train arrived exactly on time.",
+          "translation": "火车准时到达。"
+        },
+        {
+          "phrase": "in time",
+          "phonetic": "/ɪn taɪm/",
+          "chinese": "及时",
+          "example": "We reached the station just in time.",
+          "translation": "我们刚好及时赶到车站。"
+        },
+        {
+          "phrase": "spend time doing",
+          "phonetic": "/ˈspɛnd taɪm ˈduːɪŋ/",
+          "chinese": "花时间做",
+          "example": "I spend time reviewing vocabulary every evening.",
+          "translation": "我每天晚上花时间复习词汇。"
+        },
+        {
+          "phrase": "from time to time",
+          "phonetic": "/ˈfrʌm taɪm ˈtuː taɪm/",
+          "chinese": "不时",
+          "example": "We meet for coffee from time to time.",
+          "translation": "我们不时见面喝咖啡。"
+        },
+        {
+          "phrase": "at the same time",
+          "phonetic": "/ˈæt ðə ˈseɪm taɪm/",
+          "chinese": "同时",
+          "example": "She studies and works at the same time.",
+          "translation": "她同时学习和工作。"
+        },
+        {
+          "phrase": "take your time",
+          "phonetic": "/ˈteɪk ˈjɔːr taɪm/",
+          "chinese": "慢慢来",
+          "example": "Take your time; there is no need to hurry.",
+          "translation": "慢慢来，不必着急。"
         }
       ],
       "synonyms": [
@@ -1967,6 +2307,36 @@
           "scene": "核心真实用法",
           "english": "She arrived on time for the interview.",
           "chinese": "她准时到达面试地点。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "The train arrived exactly on time.",
+          "chinese": "火车准时到达。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "We reached the station just in time.",
+          "chinese": "我们刚好及时赶到车站。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "I spend time reviewing vocabulary every evening.",
+          "chinese": "我每天晚上花时间复习词汇。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "We meet for coffee from time to time.",
+          "chinese": "我们不时见面喝咖啡。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "She studies and works at the same time.",
+          "chinese": "她同时学习和工作。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "Take your time; there is no need to hurry.",
+          "chinese": "慢慢来，不必着急。"
         }
       ],
       "studyFocus": {
@@ -2115,6 +2485,9 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“准时”，又符合这个形式线索：完整搭配中使用介词 on？",
           "options": [
+            "in time",
+            "spend time doing",
+            "from time to time",
             "on time"
           ],
           "answer": "on time",
@@ -2126,6 +2499,8 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“及时”，又符合这个形式线索：完整搭配中使用介词 in？",
           "options": [
+            "spend time doing",
+            "from time to time",
             "in time",
             "on time"
           ],
@@ -2218,11 +2593,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     }
   ]
 }

@@ -18,7 +18,7 @@
   "difficulty": "应用",
   "tags": [
     "adv.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心用法",
       "items": [
         {
           "phrase": "usually happens",
@@ -92,22 +92,27 @@
           "phrase": "usually take",
           "phonetic": "/ˈjuːʒuəli ˈteɪk/",
           "chinese": "通常需要"
-        },
-        {
-          "phrase": "as usually happens",
-          "phonetic": "/ˈæz ˈjuːʒuəli ˈhæpənz/",
-          "chinese": "正如通常发生的那样"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "as usually happens",
+          "phonetic": "/ˈæz ˈjuːʒuəli ˈhæpənz/",
+          "chinese": "正如通常发生的那样"
+        },
         {
           "phrase": "not usually",
           "phonetic": "/ˈnɑt ˈjuːʒuəli/",
           "chinese": "通常不"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "usually available",
           "phonetic": "/ˈjuːʒuəli əˈveɪləbəl/",
@@ -119,6 +124,21 @@
           "chinese": "通常会发生什么"
         }
       ]
+    },
+    {
+      "category": "补充常用语境",
+      "items": [
+        {
+          "phrase": "usually mean",
+          "phonetic": "/ˈjuːʒuəli ˈmiːn/",
+          "chinese": "通常表示"
+        },
+        {
+          "phrase": "usually found in",
+          "phonetic": "/ˈjuːʒuəli ˈfaʊnd ɪn/",
+          "chinese": "通常见于"
+        }
+      ]
     }
   ],
   "fixedPhrases": [
@@ -126,8 +146,43 @@
       "phrase": "usually happens",
       "phonetic": "/ˈjuːʒuəli ˈhæpənz/",
       "chinese": "通常发生",
-      "example": "I usually review words after breakfast.",
-      "translation": "我通常在早餐后复习单词。"
+      "example": "This usually happens when the connection is weak.",
+      "translation": "网络连接较弱时通常会发生这种情况。"
+    },
+    {
+      "phrase": "usually take",
+      "phonetic": "/ˈjuːʒuəli ˈteɪk/",
+      "chinese": "通常需要",
+      "example": "The journey usually takes about an hour.",
+      "translation": "这段旅程通常需要大约一小时。"
+    },
+    {
+      "phrase": "as usually happens",
+      "phonetic": "/ˈæz ˈjuːʒuəli ˈhæpənz/",
+      "chinese": "正如通常发生的那样",
+      "example": "As usually happens in August, the city was crowded.",
+      "translation": "正如八月通常的情况一样，这座城市很拥挤。"
+    },
+    {
+      "phrase": "not usually",
+      "phonetic": "/ˈnɑt ˈjuːʒuəli/",
+      "chinese": "通常不",
+      "example": "I do not usually drink coffee at night.",
+      "translation": "我通常晚上不喝咖啡。"
+    },
+    {
+      "phrase": "usually available",
+      "phonetic": "/ˈjuːʒuəli əˈveɪləbəl/",
+      "chinese": "通常可用",
+      "example": "Support is usually available during business hours.",
+      "translation": "工作时间通常可以获得支持。"
+    },
+    {
+      "phrase": "what usually happens",
+      "phonetic": "/ˈwʌt ˈjuːʒuəli ˈhæpənz/",
+      "chinese": "通常会发生什么",
+      "example": "What usually happens after you submit the form?",
+      "translation": "提交表格后通常会发生什么？"
     }
   ],
   "synonyms": [
@@ -174,6 +229,36 @@
       "scene": "核心真实用法",
       "english": "I usually review words after breakfast.",
       "chinese": "我通常在早餐后复习单词。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "This usually happens when the connection is weak.",
+      "chinese": "网络连接较弱时通常会发生这种情况。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "The journey usually takes about an hour.",
+      "chinese": "这段旅程通常需要大约一小时。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "As usually happens in August, the city was crowded.",
+      "chinese": "正如八月通常的情况一样，这座城市很拥挤。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "I do not usually drink coffee at night.",
+      "chinese": "我通常晚上不喝咖啡。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "Support is usually available during business hours.",
+      "chinese": "工作时间通常可以获得支持。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "What usually happens after you submit the form?",
+      "chinese": "提交表格后通常会发生什么？"
     }
   ],
   "studyFocus": {
@@ -322,7 +407,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“通常发生”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "usually happens"
+        "as usually happens",
+        "not usually",
+        "usually happens",
+        "usually take"
       ],
       "answer": "usually happens",
       "stage": "T2",
@@ -333,8 +421,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“通常需要”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "not usually",
+        "usually take",
         "usually happens",
-        "usually take"
+        "as usually happens"
       ],
       "answer": "usually take",
       "stage": "T3",
@@ -425,9 +515,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

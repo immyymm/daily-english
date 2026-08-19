@@ -18,7 +18,7 @@
   "difficulty": "进阶",
   "tags": [
     "adj.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心用法",
       "items": [
         {
           "phrase": "sound natural",
@@ -92,22 +92,27 @@
           "phrase": "natural ability",
           "phonetic": "/ˈnætʃərəl əˈbɪləˌtiː/",
           "chinese": "天生能力"
-        },
-        {
-          "phrase": "natural environment",
-          "phonetic": "/ˈnætʃərəl ɪˈnvaɪrənmənt/",
-          "chinese": "自然环境"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "natural environment",
+          "phonetic": "/ˈnætʃərəl ɪˈnvaɪrənmənt/",
+          "chinese": "自然环境"
+        },
         {
           "phrase": "perfectly natural",
           "phonetic": "/ˈpɝːfəktliː ˈnætʃərəl/",
           "chinese": "完全自然的"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "natural light",
           "phonetic": "/ˈnætʃərəl ˈlaɪt/",
@@ -126,8 +131,43 @@
       "phrase": "sound natural",
       "phonetic": "/ˈsaʊnd ˈnætʃərəl/",
       "chinese": "听起来自然",
-      "example": "This version sounds more natural in conversation.",
-      "translation": "这个版本在对话中听起来更自然。"
+      "example": "Your sentence is correct, but this version sounds more natural.",
+      "translation": "你的句子是对的，但这个版本听起来更自然。"
+    },
+    {
+      "phrase": "natural ability",
+      "phonetic": "/ˈnætʃərəl əˈbɪləˌtiː/",
+      "chinese": "天生能力",
+      "example": "She has a natural ability to make people feel welcome.",
+      "translation": "她天生善于让人感到宾至如归。"
+    },
+    {
+      "phrase": "natural environment",
+      "phonetic": "/ˈnætʃərəl ɪˈnvaɪrənmənt/",
+      "chinese": "自然环境",
+      "example": "The project aims to protect the natural environment.",
+      "translation": "这个项目旨在保护自然环境。"
+    },
+    {
+      "phrase": "perfectly natural",
+      "phonetic": "/ˈpɝːfəktliː ˈnætʃərəl/",
+      "chinese": "完全自然的",
+      "example": "It is perfectly natural to feel nervous at first.",
+      "translation": "起初感到紧张是完全正常的。"
+    },
+    {
+      "phrase": "natural light",
+      "phonetic": "/ˈnætʃərəl ˈlaɪt/",
+      "chinese": "自然光",
+      "example": "The room receives plenty of natural light.",
+      "translation": "这个房间有充足的自然光。"
+    },
+    {
+      "phrase": "come naturally to",
+      "phonetic": "/ˈkʌm ˈnætʃɚəliː ˈtuː/",
+      "chinese": "对……来说很自然",
+      "example": "Public speaking comes naturally to her.",
+      "translation": "公开演讲对她来说很自然。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "This version sounds more natural in conversation.",
       "chinese": "这个版本在对话中听起来更自然。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "Your sentence is correct, but this version sounds more natural.",
+      "chinese": "你的句子是对的，但这个版本听起来更自然。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "She has a natural ability to make people feel welcome.",
+      "chinese": "她天生善于让人感到宾至如归。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "The project aims to protect the natural environment.",
+      "chinese": "这个项目旨在保护自然环境。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "It is perfectly natural to feel nervous at first.",
+      "chinese": "起初感到紧张是完全正常的。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "The room receives plenty of natural light.",
+      "chinese": "这个房间有充足的自然光。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "Public speaking comes naturally to her.",
+      "chinese": "公开演讲对她来说很自然。"
     }
   ],
   "studyFocus": {
@@ -322,7 +392,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“听起来自然”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "sound natural"
+        "sound natural",
+        "natural ability",
+        "natural environment",
+        "perfectly natural"
       ],
       "answer": "sound natural",
       "stage": "T2",
@@ -334,6 +407,8 @@
       "prompt": "用法辨析：哪一项既表示“天生能力”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "sound natural",
+        "natural environment",
+        "perfectly natural",
         "natural ability"
       ],
       "answer": "natural ability",
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

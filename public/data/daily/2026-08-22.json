@@ -1,7 +1,7 @@
 {
   "date": "2026-08-22",
   "dayNumber": 6,
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "templateVersion": "learning-template-2026.08.19.1",
   "cards": [
     {
@@ -24,7 +24,7 @@
       "difficulty": "基础",
       "tags": [
         "v.",
-        "待精校",
+        "模板详卡",
         "高频表达"
       ],
       "coreMemory": {
@@ -87,7 +87,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心动作与结构",
           "items": [
             {
               "phrase": "explain something clearly",
@@ -98,22 +98,27 @@
               "phrase": "explain why",
               "phonetic": "/ɪkˈspleɪn ˈwaɪ/",
               "chinese": "解释原因"
-            },
-            {
-              "phrase": "explain how",
-              "phonetic": "/ɪkˈspleɪn ˈhaʊ/",
-              "chinese": "解释方法"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "explain how",
+              "phonetic": "/ɪkˈspleɪn ˈhaʊ/",
+              "chinese": "解释方法"
+            },
             {
               "phrase": "explain something to someone",
               "phonetic": "/ɪkˈspleɪn ˈsʌmθɪŋ ˈtuː ˈsʌˌmwʌn/",
               "chinese": "向某人解释某事"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "hard to explain",
               "phonetic": "/ˈhɑrd ˈtuː ɪkˈspleɪn/",
@@ -132,8 +137,43 @@
           "phrase": "explain something clearly",
           "phonetic": "/ɪkˈspleɪn ˈsʌmθɪŋ ˈklɪrliː/",
           "chinese": "清楚解释某事",
-          "example": "Could you explain this phrase to me?",
-          "translation": "你能给我解释一下这个短语吗？"
+          "example": "Could you explain the rule clearly?",
+          "translation": "你能把这条规则解释清楚吗？"
+        },
+        {
+          "phrase": "explain why",
+          "phonetic": "/ɪkˈspleɪn ˈwaɪ/",
+          "chinese": "解释原因",
+          "example": "She explained why the meeting had been canceled.",
+          "translation": "她解释了会议取消的原因。"
+        },
+        {
+          "phrase": "explain how",
+          "phonetic": "/ɪkˈspleɪn ˈhaʊ/",
+          "chinese": "解释方法",
+          "example": "This video explains how the system works.",
+          "translation": "这个视频解释了系统的工作原理。"
+        },
+        {
+          "phrase": "explain something to someone",
+          "phonetic": "/ɪkˈspleɪn ˈsʌmθɪŋ ˈtuː ˈsʌˌmwʌn/",
+          "chinese": "向某人解释某事",
+          "example": "I explained the problem to my manager.",
+          "translation": "我向经理解释了这个问题。"
+        },
+        {
+          "phrase": "hard to explain",
+          "phonetic": "/ˈhɑrd ˈtuː ɪkˈspleɪn/",
+          "chinese": "难以解释",
+          "example": "The difference is hard to explain in one sentence.",
+          "translation": "这种差别很难用一句话解释清楚。"
+        },
+        {
+          "phrase": "explain yourself",
+          "phonetic": "/ɪkˈspleɪn jɚˈsɛlf/",
+          "chinese": "解释自己的行为",
+          "example": "You were absent all morning; please explain yourself.",
+          "translation": "你整个上午都不在，请解释一下。"
         }
       ],
       "synonyms": [
@@ -180,6 +220,36 @@
           "scene": "核心真实用法",
           "english": "Could you explain this phrase to me?",
           "chinese": "你能给我解释一下这个短语吗？"
+        },
+        {
+          "scene": "日常使用",
+          "english": "Could you explain the rule clearly?",
+          "chinese": "你能把这条规则解释清楚吗？"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "She explained why the meeting had been canceled.",
+          "chinese": "她解释了会议取消的原因。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "This video explains how the system works.",
+          "chinese": "这个视频解释了系统的工作原理。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "I explained the problem to my manager.",
+          "chinese": "我向经理解释了这个问题。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "The difference is hard to explain in one sentence.",
+          "chinese": "这种差别很难用一句话解释清楚。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "You were absent all morning; please explain yourself.",
+          "chinese": "你整个上午都不在，请解释一下。"
         }
       ],
       "studyFocus": {
@@ -328,7 +398,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“清楚解释某事”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
           "options": [
-            "explain something clearly"
+            "explain something to someone",
+            "explain something clearly",
+            "explain why",
+            "explain how"
           ],
           "answer": "explain something clearly",
           "stage": "T2",
@@ -340,7 +413,9 @@
           "prompt": "搭配辨析：哪一项既表示“解释原因”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "explain why",
-            "explain something clearly"
+            "explain something clearly",
+            "explain how",
+            "explain something to someone"
           ],
           "answer": "explain why",
           "stage": "T3",
@@ -431,11 +506,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "suggest-v",
@@ -457,7 +532,7 @@
       "difficulty": "基础",
       "tags": [
         "v.",
-        "待精校",
+        "模板详卡",
         "高频表达"
       ],
       "coreMemory": {
@@ -520,7 +595,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心动作与结构",
           "items": [
             {
               "phrase": "suggest doing",
@@ -531,22 +606,27 @@
               "phrase": "suggest that",
               "phonetic": "/səˈdʒest ˈðæt/",
               "chinese": "建议；表明……"
-            },
-            {
-              "phrase": "strongly suggest",
-              "phonetic": "/ˈstrɔːŋliː səˈdʒest/",
-              "chinese": "强烈建议"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "strongly suggest",
+              "phonetic": "/ˈstrɔːŋliː səˈdʒest/",
+              "chinese": "强烈建议"
+            },
             {
               "phrase": "evidence suggests",
               "phonetic": "/ˈɛvədəns səˈdʒɛsts/",
               "chinese": "证据表明"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "suggest an alternative",
               "phonetic": "/səˈdʒest ˈæn ɔːˈltɝːnətɪv/",
@@ -558,6 +638,16 @@
               "chinese": "我可以建议……吗"
             }
           ]
+        },
+        {
+          "category": "补充常用语境",
+          "items": [
+            {
+              "phrase": "suggest doing something",
+              "phonetic": "/səˈdʒest ˈduːɪŋ ˈsʌmθɪŋ/",
+              "chinese": "建议做某事"
+            }
+          ]
         }
       ],
       "fixedPhrases": [
@@ -565,8 +655,43 @@
           "phrase": "suggest doing",
           "phonetic": "/səˈdʒest ˈduːɪŋ/",
           "chinese": "建议做",
-          "example": "I suggest reviewing the difficult words first.",
-          "translation": "我建议先复习困难的单词。"
+          "example": "I suggest taking a short break before we continue.",
+          "translation": "我建议我们继续之前短暂休息一下。"
+        },
+        {
+          "phrase": "suggest that",
+          "phonetic": "/səˈdʒest ˈðæt/",
+          "chinese": "建议；表明……",
+          "example": "The doctor suggested that I get more sleep.",
+          "translation": "医生建议我多睡一会儿。"
+        },
+        {
+          "phrase": "strongly suggest",
+          "phonetic": "/ˈstrɔːŋliː səˈdʒest/",
+          "chinese": "强烈建议",
+          "example": "I strongly suggest checking the details again.",
+          "translation": "我强烈建议再核对一遍细节。"
+        },
+        {
+          "phrase": "evidence suggests",
+          "phonetic": "/ˈɛvədəns səˈdʒɛsts/",
+          "chinese": "证据表明",
+          "example": "The evidence suggests that the method is effective.",
+          "translation": "证据表明这个方法有效。"
+        },
+        {
+          "phrase": "suggest an alternative",
+          "phonetic": "/səˈdʒest ˈæn ɔːˈltɝːnətɪv/",
+          "chinese": "提出替代方案",
+          "example": "Could you suggest an alternative to this route?",
+          "translation": "你能为这条路线提出一个替代方案吗？"
+        },
+        {
+          "phrase": "may I suggest",
+          "phonetic": "/ˈmeɪ ˈaɪ səˈdʒest/",
+          "chinese": "我可以建议……吗",
+          "example": "May I suggest a simpler way to organize the notes?",
+          "translation": "我可以建议一种更简单的笔记整理方法吗？"
         }
       ],
       "synonyms": [
@@ -613,6 +738,36 @@
           "scene": "核心真实用法",
           "english": "I suggest reviewing the difficult words first.",
           "chinese": "我建议先复习困难的单词。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "I suggest taking a short break before we continue.",
+          "chinese": "我建议我们继续之前短暂休息一下。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "The doctor suggested that I get more sleep.",
+          "chinese": "医生建议我多睡一会儿。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "I strongly suggest checking the details again.",
+          "chinese": "我强烈建议再核对一遍细节。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "The evidence suggests that the method is effective.",
+          "chinese": "证据表明这个方法有效。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "Could you suggest an alternative to this route?",
+          "chinese": "你能为这条路线提出一个替代方案吗？"
+        },
+        {
+          "scene": "主动表达",
+          "english": "May I suggest a simpler way to organize the notes?",
+          "chinese": "我可以建议一种更简单的笔记整理方法吗？"
         }
       ],
       "studyFocus": {
@@ -761,7 +916,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“建议做”，又符合这个形式线索：目标词后的 doing 表示要换成符合语境的动词 -ing 形式？",
           "options": [
-            "suggest doing"
+            "suggest doing",
+            "suggest that",
+            "strongly suggest",
+            "evidence suggests"
           ],
           "answer": "suggest doing",
           "stage": "T2",
@@ -773,6 +931,8 @@
           "prompt": "用法辨析：哪一项既表示“建议；表明……”，又符合这个形式线索：使用 that 引导一个主谓完整的从句？",
           "options": [
             "suggest doing",
+            "strongly suggest",
+            "evidence suggests",
             "suggest that"
           ],
           "answer": "suggest that",
@@ -864,11 +1024,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "require-v",
@@ -890,7 +1050,7 @@
       "difficulty": "基础",
       "tags": [
         "v.",
-        "待精校",
+        "模板详卡",
         "高频表达"
       ],
       "coreMemory": {
@@ -953,7 +1113,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心动作与结构",
           "items": [
             {
               "phrase": "require someone to do",
@@ -964,22 +1124,27 @@
               "phrase": "require careful planning",
               "phonetic": "/rɪˈkwaɪər ˈkɛrfəl ˈplænɪŋ/",
               "chinese": "需要周密计划"
-            },
-            {
-              "phrase": "be required to",
-              "phonetic": "/ˈbiː riːˈkwaɪɚd ˈtuː/",
-              "chinese": "被要求做"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "be required to",
+              "phonetic": "/ˈbiː riːˈkwaɪɚd ˈtuː/",
+              "chinese": "被要求做"
+            },
             {
               "phrase": "as required",
               "phonetic": "/ˈæz riːˈkwaɪɚd/",
               "chinese": "按要求"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "meet the requirements",
               "phonetic": "/ˈmiːt ðə rɪˈkwaɪrmənts/",
@@ -991,6 +1156,16 @@
               "chinese": "无需经验"
             }
           ]
+        },
+        {
+          "category": "补充常用语境",
+          "items": [
+            {
+              "phrase": "require attention",
+              "phonetic": "/rɪˈkwaɪər əˈtɛnʃən/",
+              "chinese": "需要注意"
+            }
+          ]
         }
       ],
       "fixedPhrases": [
@@ -998,8 +1173,43 @@
           "phrase": "require someone to do",
           "phonetic": "/rɪˈkwaɪər ˈsʌˌmwʌn ˈtuː ˈduː/",
           "chinese": "要求某人做",
-          "example": "This task requires careful planning.",
-          "translation": "这个任务需要仔细规划。"
+          "example": "The job requires applicants to speak English.",
+          "translation": "这份工作要求申请人会说英语。"
+        },
+        {
+          "phrase": "require careful planning",
+          "phonetic": "/rɪˈkwaɪər ˈkɛrfəl ˈplænɪŋ/",
+          "chinese": "需要周密计划",
+          "example": "A large project requires careful planning.",
+          "translation": "大型项目需要周密规划。"
+        },
+        {
+          "phrase": "be required to",
+          "phonetic": "/ˈbiː riːˈkwaɪɚd ˈtuː/",
+          "chinese": "被要求做",
+          "example": "Passengers are required to show identification.",
+          "translation": "乘客必须出示身份证件。"
+        },
+        {
+          "phrase": "as required",
+          "phonetic": "/ˈæz riːˈkwaɪɚd/",
+          "chinese": "按要求",
+          "example": "Please update the form as required.",
+          "translation": "请按要求更新表格。"
+        },
+        {
+          "phrase": "meet the requirements",
+          "phonetic": "/ˈmiːt ðə rɪˈkwaɪrmənts/",
+          "chinese": "满足要求",
+          "example": "She meets all the requirements for the position.",
+          "translation": "她符合这个职位的所有要求。"
+        },
+        {
+          "phrase": "no experience required",
+          "phonetic": "/ˈnoʊ ɪˈkspɪriːəns riːˈkwaɪɚd/",
+          "chinese": "无需经验",
+          "example": "No previous experience is required for this course.",
+          "translation": "这门课程不要求有相关经验。"
         }
       ],
       "synonyms": [
@@ -1046,6 +1256,36 @@
           "scene": "核心真实用法",
           "english": "This task requires careful planning.",
           "chinese": "这个任务需要仔细规划。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "The job requires applicants to speak English.",
+          "chinese": "这份工作要求申请人会说英语。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "A large project requires careful planning.",
+          "chinese": "大型项目需要周密规划。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "Passengers are required to show identification.",
+          "chinese": "乘客必须出示身份证件。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "Please update the form as required.",
+          "chinese": "请按要求更新表格。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "She meets all the requirements for the position.",
+          "chinese": "她符合这个职位的所有要求。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "No previous experience is required for this course.",
+          "chinese": "这门课程不要求有相关经验。"
         }
       ],
       "studyFocus": {
@@ -1194,6 +1434,9 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“要求某人做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
           "options": [
+            "require careful planning",
+            "be required to",
+            "as required",
             "require someone to do"
           ],
           "answer": "require someone to do",
@@ -1205,6 +1448,8 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“需要周密计划”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "be required to",
+            "as required",
             "require careful planning",
             "require someone to do"
           ],
@@ -1297,11 +1542,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "prepare-v",
@@ -1323,7 +1568,7 @@
       "difficulty": "基础",
       "tags": [
         "v.",
-        "待精校",
+        "模板详卡",
         "高频表达"
       ],
       "coreMemory": {
@@ -1386,7 +1631,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心动作与结构",
           "items": [
             {
               "phrase": "prepare for a test",
@@ -1397,22 +1642,27 @@
               "phrase": "prepare a meal",
               "phonetic": "/prɪˈper ə ˈmiːl/",
               "chinese": "准备饭菜"
-            },
-            {
-              "phrase": "prepare a report",
-              "phonetic": "/prɪˈper ə riːˈpɔːrt/",
-              "chinese": "准备报告"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "prepare a report",
+              "phonetic": "/prɪˈper ə riːˈpɔːrt/",
+              "chinese": "准备报告"
+            },
             {
               "phrase": "prepare someone for",
               "phonetic": "/prɪˈper ˈsʌˌmwʌn ˈfɔːr/",
               "chinese": "使某人为……做好准备"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "be prepared to",
               "phonetic": "/ˈbiː priːˈpɛrd ˈtuː/",
@@ -1431,8 +1681,43 @@
           "phrase": "prepare for a test",
           "phonetic": "/prɪˈper ˈfɔːr ə ˈtɛst/",
           "chinese": "备考",
-          "example": "She prepared for the interview by practicing aloud.",
-          "translation": "她通过大声练习为面试做准备。"
+          "example": "I am preparing for an English test next week.",
+          "translation": "我正在为下周的英语考试做准备。"
+        },
+        {
+          "phrase": "prepare a meal",
+          "phonetic": "/prɪˈper ə ˈmiːl/",
+          "chinese": "准备饭菜",
+          "example": "He prepared a simple meal for the children.",
+          "translation": "他为孩子们准备了一顿简单的饭。"
+        },
+        {
+          "phrase": "prepare a report",
+          "phonetic": "/prɪˈper ə riːˈpɔːrt/",
+          "chinese": "准备报告",
+          "example": "We need to prepare a report before Friday.",
+          "translation": "我们需要在星期五前准备一份报告。"
+        },
+        {
+          "phrase": "prepare someone for",
+          "phonetic": "/prɪˈper ˈsʌˌmwʌn ˈfɔːr/",
+          "chinese": "使某人为……做好准备",
+          "example": "The training prepared her for the new role.",
+          "translation": "培训让她为新职位做好了准备。"
+        },
+        {
+          "phrase": "be prepared to",
+          "phonetic": "/ˈbiː priːˈpɛrd ˈtuː/",
+          "chinese": "准备好做",
+          "example": "Be prepared to answer a few detailed questions.",
+          "translation": "准备好回答几个详细问题。"
+        },
+        {
+          "phrase": "well prepared",
+          "phonetic": "/ˈwɛl priːˈpɛrd/",
+          "chinese": "准备充分的",
+          "example": "She felt well prepared for the interview.",
+          "translation": "她觉得自己为面试准备得很充分。"
         }
       ],
       "synonyms": [
@@ -1479,6 +1764,36 @@
           "scene": "核心真实用法",
           "english": "She prepared for the interview by practicing aloud.",
           "chinese": "她通过大声练习为面试做准备。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "I am preparing for an English test next week.",
+          "chinese": "我正在为下周的英语考试做准备。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "He prepared a simple meal for the children.",
+          "chinese": "他为孩子们准备了一顿简单的饭。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "We need to prepare a report before Friday.",
+          "chinese": "我们需要在星期五前准备一份报告。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "The training prepared her for the new role.",
+          "chinese": "培训让她为新职位做好了准备。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "Be prepared to answer a few detailed questions.",
+          "chinese": "准备好回答几个详细问题。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "She felt well prepared for the interview.",
+          "chinese": "她觉得自己为面试准备得很充分。"
         }
       ],
       "studyFocus": {
@@ -1627,7 +1942,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“备考”，又符合这个形式线索：完整搭配中使用介词 for？",
           "options": [
-            "prepare for a test"
+            "prepare a report",
+            "prepare someone for",
+            "prepare for a test",
+            "prepare a meal"
           ],
           "answer": "prepare for a test",
           "stage": "T2",
@@ -1638,8 +1956,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“准备饭菜”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "prepare someone for",
+            "prepare a meal",
             "prepare for a test",
-            "prepare a meal"
+            "prepare a report"
           ],
           "answer": "prepare a meal",
           "stage": "T3",
@@ -1730,11 +2050,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "achieve-v",
@@ -1756,7 +2076,7 @@
       "difficulty": "基础",
       "tags": [
         "v.",
-        "待精校",
+        "模板详卡",
         "高频表达"
       ],
       "coreMemory": {
@@ -1819,7 +2139,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心动作与结构",
           "items": [
             {
               "phrase": "achieve a goal",
@@ -1830,22 +2150,27 @@
               "phrase": "achieve success",
               "phonetic": "/əˈtʃiːv səˈksɛs/",
               "chinese": "取得成功"
-            },
-            {
-              "phrase": "achieve a balance",
-              "phonetic": "/əˈtʃiːv ə ˈbæləns/",
-              "chinese": "达到平衡"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "achieve a balance",
+              "phonetic": "/əˈtʃiːv ə ˈbæləns/",
+              "chinese": "达到平衡"
+            },
             {
               "phrase": "achieve better results",
               "phonetic": "/əˈtʃiːv ˈbɛtɚ rɪˈzʌlts/",
               "chinese": "取得更好结果"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "work hard to achieve",
               "phonetic": "/ˈwɝːk ˈhɑrd ˈtuː əˈtʃiːv/",
@@ -1864,8 +2189,43 @@
           "phrase": "achieve a goal",
           "phonetic": "/əˈtʃiːv ə ˈɡoʊl/",
           "chinese": "实现目标",
-          "example": "Small steps can help you achieve a big goal.",
-          "translation": "小步前进可以帮助你实现大目标。"
+          "example": "Consistent practice can help you achieve your goal.",
+          "translation": "持续练习可以帮助你实现目标。"
+        },
+        {
+          "phrase": "achieve success",
+          "phonetic": "/əˈtʃiːv səˈksɛs/",
+          "chinese": "取得成功",
+          "example": "The team achieved success through patient work.",
+          "translation": "团队通过耐心工作取得了成功。"
+        },
+        {
+          "phrase": "achieve a balance",
+          "phonetic": "/əˈtʃiːv ə ˈbæləns/",
+          "chinese": "达到平衡",
+          "example": "It is difficult to achieve a balance between work and rest.",
+          "translation": "在工作和休息之间取得平衡并不容易。"
+        },
+        {
+          "phrase": "achieve better results",
+          "phonetic": "/əˈtʃiːv ˈbɛtɚ rɪˈzʌlts/",
+          "chinese": "取得更好结果",
+          "example": "A clearer process helped us achieve better results.",
+          "translation": "更清晰的流程帮助我们取得了更好的结果。"
+        },
+        {
+          "phrase": "work hard to achieve",
+          "phonetic": "/ˈwɝːk ˈhɑrd ˈtuː əˈtʃiːv/",
+          "chinese": "努力实现",
+          "example": "She worked hard to achieve her dream.",
+          "translation": "她为实现梦想而努力。"
+        },
+        {
+          "phrase": "a sense of achievement",
+          "phonetic": "/ə ˈsɛns ˈʌv əˈtʃiːvmənt/",
+          "chinese": "成就感",
+          "example": "Finishing the course gave me a real sense of achievement.",
+          "translation": "完成课程给了我真正的成就感。"
         }
       ],
       "synonyms": [
@@ -1912,6 +2272,36 @@
           "scene": "核心真实用法",
           "english": "Small steps can help you achieve a big goal.",
           "chinese": "小步前进可以帮助你实现大目标。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "Consistent practice can help you achieve your goal.",
+          "chinese": "持续练习可以帮助你实现目标。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "The team achieved success through patient work.",
+          "chinese": "团队通过耐心工作取得了成功。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "It is difficult to achieve a balance between work and rest.",
+          "chinese": "在工作和休息之间取得平衡并不容易。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "A clearer process helped us achieve better results.",
+          "chinese": "更清晰的流程帮助我们取得了更好的结果。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "She worked hard to achieve her dream.",
+          "chinese": "她为实现梦想而努力。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "Finishing the course gave me a real sense of achievement.",
+          "chinese": "完成课程给了我真正的成就感。"
         }
       ],
       "studyFocus": {
@@ -2060,7 +2450,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“实现目标”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "achieve a goal"
+            "achieve better results",
+            "achieve a goal",
+            "achieve success",
+            "achieve a balance"
           ],
           "answer": "achieve a goal",
           "stage": "T2",
@@ -2072,7 +2465,9 @@
           "prompt": "搭配辨析：哪一项既表示“取得成功”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "achieve success",
-            "achieve a goal"
+            "achieve a goal",
+            "achieve a balance",
+            "achieve better results"
           ],
           "answer": "achieve success",
           "stage": "T3",
@@ -2163,11 +2558,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     }
   ]
 }

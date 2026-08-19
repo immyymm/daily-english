@@ -1,7 +1,7 @@
 {
   "date": "2026-09-10",
   "dayNumber": 25,
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "templateVersion": "learning-template-2026.08.19.1",
   "cards": [
     {
@@ -24,7 +24,7 @@
       "difficulty": "应用",
       "tags": [
         "n.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -87,7 +87,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心名词搭配",
           "items": [
             {
               "phrase": "mental health",
@@ -98,22 +98,27 @@
               "phrase": "physical health",
               "phonetic": "/ˈfɪzɪkəl helθ/",
               "chinese": "身体健康"
-            },
-            {
-              "phrase": "good health",
-              "phonetic": "/ˈɡʊd helθ/",
-              "chinese": "健康状况良好"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "good health",
+              "phonetic": "/ˈɡʊd helθ/",
+              "chinese": "健康状况良好"
+            },
             {
               "phrase": "health care",
               "phonetic": "/helθ ˈkɛr/",
               "chinese": "医疗保健"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "health problem",
               "phonetic": "/helθ ˈprɑbləm/",
@@ -132,8 +137,43 @@
           "phrase": "mental health",
           "phonetic": "/ˈmɛntəl helθ/",
           "chinese": "心理健康",
-          "example": "Regular sleep is important for your health.",
-          "translation": "规律睡眠对健康很重要。"
+          "example": "Regular rest is important for mental health.",
+          "translation": "规律休息对心理健康很重要。"
+        },
+        {
+          "phrase": "physical health",
+          "phonetic": "/ˈfɪzɪkəl helθ/",
+          "chinese": "身体健康",
+          "example": "Walking every day can improve physical health.",
+          "translation": "每天步行可以改善身体健康。"
+        },
+        {
+          "phrase": "good health",
+          "phonetic": "/ˈɡʊd helθ/",
+          "chinese": "健康状况良好",
+          "example": "She is eighty and still in good health.",
+          "translation": "她八十岁了，身体状况仍然很好。"
+        },
+        {
+          "phrase": "health care",
+          "phonetic": "/helθ ˈkɛr/",
+          "chinese": "医疗保健",
+          "example": "Everyone should have access to basic health care.",
+          "translation": "每个人都应该获得基本医疗保健。"
+        },
+        {
+          "phrase": "health problem",
+          "phonetic": "/helθ ˈprɑbləm/",
+          "chinese": "健康问题",
+          "example": "Back pain can become a serious health problem.",
+          "translation": "背痛可能成为严重的健康问题。"
+        },
+        {
+          "phrase": "be good for your health",
+          "phonetic": "/ˈbiː ˈɡʊd ˈfɔːr ˈjɔːr helθ/",
+          "chinese": "有益健康",
+          "example": "Fresh food and exercise are good for your health.",
+          "translation": "新鲜食物和运动有益健康。"
         }
       ],
       "synonyms": [
@@ -180,6 +220,36 @@
           "scene": "核心真实用法",
           "english": "Regular sleep is important for your health.",
           "chinese": "规律睡眠对健康很重要。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "Regular rest is important for mental health.",
+          "chinese": "规律休息对心理健康很重要。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "Walking every day can improve physical health.",
+          "chinese": "每天步行可以改善身体健康。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "She is eighty and still in good health.",
+          "chinese": "她八十岁了，身体状况仍然很好。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "Everyone should have access to basic health care.",
+          "chinese": "每个人都应该获得基本医疗保健。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "Back pain can become a serious health problem.",
+          "chinese": "背痛可能成为严重的健康问题。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "Fresh food and exercise are good for your health.",
+          "chinese": "新鲜食物和运动有益健康。"
         }
       ],
       "studyFocus": {
@@ -328,7 +398,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“心理健康”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "mental health"
+            "good health",
+            "health care",
+            "mental health",
+            "physical health"
           ],
           "answer": "mental health",
           "stage": "T2",
@@ -339,8 +412,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“身体健康”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "health care",
+            "physical health",
             "mental health",
-            "physical health"
+            "good health"
           ],
           "answer": "physical health",
           "stage": "T3",
@@ -431,11 +506,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "work-n",
@@ -1328,7 +1403,7 @@
       },
       "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；本卡依照用户词卡模板人工精校；音标为美式发音。"
     },
@@ -1358,7 +1433,7 @@
       "difficulty": "应用",
       "tags": [
         "n.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -1428,7 +1503,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心名词搭配",
           "items": [
             {
               "phrase": "study for a test",
@@ -1439,22 +1514,27 @@
               "phrase": "study English",
               "phonetic": "/ˈstʌdi ˈɪŋɡlɪʃ/",
               "chinese": "学习英语"
-            },
-            {
-              "phrase": "study abroad",
-              "phonetic": "/ˈstʌdi əˈbrɔːd/",
-              "chinese": "出国留学"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "study abroad",
+              "phonetic": "/ˈstʌdi əˈbrɔːd/",
+              "chinese": "出国留学"
+            },
             {
               "phrase": "a recent study",
               "phonetic": "/ə ˈriːsənt ˈstʌdi/",
               "chinese": "最近的一项研究"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "field of study",
               "phonetic": "/ˈfiːld ˈʌv ˈstʌdi/",
@@ -1473,8 +1553,43 @@
           "phrase": "study for a test",
           "phonetic": "/ˈstʌdi ˈfɔːr ə ˈtɛst/",
           "chinese": "为考试学习",
-          "example": "She studies English for half an hour every morning.",
-          "translation": "她每天早上学半小时英语。"
+          "example": "I am studying for a test this weekend.",
+          "translation": "这个周末我在为考试学习。"
+        },
+        {
+          "phrase": "study English",
+          "phonetic": "/ˈstʌdi ˈɪŋɡlɪʃ/",
+          "chinese": "学习英语",
+          "example": "She studies English for thirty minutes every morning.",
+          "translation": "她每天早上学习三十分钟英语。"
+        },
+        {
+          "phrase": "study abroad",
+          "phonetic": "/ˈstʌdi əˈbrɔːd/",
+          "chinese": "出国留学",
+          "example": "He plans to study abroad next year.",
+          "translation": "他计划明年出国留学。"
+        },
+        {
+          "phrase": "a recent study",
+          "phonetic": "/ə ˈriːsənt ˈstʌdi/",
+          "chinese": "最近的一项研究",
+          "example": "A recent study found that sleep supports memory.",
+          "translation": "最近一项研究发现睡眠有助于记忆。"
+        },
+        {
+          "phrase": "field of study",
+          "phonetic": "/ˈfiːld ˈʌv ˈstʌdi/",
+          "chinese": "研究领域",
+          "example": "Language education is her field of study.",
+          "translation": "语言教育是她的研究领域。"
+        },
+        {
+          "phrase": "case study",
+          "phonetic": "/ˈkeɪs ˈstʌdi/",
+          "chinese": "案例研究",
+          "example": "The report includes a case study of a small business.",
+          "translation": "报告包含一个小企业案例研究。"
         }
       ],
       "synonyms": [
@@ -1529,6 +1644,36 @@
           "scene": "核心真实用法",
           "english": "She studies English for half an hour every morning.",
           "chinese": "她每天早上学半小时英语。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "I am studying for a test this weekend.",
+          "chinese": "这个周末我在为考试学习。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "She studies English for thirty minutes every morning.",
+          "chinese": "她每天早上学习三十分钟英语。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "He plans to study abroad next year.",
+          "chinese": "他计划明年出国留学。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "A recent study found that sleep supports memory.",
+          "chinese": "最近一项研究发现睡眠有助于记忆。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "Language education is her field of study.",
+          "chinese": "语言教育是她的研究领域。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "The report includes a case study of a small business.",
+          "chinese": "报告包含一个小企业案例研究。"
         }
       ],
       "studyFocus": {
@@ -1677,7 +1822,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“为考试学习”，又符合这个形式线索：完整搭配中使用介词 for？",
           "options": [
-            "study for a test"
+            "study for a test",
+            "study English",
+            "study abroad",
+            "a recent study"
           ],
           "answer": "study for a test",
           "stage": "T2",
@@ -1689,6 +1837,8 @@
           "prompt": "用法辨析：哪一项既表示“学习英语”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "study for a test",
+            "study abroad",
+            "a recent study",
             "study English"
           ],
           "answer": "study English",
@@ -1780,11 +1930,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "learn-v",
@@ -1806,7 +1956,7 @@
       "difficulty": "应用",
       "tags": [
         "v.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -1869,7 +2019,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心动作与结构",
           "items": [
             {
               "phrase": "learn to do",
@@ -1880,22 +2030,27 @@
               "phrase": "learn about",
               "phonetic": "/lɜːrn əˈbaʊt/",
               "chinese": "了解……"
-            },
-            {
-              "phrase": "learn from mistakes",
-              "phonetic": "/lɜːrn ˈfrʌm mɪˈsteɪks/",
-              "chinese": "从错误中学习"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "learn from mistakes",
+              "phonetic": "/lɜːrn ˈfrʌm mɪˈsteɪks/",
+              "chinese": "从错误中学习"
+            },
             {
               "phrase": "learn by doing",
               "phonetic": "/lɜːrn ˈbaɪ ˈduːɪŋ/",
               "chinese": "从实践中学习"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "never stop learning",
               "phonetic": "/ˈnɛvɚ ˈstɑp ˈlɝːnɪŋ/",
@@ -1914,8 +2069,43 @@
           "phrase": "learn to do",
           "phonetic": "/lɜːrn ˈtuː ˈduː/",
           "chinese": "学习做",
-          "example": "We learn faster when feedback is specific.",
-          "translation": "反馈具体时，我们学得更快。"
+          "example": "Children learn to speak by listening to others.",
+          "translation": "孩子通过听别人说话来学习说话。"
+        },
+        {
+          "phrase": "learn about",
+          "phonetic": "/lɜːrn əˈbaʊt/",
+          "chinese": "了解……",
+          "example": "I want to learn more about local history.",
+          "translation": "我想进一步了解当地历史。"
+        },
+        {
+          "phrase": "learn from mistakes",
+          "phonetic": "/lɜːrn ˈfrʌm mɪˈsteɪks/",
+          "chinese": "从错误中学习",
+          "example": "Good teams learn from their mistakes.",
+          "translation": "优秀的团队会从错误中学习。"
+        },
+        {
+          "phrase": "learn by doing",
+          "phonetic": "/lɜːrn ˈbaɪ ˈduːɪŋ/",
+          "chinese": "从实践中学习",
+          "example": "Many practical skills are best learned by doing.",
+          "translation": "许多实用技能最好从实践中学习。"
+        },
+        {
+          "phrase": "never stop learning",
+          "phonetic": "/ˈnɛvɚ ˈstɑp ˈlɝːnɪŋ/",
+          "chinese": "永不停止学习",
+          "example": "Curious people never stop learning.",
+          "translation": "好奇的人永不停止学习。"
+        },
+        {
+          "phrase": "lesson learned",
+          "phonetic": "/ˈlɛsən ˈlɝːnd/",
+          "chinese": "吸取的教训",
+          "example": "The lesson learned was to check every detail.",
+          "translation": "吸取的教训是要检查每个细节。"
         }
       ],
       "synonyms": [
@@ -1962,6 +2152,36 @@
           "scene": "核心真实用法",
           "english": "We learn faster when feedback is specific.",
           "chinese": "反馈具体时，我们学得更快。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "Children learn to speak by listening to others.",
+          "chinese": "孩子通过听别人说话来学习说话。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "I want to learn more about local history.",
+          "chinese": "我想进一步了解当地历史。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "Good teams learn from their mistakes.",
+          "chinese": "优秀的团队会从错误中学习。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "Many practical skills are best learned by doing.",
+          "chinese": "许多实用技能最好从实践中学习。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "Curious people never stop learning.",
+          "chinese": "好奇的人永不停止学习。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "The lesson learned was to check every detail.",
+          "chinese": "吸取的教训是要检查每个细节。"
         }
       ],
       "studyFocus": {
@@ -2110,6 +2330,9 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“学习做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
           "options": [
+            "learn about",
+            "learn from mistakes",
+            "learn by doing",
             "learn to do"
           ],
           "answer": "learn to do",
@@ -2121,6 +2344,8 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“了解……”，又符合这个形式线索：完整搭配中使用介词 about？",
           "options": [
+            "learn from mistakes",
+            "learn by doing",
             "learn about",
             "learn to do"
           ],
@@ -2213,11 +2438,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "speak-v",
@@ -2239,7 +2464,7 @@
       "difficulty": "应用",
       "tags": [
         "v.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -2302,7 +2527,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心动作与结构",
           "items": [
             {
               "phrase": "speak English",
@@ -2313,22 +2538,27 @@
               "phrase": "speak to someone",
               "phonetic": "/spiːk ˈtuː ˈsʌˌmwʌn/",
               "chinese": "和某人说话"
-            },
-            {
-              "phrase": "speak about",
-              "phonetic": "/spiːk əˈbaʊt/",
-              "chinese": "谈论……"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "speak about",
+              "phonetic": "/spiːk əˈbaʊt/",
+              "chinese": "谈论……"
+            },
             {
               "phrase": "speak clearly",
               "phonetic": "/spiːk ˈklɪrliː/",
               "chinese": "说得清楚"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "generally speaking",
               "phonetic": "/ˈdʒɛnɚəliː ˈspiːkɪŋ/",
@@ -2347,8 +2577,43 @@
           "phrase": "speak English",
           "phonetic": "/spiːk ˈɪŋɡlɪʃ/",
           "chinese": "说英语",
-          "example": "Try to speak in complete sentences.",
-          "translation": "试着用完整句子说话。"
+          "example": "I try to speak English for a few minutes every day.",
+          "translation": "我每天尽量说几分钟英语。"
+        },
+        {
+          "phrase": "speak to someone",
+          "phonetic": "/spiːk ˈtuː ˈsʌˌmwʌn/",
+          "chinese": "和某人说话",
+          "example": "Could I speak to the manager, please?",
+          "translation": "我可以和经理说话吗？"
+        },
+        {
+          "phrase": "speak about",
+          "phonetic": "/spiːk əˈbaʊt/",
+          "chinese": "谈论……",
+          "example": "She spoke about her experience abroad.",
+          "translation": "她谈到了自己的海外经历。"
+        },
+        {
+          "phrase": "speak clearly",
+          "phonetic": "/spiːk ˈklɪrliː/",
+          "chinese": "说得清楚",
+          "example": "Please speak clearly and not too quickly.",
+          "translation": "请说清楚一点，不要太快。"
+        },
+        {
+          "phrase": "generally speaking",
+          "phonetic": "/ˈdʒɛnɚəliː ˈspiːkɪŋ/",
+          "chinese": "一般来说",
+          "example": "Generally speaking, the earlier train is less crowded.",
+          "translation": "一般来说，较早的火车没那么拥挤。"
+        },
+        {
+          "phrase": "speak for yourself",
+          "phonetic": "/spiːk ˈfɔːr jɚˈsɛlf/",
+          "chinese": "只代表你自己",
+          "example": "“Everyone agrees.” “Speak for yourself.”",
+          "translation": "“每个人都同意。”“那只代表你自己。”"
         }
       ],
       "synonyms": [
@@ -2403,6 +2668,36 @@
           "scene": "核心真实用法",
           "english": "Try to speak in complete sentences.",
           "chinese": "试着用完整句子说话。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "I try to speak English for a few minutes every day.",
+          "chinese": "我每天尽量说几分钟英语。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "Could I speak to the manager, please?",
+          "chinese": "我可以和经理说话吗？"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "She spoke about her experience abroad.",
+          "chinese": "她谈到了自己的海外经历。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "Please speak clearly and not too quickly.",
+          "chinese": "请说清楚一点，不要太快。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "Generally speaking, the earlier train is less crowded.",
+          "chinese": "一般来说，较早的火车没那么拥挤。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "“Everyone agrees.” “Speak for yourself.”",
+          "chinese": "“每个人都同意。”“那只代表你自己。”"
         }
       ],
       "studyFocus": {
@@ -2551,7 +2846,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“说英语”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "speak English"
+            "speak about",
+            "speak clearly",
+            "speak English",
+            "speak to someone"
           ],
           "answer": "speak English",
           "stage": "T2",
@@ -2562,8 +2860,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“和某人说话”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "speak clearly",
+            "speak to someone",
             "speak English",
-            "speak to someone"
+            "speak about"
           ],
           "answer": "speak to someone",
           "stage": "T3",
@@ -2654,11 +2954,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     }
   ]
 }

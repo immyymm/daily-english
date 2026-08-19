@@ -18,7 +18,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "待精校",
+    "模板详卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心动作与结构",
       "items": [
         {
           "phrase": "express an opinion",
@@ -92,22 +92,27 @@
           "phrase": "express your feelings",
           "phonetic": "/ɪkˈspres ˈjɔːr ˈfiːlɪŋz/",
           "chinese": "表达感受"
-        },
-        {
-          "phrase": "express concern about",
-          "phonetic": "/ɪkˈspres kəˈnsɝːn əˈbaʊt/",
-          "chinese": "表达对……的担忧"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "express concern about",
+          "phonetic": "/ɪkˈspres kəˈnsɝːn əˈbaʊt/",
+          "chinese": "表达对……的担忧"
+        },
         {
           "phrase": "clearly express",
           "phonetic": "/ˈklɪrliː ɪkˈspres/",
           "chinese": "清楚表达"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "express yourself",
           "phonetic": "/ɪkˈspres jɚˈsɛlf/",
@@ -126,8 +131,43 @@
       "phrase": "express an opinion",
       "phonetic": "/ɪkˈspres ˈæn əˈpɪnjən/",
       "chinese": "表达观点",
-      "example": "Try to express the idea in your own words.",
-      "translation": "试着用自己的话表达这个想法。"
+      "example": "Everyone had a chance to express an opinion.",
+      "translation": "每个人都有机会表达意见。"
+    },
+    {
+      "phrase": "express your feelings",
+      "phonetic": "/ɪkˈspres ˈjɔːr ˈfiːlɪŋz/",
+      "chinese": "表达感受",
+      "example": "It is healthy to express your feelings honestly.",
+      "translation": "诚实表达感受有益健康。"
+    },
+    {
+      "phrase": "express concern about",
+      "phonetic": "/ɪkˈspres kəˈnsɝːn əˈbaʊt/",
+      "chinese": "表达对……的担忧",
+      "example": "Residents expressed concern about the noise.",
+      "translation": "居民表达了对噪音的担忧。"
+    },
+    {
+      "phrase": "clearly express",
+      "phonetic": "/ˈklɪrliː ɪkˈspres/",
+      "chinese": "清楚表达",
+      "example": "Please clearly express what you need.",
+      "translation": "请清楚表达你的需求。"
+    },
+    {
+      "phrase": "express yourself",
+      "phonetic": "/ɪkˈspres jɚˈsɛlf/",
+      "chinese": "表达自己",
+      "example": "Writing can help you express yourself.",
+      "translation": "写作可以帮助你表达自己。"
+    },
+    {
+      "phrase": "facial expression",
+      "phonetic": "/ˈfeɪʃəl ɪˈksprɛʃən/",
+      "chinese": "面部表情",
+      "example": "I could tell from her facial expression that she was surprised.",
+      "translation": "我从她的面部表情看出她很惊讶。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "Try to express the idea in your own words.",
       "chinese": "试着用自己的话表达这个想法。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "Everyone had a chance to express an opinion.",
+      "chinese": "每个人都有机会表达意见。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "It is healthy to express your feelings honestly.",
+      "chinese": "诚实表达感受有益健康。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "Residents expressed concern about the noise.",
+      "chinese": "居民表达了对噪音的担忧。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "Please clearly express what you need.",
+      "chinese": "请清楚表达你的需求。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "Writing can help you express yourself.",
+      "chinese": "写作可以帮助你表达自己。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "I could tell from her facial expression that she was surprised.",
+      "chinese": "我从她的面部表情看出她很惊讶。"
     }
   ],
   "studyFocus": {
@@ -322,7 +392,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“表达观点”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "express an opinion"
+        "clearly express",
+        "express an opinion",
+        "express your feelings",
+        "express concern about"
       ],
       "answer": "express an opinion",
       "stage": "T2",
@@ -334,7 +407,9 @@
       "prompt": "搭配辨析：哪一项既表示“表达感受”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "express your feelings",
-        "express an opinion"
+        "express an opinion",
+        "express concern about",
+        "clearly express"
       ],
       "answer": "express your feelings",
       "stage": "T3",
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

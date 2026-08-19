@@ -18,7 +18,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "待精校",
+    "模板详卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心动作与结构",
       "items": [
         {
           "phrase": "realize that",
@@ -92,22 +92,27 @@
           "phrase": "realize a dream",
           "phonetic": "/ˈriːəlaɪz ə ˈdriːm/",
           "chinese": "实现梦想"
-        },
-        {
-          "phrase": "suddenly realize",
-          "phonetic": "/ˈsʌdənliː ˈriːəlaɪz/",
-          "chinese": "突然意识到"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "suddenly realize",
+          "phonetic": "/ˈsʌdənliː ˈriːəlaɪz/",
+          "chinese": "突然意识到"
+        },
         {
           "phrase": "fail to realize",
           "phonetic": "/ˈfeɪl ˈtuː ˈriːəlaɪz/",
           "chinese": "没有意识到"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "make someone realize",
           "phonetic": "/ˈmeɪk ˈsʌˌmwʌn ˈriːəlaɪz/",
@@ -126,8 +131,43 @@
       "phrase": "realize that",
       "phonetic": "/ˈriːəlaɪz ˈðæt/",
       "chinese": "意识到……",
-      "example": "I realized that I had used the wrong word.",
-      "translation": "我意识到自己用错了词。"
+      "example": "I realized that I had left my keys at home.",
+      "translation": "我意识到自己把钥匙落在家里了。"
+    },
+    {
+      "phrase": "realize a dream",
+      "phonetic": "/ˈriːəlaɪz ə ˈdriːm/",
+      "chinese": "实现梦想",
+      "example": "She worked for years to realize her dream.",
+      "translation": "她努力多年以实现梦想。"
+    },
+    {
+      "phrase": "suddenly realize",
+      "phonetic": "/ˈsʌdənliː ˈriːəlaɪz/",
+      "chinese": "突然意识到",
+      "example": "He suddenly realized why the door was locked.",
+      "translation": "他突然明白门为什么锁着。"
+    },
+    {
+      "phrase": "fail to realize",
+      "phonetic": "/ˈfeɪl ˈtuː ˈriːəlaɪz/",
+      "chinese": "没有意识到",
+      "example": "Many people fail to realize how much time the task takes.",
+      "translation": "许多人没有意识到这项任务要花多少时间。"
+    },
+    {
+      "phrase": "make someone realize",
+      "phonetic": "/ˈmeɪk ˈsʌˌmwʌn ˈriːəlaɪz/",
+      "chinese": "使某人明白",
+      "example": "The mistake made me realize the value of checking my work.",
+      "translation": "这个错误让我意识到检查工作的重要性。"
+    },
+    {
+      "phrase": "fully realize the importance",
+      "phonetic": "/ˈfʊliː ˈriːəlaɪz ðə ˌɪˈmpɔːrtəns/",
+      "chinese": "充分认识重要性",
+      "example": "We fully realize the importance of data privacy.",
+      "translation": "我们充分认识到数据隐私的重要性。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "I realized that I had used the wrong word.",
       "chinese": "我意识到自己用错了词。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "I realized that I had left my keys at home.",
+      "chinese": "我意识到自己把钥匙落在家里了。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "She worked for years to realize her dream.",
+      "chinese": "她努力多年以实现梦想。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "He suddenly realized why the door was locked.",
+      "chinese": "他突然明白门为什么锁着。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "Many people fail to realize how much time the task takes.",
+      "chinese": "许多人没有意识到这项任务要花多少时间。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "The mistake made me realize the value of checking my work.",
+      "chinese": "这个错误让我意识到检查工作的重要性。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "We fully realize the importance of data privacy.",
+      "chinese": "我们充分认识到数据隐私的重要性。"
     }
   ],
   "studyFocus": {
@@ -322,7 +392,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“意识到……”，又符合这个形式线索：使用 that 引导一个主谓完整的从句？",
       "options": [
-        "realize that"
+        "fail to realize",
+        "realize that",
+        "realize a dream",
+        "suddenly realize"
       ],
       "answer": "realize that",
       "stage": "T2",
@@ -334,7 +407,9 @@
       "prompt": "搭配辨析：哪一项既表示“实现梦想”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "realize a dream",
-        "realize that"
+        "realize that",
+        "suddenly realize",
+        "fail to realize"
       ],
       "answer": "realize a dream",
       "stage": "T3",
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

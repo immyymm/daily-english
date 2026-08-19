@@ -24,7 +24,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "待精校",
+    "模板详卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -94,7 +94,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心动作与结构",
       "items": [
         {
           "phrase": "offer help",
@@ -105,22 +105,27 @@
           "phrase": "offer someone a job",
           "phonetic": "/ˈɔːfər ˈsʌˌmwʌn ə ˈdʒɑb/",
           "chinese": "给某人一份工作"
-        },
-        {
-          "phrase": "offer to do",
-          "phonetic": "/ˈɔːfər ˈtuː ˈduː/",
-          "chinese": "主动提出做"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "offer to do",
+          "phonetic": "/ˈɔːfər ˈtuː ˈduː/",
+          "chinese": "主动提出做"
+        },
         {
           "phrase": "make an offer",
           "phonetic": "/ˈmeɪk ˈæn ˈɔːfər/",
           "chinese": "提出报价"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "accept an offer",
           "phonetic": "/æˈksɛpt ˈæn ˈɔːfər/",
@@ -139,8 +144,43 @@
       "phrase": "offer help",
       "phonetic": "/ˈɔːfər ˈhɛlp/",
       "chinese": "主动提供帮助",
-      "example": "He offered to help me with the project.",
-      "translation": "他主动提出帮我做这个项目。"
+      "example": "A neighbor offered help when our car broke down.",
+      "translation": "我们的车坏时，一位邻居主动提供了帮助。"
+    },
+    {
+      "phrase": "offer someone a job",
+      "phonetic": "/ˈɔːfər ˈsʌˌmwʌn ə ˈdʒɑb/",
+      "chinese": "给某人一份工作",
+      "example": "The company offered her a job in Beijing.",
+      "translation": "公司给了她一份在北京的工作。"
+    },
+    {
+      "phrase": "offer to do",
+      "phonetic": "/ˈɔːfər ˈtuː ˈduː/",
+      "chinese": "主动提出做",
+      "example": "He offered to carry my bag.",
+      "translation": "他主动提出帮我拿包。"
+    },
+    {
+      "phrase": "make an offer",
+      "phonetic": "/ˈmeɪk ˈæn ˈɔːfər/",
+      "chinese": "提出报价",
+      "example": "They made an offer on the apartment yesterday.",
+      "translation": "他们昨天对那套公寓提出了报价。"
+    },
+    {
+      "phrase": "accept an offer",
+      "phonetic": "/æˈksɛpt ˈæn ˈɔːfər/",
+      "chinese": "接受提议",
+      "example": "She accepted the offer after reading the contract.",
+      "translation": "她看完合同后接受了这份提议。"
+    },
+    {
+      "phrase": "on offer",
+      "phonetic": "/ˈɑn ˈɔːfər/",
+      "chinese": "可供选择；特价",
+      "example": "Several courses are on offer this summer.",
+      "translation": "今年夏天有几门课程可供选择。"
     }
   ],
   "synonyms": [
@@ -187,6 +227,36 @@
       "scene": "核心真实用法",
       "english": "He offered to help me with the project.",
       "chinese": "他主动提出帮我做这个项目。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "A neighbor offered help when our car broke down.",
+      "chinese": "我们的车坏时，一位邻居主动提供了帮助。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "The company offered her a job in Beijing.",
+      "chinese": "公司给了她一份在北京的工作。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "He offered to carry my bag.",
+      "chinese": "他主动提出帮我拿包。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "They made an offer on the apartment yesterday.",
+      "chinese": "他们昨天对那套公寓提出了报价。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "She accepted the offer after reading the contract.",
+      "chinese": "她看完合同后接受了这份提议。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "Several courses are on offer this summer.",
+      "chinese": "今年夏天有几门课程可供选择。"
     }
   ],
   "studyFocus": {
@@ -335,7 +405,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“主动提供帮助”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "offer help"
+        "offer to do",
+        "make an offer",
+        "offer help",
+        "offer someone a job"
       ],
       "answer": "offer help",
       "stage": "T2",
@@ -346,8 +419,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“给某人一份工作”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "make an offer",
+        "offer someone a job",
         "offer help",
-        "offer someone a job"
+        "offer to do"
       ],
       "answer": "offer someone a job",
       "stage": "T3",
@@ -438,9 +513,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

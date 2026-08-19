@@ -18,7 +18,7 @@
   "difficulty": "进阶",
   "tags": [
     "n.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心名词搭配",
       "items": [
         {
           "phrase": "pay attention to",
@@ -92,22 +92,27 @@
           "phrase": "draw attention to",
           "phonetic": "/ˈdrɔː əˈtenʃən ˈtuː/",
           "chinese": "使人注意……"
-        },
-        {
-          "phrase": "get someone’s attention",
-          "phonetic": "/ˈɡɛt someone’s əˈtenʃən/",
-          "chinese": "引起某人注意"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "get someone’s attention",
+          "phonetic": "/ˈɡɛt someone’s əˈtenʃən/",
+          "chinese": "引起某人注意"
+        },
         {
           "phrase": "full attention",
           "phonetic": "/ˈfʊl əˈtenʃən/",
           "chinese": "全部注意力"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "attention to detail",
           "phonetic": "/əˈtenʃən ˈtuː dɪˈteɪl/",
@@ -126,8 +131,43 @@
       "phrase": "pay attention to",
       "phonetic": "/ˈpeɪ əˈtenʃən ˈtuː/",
       "chinese": "注意……",
-      "example": "Pay attention to the preposition after the verb.",
-      "translation": "注意这个动词后面的介词。"
+      "example": "Pay attention to the verb form in this sentence.",
+      "translation": "注意这个句子中的动词形式。"
+    },
+    {
+      "phrase": "draw attention to",
+      "phonetic": "/ˈdrɔː əˈtenʃən ˈtuː/",
+      "chinese": "使人注意……",
+      "example": "The report draws attention to a serious problem.",
+      "translation": "报告使人们注意到一个严重问题。"
+    },
+    {
+      "phrase": "get someone’s attention",
+      "phonetic": "/ˈɡɛt someone’s əˈtenʃən/",
+      "chinese": "引起某人注意",
+      "example": "I waved to get the waiter’s attention.",
+      "translation": "我挥手引起服务员注意。"
+    },
+    {
+      "phrase": "full attention",
+      "phonetic": "/ˈfʊl əˈtenʃən/",
+      "chinese": "全部注意力",
+      "example": "Please give the speaker your full attention.",
+      "translation": "请全神贯注听发言者讲话。"
+    },
+    {
+      "phrase": "attention to detail",
+      "phonetic": "/əˈtenʃən ˈtuː dɪˈteɪl/",
+      "chinese": "对细节的关注",
+      "example": "Her attention to detail prevents many mistakes.",
+      "translation": "她对细节的关注避免了许多错误。"
+    },
+    {
+      "phrase": "medical attention",
+      "phonetic": "/ˈmɛdəkəl əˈtenʃən/",
+      "chinese": "医疗救治",
+      "example": "The injured driver needed medical attention.",
+      "translation": "受伤的司机需要医疗救治。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "Pay attention to the preposition after the verb.",
       "chinese": "注意这个动词后面的介词。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "Pay attention to the verb form in this sentence.",
+      "chinese": "注意这个句子中的动词形式。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "The report draws attention to a serious problem.",
+      "chinese": "报告使人们注意到一个严重问题。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "I waved to get the waiter’s attention.",
+      "chinese": "我挥手引起服务员注意。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "Please give the speaker your full attention.",
+      "chinese": "请全神贯注听发言者讲话。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "Her attention to detail prevents many mistakes.",
+      "chinese": "她对细节的关注避免了许多错误。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "The injured driver needed medical attention.",
+      "chinese": "受伤的司机需要医疗救治。"
     }
   ],
   "studyFocus": {
@@ -322,6 +392,9 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“注意……”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "draw attention to",
+        "get someone’s attention",
+        "full attention",
         "pay attention to"
       ],
       "answer": "pay attention to",
@@ -333,6 +406,8 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“使人注意……”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "get someone’s attention",
+        "full attention",
         "draw attention to",
         "pay attention to"
       ],
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

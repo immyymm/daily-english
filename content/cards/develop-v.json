@@ -18,7 +18,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "待精校",
+    "模板详卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心动作与结构",
       "items": [
         {
           "phrase": "develop a habit",
@@ -92,22 +92,27 @@
           "phrase": "develop a skill",
           "phonetic": "/dɪˈveləp ə ˈskɪl/",
           "chinese": "培养技能"
-        },
-        {
-          "phrase": "develop a plan",
-          "phonetic": "/dɪˈveləp ə ˈplæn/",
-          "chinese": "制定方案"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "develop a plan",
+          "phonetic": "/dɪˈveləp ə ˈplæn/",
+          "chinese": "制定方案"
+        },
         {
           "phrase": "develop an interest in",
           "phonetic": "/dɪˈveləp ˈæn ˈɪntrəst ɪn/",
           "chinese": "培养对……的兴趣"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "develop over time",
           "phonetic": "/dɪˈveləp ˈoʊvɚ ˈtaɪm/",
@@ -126,8 +131,43 @@
       "phrase": "develop a habit",
       "phonetic": "/dɪˈveləp ə ˈhæbət/",
       "chinese": "养成习惯",
-      "example": "She developed a habit of reading every night.",
-      "translation": "她养成了每晚阅读的习惯。"
+      "example": "It takes time to develop a healthy habit.",
+      "translation": "养成健康习惯需要时间。"
+    },
+    {
+      "phrase": "develop a skill",
+      "phonetic": "/dɪˈveləp ə ˈskɪl/",
+      "chinese": "培养技能",
+      "example": "Daily conversation can help you develop speaking skills.",
+      "translation": "每天对话可以帮助你培养口语技能。"
+    },
+    {
+      "phrase": "develop a plan",
+      "phonetic": "/dɪˈveləp ə ˈplæn/",
+      "chinese": "制定方案",
+      "example": "The team developed a practical plan for the next stage.",
+      "translation": "团队为下一阶段制定了一个切实可行的计划。"
+    },
+    {
+      "phrase": "develop an interest in",
+      "phonetic": "/dɪˈveləp ˈæn ˈɪntrəst ɪn/",
+      "chinese": "培养对……的兴趣",
+      "example": "She developed an interest in photography at college.",
+      "translation": "她在大学时培养了对摄影的兴趣。"
+    },
+    {
+      "phrase": "develop over time",
+      "phonetic": "/dɪˈveləp ˈoʊvɚ ˈtaɪm/",
+      "chinese": "逐步发展",
+      "example": "Trust develops over time.",
+      "translation": "信任是逐步建立起来的。"
+    },
+    {
+      "phrase": "research and development",
+      "phonetic": "/riːˈsɝːtʃ ənd dɪˈvɛləpmənt/",
+      "chinese": "研究与开发",
+      "example": "The company invests heavily in research and development.",
+      "translation": "公司在研发方面投入了大量资金。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "She developed a habit of reading every night.",
       "chinese": "她养成了每晚阅读的习惯。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "It takes time to develop a healthy habit.",
+      "chinese": "养成健康习惯需要时间。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "Daily conversation can help you develop speaking skills.",
+      "chinese": "每天对话可以帮助你培养口语技能。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "The team developed a practical plan for the next stage.",
+      "chinese": "团队为下一阶段制定了一个切实可行的计划。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "She developed an interest in photography at college.",
+      "chinese": "她在大学时培养了对摄影的兴趣。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "Trust develops over time.",
+      "chinese": "信任是逐步建立起来的。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "The company invests heavily in research and development.",
+      "chinese": "公司在研发方面投入了大量资金。"
     }
   ],
   "studyFocus": {
@@ -322,6 +392,9 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“养成习惯”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "develop a skill",
+        "develop a plan",
+        "develop an interest in",
         "develop a habit"
       ],
       "answer": "develop a habit",
@@ -333,6 +406,8 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“培养技能”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "develop a plan",
+        "develop an interest in",
         "develop a skill",
         "develop a habit"
       ],
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

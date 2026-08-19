@@ -18,7 +18,7 @@
   "difficulty": "应用",
   "tags": [
     "n.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心名词搭配",
       "items": [
         {
           "phrase": "solve a problem",
@@ -92,22 +92,27 @@
           "phrase": "serious problem",
           "phonetic": "/ˈsɪriːəs ˈprɑːbləm/",
           "chinese": "严重问题"
-        },
-        {
-          "phrase": "have a problem with",
-          "phonetic": "/ˈhæv ə ˈprɑːbləm ˈwɪð/",
-          "chinese": "对……有问题"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "have a problem with",
+          "phonetic": "/ˈhæv ə ˈprɑːbləm ˈwɪð/",
+          "chinese": "对……有问题"
+        },
         {
           "phrase": "cause a problem",
           "phonetic": "/ˈkɑz ə ˈprɑːbləm/",
           "chinese": "引发问题"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "no problem",
           "phonetic": "/ˈnoʊ ˈprɑːbləm/",
@@ -126,8 +131,43 @@
       "phrase": "solve a problem",
       "phonetic": "/ˈsɑlv ə ˈprɑːbləm/",
       "chinese": "解决问题",
-      "example": "Breaking the task into steps solved the problem.",
-      "translation": "把任务拆成步骤解决了这个问题。"
+      "example": "We worked together to solve the problem.",
+      "translation": "我们共同解决了这个问题。"
+    },
+    {
+      "phrase": "serious problem",
+      "phonetic": "/ˈsɪriːəs ˈprɑːbləm/",
+      "chinese": "严重问题",
+      "example": "Lack of clean water is a serious problem.",
+      "translation": "缺乏清洁用水是一个严重问题。"
+    },
+    {
+      "phrase": "have a problem with",
+      "phonetic": "/ˈhæv ə ˈprɑːbləm ˈwɪð/",
+      "chinese": "对……有问题",
+      "example": "I have a problem with the payment page.",
+      "translation": "付款页面对我来说有问题。"
+    },
+    {
+      "phrase": "cause a problem",
+      "phonetic": "/ˈkɑz ə ˈprɑːbləm/",
+      "chinese": "引发问题",
+      "example": "One wrong number can cause a problem.",
+      "translation": "一个错误数字就可能引发问题。"
+    },
+    {
+      "phrase": "no problem",
+      "phonetic": "/ˈnoʊ ˈprɑːbləm/",
+      "chinese": "没问题",
+      "example": "“Can you help me?” “No problem.”",
+      "translation": "“你能帮我吗？”“没问题。”"
+    },
+    {
+      "phrase": "deal with a problem",
+      "phonetic": "/ˈdiːl ˈwɪð ə ˈprɑːbləm/",
+      "chinese": "处理问题",
+      "example": "The team dealt with the problem quickly.",
+      "translation": "团队迅速处理了这个问题。"
     }
   ],
   "synonyms": [
@@ -182,6 +222,36 @@
       "scene": "核心真实用法",
       "english": "Breaking the task into steps solved the problem.",
       "chinese": "把任务拆成步骤解决了这个问题。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "We worked together to solve the problem.",
+      "chinese": "我们共同解决了这个问题。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "Lack of clean water is a serious problem.",
+      "chinese": "缺乏清洁用水是一个严重问题。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "I have a problem with the payment page.",
+      "chinese": "付款页面对我来说有问题。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "One wrong number can cause a problem.",
+      "chinese": "一个错误数字就可能引发问题。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "“Can you help me?” “No problem.”",
+      "chinese": "“你能帮我吗？”“没问题。”"
+    },
+    {
+      "scene": "主动表达",
+      "english": "The team dealt with the problem quickly.",
+      "chinese": "团队迅速处理了这个问题。"
     }
   ],
   "studyFocus": {
@@ -330,7 +400,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“解决问题”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "solve a problem"
+        "solve a problem",
+        "serious problem",
+        "have a problem with",
+        "cause a problem"
       ],
       "answer": "solve a problem",
       "stage": "T2",
@@ -342,6 +415,8 @@
       "prompt": "用法辨析：哪一项既表示“严重问题”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "solve a problem",
+        "have a problem with",
+        "cause a problem",
         "serious problem"
       ],
       "answer": "serious problem",
@@ -433,9 +508,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

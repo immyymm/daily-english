@@ -18,7 +18,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "待精校",
+    "模板详卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心动作与结构",
       "items": [
         {
           "phrase": "seem to be",
@@ -92,22 +92,27 @@
           "phrase": "seem likely",
           "phonetic": "/siːm ˈlaɪkliː/",
           "chinese": "看起来可能"
-        },
-        {
-          "phrase": "seem strange",
-          "phonetic": "/siːm ˈstreɪndʒ/",
-          "chinese": "看起来奇怪"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "seem strange",
+          "phonetic": "/siːm ˈstreɪndʒ/",
+          "chinese": "看起来奇怪"
+        },
         {
           "phrase": "it seems that",
           "phonetic": "/ˈɪt ˈsiːmz ˈðæt/",
           "chinese": "似乎……"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "does not seem to",
           "phonetic": "/ˈdʌz ˈnɑt siːm ˈtuː/",
@@ -126,8 +131,43 @@
       "phrase": "seem to be",
       "phonetic": "/siːm ˈtuː ˈbiː/",
       "chinese": "似乎是",
-      "example": "The task seems difficult at first.",
-      "translation": "这个任务起初看起来很难。"
+      "example": "The answer seems to be correct.",
+      "translation": "这个答案似乎是正确的。"
+    },
+    {
+      "phrase": "seem likely",
+      "phonetic": "/siːm ˈlaɪkliː/",
+      "chinese": "看起来可能",
+      "example": "A delay now seems likely.",
+      "translation": "现在看来很可能会延误。"
+    },
+    {
+      "phrase": "seem strange",
+      "phonetic": "/siːm ˈstreɪndʒ/",
+      "chinese": "看起来奇怪",
+      "example": "It may seem strange at first, but the method works.",
+      "translation": "起初它可能看起来很奇怪，但这个方法有效。"
+    },
+    {
+      "phrase": "it seems that",
+      "phonetic": "/ˈɪt ˈsiːmz ˈðæt/",
+      "chinese": "似乎……",
+      "example": "It seems that everyone is ready.",
+      "translation": "看来大家都准备好了。"
+    },
+    {
+      "phrase": "does not seem to",
+      "phonetic": "/ˈdʌz ˈnɑt siːm ˈtuː/",
+      "chinese": "似乎不……",
+      "example": "He does not seem to understand the question.",
+      "translation": "他似乎没有理解这个问题。"
+    },
+    {
+      "phrase": "seem like a good idea",
+      "phonetic": "/siːm ˈlaɪk ə ˈɡʊd aɪˈdiːə/",
+      "chinese": "看起来是个好主意",
+      "example": "Taking the train seems like a good idea.",
+      "translation": "坐火车看起来是个好主意。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "The task seems difficult at first.",
       "chinese": "这个任务起初看起来很难。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "The answer seems to be correct.",
+      "chinese": "这个答案似乎是正确的。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "A delay now seems likely.",
+      "chinese": "现在看来很可能会延误。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "It may seem strange at first, but the method works.",
+      "chinese": "起初它可能看起来很奇怪，但这个方法有效。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "It seems that everyone is ready.",
+      "chinese": "看来大家都准备好了。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "He does not seem to understand the question.",
+      "chinese": "他似乎没有理解这个问题。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "Taking the train seems like a good idea.",
+      "chinese": "坐火车看起来是个好主意。"
     }
   ],
   "studyFocus": {
@@ -322,7 +392,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“似乎是”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "seem to be"
+        "seem to be",
+        "seem likely",
+        "seem strange",
+        "it seems that"
       ],
       "answer": "seem to be",
       "stage": "T2",
@@ -334,6 +407,8 @@
       "prompt": "用法辨析：哪一项既表示“看起来可能”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "seem to be",
+        "seem strange",
+        "it seems that",
         "seem likely"
       ],
       "answer": "seem likely",
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

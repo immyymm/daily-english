@@ -18,7 +18,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "待精校",
+    "模板详卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心动作与结构",
       "items": [
         {
           "phrase": "remain calm",
@@ -92,22 +92,27 @@
           "phrase": "remain unchanged",
           "phonetic": "/rɪˈmeɪn əˈntʃeɪndʒd/",
           "chinese": "保持不变"
-        },
-        {
-          "phrase": "remain in place",
-          "phonetic": "/rɪˈmeɪn ɪn ˈpleɪs/",
-          "chinese": "留在原地"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "remain in place",
+          "phonetic": "/rɪˈmeɪn ɪn ˈpleɪs/",
+          "chinese": "留在原地"
+        },
         {
           "phrase": "remain to be seen",
           "phonetic": "/rɪˈmeɪn ˈtuː ˈbiː ˈsiːn/",
           "chinese": "尚待观察"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "the fact remains that",
           "phonetic": "/ðə ˈfækt rɪˈmeɪnz ˈðæt/",
@@ -126,8 +131,43 @@
       "phrase": "remain calm",
       "phonetic": "/rɪˈmeɪn ˈkɑm/",
       "chinese": "保持冷静",
-      "example": "Please remain calm and try again.",
-      "translation": "请保持冷静并再试一次。"
+      "example": "Please remain calm while we check the system.",
+      "translation": "我们检查系统时请保持冷静。"
+    },
+    {
+      "phrase": "remain unchanged",
+      "phonetic": "/rɪˈmeɪn əˈntʃeɪndʒd/",
+      "chinese": "保持不变",
+      "example": "The price has remained unchanged for three years.",
+      "translation": "这个价格三年来一直没有变化。"
+    },
+    {
+      "phrase": "remain in place",
+      "phonetic": "/rɪˈmeɪn ɪn ˈpleɪs/",
+      "chinese": "留在原地",
+      "example": "The old sign will remain in place.",
+      "translation": "旧标志将保留在原处。"
+    },
+    {
+      "phrase": "remain to be seen",
+      "phonetic": "/rɪˈmeɪn ˈtuː ˈbiː ˈsiːn/",
+      "chinese": "尚待观察",
+      "example": "Whether the plan will succeed remains to be seen.",
+      "translation": "这个计划能否成功还有待观察。"
+    },
+    {
+      "phrase": "the fact remains that",
+      "phonetic": "/ðə ˈfækt rɪˈmeɪnz ˈðæt/",
+      "chinese": "事实仍然是",
+      "example": "The fact remains that we need more time.",
+      "translation": "事实仍然是我们需要更多时间。"
+    },
+    {
+      "phrase": "remain open",
+      "phonetic": "/rɪˈmeɪn ˈoʊpən/",
+      "chinese": "保持开放",
+      "example": "The museum will remain open until nine tonight.",
+      "translation": "博物馆今晚将开放到九点。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "Please remain calm and try again.",
       "chinese": "请保持冷静并再试一次。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "Please remain calm while we check the system.",
+      "chinese": "我们检查系统时请保持冷静。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "The price has remained unchanged for three years.",
+      "chinese": "这个价格三年来一直没有变化。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "The old sign will remain in place.",
+      "chinese": "旧标志将保留在原处。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "Whether the plan will succeed remains to be seen.",
+      "chinese": "这个计划能否成功还有待观察。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "The fact remains that we need more time.",
+      "chinese": "事实仍然是我们需要更多时间。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "The museum will remain open until nine tonight.",
+      "chinese": "博物馆今晚将开放到九点。"
     }
   ],
   "studyFocus": {
@@ -322,7 +392,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“保持冷静”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "remain calm"
+        "remain calm",
+        "remain unchanged",
+        "remain in place",
+        "remain to be seen"
       ],
       "answer": "remain calm",
       "stage": "T2",
@@ -334,6 +407,8 @@
       "prompt": "用法辨析：哪一项既表示“保持不变”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "remain calm",
+        "remain in place",
+        "remain to be seen",
         "remain unchanged"
       ],
       "answer": "remain unchanged",
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

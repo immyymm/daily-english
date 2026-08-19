@@ -18,7 +18,7 @@
   "difficulty": "进阶",
   "tags": [
     "n.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心名词搭配",
       "items": [
         {
           "phrase": "high quality",
@@ -92,22 +92,27 @@
           "phrase": "quality of life",
           "phonetic": "/ˈkwɑːləti ˈʌv ˈlaɪf/",
           "chinese": "生活质量"
-        },
-        {
-          "phrase": "improve the quality of",
-          "phonetic": "/ˌɪˈmpruːv ðə ˈkwɑːləti ˈʌv/",
-          "chinese": "提高……质量"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "improve the quality of",
+          "phonetic": "/ˌɪˈmpruːv ðə ˈkwɑːləti ˈʌv/",
+          "chinese": "提高……质量"
+        },
         {
           "phrase": "good-quality materials",
           "phonetic": "/ˈɡʊd-ˈkwɑːləti məˈtɪriːəlz/",
           "chinese": "优质材料"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "air quality",
           "phonetic": "/ˈɛr ˈkwɑːləti/",
@@ -126,8 +131,43 @@
       "phrase": "high quality",
       "phonetic": "/ˈhaɪ ˈkwɑːləti/",
       "chinese": "高质量",
-      "example": "Focus on the quality of your practice.",
-      "translation": "关注练习的质量。"
+      "example": "This store sells products of high quality.",
+      "translation": "这家商店销售高质量产品。"
+    },
+    {
+      "phrase": "quality of life",
+      "phonetic": "/ˈkwɑːləti ˈʌv ˈlaɪf/",
+      "chinese": "生活质量",
+      "example": "Regular exercise can improve your quality of life.",
+      "translation": "规律运动可以提高生活质量。"
+    },
+    {
+      "phrase": "improve the quality of",
+      "phonetic": "/ˌɪˈmpruːv ðə ˈkwɑːləti ˈʌv/",
+      "chinese": "提高……质量",
+      "example": "The changes improved the quality of the service.",
+      "translation": "这些改变提高了服务质量。"
+    },
+    {
+      "phrase": "good-quality materials",
+      "phonetic": "/ˈɡʊd-ˈkwɑːləti məˈtɪriːəlz/",
+      "chinese": "优质材料",
+      "example": "We check every item for quality before shipping.",
+      "translation": "发货前我们会检查每件商品的质量。"
+    },
+    {
+      "phrase": "air quality",
+      "phonetic": "/ˈɛr ˈkwɑːləti/",
+      "chinese": "空气质量",
+      "example": "Customers expect good quality at a fair price.",
+      "translation": "顾客希望以合理价格买到优质商品。"
+    },
+    {
+      "phrase": "personal qualities",
+      "phonetic": "/ˈpɝːsɪnəl ˈkwɑlətiːz/",
+      "chinese": "个人品质",
+      "example": "The picture quality is better on the new screen.",
+      "translation": "新屏幕的画质更好。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "Focus on the quality of your practice.",
       "chinese": "关注练习的质量。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "This store sells products of high quality.",
+      "chinese": "这家商店销售高质量产品。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "Regular exercise can improve your quality of life.",
+      "chinese": "规律运动可以提高生活质量。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "The changes improved the quality of the service.",
+      "chinese": "这些改变提高了服务质量。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "We check every item for quality before shipping.",
+      "chinese": "发货前我们会检查每件商品的质量。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "Customers expect good quality at a fair price.",
+      "chinese": "顾客希望以合理价格买到优质商品。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "The picture quality is better on the new screen.",
+      "chinese": "新屏幕的画质更好。"
     }
   ],
   "studyFocus": {
@@ -322,7 +392,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“高质量”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "high quality"
+        "improve the quality of",
+        "good-quality materials",
+        "high quality",
+        "quality of life"
       ],
       "answer": "high quality",
       "stage": "T2",
@@ -333,8 +406,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“生活质量”，又符合这个形式线索：完整搭配中使用介词 of？",
       "options": [
+        "good-quality materials",
+        "quality of life",
         "high quality",
-        "quality of life"
+        "improve the quality of"
       ],
       "answer": "quality of life",
       "stage": "T3",
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

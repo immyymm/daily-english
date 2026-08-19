@@ -24,7 +24,7 @@
   "difficulty": "应用",
   "tags": [
     "n.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -94,7 +94,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心名词搭配",
       "items": [
         {
           "phrase": "make a plan",
@@ -105,22 +105,27 @@
           "phrase": "plan to do",
           "phonetic": "/plæn ˈtuː ˈduː/",
           "chinese": "计划做"
-        },
-        {
-          "phrase": "according to plan",
-          "phonetic": "/əˈkɔːrdɪŋ ˈtuː plæn/",
-          "chinese": "按计划"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "according to plan",
+          "phonetic": "/əˈkɔːrdɪŋ ˈtuː plæn/",
+          "chinese": "按计划"
+        },
         {
           "phrase": "change of plan",
           "phonetic": "/ˈtʃeɪndʒ ˈʌv plæn/",
           "chinese": "计划改变"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "business plan",
           "phonetic": "/ˈbɪznəs plæn/",
@@ -139,8 +144,43 @@
       "phrase": "make a plan",
       "phonetic": "/ˈmeɪk ə plæn/",
       "chinese": "制定计划",
-      "example": "Let us make a simple plan for the week.",
-      "translation": "让我们为这一周制定一个简单计划。"
+      "example": "Let us make a plan before we begin.",
+      "translation": "开始前让我们制定一个计划。"
+    },
+    {
+      "phrase": "plan to do",
+      "phonetic": "/plæn ˈtuː ˈduː/",
+      "chinese": "计划做",
+      "example": "I plan to study for an hour tonight.",
+      "translation": "我计划今晚学习一小时。"
+    },
+    {
+      "phrase": "according to plan",
+      "phonetic": "/əˈkɔːrdɪŋ ˈtuː plæn/",
+      "chinese": "按计划",
+      "example": "Everything went according to plan.",
+      "translation": "一切按计划进行。"
+    },
+    {
+      "phrase": "change of plan",
+      "phonetic": "/ˈtʃeɪndʒ ˈʌv plæn/",
+      "chinese": "计划改变",
+      "example": "There has been a change of plan.",
+      "translation": "计划有变。"
+    },
+    {
+      "phrase": "business plan",
+      "phonetic": "/ˈbɪznəs plæn/",
+      "chinese": "商业计划",
+      "example": "The bank asked to see our business plan.",
+      "translation": "银行要求查看我们的商业计划。"
+    },
+    {
+      "phrase": "have no plans to",
+      "phonetic": "/ˈhæv ˈnoʊ ˈplænz ˈtuː/",
+      "chinese": "没有做……的计划",
+      "example": "We have no plans to close the store.",
+      "translation": "我们没有关闭商店的计划。"
     }
   ],
   "synonyms": [
@@ -195,6 +235,36 @@
       "scene": "核心真实用法",
       "english": "Let us make a simple plan for the week.",
       "chinese": "让我们为这一周制定一个简单计划。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "Let us make a plan before we begin.",
+      "chinese": "开始前让我们制定一个计划。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "I plan to study for an hour tonight.",
+      "chinese": "我计划今晚学习一小时。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "Everything went according to plan.",
+      "chinese": "一切按计划进行。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "There has been a change of plan.",
+      "chinese": "计划有变。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "The bank asked to see our business plan.",
+      "chinese": "银行要求查看我们的商业计划。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "We have no plans to close the store.",
+      "chinese": "我们没有关闭商店的计划。"
     }
   ],
   "studyFocus": {
@@ -343,6 +413,9 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“制定计划”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "plan to do",
+        "according to plan",
+        "change of plan",
         "make a plan"
       ],
       "answer": "make a plan",
@@ -354,6 +427,8 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“计划做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
       "options": [
+        "according to plan",
+        "change of plan",
         "plan to do",
         "make a plan"
       ],
@@ -446,9 +521,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

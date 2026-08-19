@@ -18,7 +18,7 @@
   "difficulty": "进阶",
   "tags": [
     "n.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心名词搭配",
       "items": [
         {
           "phrase": "make an effort",
@@ -92,22 +92,27 @@
           "phrase": "put effort into",
           "phonetic": "/ˈpʊt ˈefərt ˈɪntuː/",
           "chinese": "投入精力"
-        },
-        {
-          "phrase": "a great deal of effort",
-          "phonetic": "/ə ˈɡreɪt ˈdiːl ˈʌv ˈefərt/",
-          "chinese": "大量努力"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "a great deal of effort",
+          "phonetic": "/ə ˈɡreɪt ˈdiːl ˈʌv ˈefərt/",
+          "chinese": "大量努力"
+        },
         {
           "phrase": "with little effort",
           "phonetic": "/ˈwɪð ˈlɪtəl ˈefərt/",
           "chinese": "不费什么力"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "worth the effort",
           "phonetic": "/ˈwɝːθ ðə ˈefərt/",
@@ -126,8 +131,43 @@
       "phrase": "make an effort",
       "phonetic": "/ˈmeɪk ˈæn ˈefərt/",
       "chinese": "付出努力",
-      "example": "Make an effort to use the word today.",
-      "translation": "今天努力把这个词用出来。"
+      "example": "She made an effort to arrive on time.",
+      "translation": "她努力做到准时到达。"
+    },
+    {
+      "phrase": "put effort into",
+      "phonetic": "/ˈpʊt ˈefərt ˈɪntuː/",
+      "chinese": "投入精力",
+      "example": "We put a lot of effort into the final report.",
+      "translation": "我们在最终报告上投入了大量精力。"
+    },
+    {
+      "phrase": "a great deal of effort",
+      "phonetic": "/ə ˈɡreɪt ˈdiːl ˈʌv ˈefərt/",
+      "chinese": "大量努力",
+      "example": "Learning these structures takes a great deal of effort.",
+      "translation": "学习这些结构需要付出大量努力。"
+    },
+    {
+      "phrase": "with little effort",
+      "phonetic": "/ˈwɪð ˈlɪtəl ˈefərt/",
+      "chinese": "不费什么力",
+      "example": "The door opened with little effort.",
+      "translation": "没费什么力门就打开了。"
+    },
+    {
+      "phrase": "worth the effort",
+      "phonetic": "/ˈwɝːθ ðə ˈefərt/",
+      "chinese": "值得努力",
+      "example": "The view from the top was worth the effort.",
+      "translation": "山顶的景色值得这番努力。"
+    },
+    {
+      "phrase": "a team effort",
+      "phonetic": "/ə ˈtiːm ˈefərt/",
+      "chinese": "团队共同努力",
+      "example": "Completing the project was a real team effort.",
+      "translation": "完成这个项目是团队共同努力的结果。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "Make an effort to use the word today.",
       "chinese": "今天努力把这个词用出来。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "She made an effort to arrive on time.",
+      "chinese": "她努力做到准时到达。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "We put a lot of effort into the final report.",
+      "chinese": "我们在最终报告上投入了大量精力。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "Learning these structures takes a great deal of effort.",
+      "chinese": "学习这些结构需要付出大量努力。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "The door opened with little effort.",
+      "chinese": "没费什么力门就打开了。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "The view from the top was worth the effort.",
+      "chinese": "山顶的景色值得这番努力。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "Completing the project was a real team effort.",
+      "chinese": "完成这个项目是团队共同努力的结果。"
     }
   ],
   "studyFocus": {
@@ -322,6 +392,9 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“付出努力”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "put effort into",
+        "a great deal of effort",
+        "with little effort",
         "make an effort"
       ],
       "answer": "make an effort",
@@ -333,6 +406,8 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“投入精力”，又符合这个形式线索：完整搭配中使用介词 into？",
       "options": [
+        "a great deal of effort",
+        "with little effort",
         "put effort into",
         "make an effort"
       ],
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

@@ -18,7 +18,7 @@
   "difficulty": "进阶",
   "tags": [
     "adv.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心用法",
       "items": [
         {
           "phrase": "simply put",
@@ -92,22 +92,27 @@
           "phrase": "simply because",
           "phonetic": "/ˈsɪmpli bɪˈkɔːz/",
           "chinese": "仅仅因为"
-        },
-        {
-          "phrase": "quite simply",
-          "phonetic": "/ˈkwaɪt ˈsɪmpli/",
-          "chinese": "很简单"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "quite simply",
+          "phonetic": "/ˈkwaɪt ˈsɪmpli/",
+          "chinese": "很简单"
+        },
         {
           "phrase": "simply impossible",
           "phonetic": "/ˈsɪmpli ˌɪˈmpɑsəbəl/",
           "chinese": "根本不可能"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "simply click",
           "phonetic": "/ˈsɪmpli ˈklɪk/",
@@ -119,6 +124,21 @@
           "chinese": "确实是最好的"
         }
       ]
+    },
+    {
+      "category": "补充常用语境",
+      "items": [
+        {
+          "phrase": "simply not true",
+          "phonetic": "/ˈsɪmpli ˈnɑt ˈtruː/",
+          "chinese": "根本不是真的"
+        },
+        {
+          "phrase": "simply cannot",
+          "phonetic": "/ˈsɪmpli ˈkænɑt/",
+          "chinese": "实在不能"
+        }
+      ]
     }
   ],
   "fixedPhrases": [
@@ -126,8 +146,43 @@
       "phrase": "simply put",
       "phonetic": "/ˈsɪmpli ˈpʊt/",
       "chinese": "简单来说",
-      "example": "Simply put, practice helps memory.",
-      "translation": "简单来说，练习有助于记忆。"
+      "example": "Simply put, the new system saves time.",
+      "translation": "简单来说，新系统可以节省时间。"
+    },
+    {
+      "phrase": "simply because",
+      "phonetic": "/ˈsɪmpli bɪˈkɔːz/",
+      "chinese": "仅仅因为",
+      "example": "I chose this course simply because it was practical.",
+      "translation": "我选择这门课程只是因为它很实用。"
+    },
+    {
+      "phrase": "quite simply",
+      "phonetic": "/ˈkwaɪt ˈsɪmpli/",
+      "chinese": "很简单",
+      "example": "Quite simply, we do not have enough staff.",
+      "translation": "很简单，我们没有足够的员工。"
+    },
+    {
+      "phrase": "simply impossible",
+      "phonetic": "/ˈsɪmpli ˌɪˈmpɑsəbəl/",
+      "chinese": "根本不可能",
+      "example": "Finishing everything today is simply impossible.",
+      "translation": "今天完成所有事情根本不可能。"
+    },
+    {
+      "phrase": "simply click",
+      "phonetic": "/ˈsɪmpli ˈklɪk/",
+      "chinese": "只需点击",
+      "example": "To continue, simply click the blue button.",
+      "translation": "要继续，只需点击蓝色按钮。"
+    },
+    {
+      "phrase": "simply the best",
+      "phonetic": "/ˈsɪmpli ðə ˈbɛst/",
+      "chinese": "确实是最好的",
+      "example": "For me, this is simply the best option.",
+      "translation": "对我来说，这确实是最好的选择。"
     }
   ],
   "synonyms": [
@@ -174,6 +229,36 @@
       "scene": "核心真实用法",
       "english": "Simply put, practice helps memory.",
       "chinese": "简单来说，练习有助于记忆。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "Simply put, the new system saves time.",
+      "chinese": "简单来说，新系统可以节省时间。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "I chose this course simply because it was practical.",
+      "chinese": "我选择这门课程只是因为它很实用。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "Quite simply, we do not have enough staff.",
+      "chinese": "很简单，我们没有足够的员工。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "Finishing everything today is simply impossible.",
+      "chinese": "今天完成所有事情根本不可能。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "To continue, simply click the blue button.",
+      "chinese": "要继续，只需点击蓝色按钮。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "For me, this is simply the best option.",
+      "chinese": "对我来说，这确实是最好的选择。"
     }
   ],
   "studyFocus": {
@@ -322,7 +407,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“简单来说”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "simply put"
+        "quite simply",
+        "simply impossible",
+        "simply put",
+        "simply because"
       ],
       "answer": "simply put",
       "stage": "T2",
@@ -333,8 +421,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“仅仅因为”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "simply impossible",
+        "simply because",
         "simply put",
-        "simply because"
+        "quite simply"
       ],
       "answer": "simply because",
       "stage": "T3",
@@ -425,9 +515,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

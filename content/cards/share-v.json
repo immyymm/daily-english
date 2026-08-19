@@ -24,7 +24,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "待精校",
+    "模板详卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -94,7 +94,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心动作与结构",
       "items": [
         {
           "phrase": "share something with someone",
@@ -105,22 +105,27 @@
           "phrase": "share an opinion",
           "phonetic": "/ʃer ˈæn əˈpɪnjən/",
           "chinese": "分享观点"
-        },
-        {
-          "phrase": "share the cost",
-          "phonetic": "/ʃer ðə ˈkɑst/",
-          "chinese": "分摊费用"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "share the cost",
+          "phonetic": "/ʃer ðə ˈkɑst/",
+          "chinese": "分摊费用"
+        },
         {
           "phrase": "have something in common",
           "phonetic": "/ˈhæv ˈsʌmθɪŋ ɪn ˈkɑmən/",
           "chinese": "有共同之处"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "a fair share",
           "phonetic": "/ə ˈfɛr ʃer/",
@@ -132,6 +137,16 @@
           "chinese": "市场份额"
         }
       ]
+    },
+    {
+      "category": "补充常用语境",
+      "items": [
+        {
+          "phrase": "share an idea",
+          "phonetic": "/ʃer ˈæn aɪˈdiːə/",
+          "chinese": "分享想法"
+        }
+      ]
     }
   ],
   "fixedPhrases": [
@@ -139,8 +154,43 @@
       "phrase": "share something with someone",
       "phonetic": "/ʃer ˈsʌmθɪŋ ˈwɪð ˈsʌˌmwʌn/",
       "chinese": "与某人分享某物",
-      "example": "She shared a useful study tip with me.",
-      "translation": "她和我分享了一个实用的学习技巧。"
+      "example": "I shared the news with my family.",
+      "translation": "我把这个消息告诉了家人。"
+    },
+    {
+      "phrase": "share an opinion",
+      "phonetic": "/ʃer ˈæn əˈpɪnjən/",
+      "chinese": "分享观点",
+      "example": "Would you like to share your opinion?",
+      "translation": "你愿意分享一下你的看法吗？"
+    },
+    {
+      "phrase": "share the cost",
+      "phonetic": "/ʃer ðə ˈkɑst/",
+      "chinese": "分摊费用",
+      "example": "We agreed to share the cost of the taxi.",
+      "translation": "我们同意分摊出租车费。"
+    },
+    {
+      "phrase": "have something in common",
+      "phonetic": "/ˈhæv ˈsʌmθɪŋ ɪn ˈkɑmən/",
+      "chinese": "有共同之处",
+      "example": "We shared our experiences and found that we had something in common.",
+      "translation": "我们分享了各自的经历，并发现彼此有共同之处。"
+    },
+    {
+      "phrase": "a fair share",
+      "phonetic": "/ə ˈfɛr ʃer/",
+      "chinese": "公平的一份",
+      "example": "Everyone did a fair share of the work.",
+      "translation": "每个人都承担了公平的一份工作。"
+    },
+    {
+      "phrase": "market share",
+      "phonetic": "/ˈmɑrkət ʃer/",
+      "chinese": "市场份额",
+      "example": "The company increased its market share last year.",
+      "translation": "公司去年提高了市场份额。"
     }
   ],
   "synonyms": [
@@ -187,6 +237,36 @@
       "scene": "核心真实用法",
       "english": "She shared a useful study tip with me.",
       "chinese": "她和我分享了一个实用的学习技巧。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "I shared the news with my family.",
+      "chinese": "我把这个消息告诉了家人。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "Would you like to share your opinion?",
+      "chinese": "你愿意分享一下你的看法吗？"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "We agreed to share the cost of the taxi.",
+      "chinese": "我们同意分摊出租车费。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "We shared our experiences and found that we had something in common.",
+      "chinese": "我们分享了各自的经历，并发现彼此有共同之处。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "Everyone did a fair share of the work.",
+      "chinese": "每个人都承担了公平的一份工作。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "The company increased its market share last year.",
+      "chinese": "公司去年提高了市场份额。"
     }
   ],
   "studyFocus": {
@@ -335,7 +415,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“与某人分享某物”，又符合这个形式线索：完整搭配中使用介词 with？",
       "options": [
-        "share something with someone"
+        "share the cost",
+        "have something in common",
+        "share something with someone",
+        "share an opinion"
       ],
       "answer": "share something with someone",
       "stage": "T2",
@@ -346,8 +429,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“分享观点”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "have something in common",
+        "share an opinion",
         "share something with someone",
-        "share an opinion"
+        "share the cost"
       ],
       "answer": "share an opinion",
       "stage": "T3",
@@ -438,9 +523,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

@@ -18,7 +18,7 @@
   "difficulty": "应用",
   "tags": [
     "adv.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心用法",
       "items": [
         {
           "phrase": "speak directly",
@@ -92,22 +92,27 @@
           "phrase": "directly affect",
           "phonetic": "/dəˈrektli əˈfɛkt/",
           "chinese": "直接影响"
-        },
-        {
-          "phrase": "go directly to",
-          "phonetic": "/ˈɡoʊ dəˈrektli ˈtuː/",
-          "chinese": "直接去……"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "go directly to",
+          "phonetic": "/ˈɡoʊ dəˈrektli ˈtuː/",
+          "chinese": "直接去……"
+        },
         {
           "phrase": "directly related to",
           "phonetic": "/dəˈrektli rɪˈleɪtɪd ˈtuː/",
           "chinese": "与……直接相关"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "contact someone directly",
           "phonetic": "/ˈkɑˌntækt ˈsʌˌmwʌn dəˈrektli/",
@@ -119,6 +124,21 @@
           "chinese": "完全相反"
         }
       ]
+    },
+    {
+      "category": "补充常用语境",
+      "items": [
+        {
+          "phrase": "answer directly",
+          "phonetic": "/ˈænsɚ dəˈrektli/",
+          "chinese": "直接回答"
+        },
+        {
+          "phrase": "directly involved",
+          "phonetic": "/dəˈrektli ˌɪˈnvɑlvd/",
+          "chinese": "直接参与"
+        }
+      ]
     }
   ],
   "fixedPhrases": [
@@ -126,8 +146,43 @@
       "phrase": "speak directly",
       "phonetic": "/ˈspiːk dəˈrektli/",
       "chinese": "直接表达",
-      "example": "Please answer the question directly.",
-      "translation": "请直接回答问题。"
+      "example": "If you disagree, speak directly but politely.",
+      "translation": "如果你不同意，要直接但礼貌地表达。"
+    },
+    {
+      "phrase": "directly affect",
+      "phonetic": "/dəˈrektli əˈfɛkt/",
+      "chinese": "直接影响",
+      "example": "Poor sleep directly affects concentration.",
+      "translation": "睡眠不足会直接影响注意力。"
+    },
+    {
+      "phrase": "go directly to",
+      "phonetic": "/ˈɡoʊ dəˈrektli ˈtuː/",
+      "chinese": "直接去……",
+      "example": "After the station, go directly to the hotel.",
+      "translation": "到站后直接去酒店。"
+    },
+    {
+      "phrase": "directly related to",
+      "phonetic": "/dəˈrektli rɪˈleɪtɪd ˈtuː/",
+      "chinese": "与……直接相关",
+      "example": "The two problems are directly related.",
+      "translation": "这两个问题直接相关。"
+    },
+    {
+      "phrase": "contact someone directly",
+      "phonetic": "/ˈkɑˌntækt ˈsʌˌmwʌn dəˈrektli/",
+      "chinese": "直接联系某人",
+      "example": "You can contact the manager directly.",
+      "translation": "你可以直接联系经理。"
+    },
+    {
+      "phrase": "directly opposite",
+      "phonetic": "/dəˈrektli ˈɑpəzət/",
+      "chinese": "完全相反",
+      "example": "Her answer was directly opposite to mine.",
+      "translation": "她的答案和我的完全相反。"
     }
   ],
   "synonyms": [
@@ -174,6 +229,36 @@
       "scene": "核心真实用法",
       "english": "Please answer the question directly.",
       "chinese": "请直接回答问题。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "If you disagree, speak directly but politely.",
+      "chinese": "如果你不同意，要直接但礼貌地表达。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "Poor sleep directly affects concentration.",
+      "chinese": "睡眠不足会直接影响注意力。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "After the station, go directly to the hotel.",
+      "chinese": "到站后直接去酒店。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "The two problems are directly related.",
+      "chinese": "这两个问题直接相关。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "You can contact the manager directly.",
+      "chinese": "你可以直接联系经理。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "Her answer was directly opposite to mine.",
+      "chinese": "她的答案和我的完全相反。"
     }
   ],
   "studyFocus": {
@@ -322,7 +407,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“直接表达”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "speak directly"
+        "speak directly",
+        "directly affect",
+        "go directly to",
+        "directly related to"
       ],
       "answer": "speak directly",
       "stage": "T2",
@@ -334,6 +422,8 @@
       "prompt": "用法辨析：哪一项既表示“直接影响”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "speak directly",
+        "go directly to",
+        "directly related to",
         "directly affect"
       ],
       "answer": "directly affect",
@@ -425,9 +515,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

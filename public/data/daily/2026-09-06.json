@@ -1,7 +1,7 @@
 {
   "date": "2026-09-06",
   "dayNumber": 21,
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "templateVersion": "learning-template-2026.08.19.1",
   "cards": [
     {
@@ -24,7 +24,7 @@
       "difficulty": "进阶",
       "tags": [
         "adv.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -87,7 +87,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心用法",
           "items": [
             {
               "phrase": "actually mean",
@@ -98,22 +98,27 @@
               "phrase": "actually happen",
               "phonetic": "/ˈæktʃuəli ˈhæpən/",
               "chinese": "实际发生"
-            },
-            {
-              "phrase": "actually work",
-              "phonetic": "/ˈæktʃuəli ˈwɝːk/",
-              "chinese": "确实有效"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "actually work",
+              "phonetic": "/ˈæktʃuəli ˈwɝːk/",
+              "chinese": "确实有效"
+            },
             {
               "phrase": "what actually happened",
               "phonetic": "/ˈwʌt ˈæktʃuəli ˈhæpənd/",
               "chinese": "实际发生了什么"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "not actually",
               "phonetic": "/ˈnɑt ˈæktʃuəli/",
@@ -125,6 +130,21 @@
               "chinese": "其实很简单"
             }
           ]
+        },
+        {
+          "category": "补充常用语境",
+          "items": [
+            {
+              "phrase": "actually know",
+              "phonetic": "/ˈæktʃuəli ˈnoʊ/",
+              "chinese": "其实知道"
+            },
+            {
+              "phrase": "actually need",
+              "phonetic": "/ˈæktʃuəli ˈniːd/",
+              "chinese": "实际需要"
+            }
+          ]
         }
       ],
       "fixedPhrases": [
@@ -132,8 +152,43 @@
           "phrase": "actually mean",
           "phonetic": "/ˈæktʃuəli ˈmiːn/",
           "chinese": "实际意思是",
-          "example": "I thought it was hard, but it was actually simple.",
-          "translation": "我原以为很难，但其实很简单。"
+          "example": "What does this expression actually mean?",
+          "translation": "这个表达的实际意思是什么？"
+        },
+        {
+          "phrase": "actually happen",
+          "phonetic": "/ˈæktʃuəli ˈhæpən/",
+          "chinese": "实际发生",
+          "example": "The change happened earlier than we actually expected.",
+          "translation": "这个变化发生得比我们实际预期的更早。"
+        },
+        {
+          "phrase": "actually work",
+          "phonetic": "/ˈæktʃuəli ˈwɝːk/",
+          "chinese": "确实有效",
+          "example": "The simple method actually works.",
+          "translation": "这个简单方法确实有效。"
+        },
+        {
+          "phrase": "what actually happened",
+          "phonetic": "/ˈwʌt ˈæktʃuəli ˈhæpənd/",
+          "chinese": "实际发生了什么",
+          "example": "Tell me what actually happened.",
+          "translation": "告诉我实际发生了什么。"
+        },
+        {
+          "phrase": "not actually",
+          "phonetic": "/ˈnɑt ˈæktʃuəli/",
+          "chinese": "其实并不",
+          "example": "The task is not actually difficult.",
+          "translation": "这项任务其实并不难。"
+        },
+        {
+          "phrase": "actually quite simple",
+          "phonetic": "/ˈæktʃuəli ˈkwaɪt ˈsɪmpəl/",
+          "chinese": "其实很简单",
+          "example": "Once you start, the process is actually quite simple.",
+          "translation": "一旦开始，这个过程其实很简单。"
         }
       ],
       "synonyms": [
@@ -188,6 +243,36 @@
           "scene": "核心真实用法",
           "english": "I thought it was hard, but it was actually simple.",
           "chinese": "我原以为很难，但其实很简单。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "What does this expression actually mean?",
+          "chinese": "这个表达的实际意思是什么？"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "The change happened earlier than we actually expected.",
+          "chinese": "这个变化发生得比我们实际预期的更早。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "The simple method actually works.",
+          "chinese": "这个简单方法确实有效。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "Tell me what actually happened.",
+          "chinese": "告诉我实际发生了什么。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "The task is not actually difficult.",
+          "chinese": "这项任务其实并不难。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "Once you start, the process is actually quite simple.",
+          "chinese": "一旦开始，这个过程其实很简单。"
         }
       ],
       "studyFocus": {
@@ -336,7 +421,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“实际意思是”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "actually mean"
+            "actually work",
+            "what actually happened",
+            "actually mean",
+            "actually happen"
           ],
           "answer": "actually mean",
           "stage": "T2",
@@ -347,8 +435,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“实际发生”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "what actually happened",
+            "actually happen",
             "actually mean",
-            "actually happen"
+            "actually work"
           ],
           "answer": "actually happen",
           "stage": "T3",
@@ -439,11 +529,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "probably-adv",
@@ -465,7 +555,7 @@
       "difficulty": "进阶",
       "tags": [
         "adv.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -528,7 +618,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心用法",
           "items": [
             {
               "phrase": "will probably",
@@ -539,22 +629,27 @@
               "phrase": "probably because",
               "phonetic": "/ˈprɑːbəbli bɪˈkɔːz/",
               "chinese": "可能因为"
-            },
-            {
-              "phrase": "most probably",
-              "phonetic": "/ˈmoʊst ˈprɑːbəbli/",
-              "chinese": "很可能"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "most probably",
+              "phonetic": "/ˈmoʊst ˈprɑːbəbli/",
+              "chinese": "很可能"
+            },
             {
               "phrase": "probably not",
               "phonetic": "/ˈprɑːbəbli ˈnɑt/",
               "chinese": "可能不会"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "quite probably",
               "phonetic": "/ˈkwaɪt ˈprɑːbəbli/",
@@ -566,6 +661,21 @@
               "chinese": "可能是真的"
             }
           ]
+        },
+        {
+          "category": "补充常用语境",
+          "items": [
+            {
+              "phrase": "probably happen",
+              "phonetic": "/ˈprɑːbəbli ˈhæpən/",
+              "chinese": "很可能发生"
+            },
+            {
+              "phrase": "probably enough",
+              "phonetic": "/ˈprɑːbəbli ɪˈnʌf/",
+              "chinese": "可能足够"
+            }
+          ]
         }
       ],
       "fixedPhrases": [
@@ -573,8 +683,43 @@
           "phrase": "will probably",
           "phonetic": "/ˈwɪl ˈprɑːbəbli/",
           "chinese": "很可能会",
-          "example": "She will probably arrive before noon.",
-          "translation": "她很可能在中午前到。"
+          "example": "The train will probably be crowded.",
+          "translation": "火车很可能会很拥挤。"
+        },
+        {
+          "phrase": "probably because",
+          "phonetic": "/ˈprɑːbəbli bɪˈkɔːz/",
+          "chinese": "可能因为",
+          "example": "She left early, probably because she felt tired.",
+          "translation": "她提前离开了，可能是因为累了。"
+        },
+        {
+          "phrase": "most probably",
+          "phonetic": "/ˈmoʊst ˈprɑːbəbli/",
+          "chinese": "很可能",
+          "example": "The package will most probably arrive tomorrow.",
+          "translation": "包裹很可能明天到。"
+        },
+        {
+          "phrase": "probably not",
+          "phonetic": "/ˈprɑːbəbli ˈnɑt/",
+          "chinese": "可能不会",
+          "example": "“Will he join us?” “Probably not.”",
+          "translation": "“他会加入我们吗？”“可能不会。”"
+        },
+        {
+          "phrase": "quite probably",
+          "phonetic": "/ˈkwaɪt ˈprɑːbəbli/",
+          "chinese": "很可能",
+          "example": "This is quite probably the easiest route.",
+          "translation": "这很可能是最简单的路线。"
+        },
+        {
+          "phrase": "probably true",
+          "phonetic": "/ˈprɑːbəbli ˈtruː/",
+          "chinese": "可能是真的",
+          "example": "What he said is probably true.",
+          "translation": "他说的话可能是真的。"
         }
       ],
       "synonyms": [
@@ -621,6 +766,36 @@
           "scene": "核心真实用法",
           "english": "She will probably arrive before noon.",
           "chinese": "她很可能在中午前到。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "The train will probably be crowded.",
+          "chinese": "火车很可能会很拥挤。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "She left early, probably because she felt tired.",
+          "chinese": "她提前离开了，可能是因为累了。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "The package will most probably arrive tomorrow.",
+          "chinese": "包裹很可能明天到。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "“Will he join us?” “Probably not.”",
+          "chinese": "“他会加入我们吗？”“可能不会。”"
+        },
+        {
+          "scene": "易错结构",
+          "english": "This is quite probably the easiest route.",
+          "chinese": "这很可能是最简单的路线。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "What he said is probably true.",
+          "chinese": "他说的话可能是真的。"
         }
       ],
       "studyFocus": {
@@ -769,7 +944,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“很可能会”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "will probably"
+            "probably not",
+            "will probably",
+            "probably because",
+            "most probably"
           ],
           "answer": "will probably",
           "stage": "T2",
@@ -781,7 +959,9 @@
           "prompt": "搭配辨析：哪一项既表示“可能因为”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "probably because",
-            "will probably"
+            "will probably",
+            "most probably",
+            "probably not"
           ],
           "answer": "probably because",
           "stage": "T3",
@@ -872,11 +1052,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "especially-adv",
@@ -898,7 +1078,7 @@
       "difficulty": "进阶",
       "tags": [
         "adv.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -961,7 +1141,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心用法",
           "items": [
             {
               "phrase": "especially useful",
@@ -972,22 +1152,27 @@
               "phrase": "especially important",
               "phonetic": "/ɪˈspeʃəli ˌɪˈmpɔːrtənt/",
               "chinese": "尤其重要"
-            },
-            {
-              "phrase": "especially for",
-              "phonetic": "/ɪˈspeʃəli ˈfɔːr/",
-              "chinese": "尤其对……"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "especially for",
+              "phonetic": "/ɪˈspeʃəli ˈfɔːr/",
+              "chinese": "尤其对……"
+            },
             {
               "phrase": "not especially",
               "phonetic": "/ˈnɑt ɪˈspeʃəli/",
               "chinese": "并不特别"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "especially when",
               "phonetic": "/ɪˈspeʃəli ˈwɛn/",
@@ -999,6 +1184,21 @@
               "chinese": "尤其擅长"
             }
           ]
+        },
+        {
+          "category": "补充常用语境",
+          "items": [
+            {
+              "phrase": "especially common",
+              "phonetic": "/ɪˈspeʃəli ˈkɑmən/",
+              "chinese": "尤其常见"
+            },
+            {
+              "phrase": "especially among",
+              "phonetic": "/ɪˈspeʃəli əˈmʌŋ/",
+              "chinese": "尤其在……当中"
+            }
+          ]
         }
       ],
       "fixedPhrases": [
@@ -1006,8 +1206,43 @@
           "phrase": "especially useful",
           "phonetic": "/ɪˈspeʃəli ˈjuːsfəl/",
           "chinese": "尤其有用",
-          "example": "This tip is especially useful for beginners.",
-          "translation": "这个技巧对初学者尤其有用。"
+          "example": "The examples are especially useful for beginners.",
+          "translation": "这些例子对初学者尤其有用。"
+        },
+        {
+          "phrase": "especially important",
+          "phonetic": "/ɪˈspeʃəli ˌɪˈmpɔːrtənt/",
+          "chinese": "尤其重要",
+          "example": "Sleep is especially important before an exam.",
+          "translation": "考试前睡眠尤其重要。"
+        },
+        {
+          "phrase": "especially for",
+          "phonetic": "/ɪˈspeʃəli ˈfɔːr/",
+          "chinese": "尤其对……",
+          "example": "This discount is especially helpful for students.",
+          "translation": "这项折扣对学生尤其有帮助。"
+        },
+        {
+          "phrase": "not especially",
+          "phonetic": "/ˈnɑt ɪˈspeʃəli/",
+          "chinese": "并不特别",
+          "example": "I am not especially interested in sports.",
+          "translation": "我对体育并不是特别感兴趣。"
+        },
+        {
+          "phrase": "especially when",
+          "phonetic": "/ɪˈspeʃəli ˈwɛn/",
+          "chinese": "尤其当……时",
+          "example": "Drive carefully, especially when the road is wet.",
+          "translation": "小心驾驶，尤其是路面湿滑时。"
+        },
+        {
+          "phrase": "especially good at",
+          "phonetic": "/ɪˈspeʃəli ˈɡʊd ˈæt/",
+          "chinese": "尤其擅长",
+          "example": "She is especially good at explaining grammar.",
+          "translation": "她尤其擅长解释语法。"
         }
       ],
       "synonyms": [
@@ -1062,6 +1297,36 @@
           "scene": "核心真实用法",
           "english": "This tip is especially useful for beginners.",
           "chinese": "这个技巧对初学者尤其有用。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "The examples are especially useful for beginners.",
+          "chinese": "这些例子对初学者尤其有用。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "Sleep is especially important before an exam.",
+          "chinese": "考试前睡眠尤其重要。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "This discount is especially helpful for students.",
+          "chinese": "这项折扣对学生尤其有帮助。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "I am not especially interested in sports.",
+          "chinese": "我对体育并不是特别感兴趣。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "Drive carefully, especially when the road is wet.",
+          "chinese": "小心驾驶，尤其是路面湿滑时。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "She is especially good at explaining grammar.",
+          "chinese": "她尤其擅长解释语法。"
         }
       ],
       "studyFocus": {
@@ -1210,7 +1475,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“尤其有用”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "especially useful"
+            "especially useful",
+            "especially important",
+            "especially for",
+            "not especially"
           ],
           "answer": "especially useful",
           "stage": "T2",
@@ -1222,6 +1490,8 @@
           "prompt": "用法辨析：哪一项既表示“尤其重要”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "especially useful",
+            "especially for",
+            "not especially",
             "especially important"
           ],
           "answer": "especially important",
@@ -1313,11 +1583,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "recently-adv",
@@ -1339,7 +1609,7 @@
       "difficulty": "进阶",
       "tags": [
         "adv.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -1402,7 +1672,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心用法",
           "items": [
             {
               "phrase": "have recently done",
@@ -1413,22 +1683,27 @@
               "phrase": "until recently",
               "phonetic": "/əˈntɪl ˈriːsəntli/",
               "chinese": "直到最近"
-            },
-            {
-              "phrase": "more recently",
-              "phonetic": "/ˈmɔːr ˈriːsəntli/",
-              "chinese": "更近些时候"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "more recently",
+              "phonetic": "/ˈmɔːr ˈriːsəntli/",
+              "chinese": "更近些时候"
+            },
             {
               "phrase": "recently published",
               "phonetic": "/ˈriːsəntli ˈpʌblɪʃt/",
               "chinese": "最近发布的"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "only recently",
               "phonetic": "/ˈoʊnliː ˈriːsəntli/",
@@ -1440,6 +1715,21 @@
               "chinese": "最近一次"
             }
           ]
+        },
+        {
+          "category": "补充常用语境",
+          "items": [
+            {
+              "phrase": "as recently as",
+              "phonetic": "/ˈæz ˈriːsəntli ˈæz/",
+              "chinese": "就在最近……"
+            },
+            {
+              "phrase": "relatively recently",
+              "phonetic": "/ˈrɛlətɪvliː ˈriːsəntli/",
+              "chinese": "相对较近的时候"
+            }
+          ]
         }
       ],
       "fixedPhrases": [
@@ -1447,8 +1737,43 @@
           "phrase": "have recently done",
           "phonetic": "/ˈhæv ˈriːsəntli ˈdʌn/",
           "chinese": "最近做过",
-          "example": "I have recently started keeping a journal.",
-          "translation": "我最近开始写日记了。"
+          "example": "I have recently started learning Spanish.",
+          "translation": "我最近开始学习西班牙语。"
+        },
+        {
+          "phrase": "until recently",
+          "phonetic": "/əˈntɪl ˈriːsəntli/",
+          "chinese": "直到最近",
+          "example": "Until recently, the building was used as a school.",
+          "translation": "直到最近，这栋楼还被用作学校。"
+        },
+        {
+          "phrase": "more recently",
+          "phonetic": "/ˈmɔːr ˈriːsəntli/",
+          "chinese": "更近些时候",
+          "example": "More recently, the company has focused on mobile apps.",
+          "translation": "更近些时候，公司开始专注于移动应用。"
+        },
+        {
+          "phrase": "recently published",
+          "phonetic": "/ˈriːsəntli ˈpʌblɪʃt/",
+          "chinese": "最近发布的",
+          "example": "The study was recently published online.",
+          "translation": "这项研究最近在网上发表了。"
+        },
+        {
+          "phrase": "only recently",
+          "phonetic": "/ˈoʊnliː ˈriːsəntli/",
+          "chinese": "最近才",
+          "example": "I only recently learned about the change.",
+          "translation": "我最近才知道这个变化。"
+        },
+        {
+          "phrase": "most recently",
+          "phonetic": "/ˈmoʊst ˈriːsəntli/",
+          "chinese": "最近一次",
+          "example": "Her most recently completed project won an award.",
+          "translation": "她最近完成的项目获得了奖项。"
         }
       ],
       "synonyms": [
@@ -1495,6 +1820,36 @@
           "scene": "核心真实用法",
           "english": "I have recently started keeping a journal.",
           "chinese": "我最近开始写日记了。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "I have recently started learning Spanish.",
+          "chinese": "我最近开始学习西班牙语。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "Until recently, the building was used as a school.",
+          "chinese": "直到最近，这栋楼还被用作学校。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "More recently, the company has focused on mobile apps.",
+          "chinese": "更近些时候，公司开始专注于移动应用。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "The study was recently published online.",
+          "chinese": "这项研究最近在网上发表了。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "I only recently learned about the change.",
+          "chinese": "我最近才知道这个变化。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "Her most recently completed project won an award.",
+          "chinese": "她最近完成的项目获得了奖项。"
         }
       ],
       "studyFocus": {
@@ -1643,6 +1998,9 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“最近做过”，又符合这个形式线索：目标词后的 done 表示要换成符合语境的过去分词？",
           "options": [
+            "until recently",
+            "more recently",
+            "recently published",
             "have recently done"
           ],
           "answer": "have recently done",
@@ -1654,6 +2012,8 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“直到最近”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "more recently",
+            "recently published",
             "until recently",
             "have recently done"
           ],
@@ -1746,11 +2106,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "nearly-adv",
@@ -1772,7 +2132,7 @@
       "difficulty": "进阶",
       "tags": [
         "adv.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -1835,7 +2195,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心用法",
           "items": [
             {
               "phrase": "nearly finished",
@@ -1846,22 +2206,27 @@
               "phrase": "nearly all",
               "phonetic": "/ˈnɪrli ˈɔːl/",
               "chinese": "几乎全部"
-            },
-            {
-              "phrase": "nearly impossible",
-              "phonetic": "/ˈnɪrli ˌɪˈmpɑsəbəl/",
-              "chinese": "几乎不可能"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "nearly impossible",
+              "phonetic": "/ˈnɪrli ˌɪˈmpɑsəbəl/",
+              "chinese": "几乎不可能"
+            },
             {
               "phrase": "not nearly enough",
               "phonetic": "/ˈnɑt ˈnɪrli ɪˈnʌf/",
               "chinese": "远远不够"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "nearly every day",
               "phonetic": "/ˈnɪrli ˈɛvɚiː ˈdeɪ/",
@@ -1873,6 +2238,21 @@
               "chinese": "几乎是两倍"
             }
           ]
+        },
+        {
+          "category": "补充常用语境",
+          "items": [
+            {
+              "phrase": "nearly always",
+              "phonetic": "/ˈnɪrli ˈɔːˌlweɪz/",
+              "chinese": "几乎总是"
+            },
+            {
+              "phrase": "very nearly",
+              "phonetic": "/ˈvɛriː ˈnɪrli/",
+              "chinese": "差一点就"
+            }
+          ]
         }
       ],
       "fixedPhrases": [
@@ -1881,7 +2261,42 @@
           "phonetic": "/ˈnɪrli ˈfɪnɪʃt/",
           "chinese": "快完成了",
           "example": "I am nearly finished with the report.",
-          "translation": "我的报告快完成了。"
+          "translation": "我的报告快写完了。"
+        },
+        {
+          "phrase": "nearly all",
+          "phonetic": "/ˈnɪrli ˈɔːl/",
+          "chinese": "几乎全部",
+          "example": "Nearly all the seats were taken.",
+          "translation": "几乎所有座位都有人了。"
+        },
+        {
+          "phrase": "nearly impossible",
+          "phonetic": "/ˈnɪrli ˌɪˈmpɑsəbəl/",
+          "chinese": "几乎不可能",
+          "example": "It is nearly impossible to hear him from here.",
+          "translation": "从这里几乎听不到他说话。"
+        },
+        {
+          "phrase": "not nearly enough",
+          "phonetic": "/ˈnɑt ˈnɪrli ɪˈnʌf/",
+          "chinese": "远远不够",
+          "example": "Ten minutes is not nearly enough.",
+          "translation": "十分钟远远不够。"
+        },
+        {
+          "phrase": "nearly every day",
+          "phonetic": "/ˈnɪrli ˈɛvɚiː ˈdeɪ/",
+          "chinese": "几乎每天",
+          "example": "She practices speaking nearly every day.",
+          "translation": "她几乎每天都练习口语。"
+        },
+        {
+          "phrase": "nearly twice as much",
+          "phonetic": "/ˈnɪrli ˈtwaɪs ˈæz ˈmʌtʃ/",
+          "chinese": "几乎是两倍",
+          "example": "This room costs nearly twice as much as that one.",
+          "translation": "这个房间的价格几乎是那个房间的两倍。"
         }
       ],
       "synonyms": [
@@ -1936,6 +2351,31 @@
           "scene": "核心真实用法",
           "english": "I am nearly finished with the report.",
           "chinese": "我的报告快完成了。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "Nearly all the seats were taken.",
+          "chinese": "几乎所有座位都有人了。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "It is nearly impossible to hear him from here.",
+          "chinese": "从这里几乎听不到他说话。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "Ten minutes is not nearly enough.",
+          "chinese": "十分钟远远不够。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "She practices speaking nearly every day.",
+          "chinese": "她几乎每天都练习口语。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "This room costs nearly twice as much as that one.",
+          "chinese": "这个房间的价格几乎是那个房间的两倍。"
         }
       ],
       "studyFocus": {
@@ -2084,7 +2524,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“快完成了”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "nearly finished"
+            "nearly impossible",
+            "not nearly enough",
+            "nearly finished",
+            "nearly all"
           ],
           "answer": "nearly finished",
           "stage": "T2",
@@ -2095,8 +2538,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“几乎全部”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "not nearly enough",
+            "nearly all",
             "nearly finished",
-            "nearly all"
+            "nearly impossible"
           ],
           "answer": "nearly all",
           "stage": "T3",
@@ -2187,11 +2632,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     }
   ]
 }

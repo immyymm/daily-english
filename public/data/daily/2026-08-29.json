@@ -1,7 +1,7 @@
 {
   "date": "2026-08-29",
   "dayNumber": 13,
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "templateVersion": "learning-template-2026.08.19.1",
   "cards": [
     {
@@ -24,7 +24,7 @@
       "difficulty": "进阶",
       "tags": [
         "n.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -87,7 +87,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心名词搭配",
           "items": [
             {
               "phrase": "useful information",
@@ -98,22 +98,27 @@
               "phrase": "provide information",
               "phonetic": "/prəˈvaɪd ˌɪnfərˈmeɪʃən/",
               "chinese": "提供信息"
-            },
-            {
-              "phrase": "personal information",
-              "phonetic": "/ˈpɝːsɪnəl ˌɪnfərˈmeɪʃən/",
-              "chinese": "个人信息"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "personal information",
+              "phonetic": "/ˈpɝːsɪnəl ˌɪnfərˈmeɪʃən/",
+              "chinese": "个人信息"
+            },
             {
               "phrase": "information about",
               "phonetic": "/ˌɪnfərˈmeɪʃən əˈbaʊt/",
               "chinese": "有关……的信息"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "for more information",
               "phonetic": "/ˈfɔːr ˈmɔːr ˌɪnfərˈmeɪʃən/",
@@ -132,8 +137,43 @@
           "phrase": "useful information",
           "phonetic": "/ˈjuːsfəl ˌɪnfərˈmeɪʃən/",
           "chinese": "有用信息",
-          "example": "This page provides practical information for travelers.",
-          "translation": "这个页面为旅行者提供实用信息。"
+          "example": "The website contains useful information for new students.",
+          "translation": "这个网站为新生提供了有用信息。"
+        },
+        {
+          "phrase": "provide information",
+          "phonetic": "/prəˈvaɪd ˌɪnfərˈmeɪʃən/",
+          "chinese": "提供信息",
+          "example": "Please provide the information requested on the form.",
+          "translation": "请提供表格中要求的信息。"
+        },
+        {
+          "phrase": "personal information",
+          "phonetic": "/ˈpɝːsɪnəl ˌɪnfərˈmeɪʃən/",
+          "chinese": "个人信息",
+          "example": "Never share personal information with strangers online.",
+          "translation": "不要在网上向陌生人透露个人信息。"
+        },
+        {
+          "phrase": "information about",
+          "phonetic": "/ˌɪnfərˈmeɪʃən əˈbaʊt/",
+          "chinese": "有关……的信息",
+          "example": "I need more information about the course.",
+          "translation": "我需要这门课程的更多信息。"
+        },
+        {
+          "phrase": "for more information",
+          "phonetic": "/ˈfɔːr ˈmɔːr ˌɪnfərˈmeɪʃən/",
+          "chinese": "欲知详情",
+          "example": "For more information, contact the front desk.",
+          "translation": "欲知详情，请联系前台。"
+        },
+        {
+          "phrase": "piece of information",
+          "phonetic": "/ˈpiːs ˈʌv ˌɪnfərˈmeɪʃən/",
+          "chinese": "一条信息",
+          "example": "She gave me an important piece of information.",
+          "translation": "她告诉了我一条重要信息。"
         }
       ],
       "synonyms": [
@@ -180,6 +220,36 @@
           "scene": "核心真实用法",
           "english": "This page provides practical information for travelers.",
           "chinese": "这个页面为旅行者提供实用信息。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "The website contains useful information for new students.",
+          "chinese": "这个网站为新生提供了有用信息。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "Please provide the information requested on the form.",
+          "chinese": "请提供表格中要求的信息。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "Never share personal information with strangers online.",
+          "chinese": "不要在网上向陌生人透露个人信息。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "I need more information about the course.",
+          "chinese": "我需要这门课程的更多信息。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "For more information, contact the front desk.",
+          "chinese": "欲知详情，请联系前台。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "She gave me an important piece of information.",
+          "chinese": "她告诉了我一条重要信息。"
         }
       ],
       "studyFocus": {
@@ -328,7 +398,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“有用信息”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "useful information"
+            "personal information",
+            "information about",
+            "useful information",
+            "provide information"
           ],
           "answer": "useful information",
           "stage": "T2",
@@ -339,8 +412,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“提供信息”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "information about",
+            "provide information",
             "useful information",
-            "provide information"
+            "personal information"
           ],
           "answer": "provide information",
           "stage": "T3",
@@ -431,11 +506,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "community-n",
@@ -457,7 +532,7 @@
       "difficulty": "进阶",
       "tags": [
         "n.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -520,7 +595,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心名词搭配",
           "items": [
             {
               "phrase": "local community",
@@ -531,22 +606,27 @@
               "phrase": "online community",
               "phonetic": "/ˈɔːˌnlaɪn kəˈmjuːnəti/",
               "chinese": "网络社区"
-            },
-            {
-              "phrase": "community service",
-              "phonetic": "/kəˈmjuːnəti ˈsɝːvəs/",
-              "chinese": "社区服务"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "community service",
+              "phonetic": "/kəˈmjuːnəti ˈsɝːvəs/",
+              "chinese": "社区服务"
+            },
             {
               "phrase": "community members",
               "phonetic": "/kəˈmjuːnəti ˈmɛmbɚz/",
               "chinese": "社区成员"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "serve the community",
               "phonetic": "/ˈsɝːv ðə kəˈmjuːnəti/",
@@ -565,8 +645,43 @@
           "phrase": "local community",
           "phonetic": "/ˈloʊkəl kəˈmjuːnəti/",
           "chinese": "当地社区",
-          "example": "The project brought the community together.",
-          "translation": "这个项目让社区团结在一起。"
+          "example": "The local community raised money for the library.",
+          "translation": "当地社区为图书馆筹集了资金。"
+        },
+        {
+          "phrase": "online community",
+          "phonetic": "/ˈɔːˌnlaɪn kəˈmjuːnəti/",
+          "chinese": "网络社区",
+          "example": "I joined an online community for language learners.",
+          "translation": "我加入了一个语言学习者网络社区。"
+        },
+        {
+          "phrase": "community service",
+          "phonetic": "/kəˈmjuːnəti ˈsɝːvəs/",
+          "chinese": "社区服务",
+          "example": "Students completed twenty hours of community service.",
+          "translation": "学生完成了二十小时的社区服务。"
+        },
+        {
+          "phrase": "community members",
+          "phonetic": "/kəˈmjuːnəti ˈmɛmbɚz/",
+          "chinese": "社区成员",
+          "example": "Community members meet here every month.",
+          "translation": "社区成员每月在这里见面。"
+        },
+        {
+          "phrase": "serve the community",
+          "phonetic": "/ˈsɝːv ðə kəˈmjuːnəti/",
+          "chinese": "服务社区",
+          "example": "The new clinic will serve the whole community.",
+          "translation": "新诊所将为整个社区服务。"
+        },
+        {
+          "phrase": "sense of community",
+          "phonetic": "/ˈsɛns ˈʌv kəˈmjuːnəti/",
+          "chinese": "社区归属感",
+          "example": "The event created a strong sense of community.",
+          "translation": "这项活动增强了社区归属感。"
         }
       ],
       "synonyms": [
@@ -613,6 +728,36 @@
           "scene": "核心真实用法",
           "english": "The project brought the community together.",
           "chinese": "这个项目让社区团结在一起。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "The local community raised money for the library.",
+          "chinese": "当地社区为图书馆筹集了资金。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "I joined an online community for language learners.",
+          "chinese": "我加入了一个语言学习者网络社区。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "Students completed twenty hours of community service.",
+          "chinese": "学生完成了二十小时的社区服务。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "Community members meet here every month.",
+          "chinese": "社区成员每月在这里见面。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "The new clinic will serve the whole community.",
+          "chinese": "新诊所将为整个社区服务。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "The event created a strong sense of community.",
+          "chinese": "这项活动增强了社区归属感。"
         }
       ],
       "studyFocus": {
@@ -761,7 +906,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“当地社区”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "local community"
+            "community members",
+            "local community",
+            "online community",
+            "community service"
           ],
           "answer": "local community",
           "stage": "T2",
@@ -773,7 +921,9 @@
           "prompt": "搭配辨析：哪一项既表示“网络社区”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "online community",
-            "local community"
+            "local community",
+            "community service",
+            "community members"
           ],
           "answer": "online community",
           "stage": "T3",
@@ -864,11 +1014,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "service-n",
@@ -890,7 +1040,7 @@
       "difficulty": "进阶",
       "tags": [
         "n.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -953,7 +1103,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心名词搭配",
           "items": [
             {
               "phrase": "customer service",
@@ -964,22 +1114,27 @@
               "phrase": "provide a service",
               "phonetic": "/prəˈvaɪd ə ˈsɜːrvɪs/",
               "chinese": "提供服务"
-            },
-            {
-              "phrase": "public service",
-              "phonetic": "/ˈpʌblɪk ˈsɜːrvɪs/",
-              "chinese": "公共服务"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "public service",
+              "phonetic": "/ˈpʌblɪk ˈsɜːrvɪs/",
+              "chinese": "公共服务"
+            },
             {
               "phrase": "in service",
               "phonetic": "/ɪn ˈsɜːrvɪs/",
               "chinese": "在使用中"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "out of service",
               "phonetic": "/ˈaʊt ˈʌv ˈsɜːrvɪs/",
@@ -998,8 +1153,43 @@
           "phrase": "customer service",
           "phonetic": "/ˈkʌstəmɚ ˈsɜːrvɪs/",
           "chinese": "客户服务",
-          "example": "The hotel offers excellent service.",
-          "translation": "这家酒店提供出色的服务。"
+          "example": "The hotel is known for excellent customer service.",
+          "translation": "这家酒店以优质客户服务闻名。"
+        },
+        {
+          "phrase": "provide a service",
+          "phonetic": "/prəˈvaɪd ə ˈsɜːrvɪs/",
+          "chinese": "提供服务",
+          "example": "The company provides a useful translation service.",
+          "translation": "这家公司提供实用的翻译服务。"
+        },
+        {
+          "phrase": "public service",
+          "phonetic": "/ˈpʌblɪk ˈsɜːrvɪs/",
+          "chinese": "公共服务",
+          "example": "She has worked in public service for ten years.",
+          "translation": "她从事公共服务工作已有十年。"
+        },
+        {
+          "phrase": "in service",
+          "phonetic": "/ɪn ˈsɜːrvɪs/",
+          "chinese": "在使用中",
+          "example": "The new train will enter service next month.",
+          "translation": "新列车将于下个月投入运营。"
+        },
+        {
+          "phrase": "out of service",
+          "phonetic": "/ˈaʊt ˈʌv ˈsɜːrvɪs/",
+          "chinese": "停止服务",
+          "example": "The elevator is temporarily out of service.",
+          "translation": "电梯暂时停止使用。"
+        },
+        {
+          "phrase": "service industry",
+          "phonetic": "/ˈsɜːrvɪs ˈɪndəstriː/",
+          "chinese": "服务业",
+          "example": "Tourism is an important part of the service industry.",
+          "translation": "旅游业是服务业的重要组成部分。"
         }
       ],
       "synonyms": [
@@ -1046,6 +1236,36 @@
           "scene": "核心真实用法",
           "english": "The hotel offers excellent service.",
           "chinese": "这家酒店提供出色的服务。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "The hotel is known for excellent customer service.",
+          "chinese": "这家酒店以优质客户服务闻名。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "The company provides a useful translation service.",
+          "chinese": "这家公司提供实用的翻译服务。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "She has worked in public service for ten years.",
+          "chinese": "她从事公共服务工作已有十年。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "The new train will enter service next month.",
+          "chinese": "新列车将于下个月投入运营。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "The elevator is temporarily out of service.",
+          "chinese": "电梯暂时停止使用。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "Tourism is an important part of the service industry.",
+          "chinese": "旅游业是服务业的重要组成部分。"
         }
       ],
       "studyFocus": {
@@ -1194,7 +1414,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“客户服务”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "customer service"
+            "customer service",
+            "provide a service",
+            "public service",
+            "in service"
           ],
           "answer": "customer service",
           "stage": "T2",
@@ -1206,6 +1429,8 @@
           "prompt": "用法辨析：哪一项既表示“提供服务”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "customer service",
+            "public service",
+            "in service",
             "provide a service"
           ],
           "answer": "provide a service",
@@ -1297,11 +1522,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "system-n",
@@ -1323,7 +1548,7 @@
       "difficulty": "进阶",
       "tags": [
         "n.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -1386,7 +1611,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心名词搭配",
           "items": [
             {
               "phrase": "a simple system",
@@ -1397,22 +1622,27 @@
               "phrase": "computer system",
               "phonetic": "/kəˈmpjuːtɚ ˈsɪstəm/",
               "chinese": "计算机系统"
-            },
-            {
-              "phrase": "education system",
-              "phonetic": "/ˌɛdʒəˈkeɪʃən ˈsɪstəm/",
-              "chinese": "教育体系"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "education system",
+              "phonetic": "/ˌɛdʒəˈkeɪʃən ˈsɪstəm/",
+              "chinese": "教育体系"
+            },
             {
               "phrase": "system for doing",
               "phonetic": "/ˈsɪstəm ˈfɔːr ˈduːɪŋ/",
               "chinese": "用于做……的系统"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "the entire system",
               "phonetic": "/ðə ɪˈntaɪɚ ˈsɪstəm/",
@@ -1431,8 +1661,43 @@
           "phrase": "a simple system",
           "phonetic": "/ə ˈsɪmpəl ˈsɪstəm/",
           "chinese": "简单系统",
-          "example": "This system helps you review words at the right time.",
-          "translation": "这个系统帮助你在合适的时间复习单词。"
+          "example": "We use a simple system to organize tasks.",
+          "translation": "我们使用一个简单的系统来整理任务。"
+        },
+        {
+          "phrase": "computer system",
+          "phonetic": "/kəˈmpjuːtɚ ˈsɪstəm/",
+          "chinese": "计算机系统",
+          "example": "The computer system is being updated tonight.",
+          "translation": "计算机系统今晚正在更新。"
+        },
+        {
+          "phrase": "education system",
+          "phonetic": "/ˌɛdʒəˈkeɪʃən ˈsɪstəm/",
+          "chinese": "教育体系",
+          "example": "The education system differs from country to country.",
+          "translation": "教育体系因国家而异。"
+        },
+        {
+          "phrase": "system for doing",
+          "phonetic": "/ˈsɪstəm ˈfɔːr ˈduːɪŋ/",
+          "chinese": "用于做……的系统",
+          "example": "We need a system for tracking daily progress.",
+          "translation": "我们需要一个记录每日进度的系统。"
+        },
+        {
+          "phrase": "the entire system",
+          "phonetic": "/ðə ɪˈntaɪɚ ˈsɪstəm/",
+          "chinese": "整个系统",
+          "example": "A power failure shut down the entire system.",
+          "translation": "停电导致整个系统关闭。"
+        },
+        {
+          "phrase": "system failure",
+          "phonetic": "/ˈsɪstəm ˈfeɪljɚ/",
+          "chinese": "系统故障",
+          "example": "The delay was caused by a system failure.",
+          "translation": "延误是由系统故障造成的。"
         }
       ],
       "synonyms": [
@@ -1479,6 +1744,36 @@
           "scene": "核心真实用法",
           "english": "This system helps you review words at the right time.",
           "chinese": "这个系统帮助你在合适的时间复习单词。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "We use a simple system to organize tasks.",
+          "chinese": "我们使用一个简单的系统来整理任务。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "The computer system is being updated tonight.",
+          "chinese": "计算机系统今晚正在更新。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "The education system differs from country to country.",
+          "chinese": "教育体系因国家而异。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "We need a system for tracking daily progress.",
+          "chinese": "我们需要一个记录每日进度的系统。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "A power failure shut down the entire system.",
+          "chinese": "停电导致整个系统关闭。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "The delay was caused by a system failure.",
+          "chinese": "延误是由系统故障造成的。"
         }
       ],
       "studyFocus": {
@@ -1627,6 +1922,9 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“简单系统”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "computer system",
+            "education system",
+            "system for doing",
             "a simple system"
           ],
           "answer": "a simple system",
@@ -1638,6 +1936,8 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“计算机系统”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "education system",
+            "system for doing",
             "computer system",
             "a simple system"
           ],
@@ -1730,11 +2030,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "level-n",
@@ -1762,7 +2062,7 @@
       "difficulty": "进阶",
       "tags": [
         "n.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -1832,7 +2132,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心名词搭配",
           "items": [
             {
               "phrase": "skill level",
@@ -1843,22 +2143,27 @@
               "phrase": "high level of",
               "phonetic": "/ˈhaɪ ˈlevəl ˈʌv/",
               "chinese": "高水平的……"
-            },
-            {
-              "phrase": "at this level",
-              "phonetic": "/ˈæt ˈðɪs ˈlevəl/",
-              "chinese": "在这个水平"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "at this level",
+              "phonetic": "/ˈæt ˈðɪs ˈlevəl/",
+              "chinese": "在这个水平"
+            },
             {
               "phrase": "level of confidence",
               "phonetic": "/ˈlevəl ˈʌv ˈkɑnfədəns/",
               "chinese": "信心水平"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "sea level",
               "phonetic": "/ˈsiː ˈlevəl/",
@@ -1877,8 +2182,43 @@
           "phrase": "skill level",
           "phonetic": "/ˈskɪl ˈlevəl/",
           "chinese": "技能水平",
-          "example": "Choose a task that matches your current level.",
-          "translation": "选择与当前水平相符的任务。"
+          "example": "This course is suitable for every skill level.",
+          "translation": "这门课程适合各种技能水平。"
+        },
+        {
+          "phrase": "high level of",
+          "phonetic": "/ˈhaɪ ˈlevəl ˈʌv/",
+          "chinese": "高水平的……",
+          "example": "The job requires a high level of accuracy.",
+          "translation": "这份工作要求很高的准确度。"
+        },
+        {
+          "phrase": "at this level",
+          "phonetic": "/ˈæt ˈðɪs ˈlevəl/",
+          "chinese": "在这个水平",
+          "example": "At this level, learners can hold simple conversations.",
+          "translation": "在这个水平，学习者可以进行简单对话。"
+        },
+        {
+          "phrase": "level of confidence",
+          "phonetic": "/ˈlevəl ˈʌv ˈkɑnfədəns/",
+          "chinese": "信心水平",
+          "example": "Practice raised her level of confidence.",
+          "translation": "练习提高了她的自信程度。"
+        },
+        {
+          "phrase": "sea level",
+          "phonetic": "/ˈsiː ˈlevəl/",
+          "chinese": "海平面",
+          "example": "The village lies 500 meters above sea level.",
+          "translation": "这个村庄位于海拔五百米处。"
+        },
+        {
+          "phrase": "level the surface",
+          "phonetic": "/ˈlevəl ðə ˈsɝːfəs/",
+          "chinese": "把表面弄平",
+          "example": "Use this tool to level the surface.",
+          "translation": "用这个工具把表面弄平。"
         }
       ],
       "synonyms": [
@@ -1925,6 +2265,36 @@
           "scene": "核心真实用法",
           "english": "Choose a task that matches your current level.",
           "chinese": "选择与当前水平相符的任务。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "This course is suitable for every skill level.",
+          "chinese": "这门课程适合各种技能水平。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "The job requires a high level of accuracy.",
+          "chinese": "这份工作要求很高的准确度。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "At this level, learners can hold simple conversations.",
+          "chinese": "在这个水平，学习者可以进行简单对话。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "Practice raised her level of confidence.",
+          "chinese": "练习提高了她的自信程度。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "The village lies 500 meters above sea level.",
+          "chinese": "这个村庄位于海拔五百米处。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "Use this tool to level the surface.",
+          "chinese": "用这个工具把表面弄平。"
         }
       ],
       "studyFocus": {
@@ -2073,7 +2443,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“技能水平”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "skill level"
+            "at this level",
+            "level of confidence",
+            "skill level",
+            "high level of"
           ],
           "answer": "skill level",
           "stage": "T2",
@@ -2084,8 +2457,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“高水平的……”，又符合这个形式线索：完整搭配中使用介词 of？",
           "options": [
+            "level of confidence",
+            "high level of",
             "skill level",
-            "high level of"
+            "at this level"
           ],
           "answer": "high level of",
           "stage": "T3",
@@ -2176,11 +2551,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     }
   ]
 }

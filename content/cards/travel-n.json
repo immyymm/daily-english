@@ -24,7 +24,7 @@
   "difficulty": "应用",
   "tags": [
     "n.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -94,7 +94,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心名词搭配",
       "items": [
         {
           "phrase": "travel abroad",
@@ -105,22 +105,27 @@
           "phrase": "travel by train",
           "phonetic": "/ˈtrævəl ˈbaɪ ˈtreɪn/",
           "chinese": "乘火车旅行"
-        },
-        {
-          "phrase": "travel around",
-          "phonetic": "/ˈtrævəl ɚˈaʊnd/",
-          "chinese": "到处旅行"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "travel around",
+          "phonetic": "/ˈtrævəl ɚˈaʊnd/",
+          "chinese": "到处旅行"
+        },
         {
           "phrase": "business travel",
           "phonetic": "/ˈbɪznəs ˈtrævəl/",
           "chinese": "商务旅行"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "travel plans",
           "phonetic": "/ˈtrævəl ˈplænz/",
@@ -139,8 +144,43 @@
       "phrase": "travel abroad",
       "phonetic": "/ˈtrævəl əˈbrɔːd/",
       "chinese": "出国旅行",
-      "example": "She travels abroad for work twice a year.",
-      "translation": "她每年因工作出国两次。"
+      "example": "She traveled abroad for the first time last summer.",
+      "translation": "去年夏天她第一次出国旅行。"
+    },
+    {
+      "phrase": "travel by train",
+      "phonetic": "/ˈtrævəl ˈbaɪ ˈtreɪn/",
+      "chinese": "乘火车旅行",
+      "example": "We prefer to travel by train.",
+      "translation": "我们更喜欢乘火车旅行。"
+    },
+    {
+      "phrase": "travel around",
+      "phonetic": "/ˈtrævəl ɚˈaʊnd/",
+      "chinese": "到处旅行",
+      "example": "He spent a year traveling around South America.",
+      "translation": "他花了一年时间周游南美洲。"
+    },
+    {
+      "phrase": "business travel",
+      "phonetic": "/ˈbɪznəs ˈtrævəl/",
+      "chinese": "商务旅行",
+      "example": "Business travel has increased again.",
+      "translation": "商务旅行再次增加。"
+    },
+    {
+      "phrase": "travel plans",
+      "phonetic": "/ˈtrævəl ˈplænz/",
+      "chinese": "旅行计划",
+      "example": "Our travel plans changed because of the weather.",
+      "translation": "我们的旅行计划因天气而改变。"
+    },
+    {
+      "phrase": "air travel",
+      "phonetic": "/ˈɛr ˈtrævəl/",
+      "chinese": "航空旅行",
+      "example": "Air travel is faster but usually more expensive.",
+      "translation": "航空旅行更快，但通常更贵。"
     }
   ],
   "synonyms": [
@@ -195,6 +235,36 @@
       "scene": "核心真实用法",
       "english": "She travels abroad for work twice a year.",
       "chinese": "她每年因工作出国两次。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "She traveled abroad for the first time last summer.",
+      "chinese": "去年夏天她第一次出国旅行。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "We prefer to travel by train.",
+      "chinese": "我们更喜欢乘火车旅行。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "He spent a year traveling around South America.",
+      "chinese": "他花了一年时间周游南美洲。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "Business travel has increased again.",
+      "chinese": "商务旅行再次增加。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "Our travel plans changed because of the weather.",
+      "chinese": "我们的旅行计划因天气而改变。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "Air travel is faster but usually more expensive.",
+      "chinese": "航空旅行更快，但通常更贵。"
     }
   ],
   "studyFocus": {
@@ -343,7 +413,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“出国旅行”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "travel abroad"
+        "travel around",
+        "business travel",
+        "travel abroad",
+        "travel by train"
       ],
       "answer": "travel abroad",
       "stage": "T2",
@@ -354,8 +427,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“乘火车旅行”，又符合这个形式线索：完整搭配中使用介词 by？",
       "options": [
+        "business travel",
+        "travel by train",
         "travel abroad",
-        "travel by train"
+        "travel around"
       ],
       "answer": "travel by train",
       "stage": "T3",
@@ -446,9 +521,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

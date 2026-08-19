@@ -18,7 +18,7 @@
   "difficulty": "应用",
   "tags": [
     "adv.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心用法",
       "items": [
         {
           "phrase": "quite often",
@@ -92,22 +92,27 @@
           "phrase": "often used",
           "phonetic": "/ˈɔːfən ˈjuːzd/",
           "chinese": "经常使用"
-        },
-        {
-          "phrase": "more often than not",
-          "phonetic": "/ˈmɔːr ˈɔːfən ˈðæn ˈnɑt/",
-          "chinese": "往往；通常"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "more often than not",
+          "phonetic": "/ˈmɔːr ˈɔːfən ˈðæn ˈnɑt/",
+          "chinese": "往往；通常"
+        },
         {
           "phrase": "how often",
           "phonetic": "/ˈhaʊ ˈɔːfən/",
           "chinese": "多久一次"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "as often as possible",
           "phonetic": "/ˈæz ˈɔːfən ˈæz ˈpɑsəbəl/",
@@ -119,6 +124,21 @@
           "chinese": "足够频繁"
         }
       ]
+    },
+    {
+      "category": "补充常用语境",
+      "items": [
+        {
+          "phrase": "very often",
+          "phonetic": "/ˈvɛriː ˈɔːfən/",
+          "chinese": "非常经常"
+        },
+        {
+          "phrase": "all too often",
+          "phonetic": "/ˈɔːl ˈtuː ˈɔːfən/",
+          "chinese": "常常，甚至太常"
+        }
+      ]
     }
   ],
   "fixedPhrases": [
@@ -126,8 +146,43 @@
       "phrase": "quite often",
       "phonetic": "/ˈkwaɪt ˈɔːfən/",
       "chinese": "相当经常",
-      "example": "This phrase often appears in conversation.",
-      "translation": "这个短语经常出现在对话中。"
+      "example": "We eat at that small restaurant quite often.",
+      "translation": "我们相当经常去那家小餐馆吃饭。"
+    },
+    {
+      "phrase": "often used",
+      "phonetic": "/ˈɔːfən ˈjuːzd/",
+      "chinese": "经常使用",
+      "example": "This expression is often used in formal writing.",
+      "translation": "这个表达经常用于正式写作。"
+    },
+    {
+      "phrase": "more often than not",
+      "phonetic": "/ˈmɔːr ˈɔːfən ˈðæn ˈnɑt/",
+      "chinese": "往往；通常",
+      "example": "More often than not, a simple answer is best.",
+      "translation": "通常，简单的答案最好。"
+    },
+    {
+      "phrase": "how often",
+      "phonetic": "/ˈhaʊ ˈɔːfən/",
+      "chinese": "多久一次",
+      "example": "How often do you review new words?",
+      "translation": "你多久复习一次新单词？"
+    },
+    {
+      "phrase": "as often as possible",
+      "phonetic": "/ˈæz ˈɔːfən ˈæz ˈpɑsəbəl/",
+      "chinese": "尽可能经常",
+      "example": "Try to speak English as often as possible.",
+      "translation": "尽可能经常说英语。"
+    },
+    {
+      "phrase": "often enough",
+      "phonetic": "/ˈɔːfən ɪˈnʌf/",
+      "chinese": "足够频繁",
+      "example": "Once a week is not often enough for me.",
+      "translation": "对我来说，每周一次不够频繁。"
     }
   ],
   "synonyms": [
@@ -174,6 +229,36 @@
       "scene": "核心真实用法",
       "english": "This phrase often appears in conversation.",
       "chinese": "这个短语经常出现在对话中。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "We eat at that small restaurant quite often.",
+      "chinese": "我们相当经常去那家小餐馆吃饭。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "This expression is often used in formal writing.",
+      "chinese": "这个表达经常用于正式写作。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "More often than not, a simple answer is best.",
+      "chinese": "通常，简单的答案最好。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "How often do you review new words?",
+      "chinese": "你多久复习一次新单词？"
+    },
+    {
+      "scene": "易错结构",
+      "english": "Try to speak English as often as possible.",
+      "chinese": "尽可能经常说英语。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "Once a week is not often enough for me.",
+      "chinese": "对我来说，每周一次不够频繁。"
     }
   ],
   "studyFocus": {
@@ -322,7 +407,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“相当经常”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "quite often"
+        "more often than not",
+        "how often",
+        "quite often",
+        "often used"
       ],
       "answer": "quite often",
       "stage": "T2",
@@ -333,8 +421,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“经常使用”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "how often",
+        "often used",
         "quite often",
-        "often used"
+        "more often than not"
       ],
       "answer": "often used",
       "stage": "T3",
@@ -425,9 +515,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

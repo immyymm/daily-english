@@ -18,7 +18,7 @@
   "difficulty": "应用",
   "tags": [
     "adv.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -88,7 +88,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心用法",
       "items": [
         {
           "phrase": "look forward to",
@@ -99,22 +99,27 @@
           "phrase": "move forward",
           "phonetic": "/ˈmuːv ˈfɔːrwərd/",
           "chinese": "向前推进"
-        },
-        {
-          "phrase": "go forward with",
-          "phonetic": "/ˈɡoʊ ˈfɔːrwərd ˈwɪð/",
-          "chinese": "继续推进"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "go forward with",
+          "phonetic": "/ˈɡoʊ ˈfɔːrwərd ˈwɪð/",
+          "chinese": "继续推进"
+        },
         {
           "phrase": "a step forward",
           "phonetic": "/ə ˈstɛp ˈfɔːrwərd/",
           "chinese": "向前一步；进展"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "from this day forward",
           "phonetic": "/ˈfrʌm ˈðɪs ˈdeɪ ˈfɔːrwərd/",
@@ -126,6 +131,21 @@
           "chinese": "身体前倾"
         }
       ]
+    },
+    {
+      "category": "补充常用语境",
+      "items": [
+        {
+          "phrase": "push forward",
+          "phonetic": "/ˈpʊʃ ˈfɔːrwərd/",
+          "chinese": "推动前进"
+        },
+        {
+          "phrase": "step forward",
+          "phonetic": "/ˈstɛp ˈfɔːrwərd/",
+          "chinese": "向前一步；挺身而出"
+        }
+      ]
     }
   ],
   "fixedPhrases": [
@@ -134,7 +154,42 @@
       "phonetic": "/ˈlʊk ˈfɔːrwərd ˈtuː/",
       "chinese": "期待……",
       "example": "I look forward to hearing from you.",
-      "translation": "我期待收到你的消息。"
+      "translation": "我期待收到你的回复。"
+    },
+    {
+      "phrase": "move forward",
+      "phonetic": "/ˈmuːv ˈfɔːrwərd/",
+      "chinese": "向前推进",
+      "example": "We are ready to move forward with the plan.",
+      "translation": "我们准备好推进计划了。"
+    },
+    {
+      "phrase": "go forward with",
+      "phonetic": "/ˈɡoʊ ˈfɔːrwərd ˈwɪð/",
+      "chinese": "继续推进",
+      "example": "The company decided to go forward with the project.",
+      "translation": "公司决定继续推进这个项目。"
+    },
+    {
+      "phrase": "a step forward",
+      "phonetic": "/ə ˈstɛp ˈfɔːrwərd/",
+      "chinese": "向前一步；进展",
+      "example": "The agreement is an important step forward.",
+      "translation": "这项协议是重要进展。"
+    },
+    {
+      "phrase": "from this day forward",
+      "phonetic": "/ˈfrʌm ˈðɪs ˈdeɪ ˈfɔːrwərd/",
+      "chinese": "从今以后",
+      "example": "From this day forward, we will keep better records.",
+      "translation": "从今以后，我们会更好地保存记录。"
+    },
+    {
+      "phrase": "lean forward",
+      "phonetic": "/ˈliːn ˈfɔːrwərd/",
+      "chinese": "身体前倾",
+      "example": "She leaned forward to hear the question.",
+      "translation": "她身体前倾以听清问题。"
     }
   ],
   "synonyms": [
@@ -181,6 +236,31 @@
       "scene": "核心真实用法",
       "english": "I look forward to hearing from you.",
       "chinese": "我期待收到你的消息。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "We are ready to move forward with the plan.",
+      "chinese": "我们准备好推进计划了。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "The company decided to go forward with the project.",
+      "chinese": "公司决定继续推进这个项目。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "The agreement is an important step forward.",
+      "chinese": "这项协议是重要进展。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "From this day forward, we will keep better records.",
+      "chinese": "从今以后，我们会更好地保存记录。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "She leaned forward to hear the question.",
+      "chinese": "她身体前倾以听清问题。"
     }
   ],
   "studyFocus": {
@@ -329,7 +409,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“期待……”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "look forward to"
+        "look forward to",
+        "move forward",
+        "go forward with",
+        "a step forward"
       ],
       "answer": "look forward to",
       "stage": "T2",
@@ -341,6 +424,8 @@
       "prompt": "用法辨析：哪一项既表示“向前推进”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "look forward to",
+        "go forward with",
+        "a step forward",
         "move forward"
       ],
       "answer": "move forward",
@@ -432,9 +517,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

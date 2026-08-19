@@ -18,7 +18,7 @@
   "difficulty": "应用",
   "tags": [
     "adv.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心用法",
       "items": [
         {
           "phrase": "work together",
@@ -92,22 +92,27 @@
           "phrase": "learn together",
           "phonetic": "/ˈlɝːn təˈɡeðər/",
           "chinese": "一起学习"
-        },
-        {
-          "phrase": "live together",
-          "phonetic": "/ˈlaɪv təˈɡeðər/",
-          "chinese": "一起生活"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "live together",
+          "phonetic": "/ˈlaɪv təˈɡeðər/",
+          "chinese": "一起生活"
+        },
         {
           "phrase": "get together",
           "phonetic": "/ˈɡɛt təˈɡeðər/",
           "chinese": "聚会；相聚"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "put something together",
           "phonetic": "/ˈpʊt ˈsʌmθɪŋ təˈɡeðər/",
@@ -119,6 +124,21 @@
           "chinese": "使人们团结"
         }
       ]
+    },
+    {
+      "category": "补充常用语境",
+      "items": [
+        {
+          "phrase": "stick together",
+          "phonetic": "/ˈstɪk təˈɡeðər/",
+          "chinese": "团结在一起"
+        },
+        {
+          "phrase": "come together",
+          "phonetic": "/ˈkʌm təˈɡeðər/",
+          "chinese": "汇聚；联合"
+        }
+      ]
     }
   ],
   "fixedPhrases": [
@@ -126,8 +146,43 @@
       "phrase": "work together",
       "phonetic": "/ˈwɝːk təˈɡeðər/",
       "chinese": "一起工作",
-      "example": "These words are often used together.",
-      "translation": "这些词经常搭配使用。"
+      "example": "The two teams worked together on the project.",
+      "translation": "两个团队共同完成这个项目。"
+    },
+    {
+      "phrase": "learn together",
+      "phonetic": "/ˈlɝːn təˈɡeðər/",
+      "chinese": "一起学习",
+      "example": "We learn faster when we practice together.",
+      "translation": "一起练习时我们学得更快。"
+    },
+    {
+      "phrase": "live together",
+      "phonetic": "/ˈlaɪv təˈɡeðər/",
+      "chinese": "一起生活",
+      "example": "They have lived together for three years.",
+      "translation": "他们一起生活了三年。"
+    },
+    {
+      "phrase": "get together",
+      "phonetic": "/ˈɡɛt təˈɡeðər/",
+      "chinese": "聚会；相聚",
+      "example": "Let us get together for lunch next week.",
+      "translation": "我们下周一起吃午饭吧。"
+    },
+    {
+      "phrase": "put something together",
+      "phonetic": "/ˈpʊt ˈsʌmθɪŋ təˈɡeðər/",
+      "chinese": "组装；整理",
+      "example": "It took an hour to put the shelf together.",
+      "translation": "组装这个架子花了一个小时。"
+    },
+    {
+      "phrase": "bring people together",
+      "phonetic": "/ˈbrɪŋ ˈpiːpəl təˈɡeðər/",
+      "chinese": "使人们团结",
+      "example": "Music can bring people together.",
+      "translation": "音乐可以把人们团结在一起。"
     }
   ],
   "synonyms": [
@@ -174,6 +229,36 @@
       "scene": "核心真实用法",
       "english": "These words are often used together.",
       "chinese": "这些词经常搭配使用。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "The two teams worked together on the project.",
+      "chinese": "两个团队共同完成这个项目。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "We learn faster when we practice together.",
+      "chinese": "一起练习时我们学得更快。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "They have lived together for three years.",
+      "chinese": "他们一起生活了三年。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "Let us get together for lunch next week.",
+      "chinese": "我们下周一起吃午饭吧。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "It took an hour to put the shelf together.",
+      "chinese": "组装这个架子花了一个小时。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "Music can bring people together.",
+      "chinese": "音乐可以把人们团结在一起。"
     }
   ],
   "studyFocus": {
@@ -322,7 +407,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“一起工作”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "work together"
+        "get together",
+        "work together",
+        "learn together",
+        "live together"
       ],
       "answer": "work together",
       "stage": "T2",
@@ -334,7 +422,9 @@
       "prompt": "搭配辨析：哪一项既表示“一起学习”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "learn together",
-        "work together"
+        "work together",
+        "live together",
+        "get together"
       ],
       "answer": "learn together",
       "stage": "T3",
@@ -425,9 +515,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

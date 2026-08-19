@@ -18,7 +18,7 @@
   "difficulty": "进阶",
   "tags": [
     "adj.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心用法",
       "items": [
         {
           "phrase": "a common mistake",
@@ -92,22 +92,27 @@
           "phrase": "have something in common",
           "phonetic": "/ˈhæv ˈsʌmθɪŋ ɪn ˈkɑːmən/",
           "chinese": "有共同之处"
-        },
-        {
-          "phrase": "common sense",
-          "phonetic": "/ˈkɑːmən ˈsɛns/",
-          "chinese": "常识"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "common sense",
+          "phonetic": "/ˈkɑːmən ˈsɛns/",
+          "chinese": "常识"
+        },
         {
           "phrase": "common among",
           "phonetic": "/ˈkɑːmən əˈmʌŋ/",
           "chinese": "在……中常见"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "common practice",
           "phonetic": "/ˈkɑːmən ˈpræktəs/",
@@ -126,8 +131,43 @@
       "phrase": "a common mistake",
       "phonetic": "/ə ˈkɑːmən mɪˈsteɪk/",
       "chinese": "常见错误",
-      "example": "This is a common mistake among learners.",
-      "translation": "这是学习者常犯的错误。"
+      "example": "Using the wrong preposition is a common mistake.",
+      "translation": "使用错误的介词是一个常见错误。"
+    },
+    {
+      "phrase": "have something in common",
+      "phonetic": "/ˈhæv ˈsʌmθɪŋ ɪn ˈkɑːmən/",
+      "chinese": "有共同之处",
+      "example": "The two sisters have a lot in common.",
+      "translation": "这两姐妹有很多共同之处。"
+    },
+    {
+      "phrase": "common sense",
+      "phonetic": "/ˈkɑːmən ˈsɛns/",
+      "chinese": "常识",
+      "example": "Common sense tells us to check the weather first.",
+      "translation": "常识告诉我们应该先查看天气。"
+    },
+    {
+      "phrase": "common among",
+      "phonetic": "/ˈkɑːmən əˈmʌŋ/",
+      "chinese": "在……中常见",
+      "example": "The condition is common among older adults.",
+      "translation": "这种情况在老年人中很常见。"
+    },
+    {
+      "phrase": "common practice",
+      "phonetic": "/ˈkɑːmən ˈpræktəs/",
+      "chinese": "惯常做法",
+      "example": "It is common practice to confirm the booking by email.",
+      "translation": "通过电子邮件确认预订是惯常做法。"
+    },
+    {
+      "phrase": "common language",
+      "phonetic": "/ˈkɑːmən ˈlæŋɡwədʒ/",
+      "chinese": "共同语言",
+      "example": "English became their common language.",
+      "translation": "英语成了他们的共同语言。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "This is a common mistake among learners.",
       "chinese": "这是学习者常犯的错误。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "Using the wrong preposition is a common mistake.",
+      "chinese": "使用错误的介词是一个常见错误。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "The two sisters have a lot in common.",
+      "chinese": "这两姐妹有很多共同之处。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "Common sense tells us to check the weather first.",
+      "chinese": "常识告诉我们应该先查看天气。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "The condition is common among older adults.",
+      "chinese": "这种情况在老年人中很常见。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "It is common practice to confirm the booking by email.",
+      "chinese": "通过电子邮件确认预订是惯常做法。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "English became their common language.",
+      "chinese": "英语成了他们的共同语言。"
     }
   ],
   "studyFocus": {
@@ -322,7 +392,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“常见错误”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "a common mistake"
+        "common sense",
+        "common among",
+        "a common mistake",
+        "have something in common"
       ],
       "answer": "a common mistake",
       "stage": "T2",
@@ -333,8 +406,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“有共同之处”，又符合这个形式线索：完整搭配中使用介词 in？",
       "options": [
+        "common among",
+        "have something in common",
         "a common mistake",
-        "have something in common"
+        "common sense"
       ],
       "answer": "have something in common",
       "stage": "T3",
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

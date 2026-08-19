@@ -18,7 +18,7 @@
   "difficulty": "应用",
   "tags": [
     "n.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心名词搭配",
       "items": [
         {
           "phrase": "at the moment",
@@ -92,22 +92,27 @@
           "phrase": "for a moment",
           "phonetic": "/ˈfɔːr ə ˈmoʊmənt/",
           "chinese": "一会儿"
-        },
-        {
-          "phrase": "the right moment",
-          "phonetic": "/ðə ˈraɪt ˈmoʊmənt/",
-          "chinese": "合适时机"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "the right moment",
+          "phonetic": "/ðə ˈraɪt ˈmoʊmənt/",
+          "chinese": "合适时机"
+        },
         {
           "phrase": "wait a moment",
           "phonetic": "/ˈweɪt ə ˈmoʊmənt/",
           "chinese": "等一下"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "from that moment on",
           "phonetic": "/ˈfrʌm ˈðæt ˈmoʊmənt ˈɑn/",
@@ -127,7 +132,42 @@
       "phonetic": "/ˈæt ðə ˈmoʊmənt/",
       "chinese": "目前；此刻",
       "example": "I am busy at the moment.",
-      "translation": "我现在很忙。"
+      "translation": "我目前很忙。"
+    },
+    {
+      "phrase": "for a moment",
+      "phonetic": "/ˈfɔːr ə ˈmoʊmənt/",
+      "chinese": "一会儿",
+      "example": "Please wait here for a moment.",
+      "translation": "请在这里等一会儿。"
+    },
+    {
+      "phrase": "the right moment",
+      "phonetic": "/ðə ˈraɪt ˈmoʊmənt/",
+      "chinese": "合适时机",
+      "example": "This is the right moment to ask for help.",
+      "translation": "现在是寻求帮助的合适时机。"
+    },
+    {
+      "phrase": "wait a moment",
+      "phonetic": "/ˈweɪt ə ˈmoʊmənt/",
+      "chinese": "等一下",
+      "example": "Wait a moment while I check the details.",
+      "translation": "等一下，我来检查细节。"
+    },
+    {
+      "phrase": "from that moment on",
+      "phonetic": "/ˈfrʌm ˈðæt ˈmoʊmənt ˈɑn/",
+      "chinese": "从那一刻起",
+      "example": "From that moment on, everything changed.",
+      "translation": "从那一刻起，一切都改变了。"
+    },
+    {
+      "phrase": "a moment of silence",
+      "phonetic": "/ə ˈmoʊmənt ˈʌv ˈsaɪləns/",
+      "chinese": "片刻安静",
+      "example": "The room observed a moment of silence.",
+      "translation": "房间里的人默哀了片刻。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,31 @@
       "scene": "核心真实用法",
       "english": "I am busy at the moment.",
       "chinese": "我现在很忙。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "Please wait here for a moment.",
+      "chinese": "请在这里等一会儿。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "This is the right moment to ask for help.",
+      "chinese": "现在是寻求帮助的合适时机。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "Wait a moment while I check the details.",
+      "chinese": "等一下，我来检查细节。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "From that moment on, everything changed.",
+      "chinese": "从那一刻起，一切都改变了。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "The room observed a moment of silence.",
+      "chinese": "房间里的人默哀了片刻。"
     }
   ],
   "studyFocus": {
@@ -322,7 +387,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“目前；此刻”，又符合这个形式线索：完整搭配中使用介词 at？",
       "options": [
-        "at the moment"
+        "wait a moment",
+        "at the moment",
+        "for a moment",
+        "the right moment"
       ],
       "answer": "at the moment",
       "stage": "T2",
@@ -334,7 +402,9 @@
       "prompt": "搭配辨析：哪一项既表示“一会儿”，又符合这个形式线索：完整搭配中使用介词 for？",
       "options": [
         "for a moment",
-        "at the moment"
+        "at the moment",
+        "the right moment",
+        "wait a moment"
       ],
       "answer": "for a moment",
       "stage": "T3",
@@ -425,9 +495,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

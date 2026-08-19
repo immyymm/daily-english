@@ -1,7 +1,7 @@
 {
   "date": "2026-08-23",
   "dayNumber": 7,
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "templateVersion": "learning-template-2026.08.19.1",
   "cards": [
     {
@@ -24,7 +24,7 @@
       "difficulty": "基础",
       "tags": [
         "v.",
-        "待精校",
+        "模板详卡",
         "高频表达"
       ],
       "coreMemory": {
@@ -87,7 +87,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心动作与结构",
           "items": [
             {
               "phrase": "avoid making mistakes",
@@ -98,22 +98,27 @@
               "phrase": "avoid doing",
               "phonetic": "/əˈvɔɪd ˈduːɪŋ/",
               "chinese": "避免做"
-            },
-            {
-              "phrase": "avoid unnecessary risk",
-              "phonetic": "/əˈvɔɪd əˈnnɛsəˌsɛriː ˈrɪsk/",
-              "chinese": "避免不必要的风险"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "avoid unnecessary risk",
+              "phonetic": "/əˈvɔɪd əˈnnɛsəˌsɛriː ˈrɪsk/",
+              "chinese": "避免不必要的风险"
+            },
             {
               "phrase": "avoid eye contact",
               "phonetic": "/əˈvɔɪd ˈaɪ ˈkɑˌntækt/",
               "chinese": "避免目光接触"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "difficult to avoid",
               "phonetic": "/ˈdɪfəkəlt ˈtuː əˈvɔɪd/",
@@ -125,6 +130,16 @@
               "chinese": "不惜一切代价避免"
             }
           ]
+        },
+        {
+          "category": "补充常用语境",
+          "items": [
+            {
+              "phrase": "avoid doing something",
+              "phonetic": "/əˈvɔɪd ˈduːɪŋ ˈsʌmθɪŋ/",
+              "chinese": "避免做某事"
+            }
+          ]
         }
       ],
       "fixedPhrases": [
@@ -132,8 +147,43 @@
           "phrase": "avoid making mistakes",
           "phonetic": "/əˈvɔɪd ˈmeɪkɪŋ mɪˈsteɪks/",
           "chinese": "避免犯错",
-          "example": "Avoid translating every sentence word for word.",
-          "translation": "避免逐字翻译每个句子。"
+          "example": "Read the instructions carefully to avoid making mistakes.",
+          "translation": "仔细阅读说明，避免犯错。"
+        },
+        {
+          "phrase": "avoid doing",
+          "phonetic": "/əˈvɔɪd ˈduːɪŋ/",
+          "chinese": "避免做",
+          "example": "Try to avoid checking your phone while studying.",
+          "translation": "学习时尽量避免查看手机。"
+        },
+        {
+          "phrase": "avoid unnecessary risk",
+          "phonetic": "/əˈvɔɪd əˈnnɛsəˌsɛriː ˈrɪsk/",
+          "chinese": "避免不必要的风险",
+          "example": "A backup can help you avoid unnecessary risk.",
+          "translation": "备份可以帮助你避免不必要的风险。"
+        },
+        {
+          "phrase": "avoid eye contact",
+          "phonetic": "/əˈvɔɪd ˈaɪ ˈkɑˌntækt/",
+          "chinese": "避免目光接触",
+          "example": "He avoided eye contact during the conversation.",
+          "translation": "谈话时他避免目光接触。"
+        },
+        {
+          "phrase": "difficult to avoid",
+          "phonetic": "/ˈdɪfəkəlt ˈtuː əˈvɔɪd/",
+          "chinese": "难以避免",
+          "example": "Some delays are difficult to avoid.",
+          "translation": "有些延误很难避免。"
+        },
+        {
+          "phrase": "at all costs",
+          "phonetic": "/ˈæt ˈɔːl ˈkɑsts/",
+          "chinese": "不惜一切代价避免",
+          "example": "We must avoid losing this customer at all costs.",
+          "translation": "我们必须不惜一切代价避免失去这位客户。"
         }
       ],
       "synonyms": [
@@ -180,6 +230,36 @@
           "scene": "核心真实用法",
           "english": "Avoid translating every sentence word for word.",
           "chinese": "避免逐字翻译每个句子。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "Read the instructions carefully to avoid making mistakes.",
+          "chinese": "仔细阅读说明，避免犯错。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "Try to avoid checking your phone while studying.",
+          "chinese": "学习时尽量避免查看手机。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "A backup can help you avoid unnecessary risk.",
+          "chinese": "备份可以帮助你避免不必要的风险。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "He avoided eye contact during the conversation.",
+          "chinese": "谈话时他避免目光接触。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "Some delays are difficult to avoid.",
+          "chinese": "有些延误很难避免。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "We must avoid losing this customer at all costs.",
+          "chinese": "我们必须不惜一切代价避免失去这位客户。"
         }
       ],
       "studyFocus": {
@@ -328,7 +408,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“避免犯错”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "avoid making mistakes"
+            "avoid making mistakes",
+            "avoid doing",
+            "avoid unnecessary risk",
+            "avoid eye contact"
           ],
           "answer": "avoid making mistakes",
           "stage": "T2",
@@ -340,6 +423,8 @@
           "prompt": "用法辨析：哪一项既表示“避免做”，又符合这个形式线索：目标词后的 doing 表示要换成符合语境的动词 -ing 形式？",
           "options": [
             "avoid making mistakes",
+            "avoid unnecessary risk",
+            "avoid eye contact",
             "avoid doing"
           ],
           "answer": "avoid doing",
@@ -431,11 +516,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "compare-v",
@@ -457,7 +542,7 @@
       "difficulty": "基础",
       "tags": [
         "v.",
-        "待精校",
+        "模板详卡",
         "高频表达"
       ],
       "coreMemory": {
@@ -520,7 +605,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心动作与结构",
           "items": [
             {
               "phrase": "compare A with B",
@@ -531,22 +616,27 @@
               "phrase": "compare A to B",
               "phonetic": "/kəmˈper ə ˈtuː ˈbiː/",
               "chinese": "把 A 比作 B"
-            },
-            {
-              "phrase": "compare prices",
-              "phonetic": "/kəmˈper ˈpraɪsəz/",
-              "chinese": "比较价格"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "compare prices",
+              "phonetic": "/kəmˈper ˈpraɪsəz/",
+              "chinese": "比较价格"
+            },
             {
               "phrase": "compared with",
               "phonetic": "/kəˈmpɛrd ˈwɪð/",
               "chinese": "与……相比"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "cannot compare with",
               "phonetic": "/ˈkænɑt kəmˈper ˈwɪð/",
@@ -565,8 +655,43 @@
           "phrase": "compare A with B",
           "phonetic": "/kəmˈper ə ˈwɪð ˈbiː/",
           "chinese": "把 A 与 B 比较",
-          "example": "Compare the two examples before you answer.",
-          "translation": "回答前比较这两个例子。"
+          "example": "Compare this year’s results with last year’s.",
+          "translation": "把今年的结果与去年的结果比较一下。"
+        },
+        {
+          "phrase": "compare A to B",
+          "phonetic": "/kəmˈper ə ˈtuː ˈbiː/",
+          "chinese": "把 A 比作 B",
+          "example": "The writer compared the city to a living organism.",
+          "translation": "作者把这座城市比作一个有生命的有机体。"
+        },
+        {
+          "phrase": "compare prices",
+          "phonetic": "/kəmˈper ˈpraɪsəz/",
+          "chinese": "比较价格",
+          "example": "Always compare prices before making a large purchase.",
+          "translation": "进行大额购买前一定要比较价格。"
+        },
+        {
+          "phrase": "compared with",
+          "phonetic": "/kəˈmpɛrd ˈwɪð/",
+          "chinese": "与……相比",
+          "example": "Compared with the old model, this one is much lighter.",
+          "translation": "与旧款相比，这一款轻得多。"
+        },
+        {
+          "phrase": "cannot compare with",
+          "phonetic": "/ˈkænɑt kəmˈper ˈwɪð/",
+          "chinese": "无法与……相比",
+          "example": "My first attempt cannot compare with her finished work.",
+          "translation": "我的第一次尝试无法与她完成的作品相比。"
+        },
+        {
+          "phrase": "by comparison",
+          "phonetic": "/ˈbaɪ kəˈmpɛrəsən/",
+          "chinese": "相比之下",
+          "example": "The second option is cheaper by comparison.",
+          "translation": "相比之下，第二个选择更便宜。"
         }
       ],
       "synonyms": [
@@ -613,6 +738,36 @@
           "scene": "核心真实用法",
           "english": "Compare the two examples before you answer.",
           "chinese": "回答前比较这两个例子。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "Compare this year’s results with last year’s.",
+          "chinese": "把今年的结果与去年的结果比较一下。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "The writer compared the city to a living organism.",
+          "chinese": "作者把这座城市比作一个有生命的有机体。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "Always compare prices before making a large purchase.",
+          "chinese": "进行大额购买前一定要比较价格。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "Compared with the old model, this one is much lighter.",
+          "chinese": "与旧款相比，这一款轻得多。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "My first attempt cannot compare with her finished work.",
+          "chinese": "我的第一次尝试无法与她完成的作品相比。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "The second option is cheaper by comparison.",
+          "chinese": "相比之下，第二个选择更便宜。"
         }
       ],
       "studyFocus": {
@@ -761,6 +916,9 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“把 A 与 B 比较”，又符合这个形式线索：完整搭配中使用介词 with？",
           "options": [
+            "compare A to B",
+            "compare prices",
+            "compared with",
             "compare A with B"
           ],
           "answer": "compare A with B",
@@ -772,6 +930,8 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“把 A 比作 B”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "compare prices",
+            "compared with",
             "compare A to B",
             "compare A with B"
           ],
@@ -864,11 +1024,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "depend-v",
@@ -890,7 +1050,7 @@
       "difficulty": "基础",
       "tags": [
         "v.",
-        "待精校",
+        "模板详卡",
         "高频表达"
       ],
       "coreMemory": {
@@ -953,7 +1113,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心动作与结构",
           "items": [
             {
               "phrase": "depend on",
@@ -964,22 +1124,27 @@
               "phrase": "depend heavily on",
               "phonetic": "/dɪˈpend ˈhɛvəliː ˈɑn/",
               "chinese": "严重依赖"
-            },
-            {
-              "phrase": "it depends",
-              "phonetic": "/ˈɪt dɪˈpɛndz/",
-              "chinese": "视情况而定"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "it depends",
+              "phonetic": "/ˈɪt dɪˈpɛndz/",
+              "chinese": "视情况而定"
+            },
             {
               "phrase": "depend on whether",
               "phonetic": "/dɪˈpend ˈɑn ˈwɛðɚ/",
               "chinese": "取决于是否"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "you can depend on me",
               "phonetic": "/ˈjuː ˈkæn dɪˈpend ˈɑn ˈmiː/",
@@ -998,8 +1163,43 @@
           "phrase": "depend on",
           "phonetic": "/dɪˈpend ˈɑn/",
           "chinese": "取决于；依靠",
-          "example": "The best choice depends on the situation.",
-          "translation": "最好的选择取决于具体情况。"
+          "example": "The final cost will depend on the size of the project.",
+          "translation": "最终费用将取决于项目规模。"
+        },
+        {
+          "phrase": "depend heavily on",
+          "phonetic": "/dɪˈpend ˈhɛvəliː ˈɑn/",
+          "chinese": "严重依赖",
+          "example": "Many small businesses depend heavily on local customers.",
+          "translation": "许多小企业严重依赖本地顾客。"
+        },
+        {
+          "phrase": "it depends",
+          "phonetic": "/ˈɪt dɪˈpɛndz/",
+          "chinese": "视情况而定",
+          "example": "“Will it work?” “It depends.”",
+          "translation": "“这能行吗？”“要看情况。”"
+        },
+        {
+          "phrase": "depend on whether",
+          "phonetic": "/dɪˈpend ˈɑn ˈwɛðɚ/",
+          "chinese": "取决于是否",
+          "example": "Our start time depends on whether the train is delayed.",
+          "translation": "我们的出发时间取决于火车是否晚点。"
+        },
+        {
+          "phrase": "you can depend on me",
+          "phonetic": "/ˈjuː ˈkæn dɪˈpend ˈɑn ˈmiː/",
+          "chinese": "你可以依靠我",
+          "example": "If you need help, you can depend on me.",
+          "translation": "如果你需要帮助，可以依靠我。"
+        },
+        {
+          "phrase": "depending on",
+          "phonetic": "/dɪˈpɛndɪŋ ˈɑn/",
+          "chinese": "根据；视……而定",
+          "example": "The route changes depending on the weather.",
+          "translation": "路线会根据天气而变化。"
         }
       ],
       "synonyms": [
@@ -1046,6 +1246,36 @@
           "scene": "核心真实用法",
           "english": "The best choice depends on the situation.",
           "chinese": "最好的选择取决于具体情况。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "The final cost will depend on the size of the project.",
+          "chinese": "最终费用将取决于项目规模。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "Many small businesses depend heavily on local customers.",
+          "chinese": "许多小企业严重依赖本地顾客。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "“Will it work?” “It depends.”",
+          "chinese": "“这能行吗？”“要看情况。”"
+        },
+        {
+          "scene": "真实语境",
+          "english": "Our start time depends on whether the train is delayed.",
+          "chinese": "我们的出发时间取决于火车是否晚点。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "If you need help, you can depend on me.",
+          "chinese": "如果你需要帮助，可以依靠我。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "The route changes depending on the weather.",
+          "chinese": "路线会根据天气而变化。"
         }
       ],
       "studyFocus": {
@@ -1194,7 +1424,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“取决于；依靠”，又符合这个形式线索：完整搭配中使用介词 on？",
           "options": [
-            "depend on"
+            "it depends",
+            "depend on whether",
+            "depend on",
+            "depend heavily on"
           ],
           "answer": "depend on",
           "stage": "T2",
@@ -1205,8 +1438,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“严重依赖”，又符合这个形式线索：完整搭配中使用介词 on？",
           "options": [
+            "depend on whether",
+            "depend heavily on",
             "depend on",
-            "depend heavily on"
+            "it depends"
           ],
           "answer": "depend heavily on",
           "stage": "T3",
@@ -1297,11 +1532,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "increase-v",
@@ -1329,7 +1564,7 @@
       "difficulty": "基础",
       "tags": [
         "v.",
-        "待精校",
+        "模板详卡",
         "高频表达"
       ],
       "coreMemory": {
@@ -1399,7 +1634,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心动作与结构",
           "items": [
             {
               "phrase": "increase by ten percent",
@@ -1410,22 +1645,27 @@
               "phrase": "increase from A to B",
               "phonetic": "/ɪnˈkriːs ˈfrʌm ə ˈtuː ˈbiː/",
               "chinese": "从 A 增至 B"
-            },
-            {
-              "phrase": "increase the risk of",
-              "phonetic": "/ɪnˈkriːs ðə ˈrɪsk ˈʌv/",
-              "chinese": "增加……的风险"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "increase the risk of",
+              "phonetic": "/ɪnˈkriːs ðə ˈrɪsk ˈʌv/",
+              "chinese": "增加……的风险"
+            },
             {
               "phrase": "a sharp increase",
               "phonetic": "/ə ˈʃɑrp ɪnˈkriːs/",
               "chinese": "大幅增加"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "an increase in",
               "phonetic": "/ˈæn ɪnˈkriːs ɪn/",
@@ -1437,6 +1677,16 @@
               "chinese": "正在增加"
             }
           ]
+        },
+        {
+          "category": "补充常用语境",
+          "items": [
+            {
+              "phrase": "increase confidence",
+              "phonetic": "/ɪnˈkriːs ˈkɑnfədəns/",
+              "chinese": "增强信心"
+            }
+          ]
         }
       ],
       "fixedPhrases": [
@@ -1444,8 +1694,43 @@
           "phrase": "increase by ten percent",
           "phonetic": "/ɪnˈkriːs ˈbaɪ ˈtɛn pɚˈsɛnt/",
           "chinese": "增加百分之十",
-          "example": "Regular speaking practice increases confidence.",
-          "translation": "经常练习口语会增强信心。"
+          "example": "Sales increased by ten percent last month.",
+          "translation": "上个月销售额增长了百分之十。"
+        },
+        {
+          "phrase": "increase from A to B",
+          "phonetic": "/ɪnˈkriːs ˈfrʌm ə ˈtuː ˈbiː/",
+          "chinese": "从 A 增至 B",
+          "example": "The temperature increased from 20 to 28 degrees.",
+          "translation": "气温从二十度升到了二十八度。"
+        },
+        {
+          "phrase": "increase the risk of",
+          "phonetic": "/ɪnˈkriːs ðə ˈrɪsk ˈʌv/",
+          "chinese": "增加……的风险",
+          "example": "Poor sleep can increase the risk of mistakes.",
+          "translation": "睡眠不足会增加犯错的风险。"
+        },
+        {
+          "phrase": "a sharp increase",
+          "phonetic": "/ə ˈʃɑrp ɪnˈkriːs/",
+          "chinese": "大幅增加",
+          "example": "The city has seen a sharp increase in rent.",
+          "translation": "这座城市的租金大幅上涨。"
+        },
+        {
+          "phrase": "an increase in",
+          "phonetic": "/ˈæn ɪnˈkriːs ɪn/",
+          "chinese": "……的增加",
+          "example": "There was an increase in online orders.",
+          "translation": "网上订单有所增加。"
+        },
+        {
+          "phrase": "on the increase",
+          "phonetic": "/ˈɑn ðə ɪnˈkriːs/",
+          "chinese": "正在增加",
+          "example": "Remote work is still on the increase.",
+          "translation": "远程办公仍在增加。"
         }
       ],
       "synonyms": [
@@ -1492,6 +1777,36 @@
           "scene": "核心真实用法",
           "english": "Regular speaking practice increases confidence.",
           "chinese": "经常练习口语会增强信心。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "Sales increased by ten percent last month.",
+          "chinese": "上个月销售额增长了百分之十。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "The temperature increased from 20 to 28 degrees.",
+          "chinese": "气温从二十度升到了二十八度。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "Poor sleep can increase the risk of mistakes.",
+          "chinese": "睡眠不足会增加犯错的风险。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "The city has seen a sharp increase in rent.",
+          "chinese": "这座城市的租金大幅上涨。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "There was an increase in online orders.",
+          "chinese": "网上订单有所增加。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "Remote work is still on the increase.",
+          "chinese": "远程办公仍在增加。"
         }
       ],
       "studyFocus": {
@@ -1640,7 +1955,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“增加百分之十”，又符合这个形式线索：完整搭配中使用介词 by？",
           "options": [
-            "increase by ten percent"
+            "a sharp increase",
+            "increase by ten percent",
+            "increase from A to B",
+            "increase the risk of"
           ],
           "answer": "increase by ten percent",
           "stage": "T2",
@@ -1652,7 +1970,9 @@
           "prompt": "搭配辨析：哪一项既表示“从 A 增至 B”，又符合这个形式线索：同时使用 from 和 to，表示范围或变化的起点与终点？",
           "options": [
             "increase from A to B",
-            "increase by ten percent"
+            "increase by ten percent",
+            "increase the risk of",
+            "a sharp increase"
           ],
           "answer": "increase from A to B",
           "stage": "T3",
@@ -1743,11 +2063,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "reduce-v",
@@ -1769,7 +2089,7 @@
       "difficulty": "基础",
       "tags": [
         "v.",
-        "待精校",
+        "模板详卡",
         "高频表达"
       ],
       "coreMemory": {
@@ -1832,7 +2152,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心动作与结构",
           "items": [
             {
               "phrase": "reduce the risk",
@@ -1843,22 +2163,27 @@
               "phrase": "reduce costs",
               "phonetic": "/rɪˈduːs ˈkɑsts/",
               "chinese": "降低成本"
-            },
-            {
-              "phrase": "reduce stress",
-              "phonetic": "/rɪˈduːs ˈstrɛs/",
-              "chinese": "减轻压力"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "reduce stress",
+              "phonetic": "/rɪˈduːs ˈstrɛs/",
+              "chinese": "减轻压力"
+            },
             {
               "phrase": "reduce by half",
               "phonetic": "/rɪˈduːs ˈbaɪ ˈhæf/",
               "chinese": "减少一半"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "reduce A to B",
               "phonetic": "/rɪˈduːs ə ˈtuː ˈbiː/",
@@ -1877,8 +2202,43 @@
           "phrase": "reduce the risk",
           "phonetic": "/rɪˈduːs ðə ˈrɪsk/",
           "chinese": "降低风险",
-          "example": "A clear plan can reduce unnecessary stress.",
-          "translation": "清晰的计划可以减少不必要的压力。"
+          "example": "Regular exercise can reduce the risk of illness.",
+          "translation": "规律运动可以降低患病风险。"
+        },
+        {
+          "phrase": "reduce costs",
+          "phonetic": "/rɪˈduːs ˈkɑsts/",
+          "chinese": "降低成本",
+          "example": "The company is trying to reduce costs.",
+          "translation": "公司正努力降低成本。"
+        },
+        {
+          "phrase": "reduce stress",
+          "phonetic": "/rɪˈduːs ˈstrɛs/",
+          "chinese": "减轻压力",
+          "example": "A short walk may reduce stress.",
+          "translation": "短暂散步可能有助于减轻压力。"
+        },
+        {
+          "phrase": "reduce by half",
+          "phonetic": "/rɪˈduːs ˈbaɪ ˈhæf/",
+          "chinese": "减少一半",
+          "example": "We reduced the waiting time by half.",
+          "translation": "我们把等待时间缩短了一半。"
+        },
+        {
+          "phrase": "reduce A to B",
+          "phonetic": "/rɪˈduːs ə ˈtuː ˈbiː/",
+          "chinese": "把 A 减少到 B",
+          "example": "The store reduced the price from $50 to $35.",
+          "translation": "商店把价格从五十美元降到了三十五美元。"
+        },
+        {
+          "phrase": "reduce waste",
+          "phonetic": "/rɪˈduːs ˈweɪst/",
+          "chinese": "减少浪费",
+          "example": "Using both sides of the paper helps reduce waste.",
+          "translation": "使用纸张两面有助于减少浪费。"
         }
       ],
       "synonyms": [
@@ -1925,6 +2285,36 @@
           "scene": "核心真实用法",
           "english": "A clear plan can reduce unnecessary stress.",
           "chinese": "清晰的计划可以减少不必要的压力。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "Regular exercise can reduce the risk of illness.",
+          "chinese": "规律运动可以降低患病风险。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "The company is trying to reduce costs.",
+          "chinese": "公司正努力降低成本。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "A short walk may reduce stress.",
+          "chinese": "短暂散步可能有助于减轻压力。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "We reduced the waiting time by half.",
+          "chinese": "我们把等待时间缩短了一半。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "The store reduced the price from $50 to $35.",
+          "chinese": "商店把价格从五十美元降到了三十五美元。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "Using both sides of the paper helps reduce waste.",
+          "chinese": "使用纸张两面有助于减少浪费。"
         }
       ],
       "studyFocus": {
@@ -2073,7 +2463,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“降低风险”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "reduce the risk"
+            "reduce the risk",
+            "reduce costs",
+            "reduce stress",
+            "reduce by half"
           ],
           "answer": "reduce the risk",
           "stage": "T2",
@@ -2085,6 +2478,8 @@
           "prompt": "用法辨析：哪一项既表示“降低成本”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "reduce the risk",
+            "reduce stress",
+            "reduce by half",
             "reduce costs"
           ],
           "answer": "reduce costs",
@@ -2176,11 +2571,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     }
   ]
 }

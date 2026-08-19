@@ -24,7 +24,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "待精校",
+    "模板详卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -94,7 +94,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心动作与结构",
       "items": [
         {
           "phrase": "increase by ten percent",
@@ -105,22 +105,27 @@
           "phrase": "increase from A to B",
           "phonetic": "/ɪnˈkriːs ˈfrʌm ə ˈtuː ˈbiː/",
           "chinese": "从 A 增至 B"
-        },
-        {
-          "phrase": "increase the risk of",
-          "phonetic": "/ɪnˈkriːs ðə ˈrɪsk ˈʌv/",
-          "chinese": "增加……的风险"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "increase the risk of",
+          "phonetic": "/ɪnˈkriːs ðə ˈrɪsk ˈʌv/",
+          "chinese": "增加……的风险"
+        },
         {
           "phrase": "a sharp increase",
           "phonetic": "/ə ˈʃɑrp ɪnˈkriːs/",
           "chinese": "大幅增加"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "an increase in",
           "phonetic": "/ˈæn ɪnˈkriːs ɪn/",
@@ -132,6 +137,16 @@
           "chinese": "正在增加"
         }
       ]
+    },
+    {
+      "category": "补充常用语境",
+      "items": [
+        {
+          "phrase": "increase confidence",
+          "phonetic": "/ɪnˈkriːs ˈkɑnfədəns/",
+          "chinese": "增强信心"
+        }
+      ]
     }
   ],
   "fixedPhrases": [
@@ -139,8 +154,43 @@
       "phrase": "increase by ten percent",
       "phonetic": "/ɪnˈkriːs ˈbaɪ ˈtɛn pɚˈsɛnt/",
       "chinese": "增加百分之十",
-      "example": "Regular speaking practice increases confidence.",
-      "translation": "经常练习口语会增强信心。"
+      "example": "Sales increased by ten percent last month.",
+      "translation": "上个月销售额增长了百分之十。"
+    },
+    {
+      "phrase": "increase from A to B",
+      "phonetic": "/ɪnˈkriːs ˈfrʌm ə ˈtuː ˈbiː/",
+      "chinese": "从 A 增至 B",
+      "example": "The temperature increased from 20 to 28 degrees.",
+      "translation": "气温从二十度升到了二十八度。"
+    },
+    {
+      "phrase": "increase the risk of",
+      "phonetic": "/ɪnˈkriːs ðə ˈrɪsk ˈʌv/",
+      "chinese": "增加……的风险",
+      "example": "Poor sleep can increase the risk of mistakes.",
+      "translation": "睡眠不足会增加犯错的风险。"
+    },
+    {
+      "phrase": "a sharp increase",
+      "phonetic": "/ə ˈʃɑrp ɪnˈkriːs/",
+      "chinese": "大幅增加",
+      "example": "The city has seen a sharp increase in rent.",
+      "translation": "这座城市的租金大幅上涨。"
+    },
+    {
+      "phrase": "an increase in",
+      "phonetic": "/ˈæn ɪnˈkriːs ɪn/",
+      "chinese": "……的增加",
+      "example": "There was an increase in online orders.",
+      "translation": "网上订单有所增加。"
+    },
+    {
+      "phrase": "on the increase",
+      "phonetic": "/ˈɑn ðə ɪnˈkriːs/",
+      "chinese": "正在增加",
+      "example": "Remote work is still on the increase.",
+      "translation": "远程办公仍在增加。"
     }
   ],
   "synonyms": [
@@ -187,6 +237,36 @@
       "scene": "核心真实用法",
       "english": "Regular speaking practice increases confidence.",
       "chinese": "经常练习口语会增强信心。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "Sales increased by ten percent last month.",
+      "chinese": "上个月销售额增长了百分之十。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "The temperature increased from 20 to 28 degrees.",
+      "chinese": "气温从二十度升到了二十八度。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "Poor sleep can increase the risk of mistakes.",
+      "chinese": "睡眠不足会增加犯错的风险。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "The city has seen a sharp increase in rent.",
+      "chinese": "这座城市的租金大幅上涨。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "There was an increase in online orders.",
+      "chinese": "网上订单有所增加。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "Remote work is still on the increase.",
+      "chinese": "远程办公仍在增加。"
     }
   ],
   "studyFocus": {
@@ -335,7 +415,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“增加百分之十”，又符合这个形式线索：完整搭配中使用介词 by？",
       "options": [
-        "increase by ten percent"
+        "a sharp increase",
+        "increase by ten percent",
+        "increase from A to B",
+        "increase the risk of"
       ],
       "answer": "increase by ten percent",
       "stage": "T2",
@@ -347,7 +430,9 @@
       "prompt": "搭配辨析：哪一项既表示“从 A 增至 B”，又符合这个形式线索：同时使用 from 和 to，表示范围或变化的起点与终点？",
       "options": [
         "increase from A to B",
-        "increase by ten percent"
+        "increase by ten percent",
+        "increase the risk of",
+        "a sharp increase"
       ],
       "answer": "increase from A to B",
       "stage": "T3",
@@ -438,9 +523,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

@@ -18,7 +18,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "待精校",
+    "模板详卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心动作与结构",
       "items": [
         {
           "phrase": "what happened",
@@ -92,22 +92,27 @@
           "phrase": "happen to someone",
           "phonetic": "/ˈhæpən ˈtuː ˈsʌˌmwʌn/",
           "chinese": "发生在某人身上"
-        },
-        {
-          "phrase": "happen to know",
-          "phonetic": "/ˈhæpən ˈtuː ˈnoʊ/",
-          "chinese": "碰巧知道"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "happen to know",
+          "phonetic": "/ˈhæpən ˈtuː ˈnoʊ/",
+          "chinese": "碰巧知道"
+        },
         {
           "phrase": "happen by chance",
           "phonetic": "/ˈhæpən ˈbaɪ ˈtʃæns/",
           "chinese": "偶然发生"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "make it happen",
           "phonetic": "/ˈmeɪk ˈɪt ˈhæpən/",
@@ -126,8 +131,43 @@
       "phrase": "what happened",
       "phonetic": "/ˈwʌt ˈhæpənd/",
       "chinese": "发生了什么",
-      "example": "What happened during the meeting?",
-      "translation": "会议期间发生了什么？"
+      "example": "What happened after the meeting ended?",
+      "translation": "会议结束后发生了什么？"
+    },
+    {
+      "phrase": "happen to someone",
+      "phonetic": "/ˈhæpən ˈtuː ˈsʌˌmwʌn/",
+      "chinese": "发生在某人身上",
+      "example": "The same thing happened to me last year.",
+      "translation": "去年同样的事也发生在我身上。"
+    },
+    {
+      "phrase": "happen to know",
+      "phonetic": "/ˈhæpən ˈtuː ˈnoʊ/",
+      "chinese": "碰巧知道",
+      "example": "Do you happen to know her phone number?",
+      "translation": "你碰巧知道她的电话号码吗？"
+    },
+    {
+      "phrase": "happen by chance",
+      "phonetic": "/ˈhæpən ˈbaɪ ˈtʃæns/",
+      "chinese": "偶然发生",
+      "example": "The discovery happened by chance.",
+      "translation": "这个发现是偶然发生的。"
+    },
+    {
+      "phrase": "make it happen",
+      "phonetic": "/ˈmeɪk ˈɪt ˈhæpən/",
+      "chinese": "使之成为现实",
+      "example": "A clear deadline can help make the project happen.",
+      "translation": "明确的截止日期有助于推动项目落实。"
+    },
+    {
+      "phrase": "whatever happens",
+      "phonetic": "/ˌwʌˈtɛvɚ ˈhæpənz/",
+      "chinese": "无论发生什么",
+      "example": "Whatever happens, call me if you need help.",
+      "translation": "无论发生什么，需要帮助就给我打电话。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "What happened during the meeting?",
       "chinese": "会议期间发生了什么？"
+    },
+    {
+      "scene": "日常使用",
+      "english": "What happened after the meeting ended?",
+      "chinese": "会议结束后发生了什么？"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "The same thing happened to me last year.",
+      "chinese": "去年同样的事也发生在我身上。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "Do you happen to know her phone number?",
+      "chinese": "你碰巧知道她的电话号码吗？"
+    },
+    {
+      "scene": "真实语境",
+      "english": "The discovery happened by chance.",
+      "chinese": "这个发现是偶然发生的。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "A clear deadline can help make the project happen.",
+      "chinese": "明确的截止日期有助于推动项目落实。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "Whatever happens, call me if you need help.",
+      "chinese": "无论发生什么，需要帮助就给我打电话。"
     }
   ],
   "studyFocus": {
@@ -322,7 +392,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“发生了什么”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "what happened"
+        "happen to know",
+        "happen by chance",
+        "what happened",
+        "happen to someone"
       ],
       "answer": "what happened",
       "stage": "T2",
@@ -333,8 +406,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“发生在某人身上”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "happen by chance",
+        "happen to someone",
         "what happened",
-        "happen to someone"
+        "happen to know"
       ],
       "answer": "happen to someone",
       "stage": "T3",
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

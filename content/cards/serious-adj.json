@@ -18,7 +18,7 @@
   "difficulty": "进阶",
   "tags": [
     "adj.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心用法",
       "items": [
         {
           "phrase": "a serious problem",
@@ -92,22 +92,27 @@
           "phrase": "take something seriously",
           "phonetic": "/ˈteɪk ˈsʌmθɪŋ ˈsɪriːəsliː/",
           "chinese": "认真对待某事"
-        },
-        {
-          "phrase": "serious about doing",
-          "phonetic": "/ˈsɪriəs əˈbaʊt ˈduːɪŋ/",
-          "chinese": "认真想做"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "serious about doing",
+          "phonetic": "/ˈsɪriəs əˈbaʊt ˈduːɪŋ/",
+          "chinese": "认真想做"
+        },
         {
           "phrase": "serious injury",
           "phonetic": "/ˈsɪriəs ˈɪndʒɚiː/",
           "chinese": "重伤"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "nothing serious",
           "phonetic": "/ˈnʌθɪŋ ˈsɪriəs/",
@@ -127,7 +132,42 @@
       "phonetic": "/ə ˈsɪriəs ˈprɑbləm/",
       "chinese": "严重问题",
       "example": "Lack of sleep can become a serious problem.",
-      "translation": "睡眠不足可能变成一个严重问题。"
+      "translation": "睡眠不足可能成为严重问题。"
+    },
+    {
+      "phrase": "take something seriously",
+      "phonetic": "/ˈteɪk ˈsʌmθɪŋ ˈsɪriːəsliː/",
+      "chinese": "认真对待某事",
+      "example": "You need to take this warning seriously.",
+      "translation": "你需要认真对待这个警告。"
+    },
+    {
+      "phrase": "serious about doing",
+      "phonetic": "/ˈsɪriəs əˈbaʊt ˈduːɪŋ/",
+      "chinese": "认真想做",
+      "example": "She is serious about improving her English.",
+      "translation": "她认真想提高英语水平。"
+    },
+    {
+      "phrase": "serious injury",
+      "phonetic": "/ˈsɪriəs ˈɪndʒɚiː/",
+      "chinese": "重伤",
+      "example": "He was taken to hospital with a serious injury.",
+      "translation": "他因重伤被送往医院。"
+    },
+    {
+      "phrase": "nothing serious",
+      "phonetic": "/ˈnʌθɪŋ ˈsɪriəs/",
+      "chinese": "没什么严重的",
+      "example": "Do not worry; it is nothing serious.",
+      "translation": "别担心，没什么严重的。"
+    },
+    {
+      "phrase": "a serious discussion",
+      "phonetic": "/ə ˈsɪriəs dɪˈskʌʃən/",
+      "chinese": "严肃讨论",
+      "example": "We had a serious discussion about the budget.",
+      "translation": "我们就预算进行了严肃讨论。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,31 @@
       "scene": "核心真实用法",
       "english": "Lack of sleep can become a serious problem.",
       "chinese": "睡眠不足可能变成一个严重问题。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "You need to take this warning seriously.",
+      "chinese": "你需要认真对待这个警告。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "She is serious about improving her English.",
+      "chinese": "她认真想提高英语水平。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "He was taken to hospital with a serious injury.",
+      "chinese": "他因重伤被送往医院。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "Do not worry; it is nothing serious.",
+      "chinese": "别担心，没什么严重的。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "We had a serious discussion about the budget.",
+      "chinese": "我们就预算进行了严肃讨论。"
     }
   ],
   "studyFocus": {
@@ -322,7 +387,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“严重问题”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "a serious problem"
+        "serious injury",
+        "a serious problem",
+        "take something seriously",
+        "serious about doing"
       ],
       "answer": "a serious problem",
       "stage": "T2",
@@ -334,7 +402,9 @@
       "prompt": "搭配辨析：哪一项既表示“认真对待某事”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
       "options": [
         "take something seriously",
-        "a serious problem"
+        "a serious problem",
+        "serious about doing",
+        "serious injury"
       ],
       "answer": "take something seriously",
       "stage": "T3",
@@ -425,9 +495,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

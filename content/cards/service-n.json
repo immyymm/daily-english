@@ -18,7 +18,7 @@
   "difficulty": "进阶",
   "tags": [
     "n.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心名词搭配",
       "items": [
         {
           "phrase": "customer service",
@@ -92,22 +92,27 @@
           "phrase": "provide a service",
           "phonetic": "/prəˈvaɪd ə ˈsɜːrvɪs/",
           "chinese": "提供服务"
-        },
-        {
-          "phrase": "public service",
-          "phonetic": "/ˈpʌblɪk ˈsɜːrvɪs/",
-          "chinese": "公共服务"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "public service",
+          "phonetic": "/ˈpʌblɪk ˈsɜːrvɪs/",
+          "chinese": "公共服务"
+        },
         {
           "phrase": "in service",
           "phonetic": "/ɪn ˈsɜːrvɪs/",
           "chinese": "在使用中"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "out of service",
           "phonetic": "/ˈaʊt ˈʌv ˈsɜːrvɪs/",
@@ -126,8 +131,43 @@
       "phrase": "customer service",
       "phonetic": "/ˈkʌstəmɚ ˈsɜːrvɪs/",
       "chinese": "客户服务",
-      "example": "The hotel offers excellent service.",
-      "translation": "这家酒店提供出色的服务。"
+      "example": "The hotel is known for excellent customer service.",
+      "translation": "这家酒店以优质客户服务闻名。"
+    },
+    {
+      "phrase": "provide a service",
+      "phonetic": "/prəˈvaɪd ə ˈsɜːrvɪs/",
+      "chinese": "提供服务",
+      "example": "The company provides a useful translation service.",
+      "translation": "这家公司提供实用的翻译服务。"
+    },
+    {
+      "phrase": "public service",
+      "phonetic": "/ˈpʌblɪk ˈsɜːrvɪs/",
+      "chinese": "公共服务",
+      "example": "She has worked in public service for ten years.",
+      "translation": "她从事公共服务工作已有十年。"
+    },
+    {
+      "phrase": "in service",
+      "phonetic": "/ɪn ˈsɜːrvɪs/",
+      "chinese": "在使用中",
+      "example": "The new train will enter service next month.",
+      "translation": "新列车将于下个月投入运营。"
+    },
+    {
+      "phrase": "out of service",
+      "phonetic": "/ˈaʊt ˈʌv ˈsɜːrvɪs/",
+      "chinese": "停止服务",
+      "example": "The elevator is temporarily out of service.",
+      "translation": "电梯暂时停止使用。"
+    },
+    {
+      "phrase": "service industry",
+      "phonetic": "/ˈsɜːrvɪs ˈɪndəstriː/",
+      "chinese": "服务业",
+      "example": "Tourism is an important part of the service industry.",
+      "translation": "旅游业是服务业的重要组成部分。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "The hotel offers excellent service.",
       "chinese": "这家酒店提供出色的服务。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "The hotel is known for excellent customer service.",
+      "chinese": "这家酒店以优质客户服务闻名。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "The company provides a useful translation service.",
+      "chinese": "这家公司提供实用的翻译服务。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "She has worked in public service for ten years.",
+      "chinese": "她从事公共服务工作已有十年。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "The new train will enter service next month.",
+      "chinese": "新列车将于下个月投入运营。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "The elevator is temporarily out of service.",
+      "chinese": "电梯暂时停止使用。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "Tourism is an important part of the service industry.",
+      "chinese": "旅游业是服务业的重要组成部分。"
     }
   ],
   "studyFocus": {
@@ -322,7 +392,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“客户服务”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "customer service"
+        "customer service",
+        "provide a service",
+        "public service",
+        "in service"
       ],
       "answer": "customer service",
       "stage": "T2",
@@ -334,6 +407,8 @@
       "prompt": "用法辨析：哪一项既表示“提供服务”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "customer service",
+        "public service",
+        "in service",
         "provide a service"
       ],
       "answer": "provide a service",
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

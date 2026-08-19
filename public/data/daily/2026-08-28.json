@@ -1,7 +1,7 @@
 {
   "date": "2026-08-28",
   "dayNumber": 12,
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "templateVersion": "learning-template-2026.08.19.1",
   "cards": [
     {
@@ -30,7 +30,7 @@
       "difficulty": "进阶",
       "tags": [
         "n.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -100,7 +100,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心名词搭配",
           "items": [
             {
               "phrase": "gain experience",
@@ -111,22 +111,27 @@
               "phrase": "have experience in",
               "phonetic": "/ˈhæv ɪkˈspɪriəns ɪn/",
               "chinese": "有……方面的经验"
-            },
-            {
-              "phrase": "learning experience",
-              "phonetic": "/ˈlɝːnɪŋ ɪkˈspɪriəns/",
-              "chinese": "学习经历"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "learning experience",
+              "phonetic": "/ˈlɝːnɪŋ ɪkˈspɪriəns/",
+              "chinese": "学习经历"
+            },
             {
               "phrase": "from experience",
               "phonetic": "/ˈfrʌm ɪkˈspɪriəns/",
               "chinese": "根据经验"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "experience a problem",
               "phonetic": "/ɪkˈspɪriəns ə ˈprɑbləm/",
@@ -145,8 +150,43 @@
           "phrase": "gain experience",
           "phonetic": "/ˈɡeɪn ɪkˈspɪriəns/",
           "chinese": "积累经验",
-          "example": "Travel gave her valuable life experience.",
-          "translation": "旅行给了她宝贵的人生经验。"
+          "example": "Working abroad helped her gain valuable experience.",
+          "translation": "在国外工作帮助她积累了宝贵经验。"
+        },
+        {
+          "phrase": "have experience in",
+          "phonetic": "/ˈhæv ɪkˈspɪriəns ɪn/",
+          "chinese": "有……方面的经验",
+          "example": "Do you have experience in customer service?",
+          "translation": "你有客户服务方面的经验吗？"
+        },
+        {
+          "phrase": "learning experience",
+          "phonetic": "/ˈlɝːnɪŋ ɪkˈspɪriəns/",
+          "chinese": "学习经历",
+          "example": "The course was a positive learning experience.",
+          "translation": "这门课程是一次积极的学习经历。"
+        },
+        {
+          "phrase": "from experience",
+          "phonetic": "/ˈfrʌm ɪkˈspɪriəns/",
+          "chinese": "根据经验",
+          "example": "From experience, I know that preparation matters.",
+          "translation": "根据经验，我知道准备很重要。"
+        },
+        {
+          "phrase": "experience a problem",
+          "phonetic": "/ɪkˈspɪriəns ə ˈprɑbləm/",
+          "chinese": "经历问题",
+          "example": "Some users experienced a problem after the update.",
+          "translation": "一些用户在更新后遇到了问题。"
+        },
+        {
+          "phrase": "years of experience",
+          "phonetic": "/ˈjɪrz ˈʌv ɪkˈspɪriəns/",
+          "chinese": "多年经验",
+          "example": "The position requires at least two years of experience.",
+          "translation": "这个职位要求至少两年经验。"
         }
       ],
       "synonyms": [
@@ -193,6 +233,36 @@
           "scene": "核心真实用法",
           "english": "Travel gave her valuable life experience.",
           "chinese": "旅行给了她宝贵的人生经验。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "Working abroad helped her gain valuable experience.",
+          "chinese": "在国外工作帮助她积累了宝贵经验。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "Do you have experience in customer service?",
+          "chinese": "你有客户服务方面的经验吗？"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "The course was a positive learning experience.",
+          "chinese": "这门课程是一次积极的学习经历。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "From experience, I know that preparation matters.",
+          "chinese": "根据经验，我知道准备很重要。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "Some users experienced a problem after the update.",
+          "chinese": "一些用户在更新后遇到了问题。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "The position requires at least two years of experience.",
+          "chinese": "这个职位要求至少两年经验。"
         }
       ],
       "studyFocus": {
@@ -341,6 +411,9 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“积累经验”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "have experience in",
+            "learning experience",
+            "from experience",
             "gain experience"
           ],
           "answer": "gain experience",
@@ -352,6 +425,8 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“有……方面的经验”，又符合这个形式线索：完整搭配中使用介词 in？",
           "options": [
+            "learning experience",
+            "from experience",
             "have experience in",
             "gain experience"
           ],
@@ -444,11 +519,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "opportunity-n",
@@ -470,7 +545,7 @@
       "difficulty": "进阶",
       "tags": [
         "n.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -533,7 +608,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心名词搭配",
           "items": [
             {
               "phrase": "have an opportunity to",
@@ -544,22 +619,27 @@
               "phrase": "take the opportunity to",
               "phonetic": "/ˈteɪk ðə ˌɑːpərˈtuːnəti ˈtuː/",
               "chinese": "借机做"
-            },
-            {
-              "phrase": "a good opportunity",
-              "phonetic": "/ə ˈɡʊd ˌɑːpərˈtuːnəti/",
-              "chinese": "好机会"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "a good opportunity",
+              "phonetic": "/ə ˈɡʊd ˌɑːpərˈtuːnəti/",
+              "chinese": "好机会"
+            },
             {
               "phrase": "equal opportunities",
               "phonetic": "/ˈiːkwəl ˌɑpɚˈtuːnətiːz/",
               "chinese": "平等机会"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "miss an opportunity",
               "phonetic": "/ˈmɪs ˈæn ˌɑːpərˈtuːnəti/",
@@ -578,8 +658,43 @@
           "phrase": "have an opportunity to",
           "phonetic": "/ˈhæv ˈæn ˌɑːpərˈtuːnəti ˈtuː/",
           "chinese": "有机会做",
-          "example": "The meeting gave me an opportunity to practice English.",
-          "translation": "这次会议给了我练习英语的机会。"
+          "example": "I had an opportunity to practice English at work.",
+          "translation": "我有机会在工作中练习英语。"
+        },
+        {
+          "phrase": "take the opportunity to",
+          "phonetic": "/ˈteɪk ðə ˌɑːpərˈtuːnəti ˈtuː/",
+          "chinese": "借机做",
+          "example": "She took the opportunity to ask a question.",
+          "translation": "她借机问了一个问题。"
+        },
+        {
+          "phrase": "a good opportunity",
+          "phonetic": "/ə ˈɡʊd ˌɑːpərˈtuːnəti/",
+          "chinese": "好机会",
+          "example": "This is a good opportunity to learn something new.",
+          "translation": "这是学习新知识的好机会。"
+        },
+        {
+          "phrase": "equal opportunities",
+          "phonetic": "/ˈiːkwəl ˌɑpɚˈtuːnətiːz/",
+          "chinese": "平等机会",
+          "example": "The company is committed to equal opportunities.",
+          "translation": "公司致力于提供平等机会。"
+        },
+        {
+          "phrase": "miss an opportunity",
+          "phonetic": "/ˈmɪs ˈæn ˌɑːpərˈtuːnəti/",
+          "chinese": "错失机会",
+          "example": "Do not miss the opportunity to speak with her.",
+          "translation": "不要错过和她交谈的机会。"
+        },
+        {
+          "phrase": "job opportunity",
+          "phonetic": "/ˈdʒɑb ˌɑːpərˈtuːnəti/",
+          "chinese": "工作机会",
+          "example": "The move created new job opportunities.",
+          "translation": "这次搬迁创造了新的工作机会。"
         }
       ],
       "synonyms": [
@@ -626,6 +741,36 @@
           "scene": "核心真实用法",
           "english": "The meeting gave me an opportunity to practice English.",
           "chinese": "这次会议给了我练习英语的机会。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "I had an opportunity to practice English at work.",
+          "chinese": "我有机会在工作中练习英语。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "She took the opportunity to ask a question.",
+          "chinese": "她借机问了一个问题。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "This is a good opportunity to learn something new.",
+          "chinese": "这是学习新知识的好机会。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "The company is committed to equal opportunities.",
+          "chinese": "公司致力于提供平等机会。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "Do not miss the opportunity to speak with her.",
+          "chinese": "不要错过和她交谈的机会。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "The move created new job opportunities.",
+          "chinese": "这次搬迁创造了新的工作机会。"
         }
       ],
       "studyFocus": {
@@ -774,7 +919,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“有机会做”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "have an opportunity to"
+            "a good opportunity",
+            "equal opportunities",
+            "have an opportunity to",
+            "take the opportunity to"
           ],
           "answer": "have an opportunity to",
           "stage": "T2",
@@ -785,8 +933,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“借机做”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "equal opportunities",
+            "take the opportunity to",
             "have an opportunity to",
-            "take the opportunity to"
+            "a good opportunity"
           ],
           "answer": "take the opportunity to",
           "stage": "T3",
@@ -877,11 +1027,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "decision-n",
@@ -903,7 +1053,7 @@
       "difficulty": "进阶",
       "tags": [
         "n.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -966,7 +1116,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心名词搭配",
           "items": [
             {
               "phrase": "make a decision",
@@ -977,22 +1127,27 @@
               "phrase": "reach a decision",
               "phonetic": "/ˈriːtʃ ə dɪˈsɪʒən/",
               "chinese": "作出决定"
-            },
-            {
-              "phrase": "final decision",
-              "phonetic": "/ˈfaɪnəl dɪˈsɪʒən/",
-              "chinese": "最终决定"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "final decision",
+              "phonetic": "/ˈfaɪnəl dɪˈsɪʒən/",
+              "chinese": "最终决定"
+            },
             {
               "phrase": "difficult decision",
               "phonetic": "/ˈdɪfəkəlt dɪˈsɪʒən/",
               "chinese": "艰难决定"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "decision-making process",
               "phonetic": "/dɪˈsɪʒən-ˈmeɪkɪŋ ˈprɑˌsɛs/",
@@ -1011,8 +1166,43 @@
           "phrase": "make a decision",
           "phonetic": "/ˈmeɪk ə dɪˈsɪʒən/",
           "chinese": "作出决定",
-          "example": "You do not need to make the decision today.",
-          "translation": "你不必今天就做决定。"
+          "example": "We need to make a decision by Friday.",
+          "translation": "我们需要在星期五前作出决定。"
+        },
+        {
+          "phrase": "reach a decision",
+          "phonetic": "/ˈriːtʃ ə dɪˈsɪʒən/",
+          "chinese": "作出决定",
+          "example": "After a long discussion, they reached a decision.",
+          "translation": "经过长时间讨论，他们作出了决定。"
+        },
+        {
+          "phrase": "final decision",
+          "phonetic": "/ˈfaɪnəl dɪˈsɪʒən/",
+          "chinese": "最终决定",
+          "example": "The final decision belongs to the manager.",
+          "translation": "最终决定由经理作出。"
+        },
+        {
+          "phrase": "difficult decision",
+          "phonetic": "/ˈdɪfəkəlt dɪˈsɪʒən/",
+          "chinese": "艰难决定",
+          "example": "Leaving the team was a difficult decision.",
+          "translation": "离开团队是一个艰难的决定。"
+        },
+        {
+          "phrase": "decision-making process",
+          "phonetic": "/dɪˈsɪʒən-ˈmeɪkɪŋ ˈprɑˌsɛs/",
+          "chinese": "决策过程",
+          "example": "Everyone should understand the decision-making process.",
+          "translation": "每个人都应该了解决策过程。"
+        },
+        {
+          "phrase": "reverse a decision",
+          "phonetic": "/rɪˈvɝːs ə dɪˈsɪʒən/",
+          "chinese": "撤销决定",
+          "example": "The board later reversed its decision.",
+          "translation": "董事会后来撤销了决定。"
         }
       ],
       "synonyms": [
@@ -1067,6 +1257,36 @@
           "scene": "核心真实用法",
           "english": "You do not need to make the decision today.",
           "chinese": "你不必今天就做决定。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "We need to make a decision by Friday.",
+          "chinese": "我们需要在星期五前作出决定。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "After a long discussion, they reached a decision.",
+          "chinese": "经过长时间讨论，他们作出了决定。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "The final decision belongs to the manager.",
+          "chinese": "最终决定由经理作出。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "Leaving the team was a difficult decision.",
+          "chinese": "离开团队是一个艰难的决定。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "Everyone should understand the decision-making process.",
+          "chinese": "每个人都应该了解决策过程。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "The board later reversed its decision.",
+          "chinese": "董事会后来撤销了决定。"
         }
       ],
       "studyFocus": {
@@ -1215,7 +1435,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“作出决定”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "make a decision"
+            "difficult decision",
+            "make a decision",
+            "reach a decision",
+            "final decision"
           ],
           "answer": "make a decision",
           "stage": "T2",
@@ -1227,7 +1450,9 @@
           "prompt": "搭配辨析：哪一项既表示“作出决定”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "reach a decision",
-            "make a decision"
+            "make a decision",
+            "final decision",
+            "difficult decision"
           ],
           "answer": "reach a decision",
           "stage": "T3",
@@ -1318,11 +1543,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "relationship-n",
@@ -1344,7 +1569,7 @@
       "difficulty": "进阶",
       "tags": [
         "n.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -1407,7 +1632,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心名词搭配",
           "items": [
             {
               "phrase": "build a relationship",
@@ -1418,22 +1643,27 @@
               "phrase": "close relationship",
               "phonetic": "/ˈkloʊs rɪˈleɪʃənʃɪp/",
               "chinese": "亲密关系"
-            },
-            {
-              "phrase": "relationship between",
-              "phonetic": "/rɪˈleɪʃənʃɪp bɪˈtwiːn/",
-              "chinese": "……之间的关系"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "relationship between",
+              "phonetic": "/rɪˈleɪʃənʃɪp bɪˈtwiːn/",
+              "chinese": "……之间的关系"
+            },
             {
               "phrase": "working relationship",
               "phonetic": "/ˈwɝːkɪŋ rɪˈleɪʃənʃɪp/",
               "chinese": "工作关系"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "maintain a relationship",
               "phonetic": "/meɪˈnteɪn ə rɪˈleɪʃənʃɪp/",
@@ -1452,8 +1682,43 @@
           "phrase": "build a relationship",
           "phonetic": "/ˈbɪld ə rɪˈleɪʃənʃɪp/",
           "chinese": "建立关系",
-          "example": "Trust is important in any relationship.",
-          "translation": "信任在任何关系中都很重要。"
+          "example": "It takes time to build a trusting relationship.",
+          "translation": "建立信任关系需要时间。"
+        },
+        {
+          "phrase": "close relationship",
+          "phonetic": "/ˈkloʊs rɪˈleɪʃənʃɪp/",
+          "chinese": "亲密关系",
+          "example": "She has a close relationship with her sister.",
+          "translation": "她和妹妹关系亲密。"
+        },
+        {
+          "phrase": "relationship between",
+          "phonetic": "/rɪˈleɪʃənʃɪp bɪˈtwiːn/",
+          "chinese": "……之间的关系",
+          "example": "The study examines the relationship between sleep and memory.",
+          "translation": "这项研究考察睡眠与记忆之间的关系。"
+        },
+        {
+          "phrase": "working relationship",
+          "phonetic": "/ˈwɝːkɪŋ rɪˈleɪʃənʃɪp/",
+          "chinese": "工作关系",
+          "example": "We have a good working relationship.",
+          "translation": "我们有良好的工作关系。"
+        },
+        {
+          "phrase": "maintain a relationship",
+          "phonetic": "/meɪˈnteɪn ə rɪˈleɪʃənʃɪp/",
+          "chinese": "维持关系",
+          "example": "Regular communication helps maintain a relationship.",
+          "translation": "经常沟通有助于维持关系。"
+        },
+        {
+          "phrase": "in a relationship",
+          "phonetic": "/ɪn ə rɪˈleɪʃənʃɪp/",
+          "chinese": "处于恋爱关系中",
+          "example": "He has been in a relationship for two years.",
+          "translation": "他谈恋爱已经两年了。"
         }
       ],
       "synonyms": [
@@ -1500,6 +1765,36 @@
           "scene": "核心真实用法",
           "english": "Trust is important in any relationship.",
           "chinese": "信任在任何关系中都很重要。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "It takes time to build a trusting relationship.",
+          "chinese": "建立信任关系需要时间。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "She has a close relationship with her sister.",
+          "chinese": "她和妹妹关系亲密。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "The study examines the relationship between sleep and memory.",
+          "chinese": "这项研究考察睡眠与记忆之间的关系。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "We have a good working relationship.",
+          "chinese": "我们有良好的工作关系。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "Regular communication helps maintain a relationship.",
+          "chinese": "经常沟通有助于维持关系。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "He has been in a relationship for two years.",
+          "chinese": "他谈恋爱已经两年了。"
         }
       ],
       "studyFocus": {
@@ -1648,7 +1943,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“建立关系”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "build a relationship"
+            "build a relationship",
+            "close relationship",
+            "relationship between",
+            "working relationship"
           ],
           "answer": "build a relationship",
           "stage": "T2",
@@ -1660,6 +1958,8 @@
           "prompt": "用法辨析：哪一项既表示“亲密关系”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "build a relationship",
+            "relationship between",
+            "working relationship",
             "close relationship"
           ],
           "answer": "close relationship",
@@ -1751,11 +2051,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "environment-n",
@@ -1777,7 +2077,7 @@
       "difficulty": "进阶",
       "tags": [
         "n.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -1840,7 +2140,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心名词搭配",
           "items": [
             {
               "phrase": "learning environment",
@@ -1851,22 +2151,27 @@
               "phrase": "protect the environment",
               "phonetic": "/prəˈtɛkt ðə ɪnˈvaɪrənmənt/",
               "chinese": "保护环境"
-            },
-            {
-              "phrase": "safe environment",
-              "phonetic": "/ˈseɪf ɪnˈvaɪrənmənt/",
-              "chinese": "安全环境"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "safe environment",
+              "phonetic": "/ˈseɪf ɪnˈvaɪrənmənt/",
+              "chinese": "安全环境"
+            },
             {
               "phrase": "work environment",
               "phonetic": "/ˈwɝːk ɪnˈvaɪrənmənt/",
               "chinese": "工作环境"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "natural environment",
               "phonetic": "/ˈnætʃɚəl ɪnˈvaɪrənmənt/",
@@ -1885,8 +2190,43 @@
           "phrase": "learning environment",
           "phonetic": "/ˈlɝːnɪŋ ɪnˈvaɪrənmənt/",
           "chinese": "学习环境",
-          "example": "A quiet environment helps me focus.",
-          "translation": "安静的环境有助于我集中注意力。"
+          "example": "A quiet learning environment helps me concentrate.",
+          "translation": "安静的学习环境有助于我集中注意力。"
+        },
+        {
+          "phrase": "protect the environment",
+          "phonetic": "/prəˈtɛkt ðə ɪnˈvaɪrənmənt/",
+          "chinese": "保护环境",
+          "example": "Everyone can do something to protect the environment.",
+          "translation": "每个人都可以为保护环境做些事。"
+        },
+        {
+          "phrase": "safe environment",
+          "phonetic": "/ˈseɪf ɪnˈvaɪrənmənt/",
+          "chinese": "安全环境",
+          "example": "The school provides a safe environment for children.",
+          "translation": "学校为孩子们提供安全的环境。"
+        },
+        {
+          "phrase": "work environment",
+          "phonetic": "/ˈwɝːk ɪnˈvaɪrənmənt/",
+          "chinese": "工作环境",
+          "example": "A supportive work environment improves motivation.",
+          "translation": "有支持性的工作环境能提升积极性。"
+        },
+        {
+          "phrase": "natural environment",
+          "phonetic": "/ˈnætʃɚəl ɪnˈvaɪrənmənt/",
+          "chinese": "自然环境",
+          "example": "The animals were returned to their natural environment.",
+          "translation": "这些动物被送回了自然环境。"
+        },
+        {
+          "phrase": "create an environment",
+          "phonetic": "/kriːˈeɪt ˈæn ɪnˈvaɪrənmənt/",
+          "chinese": "营造环境",
+          "example": "Good leaders create an environment where people can speak openly.",
+          "translation": "优秀的领导者会营造让人们坦诚发言的环境。"
         }
       ],
       "synonyms": [
@@ -1933,6 +2273,36 @@
           "scene": "核心真实用法",
           "english": "A quiet environment helps me focus.",
           "chinese": "安静的环境有助于我集中注意力。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "A quiet learning environment helps me concentrate.",
+          "chinese": "安静的学习环境有助于我集中注意力。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "Everyone can do something to protect the environment.",
+          "chinese": "每个人都可以为保护环境做些事。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "The school provides a safe environment for children.",
+          "chinese": "学校为孩子们提供安全的环境。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "A supportive work environment improves motivation.",
+          "chinese": "有支持性的工作环境能提升积极性。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "The animals were returned to their natural environment.",
+          "chinese": "这些动物被送回了自然环境。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "Good leaders create an environment where people can speak openly.",
+          "chinese": "优秀的领导者会营造让人们坦诚发言的环境。"
         }
       ],
       "studyFocus": {
@@ -2081,6 +2451,9 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“学习环境”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "protect the environment",
+            "safe environment",
+            "work environment",
             "learning environment"
           ],
           "answer": "learning environment",
@@ -2092,6 +2465,8 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“保护环境”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "safe environment",
+            "work environment",
             "protect the environment",
             "learning environment"
           ],
@@ -2184,11 +2559,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     }
   ]
 }

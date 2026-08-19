@@ -18,7 +18,7 @@
   "difficulty": "进阶",
   "tags": [
     "n.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心名词搭配",
       "items": [
         {
           "phrase": "build a relationship",
@@ -92,22 +92,27 @@
           "phrase": "close relationship",
           "phonetic": "/ˈkloʊs rɪˈleɪʃənʃɪp/",
           "chinese": "亲密关系"
-        },
-        {
-          "phrase": "relationship between",
-          "phonetic": "/rɪˈleɪʃənʃɪp bɪˈtwiːn/",
-          "chinese": "……之间的关系"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "relationship between",
+          "phonetic": "/rɪˈleɪʃənʃɪp bɪˈtwiːn/",
+          "chinese": "……之间的关系"
+        },
         {
           "phrase": "working relationship",
           "phonetic": "/ˈwɝːkɪŋ rɪˈleɪʃənʃɪp/",
           "chinese": "工作关系"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "maintain a relationship",
           "phonetic": "/meɪˈnteɪn ə rɪˈleɪʃənʃɪp/",
@@ -126,8 +131,43 @@
       "phrase": "build a relationship",
       "phonetic": "/ˈbɪld ə rɪˈleɪʃənʃɪp/",
       "chinese": "建立关系",
-      "example": "Trust is important in any relationship.",
-      "translation": "信任在任何关系中都很重要。"
+      "example": "It takes time to build a trusting relationship.",
+      "translation": "建立信任关系需要时间。"
+    },
+    {
+      "phrase": "close relationship",
+      "phonetic": "/ˈkloʊs rɪˈleɪʃənʃɪp/",
+      "chinese": "亲密关系",
+      "example": "She has a close relationship with her sister.",
+      "translation": "她和妹妹关系亲密。"
+    },
+    {
+      "phrase": "relationship between",
+      "phonetic": "/rɪˈleɪʃənʃɪp bɪˈtwiːn/",
+      "chinese": "……之间的关系",
+      "example": "The study examines the relationship between sleep and memory.",
+      "translation": "这项研究考察睡眠与记忆之间的关系。"
+    },
+    {
+      "phrase": "working relationship",
+      "phonetic": "/ˈwɝːkɪŋ rɪˈleɪʃənʃɪp/",
+      "chinese": "工作关系",
+      "example": "We have a good working relationship.",
+      "translation": "我们有良好的工作关系。"
+    },
+    {
+      "phrase": "maintain a relationship",
+      "phonetic": "/meɪˈnteɪn ə rɪˈleɪʃənʃɪp/",
+      "chinese": "维持关系",
+      "example": "Regular communication helps maintain a relationship.",
+      "translation": "经常沟通有助于维持关系。"
+    },
+    {
+      "phrase": "in a relationship",
+      "phonetic": "/ɪn ə rɪˈleɪʃənʃɪp/",
+      "chinese": "处于恋爱关系中",
+      "example": "He has been in a relationship for two years.",
+      "translation": "他谈恋爱已经两年了。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "Trust is important in any relationship.",
       "chinese": "信任在任何关系中都很重要。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "It takes time to build a trusting relationship.",
+      "chinese": "建立信任关系需要时间。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "She has a close relationship with her sister.",
+      "chinese": "她和妹妹关系亲密。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "The study examines the relationship between sleep and memory.",
+      "chinese": "这项研究考察睡眠与记忆之间的关系。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "We have a good working relationship.",
+      "chinese": "我们有良好的工作关系。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "Regular communication helps maintain a relationship.",
+      "chinese": "经常沟通有助于维持关系。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "He has been in a relationship for two years.",
+      "chinese": "他谈恋爱已经两年了。"
     }
   ],
   "studyFocus": {
@@ -322,7 +392,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“建立关系”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "build a relationship"
+        "build a relationship",
+        "close relationship",
+        "relationship between",
+        "working relationship"
       ],
       "answer": "build a relationship",
       "stage": "T2",
@@ -334,6 +407,8 @@
       "prompt": "用法辨析：哪一项既表示“亲密关系”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "build a relationship",
+        "relationship between",
+        "working relationship",
         "close relationship"
       ],
       "answer": "close relationship",
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

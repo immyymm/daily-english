@@ -18,7 +18,7 @@
   "difficulty": "应用",
   "tags": [
     "adv.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心用法",
       "items": [
         {
           "phrase": "have already done",
@@ -92,22 +92,27 @@
           "phrase": "already know",
           "phonetic": "/ɔːlˈredi ˈnoʊ/",
           "chinese": "已经知道"
-        },
-        {
-          "phrase": "already available",
-          "phonetic": "/ɔːlˈredi əˈveɪləbəl/",
-          "chinese": "已经可用"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "already available",
+          "phonetic": "/ɔːlˈredi əˈveɪləbəl/",
+          "chinese": "已经可用"
+        },
         {
           "phrase": "as you already know",
           "phonetic": "/ˈæz ˈjuː ɔːlˈredi ˈnoʊ/",
           "chinese": "正如你已经知道的"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "already too late",
           "phonetic": "/ɔːlˈredi ˈtuː ˈleɪt/",
@@ -119,6 +124,21 @@
           "chinese": "已经在进行中"
         }
       ]
+    },
+    {
+      "category": "补充常用语境",
+      "items": [
+        {
+          "phrase": "already finished",
+          "phonetic": "/ɔːlˈredi ˈfɪnɪʃt/",
+          "chinese": "已经完成"
+        },
+        {
+          "phrase": "already enough",
+          "phonetic": "/ɔːlˈredi ɪˈnʌf/",
+          "chinese": "已经足够"
+        }
+      ]
     }
   ],
   "fixedPhrases": [
@@ -126,8 +146,43 @@
       "phrase": "have already done",
       "phonetic": "/ˈhæv ɔːlˈredi ˈdʌn/",
       "chinese": "已经做过",
-      "example": "I have already completed today’s lesson.",
-      "translation": "我已经完成了今天的课程。"
+      "example": "I have already completed the first lesson.",
+      "translation": "我已经完成了第一课。"
+    },
+    {
+      "phrase": "already know",
+      "phonetic": "/ɔːlˈredi ˈnoʊ/",
+      "chinese": "已经知道",
+      "example": "You already know most of these words.",
+      "translation": "这些词你已经认识大部分了。"
+    },
+    {
+      "phrase": "already available",
+      "phonetic": "/ɔːlˈredi əˈveɪləbəl/",
+      "chinese": "已经可用",
+      "example": "The new version is already available.",
+      "translation": "新版本已经可以使用。"
+    },
+    {
+      "phrase": "as you already know",
+      "phonetic": "/ˈæz ˈjuː ɔːlˈredi ˈnoʊ/",
+      "chinese": "正如你已经知道的",
+      "example": "As you already know, the meeting starts at nine.",
+      "translation": "正如你已经知道的，会议九点开始。"
+    },
+    {
+      "phrase": "already too late",
+      "phonetic": "/ɔːlˈredi ˈtuː ˈleɪt/",
+      "chinese": "已经太迟",
+      "example": "By the time we arrived, it was already too late.",
+      "translation": "我们到达时已经太晚了。"
+    },
+    {
+      "phrase": "already in progress",
+      "phonetic": "/ɔːlˈredi ɪn ˈprɑˌɡrɛs/",
+      "chinese": "已经在进行中",
+      "example": "The repairs are already in progress.",
+      "translation": "维修工作已经在进行中。"
     }
   ],
   "synonyms": [
@@ -182,6 +237,36 @@
       "scene": "核心真实用法",
       "english": "I have already completed today’s lesson.",
       "chinese": "我已经完成了今天的课程。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "I have already completed the first lesson.",
+      "chinese": "我已经完成了第一课。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "You already know most of these words.",
+      "chinese": "这些词你已经认识大部分了。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "The new version is already available.",
+      "chinese": "新版本已经可以使用。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "As you already know, the meeting starts at nine.",
+      "chinese": "正如你已经知道的，会议九点开始。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "By the time we arrived, it was already too late.",
+      "chinese": "我们到达时已经太晚了。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "The repairs are already in progress.",
+      "chinese": "维修工作已经在进行中。"
     }
   ],
   "studyFocus": {
@@ -330,7 +415,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“已经做过”，又符合这个形式线索：目标词后的 done 表示要换成符合语境的过去分词？",
       "options": [
-        "have already done"
+        "have already done",
+        "already know",
+        "already available",
+        "as you already know"
       ],
       "answer": "have already done",
       "stage": "T2",
@@ -342,6 +430,8 @@
       "prompt": "用法辨析：哪一项既表示“已经知道”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "have already done",
+        "already available",
+        "as you already know",
         "already know"
       ],
       "answer": "already know",
@@ -433,9 +523,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

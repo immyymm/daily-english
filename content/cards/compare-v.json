@@ -18,7 +18,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "待精校",
+    "模板详卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心动作与结构",
       "items": [
         {
           "phrase": "compare A with B",
@@ -92,22 +92,27 @@
           "phrase": "compare A to B",
           "phonetic": "/kəmˈper ə ˈtuː ˈbiː/",
           "chinese": "把 A 比作 B"
-        },
-        {
-          "phrase": "compare prices",
-          "phonetic": "/kəmˈper ˈpraɪsəz/",
-          "chinese": "比较价格"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "compare prices",
+          "phonetic": "/kəmˈper ˈpraɪsəz/",
+          "chinese": "比较价格"
+        },
         {
           "phrase": "compared with",
           "phonetic": "/kəˈmpɛrd ˈwɪð/",
           "chinese": "与……相比"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "cannot compare with",
           "phonetic": "/ˈkænɑt kəmˈper ˈwɪð/",
@@ -126,8 +131,43 @@
       "phrase": "compare A with B",
       "phonetic": "/kəmˈper ə ˈwɪð ˈbiː/",
       "chinese": "把 A 与 B 比较",
-      "example": "Compare the two examples before you answer.",
-      "translation": "回答前比较这两个例子。"
+      "example": "Compare this year’s results with last year’s.",
+      "translation": "把今年的结果与去年的结果比较一下。"
+    },
+    {
+      "phrase": "compare A to B",
+      "phonetic": "/kəmˈper ə ˈtuː ˈbiː/",
+      "chinese": "把 A 比作 B",
+      "example": "The writer compared the city to a living organism.",
+      "translation": "作者把这座城市比作一个有生命的有机体。"
+    },
+    {
+      "phrase": "compare prices",
+      "phonetic": "/kəmˈper ˈpraɪsəz/",
+      "chinese": "比较价格",
+      "example": "Always compare prices before making a large purchase.",
+      "translation": "进行大额购买前一定要比较价格。"
+    },
+    {
+      "phrase": "compared with",
+      "phonetic": "/kəˈmpɛrd ˈwɪð/",
+      "chinese": "与……相比",
+      "example": "Compared with the old model, this one is much lighter.",
+      "translation": "与旧款相比，这一款轻得多。"
+    },
+    {
+      "phrase": "cannot compare with",
+      "phonetic": "/ˈkænɑt kəmˈper ˈwɪð/",
+      "chinese": "无法与……相比",
+      "example": "My first attempt cannot compare with her finished work.",
+      "translation": "我的第一次尝试无法与她完成的作品相比。"
+    },
+    {
+      "phrase": "by comparison",
+      "phonetic": "/ˈbaɪ kəˈmpɛrəsən/",
+      "chinese": "相比之下",
+      "example": "The second option is cheaper by comparison.",
+      "translation": "相比之下，第二个选择更便宜。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "Compare the two examples before you answer.",
       "chinese": "回答前比较这两个例子。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "Compare this year’s results with last year’s.",
+      "chinese": "把今年的结果与去年的结果比较一下。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "The writer compared the city to a living organism.",
+      "chinese": "作者把这座城市比作一个有生命的有机体。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "Always compare prices before making a large purchase.",
+      "chinese": "进行大额购买前一定要比较价格。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "Compared with the old model, this one is much lighter.",
+      "chinese": "与旧款相比，这一款轻得多。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "My first attempt cannot compare with her finished work.",
+      "chinese": "我的第一次尝试无法与她完成的作品相比。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "The second option is cheaper by comparison.",
+      "chinese": "相比之下，第二个选择更便宜。"
     }
   ],
   "studyFocus": {
@@ -322,6 +392,9 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“把 A 与 B 比较”，又符合这个形式线索：完整搭配中使用介词 with？",
       "options": [
+        "compare A to B",
+        "compare prices",
+        "compared with",
         "compare A with B"
       ],
       "answer": "compare A with B",
@@ -333,6 +406,8 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“把 A 比作 B”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "compare prices",
+        "compared with",
         "compare A to B",
         "compare A with B"
       ],
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

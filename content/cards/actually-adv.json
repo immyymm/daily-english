@@ -18,7 +18,7 @@
   "difficulty": "进阶",
   "tags": [
     "adv.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心用法",
       "items": [
         {
           "phrase": "actually mean",
@@ -92,22 +92,27 @@
           "phrase": "actually happen",
           "phonetic": "/ˈæktʃuəli ˈhæpən/",
           "chinese": "实际发生"
-        },
-        {
-          "phrase": "actually work",
-          "phonetic": "/ˈæktʃuəli ˈwɝːk/",
-          "chinese": "确实有效"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "actually work",
+          "phonetic": "/ˈæktʃuəli ˈwɝːk/",
+          "chinese": "确实有效"
+        },
         {
           "phrase": "what actually happened",
           "phonetic": "/ˈwʌt ˈæktʃuəli ˈhæpənd/",
           "chinese": "实际发生了什么"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "not actually",
           "phonetic": "/ˈnɑt ˈæktʃuəli/",
@@ -119,6 +124,21 @@
           "chinese": "其实很简单"
         }
       ]
+    },
+    {
+      "category": "补充常用语境",
+      "items": [
+        {
+          "phrase": "actually know",
+          "phonetic": "/ˈæktʃuəli ˈnoʊ/",
+          "chinese": "其实知道"
+        },
+        {
+          "phrase": "actually need",
+          "phonetic": "/ˈæktʃuəli ˈniːd/",
+          "chinese": "实际需要"
+        }
+      ]
     }
   ],
   "fixedPhrases": [
@@ -126,8 +146,43 @@
       "phrase": "actually mean",
       "phonetic": "/ˈæktʃuəli ˈmiːn/",
       "chinese": "实际意思是",
-      "example": "I thought it was hard, but it was actually simple.",
-      "translation": "我原以为很难，但其实很简单。"
+      "example": "What does this expression actually mean?",
+      "translation": "这个表达的实际意思是什么？"
+    },
+    {
+      "phrase": "actually happen",
+      "phonetic": "/ˈæktʃuəli ˈhæpən/",
+      "chinese": "实际发生",
+      "example": "The change happened earlier than we actually expected.",
+      "translation": "这个变化发生得比我们实际预期的更早。"
+    },
+    {
+      "phrase": "actually work",
+      "phonetic": "/ˈæktʃuəli ˈwɝːk/",
+      "chinese": "确实有效",
+      "example": "The simple method actually works.",
+      "translation": "这个简单方法确实有效。"
+    },
+    {
+      "phrase": "what actually happened",
+      "phonetic": "/ˈwʌt ˈæktʃuəli ˈhæpənd/",
+      "chinese": "实际发生了什么",
+      "example": "Tell me what actually happened.",
+      "translation": "告诉我实际发生了什么。"
+    },
+    {
+      "phrase": "not actually",
+      "phonetic": "/ˈnɑt ˈæktʃuəli/",
+      "chinese": "其实并不",
+      "example": "The task is not actually difficult.",
+      "translation": "这项任务其实并不难。"
+    },
+    {
+      "phrase": "actually quite simple",
+      "phonetic": "/ˈæktʃuəli ˈkwaɪt ˈsɪmpəl/",
+      "chinese": "其实很简单",
+      "example": "Once you start, the process is actually quite simple.",
+      "translation": "一旦开始，这个过程其实很简单。"
     }
   ],
   "synonyms": [
@@ -182,6 +237,36 @@
       "scene": "核心真实用法",
       "english": "I thought it was hard, but it was actually simple.",
       "chinese": "我原以为很难，但其实很简单。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "What does this expression actually mean?",
+      "chinese": "这个表达的实际意思是什么？"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "The change happened earlier than we actually expected.",
+      "chinese": "这个变化发生得比我们实际预期的更早。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "The simple method actually works.",
+      "chinese": "这个简单方法确实有效。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "Tell me what actually happened.",
+      "chinese": "告诉我实际发生了什么。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "The task is not actually difficult.",
+      "chinese": "这项任务其实并不难。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "Once you start, the process is actually quite simple.",
+      "chinese": "一旦开始，这个过程其实很简单。"
     }
   ],
   "studyFocus": {
@@ -330,7 +415,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“实际意思是”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "actually mean"
+        "actually work",
+        "what actually happened",
+        "actually mean",
+        "actually happen"
       ],
       "answer": "actually mean",
       "stage": "T2",
@@ -341,8 +429,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“实际发生”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "what actually happened",
+        "actually happen",
         "actually mean",
-        "actually happen"
+        "actually work"
       ],
       "answer": "actually happen",
       "stage": "T3",
@@ -433,9 +523,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

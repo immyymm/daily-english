@@ -24,7 +24,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "待精校",
+    "模板详卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -94,7 +94,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心动作与结构",
       "items": [
         {
           "phrase": "make a change",
@@ -105,22 +105,27 @@
           "phrase": "change your mind",
           "phonetic": "/tʃeɪndʒ ˈjɔːr ˈmaɪnd/",
           "chinese": "改变主意"
-        },
-        {
-          "phrase": "change the way",
-          "phonetic": "/tʃeɪndʒ ðə ˈweɪ/",
-          "chinese": "改变方式"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "change the way",
+          "phonetic": "/tʃeɪndʒ ðə ˈweɪ/",
+          "chinese": "改变方式"
+        },
         {
           "phrase": "change over time",
           "phonetic": "/tʃeɪndʒ ˈoʊvɚ ˈtaɪm/",
           "chinese": "随时间变化"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "a change of plan",
           "phonetic": "/ə tʃeɪndʒ ˈʌv ˈplæn/",
@@ -139,8 +144,43 @@
       "phrase": "make a change",
       "phonetic": "/ˈmeɪk ə tʃeɪndʒ/",
       "chinese": "做出改变",
-      "example": "A small habit can change your whole day.",
-      "translation": "一个小习惯可以改变你的一整天。"
+      "example": "I made a small change to my study routine.",
+      "translation": "我对学习习惯做了一个小调整。"
+    },
+    {
+      "phrase": "change your mind",
+      "phonetic": "/tʃeɪndʒ ˈjɔːr ˈmaɪnd/",
+      "chinese": "改变主意",
+      "example": "She changed her mind after hearing the full story.",
+      "translation": "听完整件事后，她改变了主意。"
+    },
+    {
+      "phrase": "change the way",
+      "phonetic": "/tʃeɪndʒ ðə ˈweɪ/",
+      "chinese": "改变方式",
+      "example": "Technology has changed the way we work.",
+      "translation": "科技改变了我们的工作方式。"
+    },
+    {
+      "phrase": "change over time",
+      "phonetic": "/tʃeɪndʒ ˈoʊvɚ ˈtaɪm/",
+      "chinese": "随时间变化",
+      "example": "Your priorities may change over time.",
+      "translation": "你的优先事项可能会随时间变化。"
+    },
+    {
+      "phrase": "a change of plan",
+      "phonetic": "/ə tʃeɪndʒ ˈʌv ˈplæn/",
+      "chinese": "计划改变",
+      "example": "There has been a change of plan, so we will leave tomorrow.",
+      "translation": "计划有变，所以我们明天出发。"
+    },
+    {
+      "phrase": "for a change",
+      "phonetic": "/ˈfɔːr ə tʃeɪndʒ/",
+      "chinese": "换个方式；改换一下",
+      "example": "Let us cook at home for a change.",
+      "translation": "我们换换口味，在家做饭吧。"
     }
   ],
   "synonyms": [
@@ -187,6 +227,36 @@
       "scene": "核心真实用法",
       "english": "A small habit can change your whole day.",
       "chinese": "一个小习惯可以改变你的一整天。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "I made a small change to my study routine.",
+      "chinese": "我对学习习惯做了一个小调整。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "She changed her mind after hearing the full story.",
+      "chinese": "听完整件事后，她改变了主意。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "Technology has changed the way we work.",
+      "chinese": "科技改变了我们的工作方式。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "Your priorities may change over time.",
+      "chinese": "你的优先事项可能会随时间变化。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "There has been a change of plan, so we will leave tomorrow.",
+      "chinese": "计划有变，所以我们明天出发。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "Let us cook at home for a change.",
+      "chinese": "我们换换口味，在家做饭吧。"
     }
   ],
   "studyFocus": {
@@ -335,7 +405,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“做出改变”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "make a change"
+        "make a change",
+        "change your mind",
+        "change the way",
+        "change over time"
       ],
       "answer": "make a change",
       "stage": "T2",
@@ -347,6 +420,8 @@
       "prompt": "用法辨析：哪一项既表示“改变主意”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "make a change",
+        "change the way",
+        "change over time",
         "change your mind"
       ],
       "answer": "change your mind",
@@ -438,9 +513,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

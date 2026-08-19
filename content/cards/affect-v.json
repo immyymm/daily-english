@@ -18,7 +18,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "待精校",
+    "模板详卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心动作与结构",
       "items": [
         {
           "phrase": "affect the result",
@@ -92,22 +92,27 @@
           "phrase": "seriously affect",
           "phonetic": "/ˈsɪriːəsliː əˈfekt/",
           "chinese": "严重影响"
-        },
-        {
-          "phrase": "be affected by",
-          "phonetic": "/ˈbiː əˈfɛktɪd ˈbaɪ/",
-          "chinese": "受到……影响"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "be affected by",
+          "phonetic": "/ˈbiː əˈfɛktɪd ˈbaɪ/",
+          "chinese": "受到……影响"
+        },
         {
           "phrase": "affect your health",
           "phonetic": "/əˈfekt ˈjɔːr ˈhɛlθ/",
           "chinese": "影响健康"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "affect the way",
           "phonetic": "/əˈfekt ðə ˈweɪ/",
@@ -126,8 +131,43 @@
       "phrase": "affect the result",
       "phonetic": "/əˈfekt ðə rɪˈzʌlt/",
       "chinese": "影响结果",
-      "example": "Poor sleep can affect your memory.",
-      "translation": "睡眠不足会影响记忆力。"
+      "example": "One missing detail could affect the result.",
+      "translation": "一个缺失的细节可能会影响结果。"
+    },
+    {
+      "phrase": "seriously affect",
+      "phonetic": "/ˈsɪriːəsliː əˈfekt/",
+      "chinese": "严重影响",
+      "example": "The storm seriously affected local transport.",
+      "translation": "暴风雨严重影响了当地交通。"
+    },
+    {
+      "phrase": "be affected by",
+      "phonetic": "/ˈbiː əˈfɛktɪd ˈbaɪ/",
+      "chinese": "受到……影响",
+      "example": "Several flights were affected by the fog.",
+      "translation": "几趟航班受到大雾影响。"
+    },
+    {
+      "phrase": "affect your health",
+      "phonetic": "/əˈfekt ˈjɔːr ˈhɛlθ/",
+      "chinese": "影响健康",
+      "example": "Too much stress can affect your health.",
+      "translation": "压力过大会影响健康。"
+    },
+    {
+      "phrase": "affect the way",
+      "phonetic": "/əˈfekt ðə ˈweɪ/",
+      "chinese": "影响方式",
+      "example": "Culture affects the way people communicate.",
+      "translation": "文化会影响人们的沟通方式。"
+    },
+    {
+      "phrase": "cause and effect",
+      "phonetic": "/ˈkɑz ənd ɪˈfɛkt/",
+      "chinese": "因果",
+      "example": "The lesson shows how one event affects another through cause and effect.",
+      "translation": "这节课通过因果关系说明一个事件如何影响另一个事件。"
     }
   ],
   "synonyms": [
@@ -201,6 +241,36 @@
       "scene": "核心真实用法",
       "english": "Poor sleep can affect your memory.",
       "chinese": "睡眠不足会影响记忆力。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "One missing detail could affect the result.",
+      "chinese": "一个缺失的细节可能会影响结果。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "The storm seriously affected local transport.",
+      "chinese": "暴风雨严重影响了当地交通。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "Several flights were affected by the fog.",
+      "chinese": "几趟航班受到大雾影响。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "Too much stress can affect your health.",
+      "chinese": "压力过大会影响健康。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "Culture affects the way people communicate.",
+      "chinese": "文化会影响人们的沟通方式。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "The lesson shows how one event affects another through cause and effect.",
+      "chinese": "这节课通过因果关系说明一个事件如何影响另一个事件。"
     }
   ],
   "studyFocus": {
@@ -349,7 +419,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“影响结果”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "affect the result"
+        "be affected by",
+        "affect your health",
+        "affect the result",
+        "seriously affect"
       ],
       "answer": "affect the result",
       "stage": "T2",
@@ -360,8 +433,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“严重影响”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "affect your health",
+        "seriously affect",
         "affect the result",
-        "seriously affect"
+        "be affected by"
       ],
       "answer": "seriously affect",
       "stage": "T3",
@@ -452,9 +527,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

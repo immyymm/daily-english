@@ -18,7 +18,7 @@
   "difficulty": "进阶",
   "tags": [
     "adj.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心用法",
       "items": [
         {
           "phrase": "be similar to",
@@ -92,22 +92,27 @@
           "phrase": "very similar",
           "phonetic": "/ˈvɛriː ˈsɪmələr/",
           "chinese": "非常相似"
-        },
-        {
-          "phrase": "similar in size",
-          "phonetic": "/ˈsɪmələr ɪn ˈsaɪz/",
-          "chinese": "大小相近"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "similar in size",
+          "phonetic": "/ˈsɪmələr ɪn ˈsaɪz/",
+          "chinese": "大小相近"
+        },
         {
           "phrase": "similar experience",
           "phonetic": "/ˈsɪmələr ɪˈkspɪriːəns/",
           "chinese": "类似经历"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "something similar",
           "phonetic": "/ˈsʌmθɪŋ ˈsɪmələr/",
@@ -128,6 +133,41 @@
       "chinese": "与……相似",
       "example": "This word is similar to one we learned yesterday.",
       "translation": "这个词和我们昨天学的一个词相似。"
+    },
+    {
+      "phrase": "very similar",
+      "phonetic": "/ˈvɛriː ˈsɪmələr/",
+      "chinese": "非常相似",
+      "example": "The two designs look very similar.",
+      "translation": "这两个设计看起来非常相似。"
+    },
+    {
+      "phrase": "similar in size",
+      "phonetic": "/ˈsɪmələr ɪn ˈsaɪz/",
+      "chinese": "大小相近",
+      "example": "The apartments are similar in size.",
+      "translation": "这些公寓大小相近。"
+    },
+    {
+      "phrase": "similar experience",
+      "phonetic": "/ˈsɪmələr ɪˈkspɪriːəns/",
+      "chinese": "类似经历",
+      "example": "I had a similar experience last year.",
+      "translation": "我去年有过类似的经历。"
+    },
+    {
+      "phrase": "something similar",
+      "phonetic": "/ˈsʌmθɪŋ ˈsɪmələr/",
+      "chinese": "类似的东西",
+      "example": "Could you show me something similar?",
+      "translation": "你能给我看一个类似的东西吗？"
+    },
+    {
+      "phrase": "share similar interests",
+      "phonetic": "/ˈʃɛr ˈsɪmələr ˈɪntrəsts/",
+      "chinese": "有相似兴趣",
+      "example": "We became friends because we share similar interests.",
+      "translation": "我们因为兴趣相似而成了朋友。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,31 @@
       "scene": "核心真实用法",
       "english": "This word is similar to one we learned yesterday.",
       "chinese": "这个词和我们昨天学的一个词相似。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "The two designs look very similar.",
+      "chinese": "这两个设计看起来非常相似。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "The apartments are similar in size.",
+      "chinese": "这些公寓大小相近。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "I had a similar experience last year.",
+      "chinese": "我去年有过类似的经历。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "Could you show me something similar?",
+      "chinese": "你能给我看一个类似的东西吗？"
+    },
+    {
+      "scene": "主动表达",
+      "english": "We became friends because we share similar interests.",
+      "chinese": "我们因为兴趣相似而成了朋友。"
     }
   ],
   "studyFocus": {
@@ -322,7 +387,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“与……相似”，又符合这个形式线索：使用 be 的正确形式后接目标表达？",
       "options": [
-        "be similar to"
+        "similar experience",
+        "be similar to",
+        "very similar",
+        "similar in size"
       ],
       "answer": "be similar to",
       "stage": "T2",
@@ -334,7 +402,9 @@
       "prompt": "搭配辨析：哪一项既表示“非常相似”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "very similar",
-        "be similar to"
+        "be similar to",
+        "similar in size",
+        "similar experience"
       ],
       "answer": "very similar",
       "stage": "T3",
@@ -425,9 +495,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

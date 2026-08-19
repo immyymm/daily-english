@@ -18,7 +18,7 @@
   "difficulty": "应用",
   "tags": [
     "n.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心名词搭配",
       "items": [
         {
           "phrase": "do a good job",
@@ -92,22 +92,27 @@
           "phrase": "get a job",
           "phonetic": "/ˈɡɛt ə dʒɑːb/",
           "chinese": "找到工作"
-        },
-        {
-          "phrase": "apply for a job",
-          "phonetic": "/əˈplaɪ ˈfɔːr ə dʒɑːb/",
-          "chinese": "申请工作"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "apply for a job",
+          "phonetic": "/əˈplaɪ ˈfɔːr ə dʒɑːb/",
+          "chinese": "申请工作"
+        },
         {
           "phrase": "full-time job",
           "phonetic": "/ˈfʊl-ˈtaɪm dʒɑːb/",
           "chinese": "全职工作"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "job interview",
           "phonetic": "/dʒɑːb ˈɪntɚˌvjuː/",
@@ -126,8 +131,43 @@
       "phrase": "do a good job",
       "phonetic": "/ˈduː ə ˈɡʊd dʒɑːb/",
       "chinese": "做得好",
-      "example": "You did a good job explaining your opinion.",
-      "translation": "你很好地解释了自己的观点。"
+      "example": "You did a good job on the presentation.",
+      "translation": "你的演讲做得很好。"
+    },
+    {
+      "phrase": "get a job",
+      "phonetic": "/ˈɡɛt ə dʒɑːb/",
+      "chinese": "找到工作",
+      "example": "It took him three months to get a job.",
+      "translation": "他花了三个月找到工作。"
+    },
+    {
+      "phrase": "apply for a job",
+      "phonetic": "/əˈplaɪ ˈfɔːr ə dʒɑːb/",
+      "chinese": "申请工作",
+      "example": "She applied for a job at the university.",
+      "translation": "她申请了大学的一份工作。"
+    },
+    {
+      "phrase": "full-time job",
+      "phonetic": "/ˈfʊl-ˈtaɪm dʒɑːb/",
+      "chinese": "全职工作",
+      "example": "He left his full-time job to start a business.",
+      "translation": "他辞去全职工作去创业。"
+    },
+    {
+      "phrase": "job interview",
+      "phonetic": "/dʒɑːb ˈɪntɚˌvjuː/",
+      "chinese": "工作面试",
+      "example": "I have a job interview tomorrow morning.",
+      "translation": "我明天早上有工作面试。"
+    },
+    {
+      "phrase": "lose your job",
+      "phonetic": "/ˈluːz ˈjɔːr dʒɑːb/",
+      "chinese": "失业",
+      "example": "Many workers were afraid they would lose their jobs.",
+      "translation": "许多工人担心会失业。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "You did a good job explaining your opinion.",
       "chinese": "你很好地解释了自己的观点。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "You did a good job on the presentation.",
+      "chinese": "你的演讲做得很好。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "It took him three months to get a job.",
+      "chinese": "他花了三个月找到工作。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "She applied for a job at the university.",
+      "chinese": "她申请了大学的一份工作。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "He left his full-time job to start a business.",
+      "chinese": "他辞去全职工作去创业。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "I have a job interview tomorrow morning.",
+      "chinese": "我明天早上有工作面试。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "Many workers were afraid they would lose their jobs.",
+      "chinese": "许多工人担心会失业。"
     }
   ],
   "studyFocus": {
@@ -322,7 +392,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“做得好”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "do a good job"
+        "apply for a job",
+        "full-time job",
+        "do a good job",
+        "get a job"
       ],
       "answer": "do a good job",
       "stage": "T2",
@@ -333,8 +406,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“找到工作”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "full-time job",
+        "get a job",
         "do a good job",
-        "get a job"
+        "apply for a job"
       ],
       "answer": "get a job",
       "stage": "T3",
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

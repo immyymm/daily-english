@@ -18,7 +18,7 @@
   "difficulty": "应用",
   "tags": [
     "n.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心名词搭配",
       "items": [
         {
           "phrase": "close friend",
@@ -92,22 +92,27 @@
           "phrase": "best friend",
           "phonetic": "/ˈbɛst frend/",
           "chinese": "最好的朋友"
-        },
-        {
-          "phrase": "make friends with",
-          "phonetic": "/ˈmeɪk ˈfrɛndz ˈwɪð/",
-          "chinese": "与……交朋友"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "make friends with",
+          "phonetic": "/ˈmeɪk ˈfrɛndz ˈwɪð/",
+          "chinese": "与……交朋友"
+        },
         {
           "phrase": "a friend of mine",
           "phonetic": "/ə frend ˈʌv ˈmaɪn/",
           "chinese": "我的一位朋友"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "old friend",
           "phonetic": "/ˈoʊld frend/",
@@ -126,8 +131,43 @@
       "phrase": "close friend",
       "phonetic": "/ˈkloʊs frend/",
       "chinese": "亲密朋友",
-      "example": "I practiced the dialogue with a friend.",
-      "translation": "我和一位朋友练习了这段对话。"
+      "example": "I asked a close friend for advice.",
+      "translation": "我向一位亲密朋友征求建议。"
+    },
+    {
+      "phrase": "best friend",
+      "phonetic": "/ˈbɛst frend/",
+      "chinese": "最好的朋友",
+      "example": "My best friend lives in another city.",
+      "translation": "我最好的朋友住在另一个城市。"
+    },
+    {
+      "phrase": "make friends with",
+      "phonetic": "/ˈmeɪk ˈfrɛndz ˈwɪð/",
+      "chinese": "与……交朋友",
+      "example": "It was easy to make friends with my new classmates.",
+      "translation": "和新同学交朋友很容易。"
+    },
+    {
+      "phrase": "a friend of mine",
+      "phonetic": "/ə frend ˈʌv ˈmaɪn/",
+      "chinese": "我的一位朋友",
+      "example": "A friend of mine recommended this book.",
+      "translation": "我的一位朋友推荐了这本书。"
+    },
+    {
+      "phrase": "old friend",
+      "phonetic": "/ˈoʊld frend/",
+      "chinese": "老朋友",
+      "example": "I met an old friend at the station.",
+      "translation": "我在车站遇到了一位老朋友。"
+    },
+    {
+      "phrase": "family and friends",
+      "phonetic": "/ˈfæməliː ənd ˈfrɛndz/",
+      "chinese": "亲友",
+      "example": "We invited family and friends to the party.",
+      "translation": "我们邀请了亲友参加聚会。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "I practiced the dialogue with a friend.",
       "chinese": "我和一位朋友练习了这段对话。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "I asked a close friend for advice.",
+      "chinese": "我向一位亲密朋友征求建议。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "My best friend lives in another city.",
+      "chinese": "我最好的朋友住在另一个城市。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "It was easy to make friends with my new classmates.",
+      "chinese": "和新同学交朋友很容易。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "A friend of mine recommended this book.",
+      "chinese": "我的一位朋友推荐了这本书。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "I met an old friend at the station.",
+      "chinese": "我在车站遇到了一位老朋友。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "We invited family and friends to the party.",
+      "chinese": "我们邀请了亲友参加聚会。"
     }
   ],
   "studyFocus": {
@@ -322,7 +392,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“亲密朋友”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "close friend"
+        "make friends with",
+        "a friend of mine",
+        "close friend",
+        "best friend"
       ],
       "answer": "close friend",
       "stage": "T2",
@@ -333,8 +406,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“最好的朋友”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "a friend of mine",
+        "best friend",
         "close friend",
-        "best friend"
+        "make friends with"
       ],
       "answer": "best friend",
       "stage": "T3",
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

@@ -18,7 +18,7 @@
   "difficulty": "应用",
   "tags": [
     "n.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心名词搭配",
       "items": [
         {
           "phrase": "deal with a situation",
@@ -92,22 +92,27 @@
           "phrase": "difficult situation",
           "phonetic": "/ˈdɪfəkəlt ˌsɪtʃuˈeɪʃən/",
           "chinese": "困难局面"
-        },
-        {
-          "phrase": "current situation",
-          "phonetic": "/ˈkɝːənt ˌsɪtʃuˈeɪʃən/",
-          "chinese": "当前情况"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "current situation",
+          "phonetic": "/ˈkɝːənt ˌsɪtʃuˈeɪʃən/",
+          "chinese": "当前情况"
+        },
         {
           "phrase": "in this situation",
           "phonetic": "/ɪn ˈðɪs ˌsɪtʃuˈeɪʃən/",
           "chinese": "在这种情况下"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "improve the situation",
           "phonetic": "/ˌɪˈmpruːv ðə ˌsɪtʃuˈeɪʃən/",
@@ -126,8 +131,43 @@
       "phrase": "deal with a situation",
       "phonetic": "/ˈdiːl ˈwɪð ə ˌsɪtʃuˈeɪʃən/",
       "chinese": "应对情况",
-      "example": "The right response depends on the situation.",
-      "translation": "正确的回应取决于具体情况。"
+      "example": "She remained calm and dealt with the situation.",
+      "translation": "她保持冷静并应对了这种情况。"
+    },
+    {
+      "phrase": "difficult situation",
+      "phonetic": "/ˈdɪfəkəlt ˌsɪtʃuˈeɪʃən/",
+      "chinese": "困难局面",
+      "example": "Many families are in a difficult situation.",
+      "translation": "许多家庭处于困难局面。"
+    },
+    {
+      "phrase": "current situation",
+      "phonetic": "/ˈkɝːənt ˌsɪtʃuˈeɪʃən/",
+      "chinese": "当前情况",
+      "example": "The report describes the current situation.",
+      "translation": "报告描述了当前情况。"
+    },
+    {
+      "phrase": "in this situation",
+      "phonetic": "/ɪn ˈðɪs ˌsɪtʃuˈeɪʃən/",
+      "chinese": "在这种情况下",
+      "example": "In this situation, waiting may be safer.",
+      "translation": "在这种情况下，等待可能更安全。"
+    },
+    {
+      "phrase": "improve the situation",
+      "phonetic": "/ˌɪˈmpruːv ðə ˌsɪtʃuˈeɪʃən/",
+      "chinese": "改善局面",
+      "example": "Clear communication could improve the situation.",
+      "translation": "清晰沟通可以改善局面。"
+    },
+    {
+      "phrase": "depending on the situation",
+      "phonetic": "/dɪˈpɛndɪŋ ˈɑn ðə ˌsɪtʃuˈeɪʃən/",
+      "chinese": "视情况而定",
+      "example": "The answer changes depending on the situation.",
+      "translation": "答案会视情况而变化。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "The right response depends on the situation.",
       "chinese": "正确的回应取决于具体情况。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "She remained calm and dealt with the situation.",
+      "chinese": "她保持冷静并应对了这种情况。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "Many families are in a difficult situation.",
+      "chinese": "许多家庭处于困难局面。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "The report describes the current situation.",
+      "chinese": "报告描述了当前情况。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "In this situation, waiting may be safer.",
+      "chinese": "在这种情况下，等待可能更安全。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "Clear communication could improve the situation.",
+      "chinese": "清晰沟通可以改善局面。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "The answer changes depending on the situation.",
+      "chinese": "答案会视情况而变化。"
     }
   ],
   "studyFocus": {
@@ -322,7 +392,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“应对情况”，又符合这个形式线索：完整搭配中使用介词 with？",
       "options": [
-        "deal with a situation"
+        "deal with a situation",
+        "difficult situation",
+        "current situation",
+        "in this situation"
       ],
       "answer": "deal with a situation",
       "stage": "T2",
@@ -334,6 +407,8 @@
       "prompt": "用法辨析：哪一项既表示“困难局面”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "deal with a situation",
+        "current situation",
+        "in this situation",
         "difficult situation"
       ],
       "answer": "difficult situation",
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

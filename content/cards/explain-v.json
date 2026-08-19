@@ -18,7 +18,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "待精校",
+    "模板详卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心动作与结构",
       "items": [
         {
           "phrase": "explain something clearly",
@@ -92,22 +92,27 @@
           "phrase": "explain why",
           "phonetic": "/ɪkˈspleɪn ˈwaɪ/",
           "chinese": "解释原因"
-        },
-        {
-          "phrase": "explain how",
-          "phonetic": "/ɪkˈspleɪn ˈhaʊ/",
-          "chinese": "解释方法"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "explain how",
+          "phonetic": "/ɪkˈspleɪn ˈhaʊ/",
+          "chinese": "解释方法"
+        },
         {
           "phrase": "explain something to someone",
           "phonetic": "/ɪkˈspleɪn ˈsʌmθɪŋ ˈtuː ˈsʌˌmwʌn/",
           "chinese": "向某人解释某事"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "hard to explain",
           "phonetic": "/ˈhɑrd ˈtuː ɪkˈspleɪn/",
@@ -126,8 +131,43 @@
       "phrase": "explain something clearly",
       "phonetic": "/ɪkˈspleɪn ˈsʌmθɪŋ ˈklɪrliː/",
       "chinese": "清楚解释某事",
-      "example": "Could you explain this phrase to me?",
-      "translation": "你能给我解释一下这个短语吗？"
+      "example": "Could you explain the rule clearly?",
+      "translation": "你能把这条规则解释清楚吗？"
+    },
+    {
+      "phrase": "explain why",
+      "phonetic": "/ɪkˈspleɪn ˈwaɪ/",
+      "chinese": "解释原因",
+      "example": "She explained why the meeting had been canceled.",
+      "translation": "她解释了会议取消的原因。"
+    },
+    {
+      "phrase": "explain how",
+      "phonetic": "/ɪkˈspleɪn ˈhaʊ/",
+      "chinese": "解释方法",
+      "example": "This video explains how the system works.",
+      "translation": "这个视频解释了系统的工作原理。"
+    },
+    {
+      "phrase": "explain something to someone",
+      "phonetic": "/ɪkˈspleɪn ˈsʌmθɪŋ ˈtuː ˈsʌˌmwʌn/",
+      "chinese": "向某人解释某事",
+      "example": "I explained the problem to my manager.",
+      "translation": "我向经理解释了这个问题。"
+    },
+    {
+      "phrase": "hard to explain",
+      "phonetic": "/ˈhɑrd ˈtuː ɪkˈspleɪn/",
+      "chinese": "难以解释",
+      "example": "The difference is hard to explain in one sentence.",
+      "translation": "这种差别很难用一句话解释清楚。"
+    },
+    {
+      "phrase": "explain yourself",
+      "phonetic": "/ɪkˈspleɪn jɚˈsɛlf/",
+      "chinese": "解释自己的行为",
+      "example": "You were absent all morning; please explain yourself.",
+      "translation": "你整个上午都不在，请解释一下。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "Could you explain this phrase to me?",
       "chinese": "你能给我解释一下这个短语吗？"
+    },
+    {
+      "scene": "日常使用",
+      "english": "Could you explain the rule clearly?",
+      "chinese": "你能把这条规则解释清楚吗？"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "She explained why the meeting had been canceled.",
+      "chinese": "她解释了会议取消的原因。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "This video explains how the system works.",
+      "chinese": "这个视频解释了系统的工作原理。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "I explained the problem to my manager.",
+      "chinese": "我向经理解释了这个问题。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "The difference is hard to explain in one sentence.",
+      "chinese": "这种差别很难用一句话解释清楚。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "You were absent all morning; please explain yourself.",
+      "chinese": "你整个上午都不在，请解释一下。"
     }
   ],
   "studyFocus": {
@@ -322,7 +392,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“清楚解释某事”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
       "options": [
-        "explain something clearly"
+        "explain something to someone",
+        "explain something clearly",
+        "explain why",
+        "explain how"
       ],
       "answer": "explain something clearly",
       "stage": "T2",
@@ -334,7 +407,9 @@
       "prompt": "搭配辨析：哪一项既表示“解释原因”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "explain why",
-        "explain something clearly"
+        "explain something clearly",
+        "explain how",
+        "explain something to someone"
       ],
       "answer": "explain why",
       "stage": "T3",
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

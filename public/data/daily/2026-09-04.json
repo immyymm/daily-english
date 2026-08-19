@@ -1,7 +1,7 @@
 {
   "date": "2026-09-04",
   "dayNumber": 19,
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "templateVersion": "learning-template-2026.08.19.1",
   "cards": [
     {
@@ -24,7 +24,7 @@
       "difficulty": "进阶",
       "tags": [
         "adj.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -87,7 +87,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心用法",
           "items": [
             {
               "phrase": "sound natural",
@@ -98,22 +98,27 @@
               "phrase": "natural ability",
               "phonetic": "/ˈnætʃərəl əˈbɪləˌtiː/",
               "chinese": "天生能力"
-            },
-            {
-              "phrase": "natural environment",
-              "phonetic": "/ˈnætʃərəl ɪˈnvaɪrənmənt/",
-              "chinese": "自然环境"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "natural environment",
+              "phonetic": "/ˈnætʃərəl ɪˈnvaɪrənmənt/",
+              "chinese": "自然环境"
+            },
             {
               "phrase": "perfectly natural",
               "phonetic": "/ˈpɝːfəktliː ˈnætʃərəl/",
               "chinese": "完全自然的"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "natural light",
               "phonetic": "/ˈnætʃərəl ˈlaɪt/",
@@ -132,8 +137,43 @@
           "phrase": "sound natural",
           "phonetic": "/ˈsaʊnd ˈnætʃərəl/",
           "chinese": "听起来自然",
-          "example": "This version sounds more natural in conversation.",
-          "translation": "这个版本在对话中听起来更自然。"
+          "example": "Your sentence is correct, but this version sounds more natural.",
+          "translation": "你的句子是对的，但这个版本听起来更自然。"
+        },
+        {
+          "phrase": "natural ability",
+          "phonetic": "/ˈnætʃərəl əˈbɪləˌtiː/",
+          "chinese": "天生能力",
+          "example": "She has a natural ability to make people feel welcome.",
+          "translation": "她天生善于让人感到宾至如归。"
+        },
+        {
+          "phrase": "natural environment",
+          "phonetic": "/ˈnætʃərəl ɪˈnvaɪrənmənt/",
+          "chinese": "自然环境",
+          "example": "The project aims to protect the natural environment.",
+          "translation": "这个项目旨在保护自然环境。"
+        },
+        {
+          "phrase": "perfectly natural",
+          "phonetic": "/ˈpɝːfəktliː ˈnætʃərəl/",
+          "chinese": "完全自然的",
+          "example": "It is perfectly natural to feel nervous at first.",
+          "translation": "起初感到紧张是完全正常的。"
+        },
+        {
+          "phrase": "natural light",
+          "phonetic": "/ˈnætʃərəl ˈlaɪt/",
+          "chinese": "自然光",
+          "example": "The room receives plenty of natural light.",
+          "translation": "这个房间有充足的自然光。"
+        },
+        {
+          "phrase": "come naturally to",
+          "phonetic": "/ˈkʌm ˈnætʃɚəliː ˈtuː/",
+          "chinese": "对……来说很自然",
+          "example": "Public speaking comes naturally to her.",
+          "translation": "公开演讲对她来说很自然。"
         }
       ],
       "synonyms": [
@@ -180,6 +220,36 @@
           "scene": "核心真实用法",
           "english": "This version sounds more natural in conversation.",
           "chinese": "这个版本在对话中听起来更自然。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "Your sentence is correct, but this version sounds more natural.",
+          "chinese": "你的句子是对的，但这个版本听起来更自然。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "She has a natural ability to make people feel welcome.",
+          "chinese": "她天生善于让人感到宾至如归。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "The project aims to protect the natural environment.",
+          "chinese": "这个项目旨在保护自然环境。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "It is perfectly natural to feel nervous at first.",
+          "chinese": "起初感到紧张是完全正常的。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "The room receives plenty of natural light.",
+          "chinese": "这个房间有充足的自然光。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "Public speaking comes naturally to her.",
+          "chinese": "公开演讲对她来说很自然。"
         }
       ],
       "studyFocus": {
@@ -328,7 +398,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“听起来自然”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "sound natural"
+            "sound natural",
+            "natural ability",
+            "natural environment",
+            "perfectly natural"
           ],
           "answer": "sound natural",
           "stage": "T2",
@@ -340,6 +413,8 @@
           "prompt": "用法辨析：哪一项既表示“天生能力”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "sound natural",
+            "natural environment",
+            "perfectly natural",
             "natural ability"
           ],
           "answer": "natural ability",
@@ -431,11 +506,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "clear-adj",
@@ -463,7 +538,7 @@
       "difficulty": "进阶",
       "tags": [
         "adj.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -533,7 +608,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心用法",
           "items": [
             {
               "phrase": "make something clear",
@@ -544,22 +619,27 @@
               "phrase": "clear to someone",
               "phonetic": "/klɪr ˈtuː ˈsʌˌmwʌn/",
               "chinese": "对某人来说清楚"
-            },
-            {
-              "phrase": "clear explanation",
-              "phonetic": "/klɪr ˌɛkspləˈneɪʃən/",
-              "chinese": "清楚的解释"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "clear explanation",
+              "phonetic": "/klɪr ˌɛkspləˈneɪʃən/",
+              "chinese": "清楚的解释"
+            },
             {
               "phrase": "clear the table",
               "phonetic": "/klɪr ðə ˈteɪbəl/",
               "chinese": "清理桌面"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "clear up a misunderstanding",
               "phonetic": "/klɪr ˈʌp ə ˌmɪsəndɚˈstændɪŋ/",
@@ -580,6 +660,41 @@
           "chinese": "把某事说清楚",
           "example": "Please make your main point clear.",
           "translation": "请把你的主要观点说清楚。"
+        },
+        {
+          "phrase": "clear to someone",
+          "phonetic": "/klɪr ˈtuː ˈsʌˌmwʌn/",
+          "chinese": "对某人来说清楚",
+          "example": "The instructions were not clear to me.",
+          "translation": "这些说明对我来说不清楚。"
+        },
+        {
+          "phrase": "clear explanation",
+          "phonetic": "/klɪr ˌɛkspləˈneɪʃən/",
+          "chinese": "清楚的解释",
+          "example": "The teacher gave a clear explanation.",
+          "translation": "老师作了清楚的解释。"
+        },
+        {
+          "phrase": "clear the table",
+          "phonetic": "/klɪr ðə ˈteɪbəl/",
+          "chinese": "清理桌面",
+          "example": "Could you clear the table after dinner?",
+          "translation": "晚饭后你能清理一下桌子吗？"
+        },
+        {
+          "phrase": "clear up a misunderstanding",
+          "phonetic": "/klɪr ˈʌp ə ˌmɪsəndɚˈstændɪŋ/",
+          "chinese": "消除误会",
+          "example": "A short conversation cleared up the misunderstanding.",
+          "translation": "一次简短谈话消除了误会。"
+        },
+        {
+          "phrase": "loud and clear",
+          "phonetic": "/ˈlaʊd ənd klɪr/",
+          "chinese": "清楚明白地",
+          "example": "I can hear you loud and clear.",
+          "translation": "我能非常清楚地听到你说话。"
         }
       ],
       "synonyms": [
@@ -645,6 +760,31 @@
           "scene": "核心真实用法",
           "english": "Please make your main point clear.",
           "chinese": "请把你的主要观点说清楚。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "The instructions were not clear to me.",
+          "chinese": "这些说明对我来说不清楚。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "The teacher gave a clear explanation.",
+          "chinese": "老师作了清楚的解释。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "Could you clear the table after dinner?",
+          "chinese": "晚饭后你能清理一下桌子吗？"
+        },
+        {
+          "scene": "易错结构",
+          "english": "A short conversation cleared up the misunderstanding.",
+          "chinese": "一次简短谈话消除了误会。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "I can hear you loud and clear.",
+          "chinese": "我能非常清楚地听到你说话。"
         }
       ],
       "studyFocus": {
@@ -793,6 +933,9 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“把某事说清楚”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
           "options": [
+            "clear to someone",
+            "clear explanation",
+            "clear the table",
             "make something clear"
           ],
           "answer": "make something clear",
@@ -804,6 +947,8 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“对某人来说清楚”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "clear explanation",
+            "clear the table",
             "clear to someone",
             "make something clear"
           ],
@@ -896,11 +1041,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "common-adj",
@@ -922,7 +1067,7 @@
       "difficulty": "进阶",
       "tags": [
         "adj.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -985,7 +1130,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心用法",
           "items": [
             {
               "phrase": "a common mistake",
@@ -996,22 +1141,27 @@
               "phrase": "have something in common",
               "phonetic": "/ˈhæv ˈsʌmθɪŋ ɪn ˈkɑːmən/",
               "chinese": "有共同之处"
-            },
-            {
-              "phrase": "common sense",
-              "phonetic": "/ˈkɑːmən ˈsɛns/",
-              "chinese": "常识"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "common sense",
+              "phonetic": "/ˈkɑːmən ˈsɛns/",
+              "chinese": "常识"
+            },
             {
               "phrase": "common among",
               "phonetic": "/ˈkɑːmən əˈmʌŋ/",
               "chinese": "在……中常见"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "common practice",
               "phonetic": "/ˈkɑːmən ˈpræktəs/",
@@ -1030,8 +1180,43 @@
           "phrase": "a common mistake",
           "phonetic": "/ə ˈkɑːmən mɪˈsteɪk/",
           "chinese": "常见错误",
-          "example": "This is a common mistake among learners.",
-          "translation": "这是学习者常犯的错误。"
+          "example": "Using the wrong preposition is a common mistake.",
+          "translation": "使用错误的介词是一个常见错误。"
+        },
+        {
+          "phrase": "have something in common",
+          "phonetic": "/ˈhæv ˈsʌmθɪŋ ɪn ˈkɑːmən/",
+          "chinese": "有共同之处",
+          "example": "The two sisters have a lot in common.",
+          "translation": "这两姐妹有很多共同之处。"
+        },
+        {
+          "phrase": "common sense",
+          "phonetic": "/ˈkɑːmən ˈsɛns/",
+          "chinese": "常识",
+          "example": "Common sense tells us to check the weather first.",
+          "translation": "常识告诉我们应该先查看天气。"
+        },
+        {
+          "phrase": "common among",
+          "phonetic": "/ˈkɑːmən əˈmʌŋ/",
+          "chinese": "在……中常见",
+          "example": "The condition is common among older adults.",
+          "translation": "这种情况在老年人中很常见。"
+        },
+        {
+          "phrase": "common practice",
+          "phonetic": "/ˈkɑːmən ˈpræktəs/",
+          "chinese": "惯常做法",
+          "example": "It is common practice to confirm the booking by email.",
+          "translation": "通过电子邮件确认预订是惯常做法。"
+        },
+        {
+          "phrase": "common language",
+          "phonetic": "/ˈkɑːmən ˈlæŋɡwədʒ/",
+          "chinese": "共同语言",
+          "example": "English became their common language.",
+          "translation": "英语成了他们的共同语言。"
         }
       ],
       "synonyms": [
@@ -1078,6 +1263,36 @@
           "scene": "核心真实用法",
           "english": "This is a common mistake among learners.",
           "chinese": "这是学习者常犯的错误。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "Using the wrong preposition is a common mistake.",
+          "chinese": "使用错误的介词是一个常见错误。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "The two sisters have a lot in common.",
+          "chinese": "这两姐妹有很多共同之处。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "Common sense tells us to check the weather first.",
+          "chinese": "常识告诉我们应该先查看天气。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "The condition is common among older adults.",
+          "chinese": "这种情况在老年人中很常见。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "It is common practice to confirm the booking by email.",
+          "chinese": "通过电子邮件确认预订是惯常做法。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "English became their common language.",
+          "chinese": "英语成了他们的共同语言。"
         }
       ],
       "studyFocus": {
@@ -1226,7 +1441,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“常见错误”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "a common mistake"
+            "common sense",
+            "common among",
+            "a common mistake",
+            "have something in common"
           ],
           "answer": "a common mistake",
           "stage": "T2",
@@ -1237,8 +1455,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“有共同之处”，又符合这个形式线索：完整搭配中使用介词 in？",
           "options": [
+            "common among",
+            "have something in common",
             "a common mistake",
-            "have something in common"
+            "common sense"
           ],
           "answer": "have something in common",
           "stage": "T3",
@@ -1329,11 +1549,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "similar-adj",
@@ -1355,7 +1575,7 @@
       "difficulty": "进阶",
       "tags": [
         "adj.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -1418,7 +1638,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心用法",
           "items": [
             {
               "phrase": "be similar to",
@@ -1429,22 +1649,27 @@
               "phrase": "very similar",
               "phonetic": "/ˈvɛriː ˈsɪmələr/",
               "chinese": "非常相似"
-            },
-            {
-              "phrase": "similar in size",
-              "phonetic": "/ˈsɪmələr ɪn ˈsaɪz/",
-              "chinese": "大小相近"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "similar in size",
+              "phonetic": "/ˈsɪmələr ɪn ˈsaɪz/",
+              "chinese": "大小相近"
+            },
             {
               "phrase": "similar experience",
               "phonetic": "/ˈsɪmələr ɪˈkspɪriːəns/",
               "chinese": "类似经历"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "something similar",
               "phonetic": "/ˈsʌmθɪŋ ˈsɪmələr/",
@@ -1465,6 +1690,41 @@
           "chinese": "与……相似",
           "example": "This word is similar to one we learned yesterday.",
           "translation": "这个词和我们昨天学的一个词相似。"
+        },
+        {
+          "phrase": "very similar",
+          "phonetic": "/ˈvɛriː ˈsɪmələr/",
+          "chinese": "非常相似",
+          "example": "The two designs look very similar.",
+          "translation": "这两个设计看起来非常相似。"
+        },
+        {
+          "phrase": "similar in size",
+          "phonetic": "/ˈsɪmələr ɪn ˈsaɪz/",
+          "chinese": "大小相近",
+          "example": "The apartments are similar in size.",
+          "translation": "这些公寓大小相近。"
+        },
+        {
+          "phrase": "similar experience",
+          "phonetic": "/ˈsɪmələr ɪˈkspɪriːəns/",
+          "chinese": "类似经历",
+          "example": "I had a similar experience last year.",
+          "translation": "我去年有过类似的经历。"
+        },
+        {
+          "phrase": "something similar",
+          "phonetic": "/ˈsʌmθɪŋ ˈsɪmələr/",
+          "chinese": "类似的东西",
+          "example": "Could you show me something similar?",
+          "translation": "你能给我看一个类似的东西吗？"
+        },
+        {
+          "phrase": "share similar interests",
+          "phonetic": "/ˈʃɛr ˈsɪmələr ˈɪntrəsts/",
+          "chinese": "有相似兴趣",
+          "example": "We became friends because we share similar interests.",
+          "translation": "我们因为兴趣相似而成了朋友。"
         }
       ],
       "synonyms": [
@@ -1511,6 +1771,31 @@
           "scene": "核心真实用法",
           "english": "This word is similar to one we learned yesterday.",
           "chinese": "这个词和我们昨天学的一个词相似。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "The two designs look very similar.",
+          "chinese": "这两个设计看起来非常相似。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "The apartments are similar in size.",
+          "chinese": "这些公寓大小相近。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "I had a similar experience last year.",
+          "chinese": "我去年有过类似的经历。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "Could you show me something similar?",
+          "chinese": "你能给我看一个类似的东西吗？"
+        },
+        {
+          "scene": "主动表达",
+          "english": "We became friends because we share similar interests.",
+          "chinese": "我们因为兴趣相似而成了朋友。"
         }
       ],
       "studyFocus": {
@@ -1659,7 +1944,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“与……相似”，又符合这个形式线索：使用 be 的正确形式后接目标表达？",
           "options": [
-            "be similar to"
+            "similar experience",
+            "be similar to",
+            "very similar",
+            "similar in size"
           ],
           "answer": "be similar to",
           "stage": "T2",
@@ -1671,7 +1959,9 @@
           "prompt": "搭配辨析：哪一项既表示“非常相似”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "very similar",
-            "be similar to"
+            "be similar to",
+            "similar in size",
+            "similar experience"
           ],
           "answer": "very similar",
           "stage": "T3",
@@ -1762,11 +2052,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "different-adj",
@@ -1788,7 +2078,7 @@
       "difficulty": "进阶",
       "tags": [
         "adj.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -1851,7 +2141,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心用法",
           "items": [
             {
               "phrase": "be different from",
@@ -1862,22 +2152,27 @@
               "phrase": "different kinds of",
               "phonetic": "/ˈdɪfrənt ˈkaɪndz ˈʌv/",
               "chinese": "不同种类的……"
-            },
-            {
-              "phrase": "look different",
-              "phonetic": "/ˈlʊk ˈdɪfrənt/",
-              "chinese": "看起来不同"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "look different",
+              "phonetic": "/ˈlʊk ˈdɪfrənt/",
+              "chinese": "看起来不同"
+            },
             {
               "phrase": "something completely different",
               "phonetic": "/ˈsʌmθɪŋ kəˈmpliːtliː ˈdɪfrənt/",
               "chinese": "完全不同的事物"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "different approach",
               "phonetic": "/ˈdɪfrənt əˈproʊtʃ/",
@@ -1896,8 +2191,43 @@
           "phrase": "be different from",
           "phonetic": "/ˈbiː ˈdɪfrənt ˈfrʌm/",
           "chinese": "与……不同",
-          "example": "Spoken English is different from formal writing.",
-          "translation": "英语口语与正式写作不同。"
+          "example": "British English is sometimes different from American English.",
+          "translation": "英式英语有时与美式英语不同。"
+        },
+        {
+          "phrase": "different kinds of",
+          "phonetic": "/ˈdɪfrənt ˈkaɪndz ˈʌv/",
+          "chinese": "不同种类的……",
+          "example": "The shop sells many different kinds of tea.",
+          "translation": "这家店出售许多不同种类的茶。"
+        },
+        {
+          "phrase": "look different",
+          "phonetic": "/ˈlʊk ˈdɪfrənt/",
+          "chinese": "看起来不同",
+          "example": "You look different with shorter hair.",
+          "translation": "你留短发看起来不一样。"
+        },
+        {
+          "phrase": "something completely different",
+          "phonetic": "/ˈsʌmθɪŋ kəˈmpliːtliː ˈdɪfrənt/",
+          "chinese": "完全不同的事物",
+          "example": "Let us try something completely different.",
+          "translation": "让我们试试完全不同的东西。"
+        },
+        {
+          "phrase": "different approach",
+          "phonetic": "/ˈdɪfrənt əˈproʊtʃ/",
+          "chinese": "不同方法",
+          "example": "We need a different approach to this problem.",
+          "translation": "我们需要用不同的方法处理这个问题。"
+        },
+        {
+          "phrase": "no different from",
+          "phonetic": "/ˈnoʊ ˈdɪfrənt ˈfrʌm/",
+          "chinese": "与……没有区别",
+          "example": "This version is no different from the old one.",
+          "translation": "这个版本和旧版没有区别。"
         }
       ],
       "synonyms": [
@@ -1971,6 +2301,36 @@
           "scene": "核心真实用法",
           "english": "Spoken English is different from formal writing.",
           "chinese": "英语口语与正式写作不同。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "British English is sometimes different from American English.",
+          "chinese": "英式英语有时与美式英语不同。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "The shop sells many different kinds of tea.",
+          "chinese": "这家店出售许多不同种类的茶。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "You look different with shorter hair.",
+          "chinese": "你留短发看起来不一样。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "Let us try something completely different.",
+          "chinese": "让我们试试完全不同的东西。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "We need a different approach to this problem.",
+          "chinese": "我们需要用不同的方法处理这个问题。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "This version is no different from the old one.",
+          "chinese": "这个版本和旧版没有区别。"
         }
       ],
       "studyFocus": {
@@ -2119,7 +2479,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“与……不同”，又符合这个形式线索：完整搭配中使用介词 from？",
           "options": [
-            "be different from"
+            "be different from",
+            "different kinds of",
+            "look different",
+            "something completely different"
           ],
           "answer": "be different from",
           "stage": "T2",
@@ -2131,6 +2494,8 @@
           "prompt": "用法辨析：哪一项既表示“不同种类的……”，又符合这个形式线索：完整搭配中使用介词 of？",
           "options": [
             "be different from",
+            "look different",
+            "something completely different",
             "different kinds of"
           ],
           "answer": "different kinds of",
@@ -2222,11 +2587,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     }
   ]
 }

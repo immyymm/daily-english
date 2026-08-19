@@ -18,7 +18,7 @@
   "difficulty": "进阶",
   "tags": [
     "adj.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心用法",
       "items": [
         {
           "phrase": "be careful with",
@@ -92,22 +92,27 @@
           "phrase": "be careful not to",
           "phonetic": "/ˈbiː ˈkerfəl ˈnɑt ˈtuː/",
           "chinese": "小心不要……"
-        },
-        {
-          "phrase": "careful planning",
-          "phonetic": "/ˈkerfəl ˈplænɪŋ/",
-          "chinese": "周密计划"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "careful planning",
+          "phonetic": "/ˈkerfəl ˈplænɪŋ/",
+          "chinese": "周密计划"
+        },
         {
           "phrase": "careful examination",
           "phonetic": "/ˈkerfəl ɪˌɡzæməˈneɪʃən/",
           "chinese": "仔细检查"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "be careful about",
           "phonetic": "/ˈbiː ˈkerfəl əˈbaʊt/",
@@ -126,8 +131,43 @@
       "phrase": "be careful with",
       "phonetic": "/ˈbiː ˈkerfəl ˈwɪð/",
       "chinese": "小心处理……",
-      "example": "Be careful with the word order.",
-      "translation": "注意语序。"
+      "example": "Be careful with that glass; it is very thin.",
+      "translation": "小心那个玻璃杯，它很薄。"
+    },
+    {
+      "phrase": "be careful not to",
+      "phonetic": "/ˈbiː ˈkerfəl ˈnɑt ˈtuː/",
+      "chinese": "小心不要……",
+      "example": "Be careful not to delete the original file.",
+      "translation": "小心不要删除原文件。"
+    },
+    {
+      "phrase": "careful planning",
+      "phonetic": "/ˈkerfəl ˈplænɪŋ/",
+      "chinese": "周密计划",
+      "example": "The trip requires careful planning.",
+      "translation": "这次旅行需要周密计划。"
+    },
+    {
+      "phrase": "careful examination",
+      "phonetic": "/ˈkerfəl ɪˌɡzæməˈneɪʃən/",
+      "chinese": "仔细检查",
+      "example": "A careful examination revealed a small crack.",
+      "translation": "仔细检查发现了一条小裂缝。"
+    },
+    {
+      "phrase": "be careful about",
+      "phonetic": "/ˈbiː ˈkerfəl əˈbaʊt/",
+      "chinese": "谨慎对待……",
+      "example": "Be careful about sharing personal information.",
+      "translation": "分享个人信息时要谨慎。"
+    },
+    {
+      "phrase": "a careful choice",
+      "phonetic": "/ə ˈkerfəl ˈtʃɔɪs/",
+      "chinese": "谨慎的选择",
+      "example": "Moving abroad was a careful choice, not a sudden one.",
+      "translation": "移居国外是一个慎重选择，并非一时冲动。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "Be careful with the word order.",
       "chinese": "注意语序。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "Be careful with that glass; it is very thin.",
+      "chinese": "小心那个玻璃杯，它很薄。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "Be careful not to delete the original file.",
+      "chinese": "小心不要删除原文件。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "The trip requires careful planning.",
+      "chinese": "这次旅行需要周密计划。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "A careful examination revealed a small crack.",
+      "chinese": "仔细检查发现了一条小裂缝。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "Be careful about sharing personal information.",
+      "chinese": "分享个人信息时要谨慎。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "Moving abroad was a careful choice, not a sudden one.",
+      "chinese": "移居国外是一个慎重选择，并非一时冲动。"
     }
   ],
   "studyFocus": {
@@ -322,7 +392,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“小心处理……”，又符合这个形式线索：完整搭配中使用介词 with？",
       "options": [
-        "be careful with"
+        "careful planning",
+        "careful examination",
+        "be careful with",
+        "be careful not to"
       ],
       "answer": "be careful with",
       "stage": "T2",
@@ -333,8 +406,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“小心不要……”，又符合这个形式线索：使用 be 的正确形式后接目标表达？",
       "options": [
+        "careful examination",
+        "be careful not to",
         "be careful with",
-        "be careful not to"
+        "careful planning"
       ],
       "answer": "be careful not to",
       "stage": "T3",
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

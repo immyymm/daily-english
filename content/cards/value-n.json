@@ -24,7 +24,7 @@
   "difficulty": "进阶",
   "tags": [
     "n.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -94,7 +94,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心名词搭配",
       "items": [
         {
           "phrase": "great value",
@@ -105,22 +105,27 @@
           "phrase": "value for money",
           "phonetic": "/ˈvæljuː ˈfɔːr ˈmʌniː/",
           "chinese": "物有所值"
-        },
-        {
-          "phrase": "place a value on",
-          "phonetic": "/ˈpleɪs ə ˈvæljuː ˈɑn/",
-          "chinese": "为……估价；重视"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "place a value on",
+          "phonetic": "/ˈpleɪs ə ˈvæljuː ˈɑn/",
+          "chinese": "为……估价；重视"
+        },
         {
           "phrase": "core values",
           "phonetic": "/ˈkɔːr ˈvæljuːz/",
           "chinese": "核心价值观"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "value your opinion",
           "phonetic": "/ˈvæljuː ˈjɔːr əˈpɪnjən/",
@@ -139,8 +144,43 @@
       "phrase": "great value",
       "phonetic": "/ˈɡreɪt ˈvæljuː/",
       "chinese": "很大价值",
-      "example": "I value honest feedback.",
-      "translation": "我重视诚实的反馈。"
+      "example": "Her practical advice was of great value.",
+      "translation": "她的实用建议很有价值。"
+    },
+    {
+      "phrase": "value for money",
+      "phonetic": "/ˈvæljuː ˈfɔːr ˈmʌniː/",
+      "chinese": "物有所值",
+      "example": "The meal offers good value for money.",
+      "translation": "这顿饭物有所值。"
+    },
+    {
+      "phrase": "place a value on",
+      "phonetic": "/ˈpleɪs ə ˈvæljuː ˈɑn/",
+      "chinese": "为……估价；重视",
+      "example": "It is difficult to place a value on free time.",
+      "translation": "很难为自由时间估价。"
+    },
+    {
+      "phrase": "core values",
+      "phonetic": "/ˈkɔːr ˈvæljuːz/",
+      "chinese": "核心价值观",
+      "example": "Honesty is one of our core values.",
+      "translation": "诚实是我们的核心价值观之一。"
+    },
+    {
+      "phrase": "value your opinion",
+      "phonetic": "/ˈvæljuː ˈjɔːr əˈpɪnjən/",
+      "chinese": "重视你的意见",
+      "example": "I value your opinion, even when we disagree.",
+      "translation": "即使我们意见不同，我也重视你的看法。"
+    },
+    {
+      "phrase": "of little value",
+      "phonetic": "/ˈʌv ˈlɪtəl ˈvæljuː/",
+      "chinese": "价值不大",
+      "example": "The old equipment is now of little value.",
+      "translation": "这些旧设备现在价值不大。"
     }
   ],
   "synonyms": [
@@ -187,6 +227,36 @@
       "scene": "核心真实用法",
       "english": "I value honest feedback.",
       "chinese": "我重视诚实的反馈。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "Her practical advice was of great value.",
+      "chinese": "她的实用建议很有价值。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "The meal offers good value for money.",
+      "chinese": "这顿饭物有所值。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "It is difficult to place a value on free time.",
+      "chinese": "很难为自由时间估价。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "Honesty is one of our core values.",
+      "chinese": "诚实是我们的核心价值观之一。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "I value your opinion, even when we disagree.",
+      "chinese": "即使我们意见不同，我也重视你的看法。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "The old equipment is now of little value.",
+      "chinese": "这些旧设备现在价值不大。"
     }
   ],
   "studyFocus": {
@@ -335,7 +405,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“很大价值”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "great value"
+        "core values",
+        "great value",
+        "value for money",
+        "place a value on"
       ],
       "answer": "great value",
       "stage": "T2",
@@ -347,7 +420,9 @@
       "prompt": "搭配辨析：哪一项既表示“物有所值”，又符合这个形式线索：完整搭配中使用介词 for？",
       "options": [
         "value for money",
-        "great value"
+        "great value",
+        "place a value on",
+        "core values"
       ],
       "answer": "value for money",
       "stage": "T3",
@@ -438,9 +513,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

@@ -1,7 +1,7 @@
 {
   "date": "2026-08-24",
   "dayNumber": 8,
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "templateVersion": "learning-template-2026.08.19.1",
   "cards": [
     {
@@ -24,7 +24,7 @@
       "difficulty": "基础",
       "tags": [
         "v.",
-        "待精校",
+        "模板详卡",
         "高频表达"
       ],
       "coreMemory": {
@@ -87,7 +87,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心动作与结构",
           "items": [
             {
               "phrase": "choose to do",
@@ -98,22 +98,27 @@
               "phrase": "choose between A and B",
               "phonetic": "/tʃuːz bɪˈtwiːn ə ənd ˈbiː/",
               "chinese": "在 A 和 B 之间选择"
-            },
-            {
-              "phrase": "choose the right word",
-              "phonetic": "/tʃuːz ðə ˈraɪt ˈwɝːd/",
-              "chinese": "选择正确的词"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "choose the right word",
+              "phonetic": "/tʃuːz ðə ˈraɪt ˈwɝːd/",
+              "chinese": "选择正确的词"
+            },
             {
               "phrase": "carefully choose",
               "phonetic": "/ˈkɛrfəliː tʃuːz/",
               "chinese": "谨慎选择"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "have no choice but to",
               "phonetic": "/ˈhæv ˈnoʊ ˈtʃɔɪs ˈbʌt ˈtuː/",
@@ -132,8 +137,43 @@
           "phrase": "choose to do",
           "phonetic": "/tʃuːz ˈtuː ˈduː/",
           "chinese": "选择做",
-          "example": "Choose the most natural answer.",
-          "translation": "选择最自然的答案。"
+          "example": "She chose to stay home and rest.",
+          "translation": "她选择待在家里休息。"
+        },
+        {
+          "phrase": "choose between A and B",
+          "phonetic": "/tʃuːz bɪˈtwiːn ə ənd ˈbiː/",
+          "chinese": "在 A 和 B 之间选择",
+          "example": "You must choose between speed and accuracy.",
+          "translation": "你必须在速度和准确性之间作出选择。"
+        },
+        {
+          "phrase": "choose the right word",
+          "phonetic": "/tʃuːz ðə ˈraɪt ˈwɝːd/",
+          "chinese": "选择正确的词",
+          "example": "Read the sentence before you choose the right word.",
+          "translation": "选择正确单词前先读句子。"
+        },
+        {
+          "phrase": "carefully choose",
+          "phonetic": "/ˈkɛrfəliː tʃuːz/",
+          "chinese": "谨慎选择",
+          "example": "Carefully choose the information you share online.",
+          "translation": "请谨慎选择你在网上分享的信息。"
+        },
+        {
+          "phrase": "have no choice but to",
+          "phonetic": "/ˈhæv ˈnoʊ ˈtʃɔɪs ˈbʌt ˈtuː/",
+          "chinese": "别无选择只好",
+          "example": "I had no choice but to cancel the trip.",
+          "translation": "我别无选择，只能取消旅行。"
+        },
+        {
+          "phrase": "choice of",
+          "phonetic": "/ˈtʃɔɪs ˈʌv/",
+          "chinese": "……的选择",
+          "example": "This hotel offers a wide choice of rooms.",
+          "translation": "这家酒店提供多种房型选择。"
         }
       ],
       "synonyms": [
@@ -207,6 +247,36 @@
           "scene": "核心真实用法",
           "english": "Choose the most natural answer.",
           "chinese": "选择最自然的答案。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "She chose to stay home and rest.",
+          "chinese": "她选择待在家里休息。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "You must choose between speed and accuracy.",
+          "chinese": "你必须在速度和准确性之间作出选择。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "Read the sentence before you choose the right word.",
+          "chinese": "选择正确单词前先读句子。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "Carefully choose the information you share online.",
+          "chinese": "请谨慎选择你在网上分享的信息。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "I had no choice but to cancel the trip.",
+          "chinese": "我别无选择，只能取消旅行。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "This hotel offers a wide choice of rooms.",
+          "chinese": "这家酒店提供多种房型选择。"
         }
       ],
       "studyFocus": {
@@ -355,6 +425,9 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“选择做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
           "options": [
+            "choose between A and B",
+            "choose the right word",
+            "carefully choose",
             "choose to do"
           ],
           "answer": "choose to do",
@@ -366,6 +439,8 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“在 A 和 B 之间选择”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "choose the right word",
+            "carefully choose",
             "choose between A and B",
             "choose to do"
           ],
@@ -458,11 +533,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "share-v",
@@ -490,7 +565,7 @@
       "difficulty": "基础",
       "tags": [
         "v.",
-        "待精校",
+        "模板详卡",
         "高频表达"
       ],
       "coreMemory": {
@@ -560,7 +635,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心动作与结构",
           "items": [
             {
               "phrase": "share something with someone",
@@ -571,22 +646,27 @@
               "phrase": "share an opinion",
               "phonetic": "/ʃer ˈæn əˈpɪnjən/",
               "chinese": "分享观点"
-            },
-            {
-              "phrase": "share the cost",
-              "phonetic": "/ʃer ðə ˈkɑst/",
-              "chinese": "分摊费用"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "share the cost",
+              "phonetic": "/ʃer ðə ˈkɑst/",
+              "chinese": "分摊费用"
+            },
             {
               "phrase": "have something in common",
               "phonetic": "/ˈhæv ˈsʌmθɪŋ ɪn ˈkɑmən/",
               "chinese": "有共同之处"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "a fair share",
               "phonetic": "/ə ˈfɛr ʃer/",
@@ -598,6 +678,16 @@
               "chinese": "市场份额"
             }
           ]
+        },
+        {
+          "category": "补充常用语境",
+          "items": [
+            {
+              "phrase": "share an idea",
+              "phonetic": "/ʃer ˈæn aɪˈdiːə/",
+              "chinese": "分享想法"
+            }
+          ]
         }
       ],
       "fixedPhrases": [
@@ -605,8 +695,43 @@
           "phrase": "share something with someone",
           "phonetic": "/ʃer ˈsʌmθɪŋ ˈwɪð ˈsʌˌmwʌn/",
           "chinese": "与某人分享某物",
-          "example": "She shared a useful study tip with me.",
-          "translation": "她和我分享了一个实用的学习技巧。"
+          "example": "I shared the news with my family.",
+          "translation": "我把这个消息告诉了家人。"
+        },
+        {
+          "phrase": "share an opinion",
+          "phonetic": "/ʃer ˈæn əˈpɪnjən/",
+          "chinese": "分享观点",
+          "example": "Would you like to share your opinion?",
+          "translation": "你愿意分享一下你的看法吗？"
+        },
+        {
+          "phrase": "share the cost",
+          "phonetic": "/ʃer ðə ˈkɑst/",
+          "chinese": "分摊费用",
+          "example": "We agreed to share the cost of the taxi.",
+          "translation": "我们同意分摊出租车费。"
+        },
+        {
+          "phrase": "have something in common",
+          "phonetic": "/ˈhæv ˈsʌmθɪŋ ɪn ˈkɑmən/",
+          "chinese": "有共同之处",
+          "example": "We shared our experiences and found that we had something in common.",
+          "translation": "我们分享了各自的经历，并发现彼此有共同之处。"
+        },
+        {
+          "phrase": "a fair share",
+          "phonetic": "/ə ˈfɛr ʃer/",
+          "chinese": "公平的一份",
+          "example": "Everyone did a fair share of the work.",
+          "translation": "每个人都承担了公平的一份工作。"
+        },
+        {
+          "phrase": "market share",
+          "phonetic": "/ˈmɑrkət ʃer/",
+          "chinese": "市场份额",
+          "example": "The company increased its market share last year.",
+          "translation": "公司去年提高了市场份额。"
         }
       ],
       "synonyms": [
@@ -653,6 +778,36 @@
           "scene": "核心真实用法",
           "english": "She shared a useful study tip with me.",
           "chinese": "她和我分享了一个实用的学习技巧。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "I shared the news with my family.",
+          "chinese": "我把这个消息告诉了家人。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "Would you like to share your opinion?",
+          "chinese": "你愿意分享一下你的看法吗？"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "We agreed to share the cost of the taxi.",
+          "chinese": "我们同意分摊出租车费。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "We shared our experiences and found that we had something in common.",
+          "chinese": "我们分享了各自的经历，并发现彼此有共同之处。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "Everyone did a fair share of the work.",
+          "chinese": "每个人都承担了公平的一份工作。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "The company increased its market share last year.",
+          "chinese": "公司去年提高了市场份额。"
         }
       ],
       "studyFocus": {
@@ -801,7 +956,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“与某人分享某物”，又符合这个形式线索：完整搭配中使用介词 with？",
           "options": [
-            "share something with someone"
+            "share the cost",
+            "have something in common",
+            "share something with someone",
+            "share an opinion"
           ],
           "answer": "share something with someone",
           "stage": "T2",
@@ -812,8 +970,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“分享观点”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "have something in common",
+            "share an opinion",
             "share something with someone",
-            "share an opinion"
+            "share the cost"
           ],
           "answer": "share an opinion",
           "stage": "T3",
@@ -904,11 +1064,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "reach-v",
@@ -936,7 +1096,7 @@
       "difficulty": "基础",
       "tags": [
         "v.",
-        "待精校",
+        "模板详卡",
         "高频表达"
       ],
       "coreMemory": {
@@ -999,7 +1159,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心动作与结构",
           "items": [
             {
               "phrase": "reach a goal",
@@ -1010,22 +1170,27 @@
               "phrase": "reach an agreement",
               "phonetic": "/riːtʃ ˈæn əˈɡriːmənt/",
               "chinese": "达成协议"
-            },
-            {
-              "phrase": "reach a decision",
-              "phonetic": "/riːtʃ ə dɪˈsɪʒən/",
-              "chinese": "作出决定"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "reach a decision",
+              "phonetic": "/riːtʃ ə dɪˈsɪʒən/",
+              "chinese": "作出决定"
+            },
             {
               "phrase": "reach out to",
               "phonetic": "/riːtʃ ˈaʊt ˈtuː/",
               "chinese": "主动联系"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "within reach",
               "phonetic": "/wɪˈðɪn riːtʃ/",
@@ -1044,8 +1209,43 @@
           "phrase": "reach a goal",
           "phonetic": "/riːtʃ ə ˈɡoʊl/",
           "chinese": "达到目标",
-          "example": "We finally reached an agreement.",
-          "translation": "我们终于达成了协议。"
+          "example": "She reached her goal after months of practice.",
+          "translation": "经过几个月练习，她达成了目标。"
+        },
+        {
+          "phrase": "reach an agreement",
+          "phonetic": "/riːtʃ ˈæn əˈɡriːmənt/",
+          "chinese": "达成协议",
+          "example": "Both sides finally reached an agreement.",
+          "translation": "双方终于达成了协议。"
+        },
+        {
+          "phrase": "reach a decision",
+          "phonetic": "/riːtʃ ə dɪˈsɪʒən/",
+          "chinese": "作出决定",
+          "example": "We need more information before we reach a decision.",
+          "translation": "作出决定前我们需要更多信息。"
+        },
+        {
+          "phrase": "reach out to",
+          "phonetic": "/riːtʃ ˈaʊt ˈtuː/",
+          "chinese": "主动联系",
+          "example": "Do not hesitate to reach out to me for help.",
+          "translation": "需要帮助时请随时联系我。"
+        },
+        {
+          "phrase": "within reach",
+          "phonetic": "/wɪˈðɪn riːtʃ/",
+          "chinese": "够得着；可实现",
+          "example": "The top shelf is just within reach.",
+          "translation": "最上面的架子刚好够得着。"
+        },
+        {
+          "phrase": "reach the top",
+          "phonetic": "/riːtʃ ðə ˈtɑp/",
+          "chinese": "到达顶端",
+          "example": "They reached the top of the mountain before noon.",
+          "translation": "他们中午前到达了山顶。"
         }
       ],
       "synonyms": [
@@ -1092,6 +1292,36 @@
           "scene": "核心真实用法",
           "english": "We finally reached an agreement.",
           "chinese": "我们终于达成了协议。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "She reached her goal after months of practice.",
+          "chinese": "经过几个月练习，她达成了目标。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "Both sides finally reached an agreement.",
+          "chinese": "双方终于达成了协议。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "We need more information before we reach a decision.",
+          "chinese": "作出决定前我们需要更多信息。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "Do not hesitate to reach out to me for help.",
+          "chinese": "需要帮助时请随时联系我。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "The top shelf is just within reach.",
+          "chinese": "最上面的架子刚好够得着。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "They reached the top of the mountain before noon.",
+          "chinese": "他们中午前到达了山顶。"
         }
       ],
       "studyFocus": {
@@ -1240,7 +1470,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“达到目标”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "reach a goal"
+            "reach out to",
+            "reach a goal",
+            "reach an agreement",
+            "reach a decision"
           ],
           "answer": "reach a goal",
           "stage": "T2",
@@ -1252,7 +1485,9 @@
           "prompt": "搭配辨析：哪一项既表示“达成协议”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "reach an agreement",
-            "reach a goal"
+            "reach a goal",
+            "reach a decision",
+            "reach out to"
           ],
           "answer": "reach an agreement",
           "stage": "T3",
@@ -1343,11 +1578,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "remain-v",
@@ -1369,7 +1604,7 @@
       "difficulty": "基础",
       "tags": [
         "v.",
-        "待精校",
+        "模板详卡",
         "高频表达"
       ],
       "coreMemory": {
@@ -1432,7 +1667,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心动作与结构",
           "items": [
             {
               "phrase": "remain calm",
@@ -1443,22 +1678,27 @@
               "phrase": "remain unchanged",
               "phonetic": "/rɪˈmeɪn əˈntʃeɪndʒd/",
               "chinese": "保持不变"
-            },
-            {
-              "phrase": "remain in place",
-              "phonetic": "/rɪˈmeɪn ɪn ˈpleɪs/",
-              "chinese": "留在原地"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "remain in place",
+              "phonetic": "/rɪˈmeɪn ɪn ˈpleɪs/",
+              "chinese": "留在原地"
+            },
             {
               "phrase": "remain to be seen",
               "phonetic": "/rɪˈmeɪn ˈtuː ˈbiː ˈsiːn/",
               "chinese": "尚待观察"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "the fact remains that",
               "phonetic": "/ðə ˈfækt rɪˈmeɪnz ˈðæt/",
@@ -1477,8 +1717,43 @@
           "phrase": "remain calm",
           "phonetic": "/rɪˈmeɪn ˈkɑm/",
           "chinese": "保持冷静",
-          "example": "Please remain calm and try again.",
-          "translation": "请保持冷静并再试一次。"
+          "example": "Please remain calm while we check the system.",
+          "translation": "我们检查系统时请保持冷静。"
+        },
+        {
+          "phrase": "remain unchanged",
+          "phonetic": "/rɪˈmeɪn əˈntʃeɪndʒd/",
+          "chinese": "保持不变",
+          "example": "The price has remained unchanged for three years.",
+          "translation": "这个价格三年来一直没有变化。"
+        },
+        {
+          "phrase": "remain in place",
+          "phonetic": "/rɪˈmeɪn ɪn ˈpleɪs/",
+          "chinese": "留在原地",
+          "example": "The old sign will remain in place.",
+          "translation": "旧标志将保留在原处。"
+        },
+        {
+          "phrase": "remain to be seen",
+          "phonetic": "/rɪˈmeɪn ˈtuː ˈbiː ˈsiːn/",
+          "chinese": "尚待观察",
+          "example": "Whether the plan will succeed remains to be seen.",
+          "translation": "这个计划能否成功还有待观察。"
+        },
+        {
+          "phrase": "the fact remains that",
+          "phonetic": "/ðə ˈfækt rɪˈmeɪnz ˈðæt/",
+          "chinese": "事实仍然是",
+          "example": "The fact remains that we need more time.",
+          "translation": "事实仍然是我们需要更多时间。"
+        },
+        {
+          "phrase": "remain open",
+          "phonetic": "/rɪˈmeɪn ˈoʊpən/",
+          "chinese": "保持开放",
+          "example": "The museum will remain open until nine tonight.",
+          "translation": "博物馆今晚将开放到九点。"
         }
       ],
       "synonyms": [
@@ -1525,6 +1800,36 @@
           "scene": "核心真实用法",
           "english": "Please remain calm and try again.",
           "chinese": "请保持冷静并再试一次。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "Please remain calm while we check the system.",
+          "chinese": "我们检查系统时请保持冷静。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "The price has remained unchanged for three years.",
+          "chinese": "这个价格三年来一直没有变化。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "The old sign will remain in place.",
+          "chinese": "旧标志将保留在原处。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "Whether the plan will succeed remains to be seen.",
+          "chinese": "这个计划能否成功还有待观察。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "The fact remains that we need more time.",
+          "chinese": "事实仍然是我们需要更多时间。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "The museum will remain open until nine tonight.",
+          "chinese": "博物馆今晚将开放到九点。"
         }
       ],
       "studyFocus": {
@@ -1673,7 +1978,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“保持冷静”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "remain calm"
+            "remain calm",
+            "remain unchanged",
+            "remain in place",
+            "remain to be seen"
           ],
           "answer": "remain calm",
           "stage": "T2",
@@ -1685,6 +1993,8 @@
           "prompt": "用法辨析：哪一项既表示“保持不变”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "remain calm",
+            "remain in place",
+            "remain to be seen",
             "remain unchanged"
           ],
           "answer": "remain unchanged",
@@ -1776,11 +2086,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "handle-v",
@@ -1808,7 +2118,7 @@
       "difficulty": "基础",
       "tags": [
         "v.",
-        "待精校",
+        "模板详卡",
         "高频表达"
       ],
       "coreMemory": {
@@ -1878,7 +2188,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心动作与结构",
           "items": [
             {
               "phrase": "handle a problem",
@@ -1889,22 +2199,27 @@
               "phrase": "handle the pressure",
               "phonetic": "/ˈhændl ðə ˈprɛʃɚ/",
               "chinese": "应对压力"
-            },
-            {
-              "phrase": "handle with care",
-              "phonetic": "/ˈhændl ˈwɪð ˈkɛr/",
-              "chinese": "小心轻放"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "handle with care",
+              "phonetic": "/ˈhændl ˈwɪð ˈkɛr/",
+              "chinese": "小心轻放"
+            },
             {
               "phrase": "easy to handle",
               "phonetic": "/ˈiːziː ˈtuː ˈhændl/",
               "chinese": "容易处理"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "get a handle on",
               "phonetic": "/ˈɡɛt ə ˈhændl ˈɑn/",
@@ -1923,8 +2238,43 @@
           "phrase": "handle a problem",
           "phonetic": "/ˈhændl ə ˈprɑbləm/",
           "chinese": "处理问题",
-          "example": "She handled the difficult question well.",
-          "translation": "她很好地应对了那个难题。"
+          "example": "She handled the problem calmly.",
+          "translation": "她冷静地处理了这个问题。"
+        },
+        {
+          "phrase": "handle the pressure",
+          "phonetic": "/ˈhændl ðə ˈprɛʃɚ/",
+          "chinese": "应对压力",
+          "example": "Not everyone can handle the pressure of the job.",
+          "translation": "不是每个人都能承受这份工作的压力。"
+        },
+        {
+          "phrase": "handle with care",
+          "phonetic": "/ˈhændl ˈwɪð ˈkɛr/",
+          "chinese": "小心轻放",
+          "example": "This package is marked “Handle with care.”",
+          "translation": "这个包裹上标着“小心轻放”。"
+        },
+        {
+          "phrase": "easy to handle",
+          "phonetic": "/ˈiːziː ˈtuː ˈhændl/",
+          "chinese": "容易处理",
+          "example": "The new software is easy to handle.",
+          "translation": "这个新软件很容易操作。"
+        },
+        {
+          "phrase": "get a handle on",
+          "phonetic": "/ˈɡɛt ə ˈhændl ˈɑn/",
+          "chinese": "弄清；掌握",
+          "example": "I am finally getting a handle on the new system.",
+          "translation": "我终于开始掌握这个新系统了。"
+        },
+        {
+          "phrase": "door handle",
+          "phonetic": "/ˈdɔːr ˈhændl/",
+          "chinese": "门把手",
+          "example": "The door handle is loose.",
+          "translation": "门把手松了。"
         }
       ],
       "synonyms": [
@@ -1971,6 +2321,36 @@
           "scene": "核心真实用法",
           "english": "She handled the difficult question well.",
           "chinese": "她很好地应对了那个难题。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "She handled the problem calmly.",
+          "chinese": "她冷静地处理了这个问题。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "Not everyone can handle the pressure of the job.",
+          "chinese": "不是每个人都能承受这份工作的压力。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "This package is marked “Handle with care.”",
+          "chinese": "这个包裹上标着“小心轻放”。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "The new software is easy to handle.",
+          "chinese": "这个新软件很容易操作。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "I am finally getting a handle on the new system.",
+          "chinese": "我终于开始掌握这个新系统了。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "The door handle is loose.",
+          "chinese": "门把手松了。"
         }
       ],
       "studyFocus": {
@@ -2119,6 +2499,9 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“处理问题”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "handle the pressure",
+            "handle with care",
+            "easy to handle",
             "handle a problem"
           ],
           "answer": "handle a problem",
@@ -2130,6 +2513,8 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“应对压力”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "handle with care",
+            "easy to handle",
             "handle the pressure",
             "handle a problem"
           ],
@@ -2222,11 +2607,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     }
   ]
 }

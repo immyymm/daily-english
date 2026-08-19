@@ -18,7 +18,7 @@
   "difficulty": "进阶",
   "tags": [
     "adj.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心用法",
       "items": [
         {
           "phrase": "find something difficult",
@@ -92,22 +92,27 @@
           "phrase": "difficult to understand",
           "phonetic": "/ˈdɪfɪkəlt ˈtuː ˌʌndɚˈstænd/",
           "chinese": "难以理解"
-        },
-        {
-          "phrase": "difficult for someone",
-          "phonetic": "/ˈdɪfɪkəlt ˈfɔːr ˈsʌˌmwʌn/",
-          "chinese": "对某人困难"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "difficult for someone",
+          "phonetic": "/ˈdɪfɪkəlt ˈfɔːr ˈsʌˌmwʌn/",
+          "chinese": "对某人困难"
+        },
         {
           "phrase": "a difficult decision",
           "phonetic": "/ə ˈdɪfɪkəlt dɪˈsɪʒən/",
           "chinese": "艰难决定"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "in difficult circumstances",
           "phonetic": "/ɪn ˈdɪfɪkəlt ˈsɝːkəˌmstænsəz/",
@@ -126,8 +131,43 @@
       "phrase": "find something difficult",
       "phonetic": "/ˈfaɪnd ˈsʌmθɪŋ ˈdɪfɪkəlt/",
       "chinese": "觉得某事困难",
-      "example": "I find this sound difficult to pronounce.",
-      "translation": "我觉得这个音很难发。"
+      "example": "I find long phone conversations difficult in English.",
+      "translation": "我觉得用英语进行长时间电话交谈很困难。"
+    },
+    {
+      "phrase": "difficult to understand",
+      "phonetic": "/ˈdɪfɪkəlt ˈtuː ˌʌndɚˈstænd/",
+      "chinese": "难以理解",
+      "example": "The final paragraph is difficult to understand.",
+      "translation": "最后一段很难理解。"
+    },
+    {
+      "phrase": "difficult for someone",
+      "phonetic": "/ˈdɪfɪkəlt ˈfɔːr ˈsʌˌmwʌn/",
+      "chinese": "对某人困难",
+      "example": "The first week was difficult for everyone.",
+      "translation": "第一周对每个人来说都很困难。"
+    },
+    {
+      "phrase": "a difficult decision",
+      "phonetic": "/ə ˈdɪfɪkəlt dɪˈsɪʒən/",
+      "chinese": "艰难决定",
+      "example": "Leaving the company was a difficult decision.",
+      "translation": "离开公司是一个艰难的决定。"
+    },
+    {
+      "phrase": "in difficult circumstances",
+      "phonetic": "/ɪn ˈdɪfɪkəlt ˈsɝːkəˌmstænsəz/",
+      "chinese": "在困难处境下",
+      "example": "They continued working in difficult circumstances.",
+      "translation": "他们在困难处境下继续工作。"
+    },
+    {
+      "phrase": "increasingly difficult",
+      "phonetic": "/ɪˈnkriːsɪŋliː ˈdɪfɪkəlt/",
+      "chinese": "越来越困难",
+      "example": "It is becoming increasingly difficult to find cheap housing.",
+      "translation": "找到便宜住房变得越来越困难。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "I find this sound difficult to pronounce.",
       "chinese": "我觉得这个音很难发。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "I find long phone conversations difficult in English.",
+      "chinese": "我觉得用英语进行长时间电话交谈很困难。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "The final paragraph is difficult to understand.",
+      "chinese": "最后一段很难理解。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "The first week was difficult for everyone.",
+      "chinese": "第一周对每个人来说都很困难。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "Leaving the company was a difficult decision.",
+      "chinese": "离开公司是一个艰难的决定。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "They continued working in difficult circumstances.",
+      "chinese": "他们在困难处境下继续工作。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "It is becoming increasingly difficult to find cheap housing.",
+      "chinese": "找到便宜住房变得越来越困难。"
     }
   ],
   "studyFocus": {
@@ -322,6 +392,9 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“觉得某事困难”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
       "options": [
+        "difficult to understand",
+        "difficult for someone",
+        "a difficult decision",
         "find something difficult"
       ],
       "answer": "find something difficult",
@@ -333,6 +406,8 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“难以理解”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "difficult for someone",
+        "a difficult decision",
         "difficult to understand",
         "find something difficult"
       ],
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

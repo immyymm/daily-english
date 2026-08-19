@@ -18,7 +18,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "待精校",
+    "模板详卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心动作与结构",
       "items": [
         {
           "phrase": "solve a problem",
@@ -92,22 +92,27 @@
           "phrase": "solve an equation",
           "phonetic": "/sɑːlv ˈæn ɪˈkweɪʒən/",
           "chinese": "解方程"
-        },
-        {
-          "phrase": "help solve",
-          "phonetic": "/ˈhɛlp sɑːlv/",
-          "chinese": "帮助解决"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "help solve",
+          "phonetic": "/ˈhɛlp sɑːlv/",
+          "chinese": "帮助解决"
+        },
         {
           "phrase": "difficult to solve",
           "phonetic": "/ˈdɪfəkəlt ˈtuː sɑːlv/",
           "chinese": "难以解决"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "solve the mystery",
           "phonetic": "/sɑːlv ðə ˈmɪstɚiː/",
@@ -126,8 +131,43 @@
       "phrase": "solve a problem",
       "phonetic": "/sɑːlv ə ˈprɑbləm/",
       "chinese": "解决问题",
-      "example": "We need more information to solve this problem.",
-      "translation": "我们需要更多信息来解决这个问题。"
+      "example": "We need to solve this problem before Friday.",
+      "translation": "我们需要在星期五前解决这个问题。"
+    },
+    {
+      "phrase": "solve an equation",
+      "phonetic": "/sɑːlv ˈæn ɪˈkweɪʒən/",
+      "chinese": "解方程",
+      "example": "The students learned how to solve the equation.",
+      "translation": "学生们学会了如何解这个方程。"
+    },
+    {
+      "phrase": "help solve",
+      "phonetic": "/ˈhɛlp sɑːlv/",
+      "chinese": "帮助解决",
+      "example": "Better communication could help solve the conflict.",
+      "translation": "更好的沟通可能有助于解决冲突。"
+    },
+    {
+      "phrase": "difficult to solve",
+      "phonetic": "/ˈdɪfəkəlt ˈtuː sɑːlv/",
+      "chinese": "难以解决",
+      "example": "Some technical problems are difficult to solve remotely.",
+      "translation": "有些技术问题很难远程解决。"
+    },
+    {
+      "phrase": "solve the mystery",
+      "phonetic": "/sɑːlv ðə ˈmɪstɚiː/",
+      "chinese": "揭开谜团",
+      "example": "The detective finally solved the mystery.",
+      "translation": "侦探终于解开了谜团。"
+    },
+    {
+      "phrase": "problem-solving skills",
+      "phonetic": "/ˈprɑbləm-ˈsɑlvɪŋ ˈskɪlz/",
+      "chinese": "解决问题的能力",
+      "example": "This activity develops problem-solving skills.",
+      "translation": "这项活动培养解决问题的能力。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "We need more information to solve this problem.",
       "chinese": "我们需要更多信息来解决这个问题。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "We need to solve this problem before Friday.",
+      "chinese": "我们需要在星期五前解决这个问题。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "The students learned how to solve the equation.",
+      "chinese": "学生们学会了如何解这个方程。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "Better communication could help solve the conflict.",
+      "chinese": "更好的沟通可能有助于解决冲突。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "Some technical problems are difficult to solve remotely.",
+      "chinese": "有些技术问题很难远程解决。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "The detective finally solved the mystery.",
+      "chinese": "侦探终于解开了谜团。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "This activity develops problem-solving skills.",
+      "chinese": "这项活动培养解决问题的能力。"
     }
   ],
   "studyFocus": {
@@ -322,7 +392,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“解决问题”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "solve a problem"
+        "help solve",
+        "difficult to solve",
+        "solve a problem",
+        "solve an equation"
       ],
       "answer": "solve a problem",
       "stage": "T2",
@@ -333,8 +406,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“解方程”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "difficult to solve",
+        "solve an equation",
         "solve a problem",
-        "solve an equation"
+        "help solve"
       ],
       "answer": "solve an equation",
       "stage": "T3",
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

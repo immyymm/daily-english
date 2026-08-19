@@ -18,7 +18,7 @@
   "difficulty": "进阶",
   "tags": [
     "adv.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心用法",
       "items": [
         {
           "phrase": "finally decide",
@@ -92,22 +92,27 @@
           "phrase": "finally arrive",
           "phonetic": "/ˈfaɪnəli ɚˈaɪv/",
           "chinese": "终于到达"
-        },
-        {
-          "phrase": "finally understand",
-          "phonetic": "/ˈfaɪnəli ˌʌndɚˈstænd/",
-          "chinese": "终于理解"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "finally understand",
+          "phonetic": "/ˈfaɪnəli ˌʌndɚˈstænd/",
+          "chinese": "终于理解"
+        },
         {
           "phrase": "and finally",
           "phonetic": "/ənd ˈfaɪnəli/",
           "chinese": "最后"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "finally, remember to",
           "phonetic": "/ˈfaɪnəli rɪˈmɛmbɚ ˈtuː/",
@@ -119,6 +124,21 @@
           "chinese": "直到最后"
         }
       ]
+    },
+    {
+      "category": "补充常用语境",
+      "items": [
+        {
+          "phrase": "finally get",
+          "phonetic": "/ˈfaɪnəli ˈɡɛt/",
+          "chinese": "终于得到"
+        },
+        {
+          "phrase": "finally complete",
+          "phonetic": "/ˈfaɪnəli kəˈmpliːt/",
+          "chinese": "终于完成"
+        }
+      ]
     }
   ],
   "fixedPhrases": [
@@ -126,8 +146,43 @@
       "phrase": "finally decide",
       "phonetic": "/ˈfaɪnəli ˌdɪˈsaɪd/",
       "chinese": "终于决定",
-      "example": "I finally found the word I needed.",
-      "translation": "我终于找到了需要的那个词。"
+      "example": "We finally decided to take the train.",
+      "translation": "我们终于决定坐火车。"
+    },
+    {
+      "phrase": "finally arrive",
+      "phonetic": "/ˈfaɪnəli ɚˈaɪv/",
+      "chinese": "终于到达",
+      "example": "The package finally arrived on Friday.",
+      "translation": "包裹终于在星期五到了。"
+    },
+    {
+      "phrase": "finally understand",
+      "phonetic": "/ˈfaɪnəli ˌʌndɚˈstænd/",
+      "chinese": "终于理解",
+      "example": "After another example, I finally understood the rule.",
+      "translation": "又看了一个例子后，我终于理解了规则。"
+    },
+    {
+      "phrase": "and finally",
+      "phonetic": "/ənd ˈfaɪnəli/",
+      "chinese": "最后",
+      "example": "We discussed cost, timing, and finally quality.",
+      "translation": "我们讨论了成本、时间，最后讨论了质量。"
+    },
+    {
+      "phrase": "finally, remember to",
+      "phonetic": "/ˈfaɪnəli rɪˈmɛmbɚ ˈtuː/",
+      "chinese": "最后，记得……",
+      "example": "Finally, remember to save your changes.",
+      "translation": "最后，记得保存修改。"
+    },
+    {
+      "phrase": "until finally",
+      "phonetic": "/əˈntɪl ˈfaɪnəli/",
+      "chinese": "直到最后",
+      "example": "The rain continued until it finally stopped at noon.",
+      "translation": "雨一直下到中午才终于停。"
     }
   ],
   "synonyms": [
@@ -174,6 +229,36 @@
       "scene": "核心真实用法",
       "english": "I finally found the word I needed.",
       "chinese": "我终于找到了需要的那个词。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "We finally decided to take the train.",
+      "chinese": "我们终于决定坐火车。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "The package finally arrived on Friday.",
+      "chinese": "包裹终于在星期五到了。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "After another example, I finally understood the rule.",
+      "chinese": "又看了一个例子后，我终于理解了规则。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "We discussed cost, timing, and finally quality.",
+      "chinese": "我们讨论了成本、时间，最后讨论了质量。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "Finally, remember to save your changes.",
+      "chinese": "最后，记得保存修改。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "The rain continued until it finally stopped at noon.",
+      "chinese": "雨一直下到中午才终于停。"
     }
   ],
   "studyFocus": {
@@ -322,6 +407,9 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“终于决定”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "finally arrive",
+        "finally understand",
+        "and finally",
         "finally decide"
       ],
       "answer": "finally decide",
@@ -333,6 +421,8 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“终于到达”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "finally understand",
+        "and finally",
         "finally arrive",
         "finally decide"
       ],
@@ -425,9 +515,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

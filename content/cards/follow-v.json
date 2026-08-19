@@ -18,7 +18,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "待精校",
+    "模板详卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心动作与结构",
       "items": [
         {
           "phrase": "follow the instructions",
@@ -92,22 +92,27 @@
           "phrase": "follow the rules",
           "phonetic": "/ˈfɑːloʊ ðə ˈruːlz/",
           "chinese": "遵守规则"
-        },
-        {
-          "phrase": "follow someone on social media",
-          "phonetic": "/ˈfɑːloʊ ˈsʌˌmwʌn ˈɑn ˈsoʊʃəl ˈmiːdiːə/",
-          "chinese": "在社交媒体关注某人"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "follow someone on social media",
+          "phonetic": "/ˈfɑːloʊ ˈsʌˌmwʌn ˈɑn ˈsoʊʃəl ˈmiːdiːə/",
+          "chinese": "在社交媒体关注某人"
+        },
         {
           "phrase": "follow a path",
           "phonetic": "/ˈfɑːloʊ ə ˈpæθ/",
           "chinese": "沿着道路"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "follow up on",
           "phonetic": "/ˈfɑːloʊ ˈʌp ˈɑn/",
@@ -126,8 +131,43 @@
       "phrase": "follow the instructions",
       "phonetic": "/ˈfɑːloʊ ðə ˌɪˈnstrʌkʃənz/",
       "chinese": "按照说明",
-      "example": "Follow these steps to install the app.",
-      "translation": "按照这些步骤安装应用。"
+      "example": "Follow the instructions carefully before you start.",
+      "translation": "开始前请仔细按照说明操作。"
+    },
+    {
+      "phrase": "follow the rules",
+      "phonetic": "/ˈfɑːloʊ ðə ˈruːlz/",
+      "chinese": "遵守规则",
+      "example": "Everyone must follow the same safety rules.",
+      "translation": "每个人都必须遵守同样的安全规定。"
+    },
+    {
+      "phrase": "follow someone on social media",
+      "phonetic": "/ˈfɑːloʊ ˈsʌˌmwʌn ˈɑn ˈsoʊʃəl ˈmiːdiːə/",
+      "chinese": "在社交媒体关注某人",
+      "example": "I follow several English teachers on social media.",
+      "translation": "我在社交媒体上关注了几位英语老师。"
+    },
+    {
+      "phrase": "follow a path",
+      "phonetic": "/ˈfɑːloʊ ə ˈpæθ/",
+      "chinese": "沿着道路",
+      "example": "We followed a narrow path through the forest.",
+      "translation": "我们沿着一条狭窄的小路穿过森林。"
+    },
+    {
+      "phrase": "follow up on",
+      "phonetic": "/ˈfɑːloʊ ˈʌp ˈɑn/",
+      "chinese": "跟进",
+      "example": "I will follow up on your request this afternoon.",
+      "translation": "我今天下午会跟进你的请求。"
+    },
+    {
+      "phrase": "as follows",
+      "phonetic": "/ˈæz ˈfɑloʊz/",
+      "chinese": "如下",
+      "example": "Please complete the form as follows.",
+      "translation": "请按以下方式填写表格。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "Follow these steps to install the app.",
       "chinese": "按照这些步骤安装应用。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "Follow the instructions carefully before you start.",
+      "chinese": "开始前请仔细按照说明操作。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "Everyone must follow the same safety rules.",
+      "chinese": "每个人都必须遵守同样的安全规定。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "I follow several English teachers on social media.",
+      "chinese": "我在社交媒体上关注了几位英语老师。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "We followed a narrow path through the forest.",
+      "chinese": "我们沿着一条狭窄的小路穿过森林。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "I will follow up on your request this afternoon.",
+      "chinese": "我今天下午会跟进你的请求。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "Please complete the form as follows.",
+      "chinese": "请按以下方式填写表格。"
     }
   ],
   "studyFocus": {
@@ -322,6 +392,9 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“按照说明”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "follow the rules",
+        "follow someone on social media",
+        "follow a path",
         "follow the instructions"
       ],
       "answer": "follow the instructions",
@@ -333,6 +406,8 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“遵守规则”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "follow someone on social media",
+        "follow a path",
         "follow the rules",
         "follow the instructions"
       ],
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

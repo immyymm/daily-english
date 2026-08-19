@@ -24,7 +24,7 @@
   "difficulty": "进阶",
   "tags": [
     "n.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -94,7 +94,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心名词搭配",
       "items": [
         {
           "phrase": "deal with an issue",
@@ -105,22 +105,27 @@
           "phrase": "raise an issue",
           "phonetic": "/ˈreɪz ˈæn ˈɪʃuː/",
           "chinese": "提出问题"
-        },
-        {
-          "phrase": "a serious issue",
-          "phonetic": "/ə ˈsɪriːəs ˈɪʃuː/",
-          "chinese": "严重问题"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "a serious issue",
+          "phonetic": "/ə ˈsɪriːəs ˈɪʃuː/",
+          "chinese": "严重问题"
+        },
         {
           "phrase": "key issue",
           "phonetic": "/ˈkiː ˈɪʃuː/",
           "chinese": "关键问题"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "issue a statement",
           "phonetic": "/ˈɪʃuː ə ˈsteɪtmənt/",
@@ -139,8 +144,43 @@
       "phrase": "deal with an issue",
       "phonetic": "/ˈdiːl ˈwɪð ˈæn ˈɪʃuː/",
       "chinese": "处理问题",
-      "example": "We need to discuss this issue openly.",
-      "translation": "我们需要公开讨论这个问题。"
+      "example": "We need to deal with this issue today.",
+      "translation": "我们今天需要处理这个问题。"
+    },
+    {
+      "phrase": "raise an issue",
+      "phonetic": "/ˈreɪz ˈæn ˈɪʃuː/",
+      "chinese": "提出问题",
+      "example": "She raised an important issue during the meeting.",
+      "translation": "她在会议上提出了一个重要问题。"
+    },
+    {
+      "phrase": "a serious issue",
+      "phonetic": "/ə ˈsɪriːəs ˈɪʃuː/",
+      "chinese": "严重问题",
+      "example": "Air pollution is a serious issue in many cities.",
+      "translation": "空气污染是许多城市面临的严重问题。"
+    },
+    {
+      "phrase": "key issue",
+      "phonetic": "/ˈkiː ˈɪʃuː/",
+      "chinese": "关键问题",
+      "example": "The key issue is whether we have enough time.",
+      "translation": "关键问题是我们是否有足够时间。"
+    },
+    {
+      "phrase": "issue a statement",
+      "phonetic": "/ˈɪʃuː ə ˈsteɪtmənt/",
+      "chinese": "发表声明",
+      "example": "The company issued a statement this morning.",
+      "translation": "公司今天早上发表了一份声明。"
+    },
+    {
+      "phrase": "current issue",
+      "phonetic": "/ˈkɝːənt ˈɪʃuː/",
+      "chinese": "本期；当前问题",
+      "example": "The article appears in the current issue of the magazine.",
+      "translation": "这篇文章刊登在本期杂志上。"
     }
   ],
   "synonyms": [
@@ -187,6 +227,36 @@
       "scene": "核心真实用法",
       "english": "We need to discuss this issue openly.",
       "chinese": "我们需要公开讨论这个问题。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "We need to deal with this issue today.",
+      "chinese": "我们今天需要处理这个问题。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "She raised an important issue during the meeting.",
+      "chinese": "她在会议上提出了一个重要问题。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "Air pollution is a serious issue in many cities.",
+      "chinese": "空气污染是许多城市面临的严重问题。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "The key issue is whether we have enough time.",
+      "chinese": "关键问题是我们是否有足够时间。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "The company issued a statement this morning.",
+      "chinese": "公司今天早上发表了一份声明。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "The article appears in the current issue of the magazine.",
+      "chinese": "这篇文章刊登在本期杂志上。"
     }
   ],
   "studyFocus": {
@@ -335,7 +405,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“处理问题”，又符合这个形式线索：完整搭配中使用介词 with？",
       "options": [
-        "deal with an issue"
+        "key issue",
+        "deal with an issue",
+        "raise an issue",
+        "a serious issue"
       ],
       "answer": "deal with an issue",
       "stage": "T2",
@@ -347,7 +420,9 @@
       "prompt": "搭配辨析：哪一项既表示“提出问题”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "raise an issue",
-        "deal with an issue"
+        "deal with an issue",
+        "a serious issue",
+        "key issue"
       ],
       "answer": "raise an issue",
       "stage": "T3",
@@ -438,9 +513,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

@@ -1,7 +1,7 @@
 {
   "date": "2026-09-02",
   "dayNumber": 17,
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "templateVersion": "learning-template-2026.08.19.1",
   "cards": [
     {
@@ -24,7 +24,7 @@
       "difficulty": "进阶",
       "tags": [
         "adj.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -87,7 +87,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心用法",
           "items": [
             {
               "phrase": "important to remember",
@@ -98,22 +98,27 @@
               "phrase": "important for",
               "phonetic": "/ɪmˈpɔːrtənt ˈfɔːr/",
               "chinese": "对……很重要"
-            },
-            {
-              "phrase": "it is important to",
-              "phonetic": "/ˈɪt ˈɪz ɪmˈpɔːrtənt ˈtuː/",
-              "chinese": "做……很重要"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "it is important to",
+              "phonetic": "/ˈɪt ˈɪz ɪmˈpɔːrtənt ˈtuː/",
+              "chinese": "做……很重要"
+            },
             {
               "phrase": "play an important role",
               "phonetic": "/ˈpleɪ ˈæn ɪmˈpɔːrtənt ˈroʊl/",
               "chinese": "发挥重要作用"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "most important",
               "phonetic": "/ˈmoʊst ɪmˈpɔːrtənt/",
@@ -132,8 +137,43 @@
           "phrase": "important to remember",
           "phonetic": "/ɪmˈpɔːrtənt ˈtuː rɪˈmɛmbɚ/",
           "chinese": "需要牢记",
-          "example": "It is important to review mistakes.",
-          "translation": "复习错误很重要。"
+          "example": "It is important to remember that progress takes time.",
+          "translation": "需要牢记，进步需要时间。"
+        },
+        {
+          "phrase": "important for",
+          "phonetic": "/ɪmˈpɔːrtənt ˈfɔːr/",
+          "chinese": "对……很重要",
+          "example": "Regular sleep is important for your health.",
+          "translation": "规律睡眠对健康很重要。"
+        },
+        {
+          "phrase": "it is important to",
+          "phonetic": "/ˈɪt ˈɪz ɪmˈpɔːrtənt ˈtuː/",
+          "chinese": "做……很重要",
+          "example": "It is important to check the context before answering.",
+          "translation": "回答前检查语境很重要。"
+        },
+        {
+          "phrase": "play an important role",
+          "phonetic": "/ˈpleɪ ˈæn ɪmˈpɔːrtənt ˈroʊl/",
+          "chinese": "发挥重要作用",
+          "example": "Trust plays an important role in a strong team.",
+          "translation": "信任在优秀团队中发挥重要作用。"
+        },
+        {
+          "phrase": "most important",
+          "phonetic": "/ˈmoʊst ɪmˈpɔːrtənt/",
+          "chinese": "最重要的",
+          "example": "The most important thing is to keep practicing.",
+          "translation": "最重要的是坚持练习。"
+        },
+        {
+          "phrase": "equally important",
+          "phonetic": "/ˈiːkwəliː ɪmˈpɔːrtənt/",
+          "chinese": "同样重要",
+          "example": "Accuracy is equally important.",
+          "translation": "准确性同样重要。"
         }
       ],
       "synonyms": [
@@ -180,6 +220,36 @@
           "scene": "核心真实用法",
           "english": "It is important to review mistakes.",
           "chinese": "复习错误很重要。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "It is important to remember that progress takes time.",
+          "chinese": "需要牢记，进步需要时间。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "Regular sleep is important for your health.",
+          "chinese": "规律睡眠对健康很重要。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "It is important to check the context before answering.",
+          "chinese": "回答前检查语境很重要。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "Trust plays an important role in a strong team.",
+          "chinese": "信任在优秀团队中发挥重要作用。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "The most important thing is to keep practicing.",
+          "chinese": "最重要的是坚持练习。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "Accuracy is equally important.",
+          "chinese": "准确性同样重要。"
         }
       ],
       "studyFocus": {
@@ -328,7 +398,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“需要牢记”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "important to remember"
+            "it is important to",
+            "play an important role",
+            "important to remember",
+            "important for"
           ],
           "answer": "important to remember",
           "stage": "T2",
@@ -339,8 +412,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“对……很重要”，又符合这个形式线索：完整搭配中使用介词 for？",
           "options": [
+            "play an important role",
+            "important for",
             "important to remember",
-            "important for"
+            "it is important to"
           ],
           "answer": "important for",
           "stage": "T3",
@@ -431,11 +506,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "available-adj",
@@ -457,7 +532,7 @@
       "difficulty": "进阶",
       "tags": [
         "adj.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -520,7 +595,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心用法",
           "items": [
             {
               "phrase": "be available to",
@@ -531,22 +606,27 @@
               "phrase": "available online",
               "phonetic": "/əˈveɪləbəl ˈɔːˌnlaɪn/",
               "chinese": "可在线获得"
-            },
-            {
-              "phrase": "currently available",
-              "phonetic": "/ˈkɝːəntliː əˈveɪləbəl/",
-              "chinese": "目前可用"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "currently available",
+              "phonetic": "/ˈkɝːəntliː əˈveɪləbəl/",
+              "chinese": "目前可用"
+            },
             {
               "phrase": "available for download",
               "phonetic": "/əˈveɪləbəl ˈfɔːr ˈdaʊˌnloʊd/",
               "chinese": "可供下载"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "make something available",
               "phonetic": "/ˈmeɪk ˈsʌmθɪŋ əˈveɪləbəl/",
@@ -565,8 +645,43 @@
           "phrase": "be available to",
           "phonetic": "/ˈbiː əˈveɪləbəl ˈtuː/",
           "chinese": "可供……使用",
-          "example": "The lesson is available offline.",
-          "translation": "这节课可以离线使用。"
+          "example": "The guide is available to all registered users.",
+          "translation": "所有注册用户都可以使用这份指南。"
+        },
+        {
+          "phrase": "available online",
+          "phonetic": "/əˈveɪləbəl ˈɔːˌnlaɪn/",
+          "chinese": "可在线获得",
+          "example": "The full report is available online.",
+          "translation": "完整报告可在线获取。"
+        },
+        {
+          "phrase": "currently available",
+          "phonetic": "/ˈkɝːəntliː əˈveɪləbəl/",
+          "chinese": "目前可用",
+          "example": "Only two seats are currently available.",
+          "translation": "目前只有两个座位可用。"
+        },
+        {
+          "phrase": "available for download",
+          "phonetic": "/əˈveɪləbəl ˈfɔːr ˈdaʊˌnloʊd/",
+          "chinese": "可供下载",
+          "example": "The update is available for download now.",
+          "translation": "更新现在可供下载。"
+        },
+        {
+          "phrase": "make something available",
+          "phonetic": "/ˈmeɪk ˈsʌmθɪŋ əˈveɪləbəl/",
+          "chinese": "使某物可获得",
+          "example": "We made the recording available after the meeting.",
+          "translation": "会议后我们开放了录音。"
+        },
+        {
+          "phrase": "available time slot",
+          "phonetic": "/əˈveɪləbəl ˈtaɪm ˈslɑt/",
+          "chinese": "可用时间段",
+          "example": "Is there an available time slot on Friday?",
+          "translation": "星期五有可用的时间段吗？"
         }
       ],
       "synonyms": [
@@ -613,6 +728,36 @@
           "scene": "核心真实用法",
           "english": "The lesson is available offline.",
           "chinese": "这节课可以离线使用。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "The guide is available to all registered users.",
+          "chinese": "所有注册用户都可以使用这份指南。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "The full report is available online.",
+          "chinese": "完整报告可在线获取。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "Only two seats are currently available.",
+          "chinese": "目前只有两个座位可用。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "The update is available for download now.",
+          "chinese": "更新现在可供下载。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "We made the recording available after the meeting.",
+          "chinese": "会议后我们开放了录音。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "Is there an available time slot on Friday?",
+          "chinese": "星期五有可用的时间段吗？"
         }
       ],
       "studyFocus": {
@@ -761,7 +906,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“可供……使用”，又符合这个形式线索：使用 be 的正确形式后接目标表达？",
           "options": [
-            "be available to"
+            "available for download",
+            "be available to",
+            "available online",
+            "currently available"
           ],
           "answer": "be available to",
           "stage": "T2",
@@ -773,7 +921,9 @@
           "prompt": "搭配辨析：哪一项既表示“可在线获得”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "available online",
-            "be available to"
+            "be available to",
+            "currently available",
+            "available for download"
           ],
           "answer": "available online",
           "stage": "T3",
@@ -864,11 +1014,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "possible-adj",
@@ -890,7 +1040,7 @@
       "difficulty": "进阶",
       "tags": [
         "adj.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -953,7 +1103,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心用法",
           "items": [
             {
               "phrase": "as soon as possible",
@@ -964,22 +1114,27 @@
               "phrase": "if possible",
               "phonetic": "/ˈɪf ˈpɑːsəbəl/",
               "chinese": "如果可能"
-            },
-            {
-              "phrase": "make it possible to",
-              "phonetic": "/ˈmeɪk ˈɪt ˈpɑːsəbəl ˈtuː/",
-              "chinese": "使做……成为可能"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "make it possible to",
+              "phonetic": "/ˈmeɪk ˈɪt ˈpɑːsəbəl ˈtuː/",
+              "chinese": "使做……成为可能"
+            },
             {
               "phrase": "possible solution",
               "phonetic": "/ˈpɑːsəbəl səˈluːʃən/",
               "chinese": "可能的解决办法"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "whenever possible",
               "phonetic": "/wɛˈnɛvɚ ˈpɑːsəbəl/",
@@ -1000,6 +1155,41 @@
           "chinese": "尽快",
           "example": "Please reply as soon as possible.",
           "translation": "请尽快回复。"
+        },
+        {
+          "phrase": "if possible",
+          "phonetic": "/ˈɪf ˈpɑːsəbəl/",
+          "chinese": "如果可能",
+          "example": "If possible, book a seat near the window.",
+          "translation": "如果可能，请预订靠窗的座位。"
+        },
+        {
+          "phrase": "make it possible to",
+          "phonetic": "/ˈmeɪk ˈɪt ˈpɑːsəbəl ˈtuː/",
+          "chinese": "使做……成为可能",
+          "example": "Technology makes it possible to work from home.",
+          "translation": "科技使居家办公成为可能。"
+        },
+        {
+          "phrase": "possible solution",
+          "phonetic": "/ˈpɑːsəbəl səˈluːʃən/",
+          "chinese": "可能的解决办法",
+          "example": "We discussed every possible solution.",
+          "translation": "我们讨论了每一种可能的解决办法。"
+        },
+        {
+          "phrase": "whenever possible",
+          "phonetic": "/wɛˈnɛvɚ ˈpɑːsəbəl/",
+          "chinese": "只要可能",
+          "example": "I walk instead of driving whenever possible.",
+          "translation": "只要可能，我就步行而不是开车。"
+        },
+        {
+          "phrase": "best possible result",
+          "phonetic": "/ˈbɛst ˈpɑːsəbəl rɪˈzʌlt/",
+          "chinese": "尽可能好的结果",
+          "example": "Careful preparation gives us the best possible result.",
+          "translation": "认真准备会带来尽可能好的结果。"
         }
       ],
       "synonyms": [
@@ -1046,6 +1236,31 @@
           "scene": "核心真实用法",
           "english": "Please reply as soon as possible.",
           "chinese": "请尽快回复。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "If possible, book a seat near the window.",
+          "chinese": "如果可能，请预订靠窗的座位。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "Technology makes it possible to work from home.",
+          "chinese": "科技使居家办公成为可能。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "We discussed every possible solution.",
+          "chinese": "我们讨论了每一种可能的解决办法。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "I walk instead of driving whenever possible.",
+          "chinese": "只要可能，我就步行而不是开车。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "Careful preparation gives us the best possible result.",
+          "chinese": "认真准备会带来尽可能好的结果。"
         }
       ],
       "studyFocus": {
@@ -1194,7 +1409,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“尽快”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "as soon as possible"
+            "as soon as possible",
+            "if possible",
+            "make it possible to",
+            "possible solution"
           ],
           "answer": "as soon as possible",
           "stage": "T2",
@@ -1206,6 +1424,8 @@
           "prompt": "用法辨析：哪一项既表示“如果可能”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "as soon as possible",
+            "make it possible to",
+            "possible solution",
             "if possible"
           ],
           "answer": "if possible",
@@ -1297,11 +1517,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "difficult-adj",
@@ -1323,7 +1543,7 @@
       "difficulty": "进阶",
       "tags": [
         "adj.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -1386,7 +1606,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心用法",
           "items": [
             {
               "phrase": "find something difficult",
@@ -1397,22 +1617,27 @@
               "phrase": "difficult to understand",
               "phonetic": "/ˈdɪfɪkəlt ˈtuː ˌʌndɚˈstænd/",
               "chinese": "难以理解"
-            },
-            {
-              "phrase": "difficult for someone",
-              "phonetic": "/ˈdɪfɪkəlt ˈfɔːr ˈsʌˌmwʌn/",
-              "chinese": "对某人困难"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "difficult for someone",
+              "phonetic": "/ˈdɪfɪkəlt ˈfɔːr ˈsʌˌmwʌn/",
+              "chinese": "对某人困难"
+            },
             {
               "phrase": "a difficult decision",
               "phonetic": "/ə ˈdɪfɪkəlt dɪˈsɪʒən/",
               "chinese": "艰难决定"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "in difficult circumstances",
               "phonetic": "/ɪn ˈdɪfɪkəlt ˈsɝːkəˌmstænsəz/",
@@ -1431,8 +1656,43 @@
           "phrase": "find something difficult",
           "phonetic": "/ˈfaɪnd ˈsʌmθɪŋ ˈdɪfɪkəlt/",
           "chinese": "觉得某事困难",
-          "example": "I find this sound difficult to pronounce.",
-          "translation": "我觉得这个音很难发。"
+          "example": "I find long phone conversations difficult in English.",
+          "translation": "我觉得用英语进行长时间电话交谈很困难。"
+        },
+        {
+          "phrase": "difficult to understand",
+          "phonetic": "/ˈdɪfɪkəlt ˈtuː ˌʌndɚˈstænd/",
+          "chinese": "难以理解",
+          "example": "The final paragraph is difficult to understand.",
+          "translation": "最后一段很难理解。"
+        },
+        {
+          "phrase": "difficult for someone",
+          "phonetic": "/ˈdɪfɪkəlt ˈfɔːr ˈsʌˌmwʌn/",
+          "chinese": "对某人困难",
+          "example": "The first week was difficult for everyone.",
+          "translation": "第一周对每个人来说都很困难。"
+        },
+        {
+          "phrase": "a difficult decision",
+          "phonetic": "/ə ˈdɪfɪkəlt dɪˈsɪʒən/",
+          "chinese": "艰难决定",
+          "example": "Leaving the company was a difficult decision.",
+          "translation": "离开公司是一个艰难的决定。"
+        },
+        {
+          "phrase": "in difficult circumstances",
+          "phonetic": "/ɪn ˈdɪfɪkəlt ˈsɝːkəˌmstænsəz/",
+          "chinese": "在困难处境下",
+          "example": "They continued working in difficult circumstances.",
+          "translation": "他们在困难处境下继续工作。"
+        },
+        {
+          "phrase": "increasingly difficult",
+          "phonetic": "/ɪˈnkriːsɪŋliː ˈdɪfɪkəlt/",
+          "chinese": "越来越困难",
+          "example": "It is becoming increasingly difficult to find cheap housing.",
+          "translation": "找到便宜住房变得越来越困难。"
         }
       ],
       "synonyms": [
@@ -1479,6 +1739,36 @@
           "scene": "核心真实用法",
           "english": "I find this sound difficult to pronounce.",
           "chinese": "我觉得这个音很难发。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "I find long phone conversations difficult in English.",
+          "chinese": "我觉得用英语进行长时间电话交谈很困难。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "The final paragraph is difficult to understand.",
+          "chinese": "最后一段很难理解。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "The first week was difficult for everyone.",
+          "chinese": "第一周对每个人来说都很困难。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "Leaving the company was a difficult decision.",
+          "chinese": "离开公司是一个艰难的决定。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "They continued working in difficult circumstances.",
+          "chinese": "他们在困难处境下继续工作。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "It is becoming increasingly difficult to find cheap housing.",
+          "chinese": "找到便宜住房变得越来越困难。"
         }
       ],
       "studyFocus": {
@@ -1627,6 +1917,9 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“觉得某事困难”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
           "options": [
+            "difficult to understand",
+            "difficult for someone",
+            "a difficult decision",
             "find something difficult"
           ],
           "answer": "find something difficult",
@@ -1638,6 +1931,8 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“难以理解”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "difficult for someone",
+            "a difficult decision",
             "difficult to understand",
             "find something difficult"
           ],
@@ -1730,11 +2025,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     },
     {
       "id": "responsible-adj",
@@ -1756,7 +2051,7 @@
       "difficulty": "进阶",
       "tags": [
         "adj.",
-        "待精校",
+        "模板详卡",
         "主动词汇"
       ],
       "coreMemory": {
@@ -1819,7 +2114,7 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心高频搭配",
+          "category": "核心用法",
           "items": [
             {
               "phrase": "be responsible for",
@@ -1830,22 +2125,27 @@
               "phrase": "responsible for doing",
               "phonetic": "/rɪˈspɑːnsəbəl ˈfɔːr ˈduːɪŋ/",
               "chinese": "负责做"
-            },
-            {
-              "phrase": "hold someone responsible",
-              "phonetic": "/ˈhoʊld ˈsʌˌmwʌn rɪˈspɑːnsəbəl/",
-              "chinese": "追究某人责任"
             }
           ]
         },
         {
-          "category": "常见结构与语境",
+          "category": "日常与工作语境",
           "items": [
+            {
+              "phrase": "hold someone responsible",
+              "phonetic": "/ˈhoʊld ˈsʌˌmwʌn rɪˈspɑːnsəbəl/",
+              "chinese": "追究某人责任"
+            },
             {
               "phrase": "a responsible person",
               "phonetic": "/ə rɪˈspɑːnsəbəl ˈpɝːsən/",
               "chinese": "负责任的人"
-            },
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
             {
               "phrase": "socially responsible",
               "phonetic": "/ˈsoʊʃəliː rɪˈspɑːnsəbəl/",
@@ -1864,8 +2164,43 @@
           "phrase": "be responsible for",
           "phonetic": "/ˈbiː rɪˈspɑːnsəbəl ˈfɔːr/",
           "chinese": "对……负责",
-          "example": "She is responsible for the final report.",
-          "translation": "她负责最终报告。"
+          "example": "Who is responsible for this project?",
+          "translation": "谁对这个项目负责？"
+        },
+        {
+          "phrase": "responsible for doing",
+          "phonetic": "/rɪˈspɑːnsəbəl ˈfɔːr ˈduːɪŋ/",
+          "chinese": "负责做",
+          "example": "She is responsible for training new employees.",
+          "translation": "她负责培训新员工。"
+        },
+        {
+          "phrase": "hold someone responsible",
+          "phonetic": "/ˈhoʊld ˈsʌˌmwʌn rɪˈspɑːnsəbəl/",
+          "chinese": "追究某人责任",
+          "example": "The company was held responsible for the damage.",
+          "translation": "公司被追究了造成损失的责任。"
+        },
+        {
+          "phrase": "a responsible person",
+          "phonetic": "/ə rɪˈspɑːnsəbəl ˈpɝːsən/",
+          "chinese": "负责任的人",
+          "example": "A responsible person admits mistakes.",
+          "translation": "负责任的人会承认错误。"
+        },
+        {
+          "phrase": "socially responsible",
+          "phonetic": "/ˈsoʊʃəliː rɪˈspɑːnsəbəl/",
+          "chinese": "对社会负责的",
+          "example": "Customers increasingly prefer socially responsible businesses.",
+          "translation": "顾客越来越青睐对社会负责的企业。"
+        },
+        {
+          "phrase": "feel responsible for",
+          "phonetic": "/ˈfiːl rɪˈspɑːnsəbəl ˈfɔːr/",
+          "chinese": "觉得对……有责任",
+          "example": "I feel responsible for keeping the information safe.",
+          "translation": "我觉得自己有责任保护这些信息。"
         }
       ],
       "synonyms": [
@@ -1912,6 +2247,36 @@
           "scene": "核心真实用法",
           "english": "She is responsible for the final report.",
           "chinese": "她负责最终报告。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "Who is responsible for this project?",
+          "chinese": "谁对这个项目负责？"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "She is responsible for training new employees.",
+          "chinese": "她负责培训新员工。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "The company was held responsible for the damage.",
+          "chinese": "公司被追究了造成损失的责任。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "A responsible person admits mistakes.",
+          "chinese": "负责任的人会承认错误。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "Customers increasingly prefer socially responsible businesses.",
+          "chinese": "顾客越来越青睐对社会负责的企业。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "I feel responsible for keeping the information safe.",
+          "chinese": "我觉得自己有责任保护这些信息。"
         }
       ],
       "studyFocus": {
@@ -2060,7 +2425,10 @@
           "type": "collocation",
           "prompt": "搭配辨析：哪一项既表示“对……负责”，又符合这个形式线索：完整搭配中使用介词 for？",
           "options": [
-            "be responsible for"
+            "hold someone responsible",
+            "a responsible person",
+            "be responsible for",
+            "responsible for doing"
           ],
           "answer": "be responsible for",
           "stage": "T2",
@@ -2071,8 +2439,10 @@
           "type": "collocation",
           "prompt": "用法辨析：哪一项既表示“负责做”，又符合这个形式线索：目标词后的 doing 表示要换成符合语境的动词 -ing 形式？",
           "options": [
+            "a responsible person",
+            "responsible for doing",
             "be responsible for",
-            "responsible for doing"
+            "hold someone responsible"
           ],
           "answer": "responsible for doing",
           "stage": "T3",
@@ -2163,11 +2533,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "standard",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.1",
-      "contentVersion": "2026.08.19.4",
+      "contentVersion": "2026.08.19.5",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
     }
   ]
 }

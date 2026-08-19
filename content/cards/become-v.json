@@ -18,7 +18,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "待精校",
+    "模板详卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心动作与结构",
       "items": [
         {
           "phrase": "become more confident",
@@ -92,22 +92,27 @@
           "phrase": "become aware of",
           "phonetic": "/bɪˈkʌm əˈwɛr ˈʌv/",
           "chinese": "开始意识到"
-        },
-        {
-          "phrase": "become a habit",
-          "phonetic": "/bɪˈkʌm ə ˈhæbət/",
-          "chinese": "成为习惯"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "become a habit",
+          "phonetic": "/bɪˈkʌm ə ˈhæbət/",
+          "chinese": "成为习惯"
+        },
         {
           "phrase": "become involved in",
           "phonetic": "/bɪˈkʌm ˌɪˈnvɑlvd ɪn/",
           "chinese": "参与到……中"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "become increasingly important",
           "phonetic": "/bɪˈkʌm ɪˈnkriːsɪŋliː ˌɪˈmpɔːrtənt/",
@@ -126,8 +131,43 @@
       "phrase": "become more confident",
       "phonetic": "/bɪˈkʌm ˈmɔːr ˈkɑnfədənt/",
       "chinese": "变得更自信",
-      "example": "Speaking becomes easier with practice.",
-      "translation": "通过练习，口语会变得更容易。"
+      "example": "I became more confident after practicing every day.",
+      "translation": "每天练习后，我变得更加自信。"
+    },
+    {
+      "phrase": "become aware of",
+      "phonetic": "/bɪˈkʌm əˈwɛr ˈʌv/",
+      "chinese": "开始意识到",
+      "example": "People are becoming aware of the problem.",
+      "translation": "人们正开始意识到这个问题。"
+    },
+    {
+      "phrase": "become a habit",
+      "phonetic": "/bɪˈkʌm ə ˈhæbət/",
+      "chinese": "成为习惯",
+      "example": "Reading before bed has become a habit for me.",
+      "translation": "睡前阅读已经成了我的习惯。"
+    },
+    {
+      "phrase": "become involved in",
+      "phonetic": "/bɪˈkʌm ˌɪˈnvɑlvd ɪn/",
+      "chinese": "参与到……中",
+      "example": "She became involved in a local volunteer group.",
+      "translation": "她参与了当地的一个志愿者团体。"
+    },
+    {
+      "phrase": "become increasingly important",
+      "phonetic": "/bɪˈkʌm ɪˈnkriːsɪŋliː ˌɪˈmpɔːrtənt/",
+      "chinese": "变得越来越重要",
+      "example": "Digital skills have become increasingly important.",
+      "translation": "数字技能变得越来越重要。"
+    },
+    {
+      "phrase": "what became of",
+      "phonetic": "/ˈwʌt bɪˈkeɪm ˈʌv/",
+      "chinese": "……后来怎么样了",
+      "example": "What became of the café near your office?",
+      "translation": "你办公室附近的那家咖啡馆后来怎么样了？"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "Speaking becomes easier with practice.",
       "chinese": "通过练习，口语会变得更容易。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "I became more confident after practicing every day.",
+      "chinese": "每天练习后，我变得更加自信。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "People are becoming aware of the problem.",
+      "chinese": "人们正开始意识到这个问题。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "Reading before bed has become a habit for me.",
+      "chinese": "睡前阅读已经成了我的习惯。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "She became involved in a local volunteer group.",
+      "chinese": "她参与了当地的一个志愿者团体。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "Digital skills have become increasingly important.",
+      "chinese": "数字技能变得越来越重要。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "What became of the café near your office?",
+      "chinese": "你办公室附近的那家咖啡馆后来怎么样了？"
     }
   ],
   "studyFocus": {
@@ -322,7 +392,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“变得更自信”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "become more confident"
+        "become involved in",
+        "become more confident",
+        "become aware of",
+        "become a habit"
       ],
       "answer": "become more confident",
       "stage": "T2",
@@ -334,7 +407,9 @@
       "prompt": "搭配辨析：哪一项既表示“开始意识到”，又符合这个形式线索：完整搭配中使用介词 of？",
       "options": [
         "become aware of",
-        "become more confident"
+        "become more confident",
+        "become a habit",
+        "become involved in"
       ],
       "answer": "become aware of",
       "stage": "T3",
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

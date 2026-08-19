@@ -18,7 +18,7 @@
   "difficulty": "进阶",
   "tags": [
     "n.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心名词搭配",
       "items": [
         {
           "phrase": "useful information",
@@ -92,22 +92,27 @@
           "phrase": "provide information",
           "phonetic": "/prəˈvaɪd ˌɪnfərˈmeɪʃən/",
           "chinese": "提供信息"
-        },
-        {
-          "phrase": "personal information",
-          "phonetic": "/ˈpɝːsɪnəl ˌɪnfərˈmeɪʃən/",
-          "chinese": "个人信息"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "personal information",
+          "phonetic": "/ˈpɝːsɪnəl ˌɪnfərˈmeɪʃən/",
+          "chinese": "个人信息"
+        },
         {
           "phrase": "information about",
           "phonetic": "/ˌɪnfərˈmeɪʃən əˈbaʊt/",
           "chinese": "有关……的信息"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "for more information",
           "phonetic": "/ˈfɔːr ˈmɔːr ˌɪnfərˈmeɪʃən/",
@@ -126,8 +131,43 @@
       "phrase": "useful information",
       "phonetic": "/ˈjuːsfəl ˌɪnfərˈmeɪʃən/",
       "chinese": "有用信息",
-      "example": "This page provides practical information for travelers.",
-      "translation": "这个页面为旅行者提供实用信息。"
+      "example": "The website contains useful information for new students.",
+      "translation": "这个网站为新生提供了有用信息。"
+    },
+    {
+      "phrase": "provide information",
+      "phonetic": "/prəˈvaɪd ˌɪnfərˈmeɪʃən/",
+      "chinese": "提供信息",
+      "example": "Please provide the information requested on the form.",
+      "translation": "请提供表格中要求的信息。"
+    },
+    {
+      "phrase": "personal information",
+      "phonetic": "/ˈpɝːsɪnəl ˌɪnfərˈmeɪʃən/",
+      "chinese": "个人信息",
+      "example": "Never share personal information with strangers online.",
+      "translation": "不要在网上向陌生人透露个人信息。"
+    },
+    {
+      "phrase": "information about",
+      "phonetic": "/ˌɪnfərˈmeɪʃən əˈbaʊt/",
+      "chinese": "有关……的信息",
+      "example": "I need more information about the course.",
+      "translation": "我需要这门课程的更多信息。"
+    },
+    {
+      "phrase": "for more information",
+      "phonetic": "/ˈfɔːr ˈmɔːr ˌɪnfərˈmeɪʃən/",
+      "chinese": "欲知详情",
+      "example": "For more information, contact the front desk.",
+      "translation": "欲知详情，请联系前台。"
+    },
+    {
+      "phrase": "piece of information",
+      "phonetic": "/ˈpiːs ˈʌv ˌɪnfərˈmeɪʃən/",
+      "chinese": "一条信息",
+      "example": "She gave me an important piece of information.",
+      "translation": "她告诉了我一条重要信息。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "This page provides practical information for travelers.",
       "chinese": "这个页面为旅行者提供实用信息。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "The website contains useful information for new students.",
+      "chinese": "这个网站为新生提供了有用信息。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "Please provide the information requested on the form.",
+      "chinese": "请提供表格中要求的信息。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "Never share personal information with strangers online.",
+      "chinese": "不要在网上向陌生人透露个人信息。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "I need more information about the course.",
+      "chinese": "我需要这门课程的更多信息。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "For more information, contact the front desk.",
+      "chinese": "欲知详情，请联系前台。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "She gave me an important piece of information.",
+      "chinese": "她告诉了我一条重要信息。"
     }
   ],
   "studyFocus": {
@@ -322,7 +392,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“有用信息”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "useful information"
+        "personal information",
+        "information about",
+        "useful information",
+        "provide information"
       ],
       "answer": "useful information",
       "stage": "T2",
@@ -333,8 +406,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“提供信息”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "information about",
+        "provide information",
         "useful information",
-        "provide information"
+        "personal information"
       ],
       "answer": "provide information",
       "stage": "T3",
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

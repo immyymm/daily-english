@@ -18,7 +18,7 @@
   "difficulty": "应用",
   "tags": [
     "n.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心名词搭配",
       "items": [
         {
           "phrase": "develop a skill",
@@ -92,22 +92,27 @@
           "phrase": "communication skills",
           "phonetic": "/kəˌmjuːnəˈkeɪʃən ˈskɪlz/",
           "chinese": "沟通技能"
-        },
-        {
-          "phrase": "practical skills",
-          "phonetic": "/ˈpræktəkəl ˈskɪlz/",
-          "chinese": "实用技能"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "practical skills",
+          "phonetic": "/ˈpræktəkəl ˈskɪlz/",
+          "chinese": "实用技能"
+        },
         {
           "phrase": "skill in doing",
           "phonetic": "/skɪl ɪn ˈduːɪŋ/",
           "chinese": "做……的技能"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "learn a new skill",
           "phonetic": "/ˈlɝːn ə ˈnuː skɪl/",
@@ -126,8 +131,43 @@
       "phrase": "develop a skill",
       "phonetic": "/dɪˈvɛləp ə skɪl/",
       "chinese": "培养技能",
-      "example": "Conversation is a skill you can practice.",
-      "translation": "对话是一项可以练习的技能。"
+      "example": "Learning to listen is a skill you can develop.",
+      "translation": "倾听是一项可以培养的技能。"
+    },
+    {
+      "phrase": "communication skills",
+      "phonetic": "/kəˌmjuːnəˈkeɪʃən ˈskɪlz/",
+      "chinese": "沟通技能",
+      "example": "Good communication skills are important at work.",
+      "translation": "良好的沟通技能在工作中很重要。"
+    },
+    {
+      "phrase": "practical skills",
+      "phonetic": "/ˈpræktəkəl ˈskɪlz/",
+      "chinese": "实用技能",
+      "example": "The course teaches practical skills for daily life.",
+      "translation": "这门课程教授日常生活实用技能。"
+    },
+    {
+      "phrase": "skill in doing",
+      "phonetic": "/skɪl ɪn ˈduːɪŋ/",
+      "chinese": "做……的技能",
+      "example": "She has great skill in explaining difficult ideas.",
+      "translation": "她很擅长解释复杂想法。"
+    },
+    {
+      "phrase": "learn a new skill",
+      "phonetic": "/ˈlɝːn ə ˈnuː skɪl/",
+      "chinese": "学习新技能",
+      "example": "I want to learn a new skill this year.",
+      "translation": "我今年想学习一项新技能。"
+    },
+    {
+      "phrase": "highly skilled",
+      "phonetic": "/ˈhaɪliː ˈskɪld/",
+      "chinese": "技术熟练的",
+      "example": "The repair requires a highly skilled worker.",
+      "translation": "这项维修需要技术熟练的工人。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "Conversation is a skill you can practice.",
       "chinese": "对话是一项可以练习的技能。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "Learning to listen is a skill you can develop.",
+      "chinese": "倾听是一项可以培养的技能。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "Good communication skills are important at work.",
+      "chinese": "良好的沟通技能在工作中很重要。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "The course teaches practical skills for daily life.",
+      "chinese": "这门课程教授日常生活实用技能。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "She has great skill in explaining difficult ideas.",
+      "chinese": "她很擅长解释复杂想法。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "I want to learn a new skill this year.",
+      "chinese": "我今年想学习一项新技能。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "The repair requires a highly skilled worker.",
+      "chinese": "这项维修需要技术熟练的工人。"
     }
   ],
   "studyFocus": {
@@ -322,7 +392,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“培养技能”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "develop a skill"
+        "practical skills",
+        "skill in doing",
+        "develop a skill",
+        "communication skills"
       ],
       "answer": "develop a skill",
       "stage": "T2",
@@ -333,8 +406,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“沟通技能”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "skill in doing",
+        "communication skills",
         "develop a skill",
-        "communication skills"
+        "practical skills"
       ],
       "answer": "communication skills",
       "stage": "T3",
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

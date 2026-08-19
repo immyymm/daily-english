@@ -24,7 +24,7 @@
   "difficulty": "应用",
   "tags": [
     "n.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -94,7 +94,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心名词搭配",
       "items": [
         {
           "phrase": "study for a test",
@@ -105,22 +105,27 @@
           "phrase": "study English",
           "phonetic": "/ˈstʌdi ˈɪŋɡlɪʃ/",
           "chinese": "学习英语"
-        },
-        {
-          "phrase": "study abroad",
-          "phonetic": "/ˈstʌdi əˈbrɔːd/",
-          "chinese": "出国留学"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "study abroad",
+          "phonetic": "/ˈstʌdi əˈbrɔːd/",
+          "chinese": "出国留学"
+        },
         {
           "phrase": "a recent study",
           "phonetic": "/ə ˈriːsənt ˈstʌdi/",
           "chinese": "最近的一项研究"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "field of study",
           "phonetic": "/ˈfiːld ˈʌv ˈstʌdi/",
@@ -139,8 +144,43 @@
       "phrase": "study for a test",
       "phonetic": "/ˈstʌdi ˈfɔːr ə ˈtɛst/",
       "chinese": "为考试学习",
-      "example": "She studies English for half an hour every morning.",
-      "translation": "她每天早上学半小时英语。"
+      "example": "I am studying for a test this weekend.",
+      "translation": "这个周末我在为考试学习。"
+    },
+    {
+      "phrase": "study English",
+      "phonetic": "/ˈstʌdi ˈɪŋɡlɪʃ/",
+      "chinese": "学习英语",
+      "example": "She studies English for thirty minutes every morning.",
+      "translation": "她每天早上学习三十分钟英语。"
+    },
+    {
+      "phrase": "study abroad",
+      "phonetic": "/ˈstʌdi əˈbrɔːd/",
+      "chinese": "出国留学",
+      "example": "He plans to study abroad next year.",
+      "translation": "他计划明年出国留学。"
+    },
+    {
+      "phrase": "a recent study",
+      "phonetic": "/ə ˈriːsənt ˈstʌdi/",
+      "chinese": "最近的一项研究",
+      "example": "A recent study found that sleep supports memory.",
+      "translation": "最近一项研究发现睡眠有助于记忆。"
+    },
+    {
+      "phrase": "field of study",
+      "phonetic": "/ˈfiːld ˈʌv ˈstʌdi/",
+      "chinese": "研究领域",
+      "example": "Language education is her field of study.",
+      "translation": "语言教育是她的研究领域。"
+    },
+    {
+      "phrase": "case study",
+      "phonetic": "/ˈkeɪs ˈstʌdi/",
+      "chinese": "案例研究",
+      "example": "The report includes a case study of a small business.",
+      "translation": "报告包含一个小企业案例研究。"
     }
   ],
   "synonyms": [
@@ -195,6 +235,36 @@
       "scene": "核心真实用法",
       "english": "She studies English for half an hour every morning.",
       "chinese": "她每天早上学半小时英语。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "I am studying for a test this weekend.",
+      "chinese": "这个周末我在为考试学习。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "She studies English for thirty minutes every morning.",
+      "chinese": "她每天早上学习三十分钟英语。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "He plans to study abroad next year.",
+      "chinese": "他计划明年出国留学。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "A recent study found that sleep supports memory.",
+      "chinese": "最近一项研究发现睡眠有助于记忆。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "Language education is her field of study.",
+      "chinese": "语言教育是她的研究领域。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "The report includes a case study of a small business.",
+      "chinese": "报告包含一个小企业案例研究。"
     }
   ],
   "studyFocus": {
@@ -343,7 +413,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“为考试学习”，又符合这个形式线索：完整搭配中使用介词 for？",
       "options": [
-        "study for a test"
+        "study for a test",
+        "study English",
+        "study abroad",
+        "a recent study"
       ],
       "answer": "study for a test",
       "stage": "T2",
@@ -355,6 +428,8 @@
       "prompt": "用法辨析：哪一项既表示“学习英语”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "study for a test",
+        "study abroad",
+        "a recent study",
         "study English"
       ],
       "answer": "study English",
@@ -446,9 +521,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

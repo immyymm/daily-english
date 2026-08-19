@@ -18,7 +18,7 @@
   "difficulty": "进阶",
   "tags": [
     "adv.",
-    "待精校",
+    "模板详卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心用法",
       "items": [
         {
           "phrase": "however, the result",
@@ -92,22 +92,27 @@
           "phrase": "however difficult",
           "phonetic": "/haʊˈevər ˈdɪfəkəlt/",
           "chinese": "无论多困难"
-        },
-        {
-          "phrase": "however much",
-          "phonetic": "/haʊˈevər ˈmʌtʃ/",
-          "chinese": "无论多少"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "however much",
+          "phonetic": "/haʊˈevər ˈmʌtʃ/",
+          "chinese": "无论多少"
+        },
         {
           "phrase": "however long it takes",
           "phonetic": "/haʊˈevər ˈlɔːŋ ˈɪt ˈteɪks/",
           "chinese": "无论花多久"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "however you choose",
           "phonetic": "/haʊˈevər ˈjuː ˈtʃuːz/",
@@ -119,6 +124,21 @@
           "chinese": "不过，存在一个问题"
         }
       ]
+    },
+    {
+      "category": "补充常用语境",
+      "items": [
+        {
+          "phrase": "however possible",
+          "phonetic": "/haʊˈevər ˈpɑsəbəl/",
+          "chinese": "无论如何可行"
+        },
+        {
+          "phrase": "however carefully",
+          "phonetic": "/haʊˈevər ˈkɛrfəliː/",
+          "chinese": "无论多么仔细地"
+        }
+      ]
     }
   ],
   "fixedPhrases": [
@@ -126,8 +146,43 @@
       "phrase": "however, the result",
       "phonetic": "/haʊˈevər ðə rɪˈzʌlt/",
       "chinese": "然而，结果……",
-      "example": "The task is short; however, it requires focus.",
-      "translation": "任务很短，不过需要专注。"
+      "example": "The plan was simple; however, the result was disappointing.",
+      "translation": "计划很简单，然而结果令人失望。"
+    },
+    {
+      "phrase": "however difficult",
+      "phonetic": "/haʊˈevər ˈdɪfəkəlt/",
+      "chinese": "无论多困难",
+      "example": "However difficult the task becomes, do not give up.",
+      "translation": "无论任务多困难，都不要放弃。"
+    },
+    {
+      "phrase": "however much",
+      "phonetic": "/haʊˈevər ˈmʌtʃ/",
+      "chinese": "无论多少",
+      "example": "However much it costs, we need to repair the roof.",
+      "translation": "无论花多少钱，我们都需要修屋顶。"
+    },
+    {
+      "phrase": "however long it takes",
+      "phonetic": "/haʊˈevər ˈlɔːŋ ˈɪt ˈteɪks/",
+      "chinese": "无论花多久",
+      "example": "I will finish the work, however long it takes.",
+      "translation": "无论花多久，我都会完成这项工作。"
+    },
+    {
+      "phrase": "however you choose",
+      "phonetic": "/haʊˈevər ˈjuː ˈtʃuːz/",
+      "chinese": "无论你怎样选择",
+      "example": "However you choose to travel, book early.",
+      "translation": "无论选择怎样出行，都要提前预订。"
+    },
+    {
+      "phrase": "there is, however, a problem",
+      "phonetic": "/ˈðɛr ˈɪz haʊˈevər ə ˈprɑbləm/",
+      "chinese": "不过，存在一个问题",
+      "example": "There is, however, one serious problem.",
+      "translation": "不过，有一个严重问题。"
     }
   ],
   "synonyms": [
@@ -174,6 +229,36 @@
       "scene": "核心真实用法",
       "english": "The task is short; however, it requires focus.",
       "chinese": "任务很短，不过需要专注。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "The plan was simple; however, the result was disappointing.",
+      "chinese": "计划很简单，然而结果令人失望。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "However difficult the task becomes, do not give up.",
+      "chinese": "无论任务多困难，都不要放弃。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "However much it costs, we need to repair the roof.",
+      "chinese": "无论花多少钱，我们都需要修屋顶。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "I will finish the work, however long it takes.",
+      "chinese": "无论花多久，我都会完成这项工作。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "However you choose to travel, book early.",
+      "chinese": "无论选择怎样出行，都要提前预订。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "There is, however, one serious problem.",
+      "chinese": "不过，有一个严重问题。"
     }
   ],
   "studyFocus": {
@@ -322,7 +407,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“然而，结果……”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "however, the result"
+        "however, the result",
+        "however difficult",
+        "however much",
+        "however long it takes"
       ],
       "answer": "however, the result",
       "stage": "T2",
@@ -334,6 +422,8 @@
       "prompt": "用法辨析：哪一项既表示“无论多困难”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "however, the result",
+        "however much",
+        "however long it takes",
         "however difficult"
       ],
       "answer": "however difficult",
@@ -425,9 +515,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }

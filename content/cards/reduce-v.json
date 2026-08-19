@@ -18,7 +18,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "待精校",
+    "模板详卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -81,7 +81,7 @@
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "核心动作与结构",
       "items": [
         {
           "phrase": "reduce the risk",
@@ -92,22 +92,27 @@
           "phrase": "reduce costs",
           "phonetic": "/rɪˈduːs ˈkɑsts/",
           "chinese": "降低成本"
-        },
-        {
-          "phrase": "reduce stress",
-          "phonetic": "/rɪˈduːs ˈstrɛs/",
-          "chinese": "减轻压力"
         }
       ]
     },
     {
-      "category": "常见结构与语境",
+      "category": "日常与工作语境",
       "items": [
+        {
+          "phrase": "reduce stress",
+          "phonetic": "/rɪˈduːs ˈstrɛs/",
+          "chinese": "减轻压力"
+        },
         {
           "phrase": "reduce by half",
           "phonetic": "/rɪˈduːs ˈbaɪ ˈhæf/",
           "chinese": "减少一半"
-        },
+        }
+      ]
+    },
+    {
+      "category": "高频扩展表达",
+      "items": [
         {
           "phrase": "reduce A to B",
           "phonetic": "/rɪˈduːs ə ˈtuː ˈbiː/",
@@ -126,8 +131,43 @@
       "phrase": "reduce the risk",
       "phonetic": "/rɪˈduːs ðə ˈrɪsk/",
       "chinese": "降低风险",
-      "example": "A clear plan can reduce unnecessary stress.",
-      "translation": "清晰的计划可以减少不必要的压力。"
+      "example": "Regular exercise can reduce the risk of illness.",
+      "translation": "规律运动可以降低患病风险。"
+    },
+    {
+      "phrase": "reduce costs",
+      "phonetic": "/rɪˈduːs ˈkɑsts/",
+      "chinese": "降低成本",
+      "example": "The company is trying to reduce costs.",
+      "translation": "公司正努力降低成本。"
+    },
+    {
+      "phrase": "reduce stress",
+      "phonetic": "/rɪˈduːs ˈstrɛs/",
+      "chinese": "减轻压力",
+      "example": "A short walk may reduce stress.",
+      "translation": "短暂散步可能有助于减轻压力。"
+    },
+    {
+      "phrase": "reduce by half",
+      "phonetic": "/rɪˈduːs ˈbaɪ ˈhæf/",
+      "chinese": "减少一半",
+      "example": "We reduced the waiting time by half.",
+      "translation": "我们把等待时间缩短了一半。"
+    },
+    {
+      "phrase": "reduce A to B",
+      "phonetic": "/rɪˈduːs ə ˈtuː ˈbiː/",
+      "chinese": "把 A 减少到 B",
+      "example": "The store reduced the price from $50 to $35.",
+      "translation": "商店把价格从五十美元降到了三十五美元。"
+    },
+    {
+      "phrase": "reduce waste",
+      "phonetic": "/rɪˈduːs ˈweɪst/",
+      "chinese": "减少浪费",
+      "example": "Using both sides of the paper helps reduce waste.",
+      "translation": "使用纸张两面有助于减少浪费。"
     }
   ],
   "synonyms": [
@@ -174,6 +214,36 @@
       "scene": "核心真实用法",
       "english": "A clear plan can reduce unnecessary stress.",
       "chinese": "清晰的计划可以减少不必要的压力。"
+    },
+    {
+      "scene": "日常使用",
+      "english": "Regular exercise can reduce the risk of illness.",
+      "chinese": "规律运动可以降低患病风险。"
+    },
+    {
+      "scene": "工作或学习",
+      "english": "The company is trying to reduce costs.",
+      "chinese": "公司正努力降低成本。"
+    },
+    {
+      "scene": "常见搭配",
+      "english": "A short walk may reduce stress.",
+      "chinese": "短暂散步可能有助于减轻压力。"
+    },
+    {
+      "scene": "真实语境",
+      "english": "We reduced the waiting time by half.",
+      "chinese": "我们把等待时间缩短了一半。"
+    },
+    {
+      "scene": "易错结构",
+      "english": "The store reduced the price from $50 to $35.",
+      "chinese": "商店把价格从五十美元降到了三十五美元。"
+    },
+    {
+      "scene": "主动表达",
+      "english": "Using both sides of the paper helps reduce waste.",
+      "chinese": "使用纸张两面有助于减少浪费。"
     }
   ],
   "studyFocus": {
@@ -322,7 +392,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“降低风险”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "reduce the risk"
+        "reduce the risk",
+        "reduce costs",
+        "reduce stress",
+        "reduce by half"
       ],
       "answer": "reduce the risk",
       "stage": "T2",
@@ -334,6 +407,8 @@
       "prompt": "用法辨析：哪一项既表示“降低成本”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "reduce the risk",
+        "reduce stress",
+        "reduce by half",
         "reduce costs"
       ],
       "answer": "reduce costs",
@@ -425,9 +500,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "standard",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.1",
-  "contentVersion": "2026.08.19.4",
+  "contentVersion": "2026.08.19.5",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。"
 }
