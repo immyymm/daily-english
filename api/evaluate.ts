@@ -388,7 +388,7 @@ async function getDurableStatus(request: IncomingMessage, response: Response, or
   send(response, 200, {
     requestId: data.request_id,
     status: data.status,
-    result: parsedStoredResult.success ? sanitizeEvaluationResult(parsedStoredResult.data) : null,
+    result: parsedStoredResult.success ? sanitizeEvaluationResult(parsedStoredResult.data as EvaluationResult) : null,
     model: data.model,
     errorMessage: data.error_message,
     retryCount: data.retry_count,
@@ -477,7 +477,7 @@ export default async function handler(request: RequestWithBody, response: Respon
           requestId: input.requestId,
           status: 'complete',
           model: existing.model,
-          result: parsedExistingResult.success ? sanitizeEvaluationResult(parsedExistingResult.data) : null
+          result: parsedExistingResult.success ? sanitizeEvaluationResult(parsedExistingResult.data as EvaluationResult) : null
         }, origin);
         return;
       }
