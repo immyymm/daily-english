@@ -13,6 +13,8 @@ import type {
   DailyRecommendation,
   MasteryDimension,
   QuestionType,
+  ReviewSessionFeedback,
+  ReviewSessionProgress,
   ReviewStage
 } from '../types';
 
@@ -328,6 +330,60 @@ export async function syncDetailedRecords(
     const { error } = await client.from('daily_english_mastery').upsert(batch, { onConflict: 'user_id,card_id' });
     if (error) syncWriteError('掌握状态', error);
   }
+
+  await syncReviewSessions(client, userId, snapshot.reviewSessions ?? [], deviceId);
+}
+
+export async function syncReviewSessions(
+  client: SupabaseClient,
+  userId: string,
+  sessions: ReviewSessionProgress[],
+  deviceId?: string
+) {
+  if (!sessions.length) return;
+  const rows = sessions.map((session) => ({
+    user_id: userId,
+    session_id: session.id,
+    session_date: session.date,
+    status: session.status,
+    initial_card_ids: session.initialCardIds,
+    queue_card_ids: session.queueCardIds,
+    batch_total: session.batchTotal,
+    current_card_id: session.currentCardId ?? null,
+    stage: session.stage ?? null,
+    question_ids: session.questionIds,
+    question_index: session.questionIndex,
+    answer: session.answer,
+    feedback: jsonObjectOrNull(session.feedback),
+    attempts: session.attempts,
+    shown_at: isoTimestamp(session.shownAt, session.updatedAt),
+    speech_latency: session.speechLatency ?? null,
+    attempt_session_id: session.attemptSessionId,
+    client_updated_at: isoTimestamp(session.updatedAt, session.createdAt),
+    created_at: isoTimestamp(session.createdAt, session.updatedAt),
+    device_id: deviceId ?? null
+  }));
+
+  for (const batch of chunks(rows)) {
+    const { data: remoteRows, error: remoteError } = await client
+      .from('daily_english_review_sessions')
+      .select('session_id,client_updated_at')
+      .eq('user_id', userId)
+      .in('session_id', batch.map((row) => row.session_id));
+    if (remoteError) syncWriteError('复习进度', remoteError);
+    const remoteUpdatedAt = new Map((remoteRows ?? []).map((row) => [
+      String(row.session_id),
+      new Date(String(row.client_updated_at)).getTime() || 0
+    ]));
+    const nonStaleRows = batch.filter((row) => (
+      new Date(row.client_updated_at).getTime() >= (remoteUpdatedAt.get(row.session_id) ?? 0)
+    ));
+    if (!nonStaleRows.length) continue;
+    const { error } = await client.from('daily_english_review_sessions').upsert(nonStaleRows, {
+      onConflict: 'user_id,session_id'
+    });
+    if (error) syncWriteError('复习进度', error);
+  }
 }
 
 function rowToAttempt(row: Record<string, unknown>): Attempt {
@@ -409,6 +465,39 @@ function rowToProgress(row: Record<string, unknown>): CardProgress {
   };
 }
 
+function rowToReviewSession(row: Record<string, unknown>): ReviewSessionProgress {
+  const rawStatus = String(row.status ?? 'active');
+  const rawStage = row.stage ? String(row.stage) : undefined;
+  const rawFeedback = jsonObjectOrNull(row.feedback) as ReviewSessionFeedback | null;
+  const rawAttempts = Array.isArray(row.attempts)
+    ? row.attempts.filter((item): item is Attempt => Boolean(item && typeof item === 'object' && !Array.isArray(item)))
+    : [];
+  const createdAt = isoTimestamp(row.created_at, new Date().toISOString());
+  const updatedAt = isoTimestamp(row.client_updated_at ?? row.updated_at, createdAt);
+  return {
+    id: String(row.session_id),
+    date: String(row.session_date),
+    status: rawStatus === 'completed' ? 'completed' : 'active',
+    initialCardIds: stringArray(row.initial_card_ids),
+    queueCardIds: stringArray(row.queue_card_ids),
+    batchTotal: boundedInteger(row.batch_total, 1, 100, 1),
+    currentCardId: row.current_card_id ? String(row.current_card_id) : undefined,
+    stage: rawStage && reviewStageSet.has(rawStage) ? rawStage as ReviewStage : undefined,
+    questionIds: stringArray(row.question_ids),
+    questionIndex: boundedInteger(row.question_index, 0, 100, 0),
+    answer: String(row.answer ?? ''),
+    feedback: rawFeedback ?? undefined,
+    attempts: rawAttempts,
+    shownAt: isoTimestamp(row.shown_at, updatedAt),
+    speechLatency: row.speech_latency === null || row.speech_latency === undefined
+      ? undefined
+      : boundedInteger(row.speech_latency, 0, 2_147_483_647, 0),
+    attemptSessionId: String(row.attempt_session_id ?? row.session_id),
+    createdAt,
+    updatedAt
+  };
+}
+
 function rowToRecommendation(row: Record<string, unknown>): DailyRecommendation {
   const rawPrescriptions = row.card_prescriptions && typeof row.card_prescriptions === 'object'
     ? row.card_prescriptions as Record<string, Record<string, unknown>>
@@ -480,17 +569,19 @@ function rowToRecommendation(row: Record<string, unknown>): DailyRecommendation 
 }
 
 export async function hydrateDetailedRecords(client: SupabaseClient, userId: string) {
-  const [masteryRows, attemptRows, evaluationRows, recommendationRows] = await Promise.all([
+  const [masteryRows, attemptRows, evaluationRows, recommendationRows, reviewSessionRows] = await Promise.all([
     fetchAll(client, 'daily_english_mastery', userId),
     fetchAll(client, 'daily_english_attempts', userId),
     fetchAll(client, 'daily_english_ai_evaluations', userId),
-    fetchAll(client, 'daily_english_daily_plans', userId)
+    fetchAll(client, 'daily_english_daily_plans', userId),
+    fetchAll(client, 'daily_english_review_sessions', userId)
   ]);
   const remoteProgress = masteryRows.map(rowToProgress);
   const remoteAttempts = attemptRows.map(rowToAttempt);
   const existingProgress = new Map((await db.progress.toArray()).map((item) => [item.cardId, item]));
   const existingAttempts = await db.attempts.toArray();
   const existingEvaluations = new Map((await db.aiEvaluations.toArray()).map((item) => [item.requestId, item]));
+  const existingReviewSessions = new Map((await db.reviewSessions.toArray()).map((item) => [item.id, item]));
   const legacyInvalidAttemptIds = [...new Set([
     ...existingAttempts.filter(isLegacyInvalidClozeAttempt).map((item) => item.id),
     ...remoteAttempts.filter(isLegacyInvalidClozeAttempt).map((item) => item.id)
@@ -519,13 +610,22 @@ export async function hydrateDetailedRecords(client: SupabaseClient, userId: str
       : local;
   });
 
-  await db.transaction('rw', db.progress, db.attempts, db.aiEvaluations, db.dailyRecommendations, async () => {
+  const mergedReviewSessions = new Map(existingReviewSessions);
+  reviewSessionRows.map(rowToReviewSession).forEach((remote) => {
+    const local = mergedReviewSessions.get(remote.id);
+    if (!local || new Date(remote.updatedAt).getTime() >= new Date(local.updatedAt).getTime()) {
+      mergedReviewSessions.set(remote.id, remote);
+    }
+  });
+
+  await db.transaction('rw', db.progress, db.attempts, db.aiEvaluations, db.dailyRecommendations, db.reviewSessions, async () => {
     if (legacyInvalidAttemptIds.length) await db.attempts.bulkDelete(legacyInvalidAttemptIds);
     if (mergedProgress.length) await db.progress.bulkPut(mergedProgress);
     const validRemoteAttempts = remoteAttempts.filter((attempt) => !isLegacyInvalidClozeAttempt(attempt));
     if (validRemoteAttempts.length) await db.attempts.bulkPut(validRemoteAttempts);
     if (mergedEvaluations.length) await db.aiEvaluations.bulkPut(mergedEvaluations);
     if (recommendationRows.length) await db.dailyRecommendations.bulkPut(recommendationRows.map(rowToRecommendation));
+    if (mergedReviewSessions.size) await db.reviewSessions.bulkPut([...mergedReviewSessions.values()]);
   });
 }
 
@@ -534,6 +634,7 @@ export interface CloudRecordCounts {
   attempts: number;
   mastery: number;
   evaluations: number;
+  reviewSessions: number;
 }
 
 export async function countCloudRecords(client: SupabaseClient, userId: string): Promise<CloudRecordCounts> {
@@ -542,11 +643,12 @@ export async function countCloudRecords(client: SupabaseClient, userId: string):
     if (error) throw error;
     return value ?? 0;
   };
-  const [snapshots, attempts, mastery, evaluations] = await Promise.all([
+  const [snapshots, attempts, mastery, evaluations, reviewSessions] = await Promise.all([
     count('daily_english_snapshots'),
     count('daily_english_attempts'),
     count('daily_english_mastery'),
-    count('daily_english_ai_evaluations')
+    count('daily_english_ai_evaluations'),
+    count('daily_english_review_sessions')
   ]);
-  return { snapshots, attempts, mastery, evaluations };
+  return { snapshots, attempts, mastery, evaluations, reviewSessions };
 }

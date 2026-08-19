@@ -1,14 +1,19 @@
 import type { Session } from '@supabase/supabase-js';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { exportSnapshot, getSettings, importSnapshot } from '../storage/db';
-import { countCloudRecords, hydrateDetailedRecords, syncDetailedRecords, type CloudRecordCounts } from '../services/cloudRecords';
+import { db, exportSnapshot, getSettings, importSnapshot } from '../storage/db';
+import { countCloudRecords, hydrateDetailedRecords, syncDetailedRecords, syncReviewSessions, type CloudRecordCounts } from '../services/cloudRecords';
 import { cloudSyncConfigured, getSupabase } from '../services/supabase';
 import type { AIEvaluation, AppSnapshot, CardProgress, DailyPlanRecord } from '../types';
 
 export const LOCAL_DATA_CHANGED_EVENT = 'daily-english:local-data-changed';
+export const REVIEW_PROGRESS_CHANGED_EVENT = 'daily-english:review-progress-changed';
 
 export function notifyLocalDataChanged() {
   window.dispatchEvent(new Event(LOCAL_DATA_CHANGED_EVENT));
+}
+
+export function notifyReviewProgressChanged(sessionId: string) {
+  window.dispatchEvent(new CustomEvent<string>(REVIEW_PROGRESS_CHANGED_EVENT, { detail: sessionId }));
 }
 
 type SyncState = 'disabled' | 'signed-out' | 'connecting' | 'synced' | 'error';
@@ -69,6 +74,13 @@ function chooseRecommendation(local: AppSnapshot['dailyRecommendations'][number]
   return timestamp(remote.generatedAt) >= timestamp(local.generatedAt) ? remote : local;
 }
 
+function chooseReviewSession(
+  local: NonNullable<AppSnapshot['reviewSessions']>[number],
+  remote: NonNullable<AppSnapshot['reviewSessions']>[number]
+) {
+  return timestamp(remote.updatedAt) >= timestamp(local.updatedAt) ? remote : local;
+}
+
 export function mergeSnapshots(local: AppSnapshot, remote: AppSnapshot): AppSnapshot {
   const localNewer = timestamp(local.exportedAt) >= timestamp(remote.exportedAt);
   const newerSettings = localNewer ? local.settings : remote.settings;
@@ -92,8 +104,14 @@ export function mergeSnapshots(local: AppSnapshot, remote: AppSnapshot): AppSnap
       (item) => item.date,
       chooseRecommendation
     ),
+    reviewSessions: mergeByKey(
+      local.reviewSessions ?? [],
+      remote.reviewSessions ?? [],
+      (item) => item.id,
+      chooseReviewSession
+    ),
     exportedAt: new Date(Math.max(timestamp(local.exportedAt), timestamp(remote.exportedAt))).toISOString(),
-    schemaVersion: 2
+    schemaVersion: 3
   };
 }
 
@@ -108,6 +126,8 @@ export function useCloudSync(refresh: () => Promise<void>, hasPendingEvaluations
   const syncingRef = useRef(false);
   const queuedPushRef = useRef(false);
   const timerRef = useRef<number | undefined>(undefined);
+  const reviewTimerRef = useRef<number | undefined>(undefined);
+  const pendingReviewSessionIdsRef = useRef(new Set<string>());
 
   if (!deviceIdRef.current && typeof window !== 'undefined') deviceIdRef.current = getDeviceId();
 
@@ -289,7 +309,7 @@ export function useCloudSync(refresh: () => Promise<void>, hasPendingEvaluations
         }, 250);
       };
       let channel = client.channel('daily-english-details-' + session.user.id);
-      for (const table of ['daily_english_mastery', 'daily_english_attempts', 'daily_english_ai_evaluations', 'daily_english_daily_plans']) {
+      for (const table of ['daily_english_mastery', 'daily_english_attempts', 'daily_english_ai_evaluations', 'daily_english_daily_plans', 'daily_english_review_sessions']) {
         channel = channel.on('postgres_changes', {
           event: '*',
           schema: 'public',
@@ -316,6 +336,42 @@ export function useCloudSync(refresh: () => Promise<void>, hasPendingEvaluations
       cleanup?.();
     };
   }, [refresh, session]);
+
+  useEffect(() => {
+    if (!session) return;
+    const flushReviewProgress = async () => {
+      const ids = [...pendingReviewSessionIdsRef.current];
+      pendingReviewSessionIdsRef.current.clear();
+      if (!ids.length) return;
+      const client = await getSupabase();
+      if (!client) return;
+      const sessions = (await db.reviewSessions.bulkGet(ids))
+        .filter((item): item is NonNullable<typeof item> => Boolean(item));
+      if (!sessions.length) return;
+      try {
+        await syncReviewSessions(client, session.user.id, sessions, deviceIdRef.current);
+        setLastSyncedAt(new Date().toISOString());
+        setState('synced');
+        setMessage('复习进度已实时保存');
+      } catch (error) {
+        setState('error');
+        setMessage(error instanceof Error ? error.message : '复习进度云端保存失败，本机记录仍然安全');
+      }
+    };
+    const handleReviewProgress = (event: Event) => {
+      const sessionId = (event as CustomEvent<string>).detail;
+      if (!sessionId) return;
+      pendingReviewSessionIdsRef.current.add(sessionId);
+      window.clearTimeout(reviewTimerRef.current);
+      reviewTimerRef.current = window.setTimeout(() => void flushReviewProgress(), 350);
+    };
+    window.addEventListener(REVIEW_PROGRESS_CHANGED_EVENT, handleReviewProgress);
+    return () => {
+      window.removeEventListener(REVIEW_PROGRESS_CHANGED_EVENT, handleReviewProgress);
+      window.clearTimeout(reviewTimerRef.current);
+      if (pendingReviewSessionIdsRef.current.size) void flushReviewProgress();
+    };
+  }, [session]);
 
   useEffect(() => {
     if (!session) return;

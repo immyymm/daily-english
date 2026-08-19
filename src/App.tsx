@@ -39,7 +39,7 @@ import { masteryDimensionLabels } from './learning/mastery';
 import { studyDaySince, toLocalDateKey } from './learning/reviewEngine';
 import { evaluateAnswer } from './services/ai';
 import { clearLearningData, exportSnapshot, importSnapshot } from './storage/db';
-import type { AIEvaluation, AppSnapshot, Attempt, CardProgress, DailyRecommendation, MasteryStatus, TabId, WordCard } from './types';
+import type { AIEvaluation, AppSnapshot, Attempt, CardProgress, DailyRecommendation, MasteryStatus, ReviewSessionProgress, TabId, WordCard } from './types';
 
 interface InstallPromptEvent extends Event {
   prompt: () => Promise<void>;
@@ -57,6 +57,7 @@ function App() {
   const [masteryCard, setMasteryCard] = useState<WordCard>();
   const [reviewQueue, setReviewQueue] = useState<WordCard[]>([]);
   const [reviewBatchTotal, setReviewBatchTotal] = useState(0);
+  const [reviewSession, setReviewSession] = useState<ReviewSessionProgress>();
   const [showConsent, setShowConsent] = useState(false);
   const [showWeekly, setShowWeekly] = useState(false);
   const [showInstall, setShowInstall] = useState(false);
@@ -116,13 +117,25 @@ function App() {
     setToast('AI 辅助点评已开启，请再次提交刚才的答案。');
   };
 
-  const startReview = () => {
+  const startReview = async () => {
     if (!dueCards.length) {
       setToast('现在没有到期复习，先去学习今日新词吧。');
       return;
     }
-    setReviewBatchTotal(dueCards.length);
-    setReviewQueue([...dueCards]);
+    try {
+      const result = await data.beginReviewSession(dueCards.map((card) => card.id));
+      const queue = result.session.queueCardIds.map((cardId) => cardMap.get(cardId)).filter(Boolean) as WordCard[];
+      if (!queue.length) {
+        setToast('今天的复习已完成。');
+        return;
+      }
+      setReviewSession(result.session);
+      setReviewBatchTotal(result.session.batchTotal);
+      setReviewQueue(queue);
+      if (result.resumed) setToast(`已恢复上次进度，从 ${queue[0].word} 继续。`);
+    } catch (error) {
+      setToast(error instanceof Error ? error.message : '复习进度读取失败，请稍后重试。');
+    }
   };
 
   const completeReviewWord = async (cardId: string, attempts: Attempt[], evaluations: AIEvaluation[]) => {
@@ -130,6 +143,10 @@ function App() {
     const remaining = reviewQueue[0]?.id === cardId
       ? reviewQueue.slice(1)
       : reviewQueue.filter((card) => card.id !== cardId);
+    if (reviewSession) {
+      const nextSession = await data.advanceReviewSession(reviewSession.id, cardId, remaining.map((card) => card.id));
+      setReviewSession(nextSession?.status === 'active' ? nextSession : undefined);
+    }
     setReviewQueue(remaining);
     if (remaining.length) {
       setToast(`已完成 ${cardMap.get(cardId)?.word ?? cardId}，继续复习剩余 ${remaining.length} 个词。`);
@@ -340,10 +357,17 @@ function App() {
         open={Boolean(reviewCard)}
         batchPosition={reviewBatchTotal ? reviewBatchTotal - reviewQueue.length + 1 : 1}
         batchTotal={reviewBatchTotal || 1}
+        savedSession={reviewSession}
         aiConsent={aiAllowed}
         onNeedConsent={requestAI}
-        onClose={() => { setReviewQueue([]); setReviewBatchTotal(0); }}
+        onClose={() => {
+          setReviewQueue([]);
+          setReviewBatchTotal(0);
+          setReviewSession(undefined);
+          setToast('复习进度已保存，下次会从这里继续。');
+        }}
         onComplete={completeReviewWord}
+        onSaveProgress={data.saveReviewSessionProgress}
         onRecordAttempt={data.saveSessionAttempt}
         onQueueEvaluation={data.saveAIEvaluation}
         onCompleteEvaluation={data.completeAIAttempt}

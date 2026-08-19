@@ -1,10 +1,10 @@
 import { ArrowRight, Brain, CheckCircle2, LoaderCircle, RotateCcw, Sparkles } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { dimensionForQuestionType } from '../learning/mastery';
 import { objectiveScore } from '../learning/reviewEngine';
 import { selectReviewQuestions } from '../learning/questionSelection';
 import { evaluateAnswer } from '../services/ai';
-import type { AIEvaluation, Attempt, CardProgress, CardQuestion, EvaluationResult, QuestionType, WordCard } from '../types';
+import type { AIEvaluation, Attempt, CardProgress, CardQuestion, EvaluationResult, QuestionType, ReviewSessionCardState, ReviewSessionFeedback, ReviewSessionProgress, WordCard } from '../types';
 import { LocalRecorder } from './LocalRecorder';
 import { EvaluationResultDetails } from './EvaluationResultDetails';
 import { ModalShell } from './ModalShell';
@@ -17,6 +17,8 @@ interface ReviewSessionModalProps {
   onNeedConsent: () => void;
   onClose: () => void;
   onComplete: (cardId: string, attempts: Attempt[], evaluations: AIEvaluation[]) => Promise<void>;
+  savedSession?: ReviewSessionProgress;
+  onSaveProgress: (sessionId: string, cardId: string, state: ReviewSessionCardState) => Promise<void>;
   onRecordAttempt: (attempt: Attempt) => Promise<void>;
   onQueueEvaluation: (evaluation: AIEvaluation) => Promise<void>;
   onCompleteEvaluation: (
@@ -51,6 +53,8 @@ export function ReviewSessionModal({
   onNeedConsent,
   onClose,
   onComplete,
+  savedSession,
+  onSaveProgress,
   onRecordAttempt,
   onQueueEvaluation,
   onCompleteEvaluation,
@@ -60,26 +64,59 @@ export function ReviewSessionModal({
   const [questions, setQuestions] = useState<CardQuestion[]>([]);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [answer, setAnswer] = useState('');
-  const [feedback, setFeedback] = useState<{ score?: number; correct?: boolean; result?: EvaluationResult; pending?: boolean; message?: string }>();
+  const [feedback, setFeedback] = useState<ReviewSessionFeedback>();
   const [submitting, setSubmitting] = useState(false);
   const [attempts, setAttempts] = useState<Attempt[]>([]);
   const [shownAt, setShownAt] = useState(Date.now());
   const [speechLatency, setSpeechLatency] = useState<number>();
   const [sessionId, setSessionId] = useState(id());
+  const [initialized, setInitialized] = useState(false);
 
   useEffect(() => {
     if (open) {
-      setQuestions(card && progress ? selectReviewQuestions(card, progress) : []);
-      setQuestionIndex(0);
-      setAnswer('');
-      setFeedback(undefined);
+      const selected = card && progress ? selectReviewQuestions(card, progress) : [];
+      const selectedIds = selected.map((question) => question.id);
+      const canResume = Boolean(
+        card
+        && savedSession?.status === 'active'
+        && savedSession.currentCardId === card.id
+        && savedSession.stage === progress?.stage
+        && savedSession.questionIds.length === selectedIds.length
+        && savedSession.questionIds.every((questionId, index) => questionId === selectedIds[index])
+      );
+      setInitialized(false);
+      setQuestions(selected);
+      setQuestionIndex(canResume ? Math.min(savedSession!.questionIndex, Math.max(0, selected.length - 1)) : 0);
+      setAnswer(canResume ? savedSession!.answer : '');
+      setFeedback(canResume ? savedSession!.feedback : undefined);
       setSubmitting(false);
-      setAttempts([]);
+      setAttempts(canResume ? savedSession!.attempts : []);
       setShownAt(Date.now());
-      setSpeechLatency(undefined);
-      setSessionId(id());
+      setSpeechLatency(canResume ? savedSession!.speechLatency : undefined);
+      setSessionId(savedSession && savedSession.currentCardId === card?.id ? savedSession.attemptSessionId : id());
+      setInitialized(true);
     }
   }, [open, card?.id]);
+
+  const persistProgress = useCallback(async () => {
+    if (!initialized || !card || !progress || !savedSession || savedSession.status !== 'active') return;
+    await onSaveProgress(savedSession.id, card.id, {
+      stage: progress.stage,
+      questionIds: questions.map((item) => item.id),
+      questionIndex,
+      answer,
+      feedback,
+      attempts,
+      shownAt: new Date(shownAt).toISOString(),
+      speechLatency,
+      attemptSessionId: sessionId
+    });
+  }, [answer, attempts, card, feedback, initialized, onSaveProgress, progress, questionIndex, questions, savedSession, sessionId, shownAt, speechLatency]);
+
+  useEffect(() => {
+    if (!initialized) return;
+    void persistProgress();
+  }, [initialized, persistProgress]);
 
   if (!card || !progress || !questions.length) return null;
   const question = questions[questionIndex];
@@ -193,6 +230,7 @@ export function ReviewSessionModal({
   };
 
   const next = async () => {
+    await persistProgress();
     if (questionIndex < questions.length - 1) {
       setQuestionIndex((current) => current + 1);
       setAnswer('');
@@ -202,6 +240,10 @@ export function ReviewSessionModal({
       return;
     }
     await onComplete(card.id, attempts, []);
+  };
+
+  const closeAndSave = () => {
+    void persistProgress().finally(onClose);
   };
 
   const retry = () => {
@@ -219,7 +261,7 @@ export function ReviewSessionModal({
       open={open}
       title={card.word}
       eyebrow={`本次第 ${batchPosition} / ${batchTotal} 词 · ${progress.stage} · ${questionIndex + 1} / ${questions.length} 题`}
-      onClose={onClose}
+      onClose={closeAndSave}
     >
       <div className="quiz-progress"><span style={{ width: ((questionIndex + 1) / questions.length * 100) + '%' }} /></div>
       <section className="quiz-prompt">

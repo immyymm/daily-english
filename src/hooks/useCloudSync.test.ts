@@ -72,4 +72,41 @@ describe('mergeSnapshots', () => {
     expect(merged.aiEvaluations[0].rubricVersion).toBe('new');
     expect(merged.aiEvaluations[0].errorMessage).toBe('fresh');
   });
+
+  it('keeps the latest resumable review position and does not resurrect a completed session', () => {
+    const local = snapshot('local');
+    const remote = snapshot('remote');
+    local.reviewSessions = [{
+      id: '2026-08-18-session',
+      date: '2026-08-18',
+      status: 'active',
+      initialCardIds: ['improve-v', 'notice-v'],
+      queueCardIds: ['improve-v', 'notice-v'],
+      batchTotal: 2,
+      currentCardId: 'improve-v',
+      stage: 'T1',
+      questionIds: ['improve-question-T1-0'],
+      questionIndex: 0,
+      answer: 'draft',
+      attempts: [],
+      shownAt: '2026-08-18T02:00:00.000Z',
+      attemptSessionId: 'attempt-session',
+      createdAt: '2026-08-18T02:00:00.000Z',
+      updatedAt: '2026-08-18T02:01:00.000Z'
+    }];
+    remote.reviewSessions = [{
+      ...local.reviewSessions[0],
+      status: 'completed',
+      queueCardIds: [],
+      currentCardId: undefined,
+      questionIds: [],
+      answer: '',
+      updatedAt: '2026-08-18T02:05:00.000Z'
+    }];
+
+    const merged = mergeSnapshots(local, remote);
+    expect(merged.schemaVersion).toBe(3);
+    expect(merged.reviewSessions?.[0].status).toBe('completed');
+    expect(merged.reviewSessions?.[0].queueCardIds).toEqual([]);
+  });
 });

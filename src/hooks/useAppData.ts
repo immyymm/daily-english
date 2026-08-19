@@ -4,7 +4,7 @@ import { calculateMasteryProfile, dimensionsFromEvaluation } from '../learning/m
 import { applyLateEvaluation, applyReviewScore, isPendingReview, studyDaySince, toLocalDateKey } from '../learning/reviewEngine';
 import { evaluationSchema } from '../schemas/evaluation';
 import { finalizeEvaluationResult, normalizeEvaluationResultForHistory } from '../schemas/evaluationConstraints';
-import { notifyLocalDataChanged } from './useCloudSync';
+import { notifyLocalDataChanged, notifyReviewProgressChanged } from './useCloudSync';
 import { db, getSettings, touchStudyStreak } from '../storage/db';
 import type {
   AIEvaluation,
@@ -14,8 +14,14 @@ import type {
   DailyPlanRecord,
   DailyRecommendation,
   EvaluationResult,
+  ReviewSessionCardState,
+  ReviewSessionProgress,
   WordCard
 } from '../types';
+
+const createId = () => typeof crypto.randomUUID === 'function'
+  ? crypto.randomUUID()
+  : Date.now().toString(36) + Math.random().toString(36).slice(2);
 
 interface AppDataState {
   loading: boolean;
@@ -250,6 +256,158 @@ export function useAppData() {
     await refresh();
   }, [refresh, state.settings]);
 
+  const beginReviewSession = useCallback(async (dueCardIds: string[]) => {
+    const date = toLocalDateKey();
+    const uniqueDueCardIds = [...new Set(dueCardIds)];
+    const dueSet = new Set(uniqueDueCardIds);
+    const todaySessions = await db.reviewSessions.where('date').equals(date).toArray();
+    const activeSessions = todaySessions
+      .filter((session) => session.status === 'active')
+      .sort((a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime());
+    const active = activeSessions[0];
+    const now = new Date().toISOString();
+
+    if (activeSessions.length > 1) {
+      const obsoleteSessions = activeSessions.slice(1).map((session): ReviewSessionProgress => ({
+        ...session,
+        status: 'completed',
+        queueCardIds: [],
+        currentCardId: undefined,
+        questionIds: [],
+        questionIndex: 0,
+        answer: '',
+        feedback: undefined,
+        attempts: [],
+        updatedAt: now
+      }));
+      await db.reviewSessions.bulkPut(obsoleteSessions);
+      obsoleteSessions.forEach((session) => notifyReviewProgressChanged(session.id));
+    }
+
+    if (active) {
+      const remaining = active.queueCardIds.filter((cardId) => dueSet.has(cardId));
+      if (remaining.length) {
+        const currentCardId = remaining.includes(active.currentCardId ?? '')
+          ? active.currentCardId
+          : remaining[0];
+        const resumed: ReviewSessionProgress = currentCardId === active.currentCardId
+          ? { ...active, queueCardIds: remaining, updatedAt: now }
+          : {
+            ...active,
+            queueCardIds: remaining,
+            currentCardId,
+            stage: undefined,
+            questionIds: [],
+            questionIndex: 0,
+            answer: '',
+            feedback: undefined,
+            attempts: [],
+            shownAt: now,
+            speechLatency: undefined,
+            attemptSessionId: createId(),
+            updatedAt: now
+          };
+        await db.reviewSessions.put(resumed);
+        notifyReviewProgressChanged(resumed.id);
+        return { session: resumed, resumed: true };
+      }
+      const completed: ReviewSessionProgress = {
+        ...active,
+        status: 'completed',
+        queueCardIds: [],
+        currentCardId: undefined,
+        questionIds: [],
+        questionIndex: 0,
+        answer: '',
+        feedback: undefined,
+        attempts: [],
+        updatedAt: now
+      };
+      await db.reviewSessions.put(completed);
+      notifyReviewProgressChanged(completed.id);
+    }
+
+    const session: ReviewSessionProgress = {
+      id: `${date}-${createId()}`,
+      date,
+      status: 'active',
+      initialCardIds: uniqueDueCardIds,
+      queueCardIds: uniqueDueCardIds,
+      batchTotal: uniqueDueCardIds.length,
+      currentCardId: uniqueDueCardIds[0],
+      questionIds: [],
+      questionIndex: 0,
+      answer: '',
+      attempts: [],
+      shownAt: now,
+      attemptSessionId: createId(),
+      createdAt: now,
+      updatedAt: now
+    };
+    await db.reviewSessions.put(session);
+    notifyReviewProgressChanged(session.id);
+    return { session, resumed: false };
+  }, []);
+
+  const saveReviewSessionProgress = useCallback(async (
+    sessionId: string,
+    cardId: string,
+    cardState: ReviewSessionCardState
+  ) => {
+    let saved: ReviewSessionProgress | undefined;
+    await db.transaction('rw', db.reviewSessions, async () => {
+      const current = await db.reviewSessions.get(sessionId);
+      if (!current || current.status !== 'active' || current.currentCardId !== cardId) return;
+      saved = { ...current, ...cardState, updatedAt: new Date().toISOString() };
+      await db.reviewSessions.put(saved);
+    });
+    if (saved) notifyReviewProgressChanged(sessionId);
+  }, []);
+
+  const advanceReviewSession = useCallback(async (
+    sessionId: string,
+    completedCardId: string,
+    remainingCardIds: string[]
+  ) => {
+    const current = await db.reviewSessions.get(sessionId);
+    if (!current || current.status !== 'active' || current.currentCardId !== completedCardId) return current;
+    const now = new Date().toISOString();
+    const next: ReviewSessionProgress = remainingCardIds.length
+      ? {
+        ...current,
+        queueCardIds: remainingCardIds,
+        currentCardId: remainingCardIds[0],
+        stage: undefined,
+        questionIds: [],
+        questionIndex: 0,
+        answer: '',
+        feedback: undefined,
+        attempts: [],
+        shownAt: now,
+        speechLatency: undefined,
+        attemptSessionId: createId(),
+        updatedAt: now
+      }
+      : {
+        ...current,
+        status: 'completed',
+        queueCardIds: [],
+        currentCardId: undefined,
+        stage: undefined,
+        questionIds: [],
+        questionIndex: 0,
+        answer: '',
+        feedback: undefined,
+        attempts: [],
+        shownAt: now,
+        speechLatency: undefined,
+        updatedAt: now
+      };
+    await db.reviewSessions.put(next);
+    notifyReviewProgressChanged(next.id);
+    return next;
+  }, []);
+
   const recordWeeklyResult = useCallback(async (attempt: Attempt, evaluation: AIEvaluation) => {
     await db.transaction('rw', db.attempts, db.aiEvaluations, async () => {
       await db.attempts.put(attempt);
@@ -315,6 +473,9 @@ export function useAppData() {
     recordAttempt,
     saveSessionAttempt,
     recordReviewSession,
+    beginReviewSession,
+    saveReviewSessionProgress,
+    advanceReviewSession,
     recordWeeklyResult,
     updateSettings,
     saveAIEvaluation,

@@ -276,6 +276,48 @@ export interface AIEvaluation {
   tokenUsage?: Record<string, number>;
 }
 
+export interface ReviewSessionFeedback {
+  score?: number;
+  correct?: boolean;
+  result?: EvaluationResult;
+  pending?: boolean;
+  message?: string;
+}
+
+export interface ReviewSessionProgress {
+  id: string;
+  date: string;
+  status: 'active' | 'completed';
+  initialCardIds: string[];
+  queueCardIds: string[];
+  batchTotal: number;
+  currentCardId?: string;
+  stage?: ReviewStage;
+  questionIds: string[];
+  questionIndex: number;
+  answer: string;
+  feedback?: ReviewSessionFeedback;
+  attempts: Attempt[];
+  shownAt: string;
+  speechLatency?: number;
+  attemptSessionId: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export type ReviewSessionCardState = Pick<
+  ReviewSessionProgress,
+  | 'stage'
+  | 'questionIds'
+  | 'questionIndex'
+  | 'answer'
+  | 'feedback'
+  | 'attempts'
+  | 'shownAt'
+  | 'speechLatency'
+  | 'attemptSessionId'
+>;
+
 export interface EvaluationResult {
   overallScore: number;
   taskCompletionScore: number;
@@ -377,7 +419,8 @@ export interface AppSnapshot {
   aiEvaluations: AIEvaluation[];
   dailyPlans: DailyPlanRecord[];
   dailyRecommendations: DailyRecommendation[];
+  reviewSessions?: ReviewSessionProgress[];
   exportedAt: string;
-  schemaVersion: 1 | 2;
+  schemaVersion: 1 | 2 | 3;
 }
 

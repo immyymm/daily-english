@@ -1,5 +1,5 @@
 import Dexie, { type EntityTable } from 'dexie';
-import type { AIEvaluation, AppSettings, AppSnapshot, Attempt, CardProgress, DailyPlanRecord, DailyRecommendation } from '../types';
+import type { AIEvaluation, AppSettings, AppSnapshot, Attempt, CardProgress, DailyPlanRecord, DailyRecommendation, ReviewSessionProgress } from '../types';
 import { toLocalDateKey } from '../learning/reviewEngine';
 
 class DailyEnglishDatabase extends Dexie {
@@ -9,6 +9,7 @@ class DailyEnglishDatabase extends Dexie {
   attempts!: EntityTable<Attempt, 'id'>;
   aiEvaluations!: EntityTable<AIEvaluation, 'requestId'>;
   dailyRecommendations!: EntityTable<DailyRecommendation, 'date'>;
+  reviewSessions!: EntityTable<ReviewSessionProgress, 'id'>;
 
   constructor() {
     super('daily-english');
@@ -26,6 +27,15 @@ class DailyEnglishDatabase extends Dexie {
       attempts: 'id, cardId, createdAt, stage, questionType',
       aiEvaluations: 'requestId, cardId, createdAt, status',
       dailyRecommendations: 'date, generatedAt'
+    });
+    this.version(3).stores({
+      settings: 'id',
+      dailyPlans: 'date, studyDay',
+      progress: 'cardId, nextReviewAt, status, weak',
+      attempts: 'id, cardId, createdAt, stage, questionType',
+      aiEvaluations: 'requestId, cardId, createdAt, status',
+      dailyRecommendations: 'date, generatedAt',
+      reviewSessions: 'id, date, status, updatedAt, currentCardId'
     });
   }
 }
@@ -70,23 +80,25 @@ export async function exportSnapshot(): Promise<AppSnapshot> {
     aiEvaluations: await db.aiEvaluations.toArray(),
     dailyPlans: await db.dailyPlans.toArray(),
     dailyRecommendations: await db.dailyRecommendations.toArray(),
+    reviewSessions: await db.reviewSessions.toArray(),
     exportedAt: new Date().toISOString(),
-    schemaVersion: 2
+    schemaVersion: 3
   };
 }
 
 export async function importSnapshot(snapshot: AppSnapshot): Promise<void> {
-  if (![1, 2].includes(snapshot.schemaVersion) || !snapshot.settings || !Array.isArray(snapshot.progress)) {
+  if (![1, 2, 3].includes(snapshot.schemaVersion) || !snapshot.settings || !Array.isArray(snapshot.progress)) {
     throw new Error('备份文件格式不正确');
   }
-  await db.transaction('rw', [db.settings, db.progress, db.attempts, db.aiEvaluations, db.dailyPlans, db.dailyRecommendations], async () => {
+  await db.transaction('rw', [db.settings, db.progress, db.attempts, db.aiEvaluations, db.dailyPlans, db.dailyRecommendations, db.reviewSessions], async () => {
     await Promise.all([
       db.settings.clear(),
       db.progress.clear(),
       db.attempts.clear(),
       db.aiEvaluations.clear(),
       db.dailyPlans.clear(),
-      db.dailyRecommendations.clear()
+      db.dailyRecommendations.clear(),
+      db.reviewSessions.clear()
     ]);
     await db.settings.put(snapshot.settings);
     await db.progress.bulkPut(snapshot.progress);
@@ -94,6 +106,7 @@ export async function importSnapshot(snapshot: AppSnapshot): Promise<void> {
     await db.aiEvaluations.bulkPut(snapshot.aiEvaluations ?? []);
     await db.dailyPlans.bulkPut(snapshot.dailyPlans ?? []);
     await db.dailyRecommendations.bulkPut(snapshot.dailyRecommendations ?? []);
+    await db.reviewSessions.bulkPut(snapshot.reviewSessions ?? []);
   });
 }
 
