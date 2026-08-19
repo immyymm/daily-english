@@ -1,16 +1,24 @@
 import fs from 'node:fs/promises';
+import crypto from 'node:crypto';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const allCardsPath = path.join(root, 'public', 'data', 'all-cards.json');
 const manifestPath = path.join(root, 'public', 'data', 'manifest.json');
-const templatePath = path.join(root, 'content', 'templates', 'learning-template-2026.08.19.1.md');
+const templatePath = path.join(root, 'content', 'templates', 'learning-template-2026.08.19.2.md');
+const templateLockPath = path.join(root, 'content', 'templates', 'template-lock.json');
 const allCards = JSON.parse(await fs.readFile(allCardsPath, 'utf8'));
 const manifest = JSON.parse(await fs.readFile(manifestPath, 'utf8'));
 const template = await fs.readFile(templatePath, 'utf8');
+const templateLock = JSON.parse(await fs.readFile(templateLockPath, 'utf8'));
 const errors = [];
-const expectedTemplateVersion = 'learning-template-2026.08.19.1';
+const expectedTemplateVersion = 'learning-template-2026.08.19.2';
+const expectedLockVersion = '2026.08.19.1';
+const expectedSnapshotHashes = {
+  'canonical-template': '9A5AB81BC487F47015B7D3C74E732089481A14E49120C63FACEDA082AE67141A',
+  'canonical-example': 'DF9D024B49143DFDE1C53AE3C40EE77B86CDE5BC1A1A7CD3382980E260447CFD'
+};
 const requiredReviewedWords = new Set(['improve', 'notice', 'support', 'likely', 'manage', 'provide', 'understand', 'believe', 'create', 'include', 'work']);
 const forbiddenGeneratedCopy = [
   /The phrase [“\"].+[”\"] is useful in everyday English/i,
@@ -22,6 +30,61 @@ const forbiddenGeneratedCopy = [
   /真实表达延伸/,
   /主动输出提示/
 ];
+
+const sha256 = (content) => crypto.createHash('sha256').update(content).digest('hex').toUpperCase();
+const referenceShape = templateLock.referenceCard.recordedShape;
+const curatedCardMinimums = templateLock.curatedCardMinimums;
+const shapeFor = (card) => ({
+  meaningRows: card.meanings.length,
+  contextCategories: card.contextPhrases.length,
+  contextItems: card.contextPhrases.reduce((sum, group) => sum + group.items.length, 0),
+  fixedPhrases: card.fixedPhrases.length,
+  synonyms: card.synonyms.length,
+  antonyms: card.antonyms.length,
+  derivatives: card.derivatives.length,
+  confusables: card.confusables.length,
+  relatedCategories: card.relatedVocabulary.length,
+  relatedItems: card.relatedVocabulary.reduce((sum, group) => sum + group.items.length, 0),
+  highFrequencyExamples: card.examples.length
+});
+const meetsShape = (card, expected) => {
+  const actual = shapeFor(card);
+  return Object.entries(expected).every(([key, minimum]) => actual[key] >= minimum);
+};
+const matchesShape = (card, expected) => {
+  const actual = shapeFor(card);
+  return Object.entries(expected).every(([key, value]) => actual[key] === value);
+};
+const meetsCuratedBenchmark = (card) => meetsShape(card, curatedCardMinimums);
+
+if (templateLock.lockVersion !== expectedLockVersion || !templateLock.immutable || templateLock.sourceReferences?.length !== 2) {
+  errors.push('Canonical template and example lock is missing or mutable.');
+} else {
+  for (const reference of templateLock.sourceReferences) {
+    if (reference.snapshotSha256 !== expectedSnapshotHashes[reference.role]) {
+      errors.push(reference.role + ': lock manifest hash differs from the validator baseline; create a new explicit lock version.');
+    }
+    const snapshot = await fs.readFile(path.join(root, reference.snapshotPath));
+    if (sha256(snapshot) !== reference.snapshotSha256) {
+      errors.push(reference.role + ': locked snapshot hash changed; create a new explicit lock version instead of editing it in place.');
+    }
+  }
+}
+
+const lockedTemplate = await fs.readFile(path.join(root, 'content', 'templates', 'learning-template.locked.md'), 'utf8');
+const lockedExample = await fs.readFile(path.join(root, 'content', 'templates', 'template-test-work.locked.md'), 'utf8');
+const lockedHeadings = ['# 1. 核心记忆表', '# 2. 词性与释义', '# 3. 常用语境词组', '# 4. 固定搭配和短语', '# 5. 近义词', '# 6. 反义词', '# 7. 派生词', '# 8. 易混词', '# 9. 同类词汇分类', '# 10. 高频例句', '# 学习重点'];
+for (const source of [lockedTemplate, lockedExample]) {
+  let previous = -1;
+  for (const heading of lockedHeadings) {
+    const current = source.indexOf(heading);
+    if (current < 0 || current <= previous) errors.push('Locked template/example is missing or reorders section: ' + heading + '.');
+    previous = current;
+  }
+}
+if (!lockedExample.includes('# 模板格式测试：work') || !lockedTemplate.includes('全部使用表格整理')) {
+  errors.push('Locked template or work example no longer matches the user-provided baseline.');
+}
 
 if (allCards.cards.length !== 150) errors.push('Expected 150 cards.');
 if (manifest.dailyFiles.length !== 30) errors.push('Expected 30 daily files.');
@@ -36,19 +99,29 @@ for (const heading of templateHeadings) {
 }
 if (!template.includes(expectedTemplateVersion) || !template.includes('不得使用“这个短语很实用”')) errors.push('Canonical template version or anti-filler rule is missing.');
 
+const referenceCard = allCards.cards.find((card) => card.id === templateLock.referenceCard.cardId);
+if (!referenceCard || referenceCard.word !== templateLock.referenceCard.word || !matchesShape(referenceCard, referenceShape)) {
+  errors.push('The locked work reference card no longer exactly matches its recorded example shape.');
+}
+
 for (const card of allCards.cards) {
-  const required = ['id', 'word', 'phonetic', 'syllables', 'partOfSpeech', 'coreMemory', 'meanings', 'contextPhrases', 'fixedPhrases', 'synonyms', 'antonyms', 'derivatives', 'confusables', 'relatedVocabulary', 'examples', 'studyFocus', 'questions', 'templateVersion', 'contentVersion', 'reviewed'];
+  const required = ['id', 'word', 'phonetic', 'syllables', 'partOfSpeech', 'coreMemory', 'meanings', 'contextPhrases', 'fixedPhrases', 'synonyms', 'antonyms', 'derivatives', 'confusables', 'relatedVocabulary', 'examples', 'studyFocus', 'questions', 'detailLevel', 'templateVersion', 'contentVersion', 'reviewed'];
   for (const field of required) {
     if (card[field] === undefined || card[field] === null) {
       errors.push(card.id + ': missing ' + field);
     }
   }
   if (card.templateVersion !== expectedTemplateVersion) errors.push(card.id + ': wrong template version.');
-  if (requiredReviewedWords.has(card.word) && (!card.reviewed || card.detailLevel !== 'template-complete')) errors.push(card.id + ': required human-reviewed card is not template-complete.');
-  if (card.detailLevel !== 'template-complete') errors.push(card.id + ': every published card must be template-complete.');
+  if (requiredReviewedWords.has(card.word) && !card.reviewed) errors.push(card.id + ': required human-reviewed card is not reviewed.');
+  if (card.word === 'work' && card.detailLevel !== 'template-reference') errors.push(card.id + ': locked work card must be template-reference.');
+  if (card.word !== 'work' && card.reviewed && card.detailLevel !== 'template-curated') errors.push(card.id + ': reviewed card must be template-curated.');
+  if (!card.reviewed && card.detailLevel !== 'template-structured') errors.push(card.id + ': non-reviewed card must be labeled template-structured.');
+  if (card.detailLevel === 'template-reference' && (card.word !== 'work' || !matchesShape(card, referenceShape))) errors.push(card.id + ': reference label is reserved for the exact locked work example.');
+  if (card.detailLevel === 'template-curated' && !meetsCuratedBenchmark(card)) errors.push(card.id + ': human-curated label does not meet the curated richness benchmark.');
+  if (card.detailLevel === 'template-structured' && meetsCuratedBenchmark(card)) errors.push(card.id + ': card meets the curated benchmark and should be promoted explicitly.');
   if (forbiddenGeneratedCopy.some((pattern) => pattern.test(JSON.stringify(card)))) errors.push(card.id + ': forbidden meta-learning filler or mechanical expansion found.');
   if (card.tags.includes('人工精校') !== card.reviewed) errors.push(card.id + ': review tag does not match reviewed status.');
-  if (!card.reviewed && !card.tags.includes('模板详卡')) errors.push(card.id + ': detailed template card tag is missing.');
+  if (!card.reviewed && !card.tags.includes('模板结构版')) errors.push(card.id + ': template-structured card tag is missing.');
   if (card.meanings.length < 1) errors.push(card.id + ': expected at least one meaning.');
   if (card.partOfSpeech.includes('/') && card.meanings.length < 2) errors.push(card.id + ': multiple parts of speech need separate meanings.');
   if (!Array.isArray(card.cocaRanks) || card.cocaRanks.length < 1 || !card.cocaRankLabel) errors.push(card.id + ': missing exact COCA rank data.');
@@ -191,4 +264,7 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log('Content validation passed: all ' + allCards.cards.length + ' cards are template-complete (' + allCards.cards.filter((card) => card.reviewed).length + ' manually curated, ' + allCards.cards.filter((card) => !card.reviewed).length + ' template-detailed), 30 days, 5 unique cards per day.');
+const referenceCount = allCards.cards.filter((card) => card.detailLevel === 'template-reference').length;
+const curatedCount = allCards.cards.filter((card) => card.detailLevel === 'template-curated').length;
+const structuredCount = allCards.cards.filter((card) => card.detailLevel === 'template-structured').length;
+console.log('Content validation passed: all ' + allCards.cards.length + ' cards contain the ten required sections; ' + referenceCount + ' exactly matches the locked work reference, ' + curatedCount + ' are human-curated detailed, and ' + structuredCount + ' are explicitly labeled template-structured, 30 days, 5 unique cards per day.');

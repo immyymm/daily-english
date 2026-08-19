@@ -18,18 +18,40 @@ const progress: CardProgress = {
 };
 
 describe('review schedule', () => {
-  it('schedules T0 follow-up after 20 minutes', () => {
-    const now = new Date('2026-08-17T08:00:00.000Z');
-    expect(nextDueDate('T0', now, 100).getTime() - now.getTime()).toBe(20 * 60 * 1000);
+  it('schedules a failed T0 follow-up on the next local day', () => {
+    const now = new Date(2026, 7, 17, 10, 0, 0);
+    const due = nextDueDate('T0', now, 40);
+    expect(toLocalDateKey(due)).toBe('2026-08-18');
+    expect(due.getHours()).toBe(8);
   });
 
-  it('advances one stage after a passing score', () => {
-    const now = new Date('2026-08-17T08:00:00.000Z');
+  it('advances a passed T0 review to the next-day T1 checkpoint', () => {
+    const now = new Date(2026, 7, 18, 10, 0, 0);
     const next = applyReviewScore(progress, 88, now);
     expect(next.stage).toBe('T1');
     expect(next.correctStreak).toBe(1);
     expect(next.status).toBe('识别词汇');
-    expect(new Date(next.nextReviewAt).getTime() - now.getTime()).toBe(20 * 60 * 1000);
+    const due = new Date(next.nextReviewAt);
+    expect(toLocalDateKey(due)).toBe('2026-08-19');
+    expect(due.getHours()).toBe(8);
+  });
+
+  it('uses the next stage interval after every passing review', () => {
+    const now = new Date(2026, 7, 19, 10, 0, 0);
+    const next = applyReviewScore({ ...progress, stage: 'T1' }, 90, now);
+    expect(next.stage).toBe('T2');
+    const due = new Date(next.nextReviewAt);
+    expect(toLocalDateKey(due)).toBe('2026-08-22');
+    expect(due.getHours()).toBe(8);
+  });
+
+  it('does not shorten the next checkpoint after a weak word passes its higher threshold', () => {
+    const now = new Date(2026, 7, 19, 10, 0, 0);
+    const next = applyReviewScore({ ...progress, stage: 'T1', weak: true }, 82, now);
+    expect(next.stage).toBe('T2');
+    const due = new Date(next.nextReviewAt);
+    expect(toLocalDateKey(due)).toBe('2026-08-22');
+    expect(due.getHours()).toBe(8);
   });
 
   it('does not erase the current stage after a failure', () => {
@@ -40,12 +62,12 @@ describe('review schedule', () => {
     expect(next.status).toBe('薄弱词');
   });
 
-  it('keeps a planned preventive review until it is completed in the current batch', () => {
+  it('does not pull a planned preventive review ahead of its due time', () => {
     expect(isPendingReview({
       ...progress,
       nextReviewAt: '2026-08-20T08:00:00.000Z',
       lastReviewedAt: '2026-08-17T08:00:00.000Z'
-    }, true, '2026-08-18T05:00:00.000Z', new Date('2026-08-18T10:00:00.000Z'))).toBe(true);
+    }, true, '2026-08-18T05:00:00.000Z', new Date('2026-08-18T10:00:00.000Z'))).toBe(false);
   });
 
   it('removes a planned word after it was reviewed in this batch and rescheduled', () => {
@@ -54,6 +76,33 @@ describe('review schedule', () => {
       nextReviewAt: '2026-08-19T08:00:00.000Z',
       lastReviewedAt: '2026-08-18T09:00:00.000Z'
     }, true, '2026-08-18T05:00:00.000Z', new Date('2026-08-18T10:00:00.000Z'))).toBe(false);
+  });
+
+  it('does not re-add a successfully reviewed word when the daily plan refreshes later that day', () => {
+    expect(isPendingReview({
+      ...progress,
+      nextReviewAt: '2026-08-18T09:20:00.000Z',
+      lastScore: 90,
+      lastReviewedAt: '2026-08-18T09:00:00.000Z'
+    }, true, '2026-08-18T09:30:00.000Z', new Date('2026-08-18T10:00:00.000Z'))).toBe(false);
+  });
+
+  it('does not re-add a failed word later on the same day', () => {
+    expect(isPendingReview({
+      ...progress,
+      nextReviewAt: '2026-08-18T09:20:00.000Z',
+      lastScore: 40,
+      lastReviewedAt: '2026-08-18T09:00:00.000Z'
+    }, true, '2026-08-18T09:30:00.000Z', new Date('2026-08-18T09:21:00.000Z'))).toBe(false);
+  });
+
+  it('allows a failed word back into the queue on the next local day', () => {
+    expect(isPendingReview({
+      ...progress,
+      nextReviewAt: '2026-08-18T09:20:00.000Z',
+      lastScore: 40,
+      lastReviewedAt: '2026-08-18T09:00:00.000Z'
+    }, true, '2026-08-18T09:30:00.000Z', new Date('2026-08-19T08:00:00.000Z'))).toBe(true);
   });
 
   it('always includes a currently due word even when it was appended after the frozen plan', () => {

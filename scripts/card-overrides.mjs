@@ -1,4 +1,4 @@
-// Human-curated, template-complete cards for the launch lesson and the user's reference word.
+// Human-curated detailed cards for the launch lesson and the locked work reference word.
 // Compact tuples are normalized by build-content.mjs; no external generation API is used.
 export const cardOverrides = {
   improve: {

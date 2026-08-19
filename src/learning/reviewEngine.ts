@@ -17,7 +17,7 @@ export function studyDaySince(firstUseDate: string, now = new Date()): number {
   return Math.max(1, Math.floor((current.getTime() - start.getTime()) / DAY_MS) + 1);
 }
 
-export function nextDueDate(stage: ReviewStage, from: Date, score: number, weak = false): Date {
+export function nextDueDate(stage: ReviewStage, from: Date, score: number): Date {
   const due = new Date(from);
   const dayIntervals: Record<ReviewStage, number> = {
     T0: 0,
@@ -30,18 +30,13 @@ export function nextDueDate(stage: ReviewStage, from: Date, score: number, weak 
     T7: 90
   };
 
-  if (stage === 'T0') {
-    due.setTime(from.getTime() + 20 * 60 * 1000);
-    return due;
-  }
-
   let days = dayIntervals[stage];
-  if (score < 60) {
-    due.setTime(from.getTime() + 20 * 60 * 1000);
+  if (stage === 'T0' || score < 60) {
+    due.setDate(due.getDate() + 1);
+    due.setHours(8, 0, 0, 0);
     return due;
   }
   if (score < 75) days = Math.max(1, Math.ceil(days / 2));
-  if (weak) days = Math.max(1, Math.min(7, Math.ceil(days / 2)));
   due.setDate(due.getDate() + days);
   due.setHours(8, 0, 0, 0);
   return due;
@@ -73,25 +68,31 @@ export function applyReviewScore(progress: CardProgress, score: number, now = ne
   const recovered = correctStreak >= 2 && !hasMeasuredWeakness;
   const weak = wrongCount >= 3 || (wasWeak && !recovered) || hasMeasuredWeakness;
   const temporary = { ...progress, wrongCount, correctStreak, weak };
+  // A passed review advances to the next forgetting-curve checkpoint, so its
+  // interval must come from that next stage. Using the completed stage here
+  // incorrectly scheduled an extra same-day T0 round after a successful test.
+  const dueStage = passed ? nextStage : progress.stage;
 
   return {
     ...temporary,
     stage: nextStage,
-    nextReviewAt: nextDueDate(progress.stage, now, score, weak).toISOString(),
+    nextReviewAt: nextDueDate(dueStage, now, score).toISOString(),
     lastReviewedAt: now.toISOString(),
     lastScore: score,
     unstableCount: progress.unstableCount + (unstable ? 1 : 0),
     status: statusFor(temporary, score),
-    passedT7: progress.passedT7 || (progress.stage === 'T4' && passed),
-    passedT30: progress.passedT30 || (progress.stage === 'T6' && passed),
-    passedT60: progress.passedT60 || (progress.stage === 'T7' && passed),
+    passedT7: progress.passedT7 || (progress.stage === 'T3' && passed),
+    passedT30: progress.passedT30 || (progress.stage === 'T5' && passed),
+    passedT60: progress.passedT60 || (progress.stage === 'T6' && passed),
     targetQuestionCount: weak ? Math.max(progress.targetQuestionCount ?? 0, 12) : Math.max(progress.targetQuestionCount ?? 0, 8)
   };
 }
 
 export function applyLateEvaluation(progress: CardProgress, score: number, now = new Date()): CardProgress {
   const needsReinforcement = score < 75 || (progress.weakDimensions?.length ?? 0) > 0;
-  const acceleratedDue = new Date(now.getTime() + (score < 60 ? 20 * 60 * 1000 : 24 * 60 * 60 * 1000));
+  const acceleratedDue = new Date(now);
+  acceleratedDue.setDate(acceleratedDue.getDate() + 1);
+  acceleratedDue.setHours(8, 0, 0, 0);
   const currentDue = new Date(progress.nextReviewAt);
   return {
     ...progress,
@@ -110,19 +111,19 @@ export function isDue(progress: CardProgress, now = new Date()): boolean {
 
 export function isPendingReview(
   progress: CardProgress,
-  plannedForBatch: boolean,
-  batchAnchorAt?: string,
+  _plannedForBatch: boolean,
+  _batchAnchorAt?: string,
   now = new Date()
 ): boolean {
-  if (isDue(progress, now)) return true;
-  if (!plannedForBatch) return false;
-  if (!progress.lastReviewedAt) return true;
-
-  const parsedAnchor = batchAnchorAt ? new Date(batchAnchorAt).getTime() : Number.NaN;
-  const fallbackAnchor = new Date(now);
-  fallbackAnchor.setHours(0, 0, 0, 0);
-  const anchor = Number.isFinite(parsedAnchor) ? parsedAnchor : fallbackAnchor.getTime();
-  return new Date(progress.lastReviewedAt).getTime() < anchor;
+  const reviewedToday = Boolean(
+    progress.lastReviewedAt
+    && toLocalDateKey(new Date(progress.lastReviewedAt)) === toLocalDateKey(now)
+  );
+  // A word gets at most one completed review round per local day, regardless
+  // of score. Older clients may have saved a same-day reinforcement timestamp;
+  // keep it hidden until the next local day as well.
+  if (reviewedToday) return false;
+  return isDue(progress, now);
 }
 
 export function normalizeAnswer(value: string): string {

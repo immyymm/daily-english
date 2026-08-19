@@ -539,7 +539,9 @@ function ReviewPage({
                   : '数据库基础方案已就绪，等待 Codex 深度分析'}
             </span>
           </div>
-          <p>{recommendation.summary}</p>
+          <p>{dueProgress.length
+            ? recommendation.summary
+            : '当前没有到期词；风险分析只用于到期后的排序和题目侧重，不会提前触发下一轮复习。'}</p>
           <div className="adaptive-plan-meta">
             <span>新词 {recommendation.newCardIds?.length ?? 5} 个</span>
             <span>当前待复习 {dueProgress.length} 个</span>

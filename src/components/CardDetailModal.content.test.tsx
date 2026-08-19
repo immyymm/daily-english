@@ -18,7 +18,7 @@ describe('CardDetailModal template content', () => {
     );
 
     const dialog = screen.getByRole('dialog', { name: '完整单词词卡' });
-    expect(within(dialog).getByText('模板完整版')).toBeInTheDocument();
+    expect(within(dialog).getByText('人工精校详卡')).toBeInTheDocument();
     expect(within(dialog).getByText('provide someone with something')).toBeInTheDocument();
     expect(within(dialog).getByText('provide something for someone')).toBeInTheDocument();
 

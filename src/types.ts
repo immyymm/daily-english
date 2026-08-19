@@ -188,7 +188,7 @@ export interface WordCard {
   };
   questions: CardQuestion[];
   reviewStages: Record<ReviewStage, QuestionType[]>;
-  detailLevel: 'template-complete';
+  detailLevel: 'template-reference' | 'template-curated' | 'template-structured';
   templateVersion: string;
   contentVersion: string;
   reviewed: boolean;

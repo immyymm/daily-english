@@ -15,8 +15,8 @@ const contentCardsDir = path.join(root, 'content', 'cards');
 const publicDailyDir = path.join(root, 'public', 'data', 'daily');
 const publicDataDir = path.join(root, 'public', 'data');
 const launchDate = new Date('2026-08-17T12:00:00+08:00');
-const contentVersion = '2026.08.19.5';
-const templateVersion = 'learning-template-2026.08.19.1';
+const contentVersion = '2026.08.19.6';
+const templateVersion = 'learning-template-2026.08.19.2';
 
 const slug = (value) => value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const primaryPos = (value) => value.split('/')[0].trim().replace('.', '');
@@ -412,10 +412,10 @@ function makeCard(item, index) {
   const id = slug(item.w + '-' + primaryPos(item.p));
   const override = cardOverrides[item.w];
   if (!override && (curatedPhrases[item.w]?.length ?? 0) < 6) {
-    throw new Error(item.w + ': template-complete generation requires at least six curated phrase entries.');
+    throw new Error(item.w + ': curated generation requires at least six curated phrase entries.');
   }
   if (!override && (curatedExamples[item.w]?.length ?? 0) < 6) {
-    throw new Error(item.w + ': template-complete generation requires at least six curated bilingual examples.');
+    throw new Error(item.w + ': curated generation requires at least six curated bilingual examples.');
   }
   const tuples = [...(curatedPhrases[item.w] ?? []), [item.coll, item.collZh]]
     .filter(([phrase], tupleIndex, source) => source.findIndex(([candidate]) => candidate === phrase) === tupleIndex)
@@ -506,7 +506,7 @@ function makeCard(item, index) {
     partOfSpeech: item.p,
     frequencyBand: 'COCA 高频精选 · ' + cocaRankLabel,
     difficulty: index < 50 ? '基础' : index < 110 ? '进阶' : '应用',
-    tags: [item.p.split('/')[0].trim(), override ? '人工精校' : '模板详卡', index < 50 ? '高频表达' : '主动词汇'],
+    tags: [item.p.split('/')[0].trim(), override ? '人工精校' : '模板结构版', index < 50 ? '高频表达' : '主动词汇'],
     coreMemory: {
       chinese: item.zh,
       english: meanings.map((meaning) => meaning.partOfSpeech + ' ' + meaning.english).join('；'),
@@ -544,13 +544,13 @@ function makeCard(item, index) {
       T6: ['meaning_choice', 'recall', 'collocation', 'free_sentence', 'dialogue'],
       T7: ['meaning_choice', 'recall', 'collocation', 'free_sentence', 'dialogue']
     },
-    detailLevel: 'template-complete',
+    detailLevel: item.w === 'work' ? 'template-reference' : override ? 'template-curated' : 'template-structured',
     templateVersion,
     contentVersion,
     reviewed: Boolean(override),
     sourceNote: override
       ? '从用户提供的 COCA 词表筛选；本卡依照用户词卡模板人工精校；音标为美式发音。'
-      : '从用户提供的 COCA 词表筛选；内容依照统一词卡模板整理；音标为美式发音。'
+      : '从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。'
   };
 }
 
@@ -585,10 +585,12 @@ await fs.writeFile(path.join(publicDataDir, 'manifest.json'), JSON.stringify({
 }, null, 2) + '\n', 'utf8');
 await fs.writeFile(path.join(root, 'content', 'content-manifest.json'), JSON.stringify({
   source: 'COCA词频单词表.xlsx', generatedAt: '2026-08-19', contentVersion, templateVersion,
-  detailLevel: 'template-complete',
+  detailLevel: 'mixed-quality',
   reviewedCardIds: cards.filter((card) => card.reviewed).map((card) => card.id),
-  templateDetailedCardIds: cards.filter((card) => !card.reviewed).map((card) => card.id),
+  referenceCardIds: cards.filter((card) => card.detailLevel === 'template-reference').map((card) => card.id),
+  curatedDetailedCardIds: cards.filter((card) => card.detailLevel === 'template-curated').map((card) => card.id),
+  templateStructuredCardIds: cards.filter((card) => card.detailLevel === 'template-structured').map((card) => card.id),
   cardIds: cards.map((card) => card.id)
 }, null, 2) + '\n', 'utf8');
 
-console.log('Generated ' + cards.length + ' template-complete cards (' + cards.filter((card) => card.reviewed).length + ' manually curated, ' + cards.filter((card) => !card.reviewed).length + ' template-detailed) and ' + dailyFiles.length + ' daily files.');
+console.log('Generated ' + cards.length + ' cards: ' + cards.filter((card) => card.detailLevel === 'template-reference').length + ' locked reference, ' + cards.filter((card) => card.detailLevel === 'template-curated').length + ' human-curated detailed, and ' + cards.filter((card) => card.detailLevel === 'template-structured').length + ' template-structured, plus ' + dailyFiles.length + ' daily files.');

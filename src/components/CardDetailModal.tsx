@@ -92,11 +92,17 @@ export function CardDetailModal({ card, progress, open, onClose, onLearn }: Card
       setSaving(false);
     }
   };
+  const isDetailed = card.detailLevel !== 'template-structured';
+  const detailLabel = card.detailLevel === 'template-reference'
+    ? '锁定 work 示例卡'
+    : card.detailLevel === 'template-curated'
+      ? '人工精校详卡'
+      : '模板结构版 · 待深度补全';
 
   return (
     <ModalShell
       open={open}
-      title="完整单词词卡"
+      title={isDetailed ? '完整单词词卡' : '模板结构词卡'}
       eyebrow={progress?.status ?? '今日新词'}
       onClose={onClose}
       footer={
@@ -113,7 +119,7 @@ export function CardDetailModal({ card, progress, open, onClose, onLearn }: Card
           <p className="word-meaning">{card.coreMemory.chinese}</p>
           <div className="word-meta">
             <span>{card.cocaRankLabel ?? card.frequencyBand}</span>
-            <span>模板完整版</span>
+            <span>{detailLabel}</span>
             <span>{card.difficulty}</span>
             {card.tags.slice(0, 2).map((tag) => <span key={tag}>{tag}</span>)}
           </div>

@@ -6,18 +6,18 @@
 
 ## 已实现功能
 
-- 30 天、150 张词卡，全部选自项目附带的 COCA 词表；内容按 `learning-template-2026.08.19.1` 的 10 章顺序展示
-- 150 张词卡全部为 `template-complete`：11 张逐卡人工深度精校，剩余 139 张使用逐词整理的真实搭配与自然双语例句按固定模板重新生成，并通过同等完整性门禁；APP 不再发布基础版或缩水版词卡
+- 30 天、150 张词卡，全部选自项目附带的 COCA 词表；内容按 `learning-template-2026.08.19.2` 的 10 章顺序展示
+- 150 张词卡均具备锁定模板的十章结构；只有 `work` 1 张与锁定示例完全同规模，另有 10 张“人工精校详卡”，其余 139 张明确标记为“模板结构版 · 待深度补全”，不再把结构齐全或人工精校冒充为与示例完全相同
 - 每日独立词卡文件与全部词卡汇总文件
 - 今日学习、翻卡、例句/搭配/辨析、浏览器发音
-- T0–T7 间隔复测，每词按阶段提供 8–12 道题；薄弱词会增加题量并优先抽取对应维度题型
+- T0–T7 间隔复测：初学后进入 T0；每个词每天最多完成一轮复习，完成后当天不再进入队列，不受得分高低影响；达标后严格按下一阶段的次日、3、7、14、30、60、90 天安排，未达标时留在当前阶段并从次日开始巩固。每词按阶段提供 8–12 道题，薄弱词会增加题量并优先抽取对应维度题型
 - 第 7 天解锁周测，支持作文和口语文字稿
 - 自由造句、开放对话、作文和口语文字稿使用服务器配置的 OpenAI 模型辅助评分
 - AI 评分前隐私确认；登录同步账户后采用可恢复的后台点评队列，提交后可立即继续学习，结果完成后实时回传并永久可查
 - 录音只保留在当前页面和设备，不上传给评分接口
 - IndexedDB 本地保存进度，支持 JSON 导出、恢复和清除
 - 可选 Supabase 邮箱账户，多设备快照合并与 Realtime 实时同步；答题、五维掌握画像、AI 任务和每日方案使用独立结构化表保存
-- 每天北京时间 05:00 由 Postgres 自动刷新当天 5 个新词和整日复习批次，并为每个复习词计算遗忘风险、薄弱维度、建议题量和安排原因；掌握状态可点开查看处方、问题分布、最近答题和完整 AI 点评
+- 每天北京时间 05:00 由 Postgres 自动刷新当天 5 个新词和风险分析；风险只用于排序和聚焦已经到期的复习，不会把未到期词提前加入下一轮。系统同时为每个到期词计算薄弱维度、建议题量和安排原因；掌握状态可点开查看处方、问题分布、最近答题和完整 AI 点评
 - PWA 离线缓存、iPhone 安装引导和安全区适配
 - Vercel 正式站与 GitHub Pages 静态镜像构建配置
 
@@ -28,7 +28,10 @@
 - `public/data/all-cards.json`：全部 150 张词卡的单文件汇总
 - `public/data/manifest.json`：客户端内容清单
 - `content/content-manifest.json`：内容构建记录
-- `content/templates/learning-template-2026.08.19.1.md`：仓库内固定的词卡内容规范
+- `content/templates/learning-template.locked.md`：用户原始词卡模板的不可变快照
+- `content/templates/template-test-work.locked.md`：用户原始 `work` 示例的不可变快照
+- `content/templates/template-lock.json`：两个快照的来源和 SHA-256 锁定记录
+- `content/templates/learning-template-2026.08.19.2.md`：当前发布规范与详细度分级门槛
 
 浏览器不能在运行时写回 GitHub 或 Vercel 项目文件，因此每日文件由构建脚本提前生成。第 30 天后，APP 会以 30 天内容包循环强化，用户进度仍按日期独立保存。
 
@@ -44,7 +47,7 @@ pnpm run build
 pnpm run dev
 ```
 
-生产构建位于 `dist/`。构建命令会先验证内容文件，发现重复词卡、模板章节缺失、模板套话、机械扩展、关系词词性未知、真实例句不足、日期缺失或每日不是 5 张时会直接失败。每张新词卡必须先具备至少 6 组逐词整理的搭配和 6 组对应的自然双语例句；只有十章内容、学习重点、测试题和版本信息全部通过门禁的卡片才能发布为 `template-complete`，项目不再保留基础版发布路径。关系词和词组的北美英语发音数据来自 CMU Pronouncing Dictionary，并在内容构建阶段保留重音并转为 IPA；网页运行时不会调用词典 API。
+生产构建位于 `dist/`。构建命令会校验锁定模板与示例的 SHA-256、十章顺序、重复内容、模板套话、机械扩展、关系词词性、真实例句、日期和每日卡片数。`work` 必须精确保持锁定示例记录的 8 个义项、4 类/16 项语境词组、12 个固定搭配、5 个近义词、4 个反义词、7 个派生词、4 个易混词、4 类/12 项同类词和 12 个例句；人工精校详卡有独立的较低门槛，不能标成锁定示例卡；其他卡片必须保留“模板结构版”标识，直到逐卡补全。关系词和词组的北美英语发音数据来自 CMU Pronouncing Dictionary，并在内容构建阶段保留重音并转为 IPA；网页运行时不会调用词典 API。
 
 ## 多设备同步配置
 
@@ -55,7 +58,7 @@ VITE_SUPABASE_URL=https://your-project.supabase.co
 VITE_SUPABASE_PUBLISHABLE_KEY=sb_publishable_your_key
 ```
 
-数据库迁移位于 `supabase/migrations/`。除快照表外，系统使用 `daily_english_attempts`、`daily_english_mastery`、`daily_english_ai_evaluations` 和 `daily_english_daily_plans` 保存可实时更新的明细。所有表都启用 RLS，只向 `authenticated` 角色开放用户自己的记录；未登录的 `anon` 角色没有表权限。05:00 分析由数据库内的 `pg_cron` 任务执行，不依赖用户打开网页，也不调用 OpenAI：数据库直接写入今日新词、复习词和逐词处方，客户端通过 Supabase Data API + RLS 读取并由 Realtime 接收更新。学习后 20 分钟的 T0 即时复测仍会在当天动态补入，不必等到下一次 05:00。publishable key 会正常出现在浏览器构建中，它不是服务端密钥；切勿在前端使用 `service_role` key。
+数据库迁移位于 `supabase/migrations/`。除快照表外，系统使用 `daily_english_attempts`、`daily_english_mastery`、`daily_english_ai_evaluations` 和 `daily_english_daily_plans` 保存可实时更新的明细。所有表都启用 RLS，只向 `authenticated` 角色开放用户自己的记录；未登录的 `anon` 角色没有表权限。05:00 分析由数据库内的 `pg_cron` 任务执行，不依赖用户打开网页，也不调用 OpenAI：数据库直接写入今日新词和逐词风险处方，客户端通过 Supabase Data API + RLS 读取并由 Realtime 接收更新。初学词会立即进入 T0；每个词完成当天的一轮后，无论得分高低都不会再次进入当天队列；达标后按下一阶段日期复习，未达标则从次日开始巩固。风险处方只能给已经到期的词排序和加题，不能提前触发未到期的下一轮。publishable key 会正常出现在浏览器构建中，它不是服务端密钥；切勿在前端使用 `service_role` key。
 
 ## AI 评分配置
 
