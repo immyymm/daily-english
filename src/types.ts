@@ -189,6 +189,7 @@ export interface WordCard {
   questions: CardQuestion[];
   reviewStages: Record<ReviewStage, QuestionType[]>;
   detailLevel?: 'template-complete' | 'standard';
+  templateVersion: string;
   contentVersion: string;
   reviewed: boolean;
   sourceNote: string;
@@ -196,6 +197,7 @@ export interface WordCard {
 
 export interface ContentBundle {
   contentVersion: string;
+  templateVersion: string;
   total: number;
   cards: WordCard[];
 }

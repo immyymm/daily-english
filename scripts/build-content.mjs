@@ -14,34 +14,14 @@ const contentCardsDir = path.join(root, 'content', 'cards');
 const publicDailyDir = path.join(root, 'public', 'data', 'daily');
 const publicDataDir = path.join(root, 'public', 'data');
 const launchDate = new Date('2026-08-17T12:00:00+08:00');
-const contentVersion = '2026.08.19.3';
+const contentVersion = '2026.08.19.4';
+const templateVersion = 'learning-template-2026.08.19.1';
 
 const slug = (value) => value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const primaryPos = (value) => value.split('/')[0].trim().replace('.', '');
 const firstMeaning = (value) => value.split('；')[0];
 const lexiconByWord = new Map(lexicon.map((item) => [item.w, item]));
 const posLabels = { v: 'v.', n: 'n.', j: 'adj.', r: 'adv.' };
-const familyPosOverrides = {
-  likelihood: 'n.', belief: 'n.', memory: 'n.', comparison: 'n.', chosen: 'adj.', effect: 'n.', discovery: 'n.',
-  opportune: 'adj.', serve: 'v.', advise: 'v.', difficulty: 'n.', unaware: 'adj.', unfamiliar: 'adj.', comfort: 'n.',
-  certainty: 'n.', uncertain: 'adj.', near: 'adj. / adv.', simple: 'adj.', quick: 'adj.', direct: 'adj. / adv.',
-  healthy: 'adj.', unhealthy: 'adj.', workplace: 'n.', speech: 'n.', businesslike: 'adj.', teamwork: 'n.', unlikely: 'adj.'
-};
-const uncountableNouns = new Set([
-  'effort', 'experience', 'information', 'service', 'value', 'behavior', 'attention', 'progress', 'confidence',
-  'quality', 'success', 'advice', 'health', 'work', 'study', 'travel', 'money', 'business', 'time', 'language'
-]);
-
-function familyPartOfSpeech(word) {
-  const known = lexiconByWord.get(word);
-  if (known) return known.p;
-  if (familyPosOverrides[word]) return familyPosOverrides[word];
-  if (/(tion|sion|ment|ness|ity|ance|ence|ship|er|or|ism|hood)$/.test(word)) return 'n.';
-  if (/ly$/.test(word)) return 'adv.';
-  if (/(able|ible|ive|ous|ful|less|al|ic|ed|ing|ent|ant|ary)$/.test(word)) return 'adj.';
-  return 'word family';
-}
-
 function relatedChinese(word, item, relation) {
   const known = lexiconByWord.get(word);
   if (known) return firstMeaning(known.zh);
@@ -74,73 +54,6 @@ function extractExampleChunk(item) {
   const index = words.findIndex((word) => word.toLowerCase().startsWith(stem));
   if (index < 0) return item.coll;
   return words.slice(Math.max(0, index - 2), Math.min(words.length, index + 4)).join(' ');
-}
-
-function genericPhraseTuples(item) {
-  const p = item.p;
-  if (p.startsWith('v.')) {
-    return [
-      [item.coll, item.collZh],
-      ['to ' + item.coll, '去' + item.collZh],
-      ['need to ' + item.coll, '需要' + item.collZh],
-      ['try to ' + item.coll, '尝试' + item.collZh],
-      ['can ' + item.coll, '能够' + item.collZh],
-      ['how to ' + item.coll, '如何' + item.collZh],
-      ['learn to ' + item.coll, '学会' + item.collZh],
-      [item.coll + ' well', '很好地' + item.collZh],
-      [item.w + ' in practice', '在实际语境中使用 ' + item.w],
-      [item.w + ' more effectively', '更有效地' + item.collZh],
-      [item.w + ' when necessary', '在必要时' + item.collZh],
-      [item.w + ' over time', '逐步' + item.collZh]
-    ];
-  }
-  if (p.startsWith('n.')) {
-    const determiner = uncountableNouns.has(item.w) ? item.w : 'the ' + item.w;
-    return [
-      [item.coll, item.collZh],
-      [determiner + ' in daily life', '日常生活中的' + firstMeaning(item.zh)],
-      [determiner + ' at work', '工作中的' + firstMeaning(item.zh)],
-      ['the importance of ' + item.w, firstMeaning(item.zh) + '的重要性'],
-      ['focus on ' + item.w, '关注' + firstMeaning(item.zh)],
-      ['talk about ' + item.w, '谈论' + firstMeaning(item.zh)],
-      ['understand ' + item.w, '理解' + firstMeaning(item.zh)],
-      [item.w + ' and ' + item.syn, item.w + ' 与 ' + item.syn],
-      [item.w + ' or ' + item.ant, item.w + ' 或 ' + item.ant],
-      [item.w + ' in context', '语境中的 ' + item.w],
-      ['a better understanding of ' + item.w, '更好地理解' + firstMeaning(item.zh)],
-      [item.w + ' matters', firstMeaning(item.zh) + '很重要']
-    ];
-  }
-  if (p.includes('adj.')) {
-    return [
-      [item.coll, item.collZh],
-      ['be ' + item.w, '是' + firstMeaning(item.zh) + '的'],
-      ['seem ' + item.w, '显得' + firstMeaning(item.zh)],
-      ['remain ' + item.w, '保持' + firstMeaning(item.zh)],
-      ['become ' + item.w, '变得' + firstMeaning(item.zh)],
-      ['feel ' + item.w, '感觉' + firstMeaning(item.zh)],
-      ['very ' + item.w, '非常' + firstMeaning(item.zh)],
-      ['more ' + item.w, '更加' + firstMeaning(item.zh)],
-      ['less ' + item.w, '不那么' + firstMeaning(item.zh)],
-      [item.w + ' enough', '足够' + firstMeaning(item.zh)],
-      [item.w + ' in context', '在语境中理解 ' + item.w],
-      [item.w + ', not ' + item.ant, item.w + '，而非 ' + item.ant]
-    ];
-  }
-  return [
-    [item.coll, item.collZh],
-    ['use ' + item.w + ' correctly', '正确使用 ' + item.w],
-    [item.w + ' in conversation', '对话中的 ' + item.w],
-    [item.w + ' in a sentence', '句子中的 ' + item.w],
-    ['say ' + item.w + ' naturally', '自然地说出 ' + item.w],
-    ['listen for ' + item.w, '留意听辨 ' + item.w],
-    ['write ' + item.w, '写出 ' + item.w],
-    ['the adverb ' + item.w, '副词 ' + item.w],
-    [item.w + ' in context', '语境中的 ' + item.w],
-    [item.w + ', not ' + item.syn, item.w + '，而非 ' + item.syn],
-    ['practice ' + item.w, '练习使用 ' + item.w],
-    ['remember ' + item.w, '记住 ' + item.w]
-  ];
 }
 
 function genericErrors(item) {
@@ -198,33 +111,16 @@ function normalizeErrors(item, override) {
 function normalizeContexts(item, override, tuples) {
   const source = override?.contexts ?? [
     ['核心高频搭配', tuples.slice(0, 3)],
-    ['句型与语法框架', tuples.slice(3, 6)],
-    ['真实表达延伸', tuples.slice(6, 9)],
-    ['主动输出提示', tuples.slice(9, 12)]
+    ['常见结构与语境', tuples.slice(3, 6)]
   ];
-  return source.map(([category, items]) => ({
+  return source.filter(([, items]) => items.length).map(([category, items]) => ({
     category,
     items: items.map(([phrase, chinese]) => ({ phrase, phonetic: ipaFor(phrase, item.w, item.ipa), chinese }))
   }));
 }
 
-function genericPhraseExample(item, phrase, index) {
-  if (index === 0) return [item.ex, item.exZh];
-  const templates = [
-    ['The phrase “' + phrase + '” is useful in everyday English.', '“' + phrase + '”是日常英语中的实用表达。'],
-    ['I added “' + phrase + '” to my vocabulary notebook.', '我把“' + phrase + '”记进了词汇本。'],
-    ['Listen for “' + phrase + '” in real conversations.', '在真实对话中留意“' + phrase + '”。'],
-    ['Can you use “' + phrase + '” in a complete sentence?', '你能用“' + phrase + '”说一个完整句子吗？'],
-    ['We practiced “' + phrase + '” aloud three times.', '我们把“' + phrase + '”大声练了三遍。']
-  ];
-  return templates[(index - 1) % templates.length];
-}
-
 function normalizeFixedPhrases(item, override, tuples) {
-  const source = override?.phrases ?? tuples.slice(0, 8).map(([phrase, chinese], index) => {
-    const [example, translation] = genericPhraseExample(item, phrase, index);
-    return [phrase, chinese, example, translation];
-  });
+  const source = override?.phrases ?? tuples.slice(0, 1).map(([phrase, chinese]) => [phrase, chinese, item.ex, item.exZh]);
   return source.map(([phrase, chinese, example, translation]) => ({
     phrase,
     phonetic: ipaFor(phrase, item.w, item.ipa),
@@ -270,13 +166,15 @@ function normalizeDerivatives(item, override) {
   if (override?.derivatives) {
     return override.derivatives.map(([word, partOfSpeech, chinese, note]) => ({ word, phonetic: ipaFor(word), partOfSpeech, chinese, note }));
   }
-  return (families[item.w] ?? []).filter((word) => word !== item.w).map((word) => ({
-    word,
-    phonetic: ipaFor(word),
-    partOfSpeech: familyPartOfSpeech(word),
-    chinese: relatedChinese(word, item, 'family'),
-    note: '这是 ' + item.w + ' 的常用词族成员；先辨认词性，再放进完整句子中使用。'
-  }));
+  return (families[item.w] ?? [])
+    .filter((word) => word !== item.w && lexiconByWord.has(word))
+    .map((word) => ({
+      word,
+      phonetic: ipaFor(word),
+      partOfSpeech: lexiconByWord.get(word).p,
+      chinese: firstMeaning(lexiconByWord.get(word).zh),
+      note: '与 ' + item.w + ' 同属常用词族；注意两者词性和句中位置不同。'
+    }));
 }
 
 function normalizeConfusables(item, override) {
@@ -286,13 +184,13 @@ function normalizeConfusables(item, override) {
   return confusables[item.w] ? [{ ...confusables[item.w], phonetic: ipaFor(confusables[item.w].word) }] : [];
 }
 
-function vocabularyItem(word, fallbackPos = 'word') {
+function vocabularyItem(word, fallbackPos = 'word', fallbackChinese = '与本词相关的常用表达') {
   const known = lexiconByWord.get(word);
   return {
     word,
     phonetic: known?.ipa ?? ipaFor(word),
-    partOfSpeech: known?.p ?? familyPartOfSpeech(word) ?? fallbackPos,
-    chinese: known ? firstMeaning(known.zh) : '与本词相关的常用表达'
+    partOfSpeech: known?.p ?? fallbackPos,
+    chinese: known ? firstMeaning(known.zh) : fallbackChinese
   };
 }
 
@@ -303,16 +201,15 @@ function normalizeRelated(item, index, override, derivatives) {
       items: items.map(([word, partOfSpeech, chinese]) => ({ word, phonetic: ipaFor(word), partOfSpeech, chinese }))
     }));
   }
-  const nearby = [-2, -1, 1, 2].map((offset) => lexicon[(index + offset + lexicon.length) % lexicon.length].w);
-  const familyWords = derivatives.slice(0, 3).map((entry) => entry.word);
-  const familyOrPeers = [...new Set([...familyWords, ...nearby])].slice(0, 3);
   return [
-    { category: '语义坐标：近义与反义', items: [vocabularyItem(item.syn), vocabularyItem(item.ant)] },
     {
-      category: familyWords.length ? '词族与构词联系' : '同词性高频词',
-      items: familyOrPeers.map((word) => vocabularyItem(word))
+      category: '语义坐标：近义与反义',
+      items: [
+        vocabularyItem(item.syn, item.p, relatedChinese(item.syn, item, 'synonym')),
+        vocabularyItem(item.ant, item.p, relatedChinese(item.ant, item, 'antonym'))
+      ]
     },
-    { category: '同一学习主题中的高频词', items: nearby.map((word) => vocabularyItem(word)) }
+    ...(derivatives.length ? [{ category: '词族与构词联系', items: derivatives.map((entry) => vocabularyItem(entry.word, entry.partOfSpeech, entry.chinese)) }] : [])
   ];
 }
 
@@ -320,18 +217,7 @@ function normalizeExamples(item, override) {
   if (override?.examples) {
     return override.examples.map(([scene, english, chinese]) => ({ scene, english, chinese }));
   }
-  return [
-    { scene: '核心真实用法', english: item.ex, chinese: item.exZh },
-    { scene: '英文释义理解', english: 'In this lesson, I learned that “' + item.w + '” means “' + item.en + '”.', chinese: '这节课里，我学到 ' + item.w + ' 的核心意思是“' + item.zh + '”。' },
-    { scene: '高频搭配辨认', english: 'The phrase “' + item.coll + '” is useful in everyday English.', chinese: '“' + item.coll + '”是日常英语中的实用表达。' },
-    { scene: '主动造句', english: 'Can you use “' + item.w + '” in a sentence of your own?', chinese: '你能用 ' + item.w + ' 说一个自己的句子吗？' },
-    { scene: '词汇笔记', english: 'I wrote “' + item.w + '” and its pronunciation in my notebook.', chinese: '我把 ' + item.w + ' 和它的发音记进了笔记本。' },
-    { scene: '听力辨认', english: 'Listen for “' + item.w + '” the next time you hear English.', chinese: '下次听英语时，留意辨认 ' + item.w + '。' },
-    { scene: '近义比较', english: 'I compared “' + item.w + '” with “' + item.syn + '” before choosing the word.', chinese: '选词前，我比较了 ' + item.w + ' 和 ' + item.syn + '。' },
-    { scene: '反义对照', english: 'The opposite idea is often expressed with “' + item.ant + '”.', chinese: '相反的意思常可用 ' + item.ant + ' 表达。' },
-    { scene: '间隔复习', english: 'I reviewed “' + item.w + '” again before going to bed.', chinese: '睡前我又复习了一遍 ' + item.w + '。' },
-    { scene: '口语输出', english: 'Which real situation would make you use “' + item.w + '”?', chinese: '在什么真实情境中你会用到 ' + item.w + '？' }
-  ];
+  return [{ scene: '核心真实用法', english: item.ex, chinese: item.exZh }];
 }
 
 function rotateOptions(options, seed) {
@@ -504,7 +390,7 @@ function hasObjectiveStructureWord(phrase, targetWord) {
 function makeCard(item, index) {
   const id = slug(item.w + '-' + primaryPos(item.p));
   const override = cardOverrides[item.w];
-  const tuples = [...(curatedPhrases[item.w] ?? []), ...genericPhraseTuples(item)]
+  const tuples = [...(curatedPhrases[item.w] ?? []), [item.coll, item.collZh]]
     .filter(([phrase], tupleIndex, source) => source.findIndex(([candidate]) => candidate === phrase) === tupleIndex)
     .slice(0, 12);
   const structures = normalizeStructures(item, override, tuples);
@@ -593,7 +479,7 @@ function makeCard(item, index) {
     partOfSpeech: item.p,
     frequencyBand: 'COCA 高频精选 · ' + cocaRankLabel,
     difficulty: index < 50 ? '基础' : index < 110 ? '进阶' : '应用',
-    tags: [item.p.split('/')[0].trim(), '模板完整版', index < 50 ? '高频表达' : '主动词汇'],
+    tags: [item.p.split('/')[0].trim(), override ? '人工精校' : '待精校', index < 50 ? '高频表达' : '主动词汇'],
     coreMemory: {
       chinese: item.zh,
       english: meanings.map((meaning) => meaning.partOfSpeech + ' ' + meaning.english).join('；'),
@@ -631,12 +517,13 @@ function makeCard(item, index) {
       T6: ['meaning_choice', 'recall', 'collocation', 'free_sentence', 'dialogue'],
       T7: ['meaning_choice', 'recall', 'collocation', 'free_sentence', 'dialogue']
     },
-    detailLevel: 'template-complete',
+    detailLevel: override ? 'template-complete' : 'standard',
+    templateVersion,
     contentVersion,
-    reviewed: true,
+    reviewed: Boolean(override),
     sourceNote: override
       ? '从用户提供的 COCA 词表筛选；本卡依照用户词卡模板人工精校；音标为美式发音。'
-      : '从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。'
+      : '从用户提供的 COCA 词表筛选；仅保留已核实的基础内容，未用模板套话或机械扩展冒充人工精校。'
   };
 }
 
@@ -659,19 +546,22 @@ for (let dayIndex = 0; dayIndex < 30; dayIndex += 1) {
   const dateKey = formatDate(date);
   const dailyCards = cards.slice(dayIndex * 5, dayIndex * 5 + 5);
   const fileName = dateKey + '.json';
-  const dailyPack = { date: dateKey, dayNumber: dayIndex + 1, contentVersion, cards: dailyCards };
+  const dailyPack = { date: dateKey, dayNumber: dayIndex + 1, contentVersion, templateVersion, cards: dailyCards };
   await fs.writeFile(path.join(publicDailyDir, fileName), JSON.stringify(dailyPack, null, 2) + '\n', 'utf8');
   dailyFiles.push({ dayNumber: dayIndex + 1, date: dateKey, file: 'data/daily/' + fileName, cardIds: dailyCards.map((card) => card.id) });
 }
 
-await fs.writeFile(path.join(publicDataDir, 'all-cards.json'), JSON.stringify({ contentVersion, total: cards.length, cards }, null, 2) + '\n', 'utf8');
+await fs.writeFile(path.join(publicDataDir, 'all-cards.json'), JSON.stringify({ contentVersion, templateVersion, total: cards.length, cards }, null, 2) + '\n', 'utf8');
 await fs.writeFile(path.join(publicDataDir, 'manifest.json'), JSON.stringify({
-  appName: '每日英语', contentVersion, totalCards: cards.length, totalDays: dailyFiles.length,
+  appName: '每日英语', contentVersion, templateVersion, totalCards: cards.length, totalDays: dailyFiles.length,
   cardsPerDay: 5, scheduleStart: formatDate(launchDate), dailyFiles
 }, null, 2) + '\n', 'utf8');
 await fs.writeFile(path.join(root, 'content', 'content-manifest.json'), JSON.stringify({
-  source: 'COCA词频单词表.xlsx', generatedAt: '2026-08-17', contentVersion,
-  detailLevel: 'template-complete', cardIds: cards.map((card) => card.id)
+  source: 'COCA词频单词表.xlsx', generatedAt: '2026-08-19', contentVersion, templateVersion,
+  detailLevel: 'mixed-reviewed',
+  reviewedCardIds: cards.filter((card) => card.reviewed).map((card) => card.id),
+  standardCardIds: cards.filter((card) => !card.reviewed).map((card) => card.id),
+  cardIds: cards.map((card) => card.id)
 }, null, 2) + '\n', 'utf8');
 
-console.log('Generated ' + cards.length + ' template-complete cards and ' + dailyFiles.length + ' daily files.');
+console.log('Generated ' + cards.length + ' cards (' + cards.filter((card) => card.reviewed).length + ' template-complete, ' + cards.filter((card) => !card.reviewed).length + ' standard) and ' + dailyFiles.length + ' daily files.');

@@ -370,6 +370,379 @@ export const cardOverrides = {
     focus: ['manage 的三条主线是“设法做到、管理、应付”。', '最重要结构是 manage to do；管理人或项目时直接接宾语。', '不要说 manage doing；应说 manage to do。', 'We managed to solve the problem together.']
   },
 
+  provide: {
+    meanings: [
+      ['v.', 'to give someone something that they need', '提供；供给', 'The school provides every student with a laptop.', '学校为每名学生提供一台笔记本电脑。'],
+      ['v.', 'to make a service, opportunity, or resource available', '提供；使可以使用', 'The membership provides access to all online courses.', '会员资格可使用全部在线课程。'],
+      ['v.', 'to support someone by giving them the money or things they need', '供养；为……提供生活所需', 'She works hard to provide for her family.', '她努力工作供养家人。']
+    ],
+    structures: [
+      ['provide something', '提供某物'],
+      ['provide someone with something', '向某人提供某物'],
+      ['provide something for someone', '为某人提供某物'],
+      ['provide for someone', '供养某人；为某人提供生活所需']
+    ],
+    errors: [
+      ['provide students useful tools', 'provide students with useful tools', 'provide 后先接人时，要用 with 再接所提供的事物。'],
+      ['provide useful tools students', 'provide useful tools for students', '先说所提供的事物时，通常用 for 引出接受者。'],
+      ['provide to my family', 'provide for my family', '表示“供养家人”用 provide for，不用 provide to。']
+    ],
+    contexts: [
+      ['信息与证据', [['provide information', '提供信息'], ['provide details', '提供详细信息'], ['provide evidence', '提供证据'], ['provide an explanation', '作出解释']]],
+      ['服务与资源', [['provide a service', '提供服务'], ['provide access to', '提供使用……的机会'], ['provide technical support', '提供技术支持'], ['provide financial assistance', '提供经济援助']]],
+      ['生活与照护', [['provide food and shelter', '提供食物和住所'], ['provide medical care', '提供医疗护理'], ['provide a safe environment', '提供安全环境'], ['provide for a family', '供养家庭']]],
+      ['学习与工作', [['provide feedback', '提供反馈'], ['provide training', '提供培训'], ['provide an example', '提供例子'], ['provide someone with tools', '为某人提供工具']]]
+    ],
+    phrases: [
+      ['provide someone with something', '向某人提供某物', 'The course provides learners with practical exercises.', '这门课程为学习者提供实用练习。'],
+      ['provide something for someone', '为某人提供某物', 'The hotel provides free breakfast for its guests.', '酒店为客人提供免费早餐。'],
+      ['provide information about', '提供有关……的信息', 'This page provides information about the application process.', '这个页面提供有关申请流程的信息。'],
+      ['provide access to', '提供使用……的机会', 'The library provides access to several research databases.', '图书馆提供多个研究数据库的使用权限。'],
+      ['provide support for', '为……提供支持', 'The program provides support for new parents.', '该项目为新手父母提供支持。'],
+      ['provide evidence for', '为……提供证据', 'The study provides evidence for a different explanation.', '这项研究为另一种解释提供了证据。'],
+      ['provide for', '供养；为……做准备', 'He has two children to provide for.', '他有两个孩子要供养。'],
+      ['as provided by', '按照……提供的；由……提供', 'Use the password provided by your school.', '请使用学校提供的密码。']
+    ],
+    synonyms: [
+      ['supply', 'v.', '供应；供给', '强调按需求或持续供应物资，常用 supply someone with something 或 supply something to someone。'],
+      ['offer', 'v.', '主动提供；提出', '强调主动提出让对方选择或接受；可用 offer someone something，不说 provide someone something。'],
+      ['give', 'v.', '给；给予', '最普通、范围最广；provide 往往暗示所给之物是需要的、正式安排的或持续可用的。'],
+      ['furnish', 'v.', '提供；配备', '较正式，常用于 furnish someone with information；也可表示给房间配家具。']
+    ],
+    antonyms: [
+      ['withhold', 'v.', '拒绝给予；扣留', '最直接的反向表达，强调本可以给出却有意保留信息、资金或许可。'],
+      ['deny', 'v.', '拒绝给予；不准', '常见结构 deny someone access 或 deny a request，强调明确拒绝。'],
+      ['deprive', 'v.', '剥夺', '结构是 deprive someone of something，强调拿走或不让某人获得必需之物。']
+    ],
+    derivatives: [
+      ['provider', 'n.', '提供者；供应商', '非常常用，如 service provider、healthcare provider。'],
+      ['provision', 'n.', '提供；供应；条款', '正式用词；provision of services 表示“服务的提供”，法律文本中还可表示“条款”。'],
+      ['provided', 'conj.', '只要；如果', '常用结构 provided that，较正式；它不是 provide 的普通过去式义项。'],
+      ['providing', 'conj.', '只要；如果', 'providing that 与 provided that 含义相同，口语中也可见。']
+    ],
+    confusables: [
+      ['offer', 'v.', '主动提供；提出', 'offer someone something 可以双宾语；provide 通常要说 provide someone with something。'],
+      ['supply', 'v. / n.', '供应；供给；供应量', 'supply 更强调物资的数量和持续供应；provide 的对象可以是信息、服务、机会或照护。'],
+      ['provision', 'n.', '提供；条款；储备', 'provision 是名词，不可直接代替动词 provide；注意词性和句子位置。']
+    ],
+    related: [
+      ['给予方式', [['give', 'v.', '给；给予'], ['offer', 'v.', '主动提供'], ['supply', 'v.', '供应'], ['donate', 'v.', '捐赠']]],
+      ['常见资源', [['information', 'n.', '信息'], ['support', 'n.', '支持'], ['service', 'n.', '服务'], ['access', 'n.', '使用权；接触机会']]],
+      ['接受与拒绝', [['receive', 'v.', '收到'], ['accept', 'v.', '接受'], ['withhold', 'v.', '扣留'], ['deny', 'v.', '拒绝给予']]]
+    ],
+    examples: [
+      ['课程资源', 'The course provides learners with practical exercises.', '这门课程为学习者提供实用练习。'],
+      ['宾客服务', 'The hotel provides free breakfast for its guests.', '酒店为客人提供免费早餐。'],
+      ['信息说明', 'Please provide your full name and email address.', '请提供你的全名和电子邮箱地址。'],
+      ['使用权限', 'This card provides access to the staff entrance.', '这张卡可以进入员工通道。'],
+      ['证据论证', 'The report provides strong evidence that the policy is working.', '报告提供了有力证据，表明这项政策正在奏效。'],
+      ['医疗照护', 'The clinic provides basic care to local families.', '这家诊所为当地家庭提供基本医疗服务。'],
+      ['供养家庭', 'She works two jobs to provide for her children.', '她做两份工作来供养孩子。'],
+      ['被动表达', 'All necessary equipment will be provided.', '所有必要设备都将提供。'],
+      ['条件表达', 'You may leave early, provided that your work is finished.', '只要工作完成，你可以提前离开。'],
+      ['容易出错的结构', 'The school provides students with free meals.', '学校为学生提供免费餐食。']
+    ],
+    focus: ['provide 表示把需要的信息、物品、服务或机会提供给别人，也可用 provide for 表示“供养”。', '重点掌握 provide someone with something 和 provide something for someone。', '不能说 provide someone something；在接受者后要加 with。', 'The school provides students with free meals.']
+  },
+
+  understand: {
+    meanings: [
+      ['v.', 'to know the meaning of words, ideas, or actions', '理解；明白', 'I understand what this sentence means.', '我明白这个句子的意思。'],
+      ['v.', 'to know why or how something happens', '了解；弄懂', 'Do you understand how the system works?', '你了解这个系统是如何运作的吗？'],
+      ['v.', 'to recognize and accept another person’s feelings or situation', '体谅；理解', 'I understand how difficult this decision is for you.', '我理解这个决定对你来说有多难。']
+    ],
+    structures: [
+      ['understand something', '理解某事'],
+      ['understand why, how, or what', '理解为什么、如何或什么'],
+      ['understand that + clause', '明白……这一事实'],
+      ['make yourself understood', '让别人明白你的意思']
+    ],
+    errors: [
+      ['understand about the problem', 'understand the problem', 'understand 作及物动词时直接接所理解的事物，不加 about。'],
+      ['I am not understanding', 'I do not understand', '表示“理解”时 understand 通常是状态动词，一般不用进行时。'],
+      ['make yourself understand', 'make yourself understood', '表示“让别人听懂你”要用过去分词 understood，表示自己被理解。']
+    ],
+    contexts: [
+      ['语言与信息', [['understand a word', '理解一个单词'], ['understand the instructions', '理解说明'], ['understand the question', '理解问题'], ['clearly understand', '清楚理解']]],
+      ['原因与过程', [['understand why', '理解为什么'], ['understand how', '理解如何……'], ['understand what happened', '了解发生了什么'], ['understand the difference', '理解差别']]],
+      ['人与感受', [['understand someone’s feelings', '理解某人的感受'], ['understand each other', '相互理解'], ['perfectly understand', '完全理解'], ['try to understand', '试着理解']]],
+      ['表达与沟通', [['easy to understand', '容易理解'], ['hard to understand', '难以理解'], ['make yourself understood', '让别人明白你的意思'], ['as I understand it', '据我理解']]]
+    ],
+    phrases: [
+      ['understand why', '理解为什么', 'I understand why you need more time.', '我理解你为什么需要更多时间。'],
+      ['understand how', '理解如何……', 'First, make sure you understand how the feature works.', '首先，确保你了解这个功能如何运作。'],
+      ['understand what someone means', '明白某人的意思', 'I understand what you mean, but I see it differently.', '我明白你的意思，但我的看法不同。'],
+      ['fully understand', '充分理解', 'You need more context to fully understand the issue.', '你需要更多背景信息才能充分理解这个问题。'],
+      ['make yourself understood', '让别人明白你的意思', 'She spoke slowly to make herself understood.', '她说得很慢，好让别人听懂。'],
+      ['as I understand it', '据我理解', 'As I understand it, the meeting starts at nine.', '据我理解，会议九点开始。'],
+      ['it is understood that', '大家都明白；据悉', 'It is understood that both sides have agreed.', '据了解，双方已经达成一致。'],
+      ['come to understand', '逐渐理解', 'Over time, I came to understand his decision.', '随着时间推移，我逐渐理解了他的决定。']
+    ],
+    synonyms: [
+      ['comprehend', 'v.', '理解；领会', '比 understand 正式，常强调对复杂内容的充分理解。'],
+      ['grasp', 'v.', '理解；领会', '强调抓住重点或突然理解，也可表示用手抓住。'],
+      ['follow', 'v.', '听懂；跟得上', '常用于对话、解释或论证，如 I do not follow your reasoning。'],
+      ['appreciate', 'v.', '理解并重视', '用于理解处境、难处或重要性，通常比 understand 多一层体谅或重视。']
+    ],
+    antonyms: [
+      ['misunderstand', 'v.', '误解', '最直接的反义词，表示理解错了，而不是完全不理解。'],
+      ['misinterpret', 'v.', '误读；错误解释', '较正式，强调把话语、行为或数据解释错。'],
+      ['confuse', 'v.', '使困惑；混淆', '表示让人不能清楚理解，主语通常是造成困惑的事物。']
+    ],
+    derivatives: [
+      ['understanding', 'n. / adj.', '理解；谅解；善解人意的', '非常常用；an understanding of 表示“对……的理解”。'],
+      ['understandable', 'adj.', '可以理解的；情有可原的', '既可表示内容容易理解，也可表示人的反应合情合理。'],
+      ['misunderstanding', 'n.', '误解；误会', '常见结构 clear up a misunderstanding。'],
+      ['misunderstood', 'adj.', '被误解的', '常形容人、观点或概念没有得到正确理解。']
+    ],
+    confusables: [
+      ['know', 'v.', '知道；认识', 'know 强调拥有事实或经验；understand 强调明白含义、原因或运作方式。'],
+      ['realize', 'v.', '意识到', 'realize 强调某一刻突然明白事实；understand 可表示持续的理解状态。']
+    ],
+    related: [
+      ['理解过程', [['learn', 'v.', '学习'], ['recognize', 'v.', '认出；意识到'], ['realize', 'v.', '意识到'], ['grasp', 'v.', '领会']]],
+      ['沟通结果', [['meaning', 'n.', '含义'], ['explanation', 'n.', '解释'], ['context', 'n.', '语境；背景'], ['clarity', 'n.', '清晰']]],
+      ['理解程度', [['clear', 'adj.', '清楚的'], ['confusing', 'adj.', '令人困惑的'], ['obvious', 'adj.', '明显的'], ['complex', 'adj.', '复杂的']]]
+    ],
+    examples: [
+      ['句子含义', 'I understand what this sentence means.', '我明白这个句子的意思。'],
+      ['操作过程', 'Do you understand how the system works?', '你了解这个系统如何运作吗？'],
+      ['原因解释', 'I understand why you need more time.', '我理解你为什么需要更多时间。'],
+      ['确认理解', 'I think I understand the main point now.', '我想我现在明白重点了。'],
+      ['体谅感受', 'I understand how frustrating that must be.', '我理解那一定很让人沮丧。'],
+      ['相互沟通', 'We do not always agree, but we understand each other.', '我们并不总是意见一致，但彼此理解。'],
+      ['表达清楚', 'Please speak slowly so everyone can understand you.', '请说慢一点，好让大家都能听懂。'],
+      ['被人听懂', 'He used a picture to make himself understood.', '他用一张图片让别人明白自己的意思。'],
+      ['逐渐理解', 'I came to understand the value of regular review.', '我逐渐理解了定期复习的价值。'],
+      ['状态动词', 'I do not understand this part of the instructions.', '我不明白说明中的这一部分。']
+    ],
+    focus: ['understand 表示明白含义、原因或过程，也可表示体谅别人的处境。', '重点掌握 understand why/how/what 和 make yourself understood。', '通常说 understand the problem，不说 understand about the problem。', 'I understand what you mean.']
+  },
+
+  believe: {
+    meanings: [
+      ['v.', 'to accept that something is true', '相信；确信', 'I believe what she told me.', '我相信她告诉我的话。'],
+      ['v.', 'to have an opinion or think that something is true', '认为；觉得', 'I believe this is the best option.', '我认为这是最好的选择。'],
+      ['v.', 'to have confidence or faith in a person, idea, or ability', '信任；信仰', 'You need to believe in yourself.', '你需要相信自己。']
+    ],
+    structures: [
+      ['believe someone or something', '相信某人或某事'],
+      ['believe that + clause', '相信或认为……'],
+      ['believe in someone or something', '信任某人；信仰或相信某种价值'],
+      ['be believed to be', '被认为是……']
+    ],
+    errors: [
+      ['believe to him', 'believe him', 'believe 表示“相信某人所说的话”时直接接人，不加 to。'],
+      ['believe on yourself', 'believe in yourself', '表示“相信某人的能力或价值”用 believe in。'],
+      ['I am believe this', 'I believe this', 'believe 是动词，不能放在 am 后作表语。']
+    ],
+    contexts: [
+      ['事实与说法', [['believe a story', '相信一个说法'], ['believe the evidence', '相信证据'], ['hard to believe', '难以相信'], ['widely believed', '被广泛认为']]],
+      ['观点与判断', [['believe that', '认为……'], ['strongly believe', '坚信'], ['have reason to believe', '有理由相信'], ['be believed to be', '被认为是……']]],
+      ['信任与信心', [['believe in yourself', '相信自己'], ['believe in someone', '信任某人'], ['believe in teamwork', '相信团队合作'], ['make someone believe', '使某人相信']]],
+      ['口语表达', [['I believe so', '我想是的'], ['I cannot believe it', '我简直不敢相信'], ['believe it or not', '信不信由你'], ['would you believe it?', '你能相信吗？']]]
+    ],
+    phrases: [
+      ['believe someone', '相信某人的话', 'I believe you, and I am here to help.', '我相信你，也会在这里帮助你。'],
+      ['believe that', '相信；认为……', 'I believe that small habits can make a big difference.', '我相信小习惯能带来大改变。'],
+      ['believe in yourself', '相信自己', 'You have prepared well, so believe in yourself.', '你准备得很好，所以要相信自己。'],
+      ['have reason to believe', '有理由相信', 'We have reason to believe the data are accurate.', '我们有理由相信这些数据是准确的。'],
+      ['be believed to be', '被认为是……', 'The painting is believed to be over two hundred years old.', '这幅画被认为有两百多年历史。'],
+      ['I believe so', '我想是的', '“Will she join us?” “I believe so.”', '“她会加入我们吗？”“我想会的。”'],
+      ['believe it or not', '信不信由你', 'Believe it or not, I finished the book in one day.', '信不信由你，我一天就读完了那本书。'],
+      ['cannot believe your eyes', '不敢相信自己的眼睛', 'I could not believe my eyes when I saw the result.', '看到结果时，我简直不敢相信自己的眼睛。']
+    ],
+    synonyms: [
+      ['trust', 'v.', '信任；相信', '多指相信某人的诚实、能力或可靠性；believe someone 更侧重相信对方所说的话。'],
+      ['think', 'v.', '认为；觉得', '表达普通意见，语气往往比 believe 弱，也不表示信仰。'],
+      ['accept', 'v.', '接受；相信', '表示在考虑证据后承认某事为真，也可表示接受提议或物品。'],
+      ['be convinced', 'phr.', '确信', '强调经过证据或说服后非常确定，确信程度通常比 believe 高。']
+    ],
+    antonyms: [
+      ['doubt', 'v. / n.', '怀疑', '最常见的反向表达，表示不确定某事是否真实或是否会发生。'],
+      ['disbelieve', 'v.', '不相信', '表示认定某个说法不真实，比 doubt 更明确。'],
+      ['reject', 'v.', '拒绝接受', '用于拒绝观点、说法或证据，不只是对真实性存疑。']
+    ],
+    derivatives: [
+      ['belief', 'n.', '相信；信念', '非常常用；注意 believe 结尾是 -ve，belief 结尾是 -f。'],
+      ['believable', 'adj.', '可信的', '表示故事、解释或人物看起来可能是真的。'],
+      ['unbelievable', 'adj.', '难以置信的；极好的', '既可表示“不可信”，口语中也常表示“惊人地好”。'],
+      ['believer', 'n.', '信徒；相信者', '常见结构 a firm believer in，表示“……的坚定信奉者”。']
+    ],
+    confusables: [
+      ['belief', 'n.', '相信；信念', 'belief 是名词；believe 是动词。注意拼写变化：believe → belief。'],
+      ['trust', 'v. / n.', '信任', 'trust someone 常指相信其可靠性；believe someone 常指相信其所说的话。'],
+      ['belong', 'v.', '属于', 'belong 与 believe 开头相近，但含义和搭配完全不同；belong 通常与 to 连用。']
+    ],
+    related: [
+      ['确信程度', [['suspect', 'v.', '猜想；怀疑'], ['think', 'v.', '认为'], ['believe', 'v.', '相信'], ['know', 'v.', '知道']]],
+      ['信任关系', [['trust', 'v. / n.', '信任'], ['confidence', 'n.', '信心'], ['faith', 'n.', '信念；信仰'], ['doubt', 'v. / n.', '怀疑']]],
+      ['观点表达', [['opinion', 'n.', '观点'], ['evidence', 'n.', '证据'], ['claim', 'n. / v.', '说法；声称'], ['truth', 'n.', '事实；真相']]]
+    ],
+    examples: [
+      ['相信某人', 'I believe you, even though the story sounds unusual.', '虽然这件事听起来不寻常，但我相信你。'],
+      ['表达观点', 'I believe this is the safest option.', '我认为这是最安全的选择。'],
+      ['相信事实', 'Do you believe everything you read online?', '你相信网上读到的所有内容吗？'],
+      ['建立信心', 'You need to believe in yourself.', '你需要相信自己。'],
+      ['相信理念', 'She believes in treating everyone with respect.', '她信奉尊重每一个人。'],
+      ['有理由相信', 'We have reason to believe the problem has been fixed.', '我们有理由相信问题已经修复。'],
+      ['被动表达', 'The building is believed to be unsafe.', '这栋建筑被认为不安全。'],
+      ['难以置信', 'It is hard to believe how quickly the year passed.', '很难相信这一年过得这么快。'],
+      ['口语回应', '“Will the plan work?” “I believe so.”', '“这个计划会奏效吗？”“我想会的。”'],
+      ['不敢相信', 'I could not believe my eyes when I saw the final score.', '看到最终分数时，我简直不敢相信自己的眼睛。']
+    ],
+    focus: ['believe 可表示相信事实、表达观点，也可用 believe in 表示信任某人的能力或信奉某种理念。', '重点掌握 believe someone、believe that 和 believe in。', '相信某人所说的话直接说 believe someone，不加 to。', 'I believe that small habits can make a big difference.']
+  },
+
+  create: {
+    meanings: [
+      ['v.', 'to make something new that did not exist before', '创造；创作；创建', 'She created a simple plan for the project.', '她为项目制定了一个简单计划。'],
+      ['v.', 'to cause a situation, feeling, or result', '造成；引起；营造', 'The delay created several new problems.', '延误造成了几个新问题。']
+    ],
+    structures: [
+      ['create something', '创造或创建某物'],
+      ['create something for someone', '为某人创作或创建某物'],
+      ['create something from something', '用某种材料创造某物'],
+      ['create an opportunity or problem', '创造机会或造成问题']
+    ],
+    errors: [
+      ['create out a new account', 'create a new account', 'create 作及物动词时直接接所创建的事物，不加 out。'],
+      ['create an opportunity to someone', 'create an opportunity for someone', '表示“为某人创造机会”用 for 引出受益者。'],
+      ['create from something a model', 'create a model from something', '通常先说宾语，再用 from 说明材料或来源。']
+    ],
+    contexts: [
+      ['数字与内容', [['create an account', '创建账户'], ['create a document', '创建文档'], ['create content', '创作内容'], ['create a website', '创建网站']]],
+      ['工作与计划', [['create a plan', '制定计划'], ['create a schedule', '制定日程'], ['create a new role', '设立新岗位'], ['create jobs', '创造就业机会']]],
+      ['机会与环境', [['create an opportunity', '创造机会'], ['create a positive environment', '营造积极环境'], ['create a good impression', '留下好印象'], ['create value', '创造价值']]],
+      ['问题与影响', [['create a problem', '造成问题'], ['create confusion', '引起混乱'], ['create pressure', '造成压力'], ['create demand', '创造需求']]]
+    ],
+    phrases: [
+      ['create an account', '创建账户', 'You need to create an account before saving your progress.', '保存进度前，你需要创建一个账户。'],
+      ['create an opportunity', '创造机会', 'The workshop creates opportunities for new writers.', '这个工作坊为新作者创造机会。'],
+      ['create a positive environment', '营造积极环境', 'Good teachers create a positive learning environment.', '好老师会营造积极的学习环境。'],
+      ['create a plan', '制定计划', 'Let us create a realistic plan for the next two weeks.', '我们为接下来的两周制定一个切实可行的计划吧。'],
+      ['create a problem', '造成问题', 'Changing the date now could create a new problem.', '现在改日期可能会造成新问题。'],
+      ['create value', '创造价值', 'The feature should create real value for users.', '这个功能应该为用户创造实际价值。'],
+      ['create something from', '用……创造某物', 'The artist created the sculpture from recycled metal.', '艺术家用回收金属创作了这座雕塑。'],
+      ['be created by', '由……创造或创建', 'The illustration was created by a local artist.', '这幅插图由一位当地艺术家创作。']
+    ],
+    synonyms: [
+      ['make', 'v.', '制作；使产生', '最普通、适用范围最广；create 更强调产生此前不存在的新事物、想法或局面。'],
+      ['produce', 'v.', '生产；制作；产生', '常指系统性生产物品、内容或结果，不一定强调原创。'],
+      ['generate', 'v.', '产生；生成', '常用于数据、能量、收入、想法或计算机输出，语体较技术化。'],
+      ['design', 'v.', '设计', '强调事先规划外观、结构或功能；设计完成后不一定已经实际创造出来。']
+    ],
+    antonyms: [
+      ['destroy', 'v.', '摧毁；破坏', '最直接的反义词，强调使已经存在的事物不复存在或严重受损。'],
+      ['erase', 'v.', '擦除；抹去', '常用于文字、数据、痕迹或记忆，不适用于所有 create 的语境。'],
+      ['eliminate', 'v.', '消除；淘汰', '强调把问题、风险或选项彻底去除，与 create a problem 等语境相反。']
+    ],
+    derivatives: [
+      ['creation', 'n.', '创造；作品', '可指创造过程，也可指被创造出来的事物。'],
+      ['creator', 'n.', '创造者；创作者', '指创作内容、产品或作品的人。'],
+      ['creative', 'adj.', '有创造力的；创意的', '常形容人、想法、工作或解决办法。'],
+      ['creativity', 'n.', '创造力', '不可数名词，常用 show creativity。'],
+      ['creatively', 'adv.', '创造性地', '修饰 solve、think、use 等动词。']
+    ],
+    confusables: [
+      ['creative', 'adj.', '有创造力的', 'creative 是形容词；create 是动词；creation 是名词。'],
+      ['invent', 'v.', '发明；编造', 'invent 常指发明全新的设备或方法，也可表示编造故事；create 的范围更广。'],
+      ['build', 'v.', '建造；建立', 'build 强调逐步组装或发展结构；create 强调使新事物产生。']
+    ],
+    related: [
+      ['创作过程', [['imagine', 'v.', '想象'], ['design', 'v.', '设计'], ['develop', 'v.', '开发；发展'], ['build', 'v.', '建造；建立']]],
+      ['内容成果', [['idea', 'n.', '想法'], ['product', 'n.', '产品'], ['artwork', 'n.', '艺术作品'], ['solution', 'n.', '解决方案']]],
+      ['影响结果', [['cause', 'v. / n.', '造成；原因'], ['generate', 'v.', '产生'], ['result', 'n. / v.', '结果；导致'], ['destroy', 'v.', '摧毁']]]
+    ],
+    examples: [
+      ['数字账户', 'You need to create an account before saving your progress.', '保存进度前，你需要创建一个账户。'],
+      ['制定计划', 'She created a simple plan for the project.', '她为项目制定了一个简单计划。'],
+      ['创作内容', 'The team creates short videos for language learners.', '这个团队为语言学习者制作短视频。'],
+      ['营造环境', 'Soft lighting can create a calm atmosphere.', '柔和的灯光可以营造平静的氛围。'],
+      ['创造机会', 'The new program will create jobs in the area.', '这个新项目将在该地区创造就业机会。'],
+      ['造成问题', 'A small timing error created a much larger problem.', '一个小小的时间错误造成了更大的问题。'],
+      ['产生需求', 'Lower prices may create more demand.', '更低的价格可能会产生更多需求。'],
+      ['材料来源', 'She created the pattern from a photograph.', '她根据一张照片创作了这个图案。'],
+      ['被动表达', 'The logo was created by an independent designer.', '这个标志由一名独立设计师创作。'],
+      ['主动输出', 'What would you like to create this year?', '今年你想创造什么？']
+    ],
+    focus: ['create 表示创造新事物，也可表示造成某种局面、感觉或结果。', '重点掌握 create something、create something for someone 和 create something from something。', 'create 直接接宾语，不说 create out an account。', 'Good questions can create meaningful conversations.']
+  },
+
+  include: {
+    meanings: [
+      ['v.', 'to have someone or something as part of a group, set, or whole', '包括；包含', 'The price includes breakfast and Wi-Fi.', '价格包括早餐和无线网络。'],
+      ['v.', 'to make someone or something part of an activity or group', '把……包括在内；让……参与', 'Please include me in the next meeting.', '下次开会请把我也算上。']
+    ],
+    structures: [
+      ['include something', '包括某物'],
+      ['include someone in something', '让某人参与某事；把某人包括在内'],
+      ['be included in something', '被包括在某事物中'],
+      ['including but not limited to', '包括但不限于……']
+    ],
+    errors: [
+      ['The price includes with tax', 'The price includes tax', 'include 作动词时直接接所包含的内容，不加 with。'],
+      ['Breakfast is include', 'Breakfast is included', '被动语态要用过去分词 included。'],
+      ['include me into the discussion', 'include me in the discussion', '表示“让某人参与某事”用 include someone in something。']
+    ],
+    contexts: [
+      ['价格与服务', [['price includes tax', '价格含税'], ['include free delivery', '包括免费配送'], ['include breakfast', '含早餐'], ['service charge included', '已含服务费']]],
+      ['清单与内容', [['include examples', '包括例子'], ['include details', '包含细节'], ['include information about', '包含有关……的信息'], ['include a copy of', '附上一份……']]],
+      ['人员与活动', [['include someone in a meeting', '让某人参加会议'], ['include everyone', '把每个人都包括在内'], ['be included in the team', '被纳入团队'], ['feel included', '感到被接纳']]],
+      ['范围说明', [['including tax', '包括税费'], ['including children', '包括儿童'], ['not included', '不包括'], ['including but not limited to', '包括但不限于']]]
+    ],
+    phrases: [
+      ['include something', '包括某物', 'The package includes two batteries and a charger.', '包装内含两节电池和一个充电器。'],
+      ['include someone in something', '让某人参与某事', 'Please include Maya in the discussion.', '请让玛雅也参加讨论。'],
+      ['be included in', '被包括在……中', 'Breakfast is included in the room price.', '房价包含早餐。'],
+      ['include information about', '包含有关……的信息', 'Your report should include information about the costs.', '你的报告应包含有关成本的信息。'],
+      ['include a copy of', '附上一份……', 'Please include a copy of your receipt.', '请附上一份收据副本。'],
+      ['including tax', '包括税费', 'The total is $50, including tax.', '总价为五十美元，含税。'],
+      ['not included', '不包括；未包含', 'Flights are not included in the tour price.', '旅行价格不包括机票。'],
+      ['including but not limited to', '包括但不限于', 'The rule covers personal data, including but not limited to names and email addresses.', '该规则涵盖个人数据，包括但不限于姓名和电子邮箱地址。']
+    ],
+    synonyms: [
+      ['contain', 'v.', '含有；装有', '强调容器或整体内部含有什么；include 强调列举整体中的一部分，不一定列出全部。'],
+      ['cover', 'v.', '包含；涉及', '常用于课程、报告、费用或保险的范围，强调所处理或保障的内容。'],
+      ['involve', 'v.', '涉及；需要', '强调某活动必然牵涉的人、步骤或风险，不只是静态地包含。'],
+      ['encompass', 'v.', '包含；涵盖', '较正式，强调范围广、把多个不同部分全部纳入。']
+    ],
+    antonyms: [
+      ['exclude', 'v.', '排除；不包括', '最直接的反义词，可表示价格不包含某项，也可表示不让某人参加。'],
+      ['omit', 'v.', '省略；遗漏', '强调在清单、文字或行动中没有加入本应出现的内容。'],
+      ['leave out', 'phr.', '遗漏；不包括', '日常口语常用，可指漏掉信息或不让某人参与。']
+    ],
+    derivatives: [
+      ['inclusion', 'n.', '包括；纳入；包容', '常用结构 inclusion in，或 diversity and inclusion。'],
+      ['inclusive', 'adj.', '包括全部费用的；包容的', 'all-inclusive 表示“全包的”；inclusive 也可形容环境接纳不同人群。'],
+      ['included', 'adj.', '包括在内的', '常见表达 tax included、breakfast included。'],
+      ['including', 'prep.', '包括；包含', '用来引出例子或整体中的一部分，后接名词或名词短语。']
+    ],
+    confusables: [
+      ['contain', 'v.', '含有；装有', 'A box contains objects；a list includes examples。contain 更强调内部组成，include 更强调把某项列为一部分。'],
+      ['involve', 'v.', '涉及；需要', 'involve 强调过程所牵涉的行动或人员；include 只说明某项属于整体。'],
+      ['including', 'prep.', '包括', 'including 是介词；include 是动词。句子结构不同，不能直接互换位置。']
+    ],
+    related: [
+      ['整体与部分', [['whole', 'n. / adj.', '整体；全部的'], ['part', 'n.', '部分'], ['item', 'n.', '项目；一项'], ['component', 'n.', '组成部分']]],
+      ['范围动作', [['contain', 'v.', '含有'], ['cover', 'v.', '涵盖'], ['involve', 'v.', '涉及'], ['exclude', 'v.', '排除']]],
+      ['参与感受', [['join', 'v.', '加入'], ['participate', 'v.', '参加'], ['belong', 'v.', '属于；有归属感'], ['welcome', 'v. / adj.', '欢迎；受欢迎的']]]
+    ],
+    examples: [
+      ['价格内容', 'The price includes breakfast and Wi-Fi.', '价格包括早餐和无线网络。'],
+      ['包装清单', 'The package includes two batteries and a charger.', '包装内含两节电池和一个充电器。'],
+      ['报告内容', 'Please include a short summary at the beginning.', '请在开头加入一段简短摘要。'],
+      ['让人参与', 'Please include me in the next meeting.', '下次开会请把我也算上。'],
+      ['团队接纳', 'Good leaders make sure everyone feels included.', '好的领导者会确保每个人都有被接纳的感觉。'],
+      ['被动表达', 'Breakfast is included in the room price.', '房价包含早餐。'],
+      ['费用排除', 'Delivery is not included in the listed price.', '标价不含配送费。'],
+      ['介词用法', 'Six people attended, including two new employees.', '共有六人参加，其中包括两名新员工。'],
+      ['范围说明', 'The course covers several skills, including speaking and writing.', '课程涵盖多项技能，包括口语和写作。'],
+      ['易错结构', 'The total includes tax, so you do not need to pay extra.', '总价含税，所以你不需要额外付款。']
+    ],
+    focus: ['include 表示某人或某物是整体的一部分，也可表示让某人参与活动。', '重点掌握 include something、include someone in something 和 be included in。', 'include 直接接宾语，不说 include with；被动形式是 included。', 'The price includes breakfast and Wi-Fi.']
+  },
+
   work: {
     meanings: [
       ['v.', 'to do a job, especially to earn money', '工作；任职', 'She works at a local hospital.', '她在当地一家医院工作。'],

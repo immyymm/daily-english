@@ -5,37 +5,79 @@ import { fileURLToPath } from 'node:url';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const allCardsPath = path.join(root, 'public', 'data', 'all-cards.json');
 const manifestPath = path.join(root, 'public', 'data', 'manifest.json');
+const templatePath = path.join(root, 'content', 'templates', 'learning-template-2026.08.19.1.md');
 const allCards = JSON.parse(await fs.readFile(allCardsPath, 'utf8'));
 const manifest = JSON.parse(await fs.readFile(manifestPath, 'utf8'));
+const template = await fs.readFile(templatePath, 'utf8');
 const errors = [];
+const expectedTemplateVersion = 'learning-template-2026.08.19.1';
+const requiredReviewedWords = new Set(['improve', 'notice', 'support', 'likely', 'manage', 'provide', 'understand', 'believe', 'create', 'include', 'work']);
+const forbiddenGeneratedCopy = [
+  /The phrase [“\"].+[”\"] is useful in everyday English/i,
+  /vocabulary notebook/i,
+  /Listen for .+ in real conversations/i,
+  /We practiced .+ aloud three times/i,
+  /与本词相关的常用表达/,
+  /同一学习主题中的高频词/,
+  /真实表达延伸/,
+  /主动输出提示/
+];
 
 if (allCards.cards.length !== 150) errors.push('Expected 150 cards.');
 if (manifest.dailyFiles.length !== 30) errors.push('Expected 30 daily files.');
 if (new Set(allCards.cards.map((card) => card.id)).size !== allCards.cards.length) errors.push('Duplicate card IDs.');
+if (allCards.templateVersion !== expectedTemplateVersion || manifest.templateVersion !== expectedTemplateVersion) errors.push('Template version is not locked to ' + expectedTemplateVersion + '.');
+const templateHeadings = ['### 1. 核心记忆表', '### 2. 词性与释义', '### 3. 常用语境词组', '### 4. 固定搭配和短语', '### 5. 近义词', '### 6. 反义词', '### 7. 派生词', '### 8. 易混词', '### 9. 同类词汇分类', '### 10. 高频例句', '## 学习重点'];
+let previousHeadingIndex = -1;
+for (const heading of templateHeadings) {
+  const headingIndex = template.indexOf(heading);
+  if (headingIndex < 0 || headingIndex <= previousHeadingIndex) errors.push('Canonical template is missing or reorders section: ' + heading + '.');
+  previousHeadingIndex = headingIndex;
+}
+if (!template.includes(expectedTemplateVersion) || !template.includes('不得使用“这个短语很实用”')) errors.push('Canonical template version or anti-filler rule is missing.');
 
 for (const card of allCards.cards) {
-  const required = ['id', 'word', 'phonetic', 'syllables', 'partOfSpeech', 'coreMemory', 'meanings', 'contextPhrases', 'fixedPhrases', 'synonyms', 'antonyms', 'derivatives', 'confusables', 'relatedVocabulary', 'examples', 'studyFocus', 'questions'];
+  const required = ['id', 'word', 'phonetic', 'syllables', 'partOfSpeech', 'coreMemory', 'meanings', 'contextPhrases', 'fixedPhrases', 'synonyms', 'antonyms', 'derivatives', 'confusables', 'relatedVocabulary', 'examples', 'studyFocus', 'questions', 'templateVersion', 'contentVersion', 'reviewed'];
   for (const field of required) {
     if (card[field] === undefined || card[field] === null) {
       errors.push(card.id + ': missing ' + field);
     }
   }
+  if (card.templateVersion !== expectedTemplateVersion) errors.push(card.id + ': wrong template version.');
+  if (requiredReviewedWords.has(card.word) && (!card.reviewed || card.detailLevel !== 'template-complete')) errors.push(card.id + ': required human-reviewed card is not template-complete.');
+  if (!card.reviewed && card.detailLevel !== 'standard') errors.push(card.id + ': unreviewed content must be labeled standard.');
+  if (forbiddenGeneratedCopy.some((pattern) => pattern.test(JSON.stringify(card)))) errors.push(card.id + ': forbidden meta-learning filler or mechanical expansion found.');
+  if (card.tags.includes('人工精校') !== card.reviewed) errors.push(card.id + ': review tag does not match reviewed status.');
   if (card.meanings.length < 1) errors.push(card.id + ': expected at least one meaning.');
   if (card.partOfSpeech.includes('/') && card.meanings.length < 2) errors.push(card.id + ': multiple parts of speech need separate meanings.');
-  if (card.detailLevel !== 'template-complete') errors.push(card.id + ': card is not marked template-complete.');
   if (!Array.isArray(card.cocaRanks) || card.cocaRanks.length < 1 || !card.cocaRankLabel) errors.push(card.id + ': missing exact COCA rank data.');
   if (!Array.isArray(card.coreMemory.structures) || card.coreMemory.structures.length < 3) errors.push(card.id + ': expected at least three core structures.');
   if (!Array.isArray(card.coreMemory.commonErrors) || card.coreMemory.commonErrors.length < 2) errors.push(card.id + ': expected at least two concrete error corrections.');
-  if (card.contextPhrases.length < 4) errors.push(card.id + ': expected four context categories.');
-  if (card.contextPhrases.reduce((sum, group) => sum + group.items.length, 0) < 12) errors.push(card.id + ': expected at least twelve context phrases.');
-  if (card.fixedPhrases.length < 8) errors.push(card.id + ': expected at least eight fixed phrases or usage frames.');
   if (card.synonyms.length < 1 || card.antonyms.length < 1) errors.push(card.id + ': missing semantic contrast.');
-  if (card.relatedVocabulary.length < 3) errors.push(card.id + ': expected at least three related-vocabulary categories.');
-  if (card.relatedVocabulary.reduce((sum, group) => sum + group.items.length, 0) < 8) errors.push(card.id + ': expected at least eight related words.');
-  if (card.examples.length < 10) errors.push(card.id + ': expected ten learning-scene examples.');
+  if (card.reviewed) {
+    if (card.contextPhrases.length < 4) errors.push(card.id + ': reviewed card needs at least four real context categories.');
+    if (card.contextPhrases.reduce((sum, group) => sum + group.items.length, 0) < 12) errors.push(card.id + ': reviewed card needs at least twelve curated context phrases.');
+    if (card.fixedPhrases.length < 8) errors.push(card.id + ': reviewed card needs at least eight fixed phrases with real examples.');
+    if (card.synonyms.length < 3 || card.antonyms.length < 2) errors.push(card.id + ': reviewed card needs useful semantic comparison, not a token relation.');
+    if (card.relatedVocabulary.length < 3) errors.push(card.id + ': reviewed card needs at least three semantic categories.');
+    if (card.relatedVocabulary.reduce((sum, group) => sum + group.items.length, 0) < 8) errors.push(card.id + ': reviewed card needs at least eight genuinely related words.');
+    if (card.examples.length < 10) errors.push(card.id + ': reviewed card needs ten natural high-frequency examples.');
+    const targetForms = card.word === 'understand'
+      ? ['understand', 'understood']
+      : [card.word.toLowerCase().slice(0, Math.max(4, card.word.length - 2))];
+    const usesTarget = (text) => targetForms.some((form) => text.toLowerCase().includes(form));
+    if (card.fixedPhrases.some((entry) => !usesTarget(entry.example))) errors.push(card.id + ': every curated fixed-phrase example must actually use the target word or an inflected form.');
+    if (card.examples.some((entry) => !usesTarget(entry.english))) errors.push(card.id + ': every curated high-frequency example must actually use the target word or an inflected form.');
+  } else {
+    if (!card.contextPhrases.length || !card.contextPhrases.some((group) => group.items.length)) errors.push(card.id + ': standard card needs verified context phrases.');
+    if (!card.fixedPhrases.length) errors.push(card.id + ': standard card needs at least one verified fixed phrase.');
+    if (!card.relatedVocabulary.length) errors.push(card.id + ': standard card needs at least one semantic category.');
+    if (!card.examples.length) errors.push(card.id + ': standard card needs at least one real example.');
+  }
   if (new Set(card.examples.map((example) => example.english)).size !== card.examples.length) errors.push(card.id + ': duplicate example sentences.');
   if (card.derivatives.some((item) => item.word.toLowerCase() === card.word.toLowerCase())) errors.push(card.id + ': target word repeated as a derivative.');
   if (card.confusables.some((item) => item.word.toLowerCase() === card.word.toLowerCase())) errors.push(card.id + ': target word repeated as a confusable.');
+  if ([...card.synonyms, ...card.antonyms, ...card.derivatives, ...card.confusables].some((item) => !item.partOfSpeech || /^(word|word family)$/i.test(item.partOfSpeech))) errors.push(card.id + ': relation word has an unknown or invented part of speech.');
   if (card.coreMemory.commonErrors.some((item) => !item.wrong || !item.right || item.wrong === item.right)) errors.push(card.id + ': invalid error correction pair.');
   if (card.questions.length < 15) errors.push(card.id + ': expected at least fifteen questions sourced from the complete card.');
   if (new Set(card.questions.map((question) => question.id)).size !== card.questions.length) errors.push(card.id + ': duplicate question IDs.');
@@ -133,4 +175,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log('Content validation passed: 150 template-complete cards, 30 days, 5 unique cards per day.');
+console.log('Content validation passed: ' + allCards.cards.filter((card) => card.reviewed).length + ' template-complete cards, ' + allCards.cards.filter((card) => !card.reviewed).length + ' standard cards, 30 days, 5 unique cards per day.');

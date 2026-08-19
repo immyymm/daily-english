@@ -1,21 +1,27 @@
 import { dictionary } from 'cmu-pronouncing-dictionary';
 
 const phonemes = {
-  AA: 'ɑ', AE: 'æ', AH: 'ʌ', AO: 'ɔ', AW: 'aʊ', AY: 'aɪ',
-  B: 'b', CH: 'tʃ', D: 'd', DH: 'ð', EH: 'ɛ', ER: 'ɝ', EY: 'eɪ',
-  F: 'f', G: 'ɡ', HH: 'h', IH: 'ɪ', IY: 'i', JH: 'dʒ', K: 'k',
+  AA: 'ɑ', AE: 'æ', AH: 'ʌ', AO: 'ɔː', AW: 'aʊ', AY: 'aɪ',
+  B: 'b', CH: 'tʃ', D: 'd', DH: 'ð', EH: 'ɛ', ER: 'ɝː', EY: 'eɪ',
+  F: 'f', G: 'ɡ', HH: 'h', IH: 'ɪ', IY: 'iː', JH: 'dʒ', K: 'k',
   L: 'l', M: 'm', N: 'n', NG: 'ŋ', OW: 'oʊ', OY: 'ɔɪ', P: 'p',
-  R: 'r', S: 's', SH: 'ʃ', T: 't', TH: 'θ', UH: 'ʊ', UW: 'u',
+  R: 'r', S: 's', SH: 'ʃ', T: 't', TH: 'θ', UH: 'ʊ', UW: 'uː',
   V: 'v', W: 'w', Y: 'j', Z: 'z', ZH: 'ʒ'
 };
 
 function arpabetToIpa(value) {
-  return value.split(' ').map((token) => {
+  const rendered = [];
+  let syllableStart = 0;
+  for (const token of value.split(' ')) {
     const base = token.replace(/[012]$/, '');
-    if (base === 'AH' && token.endsWith('0')) return 'ə';
-    if (base === 'ER' && token.endsWith('0')) return 'ɚ';
-    return phonemes[base] ?? '';
-  }).join('');
+    const stress = token.match(/[12]$/)?.[0];
+    if (stress) rendered.splice(syllableStart, 0, stress === '1' ? 'ˈ' : 'ˌ');
+    if (base === 'AH' && token.endsWith('0')) rendered.push('ə');
+    else if (base === 'ER' && token.endsWith('0')) rendered.push('ɚ');
+    else rendered.push(phonemes[base] ?? '');
+    if (/[012]$/.test(token)) syllableStart = rendered.length;
+  }
+  return rendered.join('');
 }
 
 function wordIpa(word, targetWord, targetIpa) {

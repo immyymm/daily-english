@@ -18,378 +18,500 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "模板完整版",
+    "人工精校",
     "高频表达"
   ],
   "coreMemory": {
     "chinese": "相信；认为",
-    "english": "v. to think that something is true",
-    "structure": "believe in yourself /bɪˈliːv ɪn jɚsɛlf/（相信自己）；believe that /bɪˈliːv ðæt/（相信……）；strongly believe /strɔŋli bɪˈliːv/（坚信）；hard to believe /hɑrd tu bɪˈliːv/（难以相信）",
+    "english": "v. to accept that something is true；v. to have an opinion or think that something is true；v. to have confidence or faith in a person, idea, or ability",
+    "structure": "believe someone or something /bɪˈliːv ˈsʌˌmwʌn ˈɔːr ˈsʌmθɪŋ/（相信某人或某事）；believe that + clause /bɪˈliːv ˈðæt ˈklɔːz/（相信或认为……）；believe in someone or something /bɪˈliːv ɪn ˈsʌˌmwʌn ˈɔːr ˈsʌmθɪŋ/（信任某人；信仰或相信某种价值）；be believed to be /ˈbiː bɪˈliːvd ˈtuː ˈbiː/（被认为是……）",
     "structures": [
       {
-        "phrase": "believe in yourself",
-        "phonetic": "/bɪˈliːv ɪn jɚsɛlf/",
-        "chinese": "相信自己"
+        "phrase": "believe someone or something",
+        "phonetic": "/bɪˈliːv ˈsʌˌmwʌn ˈɔːr ˈsʌmθɪŋ/",
+        "chinese": "相信某人或某事"
       },
       {
-        "phrase": "believe that",
-        "phonetic": "/bɪˈliːv ðæt/",
-        "chinese": "相信……"
+        "phrase": "believe that + clause",
+        "phonetic": "/bɪˈliːv ˈðæt ˈklɔːz/",
+        "chinese": "相信或认为……"
       },
       {
-        "phrase": "strongly believe",
-        "phonetic": "/strɔŋli bɪˈliːv/",
-        "chinese": "坚信"
+        "phrase": "believe in someone or something",
+        "phonetic": "/bɪˈliːv ɪn ˈsʌˌmwʌn ˈɔːr ˈsʌmθɪŋ/",
+        "chinese": "信任某人；信仰或相信某种价值"
       },
       {
-        "phrase": "hard to believe",
-        "phonetic": "/hɑrd tu bɪˈliːv/",
-        "chinese": "难以相信"
+        "phrase": "be believed to be",
+        "phonetic": "/ˈbiː bɪˈliːvd ˈtuː ˈbiː/",
+        "chinese": "被认为是……"
       }
     ],
-    "commonError": "❌ can to believe → ✅ can believe；❌ to believeing → ✅ to believe",
+    "commonError": "❌ believe to him → ✅ believe him；❌ believe on yourself → ✅ believe in yourself；❌ I am believe this → ✅ I believe this",
     "commonErrors": [
       {
-        "wrong": "can to believe",
-        "wrongPhonetic": "/kæn tu bɪˈliːv/",
-        "right": "can believe",
-        "rightPhonetic": "/kæn bɪˈliːv/",
-        "note": "情态动词 can 后直接接动词原形，不加 to。"
+        "wrong": "believe to him",
+        "wrongPhonetic": "/bɪˈliːv ˈtuː ˈhɪm/",
+        "right": "believe him",
+        "rightPhonetic": "/bɪˈliːv ˈhɪm/",
+        "note": "believe 表示“相信某人所说的话”时直接接人，不加 to。"
       },
       {
-        "wrong": "to believeing",
-        "wrongPhonetic": "/tu believeing/",
-        "right": "to believe",
-        "rightPhonetic": "/tu bɪˈliːv/",
-        "note": "不定式 to 后接动词原形；不要把不定式和 -ing 形式混合。"
+        "wrong": "believe on yourself",
+        "wrongPhonetic": "/bɪˈliːv ˈɑn jɚˈsɛlf/",
+        "right": "believe in yourself",
+        "rightPhonetic": "/bɪˈliːv ɪn jɚˈsɛlf/",
+        "note": "表示“相信某人的能力或价值”用 believe in。"
+      },
+      {
+        "wrong": "I am believe this",
+        "wrongPhonetic": "/ˈaɪ ˈæm bɪˈliːv ˈðɪs/",
+        "right": "I believe this",
+        "rightPhonetic": "/ˈaɪ bɪˈliːv ˈðɪs/",
+        "note": "believe 是动词，不能放在 am 后作表语。"
       }
     ],
-    "directSynonym": "trust /trʌst/（与“相信”意义接近）",
-    "directAntonym": "doubt /daʊt/（与“相信”意义相反）",
-    "derivatives": "belief · believable",
+    "directSynonym": "trust /ˈtrʌst/（信任；相信）；think /ˈθɪŋk/（认为；觉得）；accept /æˈksɛpt/（接受；相信）；be convinced /ˈbiː kəˈnvɪnst/（确信）",
+    "directAntonym": "doubt /ˈdaʊt/（怀疑）；disbelieve /dɪsbəˈliːv/（不相信）；reject /rɪˈdʒɛkt/（拒绝接受）",
+    "derivatives": "belief · believable · unbelievable · believer",
     "example": "I believe this plan can work.",
     "exampleChinese": "我相信这个计划可行。"
   },
   "meanings": [
     {
       "partOfSpeech": "v.",
-      "english": "to think that something is true",
-      "chinese": "相信",
-      "example": "I believe this plan can work.",
-      "translation": "我相信这个计划可行。"
+      "english": "to accept that something is true",
+      "chinese": "相信；确信",
+      "example": "I believe what she told me.",
+      "translation": "我相信她告诉我的话。"
+    },
+    {
+      "partOfSpeech": "v.",
+      "english": "to have an opinion or think that something is true",
+      "chinese": "认为；觉得",
+      "example": "I believe this is the best option.",
+      "translation": "我认为这是最好的选择。"
+    },
+    {
+      "partOfSpeech": "v.",
+      "english": "to have confidence or faith in a person, idea, or ability",
+      "chinese": "信任；信仰",
+      "example": "You need to believe in yourself.",
+      "translation": "你需要相信自己。"
     }
   ],
   "contextPhrases": [
     {
-      "category": "核心高频搭配",
+      "category": "事实与说法",
       "items": [
         {
-          "phrase": "believe in yourself",
-          "phonetic": "/bɪˈliːv ɪn jɚsɛlf/",
-          "chinese": "相信自己"
+          "phrase": "believe a story",
+          "phonetic": "/bɪˈliːv ə ˈstɔːriː/",
+          "chinese": "相信一个说法"
         },
         {
-          "phrase": "believe that",
-          "phonetic": "/bɪˈliːv ðæt/",
-          "chinese": "相信……"
+          "phrase": "believe the evidence",
+          "phonetic": "/bɪˈliːv ðə ˈɛvədəns/",
+          "chinese": "相信证据"
         },
         {
-          "phrase": "strongly believe",
-          "phonetic": "/strɔŋli bɪˈliːv/",
-          "chinese": "坚信"
+          "phrase": "hard to believe",
+          "phonetic": "/ˈhɑrd ˈtuː bɪˈliːv/",
+          "chinese": "难以相信"
+        },
+        {
+          "phrase": "widely believed",
+          "phonetic": "/ˈwaɪdliː bɪˈliːvd/",
+          "chinese": "被广泛认为"
         }
       ]
     },
     {
-      "category": "句型与语法框架",
+      "category": "观点与判断",
       "items": [
         {
-          "phrase": "hard to believe",
-          "phonetic": "/hɑrd tu bɪˈliːv/",
-          "chinese": "难以相信"
+          "phrase": "believe that",
+          "phonetic": "/bɪˈliːv ˈðæt/",
+          "chinese": "认为……"
+        },
+        {
+          "phrase": "strongly believe",
+          "phonetic": "/ˈstrɔːŋliː bɪˈliːv/",
+          "chinese": "坚信"
         },
         {
           "phrase": "have reason to believe",
-          "phonetic": "/hæv rizən tu bɪˈliːv/",
+          "phonetic": "/ˈhæv ˈriːzən ˈtuː bɪˈliːv/",
           "chinese": "有理由相信"
         },
         {
+          "phrase": "be believed to be",
+          "phonetic": "/ˈbiː bɪˈliːvd ˈtuː ˈbiː/",
+          "chinese": "被认为是……"
+        }
+      ]
+    },
+    {
+      "category": "信任与信心",
+      "items": [
+        {
+          "phrase": "believe in yourself",
+          "phonetic": "/bɪˈliːv ɪn jɚˈsɛlf/",
+          "chinese": "相信自己"
+        },
+        {
+          "phrase": "believe in someone",
+          "phonetic": "/bɪˈliːv ɪn ˈsʌˌmwʌn/",
+          "chinese": "信任某人"
+        },
+        {
+          "phrase": "believe in teamwork",
+          "phonetic": "/bɪˈliːv ɪn ˈtiːˌmwɝːk/",
+          "chinese": "相信团队合作"
+        },
+        {
           "phrase": "make someone believe",
-          "phonetic": "/meɪk sʌmwʌn bɪˈliːv/",
+          "phonetic": "/ˈmeɪk ˈsʌˌmwʌn bɪˈliːv/",
           "chinese": "使某人相信"
         }
       ]
     },
     {
-      "category": "真实表达延伸",
+      "category": "口语表达",
       "items": [
         {
-          "phrase": "to believe in yourself",
-          "phonetic": "/tu bɪˈliːv ɪn jɚsɛlf/",
-          "chinese": "去相信自己"
+          "phrase": "I believe so",
+          "phonetic": "/ˈaɪ bɪˈliːv ˈsoʊ/",
+          "chinese": "我想是的"
         },
         {
-          "phrase": "need to believe in yourself",
-          "phonetic": "/nid tu bɪˈliːv ɪn jɚsɛlf/",
-          "chinese": "需要相信自己"
+          "phrase": "I cannot believe it",
+          "phonetic": "/ˈaɪ ˈkænɑt bɪˈliːv ˈɪt/",
+          "chinese": "我简直不敢相信"
         },
         {
-          "phrase": "try to believe in yourself",
-          "phonetic": "/traɪ tu bɪˈliːv ɪn jɚsɛlf/",
-          "chinese": "尝试相信自己"
-        }
-      ]
-    },
-    {
-      "category": "主动输出提示",
-      "items": [
-        {
-          "phrase": "can believe in yourself",
-          "phonetic": "/kæn bɪˈliːv ɪn jɚsɛlf/",
-          "chinese": "能够相信自己"
+          "phrase": "believe it or not",
+          "phonetic": "/bɪˈliːv ˈɪt ˈɔːr ˈnɑt/",
+          "chinese": "信不信由你"
         },
         {
-          "phrase": "how to believe in yourself",
-          "phonetic": "/haʊ tu bɪˈliːv ɪn jɚsɛlf/",
-          "chinese": "如何相信自己"
-        },
-        {
-          "phrase": "learn to believe in yourself",
-          "phonetic": "/lɝn tu bɪˈliːv ɪn jɚsɛlf/",
-          "chinese": "学会相信自己"
+          "phrase": "would you believe it?",
+          "phonetic": "/ˈwʊd ˈjuː bɪˈliːv ˈɪt/",
+          "chinese": "你能相信吗？"
         }
       ]
     }
   ],
   "fixedPhrases": [
     {
-      "phrase": "believe in yourself",
-      "phonetic": "/bɪˈliːv ɪn jɚsɛlf/",
-      "chinese": "相信自己",
-      "example": "I believe this plan can work.",
-      "translation": "我相信这个计划可行。"
+      "phrase": "believe someone",
+      "phonetic": "/bɪˈliːv ˈsʌˌmwʌn/",
+      "chinese": "相信某人的话",
+      "example": "I believe you, and I am here to help.",
+      "translation": "我相信你，也会在这里帮助你。"
     },
     {
       "phrase": "believe that",
-      "phonetic": "/bɪˈliːv ðæt/",
-      "chinese": "相信……",
-      "example": "The phrase “believe that” is useful in everyday English.",
-      "translation": "“believe that”是日常英语中的实用表达。"
+      "phonetic": "/bɪˈliːv ˈðæt/",
+      "chinese": "相信；认为……",
+      "example": "I believe that small habits can make a big difference.",
+      "translation": "我相信小习惯能带来大改变。"
     },
     {
-      "phrase": "strongly believe",
-      "phonetic": "/strɔŋli bɪˈliːv/",
-      "chinese": "坚信",
-      "example": "I added “strongly believe” to my vocabulary notebook.",
-      "translation": "我把“strongly believe”记进了词汇本。"
-    },
-    {
-      "phrase": "hard to believe",
-      "phonetic": "/hɑrd tu bɪˈliːv/",
-      "chinese": "难以相信",
-      "example": "Listen for “hard to believe” in real conversations.",
-      "translation": "在真实对话中留意“hard to believe”。"
+      "phrase": "believe in yourself",
+      "phonetic": "/bɪˈliːv ɪn jɚˈsɛlf/",
+      "chinese": "相信自己",
+      "example": "You have prepared well, so believe in yourself.",
+      "translation": "你准备得很好，所以要相信自己。"
     },
     {
       "phrase": "have reason to believe",
-      "phonetic": "/hæv rizən tu bɪˈliːv/",
+      "phonetic": "/ˈhæv ˈriːzən ˈtuː bɪˈliːv/",
       "chinese": "有理由相信",
-      "example": "Can you use “have reason to believe” in a complete sentence?",
-      "translation": "你能用“have reason to believe”说一个完整句子吗？"
+      "example": "We have reason to believe the data are accurate.",
+      "translation": "我们有理由相信这些数据是准确的。"
     },
     {
-      "phrase": "make someone believe",
-      "phonetic": "/meɪk sʌmwʌn bɪˈliːv/",
-      "chinese": "使某人相信",
-      "example": "We practiced “make someone believe” aloud three times.",
-      "translation": "我们把“make someone believe”大声练了三遍。"
+      "phrase": "be believed to be",
+      "phonetic": "/ˈbiː bɪˈliːvd ˈtuː ˈbiː/",
+      "chinese": "被认为是……",
+      "example": "The painting is believed to be over two hundred years old.",
+      "translation": "这幅画被认为有两百多年历史。"
     },
     {
-      "phrase": "to believe in yourself",
-      "phonetic": "/tu bɪˈliːv ɪn jɚsɛlf/",
-      "chinese": "去相信自己",
-      "example": "The phrase “to believe in yourself” is useful in everyday English.",
-      "translation": "“to believe in yourself”是日常英语中的实用表达。"
+      "phrase": "I believe so",
+      "phonetic": "/ˈaɪ bɪˈliːv ˈsoʊ/",
+      "chinese": "我想是的",
+      "example": "“Will she join us?” “I believe so.”",
+      "translation": "“她会加入我们吗？”“我想会的。”"
     },
     {
-      "phrase": "need to believe in yourself",
-      "phonetic": "/nid tu bɪˈliːv ɪn jɚsɛlf/",
-      "chinese": "需要相信自己",
-      "example": "I added “need to believe in yourself” to my vocabulary notebook.",
-      "translation": "我把“need to believe in yourself”记进了词汇本。"
+      "phrase": "believe it or not",
+      "phonetic": "/bɪˈliːv ˈɪt ˈɔːr ˈnɑt/",
+      "chinese": "信不信由你",
+      "example": "Believe it or not, I finished the book in one day.",
+      "translation": "信不信由你，我一天就读完了那本书。"
+    },
+    {
+      "phrase": "cannot believe your eyes",
+      "phonetic": "/ˈkænɑt bɪˈliːv ˈjɔːr ˈaɪz/",
+      "chinese": "不敢相信自己的眼睛",
+      "example": "I could not believe my eyes when I saw the result.",
+      "translation": "看到结果时，我简直不敢相信自己的眼睛。"
     }
   ],
   "synonyms": [
     {
       "word": "trust",
-      "phonetic": "/trʌst/",
+      "phonetic": "/ˈtrʌst/",
       "partOfSpeech": "v.",
-      "chinese": "与“相信”意义接近",
-      "difference": "believe 是本卡核心搭配 “believe in yourself” 中的中性常用选择；trust 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
+      "chinese": "信任；相信",
+      "difference": "多指相信某人的诚实、能力或可靠性；believe someone 更侧重相信对方所说的话。"
+    },
+    {
+      "word": "think",
+      "phonetic": "/ˈθɪŋk/",
+      "partOfSpeech": "v.",
+      "chinese": "认为；觉得",
+      "difference": "表达普通意见，语气往往比 believe 弱，也不表示信仰。"
+    },
+    {
+      "word": "accept",
+      "phonetic": "/æˈksɛpt/",
+      "partOfSpeech": "v.",
+      "chinese": "接受；相信",
+      "difference": "表示在考虑证据后承认某事为真，也可表示接受提议或物品。"
+    },
+    {
+      "word": "be convinced",
+      "phonetic": "/ˈbiː kəˈnvɪnst/",
+      "partOfSpeech": "phr.",
+      "chinese": "确信",
+      "difference": "强调经过证据或说服后非常确定，确信程度通常比 believe 高。"
     }
   ],
   "antonyms": [
     {
       "word": "doubt",
-      "phonetic": "/daʊt/",
+      "phonetic": "/ˈdaʊt/",
+      "partOfSpeech": "v. / n.",
+      "chinese": "怀疑",
+      "usage": "最常见的反向表达，表示不确定某事是否真实或是否会发生。"
+    },
+    {
+      "word": "disbelieve",
+      "phonetic": "/dɪsbəˈliːv/",
       "partOfSpeech": "v.",
-      "chinese": "与“相信”意义相反",
-      "usage": "在本卡核心义下与 believe 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
+      "chinese": "不相信",
+      "usage": "表示认定某个说法不真实，比 doubt 更明确。"
+    },
+    {
+      "word": "reject",
+      "phonetic": "/rɪˈdʒɛkt/",
+      "partOfSpeech": "v.",
+      "chinese": "拒绝接受",
+      "usage": "用于拒绝观点、说法或证据，不只是对真实性存疑。"
     }
   ],
   "derivatives": [
     {
       "word": "belief",
-      "phonetic": "/bɪlif/",
+      "phonetic": "/bɪˈliːf/",
       "partOfSpeech": "n.",
-      "chinese": "与 believe 同词族的常用词形",
-      "note": "这是 believe 的常用词族成员；先辨认词性，再放进完整句子中使用。"
+      "chinese": "相信；信念",
+      "note": "非常常用；注意 believe 结尾是 -ve，belief 结尾是 -f。"
     },
     {
       "word": "believable",
-      "phonetic": "/bəlivəbəl/",
+      "phonetic": "/bəˈliːvəbəl/",
       "partOfSpeech": "adj.",
-      "chinese": "与 believe 同词族的常用词形",
-      "note": "这是 believe 的常用词族成员；先辨认词性，再放进完整句子中使用。"
+      "chinese": "可信的",
+      "note": "表示故事、解释或人物看起来可能是真的。"
+    },
+    {
+      "word": "unbelievable",
+      "phonetic": "/ˌʌnbəˈliːvəbəl/",
+      "partOfSpeech": "adj.",
+      "chinese": "难以置信的；极好的",
+      "note": "既可表示“不可信”，口语中也常表示“惊人地好”。"
+    },
+    {
+      "word": "believer",
+      "phonetic": "/bəˈliːvɚ/",
+      "partOfSpeech": "n.",
+      "chinese": "信徒；相信者",
+      "note": "常见结构 a firm believer in，表示“……的坚定信奉者”。"
     }
   ],
   "confusables": [
     {
       "word": "belief",
+      "phonetic": "/bɪˈliːf/",
       "partOfSpeech": "n.",
-      "chinese": "信念；相信",
-      "difference": "believe 是动词；belief 是名词，注意结尾拼写从 -ve 变为 -f。",
-      "phonetic": "/bɪlif/"
+      "chinese": "相信；信念",
+      "difference": "belief 是名词；believe 是动词。注意拼写变化：believe → belief。"
+    },
+    {
+      "word": "trust",
+      "phonetic": "/ˈtrʌst/",
+      "partOfSpeech": "v. / n.",
+      "chinese": "信任",
+      "difference": "trust someone 常指相信其可靠性；believe someone 常指相信其所说的话。"
+    },
+    {
+      "word": "belong",
+      "phonetic": "/bɪˈlɔːŋ/",
+      "partOfSpeech": "v.",
+      "chinese": "属于",
+      "difference": "belong 与 believe 开头相近，但含义和搭配完全不同；belong 通常与 to 连用。"
     }
   ],
   "relatedVocabulary": [
     {
-      "category": "语义坐标：近义与反义",
+      "category": "确信程度",
+      "items": [
+        {
+          "word": "suspect",
+          "phonetic": "/səˈspɛkt/",
+          "partOfSpeech": "v.",
+          "chinese": "猜想；怀疑"
+        },
+        {
+          "word": "think",
+          "phonetic": "/ˈθɪŋk/",
+          "partOfSpeech": "v.",
+          "chinese": "认为"
+        },
+        {
+          "word": "believe",
+          "phonetic": "/bɪˈliːv/",
+          "partOfSpeech": "v.",
+          "chinese": "相信"
+        },
+        {
+          "word": "know",
+          "phonetic": "/ˈnoʊ/",
+          "partOfSpeech": "v.",
+          "chinese": "知道"
+        }
+      ]
+    },
+    {
+      "category": "信任关系",
       "items": [
         {
           "word": "trust",
-          "phonetic": "/trʌst/",
-          "partOfSpeech": "word family",
-          "chinese": "与本词相关的常用表达"
+          "phonetic": "/ˈtrʌst/",
+          "partOfSpeech": "v. / n.",
+          "chinese": "信任"
+        },
+        {
+          "word": "confidence",
+          "phonetic": "/ˈkɑnfədəns/",
+          "partOfSpeech": "n.",
+          "chinese": "信心"
+        },
+        {
+          "word": "faith",
+          "phonetic": "/ˈfeɪθ/",
+          "partOfSpeech": "n.",
+          "chinese": "信念；信仰"
         },
         {
           "word": "doubt",
-          "phonetic": "/daʊt/",
-          "partOfSpeech": "word family",
-          "chinese": "与本词相关的常用表达"
+          "phonetic": "/ˈdaʊt/",
+          "partOfSpeech": "v. / n.",
+          "chinese": "怀疑"
         }
       ]
     },
     {
-      "category": "词族与构词联系",
+      "category": "观点表达",
       "items": [
         {
-          "word": "belief",
-          "phonetic": "/bɪlif/",
+          "word": "opinion",
+          "phonetic": "/əˈpɪnjən/",
           "partOfSpeech": "n.",
-          "chinese": "与本词相关的常用表达"
+          "chinese": "观点"
         },
         {
-          "word": "believable",
-          "phonetic": "/bəlivəbəl/",
-          "partOfSpeech": "adj.",
-          "chinese": "与本词相关的常用表达"
+          "word": "evidence",
+          "phonetic": "/ˈɛvədəns/",
+          "partOfSpeech": "n.",
+          "chinese": "证据"
         },
         {
-          "word": "provide",
-          "phonetic": "/prəˈvaɪd/",
-          "partOfSpeech": "v.",
-          "chinese": "提供"
-        }
-      ]
-    },
-    {
-      "category": "同一学习主题中的高频词",
-      "items": [
-        {
-          "word": "provide",
-          "phonetic": "/prəˈvaɪd/",
-          "partOfSpeech": "v.",
-          "chinese": "提供"
+          "word": "claim",
+          "phonetic": "/ˈkleɪm/",
+          "partOfSpeech": "n. / v.",
+          "chinese": "说法；声称"
         },
         {
-          "word": "understand",
-          "phonetic": "/ˌʌndərˈstænd/",
-          "partOfSpeech": "v.",
-          "chinese": "理解"
-        },
-        {
-          "word": "create",
-          "phonetic": "/kriˈeɪt/",
-          "partOfSpeech": "v.",
-          "chinese": "创造"
-        },
-        {
-          "word": "include",
-          "phonetic": "/ɪnˈkluːd/",
-          "partOfSpeech": "v.",
-          "chinese": "包括"
+          "word": "truth",
+          "phonetic": "/ˈtruːθ/",
+          "partOfSpeech": "n.",
+          "chinese": "事实；真相"
         }
       ]
     }
   ],
   "examples": [
     {
-      "scene": "核心真实用法",
-      "english": "I believe this plan can work.",
-      "chinese": "我相信这个计划可行。"
+      "scene": "相信某人",
+      "english": "I believe you, even though the story sounds unusual.",
+      "chinese": "虽然这件事听起来不寻常，但我相信你。"
     },
     {
-      "scene": "英文释义理解",
-      "english": "In this lesson, I learned that “believe” means “to think that something is true”.",
-      "chinese": "这节课里，我学到 believe 的核心意思是“相信；认为”。"
+      "scene": "表达观点",
+      "english": "I believe this is the safest option.",
+      "chinese": "我认为这是最安全的选择。"
     },
     {
-      "scene": "高频搭配辨认",
-      "english": "The phrase “believe in yourself” is useful in everyday English.",
-      "chinese": "“believe in yourself”是日常英语中的实用表达。"
+      "scene": "相信事实",
+      "english": "Do you believe everything you read online?",
+      "chinese": "你相信网上读到的所有内容吗？"
     },
     {
-      "scene": "主动造句",
-      "english": "Can you use “believe” in a sentence of your own?",
-      "chinese": "你能用 believe 说一个自己的句子吗？"
+      "scene": "建立信心",
+      "english": "You need to believe in yourself.",
+      "chinese": "你需要相信自己。"
     },
     {
-      "scene": "词汇笔记",
-      "english": "I wrote “believe” and its pronunciation in my notebook.",
-      "chinese": "我把 believe 和它的发音记进了笔记本。"
+      "scene": "相信理念",
+      "english": "She believes in treating everyone with respect.",
+      "chinese": "她信奉尊重每一个人。"
     },
     {
-      "scene": "听力辨认",
-      "english": "Listen for “believe” the next time you hear English.",
-      "chinese": "下次听英语时，留意辨认 believe。"
+      "scene": "有理由相信",
+      "english": "We have reason to believe the problem has been fixed.",
+      "chinese": "我们有理由相信问题已经修复。"
     },
     {
-      "scene": "近义比较",
-      "english": "I compared “believe” with “trust” before choosing the word.",
-      "chinese": "选词前，我比较了 believe 和 trust。"
+      "scene": "被动表达",
+      "english": "The building is believed to be unsafe.",
+      "chinese": "这栋建筑被认为不安全。"
     },
     {
-      "scene": "反义对照",
-      "english": "The opposite idea is often expressed with “doubt”.",
-      "chinese": "相反的意思常可用 doubt 表达。"
+      "scene": "难以置信",
+      "english": "It is hard to believe how quickly the year passed.",
+      "chinese": "很难相信这一年过得这么快。"
     },
     {
-      "scene": "间隔复习",
-      "english": "I reviewed “believe” again before going to bed.",
-      "chinese": "睡前我又复习了一遍 believe。"
+      "scene": "口语回应",
+      "english": "“Will the plan work?” “I believe so.”",
+      "chinese": "“这个计划会奏效吗？”“我想会的。”"
     },
     {
-      "scene": "口语输出",
-      "english": "Which real situation would make you use “believe”?",
-      "chinese": "在什么真实情境中你会用到 believe？"
+      "scene": "不敢相信",
+      "english": "I could not believe my eyes when I saw the final score.",
+      "chinese": "看到最终分数时，我简直不敢相信自己的眼睛。"
     }
   ],
   "studyFocus": {
-    "coreMeaning": "相信；认为；英文核心释义：to think that something is true。",
-    "keyCollocation": "把 “believe in yourself” 作为一个完整句块记忆。",
-    "commonMistake": "情态动词 can 后直接接动词原形，不加 to。",
-    "mustUseExample": "I believe this plan can work."
+    "coreMeaning": "believe 可表示相信事实、表达观点，也可用 believe in 表示信任某人的能力或信奉某种理念。",
+    "keyCollocation": "重点掌握 believe someone、believe that 和 believe in。",
+    "commonMistake": "相信某人所说的话直接说 believe someone，不加 to。",
+    "mustUseExample": "I believe that small habits can make a big difference."
   },
   "questions": [
     {
@@ -411,24 +533,24 @@
       "prompt": "哪一项英文释义最符合词卡中的 “believe”？",
       "options": [
         "the power or skill to do something",
-        "to think that something is true",
+        "to accept that something is true",
         "to make a choice after thinking"
       ],
-      "answer": "to think that something is true",
+      "answer": "to accept that something is true",
       "stage": "T0",
       "ai": false
     },
     {
       "id": "believe-v-structure-choice-v3",
       "type": "meaning_choice",
-      "prompt": "核心结构辨析：哪一项既表示“相信自己”，又符合这个形式线索：完整搭配中使用介词 in？",
+      "prompt": "核心结构辨析：哪一项既表示“相信某人或某事”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
       "options": [
-        "believe that",
-        "strongly believe",
-        "hard to believe",
-        "believe in yourself"
+        "believe that + clause",
+        "believe in someone or something",
+        "be believed to be",
+        "believe someone or something"
       ],
-      "answer": "believe in yourself",
+      "answer": "believe someone or something",
       "stage": "T1",
       "ai": false
     },
@@ -477,7 +599,7 @@
     {
       "id": "believe-v-recall-definition",
       "type": "recall",
-      "prompt": "根据英文释义写出目标词：to think that something is true",
+      "prompt": "根据英文释义写出目标词：to accept that something is true",
       "answer": "believe",
       "stage": "T1",
       "ai": false
@@ -501,14 +623,14 @@
     {
       "id": "believe-v-collocation-structure-meaning-v3",
       "type": "collocation",
-      "prompt": "句型应用：哪一项既表示“相信……”，又符合这个形式线索：使用 that 引导一个主谓完整的从句？",
+      "prompt": "句型应用：哪一项既表示“相信或认为……”，又符合这个形式线索：使用 that 引导一个主谓完整的从句？",
       "options": [
-        "hard to believe",
-        "believe that",
-        "believe in yourself",
-        "strongly believe"
+        "be believed to be",
+        "believe that + clause",
+        "believe someone or something",
+        "believe in someone or something"
       ],
-      "answer": "believe that",
+      "answer": "believe that + clause",
       "stage": "T1",
       "ai": false
     },
@@ -529,26 +651,26 @@
     {
       "id": "believe-v-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“相信自己”，又符合这个形式线索：完整搭配中使用介词 in？",
+      "prompt": "用法辨析：哪一项既表示“相信某人的话”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "believe that",
-        "strongly believe",
-        "hard to believe",
-        "believe in yourself"
+        "believe in yourself",
+        "have reason to believe",
+        "believe someone"
       ],
-      "answer": "believe in yourself",
+      "answer": "believe someone",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "believe-v-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“相信……”，又符合这个形式线索：使用 that 引导一个主谓完整的从句？",
+      "prompt": "搭配辨析：哪一项既表示“相信；认为……”，又符合这个形式线索：使用 that 引导一个主谓完整的从句？",
       "options": [
-        "strongly believe",
-        "hard to believe",
+        "believe in yourself",
+        "have reason to believe",
         "believe that",
-        "believe in yourself"
+        "believe someone"
       ],
       "answer": "believe that",
       "stage": "T3",
@@ -573,7 +695,7 @@
     {
       "id": "believe-v-sentence-phrase",
       "type": "free_sentence",
-      "prompt": "请使用 “believe in yourself” 结构写一个与自己有关的自然英文句子；yourself 要替换成与主语一致的 myself、yourself、herself 等正确形式。",
+      "prompt": "请使用 “believe someone” 结构写一个与自己有关的自然英文句子；someone 要替换成实际的人或代词。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -581,7 +703,7 @@
     {
       "id": "believe-v-dialogue",
       "type": "dialogue",
-      "prompt": "写一段 2–4 轮真实对话，自然使用 “believe” 和 “believe that” 结构，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “believe” 和 “believe a story” 结构，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -640,7 +762,8 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.19.3",
+  "templateVersion": "learning-template-2026.08.19.1",
+  "contentVersion": "2026.08.19.4",
   "reviewed": true,
-  "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；本卡依照用户词卡模板人工精校；音标为美式发音。"
 }

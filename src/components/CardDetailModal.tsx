@@ -15,15 +15,15 @@ interface CardDetailModalProps {
 
 const sectionMeta: Array<{ id: SectionId; number: string; name: string }> = [
   { id: 'memory', number: '01', name: '核心记忆' },
-  { id: 'meanings', number: '02', name: '常用义项' },
-  { id: 'context', number: '03', name: '语境词组' },
-  { id: 'phrases', number: '04', name: '固定搭配' },
-  { id: 'synonyms', number: '05', name: '近义辨析' },
+  { id: 'meanings', number: '02', name: '词性与释义' },
+  { id: 'context', number: '03', name: '常用语境词组' },
+  { id: 'phrases', number: '04', name: '固定搭配和短语' },
+  { id: 'synonyms', number: '05', name: '近义词' },
   { id: 'antonyms', number: '06', name: '反义词' },
   { id: 'derivatives', number: '07', name: '派生词' },
   { id: 'confusables', number: '08', name: '易混词' },
-  { id: 'related', number: '09', name: '相关词汇' },
-  { id: 'examples', number: '10', name: '场景例句' },
+  { id: 'related', number: '09', name: '同类词汇分类' },
+  { id: 'examples', number: '10', name: '高频例句' },
 ];
 
 function speak(text: string) {
@@ -96,7 +96,7 @@ export function CardDetailModal({ card, progress, open, onClose, onLearn }: Card
   return (
     <ModalShell
       open={open}
-      title="完整单词词卡"
+      title={card.detailLevel === 'template-complete' ? '完整单词词卡' : '标准单词词卡'}
       eyebrow={progress?.status ?? '今日新词'}
       onClose={onClose}
       footer={
@@ -113,7 +113,7 @@ export function CardDetailModal({ card, progress, open, onClose, onLearn }: Card
           <p className="word-meaning">{card.coreMemory.chinese}</p>
           <div className="word-meta">
             <span>{card.cocaRankLabel ?? card.frequencyBand}</span>
-            <span>{card.detailLevel === 'template-complete' ? '模板完整版' : '完整词卡'}</span>
+            <span>{card.detailLevel === 'template-complete' ? '模板完整版' : '已核实基础版'}</span>
             <span>{card.difficulty}</span>
             {card.tags.slice(0, 2).map((tag) => <span key={tag}>{tag}</span>)}
           </div>
@@ -267,7 +267,7 @@ export function CardDetailModal({ card, progress, open, onClose, onLearn }: Card
           <section className="tip-card"><strong>主动输出</strong><p>盖住中文，先朗读英文；再替换句中的人物、时间或地点，口头说出一个和自己有关的新句子。</p></section>
         </LearningSection>
 
-        <p className="source-note">{card.sourceNote} · 内容版本 {card.contentVersion}</p>
+        <p className="source-note">{card.sourceNote} · 模板版本 {card.templateVersion} · 内容版本 {card.contentVersion}</p>
       </div>
     </ModalShell>
   );
