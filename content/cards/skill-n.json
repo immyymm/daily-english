@@ -491,18 +491,24 @@
       "ai": false
     },
     {
-      "id": "skill-n-collocation-structure",
+      "id": "skill-n-collocation-structure-meaning-v2",
       "type": "collocation",
-      "prompt": "补全核心结构中的连接成分：_____ a skill",
-      "answer": "develop",
+      "prompt": "结构应用：想表达“培养技能”，应选择哪个完整结构？",
+      "options": [
+        "develop a skill",
+        "communication skills",
+        "practical skills",
+        "skill in doing"
+      ],
+      "answer": "develop a skill",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "skill-n-collocation-context",
+      "id": "skill-n-collocation-example-context-v2",
       "type": "collocation",
-      "prompt": "根据语境补全搭配：_____ a skill",
-      "answer": "develop",
+      "prompt": "根据完整句意和中文提示补全英文：Conversation is a skill you can _____.（中文：对话是一项可以练习的技能。）",
+      "answer": "practice",
       "stage": "T2",
       "ai": false
     },
@@ -620,7 +626,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

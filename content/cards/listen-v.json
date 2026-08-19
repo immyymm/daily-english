@@ -492,18 +492,24 @@
       "ai": false
     },
     {
-      "id": "listen-v-collocation-structure",
+      "id": "listen-v-collocation-structure-meaning-v2",
       "type": "collocation",
-      "prompt": "补全核心结构中的连接成分：listen _____",
-      "answer": "to",
+      "prompt": "结构应用：想表达“听……”，应选择哪个完整结构？",
+      "options": [
+        "listen to advice",
+        "listen to",
+        "listen carefully",
+        "listen for"
+      ],
+      "answer": "listen to",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "listen-v-collocation-context",
+      "id": "listen-v-collocation-example-context-v2",
       "type": "collocation",
-      "prompt": "根据语境补全搭配：listen _____",
-      "answer": "carefully",
+      "prompt": "根据完整句意和中文提示补全英文：Listen to the _____ sentence before answering.（中文：回答前先听完整个句子。）",
+      "answer": "whole",
       "stage": "T2",
       "ai": false
     },
@@ -621,7 +627,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

@@ -1,7 +1,7 @@
 {
   "date": "2026-09-13",
   "dayNumber": 28,
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "cards": [
     {
       "id": "question-n",
@@ -502,17 +502,23 @@
           "ai": false
         },
         {
-          "id": "question-n-collocation-structure",
+          "id": "question-n-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ a question",
-          "answer": "ask",
+          "prompt": "结构应用：想表达“提问”，应选择哪个完整结构？",
+          "options": [
+            "good question",
+            "ask a question",
+            "answer a question",
+            "question whether"
+          ],
+          "answer": "ask a question",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "question-n-collocation-context",
+          "id": "question-n-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ a question",
+          "prompt": "根据完整句意和中文提示补全英文：Do not be afraid to _____ a question.（中文：不要害怕提问。）",
           "answer": "ask",
           "stage": "T2",
           "ai": false
@@ -631,7 +637,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1129,18 +1135,24 @@
           "ai": false
         },
         {
-          "id": "story-n-collocation-structure",
+          "id": "story-n-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ a story",
-          "answer": "tell",
+          "prompt": "结构应用：想表达“讲故事”，应选择哪个完整结构？",
+          "options": [
+            "tell a story",
+            "true story",
+            "short story",
+            "news story"
+          ],
+          "answer": "tell a story",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "story-n-collocation-context",
+          "id": "story-n-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ a story",
-          "answer": "tell",
+          "prompt": "根据完整句意和中文提示补全英文：Tell a short story _____ three new words.（中文：用三个新单词讲一个短故事。）",
+          "answer": "using",
           "stage": "T2",
           "ai": false
         },
@@ -1258,7 +1270,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1756,18 +1768,24 @@
           "ai": false
         },
         {
-          "id": "idea-n-collocation-structure",
+          "id": "idea-n-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ an idea",
-          "answer": "have",
+          "prompt": "结构应用：想表达“有一个想法”，应选择哪个完整结构？",
+          "options": [
+            "good idea",
+            "idea of doing",
+            "get the idea",
+            "have an idea"
+          ],
+          "answer": "have an idea",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "idea-n-collocation-context",
+          "id": "idea-n-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ an idea",
-          "answer": "have",
+          "prompt": "根据完整句意和中文提示补全英文：I have an idea for the _____.（中文：我对周末有个主意。）",
+          "answer": "weekend",
           "stage": "T2",
           "ai": false
         },
@@ -1885,7 +1903,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2388,18 +2406,24 @@
           "ai": false
         },
         {
-          "id": "place-n-collocation-structure",
+          "id": "place-n-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ place",
-          "answer": "take",
+          "prompt": "结构应用：想表达“发生；举行”，应选择哪个完整结构？",
+          "options": [
+            "a safe place",
+            "place something on",
+            "take place",
+            "in the first place"
+          ],
+          "answer": "take place",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "place-n-collocation-context",
+          "id": "place-n-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ place",
-          "answer": "take",
+          "prompt": "根据完整句意和中文提示补全英文：The meeting will take place on _____.（中文：会议将在星期五举行。）",
+          "answer": "Friday",
           "stage": "T2",
           "ai": false
         },
@@ -2517,7 +2541,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -3020,18 +3044,24 @@
           "ai": false
         },
         {
-          "id": "time-n-collocation-structure",
+          "id": "time-n-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ time",
-          "answer": "on",
+          "prompt": "结构应用：想表达“准时”，应选择哪个完整结构？",
+          "options": [
+            "from time to time",
+            "on time",
+            "in time",
+            "spend time doing"
+          ],
+          "answer": "on time",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "time-n-collocation-context",
+          "id": "time-n-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ time doing；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing",
-          "answer": "spend",
+          "prompt": "根据完整句意和中文提示补全英文：She arrived on time for the _____.（中文：她准时到达面试地点。）",
+          "answer": "interview",
           "stage": "T2",
           "ai": false
         },
@@ -3149,7 +3179,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

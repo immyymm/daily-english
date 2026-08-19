@@ -505,17 +505,23 @@
       "ai": false
     },
     {
-      "id": "travel-n-collocation-structure",
+      "id": "travel-n-collocation-structure-meaning-v2",
       "type": "collocation",
-      "prompt": "补全核心结构中的连接成分：travel _____",
-      "answer": "abroad",
+      "prompt": "结构应用：想表达“出国旅行”，应选择哪个完整结构？",
+      "options": [
+        "travel abroad",
+        "travel by train",
+        "travel around",
+        "business travel"
+      ],
+      "answer": "travel abroad",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "travel-n-collocation-context",
+      "id": "travel-n-collocation-example-context-v2",
       "type": "collocation",
-      "prompt": "根据语境补全搭配：travel _____",
+      "prompt": "根据完整句意和中文提示补全英文：She travels _____ for work twice a year.（中文：她每年因工作出国两次。）",
       "answer": "abroad",
       "stage": "T2",
       "ai": false
@@ -634,7 +640,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

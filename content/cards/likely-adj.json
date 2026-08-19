@@ -613,18 +613,24 @@
       "ai": false
     },
     {
-      "id": "likely-adj-collocation-structure",
+      "id": "likely-adj-collocation-structure-meaning-v2",
       "type": "collocation",
-      "prompt": "补全核心结构中的连接成分：be likely _____ do something；do 代表任意合适的动词原形，不要求写出单词 do；something 要替换成实际的事物或内容",
-      "answer": "to",
+      "prompt": "结构应用：想表达“很可能做某事”，应选择哪个完整结构？",
+      "options": [
+        "the most likely explanation",
+        "be likely to do something",
+        "it is likely that + clause",
+        "more or less likely"
+      ],
+      "answer": "be likely to do something",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "likely-adj-collocation-context",
+      "id": "likely-adj-collocation-example-context-v2",
       "type": "collocation",
-      "prompt": "根据语境补全搭配：_____ likely",
-      "answer": "highly",
+      "prompt": "根据完整句意和中文提示补全英文：It is likely to _____ this afternoon.（中文：今天下午很可能会下雨。）",
+      "answer": "rain",
       "stage": "T2",
       "ai": false
     },
@@ -742,7 +748,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；本卡依照用户词卡模板人工精校；音标为美式发音。"
 }

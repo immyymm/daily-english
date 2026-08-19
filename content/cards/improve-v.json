@@ -600,18 +600,24 @@
       "ai": false
     },
     {
-      "id": "improve-v-collocation-structure",
+      "id": "improve-v-collocation-structure-meaning-v2",
       "type": "collocation",
-      "prompt": "补全核心结构中的连接成分：improve _____ something；something 要替换成实际的事物或内容",
-      "answer": "on",
+      "prompt": "结构应用：想表达“比原有事物做得更好”，应选择哪个完整结构？",
+      "options": [
+        "improve on something",
+        "improve something",
+        "improve at something",
+        "improve by ten percent"
+      ],
+      "answer": "improve on something",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "improve-v-collocation-context",
+      "id": "improve-v-collocation-example-context-v2",
       "type": "collocation",
-      "prompt": "根据语境补全搭配：improve your _____",
-      "answer": "English",
+      "prompt": "根据完整句意和中文提示补全英文：Daily practice will improve your _____.（中文：每天练习会提高你的口语。）",
+      "answer": "speaking",
       "stage": "T2",
       "ai": false
     },
@@ -729,7 +735,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；本卡依照用户词卡模板人工精校；音标为美式发音。"
 }

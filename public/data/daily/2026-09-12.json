@@ -1,7 +1,7 @@
 {
   "date": "2026-09-12",
   "dayNumber": 27,
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "cards": [
     {
       "id": "money-n",
@@ -489,18 +489,24 @@
           "ai": false
         },
         {
-          "id": "money-n-collocation-structure",
+          "id": "money-n-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ money",
-          "answer": "save",
+          "prompt": "结构应用：想表达“省钱；存钱”，应选择哪个完整结构？",
+          "options": [
+            "make money",
+            "borrow money",
+            "save money",
+            "spend money on"
+          ],
+          "answer": "save money",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "money-n-collocation-context",
+          "id": "money-n-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ money",
-          "answer": "save",
+          "prompt": "根据完整句意和中文提示补全英文：Planning ahead can save _____ and money.（中文：提前规划可以节省时间和金钱。）",
+          "answer": "time",
           "stage": "T2",
           "ai": false
         },
@@ -618,7 +624,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1108,18 +1114,24 @@
           "ai": false
         },
         {
-          "id": "business-n-collocation-structure",
+          "id": "business-n-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ a business",
-          "answer": "run",
+          "prompt": "结构应用：想表达“经营企业”，应选择哪个完整结构？",
+          "options": [
+            "business plan",
+            "run a business",
+            "do business with",
+            "small business"
+          ],
+          "answer": "run a business",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "business-n-collocation-context",
+          "id": "business-n-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ a business",
-          "answer": "run",
+          "prompt": "根据完整句意和中文提示补全英文：She runs a small _____ business.（中文：她经营一家小型网络企业。）",
+          "answer": "online",
           "stage": "T2",
           "ai": false
         },
@@ -1237,7 +1249,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1734,18 +1746,24 @@
           "ai": false
         },
         {
-          "id": "friend-n-collocation-structure",
+          "id": "friend-n-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ friend",
-          "answer": "close",
+          "prompt": "结构应用：想表达“亲密朋友”，应选择哪个完整结构？",
+          "options": [
+            "close friend",
+            "best friend",
+            "make friends with",
+            "a friend of mine"
+          ],
+          "answer": "close friend",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "friend-n-collocation-context",
+          "id": "friend-n-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ friend",
-          "answer": "close",
+          "prompt": "根据完整句意和中文提示补全英文：I practiced the _____ with a friend.（中文：我和一位朋友练习了这段对话。）",
+          "answer": "dialogue",
           "stage": "T2",
           "ai": false
         },
@@ -1863,7 +1881,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2366,18 +2384,24 @@
           "ai": false
         },
         {
-          "id": "home-n-collocation-structure",
+          "id": "home-n-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ at home",
-          "answer": "feel",
+          "prompt": "结构应用：想表达“感到自在”，应选择哪个完整结构？",
+          "options": [
+            "go home",
+            "stay at home",
+            "work from home",
+            "feel at home"
+          ],
+          "answer": "feel at home",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "home-n-collocation-context",
+          "id": "home-n-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ at home",
-          "answer": "feel",
+          "prompt": "根据完整句意和中文提示补全英文：Make _____ at home.（中文：请不要拘束，就像在自己家一样。）",
+          "answer": "yourself",
           "stage": "T2",
           "ai": false
         },
@@ -2495,7 +2519,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2993,18 +3017,24 @@
           "ai": false
         },
         {
-          "id": "problem-n-collocation-structure",
+          "id": "problem-n-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ a problem",
-          "answer": "solve",
+          "prompt": "结构应用：想表达“解决问题”，应选择哪个完整结构？",
+          "options": [
+            "have a problem with",
+            "cause a problem",
+            "solve a problem",
+            "serious problem"
+          ],
+          "answer": "solve a problem",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "problem-n-collocation-context",
+          "id": "problem-n-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ a problem",
-          "answer": "solve",
+          "prompt": "根据完整句意和中文提示补全英文：Breaking the task into steps _____ the problem.（中文：把任务拆成步骤解决了这个问题。）",
+          "answer": "solved",
           "stage": "T2",
           "ai": false
         },
@@ -3122,7 +3152,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

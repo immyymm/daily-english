@@ -1,7 +1,7 @@
 {
   "date": "2026-09-05",
   "dayNumber": 20,
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "cards": [
     {
       "id": "useful-adj",
@@ -496,18 +496,24 @@
           "ai": false
         },
         {
-          "id": "useful-adj-collocation-structure",
+          "id": "useful-adj-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：useful _____",
-          "answer": "for",
+          "prompt": "结构应用：想表达“对……有用”，应选择哪个完整结构？",
+          "options": [
+            "find something useful",
+            "useful for",
+            "useful to someone",
+            "useful information"
+          ],
+          "answer": "useful for",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "useful-adj-collocation-context",
+          "id": "useful-adj-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：useful _____",
-          "answer": "information",
+          "prompt": "根据完整句意和中文提示补全英文：This phrase is useful for _____ requests.（中文：这个短语适合用于礼貌请求。）",
+          "answer": "polite",
           "stage": "T2",
           "ai": false
         },
@@ -625,7 +631,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1122,18 +1128,24 @@
           "ai": false
         },
         {
-          "id": "careful-adj-collocation-structure",
+          "id": "careful-adj-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：be careful _____",
-          "answer": "with",
+          "prompt": "结构应用：想表达“小心处理……”，应选择哪个完整结构？",
+          "options": [
+            "be careful with",
+            "be careful not to",
+            "careful planning",
+            "careful examination"
+          ],
+          "answer": "be careful with",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "careful-adj-collocation-context",
+          "id": "careful-adj-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：be careful _____",
-          "answer": "with",
+          "prompt": "根据完整句意和中文提示补全英文：Be careful with the _____ order.（中文：注意语序。）",
+          "answer": "word",
           "stage": "T2",
           "ai": false
         },
@@ -1251,7 +1263,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1741,18 +1753,24 @@
           "ai": false
         },
         {
-          "id": "ready-adj-collocation-structure",
+          "id": "ready-adj-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：be ready _____",
-          "answer": "to",
+          "prompt": "结构应用：想表达“准备好做”，应选择哪个完整结构？",
+          "options": [
+            "get ready for",
+            "ready for use",
+            "when you are ready",
+            "be ready to"
+          ],
+          "answer": "be ready to",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "ready-adj-collocation-context",
+          "id": "ready-adj-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：be ready _____",
-          "answer": "to",
+          "prompt": "根据完整句意和中文提示补全英文：I am ready to _____ the next question.（中文：我准备好尝试下一题了。）",
+          "answer": "try",
           "stage": "T2",
           "ai": false
         },
@@ -1870,7 +1888,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2367,18 +2385,24 @@
           "ai": false
         },
         {
-          "id": "certain-adj-collocation-structure",
+          "id": "certain-adj-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：be certain _____",
-          "answer": "that",
+          "prompt": "结构应用：想表达“确信……”，应选择哪个完整结构？",
+          "options": [
+            "make certain that",
+            "a certain amount of",
+            "be certain that",
+            "certain of"
+          ],
+          "answer": "be certain that",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "certain-adj-collocation-context",
+          "id": "certain-adj-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：be certain _____",
-          "answer": "that",
+          "prompt": "根据完整句意和中文提示补全英文：I am not certain that this _____ is correct.（中文：我不确定这个答案是否正确。）",
+          "answer": "answer",
           "stage": "T2",
           "ai": false
         },
@@ -2496,7 +2520,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -3014,18 +3038,24 @@
           "ai": false
         },
         {
-          "id": "patient-adj-collocation-structure",
+          "id": "patient-adj-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：be patient _____",
-          "answer": "with",
+          "prompt": "结构应用：想表达“对……有耐心”，应选择哪个完整结构？",
+          "options": [
+            "hospital patient",
+            "be patient with",
+            "patient enough to",
+            "remain patient"
+          ],
+          "answer": "be patient with",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "patient-adj-collocation-context",
+          "id": "patient-adj-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：be patient _____",
-          "answer": "with",
+          "prompt": "根据完整句意和中文提示补全英文：Be patient with _____ while learning.（中文：学习时要对自己有耐心。）",
+          "answer": "yourself",
           "stage": "T2",
           "ai": false
         },
@@ -3143,7 +3173,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

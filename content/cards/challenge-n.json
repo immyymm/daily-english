@@ -497,18 +497,24 @@
       "ai": false
     },
     {
-      "id": "challenge-n-collocation-structure",
+      "id": "challenge-n-collocation-structure-meaning-v2",
       "type": "collocation",
-      "prompt": "补全核心结构中的连接成分：_____ a challenge",
-      "answer": "face",
+      "prompt": "结构应用：想表达“面对挑战”，应选择哪个完整结构？",
+      "options": [
+        "major challenge",
+        "challenge someone to",
+        "face a challenge",
+        "take on a challenge"
+      ],
+      "answer": "face a challenge",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "challenge-n-collocation-context",
+      "id": "challenge-n-collocation-example-context-v2",
       "type": "collocation",
-      "prompt": "根据语境补全搭配：_____ a challenge",
-      "answer": "face",
+      "prompt": "根据完整句意和中文提示补全英文：Speaking without notes is a _____ challenge.（中文：不看笔记说话是一项有用的挑战。）",
+      "answer": "useful",
       "stage": "T2",
       "ai": false
     },
@@ -626,7 +632,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

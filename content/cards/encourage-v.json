@@ -484,18 +484,24 @@
       "ai": false
     },
     {
-      "id": "encourage-v-collocation-structure",
+      "id": "encourage-v-collocation-structure-meaning-v2",
       "type": "collocation",
-      "prompt": "补全核心结构中的连接成分：encourage someone _____ do；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词",
-      "answer": "to",
+      "prompt": "结构应用：想表达“鼓励某人做”，应选择哪个完整结构？",
+      "options": [
+        "encourage positive behavior",
+        "encourage someone to do",
+        "encourage discussion",
+        "strongly encourage"
+      ],
+      "answer": "encourage someone to do",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "encourage-v-collocation-context",
+      "id": "encourage-v-collocation-example-context-v2",
       "type": "collocation",
-      "prompt": "根据语境补全搭配：encourage _____",
-      "answer": "discussion",
+      "prompt": "根据完整句意和中文提示补全英文：The teacher encouraged us to _____ more.（中文：老师鼓励我们多开口说。）",
+      "answer": "speak",
       "stage": "T2",
       "ai": false
     },
@@ -613,7 +619,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

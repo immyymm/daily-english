@@ -620,18 +620,24 @@
       "ai": false
     },
     {
-      "id": "notice-v-collocation-structure",
+      "id": "notice-v-collocation-structure-meaning-v2",
       "type": "collocation",
-      "prompt": "补全核心结构中的连接成分：notice _____ + clause",
-      "answer": "that",
+      "prompt": "结构应用：想表达“注意到……”，应选择哪个完整结构？",
+      "options": [
+        "notice something",
+        "notice someone do something",
+        "notice someone doing something",
+        "notice that + clause"
+      ],
+      "answer": "notice that + clause",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "notice-v-collocation-context",
+      "id": "notice-v-collocation-example-context-v2",
       "type": "collocation",
-      "prompt": "根据语境补全搭配：notice a _____",
-      "answer": "difference",
+      "prompt": "根据完整句意和中文提示补全英文：Did you notice a _____ in her voice?（中文：你注意到她声音的变化了吗？）",
+      "answer": "change",
       "stage": "T2",
       "ai": false
     },
@@ -749,7 +755,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；本卡依照用户词卡模板人工精校；音标为美式发音。"
 }

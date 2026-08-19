@@ -476,18 +476,24 @@
       "ai": false
     },
     {
-      "id": "spend-v-collocation-structure",
+      "id": "spend-v-collocation-structure-meaning-v2",
       "type": "collocation",
-      "prompt": "补全核心结构中的连接成分：spend _____ doing；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing",
-      "answer": "time",
+      "prompt": "结构应用：想表达“花时间做”，应选择哪个完整结构？",
+      "options": [
+        "spend money on",
+        "spend the day with",
+        "spend too much",
+        "spend time doing"
+      ],
+      "answer": "spend time doing",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "spend-v-collocation-context",
+      "id": "spend-v-collocation-example-context-v2",
       "type": "collocation",
-      "prompt": "根据语境补全搭配：spend _____ doing；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing",
-      "answer": "time",
+      "prompt": "根据完整句意和中文提示补全英文：I spend _____ minutes reviewing words each day.（中文：我每天花二十分钟复习单词。）",
+      "answer": "twenty",
       "stage": "T2",
       "ai": false
     },
@@ -605,7 +611,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

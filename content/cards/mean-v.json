@@ -503,18 +503,24 @@
       "ai": false
     },
     {
-      "id": "mean-v-collocation-structure",
+      "id": "mean-v-collocation-structure-meaning-v2",
       "type": "collocation",
-      "prompt": "补全核心结构中的连接成分：mean a _____ to",
-      "answer": "lot",
+      "prompt": "结构应用：想表达“对……意义重大”，应选择哪个完整结构？",
+      "options": [
+        "what do you mean",
+        "mean a lot to",
+        "mean that",
+        "mean to do"
+      ],
+      "answer": "mean a lot to",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "mean-v-collocation-context",
+      "id": "mean-v-collocation-example-context-v2",
       "type": "collocation",
-      "prompt": "根据语境补全搭配：mean a lot _____",
-      "answer": "to",
+      "prompt": "根据完整句意和中文提示补全英文：Your support means a _____ to me.（中文：你的支持对我意义重大。）",
+      "answer": "lot",
       "stage": "T2",
       "ai": false
     },
@@ -632,7 +638,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

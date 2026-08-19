@@ -491,18 +491,24 @@
       "ai": false
     },
     {
-      "id": "express-v-collocation-structure",
+      "id": "express-v-collocation-structure-meaning-v2",
       "type": "collocation",
-      "prompt": "补全核心结构中的连接成分：express _____ opinion",
-      "answer": "an",
+      "prompt": "结构应用：想表达“表达观点”，应选择哪个完整结构？",
+      "options": [
+        "express your feelings",
+        "express concern about",
+        "clearly express",
+        "express an opinion"
+      ],
+      "answer": "express an opinion",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "express-v-collocation-context",
+      "id": "express-v-collocation-example-context-v2",
       "type": "collocation",
-      "prompt": "根据语境补全搭配：express an _____",
-      "answer": "opinion",
+      "prompt": "根据完整句意和中文提示补全英文：Try to express the _____ in your own words.（中文：试着用自己的话表达这个想法。）",
+      "answer": "idea",
       "stage": "T2",
       "ai": false
     },
@@ -620,7 +626,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

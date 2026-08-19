@@ -491,18 +491,24 @@
       "ai": false
     },
     {
-      "id": "success-n-collocation-structure",
+      "id": "success-n-collocation-structure-meaning-v2",
       "type": "collocation",
-      "prompt": "补全核心结构中的连接成分：_____ success",
-      "answer": "achieve",
+      "prompt": "结构应用：想表达“取得成功”，应选择哪个完整结构？",
+      "options": [
+        "great success",
+        "key to success",
+        "chance of success",
+        "achieve success"
+      ],
+      "answer": "achieve success",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "success-n-collocation-context",
+      "id": "success-n-collocation-example-context-v2",
       "type": "collocation",
-      "prompt": "根据语境补全搭配：_____ success",
-      "answer": "achieve",
+      "prompt": "根据完整句意和中文提示补全英文：Consistency is more important than _____ success.（中文：坚持比快速成功更重要。）",
+      "answer": "quick",
       "stage": "T2",
       "ai": false
     },
@@ -620,7 +626,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

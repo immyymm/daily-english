@@ -1,7 +1,7 @@
 {
   "date": "2026-08-29",
   "dayNumber": 13,
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "cards": [
     {
       "id": "information-n",
@@ -489,18 +489,24 @@
           "ai": false
         },
         {
-          "id": "information-n-collocation-structure",
+          "id": "information-n-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ information",
-          "answer": "useful",
+          "prompt": "结构应用：想表达“有用信息”，应选择哪个完整结构？",
+          "options": [
+            "useful information",
+            "provide information",
+            "personal information",
+            "information about"
+          ],
+          "answer": "useful information",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "information-n-collocation-context",
+          "id": "information-n-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ information",
-          "answer": "useful",
+          "prompt": "根据完整句意和中文提示补全英文：This page provides practical information for _____.（中文：这个页面为旅行者提供实用信息。）",
+          "answer": "travelers",
           "stage": "T2",
           "ai": false
         },
@@ -618,7 +624,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1108,18 +1114,24 @@
           "ai": false
         },
         {
-          "id": "community-n-collocation-structure",
+          "id": "community-n-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ community",
-          "answer": "local",
+          "prompt": "结构应用：想表达“当地社区”，应选择哪个完整结构？",
+          "options": [
+            "online community",
+            "community service",
+            "community members",
+            "local community"
+          ],
+          "answer": "local community",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "community-n-collocation-context",
+          "id": "community-n-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ community",
-          "answer": "local",
+          "prompt": "根据完整句意和中文提示补全英文：The project brought the community _____.（中文：这个项目让社区团结在一起。）",
+          "answer": "together",
           "stage": "T2",
           "ai": false
         },
@@ -1237,7 +1249,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1727,18 +1739,24 @@
           "ai": false
         },
         {
-          "id": "service-n-collocation-structure",
+          "id": "service-n-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ service",
-          "answer": "customer",
+          "prompt": "结构应用：想表达“客户服务”，应选择哪个完整结构？",
+          "options": [
+            "public service",
+            "in service",
+            "customer service",
+            "provide a service"
+          ],
+          "answer": "customer service",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "service-n-collocation-context",
+          "id": "service-n-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ service",
-          "answer": "customer",
+          "prompt": "根据完整句意和中文提示补全英文：The hotel offers _____ service.（中文：这家酒店提供出色的服务。）",
+          "answer": "excellent",
           "stage": "T2",
           "ai": false
         },
@@ -1856,7 +1874,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2346,18 +2364,24 @@
           "ai": false
         },
         {
-          "id": "system-n-collocation-structure",
+          "id": "system-n-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：a _____ system",
-          "answer": "simple",
+          "prompt": "结构应用：想表达“简单系统”，应选择哪个完整结构？",
+          "options": [
+            "system for doing",
+            "a simple system",
+            "computer system",
+            "education system"
+          ],
+          "answer": "a simple system",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "system-n-collocation-context",
+          "id": "system-n-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：a _____ system",
-          "answer": "simple",
+          "prompt": "根据完整句意和中文提示补全英文：This system _____ you review words at the right time.（中文：这个系统帮助你在合适的时间复习单词。）",
+          "answer": "helps",
           "stage": "T2",
           "ai": false
         },
@@ -2475,7 +2499,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2970,18 +2994,24 @@
           "ai": false
         },
         {
-          "id": "level-n-collocation-structure",
+          "id": "level-n-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ level",
-          "answer": "skill",
+          "prompt": "结构应用：想表达“技能水平”，应选择哪个完整结构？",
+          "options": [
+            "skill level",
+            "high level of",
+            "at this level",
+            "level of confidence"
+          ],
+          "answer": "skill level",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "level-n-collocation-context",
+          "id": "level-n-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ level",
-          "answer": "skill",
+          "prompt": "根据完整句意和中文提示补全英文：Choose a task that matches your _____ level.（中文：选择与当前水平相符的任务。）",
+          "answer": "current",
           "stage": "T2",
           "ai": false
         },
@@ -3099,7 +3129,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

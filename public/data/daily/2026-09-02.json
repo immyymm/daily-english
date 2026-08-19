@@ -1,7 +1,7 @@
 {
   "date": "2026-09-02",
   "dayNumber": 17,
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "cards": [
     {
       "id": "important-adj",
@@ -489,18 +489,24 @@
           "ai": false
         },
         {
-          "id": "important-adj-collocation-structure",
+          "id": "important-adj-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：important _____ remember",
-          "answer": "to",
+          "prompt": "结构应用：想表达“需要牢记”，应选择哪个完整结构？",
+          "options": [
+            "important to remember",
+            "important for",
+            "it is important to",
+            "play an important role"
+          ],
+          "answer": "important to remember",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "important-adj-collocation-context",
+          "id": "important-adj-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：important to _____",
-          "answer": "remember",
+          "prompt": "根据完整句意和中文提示补全英文：It is important to _____ mistakes.（中文：复习错误很重要。）",
+          "answer": "review",
           "stage": "T2",
           "ai": false
         },
@@ -618,7 +624,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1115,18 +1121,24 @@
           "ai": false
         },
         {
-          "id": "available-adj-collocation-structure",
+          "id": "available-adj-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：be available _____",
-          "answer": "to",
+          "prompt": "结构应用：想表达“可供……使用”，应选择哪个完整结构？",
+          "options": [
+            "available online",
+            "currently available",
+            "available for download",
+            "be available to"
+          ],
+          "answer": "be available to",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "available-adj-collocation-context",
+          "id": "available-adj-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：be available _____",
-          "answer": "to",
+          "prompt": "根据完整句意和中文提示补全英文：The lesson is available _____.（中文：这节课可以离线使用。）",
+          "answer": "offline",
           "stage": "T2",
           "ai": false
         },
@@ -1244,7 +1256,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1741,18 +1753,24 @@
           "ai": false
         },
         {
-          "id": "possible-adj-collocation-structure",
+          "id": "possible-adj-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ soon as possible",
-          "answer": "as",
+          "prompt": "结构应用：想表达“尽快”，应选择哪个完整结构？",
+          "options": [
+            "make it possible to",
+            "possible solution",
+            "as soon as possible",
+            "if possible"
+          ],
+          "answer": "as soon as possible",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "possible-adj-collocation-context",
+          "id": "possible-adj-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ soon as possible",
-          "answer": "as",
+          "prompt": "根据完整句意和中文提示补全英文：Please reply as _____ as possible.（中文：请尽快回复。）",
+          "answer": "soon",
           "stage": "T2",
           "ai": false
         },
@@ -1870,7 +1888,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2360,18 +2378,24 @@
           "ai": false
         },
         {
-          "id": "difficult-adj-collocation-structure",
+          "id": "difficult-adj-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ something difficult；something 要替换成实际的事物或内容",
-          "answer": "find",
+          "prompt": "结构应用：想表达“觉得某事困难”，应选择哪个完整结构？",
+          "options": [
+            "a difficult decision",
+            "find something difficult",
+            "difficult to understand",
+            "difficult for someone"
+          ],
+          "answer": "find something difficult",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "difficult-adj-collocation-context",
+          "id": "difficult-adj-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ something difficult；something 要替换成实际的事物或内容",
-          "answer": "find",
+          "prompt": "根据完整句意和中文提示补全英文：I find this sound difficult to _____.（中文：我觉得这个音很难发。）",
+          "answer": "pronounce",
           "stage": "T2",
           "ai": false
         },
@@ -2489,7 +2513,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2986,18 +3010,24 @@
           "ai": false
         },
         {
-          "id": "responsible-adj-collocation-structure",
+          "id": "responsible-adj-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：be responsible _____",
-          "answer": "for",
+          "prompt": "结构应用：想表达“对……负责”，应选择哪个完整结构？",
+          "options": [
+            "be responsible for",
+            "responsible for doing",
+            "hold someone responsible",
+            "a responsible person"
+          ],
+          "answer": "be responsible for",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "responsible-adj-collocation-context",
+          "id": "responsible-adj-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：be responsible _____",
-          "answer": "for",
+          "prompt": "根据完整句意和中文提示补全英文：She is responsible for the _____ report.（中文：她负责最终报告。）",
+          "answer": "final",
           "stage": "T2",
           "ai": false
         },
@@ -3115,7 +3145,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

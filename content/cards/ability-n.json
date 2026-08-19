@@ -491,18 +491,24 @@
       "ai": false
     },
     {
-      "id": "ability-n-collocation-structure",
+      "id": "ability-n-collocation-structure-meaning-v2",
       "type": "collocation",
-      "prompt": "补全核心结构中的连接成分：ability _____ do；do 代表任意合适的动词原形，不要求写出单词 do",
-      "answer": "to",
+      "prompt": "结构应用：想表达“做某事的能力”，应选择哪个完整结构？",
+      "options": [
+        "natural ability",
+        "academic ability",
+        "ability to do",
+        "develop an ability"
+      ],
+      "answer": "ability to do",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "ability-n-collocation-context",
+      "id": "ability-n-collocation-example-context-v2",
       "type": "collocation",
-      "prompt": "根据语境补全搭配：_____ an ability",
-      "answer": "develop",
+      "prompt": "根据完整句意和中文提示补全英文：Practice improves your ability to _____ words.（中文：练习会提高你回忆单词的能力。）",
+      "answer": "recall",
       "stage": "T2",
       "ai": false
     },
@@ -620,7 +626,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

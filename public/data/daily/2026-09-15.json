@@ -1,7 +1,7 @@
 {
   "date": "2026-09-15",
   "dayNumber": 30,
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "cards": [
     {
       "id": "moment-n",
@@ -489,18 +489,24 @@
           "ai": false
         },
         {
-          "id": "moment-n-collocation-structure",
+          "id": "moment-n-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ the moment",
-          "answer": "at",
+          "prompt": "结构应用：想表达“目前；此刻”，应选择哪个完整结构？",
+          "options": [
+            "for a moment",
+            "the right moment",
+            "wait a moment",
+            "at the moment"
+          ],
+          "answer": "at the moment",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "moment-n-collocation-context",
+          "id": "moment-n-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ right moment",
-          "answer": "the",
+          "prompt": "根据完整句意和中文提示补全英文：I am _____ at the moment.（中文：我现在很忙。）",
+          "answer": "busy",
           "stage": "T2",
           "ai": false
         },
@@ -618,7 +624,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1108,18 +1114,24 @@
           "ai": false
         },
         {
-          "id": "situation-n-collocation-structure",
+          "id": "situation-n-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ with a situation",
-          "answer": "deal",
+          "prompt": "结构应用：想表达“应对情况”，应选择哪个完整结构？",
+          "options": [
+            "current situation",
+            "in this situation",
+            "deal with a situation",
+            "difficult situation"
+          ],
+          "answer": "deal with a situation",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "situation-n-collocation-context",
+          "id": "situation-n-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ with a situation",
-          "answer": "deal",
+          "prompt": "根据完整句意和中文提示补全英文：The right response _____ on the situation.（中文：正确的回应取决于具体情况。）",
+          "answer": "depends",
           "stage": "T2",
           "ai": false
         },
@@ -1237,7 +1249,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1735,17 +1747,23 @@
           "ai": false
         },
         {
-          "id": "language-n-collocation-structure",
+          "id": "language-n-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：language _____",
-          "answer": "learning",
+          "prompt": "结构应用：想表达“语言学习”，应选择哪个完整结构？",
+          "options": [
+            "spoken language",
+            "language learning",
+            "foreign language",
+            "body language"
+          ],
+          "answer": "language learning",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "language-n-collocation-context",
+          "id": "language-n-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：language _____",
+          "prompt": "根据完整句意和中文提示补全英文：Language _____ takes time and practice.（中文：语言学习需要时间和练习。）",
           "answer": "learning",
           "stage": "T2",
           "ai": false
@@ -1864,7 +1882,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2361,18 +2379,24 @@
           "ai": false
         },
         {
-          "id": "skill-n-collocation-structure",
+          "id": "skill-n-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ a skill",
-          "answer": "develop",
+          "prompt": "结构应用：想表达“培养技能”，应选择哪个完整结构？",
+          "options": [
+            "develop a skill",
+            "communication skills",
+            "practical skills",
+            "skill in doing"
+          ],
+          "answer": "develop a skill",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "skill-n-collocation-context",
+          "id": "skill-n-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ a skill",
-          "answer": "develop",
+          "prompt": "根据完整句意和中文提示补全英文：Conversation is a skill you can _____.（中文：对话是一项可以练习的技能。）",
+          "answer": "practice",
           "stage": "T2",
           "ai": false
         },
@@ -2490,7 +2514,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -3001,18 +3025,24 @@
           "ai": false
         },
         {
-          "id": "benefit-n-collocation-structure",
+          "id": "benefit-n-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：benefit _____",
-          "answer": "from",
+          "prompt": "结构应用：想表达“从……中受益”，应选择哪个完整结构？",
+          "options": [
+            "benefit someone",
+            "main benefit",
+            "health benefits",
+            "benefit from"
+          ],
+          "answer": "benefit from",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "benefit-n-collocation-context",
+          "id": "benefit-n-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ benefit",
-          "answer": "main",
+          "prompt": "根据完整句意和中文提示补全英文：You will benefit from _____ review.（中文：你会从定期复习中受益。）",
+          "answer": "regular",
           "stage": "T2",
           "ai": false
         },
@@ -3130,7 +3160,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

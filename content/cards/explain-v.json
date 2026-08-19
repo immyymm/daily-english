@@ -484,18 +484,24 @@
       "ai": false
     },
     {
-      "id": "explain-v-collocation-structure",
+      "id": "explain-v-collocation-structure-meaning-v2",
       "type": "collocation",
-      "prompt": "补全核心结构中的连接成分：explain something _____；something 要替换成实际的事物或内容",
-      "answer": "clearly",
+      "prompt": "结构应用：想表达“清楚解释某事”，应选择哪个完整结构？",
+      "options": [
+        "explain why",
+        "explain how",
+        "explain something to someone",
+        "explain something clearly"
+      ],
+      "answer": "explain something clearly",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "explain-v-collocation-context",
+      "id": "explain-v-collocation-example-context-v2",
       "type": "collocation",
-      "prompt": "根据语境补全搭配：explain something _____；something 要替换成实际的事物或内容",
-      "answer": "clearly",
+      "prompt": "根据完整句意和中文提示补全英文：Could you explain this _____ to me?（中文：你能给我解释一下这个短语吗？）",
+      "answer": "phrase",
       "stage": "T2",
       "ai": false
     },
@@ -613,7 +619,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

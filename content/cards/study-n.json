@@ -505,18 +505,24 @@
       "ai": false
     },
     {
-      "id": "study-n-collocation-structure",
+      "id": "study-n-collocation-structure-meaning-v2",
       "type": "collocation",
-      "prompt": "补全核心结构中的连接成分：study _____ a test",
-      "answer": "for",
+      "prompt": "结构应用：想表达“为考试学习”，应选择哪个完整结构？",
+      "options": [
+        "study abroad",
+        "a recent study",
+        "study for a test",
+        "study English"
+      ],
+      "answer": "study for a test",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "study-n-collocation-context",
+      "id": "study-n-collocation-example-context-v2",
       "type": "collocation",
-      "prompt": "根据语境补全搭配：study for a _____",
-      "answer": "test",
+      "prompt": "根据完整句意和中文提示补全英文：She studies _____ for half an hour every morning.（中文：她每天早上学半小时英语。）",
+      "answer": "English",
       "stage": "T2",
       "ai": false
     },
@@ -634,7 +640,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

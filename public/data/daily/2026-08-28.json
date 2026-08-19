@@ -1,7 +1,7 @@
 {
   "date": "2026-08-28",
   "dayNumber": 12,
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "cards": [
     {
       "id": "experience-n",
@@ -502,18 +502,24 @@
           "ai": false
         },
         {
-          "id": "experience-n-collocation-structure",
+          "id": "experience-n-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ experience",
-          "answer": "gain",
+          "prompt": "结构应用：想表达“积累经验”，应选择哪个完整结构？",
+          "options": [
+            "from experience",
+            "gain experience",
+            "have experience in",
+            "learning experience"
+          ],
+          "answer": "gain experience",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "experience-n-collocation-context",
+          "id": "experience-n-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ experience",
-          "answer": "gain",
+          "prompt": "根据完整句意和中文提示补全英文：Travel gave her valuable _____ experience.（中文：旅行给了她宝贵的人生经验。）",
+          "answer": "life",
           "stage": "T2",
           "ai": false
         },
@@ -631,7 +637,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1121,18 +1127,24 @@
           "ai": false
         },
         {
-          "id": "opportunity-n-collocation-structure",
+          "id": "opportunity-n-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：have an opportunity _____",
-          "answer": "to",
+          "prompt": "结构应用：想表达“有机会做”，应选择哪个完整结构？",
+          "options": [
+            "have an opportunity to",
+            "take the opportunity to",
+            "a good opportunity",
+            "equal opportunities"
+          ],
+          "answer": "have an opportunity to",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "opportunity-n-collocation-context",
+          "id": "opportunity-n-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：have an opportunity _____",
-          "answer": "to",
+          "prompt": "根据完整句意和中文提示补全英文：The meeting gave me an opportunity to _____ English.（中文：这次会议给了我练习英语的机会。）",
+          "answer": "practice",
           "stage": "T2",
           "ai": false
         },
@@ -1250,7 +1262,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1748,18 +1760,24 @@
           "ai": false
         },
         {
-          "id": "decision-n-collocation-structure",
+          "id": "decision-n-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ a decision",
-          "answer": "make",
+          "prompt": "结构应用：想表达“作出决定”，应选择哪个完整结构？",
+          "options": [
+            "reach a decision",
+            "final decision",
+            "difficult decision",
+            "make a decision"
+          ],
+          "answer": "make a decision",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "decision-n-collocation-context",
+          "id": "decision-n-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ a decision",
-          "answer": "make",
+          "prompt": "根据完整句意和中文提示补全英文：You do not need to make the decision _____.（中文：你不必今天就做决定。）",
+          "answer": "today",
           "stage": "T2",
           "ai": false
         },
@@ -1877,7 +1895,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2367,18 +2385,24 @@
           "ai": false
         },
         {
-          "id": "relationship-n-collocation-structure",
+          "id": "relationship-n-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ a relationship",
-          "answer": "build",
+          "prompt": "结构应用：想表达“建立关系”，应选择哪个完整结构？",
+          "options": [
+            "relationship between",
+            "working relationship",
+            "build a relationship",
+            "close relationship"
+          ],
+          "answer": "build a relationship",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "relationship-n-collocation-context",
+          "id": "relationship-n-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ a relationship",
-          "answer": "build",
+          "prompt": "根据完整句意和中文提示补全英文：Trust is important in _____ relationship.（中文：信任在任何关系中都很重要。）",
+          "answer": "any",
           "stage": "T2",
           "ai": false
         },
@@ -2496,7 +2520,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2986,18 +3010,24 @@
           "ai": false
         },
         {
-          "id": "environment-n-collocation-structure",
+          "id": "environment-n-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ environment",
-          "answer": "learning",
+          "prompt": "结构应用：想表达“学习环境”，应选择哪个完整结构？",
+          "options": [
+            "work environment",
+            "learning environment",
+            "protect the environment",
+            "safe environment"
+          ],
+          "answer": "learning environment",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "environment-n-collocation-context",
+          "id": "environment-n-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ environment",
-          "answer": "learning",
+          "prompt": "根据完整句意和中文提示补全英文：A quiet environment _____ me focus.（中文：安静的环境有助于我集中注意力。）",
+          "answer": "helps",
           "stage": "T2",
           "ai": false
         },
@@ -3115,7 +3145,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

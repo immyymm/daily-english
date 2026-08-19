@@ -492,18 +492,24 @@
       "ai": false
     },
     {
-      "id": "story-n-collocation-structure",
+      "id": "story-n-collocation-structure-meaning-v2",
       "type": "collocation",
-      "prompt": "补全核心结构中的连接成分：_____ a story",
-      "answer": "tell",
+      "prompt": "结构应用：想表达“讲故事”，应选择哪个完整结构？",
+      "options": [
+        "tell a story",
+        "true story",
+        "short story",
+        "news story"
+      ],
+      "answer": "tell a story",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "story-n-collocation-context",
+      "id": "story-n-collocation-example-context-v2",
       "type": "collocation",
-      "prompt": "根据语境补全搭配：_____ a story",
-      "answer": "tell",
+      "prompt": "根据完整句意和中文提示补全英文：Tell a short story _____ three new words.（中文：用三个新单词讲一个短故事。）",
+      "answer": "using",
       "stage": "T2",
       "ai": false
     },
@@ -621,7 +627,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

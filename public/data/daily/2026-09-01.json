@@ -1,7 +1,7 @@
 {
   "date": "2026-09-01",
   "dayNumber": 16,
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "cards": [
     {
       "id": "confidence-n",
@@ -489,17 +489,23 @@
           "ai": false
         },
         {
-          "id": "confidence-n-collocation-structure",
+          "id": "confidence-n-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ confidence",
-          "answer": "build",
+          "prompt": "结构应用：想表达“建立信心”，应选择哪个完整结构？",
+          "options": [
+            "with confidence",
+            "build confidence",
+            "gain confidence",
+            "have confidence in"
+          ],
+          "answer": "build confidence",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "confidence-n-collocation-context",
+          "id": "confidence-n-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ confidence",
+          "prompt": "根据完整句意和中文提示补全英文：Short conversations can _____ your confidence.（中文：简短对话可以建立你的信心。）",
           "answer": "build",
           "stage": "T2",
           "ai": false
@@ -618,7 +624,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1108,18 +1114,24 @@
           "ai": false
         },
         {
-          "id": "quality-n-collocation-structure",
+          "id": "quality-n-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ quality",
-          "answer": "high",
+          "prompt": "结构应用：想表达“高质量”，应选择哪个完整结构？",
+          "options": [
+            "high quality",
+            "quality of life",
+            "improve the quality of",
+            "good-quality materials"
+          ],
+          "answer": "high quality",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "quality-n-collocation-context",
+          "id": "quality-n-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ quality",
-          "answer": "high",
+          "prompt": "根据完整句意和中文提示补全英文：Focus on the quality of your _____.（中文：关注练习的质量。）",
+          "answer": "practice",
           "stage": "T2",
           "ai": false
         },
@@ -1237,7 +1249,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1734,18 +1746,24 @@
           "ai": false
         },
         {
-          "id": "success-n-collocation-structure",
+          "id": "success-n-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ success",
-          "answer": "achieve",
+          "prompt": "结构应用：想表达“取得成功”，应选择哪个完整结构？",
+          "options": [
+            "great success",
+            "key to success",
+            "chance of success",
+            "achieve success"
+          ],
+          "answer": "achieve success",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "success-n-collocation-context",
+          "id": "success-n-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ success",
-          "answer": "achieve",
+          "prompt": "根据完整句意和中文提示补全英文：Consistency is more important than _____ success.（中文：坚持比快速成功更重要。）",
+          "answer": "quick",
           "stage": "T2",
           "ai": false
         },
@@ -1863,7 +1881,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2368,18 +2386,24 @@
           "ai": false
         },
         {
-          "id": "advice-n-collocation-structure",
+          "id": "advice-n-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ advice",
-          "answer": "give",
+          "prompt": "结构应用：想表达“给建议”，应选择哪个完整结构？",
+          "options": [
+            "follow someone’s advice",
+            "a piece of advice",
+            "give advice",
+            "ask for advice"
+          ],
+          "answer": "give advice",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "advice-n-collocation-context",
+          "id": "advice-n-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ advice",
-          "answer": "give",
+          "prompt": "根据完整句意和中文提示补全英文：She gave me some _____ advice.（中文：她给了我一些实用建议。）",
+          "answer": "practical",
           "stage": "T2",
           "ai": false
         },
@@ -2497,7 +2521,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2987,17 +3011,23 @@
           "ai": false
         },
         {
-          "id": "difference-n-collocation-structure",
+          "id": "difference-n-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ a difference",
-          "answer": "make",
+          "prompt": "结构应用：想表达“产生影响”，应选择哪个完整结构？",
+          "options": [
+            "big difference",
+            "make a difference",
+            "difference between",
+            "notice a difference"
+          ],
+          "answer": "make a difference",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "difference-n-collocation-context",
+          "id": "difference-n-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ a difference",
+          "prompt": "根据完整句意和中文提示补全英文：Ten focused minutes can _____ a difference.（中文：专注的十分钟也能带来改变。）",
           "answer": "make",
           "stage": "T2",
           "ai": false
@@ -3116,7 +3146,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

@@ -491,18 +491,24 @@
       "ai": false
     },
     {
-      "id": "aware-adj-collocation-structure",
+      "id": "aware-adj-collocation-structure-meaning-v2",
       "type": "collocation",
-      "prompt": "补全核心结构中的连接成分：be aware _____",
-      "answer": "of",
+      "prompt": "结构应用：想表达“意识到……”，应选择哪个完整结构？",
+      "options": [
+        "become aware that",
+        "fully aware",
+        "make someone aware of",
+        "be aware of"
+      ],
+      "answer": "be aware of",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "aware-adj-collocation-context",
+      "id": "aware-adj-collocation-example-context-v2",
       "type": "collocation",
-      "prompt": "根据语境补全搭配：be aware _____",
-      "answer": "of",
+      "prompt": "根据完整句意和中文提示补全英文：Be aware of the _____ in tone.（中文：注意语气上的差异。）",
+      "answer": "difference",
       "stage": "T2",
       "ai": false
     },
@@ -620,7 +626,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

@@ -1,7 +1,7 @@
 {
   "date": "2026-08-24",
   "dayNumber": 8,
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "cards": [
     {
       "id": "choose-v",
@@ -504,18 +504,24 @@
           "ai": false
         },
         {
-          "id": "choose-v-collocation-structure",
+          "id": "choose-v-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：choose _____ do；do 代表任意合适的动词原形，不要求写出单词 do",
-          "answer": "to",
+          "prompt": "结构应用：想表达“选择做”，应选择哪个完整结构？",
+          "options": [
+            "carefully choose",
+            "choose to do",
+            "choose between A and B",
+            "choose the right word"
+          ],
+          "answer": "choose to do",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "choose-v-collocation-context",
+          "id": "choose-v-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：choose _____ A and B；A、B 要替换成实际比较内容",
-          "answer": "between",
+          "prompt": "根据完整句意和中文提示补全英文：Choose the _____ natural answer.（中文：选择最自然的答案。）",
+          "answer": "most",
           "stage": "T2",
           "ai": false
         },
@@ -633,7 +639,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1143,18 +1149,24 @@
           "ai": false
         },
         {
-          "id": "share-v-collocation-structure",
+          "id": "share-v-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：share something _____ someone；someone 要替换成实际的人或代词；something 要替换成实际的事物或内容",
-          "answer": "with",
+          "prompt": "结构应用：想表达“与某人分享某物”，应选择哪个完整结构？",
+          "options": [
+            "share something with someone",
+            "share an opinion",
+            "share the cost",
+            "have something in common"
+          ],
+          "answer": "share something with someone",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "share-v-collocation-context",
+          "id": "share-v-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：share an _____",
-          "answer": "opinion",
+          "prompt": "根据完整句意和中文提示补全英文：She shared a _____ study tip with me.（中文：她和我分享了一个实用的学习技巧。）",
+          "answer": "useful",
           "stage": "T2",
           "ai": false
         },
@@ -1272,7 +1284,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1768,18 +1780,24 @@
           "ai": false
         },
         {
-          "id": "reach-v-collocation-structure",
+          "id": "reach-v-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：reach a _____",
-          "answer": "goal",
+          "prompt": "结构应用：想表达“达到目标”，应选择哪个完整结构？",
+          "options": [
+            "reach an agreement",
+            "reach a decision",
+            "reach out to",
+            "reach a goal"
+          ],
+          "answer": "reach a goal",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "reach-v-collocation-context",
+          "id": "reach-v-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：reach a _____",
-          "answer": "goal",
+          "prompt": "根据完整句意和中文提示补全英文：We finally reached an _____.（中文：我们终于达成了协议。）",
+          "answer": "agreement",
           "stage": "T2",
           "ai": false
         },
@@ -1897,7 +1915,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2379,17 +2397,23 @@
           "ai": false
         },
         {
-          "id": "remain-v-collocation-structure",
+          "id": "remain-v-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：remain _____",
-          "answer": "calm",
+          "prompt": "结构应用：想表达“保持冷静”，应选择哪个完整结构？",
+          "options": [
+            "remain in place",
+            "remain to be seen",
+            "remain calm",
+            "remain unchanged"
+          ],
+          "answer": "remain calm",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "remain-v-collocation-context",
+          "id": "remain-v-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：remain _____",
+          "prompt": "根据完整句意和中文提示补全英文：Please remain _____ and try again.（中文：请保持冷静并再试一次。）",
           "answer": "calm",
           "stage": "T2",
           "ai": false
@@ -2508,7 +2532,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -3011,18 +3035,24 @@
           "ai": false
         },
         {
-          "id": "handle-v-collocation-structure",
+          "id": "handle-v-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：handle a _____",
-          "answer": "problem",
+          "prompt": "结构应用：想表达“处理问题”，应选择哪个完整结构？",
+          "options": [
+            "easy to handle",
+            "handle a problem",
+            "handle the pressure",
+            "handle with care"
+          ],
+          "answer": "handle a problem",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "handle-v-collocation-context",
+          "id": "handle-v-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：handle a _____",
-          "answer": "problem",
+          "prompt": "根据完整句意和中文提示补全英文：She handled the _____ question well.（中文：她很好地应对了那个难题。）",
+          "answer": "difficult",
           "stage": "T2",
           "ai": false
         },
@@ -3140,7 +3170,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

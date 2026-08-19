@@ -484,18 +484,24 @@
       "ai": false
     },
     {
-      "id": "situation-n-collocation-structure",
+      "id": "situation-n-collocation-structure-meaning-v2",
       "type": "collocation",
-      "prompt": "补全核心结构中的连接成分：_____ with a situation",
-      "answer": "deal",
+      "prompt": "结构应用：想表达“应对情况”，应选择哪个完整结构？",
+      "options": [
+        "current situation",
+        "in this situation",
+        "deal with a situation",
+        "difficult situation"
+      ],
+      "answer": "deal with a situation",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "situation-n-collocation-context",
+      "id": "situation-n-collocation-example-context-v2",
       "type": "collocation",
-      "prompt": "根据语境补全搭配：_____ with a situation",
-      "answer": "deal",
+      "prompt": "根据完整句意和中文提示补全英文：The right response _____ on the situation.（中文：正确的回应取决于具体情况。）",
+      "answer": "depends",
       "stage": "T2",
       "ai": false
     },
@@ -613,7 +619,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

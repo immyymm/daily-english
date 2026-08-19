@@ -621,17 +621,23 @@
       "ai": false
     },
     {
-      "id": "manage-v-collocation-structure",
+      "id": "manage-v-collocation-structure-meaning-v2",
       "type": "collocation",
-      "prompt": "补全核心结构中的连接成分：manage _____ do something；do 代表任意合适的动词原形，不要求写出单词 do；something 要替换成实际的事物或内容",
-      "answer": "to",
+      "prompt": "结构应用：想表达“设法做成某事”，应选择哪个完整结构？",
+      "options": [
+        "manage to do something",
+        "manage a team or project",
+        "manage without something",
+        "manage on an amount of money"
+      ],
+      "answer": "manage to do something",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "manage-v-collocation-context",
+      "id": "manage-v-collocation-example-context-v2",
       "type": "collocation",
-      "prompt": "根据语境补全搭配：manage to _____",
+      "prompt": "根据完整句意和中文提示补全英文：She managed to _____ the report on time.（中文：她设法按时完成了报告。）",
       "answer": "finish",
       "stage": "T2",
       "ai": false
@@ -750,7 +756,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；本卡依照用户词卡模板人工精校；音标为美式发音。"
 }

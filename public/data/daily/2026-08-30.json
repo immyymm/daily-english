@@ -1,7 +1,7 @@
 {
   "date": "2026-08-30",
   "dayNumber": 14,
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "cards": [
     {
       "id": "value-n",
@@ -502,18 +502,24 @@
           "ai": false
         },
         {
-          "id": "value-n-collocation-structure",
+          "id": "value-n-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ value",
-          "answer": "great",
+          "prompt": "结构应用：想表达“很大价值”，应选择哪个完整结构？",
+          "options": [
+            "value for money",
+            "place a value on",
+            "core values",
+            "great value"
+          ],
+          "answer": "great value",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "value-n-collocation-context",
+          "id": "value-n-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ value",
-          "answer": "great",
+          "prompt": "根据完整句意和中文提示补全英文：I value _____ feedback.（中文：我重视诚实的反馈。）",
+          "answer": "honest",
           "stage": "T2",
           "ai": false
         },
@@ -631,7 +637,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1121,18 +1127,24 @@
           "ai": false
         },
         {
-          "id": "behavior-n-collocation-structure",
+          "id": "behavior-n-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ behavior",
-          "answer": "change",
+          "prompt": "结构应用：想表达“改变行为”，应选择哪个完整结构？",
+          "options": [
+            "human behavior",
+            "pattern of behavior",
+            "change behavior",
+            "positive behavior"
+          ],
+          "answer": "change behavior",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "behavior-n-collocation-context",
+          "id": "behavior-n-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ behavior",
-          "answer": "change",
+          "prompt": "根据完整句意和中文提示补全英文：Small rewards can encourage _____ behavior.（中文：小奖励可以鼓励积极行为。）",
+          "answer": "positive",
           "stage": "T2",
           "ai": false
         },
@@ -1250,7 +1262,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1740,18 +1752,24 @@
           "ai": false
         },
         {
-          "id": "attention-n-collocation-structure",
+          "id": "attention-n-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：pay attention _____",
-          "answer": "to",
+          "prompt": "结构应用：想表达“注意……”，应选择哪个完整结构？",
+          "options": [
+            "full attention",
+            "pay attention to",
+            "draw attention to",
+            "get someone’s attention"
+          ],
+          "answer": "pay attention to",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "attention-n-collocation-context",
+          "id": "attention-n-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：pay attention _____",
-          "answer": "to",
+          "prompt": "根据完整句意和中文提示补全英文：Pay attention to the _____ after the verb.（中文：注意这个动词后面的介词。）",
+          "answer": "preposition",
           "stage": "T2",
           "ai": false
         },
@@ -1869,7 +1887,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2359,18 +2377,24 @@
           "ai": false
         },
         {
-          "id": "purpose-n-collocation-structure",
+          "id": "purpose-n-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ purpose",
-          "answer": "main",
+          "prompt": "结构应用：想表达“主要目的”，应选择哪个完整结构？",
+          "options": [
+            "main purpose",
+            "purpose of doing",
+            "serve a purpose",
+            "on purpose"
+          ],
+          "answer": "main purpose",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "purpose-n-collocation-context",
+          "id": "purpose-n-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ purpose",
-          "answer": "main",
+          "prompt": "根据完整句意和中文提示补全英文：The main purpose of the _____ is active recall.（中文：这个测试的主要目的是主动回忆。）",
+          "answer": "test",
           "stage": "T2",
           "ai": false
         },
@@ -2488,7 +2512,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2978,18 +3002,24 @@
           "ai": false
         },
         {
-          "id": "choice-n-collocation-structure",
+          "id": "choice-n-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ a choice",
-          "answer": "make",
+          "prompt": "结构应用：想表达“作出选择”，应选择哪个完整结构？",
+          "options": [
+            "have no choice",
+            "a good choice",
+            "choice between",
+            "make a choice"
+          ],
+          "answer": "make a choice",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "choice-n-collocation-context",
+          "id": "choice-n-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ a choice",
-          "answer": "make",
+          "prompt": "根据完整句意和中文提示补全英文：Sometimes the natural choice _____ on context.（中文：有时自然的选择取决于语境。）",
+          "answer": "depends",
           "stage": "T2",
           "ai": false
         },
@@ -3107,7 +3137,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

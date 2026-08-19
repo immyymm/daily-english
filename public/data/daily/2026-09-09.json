@@ -1,7 +1,7 @@
 {
   "date": "2026-09-09",
   "dayNumber": 24,
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "cards": [
     {
       "id": "still-adv",
@@ -510,18 +510,24 @@
           "ai": false
         },
         {
-          "id": "still-adv-collocation-structure",
+          "id": "still-adv-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：still _____ to",
-          "answer": "need",
+          "prompt": "结构应用：想表达“仍然需要”，应选择哪个完整结构？",
+          "options": [
+            "still not sure",
+            "still need to",
+            "still working",
+            "still possible"
+          ],
+          "answer": "still need to",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "still-adv-collocation-context",
+          "id": "still-adv-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：still need _____",
-          "answer": "to",
+          "prompt": "根据完整句意和中文提示补全英文：I still _____ to review two words.（中文：我还需要复习两个单词。）",
+          "answer": "need",
           "stage": "T2",
           "ai": false
         },
@@ -639,7 +645,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1121,18 +1127,24 @@
           "ai": false
         },
         {
-          "id": "often-adv-collocation-structure",
+          "id": "often-adv-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ often",
-          "answer": "quite",
+          "prompt": "结构应用：想表达“相当经常”，应选择哪个完整结构？",
+          "options": [
+            "quite often",
+            "often used",
+            "more often than not",
+            "how often"
+          ],
+          "answer": "quite often",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "often-adv-collocation-context",
+          "id": "often-adv-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ often",
-          "answer": "quite",
+          "prompt": "根据完整句意和中文提示补全英文：This phrase often _____ in conversation.（中文：这个短语经常出现在对话中。）",
+          "answer": "appears",
           "stage": "T2",
           "ai": false
         },
@@ -1250,7 +1262,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1732,18 +1744,24 @@
           "ai": false
         },
         {
-          "id": "together-adv-collocation-structure",
+          "id": "together-adv-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ together",
-          "answer": "work",
+          "prompt": "结构应用：想表达“一起工作”，应选择哪个完整结构？",
+          "options": [
+            "learn together",
+            "live together",
+            "get together",
+            "work together"
+          ],
+          "answer": "work together",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "together-adv-collocation-context",
+          "id": "together-adv-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ together",
-          "answer": "work",
+          "prompt": "根据完整句意和中文提示补全英文：These words are often _____ together.（中文：这些词经常搭配使用。）",
+          "answer": "used",
           "stage": "T2",
           "ai": false
         },
@@ -1861,7 +1879,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2358,18 +2376,24 @@
           "ai": false
         },
         {
-          "id": "forward-adv-collocation-structure",
+          "id": "forward-adv-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：look forward _____",
-          "answer": "to",
+          "prompt": "结构应用：想表达“期待……”，应选择哪个完整结构？",
+          "options": [
+            "go forward with",
+            "a step forward",
+            "look forward to",
+            "move forward"
+          ],
+          "answer": "look forward to",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "forward-adv-collocation-context",
+          "id": "forward-adv-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：look forward _____",
-          "answer": "to",
+          "prompt": "根据完整句意和中文提示补全英文：I look forward to _____ from you.（中文：我期待收到你的消息。）",
+          "answer": "hearing",
           "stage": "T2",
           "ai": false
         },
@@ -2487,7 +2511,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2990,18 +3014,24 @@
           "ai": false
         },
         {
-          "id": "enough-adv-collocation-structure",
+          "id": "enough-adv-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ enough",
-          "answer": "good",
+          "prompt": "结构应用：想表达“足够好”，应选择哪个完整结构？",
+          "options": [
+            "not enough",
+            "good enough",
+            "enough time",
+            "old enough to"
+          ],
+          "answer": "good enough",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "enough-adv-collocation-context",
+          "id": "enough-adv-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ enough",
-          "answer": "good",
+          "prompt": "根据完整句意和中文提示补全英文：Five focused _____ can be enough.（中文：专注的五分钟也可能足够。）",
+          "answer": "minutes",
           "stage": "T2",
           "ai": false
         },
@@ -3119,7 +3149,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

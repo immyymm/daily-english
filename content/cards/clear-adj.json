@@ -504,18 +504,24 @@
       "ai": false
     },
     {
-      "id": "clear-adj-collocation-structure",
+      "id": "clear-adj-collocation-structure-meaning-v2",
       "type": "collocation",
-      "prompt": "补全核心结构中的连接成分：_____ something clear；something 要替换成实际的事物或内容",
-      "answer": "make",
+      "prompt": "结构应用：想表达“把某事说清楚”，应选择哪个完整结构？",
+      "options": [
+        "clear the table",
+        "make something clear",
+        "clear to someone",
+        "clear explanation"
+      ],
+      "answer": "make something clear",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "clear-adj-collocation-context",
+      "id": "clear-adj-collocation-example-context-v2",
       "type": "collocation",
-      "prompt": "根据语境补全搭配：_____ something clear；something 要替换成实际的事物或内容",
-      "answer": "make",
+      "prompt": "根据完整句意和中文提示补全英文：Please make your main _____ clear.（中文：请把你的主要观点说清楚。）",
+      "answer": "point",
       "stage": "T2",
       "ai": false
     },
@@ -633,7 +639,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

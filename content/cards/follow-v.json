@@ -491,18 +491,24 @@
       "ai": false
     },
     {
-      "id": "follow-v-collocation-structure",
+      "id": "follow-v-collocation-structure-meaning-v2",
       "type": "collocation",
-      "prompt": "补全核心结构中的连接成分：follow _____ instructions",
-      "answer": "the",
+      "prompt": "结构应用：想表达“按照说明”，应选择哪个完整结构？",
+      "options": [
+        "follow a path",
+        "follow the instructions",
+        "follow the rules",
+        "follow someone on social media"
+      ],
+      "answer": "follow the instructions",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "follow-v-collocation-context",
+      "id": "follow-v-collocation-example-context-v2",
       "type": "collocation",
-      "prompt": "根据语境补全搭配：follow the _____",
-      "answer": "instructions",
+      "prompt": "根据完整句意和中文提示补全英文：Follow these _____ to install the app.（中文：按照这些步骤安装应用。）",
+      "answer": "steps",
       "stage": "T2",
       "ai": false
     },
@@ -620,7 +626,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

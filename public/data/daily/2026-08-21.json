@@ -1,7 +1,7 @@
 {
   "date": "2026-08-21",
   "dayNumber": 5,
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "cards": [
     {
       "id": "offer-v",
@@ -502,17 +502,23 @@
           "ai": false
         },
         {
-          "id": "offer-v-collocation-structure",
+          "id": "offer-v-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：offer _____",
-          "answer": "help",
+          "prompt": "结构应用：想表达“主动提供帮助”，应选择哪个完整结构？",
+          "options": [
+            "offer help",
+            "offer someone a job",
+            "offer to do",
+            "make an offer"
+          ],
+          "answer": "offer help",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "offer-v-collocation-context",
+          "id": "offer-v-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：offer _____",
+          "prompt": "根据完整句意和中文提示补全英文：He offered to _____ me with the project.（中文：他主动提出帮我做这个项目。）",
           "answer": "help",
           "stage": "T2",
           "ai": false
@@ -631,7 +637,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1121,18 +1127,24 @@
           "ai": false
         },
         {
-          "id": "consider-v-collocation-structure",
+          "id": "consider-v-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：consider _____ possibility",
-          "answer": "the",
+          "prompt": "结构应用：想表达“考虑可能性”，应选择哪个完整结构？",
+          "options": [
+            "consider doing",
+            "consider someone suitable",
+            "carefully consider",
+            "consider the possibility"
+          ],
+          "answer": "consider the possibility",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "consider-v-collocation-context",
+          "id": "consider-v-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：consider the _____",
-          "answer": "possibility",
+          "prompt": "根据完整句意和中文提示补全英文：You should consider _____ a short break.（中文：你应该考虑短暂休息一下。）",
+          "answer": "taking",
           "stage": "T2",
           "ai": false
         },
@@ -1250,7 +1262,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1747,18 +1759,24 @@
           "ai": false
         },
         {
-          "id": "expect-v-collocation-structure",
+          "id": "expect-v-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：expect someone _____ do；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词",
-          "answer": "to",
+          "prompt": "结构应用：想表达“期待某人做”，应选择哪个完整结构？",
+          "options": [
+            "as expected",
+            "what to expect",
+            "expect someone to do",
+            "expect to see"
+          ],
+          "answer": "expect someone to do",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "expect-v-collocation-context",
+          "id": "expect-v-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：expect to _____",
-          "answer": "see",
+          "prompt": "根据完整句意和中文提示补全英文：We expect the _____ next week.（中文：我们预计下周会有结果。）",
+          "answer": "results",
           "stage": "T2",
           "ai": false
         },
@@ -1876,7 +1894,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2373,17 +2391,23 @@
           "ai": false
         },
         {
-          "id": "develop-v-collocation-structure",
+          "id": "develop-v-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：develop a _____",
-          "answer": "habit",
+          "prompt": "结构应用：想表达“养成习惯”，应选择哪个完整结构？",
+          "options": [
+            "develop an interest in",
+            "develop a habit",
+            "develop a skill",
+            "develop a plan"
+          ],
+          "answer": "develop a habit",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "develop-v-collocation-context",
+          "id": "develop-v-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：develop a _____",
+          "prompt": "根据完整句意和中文提示补全英文：She developed a _____ of reading every night.（中文：她养成了每晚阅读的习惯。）",
           "answer": "habit",
           "stage": "T2",
           "ai": false
@@ -2502,7 +2526,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2999,18 +3023,24 @@
           "ai": false
         },
         {
-          "id": "decide-v-collocation-structure",
+          "id": "decide-v-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：decide _____ do；do 代表任意合适的动词原形，不要求写出单词 do",
-          "answer": "to",
+          "prompt": "结构应用：想表达“决定做”，应选择哪个完整结构？",
+          "options": [
+            "decide to do",
+            "decide against",
+            "decide between",
+            "decide whether"
+          ],
+          "answer": "decide to do",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "decide-v-collocation-context",
+          "id": "decide-v-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：decide _____",
-          "answer": "against",
+          "prompt": "根据完整句意和中文提示补全英文：I decided to _____ with five words a day.（中文：我决定从每天五个单词开始。）",
+          "answer": "start",
           "stage": "T2",
           "ai": false
         },
@@ -3128,7 +3158,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

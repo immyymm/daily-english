@@ -491,18 +491,24 @@
       "ai": false
     },
     {
-      "id": "prepare-v-collocation-structure",
+      "id": "prepare-v-collocation-structure-meaning-v2",
       "type": "collocation",
-      "prompt": "补全核心结构中的连接成分：prepare _____ a test",
-      "answer": "for",
+      "prompt": "结构应用：想表达“备考”，应选择哪个完整结构？",
+      "options": [
+        "prepare for a test",
+        "prepare a meal",
+        "prepare a report",
+        "prepare someone for"
+      ],
+      "answer": "prepare for a test",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "prepare-v-collocation-context",
+      "id": "prepare-v-collocation-example-context-v2",
       "type": "collocation",
-      "prompt": "根据语境补全搭配：prepare for a _____",
-      "answer": "test",
+      "prompt": "根据完整句意和中文提示补全英文：She prepared for the _____ by practicing aloud.（中文：她通过大声练习为面试做准备。）",
+      "answer": "interview",
       "stage": "T2",
       "ai": false
     },
@@ -620,7 +626,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

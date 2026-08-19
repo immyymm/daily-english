@@ -484,18 +484,24 @@
       "ai": false
     },
     {
-      "id": "information-n-collocation-structure",
+      "id": "information-n-collocation-structure-meaning-v2",
       "type": "collocation",
-      "prompt": "补全核心结构中的连接成分：_____ information",
-      "answer": "useful",
+      "prompt": "结构应用：想表达“有用信息”，应选择哪个完整结构？",
+      "options": [
+        "useful information",
+        "provide information",
+        "personal information",
+        "information about"
+      ],
+      "answer": "useful information",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "information-n-collocation-context",
+      "id": "information-n-collocation-example-context-v2",
       "type": "collocation",
-      "prompt": "根据语境补全搭配：_____ information",
-      "answer": "useful",
+      "prompt": "根据完整句意和中文提示补全英文：This page provides practical information for _____.（中文：这个页面为旅行者提供实用信息。）",
+      "answer": "travelers",
       "stage": "T2",
       "ai": false
     },
@@ -613,7 +619,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

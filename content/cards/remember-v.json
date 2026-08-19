@@ -491,18 +491,24 @@
       "ai": false
     },
     {
-      "id": "remember-v-collocation-structure",
+      "id": "remember-v-collocation-structure-meaning-v2",
       "type": "collocation",
-      "prompt": "补全核心结构中的连接成分：remember _____ do；do 代表任意合适的动词原形，不要求写出单词 do",
-      "answer": "to",
+      "prompt": "结构应用：想表达“记得去做”，应选择哪个完整结构？",
+      "options": [
+        "remember someone clearly",
+        "remember the difference",
+        "remember to do",
+        "remember doing"
+      ],
+      "answer": "remember to do",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "remember-v-collocation-context",
+      "id": "remember-v-collocation-example-context-v2",
       "type": "collocation",
-      "prompt": "根据语境补全搭配：remember someone _____；someone 要替换成实际的人或代词",
-      "answer": "clearly",
+      "prompt": "根据完整句意和中文提示补全英文：Remember to _____ your work before you leave.（中文：离开前记得保存工作。）",
+      "answer": "save",
       "stage": "T2",
       "ai": false
     },
@@ -620,7 +626,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

@@ -14,7 +14,7 @@ const contentCardsDir = path.join(root, 'content', 'cards');
 const publicDailyDir = path.join(root, 'public', 'data', 'daily');
 const publicDataDir = path.join(root, 'public', 'data');
 const launchDate = new Date('2026-08-17T12:00:00+08:00');
-const contentVersion = '2026.08.19.1';
+const contentVersion = '2026.08.19.2';
 
 const slug = (value) => value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const primaryPos = (value) => value.split('/')[0].trim().replace('.', '');
@@ -396,18 +396,44 @@ function clozeTargetQuestion(id, promptPrefix, text, targetWord, stage) {
   };
 }
 
-function clozeStructureQuestion(id, promptPrefix, text, targetWord, stage, position) {
-  const words = wordsWithOffsets(text);
+function structureMeaningQuestion(id, entry, candidates, stage, index) {
+  return {
+    id,
+    type: 'collocation',
+    prompt: '结构应用：想表达“' + entry.chinese + '”，应选择哪个完整结构？',
+    options: relationOptions(entry.phrase, candidates.map((candidate) => candidate.phrase), index),
+    answer: entry.phrase,
+    stage,
+    ai: false
+  };
+}
+
+const contextClozeStopWords = new Set([
+  'a', 'an', 'the', 'and', 'or', 'but', 'if', 'so', 'to', 'of', 'in', 'on', 'at', 'for', 'from', 'with',
+  'by', 'as', 'is', 'am', 'are', 'was', 'were', 'be', 'been', 'being', 'do', 'does', 'did', 'have', 'has',
+  'had', 'will', 'would', 'can', 'could', 'may', 'might', 'must', 'should', 'i', 'you', 'he', 'she', 'it',
+  'we', 'they', 'my', 'your', 'his', 'her', 'its', 'our', 'their', 'this', 'that', 'these', 'those'
+]);
+
+function contextualCompanionQuestion(id, english, chinese, targetWord, stage) {
+  const words = wordsWithOffsets(english);
   const forms = inflectedForms(targetWord.toLowerCase());
-  const placeholders = new Set(['do', 'doing', 'done', 'someone', 'something', 'yourself', 'a', 'b']);
   const targetIndex = words.findIndex((word) => forms.has(word.text.toLowerCase()));
-  const preferredIndex = position === 'after-target' ? targetIndex + 1 : words.length - 1;
-  const isValidAnswer = (word) => !forms.has(word.text.toLowerCase()) && !placeholders.has(word.text.toLowerCase());
-  const selected = words[preferredIndex] && isValidAnswer(words[preferredIndex])
-    ? words[preferredIndex]
-    : words.find(isValidAnswer);
-  if (!selected) throw new Error(id + ': source phrase needs a non-target structure word');
-  return { id, type: 'collocation', prompt: promptPrefix + blankWord(text, selected) + slotGuidance(text), answer: selected.text, stage, ai: false };
+  const isUsefulCompanion = (word) => {
+    const normalized = word.text.toLowerCase();
+    return !forms.has(normalized) && !contextClozeStopWords.has(normalized) && normalized.length > 2;
+  };
+  const afterTarget = targetIndex >= 0 ? words.slice(targetIndex + 1).find(isUsefulCompanion) : undefined;
+  const selected = afterTarget ?? [...words].reverse().find(isUsefulCompanion);
+  if (!selected) throw new Error(id + ': example needs a meaningful non-target context word');
+  return {
+    id,
+    type: 'collocation',
+    prompt: '根据完整句意和中文提示补全英文：' + blankWord(english, selected) + '（中文：' + chinese + '）',
+    answer: selected.text,
+    stage,
+    ai: false
+  };
 }
 
 function phraseMeaningQuestion(id, entry, candidates, stage, index) {
@@ -511,8 +537,8 @@ function makeCard(item, index) {
     { id: id + '-recall-definition', type: 'recall', prompt: '根据英文释义写出目标词：' + meanings[0].english, answer: item.w, stage: 'T1', ai: false },
     { id: id + '-recall-chinese', type: 'recall', prompt: '写出符合“' + item.zh + '”（' + item.p + '）的本课目标词。', answer: item.w, stage: 'T1', ai: false },
     clozeTargetQuestion(id + '-collocation-core', '补全高频搭配：', item.coll, item.w, 'T0'),
-    clozeStructureQuestion(id + '-collocation-structure', '补全核心结构中的连接成分：', objectiveStructure.phrase, item.w, 'T1', 'after-target'),
-    clozeStructureQuestion(id + '-collocation-context', '根据语境补全搭配：', firstContextPhrase, item.w, 'T2', 'tail'),
+    structureMeaningQuestion(id + '-collocation-structure-meaning-v2', objectiveStructure, structures, 'T1', index + 8),
+    contextualCompanionQuestion(id + '-collocation-example-context-v2', item.ex, item.exZh, item.w, 'T2'),
     phraseMeaningQuestion(id + '-collocation-fixed-1', firstFixedEntry, fixedPhrases, 'T2', index + 6),
     phraseMeaningQuestion(id + '-collocation-fixed-2', secondFixedEntry, fixedPhrases, 'T3', index + 7),
     clozeTargetQuestion(id + '-example-cloze', '根据句意补全词卡核心例句：', item.ex, item.w, 'T3'),

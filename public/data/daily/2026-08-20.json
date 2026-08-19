@@ -1,7 +1,7 @@
 {
   "date": "2026-08-20",
   "dayNumber": 4,
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "cards": [
     {
       "id": "follow-v",
@@ -496,18 +496,24 @@
           "ai": false
         },
         {
-          "id": "follow-v-collocation-structure",
+          "id": "follow-v-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：follow _____ instructions",
-          "answer": "the",
+          "prompt": "结构应用：想表达“按照说明”，应选择哪个完整结构？",
+          "options": [
+            "follow a path",
+            "follow the instructions",
+            "follow the rules",
+            "follow someone on social media"
+          ],
+          "answer": "follow the instructions",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "follow-v-collocation-context",
+          "id": "follow-v-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：follow the _____",
-          "answer": "instructions",
+          "prompt": "根据完整句意和中文提示补全英文：Follow these _____ to install the app.（中文：按照这些步骤安装应用。）",
+          "answer": "steps",
           "stage": "T2",
           "ai": false
         },
@@ -625,7 +631,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1107,18 +1113,24 @@
           "ai": false
         },
         {
-          "id": "happen-v-collocation-structure",
+          "id": "happen-v-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ happened",
-          "answer": "what",
+          "prompt": "结构应用：想表达“发生了什么”，应选择哪个完整结构？",
+          "options": [
+            "what happened",
+            "happen to someone",
+            "happen to know",
+            "happen by chance"
+          ],
+          "answer": "what happened",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "happen-v-collocation-context",
+          "id": "happen-v-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ happened",
-          "answer": "what",
+          "prompt": "根据完整句意和中文提示补全英文：What happened _____ the meeting?（中文：会议期间发生了什么？）",
+          "answer": "during",
           "stage": "T2",
           "ai": false
         },
@@ -1236,7 +1248,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1718,18 +1730,24 @@
           "ai": false
         },
         {
-          "id": "become-v-collocation-structure",
+          "id": "become-v-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：become _____ confident",
-          "answer": "more",
+          "prompt": "结构应用：想表达“变得更自信”，应选择哪个完整结构？",
+          "options": [
+            "become aware of",
+            "become a habit",
+            "become involved in",
+            "become more confident"
+          ],
+          "answer": "become more confident",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "become-v-collocation-context",
+          "id": "become-v-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：become more _____",
-          "answer": "confident",
+          "prompt": "根据完整句意和中文提示补全英文：Speaking becomes _____ with practice.（中文：通过练习，口语会变得更容易。）",
+          "answer": "easier",
           "stage": "T2",
           "ai": false
         },
@@ -1847,7 +1865,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2337,18 +2355,24 @@
           "ai": false
         },
         {
-          "id": "seem-v-collocation-structure",
+          "id": "seem-v-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：seem _____ be",
-          "answer": "to",
+          "prompt": "结构应用：想表达“似乎是”，应选择哪个完整结构？",
+          "options": [
+            "seem strange",
+            "it seems that",
+            "seem to be",
+            "seem likely"
+          ],
+          "answer": "seem to be",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "seem-v-collocation-context",
+          "id": "seem-v-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：seem to _____",
-          "answer": "be",
+          "prompt": "根据完整句意和中文提示补全英文：The task seems _____ at first.（中文：这个任务起初看起来很难。）",
+          "answer": "difficult",
           "stage": "T2",
           "ai": false
         },
@@ -2466,7 +2490,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2975,18 +2999,24 @@
           "ai": false
         },
         {
-          "id": "mean-v-collocation-structure",
+          "id": "mean-v-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：mean a _____ to",
-          "answer": "lot",
+          "prompt": "结构应用：想表达“对……意义重大”，应选择哪个完整结构？",
+          "options": [
+            "what do you mean",
+            "mean a lot to",
+            "mean that",
+            "mean to do"
+          ],
+          "answer": "mean a lot to",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "mean-v-collocation-context",
+          "id": "mean-v-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：mean a lot _____",
-          "answer": "to",
+          "prompt": "根据完整句意和中文提示补全英文：Your support means a _____ to me.（中文：你的支持对我意义重大。）",
+          "answer": "lot",
           "stage": "T2",
           "ai": false
         },
@@ -3104,7 +3134,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

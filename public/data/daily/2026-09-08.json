@@ -1,7 +1,7 @@
 {
   "date": "2026-09-08",
   "dayNumber": 23,
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "cards": [
     {
       "id": "directly-adv",
@@ -496,18 +496,24 @@
           "ai": false
         },
         {
-          "id": "directly-adv-collocation-structure",
+          "id": "directly-adv-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ directly",
-          "answer": "speak",
+          "prompt": "结构应用：想表达“直接表达”，应选择哪个完整结构？",
+          "options": [
+            "go directly to",
+            "directly related to",
+            "speak directly",
+            "directly affect"
+          ],
+          "answer": "speak directly",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "directly-adv-collocation-context",
+          "id": "directly-adv-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ directly",
-          "answer": "speak",
+          "prompt": "根据完整句意和中文提示补全英文：Please answer the _____ directly.（中文：请直接回答问题。）",
+          "answer": "question",
           "stage": "T2",
           "ai": false
         },
@@ -625,7 +631,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1122,18 +1128,24 @@
           "ai": false
         },
         {
-          "id": "clearly-adv-collocation-structure",
+          "id": "clearly-adv-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ clearly",
-          "answer": "explain",
+          "prompt": "结构应用：想表达“清楚解释”，应选择哪个完整结构？",
+          "options": [
+            "clearly show",
+            "explain clearly",
+            "speak clearly",
+            "clearly understand"
+          ],
+          "answer": "explain clearly",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "clearly-adv-collocation-context",
+          "id": "clearly-adv-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ clearly",
-          "answer": "explain",
+          "prompt": "根据完整句意和中文提示补全英文：She explained the _____ clearly.（中文：她清楚地解释了这条规则。）",
+          "answer": "rule",
           "stage": "T2",
           "ai": false
         },
@@ -1251,7 +1263,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1741,18 +1753,24 @@
           "ai": false
         },
         {
-          "id": "usually-adv-collocation-structure",
+          "id": "usually-adv-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：usually _____",
-          "answer": "happens",
+          "prompt": "结构应用：想表达“通常发生”，应选择哪个完整结构？",
+          "options": [
+            "usually happens",
+            "usually take",
+            "as usually happens",
+            "not usually"
+          ],
+          "answer": "usually happens",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "usually-adv-collocation-context",
+          "id": "usually-adv-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：usually _____",
-          "answer": "happens",
+          "prompt": "根据完整句意和中文提示补全英文：I usually _____ words after breakfast.（中文：我通常在早餐后复习单词。）",
+          "answer": "review",
           "stage": "T2",
           "ai": false
         },
@@ -1870,7 +1888,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2352,18 +2370,24 @@
           "ai": false
         },
         {
-          "id": "perhaps-adv-collocation-structure",
+          "id": "perhaps-adv-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：perhaps _____",
-          "answer": "because",
+          "prompt": "结构应用：想表达“也许因为”，应选择哪个完整结构？",
+          "options": [
+            "perhaps we should",
+            "perhaps not",
+            "perhaps the most important",
+            "perhaps because"
+          ],
+          "answer": "perhaps because",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "perhaps-adv-collocation-context",
+          "id": "perhaps-adv-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：perhaps _____",
-          "answer": "because",
+          "prompt": "根据完整句意和中文提示补全英文：Perhaps we should _____ a different approach.（中文：也许我们应该尝试不同的方法。）",
+          "answer": "try",
           "stage": "T2",
           "ai": false
         },
@@ -2481,7 +2505,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2971,18 +2995,24 @@
           "ai": false
         },
         {
-          "id": "already-adv-collocation-structure",
+          "id": "already-adv-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ already done；done 代表符合语境的过去分词，不要求写出单词 done",
-          "answer": "have",
+          "prompt": "结构应用：想表达“已经做过”，应选择哪个完整结构？",
+          "options": [
+            "already available",
+            "as you already know",
+            "have already done",
+            "already know"
+          ],
+          "answer": "have already done",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "already-adv-collocation-context",
+          "id": "already-adv-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ already done；done 代表符合语境的过去分词，不要求写出单词 done",
-          "answer": "have",
+          "prompt": "根据完整句意和中文提示补全英文：I have already _____ today’s lesson.（中文：我已经完成了今天的课程。）",
+          "answer": "completed",
           "stage": "T2",
           "ai": false
         },
@@ -3100,7 +3130,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

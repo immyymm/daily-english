@@ -498,18 +498,24 @@
       "ai": false
     },
     {
-      "id": "reason-n-collocation-structure",
+      "id": "reason-n-collocation-structure-meaning-v2",
       "type": "collocation",
-      "prompt": "补全核心结构中的连接成分：the reason _____",
-      "answer": "for",
+      "prompt": "结构应用：想表达“……的原因”，应选择哪个完整结构？",
+      "options": [
+        "the reason for",
+        "reason why",
+        "main reason",
+        "for some reason"
+      ],
+      "answer": "the reason for",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "reason-n-collocation-context",
+      "id": "reason-n-collocation-example-context-v2",
       "type": "collocation",
-      "prompt": "根据语境补全搭配：reason _____",
-      "answer": "why",
+      "prompt": "根据完整句意和中文提示补全英文：What is the main reason for your _____?（中文：你做出这个选择的主要原因是什么？）",
+      "answer": "choice",
       "stage": "T2",
       "ai": false
     },
@@ -627,7 +633,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

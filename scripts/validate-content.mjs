@@ -51,7 +51,7 @@ for (const card of allCards.cards) {
   if (clozeQuestions.some((question) => !question.prompt.includes('_____') || !question.answer?.trim())) {
     errors.push(card.id + ': every non-choice collocation question needs one real blank and a non-empty answer.');
   }
-  if (clozeQuestions.some((question) => /^(do|doing|done|someone|something|yourself|A|B)$/i.test(question.answer.trim()))) {
+  if (clozeQuestions.some((question) => !question.id.includes('collocation-example-context-v2') && /^(do|doing|done|someone|something|yourself|A|B)$/i.test(question.answer.trim()))) {
     errors.push(card.id + ': a grammar placeholder must never be the answer to an objective cloze.');
   }
   if (card.questions.some((question) => question.id.includes('example-cloze') && !question.prompt.includes('（填写 ' + card.word + ' 的正确形式）'))) {
@@ -59,6 +59,22 @@ for (const card of allCards.cards) {
   }
   if (card.questions.some((question) => question.prompt.includes('（填入目标词）'))) {
     errors.push(card.id + ': obsolete target-word fallback prompt found.');
+  }
+  if (card.questions.some((question) => /^(补全核心结构中的连接成分：|根据语境补全搭配：)/.test(question.prompt))) {
+    errors.push(card.id + ': legacy phrase-fragment cloze found; a context label is not a real context.');
+  }
+  const contextualQuestions = card.questions.filter((question) => question.id.includes('collocation-example-context-v2'));
+  if (contextualQuestions.length !== 1) {
+    errors.push(card.id + ': expected exactly one full-sentence contextual companion question.');
+  } else {
+    const [question] = contextualQuestions;
+    if (!question.prompt.startsWith('根据完整句意和中文提示补全英文：') || !question.prompt.includes('（中文：') || !/[.!?](?:（中文：)/.test(question.prompt)) {
+      errors.push(card.id + ': contextual companion question needs a complete English sentence and Chinese semantic cue.');
+    }
+  }
+  const semanticStructureQuestions = card.questions.filter((question) => question.id.includes('collocation-structure-meaning-v2'));
+  if (semanticStructureQuestions.length !== 1 || semanticStructureQuestions.some((question) => !question.options?.includes(question.answer))) {
+    errors.push(card.id + ': structure knowledge must be tested through an explicit meaning and complete selectable structures.');
   }
   const slotPrompts = card.questions.filter((question) => question.ai && /\b(to do|doing|done|someone|something|yourself|A|B)\b/.test(question.prompt));
   if (slotPrompts.some((question) => !/(代表|替换|不要求)/.test(question.prompt))) {

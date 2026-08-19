@@ -1,7 +1,7 @@
 {
   "date": "2026-08-25",
   "dayNumber": 9,
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "cards": [
     {
       "id": "affect-v",
@@ -504,18 +504,24 @@
           "ai": false
         },
         {
-          "id": "affect-v-collocation-structure",
+          "id": "affect-v-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：affect _____ result",
-          "answer": "the",
+          "prompt": "结构应用：想表达“影响结果”，应选择哪个完整结构？",
+          "options": [
+            "affect the result",
+            "seriously affect",
+            "be affected by",
+            "affect your health"
+          ],
+          "answer": "affect the result",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "affect-v-collocation-context",
+          "id": "affect-v-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：affect the _____",
-          "answer": "result",
+          "prompt": "根据完整句意和中文提示补全英文：Poor sleep can affect your _____.（中文：睡眠不足会影响记忆力。）",
+          "answer": "memory",
           "stage": "T2",
           "ai": false
         },
@@ -633,7 +639,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1123,18 +1129,24 @@
           "ai": false
         },
         {
-          "id": "realize-v-collocation-structure",
+          "id": "realize-v-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：realize _____",
-          "answer": "that",
+          "prompt": "结构应用：想表达“意识到……”，应选择哪个完整结构？",
+          "options": [
+            "realize a dream",
+            "suddenly realize",
+            "fail to realize",
+            "realize that"
+          ],
+          "answer": "realize that",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "realize-v-collocation-context",
+          "id": "realize-v-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：realize _____",
-          "answer": "that",
+          "prompt": "根据完整句意和中文提示补全英文：I realized that I had _____ the wrong word.（中文：我意识到自己用错了词。）",
+          "answer": "used",
           "stage": "T2",
           "ai": false
         },
@@ -1252,7 +1264,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1749,18 +1761,24 @@
           "ai": false
         },
         {
-          "id": "describe-v-collocation-structure",
+          "id": "describe-v-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：describe something _____；something 要替换成实际的事物或内容",
-          "answer": "as",
+          "prompt": "结构应用：想表达“把某物描述为”，应选择哪个完整结构？",
+          "options": [
+            "describe in detail",
+            "difficult to describe",
+            "describe something as",
+            "describe what happened"
+          ],
+          "answer": "describe something as",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "describe-v-collocation-context",
+          "id": "describe-v-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：describe what _____",
-          "answer": "happened",
+          "prompt": "根据完整句意和中文提示补全英文：How would you describe your _____ weekend?（中文：你会怎样描述理想的周末？）",
+          "answer": "ideal",
           "stage": "T2",
           "ai": false
         },
@@ -1878,7 +1896,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2383,18 +2401,24 @@
           "ai": false
         },
         {
-          "id": "accept-v-collocation-structure",
+          "id": "accept-v-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：accept _____ offer",
-          "answer": "an",
+          "prompt": "结构应用：想表达“接受提议”，应选择哪个完整结构？",
+          "options": [
+            "widely accepted",
+            "accept an offer",
+            "accept responsibility",
+            "accept the fact that"
+          ],
+          "answer": "accept an offer",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "accept-v-collocation-context",
+          "id": "accept-v-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：accept an _____",
-          "answer": "offer",
+          "prompt": "根据完整句意和中文提示补全英文：He accepted _____ for the mistake.（中文：他为这个错误承担了责任。）",
+          "answer": "responsibility",
           "stage": "T2",
           "ai": false
         },
@@ -2512,7 +2536,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -3009,18 +3033,24 @@
           "ai": false
         },
         {
-          "id": "prefer-v-collocation-structure",
+          "id": "prefer-v-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：prefer A _____ B；A、B 要替换成实际比较内容",
-          "answer": "to",
+          "prompt": "结构应用：想表达“比起 B 更喜欢 A”，应选择哪个完整结构？",
+          "options": [
+            "prefer A to B",
+            "prefer to do",
+            "would prefer",
+            "personally prefer"
+          ],
+          "answer": "prefer A to B",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "prefer-v-collocation-context",
+          "id": "prefer-v-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：prefer A _____ B；A、B 要替换成实际比较内容",
-          "answer": "to",
+          "prompt": "根据完整句意和中文提示补全英文：I prefer _____ to taking a taxi.（中文：比起乘出租车，我更喜欢走路。）",
+          "answer": "walking",
           "stage": "T2",
           "ai": false
         },
@@ -3138,7 +3168,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

@@ -484,18 +484,24 @@
       "ai": false
     },
     {
-      "id": "consider-v-collocation-structure",
+      "id": "consider-v-collocation-structure-meaning-v2",
       "type": "collocation",
-      "prompt": "补全核心结构中的连接成分：consider _____ possibility",
-      "answer": "the",
+      "prompt": "结构应用：想表达“考虑可能性”，应选择哪个完整结构？",
+      "options": [
+        "consider doing",
+        "consider someone suitable",
+        "carefully consider",
+        "consider the possibility"
+      ],
+      "answer": "consider the possibility",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "consider-v-collocation-context",
+      "id": "consider-v-collocation-example-context-v2",
       "type": "collocation",
-      "prompt": "根据语境补全搭配：consider the _____",
-      "answer": "possibility",
+      "prompt": "根据完整句意和中文提示补全英文：You should consider _____ a short break.（中文：你应该考虑短暂休息一下。）",
+      "answer": "taking",
       "stage": "T2",
       "ai": false
     },
@@ -613,7 +619,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

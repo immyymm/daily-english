@@ -1,7 +1,7 @@
 {
   "date": "2026-09-11",
   "dayNumber": 26,
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "cards": [
     {
       "id": "write-v",
@@ -496,18 +496,24 @@
           "ai": false
         },
         {
-          "id": "write-v-collocation-structure",
+          "id": "write-v-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：write a _____",
-          "answer": "message",
+          "prompt": "结构应用：想表达“写消息”，应选择哪个完整结构？",
+          "options": [
+            "write about",
+            "write something down",
+            "write to someone",
+            "write a message"
+          ],
+          "answer": "write a message",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "write-v-collocation-context",
+          "id": "write-v-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：write a _____",
-          "answer": "message",
+          "prompt": "根据完整句意和中文提示补全英文：Write _____ one sentence using the new word.（中文：写下一个使用新单词的句子。）",
+          "answer": "down",
           "stage": "T2",
           "ai": false
         },
@@ -625,7 +631,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1122,18 +1128,24 @@
           "ai": false
         },
         {
-          "id": "read-v-collocation-structure",
+          "id": "read-v-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：read a _____",
-          "answer": "book",
+          "prompt": "结构应用：想表达“读书”，应选择哪个完整结构？",
+          "options": [
+            "read aloud",
+            "read between the lines",
+            "read a book",
+            "read about"
+          ],
+          "answer": "read a book",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "read-v-collocation-context",
+          "id": "read-v-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：read a _____",
-          "answer": "book",
+          "prompt": "根据完整句意和中文提示补全英文：Read the _____ aloud twice.（中文：把例句大声读两遍。）",
+          "answer": "example",
           "stage": "T2",
           "ai": false
         },
@@ -1251,7 +1263,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1749,18 +1761,24 @@
           "ai": false
         },
         {
-          "id": "listen-v-collocation-structure",
+          "id": "listen-v-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：listen _____",
-          "answer": "to",
+          "prompt": "结构应用：想表达“听……”，应选择哪个完整结构？",
+          "options": [
+            "listen to advice",
+            "listen to",
+            "listen carefully",
+            "listen for"
+          ],
+          "answer": "listen to",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "listen-v-collocation-context",
+          "id": "listen-v-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：listen _____",
-          "answer": "carefully",
+          "prompt": "根据完整句意和中文提示补全英文：Listen to the _____ sentence before answering.（中文：回答前先听完整个句子。）",
+          "answer": "whole",
           "stage": "T2",
           "ai": false
         },
@@ -1878,7 +1896,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2389,17 +2407,23 @@
           "ai": false
         },
         {
-          "id": "travel-n-collocation-structure",
+          "id": "travel-n-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：travel _____",
-          "answer": "abroad",
+          "prompt": "结构应用：想表达“出国旅行”，应选择哪个完整结构？",
+          "options": [
+            "travel abroad",
+            "travel by train",
+            "travel around",
+            "business travel"
+          ],
+          "answer": "travel abroad",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "travel-n-collocation-context",
+          "id": "travel-n-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：travel _____",
+          "prompt": "根据完整句意和中文提示补全英文：She travels _____ for work twice a year.（中文：她每年因工作出国两次。）",
           "answer": "abroad",
           "stage": "T2",
           "ai": false
@@ -2518,7 +2542,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -3016,18 +3040,24 @@
           "ai": false
         },
         {
-          "id": "family-n-collocation-structure",
+          "id": "family-n-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：family _____",
-          "answer": "member",
+          "prompt": "结构应用：想表达“家庭成员”，应选择哪个完整结构？",
+          "options": [
+            "close family",
+            "family life",
+            "start a family",
+            "family member"
+          ],
+          "answer": "family member",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "family-n-collocation-context",
+          "id": "family-n-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：family _____",
-          "answer": "member",
+          "prompt": "根据完整句意和中文提示补全英文：My family _____ my learning plan.（中文：我的家人支持我的学习计划。）",
+          "answer": "supports",
           "stage": "T2",
           "ai": false
         },
@@ -3145,7 +3175,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

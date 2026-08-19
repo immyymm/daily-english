@@ -1,7 +1,7 @@
 {
   "date": "2026-09-10",
   "dayNumber": 25,
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "cards": [
     {
       "id": "health-n",
@@ -496,18 +496,24 @@
           "ai": false
         },
         {
-          "id": "health-n-collocation-structure",
+          "id": "health-n-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ health",
-          "answer": "mental",
+          "prompt": "结构应用：想表达“心理健康”，应选择哪个完整结构？",
+          "options": [
+            "mental health",
+            "physical health",
+            "good health",
+            "health care"
+          ],
+          "answer": "mental health",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "health-n-collocation-context",
+          "id": "health-n-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ health",
-          "answer": "mental",
+          "prompt": "根据完整句意和中文提示补全英文：Regular sleep is _____ for your health.（中文：规律睡眠对健康很重要。）",
+          "answer": "important",
           "stage": "T2",
           "ai": false
         },
@@ -625,7 +631,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1378,18 +1384,24 @@
           "ai": false
         },
         {
-          "id": "work-n-collocation-structure",
+          "id": "work-n-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：work _____ something；something 要替换成实际的事物或内容",
-          "answer": "on",
+          "prompt": "结构应用：想表达“从事；处理某事”，应选择哪个完整结构？",
+          "options": [
+            "work for someone",
+            "work as something",
+            "work with someone",
+            "work on something"
+          ],
+          "answer": "work on something",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "work-n-collocation-context",
+          "id": "work-n-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____-time work",
-          "answer": "full",
+          "prompt": "根据完整句意和中文提示补全英文：I am working on my _____.（中文：我正在练习发音。）",
+          "answer": "pronunciation",
           "stage": "T2",
           "ai": false
         },
@@ -1507,7 +1519,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；本卡依照用户词卡模板人工精校；音标为美式发音。"
     },
@@ -2018,18 +2030,24 @@
           "ai": false
         },
         {
-          "id": "study-n-collocation-structure",
+          "id": "study-n-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：study _____ a test",
-          "answer": "for",
+          "prompt": "结构应用：想表达“为考试学习”，应选择哪个完整结构？",
+          "options": [
+            "study abroad",
+            "a recent study",
+            "study for a test",
+            "study English"
+          ],
+          "answer": "study for a test",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "study-n-collocation-context",
+          "id": "study-n-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：study for a _____",
-          "answer": "test",
+          "prompt": "根据完整句意和中文提示补全英文：She studies _____ for half an hour every morning.（中文：她每天早上学半小时英语。）",
+          "answer": "English",
           "stage": "T2",
           "ai": false
         },
@@ -2147,7 +2165,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2644,18 +2662,24 @@
           "ai": false
         },
         {
-          "id": "learn-v-collocation-structure",
+          "id": "learn-v-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：learn _____ do；do 代表任意合适的动词原形，不要求写出单词 do",
-          "answer": "to",
+          "prompt": "结构应用：想表达“学习做”，应选择哪个完整结构？",
+          "options": [
+            "learn by doing",
+            "learn to do",
+            "learn about",
+            "learn from mistakes"
+          ],
+          "answer": "learn to do",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "learn-v-collocation-context",
+          "id": "learn-v-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：learn _____",
-          "answer": "about",
+          "prompt": "根据完整句意和中文提示补全英文：We learn _____ when feedback is specific.（中文：反馈具体时，我们学得更快。）",
+          "answer": "faster",
           "stage": "T2",
           "ai": false
         },
@@ -2773,7 +2797,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -3278,18 +3302,24 @@
           "ai": false
         },
         {
-          "id": "speak-v-collocation-structure",
+          "id": "speak-v-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：speak _____",
-          "answer": "English",
+          "prompt": "结构应用：想表达“说英语”，应选择哪个完整结构？",
+          "options": [
+            "speak English",
+            "speak to someone",
+            "speak about",
+            "speak clearly"
+          ],
+          "answer": "speak English",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "speak-v-collocation-context",
+          "id": "speak-v-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：speak _____",
-          "answer": "English",
+          "prompt": "根据完整句意和中文提示补全英文：Try to speak in _____ sentences.（中文：试着用完整句子说话。）",
+          "answer": "complete",
           "stage": "T2",
           "ai": false
         },
@@ -3407,7 +3437,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

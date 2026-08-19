@@ -1,7 +1,7 @@
 {
   "date": "2026-09-04",
   "dayNumber": 19,
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "cards": [
     {
       "id": "natural-adj",
@@ -489,18 +489,24 @@
           "ai": false
         },
         {
-          "id": "natural-adj-collocation-structure",
+          "id": "natural-adj-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ natural",
-          "answer": "sound",
+          "prompt": "结构应用：想表达“听起来自然”，应选择哪个完整结构？",
+          "options": [
+            "natural environment",
+            "perfectly natural",
+            "sound natural",
+            "natural ability"
+          ],
+          "answer": "sound natural",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "natural-adj-collocation-context",
+          "id": "natural-adj-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ natural",
-          "answer": "sound",
+          "prompt": "根据完整句意和中文提示补全英文：This version sounds more natural in _____.（中文：这个版本在对话中听起来更自然。）",
+          "answer": "conversation",
           "stage": "T2",
           "ai": false
         },
@@ -618,7 +624,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1128,18 +1134,24 @@
           "ai": false
         },
         {
-          "id": "clear-adj-collocation-structure",
+          "id": "clear-adj-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ something clear；something 要替换成实际的事物或内容",
-          "answer": "make",
+          "prompt": "结构应用：想表达“把某事说清楚”，应选择哪个完整结构？",
+          "options": [
+            "clear the table",
+            "make something clear",
+            "clear to someone",
+            "clear explanation"
+          ],
+          "answer": "make something clear",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "clear-adj-collocation-context",
+          "id": "clear-adj-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ something clear；something 要替换成实际的事物或内容",
-          "answer": "make",
+          "prompt": "根据完整句意和中文提示补全英文：Please make your main _____ clear.（中文：请把你的主要观点说清楚。）",
+          "answer": "point",
           "stage": "T2",
           "ai": false
         },
@@ -1257,7 +1269,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1747,17 +1759,23 @@
           "ai": false
         },
         {
-          "id": "common-adj-collocation-structure",
+          "id": "common-adj-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：a common _____",
-          "answer": "mistake",
+          "prompt": "结构应用：想表达“常见错误”，应选择哪个完整结构？",
+          "options": [
+            "a common mistake",
+            "have something in common",
+            "common sense",
+            "common among"
+          ],
+          "answer": "a common mistake",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "common-adj-collocation-context",
+          "id": "common-adj-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：a common _____",
+          "prompt": "根据完整句意和中文提示补全英文：This is a common _____ among learners.（中文：这是学习者常犯的错误。）",
           "answer": "mistake",
           "stage": "T2",
           "ai": false
@@ -1876,7 +1894,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2366,18 +2384,24 @@
           "ai": false
         },
         {
-          "id": "similar-adj-collocation-structure",
+          "id": "similar-adj-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：be similar _____",
-          "answer": "to",
+          "prompt": "结构应用：想表达“与……相似”，应选择哪个完整结构？",
+          "options": [
+            "very similar",
+            "similar in size",
+            "similar experience",
+            "be similar to"
+          ],
+          "answer": "be similar to",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "similar-adj-collocation-context",
+          "id": "similar-adj-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：be similar _____",
-          "answer": "to",
+          "prompt": "根据完整句意和中文提示补全英文：This word is similar to _____ we learned yesterday.（中文：这个词和我们昨天学的一个词相似。）",
+          "answer": "one",
           "stage": "T2",
           "ai": false
         },
@@ -2495,7 +2519,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2993,18 +3017,24 @@
           "ai": false
         },
         {
-          "id": "different-adj-collocation-structure",
+          "id": "different-adj-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：be different _____",
-          "answer": "from",
+          "prompt": "结构应用：想表达“与……不同”，应选择哪个完整结构？",
+          "options": [
+            "look different",
+            "something completely different",
+            "be different from",
+            "different kinds of"
+          ],
+          "answer": "be different from",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "different-adj-collocation-context",
+          "id": "different-adj-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：be different _____",
-          "answer": "from",
+          "prompt": "根据完整句意和中文提示补全英文：Spoken English is different from _____ writing.（中文：英语口语与正式写作不同。）",
+          "answer": "formal",
           "stage": "T2",
           "ai": false
         },
@@ -3122,7 +3152,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

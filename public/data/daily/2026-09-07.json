@@ -1,7 +1,7 @@
 {
   "date": "2026-09-07",
   "dayNumber": 22,
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "cards": [
     {
       "id": "instead-adv",
@@ -487,18 +487,24 @@
           "ai": false
         },
         {
-          "id": "instead-adv-collocation-structure",
+          "id": "instead-adv-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：instead _____",
-          "answer": "of",
+          "prompt": "结构应用：想表达“而不是；代替”，应选择哪个完整结构？",
+          "options": [
+            "do something instead",
+            "use A instead of B",
+            "choose this instead",
+            "instead of"
+          ],
+          "answer": "instead of",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "instead-adv-collocation-context",
+          "id": "instead-adv-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ A instead of B；A、B 要替换成实际比较内容",
-          "answer": "use",
+          "prompt": "根据完整句意和中文提示补全英文：Try using an English definition instead of a _____.（中文：试着使用英文释义而不是翻译。）",
+          "answer": "translation",
           "stage": "T2",
           "ai": false
         },
@@ -616,7 +622,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1098,18 +1104,24 @@
           "ai": false
         },
         {
-          "id": "however-adv-collocation-structure",
+          "id": "however-adv-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：however, _____ result",
-          "answer": "the",
+          "prompt": "结构应用：想表达“然而，结果……”，应选择哪个完整结构？",
+          "options": [
+            "however much",
+            "however long it takes",
+            "however, the result",
+            "however difficult"
+          ],
+          "answer": "however, the result",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "however-adv-collocation-context",
+          "id": "however-adv-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：however, the _____",
-          "answer": "result",
+          "prompt": "根据完整句意和中文提示补全英文：The task is short; however, it _____ focus.（中文：任务很短，不过需要专注。）",
+          "answer": "requires",
           "stage": "T2",
           "ai": false
         },
@@ -1227,7 +1239,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1717,18 +1729,24 @@
           "ai": false
         },
         {
-          "id": "finally-adv-collocation-structure",
+          "id": "finally-adv-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：finally _____",
-          "answer": "decide",
+          "prompt": "结构应用：想表达“终于决定”，应选择哪个完整结构？",
+          "options": [
+            "and finally",
+            "finally decide",
+            "finally arrive",
+            "finally understand"
+          ],
+          "answer": "finally decide",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "finally-adv-collocation-context",
+          "id": "finally-adv-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：finally _____",
-          "answer": "decide",
+          "prompt": "根据完整句意和中文提示补全英文：I finally _____ the word I needed.（中文：我终于找到了需要的那个词。）",
+          "answer": "found",
           "stage": "T2",
           "ai": false
         },
@@ -1846,7 +1864,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2343,17 +2361,23 @@
           "ai": false
         },
         {
-          "id": "simply-adv-collocation-structure",
+          "id": "simply-adv-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：simply _____",
-          "answer": "put",
+          "prompt": "结构应用：想表达“简单来说”，应选择哪个完整结构？",
+          "options": [
+            "simply put",
+            "simply because",
+            "quite simply",
+            "simply impossible"
+          ],
+          "answer": "simply put",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "simply-adv-collocation-context",
+          "id": "simply-adv-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：simply _____",
+          "prompt": "根据完整句意和中文提示补全英文：Simply _____, practice helps memory.（中文：简单来说，练习有助于记忆。）",
           "answer": "put",
           "stage": "T2",
           "ai": false
@@ -2472,7 +2496,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2962,18 +2986,24 @@
           "ai": false
         },
         {
-          "id": "quickly-adv-collocation-structure",
+          "id": "quickly-adv-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ quickly",
-          "answer": "respond",
+          "prompt": "结构应用：想表达“快速回应”，应选择哪个完整结构？",
+          "options": [
+            "learn quickly",
+            "as quickly as possible",
+            "quickly become",
+            "respond quickly"
+          ],
+          "answer": "respond quickly",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "quickly-adv-collocation-context",
+          "id": "quickly-adv-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ quickly",
-          "answer": "respond",
+          "prompt": "根据完整句意和中文提示补全英文：Try to recall the _____ quickly.（中文：试着快速回忆这个词。）",
+          "answer": "word",
           "stage": "T2",
           "ai": false
         },
@@ -3091,7 +3121,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

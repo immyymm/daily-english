@@ -484,18 +484,24 @@
       "ai": false
     },
     {
-      "id": "recently-adv-collocation-structure",
+      "id": "recently-adv-collocation-structure-meaning-v2",
       "type": "collocation",
-      "prompt": "补全核心结构中的连接成分：_____ recently done；done 代表符合语境的过去分词，不要求写出单词 done",
-      "answer": "have",
+      "prompt": "结构应用：想表达“最近做过”，应选择哪个完整结构？",
+      "options": [
+        "recently published",
+        "have recently done",
+        "until recently",
+        "more recently"
+      ],
+      "answer": "have recently done",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "recently-adv-collocation-context",
+      "id": "recently-adv-collocation-example-context-v2",
       "type": "collocation",
-      "prompt": "根据语境补全搭配：_____ recently done；done 代表符合语境的过去分词，不要求写出单词 done",
-      "answer": "have",
+      "prompt": "根据完整句意和中文提示补全英文：I have recently _____ keeping a journal.（中文：我最近开始写日记了。）",
+      "answer": "started",
       "stage": "T2",
       "ai": false
     },
@@ -613,7 +619,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

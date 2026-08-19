@@ -627,18 +627,24 @@
       "ai": false
     },
     {
-      "id": "support-v-collocation-structure",
+      "id": "support-v-collocation-structure-meaning-v2",
       "type": "collocation",
-      "prompt": "补全核心结构中的连接成分：support someone _____ something；someone 要替换成实际的人或代词；something 要替换成实际的事物或内容",
-      "answer": "or",
+      "prompt": "结构应用：想表达“支持某人或某事”，应选择哪个完整结构？",
+      "options": [
+        "support a claim with evidence",
+        "provide support for something",
+        "support someone or something",
+        "support someone in doing something"
+      ],
+      "answer": "support someone or something",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "support-v-collocation-context",
+      "id": "support-v-collocation-example-context-v2",
       "type": "collocation",
-      "prompt": "根据语境补全搭配：support a _____",
-      "answer": "friend",
+      "prompt": "根据完整句意和中文提示补全英文：Her family supported her _____ to study abroad.（中文：她的家人支持她出国学习的决定。）",
+      "answer": "decision",
       "stage": "T2",
       "ai": false
     },
@@ -756,7 +762,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；本卡依照用户词卡模板人工精校；音标为美式发音。"
 }

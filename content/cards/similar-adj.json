@@ -484,18 +484,24 @@
       "ai": false
     },
     {
-      "id": "similar-adj-collocation-structure",
+      "id": "similar-adj-collocation-structure-meaning-v2",
       "type": "collocation",
-      "prompt": "补全核心结构中的连接成分：be similar _____",
-      "answer": "to",
+      "prompt": "结构应用：想表达“与……相似”，应选择哪个完整结构？",
+      "options": [
+        "very similar",
+        "similar in size",
+        "similar experience",
+        "be similar to"
+      ],
+      "answer": "be similar to",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "similar-adj-collocation-context",
+      "id": "similar-adj-collocation-example-context-v2",
       "type": "collocation",
-      "prompt": "根据语境补全搭配：be similar _____",
-      "answer": "to",
+      "prompt": "根据完整句意和中文提示补全英文：This word is similar to _____ we learned yesterday.（中文：这个词和我们昨天学的一个词相似。）",
+      "answer": "one",
       "stage": "T2",
       "ai": false
     },
@@ -613,7 +619,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

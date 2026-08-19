@@ -484,18 +484,24 @@
       "ai": false
     },
     {
-      "id": "money-n-collocation-structure",
+      "id": "money-n-collocation-structure-meaning-v2",
       "type": "collocation",
-      "prompt": "补全核心结构中的连接成分：_____ money",
-      "answer": "save",
+      "prompt": "结构应用：想表达“省钱；存钱”，应选择哪个完整结构？",
+      "options": [
+        "make money",
+        "borrow money",
+        "save money",
+        "spend money on"
+      ],
+      "answer": "save money",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "money-n-collocation-context",
+      "id": "money-n-collocation-example-context-v2",
       "type": "collocation",
-      "prompt": "根据语境补全搭配：_____ money",
-      "answer": "save",
+      "prompt": "根据完整句意和中文提示补全英文：Planning ahead can save _____ and money.（中文：提前规划可以节省时间和金钱。）",
+      "answer": "time",
       "stage": "T2",
       "ai": false
     },
@@ -613,7 +619,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

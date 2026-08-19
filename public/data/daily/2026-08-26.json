@@ -1,7 +1,7 @@
 {
   "date": "2026-08-26",
   "dayNumber": 10,
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "cards": [
     {
       "id": "discover-v",
@@ -489,18 +489,24 @@
           "ai": false
         },
         {
-          "id": "discover-v-collocation-structure",
+          "id": "discover-v-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：discover _____ truth",
-          "answer": "the",
+          "prompt": "结构应用：想表达“发现真相”，应选择哪个完整结构？",
+          "options": [
+            "discover a new way",
+            "discover that",
+            "recently discovered",
+            "discover the truth"
+          ],
+          "answer": "discover the truth",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "discover-v-collocation-context",
+          "id": "discover-v-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：discover the _____",
-          "answer": "truth",
+          "prompt": "根据完整句意和中文提示补全英文：You may discover a _____ way to remember it.（中文：你可能会发现更好的记忆方法。）",
+          "answer": "better",
           "stage": "T2",
           "ai": false
         },
@@ -618,7 +624,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1115,18 +1121,24 @@
           "ai": false
         },
         {
-          "id": "protect-v-collocation-structure",
+          "id": "protect-v-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：protect someone _____；someone 要替换成实际的人或代词",
-          "answer": "from",
+          "prompt": "结构应用：想表达“保护某人免受……”，应选择哪个完整结构？",
+          "options": [
+            "protect your privacy",
+            "be protected by",
+            "protect someone from",
+            "protect the environment"
+          ],
+          "answer": "protect someone from",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "protect-v-collocation-context",
+          "id": "protect-v-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：protect the _____",
-          "answer": "environment",
+          "prompt": "根据完整句意和中文提示补全英文：A strong password protects your _____.（中文：强密码可以保护你的账户。）",
+          "answer": "account",
           "stage": "T2",
           "ai": false
         },
@@ -1244,7 +1256,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1734,18 +1746,24 @@
           "ai": false
         },
         {
-          "id": "encourage-v-collocation-structure",
+          "id": "encourage-v-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：encourage someone _____ do；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词",
-          "answer": "to",
+          "prompt": "结构应用：想表达“鼓励某人做”，应选择哪个完整结构？",
+          "options": [
+            "encourage positive behavior",
+            "encourage someone to do",
+            "encourage discussion",
+            "strongly encourage"
+          ],
+          "answer": "encourage someone to do",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "encourage-v-collocation-context",
+          "id": "encourage-v-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：encourage _____",
-          "answer": "discussion",
+          "prompt": "根据完整句意和中文提示补全英文：The teacher encouraged us to _____ more.（中文：老师鼓励我们多开口说。）",
+          "answer": "speak",
           "stage": "T2",
           "ai": false
         },
@@ -1863,7 +1881,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2360,17 +2378,23 @@
           "ai": false
         },
         {
-          "id": "solve-v-collocation-structure",
+          "id": "solve-v-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：solve a _____",
-          "answer": "problem",
+          "prompt": "结构应用：想表达“解决问题”，应选择哪个完整结构？",
+          "options": [
+            "solve a problem",
+            "solve an equation",
+            "help solve",
+            "difficult to solve"
+          ],
+          "answer": "solve a problem",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "solve-v-collocation-context",
+          "id": "solve-v-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：solve a _____",
+          "prompt": "根据完整句意和中文提示补全英文：We need more information to solve this _____.（中文：我们需要更多信息来解决这个问题。）",
           "answer": "problem",
           "stage": "T2",
           "ai": false
@@ -2489,7 +2513,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2986,18 +3010,24 @@
           "ai": false
         },
         {
-          "id": "express-v-collocation-structure",
+          "id": "express-v-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：express _____ opinion",
-          "answer": "an",
+          "prompt": "结构应用：想表达“表达观点”，应选择哪个完整结构？",
+          "options": [
+            "express your feelings",
+            "express concern about",
+            "clearly express",
+            "express an opinion"
+          ],
+          "answer": "express an opinion",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "express-v-collocation-context",
+          "id": "express-v-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：express an _____",
-          "answer": "opinion",
+          "prompt": "根据完整句意和中文提示补全英文：Try to express the _____ in your own words.（中文：试着用自己的话表达这个想法。）",
+          "answer": "idea",
           "stage": "T2",
           "ai": false
         },
@@ -3115,7 +3145,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

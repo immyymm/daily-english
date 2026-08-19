@@ -498,18 +498,24 @@
       "ai": false
     },
     {
-      "id": "create-v-collocation-structure",
+      "id": "create-v-collocation-structure-meaning-v2",
       "type": "collocation",
-      "prompt": "补全核心结构中的连接成分：create _____ opportunity",
-      "answer": "an",
+      "prompt": "结构应用：想表达“创造机会”，应选择哪个完整结构？",
+      "options": [
+        "create an opportunity",
+        "create a problem",
+        "create an account",
+        "create a plan"
+      ],
+      "answer": "create an opportunity",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "create-v-collocation-context",
+      "id": "create-v-collocation-example-context-v2",
       "type": "collocation",
-      "prompt": "根据语境补全搭配：create an _____",
-      "answer": "opportunity",
+      "prompt": "根据完整句意和中文提示补全英文：Good questions can create _____ conversations.（中文：好的问题可以促成有意义的对话。）",
+      "answer": "meaningful",
       "stage": "T2",
       "ai": false
     },
@@ -627,7 +633,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

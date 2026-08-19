@@ -1,7 +1,7 @@
 {
   "date": "2026-08-17",
   "dayNumber": 1,
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "cards": [
     {
       "id": "improve-v",
@@ -605,18 +605,24 @@
           "ai": false
         },
         {
-          "id": "improve-v-collocation-structure",
+          "id": "improve-v-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：improve _____ something；something 要替换成实际的事物或内容",
-          "answer": "on",
+          "prompt": "结构应用：想表达“比原有事物做得更好”，应选择哪个完整结构？",
+          "options": [
+            "improve on something",
+            "improve something",
+            "improve at something",
+            "improve by ten percent"
+          ],
+          "answer": "improve on something",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "improve-v-collocation-context",
+          "id": "improve-v-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：improve your _____",
-          "answer": "English",
+          "prompt": "根据完整句意和中文提示补全英文：Daily practice will improve your _____.（中文：每天练习会提高你的口语。）",
+          "answer": "speaking",
           "stage": "T2",
           "ai": false
         },
@@ -734,7 +740,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；本卡依照用户词卡模板人工精校；音标为美式发音。"
     },
@@ -1360,18 +1366,24 @@
           "ai": false
         },
         {
-          "id": "notice-v-collocation-structure",
+          "id": "notice-v-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：notice _____ + clause",
-          "answer": "that",
+          "prompt": "结构应用：想表达“注意到……”，应选择哪个完整结构？",
+          "options": [
+            "notice something",
+            "notice someone do something",
+            "notice someone doing something",
+            "notice that + clause"
+          ],
+          "answer": "notice that + clause",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "notice-v-collocation-context",
+          "id": "notice-v-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：notice a _____",
-          "answer": "difference",
+          "prompt": "根据完整句意和中文提示补全英文：Did you notice a _____ in her voice?（中文：你注意到她声音的变化了吗？）",
+          "answer": "change",
           "stage": "T2",
           "ai": false
         },
@@ -1489,7 +1501,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；本卡依照用户词卡模板人工精校；音标为美式发音。"
     },
@@ -2122,18 +2134,24 @@
           "ai": false
         },
         {
-          "id": "support-v-collocation-structure",
+          "id": "support-v-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：support someone _____ something；someone 要替换成实际的人或代词；something 要替换成实际的事物或内容",
-          "answer": "or",
+          "prompt": "结构应用：想表达“支持某人或某事”，应选择哪个完整结构？",
+          "options": [
+            "support a claim with evidence",
+            "provide support for something",
+            "support someone or something",
+            "support someone in doing something"
+          ],
+          "answer": "support someone or something",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "support-v-collocation-context",
+          "id": "support-v-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：support a _____",
-          "answer": "friend",
+          "prompt": "根据完整句意和中文提示补全英文：Her family supported her _____ to study abroad.（中文：她的家人支持她出国学习的决定。）",
+          "answer": "decision",
           "stage": "T2",
           "ai": false
         },
@@ -2251,7 +2269,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；本卡依照用户词卡模板人工精校；音标为美式发音。"
     },
@@ -2870,18 +2888,24 @@
           "ai": false
         },
         {
-          "id": "likely-adj-collocation-structure",
+          "id": "likely-adj-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：be likely _____ do something；do 代表任意合适的动词原形，不要求写出单词 do；something 要替换成实际的事物或内容",
-          "answer": "to",
+          "prompt": "结构应用：想表达“很可能做某事”，应选择哪个完整结构？",
+          "options": [
+            "the most likely explanation",
+            "be likely to do something",
+            "it is likely that + clause",
+            "more or less likely"
+          ],
+          "answer": "be likely to do something",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "likely-adj-collocation-context",
+          "id": "likely-adj-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ likely",
-          "answer": "highly",
+          "prompt": "根据完整句意和中文提示补全英文：It is likely to _____ this afternoon.（中文：今天下午很可能会下雨。）",
+          "answer": "rain",
           "stage": "T2",
           "ai": false
         },
@@ -2999,7 +3023,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；本卡依照用户词卡模板人工精校；音标为美式发音。"
     },
@@ -3626,17 +3650,23 @@
           "ai": false
         },
         {
-          "id": "manage-v-collocation-structure",
+          "id": "manage-v-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：manage _____ do something；do 代表任意合适的动词原形，不要求写出单词 do；something 要替换成实际的事物或内容",
-          "answer": "to",
+          "prompt": "结构应用：想表达“设法做成某事”，应选择哪个完整结构？",
+          "options": [
+            "manage to do something",
+            "manage a team or project",
+            "manage without something",
+            "manage on an amount of money"
+          ],
+          "answer": "manage to do something",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "manage-v-collocation-context",
+          "id": "manage-v-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：manage to _____",
+          "prompt": "根据完整句意和中文提示补全英文：She managed to _____ the report on time.（中文：她设法按时完成了报告。）",
           "answer": "finish",
           "stage": "T2",
           "ai": false
@@ -3755,7 +3785,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；本卡依照用户词卡模板人工精校；音标为美式发音。"
     }

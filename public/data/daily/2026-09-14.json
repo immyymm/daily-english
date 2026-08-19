@@ -1,7 +1,7 @@
 {
   "date": "2026-09-14",
   "dayNumber": 29,
-  "contentVersion": "2026.08.19.1",
+  "contentVersion": "2026.08.19.2",
   "cards": [
     {
       "id": "job-n",
@@ -489,18 +489,24 @@
           "ai": false
         },
         {
-          "id": "job-n-collocation-structure",
+          "id": "job-n-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：do a _____ job",
-          "answer": "good",
+          "prompt": "结构应用：想表达“做得好”，应选择哪个完整结构？",
+          "options": [
+            "do a good job",
+            "get a job",
+            "apply for a job",
+            "full-time job"
+          ],
+          "answer": "do a good job",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "job-n-collocation-context",
+          "id": "job-n-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：do a _____ job",
-          "answer": "good",
+          "prompt": "根据完整句意和中文提示补全英文：You did a good job _____ your opinion.（中文：你很好地解释了自己的观点。）",
+          "answer": "explaining",
           "stage": "T2",
           "ai": false
         },
@@ -618,7 +624,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1108,18 +1114,24 @@
           "ai": false
         },
         {
-          "id": "team-n-collocation-structure",
+          "id": "team-n-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：team _____",
-          "answer": "member",
+          "prompt": "结构应用：想表达“团队成员”，应选择哪个完整结构？",
+          "options": [
+            "work as a team",
+            "join a team",
+            "team leader",
+            "team member"
+          ],
+          "answer": "team member",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "team-n-collocation-context",
+          "id": "team-n-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：team _____",
-          "answer": "member",
+          "prompt": "根据完整句意和中文提示补全英文：Our team _____ every Monday morning.（中文：我们的团队每周一早上开会。）",
+          "answer": "meets",
           "stage": "T2",
           "ai": false
         },
@@ -1237,7 +1249,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1748,18 +1760,24 @@
           "ai": false
         },
         {
-          "id": "future-n-collocation-structure",
+          "id": "future-n-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ the future",
-          "answer": "in",
+          "prompt": "结构应用：想表达“将来”，应选择哪个完整结构？",
+          "options": [
+            "future plans",
+            "for future use",
+            "in the future",
+            "near future"
+          ],
+          "answer": "in the future",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "future-n-collocation-context",
+          "id": "future-n-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ future",
-          "answer": "near",
+          "prompt": "根据完整句意和中文提示补全英文：This skill will be _____ in the future.（中文：这项技能将来会很有用。）",
+          "answer": "useful",
           "stage": "T2",
           "ai": false
         },
@@ -1877,7 +1895,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2395,18 +2413,24 @@
           "ai": false
         },
         {
-          "id": "plan-n-collocation-structure",
+          "id": "plan-n-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ a plan",
-          "answer": "make",
+          "prompt": "结构应用：想表达“制定计划”，应选择哪个完整结构？",
+          "options": [
+            "change of plan",
+            "make a plan",
+            "plan to do",
+            "according to plan"
+          ],
+          "answer": "make a plan",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "plan-n-collocation-context",
+          "id": "plan-n-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ a plan",
-          "answer": "make",
+          "prompt": "根据完整句意和中文提示补全英文：Let us make a simple plan for the _____.（中文：让我们为这一周制定一个简单计划。）",
+          "answer": "week",
           "stage": "T2",
           "ai": false
         },
@@ -2524,7 +2548,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -3014,18 +3038,24 @@
           "ai": false
         },
         {
-          "id": "activity-n-collocation-structure",
+          "id": "activity-n-collocation-structure-meaning-v2",
           "type": "collocation",
-          "prompt": "补全核心结构中的连接成分：_____ activity",
-          "answer": "daily",
+          "prompt": "结构应用：想表达“日常活动”，应选择哪个完整结构？",
+          "options": [
+            "daily activity",
+            "physical activity",
+            "outdoor activity",
+            "take part in an activity"
+          ],
+          "answer": "daily activity",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "activity-n-collocation-context",
+          "id": "activity-n-collocation-example-context-v2",
           "type": "collocation",
-          "prompt": "根据语境补全搭配：_____ activity",
-          "answer": "daily",
+          "prompt": "根据完整句意和中文提示补全英文：Walking is my favorite _____ activity.（中文：散步是我最喜欢的户外活动。）",
+          "answer": "outdoor",
           "stage": "T2",
           "ai": false
         },
@@ -3143,7 +3173,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.1",
+      "contentVersion": "2026.08.19.2",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }
