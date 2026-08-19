@@ -7,10 +7,12 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const allCardsPath = path.join(root, 'public', 'data', 'all-cards.json');
 const manifestPath = path.join(root, 'public', 'data', 'manifest.json');
 const releasePath = path.join(root, 'content', 'release.json');
+const runtimeReleasePath = path.join(root, 'src', 'config', 'release.ts');
 const templateLockPath = path.join(root, 'content', 'templates', 'template-lock.json');
 const allCards = JSON.parse(await fs.readFile(allCardsPath, 'utf8'));
 const manifest = JSON.parse(await fs.readFile(manifestPath, 'utf8'));
 const release = JSON.parse(await fs.readFile(releasePath, 'utf8'));
+const runtimeRelease = await fs.readFile(runtimeReleasePath, 'utf8');
 const templatePath = path.join(root, 'content', 'templates', release.templateVersion + '.md');
 const template = await fs.readFile(templatePath, 'utf8');
 const templateLock = JSON.parse(await fs.readFile(templateLockPath, 'utf8'));
@@ -21,6 +23,12 @@ const expectedSnapshotHashes = {
   'canonical-template': '9A5AB81BC487F47015B7D3C74E732089481A14E49120C63FACEDA082AE67141A',
   'canonical-example': 'DF9D024B49143DFDE1C53AE3C40EE77B86CDE5BC1A1A7CD3382980E260447CFD'
 };
+
+for (const [key, value] of Object.entries(release)) {
+  if (!runtimeRelease.includes(`${key}: '${value}'`)) {
+    errors.push(`Runtime release mirror differs from content/release.json at ${key}.`);
+  }
+}
 const requiredReviewedWords = new Set(['improve', 'notice', 'support', 'likely', 'manage', 'provide', 'understand', 'believe', 'create', 'include', 'work']);
 const forbiddenGeneratedCopy = [
   /The phrase [“\"].+[”\"] is useful in everyday English/i,
