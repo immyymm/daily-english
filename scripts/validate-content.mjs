@@ -6,15 +6,17 @@ import { fileURLToPath } from 'node:url';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const allCardsPath = path.join(root, 'public', 'data', 'all-cards.json');
 const manifestPath = path.join(root, 'public', 'data', 'manifest.json');
-const templatePath = path.join(root, 'content', 'templates', 'learning-template-2026.08.19.2.md');
+const releasePath = path.join(root, 'content', 'release.json');
 const templateLockPath = path.join(root, 'content', 'templates', 'template-lock.json');
 const allCards = JSON.parse(await fs.readFile(allCardsPath, 'utf8'));
 const manifest = JSON.parse(await fs.readFile(manifestPath, 'utf8'));
+const release = JSON.parse(await fs.readFile(releasePath, 'utf8'));
+const templatePath = path.join(root, 'content', 'templates', release.templateVersion + '.md');
 const template = await fs.readFile(templatePath, 'utf8');
 const templateLock = JSON.parse(await fs.readFile(templateLockPath, 'utf8'));
 const errors = [];
-const expectedTemplateVersion = 'learning-template-2026.08.19.2';
-const expectedLockVersion = '2026.08.19.1';
+const expectedTemplateVersion = release.templateVersion;
+const expectedLockVersion = release.templateLockVersion;
 const expectedSnapshotHashes = {
   'canonical-template': '9A5AB81BC487F47015B7D3C74E732089481A14E49120C63FACEDA082AE67141A',
   'canonical-example': 'DF9D024B49143DFDE1C53AE3C40EE77B86CDE5BC1A1A7CD3382980E260447CFD'
@@ -89,6 +91,7 @@ if (!lockedExample.includes('# 模板格式测试：work') || !lockedTemplate.in
 if (allCards.cards.length !== 150) errors.push('Expected 150 cards.');
 if (manifest.dailyFiles.length !== 30) errors.push('Expected 30 daily files.');
 if (new Set(allCards.cards.map((card) => card.id)).size !== allCards.cards.length) errors.push('Duplicate card IDs.');
+if (manifest.contentVersion !== release.contentVersion || allCards.contentVersion !== release.contentVersion) errors.push('Content version differs from content/release.json.');
 if (allCards.templateVersion !== expectedTemplateVersion || manifest.templateVersion !== expectedTemplateVersion) errors.push('Template version is not locked to ' + expectedTemplateVersion + '.');
 const templateHeadings = ['### 1. 核心记忆表', '### 2. 词性与释义', '### 3. 常用语境词组', '### 4. 固定搭配和短语', '### 5. 近义词', '### 6. 反义词', '### 7. 派生词', '### 8. 易混词', '### 9. 同类词汇分类', '### 10. 高频例句', '## 学习重点'];
 let previousHeadingIndex = -1;

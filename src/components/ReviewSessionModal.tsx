@@ -1,5 +1,6 @@
 import { ArrowRight, Brain, CheckCircle2, LoaderCircle, RotateCcw, Sparkles } from 'lucide-react';
 import { useCallback, useEffect, useState } from 'react';
+import { releaseConfig } from '../config/release';
 import { dimensionForQuestionType } from '../learning/mastery';
 import { objectiveScore } from '../learning/reviewEngine';
 import { selectReviewQuestions } from '../learning/questionSelection';
@@ -180,7 +181,7 @@ export function ReviewSessionModal({
       status: 'pending',
       createdAt,
       updatedAt: createdAt,
-      rubricVersion: '2026.08.19.1',
+      rubricVersion: releaseConfig.evaluationRubricVersion,
       prompt: question.prompt,
       questionId: question.id,
       correctAnswer: question.answer,

@@ -19,9 +19,15 @@ alter table public.daily_english_codex_recommendations force row level security;
 revoke all on public.daily_english_codex_recommendations from anon, authenticated;
 grant select on public.daily_english_codex_recommendations to authenticated;
 
+drop policy if exists daily_english_codex_recommendations_select_own
+  on public.daily_english_codex_recommendations;
+
 create policy daily_english_codex_recommendations_select_own
 on public.daily_english_codex_recommendations for select to authenticated
 using ((select auth.uid()) = user_id);
+
+drop trigger if exists daily_english_codex_recommendations_touch_updated_at
+  on public.daily_english_codex_recommendations;
 
 create trigger daily_english_codex_recommendations_touch_updated_at
 before update on public.daily_english_codex_recommendations
@@ -329,6 +335,9 @@ $$;
 revoke all on function private.daily_english_overlay_codex_recommendation()
   from public, anon, authenticated;
 
+drop trigger if exists daily_english_daily_plan_overlay_codex
+  on public.daily_english_daily_plans;
+
 create trigger daily_english_daily_plan_overlay_codex
 before insert or update on public.daily_english_daily_plans
 for each row execute function private.daily_english_overlay_codex_recommendation();
@@ -364,4 +373,3 @@ begin
   end if;
 end
 $$;
-

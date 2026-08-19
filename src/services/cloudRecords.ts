@@ -1,8 +1,9 @@
 import type { SupabaseClient } from '@supabase/supabase-js';
+import { releaseConfig } from '../config/release';
 import { calculateMasteryProfile, isLegacyInvalidClozeAttempt } from '../learning/mastery';
 import { evaluationSchema } from '../schemas/evaluation';
 import { normalizeEvaluationResultForHistory, sanitizeEvaluationResult } from '../schemas/evaluationConstraints';
-import { db } from '../storage/db';
+import { db, sanitizeStoredReviewState } from '../storage/db';
 import type {
   AIEvaluation,
   AppSnapshot,
@@ -233,7 +234,7 @@ export async function syncDetailedRecords(
       request_payload: { prompt, answer, questionId, correctAnswer, responseMs },
       result: jsonObjectOrNull(raw.result),
       model: textValue(raw.model).trim() || null,
-      rubric_version: textValue(raw.rubricVersion, '2026.08.19.1'),
+      rubric_version: textValue(raw.rubricVersion, releaseConfig.evaluationRubricVersion),
       token_usage: jsonObjectOrNull(raw.tokenUsage),
       error_message: textValue(raw.errorMessage).trim() || null,
       retry_count: boundedInteger(raw.retryCount, 0, 2_147_483_647, 0),
@@ -427,7 +428,7 @@ function rowToEvaluation(row: Record<string, unknown>): AIEvaluation {
     createdAt: String(row.created_at ?? row.queued_at),
     updatedAt: String(row.updated_at ?? row.created_at),
     model: row.model ? String(row.model) : undefined,
-    rubricVersion: String(row.rubric_version ?? '2026.08.19.1'),
+    rubricVersion: String(row.rubric_version ?? releaseConfig.evaluationRubricVersion),
     result,
     errorMessage: row.error_message ? String(row.error_message) : undefined,
     prompt,
@@ -627,6 +628,7 @@ export async function hydrateDetailedRecords(client: SupabaseClient, userId: str
     if (recommendationRows.length) await db.dailyRecommendations.bulkPut(recommendationRows.map(rowToRecommendation));
     if (mergedReviewSessions.size) await db.reviewSessions.bulkPut([...mergedReviewSessions.values()]);
   });
+  await sanitizeStoredReviewState(await db.progress.toArray());
 }
 
 export interface CloudRecordCounts {

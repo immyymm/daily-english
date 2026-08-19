@@ -49,7 +49,10 @@ begin
   from jsonb_each_text(v_dimension_scores)
   where value::numeric < 75;
 
-  v_reinforcement_due := now() + case when new.score < 60 then interval '20 minutes' else interval '1 day' end;
+  v_reinforcement_due := (
+    (((new.created_at at time zone 'Asia/Shanghai')::date + 1)::timestamp + time '08:00')
+      at time zone 'Asia/Shanghai'
+  );
 
   insert into public.daily_english_mastery (
     user_id, card_id, learned_at, stage, next_review_at, last_reviewed_at,

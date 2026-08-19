@@ -5,7 +5,7 @@ import { applyLateEvaluation, applyReviewScore, isPendingReview, studyDaySince, 
 import { evaluationSchema } from '../schemas/evaluation';
 import { finalizeEvaluationResult, normalizeEvaluationResultForHistory, sanitizeEvaluationResult } from '../schemas/evaluationConstraints';
 import { notifyLocalDataChanged, notifyReviewProgressChanged } from './useCloudSync';
-import { db, getSettings, touchStudyStreak } from '../storage/db';
+import { db, getSettings, sanitizeStoredReviewState, touchStudyStreak } from '../storage/db';
 import type {
   AIEvaluation,
   AppSettings,
@@ -49,18 +49,19 @@ export function useAppData() {
 
   const refresh = useCallback(async () => {
     try {
-      const [content, settings, progress, attempts, aiEvaluations, dailyRecommendations] = await Promise.all([
+      const [content, settings, progress, attempts, aiEvaluations] = await Promise.all([
         loadContent(),
         getSettings(),
         db.progress.toArray(),
         db.attempts.orderBy('createdAt').reverse().toArray(),
-        db.aiEvaluations.orderBy('createdAt').reverse().toArray(),
-        db.dailyRecommendations.orderBy('generatedAt').reverse().toArray()
+        db.aiEvaluations.orderBy('createdAt').reverse().toArray()
       ]);
       const today = toLocalDateKey();
+      await sanitizeStoredReviewState(progress, today);
+      const sanitizedDailyRecommendations = await db.dailyRecommendations.orderBy('generatedAt').reverse().toArray();
       const studyDay = studyDaySince(settings.firstUseDate);
       const dailyCards = cardsForStudyDay(content.cards, studyDay);
-      const currentRecommendation = dailyRecommendations.find((item) => item.date === today);
+      const currentRecommendation = sanitizedDailyRecommendations.find((item) => item.date === today);
       const knownCardIds = new Set(content.cards.map((card) => card.id));
       const cardWords = new Map(content.cards.map((card) => [card.id, card.word]));
       const normalizedEvaluations = aiEvaluations.map((evaluation) => {
@@ -113,7 +114,7 @@ export function useAppData() {
         };
         await db.dailyPlans.put(todayPlan);
       }
-      setState({ loading: false, cards: content.cards, settings, todayPlan, progress, attempts, aiEvaluations: normalizedEvaluations, dailyRecommendations });
+      setState({ loading: false, cards: content.cards, settings, todayPlan, progress, attempts, aiEvaluations: normalizedEvaluations, dailyRecommendations: sanitizedDailyRecommendations });
     } catch (error) {
       setState((current) => ({
         ...current,

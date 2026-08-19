@@ -4,6 +4,7 @@ import { waitUntil } from '@vercel/functions';
 import OpenAI from 'openai';
 import { zodTextFormat } from 'openai/helpers/zod';
 import { z } from 'zod';
+import { releaseConfig } from '../src/config/release.js';
 import { evaluationSchema } from '../src/schemas/evaluation.js';
 import {
   finalizeEvaluationResult,
@@ -25,7 +26,7 @@ const requestSchema = z.object({
   answer: z.string().min(3).max(5000),
   correctAnswer: z.string().max(1000).default(''),
   responseMs: z.number().min(0).max(3600000),
-  rubricVersion: z.string().min(4).max(40).default('2026.08.19.1'),
+  rubricVersion: z.string().min(4).max(40).default(releaseConfig.evaluationRubricVersion),
   cardContext: z.object({
     coreMeaning: z.string().max(500),
     englishDefinition: z.string().max(500),

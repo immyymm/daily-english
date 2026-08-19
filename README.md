@@ -23,6 +23,7 @@
 
 ## 内容文件
 
+- `content/release.json`：唯一发布版本源；内容、模板锁、评分规则和复习算法版本均从这里校验
 - `content/cards/*.json`：一词一文件，共 150 个可维护的源词卡
 - `public/data/daily/YYYY-MM-DD.json`：每天 5 张完整词卡，共 30 天
 - `public/data/all-cards.json`：全部 150 张词卡的单文件汇总
@@ -80,6 +81,8 @@ VITE_SUPABASE_PUBLISHABLE_KEY=sb_publishable_your_key
 不要在聊天、代码、`VITE_*` 变量或 Git 仓库中放置 API 密钥。前端仅可配置公开接口地址 `VITE_AI_API_URL`。
 
 ## 部署到 Vercel
+
+项目固定使用 `pnpm@11.19.0` 和项目内 `vercel@59.1.4`。首次登录后的刷新凭据保存在 Vercel CLI 的用户配置中，项目绑定保存在 `.vercel/project.json`；后续统一从本目录运行 `pnpm run vercel:check` 或 `pnpm run deploy:production`，不要再使用临时目录中的 `pnpm dlx vercel`。
 
 1. 将本目录推送到 GitHub 公共仓库。
 2. 在 Vercel 导入该仓库；框架会识别为 Vite，构建命令为 `pnpm run build`，输出目录为 `dist`。

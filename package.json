@@ -2,6 +2,7 @@
   "name": "daily-english",
   "private": true,
   "version": "1.0.0",
+  "packageManager": "pnpm@11.19.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,7 +11,12 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "content:build": "node scripts/build-content.mjs",
-    "content:validate": "node scripts/validate-content.mjs"
+    "content:validate": "node scripts/validate-content.mjs",
+    "verify": "pnpm test && pnpm run build",
+    "vercel:check": "vercel whoami",
+    "vercel:project": "vercel project inspect daily-english --scope immyymms-projects",
+    "predeploy:production": "pnpm run verify",
+    "deploy:production": "vercel deploy --prod --yes --scope immyymms-projects"
   },
   "dependencies": {
     "@supabase/supabase-js": "2.112.3",
@@ -32,6 +38,7 @@
     "cmu-pronouncing-dictionary": "^3.0.0",
     "jsdom": "^25.0.1",
     "typescript": "~5.7.2",
+    "vercel": "59.1.4",
     "vite": "^6.0.7",
     "vite-plugin-pwa": "^0.21.1",
     "vitest": "^2.1.8"

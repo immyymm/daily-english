@@ -1,5 +1,6 @@
 import { CheckCircle2, FileText, LoaderCircle, Mic2, Sparkles } from 'lucide-react';
 import { useEffect, useMemo, useState } from 'react';
+import { releaseConfig } from '../config/release';
 import { toLocalDateKey } from '../learning/reviewEngine';
 import { evaluateAnswer } from '../services/ai';
 import type { AIEvaluation, Attempt, EvaluationResult, WordCard } from '../types';
@@ -81,7 +82,7 @@ export function WeeklyTestModal({ open, cards, aiConsent, onNeedConsent, onClose
       status: 'pending',
       createdAt,
       updatedAt: createdAt,
-      rubricVersion: '2026.08.19.1',
+      rubricVersion: releaseConfig.evaluationRubricVersion,
       prompt,
       questionId,
       correctAnswer: '',

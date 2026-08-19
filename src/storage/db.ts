@@ -42,6 +42,108 @@ class DailyEnglishDatabase extends Dexie {
 
 export const db = new DailyEnglishDatabase();
 
+function reviewedCardIdsForDate(progress: CardProgress[], date: string) {
+  return new Set(progress
+    .filter((item) => item.lastReviewedAt && toLocalDateKey(new Date(item.lastReviewedAt)) === date)
+    .map((item) => item.cardId));
+}
+
+function sanitizeRecommendation(
+  recommendation: DailyRecommendation,
+  reviewedCardIds: Set<string>
+): DailyRecommendation {
+  const reviewCardIds = recommendation.reviewCardIds.filter((cardId) => !reviewedCardIds.has(cardId));
+  const recommendedCardIds = recommendation.recommendedCardIds.filter((cardId) => !reviewedCardIds.has(cardId));
+  const allowedPrescriptionIds = new Set([...reviewCardIds, ...recommendedCardIds]);
+  const cardPrescriptions = Object.fromEntries(
+    Object.entries(recommendation.cardPrescriptions).filter(([cardId]) => allowedPrescriptionIds.has(cardId))
+  );
+  const codexAnalysis = recommendation.codexAnalysis
+    ? {
+      ...recommendation.codexAnalysis,
+      recommendedCardIds: recommendation.codexAnalysis.recommendedCardIds
+        .filter((cardId) => !reviewedCardIds.has(cardId))
+    }
+    : undefined;
+  return { ...recommendation, reviewCardIds, recommendedCardIds, cardPrescriptions, codexAnalysis };
+}
+
+function sanitizeReviewSession(
+  session: ReviewSessionProgress,
+  reviewedCardIds: Set<string>,
+  updatedAt: string
+): ReviewSessionProgress {
+  if (session.status !== 'active') return session;
+  const queueCardIds = session.queueCardIds.filter((cardId) => !reviewedCardIds.has(cardId));
+  if (queueCardIds.length === session.queueCardIds.length) return session;
+  if (!queueCardIds.length) {
+    return {
+      ...session,
+      status: 'completed',
+      queueCardIds: [],
+      currentCardId: undefined,
+      stage: undefined,
+      questionIds: [],
+      questionIndex: 0,
+      answer: '',
+      feedback: undefined,
+      attempts: [],
+      speechLatency: undefined,
+      updatedAt
+    };
+  }
+  if (queueCardIds.includes(session.currentCardId ?? '')) return { ...session, queueCardIds, updatedAt };
+  return {
+    ...session,
+    queueCardIds,
+    currentCardId: queueCardIds[0],
+    stage: undefined,
+    questionIds: [],
+    questionIndex: 0,
+    answer: '',
+    feedback: undefined,
+    attempts: [],
+    speechLatency: undefined,
+    updatedAt
+  };
+}
+
+export function sanitizeSnapshotReviewState(snapshot: AppSnapshot, date = toLocalDateKey()): AppSnapshot {
+  const reviewedCardIds = reviewedCardIdsForDate(snapshot.progress, date);
+  if (!reviewedCardIds.size) return snapshot;
+  const updatedAt = new Date().toISOString();
+  return {
+    ...snapshot,
+    dailyRecommendations: snapshot.dailyRecommendations.map((item) => (
+      item.date === date ? sanitizeRecommendation(item, reviewedCardIds) : item
+    )),
+    reviewSessions: snapshot.reviewSessions?.map((item) => (
+      item.date === date ? sanitizeReviewSession(item, reviewedCardIds, updatedAt) : item
+    ))
+  };
+}
+
+export async function sanitizeStoredReviewState(progress: CardProgress[], date = toLocalDateKey()) {
+  const reviewedCardIds = reviewedCardIdsForDate(progress, date);
+  if (!reviewedCardIds.size) return;
+  const [recommendation, sessions] = await Promise.all([
+    db.dailyRecommendations.get(date),
+    db.reviewSessions.where('date').equals(date).toArray()
+  ]);
+  const updatedAt = new Date().toISOString();
+  const sanitizedRecommendation = recommendation
+    ? sanitizeRecommendation(recommendation, reviewedCardIds)
+    : undefined;
+  const sanitizedSessions = sessions.map((session) => sanitizeReviewSession(session, reviewedCardIds, updatedAt));
+  const recommendationChanged = recommendation && JSON.stringify(recommendation) !== JSON.stringify(sanitizedRecommendation);
+  const changedSessions = sanitizedSessions.filter((session, index) => JSON.stringify(session) !== JSON.stringify(sessions[index]));
+  if (!recommendationChanged && !changedSessions.length) return;
+  await db.transaction('rw', db.dailyRecommendations, db.reviewSessions, async () => {
+    if (recommendationChanged && sanitizedRecommendation) await db.dailyRecommendations.put(sanitizedRecommendation);
+    if (changedSessions.length) await db.reviewSessions.bulkPut(changedSessions);
+  });
+}
+
 export async function getSettings(): Promise<AppSettings> {
   const existing = await db.settings.get('settings');
   if (existing) return existing;
@@ -73,9 +175,11 @@ export async function touchStudyStreak(settings: AppSettings): Promise<AppSettin
 }
 
 export async function exportSnapshot(): Promise<AppSnapshot> {
-  return {
+  const progress = await db.progress.toArray();
+  await sanitizeStoredReviewState(progress);
+  return sanitizeSnapshotReviewState({
     settings: await getSettings(),
-    progress: await db.progress.toArray(),
+    progress,
     attempts: await db.attempts.toArray(),
     aiEvaluations: await db.aiEvaluations.toArray(),
     dailyPlans: await db.dailyPlans.toArray(),
@@ -83,13 +187,14 @@ export async function exportSnapshot(): Promise<AppSnapshot> {
     reviewSessions: await db.reviewSessions.toArray(),
     exportedAt: new Date().toISOString(),
     schemaVersion: 3
-  };
+  });
 }
 
 export async function importSnapshot(snapshot: AppSnapshot): Promise<void> {
   if (![1, 2, 3].includes(snapshot.schemaVersion) || !snapshot.settings || !Array.isArray(snapshot.progress)) {
     throw new Error('备份文件格式不正确');
   }
+  const sanitized = sanitizeSnapshotReviewState(snapshot);
   await db.transaction('rw', [db.settings, db.progress, db.attempts, db.aiEvaluations, db.dailyPlans, db.dailyRecommendations, db.reviewSessions], async () => {
     await Promise.all([
       db.settings.clear(),
@@ -100,13 +205,13 @@ export async function importSnapshot(snapshot: AppSnapshot): Promise<void> {
       db.dailyRecommendations.clear(),
       db.reviewSessions.clear()
     ]);
-    await db.settings.put(snapshot.settings);
-    await db.progress.bulkPut(snapshot.progress);
-    await db.attempts.bulkPut(snapshot.attempts ?? []);
-    await db.aiEvaluations.bulkPut(snapshot.aiEvaluations ?? []);
-    await db.dailyPlans.bulkPut(snapshot.dailyPlans ?? []);
-    await db.dailyRecommendations.bulkPut(snapshot.dailyRecommendations ?? []);
-    await db.reviewSessions.bulkPut(snapshot.reviewSessions ?? []);
+    await db.settings.put(sanitized.settings);
+    await db.progress.bulkPut(sanitized.progress);
+    await db.attempts.bulkPut(sanitized.attempts ?? []);
+    await db.aiEvaluations.bulkPut(sanitized.aiEvaluations ?? []);
+    await db.dailyPlans.bulkPut(sanitized.dailyPlans ?? []);
+    await db.dailyRecommendations.bulkPut(sanitized.dailyRecommendations ?? []);
+    await db.reviewSessions.bulkPut(sanitized.reviewSessions ?? []);
   });
 }
 

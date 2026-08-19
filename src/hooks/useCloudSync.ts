@@ -78,6 +78,8 @@ function chooseReviewSession(
   local: NonNullable<AppSnapshot['reviewSessions']>[number],
   remote: NonNullable<AppSnapshot['reviewSessions']>[number]
 ) {
+  if (local.status === 'completed' && remote.status !== 'completed') return local;
+  if (remote.status === 'completed' && local.status !== 'completed') return remote;
   return timestamp(remote.updatedAt) >= timestamp(local.updatedAt) ? remote : local;
 }
 

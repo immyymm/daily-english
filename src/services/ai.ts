@@ -1,4 +1,5 @@
 import type { EvaluationResult, QuestionType, ReviewStage, WordCard } from '../types';
+import { releaseConfig } from '../config/release';
 import { evaluationSchema } from '../schemas/evaluation';
 import { getSupabase } from './supabase';
 
@@ -44,7 +45,7 @@ export async function evaluateAnswer(input: EvaluationRequest): Promise<Evaluati
       answer: input.answer,
       correctAnswer: input.correctAnswer ?? '',
       responseMs: input.responseMs,
-      rubricVersion: input.rubricVersion ?? '2026.08.19.1',
+      rubricVersion: input.rubricVersion ?? releaseConfig.evaluationRubricVersion,
       cardContext: {
         coreMeaning: input.card.coreMemory.chinese,
         englishDefinition: input.card.coreMemory.english,

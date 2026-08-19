@@ -15,8 +15,8 @@ const contentCardsDir = path.join(root, 'content', 'cards');
 const publicDailyDir = path.join(root, 'public', 'data', 'daily');
 const publicDataDir = path.join(root, 'public', 'data');
 const launchDate = new Date('2026-08-17T12:00:00+08:00');
-const contentVersion = '2026.08.19.6';
-const templateVersion = 'learning-template-2026.08.19.2';
+const release = JSON.parse(await fs.readFile(path.join(root, 'content', 'release.json'), 'utf8'));
+const { contentVersion, templateVersion } = release;
 
 const slug = (value) => value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const primaryPos = (value) => value.split('/')[0].trim().replace('.', '');
