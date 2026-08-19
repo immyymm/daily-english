@@ -1,7 +1,7 @@
 {
   "date": "2026-09-11",
   "dayNumber": 26,
-  "contentVersion": "2026.08.19.2",
+  "contentVersion": "2026.08.19.3",
   "cards": [
     {
       "id": "write-v",
@@ -416,14 +416,14 @@
           "ai": false
         },
         {
-          "id": "write-v-structure-choice",
+          "id": "write-v-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “write” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“写消息”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "write about",
+            "write to someone",
             "write a message",
-            "in the future",
-            "seem to be"
+            "write about",
+            "write something down"
           ],
           "answer": "write a message",
           "stage": "T1",
@@ -496,31 +496,37 @@
           "ai": false
         },
         {
-          "id": "write-v-collocation-structure-meaning-v2",
+          "id": "write-v-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“写消息”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“写关于……”，又符合这个形式线索：完整搭配中使用介词 about？",
           "options": [
-            "write about",
+            "write a message",
             "write something down",
             "write to someone",
-            "write a message"
+            "write about"
           ],
-          "answer": "write a message",
+          "answer": "write about",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "write-v-collocation-example-context-v2",
+          "id": "write-v-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：Write _____ one sentence using the new word.（中文：写下一个使用新单词的句子。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Write _____ one sentence using the new word.（中文：写下一个使用新单词的句子。）",
+          "options": [
+            "difficult",
+            "ideal",
+            "down",
+            "useful"
+          ],
           "answer": "down",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "write-v-collocation-fixed-1",
+          "id": "write-v-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“写消息”？",
+          "prompt": "用法辨析：哪一项既表示“写消息”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "write to someone",
             "write a message",
@@ -532,9 +538,9 @@
           "ai": false
         },
         {
-          "id": "write-v-collocation-fixed-2",
+          "id": "write-v-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“写关于……”？",
+          "prompt": "搭配辨析：哪一项既表示“写关于……”，又符合这个形式线索：完整搭配中使用介词 about？",
           "options": [
             "write about",
             "write a message",
@@ -631,7 +637,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1048,14 +1054,14 @@
           "ai": false
         },
         {
-          "id": "read-v-structure-choice",
+          "id": "read-v-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “read” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“读书”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "read a book",
-            "make a plan",
-            "mean a lot to someone",
-            "read about"
+            "read about",
+            "read aloud",
+            "read between the lines"
           ],
           "answer": "read a book",
           "stage": "T1",
@@ -1128,31 +1134,37 @@
           "ai": false
         },
         {
-          "id": "read-v-collocation-structure-meaning-v2",
+          "id": "read-v-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“读书”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“阅读有关……的内容”，又符合这个形式线索：完整搭配中使用介词 about？",
           "options": [
             "read aloud",
             "read between the lines",
-            "read a book",
-            "read about"
+            "read about",
+            "read a book"
           ],
-          "answer": "read a book",
+          "answer": "read about",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "read-v-collocation-example-context-v2",
+          "id": "read-v-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：Read the _____ aloud twice.（中文：把例句大声读两遍。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Read the _____ aloud twice.（中文：把例句大声读两遍。）",
+          "options": [
+            "responsibility",
+            "example",
+            "week",
+            "lot"
+          ],
           "answer": "example",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "read-v-collocation-fixed-1",
+          "id": "read-v-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“读书”？",
+          "prompt": "搭配辨析：哪一项既表示“读书”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "read a book",
             "read about",
@@ -1164,9 +1176,9 @@
           "ai": false
         },
         {
-          "id": "read-v-collocation-fixed-2",
+          "id": "read-v-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“阅读有关……的内容”？",
+          "prompt": "用法辨析：哪一项既表示“阅读有关……的内容”，又符合这个形式线索：完整搭配中使用介词 about？",
           "options": [
             "read a book",
             "read aloud",
@@ -1263,7 +1275,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1681,13 +1693,13 @@
           "ai": false
         },
         {
-          "id": "listen-v-structure-choice",
+          "id": "listen-v-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “listen” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“听……”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "daily activity",
-            "offer help",
             "listen carefully",
+            "listen for",
+            "listen to advice",
             "listen to"
           ],
           "answer": "listen to",
@@ -1761,31 +1773,37 @@
           "ai": false
         },
         {
-          "id": "listen-v-collocation-structure-meaning-v2",
+          "id": "listen-v-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“听……”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“仔细听”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "listen to advice",
-            "listen to",
             "listen carefully",
+            "listen to",
             "listen for"
           ],
-          "answer": "listen to",
+          "answer": "listen carefully",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "listen-v-collocation-example-context-v2",
+          "id": "listen-v-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：Listen to the _____ sentence before answering.（中文：回答前先听完整个句子。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Listen to the _____ sentence before answering.（中文：回答前先听完整个句子。）",
+          "options": [
+            "whole",
+            "outdoor",
+            "help",
+            "walking"
+          ],
           "answer": "whole",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "listen-v-collocation-fixed-1",
+          "id": "listen-v-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“听……”？",
+          "prompt": "用法辨析：哪一项既表示“听……”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "listen carefully",
             "listen for",
@@ -1797,9 +1815,9 @@
           "ai": false
         },
         {
-          "id": "listen-v-collocation-fixed-2",
+          "id": "listen-v-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“仔细听”？",
+          "prompt": "搭配辨析：哪一项既表示“仔细听”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "listen for",
             "listen to advice",
@@ -1896,7 +1914,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2327,14 +2345,14 @@
           "ai": false
         },
         {
-          "id": "travel-n-structure-choice",
+          "id": "travel-n-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “travel” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“出国旅行”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "consider doing something",
-            "travel by train",
+            "travel around",
+            "business travel",
             "travel abroad",
-            "at the moment"
+            "travel by train"
           ],
           "answer": "travel abroad",
           "stage": "T1",
@@ -2407,31 +2425,37 @@
           "ai": false
         },
         {
-          "id": "travel-n-collocation-structure-meaning-v2",
+          "id": "travel-n-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“出国旅行”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“乘火车旅行”，又符合这个形式线索：完整搭配中使用介词 by？",
           "options": [
-            "travel abroad",
             "travel by train",
+            "travel abroad",
             "travel around",
             "business travel"
           ],
-          "answer": "travel abroad",
+          "answer": "travel by train",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "travel-n-collocation-example-context-v2",
+          "id": "travel-n-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：She travels _____ for work twice a year.（中文：她每年因工作出国两次。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：She travels _____ for work twice a year.（中文：她每年因工作出国两次。）",
+          "options": [
+            "busy",
+            "taking",
+            "better",
+            "abroad"
+          ],
           "answer": "abroad",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "travel-n-collocation-fixed-1",
+          "id": "travel-n-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“出国旅行”？",
+          "prompt": "搭配辨析：哪一项既表示“出国旅行”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "travel around",
             "business travel",
@@ -2443,9 +2467,9 @@
           "ai": false
         },
         {
-          "id": "travel-n-collocation-fixed-2",
+          "id": "travel-n-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“乘火车旅行”？",
+          "prompt": "用法辨析：哪一项既表示“乘火车旅行”，又符合这个形式线索：完整搭配中使用介词 by？",
           "options": [
             "business travel",
             "travel by train",
@@ -2542,7 +2566,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2960,14 +2984,14 @@
           "ai": false
         },
         {
-          "id": "family-n-structure-choice",
+          "id": "family-n-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “family” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“家庭成员”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "close family",
+            "start a family",
             "family member",
-            "deal with a situation",
-            "expect someone to do something"
+            "close family",
+            "family life"
           ],
           "answer": "family member",
           "stage": "T1",
@@ -3040,31 +3064,37 @@
           "ai": false
         },
         {
-          "id": "family-n-collocation-structure-meaning-v2",
+          "id": "family-n-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“家庭成员”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“近亲”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "close family",
+            "family member",
             "family life",
             "start a family",
-            "family member"
+            "close family"
           ],
-          "answer": "family member",
+          "answer": "close family",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "family-n-collocation-example-context-v2",
+          "id": "family-n-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：My family _____ my learning plan.（中文：我的家人支持我的学习计划。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：My family _____ my learning plan.（中文：我的家人支持我的学习计划。）",
+          "options": [
+            "results",
+            "account",
+            "supports",
+            "depends"
+          ],
           "answer": "supports",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "family-n-collocation-fixed-1",
+          "id": "family-n-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“家庭成员”？",
+          "prompt": "用法辨析：哪一项既表示“家庭成员”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "start a family",
             "family member",
@@ -3076,9 +3106,9 @@
           "ai": false
         },
         {
-          "id": "family-n-collocation-fixed-2",
+          "id": "family-n-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“近亲”？",
+          "prompt": "搭配辨析：哪一项既表示“近亲”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "close family",
             "family member",
@@ -3175,7 +3205,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

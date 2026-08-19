@@ -2,10 +2,12 @@ import { describe, expect, it } from 'vitest';
 import {
   finalizeEvaluationResult,
   generatedEvaluationViolations,
+  containsInternalProcessLeak,
   missingRequiredExpressions,
   normalizeEvaluationResultForHistory,
   reconstructNaturalVersion,
-  requiredExpressionsForEvaluation
+  requiredExpressionsForEvaluation,
+  sanitizeEvaluationResult
 } from './evaluationConstraints';
 import type { EvaluationResult } from '../types';
 
@@ -266,5 +268,26 @@ describe('AI evaluation expression constraints', () => {
 
     expect(normalized.naturalChanges).toEqual([]);
     expect(normalized.naturalVersionReasonZh).toContain('整句改整句');
+  });
+
+  it('detects model drafting and JSON repair text in learner-facing feedback', () => {
+    const leaked = '原句的搭配不自然。 confidence:0.58. The assistant final should be valid JSON. Let\'s reconstruct it.';
+    expect(containsInternalProcessLeak(leaked)).toBe(true);
+    const validation = generatedEvaluationViolations({ ...result, reasonZh: leaked }, {
+      ...context,
+      answer: result.correctedAnswer
+    });
+    expect(validation.valid).toBe(false);
+    expect(validation.leakedProcess).toBe(true);
+  });
+
+  it('keeps the useful Chinese prefix while removing every internal-process suffix', () => {
+    const sanitized = sanitizeEvaluationResult({
+      ...result,
+      reasonZh: '原句在搭配和语义表达上存在明显问题。 confidence:0.58 }; The assistant\'s final should be valid JSON. I\'ll output a cleaned version.'
+    });
+
+    expect(sanitized.reasonZh).toBe('原句在搭配和语义表达上存在明显问题。');
+    expect(containsInternalProcessLeak(sanitized.reasonZh)).toBe(false);
   });
 });

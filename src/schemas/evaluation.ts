@@ -1,5 +1,9 @@
 import { z } from 'zod';
 
+const conciseUserText = z.string().max(600);
+const detailedUserText = z.string().max(1_200);
+const englishExpression = z.string().max(4_000);
+
 export const evaluationErrorTypeSchema = z.enum([
   '任务要求',
   '词义',
@@ -15,21 +19,21 @@ export const evaluationErrorTypeSchema = z.enum([
 ]);
 
 const dimensionFeedbackSchema = z.object({
-  meaningContext: z.string(),
-  activeRecall: z.string(),
-  collocation: z.string(),
-  grammar: z.string(),
-  naturalness: z.string()
+  meaningContext: conciseUserText,
+  activeRecall: conciseUserText,
+  collocation: conciseUserText,
+  grammar: conciseUserText,
+  naturalness: conciseUserText
 });
 
 const taskComplianceSchema = z.object({
   passed: z.boolean(),
-  summaryZh: z.string(),
+  summaryZh: conciseUserText,
   checks: z.array(z.object({
-    id: z.string(),
-    labelZh: z.string(),
+    id: z.string().max(120),
+    labelZh: z.string().max(200),
     passed: z.boolean(),
-    evidenceZh: z.string()
+    evidenceZh: conciseUserText
   })).max(20)
 });
 
@@ -59,22 +63,22 @@ export const evaluationSchema = z.object({
   issues: z.array(z.object({
     category: evaluationErrorTypeSchema,
     severity: z.enum(['minor', 'major']),
-    originalText: z.string(),
-    suggestedText: z.string(),
-    explanationZh: z.string()
+    originalText: englishExpression,
+    suggestedText: englishExpression,
+    explanationZh: detailedUserText
   })).max(8).default([]),
-  correctedAnswer: z.string(),
-  naturalVersion: z.string(),
-  naturalVersionReasonZh: z.string().describe('用简体中文逐项说明 correctedAnswer 的哪些词被改成了什么，并解释对应的搭配、语序、语气或语境理由；禁止只写“更自然/更口语”。若两句相同则说明无需进一步改写。').default(''),
+  correctedAnswer: englishExpression,
+  naturalVersion: englishExpression,
+  naturalVersionReasonZh: detailedUserText.describe('用简体中文逐项说明 correctedAnswer 的哪些词被改成了什么，并解释对应的搭配、语序、语气或语境理由；禁止只写“更自然/更口语”。若两句相同则说明无需进一步改写。').default(''),
   naturalChanges: z.array(z.object({
-    from: z.string().describe('correctedAnswer 中实际被替换的最短词或短语，禁止填写整句。'),
-    to: z.string().describe('naturalVersion 中对应的新词或短语，禁止填写整句。'),
-    sourceIssueZh: z.string().describe('具体说明原词或原短语在本句中的问题，例如搭配对象、词性、语序、介词、语气或语境不合适。').default(''),
-    replacementReasonZh: z.string().describe('具体说明为什么新词或新短语在本句中更合适，以及它带来的含义、搭配或语气效果。').default(''),
-    reasonZh: z.string().describe('把原表达问题和替换理由合并成一句完整的中文说明；禁止只说“更自然/更地道/更口语”。').default('')
+    from: z.string().max(300).describe('correctedAnswer 中实际被替换的最短词或短语，禁止填写整句。'),
+    to: z.string().max(300).describe('naturalVersion 中对应的新词或短语，禁止填写整句。'),
+    sourceIssueZh: detailedUserText.describe('具体说明原词或原短语在本句中的问题，例如搭配对象、词性、语序、介词、语气或语境不合适。').default(''),
+    replacementReasonZh: detailedUserText.describe('具体说明为什么新词或新短语在本句中更合适，以及它带来的含义、搭配或语气效果。').default(''),
+    reasonZh: detailedUserText.describe('把原表达问题和替换理由合并成一句完整的中文说明；禁止只说“更自然/更地道/更口语”。').default('')
   })).max(10).default([]),
-  reasonZh: z.string(),
-  collocationSuggestions: z.array(z.string()).max(5),
+  reasonZh: detailedUserText,
+  collocationSuggestions: z.array(z.string().max(160)).max(5),
   needsRetry: z.boolean(),
   confidence: z.number().min(0).max(1)
 });

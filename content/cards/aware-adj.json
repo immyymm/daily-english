@@ -411,14 +411,14 @@
       "ai": false
     },
     {
-      "id": "aware-adj-structure-choice",
+      "id": "aware-adj-structure-choice-v3",
       "type": "meaning_choice",
-      "prompt": "哪一个是词卡要求优先记住的 “aware” 核心结构？",
+      "prompt": "核心结构辨析：哪一项既表示“意识到……”，又符合这个形式线索：完整搭配中使用介词 of？",
       "options": [
-        "become aware that",
+        "make someone aware of",
         "be aware of",
-        "especially useful",
-        "travel abroad"
+        "become aware that",
+        "fully aware"
       ],
       "answer": "be aware of",
       "stage": "T1",
@@ -491,31 +491,37 @@
       "ai": false
     },
     {
-      "id": "aware-adj-collocation-structure-meaning-v2",
+      "id": "aware-adj-collocation-structure-meaning-v3",
       "type": "collocation",
-      "prompt": "结构应用：想表达“意识到……”，应选择哪个完整结构？",
+      "prompt": "句型应用：哪一项既表示“开始意识到……”，又符合这个形式线索：使用 that 引导一个主谓完整的从句？",
       "options": [
-        "become aware that",
+        "be aware of",
         "fully aware",
         "make someone aware of",
-        "be aware of"
+        "become aware that"
       ],
-      "answer": "be aware of",
+      "answer": "become aware that",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "aware-adj-collocation-example-context-v2",
+      "id": "aware-adj-collocation-example-context-v3",
       "type": "collocation",
-      "prompt": "根据完整句意和中文提示补全英文：Be aware of the _____ in tone.（中文：注意语气上的差异。）",
+      "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Be aware of the _____ in tone.（中文：注意语气上的差异。）",
+      "options": [
+        "abroad",
+        "decision",
+        "difference",
+        "useful"
+      ],
       "answer": "difference",
       "stage": "T2",
       "ai": false
     },
     {
-      "id": "aware-adj-collocation-fixed-1",
+      "id": "aware-adj-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“意识到……”？",
+      "prompt": "用法辨析：哪一项既表示“意识到……”，又符合这个形式线索：完整搭配中使用介词 of？",
       "options": [
         "make someone aware of",
         "be aware of",
@@ -527,9 +533,9 @@
       "ai": false
     },
     {
-      "id": "aware-adj-collocation-fixed-2",
+      "id": "aware-adj-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“开始意识到……”？",
+      "prompt": "搭配辨析：哪一项既表示“开始意识到……”，又符合这个形式线索：使用 that 引导一个主谓完整的从句？",
       "options": [
         "become aware that",
         "be aware of",
@@ -626,7 +632,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.19.2",
+  "contentVersion": "2026.08.19.3",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

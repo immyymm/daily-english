@@ -1,7 +1,7 @@
 {
   "date": "2026-08-26",
   "dayNumber": 10,
-  "contentVersion": "2026.08.19.2",
+  "contentVersion": "2026.08.19.3",
   "cards": [
     {
       "id": "discover-v",
@@ -409,14 +409,14 @@
           "ai": false
         },
         {
-          "id": "discover-v-structure-choice",
+          "id": "discover-v-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “discover” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“发现真相”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "discover a new way",
+            "recently discovered",
             "discover the truth",
-            "customer service",
-            "an effective way"
+            "discover a new way",
+            "discover that"
           ],
           "answer": "discover the truth",
           "stage": "T1",
@@ -489,31 +489,37 @@
           "ai": false
         },
         {
-          "id": "discover-v-collocation-structure-meaning-v2",
+          "id": "discover-v-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“发现真相”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“发现新方法”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "discover a new way",
+            "discover the truth",
             "discover that",
             "recently discovered",
-            "discover the truth"
+            "discover a new way"
           ],
-          "answer": "discover the truth",
+          "answer": "discover a new way",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "discover-v-collocation-example-context-v2",
+          "id": "discover-v-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：You may discover a _____ way to remember it.（中文：你可能会发现更好的记忆方法。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：You may discover a _____ way to remember it.（中文：你可能会发现更好的记忆方法。）",
+          "options": [
+            "way",
+            "review",
+            "better",
+            "excellent"
+          ],
           "answer": "better",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "discover-v-collocation-fixed-1",
+          "id": "discover-v-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“发现真相”？",
+          "prompt": "用法辨析：哪一项既表示“发现真相”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "recently discovered",
             "discover the truth",
@@ -525,9 +531,9 @@
           "ai": false
         },
         {
-          "id": "discover-v-collocation-fixed-2",
+          "id": "discover-v-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“发现新方法”？",
+          "prompt": "搭配辨析：哪一项既表示“发现新方法”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "discover a new way",
             "discover the truth",
@@ -624,7 +630,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1041,14 +1047,14 @@
           "ai": false
         },
         {
-          "id": "protect-v-structure-choice",
+          "id": "protect-v-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “protect” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“保护某人免受……”，又符合这个形式线索：完整搭配中使用介词 from？",
           "options": [
             "protect someone from",
-            "a simple system",
-            "a serious problem",
-            "protect the environment"
+            "protect the environment",
+            "protect your privacy",
+            "be protected by"
           ],
           "answer": "protect someone from",
           "stage": "T1",
@@ -1121,31 +1127,37 @@
           "ai": false
         },
         {
-          "id": "protect-v-collocation-structure-meaning-v2",
+          "id": "protect-v-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“保护某人免受……”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“保护环境”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "protect your privacy",
             "be protected by",
-            "protect someone from",
-            "protect the environment"
+            "protect the environment",
+            "protect someone from"
           ],
-          "answer": "protect someone from",
+          "answer": "protect the environment",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "protect-v-collocation-example-context-v2",
+          "id": "protect-v-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：A strong password protects your _____.（中文：强密码可以保护你的账户。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：A strong password protects your _____.（中文：强密码可以保护你的账户。）",
+          "options": [
+            "try",
+            "account",
+            "helps",
+            "problem"
+          ],
           "answer": "account",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "protect-v-collocation-fixed-1",
+          "id": "protect-v-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“保护某人免受……”？（提示：someone 要替换成实际的人或代词。）",
+          "prompt": "搭配辨析：哪一项既表示“保护某人免受……”，又符合这个形式线索：完整搭配中使用介词 from？",
           "options": [
             "protect someone from",
             "protect the environment",
@@ -1157,9 +1169,9 @@
           "ai": false
         },
         {
-          "id": "protect-v-collocation-fixed-2",
+          "id": "protect-v-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“保护环境”？",
+          "prompt": "用法辨析：哪一项既表示“保护环境”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "protect someone from",
             "protect your privacy",
@@ -1256,7 +1268,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1666,13 +1678,13 @@
           "ai": false
         },
         {
-          "id": "encourage-v-structure-choice",
+          "id": "encourage-v-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “encourage” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“鼓励某人做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
           "options": [
-            "skill level",
-            "sound natural",
             "encourage discussion",
+            "strongly encourage",
+            "encourage positive behavior",
             "encourage someone to do"
           ],
           "answer": "encourage someone to do",
@@ -1746,31 +1758,37 @@
           "ai": false
         },
         {
-          "id": "encourage-v-collocation-structure-meaning-v2",
+          "id": "encourage-v-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“鼓励某人做”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“鼓励讨论”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "encourage positive behavior",
-            "encourage someone to do",
             "encourage discussion",
+            "encourage someone to do",
             "strongly encourage"
           ],
-          "answer": "encourage someone to do",
+          "answer": "encourage discussion",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "encourage-v-collocation-example-context-v2",
+          "id": "encourage-v-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：The teacher encouraged us to _____ more.（中文：老师鼓励我们多开口说。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：The teacher encouraged us to _____ more.（中文：老师鼓励我们多开口说。）",
+          "options": [
+            "speak",
+            "current",
+            "conversation",
+            "completed"
+          ],
           "answer": "speak",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "encourage-v-collocation-fixed-1",
+          "id": "encourage-v-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“鼓励某人做”？（提示：do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词。）",
+          "prompt": "用法辨析：哪一项既表示“鼓励某人做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
           "options": [
             "encourage discussion",
             "strongly encourage",
@@ -1782,9 +1800,9 @@
           "ai": false
         },
         {
-          "id": "encourage-v-collocation-fixed-2",
+          "id": "encourage-v-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“鼓励讨论”？",
+          "prompt": "搭配辨析：哪一项既表示“鼓励讨论”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "strongly encourage",
             "encourage positive behavior",
@@ -1881,7 +1899,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2298,14 +2316,14 @@
           "ai": false
         },
         {
-          "id": "solve-v-structure-choice",
+          "id": "solve-v-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “solve” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“解决问题”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "make something clear",
-            "solve an equation",
+            "help solve",
+            "difficult to solve",
             "solve a problem",
-            "great value"
+            "solve an equation"
           ],
           "answer": "solve a problem",
           "stage": "T1",
@@ -2378,31 +2396,37 @@
           "ai": false
         },
         {
-          "id": "solve-v-collocation-structure-meaning-v2",
+          "id": "solve-v-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“解决问题”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“解方程”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "solve a problem",
             "solve an equation",
+            "solve a problem",
             "help solve",
             "difficult to solve"
           ],
-          "answer": "solve a problem",
+          "answer": "solve an equation",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "solve-v-collocation-example-context-v2",
+          "id": "solve-v-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：We need more information to solve this _____.（中文：我们需要更多信息来解决这个问题。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：We need more information to solve this _____.（中文：我们需要更多信息来解决这个问题。）",
+          "options": [
+            "honest",
+            "point",
+            "need",
+            "problem"
+          ],
           "answer": "problem",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "solve-v-collocation-fixed-1",
+          "id": "solve-v-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“解决问题”？",
+          "prompt": "搭配辨析：哪一项既表示“解决问题”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "help solve",
             "difficult to solve",
@@ -2414,9 +2438,9 @@
           "ai": false
         },
         {
-          "id": "solve-v-collocation-fixed-2",
+          "id": "solve-v-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“解方程”？",
+          "prompt": "用法辨析：哪一项既表示“解方程”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "difficult to solve",
             "solve an equation",
@@ -2513,7 +2537,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2930,14 +2954,14 @@
           "ai": false
         },
         {
-          "id": "express-v-structure-choice",
+          "id": "express-v-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “express” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“表达观点”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "express your feelings",
+            "clearly express",
             "express an opinion",
-            "change behavior",
-            "a common mistake"
+            "express your feelings",
+            "express concern about"
           ],
           "answer": "express an opinion",
           "stage": "T1",
@@ -3010,31 +3034,37 @@
           "ai": false
         },
         {
-          "id": "express-v-collocation-structure-meaning-v2",
+          "id": "express-v-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“表达观点”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“表达感受”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "express your feelings",
+            "express an opinion",
             "express concern about",
             "clearly express",
-            "express an opinion"
+            "express your feelings"
           ],
-          "answer": "express an opinion",
+          "answer": "express your feelings",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "express-v-collocation-example-context-v2",
+          "id": "express-v-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：Try to express the _____ in your own words.（中文：试着用自己的话表达这个想法。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Try to express the _____ in your own words.（中文：试着用自己的话表达这个想法。）",
+          "options": [
+            "mistake",
+            "appears",
+            "idea",
+            "positive"
+          ],
           "answer": "idea",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "express-v-collocation-fixed-1",
+          "id": "express-v-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“表达观点”？",
+          "prompt": "用法辨析：哪一项既表示“表达观点”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "clearly express",
             "express an opinion",
@@ -3046,9 +3076,9 @@
           "ai": false
         },
         {
-          "id": "express-v-collocation-fixed-2",
+          "id": "express-v-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“表达感受”？",
+          "prompt": "搭配辨析：哪一项既表示“表达感受”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "express your feelings",
             "express an opinion",
@@ -3145,7 +3175,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

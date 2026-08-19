@@ -14,7 +14,7 @@ const contentCardsDir = path.join(root, 'content', 'cards');
 const publicDailyDir = path.join(root, 'public', 'data', 'daily');
 const publicDataDir = path.join(root, 'public', 'data');
 const launchDate = new Date('2026-08-17T12:00:00+08:00');
-const contentVersion = '2026.08.19.2';
+const contentVersion = '2026.08.19.3';
 
 const slug = (value) => value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const primaryPos = (value) => value.split('/')[0].trim().replace('.', '');
@@ -396,11 +396,35 @@ function clozeTargetQuestion(id, promptPrefix, text, targetWord, stage) {
   };
 }
 
+function structureFormClue(phrase) {
+  const normalized = phrase.replace(/\s+/g, ' ').trim();
+  if (/^it\s+is\b.*\bthat\b/i.test(normalized)) return '使用形式主语 it，后面接 that 完整从句';
+  if (/\bsomeone\s+doing\b/i.test(normalized)) return '宾语后接动词 -ing 形式，强调看到或感知正在进行的动作';
+  if (/\bsomeone\s+do\b/i.test(normalized)) return '宾语后接动词原形，强调看到或感知完整动作';
+  if (/\bto\s+do\b/i.test(normalized)) return '目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词';
+  if (/\bdoing\b/i.test(normalized)) return '目标词后的 doing 表示要换成符合语境的动词 -ing 形式';
+  if (/\bdone\b/i.test(normalized)) return '目标词后的 done 表示要换成符合语境的过去分词';
+  if (/\bfrom\b.*\bto\b/i.test(normalized)) return '同时使用 from 和 to，表示范围或变化的起点与终点';
+  if (/\bmore\b.*\bto\b/i.test(normalized)) return '使用 more 构成比较级，后面再接 to + 动词原形';
+  if (/\bless\b.*\bto\b/i.test(normalized)) return '使用 less 表示较低可能性，后面再接 to + 动词原式';
+  if (/^be\s+likely\s+to\b/i.test(normalized)) return '使用 be + likely + to + 动词原式，不加 more 或 less 构成比较';
+  if (/\bthat\b/i.test(normalized)) return '使用 that 引导一个主谓完整的从句';
+  const preposition = normalized.match(/\b(on|in|at|for|with|by|from|of|about|into|over|through)\b/i)?.[1];
+  if (preposition) return `完整搭配中使用介词 ${preposition.toLowerCase()}`;
+  if (/\bsomething\b/i.test(normalized)) return '目标词后直接接事物宾语，不额外加介词';
+  if (/^be\b/i.test(normalized)) return '使用 be 的正确形式后接目标表达';
+  return '选择与该中文含义和词性同时匹配的完整句块';
+}
+
+function structurePrompt(entry, label = '结构辨析') {
+  return label + '：哪一项既表示“' + entry.chinese + '”，又符合这个形式线索：' + structureFormClue(entry.phrase) + '？';
+}
+
 function structureMeaningQuestion(id, entry, candidates, stage, index) {
   return {
     id,
     type: 'collocation',
-    prompt: '结构应用：想表达“' + entry.chinese + '”，应选择哪个完整结构？',
+    prompt: structurePrompt(entry, '句型应用'),
     options: relationOptions(entry.phrase, candidates.map((candidate) => candidate.phrase), index),
     answer: entry.phrase,
     stage,
@@ -415,7 +439,7 @@ const contextClozeStopWords = new Set([
   'we', 'they', 'my', 'your', 'his', 'her', 'its', 'our', 'their', 'this', 'that', 'these', 'those'
 ]);
 
-function contextualCompanionQuestion(id, english, chinese, targetWord, stage) {
+function contextualCompanionWord(english, targetWord) {
   const words = wordsWithOffsets(english);
   const forms = inflectedForms(targetWord.toLowerCase());
   const targetIndex = words.findIndex((word) => forms.has(word.text.toLowerCase()));
@@ -424,12 +448,17 @@ function contextualCompanionQuestion(id, english, chinese, targetWord, stage) {
     return !forms.has(normalized) && !contextClozeStopWords.has(normalized) && normalized.length > 2;
   };
   const afterTarget = targetIndex >= 0 ? words.slice(targetIndex + 1).find(isUsefulCompanion) : undefined;
-  const selected = afterTarget ?? [...words].reverse().find(isUsefulCompanion);
+  return afterTarget ?? [...words].reverse().find(isUsefulCompanion);
+}
+
+function contextualCompanionQuestion(id, english, chinese, targetWord, distractors, stage, index) {
+  const selected = contextualCompanionWord(english, targetWord);
   if (!selected) throw new Error(id + ': example needs a meaningful non-target context word');
   return {
     id,
     type: 'collocation',
-    prompt: '根据完整句意和中文提示补全英文：' + blankWord(english, selected) + '（中文：' + chinese + '）',
+    prompt: '根据完整句意和中文提示，选出唯一能补全原句意思的词：' + blankWord(english, selected) + '（中文：' + chinese + '）',
+    options: relationOptions(selected.text, distractors, index),
     answer: selected.text,
     stage,
     ai: false
@@ -437,11 +466,10 @@ function contextualCompanionQuestion(id, english, chinese, targetWord, stage) {
 }
 
 function phraseMeaningQuestion(id, entry, candidates, stage, index) {
-  const guidance = slotGuidance(entry.phrase).replace(/^；/, '');
   return {
     id,
     type: 'collocation',
-    prompt: '词卡结构辨义（' + (index % 2 === 0 ? '一' : '二') + '）：哪一个结构或搭配表示“' + entry.chinese + '”？' + (guidance ? '（提示：' + guidance + '。）' : ''),
+    prompt: structurePrompt(entry, index % 2 === 0 ? '搭配辨析' : '用法辨析'),
     options: relationOptions(entry.phrase, candidates.map((candidate) => candidate.phrase), index),
     answer: entry.phrase,
     stage,
@@ -508,7 +536,10 @@ function makeCard(item, index) {
   const nextTwo = lexicon[(index + 43) % lexicon.length];
   const meaningOptions = rotateOptions([item.zh, next.zh, nextTwo.zh], index);
   const englishMeaningOptions = rotateOptions([meanings[0].english, next.en, nextTwo.en], index + 1);
-  const structureOptions = relationOptions(structures[0].phrase, [next.coll, nextTwo.coll, fixedPhrases[1]?.phrase], index + 2);
+  const structureOptions = relationOptions(structures[0].phrase, [
+    ...structures.slice(1).map((entry) => entry.phrase),
+    ...fixedPhrases.slice(0, 2).map((entry) => entry.phrase)
+  ], index + 2);
   const synonymAnswer = synonyms[0].word;
   const antonymAnswer = antonyms[0].word;
   const synonymOptions = relationOptions(synonymAnswer, [antonymAnswer, confusableItems[0]?.word, next.w, nextTwo.w], index + 3);
@@ -522,25 +553,29 @@ function makeCard(item, index) {
     ?? contextPhrases[0]?.items[0]
     ?? { phrase: item.coll, chinese: item.collZh };
   const firstContextPhrase = firstContextEntry.phrase;
-  const objectiveStructure = structures.find((entry) => hasObjectiveStructureWord(entry.phrase, item.w)) ?? structures[0];
+  const objectiveStructure = structures.slice(1).find((entry) => hasObjectiveStructureWord(entry.phrase, item.w))
+    ?? structures[1]
+    ?? structures[0];
   const firstFixedEntry = fixedPhrases[0] ?? { phrase: item.coll, chinese: item.collZh };
   const firstFixedPhrase = firstFixedEntry.phrase;
   const secondFixedEntry = fixedPhrases.find((entry) => entry.phrase !== firstFixedPhrase)
     ?? { phrase: structures[1]?.phrase ?? item.coll, chinese: structures[1]?.chinese ?? item.collZh };
+  const contextualDistractors = [next, nextTwo, lexicon[(index + 67) % lexicon.length]]
+    .map((candidate) => contextualCompanionWord(candidate.ex, candidate.w)?.text ?? candidate.w);
   const questions = [
     { id: id + '-meaning-core', type: 'meaning_choice', prompt: '“' + item.w + '”最核心的中文含义是？', options: meaningOptions, answer: item.zh, stage: 'T0', ai: false },
     { id: id + '-meaning-english', type: 'meaning_choice', prompt: '哪一项英文释义最符合词卡中的 “' + item.w + '”？', options: englishMeaningOptions, answer: meanings[0].english, stage: 'T0', ai: false },
-    { id: id + '-structure-choice', type: 'meaning_choice', prompt: '哪一个是词卡要求优先记住的 “' + item.w + '” 核心结构？', options: structureOptions, answer: structures[0].phrase, stage: 'T1', ai: false },
+    { id: id + '-structure-choice-v3', type: 'meaning_choice', prompt: structurePrompt(structures[0], '核心结构辨析'), options: structureOptions, answer: structures[0].phrase, stage: 'T1', ai: false },
     { id: id + '-synonym-choice', type: 'meaning_choice', prompt: '哪个词是词卡中列出的 “' + item.w + '” 最直接近义词？', options: synonymOptions, answer: synonymAnswer, stage: 'T2', ai: false },
     { id: id + '-antonym-choice', type: 'meaning_choice', prompt: '哪个词是词卡中列出的 “' + item.w + '” 最直接反义词？', options: antonymOptions, answer: antonymAnswer, stage: 'T2', ai: false },
     { id: id + '-contrast-choice', type: 'meaning_choice', prompt: '根据本词卡辨析，哪个词被列为 “' + item.w + '” 的' + contrastKind + '？', options: contrastOptions, answer: contrast.word, stage: 'T3', ai: false },
     { id: id + '-recall-definition', type: 'recall', prompt: '根据英文释义写出目标词：' + meanings[0].english, answer: item.w, stage: 'T1', ai: false },
     { id: id + '-recall-chinese', type: 'recall', prompt: '写出符合“' + item.zh + '”（' + item.p + '）的本课目标词。', answer: item.w, stage: 'T1', ai: false },
     clozeTargetQuestion(id + '-collocation-core', '补全高频搭配：', item.coll, item.w, 'T0'),
-    structureMeaningQuestion(id + '-collocation-structure-meaning-v2', objectiveStructure, structures, 'T1', index + 8),
-    contextualCompanionQuestion(id + '-collocation-example-context-v2', item.ex, item.exZh, item.w, 'T2'),
-    phraseMeaningQuestion(id + '-collocation-fixed-1', firstFixedEntry, fixedPhrases, 'T2', index + 6),
-    phraseMeaningQuestion(id + '-collocation-fixed-2', secondFixedEntry, fixedPhrases, 'T3', index + 7),
+    structureMeaningQuestion(id + '-collocation-structure-meaning-v3', objectiveStructure, structures, 'T1', index + 8),
+    contextualCompanionQuestion(id + '-collocation-example-context-v3', item.ex, item.exZh, item.w, contextualDistractors, 'T2', index + 9),
+    phraseMeaningQuestion(id + '-collocation-fixed-1-v3', firstFixedEntry, fixedPhrases, 'T2', index + 6),
+    phraseMeaningQuestion(id + '-collocation-fixed-2-v3', secondFixedEntry, fixedPhrases, 'T3', index + 7),
     clozeTargetQuestion(id + '-example-cloze', '根据句意补全词卡核心例句：', item.ex, item.w, 'T3'),
     { id: id + '-sentence-core', type: 'free_sentence', prompt: '请用 “' + item.w + '” 写一个自然、真实的英文句子，含义必须符合词卡核心义“' + item.zh + '”。', answer: '', stage: 'T2', ai: true },
     { id: id + '-sentence-phrase', type: 'free_sentence', prompt: '请使用 “' + firstFixedPhrase + '” 结构写一个与自己有关的自然英文句子' + slotGuidance(firstFixedPhrase) + '。', answer: '', stage: 'T3', ai: true },

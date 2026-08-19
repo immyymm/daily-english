@@ -411,14 +411,14 @@
       "ai": false
     },
     {
-      "id": "simply-adv-structure-choice",
+      "id": "simply-adv-structure-choice-v3",
       "type": "meaning_choice",
-      "prompt": "哪一个是词卡要求优先记住的 “simply” 核心结构？",
+      "prompt": "核心结构辨析：哪一项既表示“简单来说”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "notice a difference",
-        "simply because",
+        "quite simply",
+        "simply impossible",
         "simply put",
-        "write down"
+        "simply because"
       ],
       "answer": "simply put",
       "stage": "T1",
@@ -491,31 +491,37 @@
       "ai": false
     },
     {
-      "id": "simply-adv-collocation-structure-meaning-v2",
+      "id": "simply-adv-collocation-structure-meaning-v3",
       "type": "collocation",
-      "prompt": "结构应用：想表达“简单来说”，应选择哪个完整结构？",
+      "prompt": "句型应用：哪一项既表示“仅仅因为”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "simply put",
         "simply because",
+        "simply put",
         "quite simply",
         "simply impossible"
       ],
-      "answer": "simply put",
+      "answer": "simply because",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "simply-adv-collocation-example-context-v2",
+      "id": "simply-adv-collocation-example-context-v3",
       "type": "collocation",
-      "prompt": "根据完整句意和中文提示补全英文：Simply _____, practice helps memory.（中文：简单来说，练习有助于记忆。）",
+      "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Simply _____, practice helps memory.（中文：简单来说，练习有助于记忆。）",
+      "options": [
+        "down",
+        "change",
+        "phrase",
+        "put"
+      ],
       "answer": "put",
       "stage": "T2",
       "ai": false
     },
     {
-      "id": "simply-adv-collocation-fixed-1",
+      "id": "simply-adv-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“简单来说”？",
+      "prompt": "搭配辨析：哪一项既表示“简单来说”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "quite simply",
         "simply impossible",
@@ -527,9 +533,9 @@
       "ai": false
     },
     {
-      "id": "simply-adv-collocation-fixed-2",
+      "id": "simply-adv-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“仅仅因为”？",
+      "prompt": "用法辨析：哪一项既表示“仅仅因为”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "simply impossible",
         "simply because",
@@ -626,7 +632,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.19.2",
+  "contentVersion": "2026.08.19.3",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

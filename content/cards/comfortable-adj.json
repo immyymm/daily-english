@@ -411,13 +411,13 @@
       "ai": false
     },
     {
-      "id": "comfortable-adj-structure-choice",
+      "id": "comfortable-adj-structure-choice-v3",
       "type": "meaning_choice",
-      "prompt": "哪一个是词卡要求优先记住的 “comfortable” 核心结构？",
+      "prompt": "核心结构辨析：哪一项既表示“做某事感到自在”，又符合这个形式线索：目标词后的 doing 表示要换成符合语境的动词 -ing 形式？",
       "options": [
-        "nearly finished",
-        "save money",
         "comfortable with",
+        "make yourself comfortable",
+        "a comfortable chair",
         "feel comfortable doing"
       ],
       "answer": "feel comfortable doing",
@@ -491,31 +491,37 @@
       "ai": false
     },
     {
-      "id": "comfortable-adj-collocation-structure-meaning-v2",
+      "id": "comfortable-adj-collocation-structure-meaning-v3",
       "type": "collocation",
-      "prompt": "结构应用：想表达“做某事感到自在”，应选择哪个完整结构？",
+      "prompt": "句型应用：哪一项既表示“对……感到自在”，又符合这个形式线索：完整搭配中使用介词 with？",
       "options": [
         "a comfortable chair",
-        "feel comfortable doing",
         "comfortable with",
+        "feel comfortable doing",
         "make yourself comfortable"
       ],
-      "answer": "feel comfortable doing",
+      "answer": "comfortable with",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "comfortable-adj-collocation-example-context-v2",
+      "id": "comfortable-adj-collocation-example-context-v3",
       "type": "collocation",
-      "prompt": "根据完整句意和中文提示补全英文：I feel comfortable _____ her for help.（中文：我很自在地向她求助。）",
+      "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：I feel comfortable _____ her for help.（中文：我很自在地向她求助。）",
+      "options": [
+        "asking",
+        "finished",
+        "time",
+        "finish"
+      ],
       "answer": "asking",
       "stage": "T2",
       "ai": false
     },
     {
-      "id": "comfortable-adj-collocation-fixed-1",
+      "id": "comfortable-adj-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“做某事感到自在”？（提示：doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing。）",
+      "prompt": "用法辨析：哪一项既表示“做某事感到自在”，又符合这个形式线索：目标词后的 doing 表示要换成符合语境的动词 -ing 形式？",
       "options": [
         "comfortable with",
         "make yourself comfortable",
@@ -527,9 +533,9 @@
       "ai": false
     },
     {
-      "id": "comfortable-adj-collocation-fixed-2",
+      "id": "comfortable-adj-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“对……感到自在”？",
+      "prompt": "搭配辨析：哪一项既表示“对……感到自在”，又符合这个形式线索：完整搭配中使用介词 with？",
       "options": [
         "make yourself comfortable",
         "a comfortable chair",
@@ -626,7 +632,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.19.2",
+  "contentVersion": "2026.08.19.3",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

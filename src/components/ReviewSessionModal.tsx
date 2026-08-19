@@ -8,6 +8,7 @@ import type { AIEvaluation, Attempt, CardProgress, CardQuestion, EvaluationResul
 import { LocalRecorder } from './LocalRecorder';
 import { EvaluationResultDetails } from './EvaluationResultDetails';
 import { ModalShell } from './ModalShell';
+import { SpellingKeyboard } from './SpellingKeyboard';
 
 interface ReviewSessionModalProps {
   open: boolean;
@@ -265,9 +266,8 @@ export function ReviewSessionModal({
     >
       <div className="quiz-progress"><span style={{ width: ((questionIndex + 1) / questions.length * 100) + '%' }} /></div>
       <section className="quiz-prompt">
-        <span className="quiz-type">{isOpenAnswer ? <Sparkles size={15} /> : <Brain size={15} />}{questionLabels[question.type]} · {isOpenAnswer ? 'AI 辅助评分' : '本地评分'}</span>
+        <span className="quiz-type">{isOpenAnswer ? <Sparkles size={15} /> : <Brain size={15} />}{questionLabels[question.type]}{isOpenAnswer ? ' · AI 点评' : ''}</span>
         <h3>{question.prompt}</h3>
-        <p>本题来自完整词卡内容；本阶段共抽取 {questions.length} 个不同考点。</p>
       </section>
 
       {showRecorder && <LocalRecorder shownAt={shownAt} onStarted={setSpeechLatency} />}
@@ -293,9 +293,9 @@ export function ReviewSessionModal({
         <label className="answer-field">
           <span>{showRecorder ? '输入或确认你的文字稿' : '你的回答'}</span>
           {isOpenAnswer ? (
-            <textarea value={answer} onChange={(event) => setAnswer(event.target.value)} placeholder="Write your answer in English…" rows={5} disabled={Boolean(feedback)} />
+            <textarea value={answer} onChange={(event) => setAnswer(event.target.value)} placeholder="Write your answer in English…" rows={5} autoComplete="off" autoCorrect="off" spellCheck={false} disabled={Boolean(feedback)} />
           ) : (
-            <input value={answer} onChange={(event) => setAnswer(event.target.value)} placeholder="Type your answer…" autoCapitalize="none" disabled={Boolean(feedback)} />
+            <SpellingKeyboard value={answer} onChange={setAnswer} disabled={Boolean(feedback)} />
           )}
         </label>
       )}

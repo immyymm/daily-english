@@ -404,14 +404,14 @@
       "ai": false
     },
     {
-      "id": "quickly-adv-structure-choice",
+      "id": "quickly-adv-structure-choice-v3",
       "type": "meaning_choice",
-      "prompt": "哪一个是词卡要求优先记住的 “quickly” 核心结构？",
+      "prompt": "核心结构辨析：哪一项既表示“快速回应”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "learn quickly",
+        "quickly become",
         "respond quickly",
-        "read aloud",
-        "support a decision"
+        "learn quickly",
+        "as quickly as possible"
       ],
       "answer": "respond quickly",
       "stage": "T1",
@@ -484,31 +484,37 @@
       "ai": false
     },
     {
-      "id": "quickly-adv-collocation-structure-meaning-v2",
+      "id": "quickly-adv-collocation-structure-meaning-v3",
       "type": "collocation",
-      "prompt": "结构应用：想表达“快速回应”，应选择哪个完整结构？",
+      "prompt": "句型应用：哪一项既表示“学得快”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "learn quickly",
+        "respond quickly",
         "as quickly as possible",
         "quickly become",
-        "respond quickly"
+        "learn quickly"
       ],
-      "answer": "respond quickly",
+      "answer": "learn quickly",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "quickly-adv-collocation-example-context-v2",
+      "id": "quickly-adv-collocation-example-context-v3",
       "type": "collocation",
-      "prompt": "根据完整句意和中文提示补全英文：Try to recall the _____ quickly.（中文：试着快速回忆这个词。）",
+      "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Try to recall the _____ quickly.（中文：试着快速回忆这个词。）",
+      "options": [
+        "decision",
+        "reviewing",
+        "word",
+        "example"
+      ],
       "answer": "word",
       "stage": "T2",
       "ai": false
     },
     {
-      "id": "quickly-adv-collocation-fixed-1",
+      "id": "quickly-adv-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“快速回应”？",
+      "prompt": "用法辨析：哪一项既表示“快速回应”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "quickly become",
         "respond quickly",
@@ -520,9 +526,9 @@
       "ai": false
     },
     {
-      "id": "quickly-adv-collocation-fixed-2",
+      "id": "quickly-adv-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“学得快”？",
+      "prompt": "搭配辨析：哪一项既表示“学得快”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "learn quickly",
         "respond quickly",
@@ -619,7 +625,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.19.2",
+  "contentVersion": "2026.08.19.3",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

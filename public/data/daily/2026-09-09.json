@@ -1,7 +1,7 @@
 {
   "date": "2026-09-09",
   "dayNumber": 24,
-  "contentVersion": "2026.08.19.2",
+  "contentVersion": "2026.08.19.3",
   "cards": [
     {
       "id": "still-adv",
@@ -430,13 +430,13 @@
           "ai": false
         },
         {
-          "id": "still-adv-structure-choice",
+          "id": "still-adv-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “still” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“仍然需要”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "close friend",
-            "create an opportunity",
             "still working",
+            "still possible",
+            "still not sure",
             "still need to"
           ],
           "answer": "still need to",
@@ -510,31 +510,37 @@
           "ai": false
         },
         {
-          "id": "still-adv-collocation-structure-meaning-v2",
+          "id": "still-adv-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“仍然需要”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“仍在工作”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "still not sure",
-            "still need to",
             "still working",
+            "still need to",
             "still possible"
           ],
-          "answer": "still need to",
+          "answer": "still working",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "still-adv-collocation-example-context-v2",
+          "id": "still-adv-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：I still _____ to review two words.（中文：我还需要复习两个单词。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：I still _____ to review two words.（中文：我还需要复习两个单词。）",
+          "options": [
+            "need",
+            "dialogue",
+            "meaningful",
+            "situation"
+          ],
           "answer": "need",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "still-adv-collocation-fixed-1",
+          "id": "still-adv-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“仍然需要”？",
+          "prompt": "用法辨析：哪一项既表示“仍然需要”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "still working",
             "still possible",
@@ -546,9 +552,9 @@
           "ai": false
         },
         {
-          "id": "still-adv-collocation-fixed-2",
+          "id": "still-adv-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“仍在工作”？",
+          "prompt": "搭配辨析：哪一项既表示“仍在工作”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "still possible",
             "still not sure",
@@ -645,7 +651,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1047,14 +1053,14 @@
           "ai": false
         },
         {
-          "id": "often-adv-structure-choice",
+          "id": "often-adv-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “often” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“相当经常”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "include examples",
-            "often used",
+            "more often than not",
+            "how often",
             "quite often",
-            "feel at home"
+            "often used"
           ],
           "answer": "quite often",
           "stage": "T1",
@@ -1127,31 +1133,37 @@
           "ai": false
         },
         {
-          "id": "often-adv-collocation-structure-meaning-v2",
+          "id": "often-adv-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“相当经常”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“经常使用”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "quite often",
             "often used",
+            "quite often",
             "more often than not",
             "how often"
           ],
-          "answer": "quite often",
+          "answer": "often used",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "often-adv-collocation-example-context-v2",
+          "id": "often-adv-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：This phrase often _____ in conversation.（中文：这个短语经常出现在对话中。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：This phrase often _____ in conversation.（中文：这个短语经常出现在对话中。）",
+          "options": [
+            "yourself",
+            "breakfast",
+            "confidence",
+            "appears"
+          ],
           "answer": "appears",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "often-adv-collocation-fixed-1",
+          "id": "often-adv-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“相当经常”？",
+          "prompt": "搭配辨析：哪一项既表示“相当经常”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "more often than not",
             "how often",
@@ -1163,9 +1175,9 @@
           "ai": false
         },
         {
-          "id": "often-adv-collocation-fixed-2",
+          "id": "often-adv-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“经常使用”？",
+          "prompt": "用法辨析：哪一项既表示“经常使用”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "how often",
             "often used",
@@ -1262,7 +1274,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1664,14 +1676,14 @@
           "ai": false
         },
         {
-          "id": "together-adv-structure-choice",
+          "id": "together-adv-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “together” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“一起工作”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "learn together",
+            "get together",
             "work together",
-            "solve a problem",
-            "remember to do something"
+            "learn together",
+            "live together"
           ],
           "answer": "work together",
           "stage": "T1",
@@ -1744,31 +1756,37 @@
           "ai": false
         },
         {
-          "id": "together-adv-collocation-structure-meaning-v2",
+          "id": "together-adv-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“一起工作”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“一起学习”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "learn together",
+            "work together",
             "live together",
             "get together",
-            "work together"
+            "learn together"
           ],
-          "answer": "work together",
+          "answer": "learn together",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "together-adv-collocation-example-context-v2",
+          "id": "together-adv-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：These words are often _____ together.（中文：这些词经常搭配使用。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：These words are often _____ together.（中文：这些词经常搭配使用。）",
+          "options": [
+            "save",
+            "unnecessary",
+            "used",
+            "solved"
+          ],
           "answer": "used",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "together-adv-collocation-fixed-1",
+          "id": "together-adv-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“一起工作”？",
+          "prompt": "用法辨析：哪一项既表示“一起工作”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "get together",
             "work together",
@@ -1780,9 +1798,9 @@
           "ai": false
         },
         {
-          "id": "together-adv-collocation-fixed-2",
+          "id": "together-adv-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“一起学习”？",
+          "prompt": "搭配辨析：哪一项既表示“一起学习”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "learn together",
             "work together",
@@ -1879,7 +1897,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2296,14 +2314,14 @@
           "ai": false
         },
         {
-          "id": "forward-adv-structure-choice",
+          "id": "forward-adv-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “forward” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“期待……”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "look forward to",
-            "ask a question",
-            "allow someone to do something",
-            "move forward"
+            "move forward",
+            "go forward with",
+            "a step forward"
           ],
           "answer": "look forward to",
           "stage": "T1",
@@ -2376,31 +2394,37 @@
           "ai": false
         },
         {
-          "id": "forward-adv-collocation-structure-meaning-v2",
+          "id": "forward-adv-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“期待……”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“向前推进”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "go forward with",
             "a step forward",
-            "look forward to",
-            "move forward"
+            "move forward",
+            "look forward to"
           ],
-          "answer": "look forward to",
+          "answer": "move forward",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "forward-adv-collocation-example-context-v2",
+          "id": "forward-adv-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：I look forward to _____ from you.（中文：我期待收到你的消息。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：I look forward to _____ from you.（中文：我期待收到你的消息。）",
+          "options": [
+            "most",
+            "hearing",
+            "ask",
+            "study"
+          ],
           "answer": "hearing",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "forward-adv-collocation-fixed-1",
+          "id": "forward-adv-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“期待……”？",
+          "prompt": "搭配辨析：哪一项既表示“期待……”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "look forward to",
             "move forward",
@@ -2412,9 +2436,9 @@
           "ai": false
         },
         {
-          "id": "forward-adv-collocation-fixed-2",
+          "id": "forward-adv-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“向前推进”？",
+          "prompt": "用法辨析：哪一项既表示“向前推进”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "look forward to",
             "go forward with",
@@ -2511,7 +2535,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2934,13 +2958,13 @@
           "ai": false
         },
         {
-          "id": "enough-adv-structure-choice",
+          "id": "enough-adv-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “enough” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“足够好”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "tell a story",
-            "continue to improve",
             "enough time",
+            "old enough to",
+            "not enough",
             "good enough"
           ],
           "answer": "good enough",
@@ -3014,31 +3038,37 @@
           "ai": false
         },
         {
-          "id": "enough-adv-collocation-structure-meaning-v2",
+          "id": "enough-adv-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“足够好”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“足够时间”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "not enough",
-            "good enough",
             "enough time",
+            "good enough",
             "old enough to"
           ],
-          "answer": "good enough",
+          "answer": "enough time",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "enough-adv-collocation-example-context-v2",
+          "id": "enough-adv-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：Five focused _____ can be enough.（中文：专注的五分钟也可能足够。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Five focused _____ can be enough.（中文：专注的五分钟也可能足够。）",
+          "options": [
+            "minutes",
+            "using",
+            "reading",
+            "useful"
+          ],
           "answer": "minutes",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "enough-adv-collocation-fixed-1",
+          "id": "enough-adv-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“足够好”？",
+          "prompt": "用法辨析：哪一项既表示“足够好”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "enough time",
             "old enough to",
@@ -3050,9 +3080,9 @@
           "ai": false
         },
         {
-          "id": "enough-adv-collocation-fixed-2",
+          "id": "enough-adv-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“足够时间”？",
+          "prompt": "搭配辨析：哪一项既表示“足够时间”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "old enough to",
             "not enough",
@@ -3149,7 +3179,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

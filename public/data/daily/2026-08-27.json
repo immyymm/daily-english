@@ -1,7 +1,7 @@
 {
   "date": "2026-08-27",
   "dayNumber": 11,
-  "contentVersion": "2026.08.19.2",
+  "contentVersion": "2026.08.19.3",
   "cards": [
     {
       "id": "ability-n",
@@ -416,14 +416,14 @@
           "ai": false
         },
         {
-          "id": "ability-n-structure-choice",
+          "id": "ability-n-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “ability” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“做某事的能力”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
           "options": [
             "ability to do",
-            "pay attention to",
-            "be similar to",
-            "develop an ability"
+            "develop an ability",
+            "natural ability",
+            "academic ability"
           ],
           "answer": "ability to do",
           "stage": "T1",
@@ -496,31 +496,37 @@
           "ai": false
         },
         {
-          "id": "ability-n-collocation-structure-meaning-v2",
+          "id": "ability-n-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“做某事的能力”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“培养能力”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "natural ability",
             "academic ability",
-            "ability to do",
-            "develop an ability"
+            "develop an ability",
+            "ability to do"
           ],
-          "answer": "ability to do",
+          "answer": "develop an ability",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "ability-n-collocation-example-context-v2",
+          "id": "ability-n-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：Practice improves your ability to _____ words.（中文：练习会提高你回忆单词的能力。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Practice improves your ability to _____ words.（中文：练习会提高你回忆单词的能力。）",
+          "options": [
+            "used",
+            "recall",
+            "preposition",
+            "one"
+          ],
           "answer": "recall",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "ability-n-collocation-fixed-1",
+          "id": "ability-n-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“做某事的能力”？（提示：do 代表任意合适的动词原形，不要求写出单词 do。）",
+          "prompt": "搭配辨析：哪一项既表示“做某事的能力”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
           "options": [
             "ability to do",
             "develop an ability",
@@ -532,9 +538,9 @@
           "ai": false
         },
         {
-          "id": "ability-n-collocation-fixed-2",
+          "id": "ability-n-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“培养能力”？",
+          "prompt": "用法辨析：哪一项既表示“培养能力”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "ability to do",
             "natural ability",
@@ -631,7 +637,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1041,13 +1047,13 @@
           "ai": false
         },
         {
-          "id": "effort-n-structure-choice",
+          "id": "effort-n-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “effort” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“付出努力”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "main purpose",
-            "be different from",
             "put effort into",
+            "a great deal of effort",
+            "with little effort",
             "make an effort"
           ],
           "answer": "make an effort",
@@ -1121,31 +1127,37 @@
           "ai": false
         },
         {
-          "id": "effort-n-collocation-structure-meaning-v2",
+          "id": "effort-n-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“付出努力”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“投入精力”，又符合这个形式线索：完整搭配中使用介词 into？",
           "options": [
             "with little effort",
-            "make an effort",
             "put effort into",
+            "make an effort",
             "a great deal of effort"
           ],
-          "answer": "make an effort",
+          "answer": "put effort into",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "effort-n-collocation-example-context-v2",
+          "id": "effort-n-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：Make an effort to _____ the word today.（中文：今天努力把这个词用出来。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Make an effort to _____ the word today.（中文：今天努力把这个词用出来。）",
+          "options": [
+            "use",
+            "test",
+            "formal",
+            "hearing"
+          ],
           "answer": "use",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "effort-n-collocation-fixed-1",
+          "id": "effort-n-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“付出努力”？",
+          "prompt": "用法辨析：哪一项既表示“付出努力”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "put effort into",
             "a great deal of effort",
@@ -1157,9 +1169,9 @@
           "ai": false
         },
         {
-          "id": "effort-n-collocation-fixed-2",
+          "id": "effort-n-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“投入精力”？",
+          "prompt": "搭配辨析：哪一项既表示“投入精力”，又符合这个形式线索：完整搭配中使用介词 into？",
           "options": [
             "a great deal of effort",
             "with little effort",
@@ -1256,7 +1268,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1680,14 +1692,14 @@
           "ai": false
         },
         {
-          "id": "reason-n-structure-choice",
+          "id": "reason-n-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “reason” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“……的原因”，又符合这个形式线索：完整搭配中使用介词 for？",
           "options": [
-            "useful for",
-            "reason why",
+            "main reason",
+            "for some reason",
             "the reason for",
-            "make a choice"
+            "reason why"
           ],
           "answer": "the reason for",
           "stage": "T1",
@@ -1760,31 +1772,37 @@
           "ai": false
         },
         {
-          "id": "reason-n-collocation-structure-meaning-v2",
+          "id": "reason-n-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“……的原因”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“……的理由”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "the reason for",
             "reason why",
+            "the reason for",
             "main reason",
             "for some reason"
           ],
-          "answer": "the reason for",
+          "answer": "reason why",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "reason-n-collocation-example-context-v2",
+          "id": "reason-n-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：What is the main reason for your _____?（中文：你做出这个选择的主要原因是什么？）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：What is the main reason for your _____?（中文：你做出这个选择的主要原因是什么？）",
+          "options": [
+            "depends",
+            "polite",
+            "minutes",
+            "choice"
+          ],
           "answer": "choice",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "reason-n-collocation-fixed-1",
+          "id": "reason-n-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“……的原因”？",
+          "prompt": "搭配辨析：哪一项既表示“……的原因”，又符合这个形式线索：完整搭配中使用介词 for？",
           "options": [
             "main reason",
             "for some reason",
@@ -1796,9 +1814,9 @@
           "ai": false
         },
         {
-          "id": "reason-n-collocation-fixed-2",
+          "id": "reason-n-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“……的理由”？",
+          "prompt": "用法辨析：哪一项既表示“……的理由”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "for some reason",
             "reason why",
@@ -1895,7 +1913,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2310,14 +2328,14 @@
           "ai": false
         },
         {
-          "id": "issue-n-structure-choice",
+          "id": "issue-n-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “issue” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“处理问题”，又符合这个形式线索：完整搭配中使用介词 with？",
           "options": [
-            "raise an issue",
+            "key issue",
             "deal with an issue",
-            "face a challenge",
-            "be careful with"
+            "raise an issue",
+            "a serious issue"
           ],
           "answer": "deal with an issue",
           "stage": "T1",
@@ -2390,31 +2408,37 @@
           "ai": false
         },
         {
-          "id": "issue-n-collocation-structure-meaning-v2",
+          "id": "issue-n-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“处理问题”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“提出问题”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "raise an issue",
+            "deal with an issue",
             "a serious issue",
             "key issue",
-            "deal with an issue"
+            "raise an issue"
           ],
-          "answer": "deal with an issue",
+          "answer": "raise an issue",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "issue-n-collocation-example-context-v2",
+          "id": "issue-n-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：We need to discuss this issue _____.（中文：我们需要公开讨论这个问题。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：We need to discuss this issue _____.（中文：我们需要公开讨论这个问题。）",
+          "options": [
+            "word",
+            "important",
+            "openly",
+            "useful"
+          ],
           "answer": "openly",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "issue-n-collocation-fixed-1",
+          "id": "issue-n-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“处理问题”？",
+          "prompt": "用法辨析：哪一项既表示“处理问题”，又符合这个形式线索：完整搭配中使用介词 with？",
           "options": [
             "key issue",
             "deal with an issue",
@@ -2426,9 +2450,9 @@
           "ai": false
         },
         {
-          "id": "issue-n-collocation-fixed-2",
+          "id": "issue-n-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“提出问题”？",
+          "prompt": "搭配辨析：哪一项既表示“提出问题”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "raise an issue",
             "deal with an issue",
@@ -2525,7 +2549,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2940,14 +2964,14 @@
           "ai": false
         },
         {
-          "id": "result-n-structure-choice",
+          "id": "result-n-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “result” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“因此”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "as a result",
-            "make progress",
-            "be ready to",
-            "result in"
+            "result in",
+            "result from",
+            "test results"
           ],
           "answer": "as a result",
           "stage": "T1",
@@ -3020,31 +3044,37 @@
           "ai": false
         },
         {
-          "id": "result-n-collocation-structure-meaning-v2",
+          "id": "result-n-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“因此”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“导致”，又符合这个形式线索：完整搭配中使用介词 in？",
           "options": [
             "result from",
             "test results",
-            "as a result",
-            "result in"
+            "result in",
+            "as a result"
           ],
-          "answer": "as a result",
+          "answer": "result in",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "result-n-collocation-example-context-v2",
+          "id": "result-n-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：She practiced daily and, as a result, _____ more naturally.（中文：她每天练习，因此说得更自然了。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：She practiced daily and, as a result, _____ more naturally.（中文：她每天练习，因此说得更自然了。）",
+          "options": [
+            "pronunciation",
+            "spoke",
+            "steady",
+            "try"
+          ],
           "answer": "spoke",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "result-n-collocation-fixed-1",
+          "id": "result-n-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“因此”？",
+          "prompt": "搭配辨析：哪一项既表示“因此”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "as a result",
             "result in",
@@ -3056,9 +3086,9 @@
           "ai": false
         },
         {
-          "id": "result-n-collocation-fixed-2",
+          "id": "result-n-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“导致”？",
+          "prompt": "用法辨析：哪一项既表示“导致”，又符合这个形式线索：完整搭配中使用介词 in？",
           "options": [
             "as a result",
             "result from",
@@ -3155,7 +3185,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

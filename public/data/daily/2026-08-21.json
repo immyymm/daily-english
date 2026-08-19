@@ -1,7 +1,7 @@
 {
   "date": "2026-08-21",
   "dayNumber": 5,
-  "contentVersion": "2026.08.19.2",
+  "contentVersion": "2026.08.19.3",
   "cards": [
     {
       "id": "offer-v",
@@ -422,14 +422,14 @@
           "ai": false
         },
         {
-          "id": "offer-v-structure-choice",
+          "id": "offer-v-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “offer” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“主动提供帮助”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "a simple system",
-            "offer someone a job",
+            "offer to do",
+            "make an offer",
             "offer help",
-            "reach an agreement"
+            "offer someone a job"
           ],
           "answer": "offer help",
           "stage": "T1",
@@ -502,31 +502,37 @@
           "ai": false
         },
         {
-          "id": "offer-v-collocation-structure-meaning-v2",
+          "id": "offer-v-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“主动提供帮助”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“给某人一份工作”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "offer help",
             "offer someone a job",
+            "offer help",
             "offer to do",
             "make an offer"
           ],
-          "answer": "offer help",
+          "answer": "offer someone a job",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "offer-v-collocation-example-context-v2",
+          "id": "offer-v-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：He offered to _____ me with the project.（中文：他主动提出帮我做这个项目。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：He offered to _____ me with the project.（中文：他主动提出帮我做这个项目。）",
+          "options": [
+            "agreement",
+            "helps",
+            "asking",
+            "help"
+          ],
           "answer": "help",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "offer-v-collocation-fixed-1",
+          "id": "offer-v-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“主动提供帮助”？",
+          "prompt": "搭配辨析：哪一项既表示“主动提供帮助”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "offer to do",
             "make an offer",
@@ -538,9 +544,9 @@
           "ai": false
         },
         {
-          "id": "offer-v-collocation-fixed-2",
+          "id": "offer-v-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“给某人一份工作”？（提示：someone 要替换成实际的人或代词。）",
+          "prompt": "用法辨析：哪一项既表示“给某人一份工作”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "make an offer",
             "offer someone a job",
@@ -637,7 +643,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1047,14 +1053,14 @@
           "ai": false
         },
         {
-          "id": "consider-v-structure-choice",
+          "id": "consider-v-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “consider” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“考虑做”，又符合这个形式线索：目标词后的 doing 表示要换成符合语境的动词 -ing 形式？",
           "options": [
-            "consider the possibility",
+            "carefully consider",
             "consider doing",
-            "remain calm",
-            "skill level"
+            "consider the possibility",
+            "consider someone suitable"
           ],
           "answer": "consider doing",
           "stage": "T1",
@@ -1127,9 +1133,9 @@
           "ai": false
         },
         {
-          "id": "consider-v-collocation-structure-meaning-v2",
+          "id": "consider-v-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“考虑可能性”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“考虑可能性”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "consider doing",
             "consider someone suitable",
@@ -1141,17 +1147,23 @@
           "ai": false
         },
         {
-          "id": "consider-v-collocation-example-context-v2",
+          "id": "consider-v-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：You should consider _____ a short break.（中文：你应该考虑短暂休息一下。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：You should consider _____ a short break.（中文：你应该考虑短暂休息一下。）",
+          "options": [
+            "current",
+            "way",
+            "taking",
+            "calm"
+          ],
           "answer": "taking",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "consider-v-collocation-fixed-1",
+          "id": "consider-v-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“考虑做”？（提示：doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing。）",
+          "prompt": "用法辨析：哪一项既表示“考虑做”，又符合这个形式线索：目标词后的 doing 表示要换成符合语境的动词 -ing 形式？",
           "options": [
             "carefully consider",
             "consider doing",
@@ -1163,9 +1175,9 @@
           "ai": false
         },
         {
-          "id": "consider-v-collocation-fixed-2",
+          "id": "consider-v-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“考虑可能性”？",
+          "prompt": "搭配辨析：哪一项既表示“考虑可能性”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "consider the possibility",
             "consider doing",
@@ -1262,7 +1274,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1679,14 +1691,14 @@
           "ai": false
         },
         {
-          "id": "expect-v-structure-choice",
+          "id": "expect-v-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “expect” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“期待某人做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
           "options": [
             "expect someone to do",
-            "handle a problem",
-            "great value",
-            "expect to see"
+            "expect to see",
+            "as expected",
+            "what to expect"
           ],
           "answer": "expect someone to do",
           "stage": "T1",
@@ -1759,31 +1771,37 @@
           "ai": false
         },
         {
-          "id": "expect-v-collocation-structure-meaning-v2",
+          "id": "expect-v-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“期待某人做”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“预计会看到”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "as expected",
             "what to expect",
-            "expect someone to do",
-            "expect to see"
+            "expect to see",
+            "expect someone to do"
           ],
-          "answer": "expect someone to do",
+          "answer": "expect to see",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "expect-v-collocation-example-context-v2",
+          "id": "expect-v-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：We expect the _____ next week.（中文：我们预计下周会有结果。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：We expect the _____ next week.（中文：我们预计下周会有结果。）",
+          "options": [
+            "problem",
+            "results",
+            "difficult",
+            "honest"
+          ],
           "answer": "results",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "expect-v-collocation-fixed-1",
+          "id": "expect-v-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“期待某人做”？（提示：do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词。）",
+          "prompt": "搭配辨析：哪一项既表示“期待某人做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
           "options": [
             "expect someone to do",
             "expect to see",
@@ -1795,9 +1813,9 @@
           "ai": false
         },
         {
-          "id": "expect-v-collocation-fixed-2",
+          "id": "expect-v-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“预计会看到”？",
+          "prompt": "用法辨析：哪一项既表示“预计会看到”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "expect someone to do",
             "as expected",
@@ -1894,7 +1912,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2311,13 +2329,13 @@
           "ai": false
         },
         {
-          "id": "develop-v-structure-choice",
+          "id": "develop-v-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “develop” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“养成习惯”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "affect your health",
-            "change behavior",
             "develop a skill",
+            "develop a plan",
+            "develop an interest in",
             "develop a habit"
           ],
           "answer": "develop a habit",
@@ -2391,31 +2409,37 @@
           "ai": false
         },
         {
-          "id": "develop-v-collocation-structure-meaning-v2",
+          "id": "develop-v-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“养成习惯”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“培养技能”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "develop an interest in",
-            "develop a habit",
             "develop a skill",
+            "develop a habit",
             "develop a plan"
           ],
-          "answer": "develop a habit",
+          "answer": "develop a skill",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "develop-v-collocation-example-context-v2",
+          "id": "develop-v-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：She developed a _____ of reading every night.（中文：她养成了每晚阅读的习惯。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：She developed a _____ of reading every night.（中文：她养成了每晚阅读的习惯。）",
+          "options": [
+            "habit",
+            "memory",
+            "positive",
+            "conversation"
+          ],
           "answer": "habit",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "develop-v-collocation-fixed-1",
+          "id": "develop-v-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“养成习惯”？",
+          "prompt": "用法辨析：哪一项既表示“养成习惯”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "develop a skill",
             "develop a plan",
@@ -2427,9 +2451,9 @@
           "ai": false
         },
         {
-          "id": "develop-v-collocation-fixed-2",
+          "id": "develop-v-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“培养技能”？",
+          "prompt": "搭配辨析：哪一项既表示“培养技能”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "develop a plan",
             "develop an interest in",
@@ -2526,7 +2550,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2943,14 +2967,14 @@
           "ai": false
         },
         {
-          "id": "decide-v-structure-choice",
+          "id": "decide-v-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “decide” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“决定做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
           "options": [
-            "pay attention to",
-            "decide against",
+            "decide between",
+            "decide whether",
             "decide to do",
-            "realize that"
+            "decide against"
           ],
           "answer": "decide to do",
           "stage": "T1",
@@ -3023,31 +3047,37 @@
           "ai": false
         },
         {
-          "id": "decide-v-collocation-structure-meaning-v2",
+          "id": "decide-v-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“决定做”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“决定不做”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "decide to do",
             "decide against",
+            "decide to do",
             "decide between",
             "decide whether"
           ],
-          "answer": "decide to do",
+          "answer": "decide against",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "decide-v-collocation-example-context-v2",
+          "id": "decide-v-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：I decided to _____ with five words a day.（中文：我决定从每天五个单词开始。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：I decided to _____ with five words a day.（中文：我决定从每天五个单词开始。）",
+          "options": [
+            "used",
+            "preposition",
+            "point",
+            "start"
+          ],
           "answer": "start",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "decide-v-collocation-fixed-1",
+          "id": "decide-v-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“决定做”？（提示：do 代表任意合适的动词原形，不要求写出单词 do。）",
+          "prompt": "搭配辨析：哪一项既表示“决定做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
           "options": [
             "decide between",
             "decide whether",
@@ -3059,9 +3089,9 @@
           "ai": false
         },
         {
-          "id": "decide-v-collocation-fixed-2",
+          "id": "decide-v-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“决定不做”？",
+          "prompt": "用法辨析：哪一项既表示“决定不做”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "decide whether",
             "decide against",
@@ -3158,7 +3188,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

@@ -1,7 +1,7 @@
 {
   "date": "2026-08-24",
   "dayNumber": 8,
-  "contentVersion": "2026.08.19.2",
+  "contentVersion": "2026.08.19.3",
   "cards": [
     {
       "id": "choose-v",
@@ -424,13 +424,13 @@
           "ai": false
         },
         {
-          "id": "choose-v-structure-choice",
+          "id": "choose-v-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “choose” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“选择做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
           "options": [
-            "the reason for",
-            "give advice",
             "choose between A and B",
+            "choose the right word",
+            "carefully choose",
             "choose to do"
           ],
           "answer": "choose to do",
@@ -504,31 +504,37 @@
           "ai": false
         },
         {
-          "id": "choose-v-collocation-structure-meaning-v2",
+          "id": "choose-v-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“选择做”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“在 A 和 B 之间选择”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "carefully choose",
-            "choose to do",
             "choose between A and B",
+            "choose to do",
             "choose the right word"
           ],
-          "answer": "choose to do",
+          "answer": "choose between A and B",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "choose-v-collocation-example-context-v2",
+          "id": "choose-v-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：Choose the _____ natural answer.（中文：选择最自然的答案。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Choose the _____ natural answer.（中文：选择最自然的答案。）",
+          "options": [
+            "most",
+            "choice",
+            "practical",
+            "useful"
+          ],
           "answer": "most",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "choose-v-collocation-fixed-1",
+          "id": "choose-v-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“选择做”？（提示：do 代表任意合适的动词原形，不要求写出单词 do。）",
+          "prompt": "用法辨析：哪一项既表示“选择做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
           "options": [
             "choose between A and B",
             "choose the right word",
@@ -540,9 +546,9 @@
           "ai": false
         },
         {
-          "id": "choose-v-collocation-fixed-2",
+          "id": "choose-v-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“在 A 和 B 之间选择”？（提示：A、B 要替换成实际比较内容。）",
+          "prompt": "搭配辨析：哪一项既表示“在 A 和 B 之间选择”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "choose the right word",
             "carefully choose",
@@ -639,7 +645,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1069,14 +1075,14 @@
           "ai": false
         },
         {
-          "id": "share-v-structure-choice",
+          "id": "share-v-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “share” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“与某人分享某物”，又符合这个形式线索：完整搭配中使用介词 with？",
           "options": [
-            "make a difference",
-            "share an opinion",
+            "share the cost",
+            "have something in common",
             "share something with someone",
-            "deal with an issue"
+            "share an opinion"
           ],
           "answer": "share something with someone",
           "stage": "T1",
@@ -1149,31 +1155,37 @@
           "ai": false
         },
         {
-          "id": "share-v-collocation-structure-meaning-v2",
+          "id": "share-v-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“与某人分享某物”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“分享观点”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "share something with someone",
             "share an opinion",
+            "share something with someone",
             "share the cost",
             "have something in common"
           ],
-          "answer": "share something with someone",
+          "answer": "share an opinion",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "share-v-collocation-example-context-v2",
+          "id": "share-v-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：She shared a _____ study tip with me.（中文：她和我分享了一个实用的学习技巧。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：She shared a _____ study tip with me.（中文：她和我分享了一个实用的学习技巧。）",
+          "options": [
+            "openly",
+            "make",
+            "started",
+            "useful"
+          ],
           "answer": "useful",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "share-v-collocation-fixed-1",
+          "id": "share-v-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“与某人分享某物”？（提示：someone 要替换成实际的人或代词；something 要替换成实际的事物或内容。）",
+          "prompt": "搭配辨析：哪一项既表示“与某人分享某物”，又符合这个形式线索：完整搭配中使用介词 with？",
           "options": [
             "share the cost",
             "have something in common",
@@ -1185,9 +1197,9 @@
           "ai": false
         },
         {
-          "id": "share-v-collocation-fixed-2",
+          "id": "share-v-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“分享观点”？",
+          "prompt": "用法辨析：哪一项既表示“分享观点”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "have something in common",
             "share an opinion",
@@ -1284,7 +1296,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1700,14 +1712,14 @@
           "ai": false
         },
         {
-          "id": "reach-v-structure-choice",
+          "id": "reach-v-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “reach” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“达到目标”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "reach an agreement",
+            "reach out to",
             "reach a goal",
-            "as a result",
-            "important to remember"
+            "reach an agreement",
+            "reach a decision"
           ],
           "answer": "reach a goal",
           "stage": "T1",
@@ -1780,31 +1792,37 @@
           "ai": false
         },
         {
-          "id": "reach-v-collocation-structure-meaning-v2",
+          "id": "reach-v-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“达到目标”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“达成协议”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "reach an agreement",
+            "reach a goal",
             "reach a decision",
             "reach out to",
-            "reach a goal"
+            "reach an agreement"
           ],
-          "answer": "reach a goal",
+          "answer": "reach an agreement",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "reach-v-collocation-example-context-v2",
+          "id": "reach-v-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：We finally reached an _____.（中文：我们终于达成了协议。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：We finally reached an _____.（中文：我们终于达成了协议。）",
+          "options": [
+            "review",
+            "finished",
+            "agreement",
+            "spoke"
+          ],
           "answer": "agreement",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "reach-v-collocation-fixed-1",
+          "id": "reach-v-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“达到目标”？",
+          "prompt": "用法辨析：哪一项既表示“达到目标”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "reach out to",
             "reach a goal",
@@ -1816,9 +1834,9 @@
           "ai": false
         },
         {
-          "id": "reach-v-collocation-fixed-2",
+          "id": "reach-v-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“达成协议”？",
+          "prompt": "搭配辨析：哪一项既表示“达成协议”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "reach an agreement",
             "reach a goal",
@@ -1915,7 +1933,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2317,14 +2335,14 @@
           "ai": false
         },
         {
-          "id": "remain-v-structure-choice",
+          "id": "remain-v-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “remain” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“保持冷静”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "remain calm",
-            "gain experience",
-            "be available to",
-            "remain unchanged"
+            "remain unchanged",
+            "remain in place",
+            "remain to be seen"
           ],
           "answer": "remain calm",
           "stage": "T1",
@@ -2397,31 +2415,37 @@
           "ai": false
         },
         {
-          "id": "remain-v-collocation-structure-meaning-v2",
+          "id": "remain-v-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“保持冷静”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“保持不变”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "remain in place",
             "remain to be seen",
-            "remain calm",
-            "remain unchanged"
+            "remain unchanged",
+            "remain calm"
           ],
-          "answer": "remain calm",
+          "answer": "remain unchanged",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "remain-v-collocation-example-context-v2",
+          "id": "remain-v-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：Please remain _____ and try again.（中文：请保持冷静并再试一次。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Please remain _____ and try again.（中文：请保持冷静并再试一次。）",
+          "options": [
+            "translation",
+            "calm",
+            "life",
+            "offline"
+          ],
           "answer": "calm",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "remain-v-collocation-fixed-1",
+          "id": "remain-v-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“保持冷静”？",
+          "prompt": "搭配辨析：哪一项既表示“保持冷静”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "remain calm",
             "remain unchanged",
@@ -2433,9 +2457,9 @@
           "ai": false
         },
         {
-          "id": "remain-v-collocation-fixed-2",
+          "id": "remain-v-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“保持不变”？",
+          "prompt": "用法辨析：哪一项既表示“保持不变”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "remain calm",
             "remain in place",
@@ -2532,7 +2556,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2955,13 +2979,13 @@
           "ai": false
         },
         {
-          "id": "handle-v-structure-choice",
+          "id": "handle-v-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “handle” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“处理问题”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "have an opportunity to",
-            "as soon as possible",
             "handle the pressure",
+            "handle with care",
+            "easy to handle",
             "handle a problem"
           ],
           "answer": "handle a problem",
@@ -3035,31 +3059,37 @@
           "ai": false
         },
         {
-          "id": "handle-v-collocation-structure-meaning-v2",
+          "id": "handle-v-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“处理问题”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“应对压力”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "easy to handle",
-            "handle a problem",
             "handle the pressure",
+            "handle a problem",
             "handle with care"
           ],
-          "answer": "handle a problem",
+          "answer": "handle the pressure",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "handle-v-collocation-example-context-v2",
+          "id": "handle-v-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：She handled the _____ question well.（中文：她很好地应对了那个难题。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：She handled the _____ question well.（中文：她很好地应对了那个难题。）",
+          "options": [
+            "difficult",
+            "practice",
+            "soon",
+            "requires"
+          ],
           "answer": "difficult",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "handle-v-collocation-fixed-1",
+          "id": "handle-v-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“处理问题”？",
+          "prompt": "用法辨析：哪一项既表示“处理问题”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "handle the pressure",
             "handle with care",
@@ -3071,9 +3101,9 @@
           "ai": false
         },
         {
-          "id": "handle-v-collocation-fixed-2",
+          "id": "handle-v-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“应对压力”？",
+          "prompt": "搭配辨析：哪一项既表示“应对压力”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "handle with care",
             "easy to handle",
@@ -3170,7 +3200,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

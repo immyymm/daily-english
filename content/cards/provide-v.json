@@ -419,14 +419,14 @@
       "ai": false
     },
     {
-      "id": "provide-v-structure-choice",
+      "id": "provide-v-structure-choice-v3",
       "type": "meaning_choice",
-      "prompt": "哪一个是词卡要求优先记住的 “provide” 核心结构？",
+      "prompt": "核心结构辨析：哪一项既表示“提供信息”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "provide support",
+        "provide access to",
         "provide information",
-        "expect someone to do something",
-        "solve a problem"
+        "provide support",
+        "provide a service"
       ],
       "answer": "provide information",
       "stage": "T1",
@@ -499,31 +499,37 @@
       "ai": false
     },
     {
-      "id": "provide-v-collocation-structure-meaning-v2",
+      "id": "provide-v-collocation-structure-meaning-v3",
       "type": "collocation",
-      "prompt": "结构应用：想表达“提供信息”，应选择哪个完整结构？",
+      "prompt": "句型应用：哪一项既表示“提供支持”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "provide support",
+        "provide information",
         "provide a service",
         "provide access to",
-        "provide information"
+        "provide support"
       ],
-      "answer": "provide information",
+      "answer": "provide support",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "provide-v-collocation-example-context-v2",
+      "id": "provide-v-collocation-example-context-v3",
       "type": "collocation",
-      "prompt": "根据完整句意和中文提示补全英文：The course provides _____ with useful tools.（中文：这门课程为学生提供实用工具。）",
+      "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：The course provides _____ with useful tools.（中文：这门课程为学生提供实用工具。）",
+      "options": [
+        "problem",
+        "became",
+        "students",
+        "results"
+      ],
       "answer": "students",
       "stage": "T2",
       "ai": false
     },
     {
-      "id": "provide-v-collocation-fixed-1",
+      "id": "provide-v-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“提供信息”？",
+      "prompt": "用法辨析：哪一项既表示“提供信息”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "provide access to",
         "provide information",
@@ -535,9 +541,9 @@
       "ai": false
     },
     {
-      "id": "provide-v-collocation-fixed-2",
+      "id": "provide-v-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“提供支持”？",
+      "prompt": "搭配辨析：哪一项既表示“提供支持”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "provide support",
         "provide information",
@@ -634,7 +640,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.19.2",
+  "contentVersion": "2026.08.19.3",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

@@ -1,7 +1,7 @@
 {
   "date": "2026-09-06",
   "dayNumber": 21,
-  "contentVersion": "2026.08.19.2",
+  "contentVersion": "2026.08.19.3",
   "cards": [
     {
       "id": "actually-adv",
@@ -417,14 +417,14 @@
           "ai": false
         },
         {
-          "id": "actually-adv-structure-choice",
+          "id": "actually-adv-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “actually” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“实际意思是”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "make a plan",
-            "actually happen",
+            "actually work",
+            "what actually happened",
             "actually mean",
-            "work together"
+            "actually happen"
           ],
           "answer": "actually mean",
           "stage": "T1",
@@ -497,31 +497,37 @@
           "ai": false
         },
         {
-          "id": "actually-adv-collocation-structure-meaning-v2",
+          "id": "actually-adv-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“实际意思是”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“实际发生”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "actually mean",
             "actually happen",
+            "actually mean",
             "actually work",
             "what actually happened"
           ],
-          "answer": "actually mean",
+          "answer": "actually happen",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "actually-adv-collocation-example-context-v2",
+          "id": "actually-adv-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：I thought it was hard, but it was actually _____.（中文：我原以为很难，但其实很简单。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：I thought it was hard, but it was actually _____.（中文：我原以为很难，但其实很简单。）",
+          "options": [
+            "used",
+            "week",
+            "easier",
+            "simple"
+          ],
           "answer": "simple",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "actually-adv-collocation-fixed-1",
+          "id": "actually-adv-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“实际意思是”？",
+          "prompt": "搭配辨析：哪一项既表示“实际意思是”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "actually work",
             "what actually happened",
@@ -533,9 +539,9 @@
           "ai": false
         },
         {
-          "id": "actually-adv-collocation-fixed-2",
+          "id": "actually-adv-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“实际发生”？",
+          "prompt": "用法辨析：哪一项既表示“实际发生”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "what actually happened",
             "actually happen",
@@ -632,7 +638,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1049,14 +1055,14 @@
           "ai": false
         },
         {
-          "id": "probably-adv-structure-choice",
+          "id": "probably-adv-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “probably” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“很可能会”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "probably because",
+            "probably not",
             "will probably",
-            "look forward to",
-            "daily activity"
+            "probably because",
+            "most probably"
           ],
           "answer": "will probably",
           "stage": "T1",
@@ -1129,31 +1135,37 @@
           "ai": false
         },
         {
-          "id": "probably-adv-collocation-structure-meaning-v2",
+          "id": "probably-adv-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“很可能会”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“可能因为”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "probably because",
+            "will probably",
             "most probably",
             "probably not",
-            "will probably"
+            "probably because"
           ],
-          "answer": "will probably",
+          "answer": "probably because",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "probably-adv-collocation-example-context-v2",
+          "id": "probably-adv-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：She will probably _____ before noon.（中文：她很可能在中午前到。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：She will probably _____ before noon.（中文：她很可能在中午前到。）",
+          "options": [
+            "outdoor",
+            "difficult",
+            "arrive",
+            "hearing"
+          ],
           "answer": "arrive",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "probably-adv-collocation-fixed-1",
+          "id": "probably-adv-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“很可能会”？",
+          "prompt": "用法辨析：哪一项既表示“很可能会”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "probably not",
             "will probably",
@@ -1165,9 +1177,9 @@
           "ai": false
         },
         {
-          "id": "probably-adv-collocation-fixed-2",
+          "id": "probably-adv-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“可能因为”？",
+          "prompt": "搭配辨析：哪一项既表示“可能因为”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "probably because",
             "will probably",
@@ -1264,7 +1276,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1682,14 +1694,14 @@
           "ai": false
         },
         {
-          "id": "especially-adv-structure-choice",
+          "id": "especially-adv-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “especially” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“尤其有用”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "especially useful",
-            "good enough",
-            "at the moment",
-            "especially important"
+            "especially important",
+            "especially for",
+            "not especially"
           ],
           "answer": "especially useful",
           "stage": "T1",
@@ -1762,31 +1774,37 @@
           "ai": false
         },
         {
-          "id": "especially-adv-collocation-structure-meaning-v2",
+          "id": "especially-adv-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“尤其有用”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“尤其重要”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "especially for",
             "not especially",
-            "especially useful",
-            "especially important"
+            "especially important",
+            "especially useful"
           ],
-          "answer": "especially useful",
+          "answer": "especially important",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "especially-adv-collocation-example-context-v2",
+          "id": "especially-adv-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：This tip is especially _____ for beginners.（中文：这个技巧对初学者尤其有用。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：This tip is especially _____ for beginners.（中文：这个技巧对初学者尤其有用。）",
+          "options": [
+            "lot",
+            "useful",
+            "minutes",
+            "busy"
+          ],
           "answer": "useful",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "especially-adv-collocation-fixed-1",
+          "id": "especially-adv-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“尤其有用”？",
+          "prompt": "搭配辨析：哪一项既表示“尤其有用”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "especially useful",
             "especially important",
@@ -1798,9 +1816,9 @@
           "ai": false
         },
         {
-          "id": "especially-adv-collocation-fixed-2",
+          "id": "especially-adv-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“尤其重要”？",
+          "prompt": "用法辨析：哪一项既表示“尤其重要”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "especially useful",
             "especially for",
@@ -1897,7 +1915,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2307,13 +2325,13 @@
           "ai": false
         },
         {
-          "id": "recently-adv-structure-choice",
+          "id": "recently-adv-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “recently” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“最近做过”，又符合这个形式线索：目标词后的 done 表示要换成符合语境的过去分词？",
           "options": [
-            "mental health",
-            "deal with a situation",
             "until recently",
+            "more recently",
+            "recently published",
             "have recently done"
           ],
           "answer": "have recently done",
@@ -2387,31 +2405,37 @@
           "ai": false
         },
         {
-          "id": "recently-adv-collocation-structure-meaning-v2",
+          "id": "recently-adv-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“最近做过”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“直到最近”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "recently published",
-            "have recently done",
             "until recently",
+            "have recently done",
             "more recently"
           ],
-          "answer": "have recently done",
+          "answer": "until recently",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "recently-adv-collocation-example-context-v2",
+          "id": "recently-adv-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：I have recently _____ keeping a journal.（中文：我最近开始写日记了。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：I have recently _____ keeping a journal.（中文：我最近开始写日记了。）",
+          "options": [
+            "started",
+            "important",
+            "depends",
+            "help"
+          ],
           "answer": "started",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "recently-adv-collocation-fixed-1",
+          "id": "recently-adv-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“最近做过”？（提示：done 代表符合语境的过去分词，不要求写出单词 done。）",
+          "prompt": "用法辨析：哪一项既表示“最近做过”，又符合这个形式线索：目标词后的 done 表示要换成符合语境的过去分词？",
           "options": [
             "until recently",
             "more recently",
@@ -2423,9 +2447,9 @@
           "ai": false
         },
         {
-          "id": "recently-adv-collocation-fixed-2",
+          "id": "recently-adv-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“直到最近”？",
+          "prompt": "搭配辨析：哪一项既表示“直到最近”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "more recently",
             "recently published",
@@ -2522,7 +2546,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2940,14 +2964,14 @@
           "ai": false
         },
         {
-          "id": "nearly-adv-structure-choice",
+          "id": "nearly-adv-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “nearly” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“快完成了”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "language learning",
-            "nearly all",
+            "nearly impossible",
+            "not nearly enough",
             "nearly finished",
-            "work on something"
+            "nearly all"
           ],
           "answer": "nearly finished",
           "stage": "T1",
@@ -3020,31 +3044,37 @@
           "ai": false
         },
         {
-          "id": "nearly-adv-collocation-structure-meaning-v2",
+          "id": "nearly-adv-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“快完成了”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“几乎全部”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "nearly finished",
             "nearly all",
+            "nearly finished",
             "nearly impossible",
             "not nearly enough"
           ],
-          "answer": "nearly finished",
+          "answer": "nearly all",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "nearly-adv-collocation-example-context-v2",
+          "id": "nearly-adv-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：I am nearly _____ with the report.（中文：我的报告快完成了。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：I am nearly _____ with the report.（中文：我的报告快完成了。）",
+          "options": [
+            "pronunciation",
+            "learning",
+            "taking",
+            "finished"
+          ],
           "answer": "finished",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "nearly-adv-collocation-fixed-1",
+          "id": "nearly-adv-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“快完成了”？",
+          "prompt": "搭配辨析：哪一项既表示“快完成了”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "nearly impossible",
             "not nearly enough",
@@ -3056,9 +3086,9 @@
           "ai": false
         },
         {
-          "id": "nearly-adv-collocation-fixed-2",
+          "id": "nearly-adv-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“几乎全部”？",
+          "prompt": "用法辨析：哪一项既表示“几乎全部”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "not nearly enough",
             "nearly all",
@@ -3155,7 +3185,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

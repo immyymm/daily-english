@@ -411,14 +411,14 @@
       "ai": false
     },
     {
-      "id": "certain-adj-structure-choice",
+      "id": "certain-adj-structure-choice-v3",
       "type": "meaning_choice",
-      "prompt": "哪一个是词卡要求优先记住的 “certain” 核心结构？",
+      "prompt": "核心结构辨析：哪一项既表示“确信……”，又符合这个形式线索：使用 that 引导一个主谓完整的从句？",
       "options": [
         "be certain that",
-        "still need to",
-        "team member",
-        "certain of"
+        "certain of",
+        "make certain that",
+        "a certain amount of"
       ],
       "answer": "be certain that",
       "stage": "T1",
@@ -491,31 +491,37 @@
       "ai": false
     },
     {
-      "id": "certain-adj-collocation-structure-meaning-v2",
+      "id": "certain-adj-collocation-structure-meaning-v3",
       "type": "collocation",
-      "prompt": "结构应用：想表达“确信……”，应选择哪个完整结构？",
+      "prompt": "句型应用：哪一项既表示“对……有把握”，又符合这个形式线索：完整搭配中使用介词 of？",
       "options": [
         "make certain that",
         "a certain amount of",
-        "be certain that",
-        "certain of"
+        "certain of",
+        "be certain that"
       ],
-      "answer": "be certain that",
+      "answer": "certain of",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "certain-adj-collocation-example-context-v2",
+      "id": "certain-adj-collocation-example-context-v3",
       "type": "collocation",
-      "prompt": "根据完整句意和中文提示补全英文：I am not certain that this _____ is correct.（中文：我不确定这个答案是否正确。）",
+      "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：I am not certain that this _____ is correct.（中文：我不确定这个答案是否正确。）",
+      "options": [
+        "steps",
+        "answer",
+        "need",
+        "meets"
+      ],
       "answer": "answer",
       "stage": "T2",
       "ai": false
     },
     {
-      "id": "certain-adj-collocation-fixed-1",
+      "id": "certain-adj-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“确信……”？",
+      "prompt": "搭配辨析：哪一项既表示“确信……”，又符合这个形式线索：使用 that 引导一个主谓完整的从句？",
       "options": [
         "be certain that",
         "certain of",
@@ -527,9 +533,9 @@
       "ai": false
     },
     {
-      "id": "certain-adj-collocation-fixed-2",
+      "id": "certain-adj-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“对……有把握”？",
+      "prompt": "用法辨析：哪一项既表示“对……有把握”，又符合这个形式线索：完整搭配中使用介词 of？",
       "options": [
         "be certain that",
         "make certain that",
@@ -626,7 +632,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.19.2",
+  "contentVersion": "2026.08.19.3",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

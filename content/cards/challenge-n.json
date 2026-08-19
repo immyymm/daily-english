@@ -417,14 +417,14 @@
       "ai": false
     },
     {
-      "id": "challenge-n-structure-choice",
+      "id": "challenge-n-structure-choice-v3",
       "type": "meaning_choice",
-      "prompt": "哪一个是词卡要求优先记住的 “challenge” 核心结构？",
+      "prompt": "核心结构辨析：哪一项既表示“面对挑战”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "face a challenge",
-        "feel comfortable doing something",
-        "perhaps because",
-        "take on a challenge"
+        "take on a challenge",
+        "major challenge",
+        "challenge someone to"
       ],
       "answer": "face a challenge",
       "stage": "T1",
@@ -497,31 +497,37 @@
       "ai": false
     },
     {
-      "id": "challenge-n-collocation-structure-meaning-v2",
+      "id": "challenge-n-collocation-structure-meaning-v3",
       "type": "collocation",
-      "prompt": "结构应用：想表达“面对挑战”，应选择哪个完整结构？",
+      "prompt": "句型应用：哪一项既表示“接受挑战”，又符合这个形式线索：完整搭配中使用介词 on？",
       "options": [
         "major challenge",
         "challenge someone to",
-        "face a challenge",
-        "take on a challenge"
+        "take on a challenge",
+        "face a challenge"
       ],
-      "answer": "face a challenge",
+      "answer": "take on a challenge",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "challenge-n-collocation-example-context-v2",
+      "id": "challenge-n-collocation-example-context-v3",
       "type": "collocation",
-      "prompt": "根据完整句意和中文提示补全英文：Speaking without notes is a _____ challenge.（中文：不看笔记说话是一项有用的挑战。）",
+      "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Speaking without notes is a _____ challenge.（中文：不看笔记说话是一项有用的挑战。）",
+      "options": [
+        "weekend",
+        "useful",
+        "asking",
+        "try"
+      ],
       "answer": "useful",
       "stage": "T2",
       "ai": false
     },
     {
-      "id": "challenge-n-collocation-fixed-1",
+      "id": "challenge-n-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“面对挑战”？",
+      "prompt": "搭配辨析：哪一项既表示“面对挑战”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "face a challenge",
         "take on a challenge",
@@ -533,9 +539,9 @@
       "ai": false
     },
     {
-      "id": "challenge-n-collocation-fixed-2",
+      "id": "challenge-n-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“接受挑战”？",
+      "prompt": "用法辨析：哪一项既表示“接受挑战”，又符合这个形式线索：完整搭配中使用介词 on？",
       "options": [
         "face a challenge",
         "major challenge",
@@ -632,7 +638,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.19.2",
+  "contentVersion": "2026.08.19.3",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

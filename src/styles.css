@@ -871,6 +871,17 @@ h1 { font-family: Georgia, "Songti SC", serif; font-size: 21px; letter-spacing: 
 .answer-field input, .answer-field textarea { width: 100%; border: 1px solid #ead4dd; border-radius: 17px; padding: 14px; color: #503a43; background: white; font: 15px/1.6 Georgia, "PingFang SC", serif; resize: vertical; }
 .answer-field input { min-height: 52px; }
 .answer-field input:disabled, .answer-field textarea:disabled { color: #876f78; background: #faf5f7; }
+.spelling-entry { display: grid; gap: 10px; }
+.spelling-entry > p { margin: 0; color: #846c75; font-size: 12px; line-height: 1.55; }
+.spelling-keyboard { display: grid; gap: 6px; padding: 10px 7px; border: 1px solid #ead4dd; border-radius: 18px; background: #f8edf1; box-shadow: inset 0 1px 0 rgba(255,255,255,.8); }
+.spelling-keyboard-row { display: flex; gap: 4px; }
+.spelling-keyboard-row:nth-child(2) { padding-inline: 4%; }
+.spelling-keyboard-row:nth-child(3) { padding-inline: 11%; }
+.spelling-keyboard-row button { min-width: 0; min-height: 43px; flex: 1; border: 1px solid #e4ccd5; border-radius: 9px; color: #5a414b; background: #fff; box-shadow: 0 2px 3px rgba(105,73,86,.1); font: 700 16px/1 -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif; text-transform: uppercase; touch-action: manipulation; }
+.spelling-keyboard-row button:active:not(:disabled), .spelling-keyboard-actions button:active:not(:disabled) { transform: translateY(1px); background: #fde4ed; }
+.spelling-keyboard-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; margin-top: 2px; }
+.spelling-keyboard-actions button { min-height: 42px; border: 1px solid #dcbec9; border-radius: 11px; color: #824c60; background: #fff7fa; font-size: 14px; font-weight: 750; touch-action: manipulation; }
+.spelling-keyboard button:disabled { opacity: .48; }
 .quiz-actions { display: flex; gap: 9px; margin-top: 14px; }
 .quiz-actions > * { flex: 1; }
 .quiz-actions .primary-button, .quiz-actions .secondary-button { margin-top: 0; }

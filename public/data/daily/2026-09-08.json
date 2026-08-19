@@ -1,7 +1,7 @@
 {
   "date": "2026-09-08",
   "dayNumber": 23,
-  "contentVersion": "2026.08.19.2",
+  "contentVersion": "2026.08.19.3",
   "cards": [
     {
       "id": "directly-adv",
@@ -416,14 +416,14 @@
           "ai": false
         },
         {
-          "id": "directly-adv-structure-choice",
+          "id": "directly-adv-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “directly” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“直接表达”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "speak directly",
-            "listen to",
-            "be likely to",
-            "directly affect"
+            "directly affect",
+            "go directly to",
+            "directly related to"
           ],
           "answer": "speak directly",
           "stage": "T1",
@@ -496,31 +496,37 @@
           "ai": false
         },
         {
-          "id": "directly-adv-collocation-structure-meaning-v2",
+          "id": "directly-adv-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“直接表达”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“直接影响”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "go directly to",
             "directly related to",
-            "speak directly",
-            "directly affect"
+            "directly affect",
+            "speak directly"
           ],
-          "answer": "speak directly",
+          "answer": "directly affect",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "directly-adv-collocation-example-context-v2",
+          "id": "directly-adv-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：Please answer the _____ directly.（中文：请直接回答问题。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Please answer the _____ directly.（中文：请直接回答问题。）",
+          "options": [
+            "careful",
+            "question",
+            "whole",
+            "rain"
+          ],
           "answer": "question",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "directly-adv-collocation-fixed-1",
+          "id": "directly-adv-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“直接表达”？",
+          "prompt": "搭配辨析：哪一项既表示“直接表达”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "speak directly",
             "directly affect",
@@ -532,9 +538,9 @@
           "ai": false
         },
         {
-          "id": "directly-adv-collocation-fixed-2",
+          "id": "directly-adv-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“直接影响”？",
+          "prompt": "用法辨析：哪一项既表示“直接影响”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "speak directly",
             "go directly to",
@@ -631,7 +637,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1048,13 +1054,13 @@
           "ai": false
         },
         {
-          "id": "clearly-adv-structure-choice",
+          "id": "clearly-adv-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “clearly” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“清楚解释”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "travel abroad",
-            "manage to do something",
             "speak clearly",
+            "clearly understand",
+            "clearly show",
             "explain clearly"
           ],
           "answer": "explain clearly",
@@ -1128,31 +1134,37 @@
           "ai": false
         },
         {
-          "id": "clearly-adv-collocation-structure-meaning-v2",
+          "id": "clearly-adv-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“清楚解释”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“说得清楚”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "clearly show",
-            "explain clearly",
             "speak clearly",
+            "explain clearly",
             "clearly understand"
           ],
-          "answer": "explain clearly",
+          "answer": "speak clearly",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "clearly-adv-collocation-example-context-v2",
+          "id": "clearly-adv-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：She explained the _____ clearly.（中文：她清楚地解释了这条规则。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：She explained the _____ clearly.（中文：她清楚地解释了这条规则。）",
+          "options": [
+            "rule",
+            "abroad",
+            "finish",
+            "interview"
+          ],
           "answer": "rule",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "clearly-adv-collocation-fixed-1",
+          "id": "clearly-adv-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“清楚解释”？",
+          "prompt": "用法辨析：哪一项既表示“清楚解释”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "speak clearly",
             "clearly understand",
@@ -1164,9 +1176,9 @@
           "ai": false
         },
         {
-          "id": "clearly-adv-collocation-fixed-2",
+          "id": "clearly-adv-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“说得清楚”？",
+          "prompt": "搭配辨析：哪一项既表示“说得清楚”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "clearly understand",
             "clearly show",
@@ -1263,7 +1275,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1673,14 +1685,14 @@
           "ai": false
         },
         {
-          "id": "usually-adv-structure-choice",
+          "id": "usually-adv-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “usually” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“通常发生”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "provide someone with something",
-            "usually take",
+            "as usually happens",
+            "not usually",
             "usually happens",
-            "family member"
+            "usually take"
           ],
           "answer": "usually happens",
           "stage": "T1",
@@ -1753,31 +1765,37 @@
           "ai": false
         },
         {
-          "id": "usually-adv-collocation-structure-meaning-v2",
+          "id": "usually-adv-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“通常发生”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“通常需要”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "usually happens",
             "usually take",
+            "usually happens",
             "as usually happens",
             "not usually"
           ],
-          "answer": "usually happens",
+          "answer": "usually take",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "usually-adv-collocation-example-context-v2",
+          "id": "usually-adv-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：I usually _____ words after breakfast.（中文：我通常在早餐后复习单词。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：I usually _____ words after breakfast.（中文：我通常在早餐后复习单词。）",
+          "options": [
+            "supports",
+            "students",
+            "big",
+            "review"
+          ],
           "answer": "review",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "usually-adv-collocation-fixed-1",
+          "id": "usually-adv-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“通常发生”？",
+          "prompt": "搭配辨析：哪一项既表示“通常发生”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "as usually happens",
             "not usually",
@@ -1789,9 +1807,9 @@
           "ai": false
         },
         {
-          "id": "usually-adv-collocation-fixed-2",
+          "id": "usually-adv-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“通常需要”？",
+          "prompt": "用法辨析：哪一项既表示“通常需要”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "not usually",
             "usually take",
@@ -1888,7 +1906,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2290,14 +2308,14 @@
           "ai": false
         },
         {
-          "id": "perhaps-adv-structure-choice",
+          "id": "perhaps-adv-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “perhaps” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“也许因为”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "perhaps we should",
+            "perhaps the most important",
             "perhaps because",
-            "save money",
-            "fully understand"
+            "perhaps we should",
+            "perhaps not"
           ],
           "answer": "perhaps because",
           "stage": "T1",
@@ -2370,31 +2388,37 @@
           "ai": false
         },
         {
-          "id": "perhaps-adv-collocation-structure-meaning-v2",
+          "id": "perhaps-adv-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“也许因为”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“也许我们应该”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "perhaps we should",
+            "perhaps because",
             "perhaps not",
             "perhaps the most important",
-            "perhaps because"
+            "perhaps we should"
           ],
-          "answer": "perhaps because",
+          "answer": "perhaps we should",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "perhaps-adv-collocation-example-context-v2",
+          "id": "perhaps-adv-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：Perhaps we should _____ a different approach.（中文：也许我们应该尝试不同的方法。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Perhaps we should _____ a different approach.（中文：也许我们应该尝试不同的方法。）",
+          "options": [
+            "why",
+            "translating",
+            "try",
+            "time"
+          ],
           "answer": "try",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "perhaps-adv-collocation-fixed-1",
+          "id": "perhaps-adv-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“也许因为”？",
+          "prompt": "用法辨析：哪一项既表示“也许因为”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "perhaps the most important",
             "perhaps because",
@@ -2406,9 +2430,9 @@
           "ai": false
         },
         {
-          "id": "perhaps-adv-collocation-fixed-2",
+          "id": "perhaps-adv-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“也许我们应该”？",
+          "prompt": "搭配辨析：哪一项既表示“也许我们应该”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "perhaps we should",
             "perhaps because",
@@ -2505,7 +2529,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2915,14 +2939,14 @@
           "ai": false
         },
         {
-          "id": "already-adv-structure-choice",
+          "id": "already-adv-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “already” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“已经做过”，又符合这个形式线索：目标词后的 done 表示要换成符合语境的过去分词？",
           "options": [
             "have already done",
-            "run a business",
-            "believe in yourself",
-            "already know"
+            "already know",
+            "already available",
+            "as you already know"
           ],
           "answer": "have already done",
           "stage": "T1",
@@ -2995,31 +3019,37 @@
           "ai": false
         },
         {
-          "id": "already-adv-collocation-structure-meaning-v2",
+          "id": "already-adv-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“已经做过”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“已经知道”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "already available",
             "as you already know",
-            "have already done",
-            "already know"
+            "already know",
+            "have already done"
           ],
-          "answer": "have already done",
+          "answer": "already know",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "already-adv-collocation-example-context-v2",
+          "id": "already-adv-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：I have already _____ today’s lesson.（中文：我已经完成了今天的课程。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：I have already _____ today’s lesson.（中文：我已经完成了今天的课程。）",
+          "options": [
+            "two",
+            "completed",
+            "online",
+            "plan"
+          ],
           "answer": "completed",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "already-adv-collocation-fixed-1",
+          "id": "already-adv-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“已经做过”？（提示：done 代表符合语境的过去分词，不要求写出单词 done。）",
+          "prompt": "搭配辨析：哪一项既表示“已经做过”，又符合这个形式线索：目标词后的 done 表示要换成符合语境的过去分词？",
           "options": [
             "have already done",
             "already know",
@@ -3031,9 +3061,9 @@
           "ai": false
         },
         {
-          "id": "already-adv-collocation-fixed-2",
+          "id": "already-adv-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“已经知道”？",
+          "prompt": "用法辨析：哪一项既表示“已经知道”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "have already done",
             "already available",
@@ -3130,7 +3160,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

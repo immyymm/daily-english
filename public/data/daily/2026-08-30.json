@@ -1,7 +1,7 @@
 {
   "date": "2026-08-30",
   "dayNumber": 14,
-  "contentVersion": "2026.08.19.2",
+  "contentVersion": "2026.08.19.3",
   "cards": [
     {
       "id": "value-n",
@@ -422,14 +422,14 @@
           "ai": false
         },
         {
-          "id": "value-n-structure-choice",
+          "id": "value-n-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “value” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“很大价值”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "value for money",
+            "core values",
             "great value",
-            "as soon as possible",
-            "simply put"
+            "value for money",
+            "place a value on"
           ],
           "answer": "great value",
           "stage": "T1",
@@ -502,31 +502,37 @@
           "ai": false
         },
         {
-          "id": "value-n-collocation-structure-meaning-v2",
+          "id": "value-n-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“很大价值”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“物有所值”，又符合这个形式线索：完整搭配中使用介词 for？",
           "options": [
-            "value for money",
+            "great value",
             "place a value on",
             "core values",
-            "great value"
+            "value for money"
           ],
-          "answer": "great value",
+          "answer": "value for money",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "value-n-collocation-example-context-v2",
+          "id": "value-n-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：I value _____ feedback.（中文：我重视诚实的反馈。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：I value _____ feedback.（中文：我重视诚实的反馈。）",
+          "options": [
+            "put",
+            "dialogue",
+            "honest",
+            "soon"
+          ],
           "answer": "honest",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "value-n-collocation-fixed-1",
+          "id": "value-n-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“很大价值”？",
+          "prompt": "用法辨析：哪一项既表示“很大价值”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "core values",
             "great value",
@@ -538,9 +544,9 @@
           "ai": false
         },
         {
-          "id": "value-n-collocation-fixed-2",
+          "id": "value-n-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“物有所值”？",
+          "prompt": "搭配辨析：哪一项既表示“物有所值”，又符合这个形式线索：完整搭配中使用介词 for？",
           "options": [
             "value for money",
             "great value",
@@ -637,7 +643,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1047,14 +1053,14 @@
           "ai": false
         },
         {
-          "id": "behavior-n-structure-choice",
+          "id": "behavior-n-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “behavior” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“改变行为”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "change behavior",
-            "find something difficult",
-            "respond quickly",
-            "positive behavior"
+            "positive behavior",
+            "human behavior",
+            "pattern of behavior"
           ],
           "answer": "change behavior",
           "stage": "T1",
@@ -1127,31 +1133,37 @@
           "ai": false
         },
         {
-          "id": "behavior-n-collocation-structure-meaning-v2",
+          "id": "behavior-n-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“改变行为”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“积极行为”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "human behavior",
             "pattern of behavior",
-            "change behavior",
-            "positive behavior"
+            "positive behavior",
+            "change behavior"
           ],
-          "answer": "change behavior",
+          "answer": "positive behavior",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "behavior-n-collocation-example-context-v2",
+          "id": "behavior-n-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：Small rewards can encourage _____ behavior.（中文：小奖励可以鼓励积极行为。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Small rewards can encourage _____ behavior.（中文：小奖励可以鼓励积极行为。）",
+          "options": [
+            "yourself",
+            "positive",
+            "pronounce",
+            "word"
+          ],
           "answer": "positive",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "behavior-n-collocation-fixed-1",
+          "id": "behavior-n-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“改变行为”？",
+          "prompt": "搭配辨析：哪一项既表示“改变行为”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "change behavior",
             "positive behavior",
@@ -1163,9 +1175,9 @@
           "ai": false
         },
         {
-          "id": "behavior-n-collocation-fixed-2",
+          "id": "behavior-n-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“积极行为”？",
+          "prompt": "用法辨析：哪一项既表示“积极行为”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "change behavior",
             "human behavior",
@@ -1262,7 +1274,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1672,13 +1684,13 @@
           "ai": false
         },
         {
-          "id": "attention-n-structure-choice",
+          "id": "attention-n-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “attention” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“注意……”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "be responsible for",
-            "speak directly",
             "draw attention to",
+            "get someone’s attention",
+            "full attention",
             "pay attention to"
           ],
           "answer": "pay attention to",
@@ -1752,31 +1764,37 @@
           "ai": false
         },
         {
-          "id": "attention-n-collocation-structure-meaning-v2",
+          "id": "attention-n-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“注意……”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“使人注意……”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "full attention",
-            "pay attention to",
             "draw attention to",
+            "pay attention to",
             "get someone’s attention"
           ],
-          "answer": "pay attention to",
+          "answer": "draw attention to",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "attention-n-collocation-example-context-v2",
+          "id": "attention-n-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：Pay attention to the _____ after the verb.（中文：注意这个动词后面的介词。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Pay attention to the _____ after the verb.（中文：注意这个动词后面的介词。）",
+          "options": [
+            "preposition",
+            "final",
+            "question",
+            "solved"
+          ],
           "answer": "preposition",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "attention-n-collocation-fixed-1",
+          "id": "attention-n-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“注意……”？",
+          "prompt": "用法辨析：哪一项既表示“注意……”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "draw attention to",
             "get someone’s attention",
@@ -1788,9 +1806,9 @@
           "ai": false
         },
         {
-          "id": "attention-n-collocation-fixed-2",
+          "id": "attention-n-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“使人注意……”？",
+          "prompt": "搭配辨析：哪一项既表示“使人注意……”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "get someone’s attention",
             "full attention",
@@ -1887,7 +1905,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2297,14 +2315,14 @@
           "ai": false
         },
         {
-          "id": "purpose-n-structure-choice",
+          "id": "purpose-n-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “purpose” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“主要目的”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "explain clearly",
-            "purpose of doing",
+            "serve a purpose",
+            "on purpose",
             "main purpose",
-            "be aware of"
+            "purpose of doing"
           ],
           "answer": "main purpose",
           "stage": "T1",
@@ -2377,31 +2395,37 @@
           "ai": false
         },
         {
-          "id": "purpose-n-collocation-structure-meaning-v2",
+          "id": "purpose-n-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“主要目的”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“做……的目的”，又符合这个形式线索：目标词后的 doing 表示要换成符合语境的动词 -ing 形式？",
           "options": [
-            "main purpose",
             "purpose of doing",
+            "main purpose",
             "serve a purpose",
             "on purpose"
           ],
-          "answer": "main purpose",
+          "answer": "purpose of doing",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "purpose-n-collocation-example-context-v2",
+          "id": "purpose-n-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：The main purpose of the _____ is active recall.（中文：这个测试的主要目的是主动回忆。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：The main purpose of the _____ is active recall.（中文：这个测试的主要目的是主动回忆。）",
+          "options": [
+            "difference",
+            "rule",
+            "ask",
+            "test"
+          ],
           "answer": "test",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "purpose-n-collocation-fixed-1",
+          "id": "purpose-n-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“主要目的”？",
+          "prompt": "搭配辨析：哪一项既表示“主要目的”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "serve a purpose",
             "on purpose",
@@ -2413,9 +2437,9 @@
           "ai": false
         },
         {
-          "id": "purpose-n-collocation-fixed-2",
+          "id": "purpose-n-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“做……的目的”？（提示：doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing。）",
+          "prompt": "用法辨析：哪一项既表示“做……的目的”，又符合这个形式线索：目标词后的 doing 表示要换成符合语境的动词 -ing 形式？",
           "options": [
             "on purpose",
             "purpose of doing",
@@ -2512,7 +2536,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2922,14 +2946,14 @@
           "ai": false
         },
         {
-          "id": "choice-n-structure-choice",
+          "id": "choice-n-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “choice” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“作出选择”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "have no choice",
+            "choice between",
             "make a choice",
-            "be familiar with",
-            "usually happens"
+            "have no choice",
+            "a good choice"
           ],
           "answer": "make a choice",
           "stage": "T1",
@@ -3002,31 +3026,37 @@
           "ai": false
         },
         {
-          "id": "choice-n-collocation-structure-meaning-v2",
+          "id": "choice-n-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“作出选择”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“别无选择”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "have no choice",
+            "make a choice",
             "a good choice",
             "choice between",
-            "make a choice"
+            "have no choice"
           ],
-          "answer": "make a choice",
+          "answer": "have no choice",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "choice-n-collocation-example-context-v2",
+          "id": "choice-n-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：Sometimes the natural choice _____ on context.（中文：有时自然的选择取决于语境。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Sometimes the natural choice _____ on context.（中文：有时自然的选择取决于语境。）",
+          "options": [
+            "review",
+            "using",
+            "depends",
+            "expression"
+          ],
           "answer": "depends",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "choice-n-collocation-fixed-1",
+          "id": "choice-n-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“作出选择”？",
+          "prompt": "用法辨析：哪一项既表示“作出选择”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "choice between",
             "make a choice",
@@ -3038,9 +3068,9 @@
           "ai": false
         },
         {
-          "id": "choice-n-collocation-fixed-2",
+          "id": "choice-n-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“别无选择”？",
+          "prompt": "搭配辨析：哪一项既表示“别无选择”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "have no choice",
             "make a choice",
@@ -3137,7 +3167,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

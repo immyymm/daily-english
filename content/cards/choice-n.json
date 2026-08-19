@@ -404,14 +404,14 @@
       "ai": false
     },
     {
-      "id": "choice-n-structure-choice",
+      "id": "choice-n-structure-choice-v3",
       "type": "meaning_choice",
-      "prompt": "哪一个是词卡要求优先记住的 “choice” 核心结构？",
+      "prompt": "核心结构辨析：哪一项既表示“作出选择”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "have no choice",
+        "choice between",
         "make a choice",
-        "be familiar with",
-        "usually happens"
+        "have no choice",
+        "a good choice"
       ],
       "answer": "make a choice",
       "stage": "T1",
@@ -484,31 +484,37 @@
       "ai": false
     },
     {
-      "id": "choice-n-collocation-structure-meaning-v2",
+      "id": "choice-n-collocation-structure-meaning-v3",
       "type": "collocation",
-      "prompt": "结构应用：想表达“作出选择”，应选择哪个完整结构？",
+      "prompt": "句型应用：哪一项既表示“别无选择”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "have no choice",
+        "make a choice",
         "a good choice",
         "choice between",
-        "make a choice"
+        "have no choice"
       ],
-      "answer": "make a choice",
+      "answer": "have no choice",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "choice-n-collocation-example-context-v2",
+      "id": "choice-n-collocation-example-context-v3",
       "type": "collocation",
-      "prompt": "根据完整句意和中文提示补全英文：Sometimes the natural choice _____ on context.（中文：有时自然的选择取决于语境。）",
+      "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Sometimes the natural choice _____ on context.（中文：有时自然的选择取决于语境。）",
+      "options": [
+        "review",
+        "using",
+        "depends",
+        "expression"
+      ],
       "answer": "depends",
       "stage": "T2",
       "ai": false
     },
     {
-      "id": "choice-n-collocation-fixed-1",
+      "id": "choice-n-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“作出选择”？",
+      "prompt": "用法辨析：哪一项既表示“作出选择”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "choice between",
         "make a choice",
@@ -520,9 +526,9 @@
       "ai": false
     },
     {
-      "id": "choice-n-collocation-fixed-2",
+      "id": "choice-n-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“别无选择”？",
+      "prompt": "搭配辨析：哪一项既表示“别无选择”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "have no choice",
         "make a choice",
@@ -619,7 +625,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.19.2",
+  "contentVersion": "2026.08.19.3",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

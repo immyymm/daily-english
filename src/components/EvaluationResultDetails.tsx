@@ -1,6 +1,6 @@
 import { GitCompareArrows, ListChecks, Sparkles } from 'lucide-react';
 import { masteryDimensionLabels, masteryDimensions } from '../learning/mastery';
-import { reconstructNaturalVersion } from '../schemas/evaluationConstraints';
+import { reconstructNaturalVersion, sanitizeEvaluationResult } from '../schemas/evaluationConstraints';
 import type { EvaluationResult, MasteryDimension } from '../types';
 
 const dimensionMaximum: Record<MasteryDimension, number> = {
@@ -12,35 +12,36 @@ const dimensionMaximum: Record<MasteryDimension, number> = {
 };
 
 export function EvaluationResultDetails({ result, compact = false }: { result: EvaluationResult; compact?: boolean }) {
+  const safeResult = sanitizeEvaluationResult(result);
   const reconstructedNaturalVersion = reconstructNaturalVersion(
-    result.correctedAnswer,
-    result.naturalVersion,
-    result.naturalChanges
+    safeResult.correctedAnswer,
+    safeResult.naturalVersion,
+    safeResult.naturalChanges
   );
-  const verifiedNaturalChanges = reconstructedNaturalVersion ? result.naturalChanges : [];
+  const verifiedNaturalChanges = reconstructedNaturalVersion ? safeResult.naturalChanges : [];
 
   return (
     <div className={compact ? 'evaluation-result-details compact' : 'evaluation-result-details'}>
       <section className="evaluation-dimensions">
         <div className="evaluation-subtitle"><ListChecks size={16} /><strong>能力分析</strong></div>
         {masteryDimensions.map((dimension) => {
-          const score = result.dimensionScores[dimension];
+          const score = safeResult.dimensionScores[dimension];
           const maximum = dimensionMaximum[dimension];
           return (
             <article key={dimension}>
               <div><span>{masteryDimensionLabels[dimension]}</span><b>{score}/{maximum}</b></div>
               <i><span style={{ width: `${score / maximum * 100}%` }} /></i>
-              {result.dimensionFeedback[dimension] && <p>{result.dimensionFeedback[dimension]}</p>}
+              {safeResult.dimensionFeedback[dimension] && <p>{safeResult.dimensionFeedback[dimension]}</p>}
             </article>
           );
         })}
       </section>
 
       <section className="evaluation-language-review">
-        <p><b>总体分析</b><span>{result.reasonZh}</span></p>
-        {result.issues.length > 0 && (
+        <p><b>总体分析</b><span>{safeResult.reasonZh}</span></p>
+        {safeResult.issues.length > 0 && (
           <div className="evaluation-issues">
-            {result.issues.map((issue, index) => (
+            {safeResult.issues.map((issue, index) => (
               <article className={issue.severity} key={`${issue.category}-${index}`}>
                 <div><span>{issue.category}</span><small>{issue.severity === 'major' ? '重点问题' : '细节优化'}</small></div>
                 {issue.originalText && <p><b>原表达</b>{issue.originalText}</p>}
@@ -50,8 +51,8 @@ export function EvaluationResultDetails({ result, compact = false }: { result: E
             ))}
           </div>
         )}
-        <p><b>修正表达</b><span lang="en">{result.correctedAnswer}</span></p>
-        <p><b>自然表达</b><span lang="en">{result.naturalVersion}</span></p>
+        <p><b>修正表达</b><span lang="en">{safeResult.correctedAnswer}</span></p>
+        <p><b>自然表达</b><span lang="en">{safeResult.naturalVersion}</span></p>
       </section>
 
       <section className="evaluation-natural-reason">
@@ -78,18 +79,18 @@ export function EvaluationResultDetails({ result, compact = false }: { result: E
             </p>
           </div>
         )}
-        {verifiedNaturalChanges.length === 0 && <p>{result.naturalVersionReasonZh}</p>}
+        {verifiedNaturalChanges.length === 0 && <p>{safeResult.naturalVersionReasonZh}</p>}
       </section>
 
-      {result.collocationSuggestions.length > 0 && (
+      {safeResult.collocationSuggestions.length > 0 && (
         <section className="evaluation-collocations">
           <div className="evaluation-subtitle"><Sparkles size={16} /><strong>下一步可练搭配</strong></div>
-          <div>{result.collocationSuggestions.map((item) => <span key={item}>{item}</span>)}</div>
+          <div>{safeResult.collocationSuggestions.map((item) => <span key={item}>{item}</span>)}</div>
         </section>
       )}
 
       <footer className="evaluation-result-meta">
-        <span>{result.needsRetry ? '建议重新作答' : '本题通过'}</span>
+        <span>{safeResult.needsRetry ? '建议重新作答' : '本题通过'}</span>
       </footer>
     </div>
   );

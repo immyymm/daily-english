@@ -74,6 +74,7 @@ describe('ReviewSessionModal progress restore', () => {
 
     expect(await screen.findByText(resumedQuestion.prompt)).toBeInTheDocument();
     expect(screen.getByText(/2 \/ 2 题/)).toBeInTheDocument();
+    expect(screen.queryByText(/\u672c\u5730\u8bc4\u5206|\u62bd\u53d6.*\u8003\u70b9|\u5b8c\u6574\u8bcd\u5361\u5185\u5bb9/)).not.toBeInTheDocument();
     expect(screen.getByRole('button', { name: resumedAnswer })).toHaveClass('selected');
     await waitFor(() => expect(onSaveProgress).toHaveBeenCalledWith(
       'saved-session',

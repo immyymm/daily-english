@@ -63,18 +63,32 @@ for (const card of allCards.cards) {
   if (card.questions.some((question) => /^(补全核心结构中的连接成分：|根据语境补全搭配：)/.test(question.prompt))) {
     errors.push(card.id + ': legacy phrase-fragment cloze found; a context label is not a real context.');
   }
-  const contextualQuestions = card.questions.filter((question) => question.id.includes('collocation-example-context-v2'));
+  if (card.questions.some((question) => question.prompt.includes('优先记住') || question.prompt.includes('词卡结构辨义'))) {
+    errors.push(card.id + ': vague or implementation-oriented structure wording found.');
+  }
+  const typedObjectiveQuestions = card.questions.filter((question) => !question.ai && !question.options);
+  if (typedObjectiveQuestions.some((question) => !/^[A-Za-z]+(?:'[A-Za-z]+)?$/.test(question.answer.trim()))) {
+    errors.push(card.id + ': every typed objective answer must be one English word for the in-app spelling keyboard.');
+  }
+  const contextualQuestions = card.questions.filter((question) => question.id.includes('collocation-example-context-v3'));
   if (contextualQuestions.length !== 1) {
     errors.push(card.id + ': expected exactly one full-sentence contextual companion question.');
   } else {
     const [question] = contextualQuestions;
-    if (!question.prompt.startsWith('根据完整句意和中文提示补全英文：') || !question.prompt.includes('（中文：') || !/[.!?](?:（中文：)/.test(question.prompt)) {
+    if (!question.prompt.startsWith('根据完整句意和中文提示') || !question.prompt.includes('（中文：') || !/[.!?](?:（中文：)/.test(question.prompt)) {
       errors.push(card.id + ': contextual companion question needs a complete English sentence and Chinese semantic cue.');
     }
+    if (!question.options?.includes(question.answer) || question.options.length < 3) {
+      errors.push(card.id + ': contextual companion question must be a choice with one declared answer.');
+    }
   }
-  const semanticStructureQuestions = card.questions.filter((question) => question.id.includes('collocation-structure-meaning-v2'));
+  const semanticStructureQuestions = card.questions.filter((question) => question.id.includes('collocation-structure-meaning-v3'));
   if (semanticStructureQuestions.length !== 1 || semanticStructureQuestions.some((question) => !question.options?.includes(question.answer))) {
     errors.push(card.id + ': structure knowledge must be tested through an explicit meaning and complete selectable structures.');
+  }
+  const structureQuestions = card.questions.filter((question) => question.id.includes('structure-choice-v3') || question.id.includes('collocation-structure-meaning-v3') || question.id.includes('collocation-fixed-'));
+  if (structureQuestions.some((question) => !question.prompt.includes('形式线索：'))) {
+    errors.push(card.id + ': every structure choice needs a distinguishing form clue.');
   }
   const slotPrompts = card.questions.filter((question) => question.ai && /\b(to do|doing|done|someone|something|yourself|A|B)\b/.test(question.prompt));
   if (slotPrompts.some((question) => !/(代表|替换|不要求)/.test(question.prompt))) {

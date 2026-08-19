@@ -1,7 +1,7 @@
 {
   "date": "2026-09-12",
   "dayNumber": 27,
-  "contentVersion": "2026.08.19.2",
+  "contentVersion": "2026.08.19.3",
   "cards": [
     {
       "id": "money-n",
@@ -409,14 +409,14 @@
           "ai": false
         },
         {
-          "id": "money-n-structure-choice",
+          "id": "money-n-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “money” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“省钱；存钱”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "save money",
-            "language learning",
-            "develop a habit",
-            "spend money on"
+            "spend money on",
+            "make money",
+            "borrow money"
           ],
           "answer": "save money",
           "stage": "T1",
@@ -489,31 +489,37 @@
           "ai": false
         },
         {
-          "id": "money-n-collocation-structure-meaning-v2",
+          "id": "money-n-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“省钱；存钱”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“在……上花钱”，又符合这个形式线索：完整搭配中使用介词 on？",
           "options": [
             "make money",
             "borrow money",
-            "save money",
-            "spend money on"
+            "spend money on",
+            "save money"
           ],
-          "answer": "save money",
+          "answer": "spend money on",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "money-n-collocation-example-context-v2",
+          "id": "money-n-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：Planning ahead can save _____ and money.（中文：提前规划可以节省时间和金钱。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Planning ahead can save _____ and money.（中文：提前规划可以节省时间和金钱。）",
+          "options": [
+            "speak",
+            "time",
+            "learning",
+            "habit"
+          ],
           "answer": "time",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "money-n-collocation-fixed-1",
+          "id": "money-n-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“省钱；存钱”？",
+          "prompt": "搭配辨析：哪一项既表示“省钱；存钱”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "save money",
             "spend money on",
@@ -525,9 +531,9 @@
           "ai": false
         },
         {
-          "id": "money-n-collocation-fixed-2",
+          "id": "money-n-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“在……上花钱”？",
+          "prompt": "用法辨析：哪一项既表示“在……上花钱”，又符合这个形式线索：完整搭配中使用介词 on？",
           "options": [
             "save money",
             "make money",
@@ -624,7 +630,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1034,13 +1040,13 @@
           "ai": false
         },
         {
-          "id": "business-n-structure-choice",
+          "id": "business-n-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “business” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“经营企业”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "develop a skill",
-            "decide to do something",
             "do business with",
+            "small business",
+            "business plan",
             "run a business"
           ],
           "answer": "run a business",
@@ -1114,31 +1120,37 @@
           "ai": false
         },
         {
-          "id": "business-n-collocation-structure-meaning-v2",
+          "id": "business-n-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“经营企业”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“与……做生意”，又符合这个形式线索：完整搭配中使用介词 with？",
           "options": [
             "business plan",
-            "run a business",
             "do business with",
+            "run a business",
             "small business"
           ],
-          "answer": "run a business",
+          "answer": "do business with",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "business-n-collocation-example-context-v2",
+          "id": "business-n-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：She runs a small _____ business.（中文：她经营一家小型网络企业。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：She runs a small _____ business.（中文：她经营一家小型网络企业。）",
+          "options": [
+            "online",
+            "practice",
+            "start",
+            "problem"
+          ],
           "answer": "online",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "business-n-collocation-fixed-1",
+          "id": "business-n-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“经营企业”？",
+          "prompt": "用法辨析：哪一项既表示“经营企业”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "do business with",
             "small business",
@@ -1150,9 +1162,9 @@
           "ai": false
         },
         {
-          "id": "business-n-collocation-fixed-2",
+          "id": "business-n-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“与……做生意”？",
+          "prompt": "搭配辨析：哪一项既表示“与……做生意”，又符合这个形式线索：完整搭配中使用介词 with？",
           "options": [
             "small business",
             "business plan",
@@ -1249,7 +1261,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1666,14 +1678,14 @@
           "ai": false
         },
         {
-          "id": "friend-n-structure-choice",
+          "id": "friend-n-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “friend” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“亲密朋友”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "explain something to someone",
-            "best friend",
+            "make friends with",
+            "a friend of mine",
             "close friend",
-            "benefit from"
+            "best friend"
           ],
           "answer": "close friend",
           "stage": "T1",
@@ -1746,31 +1758,37 @@
           "ai": false
         },
         {
-          "id": "friend-n-collocation-structure-meaning-v2",
+          "id": "friend-n-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“亲密朋友”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“最好的朋友”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "close friend",
             "best friend",
+            "close friend",
             "make friends with",
             "a friend of mine"
           ],
-          "answer": "close friend",
+          "answer": "best friend",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "friend-n-collocation-example-context-v2",
+          "id": "friend-n-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：I practiced the _____ with a friend.（中文：我和一位朋友练习了这段对话。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：I practiced the _____ with a friend.（中文：我和一位朋友练习了这段对话。）",
+          "options": [
+            "regular",
+            "phrase",
+            "idea",
+            "dialogue"
+          ],
           "answer": "dialogue",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "friend-n-collocation-fixed-1",
+          "id": "friend-n-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“亲密朋友”？",
+          "prompt": "搭配辨析：哪一项既表示“亲密朋友”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "make friends with",
             "a friend of mine",
@@ -1782,9 +1800,9 @@
           "ai": false
         },
         {
-          "id": "friend-n-collocation-fixed-2",
+          "id": "friend-n-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“最好的朋友”？",
+          "prompt": "用法辨析：哪一项既表示“最好的朋友”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "a friend of mine",
             "best friend",
@@ -1881,7 +1899,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2304,14 +2322,14 @@
           "ai": false
         },
         {
-          "id": "home-n-structure-choice",
+          "id": "home-n-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “home” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“感到自在”，又符合这个形式线索：完整搭配中使用介词 at？",
           "options": [
-            "go home",
+            "work from home",
             "feel at home",
-            "improve your skills",
-            "suggest doing something"
+            "go home",
+            "stay at home"
           ],
           "answer": "feel at home",
           "stage": "T1",
@@ -2384,31 +2402,37 @@
           "ai": false
         },
         {
-          "id": "home-n-collocation-structure-meaning-v2",
+          "id": "home-n-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“感到自在”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“回家”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "go home",
+            "feel at home",
             "stay at home",
             "work from home",
-            "feel at home"
+            "go home"
           ],
-          "answer": "feel at home",
+          "answer": "go home",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "home-n-collocation-example-context-v2",
+          "id": "home-n-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：Make _____ at home.（中文：请不要拘束，就像在自己家一样。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Make _____ at home.（中文：请不要拘束，就像在自己家一样。）",
+          "options": [
+            "reviewing",
+            "recall",
+            "yourself",
+            "speaking"
+          ],
           "answer": "yourself",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "home-n-collocation-fixed-1",
+          "id": "home-n-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“感到自在”？",
+          "prompt": "用法辨析：哪一项既表示“感到自在”，又符合这个形式线索：完整搭配中使用介词 at？",
           "options": [
             "work from home",
             "feel at home",
@@ -2420,9 +2444,9 @@
           "ai": false
         },
         {
-          "id": "home-n-collocation-fixed-2",
+          "id": "home-n-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“回家”？",
+          "prompt": "搭配辨析：哪一项既表示“回家”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "go home",
             "feel at home",
@@ -2519,7 +2543,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2937,14 +2961,14 @@
           "ai": false
         },
         {
-          "id": "problem-n-structure-choice",
+          "id": "problem-n-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “problem” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“解决问题”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "solve a problem",
-            "notice a difference",
-            "require attention",
-            "serious problem"
+            "serious problem",
+            "have a problem with",
+            "cause a problem"
           ],
           "answer": "solve a problem",
           "stage": "T1",
@@ -3017,31 +3041,37 @@
           "ai": false
         },
         {
-          "id": "problem-n-collocation-structure-meaning-v2",
+          "id": "problem-n-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“解决问题”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“严重问题”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "have a problem with",
             "cause a problem",
-            "solve a problem",
-            "serious problem"
+            "serious problem",
+            "solve a problem"
           ],
-          "answer": "solve a problem",
+          "answer": "serious problem",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "problem-n-collocation-example-context-v2",
+          "id": "problem-n-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：Breaking the task into steps _____ the problem.（中文：把任务拆成步骤解决了这个问题。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Breaking the task into steps _____ the problem.（中文：把任务拆成步骤解决了这个问题。）",
+          "options": [
+            "use",
+            "solved",
+            "change",
+            "careful"
+          ],
           "answer": "solved",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "problem-n-collocation-fixed-1",
+          "id": "problem-n-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“解决问题”？",
+          "prompt": "搭配辨析：哪一项既表示“解决问题”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "solve a problem",
             "serious problem",
@@ -3053,9 +3083,9 @@
           "ai": false
         },
         {
-          "id": "problem-n-collocation-fixed-2",
+          "id": "problem-n-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“严重问题”？",
+          "prompt": "用法辨析：哪一项既表示“严重问题”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "solve a problem",
             "have a problem with",
@@ -3152,7 +3182,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

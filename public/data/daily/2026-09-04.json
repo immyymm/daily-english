@@ -1,7 +1,7 @@
 {
   "date": "2026-09-04",
   "dayNumber": 19,
-  "contentVersion": "2026.08.19.2",
+  "contentVersion": "2026.08.19.3",
   "cards": [
     {
       "id": "natural-adj",
@@ -409,14 +409,14 @@
           "ai": false
         },
         {
-          "id": "natural-adj-structure-choice",
+          "id": "natural-adj-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “natural” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“听起来自然”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "sound natural",
-            "finally decide",
-            "feel at home",
-            "natural ability"
+            "natural ability",
+            "natural environment",
+            "perfectly natural"
           ],
           "answer": "sound natural",
           "stage": "T1",
@@ -489,31 +489,37 @@
           "ai": false
         },
         {
-          "id": "natural-adj-collocation-structure-meaning-v2",
+          "id": "natural-adj-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“听起来自然”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“天生能力”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "natural environment",
             "perfectly natural",
-            "sound natural",
-            "natural ability"
+            "natural ability",
+            "sound natural"
           ],
-          "answer": "sound natural",
+          "answer": "natural ability",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "natural-adj-collocation-example-context-v2",
+          "id": "natural-adj-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：This version sounds more natural in _____.（中文：这个版本在对话中听起来更自然。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：This version sounds more natural in _____.（中文：这个版本在对话中听起来更自然。）",
+          "options": [
+            "plan",
+            "conversation",
+            "found",
+            "yourself"
+          ],
           "answer": "conversation",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "natural-adj-collocation-fixed-1",
+          "id": "natural-adj-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“听起来自然”？",
+          "prompt": "搭配辨析：哪一项既表示“听起来自然”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "sound natural",
             "natural ability",
@@ -525,9 +531,9 @@
           "ai": false
         },
         {
-          "id": "natural-adj-collocation-fixed-2",
+          "id": "natural-adj-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“天生能力”？",
+          "prompt": "用法辨析：哪一项既表示“天生能力”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "sound natural",
             "natural environment",
@@ -624,7 +630,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1054,13 +1060,13 @@
           "ai": false
         },
         {
-          "id": "clear-adj-structure-choice",
+          "id": "clear-adj-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “clear” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“把某事说清楚”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
           "options": [
-            "simply put",
-            "solve a problem",
             "clear to someone",
+            "clear explanation",
+            "clear the table",
             "make something clear"
           ],
           "answer": "make something clear",
@@ -1134,31 +1140,37 @@
           "ai": false
         },
         {
-          "id": "clear-adj-collocation-structure-meaning-v2",
+          "id": "clear-adj-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“把某事说清楚”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“对某人来说清楚”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "clear the table",
-            "make something clear",
             "clear to someone",
+            "make something clear",
             "clear explanation"
           ],
-          "answer": "make something clear",
+          "answer": "clear to someone",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "clear-adj-collocation-example-context-v2",
+          "id": "clear-adj-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：Please make your main _____ clear.（中文：请把你的主要观点说清楚。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Please make your main _____ clear.（中文：请把你的主要观点说清楚。）",
+          "options": [
+            "point",
+            "put",
+            "solved",
+            "meaningful"
+          ],
           "answer": "point",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "clear-adj-collocation-fixed-1",
+          "id": "clear-adj-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“把某事说清楚”？（提示：something 要替换成实际的事物或内容。）",
+          "prompt": "用法辨析：哪一项既表示“把某事说清楚”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
           "options": [
             "clear to someone",
             "clear explanation",
@@ -1170,9 +1182,9 @@
           "ai": false
         },
         {
-          "id": "clear-adj-collocation-fixed-2",
+          "id": "clear-adj-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“对某人来说清楚”？（提示：someone 要替换成实际的人或代词。）",
+          "prompt": "搭配辨析：哪一项既表示“对某人来说清楚”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "clear explanation",
             "clear the table",
@@ -1269,7 +1281,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1679,14 +1691,14 @@
           "ai": false
         },
         {
-          "id": "common-adj-structure-choice",
+          "id": "common-adj-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “common” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“常见错误”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "ask a question",
-            "have something in common",
+            "common sense",
+            "common among",
             "a common mistake",
-            "respond quickly"
+            "have something in common"
           ],
           "answer": "a common mistake",
           "stage": "T1",
@@ -1759,31 +1771,37 @@
           "ai": false
         },
         {
-          "id": "common-adj-collocation-structure-meaning-v2",
+          "id": "common-adj-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“常见错误”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“有共同之处”，又符合这个形式线索：完整搭配中使用介词 in？",
           "options": [
-            "a common mistake",
             "have something in common",
+            "a common mistake",
             "common sense",
             "common among"
           ],
-          "answer": "a common mistake",
+          "answer": "have something in common",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "common-adj-collocation-example-context-v2",
+          "id": "common-adj-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：This is a common _____ among learners.（中文：这是学习者常犯的错误。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：This is a common _____ among learners.（中文：这是学习者常犯的错误。）",
+          "options": [
+            "word",
+            "ask",
+            "breakfast",
+            "mistake"
+          ],
           "answer": "mistake",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "common-adj-collocation-fixed-1",
+          "id": "common-adj-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“常见错误”？",
+          "prompt": "搭配辨析：哪一项既表示“常见错误”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "common sense",
             "common among",
@@ -1795,9 +1813,9 @@
           "ai": false
         },
         {
-          "id": "common-adj-collocation-fixed-2",
+          "id": "common-adj-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“有共同之处”？（提示：something 要替换成实际的事物或内容。）",
+          "prompt": "用法辨析：哪一项既表示“有共同之处”，又符合这个形式线索：完整搭配中使用介词 in？",
           "options": [
             "common among",
             "have something in common",
@@ -1894,7 +1912,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2304,14 +2322,14 @@
           "ai": false
         },
         {
-          "id": "similar-adj-structure-choice",
+          "id": "similar-adj-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “similar” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“与……相似”，又符合这个形式线索：使用 be 的正确形式后接目标表达？",
           "options": [
-            "very similar",
+            "similar experience",
             "be similar to",
-            "speak directly",
-            "tell a story"
+            "very similar",
+            "similar in size"
           ],
           "answer": "be similar to",
           "stage": "T1",
@@ -2384,31 +2402,37 @@
           "ai": false
         },
         {
-          "id": "similar-adj-collocation-structure-meaning-v2",
+          "id": "similar-adj-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“与……相似”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“非常相似”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "very similar",
+            "be similar to",
             "similar in size",
             "similar experience",
-            "be similar to"
+            "very similar"
           ],
-          "answer": "be similar to",
+          "answer": "very similar",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "similar-adj-collocation-example-context-v2",
+          "id": "similar-adj-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：This word is similar to _____ we learned yesterday.（中文：这个词和我们昨天学的一个词相似。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：This word is similar to _____ we learned yesterday.（中文：这个词和我们昨天学的一个词相似。）",
+          "options": [
+            "using",
+            "save",
+            "one",
+            "question"
+          ],
           "answer": "one",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "similar-adj-collocation-fixed-1",
+          "id": "similar-adj-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“与……相似”？",
+          "prompt": "用法辨析：哪一项既表示“与……相似”，又符合这个形式线索：使用 be 的正确形式后接目标表达？",
           "options": [
             "similar experience",
             "be similar to",
@@ -2420,9 +2444,9 @@
           "ai": false
         },
         {
-          "id": "similar-adj-collocation-fixed-2",
+          "id": "similar-adj-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“非常相似”？",
+          "prompt": "搭配辨析：哪一项既表示“非常相似”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "very similar",
             "be similar to",
@@ -2519,7 +2543,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2937,14 +2961,14 @@
           "ai": false
         },
         {
-          "id": "different-adj-structure-choice",
+          "id": "different-adj-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “different” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“与……不同”，又符合这个形式线索：完整搭配中使用介词 from？",
           "options": [
             "be different from",
-            "explain clearly",
-            "have an idea",
-            "different kinds of"
+            "different kinds of",
+            "look different",
+            "something completely different"
           ],
           "answer": "be different from",
           "stage": "T1",
@@ -3017,31 +3041,37 @@
           "ai": false
         },
         {
-          "id": "different-adj-collocation-structure-meaning-v2",
+          "id": "different-adj-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“与……不同”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“不同种类的……”，又符合这个形式线索：完整搭配中使用介词 of？",
           "options": [
             "look different",
             "something completely different",
-            "be different from",
-            "different kinds of"
+            "different kinds of",
+            "be different from"
           ],
-          "answer": "be different from",
+          "answer": "different kinds of",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "different-adj-collocation-example-context-v2",
+          "id": "different-adj-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：Spoken English is different from _____ writing.（中文：英语口语与正式写作不同。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Spoken English is different from _____ writing.（中文：英语口语与正式写作不同。）",
+          "options": [
+            "study",
+            "formal",
+            "rule",
+            "weekend"
+          ],
           "answer": "formal",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "different-adj-collocation-fixed-1",
+          "id": "different-adj-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“与……不同”？",
+          "prompt": "搭配辨析：哪一项既表示“与……不同”，又符合这个形式线索：完整搭配中使用介词 from？",
           "options": [
             "be different from",
             "different kinds of",
@@ -3053,9 +3083,9 @@
           "ai": false
         },
         {
-          "id": "different-adj-collocation-fixed-2",
+          "id": "different-adj-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“不同种类的……”？",
+          "prompt": "用法辨析：哪一项既表示“不同种类的……”，又符合这个形式线索：完整搭配中使用介词 of？",
           "options": [
             "be different from",
             "look different",
@@ -3152,7 +3182,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

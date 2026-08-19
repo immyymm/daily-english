@@ -1,7 +1,7 @@
 import type { SupabaseClient } from '@supabase/supabase-js';
 import { calculateMasteryProfile, isLegacyInvalidClozeAttempt } from '../learning/mastery';
 import { evaluationSchema } from '../schemas/evaluation';
-import { normalizeEvaluationResultForHistory } from '../schemas/evaluationConstraints';
+import { normalizeEvaluationResultForHistory, sanitizeEvaluationResult } from '../schemas/evaluationConstraints';
 import { db } from '../storage/db';
 import type {
   AIEvaluation,
@@ -413,10 +413,10 @@ function rowToEvaluation(row: Record<string, unknown>): AIEvaluation {
   const parsed = evaluationSchema.safeParse(row.result);
   const questionType = row.question_type as QuestionType;
   const prompt = String(row.prompt ?? payload.prompt ?? '');
-  const result = parsed.success ? normalizeEvaluationResultForHistory(parsed.data, {
+  const result = parsed.success ? sanitizeEvaluationResult(normalizeEvaluationResultForHistory(parsed.data, {
     questionType,
     prompt
-  }) : undefined;
+  })) : undefined;
   return {
     requestId: String(row.request_id),
     cardId: String(row.card_id),

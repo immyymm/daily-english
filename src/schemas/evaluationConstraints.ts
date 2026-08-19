@@ -18,6 +18,111 @@ interface EvaluationTextResult {
   naturalChanges?: NaturalExpressionChange[];
 }
 
+const internalProcessPatterns = [
+  /confidence\s*[:=]/i,
+  /\bthe assistant(?:'s)?\b/i,
+  /\b(?:valid|clean|corrected|malformed)\s+json\b/i,
+  /\bjson\s+(?:object|now|properly)\b/i,
+  /\bprevious (?:content|result)\b/i,
+  /\b(?:system prompt|hidden reasoning|rubric checks|model output|schema validation)\b/i,
+  /\blet'?s\s+(?:reconstruct|present|deliver|craft|redo)\b/i,
+  /\bi(?:'ll| will| must| am going to)\s+(?:output|present|deliver|provide|craft)\b/i,
+  /\bwait\.\s+i must\b/i,
+  /\bsorry\.\s+i(?:'ll| will| must)\b/i,
+  /```|\*\*\*/
+];
+
+function plainText(value: string, maximum: number) {
+  return value
+    .replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .slice(0, maximum)
+    .trim();
+}
+
+export function containsInternalProcessLeak(value: string) {
+  return internalProcessPatterns.some((pattern) => pattern.test(value));
+}
+
+export function sanitizeUserFacingText(value: string, fallback: string, maximum = 1_200) {
+  const normalized = plainText(value, Math.max(maximum * 2, maximum));
+  const leakIndex = internalProcessPatterns.reduce((earliest, pattern) => {
+    const index = normalized.search(pattern);
+    return index >= 0 && (earliest < 0 || index < earliest) ? index : earliest;
+  }, -1);
+  const safePrefix = leakIndex >= 0 ? normalized.slice(0, leakIndex) : normalized;
+  const cleaned = safePrefix
+    .replace(/[{}\[\]`*]+$/g, '')
+    .replace(/[,:;\s]+$/g, '')
+    .trim();
+  const usable = leakIndex >= 0 ? cleaned.length >= 8 : cleaned.length > 0;
+  return plainText(usable ? cleaned : fallback, maximum);
+}
+
+function safeExpression(value: string, maximum = 4_000) {
+  return plainText(value, maximum);
+}
+
+function evaluationExplanatoryTexts(result: EvaluationResult) {
+  return [
+    result.reasonZh,
+    result.naturalVersionReasonZh,
+    ...Object.values(result.dimensionFeedback),
+    result.taskCompliance.summaryZh,
+    ...result.taskCompliance.checks.flatMap((check) => [check.labelZh, check.evidenceZh]),
+    ...result.issues.map((issue) => issue.explanationZh),
+    ...result.naturalChanges.flatMap((change) => [change.sourceIssueZh, change.replacementReasonZh, change.reasonZh]),
+    ...result.collocationSuggestions
+  ];
+}
+
+export function sanitizeEvaluationResult(result: EvaluationResult): EvaluationResult {
+  const hiddenFallback = '本次点评中夹带了与学习无关的系统内容，已自动隐藏；请重新提交以获得完整分析。';
+  const sanitizeExplanation = (value: string, fallback = hiddenFallback) => sanitizeUserFacingText(value, fallback, 1_200);
+  return {
+    ...result,
+    taskCompliance: {
+      ...result.taskCompliance,
+      summaryZh: sanitizeExplanation(result.taskCompliance.summaryZh),
+      checks: result.taskCompliance.checks.map((check) => ({
+        ...check,
+        id: safeExpression(check.id, 120),
+        labelZh: sanitizeUserFacingText(check.labelZh, '任务要求', 200),
+        evidenceZh: sanitizeExplanation(check.evidenceZh)
+      }))
+    },
+    dimensionFeedback: {
+      meaningContext: sanitizeExplanation(result.dimensionFeedback.meaningContext, ''),
+      activeRecall: sanitizeExplanation(result.dimensionFeedback.activeRecall, ''),
+      collocation: sanitizeExplanation(result.dimensionFeedback.collocation, ''),
+      grammar: sanitizeExplanation(result.dimensionFeedback.grammar, ''),
+      naturalness: sanitizeExplanation(result.dimensionFeedback.naturalness, '')
+    },
+    issues: result.issues.map((issue) => ({
+      ...issue,
+      originalText: safeExpression(issue.originalText),
+      suggestedText: safeExpression(issue.suggestedText),
+      explanationZh: sanitizeExplanation(issue.explanationZh)
+    })),
+    correctedAnswer: safeExpression(result.correctedAnswer),
+    naturalVersion: safeExpression(result.naturalVersion),
+    naturalVersionReasonZh: sanitizeExplanation(result.naturalVersionReasonZh),
+    naturalChanges: result.naturalChanges.map((change) => ({
+      from: safeExpression(change.from, 300),
+      to: safeExpression(change.to, 300),
+      sourceIssueZh: sanitizeExplanation(change.sourceIssueZh),
+      replacementReasonZh: sanitizeExplanation(change.replacementReasonZh),
+      reasonZh: sanitizeExplanation(change.reasonZh)
+    })),
+    reasonZh: sanitizeExplanation(result.reasonZh),
+    collocationSuggestions: result.collocationSuggestions
+      .filter((item) => !containsInternalProcessLeak(item))
+      .map((item) => safeExpression(item, 160))
+      .filter(Boolean)
+  };
+}
+
 function comparable(value: string) {
   return ` ${value.toLocaleLowerCase('en-US').replace(/[^a-z0-9']+/g, ' ').trim()} `;
 }
@@ -207,7 +312,7 @@ export function normalizeEvaluationResultForHistory<T extends EvaluationTextResu
 }
 
 export function generatedEvaluationViolations(
-  result: Pick<EvaluationResult, 'correctedAnswer' | 'naturalVersion' | 'naturalChanges'>,
+  result: EvaluationResult,
   context: EvaluationFinalizationContext
 ) {
   const requirements = deriveTaskRequirements(context);
@@ -221,7 +326,15 @@ export function generatedEvaluationViolations(
         || !hasDetailedNaturalExplanation(change)
       ))
       || !reconstructNaturalVersion(result.correctedAnswer, result.naturalVersion, result.naturalChanges);
-  return { requirements, correctedFailures, naturalFailures, invalidChanges, valid: correctedFailures.length === 0 && naturalFailures.length === 0 && !invalidChanges };
+  const leakedProcess = evaluationExplanatoryTexts(result).some(containsInternalProcessLeak);
+  return {
+    requirements,
+    correctedFailures,
+    naturalFailures,
+    invalidChanges,
+    leakedProcess,
+    valid: correctedFailures.length === 0 && naturalFailures.length === 0 && !invalidChanges && !leakedProcess
+  };
 }
 
 function normalizedNaturalChanges(result: EvaluationResult) {
@@ -249,6 +362,7 @@ export function finalizeEvaluationResult(
   context: EvaluationFinalizationContext,
   requirements: TaskRequirements = deriveTaskRequirements(context)
 ): EvaluationResult {
+  const sanitizedInput = sanitizeEvaluationResult(input);
   const checks = checkTaskRequirements(context.answer, requirements);
   const passedChecks = checks.filter((check) => check.passed).length;
   const deterministicTaskScore = checks.length ? Math.round(passedChecks / checks.length * 10) : 10;
@@ -256,22 +370,22 @@ export function finalizeEvaluationResult(
   const explicitPassed = checks.every((check) => check.passed);
   const taskPassed = explicitPassed;
   const failedEvidence = checks.filter((check) => !check.passed).map((check) => check.evidenceZh);
-  const naturalChanges = normalizedNaturalChanges(input);
-  const naturalVersionReasonZh = sameText(input.correctedAnswer, input.naturalVersion)
+  const naturalChanges = normalizedNaturalChanges(sanitizedInput);
+  const naturalVersionReasonZh = sameText(sanitizedInput.correctedAnswer, sanitizedInput.naturalVersion)
     ? '修正后的句子已经自然、清楚并符合题目要求，因此无需为了改写而另造一个版本。'
     : explicitNaturalSummary(naturalChanges);
   const errorTypes = [...new Set([
-    ...input.errorTypes.filter((type) => type !== '任务要求' || !taskPassed),
+    ...sanitizedInput.errorTypes.filter((type) => type !== '任务要求' || !taskPassed),
     ...(!taskPassed ? ['任务要求' as const] : [])
   ])];
-  const issues = taskPassed ? input.issues.filter((issue) => issue.category !== '任务要求') : input.issues;
-  const overallScore = calculateEvaluationOverallScore({ ...input, taskCompletionScore });
-  const reasonZh = taskPassed && /(未满足|任务要求|必须短语|必须包含)/.test(input.reasonZh)
+  const issues = taskPassed ? sanitizedInput.issues.filter((issue) => issue.category !== '任务要求') : sanitizedInput.issues;
+  const overallScore = calculateEvaluationOverallScore({ ...sanitizedInput, taskCompletionScore });
+  const reasonZh = taskPassed && /(未满足|任务要求|必须短语|必须包含)/.test(sanitizedInput.reasonZh)
     ? '已满足题目的目标词或结构要求；评分只反映回答本身在词义、搭配、语法和自然度上的实际表现。'
-    : input.reasonZh;
+    : sanitizedInput.reasonZh;
 
   return {
-    ...input,
+    ...sanitizedInput,
     overallScore,
     taskCompletionScore,
     taskCompliance: {
@@ -280,7 +394,7 @@ export function finalizeEvaluationResult(
         ? failedEvidence.join('；')
         : checks.length
           ? '已满足题目中可机械核验的目标词、结构和格式要求。'
-          : input.taskCompliance.summaryZh,
+          : sanitizedInput.taskCompliance.summaryZh,
       checks
     },
     errorTypes,

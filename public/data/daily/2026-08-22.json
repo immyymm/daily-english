@@ -1,7 +1,7 @@
 {
   "date": "2026-08-22",
   "dayNumber": 6,
-  "contentVersion": "2026.08.19.2",
+  "contentVersion": "2026.08.19.3",
   "cards": [
     {
       "id": "explain-v",
@@ -409,14 +409,14 @@
           "ai": false
         },
         {
-          "id": "explain-v-structure-choice",
+          "id": "explain-v-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “explain” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“清楚解释某事”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
           "options": [
-            "explain why",
+            "explain something to someone",
             "explain something clearly",
-            "describe something as",
-            "main purpose"
+            "explain why",
+            "explain how"
           ],
           "answer": "explain something clearly",
           "stage": "T1",
@@ -489,31 +489,37 @@
           "ai": false
         },
         {
-          "id": "explain-v-collocation-structure-meaning-v2",
+          "id": "explain-v-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“清楚解释某事”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“解释原因”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "explain why",
+            "explain something clearly",
             "explain how",
             "explain something to someone",
-            "explain something clearly"
+            "explain why"
           ],
-          "answer": "explain something clearly",
+          "answer": "explain why",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "explain-v-collocation-example-context-v2",
+          "id": "explain-v-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：Could you explain this _____ to me?（中文：你能给我解释一下这个短语吗？）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Could you explain this _____ to me?（中文：你能给我解释一下这个短语吗？）",
+          "options": [
+            "test",
+            "mistake",
+            "phrase",
+            "ideal"
+          ],
           "answer": "phrase",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "explain-v-collocation-fixed-1",
+          "id": "explain-v-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“清楚解释某事”？（提示：something 要替换成实际的事物或内容。）",
+          "prompt": "用法辨析：哪一项既表示“清楚解释某事”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
           "options": [
             "explain something to someone",
             "explain something clearly",
@@ -525,9 +531,9 @@
           "ai": false
         },
         {
-          "id": "explain-v-collocation-fixed-2",
+          "id": "explain-v-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“解释原因”？",
+          "prompt": "搭配辨析：哪一项既表示“解释原因”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "explain why",
             "explain something clearly",
@@ -624,7 +630,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1034,14 +1040,14 @@
           "ai": false
         },
         {
-          "id": "suggest-v-structure-choice",
+          "id": "suggest-v-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “suggest” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“建议做”，又符合这个形式线索：目标词后的 doing 表示要换成符合语境的动词 -ing 形式？",
           "options": [
             "suggest doing",
-            "accept responsibility",
-            "make a choice",
-            "suggest that"
+            "suggest that",
+            "strongly suggest",
+            "evidence suggests"
           ],
           "answer": "suggest doing",
           "stage": "T1",
@@ -1114,9 +1120,9 @@
           "ai": false
         },
         {
-          "id": "suggest-v-collocation-structure-meaning-v2",
+          "id": "suggest-v-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“建议；表明……”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“建议；表明……”，又符合这个形式线索：使用 that 引导一个主谓完整的从句？",
           "options": [
             "strongly suggest",
             "evidence suggests",
@@ -1128,17 +1134,23 @@
           "ai": false
         },
         {
-          "id": "suggest-v-collocation-example-context-v2",
+          "id": "suggest-v-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：I suggest _____ the difficult words first.（中文：我建议先复习困难的单词。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：I suggest _____ the difficult words first.（中文：我建议先复习困难的单词。）",
+          "options": [
+            "one",
+            "reviewing",
+            "responsibility",
+            "depends"
+          ],
           "answer": "reviewing",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "suggest-v-collocation-fixed-1",
+          "id": "suggest-v-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“建议做”？（提示：doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing。）",
+          "prompt": "搭配辨析：哪一项既表示“建议做”，又符合这个形式线索：目标词后的 doing 表示要换成符合语境的动词 -ing 形式？",
           "options": [
             "suggest doing",
             "suggest that",
@@ -1150,9 +1162,9 @@
           "ai": false
         },
         {
-          "id": "suggest-v-collocation-fixed-2",
+          "id": "suggest-v-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“建议；表明……”？",
+          "prompt": "用法辨析：哪一项既表示“建议；表明……”，又符合这个形式线索：使用 that 引导一个主谓完整的从句？",
           "options": [
             "suggest doing",
             "strongly suggest",
@@ -1249,7 +1261,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1659,13 +1671,13 @@
           "ai": false
         },
         {
-          "id": "require-v-structure-choice",
+          "id": "require-v-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “require” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“要求某人做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
           "options": [
-            "prefer A to B",
-            "face a challenge",
             "require careful planning",
+            "be required to",
+            "as required",
             "require someone to do"
           ],
           "answer": "require someone to do",
@@ -1739,31 +1751,37 @@
           "ai": false
         },
         {
-          "id": "require-v-collocation-structure-meaning-v2",
+          "id": "require-v-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“要求某人做”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“需要周密计划”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "as required",
-            "require someone to do",
             "require careful planning",
+            "require someone to do",
             "be required to"
           ],
-          "answer": "require someone to do",
+          "answer": "require careful planning",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "require-v-collocation-example-context-v2",
+          "id": "require-v-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：This task requires _____ planning.（中文：这个任务需要仔细规划。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：This task requires _____ planning.（中文：这个任务需要仔细规划。）",
+          "options": [
+            "careful",
+            "walking",
+            "useful",
+            "formal"
+          ],
           "answer": "careful",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "require-v-collocation-fixed-1",
+          "id": "require-v-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“要求某人做”？（提示：do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词。）",
+          "prompt": "用法辨析：哪一项既表示“要求某人做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
           "options": [
             "require careful planning",
             "be required to",
@@ -1775,9 +1793,9 @@
           "ai": false
         },
         {
-          "id": "require-v-collocation-fixed-2",
+          "id": "require-v-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“需要周密计划”？",
+          "prompt": "搭配辨析：哪一项既表示“需要周密计划”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "be required to",
             "as required",
@@ -1874,7 +1892,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2291,14 +2309,14 @@
           "ai": false
         },
         {
-          "id": "prepare-v-structure-choice",
+          "id": "prepare-v-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “prepare” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“备考”，又符合这个形式线索：完整搭配中使用介词 for？",
           "options": [
-            "make progress",
-            "prepare a meal",
+            "prepare a report",
+            "prepare someone for",
             "prepare for a test",
-            "discover a new way"
+            "prepare a meal"
           ],
           "answer": "prepare for a test",
           "stage": "T1",
@@ -2371,31 +2389,37 @@
           "ai": false
         },
         {
-          "id": "prepare-v-collocation-structure-meaning-v2",
+          "id": "prepare-v-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“备考”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“准备饭菜”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "prepare for a test",
             "prepare a meal",
+            "prepare for a test",
             "prepare a report",
             "prepare someone for"
           ],
-          "answer": "prepare for a test",
+          "answer": "prepare a meal",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "prepare-v-collocation-example-context-v2",
+          "id": "prepare-v-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：She prepared for the _____ by practicing aloud.（中文：她通过大声练习为面试做准备。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：She prepared for the _____ by practicing aloud.（中文：她通过大声练习为面试做准备。）",
+          "options": [
+            "better",
+            "steady",
+            "polite",
+            "interview"
+          ],
           "answer": "interview",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "prepare-v-collocation-fixed-1",
+          "id": "prepare-v-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“备考”？",
+          "prompt": "搭配辨析：哪一项既表示“备考”，又符合这个形式线索：完整搭配中使用介词 for？",
           "options": [
             "prepare a report",
             "prepare someone for",
@@ -2407,9 +2431,9 @@
           "ai": false
         },
         {
-          "id": "prepare-v-collocation-fixed-2",
+          "id": "prepare-v-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“准备饭菜”？",
+          "prompt": "用法辨析：哪一项既表示“准备饭菜”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "prepare someone for",
             "prepare a meal",
@@ -2506,7 +2530,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2916,14 +2940,14 @@
           "ai": false
         },
         {
-          "id": "achieve-v-structure-choice",
+          "id": "achieve-v-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “achieve” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“实现目标”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "achieve success",
+            "achieve better results",
             "achieve a goal",
-            "protect someone from something",
-            "form a habit"
+            "achieve success",
+            "achieve a balance"
           ],
           "answer": "achieve a goal",
           "stage": "T1",
@@ -2996,31 +3020,37 @@
           "ai": false
         },
         {
-          "id": "achieve-v-collocation-structure-meaning-v2",
+          "id": "achieve-v-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“实现目标”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“取得成功”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "achieve success",
+            "achieve a goal",
             "achieve a balance",
             "achieve better results",
-            "achieve a goal"
+            "achieve success"
           ],
-          "answer": "achieve a goal",
+          "answer": "achieve success",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "achieve-v-collocation-example-context-v2",
+          "id": "achieve-v-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：Small steps can help you achieve a _____ goal.（中文：小步前进可以帮助你实现大目标。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Small steps can help you achieve a _____ goal.（中文：小步前进可以帮助你实现大目标。）",
+          "options": [
+            "became",
+            "word",
+            "big",
+            "account"
+          ],
           "answer": "big",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "achieve-v-collocation-fixed-1",
+          "id": "achieve-v-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“实现目标”？",
+          "prompt": "用法辨析：哪一项既表示“实现目标”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "achieve better results",
             "achieve a goal",
@@ -3032,9 +3062,9 @@
           "ai": false
         },
         {
-          "id": "achieve-v-collocation-fixed-2",
+          "id": "achieve-v-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“取得成功”？",
+          "prompt": "搭配辨析：哪一项既表示“取得成功”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "achieve success",
             "achieve a goal",
@@ -3131,7 +3161,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

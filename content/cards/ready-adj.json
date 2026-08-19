@@ -404,14 +404,14 @@
       "ai": false
     },
     {
-      "id": "ready-adj-structure-choice",
+      "id": "ready-adj-structure-choice-v3",
       "type": "meaning_choice",
-      "prompt": "哪一个是词卡要求优先记住的 “ready” 核心结构？",
+      "prompt": "核心结构辨析：哪一项既表示“准备好做”，又符合这个形式线索：使用 be 的正确形式后接目标表达？",
       "options": [
-        "get ready for",
+        "when you are ready",
         "be ready to",
-        "have already done",
-        "do a good job"
+        "get ready for",
+        "ready for use"
       ],
       "answer": "be ready to",
       "stage": "T1",
@@ -484,31 +484,37 @@
       "ai": false
     },
     {
-      "id": "ready-adj-collocation-structure-meaning-v2",
+      "id": "ready-adj-collocation-structure-meaning-v3",
       "type": "collocation",
-      "prompt": "结构应用：想表达“准备好做”，应选择哪个完整结构？",
+      "prompt": "句型应用：哪一项既表示“为……做准备”，又符合这个形式线索：完整搭配中使用介词 for？",
       "options": [
-        "get ready for",
+        "be ready to",
         "ready for use",
         "when you are ready",
-        "be ready to"
+        "get ready for"
       ],
-      "answer": "be ready to",
+      "answer": "get ready for",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "ready-adj-collocation-example-context-v2",
+      "id": "ready-adj-collocation-example-context-v3",
       "type": "collocation",
-      "prompt": "根据完整句意和中文提示补全英文：I am ready to _____ the next question.（中文：我准备好尝试下一题了。）",
+      "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：I am ready to _____ the next question.（中文：我准备好尝试下一题了。）",
+      "options": [
+        "explaining",
+        "whole",
+        "try",
+        "completed"
+      ],
       "answer": "try",
       "stage": "T2",
       "ai": false
     },
     {
-      "id": "ready-adj-collocation-fixed-1",
+      "id": "ready-adj-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“准备好做”？",
+      "prompt": "用法辨析：哪一项既表示“准备好做”，又符合这个形式线索：使用 be 的正确形式后接目标表达？",
       "options": [
         "when you are ready",
         "be ready to",
@@ -520,9 +526,9 @@
       "ai": false
     },
     {
-      "id": "ready-adj-collocation-fixed-2",
+      "id": "ready-adj-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“为……做准备”？",
+      "prompt": "搭配辨析：哪一项既表示“为……做准备”，又符合这个形式线索：完整搭配中使用介词 for？",
       "options": [
         "get ready for",
         "be ready to",
@@ -619,7 +625,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.19.2",
+  "contentVersion": "2026.08.19.3",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

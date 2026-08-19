@@ -1,7 +1,7 @@
 {
   "date": "2026-09-07",
   "dayNumber": 22,
-  "contentVersion": "2026.08.19.2",
+  "contentVersion": "2026.08.19.3",
   "cards": [
     {
       "id": "instead-adv",
@@ -407,14 +407,14 @@
           "ai": false
         },
         {
-          "id": "instead-adv-structure-choice",
+          "id": "instead-adv-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “instead” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“而不是；代替”，又符合这个形式线索：完整搭配中使用介词 of？",
           "options": [
-            "do something instead",
+            "choose this instead",
             "instead of",
-            "study for a test",
-            "develop a skill"
+            "do something instead",
+            "use A instead of B"
           ],
           "answer": "instead of",
           "stage": "T1",
@@ -487,31 +487,37 @@
           "ai": false
         },
         {
-          "id": "instead-adv-collocation-structure-meaning-v2",
+          "id": "instead-adv-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“而不是；代替”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“用 A 代替 B”，又符合这个形式线索：完整搭配中使用介词 of？",
           "options": [
+            "instead of",
             "do something instead",
-            "use A instead of B",
             "choose this instead",
-            "instead of"
+            "use A instead of B"
           ],
-          "answer": "instead of",
+          "answer": "use A instead of B",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "instead-adv-collocation-example-context-v2",
+          "id": "instead-adv-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：Try using an English definition instead of a _____.（中文：试着使用英文释义而不是翻译。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Try using an English definition instead of a _____.（中文：试着使用英文释义而不是翻译。）",
+          "options": [
+            "practice",
+            "results",
+            "translation",
+            "English"
+          ],
           "answer": "translation",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "instead-adv-collocation-fixed-1",
+          "id": "instead-adv-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“而不是；代替”？",
+          "prompt": "用法辨析：哪一项既表示“而不是；代替”，又符合这个形式线索：完整搭配中使用介词 of？",
           "options": [
             "choose this instead",
             "instead of",
@@ -523,9 +529,9 @@
           "ai": false
         },
         {
-          "id": "instead-adv-collocation-fixed-2",
+          "id": "instead-adv-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“改做某事”？（提示：something 要替换成实际的事物或内容。）",
+          "prompt": "搭配辨析：哪一项既表示“改做某事”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
           "options": [
             "do something instead",
             "instead of",
@@ -622,7 +628,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1024,14 +1030,14 @@
           "ai": false
         },
         {
-          "id": "however-adv-structure-choice",
+          "id": "however-adv-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “however” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“然而，结果……”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "however, the result",
-            "learn from mistakes",
-            "benefit from",
-            "however difficult"
+            "however difficult",
+            "however much",
+            "however long it takes"
           ],
           "answer": "however, the result",
           "stage": "T1",
@@ -1104,31 +1110,37 @@
           "ai": false
         },
         {
-          "id": "however-adv-collocation-structure-meaning-v2",
+          "id": "however-adv-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“然而，结果……”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“无论多困难”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "however much",
             "however long it takes",
-            "however, the result",
-            "however difficult"
+            "however difficult",
+            "however, the result"
           ],
-          "answer": "however, the result",
+          "answer": "however difficult",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "however-adv-collocation-example-context-v2",
+          "id": "however-adv-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：The task is short; however, it _____ focus.（中文：任务很短，不过需要专注。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：The task is short; however, it _____ focus.（中文：任务很短，不过需要专注。）",
+          "options": [
+            "habit",
+            "requires",
+            "faster",
+            "regular"
+          ],
           "answer": "requires",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "however-adv-collocation-fixed-1",
+          "id": "however-adv-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“然而，结果……”？",
+          "prompt": "搭配辨析：哪一项既表示“然而，结果……”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "however, the result",
             "however difficult",
@@ -1140,9 +1152,9 @@
           "ai": false
         },
         {
-          "id": "however-adv-collocation-fixed-2",
+          "id": "however-adv-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“无论多困难”？",
+          "prompt": "用法辨析：哪一项既表示“无论多困难”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "however, the result",
             "however much",
@@ -1239,7 +1251,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1649,13 +1661,13 @@
           "ai": false
         },
         {
-          "id": "finally-adv-structure-choice",
+          "id": "finally-adv-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “finally” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“终于决定”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "speak to someone",
-            "improve your skills",
             "finally arrive",
+            "finally understand",
+            "and finally",
             "finally decide"
           ],
           "answer": "finally decide",
@@ -1729,31 +1741,37 @@
           "ai": false
         },
         {
-          "id": "finally-adv-collocation-structure-meaning-v2",
+          "id": "finally-adv-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“终于决定”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“终于到达”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "and finally",
-            "finally decide",
             "finally arrive",
+            "finally decide",
             "finally understand"
           ],
-          "answer": "finally decide",
+          "answer": "finally arrive",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "finally-adv-collocation-example-context-v2",
+          "id": "finally-adv-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：I finally _____ the word I needed.（中文：我终于找到了需要的那个词。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：I finally _____ the word I needed.（中文：我终于找到了需要的那个词。）",
+          "options": [
+            "found",
+            "complete",
+            "speaking",
+            "start"
+          ],
           "answer": "found",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "finally-adv-collocation-fixed-1",
+          "id": "finally-adv-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“终于决定”？",
+          "prompt": "用法辨析：哪一项既表示“终于决定”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "finally arrive",
             "finally understand",
@@ -1765,9 +1783,9 @@
           "ai": false
         },
         {
-          "id": "finally-adv-collocation-fixed-2",
+          "id": "finally-adv-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“终于到达”？",
+          "prompt": "搭配辨析：哪一项既表示“终于到达”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "finally understand",
             "and finally",
@@ -1864,7 +1882,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2281,14 +2299,14 @@
           "ai": false
         },
         {
-          "id": "simply-adv-structure-choice",
+          "id": "simply-adv-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “simply” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“简单来说”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "notice a difference",
-            "simply because",
+            "quite simply",
+            "simply impossible",
             "simply put",
-            "write down"
+            "simply because"
           ],
           "answer": "simply put",
           "stage": "T1",
@@ -2361,31 +2379,37 @@
           "ai": false
         },
         {
-          "id": "simply-adv-collocation-structure-meaning-v2",
+          "id": "simply-adv-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“简单来说”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“仅仅因为”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "simply put",
             "simply because",
+            "simply put",
             "quite simply",
             "simply impossible"
           ],
-          "answer": "simply put",
+          "answer": "simply because",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "simply-adv-collocation-example-context-v2",
+          "id": "simply-adv-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：Simply _____, practice helps memory.（中文：简单来说，练习有助于记忆。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Simply _____, practice helps memory.（中文：简单来说，练习有助于记忆。）",
+          "options": [
+            "down",
+            "change",
+            "phrase",
+            "put"
+          ],
           "answer": "put",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "simply-adv-collocation-fixed-1",
+          "id": "simply-adv-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“简单来说”？",
+          "prompt": "搭配辨析：哪一项既表示“简单来说”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "quite simply",
             "simply impossible",
@@ -2397,9 +2421,9 @@
           "ai": false
         },
         {
-          "id": "simply-adv-collocation-fixed-2",
+          "id": "simply-adv-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“仅仅因为”？",
+          "prompt": "用法辨析：哪一项既表示“仅仅因为”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "simply impossible",
             "simply because",
@@ -2496,7 +2520,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2906,14 +2930,14 @@
           "ai": false
         },
         {
-          "id": "quickly-adv-structure-choice",
+          "id": "quickly-adv-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “quickly” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“快速回应”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "learn quickly",
+            "quickly become",
             "respond quickly",
-            "read aloud",
-            "support a decision"
+            "learn quickly",
+            "as quickly as possible"
           ],
           "answer": "respond quickly",
           "stage": "T1",
@@ -2986,31 +3010,37 @@
           "ai": false
         },
         {
-          "id": "quickly-adv-collocation-structure-meaning-v2",
+          "id": "quickly-adv-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“快速回应”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“学得快”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "learn quickly",
+            "respond quickly",
             "as quickly as possible",
             "quickly become",
-            "respond quickly"
+            "learn quickly"
           ],
-          "answer": "respond quickly",
+          "answer": "learn quickly",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "quickly-adv-collocation-example-context-v2",
+          "id": "quickly-adv-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：Try to recall the _____ quickly.（中文：试着快速回忆这个词。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Try to recall the _____ quickly.（中文：试着快速回忆这个词。）",
+          "options": [
+            "decision",
+            "reviewing",
+            "word",
+            "example"
+          ],
           "answer": "word",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "quickly-adv-collocation-fixed-1",
+          "id": "quickly-adv-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“快速回应”？",
+          "prompt": "用法辨析：哪一项既表示“快速回应”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "quickly become",
             "respond quickly",
@@ -3022,9 +3052,9 @@
           "ai": false
         },
         {
-          "id": "quickly-adv-collocation-fixed-2",
+          "id": "quickly-adv-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“学得快”？",
+          "prompt": "搭配辨析：哪一项既表示“学得快”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "learn quickly",
             "respond quickly",
@@ -3121,7 +3151,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

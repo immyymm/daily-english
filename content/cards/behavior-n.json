@@ -404,14 +404,14 @@
       "ai": false
     },
     {
-      "id": "behavior-n-structure-choice",
+      "id": "behavior-n-structure-choice-v3",
       "type": "meaning_choice",
-      "prompt": "哪一个是词卡要求优先记住的 “behavior” 核心结构？",
+      "prompt": "核心结构辨析：哪一项既表示“改变行为”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "change behavior",
-        "find something difficult",
-        "respond quickly",
-        "positive behavior"
+        "positive behavior",
+        "human behavior",
+        "pattern of behavior"
       ],
       "answer": "change behavior",
       "stage": "T1",
@@ -484,31 +484,37 @@
       "ai": false
     },
     {
-      "id": "behavior-n-collocation-structure-meaning-v2",
+      "id": "behavior-n-collocation-structure-meaning-v3",
       "type": "collocation",
-      "prompt": "结构应用：想表达“改变行为”，应选择哪个完整结构？",
+      "prompt": "句型应用：哪一项既表示“积极行为”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "human behavior",
         "pattern of behavior",
-        "change behavior",
-        "positive behavior"
+        "positive behavior",
+        "change behavior"
       ],
-      "answer": "change behavior",
+      "answer": "positive behavior",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "behavior-n-collocation-example-context-v2",
+      "id": "behavior-n-collocation-example-context-v3",
       "type": "collocation",
-      "prompt": "根据完整句意和中文提示补全英文：Small rewards can encourage _____ behavior.（中文：小奖励可以鼓励积极行为。）",
+      "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Small rewards can encourage _____ behavior.（中文：小奖励可以鼓励积极行为。）",
+      "options": [
+        "yourself",
+        "positive",
+        "pronounce",
+        "word"
+      ],
       "answer": "positive",
       "stage": "T2",
       "ai": false
     },
     {
-      "id": "behavior-n-collocation-fixed-1",
+      "id": "behavior-n-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“改变行为”？",
+      "prompt": "搭配辨析：哪一项既表示“改变行为”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "change behavior",
         "positive behavior",
@@ -520,9 +526,9 @@
       "ai": false
     },
     {
-      "id": "behavior-n-collocation-fixed-2",
+      "id": "behavior-n-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“积极行为”？",
+      "prompt": "用法辨析：哪一项既表示“积极行为”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "change behavior",
         "human behavior",
@@ -619,7 +625,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.19.2",
+  "contentVersion": "2026.08.19.3",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

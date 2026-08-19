@@ -7,7 +7,8 @@ import { z } from 'zod';
 import { evaluationSchema } from '../src/schemas/evaluation.js';
 import {
   finalizeEvaluationResult,
-  generatedEvaluationViolations
+  generatedEvaluationViolations,
+  sanitizeEvaluationResult
 } from '../src/schemas/evaluationConstraints.js';
 import { deriveTaskRequirements } from '../src/schemas/taskRequirements.js';
 import type { EvaluationResult } from '../src/types.js';
@@ -64,6 +65,7 @@ const systemPrompt = [
   'For every naturalChanges item, sourceIssueZh must explain the precise problem with the original from span in this sentence; replacementReasonZh must separately explain why the to span fixes that problem and what meaning, collocation, grammar, tone, or clarity it adds. Each field must be a detailed Chinese explanation, not a label. reasonZh must combine both points. Never write only “更自然”“更地道”“更口语” or a generic whole-sentence explanation.',
   'Example of the required granularity: from="English speaking", to="spoken English", sourceIssueZh="English speaking 把动名词 speaking 放在名词 English 后面作类别名称，词序不符合这里表示语言能力的常用说法。", replacementReasonZh="spoken English 用过去分词 spoken 作定语，直接表示‘英语口语’，是描述语言能力时固定且清楚的名词搭配。". Do not combine unrelated edits into this item.',
   'naturalVersionReasonZh must summarize the word-level and phrase-level changes; do not expose hidden reasoning, rubric checks, confidence calculations, or model process.',
+  'Every string is rendered directly to a learner. Never include JSON, schema repair, confidence calculations, model instructions, drafting notes, self-talk, or phrases such as “the assistant”, “valid JSON”, “I will output”, “wait”, or “sorry”. Return only the requested learner-facing content inside the schema.',
   'dimensionFeedback must briefly justify every dimension score using evidence from the learner answer. Return a conservative confidence value.',
   'Use only these error labels when relevant: 任务要求, 词义, 拼写, 词性, 介词, 搭配, 语法, 语境, 语气, 中文直译, 表达不自然.'
 ].join('\n');
@@ -203,7 +205,7 @@ async function runModel(input: EvaluationInput) {
   let rawResult = evaluationSchema.parse(completion.output_parsed) as EvaluationResult;
   let validation = generatedEvaluationViolations(rawResult, context);
 
-  if (validation.invalidChanges && validation.correctedFailures.length === 0 && validation.naturalFailures.length === 0) {
+  if (validation.invalidChanges && !validation.leakedProcess && validation.correctedFailures.length === 0 && validation.naturalFailures.length === 0) {
     rawResult = {
       ...rawResult,
       naturalVersion: rawResult.correctedAnswer,
@@ -213,12 +215,13 @@ async function runModel(input: EvaluationInput) {
     validation = generatedEvaluationViolations(rawResult, context);
   }
 
-  if (validation.correctedFailures.length > 0 || validation.naturalFailures.length > 0) {
+  if (validation.correctedFailures.length > 0 || validation.naturalFailures.length > 0 || validation.leakedProcess) {
     completion = await parseEvaluation({
       result: rawResult,
       violations: {
         correctedAnswer: validation.correctedFailures,
         naturalVersion: validation.naturalFailures,
+        leakedProcess: validation.leakedProcess ? 'Remove every piece of JSON/schema/model/drafting/self-talk. Every string must contain only concise learner-facing feedback.' : undefined,
         naturalChanges: validation.invalidChanges ? 'naturalChanges must use unique, non-overlapping 1-to-8-token spans copied exactly from correctedAnswer and naturalVersion in left-to-right order; every item needs separate, detailed sourceIssueZh and replacementReasonZh, and replacing all original spans must reconstruct naturalVersion exactly' : undefined
       }
     });
@@ -240,7 +243,7 @@ async function runModel(input: EvaluationInput) {
     validation = generatedEvaluationViolations(rawResult, context);
   }
 
-  if (validation.invalidChanges && validation.correctedFailures.length === 0 && validation.naturalFailures.length === 0) {
+  if (validation.invalidChanges && !validation.leakedProcess && validation.correctedFailures.length === 0 && validation.naturalFailures.length === 0) {
     rawResult = {
       ...rawResult,
       naturalVersion: rawResult.correctedAnswer,
@@ -381,10 +384,11 @@ async function getDurableStatus(request: IncomingMessage, response: Response, or
     send(response, 404, { code: 'NOT_FOUND', message: '没有找到这条点评。' }, origin);
     return;
   }
+  const parsedStoredResult = evaluationSchema.safeParse(data.result);
   send(response, 200, {
     requestId: data.request_id,
     status: data.status,
-    result: data.result,
+    result: parsedStoredResult.success ? sanitizeEvaluationResult(parsedStoredResult.data) : null,
     model: data.model,
     errorMessage: data.error_message,
     retryCount: data.retry_count,
@@ -468,11 +472,12 @@ export default async function handler(request: RequestWithBody, response: Respon
         .eq('request_id', input.requestId)
         .maybeSingle();
       if (existing?.status === 'complete' && existing.result) {
+        const parsedExistingResult = evaluationSchema.safeParse(existing.result);
         send(response, 200, {
           requestId: input.requestId,
           status: 'complete',
           model: existing.model,
-          result: existing.result
+          result: parsedExistingResult.success ? sanitizeEvaluationResult(parsedExistingResult.data) : null
         }, origin);
         return;
       }

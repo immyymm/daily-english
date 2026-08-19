@@ -667,14 +667,14 @@
       "ai": false
     },
     {
-      "id": "work-n-structure-choice",
+      "id": "work-n-structure-choice-v3",
       "type": "meaning_choice",
-      "prompt": "哪一个是词卡要求优先记住的 “work” 核心结构？",
+      "prompt": "核心结构辨析：哪一项既表示“从事；处理某事”，又符合这个形式线索：完整搭配中使用介词 on？",
       "options": [
-        "work at",
+        "work with someone",
         "work on something",
-        "take place",
-        "make a change"
+        "work for someone",
+        "work as something"
       ],
       "answer": "work on something",
       "stage": "T1",
@@ -747,31 +747,37 @@
       "ai": false
     },
     {
-      "id": "work-n-collocation-structure-meaning-v2",
+      "id": "work-n-collocation-structure-meaning-v3",
       "type": "collocation",
-      "prompt": "结构应用：想表达“从事；处理某事”，应选择哪个完整结构？",
+      "prompt": "句型应用：哪一项既表示“为某人或某机构工作”，又符合这个形式线索：完整搭配中使用介词 for？",
       "options": [
-        "work for someone",
+        "work on something",
         "work as something",
         "work with someone",
-        "work on something"
+        "work for someone"
       ],
-      "answer": "work on something",
+      "answer": "work for someone",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "work-n-collocation-example-context-v2",
+      "id": "work-n-collocation-example-context-v3",
       "type": "collocation",
-      "prompt": "根据完整句意和中文提示补全英文：I am working on my _____.（中文：我正在练习发音。）",
+      "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：I am working on my _____.（中文：我正在练习发音。）",
+      "options": [
+        "whole",
+        "calm",
+        "pronunciation",
+        "Friday"
+      ],
       "answer": "pronunciation",
       "stage": "T2",
       "ai": false
     },
     {
-      "id": "work-n-collocation-fixed-1",
+      "id": "work-n-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“为……工作；受雇于”？",
+      "prompt": "用法辨析：哪一项既表示“为……工作；受雇于”，又符合这个形式线索：完整搭配中使用介词 for？",
       "options": [
         "work on",
         "work for",
@@ -783,9 +789,9 @@
       "ai": false
     },
     {
-      "id": "work-n-collocation-fixed-2",
+      "id": "work-n-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“在某个地点或机构工作”？",
+      "prompt": "搭配辨析：哪一项既表示“在某个地点或机构工作”，又符合这个形式线索：完整搭配中使用介词 at？",
       "options": [
         "work at",
         "work for",
@@ -882,7 +888,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.19.2",
+  "contentVersion": "2026.08.19.3",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；本卡依照用户词卡模板人工精校；音标为美式发音。"
 }

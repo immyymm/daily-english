@@ -411,13 +411,13 @@
       "ai": false
     },
     {
-      "id": "allow-v-structure-choice",
+      "id": "allow-v-structure-choice-v3",
       "type": "meaning_choice",
-      "prompt": "哪一个是词卡要求优先记住的 “allow” 核心结构？",
+      "prompt": "核心结构辨析：哪一项既表示“允许某人做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
       "options": [
-        "prepare for a test",
-        "as a result",
         "allow time for",
+        "allow access to",
+        "not allow smoking",
         "allow someone to do"
       ],
       "answer": "allow someone to do",
@@ -491,31 +491,37 @@
       "ai": false
     },
     {
-      "id": "allow-v-collocation-structure-meaning-v2",
+      "id": "allow-v-collocation-structure-meaning-v3",
       "type": "collocation",
-      "prompt": "结构应用：想表达“允许某人做”，应选择哪个完整结构？",
+      "prompt": "句型应用：哪一项既表示“为……留出时间”，又符合这个形式线索：完整搭配中使用介词 for？",
       "options": [
         "not allow smoking",
-        "allow someone to do",
         "allow time for",
+        "allow someone to do",
         "allow access to"
       ],
-      "answer": "allow someone to do",
+      "answer": "allow time for",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "allow-v-collocation-example-context-v2",
+      "id": "allow-v-collocation-example-context-v3",
       "type": "collocation",
-      "prompt": "根据完整句意和中文提示补全英文：The app allows you to _____ offline.（中文：这个应用允许你离线学习。）",
+      "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：The app allows you to _____ offline.（中文：这个应用允许你离线学习。）",
+      "options": [
+        "study",
+        "interview",
+        "spoke",
+        "practical"
+      ],
       "answer": "study",
       "stage": "T2",
       "ai": false
     },
     {
-      "id": "allow-v-collocation-fixed-1",
+      "id": "allow-v-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“允许某人做”？（提示：do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词。）",
+      "prompt": "用法辨析：哪一项既表示“允许某人做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
       "options": [
         "allow time for",
         "allow access to",
@@ -527,9 +533,9 @@
       "ai": false
     },
     {
-      "id": "allow-v-collocation-fixed-2",
+      "id": "allow-v-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“为……留出时间”？",
+      "prompt": "搭配辨析：哪一项既表示“为……留出时间”，又符合这个形式线索：完整搭配中使用介词 for？",
       "options": [
         "allow access to",
         "not allow smoking",
@@ -626,7 +632,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.19.2",
+  "contentVersion": "2026.08.19.3",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

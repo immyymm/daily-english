@@ -1,7 +1,7 @@
 {
   "date": "2026-08-31",
   "dayNumber": 15,
-  "contentVersion": "2026.08.19.2",
+  "contentVersion": "2026.08.19.3",
   "cards": [
     {
       "id": "challenge-n",
@@ -422,14 +422,14 @@
           "ai": false
         },
         {
-          "id": "challenge-n-structure-choice",
+          "id": "challenge-n-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “challenge” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“面对挑战”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "face a challenge",
-            "feel comfortable doing something",
-            "perhaps because",
-            "take on a challenge"
+            "take on a challenge",
+            "major challenge",
+            "challenge someone to"
           ],
           "answer": "face a challenge",
           "stage": "T1",
@@ -502,31 +502,37 @@
           "ai": false
         },
         {
-          "id": "challenge-n-collocation-structure-meaning-v2",
+          "id": "challenge-n-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“面对挑战”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“接受挑战”，又符合这个形式线索：完整搭配中使用介词 on？",
           "options": [
             "major challenge",
             "challenge someone to",
-            "face a challenge",
-            "take on a challenge"
+            "take on a challenge",
+            "face a challenge"
           ],
-          "answer": "face a challenge",
+          "answer": "take on a challenge",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "challenge-n-collocation-example-context-v2",
+          "id": "challenge-n-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：Speaking without notes is a _____ challenge.（中文：不看笔记说话是一项有用的挑战。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Speaking without notes is a _____ challenge.（中文：不看笔记说话是一项有用的挑战。）",
+          "options": [
+            "weekend",
+            "useful",
+            "asking",
+            "try"
+          ],
           "answer": "useful",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "challenge-n-collocation-fixed-1",
+          "id": "challenge-n-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“面对挑战”？",
+          "prompt": "搭配辨析：哪一项既表示“面对挑战”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "face a challenge",
             "take on a challenge",
@@ -538,9 +544,9 @@
           "ai": false
         },
         {
-          "id": "challenge-n-collocation-fixed-2",
+          "id": "challenge-n-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“接受挑战”？",
+          "prompt": "用法辨析：哪一项既表示“接受挑战”，又符合这个形式线索：完整搭配中使用介词 on？",
           "options": [
             "face a challenge",
             "major challenge",
@@ -637,7 +643,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1054,13 +1060,13 @@
           "ai": false
         },
         {
-          "id": "progress-n-structure-choice",
+          "id": "progress-n-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “progress” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“取得进步”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "an effective way",
-            "have already done",
             "steady progress",
+            "progress toward",
+            "in progress",
             "make progress"
           ],
           "answer": "make progress",
@@ -1134,31 +1140,37 @@
           "ai": false
         },
         {
-          "id": "progress-n-collocation-structure-meaning-v2",
+          "id": "progress-n-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“取得进步”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“稳步进展”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "in progress",
-            "make progress",
             "steady progress",
+            "make progress",
             "progress toward"
           ],
-          "answer": "make progress",
+          "answer": "steady progress",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "progress-n-collocation-example-context-v2",
+          "id": "progress-n-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：You are making _____ progress.（中文：你正在稳步进步。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：You are making _____ progress.（中文：你正在稳步进步。）",
+          "options": [
+            "steady",
+            "way",
+            "completed",
+            "Friday"
+          ],
           "answer": "steady",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "progress-n-collocation-fixed-1",
+          "id": "progress-n-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“取得进步”？",
+          "prompt": "用法辨析：哪一项既表示“取得进步”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "steady progress",
             "progress toward",
@@ -1170,9 +1182,9 @@
           "ai": false
         },
         {
-          "id": "progress-n-collocation-fixed-2",
+          "id": "progress-n-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“稳步进展”？",
+          "prompt": "搭配辨析：哪一项既表示“稳步进展”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "progress toward",
             "in progress",
@@ -1269,7 +1281,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1679,14 +1691,14 @@
           "ai": false
         },
         {
-          "id": "habit-n-structure-choice",
+          "id": "habit-n-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “habit” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“养成习惯”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "still need to",
-            "develop a habit",
+            "break a habit",
+            "good study habits",
             "form a habit",
-            "a serious problem"
+            "develop a habit"
           ],
           "answer": "form a habit",
           "stage": "T1",
@@ -1759,31 +1771,37 @@
           "ai": false
         },
         {
-          "id": "habit-n-collocation-structure-meaning-v2",
+          "id": "habit-n-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“养成习惯”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“养成习惯”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "form a habit",
             "develop a habit",
+            "form a habit",
             "break a habit",
             "good study habits"
           ],
-          "answer": "form a habit",
+          "answer": "develop a habit",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "habit-n-collocation-example-context-v2",
+          "id": "habit-n-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：Reviewing before bed _____ a habit.（中文：睡前复习成了一种习惯。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Reviewing before bed _____ a habit.（中文：睡前复习成了一种习惯。）",
+          "options": [
+            "problem",
+            "need",
+            "interview",
+            "became"
+          ],
           "answer": "became",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "habit-n-collocation-fixed-1",
+          "id": "habit-n-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“养成习惯”？",
+          "prompt": "搭配辨析：哪一项既表示“养成习惯”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "break a habit",
             "good study habits",
@@ -1795,9 +1813,9 @@
           "ai": false
         },
         {
-          "id": "habit-n-collocation-fixed-2",
+          "id": "habit-n-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“养成习惯”？",
+          "prompt": "用法辨析：哪一项既表示“养成习惯”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "good study habits",
             "develop a habit",
@@ -1894,7 +1912,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2296,14 +2314,14 @@
           "ai": false
         },
         {
-          "id": "goal-n-structure-choice",
+          "id": "goal-n-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “goal” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“设定目标”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "achieve a goal",
+            "work toward a goal",
             "set a goal",
-            "sound natural",
-            "quite often"
+            "achieve a goal",
+            "long-term goal"
           ],
           "answer": "set a goal",
           "stage": "T1",
@@ -2376,31 +2394,37 @@
           "ai": false
         },
         {
-          "id": "goal-n-collocation-structure-meaning-v2",
+          "id": "goal-n-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“设定目标”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“实现目标”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "achieve a goal",
+            "set a goal",
             "long-term goal",
             "work toward a goal",
-            "set a goal"
+            "achieve a goal"
           ],
-          "answer": "set a goal",
+          "answer": "achieve a goal",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "goal-n-collocation-example-context-v2",
+          "id": "goal-n-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：Set a small goal for this _____.（中文：为本周设定一个小目标。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Set a small goal for this _____.（中文：为本周设定一个小目标。）",
+          "options": [
+            "appears",
+            "explaining",
+            "week",
+            "conversation"
+          ],
           "answer": "week",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "goal-n-collocation-fixed-1",
+          "id": "goal-n-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“设定目标”？",
+          "prompt": "用法辨析：哪一项既表示“设定目标”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "work toward a goal",
             "set a goal",
@@ -2412,9 +2436,9 @@
           "ai": false
         },
         {
-          "id": "goal-n-collocation-fixed-2",
+          "id": "goal-n-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“实现目标”？",
+          "prompt": "搭配辨析：哪一项既表示“实现目标”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "achieve a goal",
             "set a goal",
@@ -2511,7 +2535,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2934,14 +2958,14 @@
           "ai": false
         },
         {
-          "id": "balance-n-structure-choice",
+          "id": "balance-n-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “balance” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“找到平衡”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "find a balance",
-            "make something clear",
-            "work together",
-            "keep your balance"
+            "keep your balance",
+            "work-life balance",
+            "balance A with B"
           ],
           "answer": "find a balance",
           "stage": "T1",
@@ -3014,31 +3038,37 @@
           "ai": false
         },
         {
-          "id": "balance-n-collocation-structure-meaning-v2",
+          "id": "balance-n-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“找到平衡”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“保持平衡”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "work-life balance",
             "balance A with B",
-            "find a balance",
-            "keep your balance"
+            "keep your balance",
+            "find a balance"
           ],
-          "answer": "find a balance",
+          "answer": "keep your balance",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "balance-n-collocation-example-context-v2",
+          "id": "balance-n-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：Try to find a balance _____ study and rest.（中文：试着在学习和休息之间找到平衡。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Try to find a balance _____ study and rest.（中文：试着在学习和休息之间找到平衡。）",
+          "options": [
+            "meets",
+            "between",
+            "point",
+            "used"
+          ],
           "answer": "between",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "balance-n-collocation-fixed-1",
+          "id": "balance-n-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“找到平衡”？",
+          "prompt": "搭配辨析：哪一项既表示“找到平衡”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "find a balance",
             "keep your balance",
@@ -3050,9 +3080,9 @@
           "ai": false
         },
         {
-          "id": "balance-n-collocation-fixed-2",
+          "id": "balance-n-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“保持平衡”？",
+          "prompt": "用法辨析：哪一项既表示“保持平衡”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "find a balance",
             "work-life balance",
@@ -3149,7 +3179,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

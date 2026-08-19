@@ -412,14 +412,14 @@
       "ai": false
     },
     {
-      "id": "family-n-structure-choice",
+      "id": "family-n-structure-choice-v3",
       "type": "meaning_choice",
-      "prompt": "哪一个是词卡要求优先记住的 “family” 核心结构？",
+      "prompt": "核心结构辨析：哪一项既表示“家庭成员”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "close family",
+        "start a family",
         "family member",
-        "deal with a situation",
-        "expect someone to do something"
+        "close family",
+        "family life"
       ],
       "answer": "family member",
       "stage": "T1",
@@ -492,31 +492,37 @@
       "ai": false
     },
     {
-      "id": "family-n-collocation-structure-meaning-v2",
+      "id": "family-n-collocation-structure-meaning-v3",
       "type": "collocation",
-      "prompt": "结构应用：想表达“家庭成员”，应选择哪个完整结构？",
+      "prompt": "句型应用：哪一项既表示“近亲”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "close family",
+        "family member",
         "family life",
         "start a family",
-        "family member"
+        "close family"
       ],
-      "answer": "family member",
+      "answer": "close family",
       "stage": "T1",
       "ai": false
     },
     {
-      "id": "family-n-collocation-example-context-v2",
+      "id": "family-n-collocation-example-context-v3",
       "type": "collocation",
-      "prompt": "根据完整句意和中文提示补全英文：My family _____ my learning plan.（中文：我的家人支持我的学习计划。）",
+      "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：My family _____ my learning plan.（中文：我的家人支持我的学习计划。）",
+      "options": [
+        "results",
+        "account",
+        "supports",
+        "depends"
+      ],
       "answer": "supports",
       "stage": "T2",
       "ai": false
     },
     {
-      "id": "family-n-collocation-fixed-1",
+      "id": "family-n-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“家庭成员”？",
+      "prompt": "用法辨析：哪一项既表示“家庭成员”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "start a family",
         "family member",
@@ -528,9 +534,9 @@
       "ai": false
     },
     {
-      "id": "family-n-collocation-fixed-2",
+      "id": "family-n-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“近亲”？",
+      "prompt": "搭配辨析：哪一项既表示“近亲”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "close family",
         "family member",
@@ -627,7 +633,7 @@
     ]
   },
   "detailLevel": "template-complete",
-  "contentVersion": "2026.08.19.2",
+  "contentVersion": "2026.08.19.3",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
 }

@@ -3,7 +3,7 @@ import { cardsForStudyDay, loadContent } from '../data/content';
 import { calculateMasteryProfile, dimensionsFromEvaluation } from '../learning/mastery';
 import { applyLateEvaluation, applyReviewScore, isPendingReview, studyDaySince, toLocalDateKey } from '../learning/reviewEngine';
 import { evaluationSchema } from '../schemas/evaluation';
-import { finalizeEvaluationResult, normalizeEvaluationResultForHistory } from '../schemas/evaluationConstraints';
+import { finalizeEvaluationResult, normalizeEvaluationResultForHistory, sanitizeEvaluationResult } from '../schemas/evaluationConstraints';
 import { notifyLocalDataChanged, notifyReviewProgressChanged } from './useCloudSync';
 import { db, getSettings, touchStudyStreak } from '../storage/db';
 import type {
@@ -73,7 +73,7 @@ export function useAppData() {
           targetWord: cardWords.get(evaluation.cardId)
         });
         const result = evaluation.questionType === 'weekly_writing' || evaluation.questionType === 'weekly_speaking'
-          ? normalizedText
+          ? sanitizeEvaluationResult(normalizedText)
           : finalizeEvaluationResult(normalizedText, {
             questionType: evaluation.questionType,
             prompt: evaluation.prompt ?? '',

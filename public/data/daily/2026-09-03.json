@@ -1,7 +1,7 @@
 {
   "date": "2026-09-03",
   "dayNumber": 18,
-  "contentVersion": "2026.08.19.2",
+  "contentVersion": "2026.08.19.3",
   "cards": [
     {
       "id": "aware-adj",
@@ -416,14 +416,14 @@
           "ai": false
         },
         {
-          "id": "aware-adj-structure-choice",
+          "id": "aware-adj-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “aware” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“意识到……”，又符合这个形式线索：完整搭配中使用介词 of？",
           "options": [
-            "become aware that",
+            "make someone aware of",
             "be aware of",
-            "especially useful",
-            "travel abroad"
+            "become aware that",
+            "fully aware"
           ],
           "answer": "be aware of",
           "stage": "T1",
@@ -496,31 +496,37 @@
           "ai": false
         },
         {
-          "id": "aware-adj-collocation-structure-meaning-v2",
+          "id": "aware-adj-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“意识到……”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“开始意识到……”，又符合这个形式线索：使用 that 引导一个主谓完整的从句？",
           "options": [
-            "become aware that",
+            "be aware of",
             "fully aware",
             "make someone aware of",
-            "be aware of"
+            "become aware that"
           ],
-          "answer": "be aware of",
+          "answer": "become aware that",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "aware-adj-collocation-example-context-v2",
+          "id": "aware-adj-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：Be aware of the _____ in tone.（中文：注意语气上的差异。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Be aware of the _____ in tone.（中文：注意语气上的差异。）",
+          "options": [
+            "abroad",
+            "decision",
+            "difference",
+            "useful"
+          ],
           "answer": "difference",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "aware-adj-collocation-fixed-1",
+          "id": "aware-adj-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“意识到……”？",
+          "prompt": "用法辨析：哪一项既表示“意识到……”，又符合这个形式线索：完整搭配中使用介词 of？",
           "options": [
             "make someone aware of",
             "be aware of",
@@ -532,9 +538,9 @@
           "ai": false
         },
         {
-          "id": "aware-adj-collocation-fixed-2",
+          "id": "aware-adj-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“开始意识到……”？",
+          "prompt": "搭配辨析：哪一项既表示“开始意识到……”，又符合这个形式线索：使用 that 引导一个主谓完整的从句？",
           "options": [
             "become aware that",
             "be aware of",
@@ -631,7 +637,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1048,14 +1054,14 @@
           "ai": false
         },
         {
-          "id": "familiar-adj-structure-choice",
+          "id": "familiar-adj-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “familiar” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“熟悉……”，又符合这个形式线索：完整搭配中使用介词 with？",
           "options": [
             "be familiar with",
-            "have recently done",
-            "family member",
-            "look familiar"
+            "look familiar",
+            "sound familiar",
+            "familiar to someone"
           ],
           "answer": "be familiar with",
           "stage": "T1",
@@ -1128,31 +1134,37 @@
           "ai": false
         },
         {
-          "id": "familiar-adj-collocation-structure-meaning-v2",
+          "id": "familiar-adj-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“熟悉……”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“看起来眼熟”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "sound familiar",
             "familiar to someone",
-            "be familiar with",
-            "look familiar"
+            "look familiar",
+            "be familiar with"
           ],
-          "answer": "be familiar with",
+          "answer": "look familiar",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "familiar-adj-collocation-example-context-v2",
+          "id": "familiar-adj-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：Are you familiar with this _____?（中文：你熟悉这个表达吗？）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Are you familiar with this _____?（中文：你熟悉这个表达吗？）",
+          "options": [
+            "rain",
+            "expression",
+            "started",
+            "supports"
+          ],
           "answer": "expression",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "familiar-adj-collocation-fixed-1",
+          "id": "familiar-adj-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“熟悉……”？",
+          "prompt": "搭配辨析：哪一项既表示“熟悉……”，又符合这个形式线索：完整搭配中使用介词 with？",
           "options": [
             "be familiar with",
             "look familiar",
@@ -1164,9 +1176,9 @@
           "ai": false
         },
         {
-          "id": "familiar-adj-collocation-fixed-2",
+          "id": "familiar-adj-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“看起来眼熟”？",
+          "prompt": "用法辨析：哪一项既表示“看起来眼熟”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "be familiar with",
             "sound familiar",
@@ -1263,7 +1275,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1680,13 +1692,13 @@
           "ai": false
         },
         {
-          "id": "comfortable-adj-structure-choice",
+          "id": "comfortable-adj-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “comfortable” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“做某事感到自在”，又符合这个形式线索：目标词后的 doing 表示要换成符合语境的动词 -ing 形式？",
           "options": [
-            "nearly finished",
-            "save money",
             "comfortable with",
+            "make yourself comfortable",
+            "a comfortable chair",
             "feel comfortable doing"
           ],
           "answer": "feel comfortable doing",
@@ -1760,31 +1772,37 @@
           "ai": false
         },
         {
-          "id": "comfortable-adj-collocation-structure-meaning-v2",
+          "id": "comfortable-adj-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“做某事感到自在”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“对……感到自在”，又符合这个形式线索：完整搭配中使用介词 with？",
           "options": [
             "a comfortable chair",
-            "feel comfortable doing",
             "comfortable with",
+            "feel comfortable doing",
             "make yourself comfortable"
           ],
-          "answer": "feel comfortable doing",
+          "answer": "comfortable with",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "comfortable-adj-collocation-example-context-v2",
+          "id": "comfortable-adj-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：I feel comfortable _____ her for help.（中文：我很自在地向她求助。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：I feel comfortable _____ her for help.（中文：我很自在地向她求助。）",
+          "options": [
+            "asking",
+            "finished",
+            "time",
+            "finish"
+          ],
           "answer": "asking",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "comfortable-adj-collocation-fixed-1",
+          "id": "comfortable-adj-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“做某事感到自在”？（提示：doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing。）",
+          "prompt": "用法辨析：哪一项既表示“做某事感到自在”，又符合这个形式线索：目标词后的 doing 表示要换成符合语境的动词 -ing 形式？",
           "options": [
             "comfortable with",
             "make yourself comfortable",
@@ -1796,9 +1814,9 @@
           "ai": false
         },
         {
-          "id": "comfortable-adj-collocation-fixed-2",
+          "id": "comfortable-adj-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“对……感到自在”？",
+          "prompt": "搭配辨析：哪一项既表示“对……感到自在”，又符合这个形式线索：完整搭配中使用介词 with？",
           "options": [
             "make yourself comfortable",
             "a comfortable chair",
@@ -1895,7 +1913,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2312,14 +2330,14 @@
           "ai": false
         },
         {
-          "id": "effective-adj-structure-choice",
+          "id": "effective-adj-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “effective” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“有效方法”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "run a business",
-            "highly effective",
+            "effective in doing",
+            "effective against",
             "an effective way",
-            "instead of"
+            "highly effective"
           ],
           "answer": "an effective way",
           "stage": "T1",
@@ -2392,31 +2410,37 @@
           "ai": false
         },
         {
-          "id": "effective-adj-collocation-structure-meaning-v2",
+          "id": "effective-adj-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“有效方法”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“非常有效”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "an effective way",
             "highly effective",
+            "an effective way",
             "effective in doing",
             "effective against"
           ],
-          "answer": "an effective way",
+          "answer": "highly effective",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "effective-adj-collocation-example-context-v2",
+          "id": "effective-adj-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：Active recall is an effective _____ to learn.（中文：主动回忆是一种有效的学习方法。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Active recall is an effective _____ to learn.（中文：主动回忆是一种有效的学习方法。）",
+          "options": [
+            "translation",
+            "online",
+            "students",
+            "way"
+          ],
           "answer": "way",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "effective-adj-collocation-fixed-1",
+          "id": "effective-adj-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“有效方法”？",
+          "prompt": "搭配辨析：哪一项既表示“有效方法”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "effective in doing",
             "effective against",
@@ -2428,9 +2452,9 @@
           "ai": false
         },
         {
-          "id": "effective-adj-collocation-fixed-2",
+          "id": "effective-adj-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“非常有效”？",
+          "prompt": "用法辨析：哪一项既表示“非常有效”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "effective against",
             "highly effective",
@@ -2527,7 +2551,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2944,14 +2968,14 @@
           "ai": false
         },
         {
-          "id": "serious-adj-structure-choice",
+          "id": "serious-adj-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “serious” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“严重问题”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "take something seriously",
+            "serious injury",
             "a serious problem",
-            "however difficult",
-            "close friend"
+            "take something seriously",
+            "serious about doing"
           ],
           "answer": "a serious problem",
           "stage": "T1",
@@ -3024,31 +3048,37 @@
           "ai": false
         },
         {
-          "id": "serious-adj-collocation-structure-meaning-v2",
+          "id": "serious-adj-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“严重问题”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“认真对待某事”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
           "options": [
-            "take something seriously",
+            "a serious problem",
             "serious about doing",
             "serious injury",
-            "a serious problem"
+            "take something seriously"
           ],
-          "answer": "a serious problem",
+          "answer": "take something seriously",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "serious-adj-collocation-example-context-v2",
+          "id": "serious-adj-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：Lack of sleep can become a serious _____.（中文：睡眠不足可能变成一个严重问题。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Lack of sleep can become a serious _____.（中文：睡眠不足可能变成一个严重问题。）",
+          "options": [
+            "dialogue",
+            "why",
+            "problem",
+            "requires"
+          ],
           "answer": "problem",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "serious-adj-collocation-fixed-1",
+          "id": "serious-adj-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“严重问题”？",
+          "prompt": "用法辨析：哪一项既表示“严重问题”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "serious injury",
             "a serious problem",
@@ -3060,9 +3090,9 @@
           "ai": false
         },
         {
-          "id": "serious-adj-collocation-fixed-2",
+          "id": "serious-adj-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“认真对待某事”？（提示：something 要替换成实际的事物或内容。）",
+          "prompt": "搭配辨析：哪一项既表示“认真对待某事”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
           "options": [
             "take something seriously",
             "a serious problem",
@@ -3159,7 +3189,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }

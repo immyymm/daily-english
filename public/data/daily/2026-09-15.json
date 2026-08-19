@@ -1,7 +1,7 @@
 {
   "date": "2026-09-15",
   "dayNumber": 30,
-  "contentVersion": "2026.08.19.2",
+  "contentVersion": "2026.08.19.3",
   "cards": [
     {
       "id": "moment-n",
@@ -409,14 +409,14 @@
           "ai": false
         },
         {
-          "id": "moment-n-structure-choice",
+          "id": "moment-n-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “moment” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“目前；此刻”，又符合这个形式线索：完整搭配中使用介词 at？",
           "options": [
-            "for a moment",
+            "wait a moment",
             "at the moment",
-            "continue to improve",
-            "remain calm"
+            "for a moment",
+            "the right moment"
           ],
           "answer": "at the moment",
           "stage": "T1",
@@ -489,31 +489,37 @@
           "ai": false
         },
         {
-          "id": "moment-n-collocation-structure-meaning-v2",
+          "id": "moment-n-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“目前；此刻”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“一会儿”，又符合这个形式线索：完整搭配中使用介词 for？",
           "options": [
-            "for a moment",
+            "at the moment",
             "the right moment",
             "wait a moment",
-            "at the moment"
+            "for a moment"
           ],
-          "answer": "at the moment",
+          "answer": "for a moment",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "moment-n-collocation-example-context-v2",
+          "id": "moment-n-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：I am _____ at the moment.（中文：我现在很忙。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：I am _____ at the moment.（中文：我现在很忙。）",
+          "options": [
+            "calm",
+            "excellent",
+            "busy",
+            "reading"
+          ],
           "answer": "busy",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "moment-n-collocation-fixed-1",
+          "id": "moment-n-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“目前；此刻”？",
+          "prompt": "用法辨析：哪一项既表示“目前；此刻”，又符合这个形式线索：完整搭配中使用介词 at？",
           "options": [
             "wait a moment",
             "at the moment",
@@ -525,9 +531,9 @@
           "ai": false
         },
         {
-          "id": "moment-n-collocation-fixed-2",
+          "id": "moment-n-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“一会儿”？",
+          "prompt": "搭配辨析：哪一项既表示“一会儿”，又符合这个形式线索：完整搭配中使用介词 for？",
           "options": [
             "for a moment",
             "at the moment",
@@ -624,7 +630,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1034,14 +1040,14 @@
           "ai": false
         },
         {
-          "id": "situation-n-structure-choice",
+          "id": "situation-n-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “situation” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“应对情况”，又符合这个形式线索：完整搭配中使用介词 with？",
           "options": [
             "deal with a situation",
-            "spend time doing something",
-            "handle a problem",
-            "difficult situation"
+            "difficult situation",
+            "current situation",
+            "in this situation"
           ],
           "answer": "deal with a situation",
           "stage": "T1",
@@ -1114,31 +1120,37 @@
           "ai": false
         },
         {
-          "id": "situation-n-collocation-structure-meaning-v2",
+          "id": "situation-n-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“应对情况”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“困难局面”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "current situation",
             "in this situation",
-            "deal with a situation",
-            "difficult situation"
+            "difficult situation",
+            "deal with a situation"
           ],
-          "answer": "deal with a situation",
+          "answer": "difficult situation",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "situation-n-collocation-example-context-v2",
+          "id": "situation-n-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：The right response _____ on the situation.（中文：正确的回应取决于具体情况。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：The right response _____ on the situation.（中文：正确的回应取决于具体情况。）",
+          "options": [
+            "helps",
+            "depends",
+            "twenty",
+            "difficult"
+          ],
           "answer": "depends",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "situation-n-collocation-fixed-1",
+          "id": "situation-n-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“应对情况”？",
+          "prompt": "搭配辨析：哪一项既表示“应对情况”，又符合这个形式线索：完整搭配中使用介词 with？",
           "options": [
             "deal with a situation",
             "difficult situation",
@@ -1150,9 +1162,9 @@
           "ai": false
         },
         {
-          "id": "situation-n-collocation-fixed-2",
+          "id": "situation-n-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“困难局面”？",
+          "prompt": "用法辨析：哪一项既表示“困难局面”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "deal with a situation",
             "current situation",
@@ -1249,7 +1261,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -1667,13 +1679,13 @@
           "ai": false
         },
         {
-          "id": "language-n-structure-choice",
+          "id": "language-n-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “language” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“语言学习”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "make a change",
-            "affect your health",
             "foreign language",
+            "body language",
+            "spoken language",
             "language learning"
           ],
           "answer": "language learning",
@@ -1747,31 +1759,37 @@
           "ai": false
         },
         {
-          "id": "language-n-collocation-structure-meaning-v2",
+          "id": "language-n-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“语言学习”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“外语”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "spoken language",
-            "language learning",
             "foreign language",
+            "language learning",
             "body language"
           ],
-          "answer": "language learning",
+          "answer": "foreign language",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "language-n-collocation-example-context-v2",
+          "id": "language-n-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：Language _____ takes time and practice.（中文：语言学习需要时间和练习。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Language _____ takes time and practice.（中文：语言学习需要时间和练习。）",
+          "options": [
+            "learning",
+            "whole",
+            "memory",
+            "current"
+          ],
           "answer": "learning",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "language-n-collocation-fixed-1",
+          "id": "language-n-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“语言学习”？",
+          "prompt": "用法辨析：哪一项既表示“语言学习”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "foreign language",
             "body language",
@@ -1783,9 +1801,9 @@
           "ai": false
         },
         {
-          "id": "language-n-collocation-fixed-2",
+          "id": "language-n-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“外语”？",
+          "prompt": "搭配辨析：哪一项既表示“外语”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "body language",
             "spoken language",
@@ -1882,7 +1900,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2299,14 +2317,14 @@
           "ai": false
         },
         {
-          "id": "skill-n-structure-choice",
+          "id": "skill-n-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “skill” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“培养技能”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "realize that",
-            "communication skills",
+            "practical skills",
+            "skill in doing",
             "develop a skill",
-            "follow the instructions"
+            "communication skills"
           ],
           "answer": "develop a skill",
           "stage": "T1",
@@ -2379,31 +2397,37 @@
           "ai": false
         },
         {
-          "id": "skill-n-collocation-structure-meaning-v2",
+          "id": "skill-n-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“培养技能”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“沟通技能”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "develop a skill",
             "communication skills",
+            "develop a skill",
             "practical skills",
             "skill in doing"
           ],
-          "answer": "develop a skill",
+          "answer": "communication skills",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "skill-n-collocation-example-context-v2",
+          "id": "skill-n-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：Conversation is a skill you can _____.（中文：对话是一项可以练习的技能。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Conversation is a skill you can _____.（中文：对话是一项可以练习的技能。）",
+          "options": [
+            "steps",
+            "used",
+            "honest",
+            "practice"
+          ],
           "answer": "practice",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "skill-n-collocation-fixed-1",
+          "id": "skill-n-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“培养技能”？",
+          "prompt": "搭配辨析：哪一项既表示“培养技能”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "practical skills",
             "skill in doing",
@@ -2415,9 +2439,9 @@
           "ai": false
         },
         {
-          "id": "skill-n-collocation-fixed-2",
+          "id": "skill-n-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“沟通技能”？",
+          "prompt": "用法辨析：哪一项既表示“沟通技能”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "skill in doing",
             "communication skills",
@@ -2514,7 +2538,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     },
@@ -2945,14 +2969,14 @@
           "ai": false
         },
         {
-          "id": "benefit-n-structure-choice",
+          "id": "benefit-n-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "哪一个是词卡要求优先记住的 “benefit” 核心结构？",
+          "prompt": "核心结构辨析：哪一项既表示“从……中受益”，又符合这个形式线索：完整搭配中使用介词 from？",
           "options": [
-            "benefit someone",
+            "health benefits",
             "benefit from",
-            "happen to someone",
-            "describe something as"
+            "benefit someone",
+            "main benefit"
           ],
           "answer": "benefit from",
           "stage": "T1",
@@ -3025,31 +3049,37 @@
           "ai": false
         },
         {
-          "id": "benefit-n-collocation-structure-meaning-v2",
+          "id": "benefit-n-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "结构应用：想表达“从……中受益”，应选择哪个完整结构？",
+          "prompt": "句型应用：哪一项既表示“主要好处”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "benefit from",
             "benefit someone",
-            "main benefit",
             "health benefits",
-            "benefit from"
+            "main benefit"
           ],
-          "answer": "benefit from",
+          "answer": "main benefit",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "benefit-n-collocation-example-context-v2",
+          "id": "benefit-n-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示补全英文：You will benefit from _____ review.（中文：你会从定期复习中受益。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：You will benefit from _____ review.（中文：你会从定期复习中受益。）",
+          "options": [
+            "ideal",
+            "positive",
+            "regular",
+            "during"
+          ],
           "answer": "regular",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "benefit-n-collocation-fixed-1",
+          "id": "benefit-n-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（二）：哪一个结构或搭配表示“从……中受益”？",
+          "prompt": "用法辨析：哪一项既表示“从……中受益”，又符合这个形式线索：完整搭配中使用介词 from？",
           "options": [
             "health benefits",
             "benefit from",
@@ -3061,9 +3091,9 @@
           "ai": false
         },
         {
-          "id": "benefit-n-collocation-fixed-2",
+          "id": "benefit-n-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "词卡结构辨义（一）：哪一个结构或搭配表示“使某人受益”？（提示：someone 要替换成实际的人或代词。）",
+          "prompt": "搭配辨析：哪一项既表示“使某人受益”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "benefit someone",
             "benefit from",
@@ -3160,7 +3190,7 @@
         ]
       },
       "detailLevel": "template-complete",
-      "contentVersion": "2026.08.19.2",
+      "contentVersion": "2026.08.19.3",
       "reviewed": true,
       "sourceNote": "从用户提供的 COCA 词表筛选；依照完整十章节模板离线整理；词频来自用户词表，关系词与词组音标来自 CMU 北美英语发音词典。"
     }
