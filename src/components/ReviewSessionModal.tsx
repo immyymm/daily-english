@@ -143,7 +143,9 @@ export function ReviewSessionModal({
       ? { [dimensionForQuestionType(question.type)!]: score }
       : undefined,
     sessionId,
-    scheduleImpact: !ai
+    // Individual questions are diagnostic inputs. The aggregate word result
+    // advances the schedule once, after the complete review round finishes.
+    scheduleImpact: false
   });
 
   const submitObjective = () => {

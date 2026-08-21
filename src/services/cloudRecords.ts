@@ -193,7 +193,7 @@ export async function syncDetailedRecords(
       dimension_scores: normalizedDimensionScores(raw.dimensionScores),
       ai,
       session_id: textValue(raw.sessionId).trim() || null,
-      schedule_impact: typeof raw.scheduleImpact === 'boolean' ? raw.scheduleImpact : !ai,
+      schedule_impact: typeof raw.scheduleImpact === 'boolean' ? raw.scheduleImpact : false,
       created_at: isoTimestamp(raw.createdAt, fallbackTimestamp),
       device_id: deviceId ?? null
     };

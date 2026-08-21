@@ -90,17 +90,16 @@ export function applyReviewScore(progress: CardProgress, score: number, now = ne
 
 export function applyLateEvaluation(progress: CardProgress, score: number, now = new Date()): CardProgress {
   const needsReinforcement = score < 75 || (progress.weakDimensions?.length ?? 0) > 0;
-  const acceleratedDue = new Date(now);
-  acceleratedDue.setDate(acceleratedDue.getDate() + 1);
-  acceleratedDue.setHours(8, 0, 0, 0);
-  const currentDue = new Date(progress.nextReviewAt);
   return {
     ...progress,
     lastScore: score,
     lastAnalyzedAt: now.toISOString(),
     weak: progress.weak || needsReinforcement,
     status: needsReinforcement ? '薄弱词' : progress.status,
-    nextReviewAt: needsReinforcement && acceleratedDue < currentDue ? acceleratedDue.toISOString() : progress.nextReviewAt,
+    // A delayed AI result is diagnostic only. It may increase practice depth,
+    // but it must never rewrite the forgetting-curve checkpoint established
+    // when the complete review round was submitted.
+    nextReviewAt: progress.nextReviewAt,
     targetQuestionCount: needsReinforcement ? 12 : Math.max(progress.targetQuestionCount ?? 0, 8)
   };
 }

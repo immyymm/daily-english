@@ -76,4 +76,35 @@ describe('sanitizeSnapshotReviewState', () => {
     expect(sanitized.reviewSessions?.[0].status).toBe('completed');
     expect(sanitized.reviewSessions?.[0].queueCardIds).toEqual([]);
   });
+
+  it('removes not-yet-due words from a stale active queue', () => {
+    const snapshot: AppSnapshot = {
+      settings: {
+        id: 'settings', firstUseDate: '2026-08-17', streak: 1,
+        aiConsent: false, reduceMotion: false, dailyAiLimit: 20
+      },
+      progress: [{
+        cardId: 'improve-v', learnedAt: '2026-08-17T01:00:00.000Z',
+        lastReviewedAt: '2026-08-19T12:00:00+08:00', stage: 'T3',
+        nextReviewAt: '2026-08-26T08:00:00+08:00', status: '基本掌握',
+        correctStreak: 3, wrongCount: 0, unstableCount: 0, weak: true,
+        passedT7: false, passedT30: false, passedT60: false
+      }],
+      attempts: [],
+      aiEvaluations: [],
+      dailyPlans: [],
+      dailyRecommendations: [{ ...recommendation, date: '2026-08-21' }],
+      reviewSessions: [{ ...session, date: '2026-08-21' }],
+      exportedAt: '2026-08-21T12:00:00.000Z',
+      schemaVersion: 3
+    };
+
+    const sanitized = sanitizeSnapshotReviewState(
+      snapshot,
+      '2026-08-21',
+      new Date('2026-08-21T20:00:00+08:00')
+    );
+    expect(sanitized.reviewSessions?.[0].status).toBe('completed');
+    expect(sanitized.reviewSessions?.[0].queueCardIds).toEqual([]);
+  });
 });

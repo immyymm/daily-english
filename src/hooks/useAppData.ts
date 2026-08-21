@@ -1,7 +1,8 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { cardsForStudyDay, loadContent } from '../data/content';
+import { loadContent } from '../data/content';
+import { resolveDailyLearningPlan } from '../learning/dailyPlan';
 import { calculateMasteryProfile, dimensionsFromEvaluation } from '../learning/mastery';
-import { applyLateEvaluation, applyReviewScore, isPendingReview, studyDaySince, toLocalDateKey } from '../learning/reviewEngine';
+import { applyLateEvaluation, applyReviewScore, isPendingReview, toLocalDateKey } from '../learning/reviewEngine';
 import { evaluationSchema } from '../schemas/evaluation';
 import { finalizeEvaluationResult, normalizeEvaluationResultForHistory, sanitizeEvaluationResult } from '../schemas/evaluationConstraints';
 import { notifyLocalDataChanged, notifyReviewProgressChanged } from './useCloudSync';
@@ -59,10 +60,7 @@ export function useAppData() {
       const today = toLocalDateKey();
       await sanitizeStoredReviewState(progress, today);
       const sanitizedDailyRecommendations = await db.dailyRecommendations.orderBy('generatedAt').reverse().toArray();
-      const studyDay = studyDaySince(settings.firstUseDate);
-      const dailyCards = cardsForStudyDay(content.cards, studyDay);
       const currentRecommendation = sanitizedDailyRecommendations.find((item) => item.date === today);
-      const knownCardIds = new Set(content.cards.map((card) => card.id));
       const cardWords = new Map(content.cards.map((card) => [card.id, card.word]));
       const normalizedEvaluations = aiEvaluations.map((evaluation) => {
         if (!evaluation.result) return evaluation;
@@ -89,29 +87,16 @@ export function useAppData() {
         await db.aiEvaluations.bulkPut(repairedEvaluations);
         notifyLocalDataChanged();
       }
-      const databaseCardIds = (currentRecommendation?.newCardIds ?? []).filter((id) => knownCardIds.has(id));
-      const selectedCardIds = databaseCardIds.length === 5
-        ? databaseCardIds
-        : dailyCards.map((card) => card.id);
       let todayPlan = await db.dailyPlans.get(today);
-      if (!todayPlan) {
-        todayPlan = {
-          date: today,
-          studyDay: currentRecommendation?.studyDay ?? studyDay,
-          cycle: Math.floor(((currentRecommendation?.studyDay ?? studyDay) - 1) / 30) + 1,
-          cardIds: selectedCardIds,
-          completedCardIds: [],
-          contentVersion: content.contentVersion
-        };
-        await db.dailyPlans.put(todayPlan);
-      } else if (databaseCardIds.length === 5 && databaseCardIds.join('|') !== todayPlan.cardIds.join('|')) {
-        todayPlan = {
-          ...todayPlan,
-          studyDay: currentRecommendation?.studyDay ?? todayPlan.studyDay,
-          cycle: Math.floor(((currentRecommendation?.studyDay ?? todayPlan.studyDay) - 1) / 30) + 1,
-          cardIds: databaseCardIds,
-          completedCardIds: todayPlan.completedCardIds.filter((id) => databaseCardIds.includes(id))
-        };
+      const resolvedPlan = resolveDailyLearningPlan({
+        cards: content.cards,
+        progress,
+        existingPlan: todayPlan,
+        date: today,
+        contentVersion: content.contentVersion
+      });
+      if (!todayPlan || JSON.stringify(todayPlan) !== JSON.stringify(resolvedPlan)) {
+        todayPlan = resolvedPlan;
         await db.dailyPlans.put(todayPlan);
       }
       setState({ loading: false, cards: content.cards, settings, todayPlan, progress, attempts, aiEvaluations: normalizedEvaluations, dailyRecommendations: sanitizedDailyRecommendations });

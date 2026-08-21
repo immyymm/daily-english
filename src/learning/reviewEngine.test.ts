@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { applyReviewScore, isPendingReview, nextDueDate, normalizeAnswer, objectiveScore, studyDaySince, toLocalDateKey } from './reviewEngine';
+import { applyLateEvaluation, applyReviewScore, isPendingReview, nextDueDate, normalizeAnswer, objectiveScore, studyDaySince, toLocalDateKey } from './reviewEngine';
 import type { CardProgress } from '../types';
 
 const progress: CardProgress = {
@@ -43,6 +43,18 @@ describe('review schedule', () => {
     const due = new Date(next.nextReviewAt);
     expect(toLocalDateKey(due)).toBe('2026-08-22');
     expect(due.getHours()).toBe(8);
+  });
+
+  it('does not let delayed AI diagnostics pull a curve checkpoint forward', () => {
+    const nextReviewAt = '2026-08-26T00:00:00.000Z';
+    const next = applyLateEvaluation(
+      { ...progress, stage: 'T3', nextReviewAt, weakDimensions: ['grammar'] },
+      50,
+      new Date('2026-08-21T12:00:00+08:00')
+    );
+    expect(next.nextReviewAt).toBe(nextReviewAt);
+    expect(next.weak).toBe(true);
+    expect(next.targetQuestionCount).toBe(12);
   });
 
   it('does not shorten the next checkpoint after a weak word passes its higher threshold', () => {

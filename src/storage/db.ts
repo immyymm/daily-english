@@ -48,6 +48,12 @@ function reviewedCardIdsForDate(progress: CardProgress[], date: string) {
     .map((item) => item.cardId));
 }
 
+function dueCardIds(progress: CardProgress[], now: Date) {
+  return new Set(progress
+    .filter((item) => new Date(item.nextReviewAt).getTime() <= now.getTime())
+    .map((item) => item.cardId));
+}
+
 function sanitizeRecommendation(
   recommendation: DailyRecommendation,
   reviewedCardIds: Set<string>
@@ -71,10 +77,15 @@ function sanitizeRecommendation(
 function sanitizeReviewSession(
   session: ReviewSessionProgress,
   reviewedCardIds: Set<string>,
+  currentlyDueCardIds: Set<string>,
+  date: string,
   updatedAt: string
 ): ReviewSessionProgress {
   if (session.status !== 'active') return session;
-  const queueCardIds = session.queueCardIds.filter((cardId) => !reviewedCardIds.has(cardId));
+  const queueCardIds = session.queueCardIds.filter((cardId) => (
+    !reviewedCardIds.has(cardId)
+      && (session.date !== date || currentlyDueCardIds.has(cardId))
+  ));
   if (queueCardIds.length === session.queueCardIds.length) return session;
   if (!queueCardIds.length) {
     return {
@@ -108,33 +119,36 @@ function sanitizeReviewSession(
   };
 }
 
-export function sanitizeSnapshotReviewState(snapshot: AppSnapshot, date = toLocalDateKey()): AppSnapshot {
+export function sanitizeSnapshotReviewState(snapshot: AppSnapshot, date = toLocalDateKey(), now = new Date()): AppSnapshot {
   const reviewedCardIds = reviewedCardIdsForDate(snapshot.progress, date);
-  if (!reviewedCardIds.size) return snapshot;
-  const updatedAt = new Date().toISOString();
+  const currentlyDueCardIds = dueCardIds(snapshot.progress, now);
+  const updatedAt = now.toISOString();
   return {
     ...snapshot,
     dailyRecommendations: snapshot.dailyRecommendations.map((item) => (
       item.date === date ? sanitizeRecommendation(item, reviewedCardIds) : item
     )),
     reviewSessions: snapshot.reviewSessions?.map((item) => (
-      item.date === date ? sanitizeReviewSession(item, reviewedCardIds, updatedAt) : item
+      item.date === date ? sanitizeReviewSession(item, reviewedCardIds, currentlyDueCardIds, date, updatedAt) : item
     ))
   };
 }
 
 export async function sanitizeStoredReviewState(progress: CardProgress[], date = toLocalDateKey()) {
   const reviewedCardIds = reviewedCardIdsForDate(progress, date);
-  if (!reviewedCardIds.size) return;
+  const now = new Date();
+  const currentlyDueCardIds = dueCardIds(progress, now);
   const [recommendation, sessions] = await Promise.all([
     db.dailyRecommendations.get(date),
     db.reviewSessions.where('date').equals(date).toArray()
   ]);
-  const updatedAt = new Date().toISOString();
+  const updatedAt = now.toISOString();
   const sanitizedRecommendation = recommendation
     ? sanitizeRecommendation(recommendation, reviewedCardIds)
     : undefined;
-  const sanitizedSessions = sessions.map((session) => sanitizeReviewSession(session, reviewedCardIds, updatedAt));
+  const sanitizedSessions = sessions.map((session) => (
+    sanitizeReviewSession(session, reviewedCardIds, currentlyDueCardIds, date, updatedAt)
+  ));
   const recommendationChanged = recommendation && JSON.stringify(recommendation) !== JSON.stringify(sanitizedRecommendation);
   const changedSessions = sanitizedSessions.filter((session, index) => JSON.stringify(session) !== JSON.stringify(sessions[index]));
   if (!recommendationChanged && !changedSessions.length) return;
