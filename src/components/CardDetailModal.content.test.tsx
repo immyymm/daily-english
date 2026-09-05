@@ -18,7 +18,8 @@ describe('CardDetailModal template content', () => {
     );
 
     const dialog = screen.getByRole('dialog', { name: '完整单词词卡' });
-    expect(within(dialog).getByText('人工精校详卡')).toBeInTheDocument();
+    expect(within(dialog).getByText('释义')).toBeInTheDocument();
+    expect(within(dialog).getByText('音节与美式音标')).toBeInTheDocument();
     expect(within(dialog).getByText('provide someone with something')).toBeInTheDocument();
     expect(within(dialog).getByText('provide something for someone')).toBeInTheDocument();
 
@@ -45,7 +46,7 @@ describe('CardDetailModal template content', () => {
 
     const mainEntry = dialog.querySelector('.memory-main-entry');
     const mainEntryOrder = Array.from(mainEntry?.children ?? []).map((element) => element.className);
-    expect(mainEntryOrder).toEqual(['memory-main-head', 'memory-meaning-list', 'memory-pronunciation']);
+    expect(mainEntryOrder).toEqual(['memory-main-head', 'memory-meaning-list']);
 
     const meaningItems = Array.from(dialog.querySelectorAll('.memory-meaning-item'));
     expect(meaningItems).toHaveLength(provideCard.meanings.length);
@@ -58,7 +59,7 @@ describe('CardDetailModal template content', () => {
     expect(meaningItems[1]).toHaveTextContent('提供；使可以使用');
     expect(meaningItems[2]).toHaveTextContent('供养；为……提供生活所需');
 
-    const pronunciation = mainEntry?.querySelector('.memory-pronunciation');
+    const pronunciation = dialog.querySelector('.memory-pronunciation-row .memory-pronunciation');
     expect(pronunciation).toHaveTextContent('pro·vide');
     expect(pronunciation).toHaveTextContent('/prəˈvaɪd/');
 
@@ -90,5 +91,9 @@ describe('CardDetailModal template content', () => {
     expect(visibleText).not.toContain('vocabulary notebook');
     expect(visibleText).not.toContain('真实表达延伸');
     expect(visibleText).not.toContain('主动输出提示');
+    expect(visibleText).not.toContain('人工精校');
+    expect(visibleText).not.toContain('模板版本');
+    expect(visibleText).not.toContain('内容版本');
+    expect(visibleText).not.toContain('待深度补全');
   });
 });

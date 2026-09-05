@@ -127,17 +127,10 @@ export function CardDetailModal({ card, progress, open, onClose, onLearn }: Card
       setSaving(false);
     }
   };
-  const isDetailed = card.detailLevel !== 'template-structured';
-  const detailLabel = card.detailLevel === 'template-reference'
-    ? '锁定 work 示例卡'
-    : card.detailLevel === 'template-curated'
-      ? '人工精校详卡'
-      : '模板结构版 · 待深度补全';
-
   return (
     <ModalShell
       open={open}
-      title={isDetailed ? '完整单词词卡' : '模板结构词卡'}
+      title="完整单词词卡"
       eyebrow={progress?.status ?? '今日新词'}
       onClose={onClose}
       footer={
@@ -154,9 +147,7 @@ export function CardDetailModal({ card, progress, open, onClose, onLearn }: Card
           <p className="phonetic">{card.syllables} · {card.phonetic}</p>
           <div className="word-meta">
             <span>{card.cocaRankLabel ?? card.frequencyBand}</span>
-            <span>{detailLabel}</span>
             <span>{card.difficulty}</span>
-            {card.tags.slice(0, 2).map((tag) => <span key={tag}>{tag}</span>)}
           </div>
         </div>
         <button className="sound-button" onClick={() => speak(card.word)} aria-label={'播放 ' + card.word + ' 的发音'}><Volume2 size={22} /></button>
@@ -182,7 +173,7 @@ export function CardDetailModal({ card, progress, open, onClose, onLearn }: Card
         <LearningSection meta={sectionMeta[0]} count={counts.memory} open={expanded.has('memory')} onToggle={() => toggle('memory')}>
           <section className="memory-table">
             <div className="core-memory-row">
-              <span>单词与完整释义</span>
+              <span>释义</span>
               <div className="memory-main-entry">
                 <div className="memory-main-head">
                   <div><strong>{card.word}</strong><small>{card.cocaRankLabel ?? card.frequencyBand}</small></div>
@@ -204,10 +195,13 @@ export function CardDetailModal({ card, progress, open, onClose, onLearn }: Card
                     </div>
                   ))}
                 </div>
-                <div className="memory-pronunciation">
-                  <strong>{card.syllables}</strong>
-                  <span className="memory-phonetic">{card.phonetic}</span>
-                </div>
+              </div>
+            </div>
+            <div className="memory-pronunciation-row">
+              <span>音节与美式音标</span>
+              <div className="memory-pronunciation">
+                <strong>{card.syllables}</strong>
+                <span className="memory-phonetic">{card.phonetic}</span>
               </div>
             </div>
             {sortedDerivatives.length > 0 && (
@@ -308,8 +302,6 @@ export function CardDetailModal({ card, progress, open, onClose, onLearn }: Card
             </section>
           ))}
         </LearningSection>
-
-        <p className="source-note">{card.sourceNote} · 模板版本 {card.templateVersion} · 内容版本 {card.contentVersion}</p>
       </div>
     </ModalShell>
   );

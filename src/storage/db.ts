@@ -229,7 +229,16 @@ export async function importSnapshot(snapshot: AppSnapshot): Promise<void> {
   });
 }
 
-export async function clearLearningData(): Promise<void> {
+export async function clearLearningData(resetAt = new Date().toISOString()): Promise<void> {
+  const currentSettings = await getSettings();
   await db.delete();
   await db.open();
+  await db.settings.put({
+    ...currentSettings,
+    id: 'settings',
+    firstUseDate: toLocalDateKey(new Date(resetAt)),
+    dataResetAt: resetAt,
+    lastStudyDate: undefined,
+    streak: 1
+  });
 }

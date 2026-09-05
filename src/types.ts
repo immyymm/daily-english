@@ -205,6 +205,7 @@ export interface ContentBundle {
 export interface AppSettings {
   id: 'settings';
   firstUseDate: string;
+  dataResetAt?: string;
   lastStudyDate?: string;
   streak: number;
   aiConsent: boolean;

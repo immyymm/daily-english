@@ -1,6 +1,6 @@
 import type { Session } from '@supabase/supabase-js';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { db, exportSnapshot, getSettings, importSnapshot } from '../storage/db';
+import { clearLearningData, db, exportSnapshot, getSettings, importSnapshot } from '../storage/db';
 import { countCloudRecords, hydrateDetailedRecords, syncDetailedRecords, syncReviewSessions, type CloudRecordCounts } from '../services/cloudRecords';
 import { cloudSyncConfigured, getSupabase } from '../services/supabase';
 import type { AIEvaluation, AppSnapshot, CardProgress, DailyPlanRecord } from '../types';
@@ -84,6 +84,22 @@ function chooseReviewSession(
 }
 
 export function mergeSnapshots(local: AppSnapshot, remote: AppSnapshot): AppSnapshot {
+  const localResetAt = timestamp(local.settings.dataResetAt);
+  const remoteResetAt = timestamp(remote.settings.dataResetAt);
+  if (localResetAt !== remoteResetAt) {
+    const resetWinner = localResetAt > remoteResetAt ? local : remote;
+    return {
+      ...resetWinner,
+      settings: { ...resetWinner.settings, id: 'settings' },
+      progress: [...resetWinner.progress],
+      attempts: [...resetWinner.attempts],
+      aiEvaluations: [...resetWinner.aiEvaluations],
+      dailyPlans: [...resetWinner.dailyPlans],
+      dailyRecommendations: [...(resetWinner.dailyRecommendations ?? [])],
+      reviewSessions: [...(resetWinner.reviewSessions ?? [])],
+      schemaVersion: 3
+    };
+  }
   const localNewer = timestamp(local.exportedAt) >= timestamp(remote.exportedAt);
   const newerSettings = localNewer ? local.settings : remote.settings;
   return {
@@ -126,6 +142,7 @@ export function useCloudSync(refresh: () => Promise<void>, hasPendingEvaluations
   const revisionRef = useRef(0);
   const deviceIdRef = useRef<string | undefined>(undefined);
   const syncingRef = useRef(false);
+  const resettingRef = useRef(false);
   const queuedPushRef = useRef(false);
   const timerRef = useRef<number | undefined>(undefined);
   const reviewTimerRef = useRef<number | undefined>(undefined);
@@ -134,6 +151,7 @@ export function useCloudSync(refresh: () => Promise<void>, hasPendingEvaluations
   if (!deviceIdRef.current && typeof window !== 'undefined') deviceIdRef.current = getDeviceId();
 
   const pushSnapshot = useCallback(async (userId?: string) => {
+    if (resettingRef.current) return;
     const activeUserId = userId ?? session?.user.id;
     const client = await getSupabase();
     if (!client || !activeUserId) return;
@@ -195,10 +213,22 @@ export function useCloudSync(refresh: () => Promise<void>, hasPendingEvaluations
   }, [pushSnapshot, refresh]);
 
   const connect = useCallback(async (activeSession: Session) => {
+    if (resettingRef.current) return;
     const client = await getSupabase();
     if (!client) return;
     setState('connecting');
     setMessage('正在合并云端和本机记录…');
+    const { data, error } = await client
+      .from('daily_english_snapshots')
+      .select('*')
+      .eq('user_id', activeSession.user.id)
+      .maybeSingle<SnapshotRow>();
+    if (error) {
+      setState('error');
+      setMessage(error.message);
+      return;
+    }
+    if (data) await mergeRemote(data, activeSession.user.id, false);
     const settings = await getSettings();
     const { error: profileError } = await client.from('daily_english_profiles').upsert({
       user_id: activeSession.user.id,
@@ -211,17 +241,6 @@ export function useCloudSync(refresh: () => Promise<void>, hasPendingEvaluations
       setMessage(profileError.message);
       return;
     }
-    const { data, error } = await client
-      .from('daily_english_snapshots')
-      .select('*')
-      .eq('user_id', activeSession.user.id)
-      .maybeSingle<SnapshotRow>();
-    if (error) {
-      setState('error');
-      setMessage(error.message);
-      return;
-    }
-    if (data) await mergeRemote(data, activeSession.user.id, false);
     try {
       await hydrateDetailedRecords(client, activeSession.user.id);
       await refresh();
@@ -274,6 +293,7 @@ export function useCloudSync(refresh: () => Promise<void>, hasPendingEvaluations
           table: 'daily_english_snapshots',
           filter: 'user_id=eq.' + session.user.id
         }, (event) => {
+          if (resettingRef.current) return;
           const row = event.new as SnapshotRow;
           if (!row?.payload || row.device_id === deviceIdRef.current) return;
           void mergeRemote(row, session.user.id, false);
@@ -300,6 +320,7 @@ export function useCloudSync(refresh: () => Promise<void>, hasPendingEvaluations
     void getSupabase().then((client) => {
       if (!client || cancelled) return;
       const hydrate = () => {
+        if (resettingRef.current) return;
         window.clearTimeout(refreshTimer);
         refreshTimer = window.setTimeout(() => {
           void hydrateDetailedRecords(client, session.user.id)
@@ -378,6 +399,7 @@ export function useCloudSync(refresh: () => Promise<void>, hasPendingEvaluations
   useEffect(() => {
     if (!session) return;
     const handleChange = () => {
+      if (resettingRef.current) return;
       window.clearTimeout(timerRef.current);
       timerRef.current = window.setTimeout(() => void pushSnapshot(), 900);
     };
@@ -468,6 +490,77 @@ export function useCloudSync(refresh: () => Promise<void>, hasPendingEvaluations
     setMessage('已退出；本机学习记录仍然保留');
   }, []);
 
+  const resetLearningData = useCallback(async () => {
+    const deadline = Date.now() + 5000;
+    while (syncingRef.current && Date.now() < deadline) {
+      await new Promise((resolve) => window.setTimeout(resolve, 50));
+    }
+    if (syncingRef.current) throw new Error('当前同步尚未完成，请稍后再清除。');
+
+    resettingRef.current = true;
+    queuedPushRef.current = false;
+    window.clearTimeout(timerRef.current);
+    window.clearTimeout(reviewTimerRef.current);
+    setState('connecting');
+    setMessage('正在清除学习记录…');
+
+    try {
+      const client = await getSupabase();
+      const userId = session?.user.id;
+      let resetAt = new Date().toISOString();
+      let remoteRevision = revisionRef.current;
+
+      if (userId) {
+        if (!client) throw new Error('云同步暂时不可用，未执行清除。');
+        const { data, error } = await client.rpc('daily_english_clear_my_learning_data');
+        if (error) throw error;
+        const result = data as { reset_at?: string; revision?: number } | null;
+        resetAt = result?.reset_at ?? resetAt;
+        remoteRevision = Math.max(remoteRevision, Number(result?.revision ?? 0));
+      }
+
+      await clearLearningData(resetAt);
+      await refresh();
+
+      if (client && userId) {
+        const payload = await exportSnapshot();
+        const now = new Date().toISOString();
+        const revision = remoteRevision + 1;
+        const compactPayload: AppSnapshot = {
+          ...payload,
+          progress: [],
+          attempts: [],
+          aiEvaluations: []
+        };
+        const { error } = await client.from('daily_english_snapshots').upsert({
+          user_id: userId,
+          payload: compactPayload,
+          schema_version: compactPayload.schemaVersion,
+          client_updated_at: now,
+          updated_at: now,
+          revision,
+          device_id: deviceIdRef.current
+        }, { onConflict: 'user_id' });
+        if (error) throw error;
+        revisionRef.current = revision;
+        setCloudCounts(await countCloudRecords(client, userId));
+        setLastSyncedAt(now);
+        setState('synced');
+        setMessage('本机、云端和其他设备的学习记录已清除');
+      } else {
+        setState(cloudSyncConfigured ? 'signed-out' : 'disabled');
+        setMessage(cloudSyncConfigured ? '本机学习记录已清除' : '云同步尚未配置');
+      }
+      return { cloudCleared: Boolean(userId) };
+    } catch (error) {
+      setState('error');
+      setMessage(error instanceof Error ? error.message : '清除失败，请稍后重试');
+      throw error;
+    } finally {
+      resettingRef.current = false;
+    }
+  }, [refresh, session?.user.id]);
+
   return {
     configured: cloudSyncConfigured,
     session,
@@ -479,6 +572,7 @@ export function useCloudSync(refresh: () => Promise<void>, hasPendingEvaluations
     signIn,
     signUp,
     signOut,
+    resetLearningData,
     syncNow: () => pushSnapshot()
   };
 }

@@ -109,4 +109,65 @@ describe('mergeSnapshots', () => {
     expect(merged.reviewSessions?.[0].status).toBe('completed');
     expect(merged.reviewSessions?.[0].queueCardIds).toEqual([]);
   });
+
+  it('treats a newer cloud reset as authoritative instead of merging deleted learning records back in', () => {
+    const local = snapshot('local');
+    const remote = snapshot('remote');
+    remote.settings = {
+      ...remote.settings,
+      firstUseDate: '2026-09-06',
+      dataResetAt: '2026-09-06T02:00:00.000Z',
+      streak: 1
+    };
+    remote.progress = [];
+    remote.attempts = [];
+    remote.dailyPlans = [];
+    remote.reviewSessions = [];
+
+    const merged = mergeSnapshots(local, remote);
+    expect(merged.settings.dataResetAt).toBe('2026-09-06T02:00:00.000Z');
+    expect(merged.settings.firstUseDate).toBe('2026-09-06');
+    expect(merged.progress).toEqual([]);
+    expect(merged.attempts).toEqual([]);
+    expect(merged.dailyPlans).toEqual([]);
+    expect(merged.reviewSessions).toEqual([]);
+  });
+
+  it('does not let an older cloud snapshot resurrect records after this device has reset', () => {
+    const local = snapshot('local');
+    const remote = snapshot('remote');
+    local.settings = {
+      ...local.settings,
+      firstUseDate: '2026-09-06',
+      dataResetAt: '2026-09-06T03:00:00.000Z',
+      streak: 1
+    };
+    local.progress = [];
+    local.attempts = [];
+    local.dailyPlans = [];
+    local.reviewSessions = [];
+
+    const merged = mergeSnapshots(local, remote);
+    expect(merged.settings.dataResetAt).toBe('2026-09-06T03:00:00.000Z');
+    expect(merged.progress).toEqual([]);
+    expect(merged.attempts).toEqual([]);
+    expect(merged.dailyPlans).toEqual([]);
+    expect(merged.reviewSessions).toEqual([]);
+  });
+
+  it('continues merging new records once both devices share the same reset generation', () => {
+    const local = snapshot('local');
+    const remote = snapshot('remote');
+    const resetAt = '2026-09-06T03:00:00.000Z';
+    local.settings.dataResetAt = resetAt;
+    remote.settings.dataResetAt = resetAt;
+    local.attempts = [{
+      id: 'local-after-reset', cardId: 'notice-v', questionId: 'q2', questionType: 'recall', stage: 'T0',
+      prompt: 'prompt', answer: 'notice', correctAnswer: 'notice', score: 100, correct: true,
+      responseMs: 600, errorTypes: [], createdAt: '2026-09-06T03:10:00.000Z', ai: false
+    }];
+
+    const merged = mergeSnapshots(local, remote);
+    expect(merged.attempts.map((item) => item.id).sort()).toEqual(['local-after-reset', 'remote-attempt']);
+  });
 });

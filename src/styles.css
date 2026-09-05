@@ -829,11 +829,12 @@ h1 { font-family: Georgia, "Songti SC", serif; font-size: 21px; letter-spacing: 
 .memory-meaning-chinese > span { flex: 0 0 auto; padding: 3px 7px; border-radius: 8px; color: #95516b; background: #ffedf3; font-size: 12px; line-height: 1.45; font-weight: 800; }
 .memory-meaning-chinese > b, .memory-meaning-chinese > strong { color: #543d46; font-size: 15px; line-height: 1.65; font-weight: 750; }
 .memory-meaning-item > p { color: #634c55; font: 14px/1.6 Georgia, "PingFang SC", serif; margin-top: 3px; }
-.memory-pronunciation { display: flex; align-items: baseline; gap: 8px; min-width: 0; padding-top: 10px; border-top: 1px solid #f4e7ec; white-space: nowrap; }
+.memory-pronunciation { display: flex; align-items: baseline; gap: 8px; min-width: 0; white-space: nowrap; }
 .memory-pronunciation strong { font-family: Georgia, "Songti SC", serif; }
 .memory-phonetic { color: #80626e; font: 14px/1.65 Georgia, serif; }
 .memory-phonetic::before { content: "·"; margin-right: 8px; color: #c08a9d; }
-.memory-table > .core-memory-row > span { color: #b23f65; }
+.memory-table > .core-memory-row > span,
+.memory-table > .memory-pronunciation-row > span { color: #b23f65; }
 .memory-relation-list { display: grid; gap: 10px; min-width: 0; }
 .memory-relation-item + .memory-relation-item { padding-top: 10px; border-top: 1px solid #f4e7ec; }
 .lexical-entry { display: grid; grid-template-columns: minmax(0, 1fr) 44px; align-items: center; gap: 10px; min-width: 0; }
@@ -861,7 +862,6 @@ h1 { font-family: Georgia, "Songti SC", serif; font-size: 21px; letter-spacing: 
 .content-card > .relation-row { padding: 11px 0; border: 0; border-radius: 0; }
 .content-card > .relation-row + .relation-row { border-top: 1px solid #f4e7ec; }
 .relation-row > span { display: block; color: #5f4a52; font-size: 15px; line-height: 1.65; margin-top: 7px; }
-.source-note { color: #8f717c; font-size: 12px; line-height: 1.65; text-align: center; padding: 7px 12px; }
 .empty-section { padding: 14px 15px; border: 1px dashed #e8d4dc; border-radius: 17px; color: #765f6a; background: rgba(255,255,255,.55); font-size: 14px; line-height: 1.65; }
 
 .consent-illustration { width: 76px; height: 76px; margin: 8px auto 18px; border-radius: 26px; display: grid; place-items: center; color: #a65372; background: #ffeaf2; box-shadow: 0 12px 28px rgba(149,79,105,.12); }

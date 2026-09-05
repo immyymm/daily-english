@@ -38,7 +38,7 @@ import { notifyLocalDataChanged, useCloudSync } from './hooks/useCloudSync';
 import { masteryDimensionLabels } from './learning/mastery';
 import { studyDaySince, toLocalDateKey } from './learning/reviewEngine';
 import { evaluateAnswer } from './services/ai';
-import { clearLearningData, exportSnapshot, importSnapshot } from './storage/db';
+import { exportSnapshot, importSnapshot } from './storage/db';
 import type { AIEvaluation, AppSnapshot, Attempt, CardProgress, DailyRecommendation, MasteryStatus, ReviewSessionProgress, TabId, WordCard } from './types';
 
 interface InstallPromptEvent extends Event {
@@ -190,11 +190,18 @@ function App() {
   };
 
   const resetData = async () => {
-    if (!window.confirm('确定清除本机全部学习记录吗？此操作无法撤销，建议先导出备份。')) return;
-    await clearLearningData();
-    await data.refresh();
-    notifyLocalDataChanged();
-    setToast('本机学习记录已清除。');
+    const synced = Boolean(sync.session);
+    const target = synced ? '当前账号在本机、云端及其他设备上' : '本机';
+    if (!window.confirm(`确定清除${target}的全部学习记录吗？此操作无法撤销，建议先导出备份。`)) return;
+    try {
+      const result = await sync.resetLearningData();
+      setReviewQueue([]);
+      setReviewBatchTotal(0);
+      setReviewSession(undefined);
+      setToast(result.cloudCleared ? '本机与云端学习记录已清除，其他设备会实时同步。' : '本机学习记录已清除。');
+    } catch (error) {
+      setToast(error instanceof Error ? error.message : '清除失败，请稍后重试。');
+    }
   };
 
   const installApp = async () => {
@@ -834,7 +841,7 @@ function ProfilePage({
         <button className="setting-row action" onClick={onExport}><span className="setting-icon"><Download size={18} /></span><div><strong>导出学习数据</strong><p>下载 JSON 备份文件</p></div><ChevronRight size={17} /></button>
         <button className="setting-row action" onClick={onImport}><span className="setting-icon"><FileUp size={18} /></span><div><strong>从备份恢复</strong><p>恢复词卡进度、答题和 AI 点评</p></div><ChevronRight size={17} /></button>
         <button className="setting-row action" onClick={onInstall}><span className="setting-icon"><ArchiveRestore size={18} /></span><div><strong>安装到 iPhone 主屏幕</strong><p>像普通 APP 一样打开</p></div><ChevronRight size={17} /></button>
-        <button className="setting-row action danger" onClick={onReset}><span className="setting-icon"><Trash2 size={18} /></span><div><strong>清除本机学习记录</strong><p>建议先导出备份</p></div><ChevronRight size={17} /></button>
+        <button className="setting-row action danger" onClick={onReset}><span className="setting-icon"><Trash2 size={18} /></span><div><strong>{sync.session ? '清除全部学习记录' : '清除本机学习记录'}</strong><p>{sync.session ? '同步删除云端及所有设备记录' : '建议先导出备份'}</p></div><ChevronRight size={17} /></button>
       </section>
 
       <section className="privacy-note"><LockKeyhole size={18} /><p>不登录时，学习记录只保存在当前设备；开启同步后，答题、掌握画像和 AI 点评会加密传输并保存到你的“每日英语”账户。开放题文字仅在你主动提交时发送给 OpenAI API，录音不会上传。</p></section>
