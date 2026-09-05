@@ -814,10 +814,20 @@ h1 { font-family: Georgia, "Songti SC", serif; font-size: 21px; letter-spacing: 
 .phrase-row p { color: #715a64; font-size: 14px; line-height: 1.55; margin-top: 4px; }
 .mini-sound { flex: 0 0 auto; width: 44px; height: 44px; border: 0; border-radius: 14px; display: grid; place-items: center; color: #985b72; background: #ffedf3; }
 .memory-table { padding: 0; overflow: hidden; }
-.memory-table > div { display: grid; grid-template-columns: 104px minmax(0, 1fr); gap: 12px; padding: 15px 14px; align-items: start; }
+.memory-table > div { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 12px; padding: 15px 14px; align-items: start; }
 .memory-table > div + div { border-top: 1px solid #f4e7ec; }
 .memory-table > div > span { color: #8d6876; font-size: 13px; line-height: 1.45; font-weight: 750; }
 .memory-table strong, .memory-table p { color: #543d46; font-size: 15px; line-height: 1.65; }
+.memory-pronunciation { display: flex; align-items: baseline; gap: 8px; min-width: 0; white-space: nowrap; }
+.memory-pronunciation strong { font-family: Georgia, "Songti SC", serif; }
+.memory-phonetic { color: #80626e; font: 14px/1.65 Georgia, serif; }
+.memory-phonetic::before { content: "·"; margin-right: 8px; color: #c08a9d; }
+.memory-definition { display: grid; gap: 5px; min-width: 0; }
+.memory-definition > div { display: flex; align-items: baseline; gap: 8px; min-width: 0; }
+.memory-definition > div > span { flex: 0 0 auto; padding: 3px 7px; border-radius: 8px; color: #95516b; background: #ffedf3; font-size: 12px; line-height: 1.45; font-weight: 800; }
+.memory-definition strong { color: #b23f65; font-weight: 850; }
+.memory-definition p { color: #634c55; font-family: Georgia, "PingFang SC", serif; }
+.memory-table > .core-memory-row > span { color: #b23f65; }
 .memory-relation-list { display: grid; gap: 10px; min-width: 0; }
 .memory-relation-item { display: grid; grid-template-columns: minmax(0, 1fr) 44px; align-items: center; gap: 10px; }
 .memory-relation-item + .memory-relation-item { padding-top: 10px; border-top: 1px solid #f4e7ec; }
@@ -1023,6 +1033,9 @@ h1 { font-family: Georgia, "Songti SC", serif; font-size: 21px; letter-spacing: 
   .library-list > article { grid-template-columns: minmax(0, 1fr) auto; }
   .library-card-button { grid-template-columns: 39px minmax(0, 1fr); }
   .library-list > article > svg { display: none; }
+  .memory-table > div { grid-template-columns: 82px minmax(0, 1fr); gap: 9px; padding-inline: 11px; }
+  .memory-pronunciation { gap: 5px; }
+  .memory-phonetic::before { margin-right: 5px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

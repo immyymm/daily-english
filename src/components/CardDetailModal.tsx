@@ -3,7 +3,7 @@ import { useEffect, useMemo, useState, type ReactNode } from 'react';
 import type { CardProgress, WordCard } from '../types';
 import { ModalShell } from './ModalShell';
 
-type SectionId = 'memory' | 'meanings' | 'context' | 'phrases' | 'synonyms' | 'antonyms' | 'derivatives' | 'confusables' | 'related' | 'examples';
+type SectionId = 'memory' | 'phrases' | 'context' | 'derivatives' | 'synonyms' | 'antonyms' | 'confusables' | 'related';
 
 interface CardDetailModalProps {
   card?: WordCard;
@@ -15,16 +15,38 @@ interface CardDetailModalProps {
 
 const sectionMeta: Array<{ id: SectionId; number: string; name: string }> = [
   { id: 'memory', number: '01', name: '核心记忆' },
-  { id: 'meanings', number: '02', name: '词性与释义' },
+  { id: 'phrases', number: '02', name: '固定搭配和短语' },
   { id: 'context', number: '03', name: '常用语境词组' },
-  { id: 'phrases', number: '04', name: '固定搭配和短语' },
+  { id: 'derivatives', number: '04', name: '派生词' },
   { id: 'synonyms', number: '05', name: '近义词' },
   { id: 'antonyms', number: '06', name: '反义词' },
-  { id: 'derivatives', number: '07', name: '派生词' },
-  { id: 'confusables', number: '08', name: '易混词' },
-  { id: 'related', number: '09', name: '同类词汇分类' },
-  { id: 'examples', number: '10', name: '高频例句' },
+  { id: 'confusables', number: '07', name: '易混词' },
+  { id: 'related', number: '08', name: '同类词汇分类' },
 ];
+
+const derivativeOrder = ['v', 'n', 'adj', 'adv'] as const;
+
+function derivativeRank(partOfSpeech: string) {
+  const parts = partOfSpeech
+    .toLowerCase()
+    .replaceAll('.', '')
+    .split(/\s*\/\s*|\s+/)
+    .filter(Boolean);
+  const ranks = parts
+    .map((part) => derivativeOrder.indexOf(part as (typeof derivativeOrder)[number]))
+    .filter((rank) => rank >= 0);
+  return ranks.length ? Math.min(...ranks) : -1;
+}
+
+function sortDerivatives(items: WordCard['derivatives']) {
+  return items
+    .map((item, index) => ({ item, index }))
+    .filter(({ item }) => derivativeRank(item.partOfSpeech) >= 0)
+    .sort((left, right) => {
+      return derivativeRank(left.item.partOfSpeech) - derivativeRank(right.item.partOfSpeech) || left.index - right.index;
+    })
+    .map(({ item }) => item);
+}
 
 function speak(text: string) {
   if (!('speechSynthesis' in window)) return;
@@ -42,28 +64,28 @@ function ListenButton({ text, label = '播放发音' }: { text: string; label?: 
 }
 
 export function CardDetailModal({ card, progress, open, onClose, onLearn }: CardDetailModalProps) {
-  const [expanded, setExpanded] = useState<Set<SectionId>>(new Set(['memory', 'meanings']));
+  const [expanded, setExpanded] = useState<Set<SectionId>>(new Set(['memory']));
   const [saving, setSaving] = useState(false);
 
   useEffect(() => {
-    if (open) setExpanded(new Set(['memory', 'meanings']));
+    if (open) setExpanded(new Set(['memory']));
   }, [card?.id, open]);
 
+  const sortedDerivatives = useMemo(() => card ? sortDerivatives(card.derivatives) : [], [card]);
+
   const counts = useMemo<Record<SectionId, number>>(() => {
-    if (!card) return { memory: 0, meanings: 0, context: 0, phrases: 0, synonyms: 0, antonyms: 0, derivatives: 0, confusables: 0, related: 0, examples: 0 };
+    if (!card) return { memory: 0, phrases: 0, context: 0, derivatives: 0, synonyms: 0, antonyms: 0, confusables: 0, related: 0 };
     return {
-      memory: 1 + (card.coreMemory.structures?.length ?? 1) + (card.coreMemory.commonErrors?.length ?? 1),
-      meanings: card.meanings.length,
-      context: card.contextPhrases.reduce((sum, group) => sum + group.items.length, 0),
+      memory: 3 + sortedDerivatives.length + card.synonyms.length + card.antonyms.length + (card.coreMemory.structures?.length ?? 1) + (card.coreMemory.commonErrors?.length ?? 1),
       phrases: card.fixedPhrases.length,
+      context: card.contextPhrases.reduce((sum, group) => sum + group.items.length, 0),
+      derivatives: sortedDerivatives.length,
       synonyms: card.synonyms.length,
       antonyms: card.antonyms.length,
-      derivatives: card.derivatives.length,
       confusables: card.confusables.length,
       related: card.relatedVocabulary.reduce((sum, group) => sum + group.items.length, 0),
-      examples: card.examples.length,
     };
-  }, [card]);
+  }, [card, sortedDerivatives]);
 
   if (!card) return null;
 
@@ -128,7 +150,7 @@ export function CardDetailModal({ card, progress, open, onClose, onLearn }: Card
       </div>
 
       <div className="detail-toolbar">
-        <div><ListTree size={16} /><span>10 个学习章节，全部内容都在本页</span></div>
+        <div><ListTree size={16} /><span>{sectionMeta.length} 个学习章节，全部内容都在本页</span></div>
         <button className="expand-all-button" onClick={toggleAll}>
           {allExpanded ? <Minimize2 size={14} /> : <Maximize2 size={14} />}
           {allExpanded ? '收起' : '展开全部'}
@@ -147,11 +169,26 @@ export function CardDetailModal({ card, progress, open, onClose, onLearn }: Card
         <LearningSection meta={sectionMeta[0]} count={counts.memory} open={expanded.has('memory')} onToggle={() => toggle('memory')}>
           <section className="memory-table">
             <div><span>单词与词频</span><strong>{card.word} · {card.cocaRankLabel ?? card.frequencyBand}</strong></div>
-            <div><span>美式音标</span><strong>{card.phonetic}</strong></div>
-            <div><span>音节划分</span><strong>{card.syllables}</strong></div>
-            <div><span>词性</span><strong>{card.partOfSpeech}</strong></div>
-            <div><span>中文核心义</span><strong>{card.coreMemory.chinese}</strong></div>
-            <div><span>Simple English</span><p>{card.coreMemory.english}</p></div>
+            <div>
+              <span>音节与音标</span>
+              <div className="memory-pronunciation">
+                <strong>{card.syllables}</strong>
+                <span className="memory-phonetic">{card.phonetic}</span>
+              </div>
+            </div>
+            <div className="core-memory-row">
+              <span>核心义</span>
+              <div className="memory-definition">
+                <div><span>{card.partOfSpeech}</span><strong>{card.coreMemory.chinese}</strong></div>
+                <p>{card.coreMemory.english}</p>
+              </div>
+            </div>
+            {sortedDerivatives.length > 0 && (
+              <div>
+                <span>常用派生词</span>
+                <CoreDerivativeList items={sortedDerivatives} />
+              </div>
+            )}
             <div>
               <span>最直接近义词</span>
               <CoreRelationList
@@ -168,7 +205,6 @@ export function CardDetailModal({ card, progress, open, onClose, onLearn }: Card
                 relationLabel="反义词"
               />
             </div>
-            <div><span>常用派生词</span><strong>{card.coreMemory.derivatives}</strong></div>
           </section>
           <section className="content-card">
             <span className="content-label">核心结构</span>
@@ -204,12 +240,11 @@ export function CardDetailModal({ card, progress, open, onClose, onLearn }: Card
           </section>
         </LearningSection>
 
-        <LearningSection meta={sectionMeta[1]} count={counts.meanings} open={expanded.has('meanings')} onToggle={() => toggle('meanings')}>
-          {card.meanings.map((meaning, index) => (
-            <section className="meaning-card" key={meaning.partOfSpeech + meaning.chinese + index}>
-              <div className="meaning-head"><span>{meaning.partOfSpeech}</span><strong>{meaning.chinese}</strong></div>
-              <p className="english-definition">{meaning.english}</p>
-              <div className="meaning-example"><p>{meaning.example}</p><span>{meaning.translation}</span><ListenButton text={meaning.example} label="播放义项例句" /></div>
+        <LearningSection meta={sectionMeta[1]} count={counts.phrases} open={expanded.has('phrases')} onToggle={() => toggle('phrases')}>
+          {card.fixedPhrases.map((item) => (
+            <section className="fixed-card" key={item.phrase}>
+              <div className="fixed-head"><div><strong>{item.phrase}</strong><small>{item.phonetic}</small></div><ListenButton text={item.phrase} /></div>
+              <p className="fixed-meaning">{item.chinese}</p><p>{item.example}</p><span>{item.translation}</span>
             </section>
           ))}
         </LearningSection>
@@ -228,13 +263,8 @@ export function CardDetailModal({ card, progress, open, onClose, onLearn }: Card
           ))}
         </LearningSection>
 
-        <LearningSection meta={sectionMeta[3]} count={counts.phrases} open={expanded.has('phrases')} onToggle={() => toggle('phrases')}>
-          {card.fixedPhrases.map((item) => (
-            <section className="fixed-card" key={item.phrase}>
-              <div className="fixed-head"><div><strong>{item.phrase}</strong><small>{item.phonetic}</small></div><ListenButton text={item.phrase} /></div>
-              <p className="fixed-meaning">{item.chinese}</p><p>{item.example}</p><span>{item.translation}</span>
-            </section>
-          ))}
+        <LearningSection meta={sectionMeta[3]} count={counts.derivatives} open={expanded.has('derivatives')} onToggle={() => toggle('derivatives')}>
+          {sortedDerivatives.length ? <div className="relation-list">{sortedDerivatives.map((item) => <RelationRow key={item.word} word={item.word} phonetic={item.phonetic} meta={item.partOfSpeech + ' · ' + item.chinese} note={item.note} />)}</div> : <EmptySection>本词没有需要强记的高频派生词，先把核心用法学扎实。</EmptySection>}
         </LearningSection>
 
         <LearningSection meta={sectionMeta[4]} count={counts.synonyms} open={expanded.has('synonyms')} onToggle={() => toggle('synonyms')}>
@@ -245,32 +275,17 @@ export function CardDetailModal({ card, progress, open, onClose, onLearn }: Card
           <div className="relation-list">{card.antonyms.map((item) => <RelationRow key={item.word} word={item.word} phonetic={item.phonetic} meta={item.partOfSpeech + ' · ' + item.chinese} note={item.usage} />)}</div>
         </LearningSection>
 
-        <LearningSection meta={sectionMeta[6]} count={counts.derivatives} open={expanded.has('derivatives')} onToggle={() => toggle('derivatives')}>
-          {card.derivatives.length ? <div className="relation-list">{card.derivatives.map((item) => <RelationRow key={item.word} word={item.word} phonetic={item.phonetic} meta={item.partOfSpeech + ' · ' + item.chinese} note={item.note} />)}</div> : <EmptySection>本词没有需要强记的高频派生词，先把核心用法学扎实。</EmptySection>}
-        </LearningSection>
-
-        <LearningSection meta={sectionMeta[7]} count={counts.confusables} open={expanded.has('confusables')} onToggle={() => toggle('confusables')}>
+        <LearningSection meta={sectionMeta[6]} count={counts.confusables} open={expanded.has('confusables')} onToggle={() => toggle('confusables')}>
           {card.confusables.length ? <div className="relation-list">{card.confusables.map((item) => <RelationRow key={item.word} word={item.word} phonetic={item.phonetic} meta={item.partOfSpeech + ' · ' + item.chinese} note={item.difference} />)}</div> : <EmptySection>暂无高频且真正容易混淆的词，不为凑数量加入生僻内容。</EmptySection>}
         </LearningSection>
 
-        <LearningSection meta={sectionMeta[8]} count={counts.related} open={expanded.has('related')} onToggle={() => toggle('related')}>
+        <LearningSection meta={sectionMeta[7]} count={counts.related} open={expanded.has('related')} onToggle={() => toggle('related')}>
           {card.relatedVocabulary.map((group) => (
             <section className="content-card" key={group.category}>
               <span className="content-label">{group.category}</span>
               {group.items.map((item) => <RelationRow key={item.word} word={item.word} phonetic={item.phonetic} meta={item.partOfSpeech + ' · ' + item.chinese} />)}
             </section>
           ))}
-        </LearningSection>
-
-        <LearningSection meta={sectionMeta[9]} count={counts.examples} open={expanded.has('examples')} onToggle={() => toggle('examples')}>
-          {card.examples.map((example, index) => (
-            <section className="example-card" key={example.scene + index}>
-              <span className="scene-label">{String(index + 1).padStart(2, '0')} · {example.scene}</span>
-              <p>{example.english}</p><span>{example.chinese}</span>
-              <button onClick={() => speak(example.english)}><Volume2 size={16} />听一听</button>
-            </section>
-          ))}
-          <section className="tip-card"><strong>主动输出</strong><p>盖住中文，先朗读英文；再替换句中的人物、时间或地点，口头说出一个和自己有关的新句子。</p></section>
         </LearningSection>
 
         <p className="source-note">{card.sourceNote} · 模板版本 {card.templateVersion} · 内容版本 {card.contentVersion}</p>
@@ -323,6 +338,23 @@ function CoreRelationList({
         <div className="memory-relation-item" key={item.word}>
           <div><strong>{item.word}</strong><small>{item.phonetic} · {item.chinese}</small></div>
           <ListenButton text={item.word} label={`播放${relationLabel} ${item.word} 的发音`} />
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function CoreDerivativeList({ items }: { items: WordCard['derivatives'] }) {
+  return (
+    <div className="memory-relation-list">
+      {items.map((item) => (
+        <div className="memory-relation-item" key={item.word}>
+          <div>
+            <strong>{item.word}</strong>
+            <small>{item.partOfSpeech} · {item.chinese}</small>
+            <small>{item.phonetic}</small>
+          </div>
+          <ListenButton text={item.word} label={`播放派生词 ${item.word} 的发音`} />
         </div>
       ))}
     </div>

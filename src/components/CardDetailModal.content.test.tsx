@@ -7,7 +7,7 @@ import { CardDetailModal } from './CardDetailModal';
 const provideCard = provideCardJson as unknown as WordCard;
 
 describe('CardDetailModal template content', () => {
-  it('renders the locked ten-section template with curated provide content', () => {
+  it('renders the mobile learning order and the condensed core-memory fields', () => {
     render(
       <CardDetailModal
         open
@@ -24,19 +24,40 @@ describe('CardDetailModal template content', () => {
 
     const sectionNames = [
       '核心记忆',
-      '词性与释义',
-      '常用语境词组',
       '固定搭配和短语',
+      '常用语境词组',
+      '派生词',
       '近义词',
       '反义词',
-      '派生词',
       '易混词',
       '同类词汇分类',
-      '高频例句',
     ];
     for (const sectionName of sectionNames) {
       expect(within(dialog).getAllByText(sectionName).length).toBeGreaterThan(0);
     }
+
+    const renderedSectionOrder = Array.from(dialog.querySelectorAll('.learning-section-toggle .section-name'))
+      .map((element) => element.firstChild?.textContent);
+    expect(renderedSectionOrder).toEqual(sectionNames);
+
+    expect(within(dialog).queryByText('词性与释义')).not.toBeInTheDocument();
+    expect(within(dialog).queryByText('高频例句')).not.toBeInTheDocument();
+
+    const pronunciation = dialog.querySelector('.memory-pronunciation');
+    expect(pronunciation).toHaveTextContent('pro·vide');
+    expect(pronunciation).toHaveTextContent('/prəˈvaɪd/');
+
+    const definition = dialog.querySelector('.memory-definition');
+    expect(definition).toHaveTextContent('v.');
+    expect(definition).toHaveTextContent('提供');
+    expect(definition).toHaveTextContent('to give someone something that they need');
+
+    const coreDerivativeWords = Array.from(dialog.querySelectorAll('.memory-relation-item > div > strong'))
+      .map((element) => element.textContent);
+    expect(coreDerivativeWords.slice(0, 2)).toEqual(['provider', 'provision']);
+    expect(coreDerivativeWords).not.toContain('provided');
+    expect(coreDerivativeWords).not.toContain('providing');
+    expect(within(dialog).getByRole('button', { name: '播放派生词 provider 的发音' })).toBeInTheDocument();
 
     const visibleText = dialog.textContent ?? '';
     expect(visibleText).not.toContain('The phrase “');
