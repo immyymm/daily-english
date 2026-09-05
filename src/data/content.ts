@@ -16,7 +16,7 @@ export async function loadContent(): Promise<ContentBundle> {
   const bundle = (await response.json()) as ContentBundle;
   if (!Array.isArray(bundle.cards) || bundle.cards.length === 0) throw new Error('词卡内容为空');
   if (bundle.contentVersion !== manifest.contentVersion || bundle.templateVersion !== manifest.templateVersion) {
-    throw new Error('词卡内容版本不一致，请刷新后重试');
+    throw new Error('词卡更新未完成，请刷新后重试');
   }
   cachedBundle = bundle;
   return bundle;
