@@ -752,8 +752,8 @@ h1 { font-family: Georgia, "Songti SC", serif; font-size: 21px; letter-spacing: 
 .word-heading { display: flex; gap: 9px; align-items: baseline; }
 .word-heading h3 { color: #55333f; font: 700 39px Georgia, serif; letter-spacing: -.02em; }
 .word-heading span { color: #8c5f6f; font-size: 14px; }
-.phonetic { color: #855f6d; font: 16px/1.45 Georgia, serif; margin-top: 5px; }
-.word-meaning { color: #57404a; font-size: 17px; line-height: 1.5; margin-top: 10px; }
+.phonetic { color: #855f6d; font: 16px/1.45 Georgia, serif; margin-top: 6px; }
+.word-meaning { color: #57404a; font-size: 17px; line-height: 1.5; margin-top: 8px; }
 .word-meta { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 11px; }
 .word-meta span { padding: 5px 8px; border-radius: 99px; color: #79505f; background: rgba(255,255,255,.65); font-size: 11px; }
 .sound-button { width: 54px; height: 54px; border: 1px solid rgba(255,255,255,.8); border-radius: 20px; display: grid; place-items: center; color: #95516c; background: rgba(255,255,255,.55); box-shadow: 0 8px 18px rgba(126,63,84,.09); }
@@ -807,32 +807,41 @@ h1 { font-family: Georgia, "Songti SC", serif; font-size: 21px; letter-spacing: 
 .error-structure-list .wrong-structure { color: #a76868; text-decoration-color: rgba(167,104,104,.35); }
 .error-structure-list .right-structure { color: #55806a; }
 .error-structure-list article > span { display: block; color: #705d57; font-size: 14px; line-height: 1.65; margin-top: 8px; }
-.phrase-row { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.phrase-row { min-width: 0; }
 .phrase-row + .phrase-row { padding-top: 12px; margin-top: 12px; border-top: 1px solid #f5e7ec; }
-.phrase-row strong { font-size: 16px; line-height: 1.45; }
-.phrase-row small, .fixed-head small, .relation-word small { display: block; color: #92717e; font: 14px/1.45 Georgia, serif; margin-top: 4px; }
-.phrase-row p { color: #715a64; font-size: 14px; line-height: 1.55; margin-top: 4px; }
 .mini-sound { flex: 0 0 auto; width: 44px; height: 44px; border: 0; border-radius: 14px; display: grid; place-items: center; color: #985b72; background: #ffedf3; }
 .memory-table { padding: 0; overflow: hidden; }
 .memory-table > div { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 12px; padding: 15px 14px; align-items: start; }
 .memory-table > div + div { border-top: 1px solid #f4e7ec; }
 .memory-table > div > span { color: #8d6876; font-size: 13px; line-height: 1.45; font-weight: 750; }
 .memory-table strong, .memory-table p { color: #543d46; font-size: 15px; line-height: 1.65; }
-.memory-pronunciation { display: flex; align-items: baseline; gap: 8px; min-width: 0; white-space: nowrap; }
+.memory-main-entry { display: grid; gap: 12px; min-width: 0; }
+.memory-main-head { display: grid; grid-template-columns: minmax(0, 1fr) 44px; align-items: center; gap: 10px; }
+.memory-main-head > div > strong { display: block; color: #533c45; font: 700 19px/1.4 Georgia, serif; }
+.memory-main-head > div > small { display: block; color: #92717e; font-size: 12px; line-height: 1.45; margin-top: 3px; }
+.memory-meaning-list { display: grid; gap: 9px; }
+.memory-core-summary { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px; padding: 10px 11px; border-radius: 13px; background: #fff0f5; }
+.memory-core-summary > span { flex: 0 0 auto; padding: 3px 7px; border-radius: 8px; color: #95516b; background: white; font-size: 12px; line-height: 1.45; font-weight: 800; }
+.memory-core-summary > strong { color: #b23f65; font-size: 16px; line-height: 1.65; font-weight: 850; }
+.memory-core-summary > em { color: #b23f65; font-size: 10px; line-height: 1.45; font-style: normal; font-weight: 800; }
+.memory-meaning-item { padding-top: 9px; border-top: 1px solid #f4e7ec; }
+.memory-meaning-chinese { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px; }
+.memory-meaning-chinese > span { flex: 0 0 auto; padding: 3px 7px; border-radius: 8px; color: #95516b; background: #ffedf3; font-size: 12px; line-height: 1.45; font-weight: 800; }
+.memory-meaning-chinese > b, .memory-meaning-chinese > strong { color: #543d46; font-size: 15px; line-height: 1.65; font-weight: 750; }
+.memory-meaning-item > p { color: #634c55; font: 14px/1.6 Georgia, "PingFang SC", serif; margin-top: 3px; }
+.memory-pronunciation { display: flex; align-items: baseline; gap: 8px; min-width: 0; padding-top: 10px; border-top: 1px solid #f4e7ec; white-space: nowrap; }
 .memory-pronunciation strong { font-family: Georgia, "Songti SC", serif; }
 .memory-phonetic { color: #80626e; font: 14px/1.65 Georgia, serif; }
 .memory-phonetic::before { content: "·"; margin-right: 8px; color: #c08a9d; }
-.memory-definition { display: grid; gap: 5px; min-width: 0; }
-.memory-definition > div { display: flex; align-items: baseline; gap: 8px; min-width: 0; }
-.memory-definition > div > span { flex: 0 0 auto; padding: 3px 7px; border-radius: 8px; color: #95516b; background: #ffedf3; font-size: 12px; line-height: 1.45; font-weight: 800; }
-.memory-definition strong { color: #b23f65; font-weight: 850; }
-.memory-definition p { color: #634c55; font-family: Georgia, "PingFang SC", serif; }
 .memory-table > .core-memory-row > span { color: #b23f65; }
 .memory-relation-list { display: grid; gap: 10px; min-width: 0; }
-.memory-relation-item { display: grid; grid-template-columns: minmax(0, 1fr) 44px; align-items: center; gap: 10px; }
 .memory-relation-item + .memory-relation-item { padding-top: 10px; border-top: 1px solid #f4e7ec; }
-.memory-relation-item strong { display: block; font: 700 17px/1.4 Georgia, serif; }
-.memory-relation-item small { display: block; color: #79616a; font: 13px/1.5 Georgia, "PingFang SC", serif; margin-top: 3px; }
+.lexical-entry { display: grid; grid-template-columns: minmax(0, 1fr) 44px; align-items: center; gap: 10px; min-width: 0; }
+.lexical-entry-copy { min-width: 0; }
+.lexical-entry-term { display: block; color: #58404a; font: 700 17px/1.4 Georgia, serif; overflow-wrap: anywhere; }
+.lexical-entry-meaning { color: #715663; font-size: 14px; line-height: 1.55; margin-top: 4px; }
+.lexical-entry-meaning > span { display: inline-block; margin-right: 6px; padding: 2px 6px; border-radius: 7px; color: #95516b; background: #ffedf3; font-size: 11px; line-height: 1.45; font-weight: 800; vertical-align: 1px; }
+.lexical-entry-phonetic { display: block; color: #92717e; font: 13px/1.5 Georgia, serif; margin-top: 4px; overflow-wrap: anywhere; }
 .study-focus { color: #665176; background: #f6f0ff; border-color: #eadff7; }
 .study-focus ol { display: grid; gap: 8px; padding-left: 20px; margin-top: 9px; }
 .study-focus li { padding-left: 3px; font-size: 15px; line-height: 1.65; }
@@ -845,17 +854,12 @@ h1 { font-family: Georgia, "Songti SC", serif; font-size: 21px; letter-spacing: 
 .meaning-example > span { display: block; color: #755d67; font-size: 14px; line-height: 1.55; margin-top: 5px; }
 .meaning-example > button { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); }
 .fixed-card { display: grid; gap: 8px; }
-.fixed-head, .relation-word { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
-.fixed-head strong { color: #563e47; font: 16px Georgia, serif; }
-.fixed-meaning { color: #89566a !important; font-size: 14px !important; }
 .fixed-card > p { color: #4f3942; font: 16px/1.65 Georgia, serif; }
 .fixed-card > span { color: #725c65; font-size: 14px; line-height: 1.6; }
 .relation-list { display: grid; gap: 8px; }
 .relation-row { padding: 14px; border-radius: 18px; background: white; border: 1px solid #f2e2e8; }
 .content-card > .relation-row { padding: 11px 0; border: 0; border-radius: 0; }
 .content-card > .relation-row + .relation-row { border-top: 1px solid #f4e7ec; }
-.relation-word strong { color: #58404a; font: 16px Georgia, serif; }
-.relation-row > p { color: #795565; font-size: 14px; line-height: 1.55; margin-top: 8px; }
 .relation-row > span { display: block; color: #5f4a52; font-size: 15px; line-height: 1.65; margin-top: 7px; }
 .source-note { color: #8f717c; font-size: 12px; line-height: 1.65; text-align: center; padding: 7px 12px; }
 .empty-section { padding: 14px 15px; border: 1px dashed #e8d4dc; border-radius: 17px; color: #765f6a; background: rgba(255,255,255,.55); font-size: 14px; line-height: 1.65; }
