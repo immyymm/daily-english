@@ -569,7 +569,11 @@ function rowToRecommendation(row: Record<string, unknown>): DailyRecommendation 
   };
 }
 
-export async function hydrateDetailedRecords(client: SupabaseClient, userId: string) {
+export async function hydrateDetailedRecords(
+  client: SupabaseClient,
+  userId: string,
+  shouldApply: () => boolean = () => true
+) {
   const [masteryRows, attemptRows, evaluationRows, recommendationRows, reviewSessionRows] = await Promise.all([
     fetchAll(client, 'daily_english_mastery', userId),
     fetchAll(client, 'daily_english_attempts', userId),
@@ -577,6 +581,7 @@ export async function hydrateDetailedRecords(client: SupabaseClient, userId: str
     fetchAll(client, 'daily_english_daily_plans', userId),
     fetchAll(client, 'daily_english_review_sessions', userId)
   ]);
+  if (!shouldApply()) return false;
   const remoteProgress = masteryRows.map(rowToProgress);
   const remoteAttempts = attemptRows.map(rowToAttempt);
   const existingProgress = new Map((await db.progress.toArray()).map((item) => [item.cardId, item]));
@@ -619,7 +624,9 @@ export async function hydrateDetailedRecords(client: SupabaseClient, userId: str
     }
   });
 
+  if (!shouldApply()) return false;
   await db.transaction('rw', db.progress, db.attempts, db.aiEvaluations, db.dailyRecommendations, db.reviewSessions, async () => {
+    if (!shouldApply()) return;
     if (legacyInvalidAttemptIds.length) await db.attempts.bulkDelete(legacyInvalidAttemptIds);
     if (mergedProgress.length) await db.progress.bulkPut(mergedProgress);
     const validRemoteAttempts = remoteAttempts.filter((attempt) => !isLegacyInvalidClozeAttempt(attempt));
@@ -628,7 +635,9 @@ export async function hydrateDetailedRecords(client: SupabaseClient, userId: str
     if (recommendationRows.length) await db.dailyRecommendations.bulkPut(recommendationRows.map(rowToRecommendation));
     if (mergedReviewSessions.size) await db.reviewSessions.bulkPut([...mergedReviewSessions.values()]);
   });
+  if (!shouldApply()) return false;
   await sanitizeStoredReviewState(await db.progress.toArray());
+  return true;
 }
 
 export interface CloudRecordCounts {

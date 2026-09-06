@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from 'vitest';
-import { syncDetailedRecords } from './cloudRecords';
+import { hydrateDetailedRecords, syncDetailedRecords } from './cloudRecords';
 import type { AppSnapshot } from '../types';
 
 describe('syncDetailedRecords', () => {
@@ -216,5 +216,19 @@ describe('syncDetailedRecords', () => {
         created_at: '2026-08-18T00:00:01.000Z'
       })
     ], { onConflict: 'user_id,id' });
+  });
+});
+
+describe('hydrateDetailedRecords', () => {
+  it('does not apply a stale cloud read after a learning-data reset starts', async () => {
+    const range = vi.fn().mockResolvedValue({ data: [], error: null });
+    const eq = vi.fn(() => ({ range }));
+    const select = vi.fn(() => ({ eq }));
+    const client = { from: vi.fn(() => ({ select })) };
+
+    const applied = await hydrateDetailedRecords(client as never, 'user-1', () => false);
+
+    expect(applied).toBe(false);
+    expect(range).toHaveBeenCalledTimes(5);
   });
 });

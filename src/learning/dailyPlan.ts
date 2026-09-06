@@ -19,10 +19,26 @@ export function resolveDailyLearningPlan({
   date: string;
   contentVersion: string;
 }): DailyPlanRecord {
+  const knownCardIds = new Set(cards.map((card) => card.id));
+  const existingCardIdsAreValid = Boolean(existingPlan?.cardIds.length)
+    && existingPlan!.cardIds.every((cardId) => knownCardIds.has(cardId));
+  const learnedCardIds = new Set(progress.map((item) => item.cardId));
+
+  // A content-only deployment must never replace the five words already shown
+  // for the current day. The card bodies are looked up by id and therefore can
+  // still receive corrections without mutating the user's saved plan.
+  if (existingPlan && existingCardIdsAreValid && existingPlan.contentVersion !== contentVersion) {
+    return {
+      ...existingPlan,
+      completedCardIds: existingPlan.cardIds.filter((cardId) => (
+        existingPlan.completedCardIds.includes(cardId) || learnedCardIds.has(cardId)
+      ))
+    };
+  }
+
   const batches = Array.from({ length: Math.ceil(cards.length / DAILY_WORD_COUNT) }, (_, index) => (
     cards.slice(index * DAILY_WORD_COUNT, index * DAILY_WORD_COUNT + DAILY_WORD_COUNT).map((card) => card.id)
   )).filter((cardIds) => cardIds.length > 0);
-  const learnedCardIds = new Set(progress.map((item) => item.cardId));
   const firstIncompleteIndex = batches.findIndex((cardIds) => cardIds.some((cardId) => !learnedCardIds.has(cardId)));
   const existingBatchIndex = existingPlan
     ? batches.findIndex((cardIds) => sameCardIds(cardIds, existingPlan.cardIds))
@@ -44,7 +60,9 @@ export function resolveDailyLearningPlan({
     studyDay: selectedIndex + 1,
     cycle: Math.floor(selectedIndex / 30) + 1,
     cardIds,
-    completedCardIds: cardIds.filter((cardId) => learnedCardIds.has(cardId)),
+    completedCardIds: cardIds.filter((cardId) => (
+      learnedCardIds.has(cardId) || existingPlan?.completedCardIds.includes(cardId)
+    )),
     contentVersion
   };
 }

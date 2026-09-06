@@ -143,6 +143,7 @@ export function useCloudSync(refresh: () => Promise<void>, hasPendingEvaluations
   const deviceIdRef = useRef<string | undefined>(undefined);
   const syncingRef = useRef(false);
   const resettingRef = useRef(false);
+  const syncEpochRef = useRef(0);
   const queuedPushRef = useRef(false);
   const timerRef = useRef<number | undefined>(undefined);
   const reviewTimerRef = useRef<number | undefined>(undefined);
@@ -201,11 +202,16 @@ export function useCloudSync(refresh: () => Promise<void>, hasPendingEvaluations
   }, [session?.user.id]);
 
   const mergeRemote = useCallback(async (row: SnapshotRow, userId: string, uploadMerged: boolean) => {
+    const epoch = syncEpochRef.current;
+    const isCurrent = () => !resettingRef.current && syncEpochRef.current === epoch;
     const local = await exportSnapshot();
+    if (!isCurrent()) return;
     const merged = mergeSnapshots(local, row.payload);
     revisionRef.current = Math.max(revisionRef.current, row.revision ?? 0);
     await importSnapshot(merged);
+    if (!isCurrent()) return;
     await refresh();
+    if (!isCurrent()) return;
     setLastSyncedAt(row.updated_at ?? row.client_updated_at);
     setState('synced');
     setMessage('已收到另一台设备的最新记录');
@@ -214,8 +220,10 @@ export function useCloudSync(refresh: () => Promise<void>, hasPendingEvaluations
 
   const connect = useCallback(async (activeSession: Session) => {
     if (resettingRef.current) return;
+    const epoch = syncEpochRef.current;
+    const isCurrent = () => !resettingRef.current && syncEpochRef.current === epoch;
     const client = await getSupabase();
-    if (!client) return;
+    if (!client || !isCurrent()) return;
     setState('connecting');
     setMessage('正在合并云端和本机记录…');
     const { data, error } = await client
@@ -223,12 +231,14 @@ export function useCloudSync(refresh: () => Promise<void>, hasPendingEvaluations
       .select('*')
       .eq('user_id', activeSession.user.id)
       .maybeSingle<SnapshotRow>();
+    if (!isCurrent()) return;
     if (error) {
       setState('error');
       setMessage(error.message);
       return;
     }
     if (data) await mergeRemote(data, activeSession.user.id, false);
+    if (!isCurrent()) return;
     const settings = await getSettings();
     const { error: profileError } = await client.from('daily_english_profiles').upsert({
       user_id: activeSession.user.id,
@@ -236,16 +246,20 @@ export function useCloudSync(refresh: () => Promise<void>, hasPendingEvaluations
       timezone: 'Asia/Shanghai',
       updated_at: new Date().toISOString()
     }, { onConflict: 'user_id' });
+    if (!isCurrent()) return;
     if (profileError) {
       setState('error');
       setMessage(profileError.message);
       return;
     }
     try {
-      await hydrateDetailedRecords(client, activeSession.user.id);
+      const applied = await hydrateDetailedRecords(client, activeSession.user.id, isCurrent);
+      if (!applied || !isCurrent()) return;
       await refresh();
+      if (!isCurrent()) return;
       await pushSnapshot(activeSession.user.id);
     } catch (detailError) {
+      if (!isCurrent()) return;
       console.warn('DETAILED_SYNC_UNAVAILABLE', detailError);
       setState('error');
       setMessage(detailError instanceof Error ? detailError.message : '详细学习记录同步失败');
@@ -321,13 +335,17 @@ export function useCloudSync(refresh: () => Promise<void>, hasPendingEvaluations
       if (!client || cancelled) return;
       const hydrate = () => {
         if (resettingRef.current) return;
+        const epoch = syncEpochRef.current;
+        const isCurrent = () => !resettingRef.current && syncEpochRef.current === epoch;
         window.clearTimeout(refreshTimer);
         refreshTimer = window.setTimeout(() => {
-          void hydrateDetailedRecords(client, session.user.id)
-            .then(() => Promise.all([
+          void hydrateDetailedRecords(client, session.user.id, isCurrent)
+            .then((applied) => applied && isCurrent() ? Promise.all([
               refresh(),
-              countCloudRecords(client, session.user.id).then(setCloudCounts)
-            ]))
+              countCloudRecords(client, session.user.id).then((counts) => {
+                if (isCurrent()) setCloudCounts(counts);
+              })
+            ]) : undefined)
             .catch((error) => console.warn('DETAILED_REALTIME_REFRESH_FAILED', error));
         }, 250);
       };
@@ -491,13 +509,8 @@ export function useCloudSync(refresh: () => Promise<void>, hasPendingEvaluations
   }, []);
 
   const resetLearningData = useCallback(async () => {
-    const deadline = Date.now() + 5000;
-    while (syncingRef.current && Date.now() < deadline) {
-      await new Promise((resolve) => window.setTimeout(resolve, 50));
-    }
-    if (syncingRef.current) throw new Error('当前同步尚未完成，请稍后再清除。');
-
     resettingRef.current = true;
+    syncEpochRef.current += 1;
     queuedPushRef.current = false;
     window.clearTimeout(timerRef.current);
     window.clearTimeout(reviewTimerRef.current);
@@ -505,6 +518,12 @@ export function useCloudSync(refresh: () => Promise<void>, hasPendingEvaluations
     setMessage('正在清除学习记录…');
 
     try {
+      const deadline = Date.now() + 5000;
+      while (syncingRef.current && Date.now() < deadline) {
+        await new Promise((resolve) => window.setTimeout(resolve, 50));
+      }
+      if (syncingRef.current) throw new Error('当前同步尚未完成，请稍后再清除。');
+
       const client = await getSupabase();
       const userId = session?.user.id;
       let resetAt = new Date().toISOString();

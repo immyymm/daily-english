@@ -95,10 +95,10 @@ export function useAppData() {
         date: today,
         contentVersion: content.contentVersion
       });
-      if (!todayPlan || JSON.stringify(todayPlan) !== JSON.stringify(resolvedPlan)) {
-        todayPlan = resolvedPlan;
-        await db.dailyPlans.put(todayPlan);
+      if (todayPlan && JSON.stringify(todayPlan) !== JSON.stringify(resolvedPlan)) {
+        await db.dailyPlans.put(resolvedPlan);
       }
+      todayPlan = resolvedPlan;
       setState({ loading: false, cards: content.cards, settings, todayPlan, progress, attempts, aiEvaluations: normalizedEvaluations, dailyRecommendations: sanitizedDailyRecommendations });
     } catch (error) {
       setState((current) => ({
