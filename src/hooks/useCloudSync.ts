@@ -83,12 +83,45 @@ function chooseReviewSession(
   return timestamp(remote.updatedAt) >= timestamp(local.updatedAt) ? remote : local;
 }
 
+function sanitizeSnapshotAfterReset(snapshot: AppSnapshot): AppSnapshot {
+  const resetAt = timestamp(snapshot.settings.dataResetAt);
+  if (!resetAt) return snapshot;
+
+  const progress = snapshot.progress.filter((item) => progressTime(item) >= resetAt);
+  const attempts = snapshot.attempts.filter((item) => timestamp(item.createdAt) >= resetAt);
+  const aiEvaluations = snapshot.aiEvaluations.filter((item) => (
+    timestamp(item.updatedAt ?? item.createdAt) >= resetAt
+  ));
+  const reviewSessions = (snapshot.reviewSessions ?? []).filter((item) => (
+    timestamp(item.updatedAt ?? item.createdAt) >= resetAt
+  ));
+  const hasPostResetActivity = progress.length > 0
+    || attempts.length > 0
+    || aiEvaluations.length > 0
+    || reviewSessions.length > 0;
+
+  return {
+    ...snapshot,
+    progress,
+    attempts,
+    aiEvaluations,
+    reviewSessions,
+    // An unstarted plan is presentation state, not learning history. Old app
+    // versions persisted it immediately after a reset, so never let that empty
+    // shell resurrect a cleared record on another device.
+    dailyPlans: hasPostResetActivity ? snapshot.dailyPlans : [],
+    dailyRecommendations: hasPostResetActivity
+      ? (snapshot.dailyRecommendations ?? []).filter((item) => timestamp(item.generatedAt) >= resetAt)
+      : []
+  };
+}
+
 export function mergeSnapshots(local: AppSnapshot, remote: AppSnapshot): AppSnapshot {
   const localResetAt = timestamp(local.settings.dataResetAt);
   const remoteResetAt = timestamp(remote.settings.dataResetAt);
   if (localResetAt !== remoteResetAt) {
     const resetWinner = localResetAt > remoteResetAt ? local : remote;
-    return {
+    return sanitizeSnapshotAfterReset({
       ...resetWinner,
       settings: { ...resetWinner.settings, id: 'settings' },
       progress: [...resetWinner.progress],
@@ -98,11 +131,11 @@ export function mergeSnapshots(local: AppSnapshot, remote: AppSnapshot): AppSnap
       dailyRecommendations: [...(resetWinner.dailyRecommendations ?? [])],
       reviewSessions: [...(resetWinner.reviewSessions ?? [])],
       schemaVersion: 3
-    };
+    });
   }
   const localNewer = timestamp(local.exportedAt) >= timestamp(remote.exportedAt);
   const newerSettings = localNewer ? local.settings : remote.settings;
-  return {
+  return sanitizeSnapshotAfterReset({
     settings: {
       ...newerSettings,
       id: 'settings',
@@ -130,7 +163,7 @@ export function mergeSnapshots(local: AppSnapshot, remote: AppSnapshot): AppSnap
     ),
     exportedAt: new Date(Math.max(timestamp(local.exportedAt), timestamp(remote.exportedAt))).toISOString(),
     schemaVersion: 3
-  };
+  });
 }
 
 export function useCloudSync(refresh: () => Promise<void>, hasPendingEvaluations = false) {
@@ -164,7 +197,7 @@ export function useCloudSync(refresh: () => Promise<void>, hasPendingEvaluations
     setState('connecting');
     setMessage('正在同步学习记录…');
     try {
-      const payload = await exportSnapshot();
+      const payload = sanitizeSnapshotAfterReset(await exportSnapshot());
       const now = new Date().toISOString();
       const revision = revisionRef.current + 1;
       await syncDetailedRecords(client, activeUserId, payload, deviceIdRef.current);
@@ -542,7 +575,7 @@ export function useCloudSync(refresh: () => Promise<void>, hasPendingEvaluations
       await refresh();
 
       if (client && userId) {
-        const payload = await exportSnapshot();
+        const payload = sanitizeSnapshotAfterReset(await exportSnapshot());
         const now = new Date().toISOString();
         const revision = remoteRevision + 1;
         const compactPayload: AppSnapshot = {

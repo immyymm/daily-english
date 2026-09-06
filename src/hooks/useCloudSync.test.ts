@@ -168,6 +168,37 @@ describe('mergeSnapshots', () => {
     }];
 
     const merged = mergeSnapshots(local, remote);
-    expect(merged.attempts.map((item) => item.id).sort()).toEqual(['local-after-reset', 'remote-attempt']);
+    expect(merged.attempts.map((item) => item.id)).toEqual(['local-after-reset']);
+  });
+
+  it('drops an unstarted plan shell that an old client recreated after the same reset', () => {
+    const local = snapshot('local');
+    const remote = snapshot('remote');
+    const resetAt = '2026-09-06T03:00:00.000Z';
+    local.settings.dataResetAt = resetAt;
+    remote.settings.dataResetAt = resetAt;
+    local.progress = [];
+    remote.progress = [];
+    local.attempts = [];
+    remote.attempts = [];
+    local.aiEvaluations = [];
+    remote.aiEvaluations = [];
+    local.reviewSessions = [];
+    remote.reviewSessions = [];
+    local.dailyPlans = [{
+      date: '2026-09-06', studyDay: 1, cycle: 1, cardIds: ['improve-v'],
+      completedCardIds: [], contentVersion: 'old-client'
+    }];
+    local.dailyRecommendations = [{
+      date: '2026-09-06', generatedAt: '2026-09-06T03:01:00.000Z',
+      algorithmVersion: 'old-client', studyDay: 1, newCardIds: ['improve-v'], reviewCardIds: [],
+      recommendedCardIds: [], cardPrescriptions: {}, focusDimensions: [], targetQuestionCount: 5,
+      summary: 'old shell', analysis: {}, codexStatus: 'pending'
+    }];
+
+    const merged = mergeSnapshots(local, remote);
+
+    expect(merged.dailyPlans).toEqual([]);
+    expect(merged.dailyRecommendations).toEqual([]);
   });
 });
