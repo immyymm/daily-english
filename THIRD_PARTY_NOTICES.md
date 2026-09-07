@@ -17,3 +17,12 @@ APP 运行时不向 ECDICT 或其他词典 API 发送请求。
 
 - 项目：https://github.com/skywind3000/ECDICT
 - 许可证：MIT License
+
+## Princeton WordNet
+
+本项目在离线内容构建阶段通过 `wordnet-db@3.1.14` 提取 Princeton WordNet 中的常用义项、近义关系、反义关系、派生关系与语义上下位关系。仓库只保留当前 150 张词卡所需的最小结构化摘录。
+
+APP 运行时不向 WordNet 或其他词典 API 发送请求。WordNet 数据按 Princeton University WordNet License 使用，版权声明和免责条款保留于本项目。
+
+- 项目与数据封装：https://www.npmjs.com/package/wordnet-db
+- WordNet 许可说明：https://wordnet.princeton.edu/license-and-commercial-use

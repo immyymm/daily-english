@@ -9,6 +9,9 @@ const manifestPath = path.join(root, 'public', 'data', 'manifest.json');
 const releasePath = path.join(root, 'content', 'release.json');
 const auditPath = path.join(root, 'content', 'coca-audit.json');
 const wordMetadataPath = path.join(root, 'scripts', 'word-metadata.json');
+const wordnetEnrichmentPath = path.join(root, 'scripts', 'wordnet-enrichment.json');
+const ecdictEnrichmentPath = path.join(root, 'scripts', 'ecdict-enrichment.json');
+const qualityReportPath = path.join(root, 'content', 'content-quality-report.json');
 const runtimeReleasePath = path.join(root, 'src', 'config', 'release.ts');
 const templateLockPath = path.join(root, 'content', 'templates', 'template-lock.json');
 const allCards = JSON.parse(await fs.readFile(allCardsPath, 'utf8'));
@@ -16,6 +19,8 @@ const manifest = JSON.parse(await fs.readFile(manifestPath, 'utf8'));
 const release = JSON.parse(await fs.readFile(releasePath, 'utf8'));
 const cocaAudit = JSON.parse(await fs.readFile(auditPath, 'utf8'));
 const wordMetadata = JSON.parse(await fs.readFile(wordMetadataPath, 'utf8'));
+const wordnetEnrichment = JSON.parse(await fs.readFile(wordnetEnrichmentPath, 'utf8'));
+const ecdictEnrichment = JSON.parse(await fs.readFile(ecdictEnrichmentPath, 'utf8'));
 const runtimeRelease = await fs.readFile(runtimeReleasePath, 'utf8');
 const templatePath = path.join(root, 'content', 'templates', release.templateVersion + '.md');
 const template = await fs.readFile(templatePath, 'utf8');
@@ -42,7 +47,11 @@ const forbiddenGeneratedCopy = [
   /与本词相关的常用表达/,
   /同一学习主题中的高频词/,
   /真实表达延伸/,
-  /主动输出提示/
+  /主动输出提示/,
+  /语体、宾语范围和固定搭配可能不同/,
+  /实际使用前仍要核对词性和句型/,
+  /这是 .+ 的常用词族成员/,
+  /人工精校|AI 生成|自动生成|程序运行|JSON 对象|confidence:/i
 ];
 
 const sha256 = (content) => crypto.createHash('sha256').update(content).digest('hex').toUpperCase();
@@ -105,6 +114,8 @@ const expectedDayCount = Math.ceil(expectedCardCount / 5);
 if (!cocaAudit.selection?.allSelectedWordsFound || cocaAudit.selection?.missingWords?.length) errors.push('COCA audit has missing selected words.');
 if (cocaAudit.selection?.primaryGroupCounts?.verb !== 150 || Object.keys(cocaAudit.selection?.primaryGroupCounts ?? {}).length !== 1) errors.push('The active learning catalog must contain 150 primary verb cards and no other primary POS.');
 if (wordMetadata.missing?.length || Object.keys(wordMetadata.entries ?? {}).length < 450) errors.push('Offline relation/derivative metadata extraction is incomplete.');
+if (Object.keys(wordnetEnrichment.entries ?? {}).length !== expectedCardCount) errors.push('WordNet enrichment must cover every selected verb.');
+if (Object.keys(ecdictEnrichment.entries ?? {}).length < 3000) errors.push('ECDICT enrichment does not cover enough relation and derivative words.');
 if (allCards.cards.length !== expectedCardCount) errors.push('Expected ' + expectedCardCount + ' audited cards.');
 if (manifest.dailyFiles.length !== expectedDayCount) errors.push('Expected ' + expectedDayCount + ' daily files.');
 if (new Set(allCards.cards.map((card) => card.id)).size !== allCards.cards.length) errors.push('Duplicate card IDs.');
@@ -146,7 +157,6 @@ for (const [cardIndex, card] of allCards.cards.entries()) {
   if (card.detailLevel === 'template-curated' && !meetsCuratedBenchmark(card)) errors.push(card.id + ': human-curated label does not meet the curated richness benchmark.');
   if (forbiddenGeneratedCopy.some((pattern) => pattern.test(JSON.stringify(card)))) errors.push(card.id + ': forbidden meta-learning filler or mechanical expansion found.');
   if (card.tags.some((tag) => /(人工精校|模板结构版|待深度补全)/.test(tag))) errors.push(card.id + ': internal production labels must not appear in app tags.');
-  if (!card.tags.includes('完整词卡')) errors.push(card.id + ': complete-card tag is missing.');
   const expectedPriority = cocaAudit.orderedCards?.[cardIndex];
   if (!expectedPriority
     || card.learningPriority.sequence !== cardIndex + 1
@@ -155,12 +165,14 @@ for (const [cardIndex, card] of allCards.cards.entries()) {
     || card.learningPriority.groupOrder !== learningGroups.indexOf(card.learningPriority.group) + 1) {
     errors.push(card.id + ': learning priority metadata differs from the COCA audit.');
   }
-  if (card.meanings.length < 1) errors.push(card.id + ': expected at least one meaning.');
+  if (card.meanings.length < 2) errors.push(card.id + ': a detailed card needs at least two distinct, useful meanings.');
   if (card.partOfSpeech.includes('/') && card.meanings.length < 2) errors.push(card.id + ': multiple parts of speech need separate meanings.');
   if (!Array.isArray(card.cocaRanks) || card.cocaRanks.length < 1 || !card.cocaRankLabel) errors.push(card.id + ': missing exact COCA rank data.');
   if (!Array.isArray(card.coreMemory.structures) || card.coreMemory.structures.length < 3) errors.push(card.id + ': expected at least three core structures.');
   if (!Array.isArray(card.coreMemory.commonErrors) || card.coreMemory.commonErrors.length < 2) errors.push(card.id + ': expected at least two concrete error corrections.');
   if (card.synonyms.length < 1 || card.antonyms.length < 1) errors.push(card.id + ': missing semantic contrast.');
+  if (!card.reviewed && card.synonyms.some((item) => !item.difference || item.difference.length < 45 || !item.difference.includes(card.word))) errors.push(card.id + ': every synonym needs a target-specific usage distinction.');
+  if (!card.reviewed && card.antonyms.some((item) => !item.usage || item.usage.length < 35 || !item.usage.includes(card.word))) errors.push(card.id + ': every antonym needs a sense-specific contrast explanation.');
   if (card.detailLevel === 'template-curated' || card.detailLevel === 'template-reference') {
     if (card.contextPhrases.length < 4) errors.push(card.id + ': reviewed card needs at least four real context categories.');
     if (card.contextPhrases.reduce((sum, group) => sum + group.items.length, 0) < 12) errors.push(card.id + ': reviewed card needs at least twelve curated context phrases.');
@@ -233,6 +245,13 @@ for (const [cardIndex, card] of allCards.cards.entries()) {
     if (card.fixedPhrases.some((entry) => !usesTarget(entry.example))) errors.push(card.id + ': every fixed-phrase example must use the target word or an inflected form.');
     if (card.examples.some((entry) => !usesTarget(entry.english))) errors.push(card.id + ': every high-frequency example must use the target word or an inflected form.');
   }
+  const fixedPhraseSet = new Set(card.fixedPhrases.map((entry) => entry.phrase.toLowerCase().replace(/[^a-z]+/g, ' ').trim()));
+  const duplicatedContextPhrases = card.contextPhrases
+    .flatMap((group) => group.items)
+    .filter((entry) => fixedPhraseSet.has(entry.phrase.toLowerCase().replace(/[^a-z]+/g, ' ').trim()));
+  if (!card.reviewed && duplicatedContextPhrases.length > 1) errors.push(card.id + ': context phrases repeat fixed phrases instead of adding real sentence context.');
+  if (card.meanings.some((meaning) => !meaning.english || !meaning.chinese || !meaning.example || !meaning.translation)) errors.push(card.id + ': every meaning needs bilingual definition and example evidence.');
+  if (card.fixedPhrases.some((entry) => !entry.chinese || !entry.example || !entry.translation)) errors.push(card.id + ': every fixed phrase needs a Chinese meaning and a bilingual example.');
   if (new Set(card.examples.map((example) => example.english)).size !== card.examples.length) errors.push(card.id + ': duplicate example sentences.');
   if (card.derivatives.some((item) => item.word.toLowerCase() === card.word.toLowerCase())) errors.push(card.id + ': target word repeated as a derivative.');
   if (card.confusables.some((item) => item.word.toLowerCase() === card.word.toLowerCase())) errors.push(card.id + ': target word repeated as a confusable.');
@@ -338,4 +357,30 @@ if (errors.length) {
 const referenceCount = allCards.cards.filter((card) => card.detailLevel === 'template-reference').length;
 const curatedCount = allCards.cards.filter((card) => card.detailLevel === 'template-curated').length;
 const completeCount = allCards.cards.filter((card) => card.detailLevel === 'template-complete').length;
+const shapeRows = allCards.cards.map((card) => ({ word: card.word, ...shapeFor(card) }));
+const metrics = Object.keys(shapeFor(allCards.cards[0])).reduce((summary, key) => {
+  const values = shapeRows.map((row) => row[key]);
+  summary[key] = {
+    minimum: Math.min(...values),
+    maximum: Math.max(...values),
+    average: Number((values.reduce((sum, value) => sum + value, 0) / values.length).toFixed(2))
+  };
+  return summary;
+}, {});
+await fs.writeFile(qualityReportPath, JSON.stringify({
+  contentVersion: release.contentVersion,
+  generatedAt: '2026-09-08',
+  totalCards: allCards.cards.length,
+  lexicalSources: ['user-provided COCA word list', 'Princeton WordNet via wordnet-db@3.1.14', 'ECDICT'],
+  checks: {
+    bilingualMeanings: true,
+    phraseExamples: true,
+    senseSpecificRelations: true,
+    noMechanicalFiller: true,
+    noRuntimeDictionaryApi: true,
+    allCardsValidated: true
+  },
+  metrics,
+  cards: shapeRows
+}, null, 2) + '\n', 'utf8');
 console.log('Content validation passed: all ' + allCards.cards.length + ' cards are complete static verb cards in COCA verb-rank order; ' + referenceCount + ' locked reference, ' + curatedCount + ' curated detailed, ' + completeCount + ' template-complete, ' + manifest.dailyFiles.length + ' days, 5 unique cards per full day.');

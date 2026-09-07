@@ -12,6 +12,9 @@ import { ipaFor } from './phonetics.mjs';
 import { learningPriority, sortLexiconForLearning } from './learning-order.mjs';
 import cocaRankData from './coca-ranks.json' with { type: 'json' };
 import wordMetadataData from './word-metadata.json' with { type: 'json' };
+import wordnetEnrichmentData from './wordnet-enrichment.json' with { type: 'json' };
+import ecdictEnrichmentData from './ecdict-enrichment.json' with { type: 'json' };
+import { manualConfusableWords, manualDerivativePacks, manualMeaningPacks } from './deep-card-rules.mjs';
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(scriptDir, '..');
@@ -61,13 +64,105 @@ if (activeLexicon.length !== 150 || activeWords.size !== activeLexicon.length) {
 const lexiconByWord = new Map(activeLexicon.map((item) => [item.w, item]));
 const orderedLexicon = sortLexiconForLearning(activeLexicon, cocaRankData);
 const wordMetadata = wordMetadataData.entries;
+const wordnetEntries = wordnetEnrichmentData.entries;
+const ecdictEntries = ecdictEnrichmentData.entries;
 const posLabels = { v: 'v.', n: 'n.', j: 'adj.', r: 'adv.' };
+
+function stripDictionaryLabels(value = '') {
+  return value
+    .replace(/\\n/g, '\n')
+    .split(/\r?\n/)
+    .filter((line) => line.trim() && !/^\s*\[[^\]]+\]/.test(line))
+    .join('；')
+    .replace(/\b(?:vt|vi|aux|v|n|adj|adv|prep|conj|pron|a)\.\s*/gi, '')
+    .replace(/[，,]\s*/g, '；')
+    .replace(/；+/g, '；')
+    .replace(/^；|；$/g, '')
+    .trim();
+}
+
+function conciseChinese(word, fallback = '') {
+  const source = stripDictionaryLabels(ecdictEntries[word.toLowerCase()]?.translation ?? '');
+  const parts = source.split('；').map((part) => part.trim()).filter(Boolean);
+  return parts.slice(0, 3).join('；') || fallback;
+}
+
+function ecdictPartOfSpeech(word, fallback = 'word') {
+  const entry = ecdictEntries[word.toLowerCase()];
+  const explicit = entry?.partOfSpeech?.match(/\b(vt|vi|v|n|a|adj|adv|prep|conj|pron|aux)\b/i)?.[1];
+  if (explicit) return explicit.replace(/^vt$|^vi$/i, 'v').replace(/^a$/i, 'adj') + '.';
+  const definition = entry?.definition ?? '';
+  const inferred = definition.replace(/\\n/g, '\n').match(/(?:^|\n)(vt|vi|v|n|a|adj|adv|prep|conj|pron|aux)\.?\s/i)?.[1];
+  return inferred ? inferred.replace(/^vt$|^vi$/i, 'v').replace(/^a$/i, 'adj') + '.' : fallback;
+}
+
+function dictionaryHeadword(word) {
+  const normalized = word.toLowerCase().trim();
+  if (ecdictEntries[normalized]) return normalized;
+  const candidates = normalized.endsWith('ies')
+    ? [normalized.slice(0, -3) + 'y']
+    : normalized.endsWith('ing')
+      ? [normalized.slice(0, -3), normalized.slice(0, -3) + 'e']
+      : normalized.endsWith('ed')
+        ? [normalized.slice(0, -2), normalized.slice(0, -1)]
+        : normalized.endsWith('s')
+          ? [normalized.slice(0, -1)]
+          : [];
+  return candidates.find((candidate) => ecdictEntries[candidate]) ?? normalized;
+}
+
+function candidateCommonness(word) {
+  const entry = ecdictEntries[word.toLowerCase()];
+  if (!entry) return -10000;
+  const numeric = (value, fallback) => Number.isFinite(Number(value)) && Number(value) > 0 ? Number(value) : fallback;
+  const bnc = numeric(entry.bncRank, 60000);
+  const frequency = numeric(entry.frequencyRank, 60000);
+  const collins = numeric(entry.collins, 0);
+  return (activeWords.has(word) ? 500 : 0)
+    + (entry.oxford === '1' ? 160 : 0)
+    + collins * 20
+    + (entry.tags ? 40 : 0)
+    + Math.max(0, 120 - Math.min(bnc, frequency) / 250)
+    - Math.max(0, word.split(' ').length - 1) * 35;
+}
+
+function selectCommonCandidates(items = [], excludedWords = [], limit = 4) {
+  const excluded = new Set(excludedWords.map((word) => word.toLowerCase()));
+  const seen = new Set();
+  return items
+    .map((entry) => ({ ...entry, word: dictionaryHeadword(entry.word ?? '') }))
+    .filter((entry) => {
+      const word = entry.word?.toLowerCase().trim();
+      if (!word || excluded.has(word) || seen.has(word) || !ecdictEntries[word]) return false;
+      if (word.length > 30 || word.split(' ').length > 3) return false;
+      seen.add(word);
+      return true;
+    })
+    .sort((left, right) => candidateCommonness(right.word) - candidateCommonness(left.word))
+    .slice(0, limit);
+}
+
+function wordnetDefinitionNote(entry) {
+  const definition = entry?.definition?.replace(/\s+/g, ' ').trim();
+  return definition ? `对应的常用英文义是 “${definition}”。` : '';
+}
+
+const definitionStopWords = new Set(['a', 'an', 'and', 'as', 'at', 'be', 'by', 'for', 'from', 'in', 'into', 'is', 'it', 'of', 'on', 'or', 'someone', 'something', 'that', 'the', 'their', 'this', 'to', 'with']);
+
+function definitionSimilarity(left, right) {
+  const tokens = (value) => new Set(value.toLowerCase().match(/[a-z]+/g)?.filter((word) => !definitionStopWords.has(word)).map((word) => word.slice(0, Math.min(5, word.length))) ?? []);
+  const leftTokens = tokens(left);
+  const rightTokens = tokens(right);
+  return [...leftTokens].filter((token) => rightTokens.has(token)).length;
+}
 function relatedChinese(word, item, relation) {
   if (relation === 'synonym' && item.synZh) return item.synZh;
   if (relation === 'antonym' && item.antZh) return item.antZh;
   const known = lexiconByWord.get(word);
   if (known) return firstMeaning(known.zh);
   if (wordMetadata[word]?.chinese) return wordMetadata[word].chinese;
+  const dictionaryChinese = conciseChinese(word);
+  if (dictionaryChinese) return dictionaryChinese;
   if (relation === 'synonym') return '与“' + firstMeaning(item.zh) + '”意义接近';
   if (relation === 'antonym') return '与“' + firstMeaning(item.zh) + '”意义相反';
   return '与 ' + item.w + ' 同词族的常用词形';
@@ -97,48 +192,102 @@ function syllableHint(word) {
   return groups <= 1 ? word + '（单音节）' : word + '（约 ' + groups + ' 音节）';
 }
 
-function extractExampleChunk(item) {
-  const words = item.ex.replace(/[.!?,;:]/g, '').split(/\s+/);
-  const stem = item.w.slice(0, Math.min(4, item.w.length)).toLowerCase();
-  const index = words.findIndex((word) => word.toLowerCase().startsWith(stem));
-  if (index < 0) return item.coll;
-  return words.slice(Math.max(0, index - 2), Math.min(words.length, index + 4)).join(' ');
+function extractTargetChunk(text, targetWord) {
+  const words = wordsWithOffsets(text);
+  const forms = inflectedForms(targetWord.toLowerCase());
+  const targetIndex = words.findIndex((word) => forms.has(word.text.toLowerCase()));
+  if (targetIndex < 0) return text.replace(/[.!?]+$/, '').trim();
+  const start = Math.max(0, targetIndex - 2);
+  const end = Math.min(words.length, targetIndex + 5);
+  return words.slice(start, end).map((word) => word.text).join(' ');
 }
 
-function genericErrors(item) {
-  if (item.p.startsWith('v.')) {
-    return [
-      ['can to ' + item.w, 'can ' + item.w, '情态动词 can 后直接接动词原形，不加 to。'],
-      ['to ' + item.w + 'ing', 'to ' + item.w, '不定式 to 后接动词原形；不要把不定式和 -ing 形式混合。']
-    ];
+function phraseSpecificError(item, phrase, fallbackIndex) {
+  const normalized = phrase.replace(/\s+/g, ' ').trim();
+  if (/\bto do something\b/i.test(normalized)) {
+    const wrong = normalized.replace(/\bto do something\b/i, 'doing something');
+    return [wrong, normalized, `这个结构要用 ${item.w} + to + 动词原形；do 只是词卡里的动词占位符，真实句子要换成 finish、check 等具体动词。`];
   }
-  if (item.p.startsWith('n.')) {
-    return [
-      ['use ' + item.w + ' with the same article in every context', 'check the countability of ' + item.w + ' in context', '同一个名词在不同义项下可能有可数、不可数或单复数差异，不能机械套用冠词。'],
-      ['translate ' + item.w + ' word by word', 'learn the complete phrase “' + item.coll + '”', '不要只按中文逐字替换；优先把本卡高频搭配作为完整句块记忆。']
-    ];
+  if (/\bsomeone doing something\b/i.test(normalized)) {
+    return [normalized.replace('doing', 'do'), normalized, `此处用动词 -ing 形式强调动作正在进行；换成动词原形时通常强调看到或感知完整动作。`];
   }
-  if (item.p.includes('adj.')) {
-    return [
-      ['feel ' + item.w + 'ly', 'feel ' + item.w, '系动词 feel 后接形容词作表语，不随意加 -ly。'],
-      ['more ' + item.w + 'er', 'more ' + item.w, '较长形容词通常用 more 构成比较级，不重复加 -er。']
-    ];
+  if (/\bsomeone do something\b/i.test(normalized)) {
+    return [normalized.replace('do', 'doing'), normalized, `此处用不带 to 的动词原形表示完整动作；do 同样是占位符，不是必须写出的单词。`];
   }
-  return [
-    ['a ' + item.w + ' answer', 'use ' + item.w + ' to modify the statement', '副词通常不直接放在名词前作定语，应根据句意放在动词、形容词或整个分句旁。'],
-    [item.w + 'ly', item.w, item.w + ' 本身已经是本卡要学的形式，不要再次机械添加 -ly。']
-  ];
+  if (/\bthat \+ clause\b/i.test(normalized)) {
+    return [normalized.replace(/\s*that \+ clause/i, ' something'), normalized, `本义项后面要接 that 引导的完整从句，从句里需要有自己的主语和谓语。`];
+  }
+  const preposition = normalized.match(/\b(on|in|at|for|with|by|from|of|about|into|over|through)\b/i)?.[1];
+  if (preposition) {
+    const wrong = normalized.replace(new RegExp(`(^|\\s)${preposition}(?=\\s|$)`, 'i'), '$1').replace(/\s+/g, ' ').trim();
+    return [wrong, normalized, `在“${normalized}”这个常用搭配中，介词 ${preposition.toLowerCase()} 负责连接后面的对象或范围，不能省略或随意换成其他介词。`];
+  }
+  if (/^\b(can|could|may|might|must|should|will|would)\b/i.test(normalized)) {
+    const modal = normalized.match(/^\w+/)?.[0] ?? 'modal';
+    return [`${modal} to ${item.w}`, normalized, `情态动词 ${modal} 后面直接接动词原形，不加 to；后面的 something 或 do 要按语境换成真实内容。`];
+  }
+  if (/\bdoing something\b/i.test(normalized)) {
+    return [normalized.replace('doing', 'to do'), normalized, `“${normalized}”是需要动词 -ing 形式的固定结构；doing 是占位符，应换成具体动词的 -ing 形式。`];
+  }
+  return fallbackIndex === 0
+    ? [`can to ${item.w}`, `can ${item.w}`, `情态动词 can 后面直接接 ${item.w} 的原形，不加 to。`]
+    : [`to ${item.w}ing`, `to ${item.w}`, `这里的 to 是不定式标记，后面要用 ${item.w} 的原形，不能再加 -ing。`];
+}
+
+function generatedErrors(item, tuples) {
+  const source = [...tuples].sort((left, right) => {
+    const score = (phrase) => /\b(to do|someone do|someone doing|that \+ clause|doing something)\b/i.test(phrase) ? 2 : /\b(on|in|at|for|with|by|from|of|about|into|over|through)\b/i.test(phrase) ? 1 : 0;
+    return score(right[0]) - score(left[0]);
+  });
+  const rows = source.slice(0, 4).map(([phrase], index) => phraseSpecificError(item, phrase, index));
+  const seen = new Set();
+  return rows.filter(([wrong, right]) => {
+    const key = `${wrong}|${right}`.toLowerCase();
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  }).slice(0, 2);
 }
 
 function normalizeMeanings(item, override) {
   if (override?.meanings) {
     return override.meanings.map(([partOfSpeech, english, chinese, example, translation]) => ({ partOfSpeech, english, chinese, example, translation }));
   }
+  const examplePool = priorityEntries[item.w]?.uses?.map((entry) => ({ example: entry[2], translation: entry[3] }))
+    ?? (curatedExamples[item.w] ?? [[item.ex, item.exZh]]).map(([example, translation]) => ({ example, translation }));
+  const manual = manualMeaningPacks[item.w];
+  if (manual) {
+    return manual.map(([partOfSpeech, english, chinese, exampleIndex, customExample, customTranslation]) => ({
+      partOfSpeech,
+      english,
+      chinese,
+      ...(customExample && customTranslation
+        ? { example: customExample, translation: customTranslation }
+        : (examplePool[exampleIndex] ?? examplePool[0]))
+    }));
+  }
   const secondary = secondarySenses[item.w];
-  return [
-    { partOfSpeech: item.p.split('/')[0].trim(), english: item.en, chinese: firstMeaning(item.zh), example: item.ex, translation: item.exZh },
-    ...(secondary ? [secondary] : [])
+  const wordnetMeanings = (wordnetEntries[item.w]?.meanings ?? [])
+    .filter((entry) => entry.definition && entry.definition.toLowerCase() !== item.en.toLowerCase());
+  const similarMeanings = wordnetMeanings.filter((entry) => definitionSimilarity(entry.definition, item.en) > 0);
+  const dictionaryMeanings = (similarMeanings.length ? similarMeanings : wordnetMeanings.slice(0, 1)).slice(0, 1);
+  const rows = [
+    { partOfSpeech: item.p.split('/')[0].trim(), english: item.en, chinese: item.zh, ...examplePool[0] },
+    ...(secondary ? [secondary] : []),
+    ...dictionaryMeanings.map((entry, index) => ({
+      partOfSpeech: item.p.split('/')[0].trim(),
+      english: entry.definition,
+      chinese: item.zh,
+      ...examplePool[0]
+    }))
   ];
+  const seenDefinitions = new Set();
+  return rows.filter((entry) => {
+    const key = entry.english.toLowerCase().replace(/[^a-z]+/g, ' ').trim();
+    if (seenDefinitions.has(key)) return false;
+    seenDefinitions.add(key);
+    return true;
+  }).slice(0, 4);
 }
 
 function normalizeStructures(item, override, tuples) {
@@ -146,8 +295,8 @@ function normalizeStructures(item, override, tuples) {
   return source.map(([phrase, chinese]) => ({ phrase, phonetic: ipaFor(phrase, item.w, item.ipa), chinese }));
 }
 
-function normalizeErrors(item, override) {
-  const source = override?.errors ?? genericErrors(item);
+function normalizeErrors(item, override, tuples) {
+  const source = override?.errors ?? generatedErrors(item, tuples);
   return source.map(([wrong, right, note]) => ({
     wrong,
     wrongPhonetic: ipaFor(wrong, item.w, item.ipa),
@@ -163,9 +312,21 @@ function normalizeContexts(item, override, tuples) {
     : item.p.startsWith('n.')
       ? ['核心名词搭配', '日常与工作语境', '高频扩展表达', '补充常用语境']
       : ['核心用法', '日常与工作语境', '高频扩展表达', '补充常用语境'];
-  const generatedGroups = Array.from({ length: Math.ceil(tuples.length / 2) }, (_, index) => [
+  const examples = priorityEntries[item.w]?.uses
+    ?? (curatedExamples[item.w] ?? [[item.ex, item.exZh]]).map(([example, translation], index) => [
+      tuples[index]?.[0] ?? item.coll,
+      tuples[index]?.[1] ?? item.collZh,
+      example,
+      translation
+    ]);
+  const contextItems = examples.map((entry, index) => [
+    extractTargetChunk(entry[2], item.w),
+    `${entry[1]}；原句语境：${entry[3]}`,
+    index
+  ]).filter(([phrase], index, source) => source.findIndex(([candidate]) => candidate.toLowerCase() === phrase.toLowerCase()) === index);
+  const generatedGroups = Array.from({ length: Math.ceil(contextItems.length / 2) }, (_, index) => [
     contextLabels[index] ?? '补充常用语境',
-    tuples.slice(index * 2, index * 2 + 2)
+    contextItems.slice(index * 2, index * 2 + 2).map(([phrase, chinese]) => [phrase, chinese])
   ]);
   const source = override?.contexts ?? generatedGroups;
   return source.filter(([, items]) => items.length).map(([category, items]) => ({
@@ -204,41 +365,93 @@ function normalizeRelations(item, override, key) {
     }));
   }
   if (key === 'synonyms') {
-    return [{
-      word: item.syn,
-      phonetic: ipaFor(item.syn),
-      partOfSpeech: wordMetadata[item.syn]?.partOfSpeech ?? item.p.split('/')[0].trim(),
-      chinese: relatedChinese(item.syn, item, 'synonym'),
-      difference: item.w + ' 是本卡核心搭配 “' + item.coll + '” 中的中性常用选择；' + item.syn + ' 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。'
-    }];
+    // WordNet groups words by every recorded sense.  A common word can therefore
+    // pick up a technically valid but pedagogically misleading relation from a
+    // rare sense (for example find -> chance or solve -> lick).  This field asks
+    // for the most direct synonym, so keep only the reviewed source relation.
+    const candidates = [
+      { word: item.syn, partOfSpeech: wordMetadata[item.syn]?.partOfSpeech ?? item.p.split('/')[0].trim(), definition: item.en }
+    ];
+    const seen = new Set();
+    return candidates.filter((entry) => {
+      const word = entry.word.toLowerCase();
+      if (seen.has(word)) return false;
+      seen.add(word);
+      return true;
+    }).slice(0, 3).map((entry, relationIndex) => ({
+      word: entry.word,
+      phonetic: ipaFor(entry.word),
+      partOfSpeech: entry.partOfSpeech ?? ecdictPartOfSpeech(entry.word, item.p.split('/')[0].trim()),
+      chinese: relationIndex === 0 ? relatedChinese(entry.word, item, 'synonym') : conciseChinese(entry.word, '与本卡当前义项意义接近'),
+      difference: `${entry.word} 侧重“${relationIndex === 0 ? relatedChinese(entry.word, item, 'synonym') : conciseChinese(entry.word, '相近动作')}”。${wordnetDefinitionNote(entry)}${item.w} 在本卡搭配“${item.coll}”中表达“${firstMeaning(item.zh)}”；换词时要同时检查宾语和介词。`
+    }));
   }
   if (key === 'antonyms') {
-    return [{
-      word: item.ant,
-      phonetic: ipaFor(item.ant),
-      partOfSpeech: wordMetadata[item.ant]?.partOfSpeech ?? item.p.split('/')[0].trim(),
-      chinese: relatedChinese(item.ant, item, 'antonym'),
-      usage: '在本卡核心义下与 ' + item.w + ' 构成最直接的语义对比；实际使用前仍要核对词性和句型。'
-    }];
+    // Antonymy is even more sense-dependent.  The source list contains one
+    // reviewed direct contrast for the taught sense, so do not pad this section
+    // with opposites belonging to unrelated secondary senses.
+    const candidates = [
+      { word: item.ant, partOfSpeech: wordMetadata[item.ant]?.partOfSpeech ?? item.p.split('/')[0].trim(), definition: `opposite of ${item.w}` }
+    ];
+    const seen = new Set();
+    return candidates.filter((entry) => {
+      const word = entry.word.toLowerCase();
+      if (seen.has(word)) return false;
+      seen.add(word);
+      return true;
+    }).slice(0, 3).map((entry, relationIndex) => ({
+      word: entry.word,
+      phonetic: ipaFor(entry.word),
+      partOfSpeech: entry.partOfSpeech ?? ecdictPartOfSpeech(entry.word, item.p.split('/')[0].trim()),
+      chinese: relationIndex === 0 ? relatedChinese(entry.word, item, 'antonym') : conciseChinese(entry.word, '与本卡当前义项相反'),
+      usage: `在“${firstMeaning(item.zh)}”这个义项下，${entry.word}（${relationIndex === 0 ? relatedChinese(entry.word, item, 'antonym') : conciseChinese(entry.word, '相反含义')}）与 ${item.w} 形成对比。${wordnetDefinitionNote(entry)}只在这个明确义项和句型中对比，不把两个词的所有用法都视为相反。`
+    }));
   }
   return [];
 }
 
 function normalizeDerivatives(item, override) {
   const priorityDerivatives = priorityEntries[item.w]?.derivatives;
-  if (override?.derivatives || priorityDerivatives) {
-    return (override?.derivatives ?? priorityDerivatives)
+  if (override?.derivatives) {
+    return override.derivatives
       .filter(([word]) => word.toLowerCase() !== item.w.toLowerCase())
       .map(([word, partOfSpeech, chinese, note]) => ({ word, phonetic: ipaFor(word), partOfSpeech, chinese, note }));
   }
-  return (families[item.w] ?? [])
-    .filter((word) => word !== item.w && (lexiconByWord.has(word) || wordMetadata[word]))
-    .map((word) => ({
-      word,
-      phonetic: ipaFor(word),
-      partOfSpeech: lexiconByWord.get(word)?.p ?? wordMetadata[word].partOfSpeech,
-      chinese: lexiconByWord.has(word) ? firstMeaning(lexiconByWord.get(word).zh) : wordMetadata[word].chinese,
-      note: '这是 ' + item.w + ' 的常用词族成员；请按上方词性放到句子的正确位置。'
+  const curated = [...(priorityDerivatives ?? []), ...(manualDerivativePacks[item.w] ?? [])]
+    .map(([word, partOfSpeech, chinese, note]) => ({ word, partOfSpeech, chinese, note }));
+  const legacy = (families[item.w] ?? []).map((word) => ({
+    word,
+    partOfSpeech: lexiconByWord.get(word)?.p ?? wordMetadata[word]?.partOfSpeech,
+    chinese: lexiconByWord.has(word) ? firstMeaning(lexiconByWord.get(word).zh) : wordMetadata[word]?.chinese
+  }));
+  const stemLength = Math.min(4, Math.max(3, item.w.length - 2));
+  const stem = item.w.toLowerCase().slice(0, stemLength);
+  const dictionary = selectCommonCandidates(
+    (wordnetEntries[item.w]?.derivatives ?? []).filter((entry) => entry.word.toLowerCase().startsWith(stem)),
+    [item.w, ...curated.map((entry) => entry.word), ...legacy.map((entry) => entry.word)],
+    6
+  ).map((entry) => ({
+    word: entry.word,
+    partOfSpeech: entry.partOfSpeech ?? ecdictPartOfSpeech(entry.word),
+    chinese: conciseChinese(entry.word, '与本词同词族'),
+    note: `${entry.word} 是 ${item.w} 的常用词族形式，作 ${entry.partOfSpeech ?? ecdictPartOfSpeech(entry.word)} 使用；${wordnetDefinitionNote(entry)}`
+  }));
+  const seen = new Set();
+  return [...curated, ...legacy, ...dictionary]
+    .filter((entry) => entry.word && entry.word.toLowerCase() !== item.w.toLowerCase())
+    .filter((entry) => {
+      const word = entry.word.toLowerCase();
+      if (seen.has(word)) return false;
+      seen.add(word);
+      return true;
+    })
+    .slice(0, 8)
+    .map((entry) => ({
+      word: entry.word,
+      phonetic: ipaFor(entry.word),
+      partOfSpeech: entry.partOfSpeech ?? ecdictPartOfSpeech(entry.word),
+      chinese: entry.chinese ?? conciseChinese(entry.word, '与本词同词族'),
+      note: entry.note ?? `${entry.word} 是 ${item.w} 的常用词族形式；作 ${entry.partOfSpeech ?? ecdictPartOfSpeech(entry.word)} 时表示“${entry.chinese ?? conciseChinese(entry.word, '相关含义')}”。`
     }));
 }
 
@@ -246,7 +459,29 @@ function normalizeConfusables(item, override) {
   if (override?.confusables) {
     return normalizeRelations(item, override, 'confusables');
   }
-  return confusables[item.w] ? [{ ...confusables[item.w], phonetic: ipaFor(confusables[item.w].word) }] : [];
+  const legacy = confusables[item.w] ? [confusables[item.w].word] : [];
+  const candidates = [...legacy, ...(manualConfusableWords[item.w] ?? [])];
+  const specialChinese = {
+    'believe in': '信仰；信任', 'there is': '有；存在', 'go back': '回去；返回',
+    'used to': '过去常常', 'would not': '不会；不愿意', 'could not': '不能；不可能',
+    'may not': '可能不；不可以', 'should not': '不应该', 'be unable to': '无法做某事'
+  };
+  const seen = new Set();
+  return candidates.filter((word) => {
+    const normalized = word.toLowerCase();
+    if (seen.has(normalized)) return false;
+    seen.add(normalized);
+    return normalized !== item.w.toLowerCase();
+  }).slice(0, 3).map((word) => {
+    const chinese = specialChinese[word] ?? conciseChinese(word, `与 ${item.w} 容易混淆的表达`);
+    return {
+      word,
+      phonetic: ipaFor(word),
+      partOfSpeech: word.includes(' ') ? 'phr.' : ecdictPartOfSpeech(word, item.p.split('/')[0].trim()),
+      chinese,
+      difference: `${word} 表示“${chinese}”；${item.w} 在本卡核心搭配“${item.coll}”中表示“${firstMeaning(item.zh)}”。答题时要根据句意和完整结构区分，不只看拼写或中文近义。`
+    };
+  });
 }
 
 function vocabularyItem(word, fallbackPos = 'word', fallbackChinese = '与本词相关的常用表达') {
@@ -255,28 +490,47 @@ function vocabularyItem(word, fallbackPos = 'word', fallbackChinese = '与本词
   return {
     word,
     phonetic: known?.ipa ?? ipaFor(word),
-    partOfSpeech: known?.p ?? metadata?.partOfSpeech ?? fallbackPos,
-    chinese: known ? firstMeaning(known.zh) : metadata?.chinese ?? fallbackChinese
+    partOfSpeech: fallbackPos !== 'word' ? fallbackPos : known?.p ?? metadata?.partOfSpeech ?? ecdictPartOfSpeech(word, fallbackPos),
+    chinese: known ? firstMeaning(known.zh) : metadata?.chinese ?? conciseChinese(word, fallbackChinese)
   };
 }
 
-function normalizeRelated(item, index, override, derivatives) {
+function normalizeRelated(item, index, override, derivatives, synonyms, antonyms, confusableItems) {
   if (override?.related) {
     return override.related.map(([category, items]) => ({
       category,
       items: items.map(([word, partOfSpeech, chinese]) => ({ word, phonetic: ipaFor(word), partOfSpeech, chinese }))
     }));
   }
-  return [
-    {
-      category: '语义坐标：近义与反义',
-      items: [
-        vocabularyItem(item.syn, item.p, relatedChinese(item.syn, item, 'synonym')),
-        vocabularyItem(item.ant, item.p, relatedChinese(item.ant, item, 'antonym'))
-      ]
-    },
-    ...(derivatives.length ? [{ category: '词族与构词联系', items: derivatives.map((entry) => vocabularyItem(entry.word, entry.partOfSpeech, entry.chinese)) }] : [])
+  const excluded = [
+    item.w,
+    ...derivatives.map((entry) => entry.word),
+    ...synonyms.map((entry) => entry.word),
+    ...antonyms.map((entry) => entry.word),
+    ...confusableItems.map((entry) => entry.word)
   ];
+  const semanticParents = selectCommonCandidates(wordnetEntries[item.w]?.hypernyms, excluded, 4);
+  const concreteActions = selectCommonCandidates(wordnetEntries[item.w]?.hyponyms, [...excluded, ...semanticParents.map((entry) => entry.word)], 4);
+  const contextExamples = priorityEntries[item.w]?.uses?.map((entry) => entry[2])
+    ?? (curatedExamples[item.w] ?? []).map((entry) => entry[0]);
+  const companionCandidates = contextExamples
+    .flatMap((example) => wordsWithOffsets(example).map((word) => ({ word: word.text.toLowerCase() })))
+    .filter((entry) => !contextClozeStopWords.has(entry.word) && entry.word.length > 3 && !inflectedForms(item.w).has(entry.word));
+  const companions = selectCommonCandidates(companionCandidates, [...excluded, ...semanticParents.map((entry) => entry.word), ...concreteActions.map((entry) => entry.word)], 4);
+  return [
+    ...(semanticParents.length ? [{
+      category: '语义上位词：这个动作属于什么类别',
+      items: semanticParents.map((entry) => vocabularyItem(entry.word, entry.partOfSpeech, conciseChinese(entry.word, '相关上位概念')))
+    }] : []),
+    ...(concreteActions.length ? [{
+      category: '具体动作：相关的更具体表达',
+      items: concreteActions.map((entry) => vocabularyItem(entry.word, entry.partOfSpeech, conciseChinese(entry.word, '相关具体动作')))
+    }] : []),
+    ...(companions.length ? [{
+      category: '真实语境：例句中常与本词同现的词',
+      items: companions.map((entry) => vocabularyItem(entry.word, ecdictPartOfSpeech(entry.word), conciseChinese(entry.word, '例句中的常用语境词')))
+    }] : [])
+  ].filter((group) => group.items.length);
 }
 
 function normalizeExamples(item, override) {
@@ -476,7 +730,7 @@ function makeCard(item, index) {
     .filter(([phrase], tupleIndex, source) => source.findIndex(([candidate]) => candidate === phrase) === tupleIndex)
     .slice(0, 12);
   const structures = normalizeStructures(item, override, tuples);
-  const commonErrors = normalizeErrors(item, override);
+  const commonErrors = normalizeErrors(item, override, tuples);
   const meanings = normalizeMeanings(item, override);
   const contextPhrases = normalizeContexts(item, override, tuples);
   const fixedPhrases = normalizeFixedPhrases(item, override, tuples);
@@ -484,14 +738,14 @@ function makeCard(item, index) {
   const antonyms = normalizeRelations(item, override, 'antonyms');
   const derivatives = normalizeDerivatives(item, override);
   const confusableItems = normalizeConfusables(item, override);
-  const relatedVocabulary = normalizeRelated(item, index, override, derivatives);
+  const relatedVocabulary = normalizeRelated(item, index, override, derivatives, synonyms, antonyms, confusableItems);
   const examples = normalizeExamples(item, override);
   const wordFamily = derivatives.map((entry) => entry.word);
   const focus = override?.focus ?? [
-    item.zh + '；英文核心释义：' + item.en + '。',
-    '把 “' + item.coll + '” 作为一个完整句块记忆。',
-    commonErrors[0].note,
-    item.ex
+    `先掌握“${firstMeaning(item.zh)}”这个核心义，再用本卡的 ${meanings.length - 1} 个常用义项辨别不同语境。`,
+    `把“${item.coll}”连同介词、宾语和动词形式作为整个句块记忆。`,
+    commonErrors[0]?.note ?? `使用 ${item.w} 时同时检查词性、宾语和搭配。`,
+    `${item.ex}（${item.exZh}）`
   ];
   const ranks = (cocaRankData[item.w] ?? []).map((entry) => ({
     ...entry,
@@ -562,7 +816,7 @@ function makeCard(item, index) {
     partOfSpeech: item.p,
     frequencyBand: 'COCA 高频精选 · ' + cocaRankLabel,
     difficulty: index < 50 ? '基础' : index < 110 ? '进阶' : '应用',
-    tags: [item.p.split('/')[0].trim(), '完整词卡', index < 50 ? '高频表达' : '主动词汇'],
+    tags: [item.p.split('/')[0].trim(), index < 50 ? '高频表达' : '主动词汇'],
     coreMemory: {
       chinese: item.zh,
       english: meanings.map((meaning) => meaning.partOfSpeech + ' ' + meaning.english).join('；'),
@@ -604,7 +858,7 @@ function makeCard(item, index) {
     templateVersion,
     contentVersion,
     reviewed: Boolean(override),
-    sourceNote: '从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。'
+    sourceNote: '词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。'
   };
 }
 

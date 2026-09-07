@@ -1,7 +1,7 @@
 {
   "date": "2026-08-20",
   "dayNumber": 4,
-  "contentVersion": "2026.09.07.2",
+  "contentVersion": "2026.09.08.1",
   "templateVersion": "learning-template-2026.08.19.2",
   "cards": [
     {
@@ -31,12 +31,11 @@
       "difficulty": "基础",
       "tags": [
         "v.",
-        "完整词卡",
         "高频表达"
       ],
       "coreMemory": {
         "chinese": "想要；需要",
-        "english": "v. to wish for or need something or to do something",
+        "english": "v. to wish for something or wish to do something；v. to need someone or something for a purpose；v. to lack something necessary",
         "structure": "want to do something /ˈwɑnt ˈtuː ˈduː ˈsʌmθɪŋ/（想做某事）；want someone to do something /ˈwɑnt ˈsʌˌmwʌn ˈtuː ˈduː ˈsʌmθɪŋ/（想让某人做某事）；want something badly /ˈwɑnt ˈsʌmθɪŋ ˈbædliː/（非常想要某物）；want more from something /ˈwɑnt ˈmɔːr ˈfrʌm ˈsʌmθɪŋ/（希望从某事获得更多）",
         "structures": [
           {
@@ -60,36 +59,50 @@
             "chinese": "希望从某事获得更多"
           }
         ],
-        "commonError": "❌ can to want → ✅ can want；❌ to wanting → ✅ to want",
+        "commonError": "❌ want doing something → ✅ want to do something；❌ want someone doing something → ✅ want someone to do something",
         "commonErrors": [
           {
-            "wrong": "can to want",
-            "wrongPhonetic": "/ˈkæn ˈtuː ˈwɑnt/",
-            "right": "can want",
-            "rightPhonetic": "/ˈkæn ˈwɑnt/",
-            "note": "情态动词 can 后直接接动词原形，不加 to。"
+            "wrong": "want doing something",
+            "wrongPhonetic": "/ˈwɑnt ˈduːɪŋ ˈsʌmθɪŋ/",
+            "right": "want to do something",
+            "rightPhonetic": "/ˈwɑnt ˈtuː ˈduː ˈsʌmθɪŋ/",
+            "note": "这个结构要用 want + to + 动词原形；do 只是词卡里的动词占位符，真实句子要换成 finish、check 等具体动词。"
           },
           {
-            "wrong": "to wanting",
-            "wrongPhonetic": "/ˈtuː ˈwɑntɪŋ/",
-            "right": "to want",
-            "rightPhonetic": "/ˈtuː ˈwɑnt/",
-            "note": "不定式 to 后接动词原形；不要把不定式和 -ing 形式混合。"
+            "wrong": "want someone doing something",
+            "wrongPhonetic": "/ˈwɑnt ˈsʌˌmwʌn ˈduːɪŋ ˈsʌmθɪŋ/",
+            "right": "want someone to do something",
+            "rightPhonetic": "/ˈwɑnt ˈsʌˌmwʌn ˈtuː ˈduː ˈsʌmθɪŋ/",
+            "note": "这个结构要用 want + to + 动词原形；do 只是词卡里的动词占位符，真实句子要换成 finish、check 等具体动词。"
           }
         ],
         "directSynonym": "desire /dɪˈzaɪɚ/（渴望；想要）",
         "directAntonym": "reject /rɪˈdʒɛkt/（拒绝；不要）",
-        "derivatives": "wanted · unwanted",
+        "derivatives": "wanted · unwanted · wanter",
         "example": "I want to improve my speaking this month.",
         "exampleChinese": "这个月我想提高口语。"
       },
       "meanings": [
         {
           "partOfSpeech": "v.",
-          "english": "to wish for or need something or to do something",
-          "chinese": "想要",
+          "english": "to wish for something or wish to do something",
+          "chinese": "想要；希望",
           "example": "I want to improve my speaking this month.",
           "translation": "这个月我想提高口语。"
+        },
+        {
+          "partOfSpeech": "v.",
+          "english": "to need someone or something for a purpose",
+          "chinese": "需要",
+          "example": "I want you to explain why this option is correct.",
+          "translation": "我希望你解释这个选项为什么正确。"
+        },
+        {
+          "partOfSpeech": "v.",
+          "english": "to lack something necessary",
+          "chinese": "缺少；不足",
+          "example": "The plan failed for want of clear instructions.",
+          "translation": "这个计划因缺少清晰说明而失败。"
         }
       ],
       "contextPhrases": [
@@ -97,14 +110,14 @@
           "category": "核心动作与结构",
           "items": [
             {
-              "phrase": "want to do something",
-              "phonetic": "/ˈwɑnt ˈtuː ˈduː ˈsʌmθɪŋ/",
-              "chinese": "想做某事"
+              "phrase": "I want to improve my speaking",
+              "phonetic": "/ˈaɪ ˈwɑnt ˈtuː ˌɪˈmpruːv ˈmaɪ ˈspiːkɪŋ/",
+              "chinese": "想做某事；原句语境：这个月我想提高口语。"
             },
             {
-              "phrase": "want someone to do something",
-              "phonetic": "/ˈwɑnt ˈsʌˌmwʌn ˈtuː ˈduː ˈsʌmθɪŋ/",
-              "chinese": "想让某人做某事"
+              "phrase": "I want you to explain why",
+              "phonetic": "/ˈaɪ ˈwɑnt ˈjuː ˈtuː ɪˈkspleɪn ˈwaɪ/",
+              "chinese": "想让某人做某事；原句语境：我希望你解释这个选项为什么正确。"
             }
           ]
         },
@@ -112,14 +125,14 @@
           "category": "日常与工作语境",
           "items": [
             {
-              "phrase": "want something badly",
-              "phonetic": "/ˈwɑnt ˈsʌmθɪŋ ˈbædliː/",
-              "chinese": "非常想要某物"
+              "phrase": "She wants the job badly and",
+              "phonetic": "/ˈʃiː ˈwɑnts ðə ˈdʒɑb ˈbædliː ənd/",
+              "chinese": "非常想要某物；原句语境：她非常想得到这份工作，并做了认真准备。"
             },
             {
-              "phrase": "want more from something",
-              "phonetic": "/ˈwɑnt ˈmɔːr ˈfrʌm ˈsʌmθɪŋ/",
-              "chinese": "希望从某事获得更多"
+              "phrase": "I want more from this lesson",
+              "phonetic": "/ˈaɪ ˈwɑnt ˈmɔːr ˈfrʌm ˈðɪs ˈlɛsən/",
+              "chinese": "希望从某事获得更多；原句语境：我希望从这节课学到的不只是一条简短释义。"
             }
           ]
         },
@@ -127,14 +140,14 @@
           "category": "高频扩展表达",
           "items": [
             {
-              "phrase": "for want of something",
-              "phonetic": "/ˈfɔːr ˈwɑnt ˈʌv ˈsʌmθɪŋ/",
-              "chinese": "由于缺少某物"
+              "phrase": "failed for want of clear instructions",
+              "phonetic": "/ˈfeɪld ˈfɔːr ˈwɑnt ˈʌv ˈklɪr ˌɪˈnstrʌkʃənz/",
+              "chinese": "由于缺少某物；原句语境：这个计划因缺少清晰说明而失败。"
             },
             {
-              "phrase": "the last thing you want",
-              "phonetic": "/ðə ˈlæst ˈθɪŋ ˈjuː ˈwɑnt/",
-              "chinese": "最不希望发生的事"
+              "phrase": "thing you want is to miss an",
+              "phonetic": "/ˈθɪŋ ˈjuː ˈwɑnt ˈɪz ˈtuː ˈmɪs ˈæn/",
+              "chinese": "最不希望发生的事；原句语境：你最不希望发生的事就是错过重要期限。"
             }
           ]
         }
@@ -189,7 +202,7 @@
           "phonetic": "/dɪˈzaɪɚ/",
           "partOfSpeech": "v.",
           "chinese": "渴望；想要",
-          "difference": "want 是本卡核心搭配 “want to do something” 中的中性常用选择；desire 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
+          "difference": "desire 侧重“渴望；想要”。对应的常用英文义是 “to wish for or need something or to do something”。want 在本卡搭配“want to do something”中表达“想要”；换词时要同时检查宾语和介词。"
         }
       ],
       "antonyms": [
@@ -198,7 +211,7 @@
           "phonetic": "/rɪˈdʒɛkt/",
           "partOfSpeech": "v. / n.",
           "chinese": "拒绝；不要",
-          "usage": "在本卡核心义下与 want 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
+          "usage": "在“想要”这个义项下，reject（拒绝；不要）与 want 形成对比。对应的常用英文义是 “opposite of want”。只在这个明确义项和句型中对比，不把两个词的所有用法都视为相反。"
         }
       ],
       "derivatives": [
@@ -215,41 +228,101 @@
           "partOfSpeech": "adj.",
           "chinese": "不想要的；多余的",
           "note": "常用于 unwanted messages 或 effects。"
+        },
+        {
+          "word": "wanter",
+          "phonetic": "/wanter/",
+          "partOfSpeech": "n.",
+          "chinese": "缺[贫]乏者",
+          "note": "wanter 是 want 的常用词族形式，作 n. 使用；对应的常用英文义是 “a person who wants or needs something”。"
         }
       ],
       "confusables": [],
       "relatedVocabulary": [
         {
-          "category": "语义坐标：近义与反义",
+          "category": "语义上位词：这个动作属于什么类别",
           "items": [
             {
-              "word": "desire",
-              "phonetic": "/dɪˈzaɪɚ/",
+              "word": "be",
+              "phonetic": "/ˈbiː/",
               "partOfSpeech": "v.",
-              "chinese": "渴望；想要"
+              "chinese": "是"
             },
             {
-              "word": "reject",
-              "phonetic": "/rɪˈdʒɛkt/",
-              "partOfSpeech": "v. / n.",
-              "chinese": "被拒之人；被弃之物；不合格品；次品"
+              "word": "seek",
+              "phonetic": "/ˈsiːk/",
+              "partOfSpeech": "v.",
+              "chinese": "寻求；寻找；探索；追求"
+            },
+            {
+              "word": "demand",
+              "phonetic": "/dɪˈmænd/",
+              "partOfSpeech": "v.",
+              "chinese": "要求；需求；需要；查询"
+            },
+            {
+              "word": "miss",
+              "phonetic": "/ˈmɪs/",
+              "partOfSpeech": "v.",
+              "chinese": "失误；避免；失败；小姐"
             }
           ]
         },
         {
-          "category": "词族与构词联系",
+          "category": "具体动作：相关的更具体表达",
           "items": [
             {
-              "word": "wanted",
-              "phonetic": "/ˈwɔːntɪd/",
-              "partOfSpeech": "adj.",
-              "chinese": "想要的；被通缉的"
+              "word": "like",
+              "phonetic": "/ˈlaɪk/",
+              "partOfSpeech": "v.",
+              "chinese": "喜欢"
             },
             {
-              "word": "unwanted",
-              "phonetic": "/əˈnwɔːntɪd/",
-              "partOfSpeech": "adj.",
-              "chinese": "不想要的；多余的"
+              "word": "hope",
+              "phonetic": "/ˈhoʊp/",
+              "partOfSpeech": "v.",
+              "chinese": "希望"
+            },
+            {
+              "word": "care",
+              "phonetic": "/ˈkɛr/",
+              "partOfSpeech": "v.",
+              "chinese": "小心；照料；忧虑"
+            },
+            {
+              "word": "wish",
+              "phonetic": "/ˈwɪʃ/",
+              "partOfSpeech": "v.",
+              "chinese": "希望；愿望；祝愿"
+            }
+          ]
+        },
+        {
+          "category": "真实语境：例句中常与本词同现的词",
+          "items": [
+            {
+              "word": "explain",
+              "phonetic": "/ɪkˈspleɪn/",
+              "partOfSpeech": "v.",
+              "chinese": "解释"
+            },
+            {
+              "word": "prepare",
+              "phonetic": "/prɪˈper/",
+              "partOfSpeech": "v.",
+              "chinese": "准备"
+            },
+            {
+              "word": "improve",
+              "phonetic": "/ɪmˈpruːv/",
+              "partOfSpeech": "v.",
+              "chinese": "改善"
+            },
+            {
+              "word": "clear",
+              "phonetic": "/ˈklɪr/",
+              "partOfSpeech": "n.",
+              "chinese": "清楚的；明确的；澄清的；清晰地"
             }
           ]
         }
@@ -287,10 +360,10 @@
         }
       ],
       "studyFocus": {
-        "coreMeaning": "想要；需要；英文核心释义：to wish for or need something or to do something。",
-        "keyCollocation": "把 “want to do something” 作为一个完整句块记忆。",
-        "commonMistake": "情态动词 can 后直接接动词原形，不加 to。",
-        "mustUseExample": "I want to improve my speaking this month."
+        "coreMeaning": "先掌握“想要”这个核心义，再用本卡的 2 个常用义项辨别不同语境。",
+        "keyCollocation": "把“want to do something”连同介词、宾语和动词形式作为整个句块记忆。",
+        "commonMistake": "这个结构要用 want + to + 动词原形；do 只是词卡里的动词占位符，真实句子要换成 finish、check 等具体动词。",
+        "mustUseExample": "I want to improve my speaking this month.（这个月我想提高口语。）"
       },
       "questions": [
         {
@@ -313,9 +386,9 @@
           "options": [
             "to speak with someone or discuss a subject",
             "to end an action or prevent something from happening",
-            "to wish for or need something or to do something"
+            "to wish for something or wish to do something"
           ],
-          "answer": "to wish for or need something or to do something",
+          "answer": "to wish for something or wish to do something",
           "stage": "T0",
           "ai": false
         },
@@ -378,7 +451,7 @@
         {
           "id": "want-v-recall-definition",
           "type": "recall",
-          "prompt": "根据英文释义写出目标词：to wish for or need something or to do something",
+          "prompt": "根据英文释义写出目标词：to wish for something or wish to do something",
           "answer": "want",
           "stage": "T1",
           "ai": false
@@ -482,7 +555,7 @@
         {
           "id": "want-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “want” 和 “want something badly” 结构，并避免中文直译；something 要替换成实际的事物或内容。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “want” 和 “I want to improve my speaking” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -542,9 +615,9 @@
       },
       "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.2",
-      "contentVersion": "2026.09.07.2",
+      "contentVersion": "2026.09.08.1",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
+      "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
       "id": "could-v",
@@ -573,12 +646,11 @@
       "difficulty": "基础",
       "tags": [
         "v.",
-        "完整词卡",
         "高频表达"
       ],
       "coreMemory": {
         "chinese": "能；可以；可能",
-        "english": "v. used for past ability, possibility, or polite suggestions and requests",
+        "english": "aux. used to express ability in the past；aux. used to express a present or future possibility；aux. used for polite requests and suggestions；aux. used with have for a possible but unreal past action",
         "structure": "could do something /ˈkʊd ˈduː ˈsʌmθɪŋ/（可以做某事）；could you do something /ˈkʊd ˈjuː ˈduː ˈsʌmθɪŋ/（你能做某事吗）；could be true /ˈkʊd ˈbiː ˈtruː/（可能是真的）；could have done something /ˈkʊd ˈhæv ˈdʌn ˈsʌmθɪŋ/（本来可以做某事）",
         "structures": [
           {
@@ -602,21 +674,21 @@
             "chinese": "本来可以做某事"
           }
         ],
-        "commonError": "❌ can to could → ✅ can could；❌ to coulding → ✅ to could",
+        "commonError": "❌ could to could → ✅ could not help doing something；❌ could to could → ✅ could do something",
         "commonErrors": [
           {
-            "wrong": "can to could",
-            "wrongPhonetic": "/ˈkæn ˈtuː ˈkʊd/",
-            "right": "can could",
-            "rightPhonetic": "/ˈkæn ˈkʊd/",
-            "note": "情态动词 can 后直接接动词原形，不加 to。"
+            "wrong": "could to could",
+            "wrongPhonetic": "/ˈkʊd ˈtuː ˈkʊd/",
+            "right": "could not help doing something",
+            "rightPhonetic": "/ˈkʊd ˈnɑt ˈhɛlp ˈduːɪŋ ˈsʌmθɪŋ/",
+            "note": "情态动词 could 后面直接接动词原形，不加 to；后面的 something 或 do 要按语境换成真实内容。"
           },
           {
-            "wrong": "to coulding",
-            "wrongPhonetic": "/ˈtuː coulding/",
-            "right": "to could",
-            "rightPhonetic": "/ˈtuː ˈkʊd/",
-            "note": "不定式 to 后接动词原形；不要把不定式和 -ing 形式混合。"
+            "wrong": "could to could",
+            "wrongPhonetic": "/ˈkʊd ˈtuː ˈkʊd/",
+            "right": "could do something",
+            "rightPhonetic": "/ˈkʊd ˈduː ˈsʌmθɪŋ/",
+            "note": "情态动词 could 后面直接接动词原形，不加 to；后面的 something 或 do 要按语境换成真实内容。"
           }
         ],
         "directSynonym": "was able to /ˈwɑz ˈeɪbəl ˈtuː/（过去能够）",
@@ -627,11 +699,32 @@
       },
       "meanings": [
         {
-          "partOfSpeech": "v.",
-          "english": "used for past ability, possibility, or polite suggestions and requests",
-          "chinese": "能",
-          "example": "We could review the difficult cards first.",
-          "translation": "我们可以先复习难词卡。"
+          "partOfSpeech": "aux.",
+          "english": "used to express ability in the past",
+          "chinese": "过去能；过去会",
+          "example": "I could hardly understand the recording at first.",
+          "translation": "一开始我几乎听不懂这段录音。"
+        },
+        {
+          "partOfSpeech": "aux.",
+          "english": "used to express a present or future possibility",
+          "chinese": "可能；可以",
+          "example": "Your explanation could be true, but we need evidence.",
+          "translation": "你的解释可能是真的，但我们需要证据。"
+        },
+        {
+          "partOfSpeech": "aux.",
+          "english": "used for polite requests and suggestions",
+          "chinese": "能否；可以（礼貌请求或建议）",
+          "example": "Could you read the example aloud?",
+          "translation": "你能朗读这个例句吗？"
+        },
+        {
+          "partOfSpeech": "aux.",
+          "english": "used with have for a possible but unreal past action",
+          "chinese": "本来可以；原本可能",
+          "example": "I could have saved more time by planning ahead.",
+          "translation": "如果提前计划，我本可以节省更多时间。"
         }
       ],
       "contextPhrases": [
@@ -639,14 +732,14 @@
           "category": "核心动作与结构",
           "items": [
             {
-              "phrase": "could do something",
-              "phonetic": "/ˈkʊd ˈduː ˈsʌmθɪŋ/",
-              "chinese": "可以做某事"
+              "phrase": "We could review the difficult cards",
+              "phonetic": "/ˈwiː ˈkʊd ˌriːˈvjuː ðə ˈdɪfəkəlt ˈkɑrdz/",
+              "chinese": "可以做某事；原句语境：我们可以先复习难词卡。"
             },
             {
-              "phrase": "could you do something",
-              "phonetic": "/ˈkʊd ˈjuː ˈduː ˈsʌmθɪŋ/",
-              "chinese": "你能做某事吗"
+              "phrase": "Could you read the example",
+              "phonetic": "/ˈkʊd ˈjuː ˈrɛd ðə ɪˈɡzæmpəl/",
+              "chinese": "你能做某事吗；原句语境：你能朗读这个例句吗？"
             }
           ]
         },
@@ -654,14 +747,14 @@
           "category": "日常与工作语境",
           "items": [
             {
-              "phrase": "could be true",
-              "phonetic": "/ˈkʊd ˈbiː ˈtruː/",
-              "chinese": "可能是真的"
+              "phrase": "Your explanation could be true but we",
+              "phonetic": "/ˈjɔːr ˌɛkspləˈneɪʃən ˈkʊd ˈbiː ˈtruː ˈbʌt ˈwiː/",
+              "chinese": "可能是真的；原句语境：你的解释可能是真的，但我们需要证据。"
             },
             {
-              "phrase": "could have done something",
-              "phonetic": "/ˈkʊd ˈhæv ˈdʌn ˈsʌmθɪŋ/",
-              "chinese": "本来可以做某事"
+              "phrase": "I could have saved more time",
+              "phonetic": "/ˈaɪ ˈkʊd ˈhæv ˈseɪvd ˈmɔːr ˈtaɪm/",
+              "chinese": "本来可以做某事；原句语境：如果提前计划，我本可以节省更多时间。"
             }
           ]
         },
@@ -669,14 +762,14 @@
           "category": "高频扩展表达",
           "items": [
             {
-              "phrase": "could hardly do something",
-              "phonetic": "/ˈkʊd ˈhɑrdliː ˈduː ˈsʌmθɪŋ/",
-              "chinese": "几乎不能做某事"
+              "phrase": "I could hardly understand the recording",
+              "phonetic": "/ˈaɪ ˈkʊd ˈhɑrdliː ˌʌndɚˈstænd ðə rəˈkɔːrdɪŋ/",
+              "chinese": "几乎不能做某事；原句语境：一开始我几乎听不懂这段录音。"
             },
             {
-              "phrase": "could not help doing something",
-              "phonetic": "/ˈkʊd ˈnɑt ˈhɛlp ˈduːɪŋ ˈsʌmθɪŋ/",
-              "chinese": "忍不住做某事"
+              "phrase": "I could not help smiling at",
+              "phonetic": "/ˈaɪ ˈkʊd ˈnɑt ˈhɛlp ˈsmaɪlɪŋ ˈæt/",
+              "chinese": "忍不住做某事；原句语境：看到这个例子，我忍不住笑了。"
             }
           ]
         }
@@ -731,7 +824,7 @@
           "phonetic": "/ˈwɑz ˈeɪbəl ˈtuː/",
           "partOfSpeech": "v.",
           "chinese": "过去能够",
-          "difference": "could 是本卡核心搭配 “could do something” 中的中性常用选择；was able to 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
+          "difference": "was able to 侧重“过去能够”。对应的常用英文义是 “used for past ability, possibility, or polite suggestions and requests”。could 在本卡搭配“could do something”中表达“能”；换词时要同时检查宾语和介词。"
         }
       ],
       "antonyms": [
@@ -740,26 +833,46 @@
           "phonetic": "/ˈkʊd ˈnɑt/",
           "partOfSpeech": "v.",
           "chinese": "不能；不可能",
-          "usage": "在本卡核心义下与 could 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
+          "usage": "在“能”这个义项下，could not（不能；不可能）与 could 形成对比。对应的常用英文义是 “opposite of could”。只在这个明确义项和句型中对比，不把两个词的所有用法都视为相反。"
         }
       ],
       "derivatives": [],
-      "confusables": [],
+      "confusables": [
+        {
+          "word": "would",
+          "phonetic": "/ˈwʊd/",
+          "partOfSpeech": "v.",
+          "chinese": "将；愿意",
+          "difference": "would 表示“将；愿意”；could 在本卡核心搭配“could do something”中表示“能”。答题时要根据句意和完整结构区分，不只看拼写或中文近义。"
+        }
+      ],
       "relatedVocabulary": [
         {
-          "category": "语义坐标：近义与反义",
+          "category": "真实语境：例句中常与本词同现的词",
           "items": [
             {
-              "word": "was able to",
-              "phonetic": "/ˈwɑz ˈeɪbəl ˈtuː/",
-              "partOfSpeech": "v.",
-              "chinese": "过去能够"
+              "word": "need",
+              "phonetic": "/ˈniːd/",
+              "partOfSpeech": "n.",
+              "chinese": "需要"
             },
             {
-              "word": "could not",
-              "phonetic": "/ˈkʊd ˈnɑt/",
+              "word": "help",
+              "phonetic": "/ˈhɛlp/",
               "partOfSpeech": "v.",
-              "chinese": "不能；不可能"
+              "chinese": "帮助"
+            },
+            {
+              "word": "understand",
+              "phonetic": "/ˌʌndərˈstænd/",
+              "partOfSpeech": "v.",
+              "chinese": "理解"
+            },
+            {
+              "word": "read",
+              "phonetic": "/riːd/",
+              "partOfSpeech": "n.",
+              "chinese": "阅读"
             }
           ]
         }
@@ -797,10 +910,10 @@
         }
       ],
       "studyFocus": {
-        "coreMeaning": "能；可以；可能；英文核心释义：used for past ability, possibility, or polite suggestions and requests。",
-        "keyCollocation": "把 “could do something” 作为一个完整句块记忆。",
-        "commonMistake": "情态动词 can 后直接接动词原形，不加 to。",
-        "mustUseExample": "We could review the difficult cards first."
+        "coreMeaning": "先掌握“能”这个核心义，再用本卡的 3 个常用义项辨别不同语境。",
+        "keyCollocation": "把“could do something”连同介词、宾语和动词形式作为整个句块记忆。",
+        "commonMistake": "情态动词 could 后面直接接动词原形，不加 to；后面的 something 或 do 要按语境换成真实内容。",
+        "mustUseExample": "We could review the difficult cards first.（我们可以先复习难词卡。）"
       },
       "questions": [
         {
@@ -822,10 +935,10 @@
           "prompt": "哪一项英文释义最符合词卡中的 “could”？",
           "options": [
             "to give money, attention, or a particular cost",
-            "used for past ability, possibility, or polite suggestions and requests",
+            "used to express ability in the past",
             "to continue, retain, or cause something to remain in a state"
           ],
-          "answer": "used for past ability, possibility, or polite suggestions and requests",
+          "answer": "used to express ability in the past",
           "stage": "T0",
           "ai": false
         },
@@ -848,10 +961,10 @@
           "type": "meaning_choice",
           "prompt": "哪个词是词卡中列出的 “could” 最直接近义词？",
           "options": [
-            "pay",
+            "keep",
             "was able to",
             "could not",
-            "keep"
+            "would"
           ],
           "answer": "was able to",
           "stage": "T2",
@@ -864,8 +977,8 @@
           "options": [
             "could not",
             "was able to",
-            "keep",
-            "pay"
+            "would",
+            "keep"
           ],
           "answer": "could not",
           "stage": "T2",
@@ -874,21 +987,21 @@
         {
           "id": "could-v-contrast-choice",
           "type": "meaning_choice",
-          "prompt": "根据本词卡辨析，哪个词被列为 “could” 的相关近义词？",
+          "prompt": "根据本词卡辨析，哪个词被列为 “could” 的易混词？",
           "options": [
+            "was able to",
             "could not",
             "keep",
-            "pay",
-            "was able to"
+            "would"
           ],
-          "answer": "was able to",
+          "answer": "would",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "could-v-recall-definition",
           "type": "recall",
-          "prompt": "根据英文释义写出目标词：used for past ability, possibility, or polite suggestions and requests",
+          "prompt": "根据英文释义写出目标词：used to express ability in the past",
           "answer": "could",
           "stage": "T1",
           "ai": false
@@ -992,7 +1105,7 @@
         {
           "id": "could-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “could” 和 “could you do something” 结构，并避免中文直译；something 要替换成实际的事物或内容。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “could” 和 “We could review the difficult cards” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1052,9 +1165,9 @@
       },
       "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.2",
-      "contentVersion": "2026.09.07.2",
+      "contentVersion": "2026.09.08.1",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
+      "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
       "id": "look-v",
@@ -1089,12 +1202,11 @@
       "difficulty": "基础",
       "tags": [
         "v.",
-        "完整词卡",
         "高频表达"
       ],
       "coreMemory": {
         "chinese": "看；显得；寻找",
-        "english": "v. to direct the eyes, appear, or search for something",
+        "english": "v. to direct your eyes toward someone or something；v. to appear or seem in a particular way；v. to search for, examine, or consider something",
         "structure": "look at something /ˈlʊk ˈæt ˈsʌmθɪŋ/（看某物）；look for something /ˈlʊk ˈfɔːr ˈsʌmθɪŋ/（寻找某物）；look like something /ˈlʊk ˈlaɪk ˈsʌmθɪŋ/（看起来像某物）；look forward to doing something /ˈlʊk ˈfɔːrwɚd ˈtuː ˈduːɪŋ ˈsʌmθɪŋ/（期待做某事）",
         "structures": [
           {
@@ -1118,21 +1230,21 @@
             "chinese": "期待做某事"
           }
         ],
-        "commonError": "❌ can to look → ✅ can look；❌ to looking → ✅ to look",
+        "commonError": "❌ look forward to to do something → ✅ look forward to doing something；❌ look something → ✅ look at something",
         "commonErrors": [
           {
-            "wrong": "can to look",
-            "wrongPhonetic": "/ˈkæn ˈtuː ˈlʊk/",
-            "right": "can look",
-            "rightPhonetic": "/ˈkæn ˈlʊk/",
-            "note": "情态动词 can 后直接接动词原形，不加 to。"
+            "wrong": "look forward to to do something",
+            "wrongPhonetic": "/ˈlʊk ˈfɔːrwɚd ˈtuː ˈtuː ˈduː ˈsʌmθɪŋ/",
+            "right": "look forward to doing something",
+            "rightPhonetic": "/ˈlʊk ˈfɔːrwɚd ˈtuː ˈduːɪŋ ˈsʌmθɪŋ/",
+            "note": "“look forward to doing something”是需要动词 -ing 形式的固定结构；doing 是占位符，应换成具体动词的 -ing 形式。"
           },
           {
-            "wrong": "to looking",
-            "wrongPhonetic": "/ˈtuː ˈlʊkɪŋ/",
-            "right": "to look",
-            "rightPhonetic": "/ˈtuː ˈlʊk/",
-            "note": "不定式 to 后接动词原形；不要把不定式和 -ing 形式混合。"
+            "wrong": "look something",
+            "wrongPhonetic": "/ˈlʊk ˈsʌmθɪŋ/",
+            "right": "look at something",
+            "rightPhonetic": "/ˈlʊk ˈæt ˈsʌmθɪŋ/",
+            "note": "在“look at something”这个常用搭配中，介词 at 负责连接后面的对象或范围，不能省略或随意换成其他介词。"
           }
         ],
         "directSynonym": "watch /ˈwɑtʃ/（观看；注视）",
@@ -1144,10 +1256,24 @@
       "meanings": [
         {
           "partOfSpeech": "v.",
-          "english": "to direct the eyes, appear, or search for something",
-          "chinese": "看",
+          "english": "to direct your eyes toward someone or something",
+          "chinese": "看；注视",
           "example": "Look at the whole sentence before choosing an answer.",
           "translation": "选择答案前先看完整句子。"
+        },
+        {
+          "partOfSpeech": "v.",
+          "english": "to appear or seem in a particular way",
+          "chinese": "看起来；显得",
+          "example": "This word looks like another one but means something different.",
+          "translation": "这个词看起来像另一个词，但含义不同。"
+        },
+        {
+          "partOfSpeech": "v.",
+          "english": "to search for, examine, or consider something",
+          "chinese": "寻找；查看；考虑",
+          "example": "I am looking for a more natural expression.",
+          "translation": "我正在寻找一个更自然的表达。"
         }
       ],
       "contextPhrases": [
@@ -1155,14 +1281,14 @@
           "category": "核心动作与结构",
           "items": [
             {
-              "phrase": "look at something",
-              "phonetic": "/ˈlʊk ˈæt ˈsʌmθɪŋ/",
-              "chinese": "看某物"
+              "phrase": "Look at the whole sentence",
+              "phonetic": "/ˈlʊk ˈæt ðə ˈhoʊl ˈsɛntəns/",
+              "chinese": "看某物；原句语境：选择答案前先看完整句子。"
             },
             {
-              "phrase": "look for something",
-              "phonetic": "/ˈlʊk ˈfɔːr ˈsʌmθɪŋ/",
-              "chinese": "寻找某物"
+              "phrase": "I am looking for a more natural",
+              "phonetic": "/ˈaɪ ˈæm ˈlʊkɪŋ ˈfɔːr ə ˈmɔːr ˈnætʃɚəl/",
+              "chinese": "寻找某物；原句语境：我正在寻找一个更自然的表达。"
             }
           ]
         },
@@ -1170,14 +1296,14 @@
           "category": "日常与工作语境",
           "items": [
             {
-              "phrase": "look like something",
-              "phonetic": "/ˈlʊk ˈlaɪk ˈsʌmθɪŋ/",
-              "chinese": "看起来像某物"
+              "phrase": "This word looks like another one but",
+              "phonetic": "/ˈðɪs ˈwɝːd ˈlʊks ˈlaɪk əˈnʌðɚ ˈwʌn ˈbʌt/",
+              "chinese": "看起来像某物；原句语境：这个词看起来像另一个词，但含义不同。"
             },
             {
-              "phrase": "look forward to doing something",
-              "phonetic": "/ˈlʊk ˈfɔːrwɚd ˈtuː ˈduːɪŋ ˈsʌmθɪŋ/",
-              "chinese": "期待做某事"
+              "phrase": "I look forward to seeing your",
+              "phonetic": "/ˈaɪ ˈlʊk ˈfɔːrwɚd ˈtuː ˈsiːɪŋ ˈjɔːr/",
+              "chinese": "期待做某事；原句语境：我期待看到你的下一个例子。"
             }
           ]
         },
@@ -1185,14 +1311,14 @@
           "category": "高频扩展表达",
           "items": [
             {
-              "phrase": "look into something",
-              "phonetic": "/ˈlʊk ˈɪntuː ˈsʌmθɪŋ/",
-              "chinese": "调查某事"
+              "phrase": "need to look into why sales fell",
+              "phonetic": "/ˈniːd ˈtuː ˈlʊk ˈɪntuː ˈwaɪ ˈseɪlz ˈfɛl/",
+              "chinese": "调查某事；原句语境：我们需要调查上个月销量下降的原因。"
             },
             {
-              "phrase": "look after someone",
-              "phonetic": "/ˈlʊk ˈæftɚ ˈsʌˌmwʌn/",
-              "chinese": "照顾某人"
+              "phrase": "She looks after her younger brother",
+              "phonetic": "/ˈʃiː ˈlʊks ˈæftɚ ˈhɝː ˈjʌŋɡɚ ˈbrʌðɚ/",
+              "chinese": "照顾某人；原句语境：她放学后照顾弟弟。"
             }
           ]
         }
@@ -1247,7 +1373,7 @@
           "phonetic": "/ˈwɑtʃ/",
           "partOfSpeech": "v.",
           "chinese": "观看；注视",
-          "difference": "look 是本卡核心搭配 “look at something” 中的中性常用选择；watch 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
+          "difference": "watch 侧重“观看；注视”。对应的常用英文义是 “to direct the eyes, appear, or search for something”。look 在本卡搭配“look at something”中表达“看”；换词时要同时检查宾语和介词。"
         }
       ],
       "antonyms": [
@@ -1256,7 +1382,7 @@
           "phonetic": "/ˌɪˈɡnɔːr/",
           "partOfSpeech": "v.",
           "chinese": "忽视；不看",
-          "usage": "在本卡核心义下与 look 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
+          "usage": "在“看”这个义项下，ignore（忽视；不看）与 look 形成对比。对应的常用英文义是 “opposite of look”。只在这个明确义项和句型中对比，不把两个词的所有用法都视为相反。"
         }
       ],
       "derivatives": [
@@ -1275,39 +1401,107 @@
           "note": "多用于复合词，如 good-looking。"
         }
       ],
-      "confusables": [],
+      "confusables": [
+        {
+          "word": "see",
+          "phonetic": "/ˈsiː/",
+          "partOfSpeech": "n.",
+          "chinese": "看见；查看；参观",
+          "difference": "see 表示“看见；查看；参观”；look 在本卡核心搭配“look at something”中表示“看”。答题时要根据句意和完整结构区分，不只看拼写或中文近义。"
+        },
+        {
+          "word": "watch",
+          "phonetic": "/ˈwɑtʃ/",
+          "partOfSpeech": "n.",
+          "chinese": "观察；手表；看守",
+          "difference": "watch 表示“观察；手表；看守”；look 在本卡核心搭配“look at something”中表示“看”。答题时要根据句意和完整结构区分，不只看拼写或中文近义。"
+        }
+      ],
       "relatedVocabulary": [
         {
-          "category": "语义坐标：近义与反义",
+          "category": "语义上位词：这个动作属于什么类别",
           "items": [
             {
-              "word": "watch",
-              "phonetic": "/ˈwɑtʃ/",
+              "word": "be",
+              "phonetic": "/ˈbiː/",
               "partOfSpeech": "v.",
-              "chinese": "观看"
+              "chinese": "是"
             },
             {
-              "word": "ignore",
-              "phonetic": "/ˌɪˈɡnɔːr/",
+              "word": "agree",
+              "phonetic": "/əˈɡriː/",
               "partOfSpeech": "v.",
-              "chinese": "不理睬；忽视；驳回；忽略"
+              "chinese": "同意"
+            },
+            {
+              "word": "care",
+              "phonetic": "/ˈkɛr/",
+              "partOfSpeech": "v.",
+              "chinese": "小心；照料；忧虑"
+            },
+            {
+              "word": "match",
+              "phonetic": "/ˈmætʃ/",
+              "partOfSpeech": "v.",
+              "chinese": "比赛；火柴；对手"
             }
           ]
         },
         {
-          "category": "词族与构词联系",
+          "category": "具体动作：相关的更具体表达",
           "items": [
             {
-              "word": "looker",
-              "phonetic": "/ˈlʊkɚ/",
-              "partOfSpeech": "n.",
-              "chinese": "观看者；相貌出众的人"
+              "word": "consider",
+              "phonetic": "/kənˈsɪdər/",
+              "partOfSpeech": "v.",
+              "chinese": "考虑"
             },
             {
-              "word": "looking",
-              "phonetic": "/ˈlʊkɪŋ/",
-              "partOfSpeech": "adj.",
-              "chinese": "看起来……的"
+              "word": "regard",
+              "phonetic": "/rɪˈɡɑrd/",
+              "partOfSpeech": "v.",
+              "chinese": "关心；注意；尊敬"
+            },
+            {
+              "word": "stare",
+              "phonetic": "/ˈstɛr/",
+              "partOfSpeech": "v.",
+              "chinese": "注视；凝视；瞪视"
+            },
+            {
+              "word": "peep",
+              "phonetic": "/ˈpiːp/",
+              "partOfSpeech": "v.",
+              "chinese": "一瞥；偷看；不完全的景象"
+            }
+          ]
+        },
+        {
+          "category": "真实语境：例句中常与本词同现的词",
+          "items": [
+            {
+              "word": "like",
+              "phonetic": "/ˈlaɪk/",
+              "partOfSpeech": "n.",
+              "chinese": "喜欢"
+            },
+            {
+              "word": "need",
+              "phonetic": "/ˈniːd/",
+              "partOfSpeech": "n.",
+              "chinese": "需要"
+            },
+            {
+              "word": "choose",
+              "phonetic": "/tʃuːz/",
+              "partOfSpeech": "v.",
+              "chinese": "选择"
+            },
+            {
+              "word": "mean",
+              "phonetic": "/miːn/",
+              "partOfSpeech": "n.",
+              "chinese": "意思是"
             }
           ]
         }
@@ -1345,10 +1539,10 @@
         }
       ],
       "studyFocus": {
-        "coreMeaning": "看；显得；寻找；英文核心释义：to direct the eyes, appear, or search for something。",
-        "keyCollocation": "把 “look at something” 作为一个完整句块记忆。",
-        "commonMistake": "情态动词 can 后直接接动词原形，不加 to。",
-        "mustUseExample": "Look at the whole sentence before choosing an answer."
+        "coreMeaning": "先掌握“看”这个核心义，再用本卡的 2 个常用义项辨别不同语境。",
+        "keyCollocation": "把“look at something”连同介词、宾语和动词形式作为整个句块记忆。",
+        "commonMistake": "“look forward to doing something”是需要动词 -ing 形式的固定结构；doing 是占位符，应换成具体动词的 -ing 形式。",
+        "mustUseExample": "Look at the whole sentence before choosing an answer.（选择答案前先看完整句子。）"
       },
       "questions": [
         {
@@ -1369,11 +1563,11 @@
           "type": "meaning_choice",
           "prompt": "哪一项英文释义最符合词卡中的 “look”？",
           "options": [
-            "to direct the eyes, appear, or search for something",
+            "to direct your eyes toward someone or something",
             "to go away, allow something to remain, or cause a state",
             "to give something that is needed"
           ],
-          "answer": "to direct the eyes, appear, or search for something",
+          "answer": "to direct your eyes toward someone or something",
           "stage": "T0",
           "ai": false
         },
@@ -1398,8 +1592,8 @@
           "options": [
             "watch",
             "ignore",
-            "leave",
-            "provide"
+            "see",
+            "leave"
           ],
           "answer": "watch",
           "stage": "T2",
@@ -1411,8 +1605,8 @@
           "prompt": "哪个词是词卡中列出的 “look” 最直接反义词？",
           "options": [
             "watch",
+            "see",
             "leave",
-            "provide",
             "ignore"
           ],
           "answer": "ignore",
@@ -1422,21 +1616,21 @@
         {
           "id": "look-v-contrast-choice",
           "type": "meaning_choice",
-          "prompt": "根据本词卡辨析，哪个词被列为 “look” 的派生词？",
+          "prompt": "根据本词卡辨析，哪个词被列为 “look” 的易混词？",
           "options": [
             "ignore",
             "leave",
-            "looker",
+            "see",
             "watch"
           ],
-          "answer": "looker",
+          "answer": "see",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "look-v-recall-definition",
           "type": "recall",
-          "prompt": "根据英文释义写出目标词：to direct the eyes, appear, or search for something",
+          "prompt": "根据英文释义写出目标词：to direct your eyes toward someone or something",
           "answer": "look",
           "stage": "T1",
           "ai": false
@@ -1540,7 +1734,7 @@
         {
           "id": "look-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “look” 和 “look like something” 结构，并避免中文直译；something 要替换成实际的事物或内容。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “look” 和 “Look at the whole sentence” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1600,9 +1794,9 @@
       },
       "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.2",
-      "contentVersion": "2026.09.07.2",
+      "contentVersion": "2026.09.08.1",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
+      "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
       "id": "use-v",
@@ -1637,12 +1831,11 @@
       "difficulty": "基础",
       "tags": [
         "v.",
-        "完整词卡",
         "高频表达"
       ],
       "coreMemory": {
         "chinese": "使用；利用",
-        "english": "v. to employ something for a purpose",
+        "english": "v. to do something with an object, method, or resource for a purpose；v. to consume an amount of material, money, or energy；v. to treat someone unfairly in order to gain an advantage",
         "structure": "use something to do something /ˈjuːs ˈsʌmθɪŋ ˈtuː ˈduː ˈsʌmθɪŋ/（使用某物做某事）；use something for something /ˈjuːs ˈsʌmθɪŋ ˈfɔːr ˈsʌmθɪŋ/（把某物用于某事）；be used to do something /ˈbiː ˈjuːzd ˈtuː ˈduː ˈsʌmθɪŋ/（被用于做某事）；be used to doing something /ˈbiː ˈjuːzd ˈtuː ˈduːɪŋ ˈsʌmθɪŋ/（习惯做某事）",
         "structures": [
           {
@@ -1666,36 +1859,50 @@
             "chinese": "习惯做某事"
           }
         ],
-        "commonError": "❌ can to use → ✅ can use；❌ to useing → ✅ to use",
+        "commonError": "❌ use something doing something → ✅ use something to do something；❌ be used doing something → ✅ be used to do something",
         "commonErrors": [
           {
-            "wrong": "can to use",
-            "wrongPhonetic": "/ˈkæn ˈtuː ˈjuːs/",
-            "right": "can use",
-            "rightPhonetic": "/ˈkæn ˈjuːs/",
-            "note": "情态动词 can 后直接接动词原形，不加 to。"
+            "wrong": "use something doing something",
+            "wrongPhonetic": "/ˈjuːs ˈsʌmθɪŋ ˈduːɪŋ ˈsʌmθɪŋ/",
+            "right": "use something to do something",
+            "rightPhonetic": "/ˈjuːs ˈsʌmθɪŋ ˈtuː ˈduː ˈsʌmθɪŋ/",
+            "note": "这个结构要用 use + to + 动词原形；do 只是词卡里的动词占位符，真实句子要换成 finish、check 等具体动词。"
           },
           {
-            "wrong": "to useing",
-            "wrongPhonetic": "/ˈtuː useing/",
-            "right": "to use",
-            "rightPhonetic": "/ˈtuː ˈjuːs/",
-            "note": "不定式 to 后接动词原形；不要把不定式和 -ing 形式混合。"
+            "wrong": "be used doing something",
+            "wrongPhonetic": "/ˈbiː ˈjuːzd ˈduːɪŋ ˈsʌmθɪŋ/",
+            "right": "be used to do something",
+            "rightPhonetic": "/ˈbiː ˈjuːzd ˈtuː ˈduː ˈsʌmθɪŋ/",
+            "note": "这个结构要用 use + to + 动词原形；do 只是词卡里的动词占位符，真实句子要换成 finish、check 等具体动词。"
           }
         ],
         "directSynonym": "employ /ɛˈmplɔɪ/（使用；运用）",
         "directAntonym": "discard /dɪˈskɑrd/（丢弃；不用）",
-        "derivatives": "usage · useful · useless",
+        "derivatives": "usage · useful · useless · user",
         "example": "Use this example to remember the structure.",
         "exampleChinese": "用这个例子记住这个结构。"
       },
       "meanings": [
         {
           "partOfSpeech": "v.",
-          "english": "to employ something for a purpose",
-          "chinese": "使用",
+          "english": "to do something with an object, method, or resource for a purpose",
+          "chinese": "使用；利用",
           "example": "Use this example to remember the structure.",
           "translation": "用这个例子记住这个结构。"
+        },
+        {
+          "partOfSpeech": "v.",
+          "english": "to consume an amount of material, money, or energy",
+          "chinese": "耗用；消耗",
+          "example": "This device uses very little electricity.",
+          "translation": "这台设备耗电很少。"
+        },
+        {
+          "partOfSpeech": "v.",
+          "english": "to treat someone unfairly in order to gain an advantage",
+          "chinese": "利用某人",
+          "example": "He realized that the company was using him.",
+          "translation": "他意识到公司正在利用他。"
         }
       ],
       "contextPhrases": [
@@ -1703,14 +1910,14 @@
           "category": "核心动作与结构",
           "items": [
             {
-              "phrase": "use something to do something",
-              "phonetic": "/ˈjuːs ˈsʌmθɪŋ ˈtuː ˈduː ˈsʌmθɪŋ/",
-              "chinese": "使用某物做某事"
+              "phrase": "Use this example to remember",
+              "phonetic": "/ˈjuːs ˈðɪs ɪˈɡzæmpəl ˈtuː rɪˈmɛmbɚ/",
+              "chinese": "使用某物做某事；原句语境：用这个例子记住这个结构。"
             },
             {
-              "phrase": "use something for something",
-              "phonetic": "/ˈjuːs ˈsʌmθɪŋ ˈfɔːr ˈsʌmθɪŋ/",
-              "chinese": "把某物用于某事"
+              "phrase": "You can use the search box for",
+              "phonetic": "/ˈjuː ˈkæn ˈjuːs ðə ˈsɝːtʃ ˈbɑks ˈfɔːr/",
+              "chinese": "把某物用于某事；原句语境：你可以使用搜索框查找旧词卡。"
             }
           ]
         },
@@ -1718,14 +1925,14 @@
           "category": "日常与工作语境",
           "items": [
             {
-              "phrase": "be used to do something",
-              "phonetic": "/ˈbiː ˈjuːzd ˈtuː ˈduː ˈsʌmθɪŋ/",
-              "chinese": "被用于做某事"
+              "phrase": "button is used to save your answer",
+              "phonetic": "/ˈbʌtən ˈɪz ˈjuːzd ˈtuː ˈseɪv ˈjɔːr ˈænsɚ/",
+              "chinese": "被用于做某事；原句语境：这个按钮用于保存答案。"
             },
             {
-              "phrase": "be used to doing something",
-              "phonetic": "/ˈbiː ˈjuːzd ˈtuː ˈduːɪŋ ˈsʌmθɪŋ/",
-              "chinese": "习惯做某事"
+              "phrase": "I am used to reviewing words before",
+              "phonetic": "/ˈaɪ ˈæm ˈjuːzd ˈtuː riːˈvjuːɪŋ ˈwɝːdz bɪˈfɔːr/",
+              "chinese": "习惯做某事；原句语境：我习惯睡前复习单词。"
             }
           ]
         },
@@ -1733,14 +1940,14 @@
           "category": "高频扩展表达",
           "items": [
             {
-              "phrase": "used to do something",
-              "phonetic": "/ˈjuːzd ˈtuː ˈduː ˈsʌmθɪŋ/",
-              "chinese": "过去常常做某事"
+              "phrase": "I used to translate every sentence",
+              "phonetic": "/ˈaɪ ˈjuːzd ˈtuː træˈnzleɪt ˈɛvɚiː ˈsɛntəns/",
+              "chinese": "过去常常做某事；原句语境：我过去常常逐字翻译每个句子。"
             },
             {
-              "phrase": "make use of something",
-              "phonetic": "/ˈmeɪk ˈjuːs ˈʌv ˈsʌmθɪŋ/",
-              "chinese": "利用某物"
+              "phrase": "make good use of the example sentences",
+              "phonetic": "/ˈmeɪk ˈɡʊd ˈjuːs ˈʌv ðə ɪˈɡzæmpəl ˈsɛntənsəz/",
+              "chinese": "利用某物；原句语境：尽量充分利用这些例句。"
             }
           ]
         }
@@ -1795,7 +2002,7 @@
           "phonetic": "/ɛˈmplɔɪ/",
           "partOfSpeech": "v.",
           "chinese": "使用；运用",
-          "difference": "use 是本卡核心搭配 “use something to do something” 中的中性常用选择；employ 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
+          "difference": "employ 侧重“使用；运用”。对应的常用英文义是 “to employ something for a purpose”。use 在本卡搭配“use something to do something”中表达“使用”；换词时要同时检查宾语和介词。"
         }
       ],
       "antonyms": [
@@ -1804,7 +2011,7 @@
           "phonetic": "/dɪˈskɑrd/",
           "partOfSpeech": "v.",
           "chinese": "丢弃；不用",
-          "usage": "在本卡核心义下与 use 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
+          "usage": "在“使用”这个义项下，discard（丢弃；不用）与 use 形成对比。对应的常用英文义是 “opposite of use”。只在这个明确义项和句型中对比，不把两个词的所有用法都视为相反。"
         }
       ],
       "derivatives": [
@@ -1828,47 +2035,109 @@
           "partOfSpeech": "adj.",
           "chinese": "无用的",
           "note": "表示不能达到所需目的。"
+        },
+        {
+          "word": "user",
+          "phonetic": "/ˈjuːzɚ/",
+          "partOfSpeech": "n.",
+          "chinese": "使用者",
+          "note": "user 是 use 的常用词族形式，作 n. 使用；对应的常用英文义是 “a person who makes use of a thing”。"
         }
       ],
-      "confusables": [],
+      "confusables": [
+        {
+          "word": "used to",
+          "phonetic": "/ˈjuːzd ˈtuː/",
+          "partOfSpeech": "phr.",
+          "chinese": "过去常常",
+          "difference": "used to 表示“过去常常”；use 在本卡核心搭配“use something to do something”中表示“使用”。答题时要根据句意和完整结构区分，不只看拼写或中文近义。"
+        }
+      ],
       "relatedVocabulary": [
         {
-          "category": "语义坐标：近义与反义",
+          "category": "语义上位词：这个动作属于什么类别",
           "items": [
             {
-              "word": "employ",
-              "phonetic": "/ɛˈmplɔɪ/",
+              "word": "have",
+              "phonetic": "/ˈhæv/",
               "partOfSpeech": "v.",
-              "chinese": "使用；运用"
+              "chinese": "有"
             },
             {
-              "word": "discard",
-              "phonetic": "/dɪˈskɑrd/",
+              "word": "work",
+              "phonetic": "/ˈwɝːk/",
               "partOfSpeech": "v.",
-              "chinese": "丢弃；不用"
+              "chinese": "工作"
+            },
+            {
+              "word": "move",
+              "phonetic": "/ˈmuːv/",
+              "partOfSpeech": "v.",
+              "chinese": "移动"
+            },
+            {
+              "word": "take",
+              "phonetic": "/ˈteɪk/",
+              "partOfSpeech": "v.",
+              "chinese": "拿"
             }
           ]
         },
         {
-          "category": "词族与构词联系",
+          "category": "具体动作：相关的更具体表达",
           "items": [
             {
-              "word": "usage",
-              "phonetic": "/ˈjuːsədʒ/",
+              "word": "give",
+              "phonetic": "/ˈɡɪv/",
+              "partOfSpeech": "v.",
+              "chinese": "给"
+            },
+            {
+              "word": "put",
+              "phonetic": "/ˈpʊt/",
+              "partOfSpeech": "v.",
+              "chinese": "放"
+            },
+            {
+              "word": "play",
+              "phonetic": "/ˈpleɪ/",
+              "partOfSpeech": "v.",
+              "chinese": "玩"
+            },
+            {
+              "word": "address",
+              "phonetic": "/ˈæˌdrɛs/",
+              "partOfSpeech": "v.",
+              "chinese": "住址；演说；举止"
+            }
+          ]
+        },
+        {
+          "category": "真实语境：例句中常与本词同现的词",
+          "items": [
+            {
+              "word": "remember",
+              "phonetic": "/rɪˈmembər/",
+              "partOfSpeech": "v.",
+              "chinese": "记得"
+            },
+            {
+              "word": "make",
+              "phonetic": "/ˈmeɪk/",
+              "partOfSpeech": "v.",
+              "chinese": "制作"
+            },
+            {
+              "word": "word",
+              "phonetic": "/ˈwɝːd/",
               "partOfSpeech": "n.",
-              "chinese": "用法；使用"
+              "chinese": "话；消息；词"
             },
             {
-              "word": "useful",
-              "phonetic": "/ˈjuːsfəl/",
-              "partOfSpeech": "adj.",
-              "chinese": "有用的"
-            },
-            {
-              "word": "useless",
-              "phonetic": "/ˈjuːsləs/",
-              "partOfSpeech": "adj.",
-              "chinese": "无用的；无效的；无益的"
+              "word": "save",
+              "phonetic": "/ˈseɪv/",
+              "partOfSpeech": "n.",
+              "chinese": "救球；解救；挽救；储蓄"
             }
           ]
         }
@@ -1906,10 +2175,10 @@
         }
       ],
       "studyFocus": {
-        "coreMeaning": "使用；利用；英文核心释义：to employ something for a purpose。",
-        "keyCollocation": "把 “use something to do something” 作为一个完整句块记忆。",
-        "commonMistake": "情态动词 can 后直接接动词原形，不加 to。",
-        "mustUseExample": "Use this example to remember the structure."
+        "coreMeaning": "先掌握“使用”这个核心义，再用本卡的 2 个常用义项辨别不同语境。",
+        "keyCollocation": "把“use something to do something”连同介词、宾语和动词形式作为整个句块记忆。",
+        "commonMistake": "这个结构要用 use + to + 动词原形；do 只是词卡里的动词占位符，真实句子要换成 finish、check 等具体动词。",
+        "mustUseExample": "Use this example to remember the structure.（用这个例子记住这个结构。）"
       },
       "questions": [
         {
@@ -1932,9 +2201,9 @@
           "options": [
             "to place something somewhere or express it in words",
             "to no longer have something or fail to win",
-            "to employ something for a purpose"
+            "to do something with an object, method, or resource for a purpose"
           ],
-          "answer": "to employ something for a purpose",
+          "answer": "to do something with an object, method, or resource for a purpose",
           "stage": "T0",
           "ai": false
         },
@@ -1958,8 +2227,8 @@
           "prompt": "哪个词是词卡中列出的 “use” 最直接近义词？",
           "options": [
             "discard",
+            "used to",
             "put",
-            "lose",
             "employ"
           ],
           "answer": "employ",
@@ -1971,8 +2240,8 @@
           "type": "meaning_choice",
           "prompt": "哪个词是词卡中列出的 “use” 最直接反义词？",
           "options": [
+            "used to",
             "put",
-            "lose",
             "discard",
             "employ"
           ],
@@ -1983,21 +2252,21 @@
         {
           "id": "use-v-contrast-choice",
           "type": "meaning_choice",
-          "prompt": "根据本词卡辨析，哪个词被列为 “use” 的派生词？",
+          "prompt": "根据本词卡辨析，哪个词被列为 “use” 的易混词？",
           "options": [
             "put",
-            "usage",
+            "used to",
             "employ",
             "discard"
           ],
-          "answer": "usage",
+          "answer": "used to",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "use-v-recall-definition",
           "type": "recall",
-          "prompt": "根据英文释义写出目标词：to employ something for a purpose",
+          "prompt": "根据英文释义写出目标词：to do something with an object, method, or resource for a purpose",
           "answer": "use",
           "stage": "T1",
           "ai": false
@@ -2101,7 +2370,7 @@
         {
           "id": "use-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “use” 和 “be used to do something” 结构，并避免中文直译；do 代表任意合适的动词原形，不要求写出单词 do；something 要替换成实际的事物或内容。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “use” 和 “Use this example to remember” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2161,9 +2430,9 @@
       },
       "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.2",
-      "contentVersion": "2026.09.07.2",
+      "contentVersion": "2026.09.08.1",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
+      "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
       "id": "tell-v",
@@ -2192,12 +2461,11 @@
       "difficulty": "基础",
       "tags": [
         "v.",
-        "完整词卡",
         "高频表达"
       ],
       "coreMemory": {
         "chinese": "告诉；讲述；辨别",
-        "english": "v. to give information, narrate, or recognize a difference",
+        "english": "v. to give someone information by speaking or writing；v. to order, advise, or instruct someone to do something；v. to recognize, distinguish, or know something；v. to describe or narrate a story, joke, or experience",
         "structure": "tell someone something /ˈtɛl ˈsʌˌmwʌn ˈsʌmθɪŋ/（告诉某人某事）；tell someone to do something /ˈtɛl ˈsʌˌmwʌn ˈtuː ˈduː ˈsʌmθɪŋ/（叫某人做某事）；tell the truth /ˈtɛl ðə ˈtruːθ/（说实话）；tell a story /ˈtɛl ə ˈstɔːriː/（讲故事）",
         "structures": [
           {
@@ -2221,21 +2489,21 @@
             "chinese": "讲故事"
           }
         ],
-        "commonError": "❌ can to tell → ✅ can tell；❌ to telling → ✅ to tell",
+        "commonError": "❌ tell someone doing something → ✅ tell someone to do something；❌ to telling → ✅ to tell",
         "commonErrors": [
           {
-            "wrong": "can to tell",
-            "wrongPhonetic": "/ˈkæn ˈtuː ˈtɛl/",
-            "right": "can tell",
-            "rightPhonetic": "/ˈkæn ˈtɛl/",
-            "note": "情态动词 can 后直接接动词原形，不加 to。"
+            "wrong": "tell someone doing something",
+            "wrongPhonetic": "/ˈtɛl ˈsʌˌmwʌn ˈduːɪŋ ˈsʌmθɪŋ/",
+            "right": "tell someone to do something",
+            "rightPhonetic": "/ˈtɛl ˈsʌˌmwʌn ˈtuː ˈduː ˈsʌmθɪŋ/",
+            "note": "这个结构要用 tell + to + 动词原形；do 只是词卡里的动词占位符，真实句子要换成 finish、check 等具体动词。"
           },
           {
             "wrong": "to telling",
             "wrongPhonetic": "/ˈtuː ˈtɛlɪŋ/",
             "right": "to tell",
             "rightPhonetic": "/ˈtuː ˈtɛl/",
-            "note": "不定式 to 后接动词原形；不要把不定式和 -ing 形式混合。"
+            "note": "这里的 to 是不定式标记，后面要用 tell 的原形，不能再加 -ing。"
           }
         ],
         "directSynonym": "inform /ˌɪˈnfɔːrm/（告知；通知）",
@@ -2247,10 +2515,31 @@
       "meanings": [
         {
           "partOfSpeech": "v.",
-          "english": "to give information, narrate, or recognize a difference",
-          "chinese": "告诉",
+          "english": "to give someone information by speaking or writing",
+          "chinese": "告诉；告知",
           "example": "Please tell me the reason for your choice.",
           "translation": "请告诉我你选择的理由。"
+        },
+        {
+          "partOfSpeech": "v.",
+          "english": "to order, advise, or instruct someone to do something",
+          "chinese": "吩咐；命令；建议",
+          "example": "The teacher told us to read the sentence aloud.",
+          "translation": "老师让我们朗读这个句子。"
+        },
+        {
+          "partOfSpeech": "v.",
+          "english": "to recognize, distinguish, or know something",
+          "chinese": "辨别；看出；判断",
+          "example": "Can you tell a short story using this verb?",
+          "translation": "你能用这个动词讲一个小故事吗？"
+        },
+        {
+          "partOfSpeech": "v.",
+          "english": "to describe or narrate a story, joke, or experience",
+          "chinese": "讲述；叙述",
+          "example": "I can now tell the difference between the two structures.",
+          "translation": "我现在能分辨这两个结构的差异。"
         }
       ],
       "contextPhrases": [
@@ -2258,14 +2547,14 @@
           "category": "核心动作与结构",
           "items": [
             {
-              "phrase": "tell someone something",
-              "phonetic": "/ˈtɛl ˈsʌˌmwʌn ˈsʌmθɪŋ/",
-              "chinese": "告诉某人某事"
+              "phrase": "Please tell me the reason for",
+              "phonetic": "/ˈpliːz ˈtɛl ˈmiː ðə ˈriːzən ˈfɔːr/",
+              "chinese": "告诉某人某事；原句语境：请告诉我你选择的理由。"
             },
             {
-              "phrase": "tell someone to do something",
-              "phonetic": "/ˈtɛl ˈsʌˌmwʌn ˈtuː ˈduː ˈsʌmθɪŋ/",
-              "chinese": "叫某人做某事"
+              "phrase": "The teacher told us to read the",
+              "phonetic": "/ðə ˈtiːtʃɚ ˈtoʊld ˈʌs ˈtuː ˈrɛd ðə/",
+              "chinese": "叫某人做某事；原句语境：老师让我们朗读这个句子。"
             }
           ]
         },
@@ -2273,14 +2562,14 @@
           "category": "日常与工作语境",
           "items": [
             {
-              "phrase": "tell the truth",
-              "phonetic": "/ˈtɛl ðə ˈtruːθ/",
-              "chinese": "说实话"
+              "phrase": "better to tell the truth",
+              "phonetic": "/ˈbɛtɚ ˈtuː ˈtɛl ðə ˈtruːθ/",
+              "chinese": "说实话；原句语境：说实话总是更好。"
             },
             {
-              "phrase": "tell a story",
-              "phonetic": "/ˈtɛl ə ˈstɔːriː/",
-              "chinese": "讲故事"
+              "phrase": "Can you tell a short story using",
+              "phonetic": "/ˈkæn ˈjuː ˈtɛl ə ˈʃɔːrt ˈstɔːriː ˈjuːzɪŋ/",
+              "chinese": "讲故事；原句语境：你能用这个动词讲一个小故事吗？"
             }
           ]
         },
@@ -2288,14 +2577,14 @@
           "category": "高频扩展表达",
           "items": [
             {
-              "phrase": "tell the difference",
-              "phonetic": "/ˈtɛl ðə ˈdɪfɚəns/",
-              "chinese": "分辨差异"
+              "phrase": "can now tell the difference between the",
+              "phonetic": "/ˈkæn ˈnaʊ ˈtɛl ðə ˈdɪfɚəns bɪˈtwiːn ðə/",
+              "chinese": "分辨差异；原句语境：我现在能分辨这两个结构的差异。"
             },
             {
-              "phrase": "time will tell",
-              "phonetic": "/ˈtaɪm ˈwɪl ˈtɛl/",
-              "chinese": "时间会证明"
+              "phrase": "Time will tell whether the new habit",
+              "phonetic": "/ˈtaɪm ˈwɪl ˈtɛl ˈwɛðɚ ðə ˈnuː ˈhæbət/",
+              "chinese": "时间会证明；原句语境：时间会证明这个新习惯能否保持。"
             }
           ]
         }
@@ -2350,7 +2639,7 @@
           "phonetic": "/ˌɪˈnfɔːrm/",
           "partOfSpeech": "v.",
           "chinese": "告知；通知",
-          "difference": "tell 是本卡核心搭配 “tell someone something” 中的中性常用选择；inform 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
+          "difference": "inform 侧重“告知；通知”。对应的常用英文义是 “to give information, narrate, or recognize a difference”。tell 在本卡搭配“tell someone something”中表达“告诉”；换词时要同时检查宾语和介词。"
         }
       ],
       "antonyms": [
@@ -2359,7 +2648,7 @@
           "phonetic": "/kəˈnsiːl/",
           "partOfSpeech": "v.",
           "chinese": "隐瞒；掩盖",
-          "usage": "在本卡核心义下与 tell 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
+          "usage": "在“告诉”这个义项下，conceal（隐瞒；掩盖）与 tell 形成对比。对应的常用英文义是 “opposite of tell”。只在这个明确义项和句型中对比，不把两个词的所有用法都视为相反。"
         }
       ],
       "derivatives": [
@@ -2378,39 +2667,100 @@
           "note": "常修饰 sign、example、evidence。"
         }
       ],
-      "confusables": [],
+      "confusables": [
+        {
+          "word": "say",
+          "phonetic": "/ˈseɪ/",
+          "partOfSpeech": "n.",
+          "chinese": "说；讲；念",
+          "difference": "say 表示“说；讲；念”；tell 在本卡核心搭配“tell someone something”中表示“告诉”。答题时要根据句意和完整结构区分，不只看拼写或中文近义。"
+        }
+      ],
       "relatedVocabulary": [
         {
-          "category": "语义坐标：近义与反义",
+          "category": "语义上位词：这个动作属于什么类别",
           "items": [
             {
-              "word": "inform",
-              "phonetic": "/ˌɪˈnfɔːrm/",
+              "word": "express",
+              "phonetic": "/ɪkˈspres/",
               "partOfSpeech": "v.",
-              "chinese": "告知；通知"
+              "chinese": "表达"
             },
             {
-              "word": "conceal",
-              "phonetic": "/kəˈnsiːl/",
+              "word": "guess",
+              "phonetic": "/ˈɡɛs/",
               "partOfSpeech": "v.",
-              "chinese": "隐藏；掩盖；隐瞒"
+              "chinese": "猜测；臆测；猜测"
+            },
+            {
+              "word": "request",
+              "phonetic": "/rɪˈkwɛst/",
+              "partOfSpeech": "v.",
+              "chinese": "请求；需要；申请书"
+            },
+            {
+              "word": "swear",
+              "phonetic": "/ˈswɛr/",
+              "partOfSpeech": "v.",
+              "chinese": "发誓；咒骂；使宣誓"
             }
           ]
         },
         {
-          "category": "词族与构词联系",
+          "category": "具体动作：相关的更具体表达",
           "items": [
             {
-              "word": "teller",
-              "phonetic": "/ˈtɛlɚ/",
-              "partOfSpeech": "n.",
-              "chinese": "讲述者；出纳员"
+              "word": "add",
+              "phonetic": "/ˈæd/",
+              "partOfSpeech": "v.",
+              "chinese": "添加"
             },
             {
-              "word": "telling",
-              "phonetic": "/ˈtɛlɪŋ/",
-              "partOfSpeech": "adj.",
-              "chinese": "有说服力的；显著的"
+              "word": "answer",
+              "phonetic": "/ˈænsɚ/",
+              "partOfSpeech": "v.",
+              "chinese": "答案；回答；回报；答辩"
+            },
+            {
+              "word": "announce",
+              "phonetic": "/əˈnaʊns/",
+              "partOfSpeech": "v.",
+              "chinese": "宣布；声称；显示"
+            },
+            {
+              "word": "represent",
+              "phonetic": "/ˌrɛprɪˈzɛnt/",
+              "partOfSpeech": "v.",
+              "chinese": "表现；表示；描绘"
+            }
+          ]
+        },
+        {
+          "category": "真实语境：例句中常与本词同现的词",
+          "items": [
+            {
+              "word": "read",
+              "phonetic": "/riːd/",
+              "partOfSpeech": "n.",
+              "chinese": "阅读"
+            },
+            {
+              "word": "reason",
+              "phonetic": "/ˈriːzən/",
+              "partOfSpeech": "n.",
+              "chinese": "理由；原因；理智"
+            },
+            {
+              "word": "better",
+              "phonetic": "/ˈbɛtɚ/",
+              "partOfSpeech": "n.",
+              "chinese": "较好的；比较好"
+            },
+            {
+              "word": "please",
+              "phonetic": "/ˈpliːz/",
+              "partOfSpeech": "v.",
+              "chinese": "请；使高兴；合...的心意"
             }
           ]
         }
@@ -2448,10 +2798,10 @@
         }
       ],
       "studyFocus": {
-        "coreMeaning": "告诉；讲述；辨别；英文核心释义：to give information, narrate, or recognize a difference。",
-        "keyCollocation": "把 “tell someone something” 作为一个完整句块记忆。",
-        "commonMistake": "情态动词 can 后直接接动词原形，不加 to。",
-        "mustUseExample": "Please tell me the reason for your choice."
+        "coreMeaning": "先掌握“告诉”这个核心义，再用本卡的 3 个常用义项辨别不同语境。",
+        "keyCollocation": "把“tell someone something”连同介词、宾语和动词形式作为整个句块记忆。",
+        "commonMistake": "这个结构要用 tell + to + 动词原形；do 只是词卡里的动词占位符，真实句子要换成 finish、check 等具体动词。",
+        "mustUseExample": "Please tell me the reason for your choice.（请告诉我你选择的理由。）"
       },
       "questions": [
         {
@@ -2473,10 +2823,10 @@
           "prompt": "哪一项英文释义最符合词卡中的 “tell”？",
           "options": [
             "to know the meaning or reason for something",
-            "to give information, narrate, or recognize a difference",
+            "to give someone information by speaking or writing",
             "to enjoy, approve of, or prefer someone or something"
           ],
-          "answer": "to give information, narrate, or recognize a difference",
+          "answer": "to give someone information by speaking or writing",
           "stage": "T0",
           "ai": false
         },
@@ -2499,8 +2849,8 @@
           "type": "meaning_choice",
           "prompt": "哪个词是词卡中列出的 “tell” 最直接近义词？",
           "options": [
+            "say",
             "like",
-            "understand",
             "inform",
             "conceal"
           ],
@@ -2513,10 +2863,10 @@
           "type": "meaning_choice",
           "prompt": "哪个词是词卡中列出的 “tell” 最直接反义词？",
           "options": [
-            "understand",
+            "like",
             "conceal",
             "inform",
-            "like"
+            "say"
           ],
           "answer": "conceal",
           "stage": "T2",
@@ -2525,21 +2875,21 @@
         {
           "id": "tell-v-contrast-choice",
           "type": "meaning_choice",
-          "prompt": "根据本词卡辨析，哪个词被列为 “tell” 的派生词？",
+          "prompt": "根据本词卡辨析，哪个词被列为 “tell” 的易混词？",
           "options": [
-            "teller",
+            "say",
             "inform",
             "conceal",
             "like"
           ],
-          "answer": "teller",
+          "answer": "say",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "tell-v-recall-definition",
           "type": "recall",
-          "prompt": "根据英文释义写出目标词：to give information, narrate, or recognize a difference",
+          "prompt": "根据英文释义写出目标词：to give someone information by speaking or writing",
           "answer": "tell",
           "stage": "T1",
           "ai": false
@@ -2643,7 +2993,7 @@
         {
           "id": "tell-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “tell” 和 “tell the truth” 结构，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “tell” 和 “Please tell me the reason for” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2703,9 +3053,9 @@
       },
       "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.2",
-      "contentVersion": "2026.09.07.2",
+      "contentVersion": "2026.09.08.1",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
+      "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     }
   ]
 }
