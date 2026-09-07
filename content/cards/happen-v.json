@@ -12,14 +12,14 @@
   ],
   "cocaRankLabel": "v. 第 170 名",
   "learningPriority": {
-    "sequence": 3,
+    "sequence": 41,
     "group": "verb",
     "groupLabel": "动词",
     "groupOrder": 1,
     "primaryCocaRank": 170
   },
   "phonetic": "/ˈhæpən/",
-  "syllables": "happen（约 2 音节）",
+  "syllables": "hap·pen",
   "partOfSpeech": "v.",
   "frequencyBand": "COCA 高频精选 · v. 第 170 名",
   "difficulty": "基础",
@@ -265,9 +265,9 @@
       "type": "meaning_choice",
       "prompt": "“happen”最核心的中文含义是？",
       "options": [
-        "改善；提高",
-        "发生",
-        "考虑；认为"
+        "阅读；读懂",
+        "停留；保持；暂住",
+        "发生"
       ],
       "answer": "发生",
       "stage": "T0",
@@ -278,9 +278,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “happen”？",
       "options": [
+        "to remain in a place or continue in a state",
         "to take place",
-        "to think carefully about something",
-        "to make something better"
+        "to understand written words"
       ],
       "answer": "to take place",
       "stage": "T0",
@@ -291,10 +291,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“发生了什么”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "what happened",
-        "happen to someone",
         "happen to know",
-        "happen by chance"
+        "happen by chance",
+        "what happened",
+        "happen to someone"
       ],
       "answer": "what happened",
       "stage": "T1",
@@ -305,10 +305,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “happen” 最直接近义词？",
       "options": [
+        "stay",
+        "occur",
         "prevent",
-        "consider",
-        "improve",
-        "occur"
+        "read"
       ],
       "answer": "occur",
       "stage": "T2",
@@ -319,10 +319,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “happen” 最直接反义词？",
       "options": [
-        "consider",
-        "improve",
         "prevent",
-        "occur"
+        "occur",
+        "read",
+        "stay"
       ],
       "answer": "prevent",
       "stage": "T2",
@@ -333,10 +333,10 @@
       "type": "meaning_choice",
       "prompt": "根据本词卡辨析，哪个词被列为 “happen” 的相关近义词？",
       "options": [
-        "improve",
-        "occur",
         "prevent",
-        "consider"
+        "read",
+        "stay",
+        "occur"
       ],
       "answer": "occur",
       "stage": "T3",
@@ -371,10 +371,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“发生在某人身上”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "happen to know",
-        "happen by chance",
         "happen to someone",
-        "what happened"
+        "what happened",
+        "happen to know",
+        "happen by chance"
       ],
       "answer": "happen to someone",
       "stage": "T1",
@@ -385,10 +385,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：What happened _____ the meeting?（中文：会议期间发生了什么？）",
       "options": [
-        "weekend",
-        "during",
-        "taking",
-        "speaking"
+        "example",
+        "home",
+        "breakfast",
+        "during"
       ],
       "answer": "during",
       "stage": "T2",
@@ -399,10 +399,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“发生了什么”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "what happened",
-        "happen to someone",
         "happen to know",
-        "happen by chance"
+        "happen by chance",
+        "what happened",
+        "happen to someone"
       ],
       "answer": "what happened",
       "stage": "T2",
@@ -413,10 +413,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“发生在某人身上”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "what happened",
-        "happen to know",
         "happen by chance",
-        "happen to someone"
+        "happen to someone",
+        "what happened",
+        "happen to know"
       ],
       "answer": "happen to someone",
       "stage": "T3",
@@ -509,7 +509,7 @@
   },
   "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.09.07.1",
+  "contentVersion": "2026.09.07.2",
   "reviewed": false,
   "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

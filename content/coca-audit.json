@@ -1,5 +1,5 @@
 {
-  "auditVersion": "2026.09.07.1",
+  "auditVersion": "2026.09.07.2",
   "auditedAt": "2026-09-07",
   "source": "COCA词频单词表.xlsx",
   "sheet": "1 lemmas",
@@ -31,22 +31,278 @@
     "missingWords": [],
     "allSelectedWordsFound": true,
     "stableCardIds": true,
-    "primaryPartOfSpeechPolicy": "use the first declared card POS; do not promote a rare secondary COCA sense",
+    "preservedExistingVerbCards": 54,
+    "replacedNonVerbCards": 96,
+    "primaryPartOfSpeechPolicy": "preserve existing primary-verb cards, replace every non-verb slot with the highest-ranked remaining COCA verb, then order all cards by COCA verb rank",
     "learningOrder": [
-      "动词",
-      "名词",
-      "形容词",
-      "副词",
-      "其他词性"
+      "动词（按 COCA 动词词频升序）"
     ],
     "primaryGroupCounts": {
-      "verb": 54,
-      "noun": 55,
-      "adjective": 21,
-      "adverb": 20
+      "verb": 150
     }
   },
   "orderedCards": [
+    {
+      "word": "be",
+      "cardId": "be-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 2,
+      "sequence": 1
+    },
+    {
+      "word": "have",
+      "cardId": "have-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 11,
+      "sequence": 2
+    },
+    {
+      "word": "do",
+      "cardId": "do-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 15,
+      "sequence": 3
+    },
+    {
+      "word": "say",
+      "cardId": "say-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 26,
+      "sequence": 4
+    },
+    {
+      "word": "go",
+      "cardId": "go-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 31,
+      "sequence": 5
+    },
+    {
+      "word": "get",
+      "cardId": "get-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 34,
+      "sequence": 6
+    },
+    {
+      "word": "can",
+      "cardId": "can-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 37,
+      "sequence": 7
+    },
+    {
+      "word": "know",
+      "cardId": "know-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 39,
+      "sequence": 8
+    },
+    {
+      "word": "will",
+      "cardId": "will-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 47,
+      "sequence": 9
+    },
+    {
+      "word": "would",
+      "cardId": "would-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 49,
+      "sequence": 10
+    },
+    {
+      "word": "make",
+      "cardId": "make-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 50,
+      "sequence": 11
+    },
+    {
+      "word": "think",
+      "cardId": "think-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 53,
+      "sequence": 12
+    },
+    {
+      "word": "see",
+      "cardId": "see-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 56,
+      "sequence": 13
+    },
+    {
+      "word": "come",
+      "cardId": "come-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 61,
+      "sequence": 14
+    },
+    {
+      "word": "take",
+      "cardId": "take-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 63,
+      "sequence": 15
+    },
+    {
+      "word": "want",
+      "cardId": "want-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 68,
+      "sequence": 16
+    },
+    {
+      "word": "could",
+      "cardId": "could-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 75,
+      "sequence": 17
+    },
+    {
+      "word": "look",
+      "cardId": "look-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 81,
+      "sequence": 18
+    },
+    {
+      "word": "use",
+      "cardId": "use-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 91,
+      "sequence": 19
+    },
+    {
+      "word": "tell",
+      "cardId": "tell-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 92,
+      "sequence": 20
+    },
+    {
+      "word": "find",
+      "cardId": "find-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 97,
+      "sequence": 21
+    },
+    {
+      "word": "give",
+      "cardId": "give-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 98,
+      "sequence": 22
+    },
+    {
+      "word": "need",
+      "cardId": "need-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 107,
+      "sequence": 23
+    },
+    {
+      "word": "should",
+      "cardId": "should-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 110,
+      "sequence": 24
+    },
+    {
+      "word": "work",
+      "cardId": "work-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 115,
+      "sequence": 25
+    },
+    {
+      "word": "try",
+      "cardId": "try-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 121,
+      "sequence": 26
+    },
+    {
+      "word": "let",
+      "cardId": "let-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 122,
+      "sequence": 27
+    },
+    {
+      "word": "call",
+      "cardId": "call-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 125,
+      "sequence": 28
+    },
+    {
+      "word": "may",
+      "cardId": "may-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 127,
+      "sequence": 29
+    },
     {
       "word": "mean",
       "cardId": "mean-v",
@@ -54,7 +310,88 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 130,
-      "sequence": 1
+      "sequence": 30
+    },
+    {
+      "word": "feel",
+      "cardId": "feel-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 136,
+      "sequence": 31
+    },
+    {
+      "word": "ask",
+      "cardId": "ask-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 143,
+      "sequence": 32
+    },
+    {
+      "word": "talk",
+      "cardId": "talk-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 149,
+      "sequence": 33
+    },
+    {
+      "word": "keep",
+      "cardId": "keep-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 151,
+      "sequence": 34
+    },
+    {
+      "word": "leave",
+      "cardId": "leave-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 152,
+      "sequence": 35
+    },
+    {
+      "word": "put",
+      "cardId": "put-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 153,
+      "sequence": 36
+    },
+    {
+      "word": "like",
+      "cardId": "like-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 154,
+      "sequence": 37
+    },
+    {
+      "word": "help",
+      "cardId": "help-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 155,
+      "sequence": 38
+    },
+    {
+      "word": "start",
+      "cardId": "start-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 162,
+      "sequence": 39
     },
     {
       "word": "become",
@@ -63,7 +400,7 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 167,
-      "sequence": 2
+      "sequence": 40
     },
     {
       "word": "happen",
@@ -72,7 +409,16 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 170,
-      "sequence": 3
+      "sequence": 41
+    },
+    {
+      "word": "show",
+      "cardId": "show-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 177,
+      "sequence": 42
     },
     {
       "word": "seem",
@@ -81,7 +427,25 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 181,
-      "sequence": 4
+      "sequence": 43
+    },
+    {
+      "word": "might",
+      "cardId": "might-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 182,
+      "sequence": 44
+    },
+    {
+      "word": "hear",
+      "cardId": "hear-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 184,
+      "sequence": 45
     },
     {
       "word": "believe",
@@ -90,7 +454,43 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 189,
-      "sequence": 5
+      "sequence": 46
+    },
+    {
+      "word": "play",
+      "cardId": "play-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 196,
+      "sequence": 47
+    },
+    {
+      "word": "turn",
+      "cardId": "turn-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 197,
+      "sequence": 48
+    },
+    {
+      "word": "run",
+      "cardId": "run-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 202,
+      "sequence": 49
+    },
+    {
+      "word": "live",
+      "cardId": "live-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 209,
+      "sequence": 50
     },
     {
       "word": "write",
@@ -99,7 +499,61 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 212,
-      "sequence": 6
+      "sequence": 51
+    },
+    {
+      "word": "bring",
+      "cardId": "bring-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 213,
+      "sequence": 52
+    },
+    {
+      "word": "move",
+      "cardId": "move-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 227,
+      "sequence": 53
+    },
+    {
+      "word": "must",
+      "cardId": "must-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 228,
+      "sequence": 54
+    },
+    {
+      "word": "begin",
+      "cardId": "begin-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 232,
+      "sequence": 55
+    },
+    {
+      "word": "love",
+      "cardId": "love-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 233,
+      "sequence": 56
+    },
+    {
+      "word": "hold",
+      "cardId": "hold-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 235,
+      "sequence": 57
     },
     {
       "word": "read",
@@ -108,7 +562,25 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 244,
-      "sequence": 7
+      "sequence": 58
+    },
+    {
+      "word": "stop",
+      "cardId": "stop-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 257,
+      "sequence": 59
+    },
+    {
+      "word": "pay",
+      "cardId": "pay-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 258,
+      "sequence": 60
     },
     {
       "word": "provide",
@@ -117,7 +589,16 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 272,
-      "sequence": 8
+      "sequence": 61
+    },
+    {
+      "word": "lose",
+      "cardId": "lose-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 273,
+      "sequence": 62
     },
     {
       "word": "understand",
@@ -126,7 +607,34 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 277,
-      "sequence": 9
+      "sequence": 63
+    },
+    {
+      "word": "wait",
+      "cardId": "wait-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 289,
+      "sequence": 64
+    },
+    {
+      "word": "meet",
+      "cardId": "meet-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 294,
+      "sequence": 65
+    },
+    {
+      "word": "thank",
+      "cardId": "thank-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 300,
+      "sequence": 66
     },
     {
       "word": "change",
@@ -135,7 +643,25 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 304,
-      "sequence": 10
+      "sequence": 67
+    },
+    {
+      "word": "watch",
+      "cardId": "watch-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 315,
+      "sequence": 68
+    },
+    {
+      "word": "sit",
+      "cardId": "sit-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 318,
+      "sequence": 69
     },
     {
       "word": "create",
@@ -144,7 +670,7 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 319,
-      "sequence": 11
+      "sequence": 70
     },
     {
       "word": "learn",
@@ -153,7 +679,16 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 322,
-      "sequence": 12
+      "sequence": 71
+    },
+    {
+      "word": "kill",
+      "cardId": "kill-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 325,
+      "sequence": 72
     },
     {
       "word": "include",
@@ -162,7 +697,16 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 328,
-      "sequence": 13
+      "sequence": 73
+    },
+    {
+      "word": "stand",
+      "cardId": "stand-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 329,
+      "sequence": 74
     },
     {
       "word": "follow",
@@ -171,7 +715,7 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 332,
-      "sequence": 14
+      "sequence": 75
     },
     {
       "word": "remember",
@@ -180,7 +724,7 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 334,
-      "sequence": 15
+      "sequence": 76
     },
     {
       "word": "speak",
@@ -189,7 +733,16 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 337,
-      "sequence": 16
+      "sequence": 77
+    },
+    {
+      "word": "set",
+      "cardId": "set-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 339,
+      "sequence": 78
     },
     {
       "word": "allow",
@@ -198,7 +751,25 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 346,
-      "sequence": 17
+      "sequence": 79
+    },
+    {
+      "word": "win",
+      "cardId": "win-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 347,
+      "sequence": 80
+    },
+    {
+      "word": "lead",
+      "cardId": "lead-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 349,
+      "sequence": 81
     },
     {
       "word": "continue",
@@ -207,7 +778,7 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 350,
-      "sequence": 18
+      "sequence": 82
     },
     {
       "word": "spend",
@@ -216,7 +787,79 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 353,
-      "sequence": 19
+      "sequence": 83
+    },
+    {
+      "word": "stay",
+      "cardId": "stay-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 361,
+      "sequence": 84
+    },
+    {
+      "word": "add",
+      "cardId": "add-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 362,
+      "sequence": 85
+    },
+    {
+      "word": "die",
+      "cardId": "die-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 371,
+      "sequence": 86
+    },
+    {
+      "word": "buy",
+      "cardId": "buy-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 375,
+      "sequence": 87
+    },
+    {
+      "word": "send",
+      "cardId": "send-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 382,
+      "sequence": 88
+    },
+    {
+      "word": "walk",
+      "cardId": "walk-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 384,
+      "sequence": 89
+    },
+    {
+      "word": "grow",
+      "cardId": "grow-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 390,
+      "sequence": 90
+    },
+    {
+      "word": "open",
+      "cardId": "open-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 392,
+      "sequence": 91
     },
     {
       "word": "consider",
@@ -225,7 +868,16 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 395,
-      "sequence": 20
+      "sequence": 92
+    },
+    {
+      "word": "hope",
+      "cardId": "hope-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 413,
+      "sequence": 93
     },
     {
       "word": "offer",
@@ -234,7 +886,16 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 418,
-      "sequence": 21
+      "sequence": 94
+    },
+    {
+      "word": "build",
+      "cardId": "build-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 425,
+      "sequence": 95
     },
     {
       "word": "expect",
@@ -243,7 +904,52 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 426,
-      "sequence": 22
+      "sequence": 96
+    },
+    {
+      "word": "fall",
+      "cardId": "fall-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 427,
+      "sequence": 97
+    },
+    {
+      "word": "appear",
+      "cardId": "appear-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 437,
+      "sequence": 98
+    },
+    {
+      "word": "serve",
+      "cardId": "serve-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 449,
+      "sequence": 99
+    },
+    {
+      "word": "break",
+      "cardId": "break-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 450,
+      "sequence": 100
+    },
+    {
+      "word": "end",
+      "cardId": "end-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 452,
+      "sequence": 101
     },
     {
       "word": "require",
@@ -252,7 +958,7 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 457,
-      "sequence": 23
+      "sequence": 102
     },
     {
       "word": "listen",
@@ -261,7 +967,25 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 460,
-      "sequence": 24
+      "sequence": 103
+    },
+    {
+      "word": "agree",
+      "cardId": "agree-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 461,
+      "sequence": 104
+    },
+    {
+      "word": "cut",
+      "cardId": "cut-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 467,
+      "sequence": 105
     },
     {
       "word": "decide",
@@ -270,7 +994,34 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 468,
-      "sequence": 25
+      "sequence": 106
+    },
+    {
+      "word": "pass",
+      "cardId": "pass-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 472,
+      "sequence": 107
+    },
+    {
+      "word": "eat",
+      "cardId": "eat-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 476,
+      "sequence": 108
+    },
+    {
+      "word": "report",
+      "cardId": "report-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 477,
+      "sequence": 109
     },
     {
       "word": "suggest",
@@ -279,7 +1030,16 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 481,
-      "sequence": 26
+      "sequence": 110
+    },
+    {
+      "word": "sell",
+      "cardId": "sell-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 484,
+      "sequence": 111
     },
     {
       "word": "support",
@@ -288,7 +1048,43 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 486,
-      "sequence": 27
+      "sequence": 112
+    },
+    {
+      "word": "receive",
+      "cardId": "receive-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 489,
+      "sequence": 113
+    },
+    {
+      "word": "base",
+      "cardId": "base-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 491,
+      "sequence": 114
+    },
+    {
+      "word": "pick",
+      "cardId": "pick-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 492,
+      "sequence": 115
+    },
+    {
+      "word": "drive",
+      "cardId": "drive-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 496,
+      "sequence": 116
     },
     {
       "word": "reach",
@@ -297,7 +1093,7 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 498,
-      "sequence": 28
+      "sequence": 117
     },
     {
       "word": "remain",
@@ -306,7 +1102,7 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 499,
-      "sequence": 29
+      "sequence": 118
     },
     {
       "word": "explain",
@@ -315,7 +1111,52 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 500,
-      "sequence": 30
+      "sequence": 119
+    },
+    {
+      "word": "hit",
+      "cardId": "hit-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 502,
+      "sequence": 120
+    },
+    {
+      "word": "pull",
+      "cardId": "pull-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 503,
+      "sequence": 121
+    },
+    {
+      "word": "raise",
+      "cardId": "raise-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 512,
+      "sequence": 122
+    },
+    {
+      "word": "wear",
+      "cardId": "wear-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 542,
+      "sequence": 123
+    },
+    {
+      "word": "return",
+      "cardId": "return-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 545,
+      "sequence": 124
     },
     {
       "word": "choose",
@@ -324,7 +1165,25 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 561,
-      "sequence": 31
+      "sequence": 125
+    },
+    {
+      "word": "cause",
+      "cardId": "cause-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 563,
+      "sequence": 126
+    },
+    {
+      "word": "join",
+      "cardId": "join-v",
+      "partOfSpeech": "v.",
+      "primaryGroup": "verb",
+      "primaryGroupLabel": "动词",
+      "primaryCocaRank": 566,
+      "sequence": 127
     },
     {
       "word": "develop",
@@ -333,7 +1192,7 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 569,
-      "sequence": 32
+      "sequence": 128
     },
     {
       "word": "share",
@@ -342,7 +1201,7 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 570,
-      "sequence": 33
+      "sequence": 129
     },
     {
       "word": "realize",
@@ -351,7 +1210,7 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 599,
-      "sequence": 34
+      "sequence": 130
     },
     {
       "word": "describe",
@@ -360,7 +1219,7 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 609,
-      "sequence": 35
+      "sequence": 131
     },
     {
       "word": "increase",
@@ -369,7 +1228,7 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 701,
-      "sequence": 36
+      "sequence": 132
     },
     {
       "word": "protect",
@@ -378,7 +1237,7 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 769,
-      "sequence": 37
+      "sequence": 133
     },
     {
       "word": "compare",
@@ -387,7 +1246,7 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 800,
-      "sequence": 38
+      "sequence": 134
     },
     {
       "word": "reduce",
@@ -396,7 +1255,7 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 809,
-      "sequence": 39
+      "sequence": 135
     },
     {
       "word": "accept",
@@ -405,7 +1264,7 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 816,
-      "sequence": 40
+      "sequence": 136
     },
     {
       "word": "prepare",
@@ -414,7 +1273,7 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 881,
-      "sequence": 41
+      "sequence": 137
     },
     {
       "word": "avoid",
@@ -423,7 +1282,7 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 946,
-      "sequence": 42
+      "sequence": 138
     },
     {
       "word": "notice",
@@ -432,7 +1291,7 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 969,
-      "sequence": 43
+      "sequence": 139
     },
     {
       "word": "affect",
@@ -441,7 +1300,7 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 984,
-      "sequence": 44
+      "sequence": 140
     },
     {
       "word": "manage",
@@ -450,7 +1309,7 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 992,
-      "sequence": 45
+      "sequence": 141
     },
     {
       "word": "improve",
@@ -459,7 +1318,7 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 1023,
-      "sequence": 46
+      "sequence": 142
     },
     {
       "word": "discover",
@@ -468,7 +1327,7 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 1070,
-      "sequence": 47
+      "sequence": 143
     },
     {
       "word": "handle",
@@ -477,7 +1336,7 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 1223,
-      "sequence": 48
+      "sequence": 144
     },
     {
       "word": "achieve",
@@ -486,7 +1345,7 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 1280,
-      "sequence": 49
+      "sequence": 145
     },
     {
       "word": "express",
@@ -495,7 +1354,7 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 1303,
-      "sequence": 50
+      "sequence": 146
     },
     {
       "word": "encourage",
@@ -504,7 +1363,7 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 1305,
-      "sequence": 51
+      "sequence": 147
     },
     {
       "word": "depend",
@@ -513,7 +1372,7 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 1604,
-      "sequence": 52
+      "sequence": 148
     },
     {
       "word": "prefer",
@@ -522,7 +1381,7 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 1770,
-      "sequence": 53
+      "sequence": 149
     },
     {
       "word": "solve",
@@ -531,870 +1390,6 @@
       "primaryGroup": "verb",
       "primaryGroupLabel": "动词",
       "primaryCocaRank": 1805,
-      "sequence": 54
-    },
-    {
-      "word": "time",
-      "cardId": "time-n",
-      "partOfSpeech": "n. / v.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 54,
-      "sequence": 55
-    },
-    {
-      "word": "family",
-      "cardId": "family-n",
-      "partOfSpeech": "n.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 171,
-      "sequence": 56
-    },
-    {
-      "word": "place",
-      "cardId": "place-n",
-      "partOfSpeech": "n. / v.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 186,
-      "sequence": 57
-    },
-    {
-      "word": "problem",
-      "cardId": "problem-n",
-      "partOfSpeech": "n.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 187,
-      "sequence": 58
-    },
-    {
-      "word": "question",
-      "cardId": "question-n",
-      "partOfSpeech": "n. / v.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 206,
-      "sequence": 59
-    },
-    {
-      "word": "work",
-      "cardId": "work-n",
-      "partOfSpeech": "n. / v.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 207,
-      "sequence": 60
-    },
-    {
-      "word": "money",
-      "cardId": "money-n",
-      "partOfSpeech": "n.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 215,
-      "sequence": 61
-    },
-    {
-      "word": "system",
-      "cardId": "system-n",
-      "partOfSpeech": "n.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 219,
-      "sequence": 62
-    },
-    {
-      "word": "story",
-      "cardId": "story-n",
-      "partOfSpeech": "n.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 224,
-      "sequence": 63
-    },
-    {
-      "word": "job",
-      "cardId": "job-n",
-      "partOfSpeech": "n.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 226,
-      "sequence": 64
-    },
-    {
-      "word": "friend",
-      "cardId": "friend-n",
-      "partOfSpeech": "n.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 230,
-      "sequence": 65
-    },
-    {
-      "word": "business",
-      "cardId": "business-n",
-      "partOfSpeech": "n.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 254,
-      "sequence": 66
-    },
-    {
-      "word": "home",
-      "cardId": "home-n",
-      "partOfSpeech": "n. / adv.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 255,
-      "sequence": 67
-    },
-    {
-      "word": "study",
-      "cardId": "study-n",
-      "partOfSpeech": "n. / v.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 259,
-      "sequence": 68
-    },
-    {
-      "word": "issue",
-      "cardId": "issue-n",
-      "partOfSpeech": "n. / v.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 261,
-      "sequence": 69
-    },
-    {
-      "word": "idea",
-      "cardId": "idea-n",
-      "partOfSpeech": "n.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 263,
-      "sequence": 70
-    },
-    {
-      "word": "team",
-      "cardId": "team-n",
-      "partOfSpeech": "n.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 282,
-      "sequence": 71
-    },
-    {
-      "word": "service",
-      "cardId": "service-n",
-      "partOfSpeech": "n.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 295,
-      "sequence": 72
-    },
-    {
-      "word": "information",
-      "cardId": "information-n",
-      "partOfSpeech": "n.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 320,
-      "sequence": 73
-    },
-    {
-      "word": "health",
-      "cardId": "health-n",
-      "partOfSpeech": "n.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 333,
-      "sequence": 74
-    },
-    {
-      "word": "reason",
-      "cardId": "reason-n",
-      "partOfSpeech": "n. / v.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 336,
-      "sequence": 75
-    },
-    {
-      "word": "community",
-      "cardId": "community-n",
-      "partOfSpeech": "n.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 342,
-      "sequence": 76
-    },
-    {
-      "word": "level",
-      "cardId": "level-n",
-      "partOfSpeech": "n. / v.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 354,
-      "sequence": 77
-    },
-    {
-      "word": "result",
-      "cardId": "result-n",
-      "partOfSpeech": "n. / v.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 376,
-      "sequence": 78
-    },
-    {
-      "word": "moment",
-      "cardId": "moment-n",
-      "partOfSpeech": "n.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 393,
-      "sequence": 79
-    },
-    {
-      "word": "experience",
-      "cardId": "experience-n",
-      "partOfSpeech": "n. / v.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 421,
-      "sequence": 80
-    },
-    {
-      "word": "plan",
-      "cardId": "plan-n",
-      "partOfSpeech": "n. / v.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 422,
-      "sequence": 81
-    },
-    {
-      "word": "decision",
-      "cardId": "decision-n",
-      "partOfSpeech": "n.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 488,
-      "sequence": 82
-    },
-    {
-      "word": "value",
-      "cardId": "value-n",
-      "partOfSpeech": "n. / v.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 490,
-      "sequence": 83
-    },
-    {
-      "word": "relationship",
-      "cardId": "relationship-n",
-      "partOfSpeech": "n.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 507,
-      "sequence": 84
-    },
-    {
-      "word": "difference",
-      "cardId": "difference-n",
-      "partOfSpeech": "n.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 520,
-      "sequence": 85
-    },
-    {
-      "word": "effort",
-      "cardId": "effort-n",
-      "partOfSpeech": "n.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 530,
-      "sequence": 86
-    },
-    {
-      "word": "situation",
-      "cardId": "situation-n",
-      "partOfSpeech": "n.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 560,
-      "sequence": 87
-    },
-    {
-      "word": "activity",
-      "cardId": "activity-n",
-      "partOfSpeech": "n.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 592,
-      "sequence": 88
-    },
-    {
-      "word": "choice",
-      "cardId": "choice-n",
-      "partOfSpeech": "n.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 611,
-      "sequence": 89
-    },
-    {
-      "word": "opportunity",
-      "cardId": "opportunity-n",
-      "partOfSpeech": "n.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 643,
-      "sequence": 90
-    },
-    {
-      "word": "future",
-      "cardId": "future-n",
-      "partOfSpeech": "n. / adj.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 653,
-      "sequence": 91
-    },
-    {
-      "word": "attention",
-      "cardId": "attention-n",
-      "partOfSpeech": "n.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 664,
-      "sequence": 92
-    },
-    {
-      "word": "goal",
-      "cardId": "goal-n",
-      "partOfSpeech": "n.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 694,
-      "sequence": 93
-    },
-    {
-      "word": "behavior",
-      "cardId": "behavior-n",
-      "partOfSpeech": "n.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 696,
-      "sequence": 94
-    },
-    {
-      "word": "language",
-      "cardId": "language-n",
-      "partOfSpeech": "n.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 713,
-      "sequence": 95
-    },
-    {
-      "word": "ability",
-      "cardId": "ability-n",
-      "partOfSpeech": "n.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 789,
-      "sequence": 96
-    },
-    {
-      "word": "quality",
-      "cardId": "quality-n",
-      "partOfSpeech": "n.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 811,
-      "sequence": 97
-    },
-    {
-      "word": "benefit",
-      "cardId": "benefit-n",
-      "partOfSpeech": "n. / v.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 827,
-      "sequence": 98
-    },
-    {
-      "word": "skill",
-      "cardId": "skill-n",
-      "partOfSpeech": "n.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 851,
-      "sequence": 99
-    },
-    {
-      "word": "success",
-      "cardId": "success-n",
-      "partOfSpeech": "n.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 884,
-      "sequence": 100
-    },
-    {
-      "word": "purpose",
-      "cardId": "purpose-n",
-      "partOfSpeech": "n.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 938,
-      "sequence": 101
-    },
-    {
-      "word": "environment",
-      "cardId": "environment-n",
-      "partOfSpeech": "n.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 950,
-      "sequence": 102
-    },
-    {
-      "word": "challenge",
-      "cardId": "challenge-n",
-      "partOfSpeech": "n. / v.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 972,
-      "sequence": 103
-    },
-    {
-      "word": "advice",
-      "cardId": "advice-n",
-      "partOfSpeech": "n.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 1551,
-      "sequence": 104
-    },
-    {
-      "word": "progress",
-      "cardId": "progress-n",
-      "partOfSpeech": "n. / v.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 1660,
-      "sequence": 105
-    },
-    {
-      "word": "balance",
-      "cardId": "balance-n",
-      "partOfSpeech": "n. / v.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 1859,
-      "sequence": 106
-    },
-    {
-      "word": "confidence",
-      "cardId": "confidence-n",
-      "partOfSpeech": "n.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 2017,
-      "sequence": 107
-    },
-    {
-      "word": "travel",
-      "cardId": "travel-n",
-      "partOfSpeech": "n. / v.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 2069,
-      "sequence": 108
-    },
-    {
-      "word": "habit",
-      "cardId": "habit-n",
-      "partOfSpeech": "n.",
-      "primaryGroup": "noun",
-      "primaryGroupLabel": "名词",
-      "primaryCocaRank": 2425,
-      "sequence": 109
-    },
-    {
-      "word": "different",
-      "cardId": "different-adj",
-      "partOfSpeech": "adj.",
-      "primaryGroup": "adjective",
-      "primaryGroupLabel": "形容词",
-      "primaryCocaRank": 236,
-      "sequence": 110
-    },
-    {
-      "word": "important",
-      "cardId": "important-adj",
-      "partOfSpeech": "adj.",
-      "primaryGroup": "adjective",
-      "primaryGroupLabel": "形容词",
-      "primaryCocaRank": 297,
-      "sequence": 111
-    },
-    {
-      "word": "possible",
-      "cardId": "possible-adj",
-      "partOfSpeech": "adj.",
-      "primaryGroup": "adjective",
-      "primaryGroupLabel": "形容词",
-      "primaryCocaRank": 448,
-      "sequence": 112
-    },
-    {
-      "word": "clear",
-      "cardId": "clear-adj",
-      "partOfSpeech": "adj. / v.",
-      "primaryGroup": "adjective",
-      "primaryGroupLabel": "形容词",
-      "primaryCocaRank": 573,
-      "sequence": 113
-    },
-    {
-      "word": "certain",
-      "cardId": "certain-adj",
-      "partOfSpeech": "adj.",
-      "primaryGroup": "adjective",
-      "primaryGroupLabel": "形容词",
-      "primaryCocaRank": 630,
-      "sequence": 114
-    },
-    {
-      "word": "available",
-      "cardId": "available-adj",
-      "partOfSpeech": "adj.",
-      "primaryGroup": "adjective",
-      "primaryGroupLabel": "形容词",
-      "primaryCocaRank": 640,
-      "sequence": 115
-    },
-    {
-      "word": "ready",
-      "cardId": "ready-adj",
-      "partOfSpeech": "adj.",
-      "primaryGroup": "adjective",
-      "primaryGroupLabel": "形容词",
-      "primaryCocaRank": 642,
-      "sequence": 116
-    },
-    {
-      "word": "likely",
-      "cardId": "likely-adj",
-      "partOfSpeech": "adj. / adv.",
-      "primaryGroup": "adjective",
-      "primaryGroupLabel": "形容词",
-      "primaryCocaRank": 651,
-      "sequence": 117
-    },
-    {
-      "word": "difficult",
-      "cardId": "difficult-adj",
-      "partOfSpeech": "adj.",
-      "primaryGroup": "adjective",
-      "primaryGroupLabel": "形容词",
-      "primaryCocaRank": 711,
-      "sequence": 118
-    },
-    {
-      "word": "common",
-      "cardId": "common-adj",
-      "partOfSpeech": "adj.",
-      "primaryGroup": "adjective",
-      "primaryGroupLabel": "形容词",
-      "primaryCocaRank": 745,
-      "sequence": 119
-    },
-    {
-      "word": "similar",
-      "cardId": "similar-adj",
-      "partOfSpeech": "adj.",
-      "primaryGroup": "adjective",
-      "primaryGroupLabel": "形容词",
-      "primaryCocaRank": 751,
-      "sequence": 120
-    },
-    {
-      "word": "natural",
-      "cardId": "natural-adj",
-      "partOfSpeech": "adj.",
-      "primaryGroup": "adjective",
-      "primaryGroupLabel": "形容词",
-      "primaryCocaRank": 783,
-      "sequence": 121
-    },
-    {
-      "word": "serious",
-      "cardId": "serious-adj",
-      "partOfSpeech": "adj.",
-      "primaryGroup": "adjective",
-      "primaryGroupLabel": "形容词",
-      "primaryCocaRank": 795,
-      "sequence": 122
-    },
-    {
-      "word": "effective",
-      "cardId": "effective-adj",
-      "partOfSpeech": "adj.",
-      "primaryGroup": "adjective",
-      "primaryGroupLabel": "形容词",
-      "primaryCocaRank": 1213,
-      "sequence": 123
-    },
-    {
-      "word": "responsible",
-      "cardId": "responsible-adj",
-      "partOfSpeech": "adj.",
-      "primaryGroup": "adjective",
-      "primaryGroupLabel": "形容词",
-      "primaryCocaRank": 1425,
-      "sequence": 124
-    },
-    {
-      "word": "aware",
-      "cardId": "aware-adj",
-      "partOfSpeech": "adj.",
-      "primaryGroup": "adjective",
-      "primaryGroupLabel": "形容词",
-      "primaryCocaRank": 1506,
-      "sequence": 125
-    },
-    {
-      "word": "familiar",
-      "cardId": "familiar-adj",
-      "partOfSpeech": "adj.",
-      "primaryGroup": "adjective",
-      "primaryGroupLabel": "形容词",
-      "primaryCocaRank": 1692,
-      "sequence": 126
-    },
-    {
-      "word": "comfortable",
-      "cardId": "comfortable-adj",
-      "partOfSpeech": "adj.",
-      "primaryGroup": "adjective",
-      "primaryGroupLabel": "形容词",
-      "primaryCocaRank": 1833,
-      "sequence": 127
-    },
-    {
-      "word": "useful",
-      "cardId": "useful-adj",
-      "partOfSpeech": "adj.",
-      "primaryGroup": "adjective",
-      "primaryGroupLabel": "形容词",
-      "primaryCocaRank": 1835,
-      "sequence": 128
-    },
-    {
-      "word": "careful",
-      "cardId": "careful-adj",
-      "partOfSpeech": "adj.",
-      "primaryGroup": "adjective",
-      "primaryGroupLabel": "形容词",
-      "primaryCocaRank": 1882,
-      "sequence": 129
-    },
-    {
-      "word": "patient",
-      "cardId": "patient-adj",
-      "partOfSpeech": "adj. / n.",
-      "primaryGroup": "adjective",
-      "primaryGroupLabel": "形容词",
-      "primaryCocaRank": 3429,
-      "sequence": 130
-    },
-    {
-      "word": "still",
-      "cardId": "still-adv",
-      "partOfSpeech": "adv. / adj.",
-      "primaryGroup": "adverb",
-      "primaryGroupLabel": "副词",
-      "primaryCocaRank": 128,
-      "sequence": 131
-    },
-    {
-      "word": "actually",
-      "cardId": "actually-adv",
-      "partOfSpeech": "adv.",
-      "primaryGroup": "adverb",
-      "primaryGroupLabel": "副词",
-      "primaryCocaRank": 269,
-      "sequence": 132
-    },
-    {
-      "word": "however",
-      "cardId": "however-adv",
-      "partOfSpeech": "adv.",
-      "primaryGroup": "adverb",
-      "primaryGroupLabel": "副词",
-      "primaryCocaRank": 305,
-      "sequence": 133
-    },
-    {
-      "word": "already",
-      "cardId": "already-adv",
-      "partOfSpeech": "adv.",
-      "primaryGroup": "adverb",
-      "primaryGroupLabel": "副词",
-      "primaryCocaRank": 324,
-      "sequence": 134
-    },
-    {
-      "word": "together",
-      "cardId": "together-adv",
-      "partOfSpeech": "adv.",
-      "primaryGroup": "adverb",
-      "primaryGroupLabel": "副词",
-      "primaryCocaRank": 330,
-      "sequence": 135
-    },
-    {
-      "word": "often",
-      "cardId": "often-adv",
-      "partOfSpeech": "adv.",
-      "primaryGroup": "adverb",
-      "primaryGroupLabel": "副词",
-      "primaryCocaRank": 335,
-      "sequence": 136
-    },
-    {
-      "word": "enough",
-      "cardId": "enough-adv",
-      "partOfSpeech": "adv. / adj.",
-      "primaryGroup": "adverb",
-      "primaryGroupLabel": "副词",
-      "primaryCocaRank": 352,
-      "sequence": 137
-    },
-    {
-      "word": "probably",
-      "cardId": "probably-adv",
-      "partOfSpeech": "adv.",
-      "primaryGroup": "adverb",
-      "primaryGroupLabel": "副词",
-      "primaryCocaRank": 366,
-      "sequence": 138
-    },
-    {
-      "word": "perhaps",
-      "cardId": "perhaps-adv",
-      "partOfSpeech": "adv.",
-      "primaryGroup": "adverb",
-      "primaryGroupLabel": "副词",
-      "primaryCocaRank": 506,
-      "sequence": 139
-    },
-    {
-      "word": "especially",
-      "cardId": "especially-adv",
-      "partOfSpeech": "adv.",
-      "primaryGroup": "adverb",
-      "primaryGroupLabel": "副词",
-      "primaryCocaRank": 519,
-      "sequence": 140
-    },
-    {
-      "word": "finally",
-      "cardId": "finally-adv",
-      "partOfSpeech": "adv.",
-      "primaryGroup": "adverb",
-      "primaryGroupLabel": "副词",
-      "primaryCocaRank": 535,
-      "sequence": 141
-    },
-    {
-      "word": "simply",
-      "cardId": "simply-adv",
-      "partOfSpeech": "adv.",
-      "primaryGroup": "adverb",
-      "primaryGroupLabel": "副词",
-      "primaryCocaRank": 580,
-      "sequence": 142
-    },
-    {
-      "word": "nearly",
-      "cardId": "nearly-adv",
-      "partOfSpeech": "adv.",
-      "primaryGroup": "adverb",
-      "primaryGroupLabel": "副词",
-      "primaryCocaRank": 700,
-      "sequence": 143
-    },
-    {
-      "word": "recently",
-      "cardId": "recently-adv",
-      "partOfSpeech": "adv.",
-      "primaryGroup": "adverb",
-      "primaryGroupLabel": "副词",
-      "primaryCocaRank": 774,
-      "sequence": 144
-    },
-    {
-      "word": "usually",
-      "cardId": "usually-adv",
-      "partOfSpeech": "adv.",
-      "primaryGroup": "adverb",
-      "primaryGroupLabel": "副词",
-      "primaryCocaRank": 786,
-      "sequence": 145
-    },
-    {
-      "word": "forward",
-      "cardId": "forward-adv",
-      "partOfSpeech": "adv. / adj.",
-      "primaryGroup": "adverb",
-      "primaryGroupLabel": "副词",
-      "primaryCocaRank": 802,
-      "sequence": 146
-    },
-    {
-      "word": "quickly",
-      "cardId": "quickly-adv",
-      "partOfSpeech": "adv.",
-      "primaryGroup": "adverb",
-      "primaryGroupLabel": "副词",
-      "primaryCocaRank": 812,
-      "sequence": 147
-    },
-    {
-      "word": "clearly",
-      "cardId": "clearly-adv",
-      "partOfSpeech": "adv.",
-      "primaryGroup": "adverb",
-      "primaryGroupLabel": "副词",
-      "primaryCocaRank": 905,
-      "sequence": 148
-    },
-    {
-      "word": "instead",
-      "cardId": "instead-adv",
-      "partOfSpeech": "adv.",
-      "primaryGroup": "adverb",
-      "primaryGroupLabel": "副词",
-      "primaryCocaRank": 981,
-      "sequence": 149
-    },
-    {
-      "word": "directly",
-      "cardId": "directly-adv",
-      "partOfSpeech": "adv.",
-      "primaryGroup": "adverb",
-      "primaryGroupLabel": "副词",
-      "primaryCocaRank": 1220,
       "sequence": 150
     }
   ]

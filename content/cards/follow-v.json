@@ -12,7 +12,7 @@
   ],
   "cocaRankLabel": "v. 第 332 名",
   "learningPriority": {
-    "sequence": 14,
+    "sequence": 75,
     "group": "verb",
     "groupLabel": "动词",
     "groupOrder": 1,
@@ -22,11 +22,11 @@
   "syllables": "follow（约 2 音节）",
   "partOfSpeech": "v.",
   "frequencyBand": "COCA 高频精选 · v. 第 332 名",
-  "difficulty": "基础",
+  "difficulty": "进阶",
   "tags": [
     "v.",
     "完整词卡",
-    "高频表达"
+    "主动词汇"
   ],
   "coreMemory": {
     "chinese": "跟随；遵循",
@@ -72,7 +72,7 @@
       }
     ],
     "directSynonym": "obey /oʊˈbeɪ/（服从；遵从；顺从）",
-    "directAntonym": "lead /ˈlɛd/（铅；铅条；领导；超前量）",
+    "directAntonym": "lead /ˈlɛd/（带领）",
     "derivatives": "follower · following",
     "example": "Follow these steps to install the app.",
     "exampleChinese": "按照这些步骤安装应用。"
@@ -191,7 +191,7 @@
       "word": "lead",
       "phonetic": "/ˈlɛd/",
       "partOfSpeech": "v. / n. / adj.",
-      "chinese": "铅；铅条；领导；超前量",
+      "chinese": "带领",
       "usage": "在本卡核心义下与 follow 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
@@ -225,8 +225,8 @@
         {
           "word": "lead",
           "phonetic": "/ˈlɛd/",
-          "partOfSpeech": "v. / n. / adj.",
-          "chinese": "铅；铅条；领导；超前量"
+          "partOfSpeech": "v.",
+          "chinese": "带领"
         }
       ]
     },
@@ -297,9 +297,9 @@
       "type": "meaning_choice",
       "prompt": "“follow”最核心的中文含义是？",
       "options": [
-        "选择",
-        "地方；放置",
-        "跟随；遵循"
+        "保持；仍然是",
+        "跟随；遵循",
+        "考虑；认为"
       ],
       "answer": "跟随；遵循",
       "stage": "T0",
@@ -310,9 +310,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “follow”？",
       "options": [
-        "a particular area or position",
         "to go after or act according to something",
-        "to decide which person or thing you want"
+        "to think carefully about something",
+        "to continue to be in the same state"
       ],
       "answer": "to go after or act according to something",
       "stage": "T0",
@@ -323,10 +323,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“按照说明”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "follow a path",
         "follow the instructions",
         "follow the rules",
-        "follow someone on social media"
+        "follow someone on social media",
+        "follow a path"
       ],
       "answer": "follow the instructions",
       "stage": "T1",
@@ -337,10 +337,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “follow” 最直接近义词？",
       "options": [
-        "obey",
         "lead",
-        "choose",
-        "place"
+        "consider",
+        "remain",
+        "obey"
       ],
       "answer": "obey",
       "stage": "T2",
@@ -351,10 +351,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “follow” 最直接反义词？",
       "options": [
-        "obey",
-        "choose",
-        "place",
-        "lead"
+        "consider",
+        "remain",
+        "lead",
+        "obey"
       ],
       "answer": "lead",
       "stage": "T2",
@@ -365,10 +365,10 @@
       "type": "meaning_choice",
       "prompt": "根据本词卡辨析，哪个词被列为 “follow” 的派生词？",
       "options": [
-        "lead",
-        "choose",
+        "consider",
         "follower",
-        "obey"
+        "obey",
+        "lead"
       ],
       "answer": "follower",
       "stage": "T3",
@@ -403,10 +403,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“遵守规则”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "follow the instructions",
         "follow someone on social media",
         "follow a path",
-        "follow the rules"
+        "follow the rules",
+        "follow the instructions"
       ],
       "answer": "follow the rules",
       "stage": "T1",
@@ -417,10 +417,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Follow these _____ to install the app.（中文：按照这些步骤安装应用。）",
       "options": [
-        "Friday",
-        "week",
+        "speaking",
         "steps",
-        "most"
+        "taking",
+        "calm"
       ],
       "answer": "steps",
       "stage": "T2",
@@ -429,12 +429,12 @@
     {
       "id": "follow-v-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“按照说明”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "搭配辨析：哪一项既表示“按照说明”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "follow a path",
         "follow the instructions",
         "follow the rules",
-        "follow someone on social media"
+        "follow someone on social media",
+        "follow a path"
       ],
       "answer": "follow the instructions",
       "stage": "T2",
@@ -443,12 +443,12 @@
     {
       "id": "follow-v-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“遵守规则”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "用法辨析：哪一项既表示“遵守规则”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "follow the rules",
         "follow the instructions",
         "follow someone on social media",
-        "follow a path"
+        "follow a path",
+        "follow the rules"
       ],
       "answer": "follow the rules",
       "stage": "T3",
@@ -541,7 +541,7 @@
   },
   "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.09.07.1",
+  "contentVersion": "2026.09.07.2",
   "reviewed": false,
   "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

@@ -12,7 +12,7 @@
   ],
   "cocaRankLabel": "v. 第 322 名",
   "learningPriority": {
-    "sequence": 12,
+    "sequence": 71,
     "group": "verb",
     "groupLabel": "动词",
     "groupOrder": 1,
@@ -22,11 +22,11 @@
   "syllables": "learn（单音节）",
   "partOfSpeech": "v.",
   "frequencyBand": "COCA 高频精选 · v. 第 322 名",
-  "difficulty": "基础",
+  "difficulty": "进阶",
   "tags": [
     "v.",
     "完整词卡",
-    "高频表达"
+    "主动词汇"
   ],
   "coreMemory": {
     "chinese": "学习；得知",
@@ -297,9 +297,9 @@
       "type": "meaning_choice",
       "prompt": "“learn”最核心的中文含义是？",
       "options": [
-        "时间；计时",
-        "学习；得知",
-        "保持；仍然是"
+        "发送；寄出；派遣",
+        "以……为基础；把基地设在",
+        "学习；得知"
       ],
       "answer": "学习；得知",
       "stage": "T0",
@@ -310,9 +310,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “learn”？",
       "options": [
+        "to use something as the foundation for a decision or locate operations somewhere",
         "to gain knowledge or a skill",
-        "to continue to be in the same state",
-        "the measured flow in which events happen"
+        "to cause something or someone to go to a destination"
       ],
       "answer": "to gain knowledge or a skill",
       "stage": "T0",
@@ -323,10 +323,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“学习做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
       "options": [
+        "learn to do",
         "learn about",
         "learn from mistakes",
-        "learn by doing",
-        "learn to do"
+        "learn by doing"
       ],
       "answer": "learn to do",
       "stage": "T1",
@@ -337,10 +337,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “learn” 最直接近义词？",
       "options": [
-        "remain",
-        "time",
-        "master",
-        "forget"
+        "forget",
+        "send",
+        "base",
+        "master"
       ],
       "answer": "master",
       "stage": "T2",
@@ -351,10 +351,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “learn” 最直接反义词？",
       "options": [
-        "time",
+        "send",
+        "base",
         "forget",
-        "master",
-        "remain"
+        "master"
       ],
       "answer": "forget",
       "stage": "T2",
@@ -365,10 +365,10 @@
       "type": "meaning_choice",
       "prompt": "根据本词卡辨析，哪个词被列为 “learn” 的派生词？",
       "options": [
+        "send",
         "learner",
         "master",
-        "forget",
-        "remain"
+        "forget"
       ],
       "answer": "learner",
       "stage": "T3",
@@ -403,10 +403,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“了解……”，又符合这个形式线索：完整搭配中使用介词 about？",
       "options": [
+        "learn from mistakes",
         "learn by doing",
         "learn about",
-        "learn to do",
-        "learn from mistakes"
+        "learn to do"
       ],
       "answer": "learn about",
       "stage": "T1",
@@ -417,10 +417,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：We learn _____ when feedback is specific.（中文：反馈具体时，我们学得更快。）",
       "options": [
+        "translating",
         "faster",
-        "calm",
-        "interview",
-        "busy"
+        "message",
+        "answer"
       ],
       "answer": "faster",
       "stage": "T2",
@@ -429,12 +429,12 @@
     {
       "id": "learn-v-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“学习做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
+      "prompt": "搭配辨析：哪一项既表示“学习做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
       "options": [
+        "learn to do",
         "learn about",
         "learn from mistakes",
-        "learn by doing",
-        "learn to do"
+        "learn by doing"
       ],
       "answer": "learn to do",
       "stage": "T2",
@@ -443,12 +443,12 @@
     {
       "id": "learn-v-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“了解……”，又符合这个形式线索：完整搭配中使用介词 about？",
+      "prompt": "用法辨析：哪一项既表示“了解……”，又符合这个形式线索：完整搭配中使用介词 about？",
       "options": [
+        "learn to do",
         "learn from mistakes",
         "learn by doing",
-        "learn about",
-        "learn to do"
+        "learn about"
       ],
       "answer": "learn about",
       "stage": "T3",
@@ -541,7 +541,7 @@
   },
   "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.09.07.1",
+  "contentVersion": "2026.09.07.2",
   "reviewed": false,
   "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

@@ -18,7 +18,7 @@
   ],
   "cocaRankLabel": "v. 第 304 名；n. 第 364 名",
   "learningPriority": {
-    "sequence": 10,
+    "sequence": 67,
     "group": "verb",
     "groupLabel": "动词",
     "groupOrder": 1,
@@ -28,11 +28,11 @@
   "syllables": "change（单音节）",
   "partOfSpeech": "v. / n.",
   "frequencyBand": "COCA 高频精选 · v. 第 304 名；n. 第 364 名",
-  "difficulty": "基础",
+  "difficulty": "进阶",
   "tags": [
     "v.",
     "完整词卡",
-    "高频表达"
+    "主动词汇"
   ],
   "coreMemory": {
     "chinese": "改变；变化",
@@ -311,8 +311,8 @@
       "prompt": "“change”最核心的中文含义是？",
       "options": [
         "改变；变化",
-        "支持；支撑",
-        "更喜欢"
+        "停留；保持；暂住",
+        "建议；表明"
       ],
       "answer": "改变；变化",
       "stage": "T0",
@@ -323,8 +323,8 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “change”？",
       "options": [
-        "to help someone or hold something up",
-        "to like one thing more than another",
+        "to remain in a place or continue in a state",
+        "to offer an idea for someone to consider",
         "to become or make something different"
       ],
       "answer": "to become or make something different",
@@ -336,10 +336,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“做出改变”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "change over time",
         "make a change",
         "change your mind",
-        "change the way"
+        "change the way",
+        "change over time"
       ],
       "answer": "make a change",
       "stage": "T1",
@@ -350,10 +350,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “change” 最直接近义词？",
       "options": [
-        "alter",
         "maintain",
-        "support",
-        "prefer"
+        "stay",
+        "suggest",
+        "alter"
       ],
       "answer": "alter",
       "stage": "T2",
@@ -364,10 +364,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “change” 最直接反义词？",
       "options": [
-        "alter",
-        "support",
-        "prefer",
-        "maintain"
+        "stay",
+        "suggest",
+        "maintain",
+        "alter"
       ],
       "answer": "maintain",
       "stage": "T2",
@@ -378,10 +378,10 @@
       "type": "meaning_choice",
       "prompt": "根据本词卡辨析，哪个词被列为 “change” 的派生词？",
       "options": [
-        "maintain",
-        "support",
+        "stay",
         "changeable",
-        "alter"
+        "alter",
+        "maintain"
       ],
       "answer": "changeable",
       "stage": "T3",
@@ -416,10 +416,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“改变主意”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "make a change",
         "change the way",
         "change over time",
-        "change your mind"
+        "change your mind",
+        "make a change"
       ],
       "answer": "change your mind",
       "stage": "T1",
@@ -430,10 +430,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：A small habit can change your _____ day.（中文：一个小习惯可以改变你的一整天。）",
       "options": [
-        "walking",
-        "current",
+        "two",
         "whole",
-        "decision"
+        "home",
+        "reviewing"
       ],
       "answer": "whole",
       "stage": "T2",
@@ -442,12 +442,12 @@
     {
       "id": "change-v-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“做出改变”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "搭配辨析：哪一项既表示“做出改变”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "change over time",
         "make a change",
         "change your mind",
-        "change the way"
+        "change the way",
+        "change over time"
       ],
       "answer": "make a change",
       "stage": "T2",
@@ -456,12 +456,12 @@
     {
       "id": "change-v-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“改变主意”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "用法辨析：哪一项既表示“改变主意”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "change your mind",
         "make a change",
         "change the way",
-        "change over time"
+        "change over time",
+        "change your mind"
       ],
       "answer": "change your mind",
       "stage": "T3",
@@ -554,7 +554,7 @@
   },
   "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.09.07.1",
+  "contentVersion": "2026.09.07.2",
   "reviewed": false,
   "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

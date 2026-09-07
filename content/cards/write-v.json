@@ -12,7 +12,7 @@
   ],
   "cocaRankLabel": "v. 第 212 名",
   "learningPriority": {
-    "sequence": 6,
+    "sequence": 51,
     "group": "verb",
     "groupLabel": "动词",
     "groupOrder": 1,
@@ -22,11 +22,11 @@
   "syllables": "write（单音节）",
   "partOfSpeech": "v.",
   "frequencyBand": "COCA 高频精选 · v. 第 212 名",
-  "difficulty": "基础",
+  "difficulty": "进阶",
   "tags": [
     "v.",
     "完整词卡",
-    "高频表达"
+    "主动词汇"
   ],
   "coreMemory": {
     "chinese": "写；写作",
@@ -307,9 +307,9 @@
       "type": "meaning_choice",
       "prompt": "“write”最核心的中文含义是？",
       "options": [
-        "实现；达到",
+        "提供；提议",
         "写；写作",
-        "需要；要求"
+        "观看；注视；留意"
       ],
       "answer": "写；写作",
       "stage": "T0",
@@ -321,8 +321,8 @@
       "prompt": "哪一项英文释义最符合词卡中的 “write”？",
       "options": [
         "to form words on a surface or compose text",
-        "to need something or make it necessary",
-        "to succeed in reaching a goal"
+        "to look at something carefully over a period of time",
+        "to say that you are willing to give something"
       ],
       "answer": "to form words on a surface or compose text",
       "stage": "T0",
@@ -333,10 +333,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“写消息”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "write to someone",
         "write a message",
         "write about",
-        "write something down"
+        "write something down",
+        "write to someone"
       ],
       "answer": "write a message",
       "stage": "T1",
@@ -347,10 +347,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “write” 最直接近义词？",
       "options": [
-        "compose",
         "erase",
-        "require",
-        "achieve"
+        "watch",
+        "offer",
+        "compose"
       ],
       "answer": "compose",
       "stage": "T2",
@@ -361,10 +361,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “write” 最直接反义词？",
       "options": [
-        "compose",
-        "require",
-        "achieve",
-        "erase"
+        "watch",
+        "offer",
+        "erase",
+        "compose"
       ],
       "answer": "erase",
       "stage": "T2",
@@ -375,10 +375,10 @@
       "type": "meaning_choice",
       "prompt": "根据本词卡辨析，哪个词被列为 “write” 的派生词？",
       "options": [
-        "erase",
-        "require",
+        "watch",
         "writer",
-        "compose"
+        "compose",
+        "erase"
       ],
       "answer": "writer",
       "stage": "T3",
@@ -413,10 +413,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“写关于……”，又符合这个形式线索：完整搭配中使用介词 about？",
       "options": [
-        "write a message",
         "write something down",
         "write to someone",
-        "write about"
+        "write about",
+        "write a message"
       ],
       "answer": "write about",
       "stage": "T1",
@@ -427,10 +427,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Write _____ one sentence using the new word.（中文：写下一个使用新单词的句子。）",
       "options": [
-        "big",
-        "travelers",
+        "calm",
         "down",
-        "careful"
+        "video",
+        "help"
       ],
       "answer": "down",
       "stage": "T2",
@@ -439,12 +439,12 @@
     {
       "id": "write-v-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“写消息”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "搭配辨析：哪一项既表示“写消息”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "write to someone",
         "write a message",
         "write about",
-        "write something down"
+        "write something down",
+        "write to someone"
       ],
       "answer": "write a message",
       "stage": "T2",
@@ -453,12 +453,12 @@
     {
       "id": "write-v-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“写关于……”，又符合这个形式线索：完整搭配中使用介词 about？",
+      "prompt": "用法辨析：哪一项既表示“写关于……”，又符合这个形式线索：完整搭配中使用介词 about？",
       "options": [
-        "write about",
         "write a message",
         "write something down",
-        "write to someone"
+        "write to someone",
+        "write about"
       ],
       "answer": "write about",
       "stage": "T3",
@@ -551,7 +551,7 @@
   },
   "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.09.07.1",
+  "contentVersion": "2026.09.07.2",
   "reviewed": false,
   "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

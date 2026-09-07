@@ -18,7 +18,7 @@
   ],
   "cocaRankLabel": "v. 第 498 名；n. 第 3928 名",
   "learningPriority": {
-    "sequence": 28,
+    "sequence": 117,
     "group": "verb",
     "groupLabel": "动词",
     "groupOrder": 1,
@@ -28,11 +28,11 @@
   "syllables": "reach（单音节）",
   "partOfSpeech": "v.",
   "frequencyBand": "COCA 高频精选 · v. 第 498 名；n. 第 3928 名",
-  "difficulty": "基础",
+  "difficulty": "应用",
   "tags": [
     "v.",
     "完整词卡",
-    "高频表达"
+    "主动词汇"
   ],
   "coreMemory": {
     "chinese": "到达；达到",
@@ -290,9 +290,9 @@
       "type": "meaning_choice",
       "prompt": "“reach”最核心的中文含义是？",
       "options": [
+        "会；愿意；过去常常",
         "到达；达到",
-        "设法做到；管理",
-        "团队"
+        "比较"
       ],
       "answer": "到达；达到",
       "stage": "T0",
@@ -303,9 +303,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “reach”？",
       "options": [
-        "to succeed in doing or controlling something",
-        "a group that works or plays together",
-        "to arrive at a place or level"
+        "to arrive at a place or level",
+        "to examine how things are alike or different",
+        "used for imagined situations, polite requests, preferences, or past habits"
       ],
       "answer": "to arrive at a place or level",
       "stage": "T0",
@@ -316,10 +316,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“达到目标”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "reach an agreement",
         "reach a decision",
         "reach out to",
-        "reach a goal"
+        "reach a goal",
+        "reach an agreement"
       ],
       "answer": "reach a goal",
       "stage": "T1",
@@ -330,10 +330,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “reach” 最直接近义词？",
       "options": [
-        "manage",
-        "team",
+        "would",
         "attain",
-        "miss"
+        "miss",
+        "compare"
       ],
       "answer": "attain",
       "stage": "T2",
@@ -344,10 +344,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “reach” 最直接反义词？",
       "options": [
-        "team",
         "miss",
         "attain",
-        "manage"
+        "compare",
+        "would"
       ],
       "answer": "miss",
       "stage": "T2",
@@ -358,10 +358,10 @@
       "type": "meaning_choice",
       "prompt": "根据本词卡辨析，哪个词被列为 “reach” 的派生词？",
       "options": [
-        "reachable",
         "attain",
         "miss",
-        "manage"
+        "compare",
+        "reachable"
       ],
       "answer": "reachable",
       "stage": "T3",
@@ -396,10 +396,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“达成协议”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "reach out to",
         "reach an agreement",
         "reach a goal",
-        "reach a decision"
+        "reach a decision",
+        "reach out to"
       ],
       "answer": "reach an agreement",
       "stage": "T1",
@@ -410,10 +410,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：We finally reached an _____.（中文：我们终于达成了协议。）",
       "options": [
-        "agreement",
-        "finish",
-        "meets",
-        "learning"
+        "two",
+        "like",
+        "practicing",
+        "agreement"
       ],
       "answer": "agreement",
       "stage": "T2",
@@ -422,12 +422,12 @@
     {
       "id": "reach-v-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“达到目标”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "搭配辨析：哪一项既表示“达到目标”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "reach an agreement",
         "reach a decision",
         "reach out to",
-        "reach a goal"
+        "reach a goal",
+        "reach an agreement"
       ],
       "answer": "reach a goal",
       "stage": "T2",
@@ -436,12 +436,12 @@
     {
       "id": "reach-v-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“达成协议”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "用法辨析：哪一项既表示“达成协议”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "reach a decision",
         "reach out to",
         "reach an agreement",
-        "reach a goal"
+        "reach a goal",
+        "reach a decision"
       ],
       "answer": "reach an agreement",
       "stage": "T3",
@@ -534,7 +534,7 @@
   },
   "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.09.07.1",
+  "contentVersion": "2026.09.07.2",
   "reviewed": false,
   "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

@@ -12,21 +12,21 @@
   ],
   "cocaRankLabel": "v. 第 468 名",
   "learningPriority": {
-    "sequence": 25,
+    "sequence": 106,
     "group": "verb",
     "groupLabel": "动词",
     "groupOrder": 1,
     "primaryCocaRank": 468
   },
   "phonetic": "/dɪˈsaɪd/",
-  "syllables": "decide（约 2 音节）",
+  "syllables": "de·cide",
   "partOfSpeech": "v.",
   "frequencyBand": "COCA 高频精选 · v. 第 468 名",
-  "difficulty": "基础",
+  "difficulty": "进阶",
   "tags": [
     "v.",
     "完整词卡",
-    "高频表达"
+    "主动词汇"
   ],
   "coreMemory": {
     "chinese": "决定",
@@ -210,7 +210,7 @@
       "word": "decision",
       "phonetic": "/dɪˈsɪʒən/",
       "partOfSpeech": "n.",
-      "chinese": "决定",
+      "chinese": "决定；决心；决断",
       "note": "这是 decide 的常用词族成员；请按上方词性放到句子的正确位置。"
     },
     {
@@ -247,7 +247,7 @@
           "word": "decision",
           "phonetic": "/dɪˈsɪʒən/",
           "partOfSpeech": "n.",
-          "chinese": "决定"
+          "chinese": "决定；决心；决断"
         },
         {
           "word": "decisive",
@@ -308,8 +308,8 @@
       "prompt": "“decide”最核心的中文含义是？",
       "options": [
         "决定",
-        "避免",
-        "学习；研究"
+        "穿戴；磨损；留着",
+        "更喜欢"
       ],
       "answer": "决定",
       "stage": "T0",
@@ -320,8 +320,8 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “decide”？",
       "options": [
-        "to keep away from something",
-        "to learn about a subject carefully",
+        "to have clothing on the body or become damaged through use",
+        "to like one thing more than another",
         "to make a choice after thinking"
       ],
       "answer": "to make a choice after thinking",
@@ -333,10 +333,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“决定做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
       "options": [
-        "decide between",
         "decide whether",
         "decide to do",
-        "decide against"
+        "decide against",
+        "decide between"
       ],
       "answer": "decide to do",
       "stage": "T1",
@@ -347,10 +347,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “decide” 最直接近义词？",
       "options": [
-        "study",
         "determine",
         "hesitate",
-        "avoid"
+        "wear",
+        "prefer"
       ],
       "answer": "determine",
       "stage": "T2",
@@ -361,10 +361,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “decide” 最直接反义词？",
       "options": [
-        "hesitate",
         "determine",
-        "avoid",
-        "study"
+        "wear",
+        "prefer",
+        "hesitate"
       ],
       "answer": "hesitate",
       "stage": "T2",
@@ -375,10 +375,10 @@
       "type": "meaning_choice",
       "prompt": "根据本词卡辨析，哪个词被列为 “decide” 的派生词？",
       "options": [
-        "determine",
         "hesitate",
-        "avoid",
-        "decision"
+        "wear",
+        "decision",
+        "determine"
       ],
       "answer": "decision",
       "stage": "T3",
@@ -413,10 +413,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“决定不做”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "decide against",
         "decide to do",
         "decide between",
-        "decide whether"
+        "decide whether",
+        "decide against"
       ],
       "answer": "decide against",
       "stage": "T1",
@@ -427,10 +427,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：I decided to _____ with five words a day.（中文：我决定从每天五个单词开始。）",
       "options": [
-        "translating",
-        "English",
-        "preposition",
-        "start"
+        "walking",
+        "more",
+        "start",
+        "warm"
       ],
       "answer": "start",
       "stage": "T2",
@@ -439,12 +439,12 @@
     {
       "id": "decide-v-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“决定做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
+      "prompt": "用法辨析：哪一项既表示“决定做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
       "options": [
-        "decide between",
         "decide whether",
         "decide to do",
-        "decide against"
+        "decide against",
+        "decide between"
       ],
       "answer": "decide to do",
       "stage": "T2",
@@ -453,12 +453,12 @@
     {
       "id": "decide-v-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“决定不做”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "搭配辨析：哪一项既表示“决定不做”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "decide whether",
         "decide against",
         "decide to do",
-        "decide between"
+        "decide between",
+        "decide whether"
       ],
       "answer": "decide against",
       "stage": "T3",
@@ -551,7 +551,7 @@
   },
   "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.09.07.1",
+  "contentVersion": "2026.09.07.2",
   "reviewed": false,
   "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

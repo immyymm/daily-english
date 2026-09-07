@@ -24,7 +24,7 @@
   ],
   "cocaRankLabel": "v. 第 130 名；n. 第 1392 名；adj. 第 2135 名",
   "learningPriority": {
-    "sequence": 1,
+    "sequence": 30,
     "group": "verb",
     "groupLabel": "动词",
     "groupOrder": 1,
@@ -319,9 +319,9 @@
       "type": "meaning_choice",
       "prompt": "“mean”最核心的中文含义是？",
       "options": [
+        "包括；包含",
         "意思是；意味着",
-        "继续",
-        "影响"
+        "玩；演奏；扮演"
       ],
       "answer": "意思是；意味着",
       "stage": "T0",
@@ -332,9 +332,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “mean”？",
       "options": [
-        "to keep doing something without stopping",
-        "to cause a change in someone or something",
-        "to express or have a particular meaning"
+        "to express or have a particular meaning",
+        "to take part in a game, perform music, or act a role",
+        "to have something as part of a whole"
       ],
       "answer": "to express or have a particular meaning",
       "stage": "T0",
@@ -345,10 +345,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“对……意义重大”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "mean to do",
         "what do you mean",
         "mean a lot to",
-        "mean that"
+        "mean that",
+        "mean to do"
       ],
       "answer": "mean a lot to",
       "stage": "T1",
@@ -359,10 +359,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “mean” 最直接近义词？",
       "options": [
-        "affect",
         "signify",
         "misrepresent",
-        "continue"
+        "play",
+        "include"
       ],
       "answer": "signify",
       "stage": "T2",
@@ -373,10 +373,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “mean” 最直接反义词？",
       "options": [
-        "misrepresent",
         "signify",
-        "continue",
-        "affect"
+        "play",
+        "include",
+        "misrepresent"
       ],
       "answer": "misrepresent",
       "stage": "T2",
@@ -387,10 +387,10 @@
       "type": "meaning_choice",
       "prompt": "根据本词卡辨析，哪个词被列为 “mean” 的派生词？",
       "options": [
-        "signify",
         "misrepresent",
-        "continue",
-        "meaning"
+        "play",
+        "meaning",
+        "signify"
       ],
       "answer": "meaning",
       "stage": "T3",
@@ -425,10 +425,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“意味着……”，又符合这个形式线索：使用 that 引导一个主谓完整的从句？",
       "options": [
-        "mean that",
         "mean a lot to",
         "mean to do",
-        "what do you mean"
+        "what do you mean",
+        "mean that"
       ],
       "answer": "mean that",
       "stage": "T1",
@@ -439,10 +439,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Your support means a _____ to me.（中文：你的支持对我意义重大。）",
       "options": [
-        "reading",
-        "memory",
-        "English",
-        "lot"
+        "breakfast",
+        "ground",
+        "lot",
+        "short"
       ],
       "answer": "lot",
       "stage": "T2",
@@ -451,12 +451,12 @@
     {
       "id": "mean-v-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“对……意义重大”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "用法辨析：哪一项既表示“对……意义重大”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "mean to do",
         "what do you mean",
         "mean a lot to",
-        "mean that"
+        "mean that",
+        "mean to do"
       ],
       "answer": "mean a lot to",
       "stage": "T2",
@@ -465,12 +465,12 @@
     {
       "id": "mean-v-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“意味着……”，又符合这个形式线索：使用 that 引导一个主谓完整的从句？",
+      "prompt": "搭配辨析：哪一项既表示“意味着……”，又符合这个形式线索：使用 that 引导一个主谓完整的从句？",
       "options": [
-        "what do you mean",
         "mean that",
         "mean a lot to",
-        "mean to do"
+        "mean to do",
+        "what do you mean"
       ],
       "answer": "mean that",
       "stage": "T3",
@@ -563,7 +563,7 @@
   },
   "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.09.07.1",
+  "contentVersion": "2026.09.07.2",
   "reviewed": false,
   "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

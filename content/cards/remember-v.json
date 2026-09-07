@@ -12,7 +12,7 @@
   ],
   "cocaRankLabel": "v. 第 334 名",
   "learningPriority": {
-    "sequence": 15,
+    "sequence": 76,
     "group": "verb",
     "groupLabel": "动词",
     "groupOrder": 1,
@@ -22,11 +22,11 @@
   "syllables": "re·mem·ber",
   "partOfSpeech": "v.",
   "frequencyBand": "COCA 高频精选 · v. 第 334 名",
-  "difficulty": "基础",
+  "difficulty": "进阶",
   "tags": [
     "v.",
     "完整词卡",
-    "高频表达"
+    "主动词汇"
   ],
   "coreMemory": {
     "chinese": "记得；想起",
@@ -307,9 +307,9 @@
       "type": "meaning_choice",
       "prompt": "“remember”最核心的中文含义是？",
       "options": [
-        "问题；难题",
         "记得；想起",
-        "发展；培养"
+        "希望；期望",
+        "解释；说明"
       ],
       "answer": "记得；想起",
       "stage": "T0",
@@ -320,9 +320,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “remember”？",
       "options": [
-        "to keep or bring something back to mind",
-        "to grow or cause something to grow",
-        "a situation that needs a solution"
+        "to want something to happen and believe it is possible",
+        "to make something clear",
+        "to keep or bring something back to mind"
       ],
       "answer": "to keep or bring something back to mind",
       "stage": "T0",
@@ -333,10 +333,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“记得去做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
       "options": [
-        "remember to do",
         "remember doing",
         "remember someone clearly",
-        "remember the difference"
+        "remember the difference",
+        "remember to do"
       ],
       "answer": "remember to do",
       "stage": "T1",
@@ -347,10 +347,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “remember” 最直接近义词？",
       "options": [
-        "forget",
-        "develop",
-        "problem",
-        "recall"
+        "hope",
+        "explain",
+        "recall",
+        "forget"
       ],
       "answer": "recall",
       "stage": "T2",
@@ -361,10 +361,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “remember” 最直接反义词？",
       "options": [
-        "develop",
-        "problem",
+        "explain",
         "forget",
-        "recall"
+        "recall",
+        "hope"
       ],
       "answer": "forget",
       "stage": "T2",
@@ -375,10 +375,10 @@
       "type": "meaning_choice",
       "prompt": "根据本词卡辨析，哪个词被列为 “remember” 的派生词？",
       "options": [
-        "develop",
         "memory",
         "recall",
-        "forget"
+        "forget",
+        "hope"
       ],
       "answer": "memory",
       "stage": "T3",
@@ -413,10 +413,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“清楚地记得某人”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "remember doing",
         "remember the difference",
         "remember someone clearly",
-        "remember to do"
+        "remember to do",
+        "remember doing"
       ],
       "answer": "remember someone clearly",
       "stage": "T1",
@@ -427,10 +427,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Remember to _____ your work before you leave.（中文：离开前记得保存工作。）",
       "options": [
-        "today",
         "save",
-        "habit",
-        "solved"
+        "finish",
+        "phrase",
+        "better"
       ],
       "answer": "save",
       "stage": "T2",
@@ -439,12 +439,12 @@
     {
       "id": "remember-v-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“记得去做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
+      "prompt": "用法辨析：哪一项既表示“记得去做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
       "options": [
-        "remember to do",
         "remember doing",
         "remember someone clearly",
-        "remember the difference"
+        "remember the difference",
+        "remember to do"
       ],
       "answer": "remember to do",
       "stage": "T2",
@@ -453,12 +453,12 @@
     {
       "id": "remember-v-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“记得做过”，又符合这个形式线索：目标词后的 doing 表示要换成符合语境的动词 -ing 形式？",
+      "prompt": "搭配辨析：哪一项既表示“记得做过”，又符合这个形式线索：目标词后的 doing 表示要换成符合语境的动词 -ing 形式？",
       "options": [
-        "remember to do",
         "remember someone clearly",
         "remember the difference",
-        "remember doing"
+        "remember doing",
+        "remember to do"
       ],
       "answer": "remember doing",
       "stage": "T3",
@@ -551,7 +551,7 @@
   },
   "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.09.07.1",
+  "contentVersion": "2026.09.07.2",
   "reviewed": false,
   "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

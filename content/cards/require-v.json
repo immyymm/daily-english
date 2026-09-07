@@ -12,21 +12,21 @@
   ],
   "cocaRankLabel": "v. 第 457 名",
   "learningPriority": {
-    "sequence": 23,
+    "sequence": 102,
     "group": "verb",
     "groupLabel": "动词",
     "groupOrder": 1,
     "primaryCocaRank": 457
   },
   "phonetic": "/rɪˈkwaɪər/",
-  "syllables": "require（约 2 音节）",
+  "syllables": "re·quire",
   "partOfSpeech": "v.",
   "frequencyBand": "COCA 高频精选 · v. 第 457 名",
-  "difficulty": "基础",
+  "difficulty": "进阶",
   "tags": [
     "v.",
     "完整词卡",
-    "高频表达"
+    "主动词汇"
   ],
   "coreMemory": {
     "chinese": "需要；要求",
@@ -294,9 +294,9 @@
       "type": "meaning_choice",
       "prompt": "“require”最核心的中文含义是？",
       "options": [
-        "接受；认可",
-        "商业；事务",
-        "需要；要求"
+        "实现；达到",
+        "需要；要求",
+        "解释；说明"
       ],
       "answer": "需要；要求",
       "stage": "T0",
@@ -307,9 +307,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “require”？",
       "options": [
-        "work involving buying, selling, or services",
         "to need something or make it necessary",
-        "to agree to receive or believe something"
+        "to make something clear",
+        "to succeed in reaching a goal"
       ],
       "answer": "to need something or make it necessary",
       "stage": "T0",
@@ -320,10 +320,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“要求某人做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
       "options": [
+        "as required",
         "require someone to do",
         "require careful planning",
-        "be required to",
-        "as required"
+        "be required to"
       ],
       "answer": "require someone to do",
       "stage": "T1",
@@ -334,10 +334,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “require” 最直接近义词？",
       "options": [
+        "demand",
         "waive",
-        "accept",
-        "business",
-        "demand"
+        "explain",
+        "achieve"
       ],
       "answer": "demand",
       "stage": "T2",
@@ -348,10 +348,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “require” 最直接反义词？",
       "options": [
-        "accept",
-        "business",
-        "waive",
-        "demand"
+        "demand",
+        "explain",
+        "achieve",
+        "waive"
       ],
       "answer": "waive",
       "stage": "T2",
@@ -362,10 +362,10 @@
       "type": "meaning_choice",
       "prompt": "根据本词卡辨析，哪个词被列为 “require” 的派生词？",
       "options": [
-        "accept",
+        "waive",
+        "explain",
         "requirement",
-        "demand",
-        "waive"
+        "demand"
       ],
       "answer": "requirement",
       "stage": "T3",
@@ -400,10 +400,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“需要周密计划”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "require someone to do",
         "be required to",
         "as required",
-        "require careful planning",
-        "require someone to do"
+        "require careful planning"
       ],
       "answer": "require careful planning",
       "stage": "T1",
@@ -414,10 +414,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：This task requires _____ planning.（中文：这个任务需要仔细规划。）",
       "options": [
-        "practice",
+        "big",
+        "example",
         "careful",
-        "responsibility",
-        "online"
+        "phrase"
       ],
       "answer": "careful",
       "stage": "T2",
@@ -426,12 +426,12 @@
     {
       "id": "require-v-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“要求某人做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
+      "prompt": "用法辨析：哪一项既表示“要求某人做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
       "options": [
+        "as required",
         "require someone to do",
         "require careful planning",
-        "be required to",
-        "as required"
+        "be required to"
       ],
       "answer": "require someone to do",
       "stage": "T2",
@@ -440,12 +440,12 @@
     {
       "id": "require-v-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“需要周密计划”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "搭配辨析：哪一项既表示“需要周密计划”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "require careful planning",
         "require someone to do",
         "be required to",
-        "as required",
-        "require careful planning"
+        "as required"
       ],
       "answer": "require careful planning",
       "stage": "T3",
@@ -538,7 +538,7 @@
   },
   "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.09.07.1",
+  "contentVersion": "2026.09.07.2",
   "reviewed": false,
   "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

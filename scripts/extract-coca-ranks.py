@@ -10,6 +10,7 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
 LEXICON_PATH = ROOT / "scripts" / "lexicon.mjs"
+PRIORITY_DATA_PATH = ROOT / "scripts" / "verb-priority-data.json"
 SOURCE_PATH = ROOT.parent / "COCA词频单词表.xlsx"
 OUTPUT_PATH = ROOT / "scripts" / "coca-ranks.json"
 AUDIT_PATH = ROOT / "content" / "coca-audit.json"
@@ -31,7 +32,13 @@ def primary_group(part_of_speech: str) -> tuple[str, str, str | None, str]:
 
 def main() -> None:
     lexicon_text = LEXICON_PATH.read_text(encoding="utf-8")
-    entries = re.findall(r"\{ w: '([^']+)', p: '([^']+)'", lexicon_text)
+    legacy_entries = re.findall(r"\{ w: '([^']+)', p: '([^']+)'", lexicon_text)
+    preserved_verbs = [entry for entry in legacy_entries if primary_group(entry[1])[0] == "verb"]
+    priority_data = json.loads(PRIORITY_DATA_PATH.read_text(encoding="utf-8"))["entries"]
+    priority_verbs = [(word, "v.") for word in priority_data]
+    entries = [*preserved_verbs, *priority_verbs]
+    if len(preserved_verbs) != 54 or len(priority_verbs) != 96 or len({word for word, _ in entries}) != 150:
+        raise ValueError("动词优先目录必须由 54 张既有动词卡和 96 张替换动词卡组成，且共 150 个唯一单词。")
     words = [word for word, _ in entries]
     table = pd.read_excel(SOURCE_PATH, sheet_name="1 lemmas")
     table["lemma"] = table["lemma"].astype(str).str.lower()
@@ -82,7 +89,7 @@ def main() -> None:
         entry["sequence"] = sequence
 
     audit = {
-        "auditVersion": "2026.09.07.1",
+        "auditVersion": "2026.09.07.2",
         "auditedAt": "2026-09-07",
         "source": "COCA词频单词表.xlsx",
         "sheet": "1 lemmas",
@@ -102,8 +109,10 @@ def main() -> None:
             "missingWords": missing,
             "allSelectedWordsFound": not missing,
             "stableCardIds": True,
-            "primaryPartOfSpeechPolicy": "use the first declared card POS; do not promote a rare secondary COCA sense",
-            "learningOrder": ["动词", "名词", "形容词", "副词", "其他词性"],
+            "preservedExistingVerbCards": len(preserved_verbs),
+            "replacedNonVerbCards": len(priority_verbs),
+            "primaryPartOfSpeechPolicy": "preserve existing primary-verb cards, replace every non-verb slot with the highest-ranked remaining COCA verb, then order all cards by COCA verb rank",
+            "learningOrder": ["动词（按 COCA 动词词频升序）"],
             "primaryGroupCounts": dict(Counter(str(entry["primaryGroup"]) for entry in ordered)),
         },
         "orderedCards": ordered,

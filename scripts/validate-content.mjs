@@ -103,6 +103,7 @@ if (!lockedExample.includes('# 模板格式测试：work') || !lockedTemplate.in
 const expectedCardCount = cocaAudit.selection?.selectedCards ?? 150;
 const expectedDayCount = Math.ceil(expectedCardCount / 5);
 if (!cocaAudit.selection?.allSelectedWordsFound || cocaAudit.selection?.missingWords?.length) errors.push('COCA audit has missing selected words.');
+if (cocaAudit.selection?.primaryGroupCounts?.verb !== 150 || Object.keys(cocaAudit.selection?.primaryGroupCounts ?? {}).length !== 1) errors.push('The active learning catalog must contain 150 primary verb cards and no other primary POS.');
 if (wordMetadata.missing?.length || Object.keys(wordMetadata.entries ?? {}).length < 450) errors.push('Offline relation/derivative metadata extraction is incomplete.');
 if (allCards.cards.length !== expectedCardCount) errors.push('Expected ' + expectedCardCount + ' audited cards.');
 if (manifest.dailyFiles.length !== expectedDayCount) errors.push('Expected ' + expectedDayCount + ' daily files.');
@@ -181,9 +182,46 @@ for (const [cardIndex, card] of allCards.cards.entries()) {
     if (!card.relatedVocabulary.length) errors.push(card.id + ': template-detailed card needs at least one semantic category.');
     if (card.examples.length < 6) errors.push(card.id + ': template-detailed card needs at least six natural high-frequency examples.');
     const irregularTargetForms = {
+      be: ['am', 'is', 'are', 'was', 'were', 'been', 'being'],
       become: ['became'],
+      begin: ['began', 'begun'],
+      buy: ['bought'],
       choose: ['chose', 'chosen', 'choice'],
+      do: ['did', 'done'],
+      die: ['dying'],
+      drive: ['drove', 'driven'],
+      eat: ['ate', 'eaten'],
+      fall: ['fell', 'fallen'],
+      feel: ['felt'],
+      find: ['found'],
+      get: ['got', 'gotten'],
+      give: ['gave', 'given'],
+      go: ['went', 'gone'],
+      have: ['had'],
+      hear: ['heard'],
+      hold: ['held'],
+      keep: ['kept'],
+      know: ['knew', 'known'],
+      lead: ['led'],
+      leave: ['left'],
+      lose: ['lost'],
+      make: ['made'],
+      meet: ['met'],
+      pay: ['paid'],
+      run: ['ran'],
+      say: ['said'],
+      see: ['saw', 'seen'],
+      sell: ['sold'],
+      send: ['sent'],
+      sit: ['sat'],
       speak: ['spoke', 'spoken'],
+      stand: ['stood'],
+      take: ['took', 'taken'],
+      tell: ['told'],
+      think: ['thought'],
+      understand: ['understood'],
+      wear: ['wore', 'worn'],
+      win: ['won'],
       write: ['wrote', 'written']
     };
     const targetForms = [
@@ -215,7 +253,7 @@ for (const [cardIndex, card] of allCards.cards.entries()) {
   if (clozeQuestions.some((question) => !question.prompt.includes('_____') || !question.answer?.trim())) {
     errors.push(card.id + ': every non-choice collocation question needs one real blank and a non-empty answer.');
   }
-  if (clozeQuestions.some((question) => !question.id.includes('collocation-example-context-v2') && /^(do|doing|done|someone|something|yourself|A|B)$/i.test(question.answer.trim()))) {
+  if (clozeQuestions.some((question) => !question.id.includes('collocation-example-context-v2') && question.answer.trim().toLowerCase() !== card.word.toLowerCase() && /^(do|doing|done|someone|something|yourself|A|B)$/i.test(question.answer.trim()))) {
     errors.push(card.id + ': a grammar placeholder must never be the answer to an objective cloze.');
   }
   if (card.questions.some((question) => question.id.includes('example-cloze') && !question.prompt.includes('（填写 ' + card.word + ' 的正确形式）'))) {
@@ -300,4 +338,4 @@ if (errors.length) {
 const referenceCount = allCards.cards.filter((card) => card.detailLevel === 'template-reference').length;
 const curatedCount = allCards.cards.filter((card) => card.detailLevel === 'template-curated').length;
 const completeCount = allCards.cards.filter((card) => card.detailLevel === 'template-complete').length;
-console.log('Content validation passed: all ' + allCards.cards.length + ' cards are complete static cards in verb/noun/adjective/adverb/other and COCA-rank order; ' + referenceCount + ' locked reference, ' + curatedCount + ' curated detailed, ' + completeCount + ' template-complete, ' + manifest.dailyFiles.length + ' days, 5 unique cards per full day.');
+console.log('Content validation passed: all ' + allCards.cards.length + ' cards are complete static verb cards in COCA verb-rank order; ' + referenceCount + ' locked reference, ' + curatedCount + ' curated detailed, ' + completeCount + ' template-complete, ' + manifest.dailyFiles.length + ' days, 5 unique cards per full day.');

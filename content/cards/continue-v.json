@@ -12,7 +12,7 @@
   ],
   "cocaRankLabel": "v. 第 350 名",
   "learningPriority": {
-    "sequence": 18,
+    "sequence": 82,
     "group": "verb",
     "groupLabel": "动词",
     "groupOrder": 1,
@@ -22,11 +22,11 @@
   "syllables": "con·tin·ue",
   "partOfSpeech": "v.",
   "frequencyBand": "COCA 高频精选 · v. 第 350 名",
-  "difficulty": "基础",
+  "difficulty": "进阶",
   "tags": [
     "v.",
     "完整词卡",
-    "高频表达"
+    "主动词汇"
   ],
   "coreMemory": {
     "chinese": "继续",
@@ -72,7 +72,7 @@
       }
     ],
     "directSynonym": "proceed /prəˈsiːd/（继续进行；进行；开始；发出）",
-    "directAntonym": "stop /ˈstɑp/（停止；车站；逗留；填塞）",
+    "directAntonym": "stop /ˈstɑp/（停止）",
     "derivatives": "continuation · continuous",
     "example": "Please continue reading from page ten.",
     "exampleChinese": "请从第十页继续读。"
@@ -191,7 +191,7 @@
       "word": "stop",
       "phonetic": "/ˈstɑp/",
       "partOfSpeech": "v. / n.",
-      "chinese": "停止；车站；逗留；填塞",
+      "chinese": "停止",
       "usage": "在本卡核心义下与 continue 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
@@ -225,8 +225,8 @@
         {
           "word": "stop",
           "phonetic": "/ˈstɑp/",
-          "partOfSpeech": "v. / n.",
-          "chinese": "停止；车站；逗留；填塞"
+          "partOfSpeech": "v.",
+          "chinese": "停止"
         }
       ]
     },
@@ -297,9 +297,9 @@
       "type": "meaning_choice",
       "prompt": "“continue”最核心的中文含义是？",
       "options": [
-        "钱；货币",
         "继续",
-        "描述"
+        "服务；供应；起作用",
+        "选择"
       ],
       "answer": "继续",
       "stage": "T0",
@@ -310,9 +310,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “continue”？",
       "options": [
-        "to keep doing something without stopping",
-        "to say what someone or something is like",
-        "what people use to buy things"
+        "to provide help or food, perform a duty, or be useful for a purpose",
+        "to decide which person or thing you want",
+        "to keep doing something without stopping"
       ],
       "answer": "to keep doing something without stopping",
       "stage": "T0",
@@ -339,8 +339,8 @@
       "options": [
         "proceed",
         "stop",
-        "describe",
-        "money"
+        "serve",
+        "choose"
       ],
       "answer": "proceed",
       "stage": "T2",
@@ -352,8 +352,8 @@
       "prompt": "哪个词是词卡中列出的 “continue” 最直接反义词？",
       "options": [
         "proceed",
-        "describe",
-        "money",
+        "serve",
+        "choose",
         "stop"
       ],
       "answer": "stop",
@@ -366,7 +366,7 @@
       "prompt": "根据本词卡辨析，哪个词被列为 “continue” 的派生词？",
       "options": [
         "stop",
-        "describe",
+        "serve",
         "continuation",
         "proceed"
       ],
@@ -417,10 +417,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Please continue _____ from page ten.（中文：请从第十页继续读。）",
       "options": [
-        "time",
-        "make",
+        "most",
+        "walking",
         "reading",
-        "ideal"
+        "every"
       ],
       "answer": "reading",
       "stage": "T2",
@@ -541,7 +541,7 @@
   },
   "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.09.07.1",
+  "contentVersion": "2026.09.07.2",
   "reviewed": false,
   "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

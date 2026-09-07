@@ -12,7 +12,7 @@
   ],
   "cocaRankLabel": "v. 第 460 名",
   "learningPriority": {
-    "sequence": 24,
+    "sequence": 103,
     "group": "verb",
     "groupLabel": "动词",
     "groupOrder": 1,
@@ -22,11 +22,11 @@
   "syllables": "listen（约 2 音节）",
   "partOfSpeech": "v.",
   "frequencyBand": "COCA 高频精选 · v. 第 460 名",
-  "difficulty": "基础",
+  "difficulty": "进阶",
   "tags": [
     "v.",
     "完整词卡",
-    "高频表达"
+    "主动词汇"
   ],
   "coreMemory": {
     "chinese": "听；倾听",
@@ -71,7 +71,7 @@
         "note": "不定式 to 后接动词原形；不要把不定式和 -ing 形式混合。"
       }
     ],
-    "directSynonym": "hear /ˈhiːr/（听到；倾听；听说；审理）",
+    "directSynonym": "hear /ˈhiːr/（听见）",
     "directAntonym": "ignore /ˌɪˈɡnɔːr/（不理睬；忽视；驳回；忽略）",
     "derivatives": "listener",
     "example": "Listen to the whole sentence before answering.",
@@ -182,7 +182,7 @@
       "word": "hear",
       "phonetic": "/ˈhiːr/",
       "partOfSpeech": "v.",
-      "chinese": "听到；倾听；听说；审理",
+      "chinese": "听见",
       "difference": "listen 是本卡核心搭配 “listen to” 中的中性常用选择；hear 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -221,7 +221,7 @@
           "word": "hear",
           "phonetic": "/ˈhiːr/",
           "partOfSpeech": "v.",
-          "chinese": "听到；倾听；听说；审理"
+          "chinese": "听见"
         },
         {
           "word": "ignore",
@@ -292,9 +292,9 @@
       "type": "meaning_choice",
       "prompt": "“listen”最核心的中文含义是？",
       "options": [
-        "家；在家",
         "听；倾听",
-        "准备"
+        "击打；撞击；达到",
+        "表达"
       ],
       "answer": "听；倾听",
       "stage": "T0",
@@ -305,9 +305,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “listen”？",
       "options": [
-        "to pay attention to sound",
-        "to make ready for something",
-        "the place where you live"
+        "to strike, collide with, or reach a particular level",
+        "to show a thought or feeling in words or actions",
+        "to pay attention to sound"
       ],
       "answer": "to pay attention to sound",
       "stage": "T0",
@@ -318,10 +318,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“听……”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "listen to",
         "listen carefully",
         "listen for",
-        "listen to advice",
-        "listen to"
+        "listen to advice"
       ],
       "answer": "listen to",
       "stage": "T1",
@@ -332,10 +332,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “listen” 最直接近义词？",
       "options": [
-        "prepare",
-        "home",
-        "hear",
-        "ignore"
+        "ignore",
+        "hit",
+        "express",
+        "hear"
       ],
       "answer": "hear",
       "stage": "T2",
@@ -346,10 +346,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “listen” 最直接反义词？",
       "options": [
-        "home",
+        "hit",
+        "express",
         "ignore",
-        "hear",
-        "prepare"
+        "hear"
       ],
       "answer": "ignore",
       "stage": "T2",
@@ -360,10 +360,10 @@
       "type": "meaning_choice",
       "prompt": "根据本词卡辨析，哪个词被列为 “listen” 的易混词？",
       "options": [
+        "express",
         "hear",
         "ignore",
-        "prepare",
-        "home"
+        "hit"
       ],
       "answer": "hear",
       "stage": "T3",
@@ -398,10 +398,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“仔细听”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "listen for",
         "listen to advice",
         "listen carefully",
-        "listen to",
-        "listen for"
+        "listen to"
       ],
       "answer": "listen carefully",
       "stage": "T1",
@@ -412,10 +412,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Listen to the _____ sentence before answering.（中文：回答前先听完整个句子。）",
       "options": [
+        "reason",
         "whole",
-        "interview",
-        "yourself",
-        "useful"
+        "ball",
+        "idea"
       ],
       "answer": "whole",
       "stage": "T2",
@@ -424,12 +424,12 @@
     {
       "id": "listen-v-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“听……”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "搭配辨析：哪一项既表示“听……”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "listen to",
         "listen carefully",
         "listen for",
-        "listen to advice",
-        "listen to"
+        "listen to advice"
       ],
       "answer": "listen to",
       "stage": "T2",
@@ -438,12 +438,12 @@
     {
       "id": "listen-v-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“仔细听”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "用法辨析：哪一项既表示“仔细听”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "listen to",
         "listen for",
         "listen to advice",
-        "listen carefully",
-        "listen to"
+        "listen carefully"
       ],
       "answer": "listen carefully",
       "stage": "T3",
@@ -536,7 +536,7 @@
   },
   "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.09.07.1",
+  "contentVersion": "2026.09.07.2",
   "reviewed": false,
   "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

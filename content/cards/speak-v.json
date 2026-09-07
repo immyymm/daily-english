@@ -12,7 +12,7 @@
   ],
   "cocaRankLabel": "v. 第 337 名",
   "learningPriority": {
-    "sequence": 16,
+    "sequence": 77,
     "group": "verb",
     "groupLabel": "动词",
     "groupOrder": 1,
@@ -22,11 +22,11 @@
   "syllables": "speak（单音节）",
   "partOfSpeech": "v.",
   "frequencyBand": "COCA 高频精选 · v. 第 337 名",
-  "difficulty": "基础",
+  "difficulty": "进阶",
   "tags": [
     "v.",
     "完整词卡",
-    "高频表达"
+    "主动词汇"
   ],
   "coreMemory": {
     "chinese": "说话；演讲",
@@ -71,7 +71,7 @@
         "note": "不定式 to 后接动词原形；不要把不定式和 -ing 形式混合。"
       }
     ],
-    "directSynonym": "talk /ˈtɔːk/（谈话；交谈；会谈；讲话）",
+    "directSynonym": "talk /ˈtɔːk/（交谈）",
     "directAntonym": "listen /ˈlɪsən/（听）",
     "derivatives": "speaker · speech",
     "example": "Try to speak in complete sentences.",
@@ -182,7 +182,7 @@
       "word": "talk",
       "phonetic": "/ˈtɔːk/",
       "partOfSpeech": "v. / n.",
-      "chinese": "谈话；交谈；会谈；讲话",
+      "chinese": "交谈",
       "difference": "speak 是本卡核心搭配 “speak to someone” 中的中性常用选择；talk 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -227,8 +227,8 @@
         {
           "word": "talk",
           "phonetic": "/ˈtɔːk/",
-          "partOfSpeech": "v. / n.",
-          "chinese": "谈话；交谈；会谈；讲话"
+          "partOfSpeech": "v.",
+          "chinese": "交谈"
         },
         {
           "word": "listen",
@@ -305,9 +305,9 @@
       "type": "meaning_choice",
       "prompt": "“speak”最核心的中文含义是？",
       "options": [
-        "说话；演讲",
-        "分享；共同拥有",
-        "问题；质疑"
+        "提供；提议",
+        "击打；撞击；达到",
+        "说话；演讲"
       ],
       "answer": "说话；演讲",
       "stage": "T0",
@@ -318,9 +318,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “speak”？",
       "options": [
-        "to give part of something to others",
-        "a sentence used to ask for information",
-        "to say words or talk to someone"
+        "to strike, collide with, or reach a particular level",
+        "to say words or talk to someone",
+        "to say that you are willing to give something"
       ],
       "answer": "to say words or talk to someone",
       "stage": "T0",
@@ -331,10 +331,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“说英语”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "speak to someone",
         "speak about",
         "speak clearly",
-        "speak English"
+        "speak English",
+        "speak to someone"
       ],
       "answer": "speak English",
       "stage": "T1",
@@ -345,10 +345,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “speak” 最直接近义词？",
       "options": [
-        "share",
-        "question",
+        "hit",
         "talk",
-        "listen"
+        "listen",
+        "offer"
       ],
       "answer": "talk",
       "stage": "T2",
@@ -359,10 +359,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “speak” 最直接反义词？",
       "options": [
-        "question",
         "listen",
         "talk",
-        "share"
+        "offer",
+        "hit"
       ],
       "answer": "listen",
       "stage": "T2",
@@ -373,10 +373,10 @@
       "type": "meaning_choice",
       "prompt": "根据本词卡辨析，哪个词被列为 “speak” 的易混词？",
       "options": [
-        "talk",
         "listen",
-        "share",
-        "question"
+        "offer",
+        "hit",
+        "talk"
       ],
       "answer": "talk",
       "stage": "T3",
@@ -411,10 +411,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“和某人说话”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "speak clearly",
         "speak to someone",
         "speak English",
-        "speak about"
+        "speak about",
+        "speak clearly"
       ],
       "answer": "speak to someone",
       "stage": "T1",
@@ -425,10 +425,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Try to speak in _____ sentences.（中文：试着用完整句子说话。）",
       "options": [
-        "complete",
-        "useful",
-        "ask",
-        "honest"
+        "help",
+        "ball",
+        "difficult",
+        "complete"
       ],
       "answer": "complete",
       "stage": "T2",
@@ -437,12 +437,12 @@
     {
       "id": "speak-v-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“说英语”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "搭配辨析：哪一项既表示“说英语”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "speak to someone",
         "speak about",
         "speak clearly",
-        "speak English"
+        "speak English",
+        "speak to someone"
       ],
       "answer": "speak English",
       "stage": "T2",
@@ -451,12 +451,12 @@
     {
       "id": "speak-v-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“和某人说话”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "用法辨析：哪一项既表示“和某人说话”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "speak about",
         "speak clearly",
         "speak to someone",
-        "speak English"
+        "speak English",
+        "speak about"
       ],
       "answer": "speak to someone",
       "stage": "T3",
@@ -549,7 +549,7 @@
   },
   "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.09.07.1",
+  "contentVersion": "2026.09.07.2",
   "reviewed": false,
   "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

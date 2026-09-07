@@ -12,7 +12,7 @@
   ],
   "cocaRankLabel": "v. 第 272 名",
   "learningPriority": {
-    "sequence": 8,
+    "sequence": 61,
     "group": "verb",
     "groupLabel": "动词",
     "groupOrder": 1,
@@ -22,11 +22,11 @@
   "syllables": "pro·vide",
   "partOfSpeech": "v.",
   "frequencyBand": "COCA 高频精选 · v. 第 272 名",
-  "difficulty": "基础",
+  "difficulty": "进阶",
   "tags": [
     "v.",
     "完整词卡",
-    "高频表达"
+    "主动词汇"
   ],
   "coreMemory": {
     "chinese": "提供",
@@ -526,9 +526,9 @@
       "type": "meaning_choice",
       "prompt": "“provide”最核心的中文含义是？",
       "options": [
-        "决定",
-        "鼓励；促进",
-        "提供"
+        "提供",
+        "设置；放置；确定",
+        "同意；达成一致"
       ],
       "answer": "提供",
       "stage": "T0",
@@ -539,9 +539,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “provide”？",
       "options": [
-        "to give someone confidence or support",
-        "to give someone something that they need",
-        "to make a choice after thinking"
+        "to put something in position, establish, or decide a value or time",
+        "to have the same opinion or accept a proposal",
+        "to give someone something that they need"
       ],
       "answer": "to give someone something that they need",
       "stage": "T0",
@@ -552,10 +552,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“提供某物”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
       "options": [
-        "provide someone with something",
         "provide something for someone",
         "provide for someone",
-        "provide something"
+        "provide something",
+        "provide someone with something"
       ],
       "answer": "provide something",
       "stage": "T1",
@@ -566,10 +566,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “provide” 最直接近义词？",
       "options": [
-        "offer",
-        "decide",
+        "set",
         "supply",
-        "withhold"
+        "withhold",
+        "offer"
       ],
       "answer": "supply",
       "stage": "T2",
@@ -580,10 +580,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “provide” 最直接反义词？",
       "options": [
-        "decide",
         "withhold",
         "supply",
-        "offer"
+        "offer",
+        "set"
       ],
       "answer": "withhold",
       "stage": "T2",
@@ -594,10 +594,10 @@
       "type": "meaning_choice",
       "prompt": "根据本词卡辨析，哪个词被列为 “provide” 的易混词？",
       "options": [
-        "offer",
         "supply",
         "withhold",
-        "decide"
+        "set",
+        "offer"
       ],
       "answer": "offer",
       "stage": "T3",
@@ -632,10 +632,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“向某人提供某物”，又符合这个形式线索：完整搭配中使用介词 with？",
       "options": [
-        "provide for someone",
         "provide someone with something",
         "provide something",
-        "provide something for someone"
+        "provide something for someone",
+        "provide for someone"
       ],
       "answer": "provide someone with something",
       "stage": "T1",
@@ -646,10 +646,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：The course provides _____ with useful tools.（中文：这门课程为学生提供实用工具。）",
       "options": [
-        "students",
-        "start",
-        "speak",
-        "choice"
+        "realistic",
+        "about",
+        "habit",
+        "students"
       ],
       "answer": "students",
       "stage": "T2",
@@ -658,12 +658,12 @@
     {
       "id": "provide-v-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“向某人提供某物”，又符合这个形式线索：完整搭配中使用介词 with？",
+      "prompt": "搭配辨析：哪一项既表示“向某人提供某物”，又符合这个形式线索：完整搭配中使用介词 with？",
       "options": [
-        "provide something for someone",
         "provide information about",
         "provide access to",
-        "provide someone with something"
+        "provide someone with something",
+        "provide something for someone"
       ],
       "answer": "provide someone with something",
       "stage": "T2",
@@ -672,12 +672,12 @@
     {
       "id": "provide-v-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“为某人提供某物”，又符合这个形式线索：完整搭配中使用介词 for？",
+      "prompt": "用法辨析：哪一项既表示“为某人提供某物”，又符合这个形式线索：完整搭配中使用介词 for？",
       "options": [
-        "provide information about",
         "provide access to",
         "provide something for someone",
-        "provide someone with something"
+        "provide someone with something",
+        "provide information about"
       ],
       "answer": "provide something for someone",
       "stage": "T3",
@@ -770,7 +770,7 @@
   },
   "detailLevel": "template-curated",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.09.07.1",
+  "contentVersion": "2026.09.07.2",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

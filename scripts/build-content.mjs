@@ -2,6 +2,8 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { lexicon } from './lexicon.mjs';
+import verbPriorityData from './verb-priority-data.json' with { type: 'json' };
+import { verbPriorityUseCorrections } from './verb-priority-corrections.mjs';
 import { confusables, families, secondarySenses } from './content-overrides.mjs';
 import { cardOverrides } from './card-overrides.mjs';
 import { curatedPhrases } from './curated-phrases.mjs';
@@ -23,11 +25,46 @@ const { contentVersion, templateVersion } = release;
 const slug = (value) => value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const primaryPos = (value) => value.split('/')[0].trim().replace('.', '');
 const firstMeaning = (value) => value.split('；')[0];
-const lexiconByWord = new Map(lexicon.map((item) => [item.w, item]));
-const orderedLexicon = sortLexiconForLearning(lexicon, cocaRankData);
+const priorityEntries = Object.fromEntries(Object.entries(verbPriorityData.entries).map(([word, entry]) => [
+  word,
+  {
+    ...entry,
+    uses: entry.uses.map((use) => {
+      const correction = verbPriorityUseCorrections[`${word}|${use[0]}`];
+      return correction ? [use[0], use[1], correction[0], correction[1]] : use;
+    })
+  }
+]));
+const priorityVerbLexicon = Object.entries(priorityEntries).map(([word, entry]) => ({
+  w: word,
+  p: 'v.',
+  ipa: ipaFor(word),
+  zh: entry.zh,
+  en: entry.en,
+  coll: entry.uses[0][0],
+  collZh: entry.uses[0][1],
+  ex: entry.uses[0][2],
+  exZh: entry.uses[0][3],
+  syn: entry.syn,
+  synZh: entry.synZh,
+  ant: entry.ant,
+  antZh: entry.antZh
+}));
+const activeLexicon = [
+  ...lexicon.filter((item) => primaryPos(item.p) === 'v'),
+  ...priorityVerbLexicon
+];
+const activeWords = new Set(activeLexicon.map((item) => item.w));
+if (activeLexicon.length !== 150 || activeWords.size !== activeLexicon.length) {
+  throw new Error('Verb-priority catalog must contain exactly 150 unique words.');
+}
+const lexiconByWord = new Map(activeLexicon.map((item) => [item.w, item]));
+const orderedLexicon = sortLexiconForLearning(activeLexicon, cocaRankData);
 const wordMetadata = wordMetadataData.entries;
 const posLabels = { v: 'v.', n: 'n.', j: 'adj.', r: 'adv.' };
 function relatedChinese(word, item, relation) {
+  if (relation === 'synonym' && item.synZh) return item.synZh;
+  if (relation === 'antonym' && item.antZh) return item.antZh;
   const known = lexiconByWord.get(word);
   if (known) return firstMeaning(known.zh);
   if (wordMetadata[word]?.chinese) return wordMetadata[word].chinese;
@@ -41,7 +78,13 @@ function syllableHint(word) {
     improve: 'im·prove', notice: 'no·tice', support: 'sup·port', likely: 'like·ly', manage: 'man·age',
     provide: 'pro·vide', understand: 'un·der·stand', believe: 'be·lieve', create: 'cre·ate', include: 'in·clude',
     remember: 're·mem·ber', continue: 'con·tin·ue', consider: 'con·sid·er', develop: 'de·vel·op',
-    explain: 'ex·plain', prepare: 'pre·pare', achieve: 'a·chieve', compare: 'com·pare',
+    explain: 'ex·plain', prepare: 'pre·pare', achieve: 'a·chieve', compare: 'com·pare', happen: 'hap·pen',
+    become: 'be·come', offer: 'of·fer', expect: 'ex·pect', decide: 'de·cide', suggest: 'sug·gest',
+    require: 're·quire', avoid: 'a·void', depend: 'de·pend', increase: 'in·crease', reduce: 're·duce',
+    remain: 're·main', handle: 'han·dle', affect: 'af·fect', realize: 're·al·ize', describe: 'de·scribe',
+    accept: 'ac·cept', prefer: 'pre·fer', discover: 'dis·cov·er', protect: 'pro·tect',
+    encourage: 'en·cour·age', express: 'ex·press', begin: 'be·gin', open: 'o·pen', appear: 'ap·pear',
+    agree: 'a·gree', report: 're·port', receive: 're·ceive', return: 're·turn',
     ability: 'a·bil·i·ty', opportunity: 'op·por·tu·ni·ty', relationship: 're·la·tion·ship',
     environment: 'en·vi·ron·ment', information: 'in·for·ma·tion', community: 'com·mu·ni·ty',
     important: 'im·por·tant', available: 'a·vail·a·ble', possible: 'pos·si·ble',
@@ -132,7 +175,8 @@ function normalizeContexts(item, override, tuples) {
 }
 
 function normalizeFixedPhrases(item, override, tuples) {
-  const examples = curatedExamples[item.w] ?? [[item.ex, item.exZh]];
+  const priorityExamples = priorityEntries[item.w]?.uses?.map((entry) => [entry[2], entry[3]]);
+  const examples = priorityExamples ?? curatedExamples[item.w] ?? [[item.ex, item.exZh]];
   const source = override?.phrases ?? tuples.slice(0, examples.length).map(([phrase, chinese], index) => [
     phrase,
     chinese,
@@ -181,8 +225,11 @@ function normalizeRelations(item, override, key) {
 }
 
 function normalizeDerivatives(item, override) {
-  if (override?.derivatives) {
-    return override.derivatives.map(([word, partOfSpeech, chinese, note]) => ({ word, phonetic: ipaFor(word), partOfSpeech, chinese, note }));
+  const priorityDerivatives = priorityEntries[item.w]?.derivatives;
+  if (override?.derivatives || priorityDerivatives) {
+    return (override?.derivatives ?? priorityDerivatives)
+      .filter(([word]) => word.toLowerCase() !== item.w.toLowerCase())
+      .map(([word, partOfSpeech, chinese, note]) => ({ word, phonetic: ipaFor(word), partOfSpeech, chinese, note }));
   }
   return (families[item.w] ?? [])
     .filter((word) => word !== item.w && (lexiconByWord.has(word) || wordMetadata[word]))
@@ -236,7 +283,8 @@ function normalizeExamples(item, override) {
   if (override?.examples) {
     return override.examples.map(([scene, english, chinese]) => ({ scene, english, chinese }));
   }
-  const generated = (curatedExamples[item.w] ?? []).map(([english, chinese], index) => ({
+  const priorityExamples = priorityEntries[item.w]?.uses?.map((entry) => [entry[2], entry[3]]);
+  const generated = (priorityExamples ?? curatedExamples[item.w] ?? []).map(([english, chinese], index) => ({
     scene: ['日常使用', '工作或学习', '常见搭配', '真实语境', '易错结构', '主动表达'][index] ?? '高频表达',
     english,
     chinese
@@ -417,13 +465,14 @@ function hasObjectiveStructureWord(phrase, targetWord) {
 function makeCard(item, index) {
   const id = slug(item.w + '-' + primaryPos(item.p));
   const override = cardOverrides[item.w];
-  if (!override && (curatedPhrases[item.w]?.length ?? 0) < 6) {
+  const priorityPhrases = priorityEntries[item.w]?.uses?.map((entry) => [entry[0], entry[1]]);
+  if (!override && (priorityPhrases ?? curatedPhrases[item.w] ?? []).length < 6) {
     throw new Error(item.w + ': curated generation requires at least six curated phrase entries.');
   }
-  if (!override && (curatedExamples[item.w]?.length ?? 0) < 6) {
+  if (!override && (priorityEntries[item.w]?.uses ?? curatedExamples[item.w] ?? []).length < 6) {
     throw new Error(item.w + ': curated generation requires at least six curated bilingual examples.');
   }
-  const tuples = [...(curatedPhrases[item.w] ?? []), [item.coll, item.collZh]]
+  const tuples = [...(priorityPhrases ?? curatedPhrases[item.w] ?? []), [item.coll, item.collZh]]
     .filter(([phrase], tupleIndex, source) => source.findIndex(([candidate]) => candidate === phrase) === tupleIndex)
     .slice(0, 12);
   const structures = normalizeStructures(item, override, tuples);
@@ -566,6 +615,13 @@ function formatDate(date) {
 await fs.mkdir(contentCardsDir, { recursive: true });
 await fs.mkdir(publicDailyDir, { recursive: true });
 
+for (const directory of [contentCardsDir, publicDailyDir]) {
+  const entries = await fs.readdir(directory, { withFileTypes: true });
+  await Promise.all(entries
+    .filter((entry) => entry.isFile() && entry.name.endsWith('.json'))
+    .map((entry) => fs.unlink(path.join(directory, entry.name))));
+}
+
 const cards = orderedLexicon.map(makeCard);
 for (const card of cards) {
   await fs.writeFile(path.join(contentCardsDir, card.id + '.json'), JSON.stringify(card, null, 2) + '\n', 'utf8');
@@ -592,7 +648,7 @@ await fs.writeFile(path.join(publicDataDir, 'manifest.json'), JSON.stringify({
 await fs.writeFile(path.join(root, 'content', 'content-manifest.json'), JSON.stringify({
   source: 'COCA词频单词表.xlsx', generatedAt: '2026-09-07', contentVersion, templateVersion,
   generationMode: 'one-time-static',
-  orderingPolicy: 'primary-pos-verb-noun-adjective-adverb-other-then-coca-rank',
+  orderingPolicy: 'verbs-only-then-coca-verb-rank',
   detailLevel: 'template-complete',
   reviewedCardIds: cards.filter((card) => card.reviewed).map((card) => card.id),
   referenceCardIds: cards.filter((card) => card.detailLevel === 'template-reference').map((card) => card.id),
@@ -601,4 +657,4 @@ await fs.writeFile(path.join(root, 'content', 'content-manifest.json'), JSON.str
   cardIds: cards.map((card) => card.id)
 }, null, 2) + '\n', 'utf8');
 
-console.log('Generated all ' + cards.length + ' complete static cards in primary-POS/COCA-rank order, plus ' + dailyFiles.length + ' daily files.');
+console.log('Generated all ' + cards.length + ' complete static verb cards in COCA verb-rank order, plus ' + dailyFiles.length + ' daily files.');

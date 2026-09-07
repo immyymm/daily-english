@@ -12,7 +12,7 @@
   ],
   "cocaRankLabel": "v. 第 500 名",
   "learningPriority": {
-    "sequence": 30,
+    "sequence": 119,
     "group": "verb",
     "groupLabel": "动词",
     "groupOrder": 1,
@@ -22,11 +22,11 @@
   "syllables": "ex·plain",
   "partOfSpeech": "v.",
   "frequencyBand": "COCA 高频精选 · v. 第 500 名",
-  "difficulty": "基础",
+  "difficulty": "应用",
   "tags": [
     "v.",
     "完整词卡",
-    "高频表达"
+    "主动词汇"
   ],
   "coreMemory": {
     "chinese": "解释；说明",
@@ -284,9 +284,9 @@
       "type": "meaning_choice",
       "prompt": "“explain”最核心的中文含义是？",
       "options": [
-        "信息",
-        "解释；说明",
-        "发现"
+        "接受；认可",
+        "想；认为；思考",
+        "解释；说明"
       ],
       "answer": "解释；说明",
       "stage": "T0",
@@ -297,9 +297,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “explain”？",
       "options": [
+        "to use the mind, form an opinion, or consider something",
         "to make something clear",
-        "to find something for the first time",
-        "facts or details about something"
+        "to agree to receive or believe something"
       ],
       "answer": "to make something clear",
       "stage": "T0",
@@ -310,10 +310,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“清楚解释某事”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
       "options": [
-        "explain something to someone",
         "explain something clearly",
         "explain why",
-        "explain how"
+        "explain how",
+        "explain something to someone"
       ],
       "answer": "explain something clearly",
       "stage": "T1",
@@ -324,10 +324,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “explain” 最直接近义词？",
       "options": [
-        "clarify",
         "confuse",
-        "discover",
-        "information"
+        "accept",
+        "think",
+        "clarify"
       ],
       "answer": "clarify",
       "stage": "T2",
@@ -338,10 +338,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “explain” 最直接反义词？",
       "options": [
-        "clarify",
-        "discover",
-        "information",
-        "confuse"
+        "accept",
+        "think",
+        "confuse",
+        "clarify"
       ],
       "answer": "confuse",
       "stage": "T2",
@@ -352,10 +352,10 @@
       "type": "meaning_choice",
       "prompt": "根据本词卡辨析，哪个词被列为 “explain” 的派生词？",
       "options": [
-        "confuse",
-        "discover",
+        "accept",
         "explanation",
-        "clarify"
+        "clarify",
+        "confuse"
       ],
       "answer": "explanation",
       "stage": "T3",
@@ -390,10 +390,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“解释原因”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "explain something clearly",
         "explain how",
         "explain something to someone",
-        "explain why"
+        "explain why",
+        "explain something clearly"
       ],
       "answer": "explain why",
       "stage": "T1",
@@ -404,10 +404,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Could you explain this _____ to me?（中文：你能给我解释一下这个短语吗？）",
       "options": [
-        "travelers",
-        "practice",
+        "new",
         "phrase",
-        "better"
+        "responsibility",
+        "about"
       ],
       "answer": "phrase",
       "stage": "T2",
@@ -416,12 +416,12 @@
     {
       "id": "explain-v-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“清楚解释某事”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
+      "prompt": "搭配辨析：哪一项既表示“清楚解释某事”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
       "options": [
-        "explain something to someone",
         "explain something clearly",
         "explain why",
-        "explain how"
+        "explain how",
+        "explain something to someone"
       ],
       "answer": "explain something clearly",
       "stage": "T2",
@@ -430,12 +430,12 @@
     {
       "id": "explain-v-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“解释原因”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "用法辨析：哪一项既表示“解释原因”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "explain why",
         "explain something clearly",
         "explain how",
-        "explain something to someone"
+        "explain something to someone",
+        "explain why"
       ],
       "answer": "explain why",
       "stage": "T3",
@@ -528,7 +528,7 @@
   },
   "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.09.07.1",
+  "contentVersion": "2026.09.07.2",
   "reviewed": false,
   "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

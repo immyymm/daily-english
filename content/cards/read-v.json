@@ -12,7 +12,7 @@
   ],
   "cocaRankLabel": "v. 第 244 名",
   "learningPriority": {
-    "sequence": 7,
+    "sequence": 58,
     "group": "verb",
     "groupLabel": "动词",
     "groupOrder": 1,
@@ -22,11 +22,11 @@
   "syllables": "read（单音节）",
   "partOfSpeech": "v.",
   "frequencyBand": "COCA 高频精选 · v. 第 244 名",
-  "difficulty": "基础",
+  "difficulty": "进阶",
   "tags": [
     "v.",
     "完整词卡",
-    "高频表达"
+    "主动词汇"
   ],
   "coreMemory": {
     "chinese": "阅读；读懂",
@@ -298,8 +298,8 @@
       "prompt": "“read”最核心的中文含义是？",
       "options": [
         "阅读；读懂",
-        "听；倾听",
-        "表达"
+        "跟随；遵循",
+        "结束；终止"
       ],
       "answer": "阅读；读懂",
       "stage": "T0",
@@ -310,8 +310,8 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “read”？",
       "options": [
-        "to pay attention to sound",
-        "to show a thought or feeling in words or actions",
+        "to go after or act according to something",
+        "to finish or cause something to finish",
         "to understand written words"
       ],
       "answer": "to understand written words",
@@ -323,10 +323,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“读书”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "read between the lines",
         "read a book",
         "read about",
-        "read aloud",
-        "read between the lines"
+        "read aloud"
       ],
       "answer": "read a book",
       "stage": "T1",
@@ -337,10 +337,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “read” 最直接近义词？",
       "options": [
+        "review",
         "skip",
-        "listen",
-        "express",
-        "review"
+        "follow",
+        "end"
       ],
       "answer": "review",
       "stage": "T2",
@@ -351,10 +351,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “read” 最直接反义词？",
       "options": [
-        "listen",
-        "express",
-        "skip",
-        "review"
+        "review",
+        "follow",
+        "end",
+        "skip"
       ],
       "answer": "skip",
       "stage": "T2",
@@ -365,10 +365,10 @@
       "type": "meaning_choice",
       "prompt": "根据本词卡辨析，哪个词被列为 “read” 的派生词？",
       "options": [
-        "listen",
+        "skip",
+        "follow",
         "reader",
-        "review",
-        "skip"
+        "review"
       ],
       "answer": "reader",
       "stage": "T3",
@@ -403,10 +403,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“阅读有关……的内容”，又符合这个形式线索：完整搭配中使用介词 about？",
       "options": [
+        "read a book",
         "read aloud",
         "read between the lines",
-        "read about",
-        "read a book"
+        "read about"
       ],
       "answer": "read about",
       "stage": "T1",
@@ -417,10 +417,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Read the _____ aloud twice.（中文：把例句大声读两遍。）",
       "options": [
-        "important",
+        "meeting",
+        "most",
         "example",
-        "whole",
-        "idea"
+        "steps"
       ],
       "answer": "example",
       "stage": "T2",
@@ -429,12 +429,12 @@
     {
       "id": "read-v-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“读书”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "用法辨析：哪一项既表示“读书”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "read between the lines",
         "read a book",
         "read about",
-        "read aloud",
-        "read between the lines"
+        "read aloud"
       ],
       "answer": "read a book",
       "stage": "T2",
@@ -443,12 +443,12 @@
     {
       "id": "read-v-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“阅读有关……的内容”，又符合这个形式线索：完整搭配中使用介词 about？",
+      "prompt": "搭配辨析：哪一项既表示“阅读有关……的内容”，又符合这个形式线索：完整搭配中使用介词 about？",
       "options": [
+        "read about",
         "read a book",
         "read aloud",
-        "read between the lines",
-        "read about"
+        "read between the lines"
       ],
       "answer": "read about",
       "stage": "T3",
@@ -541,7 +541,7 @@
   },
   "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.09.07.1",
+  "contentVersion": "2026.09.07.2",
   "reviewed": false,
   "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

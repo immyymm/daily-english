@@ -12,7 +12,7 @@
   ],
   "cocaRankLabel": "v. 第 189 名",
   "learningPriority": {
-    "sequence": 5,
+    "sequence": 46,
     "group": "verb",
     "groupLabel": "动词",
     "groupOrder": 1,
@@ -526,9 +526,9 @@
       "type": "meaning_choice",
       "prompt": "“believe”最核心的中文含义是？",
       "options": [
-        "预期；期待",
-        "处理；应对",
-        "相信；认为"
+        "相信；认为",
+        "理解；明白",
+        "走路；步行；陪同"
       ],
       "answer": "相信；认为",
       "stage": "T0",
@@ -539,9 +539,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “believe”？",
       "options": [
-        "to deal with a situation or task",
-        "to accept that something is true",
-        "to think that something will happen"
+        "to know the meaning or reason for something",
+        "to move on foot or accompany someone on foot",
+        "to accept that something is true"
       ],
       "answer": "to accept that something is true",
       "stage": "T0",
@@ -552,10 +552,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“相信某人或某事”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
       "options": [
-        "believe in someone or something",
         "be believed to be",
         "believe someone or something",
-        "believe that + clause"
+        "believe that + clause",
+        "believe in someone or something"
       ],
       "answer": "believe someone or something",
       "stage": "T1",
@@ -566,10 +566,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “believe” 最直接近义词？",
       "options": [
-        "expect",
         "trust",
         "doubt",
-        "belief"
+        "belief",
+        "understand"
       ],
       "answer": "trust",
       "stage": "T2",
@@ -580,10 +580,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “believe” 最直接反义词？",
       "options": [
-        "doubt",
         "trust",
         "belief",
-        "expect"
+        "understand",
+        "doubt"
       ],
       "answer": "doubt",
       "stage": "T2",
@@ -594,10 +594,10 @@
       "type": "meaning_choice",
       "prompt": "根据本词卡辨析，哪个词被列为 “believe” 的易混词？",
       "options": [
-        "trust",
         "doubt",
-        "expect",
-        "belief"
+        "understand",
+        "belief",
+        "trust"
       ],
       "answer": "belief",
       "stage": "T3",
@@ -632,10 +632,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“相信或认为……”，又符合这个形式线索：使用 that 引导一个主谓完整的从句？",
       "options": [
-        "believe that + clause",
         "believe someone or something",
         "believe in someone or something",
-        "be believed to be"
+        "be believed to be",
+        "believe that + clause"
       ],
       "answer": "believe that + clause",
       "stage": "T1",
@@ -646,10 +646,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：I believe this _____ can work.（中文：我相信这个计划可行。）",
       "options": [
-        "results",
-        "difficult",
-        "excellent",
-        "plan"
+        "work",
+        "message",
+        "plan",
+        "why"
       ],
       "answer": "plan",
       "stage": "T2",
@@ -658,12 +658,12 @@
     {
       "id": "believe-v-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“相信某人的话”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "用法辨析：哪一项既表示“相信某人的话”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "believe in yourself",
         "have reason to believe",
         "believe someone",
-        "believe that"
+        "believe that",
+        "believe in yourself"
       ],
       "answer": "believe someone",
       "stage": "T2",
@@ -672,12 +672,12 @@
     {
       "id": "believe-v-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“相信；认为……”，又符合这个形式线索：使用 that 引导一个主谓完整的从句？",
+      "prompt": "搭配辨析：哪一项既表示“相信；认为……”，又符合这个形式线索：使用 that 引导一个主谓完整的从句？",
       "options": [
-        "have reason to believe",
         "believe that",
         "believe someone",
-        "believe in yourself"
+        "believe in yourself",
+        "have reason to believe"
       ],
       "answer": "believe that",
       "stage": "T3",
@@ -770,7 +770,7 @@
   },
   "detailLevel": "template-curated",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.09.07.1",
+  "contentVersion": "2026.09.07.2",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

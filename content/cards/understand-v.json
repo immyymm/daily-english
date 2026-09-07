@@ -12,7 +12,7 @@
   ],
   "cocaRankLabel": "v. 第 277 名",
   "learningPriority": {
-    "sequence": 9,
+    "sequence": 63,
     "group": "verb",
     "groupLabel": "动词",
     "groupOrder": 1,
@@ -22,11 +22,11 @@
   "syllables": "un·der·stand",
   "partOfSpeech": "v.",
   "frequencyBand": "COCA 高频精选 · v. 第 277 名",
-  "difficulty": "基础",
+  "difficulty": "进阶",
   "tags": [
     "v.",
     "完整词卡",
-    "高频表达"
+    "主动词汇"
   ],
   "coreMemory": {
     "chinese": "理解；明白",
@@ -519,9 +519,9 @@
       "type": "meaning_choice",
       "prompt": "“understand”最核心的中文含义是？",
       "options": [
-        "依赖；取决于",
+        "决定",
         "理解；明白",
-        "建议；表明"
+        "赢；获得；赢得"
       ],
       "answer": "理解；明白",
       "stage": "T0",
@@ -533,8 +533,8 @@
       "prompt": "哪一项英文释义最符合词卡中的 “understand”？",
       "options": [
         "to know the meaning of words, ideas, or actions",
-        "to offer an idea for someone to consider",
-        "to be decided by or need something"
+        "to be successful in a contest or gain something through effort",
+        "to make a choice after thinking"
       ],
       "answer": "to know the meaning of words, ideas, or actions",
       "stage": "T0",
@@ -545,10 +545,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“理解某事”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
       "options": [
-        "understand that + clause",
-        "make yourself understood",
         "understand something",
-        "understand why, how, or what"
+        "understand why, how, or what",
+        "understand that + clause",
+        "make yourself understood"
       ],
       "answer": "understand something",
       "stage": "T1",
@@ -559,10 +559,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “understand” 最直接近义词？",
       "options": [
-        "suggest",
-        "comprehend",
         "misunderstand",
-        "know"
+        "know",
+        "win",
+        "comprehend"
       ],
       "answer": "comprehend",
       "stage": "T2",
@@ -573,10 +573,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “understand” 最直接反义词？",
       "options": [
-        "misunderstand",
-        "comprehend",
         "know",
-        "suggest"
+        "win",
+        "misunderstand",
+        "comprehend"
       ],
       "answer": "misunderstand",
       "stage": "T2",
@@ -587,10 +587,10 @@
       "type": "meaning_choice",
       "prompt": "根据本词卡辨析，哪个词被列为 “understand” 的易混词？",
       "options": [
+        "win",
+        "know",
         "comprehend",
-        "misunderstand",
-        "suggest",
-        "know"
+        "misunderstand"
       ],
       "answer": "know",
       "stage": "T3",
@@ -625,10 +625,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“理解为什么、如何或什么”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "understand why, how, or what",
-        "understand something",
         "understand that + clause",
-        "make yourself understood"
+        "make yourself understood",
+        "understand why, how, or what",
+        "understand something"
       ],
       "answer": "understand why, how, or what",
       "stage": "T1",
@@ -639,10 +639,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：I understand _____ you need more time.（中文：我理解你为什么需要更多时间。）",
       "options": [
-        "reviewing",
-        "situation",
-        "together",
-        "why"
+        "used",
+        "why",
+        "game",
+        "start"
       ],
       "answer": "why",
       "stage": "T2",
@@ -653,10 +653,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“理解为什么”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "understand what someone means",
-        "fully understand",
         "understand why",
-        "understand how"
+        "understand how",
+        "understand what someone means",
+        "fully understand"
       ],
       "answer": "understand why",
       "stage": "T2",
@@ -667,10 +667,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“理解如何……”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "fully understand",
-        "understand how",
         "understand why",
-        "understand what someone means"
+        "understand what someone means",
+        "fully understand",
+        "understand how"
       ],
       "answer": "understand how",
       "stage": "T3",
@@ -763,7 +763,7 @@
   },
   "detailLevel": "template-curated",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.09.07.1",
+  "contentVersion": "2026.09.07.2",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

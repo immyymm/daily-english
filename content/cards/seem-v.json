@@ -12,7 +12,7 @@
   ],
   "cocaRankLabel": "v. 第 181 名",
   "learningPriority": {
-    "sequence": 4,
+    "sequence": 43,
     "group": "verb",
     "groupLabel": "动词",
     "groupOrder": 1,
@@ -71,7 +71,7 @@
         "note": "不定式 to 后接动词原形；不要把不定式和 -ing 形式混合。"
       }
     ],
-    "directSynonym": "appear /əˈpɪr/（出现；显得；来到）",
+    "directSynonym": "appear /əˈpɪr/（出现）",
     "directAntonym": "prove /ˈpruːv/（证明；查验；检验；勘探）",
     "derivatives": "seemingly",
     "example": "The task seems difficult at first.",
@@ -182,7 +182,7 @@
       "word": "appear",
       "phonetic": "/əˈpɪr/",
       "partOfSpeech": "v.",
-      "chinese": "出现；显得；来到",
+      "chinese": "出现",
       "difference": "seem 是本卡核心搭配 “seem to be” 中的中性常用选择；appear 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -213,7 +213,7 @@
           "word": "appear",
           "phonetic": "/əˈpɪr/",
           "partOfSpeech": "v.",
-          "chinese": "出现；显得；来到"
+          "chinese": "出现"
         },
         {
           "word": "prove",
@@ -285,8 +285,8 @@
       "prompt": "“seem”最核心的中文含义是？",
       "options": [
         "似乎；看起来",
-        "提供；提议",
-        "发现"
+        "支付；付出；给予关注",
+        "死亡；消失；停止运转"
       ],
       "answer": "似乎；看起来",
       "stage": "T0",
@@ -297,8 +297,8 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “seem”？",
       "options": [
-        "to say that you are willing to give something",
-        "to find something for the first time",
+        "to give money, attention, or a particular cost",
+        "to stop living, disappear, or stop functioning",
         "to appear to be true"
       ],
       "answer": "to appear to be true",
@@ -310,10 +310,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“似乎是”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "seem to be",
         "seem likely",
         "seem strange",
-        "it seems that",
-        "seem to be"
+        "it seems that"
       ],
       "answer": "seem to be",
       "stage": "T1",
@@ -324,10 +324,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “seem” 最直接近义词？",
       "options": [
-        "offer",
-        "discover",
-        "appear",
-        "prove"
+        "prove",
+        "pay",
+        "die",
+        "appear"
       ],
       "answer": "appear",
       "stage": "T2",
@@ -338,10 +338,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “seem” 最直接反义词？",
       "options": [
-        "discover",
+        "pay",
+        "die",
         "prove",
-        "appear",
-        "offer"
+        "appear"
       ],
       "answer": "prove",
       "stage": "T2",
@@ -352,10 +352,10 @@
       "type": "meaning_choice",
       "prompt": "根据本词卡辨析，哪个词被列为 “seem” 的派生词？",
       "options": [
+        "pay",
         "seemingly",
         "appear",
-        "prove",
-        "offer"
+        "prove"
       ],
       "answer": "seemingly",
       "stage": "T3",
@@ -390,10 +390,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“看起来可能”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "seem strange",
         "it seems that",
         "seem likely",
-        "seem to be",
-        "seem strange"
+        "seem to be"
       ],
       "answer": "seem likely",
       "stage": "T1",
@@ -404,10 +404,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：The task seems _____ at first.（中文：这个任务起初看起来很难。）",
       "options": [
+        "reviewing",
         "difficult",
-        "help",
-        "better",
-        "meets"
+        "books",
+        "preventable"
       ],
       "answer": "difficult",
       "stage": "T2",
@@ -416,12 +416,12 @@
     {
       "id": "seem-v-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“似乎是”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "搭配辨析：哪一项既表示“似乎是”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "seem to be",
         "seem likely",
         "seem strange",
-        "it seems that",
-        "seem to be"
+        "it seems that"
       ],
       "answer": "seem to be",
       "stage": "T2",
@@ -430,12 +430,12 @@
     {
       "id": "seem-v-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“看起来可能”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "用法辨析：哪一项既表示“看起来可能”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "seem to be",
         "seem strange",
         "it seems that",
-        "seem likely",
-        "seem to be"
+        "seem likely"
       ],
       "answer": "seem likely",
       "stage": "T3",
@@ -528,7 +528,7 @@
   },
   "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.09.07.1",
+  "contentVersion": "2026.09.07.2",
   "reviewed": false,
   "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

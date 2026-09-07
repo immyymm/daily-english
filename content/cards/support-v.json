@@ -18,7 +18,7 @@
   ],
   "cocaRankLabel": "v. 第 486 名；n. 第 634 名",
   "learningPriority": {
-    "sequence": 27,
+    "sequence": 112,
     "group": "verb",
     "groupLabel": "动词",
     "groupOrder": 1,
@@ -28,11 +28,11 @@
   "syllables": "sup·port",
   "partOfSpeech": "v. / n.",
   "frequencyBand": "COCA 高频精选 · v. 第 486 名；n. 第 634 名",
-  "difficulty": "基础",
+  "difficulty": "应用",
   "tags": [
     "v.",
     "完整词卡",
-    "高频表达"
+    "主动词汇"
   ],
   "coreMemory": {
     "chinese": "支持；支撑",
@@ -532,9 +532,9 @@
       "type": "meaning_choice",
       "prompt": "“support”最核心的中文含义是？",
       "options": [
-        "想法；主意",
         "支持；支撑",
-        "影响"
+        "分享；共同拥有",
+        "去；前往；进展"
       ],
       "answer": "支持；支撑",
       "stage": "T0",
@@ -545,9 +545,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “support”？",
       "options": [
-        "to help or encourage a person, idea, or activity",
-        "to cause a change in someone or something",
-        "a thought or suggestion"
+        "to give part of something to others",
+        "to move or travel somewhere, or develop in a particular way",
+        "to help or encourage a person, idea, or activity"
       ],
       "answer": "to help or encourage a person, idea, or activity",
       "stage": "T0",
@@ -558,10 +558,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“支持某人或某事”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
       "options": [
-        "support someone or something",
         "support someone in doing something",
         "support a claim with evidence",
-        "provide support for something"
+        "provide support for something",
+        "support someone or something"
       ],
       "answer": "support someone or something",
       "stage": "T1",
@@ -572,10 +572,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “support” 最直接近义词？",
       "options": [
-        "oppose",
         "suppose",
-        "affect",
-        "assist"
+        "share",
+        "assist",
+        "oppose"
       ],
       "answer": "assist",
       "stage": "T2",
@@ -586,10 +586,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “support” 最直接反义词？",
       "options": [
-        "suppose",
-        "affect",
+        "share",
         "oppose",
-        "assist"
+        "assist",
+        "suppose"
       ],
       "answer": "oppose",
       "stage": "T2",
@@ -600,10 +600,10 @@
       "type": "meaning_choice",
       "prompt": "根据本词卡辨析，哪个词被列为 “support” 的易混词？",
       "options": [
-        "affect",
         "suppose",
         "assist",
-        "oppose"
+        "oppose",
+        "share"
       ],
       "answer": "suppose",
       "stage": "T3",
@@ -638,10 +638,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“支持某人做某事”，又符合这个形式线索：目标词后的 doing 表示要换成符合语境的动词 -ing 形式？",
       "options": [
-        "support a claim with evidence",
         "provide support for something",
         "support someone in doing something",
-        "support someone or something"
+        "support someone or something",
+        "support a claim with evidence"
       ],
       "answer": "support someone in doing something",
       "stage": "T1",
@@ -652,10 +652,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Her family supported her _____ to study abroad.（中文：她的家人支持她出国学习的决定。）",
       "options": [
-        "positive",
         "decision",
-        "memory",
-        "weekend"
+        "useful",
+        "work",
+        "see"
       ],
       "answer": "decision",
       "stage": "T2",
@@ -664,12 +664,12 @@
     {
       "id": "support-v-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“支持某人做某事”，又符合这个形式线索：目标词后的 doing 表示要换成符合语境的动词 -ing 形式？",
+      "prompt": "用法辨析：哪一项既表示“支持某人做某事”，又符合这个形式线索：目标词后的 doing 表示要换成符合语境的动词 -ing 形式？",
       "options": [
-        "support someone in doing",
         "support a decision",
         "support a claim with evidence",
-        "provide support for"
+        "provide support for",
+        "support someone in doing"
       ],
       "answer": "support someone in doing",
       "stage": "T2",
@@ -678,12 +678,12 @@
     {
       "id": "support-v-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“支持一项决定”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "搭配辨析：哪一项既表示“支持一项决定”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "support someone in doing",
         "support a claim with evidence",
         "provide support for",
-        "support a decision"
+        "support a decision",
+        "support someone in doing"
       ],
       "answer": "support a decision",
       "stage": "T3",
@@ -776,7 +776,7 @@
   },
   "detailLevel": "template-curated",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.09.07.1",
+  "contentVersion": "2026.09.07.2",
   "reviewed": true,
   "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }
