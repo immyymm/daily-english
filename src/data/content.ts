@@ -24,6 +24,6 @@ export async function loadContent(): Promise<ContentBundle> {
 
 export function cardsForStudyDay(cards: WordCard[], studyDay: number): WordCard[] {
   const normalizedDay = Math.max(1, studyDay);
-  const dayInCycle = (normalizedDay - 1) % 30;
-  return cards.slice(dayInCycle * 5, dayInCycle * 5 + 5);
+  const start = (normalizedDay - 1) * 5;
+  return cards.slice(start, start + 5);
 }

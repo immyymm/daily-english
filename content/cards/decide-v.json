@@ -11,6 +11,13 @@
     }
   ],
   "cocaRankLabel": "v. 第 468 名",
+  "learningPriority": {
+    "sequence": 25,
+    "group": "verb",
+    "groupLabel": "动词",
+    "groupOrder": 1,
+    "primaryCocaRank": 468
+  },
   "phonetic": "/dɪˈsaɪd/",
   "syllables": "decide（约 2 音节）",
   "partOfSpeech": "v.",
@@ -18,7 +25,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "模板结构版",
+    "完整词卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -64,9 +71,9 @@
         "note": "不定式 to 后接动词原形；不要把不定式和 -ing 形式混合。"
       }
     ],
-    "directSynonym": "determine /dəˈtɝːmən/（与“决定”意义接近）",
-    "directAntonym": "hesitate /ˈhɛzəˌteɪt/（与“决定”意义相反）",
-    "derivatives": "decision",
+    "directSynonym": "determine /dəˈtɝːmən/（决定；决心）",
+    "directAntonym": "hesitate /ˈhɛzəˌteɪt/（犹豫；迟疑；踌躇；支吾）",
+    "derivatives": "decision · decisive",
     "example": "I decided to start with five words a day.",
     "exampleChinese": "我决定从每天五个单词开始。"
   },
@@ -185,7 +192,7 @@
       "word": "determine",
       "phonetic": "/dəˈtɝːmən/",
       "partOfSpeech": "v.",
-      "chinese": "与“决定”意义接近",
+      "chinese": "决定；决心",
       "difference": "decide 是本卡核心搭配 “decide to do something” 中的中性常用选择；determine 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -194,7 +201,7 @@
       "word": "hesitate",
       "phonetic": "/ˈhɛzəˌteɪt/",
       "partOfSpeech": "v.",
-      "chinese": "与“决定”意义相反",
+      "chinese": "犹豫；迟疑；踌躇；支吾",
       "usage": "在本卡核心义下与 decide 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
@@ -204,7 +211,14 @@
       "phonetic": "/dɪˈsɪʒən/",
       "partOfSpeech": "n.",
       "chinese": "决定",
-      "note": "与 decide 同属常用词族；注意两者词性和句中位置不同。"
+      "note": "这是 decide 的常用词族成员；请按上方词性放到句子的正确位置。"
+    },
+    {
+      "word": "decisive",
+      "phonetic": "/dɪˈsaɪsɪv/",
+      "partOfSpeech": "adj.",
+      "chinese": "决定性的；坚定的；果断的",
+      "note": "这是 decide 的常用词族成员；请按上方词性放到句子的正确位置。"
     }
   ],
   "confusables": [],
@@ -216,13 +230,13 @@
           "word": "determine",
           "phonetic": "/dəˈtɝːmən/",
           "partOfSpeech": "v.",
-          "chinese": "与“决定”意义接近"
+          "chinese": "决定；决心"
         },
         {
           "word": "hesitate",
           "phonetic": "/ˈhɛzəˌteɪt/",
           "partOfSpeech": "v.",
-          "chinese": "与“决定”意义相反"
+          "chinese": "犹豫；迟疑；踌躇；支吾"
         }
       ]
     },
@@ -234,6 +248,12 @@
           "phonetic": "/dɪˈsɪʒən/",
           "partOfSpeech": "n.",
           "chinese": "决定"
+        },
+        {
+          "word": "decisive",
+          "phonetic": "/dɪˈsaɪsɪv/",
+          "partOfSpeech": "adj.",
+          "chinese": "决定性的；坚定的；果断的"
         }
       ]
     }
@@ -288,8 +308,8 @@
       "prompt": "“decide”最核心的中文含义是？",
       "options": [
         "决定",
-        "意识到；实现",
-        "注意力；关注"
+        "避免",
+        "学习；研究"
       ],
       "answer": "决定",
       "stage": "T0",
@@ -300,8 +320,8 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “decide”？",
       "options": [
-        "to suddenly understand something clearly",
-        "the act of carefully noticing something",
+        "to keep away from something",
+        "to learn about a subject carefully",
         "to make a choice after thinking"
       ],
       "answer": "to make a choice after thinking",
@@ -327,10 +347,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “decide” 最直接近义词？",
       "options": [
-        "attention",
+        "study",
         "determine",
         "hesitate",
-        "realize"
+        "avoid"
       ],
       "answer": "determine",
       "stage": "T2",
@@ -343,8 +363,8 @@
       "options": [
         "hesitate",
         "determine",
-        "realize",
-        "attention"
+        "avoid",
+        "study"
       ],
       "answer": "hesitate",
       "stage": "T2",
@@ -357,7 +377,7 @@
       "options": [
         "determine",
         "hesitate",
-        "realize",
+        "avoid",
         "decision"
       ],
       "answer": "decision",
@@ -407,9 +427,9 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：I decided to _____ with five words a day.（中文：我决定从每天五个单词开始。）",
       "options": [
-        "used",
+        "translating",
+        "English",
         "preposition",
-        "point",
         "start"
       ],
       "answer": "start",
@@ -529,9 +549,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

@@ -17,14 +17,21 @@
     }
   ],
   "cocaRankLabel": "adj. 第 573 名；v. 第 1869 名",
+  "learningPriority": {
+    "sequence": 113,
+    "group": "adjective",
+    "groupLabel": "形容词",
+    "groupOrder": 3,
+    "primaryCocaRank": 573
+  },
   "phonetic": "/klɪr/",
   "syllables": "clear（单音节）",
   "partOfSpeech": "adj. / v.",
   "frequencyBand": "COCA 高频精选 · adj. 第 573 名；v. 第 1869 名",
-  "difficulty": "进阶",
+  "difficulty": "应用",
   "tags": [
     "adj.",
-    "模板结构版",
+    "完整词卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -70,9 +77,9 @@
         "note": "较长形容词通常用 more 构成比较级，不重复加 -er。"
       }
     ],
-    "directSynonym": "obvious /ˈɑbviːəs/（与“清楚的”意义接近）",
-    "directAntonym": "unclear /əˈnklɪr/（与“清楚的”意义相反）",
-    "derivatives": "clearly",
+    "directSynonym": "obvious /ˈɑbviːəs/（明显的；明白的；显然的；平淡无奇的）",
+    "directAntonym": "unclear /əˈnklɪr/（不易了解的；不清楚的；含混的）",
+    "derivatives": "clearly · clarity",
     "example": "Please make your main point clear.",
     "exampleChinese": "请把你的主要观点说清楚。"
   },
@@ -187,8 +194,8 @@
     {
       "word": "obvious",
       "phonetic": "/ˈɑbviːəs/",
-      "partOfSpeech": "adj. / v.",
-      "chinese": "与“清楚的”意义接近",
+      "partOfSpeech": "adj.",
+      "chinese": "明显的；明白的；显然的；平淡无奇的",
       "difference": "clear 是本卡核心搭配 “make something clear” 中的中性常用选择；obvious 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -196,8 +203,8 @@
     {
       "word": "unclear",
       "phonetic": "/əˈnklɪr/",
-      "partOfSpeech": "adj. / v.",
-      "chinese": "与“清楚的”意义相反",
+      "partOfSpeech": "adj.",
+      "chinese": "不易了解的；不清楚的；含混的",
       "usage": "在本卡核心义下与 clear 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
@@ -207,7 +214,14 @@
       "phonetic": "/ˈklɪrliː/",
       "partOfSpeech": "adv.",
       "chinese": "清楚地",
-      "note": "与 clear 同属常用词族；注意两者词性和句中位置不同。"
+      "note": "这是 clear 的常用词族成员；请按上方词性放到句子的正确位置。"
+    },
+    {
+      "word": "clarity",
+      "phonetic": "/ˈklɛrətiː/",
+      "partOfSpeech": "n.",
+      "chinese": "清楚；明晰",
+      "note": "这是 clear 的常用词族成员；请按上方词性放到句子的正确位置。"
     }
   ],
   "confusables": [],
@@ -218,14 +232,14 @@
         {
           "word": "obvious",
           "phonetic": "/ˈɑbviːəs/",
-          "partOfSpeech": "adj. / v.",
-          "chinese": "与“清楚的”意义接近"
+          "partOfSpeech": "adj.",
+          "chinese": "明显的；明白的；显然的；平淡无奇的"
         },
         {
           "word": "unclear",
           "phonetic": "/əˈnklɪr/",
-          "partOfSpeech": "adj. / v.",
-          "chinese": "与“清楚的”意义相反"
+          "partOfSpeech": "adj.",
+          "chinese": "不易了解的；不清楚的；含混的"
         }
       ]
     },
@@ -237,6 +251,12 @@
           "phonetic": "/ˈklɪrli/",
           "partOfSpeech": "adv.",
           "chinese": "清楚地"
+        },
+        {
+          "word": "clarity",
+          "phonetic": "/ˈklɛrətiː/",
+          "partOfSpeech": "n.",
+          "chinese": "清楚；明晰"
         }
       ]
     }
@@ -285,8 +305,8 @@
       "type": "meaning_choice",
       "prompt": "“clear”最核心的中文含义是？",
       "options": [
-        "简单地；仅仅",
-        "问题；难题",
+        "有耐心的；病人",
+        "写；写作",
         "清楚的；清除"
       ],
       "answer": "清楚的；清除",
@@ -298,9 +318,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “clear”？",
       "options": [
-        "a situation that needs a solution",
+        "to form words on a surface or compose text",
         "easy to understand or see",
-        "in an easy or plain way"
+        "able to wait calmly"
       ],
       "answer": "easy to understand or see",
       "stage": "T0",
@@ -311,10 +331,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“把某事说清楚”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
       "options": [
-        "clear to someone",
         "clear explanation",
         "clear the table",
-        "make something clear"
+        "make something clear",
+        "clear to someone"
       ],
       "answer": "make something clear",
       "stage": "T1",
@@ -325,10 +345,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “clear” 最直接近义词？",
       "options": [
-        "simply",
-        "problem",
+        "write",
         "obvious",
-        "unclear"
+        "unclear",
+        "patient"
       ],
       "answer": "obvious",
       "stage": "T2",
@@ -339,10 +359,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “clear” 最直接反义词？",
       "options": [
-        "problem",
         "unclear",
         "obvious",
-        "simply"
+        "patient",
+        "write"
       ],
       "answer": "unclear",
       "stage": "T2",
@@ -353,10 +373,10 @@
       "type": "meaning_choice",
       "prompt": "根据本词卡辨析，哪个词被列为 “clear” 的派生词？",
       "options": [
-        "clearly",
         "obvious",
         "unclear",
-        "simply"
+        "patient",
+        "clearly"
       ],
       "answer": "clearly",
       "stage": "T3",
@@ -391,10 +411,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“对某人来说清楚”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "clear the table",
         "clear to someone",
         "make something clear",
-        "clear explanation"
+        "clear explanation",
+        "clear the table"
       ],
       "answer": "clear to someone",
       "stage": "T1",
@@ -405,10 +425,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Please make your main _____ clear.（中文：请把你的主要观点说清楚。）",
       "options": [
-        "point",
-        "put",
-        "solved",
-        "meaningful"
+        "yourself",
+        "down",
+        "phrase",
+        "point"
       ],
       "answer": "point",
       "stage": "T2",
@@ -417,12 +437,12 @@
     {
       "id": "clear-adj-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“把某事说清楚”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
+      "prompt": "搭配辨析：哪一项既表示“把某事说清楚”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
       "options": [
-        "clear to someone",
         "clear explanation",
         "clear the table",
-        "make something clear"
+        "make something clear",
+        "clear to someone"
       ],
       "answer": "make something clear",
       "stage": "T2",
@@ -431,12 +451,12 @@
     {
       "id": "clear-adj-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“对某人来说清楚”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "用法辨析：哪一项既表示“对某人来说清楚”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "clear explanation",
         "clear the table",
         "clear to someone",
-        "make something clear"
+        "make something clear",
+        "clear explanation"
       ],
       "answer": "clear to someone",
       "stage": "T3",
@@ -527,9 +547,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

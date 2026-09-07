@@ -11,14 +11,21 @@
     }
   ],
   "cocaRankLabel": "n. 第 254 名",
+  "learningPriority": {
+    "sequence": 66,
+    "group": "noun",
+    "groupLabel": "名词",
+    "groupOrder": 2,
+    "primaryCocaRank": 254
+  },
   "phonetic": "/ˈbɪznəs/",
   "syllables": "business（约 3 音节）",
   "partOfSpeech": "n.",
   "frequencyBand": "COCA 高频精选 · n. 第 254 名",
-  "difficulty": "应用",
+  "difficulty": "进阶",
   "tags": [
     "n.",
-    "模板结构版",
+    "完整词卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -64,9 +71,9 @@
         "note": "不要只按中文逐字替换；优先把本卡高频搭配作为完整句块记忆。"
       }
     ],
-    "directSynonym": "enterprise /ˈɛntɚˌpraɪz/（与“商业”意义接近）",
-    "directAntonym": "leisure /ˈlɛʒɚ/（与“商业”意义相反）",
-    "derivatives": "本词暂无需额外强记的高频派生词",
+    "directSynonym": "enterprise /ˈɛntɚˌpraɪz/（企业；事业心；进取心；干事业）",
+    "directAntonym": "leisure /ˈlɛʒɚ/（空闲；闲暇；悠闲；空闲的）",
+    "derivatives": "businesslike",
     "example": "She runs a small online business.",
     "exampleChinese": "她经营一家小型网络企业。"
   },
@@ -175,7 +182,7 @@
       "word": "enterprise",
       "phonetic": "/ˈɛntɚˌpraɪz/",
       "partOfSpeech": "n.",
-      "chinese": "与“商业”意义接近",
+      "chinese": "企业；事业心；进取心；干事业",
       "difference": "business 是本卡核心搭配 “run a business” 中的中性常用选择；enterprise 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -183,12 +190,20 @@
     {
       "word": "leisure",
       "phonetic": "/ˈlɛʒɚ/",
-      "partOfSpeech": "n.",
-      "chinese": "与“商业”意义相反",
+      "partOfSpeech": "n. / adj.",
+      "chinese": "空闲；闲暇；悠闲；空闲的",
       "usage": "在本卡核心义下与 business 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
-  "derivatives": [],
+  "derivatives": [
+    {
+      "word": "businesslike",
+      "phonetic": "/ˈbɪznɪˌslaɪk/",
+      "partOfSpeech": "adj.",
+      "chinese": "有条理的；有效率的",
+      "note": "这是 business 的常用词族成员；请按上方词性放到句子的正确位置。"
+    }
+  ],
   "confusables": [],
   "relatedVocabulary": [
     {
@@ -198,13 +213,24 @@
           "word": "enterprise",
           "phonetic": "/ˈɛntɚˌpraɪz/",
           "partOfSpeech": "n.",
-          "chinese": "与“商业”意义接近"
+          "chinese": "企业；事业心；进取心；干事业"
         },
         {
           "word": "leisure",
           "phonetic": "/ˈlɛʒɚ/",
-          "partOfSpeech": "n.",
-          "chinese": "与“商业”意义相反"
+          "partOfSpeech": "n. / adj.",
+          "chinese": "空闲；闲暇；悠闲；空闲的"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "businesslike",
+          "phonetic": "/ˈbɪznɪˌslaɪk/",
+          "partOfSpeech": "adj.",
+          "chinese": "有条理的；有效率的"
         }
       ]
     }
@@ -258,9 +284,9 @@
       "type": "meaning_choice",
       "prompt": "“business”最核心的中文含义是？",
       "options": [
-        "决定",
+        "习惯",
         "商业；事务",
-        "技能；技巧"
+        "价值；重视"
       ],
       "answer": "商业；事务",
       "stage": "T0",
@@ -272,8 +298,8 @@
       "prompt": "哪一项英文释义最符合词卡中的 “business”？",
       "options": [
         "work involving buying, selling, or services",
-        "an ability learned through practice",
-        "to make a choice after thinking"
+        "the importance or usefulness of something",
+        "something you do regularly"
       ],
       "answer": "work involving buying, selling, or services",
       "stage": "T0",
@@ -284,10 +310,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“经营企业”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "do business with",
-        "small business",
         "business plan",
-        "run a business"
+        "run a business",
+        "do business with",
+        "small business"
       ],
       "answer": "run a business",
       "stage": "T1",
@@ -298,10 +324,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “business” 最直接近义词？",
       "options": [
-        "skill",
-        "decide",
         "enterprise",
-        "leisure"
+        "leisure",
+        "value",
+        "habit"
       ],
       "answer": "enterprise",
       "stage": "T2",
@@ -312,10 +338,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “business” 最直接反义词？",
       "options": [
-        "decide",
-        "leisure",
         "enterprise",
-        "skill"
+        "value",
+        "habit",
+        "leisure"
       ],
       "answer": "leisure",
       "stage": "T2",
@@ -324,14 +350,14 @@
     {
       "id": "business-n-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “business” 的相关近义词？",
+      "prompt": "根据本词卡辨析，哪个词被列为 “business” 的派生词？",
       "options": [
-        "enterprise",
         "leisure",
-        "skill",
-        "decide"
+        "value",
+        "businesslike",
+        "enterprise"
       ],
-      "answer": "enterprise",
+      "answer": "businesslike",
       "stage": "T3",
       "ai": false
     },
@@ -364,10 +390,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“与……做生意”，又符合这个形式线索：完整搭配中使用介词 with？",
       "options": [
-        "business plan",
-        "do business with",
         "run a business",
-        "small business"
+        "small business",
+        "business plan",
+        "do business with"
       ],
       "answer": "do business with",
       "stage": "T1",
@@ -378,10 +404,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：She runs a small _____ business.（中文：她经营一家小型网络企业。）",
       "options": [
+        "became",
+        "requires",
         "online",
-        "practice",
-        "start",
-        "problem"
+        "honest"
       ],
       "answer": "online",
       "stage": "T2",
@@ -392,10 +418,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“经营企业”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "do business with",
-        "small business",
         "business plan",
-        "run a business"
+        "run a business",
+        "do business with",
+        "small business"
       ],
       "answer": "run a business",
       "stage": "T2",
@@ -406,10 +432,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“与……做生意”，又符合这个形式线索：完整搭配中使用介词 with？",
       "options": [
-        "small business",
-        "business plan",
         "do business with",
-        "run a business"
+        "run a business",
+        "small business",
+        "business plan"
       ],
       "answer": "do business with",
       "stage": "T3",
@@ -500,9 +526,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

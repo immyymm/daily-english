@@ -11,6 +11,13 @@
     }
   ],
   "cocaRankLabel": "v. 第 328 名",
+  "learningPriority": {
+    "sequence": 13,
+    "group": "verb",
+    "groupLabel": "动词",
+    "groupOrder": 1,
+    "primaryCocaRank": 328
+  },
   "phonetic": "/ɪnˈkluːd/",
   "syllables": "in·clude",
   "partOfSpeech": "v.",
@@ -18,7 +25,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "人工精校",
+    "完整词卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -513,8 +520,8 @@
       "prompt": "“include”最核心的中文含义是？",
       "options": [
         "包括；包含",
-        "建议；表明",
-        "原因；推理"
+        "解释；说明",
+        "家庭；家人"
       ],
       "answer": "包括；包含",
       "stage": "T0",
@@ -525,8 +532,8 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “include”？",
       "options": [
-        "to offer an idea for someone to consider",
-        "a cause or explanation for something",
+        "to make something clear",
+        "a group of related people",
         "to have someone or something as part of a group, set, or whole"
       ],
       "answer": "to have someone or something as part of a group, set, or whole",
@@ -538,10 +545,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“包括某物”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
       "options": [
+        "be included in something",
         "including but not limited to",
         "include something",
-        "include someone in something",
-        "be included in something"
+        "include someone in something"
       ],
       "answer": "include something",
       "stage": "T1",
@@ -552,10 +559,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “include” 最直接近义词？",
       "options": [
+        "family",
         "contain",
         "exclude",
-        "suggest",
-        "reason"
+        "explain"
       ],
       "answer": "contain",
       "stage": "T2",
@@ -566,10 +573,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “include” 最直接反义词？",
       "options": [
+        "exclude",
         "contain",
-        "suggest",
-        "reason",
-        "exclude"
+        "explain",
+        "family"
       ],
       "answer": "exclude",
       "stage": "T2",
@@ -580,10 +587,10 @@
       "type": "meaning_choice",
       "prompt": "根据本词卡辨析，哪个词被列为 “include” 的易混词？",
       "options": [
-        "suggest",
-        "reason",
-        "contain",
-        "exclude"
+        "exclude",
+        "explain",
+        "family",
+        "contain"
       ],
       "answer": "contain",
       "stage": "T3",
@@ -618,10 +625,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“让某人参与某事；把某人包括在内”，又符合这个形式线索：完整搭配中使用介词 in？",
       "options": [
+        "include someone in something",
         "include something",
         "be included in something",
-        "including but not limited to",
-        "include someone in something"
+        "including but not limited to"
       ],
       "answer": "include someone in something",
       "stage": "T1",
@@ -632,10 +639,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：The price includes _____ and Wi-Fi.（中文：价格包括早餐和无线网络。）",
       "options": [
-        "choice",
-        "practice",
-        "breakfast",
-        "reviewing"
+        "phrase",
+        "supports",
+        "life",
+        "breakfast"
       ],
       "answer": "breakfast",
       "stage": "T2",
@@ -644,12 +651,12 @@
     {
       "id": "include-v-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“包括某物”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
+      "prompt": "搭配辨析：哪一项既表示“包括某物”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
       "options": [
+        "be included in",
         "include information about",
         "include something",
-        "include someone in something",
-        "be included in"
+        "include someone in something"
       ],
       "answer": "include something",
       "stage": "T2",
@@ -658,12 +665,12 @@
     {
       "id": "include-v-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“让某人参与某事”，又符合这个形式线索：完整搭配中使用介词 in？",
+      "prompt": "用法辨析：哪一项既表示“让某人参与某事”，又符合这个形式线索：完整搭配中使用介词 in？",
       "options": [
+        "include information about",
         "include someone in something",
         "include something",
-        "be included in",
-        "include information about"
+        "be included in"
       ],
       "answer": "include someone in something",
       "stage": "T3",
@@ -756,7 +763,7 @@
   },
   "detailLevel": "template-curated",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": true,
-  "sourceNote": "从用户提供的 COCA 词表筛选；本卡依照用户词卡模板人工精校；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

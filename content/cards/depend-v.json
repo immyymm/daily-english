@@ -11,15 +11,22 @@
     }
   ],
   "cocaRankLabel": "v. 第 1604 名",
+  "learningPriority": {
+    "sequence": 52,
+    "group": "verb",
+    "groupLabel": "动词",
+    "groupOrder": 1,
+    "primaryCocaRank": 1604
+  },
   "phonetic": "/dɪˈpend/",
   "syllables": "depend（约 2 音节）",
   "partOfSpeech": "v.",
   "frequencyBand": "COCA 高频精选 · v. 第 1604 名",
-  "difficulty": "基础",
+  "difficulty": "进阶",
   "tags": [
     "v.",
-    "模板结构版",
-    "高频表达"
+    "完整词卡",
+    "主动词汇"
   ],
   "coreMemory": {
     "chinese": "依赖；取决于",
@@ -64,9 +71,9 @@
         "note": "不定式 to 后接动词原形；不要把不定式和 -ing 形式混合。"
       }
     ],
-    "directSynonym": "rely /rɪˈlaɪ/（与“依赖”意义接近）",
-    "directAntonym": "be independent /ˈbiː ˌɪndɪˈpɛndənt/（与“依赖”意义相反）",
-    "derivatives": "本词暂无需额外强记的高频派生词",
+    "directSynonym": "rely /rɪˈlaɪ/（信赖；依赖；信任）",
+    "directAntonym": "be independent /ˈbiː ˌɪndɪˈpɛndənt/（独立；不依赖他人）",
+    "derivatives": "dependence · dependent · independent",
     "example": "The best choice depends on the situation.",
     "exampleChinese": "最好的选择取决于具体情况。"
   },
@@ -175,7 +182,7 @@
       "word": "rely",
       "phonetic": "/rɪˈlaɪ/",
       "partOfSpeech": "v.",
-      "chinese": "与“依赖”意义接近",
+      "chinese": "信赖；依赖；信任",
       "difference": "depend 是本卡核心搭配 “depend on” 中的中性常用选择；rely 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -183,12 +190,34 @@
     {
       "word": "be independent",
       "phonetic": "/ˈbiː ˌɪndɪˈpɛndənt/",
-      "partOfSpeech": "v.",
-      "chinese": "与“依赖”意义相反",
+      "partOfSpeech": "v. phrase",
+      "chinese": "独立；不依赖他人",
       "usage": "在本卡核心义下与 depend 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
-  "derivatives": [],
+  "derivatives": [
+    {
+      "word": "dependence",
+      "phonetic": "/dɪˈpɛndəns/",
+      "partOfSpeech": "n.",
+      "chinese": "依赖；依存；信赖",
+      "note": "这是 depend 的常用词族成员；请按上方词性放到句子的正确位置。"
+    },
+    {
+      "word": "dependent",
+      "phonetic": "/dɪˈpɛndənt/",
+      "partOfSpeech": "n. / adj.",
+      "chinese": "依赖他人者；依赖的；从属的",
+      "note": "这是 depend 的常用词族成员；请按上方词性放到句子的正确位置。"
+    },
+    {
+      "word": "independent",
+      "phonetic": "/ˌɪndɪˈpɛndənt/",
+      "partOfSpeech": "n. / adj.",
+      "chinese": "独立自主者；无党派者；独立的；有主见的",
+      "note": "这是 depend 的常用词族成员；请按上方词性放到句子的正确位置。"
+    }
+  ],
   "confusables": [],
   "relatedVocabulary": [
     {
@@ -198,13 +227,36 @@
           "word": "rely",
           "phonetic": "/rɪˈlaɪ/",
           "partOfSpeech": "v.",
-          "chinese": "与“依赖”意义接近"
+          "chinese": "信赖；依赖；信任"
         },
         {
           "word": "be independent",
           "phonetic": "/ˈbiː ˌɪndɪˈpɛndənt/",
-          "partOfSpeech": "v.",
-          "chinese": "与“依赖”意义相反"
+          "partOfSpeech": "v. phrase",
+          "chinese": "独立；不依赖他人"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "dependence",
+          "phonetic": "/dɪˈpɛndəns/",
+          "partOfSpeech": "n.",
+          "chinese": "依赖；依存；信赖"
+        },
+        {
+          "word": "dependent",
+          "phonetic": "/dɪˈpɛndənt/",
+          "partOfSpeech": "n. / adj.",
+          "chinese": "依赖他人者；依赖的；从属的"
+        },
+        {
+          "word": "independent",
+          "phonetic": "/ˌɪndɪˈpɛndənt/",
+          "partOfSpeech": "n. / adj.",
+          "chinese": "独立自主者；无党派者；独立的；有主见的"
         }
       ]
     }
@@ -258,9 +310,9 @@
       "type": "meaning_choice",
       "prompt": "“depend”最核心的中文含义是？",
       "options": [
-        "信心；自信",
         "依赖；取决于",
-        "表达"
+        "问题；议题",
+        "语言"
       ],
       "answer": "依赖；取决于",
       "stage": "T0",
@@ -271,9 +323,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “depend”？",
       "options": [
-        "to be decided by or need something",
-        "to show a thought or feeling in words or actions",
-        "belief in your own ability"
+        "an important problem or topic",
+        "a system people use to communicate",
+        "to be decided by or need something"
       ],
       "answer": "to be decided by or need something",
       "stage": "T0",
@@ -284,10 +336,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“取决于；依靠”，又符合这个形式线索：完整搭配中使用介词 on？",
       "options": [
+        "depend heavily on",
         "it depends",
         "depend on whether",
-        "depend on",
-        "depend heavily on"
+        "depend on"
       ],
       "answer": "depend on",
       "stage": "T1",
@@ -298,10 +350,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “depend” 最直接近义词？",
       "options": [
-        "confidence",
+        "issue",
+        "language",
         "rely",
-        "be independent",
-        "express"
+        "be independent"
       ],
       "answer": "rely",
       "stage": "T2",
@@ -312,10 +364,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “depend” 最直接反义词？",
       "options": [
+        "language",
         "be independent",
         "rely",
-        "express",
-        "confidence"
+        "issue"
       ],
       "answer": "be independent",
       "stage": "T2",
@@ -324,14 +376,14 @@
     {
       "id": "depend-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “depend” 的相关近义词？",
+      "prompt": "根据本词卡辨析，哪个词被列为 “depend” 的派生词？",
       "options": [
+        "dependence",
+        "rely",
         "be independent",
-        "express",
-        "confidence",
-        "rely"
+        "issue"
       ],
-      "answer": "rely",
+      "answer": "dependence",
       "stage": "T3",
       "ai": false
     },
@@ -364,10 +416,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“严重依赖”，又符合这个形式线索：完整搭配中使用介词 on？",
       "options": [
+        "depend on whether",
         "depend heavily on",
         "depend on",
-        "it depends",
-        "depend on whether"
+        "it depends"
       ],
       "answer": "depend heavily on",
       "stage": "T1",
@@ -378,10 +430,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：The best choice depends on the _____.（中文：最好的选择取决于具体情况。）",
       "options": [
-        "idea",
-        "build",
-        "yourself",
-        "situation"
+        "situation",
+        "openly",
+        "learning",
+        "mistake"
       ],
       "answer": "situation",
       "stage": "T2",
@@ -390,12 +442,12 @@
     {
       "id": "depend-v-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“取决于；依靠”，又符合这个形式线索：完整搭配中使用介词 on？",
+      "prompt": "用法辨析：哪一项既表示“取决于；依靠”，又符合这个形式线索：完整搭配中使用介词 on？",
       "options": [
+        "depend heavily on",
         "it depends",
         "depend on whether",
-        "depend on",
-        "depend heavily on"
+        "depend on"
       ],
       "answer": "depend on",
       "stage": "T2",
@@ -404,12 +456,12 @@
     {
       "id": "depend-v-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“严重依赖”，又符合这个形式线索：完整搭配中使用介词 on？",
+      "prompt": "搭配辨析：哪一项既表示“严重依赖”，又符合这个形式线索：完整搭配中使用介词 on？",
       "options": [
+        "it depends",
         "depend on whether",
         "depend heavily on",
-        "depend on",
-        "it depends"
+        "depend on"
       ],
       "answer": "depend heavily on",
       "stage": "T3",
@@ -500,9 +552,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

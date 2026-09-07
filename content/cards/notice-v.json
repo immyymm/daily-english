@@ -17,6 +17,13 @@
     }
   ],
   "cocaRankLabel": "v. 第 969 名；n. 第 3270 名",
+  "learningPriority": {
+    "sequence": 43,
+    "group": "verb",
+    "groupLabel": "动词",
+    "groupOrder": 1,
+    "primaryCocaRank": 969
+  },
   "phonetic": "/ˈnoʊtɪs/",
   "syllables": "no·tice",
   "partOfSpeech": "v. / n.",
@@ -24,7 +31,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "人工精校",
+    "完整词卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -518,9 +525,9 @@
       "type": "meaning_choice",
       "prompt": "“notice”最核心的中文含义是？",
       "options": [
-        "似乎；看起来",
-        "更喜欢",
-        "注意到；通知"
+        "注意到；通知",
+        "工作；起作用",
+        "努力"
       ],
       "answer": "注意到；通知",
       "stage": "T0",
@@ -531,9 +538,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “notice”？",
       "options": [
-        "to like one thing more than another",
-        "to see, hear, or become aware of something",
-        "to appear to be true"
+        "activity done for a purpose or job",
+        "physical or mental energy used to do something",
+        "to see, hear, or become aware of something"
       ],
       "answer": "to see, hear, or become aware of something",
       "stage": "T0",
@@ -544,10 +551,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“注意到某事”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
       "options": [
-        "notice someone doing something",
         "notice something",
         "notice that + clause",
-        "notice someone do something"
+        "notice someone do something",
+        "notice someone doing something"
       ],
       "answer": "notice something",
       "stage": "T1",
@@ -558,10 +565,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “notice” 最直接近义词？",
       "options": [
-        "observe",
         "ignore",
         "note",
-        "seem"
+        "work",
+        "observe"
       ],
       "answer": "observe",
       "stage": "T2",
@@ -572,10 +579,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “notice” 最直接反义词？",
       "options": [
-        "observe",
         "note",
-        "seem",
-        "ignore"
+        "work",
+        "ignore",
+        "observe"
       ],
       "answer": "ignore",
       "stage": "T2",
@@ -586,10 +593,10 @@
       "type": "meaning_choice",
       "prompt": "根据本词卡辨析，哪个词被列为 “notice” 的易混词？",
       "options": [
-        "ignore",
-        "seem",
+        "work",
         "note",
-        "observe"
+        "observe",
+        "ignore"
       ],
       "answer": "note",
       "stage": "T3",
@@ -624,10 +631,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“注意到……”，又符合这个形式线索：使用 that 引导一个主谓完整的从句？",
       "options": [
-        "notice something",
         "notice someone do something",
         "notice someone doing something",
-        "notice that + clause"
+        "notice that + clause",
+        "notice something"
       ],
       "answer": "notice that + clause",
       "stage": "T1",
@@ -638,10 +645,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Did you notice a _____ in her voice?（中文：你注意到她声音的变化了吗？）",
       "options": [
-        "walking",
-        "test",
+        "formal",
         "change",
-        "difficult"
+        "pronunciation",
+        "use"
       ],
       "answer": "change",
       "stage": "T2",
@@ -650,12 +657,12 @@
     {
       "id": "notice-v-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“注意到差异”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "搭配辨析：哪一项既表示“注意到差异”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "come to someone’s notice",
         "notice a difference",
         "notice that",
-        "take notice of"
+        "take notice of",
+        "come to someone’s notice"
       ],
       "answer": "notice a difference",
       "stage": "T2",
@@ -664,12 +671,12 @@
     {
       "id": "notice-v-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“注意到……”，又符合这个形式线索：使用 that 引导一个主谓完整的从句？",
+      "prompt": "用法辨析：哪一项既表示“注意到……”，又符合这个形式线索：使用 that 引导一个主谓完整的从句？",
       "options": [
-        "notice that",
         "notice a difference",
         "take notice of",
-        "come to someone’s notice"
+        "come to someone’s notice",
+        "notice that"
       ],
       "answer": "notice that",
       "stage": "T3",
@@ -762,7 +769,7 @@
   },
   "detailLevel": "template-curated",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": true,
-  "sourceNote": "从用户提供的 COCA 词表筛选；本卡依照用户词卡模板人工精校；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

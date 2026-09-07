@@ -17,14 +17,21 @@
     }
   ],
   "cocaRankLabel": "n. 第 653 名；adj. 第 1245 名",
+  "learningPriority": {
+    "sequence": 91,
+    "group": "noun",
+    "groupLabel": "名词",
+    "groupOrder": 2,
+    "primaryCocaRank": 653
+  },
   "phonetic": "/ˈfjuːtʃər/",
   "syllables": "future（约 2 音节）",
   "partOfSpeech": "n. / adj.",
   "frequencyBand": "COCA 高频精选 · n. 第 653 名；adj. 第 1245 名",
-  "difficulty": "应用",
+  "difficulty": "进阶",
   "tags": [
     "n.",
-    "模板结构版",
+    "完整词卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -70,9 +77,9 @@
         "note": "不要只按中文逐字替换；优先把本卡高频搭配作为完整句块记忆。"
       }
     ],
-    "directSynonym": "tomorrow /təˈmɑˌroʊ/（与“未来”意义接近）",
-    "directAntonym": "past /ˈpæst/（与“未来”意义相反）",
-    "derivatives": "本词暂无需额外强记的高频派生词",
+    "directSynonym": "tomorrow /təˈmɑˌroʊ/（明天；未来；未来地）",
+    "directAntonym": "past /ˈpæst/（过去；昔时；往事；早年经历）",
+    "derivatives": "futuristic",
     "example": "This skill will be useful in the future.",
     "exampleChinese": "这项技能将来会很有用。"
   },
@@ -187,8 +194,8 @@
     {
       "word": "tomorrow",
       "phonetic": "/təˈmɑˌroʊ/",
-      "partOfSpeech": "n. / adj.",
-      "chinese": "与“未来”意义接近",
+      "partOfSpeech": "n. / adv.",
+      "chinese": "明天；未来；未来地",
       "difference": "future 是本卡核心搭配 “in the future” 中的中性常用选择；tomorrow 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -196,12 +203,20 @@
     {
       "word": "past",
       "phonetic": "/ˈpæst/",
-      "partOfSpeech": "n. / adj.",
-      "chinese": "与“未来”意义相反",
+      "partOfSpeech": "n. / adj. / prep.",
+      "chinese": "过去；昔时；往事；早年经历",
       "usage": "在本卡核心义下与 future 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
-  "derivatives": [],
+  "derivatives": [
+    {
+      "word": "futuristic",
+      "phonetic": "/ˌfjuːtʃɚˈɪstɪk/",
+      "partOfSpeech": "adj.",
+      "chinese": "未来派的",
+      "note": "这是 future 的常用词族成员；请按上方词性放到句子的正确位置。"
+    }
+  ],
   "confusables": [
     {
       "word": "further",
@@ -218,14 +233,25 @@
         {
           "word": "tomorrow",
           "phonetic": "/təˈmɑˌroʊ/",
-          "partOfSpeech": "n. / adj.",
-          "chinese": "与“未来”意义接近"
+          "partOfSpeech": "n. / adv.",
+          "chinese": "明天；未来；未来地"
         },
         {
           "word": "past",
           "phonetic": "/ˈpæst/",
-          "partOfSpeech": "n. / adj.",
-          "chinese": "与“未来”意义相反"
+          "partOfSpeech": "n. / adj. / prep.",
+          "chinese": "过去；昔时；往事；早年经历"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "futuristic",
+          "phonetic": "/ˌfjuːtʃɚˈɪstɪk/",
+          "partOfSpeech": "adj.",
+          "chinese": "未来派的"
         }
       ]
     }
@@ -279,9 +305,9 @@
       "type": "meaning_choice",
       "prompt": "“future”最核心的中文含义是？",
       "options": [
-        "包括；包含",
-        "选择",
-        "未来；将来的"
+        "未来；将来的",
+        "旅行",
+        "已经"
       ],
       "answer": "未来；将来的",
       "stage": "T0",
@@ -292,9 +318,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “future”？",
       "options": [
-        "to decide which person or thing you want",
-        "the time that has not happened yet",
-        "to have something as part of a whole"
+        "to go from one place to another",
+        "before now or earlier than expected",
+        "the time that has not happened yet"
       ],
       "answer": "the time that has not happened yet",
       "stage": "T0",
@@ -321,7 +347,7 @@
       "options": [
         "past",
         "further",
-        "include",
+        "travel",
         "tomorrow"
       ],
       "answer": "tomorrow",
@@ -334,7 +360,7 @@
       "prompt": "哪个词是词卡中列出的 “future” 最直接反义词？",
       "options": [
         "further",
-        "include",
+        "travel",
         "past",
         "tomorrow"
       ],
@@ -347,7 +373,7 @@
       "type": "meaning_choice",
       "prompt": "根据本词卡辨析，哪个词被列为 “future” 的易混词？",
       "options": [
-        "include",
+        "travel",
         "further",
         "tomorrow",
         "past"
@@ -399,10 +425,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：This skill will be _____ in the future.（中文：这项技能将来会很有用。）",
       "options": [
-        "helps",
+        "students",
         "useful",
-        "breakfast",
-        "most"
+        "abroad",
+        "completed"
       ],
       "answer": "useful",
       "stage": "T2",
@@ -521,9 +547,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

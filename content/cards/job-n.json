@@ -11,14 +11,21 @@
     }
   ],
   "cocaRankLabel": "n. 第 226 名",
+  "learningPriority": {
+    "sequence": 64,
+    "group": "noun",
+    "groupLabel": "名词",
+    "groupOrder": 2,
+    "primaryCocaRank": 226
+  },
   "phonetic": "/dʒɑːb/",
   "syllables": "job（单音节）",
   "partOfSpeech": "n.",
   "frequencyBand": "COCA 高频精选 · n. 第 226 名",
-  "difficulty": "应用",
+  "difficulty": "进阶",
   "tags": [
     "n.",
-    "模板结构版",
+    "完整词卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -64,9 +71,9 @@
         "note": "不要只按中文逐字替换；优先把本卡高频搭配作为完整句块记忆。"
       }
     ],
-    "directSynonym": "position /pəˈzɪʃən/（与“工作”意义接近）",
-    "directAntonym": "unemployment /ˌʌnɪˈmplɔɪmənt/（与“工作”意义相反）",
-    "derivatives": "本词暂无需额外强记的高频派生词",
+    "directSynonym": "position /pəˈzɪʃən/（位置；地位；身分；形势）",
+    "directAntonym": "unemployment /ˌʌnɪˈmplɔɪmənt/（失业；失业人数）",
+    "derivatives": "jobless",
     "example": "You did a good job explaining your opinion.",
     "exampleChinese": "你很好地解释了自己的观点。"
   },
@@ -174,8 +181,8 @@
     {
       "word": "position",
       "phonetic": "/pəˈzɪʃən/",
-      "partOfSpeech": "n.",
-      "chinese": "与“工作”意义接近",
+      "partOfSpeech": "v. / n.",
+      "chinese": "位置；地位；身分；形势",
       "difference": "job 是本卡核心搭配 “do a good job” 中的中性常用选择；position 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -184,11 +191,19 @@
       "word": "unemployment",
       "phonetic": "/ˌʌnɪˈmplɔɪmənt/",
       "partOfSpeech": "n.",
-      "chinese": "与“工作”意义相反",
+      "chinese": "失业；失业人数",
       "usage": "在本卡核心义下与 job 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
-  "derivatives": [],
+  "derivatives": [
+    {
+      "word": "jobless",
+      "phonetic": "/ˈdʒɑbləs/",
+      "partOfSpeech": "adj.",
+      "chinese": "失职的；无职业的",
+      "note": "这是 job 的常用词族成员；请按上方词性放到句子的正确位置。"
+    }
+  ],
   "confusables": [],
   "relatedVocabulary": [
     {
@@ -197,14 +212,25 @@
         {
           "word": "position",
           "phonetic": "/pəˈzɪʃən/",
-          "partOfSpeech": "n.",
-          "chinese": "与“工作”意义接近"
+          "partOfSpeech": "v. / n.",
+          "chinese": "位置；地位；身分；形势"
         },
         {
           "word": "unemployment",
           "phonetic": "/ˌʌnɪˈmplɔɪmənt/",
           "partOfSpeech": "n.",
-          "chinese": "与“工作”意义相反"
+          "chinese": "失业；失业人数"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "jobless",
+          "phonetic": "/ˈdʒɑbləs/",
+          "partOfSpeech": "adj.",
+          "chinese": "失职的；无职业的"
         }
       ]
     }
@@ -258,9 +284,9 @@
       "type": "meaning_choice",
       "prompt": "“job”最核心的中文含义是？",
       "options": [
-        "增加；增长",
         "工作；任务",
-        "相信；认为"
+        "计划",
+        "信心；自信"
       ],
       "answer": "工作；任务",
       "stage": "T0",
@@ -271,9 +297,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “job”？",
       "options": [
-        "paid work or a particular task",
-        "to think that something is true",
-        "to become or make something greater"
+        "a set of actions intended to achieve something",
+        "belief in your own ability",
+        "paid work or a particular task"
       ],
       "answer": "paid work or a particular task",
       "stage": "T0",
@@ -284,10 +310,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“做得好”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "get a job",
         "apply for a job",
         "full-time job",
-        "do a good job",
-        "get a job"
+        "do a good job"
       ],
       "answer": "do a good job",
       "stage": "T1",
@@ -298,10 +324,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “job” 最直接近义词？",
       "options": [
-        "increase",
+        "plan",
+        "confidence",
         "position",
-        "unemployment",
-        "believe"
+        "unemployment"
       ],
       "answer": "position",
       "stage": "T2",
@@ -312,10 +338,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “job” 最直接反义词？",
       "options": [
+        "confidence",
         "unemployment",
         "position",
-        "believe",
-        "increase"
+        "plan"
       ],
       "answer": "unemployment",
       "stage": "T2",
@@ -324,14 +350,14 @@
     {
       "id": "job-n-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “job” 的相关近义词？",
+      "prompt": "根据本词卡辨析，哪个词被列为 “job” 的派生词？",
       "options": [
+        "jobless",
+        "position",
         "unemployment",
-        "believe",
-        "increase",
-        "position"
+        "plan"
       ],
-      "answer": "position",
+      "answer": "jobless",
       "stage": "T3",
       "ai": false
     },
@@ -364,10 +390,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“找到工作”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "full-time job",
         "get a job",
         "do a good job",
-        "apply for a job",
-        "full-time job"
+        "apply for a job"
       ],
       "answer": "get a job",
       "stage": "T1",
@@ -378,10 +404,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：You did a good job _____ your opinion.（中文：你很好地解释了自己的观点。）",
       "options": [
-        "plan",
-        "confidence",
-        "today",
-        "explaining"
+        "explaining",
+        "week",
+        "build",
+        "need"
       ],
       "answer": "explaining",
       "stage": "T2",
@@ -390,12 +416,12 @@
     {
       "id": "job-n-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“做得好”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "用法辨析：哪一项既表示“做得好”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "get a job",
         "apply for a job",
         "full-time job",
-        "do a good job",
-        "get a job"
+        "do a good job"
       ],
       "answer": "do a good job",
       "stage": "T2",
@@ -404,12 +430,12 @@
     {
       "id": "job-n-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“找到工作”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "搭配辨析：哪一项既表示“找到工作”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "apply for a job",
         "full-time job",
         "get a job",
-        "do a good job",
-        "apply for a job"
+        "do a good job"
       ],
       "answer": "get a job",
       "stage": "T3",
@@ -500,9 +526,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

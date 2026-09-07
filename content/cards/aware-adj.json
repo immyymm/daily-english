@@ -11,14 +11,21 @@
     }
   ],
   "cocaRankLabel": "adj. 第 1506 名",
+  "learningPriority": {
+    "sequence": 125,
+    "group": "adjective",
+    "groupLabel": "形容词",
+    "groupOrder": 3,
+    "primaryCocaRank": 1506
+  },
   "phonetic": "/əˈwer/",
   "syllables": "aware（约 2 音节）",
   "partOfSpeech": "adj.",
   "frequencyBand": "COCA 高频精选 · adj. 第 1506 名",
-  "difficulty": "进阶",
+  "difficulty": "应用",
   "tags": [
     "adj.",
-    "模板结构版",
+    "完整词卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -64,9 +71,9 @@
         "note": "较长形容词通常用 more 构成比较级，不重复加 -er。"
       }
     ],
-    "directSynonym": "conscious /ˈkɑnʃəs/（与“意识到的”意义接近）",
-    "directAntonym": "unaware /ˌʌnəˈwɛr/（与“意识到的”意义相反）",
-    "derivatives": "本词暂无需额外强记的高频派生词",
+    "directSynonym": "conscious /ˈkɑnʃəs/（有意识的；知觉的；觉察的）",
+    "directAntonym": "unaware /ˌʌnəˈwɛr/（未认识到的；不知道的）",
+    "derivatives": "awareness · unaware",
     "example": "Be aware of the difference in tone.",
     "exampleChinese": "注意语气上的差异。"
   },
@@ -175,7 +182,7 @@
       "word": "conscious",
       "phonetic": "/ˈkɑnʃəs/",
       "partOfSpeech": "adj.",
-      "chinese": "与“意识到的”意义接近",
+      "chinese": "有意识的；知觉的；觉察的",
       "difference": "aware 是本卡核心搭配 “be aware of” 中的中性常用选择；conscious 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -184,11 +191,26 @@
       "word": "unaware",
       "phonetic": "/ˌʌnəˈwɛr/",
       "partOfSpeech": "adj.",
-      "chinese": "与“意识到的”意义相反",
+      "chinese": "未认识到的；不知道的",
       "usage": "在本卡核心义下与 aware 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
-  "derivatives": [],
+  "derivatives": [
+    {
+      "word": "awareness",
+      "phonetic": "/əˈwɛrnəs/",
+      "partOfSpeech": "n.",
+      "chinese": "意识；认识",
+      "note": "这是 aware 的常用词族成员；请按上方词性放到句子的正确位置。"
+    },
+    {
+      "word": "unaware",
+      "phonetic": "/ˌʌnəˈwɛr/",
+      "partOfSpeech": "adj.",
+      "chinese": "未认识到的；不知道的",
+      "note": "这是 aware 的常用词族成员；请按上方词性放到句子的正确位置。"
+    }
+  ],
   "confusables": [],
   "relatedVocabulary": [
     {
@@ -198,13 +220,30 @@
           "word": "conscious",
           "phonetic": "/ˈkɑnʃəs/",
           "partOfSpeech": "adj.",
-          "chinese": "与“意识到的”意义接近"
+          "chinese": "有意识的；知觉的；觉察的"
         },
         {
           "word": "unaware",
           "phonetic": "/ˌʌnəˈwɛr/",
           "partOfSpeech": "adj.",
-          "chinese": "与“意识到的”意义相反"
+          "chinese": "未认识到的；不知道的"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "awareness",
+          "phonetic": "/əˈwɛrnəs/",
+          "partOfSpeech": "n.",
+          "chinese": "意识；认识"
+        },
+        {
+          "word": "unaware",
+          "phonetic": "/ˌʌnəˈwɛr/",
+          "partOfSpeech": "adj.",
+          "chinese": "未认识到的；不知道的"
         }
       ]
     }
@@ -258,8 +297,8 @@
       "type": "meaning_choice",
       "prompt": "“aware”最核心的中文含义是？",
       "options": [
-        "尤其；特别",
-        "旅行",
+        "简单地；仅仅",
+        "继续",
         "意识到的；知晓的"
       ],
       "answer": "意识到的；知晓的",
@@ -271,9 +310,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “aware”？",
       "options": [
-        "to go from one place to another",
+        "to keep doing something without stopping",
         "knowing that something exists or is true",
-        "more than usual or more than others"
+        "in an easy or plain way"
       ],
       "answer": "knowing that something exists or is true",
       "stage": "T0",
@@ -284,10 +323,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“意识到……”，又符合这个形式线索：完整搭配中使用介词 of？",
       "options": [
+        "fully aware",
         "make someone aware of",
         "be aware of",
-        "become aware that",
-        "fully aware"
+        "become aware that"
       ],
       "answer": "be aware of",
       "stage": "T1",
@@ -298,10 +337,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “aware” 最直接近义词？",
       "options": [
+        "continue",
         "conscious",
         "unaware",
-        "especially",
-        "travel"
+        "simply"
       ],
       "answer": "conscious",
       "stage": "T2",
@@ -312,10 +351,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “aware” 最直接反义词？",
       "options": [
+        "unaware",
         "conscious",
-        "especially",
-        "travel",
-        "unaware"
+        "simply",
+        "continue"
       ],
       "answer": "unaware",
       "stage": "T2",
@@ -324,14 +363,14 @@
     {
       "id": "aware-adj-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “aware” 的相关近义词？",
+      "prompt": "根据本词卡辨析，哪个词被列为 “aware” 的派生词？",
       "options": [
-        "especially",
-        "travel",
         "conscious",
-        "unaware"
+        "unaware",
+        "simply",
+        "awareness"
       ],
-      "answer": "conscious",
+      "answer": "awareness",
       "stage": "T3",
       "ai": false
     },
@@ -364,10 +403,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“开始意识到……”，又符合这个形式线索：使用 that 引导一个主谓完整的从句？",
       "options": [
+        "become aware that",
         "be aware of",
         "fully aware",
-        "make someone aware of",
-        "become aware that"
+        "make someone aware of"
       ],
       "answer": "become aware that",
       "stage": "T1",
@@ -378,10 +417,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Be aware of the _____ in tone.（中文：注意语气上的差异。）",
       "options": [
-        "abroad",
-        "decision",
-        "difference",
-        "useful"
+        "put",
+        "reading",
+        "translating",
+        "difference"
       ],
       "answer": "difference",
       "stage": "T2",
@@ -390,12 +429,12 @@
     {
       "id": "aware-adj-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“意识到……”，又符合这个形式线索：完整搭配中使用介词 of？",
+      "prompt": "搭配辨析：哪一项既表示“意识到……”，又符合这个形式线索：完整搭配中使用介词 of？",
       "options": [
+        "fully aware",
         "make someone aware of",
         "be aware of",
-        "become aware that",
-        "fully aware"
+        "become aware that"
       ],
       "answer": "be aware of",
       "stage": "T2",
@@ -404,12 +443,12 @@
     {
       "id": "aware-adj-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“开始意识到……”，又符合这个形式线索：使用 that 引导一个主谓完整的从句？",
+      "prompt": "用法辨析：哪一项既表示“开始意识到……”，又符合这个形式线索：使用 that 引导一个主谓完整的从句？",
       "options": [
+        "make someone aware of",
         "become aware that",
         "be aware of",
-        "fully aware",
-        "make someone aware of"
+        "fully aware"
       ],
       "answer": "become aware that",
       "stage": "T3",
@@ -500,9 +539,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

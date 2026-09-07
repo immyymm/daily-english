@@ -17,6 +17,13 @@
     }
   ],
   "cocaRankLabel": "v. 第 701 名；n. 第 1340 名",
+  "learningPriority": {
+    "sequence": 36,
+    "group": "verb",
+    "groupLabel": "动词",
+    "groupOrder": 1,
+    "primaryCocaRank": 701
+  },
   "phonetic": "/ɪnˈkriːs/",
   "syllables": "increase（约 2 音节）",
   "partOfSpeech": "v. / n.",
@@ -24,7 +31,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "模板结构版",
+    "完整词卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -70,9 +77,9 @@
         "note": "不定式 to 后接动词原形；不要把不定式和 -ing 形式混合。"
       }
     ],
-    "directSynonym": "raise /ˈreɪz/（与“增加”意义接近）",
-    "directAntonym": "decrease /dɪˈkriːs/（与“增加”意义相反）",
-    "derivatives": "本词暂无需额外强记的高频派生词",
+    "directSynonym": "raise /ˈreɪz/（上升；高地；增高；升起）",
+    "directAntonym": "decrease /dɪˈkriːs/（减少；减少量）",
+    "derivatives": "increasing",
     "example": "Regular speaking practice increases confidence.",
     "exampleChinese": "经常练习口语会增强信心。"
   },
@@ -198,7 +205,7 @@
       "word": "raise",
       "phonetic": "/ˈreɪz/",
       "partOfSpeech": "v. / n.",
-      "chinese": "与“增加”意义接近",
+      "chinese": "上升；高地；增高；升起",
       "difference": "increase 是本卡核心搭配 “increase confidence” 中的中性常用选择；raise 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -207,11 +214,19 @@
       "word": "decrease",
       "phonetic": "/dɪˈkriːs/",
       "partOfSpeech": "v. / n.",
-      "chinese": "与“增加”意义相反",
+      "chinese": "减少；减少量",
       "usage": "在本卡核心义下与 increase 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
-  "derivatives": [],
+  "derivatives": [
+    {
+      "word": "increasing",
+      "phonetic": "/ˌɪˈnkriːsɪŋ/",
+      "partOfSpeech": "adj.",
+      "chinese": "不断增加的",
+      "note": "这是 increase 的常用词族成员；请按上方词性放到句子的正确位置。"
+    }
+  ],
   "confusables": [],
   "relatedVocabulary": [
     {
@@ -221,13 +236,24 @@
           "word": "raise",
           "phonetic": "/ˈreɪz/",
           "partOfSpeech": "v. / n.",
-          "chinese": "与“增加”意义接近"
+          "chinese": "上升；高地；增高；升起"
         },
         {
           "word": "decrease",
           "phonetic": "/dɪˈkriːs/",
           "partOfSpeech": "v. / n.",
-          "chinese": "与“增加”意义相反"
+          "chinese": "减少；减少量"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "increasing",
+          "phonetic": "/ˌɪˈnkriːsɪŋ/",
+          "partOfSpeech": "adj.",
+          "chinese": "不断增加的"
         }
       ]
     }
@@ -281,9 +307,9 @@
       "type": "meaning_choice",
       "prompt": "“increase”最核心的中文含义是？",
       "options": [
+        "片刻；时刻",
         "增加；增长",
-        "能力",
-        "质量；品质"
+        "更喜欢"
       ],
       "answer": "增加；增长",
       "stage": "T0",
@@ -294,9 +320,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “increase”？",
       "options": [
-        "the power or skill to do something",
-        "how good or bad something is",
-        "to become or make something greater"
+        "to become or make something greater",
+        "to like one thing more than another",
+        "a very short period of time"
       ],
       "answer": "to become or make something greater",
       "stage": "T0",
@@ -307,10 +333,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“增加百分之十”，又符合这个形式线索：完整搭配中使用介词 by？",
       "options": [
-        "a sharp increase",
-        "increase by ten percent",
         "increase from A to B",
-        "increase the risk of"
+        "increase the risk of",
+        "a sharp increase",
+        "increase by ten percent"
       ],
       "answer": "increase by ten percent",
       "stage": "T1",
@@ -321,10 +347,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “increase” 最直接近义词？",
       "options": [
+        "prefer",
+        "moment",
         "raise",
-        "decrease",
-        "ability",
-        "quality"
+        "decrease"
       ],
       "answer": "raise",
       "stage": "T2",
@@ -335,10 +361,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “increase” 最直接反义词？",
       "options": [
+        "moment",
+        "decrease",
         "raise",
-        "ability",
-        "quality",
-        "decrease"
+        "prefer"
       ],
       "answer": "decrease",
       "stage": "T2",
@@ -347,14 +373,14 @@
     {
       "id": "increase-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “increase” 的相关近义词？",
+      "prompt": "根据本词卡辨析，哪个词被列为 “increase” 的派生词？",
       "options": [
-        "ability",
-        "quality",
+        "increasing",
         "raise",
-        "decrease"
+        "decrease",
+        "prefer"
       ],
-      "answer": "raise",
+      "answer": "increasing",
       "stage": "T3",
       "ai": false
     },
@@ -387,10 +413,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“从 A 增至 B”，又符合这个形式线索：同时使用 from 和 to，表示范围或变化的起点与终点？",
       "options": [
-        "increase by ten percent",
-        "increase the risk of",
         "a sharp increase",
-        "increase from A to B"
+        "increase from A to B",
+        "increase by ten percent",
+        "increase the risk of"
       ],
       "answer": "increase from A to B",
       "stage": "T1",
@@ -401,10 +427,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Regular speaking practice increases _____.（中文：经常练习口语会增强信心。）",
       "options": [
-        "practice",
-        "simple",
         "confidence",
-        "recall"
+        "walking",
+        "busy",
+        "useful"
       ],
       "answer": "confidence",
       "stage": "T2",
@@ -415,10 +441,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“增加百分之十”，又符合这个形式线索：完整搭配中使用介词 by？",
       "options": [
-        "a sharp increase",
-        "increase by ten percent",
         "increase from A to B",
-        "increase the risk of"
+        "increase the risk of",
+        "a sharp increase",
+        "increase by ten percent"
       ],
       "answer": "increase by ten percent",
       "stage": "T2",
@@ -429,10 +455,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“从 A 增至 B”，又符合这个形式线索：同时使用 from 和 to，表示范围或变化的起点与终点？",
       "options": [
-        "increase from A to B",
-        "increase by ten percent",
         "increase the risk of",
-        "a sharp increase"
+        "a sharp increase",
+        "increase from A to B",
+        "increase by ten percent"
       ],
       "answer": "increase from A to B",
       "stage": "T3",
@@ -523,9 +549,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

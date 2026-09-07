@@ -1,7 +1,7 @@
 {
   "date": "2026-08-21",
   "dayNumber": 5,
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "templateVersion": "learning-template-2026.08.19.2",
   "cards": [
     {
@@ -23,6 +23,13 @@
         }
       ],
       "cocaRankLabel": "v. 第 418 名；n. 第 2062 名",
+      "learningPriority": {
+        "sequence": 21,
+        "group": "verb",
+        "groupLabel": "动词",
+        "groupOrder": 1,
+        "primaryCocaRank": 418
+      },
       "phonetic": "/ˈɔːfər/",
       "syllables": "offer（约 2 音节）",
       "partOfSpeech": "v. / n.",
@@ -30,7 +37,7 @@
       "difficulty": "基础",
       "tags": [
         "v.",
-        "模板结构版",
+        "完整词卡",
         "高频表达"
       ],
       "coreMemory": {
@@ -76,9 +83,9 @@
             "note": "不定式 to 后接动词原形；不要把不定式和 -ing 形式混合。"
           }
         ],
-        "directSynonym": "propose /prəˈpoʊz/（与“提供”意义接近）",
-        "directAntonym": "refuse /rəˈfjuːz/（与“提供”意义相反）",
-        "derivatives": "本词暂无需额外强记的高频派生词",
+        "directSynonym": "propose /prəˈpoʊz/（计划；打算；建议；提议）",
+        "directAntonym": "refuse /rəˈfjuːz/（拒绝；谢绝；废物；扔掉的）",
+        "derivatives": "offering",
         "example": "He offered to help me with the project.",
         "exampleChinese": "他主动提出帮我做这个项目。"
       },
@@ -193,8 +200,8 @@
         {
           "word": "propose",
           "phonetic": "/prəˈpoʊz/",
-          "partOfSpeech": "v. / n.",
-          "chinese": "与“提供”意义接近",
+          "partOfSpeech": "v.",
+          "chinese": "计划；打算；建议；提议",
           "difference": "offer 是本卡核心搭配 “offer help” 中的中性常用选择；propose 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
         }
       ],
@@ -202,12 +209,20 @@
         {
           "word": "refuse",
           "phonetic": "/rəˈfjuːz/",
-          "partOfSpeech": "v. / n.",
-          "chinese": "与“提供”意义相反",
+          "partOfSpeech": "v. / n. / adj.",
+          "chinese": "拒绝；谢绝；废物；扔掉的",
           "usage": "在本卡核心义下与 offer 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
         }
       ],
-      "derivatives": [],
+      "derivatives": [
+        {
+          "word": "offering",
+          "phonetic": "/ˈɔːfɚɪŋ/",
+          "partOfSpeech": "n.",
+          "chinese": "提供；奉献物；牲礼；上市的股票",
+          "note": "这是 offer 的常用词族成员；请按上方词性放到句子的正确位置。"
+        }
+      ],
       "confusables": [],
       "relatedVocabulary": [
         {
@@ -216,14 +231,25 @@
             {
               "word": "propose",
               "phonetic": "/prəˈpoʊz/",
-              "partOfSpeech": "v. / n.",
-              "chinese": "与“提供”意义接近"
+              "partOfSpeech": "v.",
+              "chinese": "计划；打算；建议；提议"
             },
             {
               "word": "refuse",
               "phonetic": "/rəˈfjuːz/",
-              "partOfSpeech": "v. / n.",
-              "chinese": "与“提供”意义相反"
+              "partOfSpeech": "v. / n. / adj.",
+              "chinese": "拒绝；谢绝；废物；扔掉的"
+            }
+          ]
+        },
+        {
+          "category": "词族与构词联系",
+          "items": [
+            {
+              "word": "offering",
+              "phonetic": "/ˈɔːfɚɪŋ/",
+              "partOfSpeech": "n.",
+              "chinese": "提供；奉献物；牲礼；上市的股票"
             }
           ]
         }
@@ -277,9 +303,9 @@
           "type": "meaning_choice",
           "prompt": "“offer”最核心的中文含义是？",
           "options": [
-            "系统；体系",
+            "工作；任务",
             "提供；提议",
-            "到达；达到"
+            "比较"
           ],
           "answer": "提供；提议",
           "stage": "T0",
@@ -291,8 +317,8 @@
           "prompt": "哪一项英文释义最符合词卡中的 “offer”？",
           "options": [
             "to say that you are willing to give something",
-            "to arrive at a place or level",
-            "a set of connected parts that work together"
+            "to examine how things are alike or different",
+            "paid work or a particular task"
           ],
           "answer": "to say that you are willing to give something",
           "stage": "T0",
@@ -317,10 +343,10 @@
           "type": "meaning_choice",
           "prompt": "哪个词是词卡中列出的 “offer” 最直接近义词？",
           "options": [
-            "system",
+            "job",
             "propose",
             "refuse",
-            "reach"
+            "compare"
           ],
           "answer": "propose",
           "stage": "T2",
@@ -333,8 +359,8 @@
           "options": [
             "refuse",
             "propose",
-            "reach",
-            "system"
+            "compare",
+            "job"
           ],
           "answer": "refuse",
           "stage": "T2",
@@ -343,14 +369,14 @@
         {
           "id": "offer-v-contrast-choice",
           "type": "meaning_choice",
-          "prompt": "根据本词卡辨析，哪个词被列为 “offer” 的相关近义词？",
+          "prompt": "根据本词卡辨析，哪个词被列为 “offer” 的派生词？",
           "options": [
+            "propose",
             "refuse",
-            "reach",
-            "system",
-            "propose"
+            "compare",
+            "offering"
           ],
-          "answer": "propose",
+          "answer": "offering",
           "stage": "T3",
           "ai": false
         },
@@ -397,9 +423,9 @@
           "type": "collocation",
           "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：He offered to _____ me with the project.（中文：他主动提出帮我做这个项目。）",
           "options": [
-            "agreement",
-            "helps",
-            "asking",
+            "two",
+            "explaining",
+            "outdoor",
             "help"
           ],
           "answer": "help",
@@ -519,529 +545,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "template-structured",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.2",
-      "contentVersion": "2026.08.19.6",
+      "contentVersion": "2026.09.07.1",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
-    },
-    {
-      "id": "consider-v",
-      "word": "consider",
-      "lemma": "consider",
-      "cocaRanks": [
-        {
-          "rank": 395,
-          "pos": "v",
-          "frequency": 244644,
-          "partOfSpeech": "v."
-        }
-      ],
-      "cocaRankLabel": "v. 第 395 名",
-      "phonetic": "/kənˈsɪdər/",
-      "syllables": "con·sid·er",
-      "partOfSpeech": "v.",
-      "frequencyBand": "COCA 高频精选 · v. 第 395 名",
-      "difficulty": "基础",
-      "tags": [
-        "v.",
-        "模板结构版",
-        "高频表达"
-      ],
-      "coreMemory": {
-        "chinese": "考虑；认为",
-        "english": "v. to think carefully about something",
-        "structure": "consider doing /kənˈsɪdər ˈduːɪŋ/（考虑做）；consider the possibility /kənˈsɪdər ðə ˌpɑsəˈbɪləˌtiː/（考虑可能性）；consider someone suitable /kənˈsɪdər ˈsʌˌmwʌn ˈsuːtəbəl/（认为某人合适）；carefully consider /ˈkɛrfəliː kənˈsɪdər/（认真考虑）",
-        "structures": [
-          {
-            "phrase": "consider doing",
-            "phonetic": "/kənˈsɪdər ˈduːɪŋ/",
-            "chinese": "考虑做"
-          },
-          {
-            "phrase": "consider the possibility",
-            "phonetic": "/kənˈsɪdər ðə ˌpɑsəˈbɪləˌtiː/",
-            "chinese": "考虑可能性"
-          },
-          {
-            "phrase": "consider someone suitable",
-            "phonetic": "/kənˈsɪdər ˈsʌˌmwʌn ˈsuːtəbəl/",
-            "chinese": "认为某人合适"
-          },
-          {
-            "phrase": "carefully consider",
-            "phonetic": "/ˈkɛrfəliː kənˈsɪdər/",
-            "chinese": "认真考虑"
-          }
-        ],
-        "commonError": "❌ can to consider → ✅ can consider；❌ to considering → ✅ to consider",
-        "commonErrors": [
-          {
-            "wrong": "can to consider",
-            "wrongPhonetic": "/ˈkæn ˈtuː kənˈsɪdər/",
-            "right": "can consider",
-            "rightPhonetic": "/ˈkæn kənˈsɪdər/",
-            "note": "情态动词 can 后直接接动词原形，不加 to。"
-          },
-          {
-            "wrong": "to considering",
-            "wrongPhonetic": "/ˈtuː kəˈnsɪdɚɪŋ/",
-            "right": "to consider",
-            "rightPhonetic": "/ˈtuː kənˈsɪdər/",
-            "note": "不定式 to 后接动词原形；不要把不定式和 -ing 形式混合。"
-          }
-        ],
-        "directSynonym": "evaluate /ɪˈvæljuːˌeɪt/（与“考虑”意义接近）",
-        "directAntonym": "dismiss /dɪˈsmɪs/（与“考虑”意义相反）",
-        "derivatives": "本词暂无需额外强记的高频派生词",
-        "example": "You should consider taking a short break.",
-        "exampleChinese": "你应该考虑短暂休息一下。"
-      },
-      "meanings": [
-        {
-          "partOfSpeech": "v.",
-          "english": "to think carefully about something",
-          "chinese": "考虑",
-          "example": "You should consider taking a short break.",
-          "translation": "你应该考虑短暂休息一下。"
-        }
-      ],
-      "contextPhrases": [
-        {
-          "category": "核心动作与结构",
-          "items": [
-            {
-              "phrase": "consider doing",
-              "phonetic": "/kənˈsɪdər ˈduːɪŋ/",
-              "chinese": "考虑做"
-            },
-            {
-              "phrase": "consider the possibility",
-              "phonetic": "/kənˈsɪdər ðə ˌpɑsəˈbɪləˌtiː/",
-              "chinese": "考虑可能性"
-            }
-          ]
-        },
-        {
-          "category": "日常与工作语境",
-          "items": [
-            {
-              "phrase": "consider someone suitable",
-              "phonetic": "/kənˈsɪdər ˈsʌˌmwʌn ˈsuːtəbəl/",
-              "chinese": "认为某人合适"
-            },
-            {
-              "phrase": "carefully consider",
-              "phonetic": "/ˈkɛrfəliː kənˈsɪdər/",
-              "chinese": "认真考虑"
-            }
-          ]
-        },
-        {
-          "category": "高频扩展表达",
-          "items": [
-            {
-              "phrase": "all things considered",
-              "phonetic": "/ˈɔːl ˈθɪŋz kəˈnsɪdɚd/",
-              "chinese": "综合考虑"
-            },
-            {
-              "phrase": "take something into consideration",
-              "phonetic": "/ˈteɪk ˈsʌmθɪŋ ˈɪntuː kəˌnsɪdɚˈeɪʃən/",
-              "chinese": "把某事考虑进去"
-            }
-          ]
-        },
-        {
-          "category": "补充常用语境",
-          "items": [
-            {
-              "phrase": "consider doing something",
-              "phonetic": "/kənˈsɪdər ˈduːɪŋ ˈsʌmθɪŋ/",
-              "chinese": "考虑做某事"
-            }
-          ]
-        }
-      ],
-      "fixedPhrases": [
-        {
-          "phrase": "consider doing",
-          "phonetic": "/kənˈsɪdər ˈduːɪŋ/",
-          "chinese": "考虑做",
-          "example": "I am considering taking an evening class.",
-          "translation": "我正在考虑上夜校。"
-        },
-        {
-          "phrase": "consider the possibility",
-          "phonetic": "/kənˈsɪdər ðə ˌpɑsəˈbɪləˌtiː/",
-          "chinese": "考虑可能性",
-          "example": "We should consider every possibility before deciding.",
-          "translation": "决定前我们应该考虑每一种可能性。"
-        },
-        {
-          "phrase": "consider someone suitable",
-          "phonetic": "/kənˈsɪdər ˈsʌˌmwʌn ˈsuːtəbəl/",
-          "chinese": "认为某人合适",
-          "example": "The manager considers her suitable for the role.",
-          "translation": "经理认为她适合这个职位。"
-        },
-        {
-          "phrase": "carefully consider",
-          "phonetic": "/ˈkɛrfəliː kənˈsɪdər/",
-          "chinese": "认真考虑",
-          "example": "Please carefully consider the long-term cost.",
-          "translation": "请认真考虑长期成本。"
-        },
-        {
-          "phrase": "all things considered",
-          "phonetic": "/ˈɔːl ˈθɪŋz kəˈnsɪdɚd/",
-          "chinese": "综合考虑",
-          "example": "All things considered, staying home was the best choice.",
-          "translation": "综合考虑，待在家里是最好的选择。"
-        },
-        {
-          "phrase": "take something into consideration",
-          "phonetic": "/ˈteɪk ˈsʌmθɪŋ ˈɪntuː kəˌnsɪdɚˈeɪʃən/",
-          "chinese": "把某事考虑进去",
-          "example": "We need to take the weather into consideration.",
-          "translation": "我们需要把天气考虑进去。"
-        }
-      ],
-      "synonyms": [
-        {
-          "word": "evaluate",
-          "phonetic": "/ɪˈvæljuːˌeɪt/",
-          "partOfSpeech": "v.",
-          "chinese": "与“考虑”意义接近",
-          "difference": "consider 是本卡核心搭配 “consider doing something” 中的中性常用选择；evaluate 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
-        }
-      ],
-      "antonyms": [
-        {
-          "word": "dismiss",
-          "phonetic": "/dɪˈsmɪs/",
-          "partOfSpeech": "v.",
-          "chinese": "与“考虑”意义相反",
-          "usage": "在本卡核心义下与 consider 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
-        }
-      ],
-      "derivatives": [],
-      "confusables": [],
-      "relatedVocabulary": [
-        {
-          "category": "语义坐标：近义与反义",
-          "items": [
-            {
-              "word": "evaluate",
-              "phonetic": "/ɪˈvæljuːˌeɪt/",
-              "partOfSpeech": "v.",
-              "chinese": "与“考虑”意义接近"
-            },
-            {
-              "word": "dismiss",
-              "phonetic": "/dɪˈsmɪs/",
-              "partOfSpeech": "v.",
-              "chinese": "与“考虑”意义相反"
-            }
-          ]
-        }
-      ],
-      "examples": [
-        {
-          "scene": "核心真实用法",
-          "english": "You should consider taking a short break.",
-          "chinese": "你应该考虑短暂休息一下。"
-        },
-        {
-          "scene": "日常使用",
-          "english": "I am considering taking an evening class.",
-          "chinese": "我正在考虑上夜校。"
-        },
-        {
-          "scene": "工作或学习",
-          "english": "We should consider every possibility before deciding.",
-          "chinese": "决定前我们应该考虑每一种可能性。"
-        },
-        {
-          "scene": "常见搭配",
-          "english": "The manager considers her suitable for the role.",
-          "chinese": "经理认为她适合这个职位。"
-        },
-        {
-          "scene": "真实语境",
-          "english": "Please carefully consider the long-term cost.",
-          "chinese": "请认真考虑长期成本。"
-        },
-        {
-          "scene": "易错结构",
-          "english": "All things considered, staying home was the best choice.",
-          "chinese": "综合考虑，待在家里是最好的选择。"
-        },
-        {
-          "scene": "主动表达",
-          "english": "We need to take the weather into consideration.",
-          "chinese": "我们需要把天气考虑进去。"
-        }
-      ],
-      "studyFocus": {
-        "coreMeaning": "考虑；认为；英文核心释义：to think carefully about something。",
-        "keyCollocation": "把 “consider doing something” 作为一个完整句块记忆。",
-        "commonMistake": "情态动词 can 后直接接动词原形，不加 to。",
-        "mustUseExample": "You should consider taking a short break."
-      },
-      "questions": [
-        {
-          "id": "consider-v-meaning-core",
-          "type": "meaning_choice",
-          "prompt": "“consider”最核心的中文含义是？",
-          "options": [
-            "考虑；认为",
-            "保持；仍然是",
-            "水平；级别"
-          ],
-          "answer": "考虑；认为",
-          "stage": "T0",
-          "ai": false
-        },
-        {
-          "id": "consider-v-meaning-english",
-          "type": "meaning_choice",
-          "prompt": "哪一项英文释义最符合词卡中的 “consider”？",
-          "options": [
-            "to continue to be in the same state",
-            "a position on a scale of amount or quality",
-            "to think carefully about something"
-          ],
-          "answer": "to think carefully about something",
-          "stage": "T0",
-          "ai": false
-        },
-        {
-          "id": "consider-v-structure-choice-v3",
-          "type": "meaning_choice",
-          "prompt": "核心结构辨析：哪一项既表示“考虑做”，又符合这个形式线索：目标词后的 doing 表示要换成符合语境的动词 -ing 形式？",
-          "options": [
-            "carefully consider",
-            "consider doing",
-            "consider the possibility",
-            "consider someone suitable"
-          ],
-          "answer": "consider doing",
-          "stage": "T1",
-          "ai": false
-        },
-        {
-          "id": "consider-v-synonym-choice",
-          "type": "meaning_choice",
-          "prompt": "哪个词是词卡中列出的 “consider” 最直接近义词？",
-          "options": [
-            "evaluate",
-            "dismiss",
-            "remain",
-            "level"
-          ],
-          "answer": "evaluate",
-          "stage": "T2",
-          "ai": false
-        },
-        {
-          "id": "consider-v-antonym-choice",
-          "type": "meaning_choice",
-          "prompt": "哪个词是词卡中列出的 “consider” 最直接反义词？",
-          "options": [
-            "evaluate",
-            "remain",
-            "level",
-            "dismiss"
-          ],
-          "answer": "dismiss",
-          "stage": "T2",
-          "ai": false
-        },
-        {
-          "id": "consider-v-contrast-choice",
-          "type": "meaning_choice",
-          "prompt": "根据本词卡辨析，哪个词被列为 “consider” 的相关近义词？",
-          "options": [
-            "remain",
-            "level",
-            "evaluate",
-            "dismiss"
-          ],
-          "answer": "evaluate",
-          "stage": "T3",
-          "ai": false
-        },
-        {
-          "id": "consider-v-recall-definition",
-          "type": "recall",
-          "prompt": "根据英文释义写出目标词：to think carefully about something",
-          "answer": "consider",
-          "stage": "T1",
-          "ai": false
-        },
-        {
-          "id": "consider-v-recall-chinese",
-          "type": "recall",
-          "prompt": "写出符合“考虑；认为”（v.）的本课目标词。",
-          "answer": "consider",
-          "stage": "T1",
-          "ai": false
-        },
-        {
-          "id": "consider-v-collocation-core",
-          "type": "collocation",
-          "prompt": "补全高频搭配：_____ doing something（填写 consider 的正确形式）；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing；something 要替换成实际的事物或内容",
-          "answer": "consider",
-          "stage": "T0",
-          "ai": false
-        },
-        {
-          "id": "consider-v-collocation-structure-meaning-v3",
-          "type": "collocation",
-          "prompt": "句型应用：哪一项既表示“考虑可能性”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
-          "options": [
-            "consider doing",
-            "consider someone suitable",
-            "carefully consider",
-            "consider the possibility"
-          ],
-          "answer": "consider the possibility",
-          "stage": "T1",
-          "ai": false
-        },
-        {
-          "id": "consider-v-collocation-example-context-v3",
-          "type": "collocation",
-          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：You should consider _____ a short break.（中文：你应该考虑短暂休息一下。）",
-          "options": [
-            "current",
-            "way",
-            "taking",
-            "calm"
-          ],
-          "answer": "taking",
-          "stage": "T2",
-          "ai": false
-        },
-        {
-          "id": "consider-v-collocation-fixed-1-v3",
-          "type": "collocation",
-          "prompt": "用法辨析：哪一项既表示“考虑做”，又符合这个形式线索：目标词后的 doing 表示要换成符合语境的动词 -ing 形式？",
-          "options": [
-            "carefully consider",
-            "consider doing",
-            "consider the possibility",
-            "consider someone suitable"
-          ],
-          "answer": "consider doing",
-          "stage": "T2",
-          "ai": false
-        },
-        {
-          "id": "consider-v-collocation-fixed-2-v3",
-          "type": "collocation",
-          "prompt": "搭配辨析：哪一项既表示“考虑可能性”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
-          "options": [
-            "consider the possibility",
-            "consider doing",
-            "consider someone suitable",
-            "carefully consider"
-          ],
-          "answer": "consider the possibility",
-          "stage": "T3",
-          "ai": false
-        },
-        {
-          "id": "consider-v-example-cloze",
-          "type": "collocation",
-          "prompt": "根据句意补全词卡核心例句：You should _____ taking a short break.（填写 consider 的正确形式）",
-          "answer": "consider",
-          "stage": "T3",
-          "ai": false
-        },
-        {
-          "id": "consider-v-sentence-core",
-          "type": "free_sentence",
-          "prompt": "请用 “consider” 写一个自然、真实的英文句子，含义必须符合词卡核心义“考虑；认为”。",
-          "answer": "",
-          "stage": "T2",
-          "ai": true
-        },
-        {
-          "id": "consider-v-sentence-phrase",
-          "type": "free_sentence",
-          "prompt": "请使用 “consider doing” 结构写一个与自己有关的自然英文句子；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing。",
-          "answer": "",
-          "stage": "T3",
-          "ai": true
-        },
-        {
-          "id": "consider-v-dialogue",
-          "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “consider” 和 “consider the possibility” 结构，并避免中文直译。",
-          "answer": "",
-          "stage": "T4",
-          "ai": true
-        }
-      ],
-      "reviewStages": {
-        "T0": [
-          "meaning_choice",
-          "collocation",
-          "free_sentence"
-        ],
-        "T1": [
-          "meaning_choice",
-          "recall",
-          "collocation"
-        ],
-        "T2": [
-          "meaning_choice",
-          "recall",
-          "collocation",
-          "free_sentence"
-        ],
-        "T3": [
-          "meaning_choice",
-          "recall",
-          "collocation",
-          "dialogue"
-        ],
-        "T4": [
-          "meaning_choice",
-          "recall",
-          "collocation",
-          "free_sentence",
-          "dialogue"
-        ],
-        "T5": [
-          "meaning_choice",
-          "recall",
-          "collocation",
-          "free_sentence",
-          "dialogue"
-        ],
-        "T6": [
-          "meaning_choice",
-          "recall",
-          "collocation",
-          "free_sentence",
-          "dialogue"
-        ],
-        "T7": [
-          "meaning_choice",
-          "recall",
-          "collocation",
-          "free_sentence",
-          "dialogue"
-        ]
-      },
-      "detailLevel": "template-structured",
-      "templateVersion": "learning-template-2026.08.19.2",
-      "contentVersion": "2026.08.19.6",
-      "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
     },
     {
       "id": "expect-v",
@@ -1056,6 +564,13 @@
         }
       ],
       "cocaRankLabel": "v. 第 426 名",
+      "learningPriority": {
+        "sequence": 22,
+        "group": "verb",
+        "groupLabel": "动词",
+        "groupOrder": 1,
+        "primaryCocaRank": 426
+      },
       "phonetic": "/ɪkˈspekt/",
       "syllables": "expect（约 2 音节）",
       "partOfSpeech": "v.",
@@ -1063,7 +578,7 @@
       "difficulty": "基础",
       "tags": [
         "v.",
-        "模板结构版",
+        "完整词卡",
         "高频表达"
       ],
       "coreMemory": {
@@ -1109,9 +624,9 @@
             "note": "不定式 to 后接动词原形；不要把不定式和 -ing 形式混合。"
           }
         ],
-        "directSynonym": "anticipate /æˈntɪsəˌpeɪt/（与“预期”意义接近）",
-        "directAntonym": "doubt /ˈdaʊt/（与“预期”意义相反）",
-        "derivatives": "本词暂无需额外强记的高频派生词",
+        "directSynonym": "anticipate /æˈntɪsəˌpeɪt/（预期；占先；加速；提前使用）",
+        "directAntonym": "doubt /ˈdaʊt/（怀疑；疑惑；不信）",
+        "derivatives": "expectation · unexpected",
         "example": "We expect the results next week.",
         "exampleChinese": "我们预计下周会有结果。"
       },
@@ -1230,7 +745,7 @@
           "word": "anticipate",
           "phonetic": "/æˈntɪsəˌpeɪt/",
           "partOfSpeech": "v.",
-          "chinese": "与“预期”意义接近",
+          "chinese": "预期；占先；加速；提前使用",
           "difference": "expect 是本卡核心搭配 “expect someone to do something” 中的中性常用选择；anticipate 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
         }
       ],
@@ -1238,12 +753,27 @@
         {
           "word": "doubt",
           "phonetic": "/ˈdaʊt/",
-          "partOfSpeech": "v.",
-          "chinese": "与“预期”意义相反",
+          "partOfSpeech": "v. / n.",
+          "chinese": "怀疑；疑惑；不信",
           "usage": "在本卡核心义下与 expect 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
         }
       ],
-      "derivatives": [],
+      "derivatives": [
+        {
+          "word": "expectation",
+          "phonetic": "/ˌɛkspɛˈkteɪʃən/",
+          "partOfSpeech": "n.",
+          "chinese": "期待；指望；展望",
+          "note": "这是 expect 的常用词族成员；请按上方词性放到句子的正确位置。"
+        },
+        {
+          "word": "unexpected",
+          "phonetic": "/ˌʌnɪˈkspɛktɪd/",
+          "partOfSpeech": "adj.",
+          "chinese": "料想不到的；突然的；意外的",
+          "note": "这是 expect 的常用词族成员；请按上方词性放到句子的正确位置。"
+        }
+      ],
       "confusables": [],
       "relatedVocabulary": [
         {
@@ -1253,13 +783,30 @@
               "word": "anticipate",
               "phonetic": "/æˈntɪsəˌpeɪt/",
               "partOfSpeech": "v.",
-              "chinese": "与“预期”意义接近"
+              "chinese": "预期；占先；加速；提前使用"
             },
             {
               "word": "doubt",
               "phonetic": "/ˈdaʊt/",
-              "partOfSpeech": "v.",
-              "chinese": "与“预期”意义相反"
+              "partOfSpeech": "v. / n.",
+              "chinese": "怀疑；疑惑；不信"
+            }
+          ]
+        },
+        {
+          "category": "词族与构词联系",
+          "items": [
+            {
+              "word": "expectation",
+              "phonetic": "/ˌɛkspɛˈkteɪʃən/",
+              "partOfSpeech": "n.",
+              "chinese": "期待；指望；展望"
+            },
+            {
+              "word": "unexpected",
+              "phonetic": "/ˌʌnɪˈkspɛktɪd/",
+              "partOfSpeech": "adj.",
+              "chinese": "料想不到的；突然的；意外的"
             }
           ]
         }
@@ -1313,9 +860,9 @@
           "type": "meaning_choice",
           "prompt": "“expect”最核心的中文含义是？",
           "options": [
-            "处理；应对",
-            "价值；重视",
-            "预期；期待"
+            "预期；期待",
+            "减少；降低",
+            "朋友"
           ],
           "answer": "预期；期待",
           "stage": "T0",
@@ -1326,9 +873,9 @@
           "type": "meaning_choice",
           "prompt": "哪一项英文释义最符合词卡中的 “expect”？",
           "options": [
-            "the importance or usefulness of something",
-            "to think that something will happen",
-            "to deal with a situation or task"
+            "to make something smaller or less",
+            "a person you know and like",
+            "to think that something will happen"
           ],
           "answer": "to think that something will happen",
           "stage": "T0",
@@ -1339,10 +886,10 @@
           "type": "meaning_choice",
           "prompt": "核心结构辨析：哪一项既表示“期待某人做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
           "options": [
+            "what to expect",
             "expect someone to do",
             "expect to see",
-            "as expected",
-            "what to expect"
+            "as expected"
           ],
           "answer": "expect someone to do",
           "stage": "T1",
@@ -1353,10 +900,10 @@
           "type": "meaning_choice",
           "prompt": "哪个词是词卡中列出的 “expect” 最直接近义词？",
           "options": [
+            "anticipate",
             "doubt",
-            "handle",
-            "value",
-            "anticipate"
+            "reduce",
+            "friend"
           ],
           "answer": "anticipate",
           "stage": "T2",
@@ -1367,10 +914,10 @@
           "type": "meaning_choice",
           "prompt": "哪个词是词卡中列出的 “expect” 最直接反义词？",
           "options": [
-            "handle",
-            "value",
-            "doubt",
-            "anticipate"
+            "anticipate",
+            "reduce",
+            "friend",
+            "doubt"
           ],
           "answer": "doubt",
           "stage": "T2",
@@ -1379,14 +926,14 @@
         {
           "id": "expect-v-contrast-choice",
           "type": "meaning_choice",
-          "prompt": "根据本词卡辨析，哪个词被列为 “expect” 的相关近义词？",
+          "prompt": "根据本词卡辨析，哪个词被列为 “expect” 的派生词？",
           "options": [
-            "value",
-            "anticipate",
             "doubt",
-            "handle"
+            "reduce",
+            "expectation",
+            "anticipate"
           ],
-          "answer": "anticipate",
+          "answer": "expectation",
           "stage": "T3",
           "ai": false
         },
@@ -1419,10 +966,10 @@
           "type": "collocation",
           "prompt": "句型应用：哪一项既表示“预计会看到”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "expect someone to do",
             "as expected",
             "what to expect",
-            "expect to see",
-            "expect someone to do"
+            "expect to see"
           ],
           "answer": "expect to see",
           "stage": "T1",
@@ -1433,10 +980,10 @@
           "type": "collocation",
           "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：We expect the _____ next week.（中文：我们预计下周会有结果。）",
           "options": [
-            "problem",
+            "dialogue",
+            "depends",
             "results",
-            "difficult",
-            "honest"
+            "unnecessary"
           ],
           "answer": "results",
           "stage": "T2",
@@ -1445,12 +992,12 @@
         {
           "id": "expect-v-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "搭配辨析：哪一项既表示“期待某人做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
+          "prompt": "用法辨析：哪一项既表示“期待某人做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
           "options": [
+            "what to expect",
             "expect someone to do",
             "expect to see",
-            "as expected",
-            "what to expect"
+            "as expected"
           ],
           "answer": "expect someone to do",
           "stage": "T2",
@@ -1459,12 +1006,12 @@
         {
           "id": "expect-v-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "用法辨析：哪一项既表示“预计会看到”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+          "prompt": "搭配辨析：哪一项既表示“预计会看到”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "expect to see",
             "expect someone to do",
             "as expected",
-            "what to expect",
-            "expect to see"
+            "what to expect"
           ],
           "answer": "expect to see",
           "stage": "T3",
@@ -1555,91 +1102,98 @@
           "dialogue"
         ]
       },
-      "detailLevel": "template-structured",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.2",
-      "contentVersion": "2026.08.19.6",
+      "contentVersion": "2026.09.07.1",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
     },
     {
-      "id": "develop-v",
-      "word": "develop",
-      "lemma": "develop",
+      "id": "require-v",
+      "word": "require",
+      "lemma": "require",
       "cocaRanks": [
         {
-          "rank": 569,
+          "rank": 457,
           "pos": "v",
-          "frequency": 168894,
+          "frequency": 209616,
           "partOfSpeech": "v."
         }
       ],
-      "cocaRankLabel": "v. 第 569 名",
-      "phonetic": "/dɪˈveləp/",
-      "syllables": "de·vel·op",
+      "cocaRankLabel": "v. 第 457 名",
+      "learningPriority": {
+        "sequence": 23,
+        "group": "verb",
+        "groupLabel": "动词",
+        "groupOrder": 1,
+        "primaryCocaRank": 457
+      },
+      "phonetic": "/rɪˈkwaɪər/",
+      "syllables": "require（约 2 音节）",
       "partOfSpeech": "v.",
-      "frequencyBand": "COCA 高频精选 · v. 第 569 名",
+      "frequencyBand": "COCA 高频精选 · v. 第 457 名",
       "difficulty": "基础",
       "tags": [
         "v.",
-        "模板结构版",
+        "完整词卡",
         "高频表达"
       ],
       "coreMemory": {
-        "chinese": "发展；培养",
-        "english": "v. to grow or cause something to grow",
-        "structure": "develop a habit /dɪˈveləp ə ˈhæbət/（养成习惯）；develop a skill /dɪˈveləp ə ˈskɪl/（培养技能）；develop a plan /dɪˈveləp ə ˈplæn/（制定方案）；develop an interest in /dɪˈveləp ˈæn ˈɪntrəst ɪn/（培养对……的兴趣）",
+        "chinese": "需要；要求",
+        "english": "v. to need something or make it necessary",
+        "structure": "require someone to do /rɪˈkwaɪər ˈsʌˌmwʌn ˈtuː ˈduː/（要求某人做）；require careful planning /rɪˈkwaɪər ˈkɛrfəl ˈplænɪŋ/（需要周密计划）；be required to /ˈbiː riːˈkwaɪɚd ˈtuː/（被要求做）；as required /ˈæz riːˈkwaɪɚd/（按要求）",
         "structures": [
           {
-            "phrase": "develop a habit",
-            "phonetic": "/dɪˈveləp ə ˈhæbət/",
-            "chinese": "养成习惯"
+            "phrase": "require someone to do",
+            "phonetic": "/rɪˈkwaɪər ˈsʌˌmwʌn ˈtuː ˈduː/",
+            "chinese": "要求某人做"
           },
           {
-            "phrase": "develop a skill",
-            "phonetic": "/dɪˈveləp ə ˈskɪl/",
-            "chinese": "培养技能"
+            "phrase": "require careful planning",
+            "phonetic": "/rɪˈkwaɪər ˈkɛrfəl ˈplænɪŋ/",
+            "chinese": "需要周密计划"
           },
           {
-            "phrase": "develop a plan",
-            "phonetic": "/dɪˈveləp ə ˈplæn/",
-            "chinese": "制定方案"
+            "phrase": "be required to",
+            "phonetic": "/ˈbiː riːˈkwaɪɚd ˈtuː/",
+            "chinese": "被要求做"
           },
           {
-            "phrase": "develop an interest in",
-            "phonetic": "/dɪˈveləp ˈæn ˈɪntrəst ɪn/",
-            "chinese": "培养对……的兴趣"
+            "phrase": "as required",
+            "phonetic": "/ˈæz riːˈkwaɪɚd/",
+            "chinese": "按要求"
           }
         ],
-        "commonError": "❌ can to develop → ✅ can develop；❌ to developing → ✅ to develop",
+        "commonError": "❌ can to require → ✅ can require；❌ to requireing → ✅ to require",
         "commonErrors": [
           {
-            "wrong": "can to develop",
-            "wrongPhonetic": "/ˈkæn ˈtuː dɪˈveləp/",
-            "right": "can develop",
-            "rightPhonetic": "/ˈkæn dɪˈveləp/",
+            "wrong": "can to require",
+            "wrongPhonetic": "/ˈkæn ˈtuː rɪˈkwaɪər/",
+            "right": "can require",
+            "rightPhonetic": "/ˈkæn rɪˈkwaɪər/",
             "note": "情态动词 can 后直接接动词原形，不加 to。"
           },
           {
-            "wrong": "to developing",
-            "wrongPhonetic": "/ˈtuː dɪˈvɛləpɪŋ/",
-            "right": "to develop",
-            "rightPhonetic": "/ˈtuː dɪˈveləp/",
+            "wrong": "to requireing",
+            "wrongPhonetic": "/ˈtuː requireing/",
+            "right": "to require",
+            "rightPhonetic": "/ˈtuː rɪˈkwaɪər/",
             "note": "不定式 to 后接动词原形；不要把不定式和 -ing 形式混合。"
           }
         ],
-        "directSynonym": "build /ˈbɪld/（与“发展”意义接近）",
-        "directAntonym": "decline /dɪˈklaɪn/（与“发展”意义相反）",
-        "derivatives": "本词暂无需额外强记的高频派生词",
-        "example": "She developed a habit of reading every night.",
-        "exampleChinese": "她养成了每晚阅读的习惯。"
+        "directSynonym": "demand /dɪˈmænd/（要求；需求；需要；查询）",
+        "directAntonym": "waive /ˈweɪv/（不坚持要求；放弃；推迟考虑；丢弃）",
+        "derivatives": "requirement",
+        "example": "This task requires careful planning.",
+        "exampleChinese": "这个任务需要仔细规划。"
       },
       "meanings": [
         {
           "partOfSpeech": "v.",
-          "english": "to grow or cause something to grow",
-          "chinese": "发展",
-          "example": "She developed a habit of reading every night.",
-          "translation": "她养成了每晚阅读的习惯。"
+          "english": "to need something or make it necessary",
+          "chinese": "需要",
+          "example": "This task requires careful planning.",
+          "translation": "这个任务需要仔细规划。"
         }
       ],
       "contextPhrases": [
@@ -1647,14 +1201,14 @@
           "category": "核心动作与结构",
           "items": [
             {
-              "phrase": "develop a habit",
-              "phonetic": "/dɪˈveləp ə ˈhæbət/",
-              "chinese": "养成习惯"
+              "phrase": "require someone to do",
+              "phonetic": "/rɪˈkwaɪər ˈsʌˌmwʌn ˈtuː ˈduː/",
+              "chinese": "要求某人做"
             },
             {
-              "phrase": "develop a skill",
-              "phonetic": "/dɪˈveləp ə ˈskɪl/",
-              "chinese": "培养技能"
+              "phrase": "require careful planning",
+              "phonetic": "/rɪˈkwaɪər ˈkɛrfəl ˈplænɪŋ/",
+              "chinese": "需要周密计划"
             }
           ]
         },
@@ -1662,14 +1216,14 @@
           "category": "日常与工作语境",
           "items": [
             {
-              "phrase": "develop a plan",
-              "phonetic": "/dɪˈveləp ə ˈplæn/",
-              "chinese": "制定方案"
+              "phrase": "be required to",
+              "phonetic": "/ˈbiː riːˈkwaɪɚd ˈtuː/",
+              "chinese": "被要求做"
             },
             {
-              "phrase": "develop an interest in",
-              "phonetic": "/dɪˈveləp ˈæn ˈɪntrəst ɪn/",
-              "chinese": "培养对……的兴趣"
+              "phrase": "as required",
+              "phonetic": "/ˈæz riːˈkwaɪɚd/",
+              "chinese": "按要求"
             }
           ]
         },
@@ -1677,97 +1231,126 @@
           "category": "高频扩展表达",
           "items": [
             {
-              "phrase": "develop over time",
-              "phonetic": "/dɪˈveləp ˈoʊvɚ ˈtaɪm/",
-              "chinese": "逐步发展"
+              "phrase": "meet the requirements",
+              "phonetic": "/ˈmiːt ðə rɪˈkwaɪrmənts/",
+              "chinese": "满足要求"
             },
             {
-              "phrase": "research and development",
-              "phonetic": "/riːˈsɝːtʃ ənd dɪˈvɛləpmənt/",
-              "chinese": "研究与开发"
+              "phrase": "no experience required",
+              "phonetic": "/ˈnoʊ ɪˈkspɪriːəns riːˈkwaɪɚd/",
+              "chinese": "无需经验"
+            }
+          ]
+        },
+        {
+          "category": "补充常用语境",
+          "items": [
+            {
+              "phrase": "require attention",
+              "phonetic": "/rɪˈkwaɪər əˈtɛnʃən/",
+              "chinese": "需要注意"
             }
           ]
         }
       ],
       "fixedPhrases": [
         {
-          "phrase": "develop a habit",
-          "phonetic": "/dɪˈveləp ə ˈhæbət/",
-          "chinese": "养成习惯",
-          "example": "It takes time to develop a healthy habit.",
-          "translation": "养成健康习惯需要时间。"
+          "phrase": "require someone to do",
+          "phonetic": "/rɪˈkwaɪər ˈsʌˌmwʌn ˈtuː ˈduː/",
+          "chinese": "要求某人做",
+          "example": "The job requires applicants to speak English.",
+          "translation": "这份工作要求申请人会说英语。"
         },
         {
-          "phrase": "develop a skill",
-          "phonetic": "/dɪˈveləp ə ˈskɪl/",
-          "chinese": "培养技能",
-          "example": "Daily conversation can help you develop speaking skills.",
-          "translation": "每天对话可以帮助你培养口语技能。"
+          "phrase": "require careful planning",
+          "phonetic": "/rɪˈkwaɪər ˈkɛrfəl ˈplænɪŋ/",
+          "chinese": "需要周密计划",
+          "example": "A large project requires careful planning.",
+          "translation": "大型项目需要周密规划。"
         },
         {
-          "phrase": "develop a plan",
-          "phonetic": "/dɪˈveləp ə ˈplæn/",
-          "chinese": "制定方案",
-          "example": "The team developed a practical plan for the next stage.",
-          "translation": "团队为下一阶段制定了一个切实可行的计划。"
+          "phrase": "be required to",
+          "phonetic": "/ˈbiː riːˈkwaɪɚd ˈtuː/",
+          "chinese": "被要求做",
+          "example": "Passengers are required to show identification.",
+          "translation": "乘客必须出示身份证件。"
         },
         {
-          "phrase": "develop an interest in",
-          "phonetic": "/dɪˈveləp ˈæn ˈɪntrəst ɪn/",
-          "chinese": "培养对……的兴趣",
-          "example": "She developed an interest in photography at college.",
-          "translation": "她在大学时培养了对摄影的兴趣。"
+          "phrase": "as required",
+          "phonetic": "/ˈæz riːˈkwaɪɚd/",
+          "chinese": "按要求",
+          "example": "Please update the form as required.",
+          "translation": "请按要求更新表格。"
         },
         {
-          "phrase": "develop over time",
-          "phonetic": "/dɪˈveləp ˈoʊvɚ ˈtaɪm/",
-          "chinese": "逐步发展",
-          "example": "Trust develops over time.",
-          "translation": "信任是逐步建立起来的。"
+          "phrase": "meet the requirements",
+          "phonetic": "/ˈmiːt ðə rɪˈkwaɪrmənts/",
+          "chinese": "满足要求",
+          "example": "She meets all the requirements for the position.",
+          "translation": "她符合这个职位的所有要求。"
         },
         {
-          "phrase": "research and development",
-          "phonetic": "/riːˈsɝːtʃ ənd dɪˈvɛləpmənt/",
-          "chinese": "研究与开发",
-          "example": "The company invests heavily in research and development.",
-          "translation": "公司在研发方面投入了大量资金。"
+          "phrase": "no experience required",
+          "phonetic": "/ˈnoʊ ɪˈkspɪriːəns riːˈkwaɪɚd/",
+          "chinese": "无需经验",
+          "example": "No previous experience is required for this course.",
+          "translation": "这门课程不要求有相关经验。"
         }
       ],
       "synonyms": [
         {
-          "word": "build",
-          "phonetic": "/ˈbɪld/",
-          "partOfSpeech": "v.",
-          "chinese": "与“发展”意义接近",
-          "difference": "develop 是本卡核心搭配 “develop a habit” 中的中性常用选择；build 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
+          "word": "demand",
+          "phonetic": "/dɪˈmænd/",
+          "partOfSpeech": "v. / n.",
+          "chinese": "要求；需求；需要；查询",
+          "difference": "require 是本卡核心搭配 “require attention” 中的中性常用选择；demand 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
         }
       ],
       "antonyms": [
         {
-          "word": "decline",
-          "phonetic": "/dɪˈklaɪn/",
+          "word": "waive",
+          "phonetic": "/ˈweɪv/",
           "partOfSpeech": "v.",
-          "chinese": "与“发展”意义相反",
-          "usage": "在本卡核心义下与 develop 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
+          "chinese": "不坚持要求；放弃；推迟考虑；丢弃",
+          "usage": "在本卡核心义下与 require 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
         }
       ],
-      "derivatives": [],
+      "derivatives": [
+        {
+          "word": "requirement",
+          "phonetic": "/rɪˈkwaɪrmənt/",
+          "partOfSpeech": "n.",
+          "chinese": "需求；必要条件；要求",
+          "note": "这是 require 的常用词族成员；请按上方词性放到句子的正确位置。"
+        }
+      ],
       "confusables": [],
       "relatedVocabulary": [
         {
           "category": "语义坐标：近义与反义",
           "items": [
             {
-              "word": "build",
-              "phonetic": "/ˈbɪld/",
-              "partOfSpeech": "v.",
-              "chinese": "与“发展”意义接近"
+              "word": "demand",
+              "phonetic": "/dɪˈmænd/",
+              "partOfSpeech": "v. / n.",
+              "chinese": "要求；需求；需要；查询"
             },
             {
-              "word": "decline",
-              "phonetic": "/dɪˈklaɪn/",
+              "word": "waive",
+              "phonetic": "/ˈweɪv/",
               "partOfSpeech": "v.",
-              "chinese": "与“发展”意义相反"
+              "chinese": "不坚持要求；放弃；推迟考虑；丢弃"
+            }
+          ]
+        },
+        {
+          "category": "词族与构词联系",
+          "items": [
+            {
+              "word": "requirement",
+              "phonetic": "/rɪˈkwaɪrmənt/",
+              "partOfSpeech": "n.",
+              "chinese": "需求；必要条件；要求"
             }
           ]
         }
@@ -1775,237 +1358,237 @@
       "examples": [
         {
           "scene": "核心真实用法",
-          "english": "She developed a habit of reading every night.",
-          "chinese": "她养成了每晚阅读的习惯。"
+          "english": "This task requires careful planning.",
+          "chinese": "这个任务需要仔细规划。"
         },
         {
           "scene": "日常使用",
-          "english": "It takes time to develop a healthy habit.",
-          "chinese": "养成健康习惯需要时间。"
+          "english": "The job requires applicants to speak English.",
+          "chinese": "这份工作要求申请人会说英语。"
         },
         {
           "scene": "工作或学习",
-          "english": "Daily conversation can help you develop speaking skills.",
-          "chinese": "每天对话可以帮助你培养口语技能。"
+          "english": "A large project requires careful planning.",
+          "chinese": "大型项目需要周密规划。"
         },
         {
           "scene": "常见搭配",
-          "english": "The team developed a practical plan for the next stage.",
-          "chinese": "团队为下一阶段制定了一个切实可行的计划。"
+          "english": "Passengers are required to show identification.",
+          "chinese": "乘客必须出示身份证件。"
         },
         {
           "scene": "真实语境",
-          "english": "She developed an interest in photography at college.",
-          "chinese": "她在大学时培养了对摄影的兴趣。"
+          "english": "Please update the form as required.",
+          "chinese": "请按要求更新表格。"
         },
         {
           "scene": "易错结构",
-          "english": "Trust develops over time.",
-          "chinese": "信任是逐步建立起来的。"
+          "english": "She meets all the requirements for the position.",
+          "chinese": "她符合这个职位的所有要求。"
         },
         {
           "scene": "主动表达",
-          "english": "The company invests heavily in research and development.",
-          "chinese": "公司在研发方面投入了大量资金。"
+          "english": "No previous experience is required for this course.",
+          "chinese": "这门课程不要求有相关经验。"
         }
       ],
       "studyFocus": {
-        "coreMeaning": "发展；培养；英文核心释义：to grow or cause something to grow。",
-        "keyCollocation": "把 “develop a habit” 作为一个完整句块记忆。",
+        "coreMeaning": "需要；要求；英文核心释义：to need something or make it necessary。",
+        "keyCollocation": "把 “require attention” 作为一个完整句块记忆。",
         "commonMistake": "情态动词 can 后直接接动词原形，不加 to。",
-        "mustUseExample": "She developed a habit of reading every night."
+        "mustUseExample": "This task requires careful planning."
       },
       "questions": [
         {
-          "id": "develop-v-meaning-core",
+          "id": "require-v-meaning-core",
           "type": "meaning_choice",
-          "prompt": "“develop”最核心的中文含义是？",
+          "prompt": "“require”最核心的中文含义是？",
           "options": [
-            "行为；表现",
-            "发展；培养",
-            "影响"
+            "接受；认可",
+            "商业；事务",
+            "需要；要求"
           ],
-          "answer": "发展；培养",
+          "answer": "需要；要求",
           "stage": "T0",
           "ai": false
         },
         {
-          "id": "develop-v-meaning-english",
+          "id": "require-v-meaning-english",
           "type": "meaning_choice",
-          "prompt": "哪一项英文释义最符合词卡中的 “develop”？",
+          "prompt": "哪一项英文释义最符合词卡中的 “require”？",
           "options": [
-            "to grow or cause something to grow",
-            "to cause a change in someone or something",
-            "the way a person or thing acts"
+            "work involving buying, selling, or services",
+            "to need something or make it necessary",
+            "to agree to receive or believe something"
           ],
-          "answer": "to grow or cause something to grow",
+          "answer": "to need something or make it necessary",
           "stage": "T0",
           "ai": false
         },
         {
-          "id": "develop-v-structure-choice-v3",
+          "id": "require-v-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "核心结构辨析：哪一项既表示“养成习惯”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+          "prompt": "核心结构辨析：哪一项既表示“要求某人做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
           "options": [
-            "develop a skill",
-            "develop a plan",
-            "develop an interest in",
-            "develop a habit"
+            "require someone to do",
+            "require careful planning",
+            "be required to",
+            "as required"
           ],
-          "answer": "develop a habit",
+          "answer": "require someone to do",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "develop-v-synonym-choice",
+          "id": "require-v-synonym-choice",
           "type": "meaning_choice",
-          "prompt": "哪个词是词卡中列出的 “develop” 最直接近义词？",
+          "prompt": "哪个词是词卡中列出的 “require” 最直接近义词？",
           "options": [
-            "affect",
-            "behavior",
-            "build",
-            "decline"
+            "waive",
+            "accept",
+            "business",
+            "demand"
           ],
-          "answer": "build",
+          "answer": "demand",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "develop-v-antonym-choice",
+          "id": "require-v-antonym-choice",
           "type": "meaning_choice",
-          "prompt": "哪个词是词卡中列出的 “develop” 最直接反义词？",
+          "prompt": "哪个词是词卡中列出的 “require” 最直接反义词？",
           "options": [
-            "behavior",
-            "decline",
-            "build",
-            "affect"
+            "accept",
+            "business",
+            "waive",
+            "demand"
           ],
-          "answer": "decline",
+          "answer": "waive",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "develop-v-contrast-choice",
+          "id": "require-v-contrast-choice",
           "type": "meaning_choice",
-          "prompt": "根据本词卡辨析，哪个词被列为 “develop” 的相关近义词？",
+          "prompt": "根据本词卡辨析，哪个词被列为 “require” 的派生词？",
           "options": [
-            "build",
-            "decline",
-            "affect",
-            "behavior"
+            "accept",
+            "requirement",
+            "demand",
+            "waive"
           ],
-          "answer": "build",
+          "answer": "requirement",
           "stage": "T3",
           "ai": false
         },
         {
-          "id": "develop-v-recall-definition",
+          "id": "require-v-recall-definition",
           "type": "recall",
-          "prompt": "根据英文释义写出目标词：to grow or cause something to grow",
-          "answer": "develop",
+          "prompt": "根据英文释义写出目标词：to need something or make it necessary",
+          "answer": "require",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "develop-v-recall-chinese",
+          "id": "require-v-recall-chinese",
           "type": "recall",
-          "prompt": "写出符合“发展；培养”（v.）的本课目标词。",
-          "answer": "develop",
+          "prompt": "写出符合“需要；要求”（v.）的本课目标词。",
+          "answer": "require",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "develop-v-collocation-core",
+          "id": "require-v-collocation-core",
           "type": "collocation",
-          "prompt": "补全高频搭配：_____ a habit（填写 develop 的正确形式）",
-          "answer": "develop",
+          "prompt": "补全高频搭配：_____ attention（填写 require 的正确形式）",
+          "answer": "require",
           "stage": "T0",
           "ai": false
         },
         {
-          "id": "develop-v-collocation-structure-meaning-v3",
+          "id": "require-v-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "句型应用：哪一项既表示“培养技能”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+          "prompt": "句型应用：哪一项既表示“需要周密计划”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "develop an interest in",
-            "develop a skill",
-            "develop a habit",
-            "develop a plan"
+            "be required to",
+            "as required",
+            "require careful planning",
+            "require someone to do"
           ],
-          "answer": "develop a skill",
+          "answer": "require careful planning",
           "stage": "T1",
           "ai": false
         },
         {
-          "id": "develop-v-collocation-example-context-v3",
+          "id": "require-v-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：She developed a _____ of reading every night.（中文：她养成了每晚阅读的习惯。）",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：This task requires _____ planning.（中文：这个任务需要仔细规划。）",
           "options": [
-            "habit",
-            "memory",
-            "positive",
-            "conversation"
+            "practice",
+            "careful",
+            "responsibility",
+            "online"
           ],
-          "answer": "habit",
+          "answer": "careful",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "develop-v-collocation-fixed-1-v3",
+          "id": "require-v-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "用法辨析：哪一项既表示“养成习惯”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+          "prompt": "搭配辨析：哪一项既表示“要求某人做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
           "options": [
-            "develop a skill",
-            "develop a plan",
-            "develop an interest in",
-            "develop a habit"
+            "require someone to do",
+            "require careful planning",
+            "be required to",
+            "as required"
           ],
-          "answer": "develop a habit",
+          "answer": "require someone to do",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "develop-v-collocation-fixed-2-v3",
+          "id": "require-v-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "搭配辨析：哪一项既表示“培养技能”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+          "prompt": "用法辨析：哪一项既表示“需要周密计划”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "develop a plan",
-            "develop an interest in",
-            "develop a skill",
-            "develop a habit"
+            "require someone to do",
+            "be required to",
+            "as required",
+            "require careful planning"
           ],
-          "answer": "develop a skill",
+          "answer": "require careful planning",
           "stage": "T3",
           "ai": false
         },
         {
-          "id": "develop-v-example-cloze",
+          "id": "require-v-example-cloze",
           "type": "collocation",
-          "prompt": "根据句意补全词卡核心例句：She _____ a habit of reading every night.（填写 develop 的正确形式）",
-          "answer": "developed",
+          "prompt": "根据句意补全词卡核心例句：This task _____ careful planning.（填写 require 的正确形式）",
+          "answer": "requires",
           "stage": "T3",
           "ai": false
         },
         {
-          "id": "develop-v-sentence-core",
+          "id": "require-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “develop” 写一个自然、真实的英文句子，含义必须符合词卡核心义“发展；培养”。",
+          "prompt": "请用 “require” 写一个自然、真实的英文句子，含义必须符合词卡核心义“需要；要求”。",
           "answer": "",
           "stage": "T2",
           "ai": true
         },
         {
-          "id": "develop-v-sentence-phrase",
+          "id": "require-v-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请使用 “develop a habit” 结构写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “require someone to do” 结构写一个与自己有关的自然英文句子；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词。",
           "answer": "",
           "stage": "T3",
           "ai": true
         },
         {
-          "id": "develop-v-dialogue",
+          "id": "require-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “develop” 和 “develop a habit” 结构，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “require” 和 “require careful planning” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2063,11 +1646,553 @@
           "dialogue"
         ]
       },
-      "detailLevel": "template-structured",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.2",
-      "contentVersion": "2026.08.19.6",
+      "contentVersion": "2026.09.07.1",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
+    },
+    {
+      "id": "listen-v",
+      "word": "listen",
+      "lemma": "listen",
+      "cocaRanks": [
+        {
+          "rank": 460,
+          "pos": "v",
+          "frequency": 208819,
+          "partOfSpeech": "v."
+        }
+      ],
+      "cocaRankLabel": "v. 第 460 名",
+      "learningPriority": {
+        "sequence": 24,
+        "group": "verb",
+        "groupLabel": "动词",
+        "groupOrder": 1,
+        "primaryCocaRank": 460
+      },
+      "phonetic": "/ˈlɪsən/",
+      "syllables": "listen（约 2 音节）",
+      "partOfSpeech": "v.",
+      "frequencyBand": "COCA 高频精选 · v. 第 460 名",
+      "difficulty": "基础",
+      "tags": [
+        "v.",
+        "完整词卡",
+        "高频表达"
+      ],
+      "coreMemory": {
+        "chinese": "听；倾听",
+        "english": "v. to pay attention to sound",
+        "structure": "listen to /ˈlɪsən ˈtuː/（听……）；listen carefully /ˈlɪsən ˈkɛrfəliː/（仔细听）；listen for /ˈlɪsən ˈfɔːr/（留意听……）；listen to advice /ˈlɪsən ˈtuː æˈdvaɪs/（听取建议）",
+        "structures": [
+          {
+            "phrase": "listen to",
+            "phonetic": "/ˈlɪsən ˈtuː/",
+            "chinese": "听……"
+          },
+          {
+            "phrase": "listen carefully",
+            "phonetic": "/ˈlɪsən ˈkɛrfəliː/",
+            "chinese": "仔细听"
+          },
+          {
+            "phrase": "listen for",
+            "phonetic": "/ˈlɪsən ˈfɔːr/",
+            "chinese": "留意听……"
+          },
+          {
+            "phrase": "listen to advice",
+            "phonetic": "/ˈlɪsən ˈtuː æˈdvaɪs/",
+            "chinese": "听取建议"
+          }
+        ],
+        "commonError": "❌ can to listen → ✅ can listen；❌ to listening → ✅ to listen",
+        "commonErrors": [
+          {
+            "wrong": "can to listen",
+            "wrongPhonetic": "/ˈkæn ˈtuː ˈlɪsən/",
+            "right": "can listen",
+            "rightPhonetic": "/ˈkæn ˈlɪsən/",
+            "note": "情态动词 can 后直接接动词原形，不加 to。"
+          },
+          {
+            "wrong": "to listening",
+            "wrongPhonetic": "/ˈtuː ˈlɪsənɪŋ/",
+            "right": "to listen",
+            "rightPhonetic": "/ˈtuː ˈlɪsən/",
+            "note": "不定式 to 后接动词原形；不要把不定式和 -ing 形式混合。"
+          }
+        ],
+        "directSynonym": "hear /ˈhiːr/（听到；倾听；听说；审理）",
+        "directAntonym": "ignore /ˌɪˈɡnɔːr/（不理睬；忽视；驳回；忽略）",
+        "derivatives": "listener",
+        "example": "Listen to the whole sentence before answering.",
+        "exampleChinese": "回答前先听完整个句子。"
+      },
+      "meanings": [
+        {
+          "partOfSpeech": "v.",
+          "english": "to pay attention to sound",
+          "chinese": "听",
+          "example": "Listen to the whole sentence before answering.",
+          "translation": "回答前先听完整个句子。"
+        }
+      ],
+      "contextPhrases": [
+        {
+          "category": "核心动作与结构",
+          "items": [
+            {
+              "phrase": "listen to",
+              "phonetic": "/ˈlɪsən ˈtuː/",
+              "chinese": "听……"
+            },
+            {
+              "phrase": "listen carefully",
+              "phonetic": "/ˈlɪsən ˈkɛrfəliː/",
+              "chinese": "仔细听"
+            }
+          ]
+        },
+        {
+          "category": "日常与工作语境",
+          "items": [
+            {
+              "phrase": "listen for",
+              "phonetic": "/ˈlɪsən ˈfɔːr/",
+              "chinese": "留意听……"
+            },
+            {
+              "phrase": "listen to advice",
+              "phonetic": "/ˈlɪsən ˈtuː æˈdvaɪs/",
+              "chinese": "听取建议"
+            }
+          ]
+        },
+        {
+          "category": "高频扩展表达",
+          "items": [
+            {
+              "phrase": "listen closely",
+              "phonetic": "/ˈlɪsən ˈkloʊsliː/",
+              "chinese": "认真听"
+            },
+            {
+              "phrase": "good listener",
+              "phonetic": "/ˈɡʊd ˈlɪsənɚ/",
+              "chinese": "善于倾听的人"
+            }
+          ]
+        }
+      ],
+      "fixedPhrases": [
+        {
+          "phrase": "listen to",
+          "phonetic": "/ˈlɪsən ˈtuː/",
+          "chinese": "听……",
+          "example": "I listen to an English podcast on my way to work.",
+          "translation": "我上班路上听英语播客。"
+        },
+        {
+          "phrase": "listen carefully",
+          "phonetic": "/ˈlɪsən ˈkɛrfəliː/",
+          "chinese": "仔细听",
+          "example": "Listen carefully before you choose an answer.",
+          "translation": "选择答案前请仔细听。"
+        },
+        {
+          "phrase": "listen for",
+          "phonetic": "/ˈlɪsən ˈfɔːr/",
+          "chinese": "留意听……",
+          "example": "Listen for the difference between the two vowel sounds.",
+          "translation": "留意听这两个元音的区别。"
+        },
+        {
+          "phrase": "listen to advice",
+          "phonetic": "/ˈlɪsən ˈtuː æˈdvaɪs/",
+          "chinese": "听取建议",
+          "example": "You should listen to your doctor’s advice.",
+          "translation": "你应该听取医生的建议。"
+        },
+        {
+          "phrase": "listen closely",
+          "phonetic": "/ˈlɪsən ˈkloʊsliː/",
+          "chinese": "认真听",
+          "example": "Everyone listened closely to the announcement.",
+          "translation": "每个人都认真听了通知。"
+        },
+        {
+          "phrase": "good listener",
+          "phonetic": "/ˈɡʊd ˈlɪsənɚ/",
+          "chinese": "善于倾听的人",
+          "example": "A good listener asks thoughtful questions.",
+          "translation": "善于倾听的人会提出有思考的问题。"
+        }
+      ],
+      "synonyms": [
+        {
+          "word": "hear",
+          "phonetic": "/ˈhiːr/",
+          "partOfSpeech": "v.",
+          "chinese": "听到；倾听；听说；审理",
+          "difference": "listen 是本卡核心搭配 “listen to” 中的中性常用选择；hear 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
+        }
+      ],
+      "antonyms": [
+        {
+          "word": "ignore",
+          "phonetic": "/ˌɪˈɡnɔːr/",
+          "partOfSpeech": "v.",
+          "chinese": "不理睬；忽视；驳回；忽略",
+          "usage": "在本卡核心义下与 listen 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
+        }
+      ],
+      "derivatives": [
+        {
+          "word": "listener",
+          "phonetic": "/ˈlɪsənɚ/",
+          "partOfSpeech": "n.",
+          "chinese": "收听者；听众",
+          "note": "这是 listen 的常用词族成员；请按上方词性放到句子的正确位置。"
+        }
+      ],
+      "confusables": [
+        {
+          "word": "hear",
+          "partOfSpeech": "v.",
+          "chinese": "听见",
+          "difference": "listen 强调主动听，常接 to；hear 强调声音进入耳朵。",
+          "phonetic": "/ˈhiːr/"
+        }
+      ],
+      "relatedVocabulary": [
+        {
+          "category": "语义坐标：近义与反义",
+          "items": [
+            {
+              "word": "hear",
+              "phonetic": "/ˈhiːr/",
+              "partOfSpeech": "v.",
+              "chinese": "听到；倾听；听说；审理"
+            },
+            {
+              "word": "ignore",
+              "phonetic": "/ˌɪˈɡnɔːr/",
+              "partOfSpeech": "v.",
+              "chinese": "不理睬；忽视；驳回；忽略"
+            }
+          ]
+        },
+        {
+          "category": "词族与构词联系",
+          "items": [
+            {
+              "word": "listener",
+              "phonetic": "/ˈlɪsənɚ/",
+              "partOfSpeech": "n.",
+              "chinese": "收听者；听众"
+            }
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "scene": "核心真实用法",
+          "english": "Listen to the whole sentence before answering.",
+          "chinese": "回答前先听完整个句子。"
+        },
+        {
+          "scene": "日常使用",
+          "english": "I listen to an English podcast on my way to work.",
+          "chinese": "我上班路上听英语播客。"
+        },
+        {
+          "scene": "工作或学习",
+          "english": "Listen carefully before you choose an answer.",
+          "chinese": "选择答案前请仔细听。"
+        },
+        {
+          "scene": "常见搭配",
+          "english": "Listen for the difference between the two vowel sounds.",
+          "chinese": "留意听这两个元音的区别。"
+        },
+        {
+          "scene": "真实语境",
+          "english": "You should listen to your doctor’s advice.",
+          "chinese": "你应该听取医生的建议。"
+        },
+        {
+          "scene": "易错结构",
+          "english": "Everyone listened closely to the announcement.",
+          "chinese": "每个人都认真听了通知。"
+        },
+        {
+          "scene": "主动表达",
+          "english": "A good listener asks thoughtful questions.",
+          "chinese": "善于倾听的人会提出有思考的问题。"
+        }
+      ],
+      "studyFocus": {
+        "coreMeaning": "听；倾听；英文核心释义：to pay attention to sound。",
+        "keyCollocation": "把 “listen to” 作为一个完整句块记忆。",
+        "commonMistake": "情态动词 can 后直接接动词原形，不加 to。",
+        "mustUseExample": "Listen to the whole sentence before answering."
+      },
+      "questions": [
+        {
+          "id": "listen-v-meaning-core",
+          "type": "meaning_choice",
+          "prompt": "“listen”最核心的中文含义是？",
+          "options": [
+            "家；在家",
+            "听；倾听",
+            "准备"
+          ],
+          "answer": "听；倾听",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "listen-v-meaning-english",
+          "type": "meaning_choice",
+          "prompt": "哪一项英文释义最符合词卡中的 “listen”？",
+          "options": [
+            "to pay attention to sound",
+            "to make ready for something",
+            "the place where you live"
+          ],
+          "answer": "to pay attention to sound",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "listen-v-structure-choice-v3",
+          "type": "meaning_choice",
+          "prompt": "核心结构辨析：哪一项既表示“听……”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+          "options": [
+            "listen carefully",
+            "listen for",
+            "listen to advice",
+            "listen to"
+          ],
+          "answer": "listen to",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "listen-v-synonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “listen” 最直接近义词？",
+          "options": [
+            "prepare",
+            "home",
+            "hear",
+            "ignore"
+          ],
+          "answer": "hear",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "listen-v-antonym-choice",
+          "type": "meaning_choice",
+          "prompt": "哪个词是词卡中列出的 “listen” 最直接反义词？",
+          "options": [
+            "home",
+            "ignore",
+            "hear",
+            "prepare"
+          ],
+          "answer": "ignore",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "listen-v-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "根据本词卡辨析，哪个词被列为 “listen” 的易混词？",
+          "options": [
+            "hear",
+            "ignore",
+            "prepare",
+            "home"
+          ],
+          "answer": "hear",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "listen-v-recall-definition",
+          "type": "recall",
+          "prompt": "根据英文释义写出目标词：to pay attention to sound",
+          "answer": "listen",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "listen-v-recall-chinese",
+          "type": "recall",
+          "prompt": "写出符合“听；倾听”（v.）的本课目标词。",
+          "answer": "listen",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "listen-v-collocation-core",
+          "type": "collocation",
+          "prompt": "补全高频搭配：_____ to（填写 listen 的正确形式）",
+          "answer": "listen",
+          "stage": "T0",
+          "ai": false
+        },
+        {
+          "id": "listen-v-collocation-structure-meaning-v3",
+          "type": "collocation",
+          "prompt": "句型应用：哪一项既表示“仔细听”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+          "options": [
+            "listen to advice",
+            "listen carefully",
+            "listen to",
+            "listen for"
+          ],
+          "answer": "listen carefully",
+          "stage": "T1",
+          "ai": false
+        },
+        {
+          "id": "listen-v-collocation-example-context-v3",
+          "type": "collocation",
+          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Listen to the _____ sentence before answering.（中文：回答前先听完整个句子。）",
+          "options": [
+            "whole",
+            "interview",
+            "yourself",
+            "useful"
+          ],
+          "answer": "whole",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "listen-v-collocation-fixed-1-v3",
+          "type": "collocation",
+          "prompt": "用法辨析：哪一项既表示“听……”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+          "options": [
+            "listen carefully",
+            "listen for",
+            "listen to advice",
+            "listen to"
+          ],
+          "answer": "listen to",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "listen-v-collocation-fixed-2-v3",
+          "type": "collocation",
+          "prompt": "搭配辨析：哪一项既表示“仔细听”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+          "options": [
+            "listen for",
+            "listen to advice",
+            "listen carefully",
+            "listen to"
+          ],
+          "answer": "listen carefully",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "listen-v-example-cloze",
+          "type": "collocation",
+          "prompt": "根据句意补全词卡核心例句：_____ to the whole sentence before answering.（填写 listen 的正确形式）",
+          "answer": "Listen",
+          "stage": "T3",
+          "ai": false
+        },
+        {
+          "id": "listen-v-sentence-core",
+          "type": "free_sentence",
+          "prompt": "请用 “listen” 写一个自然、真实的英文句子，含义必须符合词卡核心义“听；倾听”。",
+          "answer": "",
+          "stage": "T2",
+          "ai": true
+        },
+        {
+          "id": "listen-v-sentence-phrase",
+          "type": "free_sentence",
+          "prompt": "请使用 “listen to” 结构写一个与自己有关的自然英文句子。",
+          "answer": "",
+          "stage": "T3",
+          "ai": true
+        },
+        {
+          "id": "listen-v-dialogue",
+          "type": "dialogue",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “listen” 和 “listen carefully” 结构，并避免中文直译。",
+          "answer": "",
+          "stage": "T4",
+          "ai": true
+        }
+      ],
+      "reviewStages": {
+        "T0": [
+          "meaning_choice",
+          "collocation",
+          "free_sentence"
+        ],
+        "T1": [
+          "meaning_choice",
+          "recall",
+          "collocation"
+        ],
+        "T2": [
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence"
+        ],
+        "T3": [
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "dialogue"
+        ],
+        "T4": [
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
+        ],
+        "T5": [
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
+        ],
+        "T6": [
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
+        ],
+        "T7": [
+          "meaning_choice",
+          "recall",
+          "collocation",
+          "free_sentence",
+          "dialogue"
+        ]
+      },
+      "detailLevel": "template-complete",
+      "templateVersion": "learning-template-2026.08.19.2",
+      "contentVersion": "2026.09.07.1",
+      "reviewed": false,
+      "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
     },
     {
       "id": "decide-v",
@@ -2082,6 +2207,13 @@
         }
       ],
       "cocaRankLabel": "v. 第 468 名",
+      "learningPriority": {
+        "sequence": 25,
+        "group": "verb",
+        "groupLabel": "动词",
+        "groupOrder": 1,
+        "primaryCocaRank": 468
+      },
       "phonetic": "/dɪˈsaɪd/",
       "syllables": "decide（约 2 音节）",
       "partOfSpeech": "v.",
@@ -2089,7 +2221,7 @@
       "difficulty": "基础",
       "tags": [
         "v.",
-        "模板结构版",
+        "完整词卡",
         "高频表达"
       ],
       "coreMemory": {
@@ -2135,9 +2267,9 @@
             "note": "不定式 to 后接动词原形；不要把不定式和 -ing 形式混合。"
           }
         ],
-        "directSynonym": "determine /dəˈtɝːmən/（与“决定”意义接近）",
-        "directAntonym": "hesitate /ˈhɛzəˌteɪt/（与“决定”意义相反）",
-        "derivatives": "decision",
+        "directSynonym": "determine /dəˈtɝːmən/（决定；决心）",
+        "directAntonym": "hesitate /ˈhɛzəˌteɪt/（犹豫；迟疑；踌躇；支吾）",
+        "derivatives": "decision · decisive",
         "example": "I decided to start with five words a day.",
         "exampleChinese": "我决定从每天五个单词开始。"
       },
@@ -2256,7 +2388,7 @@
           "word": "determine",
           "phonetic": "/dəˈtɝːmən/",
           "partOfSpeech": "v.",
-          "chinese": "与“决定”意义接近",
+          "chinese": "决定；决心",
           "difference": "decide 是本卡核心搭配 “decide to do something” 中的中性常用选择；determine 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
         }
       ],
@@ -2265,7 +2397,7 @@
           "word": "hesitate",
           "phonetic": "/ˈhɛzəˌteɪt/",
           "partOfSpeech": "v.",
-          "chinese": "与“决定”意义相反",
+          "chinese": "犹豫；迟疑；踌躇；支吾",
           "usage": "在本卡核心义下与 decide 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
         }
       ],
@@ -2275,7 +2407,14 @@
           "phonetic": "/dɪˈsɪʒən/",
           "partOfSpeech": "n.",
           "chinese": "决定",
-          "note": "与 decide 同属常用词族；注意两者词性和句中位置不同。"
+          "note": "这是 decide 的常用词族成员；请按上方词性放到句子的正确位置。"
+        },
+        {
+          "word": "decisive",
+          "phonetic": "/dɪˈsaɪsɪv/",
+          "partOfSpeech": "adj.",
+          "chinese": "决定性的；坚定的；果断的",
+          "note": "这是 decide 的常用词族成员；请按上方词性放到句子的正确位置。"
         }
       ],
       "confusables": [],
@@ -2287,13 +2426,13 @@
               "word": "determine",
               "phonetic": "/dəˈtɝːmən/",
               "partOfSpeech": "v.",
-              "chinese": "与“决定”意义接近"
+              "chinese": "决定；决心"
             },
             {
               "word": "hesitate",
               "phonetic": "/ˈhɛzəˌteɪt/",
               "partOfSpeech": "v.",
-              "chinese": "与“决定”意义相反"
+              "chinese": "犹豫；迟疑；踌躇；支吾"
             }
           ]
         },
@@ -2305,6 +2444,12 @@
               "phonetic": "/dɪˈsɪʒən/",
               "partOfSpeech": "n.",
               "chinese": "决定"
+            },
+            {
+              "word": "decisive",
+              "phonetic": "/dɪˈsaɪsɪv/",
+              "partOfSpeech": "adj.",
+              "chinese": "决定性的；坚定的；果断的"
             }
           ]
         }
@@ -2359,8 +2504,8 @@
           "prompt": "“decide”最核心的中文含义是？",
           "options": [
             "决定",
-            "意识到；实现",
-            "注意力；关注"
+            "避免",
+            "学习；研究"
           ],
           "answer": "决定",
           "stage": "T0",
@@ -2371,8 +2516,8 @@
           "type": "meaning_choice",
           "prompt": "哪一项英文释义最符合词卡中的 “decide”？",
           "options": [
-            "to suddenly understand something clearly",
-            "the act of carefully noticing something",
+            "to keep away from something",
+            "to learn about a subject carefully",
             "to make a choice after thinking"
           ],
           "answer": "to make a choice after thinking",
@@ -2398,10 +2543,10 @@
           "type": "meaning_choice",
           "prompt": "哪个词是词卡中列出的 “decide” 最直接近义词？",
           "options": [
-            "attention",
+            "study",
             "determine",
             "hesitate",
-            "realize"
+            "avoid"
           ],
           "answer": "determine",
           "stage": "T2",
@@ -2414,8 +2559,8 @@
           "options": [
             "hesitate",
             "determine",
-            "realize",
-            "attention"
+            "avoid",
+            "study"
           ],
           "answer": "hesitate",
           "stage": "T2",
@@ -2428,7 +2573,7 @@
           "options": [
             "determine",
             "hesitate",
-            "realize",
+            "avoid",
             "decision"
           ],
           "answer": "decision",
@@ -2478,9 +2623,9 @@
           "type": "collocation",
           "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：I decided to _____ with five words a day.（中文：我决定从每天五个单词开始。）",
           "options": [
-            "used",
+            "translating",
+            "English",
             "preposition",
-            "point",
             "start"
           ],
           "answer": "start",
@@ -2600,11 +2745,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "template-structured",
+      "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.2",
-      "contentVersion": "2026.08.19.6",
+      "contentVersion": "2026.09.07.1",
       "reviewed": false,
-      "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+      "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
     }
   ]
 }

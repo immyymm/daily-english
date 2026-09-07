@@ -11,14 +11,21 @@
     }
   ],
   "cocaRankLabel": "n. 第 560 名",
+  "learningPriority": {
+    "sequence": 87,
+    "group": "noun",
+    "groupLabel": "名词",
+    "groupOrder": 2,
+    "primaryCocaRank": 560
+  },
   "phonetic": "/ˌsɪtʃuˈeɪʃən/",
   "syllables": "sit·u·a·tion",
   "partOfSpeech": "n.",
   "frequencyBand": "COCA 高频精选 · n. 第 560 名",
-  "difficulty": "应用",
+  "difficulty": "进阶",
   "tags": [
     "n.",
-    "模板结构版",
+    "完整词卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -64,9 +71,9 @@
         "note": "不要只按中文逐字替换；优先把本卡高频搭配作为完整句块记忆。"
       }
     ],
-    "directSynonym": "circumstance /ˈsɝːkəˌmstæns/（与“情况”意义接近）",
-    "directAntonym": "certainty /ˈsɝːtəntiː/（与“情况”意义相反）",
-    "derivatives": "本词暂无需额外强记的高频派生词",
+    "directSynonym": "circumstance /ˈsɝːkəˌmstæns/（环境；状况；事件）",
+    "directAntonym": "certainty /ˈsɝːtəntiː/（确定；确实的事情）",
+    "derivatives": "situational",
     "example": "The right response depends on the situation.",
     "exampleChinese": "正确的回应取决于具体情况。"
   },
@@ -175,7 +182,7 @@
       "word": "circumstance",
       "phonetic": "/ˈsɝːkəˌmstæns/",
       "partOfSpeech": "n.",
-      "chinese": "与“情况”意义接近",
+      "chinese": "环境；状况；事件",
       "difference": "situation 是本卡核心搭配 “deal with a situation” 中的中性常用选择；circumstance 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -184,11 +191,19 @@
       "word": "certainty",
       "phonetic": "/ˈsɝːtəntiː/",
       "partOfSpeech": "n.",
-      "chinese": "与“情况”意义相反",
+      "chinese": "确定；确实的事情",
       "usage": "在本卡核心义下与 situation 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
-  "derivatives": [],
+  "derivatives": [
+    {
+      "word": "situational",
+      "phonetic": "/ˌsɪtʃuːˈeɪʃənəl/",
+      "partOfSpeech": "adj.",
+      "chinese": "环境形成的；情形的",
+      "note": "这是 situation 的常用词族成员；请按上方词性放到句子的正确位置。"
+    }
+  ],
   "confusables": [],
   "relatedVocabulary": [
     {
@@ -198,13 +213,24 @@
           "word": "circumstance",
           "phonetic": "/ˈsɝːkəˌmstæns/",
           "partOfSpeech": "n.",
-          "chinese": "与“情况”意义接近"
+          "chinese": "环境；状况；事件"
         },
         {
           "word": "certainty",
           "phonetic": "/ˈsɝːtəntiː/",
           "partOfSpeech": "n.",
-          "chinese": "与“情况”意义相反"
+          "chinese": "确定；确实的事情"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "situational",
+          "phonetic": "/ˌsɪtʃuːˈeɪʃənəl/",
+          "partOfSpeech": "adj.",
+          "chinese": "环境形成的；情形的"
         }
       ]
     }
@@ -258,9 +284,9 @@
       "type": "meaning_choice",
       "prompt": "“situation”最核心的中文含义是？",
       "options": [
-        "处理；应对",
+        "有耐心的；病人",
         "情况；局面",
-        "花费；度过"
+        "建议；忠告"
       ],
       "answer": "情况；局面",
       "stage": "T0",
@@ -272,8 +298,8 @@
       "prompt": "哪一项英文释义最符合词卡中的 “situation”？",
       "options": [
         "the set of conditions at a particular time",
-        "to use time or money for something",
-        "to deal with a situation or task"
+        "an opinion about what someone should do",
+        "able to wait calmly"
       ],
       "answer": "the set of conditions at a particular time",
       "stage": "T0",
@@ -299,8 +325,8 @@
       "prompt": "哪个词是词卡中列出的 “situation” 最直接近义词？",
       "options": [
         "certainty",
-        "spend",
-        "handle",
+        "advice",
+        "patient",
         "circumstance"
       ],
       "answer": "circumstance",
@@ -312,8 +338,8 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “situation” 最直接反义词？",
       "options": [
-        "spend",
-        "handle",
+        "advice",
+        "patient",
         "certainty",
         "circumstance"
       ],
@@ -324,14 +350,14 @@
     {
       "id": "situation-n-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “situation” 的相关近义词？",
+      "prompt": "根据本词卡辨析，哪个词被列为 “situation” 的派生词？",
       "options": [
-        "handle",
+        "advice",
+        "situational",
         "circumstance",
-        "certainty",
-        "spend"
+        "certainty"
       ],
-      "answer": "circumstance",
+      "answer": "situational",
       "stage": "T3",
       "ai": false
     },
@@ -378,10 +404,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：The right response _____ on the situation.（中文：正确的回应取决于具体情况。）",
       "options": [
-        "helps",
+        "difficult",
         "depends",
-        "twenty",
-        "difficult"
+        "practical",
+        "yourself"
       ],
       "answer": "depends",
       "stage": "T2",
@@ -500,9 +526,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

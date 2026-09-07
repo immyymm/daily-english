@@ -11,6 +11,13 @@
     }
   ],
   "cocaRankLabel": "v. 第 499 名",
+  "learningPriority": {
+    "sequence": 29,
+    "group": "verb",
+    "groupLabel": "动词",
+    "groupOrder": 1,
+    "primaryCocaRank": 499
+  },
   "phonetic": "/rɪˈmeɪn/",
   "syllables": "remain（约 2 音节）",
   "partOfSpeech": "v.",
@@ -18,7 +25,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "模板结构版",
+    "完整词卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -64,7 +71,7 @@
         "note": "不定式 to 后接动词原形；不要把不定式和 -ing 形式混合。"
       }
     ],
-    "directSynonym": "stay /ˈsteɪ/（与“保持”意义接近）",
+    "directSynonym": "stay /ˈsteɪ/（停留；逗留；制止；延缓）",
     "directAntonym": "change /ˈtʃeɪndʒ/（改变）",
     "derivatives": "本词暂无需额外强记的高频派生词",
     "example": "Please remain calm and try again.",
@@ -174,8 +181,8 @@
     {
       "word": "stay",
       "phonetic": "/ˈsteɪ/",
-      "partOfSpeech": "v.",
-      "chinese": "与“保持”意义接近",
+      "partOfSpeech": "v. / n.",
+      "chinese": "停留；逗留；制止；延缓",
       "difference": "remain 是本卡核心搭配 “remain calm” 中的中性常用选择；stay 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -183,7 +190,7 @@
     {
       "word": "change",
       "phonetic": "/ˈtʃeɪndʒ/",
-      "partOfSpeech": "v.",
+      "partOfSpeech": "v. / n.",
       "chinese": "改变",
       "usage": "在本卡核心义下与 remain 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
@@ -197,8 +204,8 @@
         {
           "word": "stay",
           "phonetic": "/ˈsteɪ/",
-          "partOfSpeech": "v.",
-          "chinese": "与“保持”意义接近"
+          "partOfSpeech": "v. / n.",
+          "chinese": "停留；逗留；制止；延缓"
         },
         {
           "word": "change",
@@ -258,9 +265,9 @@
       "type": "meaning_choice",
       "prompt": "“remain”最核心的中文含义是？",
       "options": [
-        "可获得的；有空的",
-        "保持；仍然是",
-        "经验；经历"
+        "改善；提高",
+        "服务",
+        "保持；仍然是"
       ],
       "answer": "保持；仍然是",
       "stage": "T0",
@@ -271,9 +278,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “remain”？",
       "options": [
+        "work done to help or provide something for people",
         "to continue to be in the same state",
-        "knowledge gained by doing or seeing things",
-        "ready to be used or able to meet"
+        "to make something better"
       ],
       "answer": "to continue to be in the same state",
       "stage": "T0",
@@ -284,10 +291,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“保持冷静”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "remain calm",
-        "remain unchanged",
         "remain in place",
-        "remain to be seen"
+        "remain to be seen",
+        "remain calm",
+        "remain unchanged"
       ],
       "answer": "remain calm",
       "stage": "T1",
@@ -298,10 +305,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “remain” 最直接近义词？",
       "options": [
+        "service",
+        "stay",
         "change",
-        "experience",
-        "available",
-        "stay"
+        "improve"
       ],
       "answer": "stay",
       "stage": "T2",
@@ -312,10 +319,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “remain” 最直接反义词？",
       "options": [
-        "experience",
-        "available",
         "change",
-        "stay"
+        "stay",
+        "improve",
+        "service"
       ],
       "answer": "change",
       "stage": "T2",
@@ -326,10 +333,10 @@
       "type": "meaning_choice",
       "prompt": "根据本词卡辨析，哪个词被列为 “remain” 的相关近义词？",
       "options": [
-        "available",
-        "stay",
         "change",
-        "experience"
+        "improve",
+        "service",
+        "stay"
       ],
       "answer": "stay",
       "stage": "T3",
@@ -364,10 +371,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“保持不变”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "remain in place",
-        "remain to be seen",
         "remain unchanged",
-        "remain calm"
+        "remain calm",
+        "remain in place",
+        "remain to be seen"
       ],
       "answer": "remain unchanged",
       "stage": "T1",
@@ -378,10 +385,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Please remain _____ and try again.（中文：请保持冷静并再试一次。）",
       "options": [
-        "translation",
-        "calm",
-        "life",
-        "offline"
+        "speaking",
+        "excellent",
+        "recall",
+        "calm"
       ],
       "answer": "calm",
       "stage": "T2",
@@ -392,10 +399,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“保持冷静”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "remain calm",
-        "remain unchanged",
         "remain in place",
-        "remain to be seen"
+        "remain to be seen",
+        "remain calm",
+        "remain unchanged"
       ],
       "answer": "remain calm",
       "stage": "T2",
@@ -406,10 +413,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“保持不变”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "remain calm",
-        "remain in place",
         "remain to be seen",
-        "remain unchanged"
+        "remain unchanged",
+        "remain calm",
+        "remain in place"
       ],
       "answer": "remain unchanged",
       "stage": "T3",
@@ -500,9 +507,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

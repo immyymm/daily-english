@@ -23,6 +23,13 @@
     }
   ],
   "cocaRankLabel": "v. 第 130 名；n. 第 1392 名；adj. 第 2135 名",
+  "learningPriority": {
+    "sequence": 1,
+    "group": "verb",
+    "groupLabel": "动词",
+    "groupOrder": 1,
+    "primaryCocaRank": 130
+  },
   "phonetic": "/miːn/",
   "syllables": "mean（单音节）",
   "partOfSpeech": "v.",
@@ -30,7 +37,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "模板结构版",
+    "完整词卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -76,9 +83,9 @@
         "note": "不定式 to 后接动词原形；不要把不定式和 -ing 形式混合。"
       }
     ],
-    "directSynonym": "signify /ˈsɪɡnəˌfaɪ/（与“意思是”意义接近）",
-    "directAntonym": "misrepresent /mɪˌsrɛprəˈzɛnt/（与“意思是”意义相反）",
-    "derivatives": "本词暂无需额外强记的高频派生词",
+    "directSynonym": "signify /ˈsɪɡnəˌfaɪ/（象征；预示；要紧；重要）",
+    "directAntonym": "misrepresent /mɪˌsrɛprəˈzɛnt/（不如实地叙述；不称职地代表）",
+    "derivatives": "meaning · meaningful",
     "example": "Your support means a lot to me.",
     "exampleChinese": "你的支持对我意义重大。"
   },
@@ -197,7 +204,7 @@
       "word": "signify",
       "phonetic": "/ˈsɪɡnəˌfaɪ/",
       "partOfSpeech": "v.",
-      "chinese": "与“意思是”意义接近",
+      "chinese": "象征；预示；要紧；重要",
       "difference": "mean 是本卡核心搭配 “mean a lot to someone” 中的中性常用选择；signify 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -206,11 +213,26 @@
       "word": "misrepresent",
       "phonetic": "/mɪˌsrɛprəˈzɛnt/",
       "partOfSpeech": "v.",
-      "chinese": "与“意思是”意义相反",
+      "chinese": "不如实地叙述；不称职地代表",
       "usage": "在本卡核心义下与 mean 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
-  "derivatives": [],
+  "derivatives": [
+    {
+      "word": "meaning",
+      "phonetic": "/ˈmiːnɪŋ/",
+      "partOfSpeech": "n. / adj.",
+      "chinese": "意义；含义；目的；意图",
+      "note": "这是 mean 的常用词族成员；请按上方词性放到句子的正确位置。"
+    },
+    {
+      "word": "meaningful",
+      "phonetic": "/ˈmiːnɪŋfəl/",
+      "partOfSpeech": "adj.",
+      "chinese": "意味深长的",
+      "note": "这是 mean 的常用词族成员；请按上方词性放到句子的正确位置。"
+    }
+  ],
   "confusables": [],
   "relatedVocabulary": [
     {
@@ -220,13 +242,30 @@
           "word": "signify",
           "phonetic": "/ˈsɪɡnəˌfaɪ/",
           "partOfSpeech": "v.",
-          "chinese": "与“意思是”意义接近"
+          "chinese": "象征；预示；要紧；重要"
         },
         {
           "word": "misrepresent",
           "phonetic": "/mɪˌsrɛprəˈzɛnt/",
           "partOfSpeech": "v.",
-          "chinese": "与“意思是”意义相反"
+          "chinese": "不如实地叙述；不称职地代表"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "meaning",
+          "phonetic": "/ˈmiːnɪŋ/",
+          "partOfSpeech": "n. / adj.",
+          "chinese": "意义；含义；目的；意图"
+        },
+        {
+          "word": "meaningful",
+          "phonetic": "/ˈmiːnɪŋfəl/",
+          "partOfSpeech": "adj.",
+          "chinese": "意味深长的"
         }
       ]
     }
@@ -280,9 +319,9 @@
       "type": "meaning_choice",
       "prompt": "“mean”最核心的中文含义是？",
       "options": [
-        "分享；共同拥有",
-        "服务",
-        "意思是；意味着"
+        "意思是；意味着",
+        "继续",
+        "影响"
       ],
       "answer": "意思是；意味着",
       "stage": "T0",
@@ -293,9 +332,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “mean”？",
       "options": [
-        "work done to help or provide something for people",
-        "to express or have a particular meaning",
-        "to give part of something to others"
+        "to keep doing something without stopping",
+        "to cause a change in someone or something",
+        "to express or have a particular meaning"
       ],
       "answer": "to express or have a particular meaning",
       "stage": "T0",
@@ -306,10 +345,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“对……意义重大”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "mean that",
         "mean to do",
         "what do you mean",
-        "mean a lot to"
+        "mean a lot to",
+        "mean that"
       ],
       "answer": "mean a lot to",
       "stage": "T1",
@@ -320,10 +359,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “mean” 最直接近义词？",
       "options": [
-        "share",
-        "service",
+        "affect",
         "signify",
-        "misrepresent"
+        "misrepresent",
+        "continue"
       ],
       "answer": "signify",
       "stage": "T2",
@@ -334,10 +373,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “mean” 最直接反义词？",
       "options": [
-        "service",
         "misrepresent",
         "signify",
-        "share"
+        "continue",
+        "affect"
       ],
       "answer": "misrepresent",
       "stage": "T2",
@@ -346,14 +385,14 @@
     {
       "id": "mean-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “mean” 的相关近义词？",
+      "prompt": "根据本词卡辨析，哪个词被列为 “mean” 的派生词？",
       "options": [
         "signify",
         "misrepresent",
-        "share",
-        "service"
+        "continue",
+        "meaning"
       ],
-      "answer": "signify",
+      "answer": "meaning",
       "stage": "T3",
       "ai": false
     },
@@ -386,10 +425,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“意味着……”，又符合这个形式线索：使用 that 引导一个主谓完整的从句？",
       "options": [
-        "what do you mean",
         "mean that",
         "mean a lot to",
-        "mean to do"
+        "mean to do",
+        "what do you mean"
       ],
       "answer": "mean that",
       "stage": "T1",
@@ -400,10 +439,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Your support means a _____ to me.（中文：你的支持对我意义重大。）",
       "options": [
-        "lot",
-        "useful",
-        "excellent",
-        "expression"
+        "reading",
+        "memory",
+        "English",
+        "lot"
       ],
       "answer": "lot",
       "stage": "T2",
@@ -412,12 +451,12 @@
     {
       "id": "mean-v-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“对……意义重大”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "搭配辨析：哪一项既表示“对……意义重大”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "mean that",
         "mean to do",
         "what do you mean",
-        "mean a lot to"
+        "mean a lot to",
+        "mean that"
       ],
       "answer": "mean a lot to",
       "stage": "T2",
@@ -426,12 +465,12 @@
     {
       "id": "mean-v-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“意味着……”，又符合这个形式线索：使用 that 引导一个主谓完整的从句？",
+      "prompt": "用法辨析：哪一项既表示“意味着……”，又符合这个形式线索：使用 that 引导一个主谓完整的从句？",
       "options": [
-        "mean to do",
         "what do you mean",
         "mean that",
-        "mean a lot to"
+        "mean a lot to",
+        "mean to do"
       ],
       "answer": "mean that",
       "stage": "T3",
@@ -522,9 +561,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

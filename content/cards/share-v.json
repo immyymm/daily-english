@@ -17,6 +17,13 @@
     }
   ],
   "cocaRankLabel": "v. 第 570 名；n. 第 1442 名",
+  "learningPriority": {
+    "sequence": 33,
+    "group": "verb",
+    "groupLabel": "动词",
+    "groupOrder": 1,
+    "primaryCocaRank": 570
+  },
   "phonetic": "/ʃer/",
   "syllables": "share（单音节）",
   "partOfSpeech": "v. / n.",
@@ -24,7 +31,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "模板结构版",
+    "完整词卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -70,9 +77,9 @@
         "note": "不定式 to 后接动词原形；不要把不定式和 -ing 形式混合。"
       }
     ],
-    "directSynonym": "distribute /dɪˈstrɪbjuːt/（与“分享”意义接近）",
-    "directAntonym": "keep /ˈkiːp/（与“分享”意义相反）",
-    "derivatives": "本词暂无需额外强记的高频派生词",
+    "directSynonym": "distribute /dɪˈstrɪbjuːt/（分配；散布；分发）",
+    "directAntonym": "keep /ˈkiːp/（生计；维持；保持；保存）",
+    "derivatives": "shared · sharing",
     "example": "She shared a useful study tip with me.",
     "exampleChinese": "她和我分享了一个实用的学习技巧。"
   },
@@ -197,8 +204,8 @@
     {
       "word": "distribute",
       "phonetic": "/dɪˈstrɪbjuːt/",
-      "partOfSpeech": "v. / n.",
-      "chinese": "与“分享”意义接近",
+      "partOfSpeech": "v.",
+      "chinese": "分配；散布；分发",
       "difference": "share 是本卡核心搭配 “share an idea” 中的中性常用选择；distribute 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -207,11 +214,26 @@
       "word": "keep",
       "phonetic": "/ˈkiːp/",
       "partOfSpeech": "v. / n.",
-      "chinese": "与“分享”意义相反",
+      "chinese": "生计；维持；保持；保存",
       "usage": "在本卡核心义下与 share 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
-  "derivatives": [],
+  "derivatives": [
+    {
+      "word": "shared",
+      "phonetic": "/ˈʃɛrd/",
+      "partOfSpeech": "adj.",
+      "chinese": "共享的",
+      "note": "这是 share 的常用词族成员；请按上方词性放到句子的正确位置。"
+    },
+    {
+      "word": "sharing",
+      "phonetic": "/ˈʃɛrɪŋ/",
+      "partOfSpeech": "n.",
+      "chinese": "分享；共享",
+      "note": "这是 share 的常用词族成员；请按上方词性放到句子的正确位置。"
+    }
+  ],
   "confusables": [],
   "relatedVocabulary": [
     {
@@ -220,14 +242,31 @@
         {
           "word": "distribute",
           "phonetic": "/dɪˈstrɪbjuːt/",
-          "partOfSpeech": "v. / n.",
-          "chinese": "与“分享”意义接近"
+          "partOfSpeech": "v.",
+          "chinese": "分配；散布；分发"
         },
         {
           "word": "keep",
           "phonetic": "/ˈkiːp/",
           "partOfSpeech": "v. / n.",
-          "chinese": "与“分享”意义相反"
+          "chinese": "生计；维持；保持；保存"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "shared",
+          "phonetic": "/ˈʃɛrd/",
+          "partOfSpeech": "adj.",
+          "chinese": "共享的"
+        },
+        {
+          "word": "sharing",
+          "phonetic": "/ˈʃɛrɪŋ/",
+          "partOfSpeech": "n.",
+          "chinese": "分享；共享"
         }
       ]
     }
@@ -281,9 +320,9 @@
       "type": "meaning_choice",
       "prompt": "“share”最核心的中文含义是？",
       "options": [
+        "社区；群体",
         "分享；共同拥有",
-        "问题；议题",
-        "差异；区别"
+        "表达"
       ],
       "answer": "分享；共同拥有",
       "stage": "T0",
@@ -294,9 +333,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “share”？",
       "options": [
-        "an important problem or topic",
-        "the way in which things are not the same",
-        "to give part of something to others"
+        "to give part of something to others",
+        "to show a thought or feeling in words or actions",
+        "people who live together or share an interest"
       ],
       "answer": "to give part of something to others",
       "stage": "T0",
@@ -321,10 +360,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “share” 最直接近义词？",
       "options": [
-        "difference",
+        "community",
         "distribute",
         "keep",
-        "issue"
+        "express"
       ],
       "answer": "distribute",
       "stage": "T2",
@@ -337,8 +376,8 @@
       "options": [
         "keep",
         "distribute",
-        "issue",
-        "difference"
+        "express",
+        "community"
       ],
       "answer": "keep",
       "stage": "T2",
@@ -347,14 +386,14 @@
     {
       "id": "share-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “share” 的相关近义词？",
+      "prompt": "根据本词卡辨析，哪个词被列为 “share” 的派生词？",
       "options": [
+        "distribute",
         "keep",
-        "issue",
-        "difference",
-        "distribute"
+        "express",
+        "shared"
       ],
-      "answer": "distribute",
+      "answer": "shared",
       "stage": "T3",
       "ai": false
     },
@@ -401,9 +440,9 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：She shared a _____ study tip with me.（中文：她和我分享了一个实用的学习技巧。）",
       "options": [
-        "openly",
-        "make",
-        "started",
+        "idea",
+        "together",
+        "quick",
         "useful"
       ],
       "answer": "useful",
@@ -523,9 +562,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

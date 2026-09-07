@@ -17,6 +17,13 @@
     }
   ],
   "cocaRankLabel": "n. 第 972 名；v. 第 1881 名",
+  "learningPriority": {
+    "sequence": 103,
+    "group": "noun",
+    "groupLabel": "名词",
+    "groupOrder": 2,
+    "primaryCocaRank": 972
+  },
   "phonetic": "/ˈtʃælɪndʒ/",
   "syllables": "challenge（约 2 音节）",
   "partOfSpeech": "n. / v.",
@@ -24,7 +31,7 @@
   "difficulty": "进阶",
   "tags": [
     "n.",
-    "模板结构版",
+    "完整词卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -70,9 +77,9 @@
         "note": "不要只按中文逐字替换；优先把本卡高频搭配作为完整句块记忆。"
       }
     ],
-    "directSynonym": "test /ˈtɛst/（与“挑战”意义接近）",
-    "directAntonym": "ease /ˈiːz/（与“挑战”意义相反）",
-    "derivatives": "本词暂无需额外强记的高频派生词",
+    "directSynonym": "test /ˈtɛst/（测试；试验；化验；检验）",
+    "directAntonym": "ease /ˈiːz/（安乐；安逸；悠闲；使安乐）",
+    "derivatives": "challenging",
     "example": "Speaking without notes is a useful challenge.",
     "exampleChinese": "不看笔记说话是一项有用的挑战。"
   },
@@ -187,8 +194,8 @@
     {
       "word": "test",
       "phonetic": "/ˈtɛst/",
-      "partOfSpeech": "n. / v.",
-      "chinese": "与“挑战”意义接近",
+      "partOfSpeech": "v. / n.",
+      "chinese": "测试；试验；化验；检验",
       "difference": "challenge 是本卡核心搭配 “face a challenge” 中的中性常用选择；test 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -196,12 +203,20 @@
     {
       "word": "ease",
       "phonetic": "/ˈiːz/",
-      "partOfSpeech": "n. / v.",
-      "chinese": "与“挑战”意义相反",
+      "partOfSpeech": "v. / n.",
+      "chinese": "安乐；安逸；悠闲；使安乐",
       "usage": "在本卡核心义下与 challenge 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
-  "derivatives": [],
+  "derivatives": [
+    {
+      "word": "challenging",
+      "phonetic": "/ˈtʃæləndʒɪŋ/",
+      "partOfSpeech": "adj.",
+      "chinese": "挑战的；引起争论的",
+      "note": "这是 challenge 的常用词族成员；请按上方词性放到句子的正确位置。"
+    }
+  ],
   "confusables": [],
   "relatedVocabulary": [
     {
@@ -210,14 +225,25 @@
         {
           "word": "test",
           "phonetic": "/ˈtɛst/",
-          "partOfSpeech": "n. / v.",
-          "chinese": "与“挑战”意义接近"
+          "partOfSpeech": "v. / n.",
+          "chinese": "测试；试验；化验；检验"
         },
         {
           "word": "ease",
           "phonetic": "/ˈiːz/",
-          "partOfSpeech": "n. / v.",
-          "chinese": "与“挑战”意义相反"
+          "partOfSpeech": "v. / n.",
+          "chinese": "安乐；安逸；悠闲；使安乐"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "challenging",
+          "phonetic": "/ˈtʃæləndʒɪŋ/",
+          "partOfSpeech": "adj.",
+          "chinese": "挑战的；引起争论的"
         }
       ]
     }
@@ -271,9 +297,9 @@
       "type": "meaning_choice",
       "prompt": "“challenge”最核心的中文含义是？",
       "options": [
-        "舒适的；自在的",
-        "也许；可能",
-        "挑战"
+        "挑战",
+        "相似的",
+        "向前；前面的"
       ],
       "answer": "挑战",
       "stage": "T0",
@@ -284,9 +310,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “challenge”？",
       "options": [
-        "used to say that something may be true",
-        "a difficult task that tests your ability",
-        "feeling relaxed and free from worry"
+        "almost the same but not exactly",
+        "toward the front or future",
+        "a difficult task that tests your ability"
       ],
       "answer": "a difficult task that tests your ability",
       "stage": "T0",
@@ -312,8 +338,8 @@
       "prompt": "哪个词是词卡中列出的 “challenge” 最直接近义词？",
       "options": [
         "ease",
-        "comfortable",
-        "perhaps",
+        "similar",
+        "forward",
         "test"
       ],
       "answer": "test",
@@ -325,8 +351,8 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “challenge” 最直接反义词？",
       "options": [
-        "comfortable",
-        "perhaps",
+        "similar",
+        "forward",
         "ease",
         "test"
       ],
@@ -337,14 +363,14 @@
     {
       "id": "challenge-n-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “challenge” 的相关近义词？",
+      "prompt": "根据本词卡辨析，哪个词被列为 “challenge” 的派生词？",
       "options": [
-        "perhaps",
+        "similar",
+        "challenging",
         "test",
-        "ease",
-        "comfortable"
+        "ease"
       ],
-      "answer": "test",
+      "answer": "challenging",
       "stage": "T3",
       "ai": false
     },
@@ -391,10 +417,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Speaking without notes is a _____ challenge.（中文：不看笔记说话是一项有用的挑战。）",
       "options": [
-        "weekend",
+        "taking",
         "useful",
-        "asking",
-        "try"
+        "one",
+        "hearing"
       ],
       "answer": "useful",
       "stage": "T2",
@@ -513,9 +539,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

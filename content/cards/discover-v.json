@@ -11,6 +11,13 @@
     }
   ],
   "cocaRankLabel": "v. 第 1070 名",
+  "learningPriority": {
+    "sequence": 47,
+    "group": "verb",
+    "groupLabel": "动词",
+    "groupOrder": 1,
+    "primaryCocaRank": 1070
+  },
   "phonetic": "/dɪˈskʌvər/",
   "syllables": "discover（约 3 音节）",
   "partOfSpeech": "v.",
@@ -18,7 +25,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "模板结构版",
+    "完整词卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -64,9 +71,9 @@
         "note": "不定式 to 后接动词原形；不要把不定式和 -ing 形式混合。"
       }
     ],
-    "directSynonym": "find /ˈfaɪnd/（与“发现”意义接近）",
-    "directAntonym": "lose /ˈluːz/（与“发现”意义相反）",
-    "derivatives": "本词暂无需额外强记的高频派生词",
+    "directSynonym": "find /ˈfaɪnd/（发现；感到；找到；认为）",
+    "directAntonym": "lose /ˈluːz/（遗失；损失；丢失；使失去）",
+    "derivatives": "discovery",
     "example": "You may discover a better way to remember it.",
     "exampleChinese": "你可能会发现更好的记忆方法。"
   },
@@ -174,8 +181,8 @@
     {
       "word": "find",
       "phonetic": "/ˈfaɪnd/",
-      "partOfSpeech": "v.",
-      "chinese": "与“发现”意义接近",
+      "partOfSpeech": "v. / n.",
+      "chinese": "发现；感到；找到；认为",
       "difference": "discover 是本卡核心搭配 “discover a new way” 中的中性常用选择；find 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -184,11 +191,19 @@
       "word": "lose",
       "phonetic": "/ˈluːz/",
       "partOfSpeech": "v.",
-      "chinese": "与“发现”意义相反",
+      "chinese": "遗失；损失；丢失；使失去",
       "usage": "在本卡核心义下与 discover 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
-  "derivatives": [],
+  "derivatives": [
+    {
+      "word": "discovery",
+      "phonetic": "/dɪˈskʌvɚiː/",
+      "partOfSpeech": "n.",
+      "chinese": "发现；被发现的事物",
+      "note": "这是 discover 的常用词族成员；请按上方词性放到句子的正确位置。"
+    }
+  ],
   "confusables": [],
   "relatedVocabulary": [
     {
@@ -197,14 +212,25 @@
         {
           "word": "find",
           "phonetic": "/ˈfaɪnd/",
-          "partOfSpeech": "v.",
-          "chinese": "与“发现”意义接近"
+          "partOfSpeech": "v. / n.",
+          "chinese": "发现；感到；找到；认为"
         },
         {
           "word": "lose",
           "phonetic": "/ˈluːz/",
           "partOfSpeech": "v.",
-          "chinese": "与“发现”意义相反"
+          "chinese": "遗失；损失；丢失；使失去"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "discovery",
+          "phonetic": "/dɪˈskʌvɚiː/",
+          "partOfSpeech": "n.",
+          "chinese": "发现；被发现的事物"
         }
       ]
     }
@@ -258,9 +284,9 @@
       "type": "meaning_choice",
       "prompt": "“discover”最核心的中文含义是？",
       "options": [
-        "发现",
-        "服务",
-        "有效的"
+        "工作；任务",
+        "机会",
+        "发现"
       ],
       "answer": "发现",
       "stage": "T0",
@@ -271,9 +297,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “discover”？",
       "options": [
-        "work done to help or provide something for people",
-        "producing the result that is wanted",
-        "to find something for the first time"
+        "a good chance to do something",
+        "to find something for the first time",
+        "paid work or a particular task"
       ],
       "answer": "to find something for the first time",
       "stage": "T0",
@@ -284,10 +310,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“发现真相”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "recently discovered",
         "discover the truth",
         "discover a new way",
-        "discover that"
+        "discover that",
+        "recently discovered"
       ],
       "answer": "discover the truth",
       "stage": "T1",
@@ -298,10 +324,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “discover” 最直接近义词？",
       "options": [
-        "find",
         "lose",
-        "service",
-        "effective"
+        "job",
+        "opportunity",
+        "find"
       ],
       "answer": "find",
       "stage": "T2",
@@ -312,10 +338,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “discover” 最直接反义词？",
       "options": [
-        "find",
-        "service",
-        "effective",
-        "lose"
+        "job",
+        "opportunity",
+        "lose",
+        "find"
       ],
       "answer": "lose",
       "stage": "T2",
@@ -324,14 +350,14 @@
     {
       "id": "discover-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “discover” 的相关近义词？",
+      "prompt": "根据本词卡辨析，哪个词被列为 “discover” 的派生词？",
       "options": [
-        "service",
-        "effective",
+        "job",
+        "discovery",
         "find",
         "lose"
       ],
-      "answer": "find",
+      "answer": "discovery",
       "stage": "T3",
       "ai": false
     },
@@ -364,10 +390,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“发现新方法”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "discover the truth",
         "discover that",
         "recently discovered",
-        "discover a new way"
+        "discover a new way",
+        "discover the truth"
       ],
       "answer": "discover a new way",
       "stage": "T1",
@@ -378,10 +404,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：You may discover a _____ way to remember it.（中文：你可能会发现更好的记忆方法。）",
       "options": [
-        "way",
-        "review",
+        "answer",
         "better",
-        "excellent"
+        "explaining",
+        "practice"
       ],
       "answer": "better",
       "stage": "T2",
@@ -390,12 +416,12 @@
     {
       "id": "discover-v-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“发现真相”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "搭配辨析：哪一项既表示“发现真相”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "recently discovered",
         "discover the truth",
         "discover a new way",
-        "discover that"
+        "discover that",
+        "recently discovered"
       ],
       "answer": "discover the truth",
       "stage": "T2",
@@ -404,12 +430,12 @@
     {
       "id": "discover-v-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“发现新方法”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "用法辨析：哪一项既表示“发现新方法”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "discover a new way",
         "discover the truth",
         "discover that",
-        "recently discovered"
+        "recently discovered",
+        "discover a new way"
       ],
       "answer": "discover a new way",
       "stage": "T3",
@@ -500,9 +526,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

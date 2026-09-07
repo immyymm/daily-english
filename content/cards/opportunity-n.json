@@ -11,6 +11,13 @@
     }
   ],
   "cocaRankLabel": "n. 第 643 名",
+  "learningPriority": {
+    "sequence": 90,
+    "group": "noun",
+    "groupLabel": "名词",
+    "groupOrder": 2,
+    "primaryCocaRank": 643
+  },
   "phonetic": "/ˌɑːpərˈtuːnəti/",
   "syllables": "op·por·tu·ni·ty",
   "partOfSpeech": "n.",
@@ -18,7 +25,7 @@
   "difficulty": "进阶",
   "tags": [
     "n.",
-    "模板结构版",
+    "完整词卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -64,9 +71,9 @@
         "note": "不要只按中文逐字替换；优先把本卡高频搭配作为完整句块记忆。"
       }
     ],
-    "directSynonym": "chance /ˈtʃæns/（与“机会”意义接近）",
-    "directAntonym": "obstacle /ˈɑbstəkəl/（与“机会”意义相反）",
-    "derivatives": "本词暂无需额外强记的高频派生词",
+    "directSynonym": "chance /ˈtʃæns/（机会；意外；可能性；偶然发生）",
+    "directAntonym": "obstacle /ˈɑbstəkəl/（障碍；妨害物；阻碍）",
+    "derivatives": "opportune",
     "example": "The meeting gave me an opportunity to practice English.",
     "exampleChinese": "这次会议给了我练习英语的机会。"
   },
@@ -174,8 +181,8 @@
     {
       "word": "chance",
       "phonetic": "/ˈtʃæns/",
-      "partOfSpeech": "n.",
-      "chinese": "与“机会”意义接近",
+      "partOfSpeech": "v. / n.",
+      "chinese": "机会；意外；可能性；偶然发生",
       "difference": "opportunity 是本卡核心搭配 “have an opportunity to” 中的中性常用选择；chance 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -184,11 +191,19 @@
       "word": "obstacle",
       "phonetic": "/ˈɑbstəkəl/",
       "partOfSpeech": "n.",
-      "chinese": "与“机会”意义相反",
+      "chinese": "障碍；妨害物；阻碍",
       "usage": "在本卡核心义下与 opportunity 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
-  "derivatives": [],
+  "derivatives": [
+    {
+      "word": "opportune",
+      "phonetic": "/ˌɑpɚˈtuːn/",
+      "partOfSpeech": "adj.",
+      "chinese": "恰好的；时机适宜的；适当的",
+      "note": "这是 opportunity 的常用词族成员；请按上方词性放到句子的正确位置。"
+    }
+  ],
   "confusables": [],
   "relatedVocabulary": [
     {
@@ -197,14 +212,25 @@
         {
           "word": "chance",
           "phonetic": "/ˈtʃæns/",
-          "partOfSpeech": "n.",
-          "chinese": "与“机会”意义接近"
+          "partOfSpeech": "v. / n.",
+          "chinese": "机会；意外；可能性；偶然发生"
         },
         {
           "word": "obstacle",
           "phonetic": "/ˈɑbstəkəl/",
           "partOfSpeech": "n.",
-          "chinese": "与“机会”意义相反"
+          "chinese": "障碍；妨害物；阻碍"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "opportune",
+          "phonetic": "/ˌɑpɚˈtuːn/",
+          "partOfSpeech": "adj.",
+          "chinese": "恰好的；时机适宜的；适当的"
         }
       ]
     }
@@ -258,9 +284,9 @@
       "type": "meaning_choice",
       "prompt": "“opportunity”最核心的中文含义是？",
       "options": [
-        "有耐心的；病人",
+        "然而；不过",
         "机会",
-        "目标"
+        "信心；自信"
       ],
       "answer": "机会",
       "stage": "T0",
@@ -272,8 +298,8 @@
       "prompt": "哪一项英文释义最符合词卡中的 “opportunity”？",
       "options": [
         "a good chance to do something",
-        "something you want to achieve",
-        "able to wait calmly"
+        "belief in your own ability",
+        "used to introduce a contrast"
       ],
       "answer": "a good chance to do something",
       "stage": "T0",
@@ -284,10 +310,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“有机会做”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "a good opportunity",
         "equal opportunities",
         "have an opportunity to",
-        "take the opportunity to"
+        "take the opportunity to",
+        "a good opportunity"
       ],
       "answer": "have an opportunity to",
       "stage": "T1",
@@ -298,10 +324,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “opportunity” 最直接近义词？",
       "options": [
-        "patient",
         "chance",
         "obstacle",
-        "goal"
+        "confidence",
+        "however"
       ],
       "answer": "chance",
       "stage": "T2",
@@ -312,10 +338,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “opportunity” 最直接反义词？",
       "options": [
-        "obstacle",
         "chance",
-        "goal",
-        "patient"
+        "confidence",
+        "however",
+        "obstacle"
       ],
       "answer": "obstacle",
       "stage": "T2",
@@ -324,14 +350,14 @@
     {
       "id": "opportunity-n-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “opportunity” 的相关近义词？",
+      "prompt": "根据本词卡辨析，哪个词被列为 “opportunity” 的派生词？",
       "options": [
         "obstacle",
-        "goal",
-        "patient",
+        "confidence",
+        "opportune",
         "chance"
       ],
-      "answer": "chance",
+      "answer": "opportune",
       "stage": "T3",
       "ai": false
     },
@@ -364,10 +390,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“借机做”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "take the opportunity to",
         "have an opportunity to",
         "a good opportunity",
-        "equal opportunities"
+        "equal opportunities",
+        "take the opportunity to"
       ],
       "answer": "take the opportunity to",
       "stage": "T1",
@@ -378,10 +404,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：The meeting gave me an opportunity to _____ English.（中文：这次会议给了我练习英语的机会。）",
       "options": [
-        "week",
-        "yourself",
-        "faster",
-        "practice"
+        "requires",
+        "example",
+        "practice",
+        "build"
       ],
       "answer": "practice",
       "stage": "T2",
@@ -390,12 +416,12 @@
     {
       "id": "opportunity-n-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“有机会做”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "用法辨析：哪一项既表示“有机会做”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "a good opportunity",
         "equal opportunities",
         "have an opportunity to",
-        "take the opportunity to"
+        "take the opportunity to",
+        "a good opportunity"
       ],
       "answer": "have an opportunity to",
       "stage": "T2",
@@ -404,12 +430,12 @@
     {
       "id": "opportunity-n-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“借机做”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "搭配辨析：哪一项既表示“借机做”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "equal opportunities",
         "take the opportunity to",
         "have an opportunity to",
-        "a good opportunity"
+        "a good opportunity",
+        "equal opportunities"
       ],
       "answer": "take the opportunity to",
       "stage": "T3",
@@ -500,9 +526,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

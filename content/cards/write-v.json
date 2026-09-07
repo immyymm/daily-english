@@ -11,15 +11,22 @@
     }
   ],
   "cocaRankLabel": "v. 第 212 名",
+  "learningPriority": {
+    "sequence": 6,
+    "group": "verb",
+    "groupLabel": "动词",
+    "groupOrder": 1,
+    "primaryCocaRank": 212
+  },
   "phonetic": "/raɪt/",
   "syllables": "write（单音节）",
   "partOfSpeech": "v.",
   "frequencyBand": "COCA 高频精选 · v. 第 212 名",
-  "difficulty": "应用",
+  "difficulty": "基础",
   "tags": [
     "v.",
-    "模板结构版",
-    "主动词汇"
+    "完整词卡",
+    "高频表达"
   ],
   "coreMemory": {
     "chinese": "写；写作",
@@ -64,9 +71,9 @@
         "note": "不定式 to 后接动词原形；不要把不定式和 -ing 形式混合。"
       }
     ],
-    "directSynonym": "compose /kəˈmpoʊz/（与“写”意义接近）",
-    "directAntonym": "erase /ɪˈreɪs/（与“写”意义相反）",
-    "derivatives": "本词暂无需额外强记的高频派生词",
+    "directSynonym": "compose /kəˈmpoʊz/（组成；写作；作曲；使平静）",
+    "directAntonym": "erase /ɪˈreɪs/（抹去；擦掉）",
+    "derivatives": "writer · writing",
     "example": "Write down one sentence using the new word.",
     "exampleChinese": "写下一个使用新单词的句子。"
   },
@@ -185,7 +192,7 @@
       "word": "compose",
       "phonetic": "/kəˈmpoʊz/",
       "partOfSpeech": "v.",
-      "chinese": "与“写”意义接近",
+      "chinese": "组成；写作；作曲；使平静",
       "difference": "write 是本卡核心搭配 “write down” 中的中性常用选择；compose 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -194,11 +201,26 @@
       "word": "erase",
       "phonetic": "/ɪˈreɪs/",
       "partOfSpeech": "v.",
-      "chinese": "与“写”意义相反",
+      "chinese": "抹去；擦掉",
       "usage": "在本卡核心义下与 write 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
-  "derivatives": [],
+  "derivatives": [
+    {
+      "word": "writer",
+      "phonetic": "/ˈraɪtɚ/",
+      "partOfSpeech": "n.",
+      "chinese": "作家；撰稿者；抄写员",
+      "note": "这是 write 的常用词族成员；请按上方词性放到句子的正确位置。"
+    },
+    {
+      "word": "writing",
+      "phonetic": "/ˈraɪtɪŋ/",
+      "partOfSpeech": "n.",
+      "chinese": "书写；著作；笔迹；作品",
+      "note": "这是 write 的常用词族成员；请按上方词性放到句子的正确位置。"
+    }
+  ],
   "confusables": [],
   "relatedVocabulary": [
     {
@@ -208,13 +230,30 @@
           "word": "compose",
           "phonetic": "/kəˈmpoʊz/",
           "partOfSpeech": "v.",
-          "chinese": "与“写”意义接近"
+          "chinese": "组成；写作；作曲；使平静"
         },
         {
           "word": "erase",
           "phonetic": "/ɪˈreɪs/",
           "partOfSpeech": "v.",
-          "chinese": "与“写”意义相反"
+          "chinese": "抹去；擦掉"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "writer",
+          "phonetic": "/ˈraɪtɚ/",
+          "partOfSpeech": "n.",
+          "chinese": "作家；撰稿者；抄写员"
+        },
+        {
+          "word": "writing",
+          "phonetic": "/ˈraɪtɪŋ/",
+          "partOfSpeech": "n.",
+          "chinese": "书写；著作；笔迹；作品"
         }
       ]
     }
@@ -268,9 +307,9 @@
       "type": "meaning_choice",
       "prompt": "“write”最核心的中文含义是？",
       "options": [
-        "似乎；看起来",
+        "实现；达到",
         "写；写作",
-        "未来；将来的"
+        "需要；要求"
       ],
       "answer": "写；写作",
       "stage": "T0",
@@ -282,8 +321,8 @@
       "prompt": "哪一项英文释义最符合词卡中的 “write”？",
       "options": [
         "to form words on a surface or compose text",
-        "the time that has not happened yet",
-        "to appear to be true"
+        "to need something or make it necessary",
+        "to succeed in reaching a goal"
       ],
       "answer": "to form words on a surface or compose text",
       "stage": "T0",
@@ -310,8 +349,8 @@
       "options": [
         "compose",
         "erase",
-        "future",
-        "seem"
+        "require",
+        "achieve"
       ],
       "answer": "compose",
       "stage": "T2",
@@ -323,8 +362,8 @@
       "prompt": "哪个词是词卡中列出的 “write” 最直接反义词？",
       "options": [
         "compose",
-        "future",
-        "seem",
+        "require",
+        "achieve",
         "erase"
       ],
       "answer": "erase",
@@ -334,14 +373,14 @@
     {
       "id": "write-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “write” 的相关近义词？",
+      "prompt": "根据本词卡辨析，哪个词被列为 “write” 的派生词？",
       "options": [
-        "future",
-        "seem",
-        "compose",
-        "erase"
+        "erase",
+        "require",
+        "writer",
+        "compose"
       ],
-      "answer": "compose",
+      "answer": "writer",
       "stage": "T3",
       "ai": false
     },
@@ -388,10 +427,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Write _____ one sentence using the new word.（中文：写下一个使用新单词的句子。）",
       "options": [
-        "difficult",
-        "ideal",
+        "big",
+        "travelers",
         "down",
-        "useful"
+        "careful"
       ],
       "answer": "down",
       "stage": "T2",
@@ -510,9 +549,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

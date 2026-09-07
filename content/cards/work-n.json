@@ -17,14 +17,21 @@
     }
   ],
   "cocaRankLabel": "v. 第 115 名；n. 第 207 名",
+  "learningPriority": {
+    "sequence": 60,
+    "group": "noun",
+    "groupLabel": "名词",
+    "groupOrder": 2,
+    "primaryCocaRank": 207
+  },
   "phonetic": "/wɜːrk/",
   "syllables": "work（单音节）",
   "partOfSpeech": "n. / v.",
   "frequencyBand": "COCA 高频精选 · v. 第 115 名；n. 第 207 名",
-  "difficulty": "应用",
+  "difficulty": "进阶",
   "tags": [
     "n.",
-    "人工精校",
+    "完整词卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -645,9 +652,9 @@
       "type": "meaning_choice",
       "prompt": "“work”最核心的中文含义是？",
       "options": [
-        "地方；放置",
-        "改变；变化",
-        "工作；起作用"
+        "挑战",
+        "工作；起作用",
+        "水平；级别"
       ],
       "answer": "工作；起作用",
       "stage": "T0",
@@ -658,9 +665,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “work”？",
       "options": [
-        "to become or make something different",
         "to do a job, especially to earn money",
-        "a particular area or position"
+        "a position on a scale of amount or quality",
+        "a difficult task that tests your ability"
       ],
       "answer": "to do a job, especially to earn money",
       "stage": "T0",
@@ -671,10 +678,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“从事；处理某事”，又符合这个形式线索：完整搭配中使用介词 on？",
       "options": [
-        "work with someone",
-        "work on something",
         "work for someone",
-        "work as something"
+        "work as something",
+        "work with someone",
+        "work on something"
       ],
       "answer": "work on something",
       "stage": "T1",
@@ -685,10 +692,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “work” 最直接近义词？",
       "options": [
-        "labor",
-        "rest",
         "walk",
-        "place"
+        "level",
+        "labor",
+        "rest"
       ],
       "answer": "labor",
       "stage": "T2",
@@ -699,10 +706,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “work” 最直接反义词？",
       "options": [
+        "level",
+        "rest",
         "labor",
-        "walk",
-        "place",
-        "rest"
+        "walk"
       ],
       "answer": "rest",
       "stage": "T2",
@@ -713,10 +720,10 @@
       "type": "meaning_choice",
       "prompt": "根据本词卡辨析，哪个词被列为 “work” 的易混词？",
       "options": [
-        "rest",
-        "place",
         "walk",
-        "labor"
+        "labor",
+        "rest",
+        "level"
       ],
       "answer": "walk",
       "stage": "T3",
@@ -751,10 +758,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“为某人或某机构工作”，又符合这个形式线索：完整搭配中使用介词 for？",
       "options": [
-        "work on something",
-        "work as something",
         "work with someone",
-        "work for someone"
+        "work for someone",
+        "work on something",
+        "work as something"
       ],
       "answer": "work for someone",
       "stage": "T1",
@@ -765,10 +772,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：I am working on my _____.（中文：我正在练习发音。）",
       "options": [
-        "whole",
-        "calm",
         "pronunciation",
-        "Friday"
+        "current",
+        "useful",
+        "asking"
       ],
       "answer": "pronunciation",
       "stage": "T2",
@@ -779,10 +786,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“为……工作；受雇于”，又符合这个形式线索：完整搭配中使用介词 for？",
       "options": [
-        "work on",
-        "work for",
         "work at",
-        "work as"
+        "work as",
+        "work on",
+        "work for"
       ],
       "answer": "work for",
       "stage": "T2",
@@ -793,10 +800,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“在某个地点或机构工作”，又符合这个形式线索：完整搭配中使用介词 at？",
       "options": [
-        "work at",
-        "work for",
         "work as",
-        "work on"
+        "work on",
+        "work at",
+        "work for"
       ],
       "answer": "work at",
       "stage": "T3",
@@ -889,7 +896,7 @@
   },
   "detailLevel": "template-reference",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": true,
-  "sourceNote": "从用户提供的 COCA 词表筛选；本卡依照用户词卡模板人工精校；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

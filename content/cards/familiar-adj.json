@@ -11,14 +11,21 @@
     }
   ],
   "cocaRankLabel": "adj. 第 1692 名",
+  "learningPriority": {
+    "sequence": 126,
+    "group": "adjective",
+    "groupLabel": "形容词",
+    "groupOrder": 3,
+    "primaryCocaRank": 1692
+  },
   "phonetic": "/fəˈmɪliər/",
   "syllables": "familiar（约 3 音节）",
   "partOfSpeech": "adj.",
   "frequencyBand": "COCA 高频精选 · adj. 第 1692 名",
-  "difficulty": "进阶",
+  "difficulty": "应用",
   "tags": [
     "adj.",
-    "模板结构版",
+    "完整词卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -64,9 +71,9 @@
         "note": "较长形容词通常用 more 构成比较级，不重复加 -er。"
       }
     ],
-    "directSynonym": "known /ˈnoʊn/（与“熟悉的”意义接近）",
-    "directAntonym": "unfamiliar /ˌʌnfəˈmɪljɚ/（与“熟悉的”意义相反）",
-    "derivatives": "本词暂无需额外强记的高频派生词",
+    "directSynonym": "known /ˈnoʊn/（已知的；有名的；know的过去分词）",
+    "directAntonym": "unfamiliar /ˌʌnfəˈmɪljɚ/（不熟悉的）",
+    "derivatives": "familiarity · unfamiliar",
     "example": "Are you familiar with this expression?",
     "exampleChinese": "你熟悉这个表达吗？"
   },
@@ -175,7 +182,7 @@
       "word": "known",
       "phonetic": "/ˈnoʊn/",
       "partOfSpeech": "adj.",
-      "chinese": "与“熟悉的”意义接近",
+      "chinese": "已知的；有名的；know的过去分词",
       "difference": "familiar 是本卡核心搭配 “be familiar with” 中的中性常用选择；known 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -184,11 +191,26 @@
       "word": "unfamiliar",
       "phonetic": "/ˌʌnfəˈmɪljɚ/",
       "partOfSpeech": "adj.",
-      "chinese": "与“熟悉的”意义相反",
+      "chinese": "不熟悉的",
       "usage": "在本卡核心义下与 familiar 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
-  "derivatives": [],
+  "derivatives": [
+    {
+      "word": "familiarity",
+      "phonetic": "/fəˌmɪˈljɛrətiː/",
+      "partOfSpeech": "n.",
+      "chinese": "熟悉；精通；亲密",
+      "note": "这是 familiar 的常用词族成员；请按上方词性放到句子的正确位置。"
+    },
+    {
+      "word": "unfamiliar",
+      "phonetic": "/ˌʌnfəˈmɪljɚ/",
+      "partOfSpeech": "adj.",
+      "chinese": "不熟悉的",
+      "note": "这是 familiar 的常用词族成员；请按上方词性放到句子的正确位置。"
+    }
+  ],
   "confusables": [],
   "relatedVocabulary": [
     {
@@ -198,13 +220,30 @@
           "word": "known",
           "phonetic": "/ˈnoʊn/",
           "partOfSpeech": "adj.",
-          "chinese": "与“熟悉的”意义接近"
+          "chinese": "已知的；有名的；know的过去分词"
         },
         {
           "word": "unfamiliar",
           "phonetic": "/ˌʌnfəˈmɪljɚ/",
           "partOfSpeech": "adj.",
-          "chinese": "与“熟悉的”意义相反"
+          "chinese": "不熟悉的"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "familiarity",
+          "phonetic": "/fəˌmɪˈljɛrətiː/",
+          "partOfSpeech": "n.",
+          "chinese": "熟悉；精通；亲密"
+        },
+        {
+          "word": "unfamiliar",
+          "phonetic": "/ˌʌnfəˈmɪljɚ/",
+          "partOfSpeech": "adj.",
+          "chinese": "不熟悉的"
         }
       ]
     }
@@ -258,9 +297,9 @@
       "type": "meaning_choice",
       "prompt": "“familiar”最核心的中文含义是？",
       "options": [
-        "家庭；家人",
+        "花费；度过",
         "熟悉的",
-        "最近"
+        "几乎；差不多"
       ],
       "answer": "熟悉的",
       "stage": "T0",
@@ -272,8 +311,8 @@
       "prompt": "哪一项英文释义最符合词卡中的 “familiar”？",
       "options": [
         "well known from past experience",
-        "not long ago",
-        "a group of related people"
+        "almost but not completely",
+        "to use time or money for something"
       ],
       "answer": "well known from past experience",
       "stage": "T0",
@@ -284,10 +323,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“熟悉……”，又符合这个形式线索：完整搭配中使用介词 with？",
       "options": [
+        "familiar to someone",
         "be familiar with",
         "look familiar",
-        "sound familiar",
-        "familiar to someone"
+        "sound familiar"
       ],
       "answer": "be familiar with",
       "stage": "T1",
@@ -298,10 +337,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “familiar” 最直接近义词？",
       "options": [
+        "known",
         "unfamiliar",
-        "recently",
-        "family",
-        "known"
+        "nearly",
+        "spend"
       ],
       "answer": "known",
       "stage": "T2",
@@ -312,10 +351,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “familiar” 最直接反义词？",
       "options": [
-        "recently",
-        "family",
-        "unfamiliar",
-        "known"
+        "known",
+        "nearly",
+        "spend",
+        "unfamiliar"
       ],
       "answer": "unfamiliar",
       "stage": "T2",
@@ -324,14 +363,14 @@
     {
       "id": "familiar-adj-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “familiar” 的相关近义词？",
+      "prompt": "根据本词卡辨析，哪个词被列为 “familiar” 的派生词？",
       "options": [
-        "family",
-        "known",
         "unfamiliar",
-        "recently"
+        "nearly",
+        "familiarity",
+        "known"
       ],
-      "answer": "known",
+      "answer": "familiarity",
       "stage": "T3",
       "ai": false
     },
@@ -364,10 +403,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“看起来眼熟”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "be familiar with",
         "sound familiar",
         "familiar to someone",
-        "look familiar",
-        "be familiar with"
+        "look familiar"
       ],
       "answer": "look familiar",
       "stage": "T1",
@@ -378,10 +417,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Are you familiar with this _____?（中文：你熟悉这个表达吗？）",
       "options": [
-        "rain",
+        "twenty",
+        "change",
         "expression",
-        "started",
-        "supports"
+        "finished"
       ],
       "answer": "expression",
       "stage": "T2",
@@ -390,12 +429,12 @@
     {
       "id": "familiar-adj-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“熟悉……”，又符合这个形式线索：完整搭配中使用介词 with？",
+      "prompt": "用法辨析：哪一项既表示“熟悉……”，又符合这个形式线索：完整搭配中使用介词 with？",
       "options": [
+        "familiar to someone",
         "be familiar with",
         "look familiar",
-        "sound familiar",
-        "familiar to someone"
+        "sound familiar"
       ],
       "answer": "be familiar with",
       "stage": "T2",
@@ -404,12 +443,12 @@
     {
       "id": "familiar-adj-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“看起来眼熟”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "搭配辨析：哪一项既表示“看起来眼熟”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "look familiar",
         "be familiar with",
         "sound familiar",
-        "familiar to someone",
-        "look familiar"
+        "familiar to someone"
       ],
       "answer": "look familiar",
       "stage": "T3",
@@ -500,9 +539,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

@@ -11,6 +11,13 @@
     }
   ],
   "cocaRankLabel": "n. 第 488 名",
+  "learningPriority": {
+    "sequence": 82,
+    "group": "noun",
+    "groupLabel": "名词",
+    "groupOrder": 2,
+    "primaryCocaRank": 488
+  },
   "phonetic": "/dɪˈsɪʒən/",
   "syllables": "decision（约 3 音节）",
   "partOfSpeech": "n.",
@@ -18,7 +25,7 @@
   "difficulty": "进阶",
   "tags": [
     "n.",
-    "模板结构版",
+    "完整词卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -65,8 +72,8 @@
       }
     ],
     "directSynonym": "choice /ˈtʃɔɪs/（选择）",
-    "directAntonym": "indecision /ˌɪndɪˈsɪʒən/（与“决定”意义相反）",
-    "derivatives": "本词暂无需额外强记的高频派生词",
+    "directAntonym": "indecision /ˌɪndɪˈsɪʒən/（优柔寡断）",
+    "derivatives": "decisive",
     "example": "You do not need to make the decision today.",
     "exampleChinese": "你不必今天就做决定。"
   },
@@ -174,7 +181,7 @@
     {
       "word": "choice",
       "phonetic": "/ˈtʃɔɪs/",
-      "partOfSpeech": "n.",
+      "partOfSpeech": "n. / adj.",
       "chinese": "选择",
       "difference": "decision 是本卡核心搭配 “make a decision” 中的中性常用选择；choice 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
@@ -184,11 +191,19 @@
       "word": "indecision",
       "phonetic": "/ˌɪndɪˈsɪʒən/",
       "partOfSpeech": "n.",
-      "chinese": "与“决定”意义相反",
+      "chinese": "优柔寡断",
       "usage": "在本卡核心义下与 decision 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
-  "derivatives": [],
+  "derivatives": [
+    {
+      "word": "decisive",
+      "phonetic": "/dɪˈsaɪsɪv/",
+      "partOfSpeech": "adj.",
+      "chinese": "决定性的；坚定的；果断的",
+      "note": "这是 decision 的常用词族成员；请按上方词性放到句子的正确位置。"
+    }
+  ],
   "confusables": [
     {
       "word": "decide",
@@ -212,7 +227,18 @@
           "word": "indecision",
           "phonetic": "/ˌɪndɪˈsɪʒən/",
           "partOfSpeech": "n.",
-          "chinese": "与“决定”意义相反"
+          "chinese": "优柔寡断"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "decisive",
+          "phonetic": "/dɪˈsaɪsɪv/",
+          "partOfSpeech": "adj.",
+          "chinese": "决定性的；坚定的；果断的"
         }
       ]
     }
@@ -267,8 +293,8 @@
       "prompt": "“decision”最核心的中文含义是？",
       "options": [
         "决定",
-        "平衡",
-        "实际上；其实"
+        "技能；技巧",
+        "意识到的；知晓的"
       ],
       "answer": "决定",
       "stage": "T0",
@@ -279,8 +305,8 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “decision”？",
       "options": [
-        "a state in which different things have suitable amounts",
-        "used to state what is really true",
+        "an ability learned through practice",
+        "knowing that something exists or is true",
         "a choice made after thinking"
       ],
       "answer": "a choice made after thinking",
@@ -309,7 +335,7 @@
         "choice",
         "indecision",
         "decide",
-        "balance"
+        "skill"
       ],
       "answer": "choice",
       "stage": "T2",
@@ -322,7 +348,7 @@
       "options": [
         "choice",
         "decide",
-        "balance",
+        "skill",
         "indecision"
       ],
       "answer": "indecision",
@@ -335,7 +361,7 @@
       "prompt": "根据本词卡辨析，哪个词被列为 “decision” 的易混词？",
       "options": [
         "indecision",
-        "balance",
+        "skill",
         "decide",
         "choice"
       ],
@@ -386,10 +412,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：You do not need to make the decision _____.（中文：你不必今天就做决定。）",
       "options": [
-        "simple",
-        "complete",
+        "difference",
+        "translation",
         "today",
-        "between"
+        "practice"
       ],
       "answer": "today",
       "stage": "T2",
@@ -508,9 +534,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

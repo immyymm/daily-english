@@ -11,6 +11,13 @@
     }
   ],
   "cocaRankLabel": "v. 第 816 名",
+  "learningPriority": {
+    "sequence": 40,
+    "group": "verb",
+    "groupLabel": "动词",
+    "groupOrder": 1,
+    "primaryCocaRank": 816
+  },
   "phonetic": "/əkˈsept/",
   "syllables": "accept（约 2 音节）",
   "partOfSpeech": "v.",
@@ -18,7 +25,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "模板结构版",
+    "完整词卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -64,9 +71,9 @@
         "note": "不定式 to 后接动词原形；不要把不定式和 -ing 形式混合。"
       }
     ],
-    "directSynonym": "receive /rəˈsiːv/（与“接受”意义接近）",
-    "directAntonym": "reject /rɪˈdʒɛkt/（与“接受”意义相反）",
-    "derivatives": "本词暂无需额外强记的高频派生词",
+    "directSynonym": "receive /rəˈsiːv/（收到；接到；得到；接待）",
+    "directAntonym": "reject /rɪˈdʒɛkt/（被拒之人；被弃之物；不合格品；次品）",
+    "derivatives": "acceptance · acceptable",
     "example": "He accepted responsibility for the mistake.",
     "exampleChinese": "他为这个错误承担了责任。"
   },
@@ -175,7 +182,7 @@
       "word": "receive",
       "phonetic": "/rəˈsiːv/",
       "partOfSpeech": "v.",
-      "chinese": "与“接受”意义接近",
+      "chinese": "收到；接到；得到；接待",
       "difference": "accept 是本卡核心搭配 “accept responsibility” 中的中性常用选择；receive 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -183,12 +190,27 @@
     {
       "word": "reject",
       "phonetic": "/rɪˈdʒɛkt/",
-      "partOfSpeech": "v.",
-      "chinese": "与“接受”意义相反",
+      "partOfSpeech": "v. / n.",
+      "chinese": "被拒之人；被弃之物；不合格品；次品",
       "usage": "在本卡核心义下与 accept 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
-  "derivatives": [],
+  "derivatives": [
+    {
+      "word": "acceptance",
+      "phonetic": "/æˈksɛptəns/",
+      "partOfSpeech": "n.",
+      "chinese": "接受；接纳；承认；同意",
+      "note": "这是 accept 的常用词族成员；请按上方词性放到句子的正确位置。"
+    },
+    {
+      "word": "acceptable",
+      "phonetic": "/æˈksɛptəbəl/",
+      "partOfSpeech": "adj.",
+      "chinese": "可接受的；合意的；可忍受的",
+      "note": "这是 accept 的常用词族成员；请按上方词性放到句子的正确位置。"
+    }
+  ],
   "confusables": [
     {
       "word": "except",
@@ -206,13 +228,30 @@
           "word": "receive",
           "phonetic": "/rəˈsiːv/",
           "partOfSpeech": "v.",
-          "chinese": "与“接受”意义接近"
+          "chinese": "收到；接到；得到；接待"
         },
         {
           "word": "reject",
           "phonetic": "/rɪˈdʒɛkt/",
-          "partOfSpeech": "v.",
-          "chinese": "与“接受”意义相反"
+          "partOfSpeech": "v. / n.",
+          "chinese": "被拒之人；被弃之物；不合格品；次品"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "acceptance",
+          "phonetic": "/æˈksɛptəns/",
+          "partOfSpeech": "n.",
+          "chinese": "接受；接纳；承认；同意"
+        },
+        {
+          "word": "acceptable",
+          "phonetic": "/æˈksɛptəbəl/",
+          "partOfSpeech": "adj.",
+          "chinese": "可接受的；合意的；可忍受的"
         }
       ]
     }
@@ -266,9 +305,9 @@
       "type": "meaning_choice",
       "prompt": "“accept”最核心的中文含义是？",
       "options": [
-        "信息",
-        "熟悉的",
-        "接受；认可"
+        "接受；认可",
+        "地方；放置",
+        "价值；重视"
       ],
       "answer": "接受；认可",
       "stage": "T0",
@@ -279,9 +318,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “accept”？",
       "options": [
-        "well known from past experience",
-        "to agree to receive or believe something",
-        "facts or details about something"
+        "a particular area or position",
+        "the importance or usefulness of something",
+        "to agree to receive or believe something"
       ],
       "answer": "to agree to receive or believe something",
       "stage": "T0",
@@ -307,7 +346,7 @@
       "prompt": "哪个词是词卡中列出的 “accept” 最直接近义词？",
       "options": [
         "except",
-        "information",
+        "place",
         "receive",
         "reject"
       ],
@@ -320,7 +359,7 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “accept” 最直接反义词？",
       "options": [
-        "information",
+        "place",
         "reject",
         "receive",
         "except"
@@ -337,7 +376,7 @@
         "except",
         "receive",
         "reject",
-        "information"
+        "place"
       ],
       "answer": "except",
       "stage": "T3",
@@ -387,9 +426,9 @@
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：He accepted _____ for the mistake.（中文：他为这个错误承担了责任。）",
       "options": [
         "responsibility",
-        "travelers",
-        "expression",
-        "question"
+        "Friday",
+        "honest",
+        "build"
       ],
       "answer": "responsibility",
       "stage": "T2",
@@ -508,9 +547,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

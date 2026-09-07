@@ -11,6 +11,13 @@
     }
   ],
   "cocaRankLabel": "v. 第 561 名",
+  "learningPriority": {
+    "sequence": 31,
+    "group": "verb",
+    "groupLabel": "动词",
+    "groupOrder": 1,
+    "primaryCocaRank": 561
+  },
   "phonetic": "/tʃuːz/",
   "syllables": "choose（单音节）",
   "partOfSpeech": "v.",
@@ -18,7 +25,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "模板结构版",
+    "完整词卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -64,9 +71,9 @@
         "note": "不定式 to 后接动词原形；不要把不定式和 -ing 形式混合。"
       }
     ],
-    "directSynonym": "select /səˈlɛkt/（与“选择”意义接近）",
-    "directAntonym": "reject /rɪˈdʒɛkt/（与“选择”意义相反）",
-    "derivatives": "choice",
+    "directSynonym": "select /səˈlɛkt/（挑选出来的；极好的；选择；挑选）",
+    "directAntonym": "reject /rɪˈdʒɛkt/（被拒之人；被弃之物；不合格品；次品）",
+    "derivatives": "choice · chosen",
     "example": "Choose the most natural answer.",
     "exampleChinese": "选择最自然的答案。"
   },
@@ -174,8 +181,8 @@
     {
       "word": "select",
       "phonetic": "/səˈlɛkt/",
-      "partOfSpeech": "v.",
-      "chinese": "与“选择”意义接近",
+      "partOfSpeech": "v. / n. / adj.",
+      "chinese": "挑选出来的；极好的；选择；挑选",
       "difference": "choose 是本卡核心搭配 “choose between A and B” 中的中性常用选择；select 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -183,8 +190,8 @@
     {
       "word": "reject",
       "phonetic": "/rɪˈdʒɛkt/",
-      "partOfSpeech": "v.",
-      "chinese": "与“选择”意义相反",
+      "partOfSpeech": "v. / n.",
+      "chinese": "被拒之人；被弃之物；不合格品；次品",
       "usage": "在本卡核心义下与 choose 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
@@ -194,7 +201,14 @@
       "phonetic": "/ˈtʃɔɪs/",
       "partOfSpeech": "n.",
       "chinese": "选择",
-      "note": "与 choose 同属常用词族；注意两者词性和句中位置不同。"
+      "note": "这是 choose 的常用词族成员；请按上方词性放到句子的正确位置。"
+    },
+    {
+      "word": "chosen",
+      "phonetic": "/ˈtʃoʊzən/",
+      "partOfSpeech": "adj.",
+      "chinese": "选定的；精选的",
+      "note": "这是 choose 的常用词族成员；请按上方词性放到句子的正确位置。"
     }
   ],
   "confusables": [
@@ -213,14 +227,14 @@
         {
           "word": "select",
           "phonetic": "/səˈlɛkt/",
-          "partOfSpeech": "v.",
-          "chinese": "与“选择”意义接近"
+          "partOfSpeech": "v. / n. / adj.",
+          "chinese": "挑选出来的；极好的；选择；挑选"
         },
         {
           "word": "reject",
           "phonetic": "/rɪˈdʒɛkt/",
-          "partOfSpeech": "v.",
-          "chinese": "与“选择”意义相反"
+          "partOfSpeech": "v. / n.",
+          "chinese": "被拒之人；被弃之物；不合格品；次品"
         }
       ]
     },
@@ -232,6 +246,12 @@
           "phonetic": "/tʃɔɪs/",
           "partOfSpeech": "n.",
           "chinese": "选择"
+        },
+        {
+          "word": "chosen",
+          "phonetic": "/ˈtʃoʊzən/",
+          "partOfSpeech": "adj.",
+          "chinese": "选定的；精选的"
         }
       ]
     }
@@ -285,9 +305,9 @@
       "type": "meaning_choice",
       "prompt": "“choose”最核心的中文含义是？",
       "options": [
-        "建议；忠告",
         "选择",
-        "原因；推理"
+        "处理；应对",
+        "健康"
       ],
       "answer": "选择",
       "stage": "T0",
@@ -298,9 +318,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “choose”？",
       "options": [
-        "to decide which person or thing you want",
-        "a cause or explanation for something",
-        "an opinion about what someone should do"
+        "to deal with a situation or task",
+        "the condition of body and mind",
+        "to decide which person or thing you want"
       ],
       "answer": "to decide which person or thing you want",
       "stage": "T0",
@@ -311,10 +331,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“选择做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
       "options": [
+        "choose to do",
         "choose between A and B",
         "choose the right word",
-        "carefully choose",
-        "choose to do"
+        "carefully choose"
       ],
       "answer": "choose to do",
       "stage": "T1",
@@ -325,10 +345,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “choose” 最直接近义词？",
       "options": [
+        "reject",
         "choice",
-        "reason",
-        "select",
-        "reject"
+        "handle",
+        "select"
       ],
       "answer": "select",
       "stage": "T2",
@@ -339,10 +359,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “choose” 最直接反义词？",
       "options": [
-        "reason",
+        "choice",
+        "handle",
         "reject",
-        "select",
-        "choice"
+        "select"
       ],
       "answer": "reject",
       "stage": "T2",
@@ -353,10 +373,10 @@
       "type": "meaning_choice",
       "prompt": "根据本词卡辨析，哪个词被列为 “choose” 的易混词？",
       "options": [
+        "handle",
         "choice",
         "select",
-        "reject",
-        "reason"
+        "reject"
       ],
       "answer": "choice",
       "stage": "T3",
@@ -391,10 +411,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“在 A 和 B 之间选择”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "choose the right word",
         "carefully choose",
         "choose between A and B",
-        "choose to do",
-        "choose the right word"
+        "choose to do"
       ],
       "answer": "choose between A and B",
       "stage": "T1",
@@ -405,10 +425,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Choose the _____ natural answer.（中文：选择最自然的答案。）",
       "options": [
+        "regular",
         "most",
-        "choice",
-        "practical",
-        "useful"
+        "difficult",
+        "important"
       ],
       "answer": "most",
       "stage": "T2",
@@ -417,12 +437,12 @@
     {
       "id": "choose-v-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“选择做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
+      "prompt": "搭配辨析：哪一项既表示“选择做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
       "options": [
+        "choose to do",
         "choose between A and B",
         "choose the right word",
-        "carefully choose",
-        "choose to do"
+        "carefully choose"
       ],
       "answer": "choose to do",
       "stage": "T2",
@@ -431,12 +451,12 @@
     {
       "id": "choose-v-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“在 A 和 B 之间选择”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "用法辨析：哪一项既表示“在 A 和 B 之间选择”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "choose to do",
         "choose the right word",
         "carefully choose",
-        "choose between A and B",
-        "choose to do"
+        "choose between A and B"
       ],
       "answer": "choose between A and B",
       "stage": "T3",
@@ -527,9 +547,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

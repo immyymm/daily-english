@@ -11,6 +11,13 @@
     }
   ],
   "cocaRankLabel": "adv. 第 786 名",
+  "learningPriority": {
+    "sequence": 145,
+    "group": "adverb",
+    "groupLabel": "副词",
+    "groupOrder": 4,
+    "primaryCocaRank": 786
+  },
   "phonetic": "/ˈjuːʒuəli/",
   "syllables": "usually（约 3 音节）",
   "partOfSpeech": "adv.",
@@ -18,7 +25,7 @@
   "difficulty": "应用",
   "tags": [
     "adv.",
-    "模板结构版",
+    "完整词卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -64,9 +71,9 @@
         "note": "usually 本身已经是本卡要学的形式，不要再次机械添加 -ly。"
       }
     ],
-    "directSynonym": "normally /ˈnɔːrməliː/（与“通常”意义接近）",
-    "directAntonym": "rarely /ˈrɛrliː/（与“通常”意义相反）",
-    "derivatives": "本词暂无需额外强记的高频派生词",
+    "directSynonym": "normally /ˈnɔːrməliː/（正规地；合规则；正常地）",
+    "directAntonym": "rarely /ˈrɛrliː/（很少地；罕有地）",
+    "derivatives": "usual",
     "example": "I usually review words after breakfast.",
     "exampleChinese": "我通常在早餐后复习单词。"
   },
@@ -190,7 +197,7 @@
       "word": "normally",
       "phonetic": "/ˈnɔːrməliː/",
       "partOfSpeech": "adv.",
-      "chinese": "与“通常”意义接近",
+      "chinese": "正规地；合规则；正常地",
       "difference": "usually 是本卡核心搭配 “usually happens” 中的中性常用选择；normally 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -199,11 +206,19 @@
       "word": "rarely",
       "phonetic": "/ˈrɛrliː/",
       "partOfSpeech": "adv.",
-      "chinese": "与“通常”意义相反",
+      "chinese": "很少地；罕有地",
       "usage": "在本卡核心义下与 usually 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
-  "derivatives": [],
+  "derivatives": [
+    {
+      "word": "usual",
+      "phonetic": "/ˈjuːʒəwəl/",
+      "partOfSpeech": "adj.",
+      "chinese": "平常的；通常的",
+      "note": "这是 usually 的常用词族成员；请按上方词性放到句子的正确位置。"
+    }
+  ],
   "confusables": [],
   "relatedVocabulary": [
     {
@@ -213,13 +228,24 @@
           "word": "normally",
           "phonetic": "/ˈnɔːrməliː/",
           "partOfSpeech": "adv.",
-          "chinese": "与“通常”意义接近"
+          "chinese": "正规地；合规则；正常地"
         },
         {
           "word": "rarely",
           "phonetic": "/ˈrɛrliː/",
           "partOfSpeech": "adv.",
-          "chinese": "与“通常”意义相反"
+          "chinese": "很少地；罕有地"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "usual",
+          "phonetic": "/ˈjuːʒəwəl/",
+          "partOfSpeech": "adj.",
+          "chinese": "平常的；通常的"
         }
       ]
     }
@@ -273,9 +299,9 @@
       "type": "meaning_choice",
       "prompt": "“usually”最核心的中文含义是？",
       "options": [
-        "家庭；家人",
-        "提供",
-        "通常"
+        "通常",
+        "学习；得知",
+        "比较"
       ],
       "answer": "通常",
       "stage": "T0",
@@ -286,9 +312,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “usually”？",
       "options": [
-        "to give something that is needed",
-        "in most situations or cases",
-        "a group of related people"
+        "to gain knowledge or a skill",
+        "to examine how things are alike or different",
+        "in most situations or cases"
       ],
       "answer": "in most situations or cases",
       "stage": "T0",
@@ -313,10 +339,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “usually” 最直接近义词？",
       "options": [
-        "provide",
+        "compare",
         "normally",
         "rarely",
-        "family"
+        "learn"
       ],
       "answer": "normally",
       "stage": "T2",
@@ -329,8 +355,8 @@
       "options": [
         "rarely",
         "normally",
-        "family",
-        "provide"
+        "learn",
+        "compare"
       ],
       "answer": "rarely",
       "stage": "T2",
@@ -339,14 +365,14 @@
     {
       "id": "usually-adv-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “usually” 的相关近义词？",
+      "prompt": "根据本词卡辨析，哪个词被列为 “usually” 的派生词？",
       "options": [
+        "normally",
         "rarely",
-        "family",
-        "provide",
-        "normally"
+        "learn",
+        "usual"
       ],
-      "answer": "normally",
+      "answer": "usual",
       "stage": "T3",
       "ai": false
     },
@@ -393,9 +419,9 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：I usually _____ words after breakfast.（中文：我通常在早餐后复习单词。）",
       "options": [
-        "supports",
-        "students",
-        "big",
+        "faster",
+        "two",
+        "helps",
         "review"
       ],
       "answer": "review",
@@ -515,9 +541,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

@@ -17,14 +17,21 @@
     }
   ],
   "cocaRankLabel": "n. 第 259 名；v. 第 1055 名",
+  "learningPriority": {
+    "sequence": 68,
+    "group": "noun",
+    "groupLabel": "名词",
+    "groupOrder": 2,
+    "primaryCocaRank": 259
+  },
   "phonetic": "/ˈstʌdi/",
   "syllables": "study（约 2 音节）",
   "partOfSpeech": "n. / v.",
   "frequencyBand": "COCA 高频精选 · n. 第 259 名；v. 第 1055 名",
-  "difficulty": "应用",
+  "difficulty": "进阶",
   "tags": [
     "n.",
-    "模板结构版",
+    "完整词卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -71,8 +78,8 @@
       }
     ],
     "directSynonym": "learn /ˈlɝːn/（学习）",
-    "directAntonym": "ignore /ˌɪˈɡnɔːr/（与“学习”意义相反）",
-    "derivatives": "本词暂无需额外强记的高频派生词",
+    "directAntonym": "ignore /ˌɪˈɡnɔːr/（不理睬；忽视；驳回；忽略）",
+    "derivatives": "student",
     "example": "She studies English for half an hour every morning.",
     "exampleChinese": "她每天早上学半小时英语。"
   },
@@ -187,7 +194,7 @@
     {
       "word": "learn",
       "phonetic": "/ˈlɝːn/",
-      "partOfSpeech": "n. / v.",
+      "partOfSpeech": "v.",
       "chinese": "学习",
       "difference": "study 是本卡核心搭配 “study for a test” 中的中性常用选择；learn 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
@@ -196,12 +203,20 @@
     {
       "word": "ignore",
       "phonetic": "/ˌɪˈɡnɔːr/",
-      "partOfSpeech": "n. / v.",
-      "chinese": "与“学习”意义相反",
+      "partOfSpeech": "v.",
+      "chinese": "不理睬；忽视；驳回；忽略",
       "usage": "在本卡核心义下与 study 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
-  "derivatives": [],
+  "derivatives": [
+    {
+      "word": "student",
+      "phonetic": "/ˈstuːdənt/",
+      "partOfSpeech": "n.",
+      "chinese": "学生；研究者；学者",
+      "note": "这是 study 的常用词族成员；请按上方词性放到句子的正确位置。"
+    }
+  ],
   "confusables": [
     {
       "word": "learn",
@@ -224,8 +239,19 @@
         {
           "word": "ignore",
           "phonetic": "/ˌɪˈɡnɔːr/",
-          "partOfSpeech": "n. / v.",
-          "chinese": "与“学习”意义相反"
+          "partOfSpeech": "v.",
+          "chinese": "不理睬；忽视；驳回；忽略"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "student",
+          "phonetic": "/ˈstuːdənt/",
+          "partOfSpeech": "n.",
+          "chinese": "学生；研究者；学者"
         }
       ]
     }
@@ -279,9 +305,9 @@
       "type": "meaning_choice",
       "prompt": "“study”最核心的中文含义是？",
       "options": [
-        "跟随；遵循",
-        "学习；研究",
-        "时间；计时"
+        "差异；区别",
+        "重要的",
+        "学习；研究"
       ],
       "answer": "学习；研究",
       "stage": "T0",
@@ -292,9 +318,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “study”？",
       "options": [
+        "having great value or effect",
         "to learn about a subject carefully",
-        "the measured flow in which events happen",
-        "to go after or act according to something"
+        "the way in which things are not the same"
       ],
       "answer": "to learn about a subject carefully",
       "stage": "T0",
@@ -305,10 +331,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“为考试学习”，又符合这个形式线索：完整搭配中使用介词 for？",
       "options": [
-        "study for a test",
         "study English",
         "study abroad",
-        "a recent study"
+        "a recent study",
+        "study for a test"
       ],
       "answer": "study for a test",
       "stage": "T1",
@@ -319,10 +345,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “study” 最直接近义词？",
       "options": [
-        "ignore",
-        "time",
-        "follow",
-        "learn"
+        "difference",
+        "important",
+        "learn",
+        "ignore"
       ],
       "answer": "learn",
       "stage": "T2",
@@ -333,10 +359,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “study” 最直接反义词？",
       "options": [
-        "time",
-        "follow",
+        "important",
         "ignore",
-        "learn"
+        "learn",
+        "difference"
       ],
       "answer": "ignore",
       "stage": "T2",
@@ -347,10 +373,10 @@
       "type": "meaning_choice",
       "prompt": "根据本词卡辨析，哪个词被列为 “study” 的易混词？",
       "options": [
-        "follow",
         "learn",
         "ignore",
-        "time"
+        "difference",
+        "important"
       ],
       "answer": "learn",
       "stage": "T3",
@@ -385,10 +411,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“学习英语”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "study abroad",
         "a recent study",
         "study English",
-        "study for a test"
+        "study for a test",
+        "study abroad"
       ],
       "answer": "study English",
       "stage": "T1",
@@ -399,10 +425,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：She studies _____ for half an hour every morning.（中文：她每天早上学半小时英语。）",
       "options": [
-        "difficult",
         "English",
-        "interview",
-        "steps"
+        "make",
+        "review",
+        "used"
       ],
       "answer": "English",
       "stage": "T2",
@@ -411,12 +437,12 @@
     {
       "id": "study-n-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“为考试学习”，又符合这个形式线索：完整搭配中使用介词 for？",
+      "prompt": "用法辨析：哪一项既表示“为考试学习”，又符合这个形式线索：完整搭配中使用介词 for？",
       "options": [
-        "study for a test",
         "study English",
         "study abroad",
-        "a recent study"
+        "a recent study",
+        "study for a test"
       ],
       "answer": "study for a test",
       "stage": "T2",
@@ -425,12 +451,12 @@
     {
       "id": "study-n-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“学习英语”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "搭配辨析：哪一项既表示“学习英语”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "study for a test",
         "study abroad",
         "a recent study",
-        "study English"
+        "study English",
+        "study for a test"
       ],
       "answer": "study English",
       "stage": "T3",
@@ -521,9 +547,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

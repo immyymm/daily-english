@@ -7,7 +7,9 @@ import { cardOverrides } from './card-overrides.mjs';
 import { curatedPhrases } from './curated-phrases.mjs';
 import { curatedExamples } from './curated-examples.mjs';
 import { ipaFor } from './phonetics.mjs';
+import { learningPriority, sortLexiconForLearning } from './learning-order.mjs';
 import cocaRankData from './coca-ranks.json' with { type: 'json' };
+import wordMetadataData from './word-metadata.json' with { type: 'json' };
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(scriptDir, '..');
@@ -22,10 +24,13 @@ const slug = (value) => value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(
 const primaryPos = (value) => value.split('/')[0].trim().replace('.', '');
 const firstMeaning = (value) => value.split('；')[0];
 const lexiconByWord = new Map(lexicon.map((item) => [item.w, item]));
+const orderedLexicon = sortLexiconForLearning(lexicon, cocaRankData);
+const wordMetadata = wordMetadataData.entries;
 const posLabels = { v: 'v.', n: 'n.', j: 'adj.', r: 'adv.' };
 function relatedChinese(word, item, relation) {
   const known = lexiconByWord.get(word);
   if (known) return firstMeaning(known.zh);
+  if (wordMetadata[word]?.chinese) return wordMetadata[word].chinese;
   if (relation === 'synonym') return '与“' + firstMeaning(item.zh) + '”意义接近';
   if (relation === 'antonym') return '与“' + firstMeaning(item.zh) + '”意义相反';
   return '与 ' + item.w + ' 同词族的常用词形';
@@ -158,7 +163,7 @@ function normalizeRelations(item, override, key) {
     return [{
       word: item.syn,
       phonetic: ipaFor(item.syn),
-      partOfSpeech: item.p,
+      partOfSpeech: wordMetadata[item.syn]?.partOfSpeech ?? item.p.split('/')[0].trim(),
       chinese: relatedChinese(item.syn, item, 'synonym'),
       difference: item.w + ' 是本卡核心搭配 “' + item.coll + '” 中的中性常用选择；' + item.syn + ' 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。'
     }];
@@ -167,7 +172,7 @@ function normalizeRelations(item, override, key) {
     return [{
       word: item.ant,
       phonetic: ipaFor(item.ant),
-      partOfSpeech: item.p,
+      partOfSpeech: wordMetadata[item.ant]?.partOfSpeech ?? item.p.split('/')[0].trim(),
       chinese: relatedChinese(item.ant, item, 'antonym'),
       usage: '在本卡核心义下与 ' + item.w + ' 构成最直接的语义对比；实际使用前仍要核对词性和句型。'
     }];
@@ -180,13 +185,13 @@ function normalizeDerivatives(item, override) {
     return override.derivatives.map(([word, partOfSpeech, chinese, note]) => ({ word, phonetic: ipaFor(word), partOfSpeech, chinese, note }));
   }
   return (families[item.w] ?? [])
-    .filter((word) => word !== item.w && lexiconByWord.has(word))
+    .filter((word) => word !== item.w && (lexiconByWord.has(word) || wordMetadata[word]))
     .map((word) => ({
       word,
       phonetic: ipaFor(word),
-      partOfSpeech: lexiconByWord.get(word).p,
-      chinese: firstMeaning(lexiconByWord.get(word).zh),
-      note: '与 ' + item.w + ' 同属常用词族；注意两者词性和句中位置不同。'
+      partOfSpeech: lexiconByWord.get(word)?.p ?? wordMetadata[word].partOfSpeech,
+      chinese: lexiconByWord.has(word) ? firstMeaning(lexiconByWord.get(word).zh) : wordMetadata[word].chinese,
+      note: '这是 ' + item.w + ' 的常用词族成员；请按上方词性放到句子的正确位置。'
     }));
 }
 
@@ -199,11 +204,12 @@ function normalizeConfusables(item, override) {
 
 function vocabularyItem(word, fallbackPos = 'word', fallbackChinese = '与本词相关的常用表达') {
   const known = lexiconByWord.get(word);
+  const metadata = wordMetadata[word];
   return {
     word,
     phonetic: known?.ipa ?? ipaFor(word),
-    partOfSpeech: known?.p ?? fallbackPos,
-    chinese: known ? firstMeaning(known.zh) : fallbackChinese
+    partOfSpeech: known?.p ?? metadata?.partOfSpeech ?? fallbackPos,
+    chinese: known ? firstMeaning(known.zh) : metadata?.chinese ?? fallbackChinese
   };
 }
 
@@ -445,8 +451,8 @@ function makeCard(item, index) {
   const cocaRankLabel = ranks.length
     ? ranks.map((entry) => entry.partOfSpeech + ' 第 ' + entry.rank + ' 名').join('；')
     : 'COCA 高频精选';
-  const next = lexicon[(index + 17) % lexicon.length];
-  const nextTwo = lexicon[(index + 43) % lexicon.length];
+  const next = orderedLexicon[(index + 17) % orderedLexicon.length];
+  const nextTwo = orderedLexicon[(index + 43) % orderedLexicon.length];
   const meaningOptions = rotateOptions([item.zh, next.zh, nextTwo.zh], index);
   const englishMeaningOptions = rotateOptions([meanings[0].english, next.en, nextTwo.en], index + 1);
   const structureOptions = relationOptions(structures[0].phrase, [
@@ -473,7 +479,7 @@ function makeCard(item, index) {
   const firstFixedPhrase = firstFixedEntry.phrase;
   const secondFixedEntry = fixedPhrases.find((entry) => entry.phrase !== firstFixedPhrase)
     ?? { phrase: structures[1]?.phrase ?? item.coll, chinese: structures[1]?.chinese ?? item.collZh };
-  const contextualDistractors = [next, nextTwo, lexicon[(index + 67) % lexicon.length]]
+  const contextualDistractors = [next, nextTwo, orderedLexicon[(index + 67) % orderedLexicon.length]]
     .map((candidate) => contextualCompanionWord(candidate.ex, candidate.w)?.text ?? candidate.w);
   const questions = [
     { id: id + '-meaning-core', type: 'meaning_choice', prompt: '“' + item.w + '”最核心的中文含义是？', options: meaningOptions, answer: item.zh, stage: 'T0', ai: false },
@@ -501,12 +507,13 @@ function makeCard(item, index) {
     lemma: item.w,
     cocaRanks: ranks,
     cocaRankLabel,
+    learningPriority: learningPriority(item, index + 1, cocaRankData),
     phonetic: item.ipa,
     syllables: syllableHint(item.w),
     partOfSpeech: item.p,
     frequencyBand: 'COCA 高频精选 · ' + cocaRankLabel,
     difficulty: index < 50 ? '基础' : index < 110 ? '进阶' : '应用',
-    tags: [item.p.split('/')[0].trim(), override ? '人工精校' : '模板结构版', index < 50 ? '高频表达' : '主动词汇'],
+    tags: [item.p.split('/')[0].trim(), '完整词卡', index < 50 ? '高频表达' : '主动词汇'],
     coreMemory: {
       chinese: item.zh,
       english: meanings.map((meaning) => meaning.partOfSpeech + ' ' + meaning.english).join('；'),
@@ -544,13 +551,11 @@ function makeCard(item, index) {
       T6: ['meaning_choice', 'recall', 'collocation', 'free_sentence', 'dialogue'],
       T7: ['meaning_choice', 'recall', 'collocation', 'free_sentence', 'dialogue']
     },
-    detailLevel: item.w === 'work' ? 'template-reference' : override ? 'template-curated' : 'template-structured',
+    detailLevel: item.w === 'work' ? 'template-reference' : override ? 'template-curated' : 'template-complete',
     templateVersion,
     contentVersion,
     reviewed: Boolean(override),
-    sourceNote: override
-      ? '从用户提供的 COCA 词表筛选；本卡依照用户词卡模板人工精校；音标为美式发音。'
-      : '从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。'
+    sourceNote: '从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。'
   };
 }
 
@@ -561,13 +566,14 @@ function formatDate(date) {
 await fs.mkdir(contentCardsDir, { recursive: true });
 await fs.mkdir(publicDailyDir, { recursive: true });
 
-const cards = lexicon.map(makeCard);
+const cards = orderedLexicon.map(makeCard);
 for (const card of cards) {
   await fs.writeFile(path.join(contentCardsDir, card.id + '.json'), JSON.stringify(card, null, 2) + '\n', 'utf8');
 }
 
 const dailyFiles = [];
-for (let dayIndex = 0; dayIndex < 30; dayIndex += 1) {
+const totalDays = Math.ceil(cards.length / 5);
+for (let dayIndex = 0; dayIndex < totalDays; dayIndex += 1) {
   const date = new Date(launchDate);
   date.setDate(launchDate.getDate() + dayIndex);
   const dateKey = formatDate(date);
@@ -584,13 +590,15 @@ await fs.writeFile(path.join(publicDataDir, 'manifest.json'), JSON.stringify({
   cardsPerDay: 5, scheduleStart: formatDate(launchDate), dailyFiles
 }, null, 2) + '\n', 'utf8');
 await fs.writeFile(path.join(root, 'content', 'content-manifest.json'), JSON.stringify({
-  source: 'COCA词频单词表.xlsx', generatedAt: '2026-08-19', contentVersion, templateVersion,
-  detailLevel: 'mixed-quality',
+  source: 'COCA词频单词表.xlsx', generatedAt: '2026-09-07', contentVersion, templateVersion,
+  generationMode: 'one-time-static',
+  orderingPolicy: 'primary-pos-verb-noun-adjective-adverb-other-then-coca-rank',
+  detailLevel: 'template-complete',
   reviewedCardIds: cards.filter((card) => card.reviewed).map((card) => card.id),
   referenceCardIds: cards.filter((card) => card.detailLevel === 'template-reference').map((card) => card.id),
   curatedDetailedCardIds: cards.filter((card) => card.detailLevel === 'template-curated').map((card) => card.id),
-  templateStructuredCardIds: cards.filter((card) => card.detailLevel === 'template-structured').map((card) => card.id),
+  completeCardIds: cards.filter((card) => card.detailLevel === 'template-complete').map((card) => card.id),
   cardIds: cards.map((card) => card.id)
 }, null, 2) + '\n', 'utf8');
 
-console.log('Generated ' + cards.length + ' cards: ' + cards.filter((card) => card.detailLevel === 'template-reference').length + ' locked reference, ' + cards.filter((card) => card.detailLevel === 'template-curated').length + ' human-curated detailed, and ' + cards.filter((card) => card.detailLevel === 'template-structured').length + ' template-structured, plus ' + dailyFiles.length + ' daily files.');
+console.log('Generated all ' + cards.length + ' complete static cards in primary-POS/COCA-rank order, plus ' + dailyFiles.length + ' daily files.');

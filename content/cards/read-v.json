@@ -11,15 +11,22 @@
     }
   ],
   "cocaRankLabel": "v. 第 244 名",
+  "learningPriority": {
+    "sequence": 7,
+    "group": "verb",
+    "groupLabel": "动词",
+    "groupOrder": 1,
+    "primaryCocaRank": 244
+  },
   "phonetic": "/riːd/",
   "syllables": "read（单音节）",
   "partOfSpeech": "v.",
   "frequencyBand": "COCA 高频精选 · v. 第 244 名",
-  "difficulty": "应用",
+  "difficulty": "基础",
   "tags": [
     "v.",
-    "模板结构版",
-    "主动词汇"
+    "完整词卡",
+    "高频表达"
   ],
   "coreMemory": {
     "chinese": "阅读；读懂",
@@ -64,9 +71,9 @@
         "note": "不定式 to 后接动词原形；不要把不定式和 -ing 形式混合。"
       }
     ],
-    "directSynonym": "review /ˌriːˈvjuː/（与“阅读”意义接近）",
-    "directAntonym": "skip /ˈskɪp/（与“阅读”意义相反）",
-    "derivatives": "本词暂无需额外强记的高频派生词",
+    "directSynonym": "review /ˌriːˈvjuː/（检讨；复习；回顾；检阅）",
+    "directAntonym": "skip /ˈskɪp/（跳跃；跳读；跳越；跳绳）",
+    "derivatives": "reader · reading",
     "example": "Read the example aloud twice.",
     "exampleChinese": "把例句大声读两遍。"
   },
@@ -174,8 +181,8 @@
     {
       "word": "review",
       "phonetic": "/ˌriːˈvjuː/",
-      "partOfSpeech": "v.",
-      "chinese": "与“阅读”意义接近",
+      "partOfSpeech": "v. / n.",
+      "chinese": "检讨；复习；回顾；检阅",
       "difference": "read 是本卡核心搭配 “read aloud” 中的中性常用选择；review 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -183,12 +190,27 @@
     {
       "word": "skip",
       "phonetic": "/ˈskɪp/",
-      "partOfSpeech": "v.",
-      "chinese": "与“阅读”意义相反",
+      "partOfSpeech": "v. / n.",
+      "chinese": "跳跃；跳读；跳越；跳绳",
       "usage": "在本卡核心义下与 read 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
-  "derivatives": [],
+  "derivatives": [
+    {
+      "word": "reader",
+      "phonetic": "/ˈriːdɚ/",
+      "partOfSpeech": "n.",
+      "chinese": "读者；读物；文选；校对人",
+      "note": "这是 read 的常用词族成员；请按上方词性放到句子的正确位置。"
+    },
+    {
+      "word": "reading",
+      "phonetic": "/ˈriːdɪŋ/",
+      "partOfSpeech": "n. / adj.",
+      "chinese": "阅读；知识；读物；阅读的",
+      "note": "这是 read 的常用词族成员；请按上方词性放到句子的正确位置。"
+    }
+  ],
   "confusables": [],
   "relatedVocabulary": [
     {
@@ -197,14 +219,31 @@
         {
           "word": "review",
           "phonetic": "/ˌriːˈvjuː/",
-          "partOfSpeech": "v.",
-          "chinese": "与“阅读”意义接近"
+          "partOfSpeech": "v. / n.",
+          "chinese": "检讨；复习；回顾；检阅"
         },
         {
           "word": "skip",
           "phonetic": "/ˈskɪp/",
-          "partOfSpeech": "v.",
-          "chinese": "与“阅读”意义相反"
+          "partOfSpeech": "v. / n.",
+          "chinese": "跳跃；跳读；跳越；跳绳"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "reader",
+          "phonetic": "/ˈriːdɚ/",
+          "partOfSpeech": "n.",
+          "chinese": "读者；读物；文选；校对人"
+        },
+        {
+          "word": "reading",
+          "phonetic": "/ˈriːdɪŋ/",
+          "partOfSpeech": "n. / adj.",
+          "chinese": "阅读；知识；读物；阅读的"
         }
       ]
     }
@@ -259,8 +298,8 @@
       "prompt": "“read”最核心的中文含义是？",
       "options": [
         "阅读；读懂",
-        "计划",
-        "意思是；意味着"
+        "听；倾听",
+        "表达"
       ],
       "answer": "阅读；读懂",
       "stage": "T0",
@@ -271,8 +310,8 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “read”？",
       "options": [
-        "a set of actions intended to achieve something",
-        "to express or have a particular meaning",
+        "to pay attention to sound",
+        "to show a thought or feeling in words or actions",
         "to understand written words"
       ],
       "answer": "to understand written words",
@@ -299,8 +338,8 @@
       "prompt": "哪个词是词卡中列出的 “read” 最直接近义词？",
       "options": [
         "skip",
-        "plan",
-        "mean",
+        "listen",
+        "express",
         "review"
       ],
       "answer": "review",
@@ -312,8 +351,8 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “read” 最直接反义词？",
       "options": [
-        "plan",
-        "mean",
+        "listen",
+        "express",
         "skip",
         "review"
       ],
@@ -324,14 +363,14 @@
     {
       "id": "read-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “read” 的相关近义词？",
+      "prompt": "根据本词卡辨析，哪个词被列为 “read” 的派生词？",
       "options": [
-        "mean",
+        "listen",
+        "reader",
         "review",
-        "skip",
-        "plan"
+        "skip"
       ],
-      "answer": "review",
+      "answer": "reader",
       "stage": "T3",
       "ai": false
     },
@@ -378,10 +417,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Read the _____ aloud twice.（中文：把例句大声读两遍。）",
       "options": [
-        "responsibility",
+        "important",
         "example",
-        "week",
-        "lot"
+        "whole",
+        "idea"
       ],
       "answer": "example",
       "stage": "T2",
@@ -500,9 +539,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

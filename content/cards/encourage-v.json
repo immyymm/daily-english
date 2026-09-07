@@ -11,15 +11,22 @@
     }
   ],
   "cocaRankLabel": "v. 第 1305 名",
+  "learningPriority": {
+    "sequence": 51,
+    "group": "verb",
+    "groupLabel": "动词",
+    "groupOrder": 1,
+    "primaryCocaRank": 1305
+  },
   "phonetic": "/ɪnˈkɜːrɪdʒ/",
   "syllables": "encourage（约 3 音节）",
   "partOfSpeech": "v.",
   "frequencyBand": "COCA 高频精选 · v. 第 1305 名",
-  "difficulty": "基础",
+  "difficulty": "进阶",
   "tags": [
     "v.",
-    "模板结构版",
-    "高频表达"
+    "完整词卡",
+    "主动词汇"
   ],
   "coreMemory": {
     "chinese": "鼓励；促进",
@@ -64,9 +71,9 @@
         "note": "不定式 to 后接动词原形；不要把不定式和 -ing 形式混合。"
       }
     ],
-    "directSynonym": "motivate /ˈmoʊtəˌveɪt/（与“鼓励”意义接近）",
-    "directAntonym": "discourage /dɪˈskɝːɪdʒ/（与“鼓励”意义相反）",
-    "derivatives": "本词暂无需额外强记的高频派生词",
+    "directSynonym": "motivate /ˈmoʊtəˌveɪt/（给与动机；刺激；提高...的学习欲望；促动）",
+    "directAntonym": "discourage /dɪˈskɝːɪdʒ/（使气馁；阻碍）",
+    "derivatives": "encouragement",
     "example": "The teacher encouraged us to speak more.",
     "exampleChinese": "老师鼓励我们多开口说。"
   },
@@ -185,7 +192,7 @@
       "word": "motivate",
       "phonetic": "/ˈmoʊtəˌveɪt/",
       "partOfSpeech": "v.",
-      "chinese": "与“鼓励”意义接近",
+      "chinese": "给与动机；刺激；提高...的学习欲望；促动",
       "difference": "encourage 是本卡核心搭配 “encourage someone to do something” 中的中性常用选择；motivate 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -194,11 +201,19 @@
       "word": "discourage",
       "phonetic": "/dɪˈskɝːɪdʒ/",
       "partOfSpeech": "v.",
-      "chinese": "与“鼓励”意义相反",
+      "chinese": "使气馁；阻碍",
       "usage": "在本卡核心义下与 encourage 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
-  "derivatives": [],
+  "derivatives": [
+    {
+      "word": "encouragement",
+      "phonetic": "/ɛˈnkɝːɪdʒmənt/",
+      "partOfSpeech": "n.",
+      "chinese": "鼓励；激励；奖励",
+      "note": "这是 encourage 的常用词族成员；请按上方词性放到句子的正确位置。"
+    }
+  ],
   "confusables": [],
   "relatedVocabulary": [
     {
@@ -208,13 +223,24 @@
           "word": "motivate",
           "phonetic": "/ˈmoʊtəˌveɪt/",
           "partOfSpeech": "v.",
-          "chinese": "与“鼓励”意义接近"
+          "chinese": "给与动机；刺激；提高...的学习欲望；促动"
         },
         {
           "word": "discourage",
           "phonetic": "/dɪˈskɝːɪdʒ/",
           "partOfSpeech": "v.",
-          "chinese": "与“鼓励”意义相反"
+          "chinese": "使气馁；阻碍"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "encouragement",
+          "phonetic": "/ɛˈnkɝːɪdʒmənt/",
+          "partOfSpeech": "n.",
+          "chinese": "鼓励；激励；奖励"
         }
       ]
     }
@@ -268,9 +294,9 @@
       "type": "meaning_choice",
       "prompt": "“encourage”最核心的中文含义是？",
       "options": [
-        "自然的；天生的",
+        "行为；表现",
         "鼓励；促进",
-        "水平；级别"
+        "学习；研究"
       ],
       "answer": "鼓励；促进",
       "stage": "T0",
@@ -282,8 +308,8 @@
       "prompt": "哪一项英文释义最符合词卡中的 “encourage”？",
       "options": [
         "to give someone confidence or support",
-        "a position on a scale of amount or quality",
-        "normal and not forced"
+        "to learn about a subject carefully",
+        "the way a person or thing acts"
       ],
       "answer": "to give someone confidence or support",
       "stage": "T0",
@@ -294,10 +320,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“鼓励某人做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
       "options": [
+        "encourage someone to do",
         "encourage discussion",
         "strongly encourage",
-        "encourage positive behavior",
-        "encourage someone to do"
+        "encourage positive behavior"
       ],
       "answer": "encourage someone to do",
       "stage": "T1",
@@ -308,10 +334,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “encourage” 最直接近义词？",
       "options": [
-        "level",
-        "natural",
-        "motivate",
-        "discourage"
+        "discourage",
+        "study",
+        "behavior",
+        "motivate"
       ],
       "answer": "motivate",
       "stage": "T2",
@@ -322,10 +348,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “encourage” 最直接反义词？",
       "options": [
-        "natural",
+        "study",
+        "behavior",
         "discourage",
-        "motivate",
-        "level"
+        "motivate"
       ],
       "answer": "discourage",
       "stage": "T2",
@@ -334,14 +360,14 @@
     {
       "id": "encourage-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “encourage” 的相关近义词？",
+      "prompt": "根据本词卡辨析，哪个词被列为 “encourage” 的派生词？",
       "options": [
+        "study",
+        "encouragement",
         "motivate",
-        "discourage",
-        "level",
-        "natural"
+        "discourage"
       ],
-      "answer": "motivate",
+      "answer": "encouragement",
       "stage": "T3",
       "ai": false
     },
@@ -374,10 +400,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“鼓励讨论”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "strongly encourage",
         "encourage positive behavior",
         "encourage discussion",
-        "encourage someone to do",
-        "strongly encourage"
+        "encourage someone to do"
       ],
       "answer": "encourage discussion",
       "stage": "T1",
@@ -388,10 +414,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：The teacher encouraged us to _____ more.（中文：老师鼓励我们多开口说。）",
       "options": [
+        "pronounce",
         "speak",
-        "current",
-        "conversation",
-        "completed"
+        "English",
+        "positive"
       ],
       "answer": "speak",
       "stage": "T2",
@@ -400,12 +426,12 @@
     {
       "id": "encourage-v-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“鼓励某人做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
+      "prompt": "搭配辨析：哪一项既表示“鼓励某人做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
       "options": [
+        "encourage someone to do",
         "encourage discussion",
         "strongly encourage",
-        "encourage positive behavior",
-        "encourage someone to do"
+        "encourage positive behavior"
       ],
       "answer": "encourage someone to do",
       "stage": "T2",
@@ -414,12 +440,12 @@
     {
       "id": "encourage-v-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“鼓励讨论”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "用法辨析：哪一项既表示“鼓励讨论”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "encourage someone to do",
         "strongly encourage",
         "encourage positive behavior",
-        "encourage discussion",
-        "encourage someone to do"
+        "encourage discussion"
       ],
       "answer": "encourage discussion",
       "stage": "T3",
@@ -510,9 +536,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

@@ -17,6 +17,13 @@
     }
   ],
   "cocaRankLabel": "adv. 第 128 名；adj. 第 2447 名",
+  "learningPriority": {
+    "sequence": 131,
+    "group": "adverb",
+    "groupLabel": "副词",
+    "groupOrder": 4,
+    "primaryCocaRank": 128
+  },
   "phonetic": "/stɪl/",
   "syllables": "still（单音节）",
   "partOfSpeech": "adv. / adj.",
@@ -24,7 +31,7 @@
   "difficulty": "应用",
   "tags": [
     "adv.",
-    "模板结构版",
+    "完整词卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -70,9 +77,9 @@
         "note": "较长形容词通常用 more 构成比较级，不重复加 -er。"
       }
     ],
-    "directSynonym": "yet /ˈjɛt/（与“仍然”意义接近）",
-    "directAntonym": "no longer /ˈnoʊ ˈlɔːŋɡɚ/（与“仍然”意义相反）",
-    "derivatives": "本词暂无需额外强记的高频派生词",
+    "directSynonym": "yet /ˈjɛt/（还；尚；仍然；已经）",
+    "directAntonym": "no longer /ˈnoʊ ˈlɔːŋɡɚ/（不再）",
+    "derivatives": "stillness",
     "example": "I still need to review two words.",
     "exampleChinese": "我还需要复习两个单词。"
   },
@@ -202,8 +209,8 @@
     {
       "word": "yet",
       "phonetic": "/ˈjɛt/",
-      "partOfSpeech": "adv. / adj.",
-      "chinese": "与“仍然”意义接近",
+      "partOfSpeech": "adv. / conj.",
+      "chinese": "还；尚；仍然；已经",
       "difference": "still 是本卡核心搭配 “still need to” 中的中性常用选择；yet 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -211,12 +218,20 @@
     {
       "word": "no longer",
       "phonetic": "/ˈnoʊ ˈlɔːŋɡɚ/",
-      "partOfSpeech": "adv. / adj.",
-      "chinese": "与“仍然”意义相反",
+      "partOfSpeech": "adv. phrase",
+      "chinese": "不再",
       "usage": "在本卡核心义下与 still 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
-  "derivatives": [],
+  "derivatives": [
+    {
+      "word": "stillness",
+      "phonetic": "/ˈstɪlnəs/",
+      "partOfSpeech": "n.",
+      "chinese": "静止；沉静",
+      "note": "这是 still 的常用词族成员；请按上方词性放到句子的正确位置。"
+    }
+  ],
   "confusables": [
     {
       "word": "yet",
@@ -233,14 +248,25 @@
         {
           "word": "yet",
           "phonetic": "/ˈjɛt/",
-          "partOfSpeech": "adv. / adj.",
-          "chinese": "与“仍然”意义接近"
+          "partOfSpeech": "adv. / conj.",
+          "chinese": "还；尚；仍然；已经"
         },
         {
           "word": "no longer",
           "phonetic": "/ˈnoʊ ˈlɔːŋɡɚ/",
-          "partOfSpeech": "adv. / adj.",
-          "chinese": "与“仍然”意义相反"
+          "partOfSpeech": "adv. phrase",
+          "chinese": "不再"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "stillness",
+          "phonetic": "/ˈstɪlnəs/",
+          "partOfSpeech": "n.",
+          "chinese": "静止；沉静"
         }
       ]
     }
@@ -294,8 +320,8 @@
       "type": "meaning_choice",
       "prompt": "“still”最核心的中文含义是？",
       "options": [
-        "朋友",
-        "创造；创建",
+        "清楚地；显然",
+        "听；倾听",
         "仍然；静止的"
       ],
       "answer": "仍然；静止的",
@@ -307,9 +333,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “still”？",
       "options": [
-        "to make something new",
+        "to pay attention to sound",
         "continuing until now",
-        "a person you know and like"
+        "in a way that is easy to understand"
       ],
       "answer": "continuing until now",
       "stage": "T0",
@@ -320,10 +346,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“仍然需要”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "still need to",
         "still working",
         "still possible",
-        "still not sure",
-        "still need to"
+        "still not sure"
       ],
       "answer": "still need to",
       "stage": "T1",
@@ -334,10 +360,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “still” 最直接近义词？",
       "options": [
-        "friend",
-        "create",
-        "yet",
-        "no longer"
+        "no longer",
+        "clearly",
+        "listen",
+        "yet"
       ],
       "answer": "yet",
       "stage": "T2",
@@ -348,10 +374,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “still” 最直接反义词？",
       "options": [
-        "create",
+        "clearly",
+        "listen",
         "no longer",
-        "yet",
-        "friend"
+        "yet"
       ],
       "answer": "no longer",
       "stage": "T2",
@@ -362,10 +388,10 @@
       "type": "meaning_choice",
       "prompt": "根据本词卡辨析，哪个词被列为 “still” 的易混词？",
       "options": [
+        "listen",
         "yet",
         "no longer",
-        "friend",
-        "create"
+        "clearly"
       ],
       "answer": "yet",
       "stage": "T3",
@@ -400,10 +426,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“仍在工作”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "still possible",
         "still not sure",
         "still working",
-        "still need to",
-        "still possible"
+        "still need to"
       ],
       "answer": "still working",
       "stage": "T1",
@@ -414,10 +440,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：I still _____ to review two words.（中文：我还需要复习两个单词。）",
       "options": [
+        "difficult",
         "need",
-        "dialogue",
-        "meaningful",
-        "situation"
+        "rule",
+        "whole"
       ],
       "answer": "need",
       "stage": "T2",
@@ -426,12 +452,12 @@
     {
       "id": "still-adv-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“仍然需要”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "搭配辨析：哪一项既表示“仍然需要”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "still need to",
         "still working",
         "still possible",
-        "still not sure",
-        "still need to"
+        "still not sure"
       ],
       "answer": "still need to",
       "stage": "T2",
@@ -440,12 +466,12 @@
     {
       "id": "still-adv-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“仍在工作”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "用法辨析：哪一项既表示“仍在工作”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "still need to",
         "still possible",
         "still not sure",
-        "still working",
-        "still need to"
+        "still working"
       ],
       "answer": "still working",
       "stage": "T3",
@@ -536,9 +562,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

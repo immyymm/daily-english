@@ -11,6 +11,13 @@
     }
   ],
   "cocaRankLabel": "adv. 第 335 名",
+  "learningPriority": {
+    "sequence": 136,
+    "group": "adverb",
+    "groupLabel": "副词",
+    "groupOrder": 4,
+    "primaryCocaRank": 335
+  },
   "phonetic": "/ˈɔːfən/",
   "syllables": "often（约 2 音节）",
   "partOfSpeech": "adv.",
@@ -18,7 +25,7 @@
   "difficulty": "应用",
   "tags": [
     "adv.",
-    "模板结构版",
+    "完整词卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -64,8 +71,8 @@
         "note": "often 本身已经是本卡要学的形式，不要再次机械添加 -ly。"
       }
     ],
-    "directSynonym": "frequently /ˈfriːkwəntliː/（与“经常”意义接近）",
-    "directAntonym": "seldom /ˈsɛldəm/（与“经常”意义相反）",
+    "directSynonym": "frequently /ˈfriːkwəntliː/（频繁；经常地）",
+    "directAntonym": "seldom /ˈsɛldəm/（不常的；稀少的；很少；不常）",
     "derivatives": "本词暂无需额外强记的高频派生词",
     "example": "This phrase often appears in conversation.",
     "exampleChinese": "这个短语经常出现在对话中。"
@@ -190,7 +197,7 @@
       "word": "frequently",
       "phonetic": "/ˈfriːkwəntliː/",
       "partOfSpeech": "adv.",
-      "chinese": "与“经常”意义接近",
+      "chinese": "频繁；经常地",
       "difference": "often 是本卡核心搭配 “quite often” 中的中性常用选择；frequently 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -198,8 +205,8 @@
     {
       "word": "seldom",
       "phonetic": "/ˈsɛldəm/",
-      "partOfSpeech": "adv.",
-      "chinese": "与“经常”意义相反",
+      "partOfSpeech": "adj. / adv.",
+      "chinese": "不常的；稀少的；很少；不常",
       "usage": "在本卡核心义下与 often 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
@@ -213,13 +220,13 @@
           "word": "frequently",
           "phonetic": "/ˈfriːkwəntliː/",
           "partOfSpeech": "adv.",
-          "chinese": "与“经常”意义接近"
+          "chinese": "频繁；经常地"
         },
         {
           "word": "seldom",
           "phonetic": "/ˈsɛldəm/",
-          "partOfSpeech": "adv.",
-          "chinese": "与“经常”意义相反"
+          "partOfSpeech": "adj. / adv.",
+          "chinese": "不常的；稀少的；很少；不常"
         }
       ]
     }
@@ -273,9 +280,9 @@
       "type": "meaning_choice",
       "prompt": "“often”最核心的中文含义是？",
       "options": [
-        "包括；包含",
         "经常",
-        "家；在家"
+        "发生",
+        "保持；仍然是"
       ],
       "answer": "经常",
       "stage": "T0",
@@ -286,9 +293,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “often”？",
       "options": [
-        "many times",
-        "the place where you live",
-        "to have something as part of a whole"
+        "to take place",
+        "to continue to be in the same state",
+        "many times"
       ],
       "answer": "many times",
       "stage": "T0",
@@ -299,10 +306,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“相当经常”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "often used",
         "more often than not",
         "how often",
-        "quite often",
-        "often used"
+        "quite often"
       ],
       "answer": "quite often",
       "stage": "T1",
@@ -313,10 +320,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “often” 最直接近义词？",
       "options": [
-        "include",
+        "happen",
+        "remain",
         "frequently",
-        "seldom",
-        "home"
+        "seldom"
       ],
       "answer": "frequently",
       "stage": "T2",
@@ -327,10 +334,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “often” 最直接反义词？",
       "options": [
+        "remain",
         "seldom",
         "frequently",
-        "home",
-        "include"
+        "happen"
       ],
       "answer": "seldom",
       "stage": "T2",
@@ -341,10 +348,10 @@
       "type": "meaning_choice",
       "prompt": "根据本词卡辨析，哪个词被列为 “often” 的相关近义词？",
       "options": [
+        "frequently",
         "seldom",
-        "home",
-        "include",
-        "frequently"
+        "happen",
+        "remain"
       ],
       "answer": "frequently",
       "stage": "T3",
@@ -379,10 +386,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“经常使用”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "how often",
         "often used",
         "quite often",
-        "more often than not",
-        "how often"
+        "more often than not"
       ],
       "answer": "often used",
       "stage": "T1",
@@ -393,10 +400,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：This phrase often _____ in conversation.（中文：这个短语经常出现在对话中。）",
       "options": [
-        "yourself",
-        "breakfast",
-        "confidence",
-        "appears"
+        "appears",
+        "during",
+        "calm",
+        "walking"
       ],
       "answer": "appears",
       "stage": "T2",
@@ -405,12 +412,12 @@
     {
       "id": "often-adv-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“相当经常”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "用法辨析：哪一项既表示“相当经常”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "often used",
         "more often than not",
         "how often",
-        "quite often",
-        "often used"
+        "quite often"
       ],
       "answer": "quite often",
       "stage": "T2",
@@ -419,12 +426,12 @@
     {
       "id": "often-adv-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“经常使用”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "搭配辨析：哪一项既表示“经常使用”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "more often than not",
         "how often",
         "often used",
-        "quite often",
-        "more often than not"
+        "quite often"
       ],
       "answer": "often used",
       "stage": "T3",
@@ -515,9 +522,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

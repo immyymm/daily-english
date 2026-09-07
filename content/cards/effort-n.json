@@ -11,6 +11,13 @@
     }
   ],
   "cocaRankLabel": "n. 第 530 名",
+  "learningPriority": {
+    "sequence": 86,
+    "group": "noun",
+    "groupLabel": "名词",
+    "groupOrder": 2,
+    "primaryCocaRank": 530
+  },
   "phonetic": "/ˈefərt/",
   "syllables": "effort（约 2 音节）",
   "partOfSpeech": "n.",
@@ -18,7 +25,7 @@
   "difficulty": "进阶",
   "tags": [
     "n.",
-    "模板结构版",
+    "完整词卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -64,9 +71,9 @@
         "note": "不要只按中文逐字替换；优先把本卡高频搭配作为完整句块记忆。"
       }
     ],
-    "directSynonym": "attempt /əˈtɛmpt/（与“努力”意义接近）",
-    "directAntonym": "idleness /ˈaɪdəlnəs/（与“努力”意义相反）",
-    "derivatives": "本词暂无需额外强记的高频派生词",
+    "directSynonym": "attempt /əˈtɛmpt/（尝试；企图）",
+    "directAntonym": "idleness /ˈaɪdəlnəs/（懒惰；闲散；失业）",
+    "derivatives": "effortless",
     "example": "Make an effort to use the word today.",
     "exampleChinese": "今天努力把这个词用出来。"
   },
@@ -174,8 +181,8 @@
     {
       "word": "attempt",
       "phonetic": "/əˈtɛmpt/",
-      "partOfSpeech": "n.",
-      "chinese": "与“努力”意义接近",
+      "partOfSpeech": "v. / n.",
+      "chinese": "尝试；企图",
       "difference": "effort 是本卡核心搭配 “make an effort” 中的中性常用选择；attempt 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -184,11 +191,19 @@
       "word": "idleness",
       "phonetic": "/ˈaɪdəlnəs/",
       "partOfSpeech": "n.",
-      "chinese": "与“努力”意义相反",
+      "chinese": "懒惰；闲散；失业",
       "usage": "在本卡核心义下与 effort 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
-  "derivatives": [],
+  "derivatives": [
+    {
+      "word": "effortless",
+      "phonetic": "/ˈɛfɚtləs/",
+      "partOfSpeech": "adj.",
+      "chinese": "容易的；不费力气的",
+      "note": "这是 effort 的常用词族成员；请按上方词性放到句子的正确位置。"
+    }
+  ],
   "confusables": [],
   "relatedVocabulary": [
     {
@@ -197,14 +212,25 @@
         {
           "word": "attempt",
           "phonetic": "/əˈtɛmpt/",
-          "partOfSpeech": "n.",
-          "chinese": "与“努力”意义接近"
+          "partOfSpeech": "v. / n.",
+          "chinese": "尝试；企图"
         },
         {
           "word": "idleness",
           "phonetic": "/ˈaɪdəlnəs/",
           "partOfSpeech": "n.",
-          "chinese": "与“努力”意义相反"
+          "chinese": "懒惰；闲散；失业"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "effortless",
+          "phonetic": "/ˈɛfɚtləs/",
+          "partOfSpeech": "adj.",
+          "chinese": "容易的；不费力气的"
         }
       ]
     }
@@ -258,9 +284,9 @@
       "type": "meaning_choice",
       "prompt": "“effort”最核心的中文含义是？",
       "options": [
-        "努力",
-        "目的；意图",
-        "不同的"
+        "挑战",
+        "小心的；仔细的",
+        "努力"
       ],
       "answer": "努力",
       "stage": "T0",
@@ -271,9 +297,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “effort”？",
       "options": [
-        "the reason why something is done",
-        "not the same",
-        "physical or mental energy used to do something"
+        "giving attention to avoid mistakes",
+        "physical or mental energy used to do something",
+        "a difficult task that tests your ability"
       ],
       "answer": "physical or mental energy used to do something",
       "stage": "T0",
@@ -284,10 +310,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“付出努力”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "put effort into",
-        "a great deal of effort",
         "with little effort",
-        "make an effort"
+        "make an effort",
+        "put effort into",
+        "a great deal of effort"
       ],
       "answer": "make an effort",
       "stage": "T1",
@@ -298,10 +324,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “effort” 最直接近义词？",
       "options": [
-        "purpose",
-        "different",
         "attempt",
-        "idleness"
+        "idleness",
+        "challenge",
+        "careful"
       ],
       "answer": "attempt",
       "stage": "T2",
@@ -312,10 +338,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “effort” 最直接反义词？",
       "options": [
-        "different",
-        "idleness",
         "attempt",
-        "purpose"
+        "challenge",
+        "careful",
+        "idleness"
       ],
       "answer": "idleness",
       "stage": "T2",
@@ -324,14 +350,14 @@
     {
       "id": "effort-n-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “effort” 的相关近义词？",
+      "prompt": "根据本词卡辨析，哪个词被列为 “effort” 的派生词？",
       "options": [
-        "attempt",
         "idleness",
-        "purpose",
-        "different"
+        "challenge",
+        "effortless",
+        "attempt"
       ],
-      "answer": "attempt",
+      "answer": "effortless",
       "stage": "T3",
       "ai": false
     },
@@ -364,10 +390,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“投入精力”，又符合这个形式线索：完整搭配中使用介词 into？",
       "options": [
-        "with little effort",
-        "put effort into",
         "make an effort",
-        "a great deal of effort"
+        "a great deal of effort",
+        "with little effort",
+        "put effort into"
       ],
       "answer": "put effort into",
       "stage": "T1",
@@ -378,10 +404,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Make an effort to _____ the word today.（中文：今天努力把这个词用出来。）",
       "options": [
+        "word",
+        "during",
         "use",
-        "test",
-        "formal",
-        "hearing"
+        "useful"
       ],
       "answer": "use",
       "stage": "T2",
@@ -392,10 +418,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“付出努力”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "put effort into",
-        "a great deal of effort",
         "with little effort",
-        "make an effort"
+        "make an effort",
+        "put effort into",
+        "a great deal of effort"
       ],
       "answer": "make an effort",
       "stage": "T2",
@@ -406,10 +432,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“投入精力”，又符合这个形式线索：完整搭配中使用介词 into？",
       "options": [
-        "a great deal of effort",
-        "with little effort",
         "put effort into",
-        "make an effort"
+        "make an effort",
+        "a great deal of effort",
+        "with little effort"
       ],
       "answer": "put effort into",
       "stage": "T3",
@@ -500,9 +526,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

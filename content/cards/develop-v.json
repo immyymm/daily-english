@@ -11,6 +11,13 @@
     }
   ],
   "cocaRankLabel": "v. 第 569 名",
+  "learningPriority": {
+    "sequence": 32,
+    "group": "verb",
+    "groupLabel": "动词",
+    "groupOrder": 1,
+    "primaryCocaRank": 569
+  },
   "phonetic": "/dɪˈveləp/",
   "syllables": "de·vel·op",
   "partOfSpeech": "v.",
@@ -18,7 +25,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "模板结构版",
+    "完整词卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -64,9 +71,9 @@
         "note": "不定式 to 后接动词原形；不要把不定式和 -ing 形式混合。"
       }
     ],
-    "directSynonym": "build /ˈbɪld/（与“发展”意义接近）",
-    "directAntonym": "decline /dɪˈklaɪn/（与“发展”意义相反）",
-    "derivatives": "本词暂无需额外强记的高频派生词",
+    "directSynonym": "build /ˈbɪld/（建立；建筑；构造；体格）",
+    "directAntonym": "decline /dɪˈklaɪn/（衰退；跌落；下降；使降低）",
+    "derivatives": "development · developer",
     "example": "She developed a habit of reading every night.",
     "exampleChinese": "她养成了每晚阅读的习惯。"
   },
@@ -174,8 +181,8 @@
     {
       "word": "build",
       "phonetic": "/ˈbɪld/",
-      "partOfSpeech": "v.",
-      "chinese": "与“发展”意义接近",
+      "partOfSpeech": "v. / n.",
+      "chinese": "建立；建筑；构造；体格",
       "difference": "develop 是本卡核心搭配 “develop a habit” 中的中性常用选择；build 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -183,12 +190,27 @@
     {
       "word": "decline",
       "phonetic": "/dɪˈklaɪn/",
-      "partOfSpeech": "v.",
-      "chinese": "与“发展”意义相反",
+      "partOfSpeech": "v. / n.",
+      "chinese": "衰退；跌落；下降；使降低",
       "usage": "在本卡核心义下与 develop 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
-  "derivatives": [],
+  "derivatives": [
+    {
+      "word": "development",
+      "phonetic": "/dɪˈvɛləpmənt/",
+      "partOfSpeech": "n.",
+      "chinese": "发展",
+      "note": "这是 develop 的常用词族成员；请按上方词性放到句子的正确位置。"
+    },
+    {
+      "word": "developer",
+      "phonetic": "/dɪˈvɛləpɚ/",
+      "partOfSpeech": "n.",
+      "chinese": "开发者",
+      "note": "这是 develop 的常用词族成员；请按上方词性放到句子的正确位置。"
+    }
+  ],
   "confusables": [],
   "relatedVocabulary": [
     {
@@ -197,14 +219,31 @@
         {
           "word": "build",
           "phonetic": "/ˈbɪld/",
-          "partOfSpeech": "v.",
-          "chinese": "与“发展”意义接近"
+          "partOfSpeech": "v. / n.",
+          "chinese": "建立；建筑；构造；体格"
         },
         {
           "word": "decline",
           "phonetic": "/dɪˈklaɪn/",
-          "partOfSpeech": "v.",
-          "chinese": "与“发展”意义相反"
+          "partOfSpeech": "v. / n.",
+          "chinese": "衰退；跌落；下降；使降低"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "development",
+          "phonetic": "/dɪˈvɛləpmənt/",
+          "partOfSpeech": "n.",
+          "chinese": "发展"
+        },
+        {
+          "word": "developer",
+          "phonetic": "/dɪˈvɛləpɚ/",
+          "partOfSpeech": "n.",
+          "chinese": "开发者"
         }
       ]
     }
@@ -258,9 +297,9 @@
       "type": "meaning_choice",
       "prompt": "“develop”最核心的中文含义是？",
       "options": [
-        "行为；表现",
-        "发展；培养",
-        "影响"
+        "实现；达到",
+        "原因；推理",
+        "发展；培养"
       ],
       "answer": "发展；培养",
       "stage": "T0",
@@ -271,9 +310,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “develop”？",
       "options": [
+        "a cause or explanation for something",
         "to grow or cause something to grow",
-        "to cause a change in someone or something",
-        "the way a person or thing acts"
+        "to succeed in reaching a goal"
       ],
       "answer": "to grow or cause something to grow",
       "stage": "T0",
@@ -298,8 +337,8 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “develop” 最直接近义词？",
       "options": [
-        "affect",
-        "behavior",
+        "achieve",
+        "reason",
         "build",
         "decline"
       ],
@@ -312,10 +351,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “develop” 最直接反义词？",
       "options": [
-        "behavior",
+        "reason",
         "decline",
         "build",
-        "affect"
+        "achieve"
       ],
       "answer": "decline",
       "stage": "T2",
@@ -324,14 +363,14 @@
     {
       "id": "develop-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “develop” 的相关近义词？",
+      "prompt": "根据本词卡辨析，哪个词被列为 “develop” 的派生词？",
       "options": [
+        "development",
         "build",
         "decline",
-        "affect",
-        "behavior"
+        "achieve"
       ],
-      "answer": "build",
+      "answer": "development",
       "stage": "T3",
       "ai": false
     },
@@ -379,9 +418,9 @@
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：She developed a _____ of reading every night.（中文：她养成了每晚阅读的习惯。）",
       "options": [
         "habit",
-        "memory",
-        "positive",
-        "conversation"
+        "big",
+        "choice",
+        "practice"
       ],
       "answer": "habit",
       "stage": "T2",
@@ -500,9 +539,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

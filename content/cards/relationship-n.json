@@ -11,6 +11,13 @@
     }
   ],
   "cocaRankLabel": "n. 第 507 名",
+  "learningPriority": {
+    "sequence": 84,
+    "group": "noun",
+    "groupLabel": "名词",
+    "groupOrder": 2,
+    "primaryCocaRank": 507
+  },
   "phonetic": "/rɪˈleɪʃənʃɪp/",
   "syllables": "re·la·tion·ship",
   "partOfSpeech": "n.",
@@ -18,7 +25,7 @@
   "difficulty": "进阶",
   "tags": [
     "n.",
-    "模板结构版",
+    "完整词卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -64,9 +71,9 @@
         "note": "不要只按中文逐字替换；优先把本卡高频搭配作为完整句块记忆。"
       }
     ],
-    "directSynonym": "connection /kəˈnɛkʃən/（与“关系”意义接近）",
-    "directAntonym": "separation /ˌsɛpɚˈeɪʃən/（与“关系”意义相反）",
-    "derivatives": "本词暂无需额外强记的高频派生词",
+    "directSynonym": "connection /kəˈnɛkʃən/（连接；关系；前后关系）",
+    "directAntonym": "separation /ˌsɛpɚˈeɪʃən/（分离；分居；缺口；退职）",
+    "derivatives": "related",
     "example": "Trust is important in any relationship.",
     "exampleChinese": "信任在任何关系中都很重要。"
   },
@@ -175,7 +182,7 @@
       "word": "connection",
       "phonetic": "/kəˈnɛkʃən/",
       "partOfSpeech": "n.",
-      "chinese": "与“关系”意义接近",
+      "chinese": "连接；关系；前后关系",
       "difference": "relationship 是本卡核心搭配 “build a relationship” 中的中性常用选择；connection 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -184,11 +191,19 @@
       "word": "separation",
       "phonetic": "/ˌsɛpɚˈeɪʃən/",
       "partOfSpeech": "n.",
-      "chinese": "与“关系”意义相反",
+      "chinese": "分离；分居；缺口；退职",
       "usage": "在本卡核心义下与 relationship 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
-  "derivatives": [],
+  "derivatives": [
+    {
+      "word": "related",
+      "phonetic": "/rɪˈleɪtɪd/",
+      "partOfSpeech": "adj.",
+      "chinese": "讲述的；叙述的；有关系的；有关联的",
+      "note": "这是 relationship 的常用词族成员；请按上方词性放到句子的正确位置。"
+    }
+  ],
   "confusables": [],
   "relatedVocabulary": [
     {
@@ -198,13 +213,24 @@
           "word": "connection",
           "phonetic": "/kəˈnɛkʃən/",
           "partOfSpeech": "n.",
-          "chinese": "与“关系”意义接近"
+          "chinese": "连接；关系；前后关系"
         },
         {
           "word": "separation",
           "phonetic": "/ˌsɛpɚˈeɪʃən/",
           "partOfSpeech": "n.",
-          "chinese": "与“关系”意义相反"
+          "chinese": "分离；分居；缺口；退职"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "related",
+          "phonetic": "/rɪˈleɪtɪd/",
+          "partOfSpeech": "adj.",
+          "chinese": "讲述的；叙述的；有关系的；有关联的"
         }
       ]
     }
@@ -258,9 +284,9 @@
       "type": "meaning_choice",
       "prompt": "“relationship”最核心的中文含义是？",
       "options": [
-        "信心；自信",
-        "很可能",
-        "关系"
+        "舒适的；自在的",
+        "关系",
+        "目的；意图"
       ],
       "answer": "关系",
       "stage": "T0",
@@ -271,9 +297,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “relationship”？",
       "options": [
-        "used when something is likely",
         "the way people or things are connected",
-        "belief in your own ability"
+        "the reason why something is done",
+        "feeling relaxed and free from worry"
       ],
       "answer": "the way people or things are connected",
       "stage": "T0",
@@ -284,10 +310,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“建立关系”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "build a relationship",
         "close relationship",
         "relationship between",
-        "working relationship"
+        "working relationship",
+        "build a relationship"
       ],
       "answer": "build a relationship",
       "stage": "T1",
@@ -298,10 +324,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “relationship” 最直接近义词？",
       "options": [
-        "separation",
-        "confidence",
-        "probably",
-        "connection"
+        "purpose",
+        "comfortable",
+        "connection",
+        "separation"
       ],
       "answer": "connection",
       "stage": "T2",
@@ -312,10 +338,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “relationship” 最直接反义词？",
       "options": [
-        "confidence",
-        "probably",
+        "comfortable",
         "separation",
-        "connection"
+        "connection",
+        "purpose"
       ],
       "answer": "separation",
       "stage": "T2",
@@ -324,14 +350,14 @@
     {
       "id": "relationship-n-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “relationship” 的相关近义词？",
+      "prompt": "根据本词卡辨析，哪个词被列为 “relationship” 的派生词？",
       "options": [
-        "probably",
+        "related",
         "connection",
         "separation",
-        "confidence"
+        "purpose"
       ],
-      "answer": "connection",
+      "answer": "related",
       "stage": "T3",
       "ai": false
     },
@@ -364,10 +390,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“亲密关系”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "relationship between",
         "working relationship",
         "close relationship",
-        "build a relationship"
+        "build a relationship",
+        "relationship between"
       ],
       "answer": "close relationship",
       "stage": "T1",
@@ -378,10 +404,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Trust is important in _____ relationship.（中文：信任在任何关系中都很重要。）",
       "options": [
-        "down",
         "any",
-        "build",
-        "arrive"
+        "test",
+        "asking",
+        "lot"
       ],
       "answer": "any",
       "stage": "T2",
@@ -390,12 +416,12 @@
     {
       "id": "relationship-n-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“建立关系”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "用法辨析：哪一项既表示“建立关系”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "build a relationship",
         "close relationship",
         "relationship between",
-        "working relationship"
+        "working relationship",
+        "build a relationship"
       ],
       "answer": "build a relationship",
       "stage": "T2",
@@ -404,12 +430,12 @@
     {
       "id": "relationship-n-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“亲密关系”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "搭配辨析：哪一项既表示“亲密关系”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "build a relationship",
         "relationship between",
         "working relationship",
-        "close relationship"
+        "close relationship",
+        "build a relationship"
       ],
       "answer": "close relationship",
       "stage": "T3",
@@ -500,9 +526,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

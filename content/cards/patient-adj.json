@@ -17,14 +17,21 @@
     }
   ],
   "cocaRankLabel": "n. 第 628 名；adj. 第 3429 名",
+  "learningPriority": {
+    "sequence": 130,
+    "group": "adjective",
+    "groupLabel": "形容词",
+    "groupOrder": 3,
+    "primaryCocaRank": 3429
+  },
   "phonetic": "/ˈpeɪʃənt/",
   "syllables": "patient（约 2 音节）",
   "partOfSpeech": "adj. / n.",
   "frequencyBand": "COCA 高频精选 · n. 第 628 名；adj. 第 3429 名",
-  "difficulty": "进阶",
+  "difficulty": "应用",
   "tags": [
     "adj.",
-    "模板结构版",
+    "完整词卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -70,9 +77,9 @@
         "note": "较长形容词通常用 more 构成比较级，不重复加 -er。"
       }
     ],
-    "directSynonym": "tolerant /ˈtɑlɚənt/（与“有耐心的”意义接近）",
-    "directAntonym": "impatient /ˌɪˈmpeɪʃənt/（与“有耐心的”意义相反）",
-    "derivatives": "本词暂无需额外强记的高频派生词",
+    "directSynonym": "tolerant /ˈtɑlɚənt/（宽容的；容忍的；能耐的）",
+    "directAntonym": "impatient /ˌɪˈmpeɪʃənt/（不耐烦的；着急的；急切的）",
+    "derivatives": "patience · impatient",
     "example": "Be patient with yourself while learning.",
     "exampleChinese": "学习时要对自己有耐心。"
   },
@@ -187,8 +194,8 @@
     {
       "word": "tolerant",
       "phonetic": "/ˈtɑlɚənt/",
-      "partOfSpeech": "adj. / n.",
-      "chinese": "与“有耐心的”意义接近",
+      "partOfSpeech": "adj.",
+      "chinese": "宽容的；容忍的；能耐的",
       "difference": "patient 是本卡核心搭配 “be patient with” 中的中性常用选择；tolerant 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -196,12 +203,27 @@
     {
       "word": "impatient",
       "phonetic": "/ˌɪˈmpeɪʃənt/",
-      "partOfSpeech": "adj. / n.",
-      "chinese": "与“有耐心的”意义相反",
+      "partOfSpeech": "adj.",
+      "chinese": "不耐烦的；着急的；急切的",
       "usage": "在本卡核心义下与 patient 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
-  "derivatives": [],
+  "derivatives": [
+    {
+      "word": "patience",
+      "phonetic": "/ˈpeɪʃəns/",
+      "partOfSpeech": "n.",
+      "chinese": "耐性；忍耐",
+      "note": "这是 patient 的常用词族成员；请按上方词性放到句子的正确位置。"
+    },
+    {
+      "word": "impatient",
+      "phonetic": "/ˌɪˈmpeɪʃənt/",
+      "partOfSpeech": "adj.",
+      "chinese": "不耐烦的；着急的；急切的",
+      "note": "这是 patient 的常用词族成员；请按上方词性放到句子的正确位置。"
+    }
+  ],
   "confusables": [
     {
       "word": "patience",
@@ -218,14 +240,31 @@
         {
           "word": "tolerant",
           "phonetic": "/ˈtɑlɚənt/",
-          "partOfSpeech": "adj. / n.",
-          "chinese": "与“有耐心的”意义接近"
+          "partOfSpeech": "adj.",
+          "chinese": "宽容的；容忍的；能耐的"
         },
         {
           "word": "impatient",
           "phonetic": "/ˌɪˈmpeɪʃənt/",
-          "partOfSpeech": "adj. / n.",
-          "chinese": "与“有耐心的”意义相反"
+          "partOfSpeech": "adj.",
+          "chinese": "不耐烦的；着急的；急切的"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "patience",
+          "phonetic": "/ˈpeɪʃəns/",
+          "partOfSpeech": "n.",
+          "chinese": "耐性；忍耐"
+        },
+        {
+          "word": "impatient",
+          "phonetic": "/ˌɪˈmpeɪʃənt/",
+          "partOfSpeech": "adj.",
+          "chinese": "不耐烦的；着急的；急切的"
         }
       ]
     }
@@ -280,8 +319,8 @@
       "prompt": "“patient”最核心的中文含义是？",
       "options": [
         "有耐心的；病人",
-        "经常",
-        "未来；将来的"
+        "迅速地",
+        "需要；要求"
       ],
       "answer": "有耐心的；病人",
       "stage": "T0",
@@ -292,8 +331,8 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “patient”？",
       "options": [
-        "many times",
-        "the time that has not happened yet",
+        "at a fast speed",
+        "to need something or make it necessary",
         "able to wait calmly"
       ],
       "answer": "able to wait calmly",
@@ -305,10 +344,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“对……有耐心”，又符合这个形式线索：完整搭配中使用介词 with？",
       "options": [
-        "patient enough to",
-        "remain patient",
         "hospital patient",
-        "be patient with"
+        "be patient with",
+        "patient enough to",
+        "remain patient"
       ],
       "answer": "be patient with",
       "stage": "T1",
@@ -319,10 +358,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “patient” 最直接近义词？",
       "options": [
-        "patience",
-        "often",
         "tolerant",
-        "impatient"
+        "impatient",
+        "patience",
+        "quickly"
       ],
       "answer": "tolerant",
       "stage": "T2",
@@ -333,10 +372,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “patient” 最直接反义词？",
       "options": [
-        "often",
-        "impatient",
         "tolerant",
-        "patience"
+        "patience",
+        "quickly",
+        "impatient"
       ],
       "answer": "impatient",
       "stage": "T2",
@@ -347,10 +386,10 @@
       "type": "meaning_choice",
       "prompt": "根据本词卡辨析，哪个词被列为 “patient” 的易混词？",
       "options": [
-        "patience",
-        "tolerant",
         "impatient",
-        "often"
+        "quickly",
+        "patience",
+        "tolerant"
       ],
       "answer": "patience",
       "stage": "T3",
@@ -385,10 +424,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“有足够耐心做”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "hospital patient",
-        "patient enough to",
         "be patient with",
-        "remain patient"
+        "remain patient",
+        "hospital patient",
+        "patient enough to"
       ],
       "answer": "patient enough to",
       "stage": "T1",
@@ -399,10 +438,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Be patient with _____ while learning.（中文：学习时要对自己有耐心。）",
       "options": [
+        "careful",
+        "better",
         "yourself",
-        "appears",
-        "useful",
-        "during"
+        "word"
       ],
       "answer": "yourself",
       "stage": "T2",
@@ -413,10 +452,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“对……有耐心”，又符合这个形式线索：完整搭配中使用介词 with？",
       "options": [
-        "patient enough to",
-        "remain patient",
         "hospital patient",
-        "be patient with"
+        "be patient with",
+        "patient enough to",
+        "remain patient"
       ],
       "answer": "be patient with",
       "stage": "T2",
@@ -427,10 +466,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“有足够耐心做”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "remain patient",
-        "hospital patient",
         "patient enough to",
-        "be patient with"
+        "be patient with",
+        "remain patient",
+        "hospital patient"
       ],
       "answer": "patient enough to",
       "stage": "T3",
@@ -521,9 +560,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

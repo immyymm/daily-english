@@ -11,6 +11,13 @@
     }
   ],
   "cocaRankLabel": "v. 第 350 名",
+  "learningPriority": {
+    "sequence": 18,
+    "group": "verb",
+    "groupLabel": "动词",
+    "groupOrder": 1,
+    "primaryCocaRank": 350
+  },
   "phonetic": "/kənˈtɪnjuː/",
   "syllables": "con·tin·ue",
   "partOfSpeech": "v.",
@@ -18,7 +25,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "模板结构版",
+    "完整词卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -64,9 +71,9 @@
         "note": "不定式 to 后接动词原形；不要把不定式和 -ing 形式混合。"
       }
     ],
-    "directSynonym": "proceed /prəˈsiːd/（与“继续”意义接近）",
-    "directAntonym": "stop /ˈstɑp/（与“继续”意义相反）",
-    "derivatives": "本词暂无需额外强记的高频派生词",
+    "directSynonym": "proceed /prəˈsiːd/（继续进行；进行；开始；发出）",
+    "directAntonym": "stop /ˈstɑp/（停止；车站；逗留；填塞）",
+    "derivatives": "continuation · continuous",
     "example": "Please continue reading from page ten.",
     "exampleChinese": "请从第十页继续读。"
   },
@@ -175,7 +182,7 @@
       "word": "proceed",
       "phonetic": "/prəˈsiːd/",
       "partOfSpeech": "v.",
-      "chinese": "与“继续”意义接近",
+      "chinese": "继续进行；进行；开始；发出",
       "difference": "continue 是本卡核心搭配 “continue to improve” 中的中性常用选择；proceed 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -183,12 +190,27 @@
     {
       "word": "stop",
       "phonetic": "/ˈstɑp/",
-      "partOfSpeech": "v.",
-      "chinese": "与“继续”意义相反",
+      "partOfSpeech": "v. / n.",
+      "chinese": "停止；车站；逗留；填塞",
       "usage": "在本卡核心义下与 continue 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
-  "derivatives": [],
+  "derivatives": [
+    {
+      "word": "continuation",
+      "phonetic": "/kəˌntɪnjuːˈeɪʃən/",
+      "partOfSpeech": "n.",
+      "chinese": "继续；续集；补编",
+      "note": "这是 continue 的常用词族成员；请按上方词性放到句子的正确位置。"
+    },
+    {
+      "word": "continuous",
+      "phonetic": "/kəˈntɪnjuːəs/",
+      "partOfSpeech": "adj.",
+      "chinese": "连续的；继续的；连续不断的",
+      "note": "这是 continue 的常用词族成员；请按上方词性放到句子的正确位置。"
+    }
+  ],
   "confusables": [],
   "relatedVocabulary": [
     {
@@ -198,13 +220,30 @@
           "word": "proceed",
           "phonetic": "/prəˈsiːd/",
           "partOfSpeech": "v.",
-          "chinese": "与“继续”意义接近"
+          "chinese": "继续进行；进行；开始；发出"
         },
         {
           "word": "stop",
           "phonetic": "/ˈstɑp/",
-          "partOfSpeech": "v.",
-          "chinese": "与“继续”意义相反"
+          "partOfSpeech": "v. / n.",
+          "chinese": "停止；车站；逗留；填塞"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "continuation",
+          "phonetic": "/kəˌntɪnjuːˈeɪʃən/",
+          "partOfSpeech": "n.",
+          "chinese": "继续；续集；补编"
+        },
+        {
+          "word": "continuous",
+          "phonetic": "/kəˈntɪnjuːəs/",
+          "partOfSpeech": "adj.",
+          "chinese": "连续的；继续的；连续不断的"
         }
       ]
     }
@@ -258,9 +297,9 @@
       "type": "meaning_choice",
       "prompt": "“continue”最核心的中文含义是？",
       "options": [
+        "钱；货币",
         "继续",
-        "实现；达到",
-        "经验；经历"
+        "描述"
       ],
       "answer": "继续",
       "stage": "T0",
@@ -271,9 +310,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “continue”？",
       "options": [
-        "to succeed in reaching a goal",
-        "knowledge gained by doing or seeing things",
-        "to keep doing something without stopping"
+        "to keep doing something without stopping",
+        "to say what someone or something is like",
+        "what people use to buy things"
       ],
       "answer": "to keep doing something without stopping",
       "stage": "T0",
@@ -284,10 +323,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“继续提高”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "continue with the plan",
         "continue the conversation",
         "continue to improve",
-        "continue doing"
+        "continue doing",
+        "continue with the plan"
       ],
       "answer": "continue to improve",
       "stage": "T1",
@@ -298,10 +337,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “continue” 最直接近义词？",
       "options": [
-        "experience",
         "proceed",
         "stop",
-        "achieve"
+        "describe",
+        "money"
       ],
       "answer": "proceed",
       "stage": "T2",
@@ -312,10 +351,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “continue” 最直接反义词？",
       "options": [
-        "stop",
         "proceed",
-        "achieve",
-        "experience"
+        "describe",
+        "money",
+        "stop"
       ],
       "answer": "stop",
       "stage": "T2",
@@ -324,14 +363,14 @@
     {
       "id": "continue-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “continue” 的相关近义词？",
+      "prompt": "根据本词卡辨析，哪个词被列为 “continue” 的派生词？",
       "options": [
         "stop",
-        "achieve",
-        "experience",
+        "describe",
+        "continuation",
         "proceed"
       ],
-      "answer": "proceed",
+      "answer": "continuation",
       "stage": "T3",
       "ai": false
     },
@@ -364,10 +403,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“继续执行计划”，又符合这个形式线索：完整搭配中使用介词 with？",
       "options": [
-        "continue with the plan",
         "continue to improve",
         "continue doing",
-        "continue the conversation"
+        "continue the conversation",
+        "continue with the plan"
       ],
       "answer": "continue with the plan",
       "stage": "T1",
@@ -378,10 +417,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Please continue _____ from page ten.（中文：请从第十页继续读。）",
       "options": [
-        "big",
-        "life",
+        "time",
         "make",
-        "reading"
+        "reading",
+        "ideal"
       ],
       "answer": "reading",
       "stage": "T2",
@@ -390,12 +429,12 @@
     {
       "id": "continue-v-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“继续提高”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "用法辨析：哪一项既表示“继续提高”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "continue with the plan",
         "continue the conversation",
         "continue to improve",
-        "continue doing"
+        "continue doing",
+        "continue with the plan"
       ],
       "answer": "continue to improve",
       "stage": "T2",
@@ -404,12 +443,12 @@
     {
       "id": "continue-v-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“继续做”，又符合这个形式线索：目标词后的 doing 表示要换成符合语境的动词 -ing 形式？",
+      "prompt": "搭配辨析：哪一项既表示“继续做”，又符合这个形式线索：目标词后的 doing 表示要换成符合语境的动词 -ing 形式？",
       "options": [
-        "continue the conversation",
         "continue doing",
         "continue to improve",
-        "continue with the plan"
+        "continue with the plan",
+        "continue the conversation"
       ],
       "answer": "continue doing",
       "stage": "T3",
@@ -500,9 +539,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

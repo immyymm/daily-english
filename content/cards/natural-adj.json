@@ -11,14 +11,21 @@
     }
   ],
   "cocaRankLabel": "adj. 第 783 名",
+  "learningPriority": {
+    "sequence": 121,
+    "group": "adjective",
+    "groupLabel": "形容词",
+    "groupOrder": 3,
+    "primaryCocaRank": 783
+  },
   "phonetic": "/ˈnætʃərəl/",
   "syllables": "natural（约 3 音节）",
   "partOfSpeech": "adj.",
   "frequencyBand": "COCA 高频精选 · adj. 第 783 名",
-  "difficulty": "进阶",
+  "difficulty": "应用",
   "tags": [
     "adj.",
-    "模板结构版",
+    "完整词卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -64,9 +71,9 @@
         "note": "较长形容词通常用 more 构成比较级，不重复加 -er。"
       }
     ],
-    "directSynonym": "normal /ˈnɔːrməl/（与“自然的”意义接近）",
-    "directAntonym": "artificial /ˌɑrtəˈfɪʃəl/（与“自然的”意义相反）",
-    "derivatives": "本词暂无需额外强记的高频派生词",
+    "directSynonym": "normal /ˈnɔːrməl/（常态；标准；正常；普通）",
+    "directAntonym": "artificial /ˌɑrtəˈfɪʃəl/（人造的；假的；非原地产的）",
+    "derivatives": "naturally",
     "example": "This version sounds more natural in conversation.",
     "exampleChinese": "这个版本在对话中听起来更自然。"
   },
@@ -174,8 +181,8 @@
     {
       "word": "normal",
       "phonetic": "/ˈnɔːrməl/",
-      "partOfSpeech": "adj.",
-      "chinese": "与“自然的”意义接近",
+      "partOfSpeech": "n. / adj.",
+      "chinese": "常态；标准；正常；普通",
       "difference": "natural 是本卡核心搭配 “sound natural” 中的中性常用选择；normal 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -184,11 +191,19 @@
       "word": "artificial",
       "phonetic": "/ˌɑrtəˈfɪʃəl/",
       "partOfSpeech": "adj.",
-      "chinese": "与“自然的”意义相反",
+      "chinese": "人造的；假的；非原地产的",
       "usage": "在本卡核心义下与 natural 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
-  "derivatives": [],
+  "derivatives": [
+    {
+      "word": "naturally",
+      "phonetic": "/ˈnætʃɚəliː/",
+      "partOfSpeech": "adv.",
+      "chinese": "自然地；以自然力；天生地",
+      "note": "这是 natural 的常用词族成员；请按上方词性放到句子的正确位置。"
+    }
+  ],
   "confusables": [],
   "relatedVocabulary": [
     {
@@ -197,14 +212,25 @@
         {
           "word": "normal",
           "phonetic": "/ˈnɔːrməl/",
-          "partOfSpeech": "adj.",
-          "chinese": "与“自然的”意义接近"
+          "partOfSpeech": "n. / adj.",
+          "chinese": "常态；标准；正常；普通"
         },
         {
           "word": "artificial",
           "phonetic": "/ˌɑrtəˈfɪʃəl/",
           "partOfSpeech": "adj.",
-          "chinese": "与“自然的”意义相反"
+          "chinese": "人造的；假的；非原地产的"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "naturally",
+          "phonetic": "/ˈnætʃɚəliː/",
+          "partOfSpeech": "adv.",
+          "chinese": "自然地；以自然力；天生地"
         }
       ]
     }
@@ -259,8 +285,8 @@
       "prompt": "“natural”最核心的中文含义是？",
       "options": [
         "自然的；天生的",
-        "最后；终于",
-        "家；在家"
+        "很可能",
+        "跟随；遵循"
       ],
       "answer": "自然的；天生的",
       "stage": "T0",
@@ -271,8 +297,8 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “natural”？",
       "options": [
-        "after a long time or at the end",
-        "the place where you live",
+        "used when something is likely",
+        "to go after or act according to something",
         "normal and not forced"
       ],
       "answer": "normal and not forced",
@@ -284,10 +310,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“听起来自然”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "sound natural",
-        "natural ability",
         "natural environment",
-        "perfectly natural"
+        "perfectly natural",
+        "sound natural",
+        "natural ability"
       ],
       "answer": "sound natural",
       "stage": "T1",
@@ -298,10 +324,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “natural” 最直接近义词？",
       "options": [
+        "follow",
+        "normal",
         "artificial",
-        "finally",
-        "home",
-        "normal"
+        "probably"
       ],
       "answer": "normal",
       "stage": "T2",
@@ -312,10 +338,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “natural” 最直接反义词？",
       "options": [
-        "finally",
-        "home",
         "artificial",
-        "normal"
+        "normal",
+        "probably",
+        "follow"
       ],
       "answer": "artificial",
       "stage": "T2",
@@ -324,14 +350,14 @@
     {
       "id": "natural-adj-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “natural” 的相关近义词？",
+      "prompt": "根据本词卡辨析，哪个词被列为 “natural” 的派生词？",
       "options": [
-        "home",
         "normal",
         "artificial",
-        "finally"
+        "probably",
+        "naturally"
       ],
-      "answer": "normal",
+      "answer": "naturally",
       "stage": "T3",
       "ai": false
     },
@@ -364,10 +390,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“天生能力”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "natural environment",
-        "perfectly natural",
         "natural ability",
-        "sound natural"
+        "sound natural",
+        "natural environment",
+        "perfectly natural"
       ],
       "answer": "natural ability",
       "stage": "T1",
@@ -378,10 +404,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：This version sounds more natural in _____.（中文：这个版本在对话中听起来更自然。）",
       "options": [
-        "plan",
-        "conversation",
-        "found",
-        "yourself"
+        "arrive",
+        "steps",
+        "two",
+        "conversation"
       ],
       "answer": "conversation",
       "stage": "T2",
@@ -392,10 +418,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“听起来自然”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "sound natural",
-        "natural ability",
         "natural environment",
-        "perfectly natural"
+        "perfectly natural",
+        "sound natural",
+        "natural ability"
       ],
       "answer": "sound natural",
       "stage": "T2",
@@ -406,10 +432,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“天生能力”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "sound natural",
-        "natural environment",
         "perfectly natural",
-        "natural ability"
+        "natural ability",
+        "sound natural",
+        "natural environment"
       ],
       "answer": "natural ability",
       "stage": "T3",
@@ -500,9 +526,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

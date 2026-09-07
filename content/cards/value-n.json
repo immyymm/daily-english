@@ -17,6 +17,13 @@
     }
   ],
   "cocaRankLabel": "n. 第 490 名；v. 第 4072 名",
+  "learningPriority": {
+    "sequence": 83,
+    "group": "noun",
+    "groupLabel": "名词",
+    "groupOrder": 2,
+    "primaryCocaRank": 490
+  },
   "phonetic": "/ˈvæljuː/",
   "syllables": "value（约 2 音节）",
   "partOfSpeech": "n. / v.",
@@ -24,7 +31,7 @@
   "difficulty": "进阶",
   "tags": [
     "n.",
-    "模板结构版",
+    "完整词卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -70,9 +77,9 @@
         "note": "不要只按中文逐字替换；优先把本卡高频搭配作为完整句块记忆。"
       }
     ],
-    "directSynonym": "worth /ˈwɝːθ/（与“价值”意义接近）",
-    "directAntonym": "lack of value /ˈlæk ˈʌv ˈvæljuː/（与“价值”意义相反）",
-    "derivatives": "本词暂无需额外强记的高频派生词",
+    "directSynonym": "worth /ˈwɝːθ/（价值；财产；值...的；值得的）",
+    "directAntonym": "lack of value /ˈlæk ˈʌv ˈvæljuː/（缺乏价值）",
+    "derivatives": "valuable",
     "example": "I value honest feedback.",
     "exampleChinese": "我重视诚实的反馈。"
   },
@@ -187,8 +194,8 @@
     {
       "word": "worth",
       "phonetic": "/ˈwɝːθ/",
-      "partOfSpeech": "n. / v.",
-      "chinese": "与“价值”意义接近",
+      "partOfSpeech": "n. / adj.",
+      "chinese": "价值；财产；值...的；值得的",
       "difference": "value 是本卡核心搭配 “great value” 中的中性常用选择；worth 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -196,12 +203,20 @@
     {
       "word": "lack of value",
       "phonetic": "/ˈlæk ˈʌv ˈvæljuː/",
-      "partOfSpeech": "n. / v.",
-      "chinese": "与“价值”意义相反",
+      "partOfSpeech": "n. phrase",
+      "chinese": "缺乏价值",
       "usage": "在本卡核心义下与 value 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
-  "derivatives": [],
+  "derivatives": [
+    {
+      "word": "valuable",
+      "phonetic": "/ˈvæljəbəl/",
+      "partOfSpeech": "adj.",
+      "chinese": "有价值的；贵重的；宝贵的；可估价的",
+      "note": "这是 value 的常用词族成员；请按上方词性放到句子的正确位置。"
+    }
+  ],
   "confusables": [],
   "relatedVocabulary": [
     {
@@ -210,14 +225,25 @@
         {
           "word": "worth",
           "phonetic": "/ˈwɝːθ/",
-          "partOfSpeech": "n. / v.",
-          "chinese": "与“价值”意义接近"
+          "partOfSpeech": "n. / adj.",
+          "chinese": "价值；财产；值...的；值得的"
         },
         {
           "word": "lack of value",
           "phonetic": "/ˈlæk ˈʌv ˈvæljuː/",
-          "partOfSpeech": "n. / v.",
-          "chinese": "与“价值”意义相反"
+          "partOfSpeech": "n. phrase",
+          "chinese": "缺乏价值"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "valuable",
+          "phonetic": "/ˈvæljəbəl/",
+          "partOfSpeech": "adj.",
+          "chinese": "有价值的；贵重的；宝贵的；可估价的"
         }
       ]
     }
@@ -271,9 +297,9 @@
       "type": "meaning_choice",
       "prompt": "“value”最核心的中文含义是？",
       "options": [
-        "简单地；仅仅",
-        "价值；重视",
-        "可能的；可行的"
+        "成功",
+        "熟悉的",
+        "价值；重视"
       ],
       "answer": "价值；重视",
       "stage": "T0",
@@ -284,9 +310,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “value”？",
       "options": [
+        "well known from past experience",
         "the importance or usefulness of something",
-        "able to happen or be done",
-        "in an easy or plain way"
+        "the achievement of a desired result"
       ],
       "answer": "the importance or usefulness of something",
       "stage": "T0",
@@ -297,10 +323,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“很大价值”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "core values",
         "great value",
         "value for money",
-        "place a value on"
+        "place a value on",
+        "core values"
       ],
       "answer": "great value",
       "stage": "T1",
@@ -311,10 +337,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “value” 最直接近义词？",
       "options": [
-        "worth",
         "lack of value",
-        "possible",
-        "simply"
+        "success",
+        "familiar",
+        "worth"
       ],
       "answer": "worth",
       "stage": "T2",
@@ -325,10 +351,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “value” 最直接反义词？",
       "options": [
-        "worth",
-        "possible",
-        "simply",
-        "lack of value"
+        "success",
+        "familiar",
+        "lack of value",
+        "worth"
       ],
       "answer": "lack of value",
       "stage": "T2",
@@ -337,14 +363,14 @@
     {
       "id": "value-n-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “value” 的相关近义词？",
+      "prompt": "根据本词卡辨析，哪个词被列为 “value” 的派生词？",
       "options": [
-        "possible",
-        "simply",
+        "success",
+        "valuable",
         "worth",
         "lack of value"
       ],
-      "answer": "worth",
+      "answer": "valuable",
       "stage": "T3",
       "ai": false
     },
@@ -377,10 +403,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“物有所值”，又符合这个形式线索：完整搭配中使用介词 for？",
       "options": [
-        "great value",
         "place a value on",
         "core values",
-        "value for money"
+        "value for money",
+        "great value"
       ],
       "answer": "value for money",
       "stage": "T1",
@@ -391,10 +417,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：I value _____ feedback.（中文：我重视诚实的反馈。）",
       "options": [
-        "put",
-        "dialogue",
+        "question",
         "honest",
-        "soon"
+        "quick",
+        "expression"
       ],
       "answer": "honest",
       "stage": "T2",
@@ -403,12 +429,12 @@
     {
       "id": "value-n-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“很大价值”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "搭配辨析：哪一项既表示“很大价值”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "core values",
         "great value",
         "value for money",
-        "place a value on"
+        "place a value on",
+        "core values"
       ],
       "answer": "great value",
       "stage": "T2",
@@ -417,12 +443,12 @@
     {
       "id": "value-n-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“物有所值”，又符合这个形式线索：完整搭配中使用介词 for？",
+      "prompt": "用法辨析：哪一项既表示“物有所值”，又符合这个形式线索：完整搭配中使用介词 for？",
       "options": [
-        "value for money",
         "great value",
         "place a value on",
-        "core values"
+        "core values",
+        "value for money"
       ],
       "answer": "value for money",
       "stage": "T3",
@@ -513,9 +539,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

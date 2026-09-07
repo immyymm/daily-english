@@ -11,6 +11,13 @@
     }
   ],
   "cocaRankLabel": "n. 第 1660 名",
+  "learningPriority": {
+    "sequence": 105,
+    "group": "noun",
+    "groupLabel": "名词",
+    "groupOrder": 2,
+    "primaryCocaRank": 1660
+  },
   "phonetic": "/ˈprɑːɡres/",
   "syllables": "progress（约 2 音节）",
   "partOfSpeech": "n. / v.",
@@ -18,7 +25,7 @@
   "difficulty": "进阶",
   "tags": [
     "n.",
-    "模板结构版",
+    "完整词卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -64,9 +71,9 @@
         "note": "不要只按中文逐字替换；优先把本卡高频搭配作为完整句块记忆。"
       }
     ],
-    "directSynonym": "advance /əˈdvæns/（与“进步”意义接近）",
-    "directAntonym": "decline /dɪˈklaɪn/（与“进步”意义相反）",
-    "derivatives": "本词暂无需额外强记的高频派生词",
+    "directSynonym": "advance /əˈdvæns/（前进；进展；行过的路程；提高）",
+    "directAntonym": "decline /dɪˈklaɪn/（衰退；跌落；下降；使降低）",
+    "derivatives": "progressive",
     "example": "You are making steady progress.",
     "exampleChinese": "你正在稳步进步。"
   },
@@ -181,8 +188,8 @@
     {
       "word": "advance",
       "phonetic": "/əˈdvæns/",
-      "partOfSpeech": "n. / v.",
-      "chinese": "与“进步”意义接近",
+      "partOfSpeech": "v. / n. / adj.",
+      "chinese": "前进；进展；行过的路程；提高",
       "difference": "progress 是本卡核心搭配 “make progress” 中的中性常用选择；advance 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -190,12 +197,20 @@
     {
       "word": "decline",
       "phonetic": "/dɪˈklaɪn/",
-      "partOfSpeech": "n. / v.",
-      "chinese": "与“进步”意义相反",
+      "partOfSpeech": "v. / n.",
+      "chinese": "衰退；跌落；下降；使降低",
       "usage": "在本卡核心义下与 progress 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
-  "derivatives": [],
+  "derivatives": [
+    {
+      "word": "progressive",
+      "phonetic": "/prəˈɡrɛsɪv/",
+      "partOfSpeech": "n. / adj.",
+      "chinese": "改革论者；进步论者；前进的；累进的",
+      "note": "这是 progress 的常用词族成员；请按上方词性放到句子的正确位置。"
+    }
+  ],
   "confusables": [],
   "relatedVocabulary": [
     {
@@ -204,14 +219,25 @@
         {
           "word": "advance",
           "phonetic": "/əˈdvæns/",
-          "partOfSpeech": "n. / v.",
-          "chinese": "与“进步”意义接近"
+          "partOfSpeech": "v. / n. / adj.",
+          "chinese": "前进；进展；行过的路程；提高"
         },
         {
           "word": "decline",
           "phonetic": "/dɪˈklaɪn/",
-          "partOfSpeech": "n. / v.",
-          "chinese": "与“进步”意义相反"
+          "partOfSpeech": "v. / n.",
+          "chinese": "衰退；跌落；下降；使降低"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "progressive",
+          "phonetic": "/prəˈɡrɛsɪv/",
+          "partOfSpeech": "n. / adj.",
+          "chinese": "改革论者；进步论者；前进的；累进的"
         }
       ]
     }
@@ -265,9 +291,9 @@
       "type": "meaning_choice",
       "prompt": "“progress”最核心的中文含义是？",
       "options": [
-        "已经",
+        "清楚地；显然",
         "进步；进展",
-        "有效的"
+        "严重的；认真的"
       ],
       "answer": "进步；进展",
       "stage": "T0",
@@ -279,8 +305,8 @@
       "prompt": "哪一项英文释义最符合词卡中的 “progress”？",
       "options": [
         "movement toward a better or more complete state",
-        "producing the result that is wanted",
-        "before now or earlier than expected"
+        "important, dangerous, or not joking",
+        "in a way that is easy to understand"
       ],
       "answer": "movement toward a better or more complete state",
       "stage": "T0",
@@ -291,10 +317,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“取得进步”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "steady progress",
         "progress toward",
         "in progress",
-        "make progress"
+        "make progress",
+        "steady progress"
       ],
       "answer": "make progress",
       "stage": "T1",
@@ -305,10 +331,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “progress” 最直接近义词？",
       "options": [
-        "effective",
-        "already",
+        "clearly",
         "advance",
-        "decline"
+        "decline",
+        "serious"
       ],
       "answer": "advance",
       "stage": "T2",
@@ -319,10 +345,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “progress” 最直接反义词？",
       "options": [
-        "already",
         "decline",
         "advance",
-        "effective"
+        "serious",
+        "clearly"
       ],
       "answer": "decline",
       "stage": "T2",
@@ -331,14 +357,14 @@
     {
       "id": "progress-n-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “progress” 的相关近义词？",
+      "prompt": "根据本词卡辨析，哪个词被列为 “progress” 的派生词？",
       "options": [
         "advance",
         "decline",
-        "effective",
-        "already"
+        "serious",
+        "progressive"
       ],
-      "answer": "advance",
+      "answer": "progressive",
       "stage": "T3",
       "ai": false
     },
@@ -371,10 +397,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“稳步进展”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "in progress",
         "steady progress",
         "make progress",
-        "progress toward"
+        "progress toward",
+        "in progress"
       ],
       "answer": "steady progress",
       "stage": "T1",
@@ -385,10 +411,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：You are making _____ progress.（中文：你正在稳步进步。）",
       "options": [
-        "steady",
-        "way",
-        "completed",
-        "Friday"
+        "problem",
+        "rule",
+        "results",
+        "steady"
       ],
       "answer": "steady",
       "stage": "T2",
@@ -397,12 +423,12 @@
     {
       "id": "progress-n-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“取得进步”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "搭配辨析：哪一项既表示“取得进步”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "steady progress",
         "progress toward",
         "in progress",
-        "make progress"
+        "make progress",
+        "steady progress"
       ],
       "answer": "make progress",
       "stage": "T2",
@@ -411,12 +437,12 @@
     {
       "id": "progress-n-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“稳步进展”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "用法辨析：哪一项既表示“稳步进展”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "progress toward",
         "in progress",
         "steady progress",
-        "make progress"
+        "make progress",
+        "progress toward"
       ],
       "answer": "steady progress",
       "stage": "T3",
@@ -507,9 +533,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

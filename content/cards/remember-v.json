@@ -11,6 +11,13 @@
     }
   ],
   "cocaRankLabel": "v. 第 334 名",
+  "learningPriority": {
+    "sequence": 15,
+    "group": "verb",
+    "groupLabel": "动词",
+    "groupOrder": 1,
+    "primaryCocaRank": 334
+  },
   "phonetic": "/rɪˈmembər/",
   "syllables": "re·mem·ber",
   "partOfSpeech": "v.",
@@ -18,7 +25,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "模板结构版",
+    "完整词卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -64,9 +71,9 @@
         "note": "不定式 to 后接动词原形；不要把不定式和 -ing 形式混合。"
       }
     ],
-    "directSynonym": "recall /ˈriːˌkɔːl/（与“记得”意义接近）",
-    "directAntonym": "forget /fɚˈɡɛt/（与“记得”意义相反）",
-    "derivatives": "本词暂无需额外强记的高频派生词",
+    "directSynonym": "recall /ˈriːˌkɔːl/（回忆；召回；撤消；回想）",
+    "directAntonym": "forget /fɚˈɡɛt/（忘记；忽略；忘）",
+    "derivatives": "memory · memorable",
     "example": "Remember to save your work before you leave.",
     "exampleChinese": "离开前记得保存工作。"
   },
@@ -184,8 +191,8 @@
     {
       "word": "recall",
       "phonetic": "/ˈriːˌkɔːl/",
-      "partOfSpeech": "v.",
-      "chinese": "与“记得”意义接近",
+      "partOfSpeech": "v. / n.",
+      "chinese": "回忆；召回；撤消；回想",
       "difference": "remember 是本卡核心搭配 “remember to do something” 中的中性常用选择；recall 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -194,11 +201,26 @@
       "word": "forget",
       "phonetic": "/fɚˈɡɛt/",
       "partOfSpeech": "v.",
-      "chinese": "与“记得”意义相反",
+      "chinese": "忘记；忽略；忘",
       "usage": "在本卡核心义下与 remember 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
-  "derivatives": [],
+  "derivatives": [
+    {
+      "word": "memory",
+      "phonetic": "/ˈmɛmɚiː/",
+      "partOfSpeech": "n.",
+      "chinese": "记忆；记忆力；回忆；纪念",
+      "note": "这是 remember 的常用词族成员；请按上方词性放到句子的正确位置。"
+    },
+    {
+      "word": "memorable",
+      "phonetic": "/ˈmɛmɚəbəl/",
+      "partOfSpeech": "adj.",
+      "chinese": "值得纪念的；难忘的",
+      "note": "这是 remember 的常用词族成员；请按上方词性放到句子的正确位置。"
+    }
+  ],
   "confusables": [],
   "relatedVocabulary": [
     {
@@ -207,14 +229,31 @@
         {
           "word": "recall",
           "phonetic": "/ˈriːˌkɔːl/",
-          "partOfSpeech": "v.",
-          "chinese": "与“记得”意义接近"
+          "partOfSpeech": "v. / n.",
+          "chinese": "回忆；召回；撤消；回想"
         },
         {
           "word": "forget",
           "phonetic": "/fɚˈɡɛt/",
           "partOfSpeech": "v.",
-          "chinese": "与“记得”意义相反"
+          "chinese": "忘记；忽略；忘"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "memory",
+          "phonetic": "/ˈmɛmɚiː/",
+          "partOfSpeech": "n.",
+          "chinese": "记忆；记忆力；回忆；纪念"
+        },
+        {
+          "word": "memorable",
+          "phonetic": "/ˈmɛmɚəbəl/",
+          "partOfSpeech": "adj.",
+          "chinese": "值得纪念的；难忘的"
         }
       ]
     }
@@ -268,9 +307,9 @@
       "type": "meaning_choice",
       "prompt": "“remember”最核心的中文含义是？",
       "options": [
-        "需要；要求",
-        "问题；议题",
-        "记得；想起"
+        "问题；难题",
+        "记得；想起",
+        "发展；培养"
       ],
       "answer": "记得；想起",
       "stage": "T0",
@@ -281,9 +320,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “remember”？",
       "options": [
-        "an important problem or topic",
         "to keep or bring something back to mind",
-        "to need something or make it necessary"
+        "to grow or cause something to grow",
+        "a situation that needs a solution"
       ],
       "answer": "to keep or bring something back to mind",
       "stage": "T0",
@@ -309,8 +348,8 @@
       "prompt": "哪个词是词卡中列出的 “remember” 最直接近义词？",
       "options": [
         "forget",
-        "require",
-        "issue",
+        "develop",
+        "problem",
         "recall"
       ],
       "answer": "recall",
@@ -322,8 +361,8 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “remember” 最直接反义词？",
       "options": [
-        "require",
-        "issue",
+        "develop",
+        "problem",
         "forget",
         "recall"
       ],
@@ -334,14 +373,14 @@
     {
       "id": "remember-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “remember” 的相关近义词？",
+      "prompt": "根据本词卡辨析，哪个词被列为 “remember” 的派生词？",
       "options": [
-        "issue",
+        "develop",
+        "memory",
         "recall",
-        "forget",
-        "require"
+        "forget"
       ],
-      "answer": "recall",
+      "answer": "memory",
       "stage": "T3",
       "ai": false
     },
@@ -388,10 +427,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Remember to _____ your work before you leave.（中文：离开前记得保存工作。）",
       "options": [
-        "quick",
+        "today",
         "save",
-        "careful",
-        "openly"
+        "habit",
+        "solved"
       ],
       "answer": "save",
       "stage": "T2",
@@ -510,9 +549,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

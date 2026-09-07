@@ -11,6 +11,13 @@
     }
   ],
   "cocaRankLabel": "v. 第 426 名",
+  "learningPriority": {
+    "sequence": 22,
+    "group": "verb",
+    "groupLabel": "动词",
+    "groupOrder": 1,
+    "primaryCocaRank": 426
+  },
   "phonetic": "/ɪkˈspekt/",
   "syllables": "expect（约 2 音节）",
   "partOfSpeech": "v.",
@@ -18,7 +25,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "模板结构版",
+    "完整词卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -64,9 +71,9 @@
         "note": "不定式 to 后接动词原形；不要把不定式和 -ing 形式混合。"
       }
     ],
-    "directSynonym": "anticipate /æˈntɪsəˌpeɪt/（与“预期”意义接近）",
-    "directAntonym": "doubt /ˈdaʊt/（与“预期”意义相反）",
-    "derivatives": "本词暂无需额外强记的高频派生词",
+    "directSynonym": "anticipate /æˈntɪsəˌpeɪt/（预期；占先；加速；提前使用）",
+    "directAntonym": "doubt /ˈdaʊt/（怀疑；疑惑；不信）",
+    "derivatives": "expectation · unexpected",
     "example": "We expect the results next week.",
     "exampleChinese": "我们预计下周会有结果。"
   },
@@ -185,7 +192,7 @@
       "word": "anticipate",
       "phonetic": "/æˈntɪsəˌpeɪt/",
       "partOfSpeech": "v.",
-      "chinese": "与“预期”意义接近",
+      "chinese": "预期；占先；加速；提前使用",
       "difference": "expect 是本卡核心搭配 “expect someone to do something” 中的中性常用选择；anticipate 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -193,12 +200,27 @@
     {
       "word": "doubt",
       "phonetic": "/ˈdaʊt/",
-      "partOfSpeech": "v.",
-      "chinese": "与“预期”意义相反",
+      "partOfSpeech": "v. / n.",
+      "chinese": "怀疑；疑惑；不信",
       "usage": "在本卡核心义下与 expect 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
-  "derivatives": [],
+  "derivatives": [
+    {
+      "word": "expectation",
+      "phonetic": "/ˌɛkspɛˈkteɪʃən/",
+      "partOfSpeech": "n.",
+      "chinese": "期待；指望；展望",
+      "note": "这是 expect 的常用词族成员；请按上方词性放到句子的正确位置。"
+    },
+    {
+      "word": "unexpected",
+      "phonetic": "/ˌʌnɪˈkspɛktɪd/",
+      "partOfSpeech": "adj.",
+      "chinese": "料想不到的；突然的；意外的",
+      "note": "这是 expect 的常用词族成员；请按上方词性放到句子的正确位置。"
+    }
+  ],
   "confusables": [],
   "relatedVocabulary": [
     {
@@ -208,13 +230,30 @@
           "word": "anticipate",
           "phonetic": "/æˈntɪsəˌpeɪt/",
           "partOfSpeech": "v.",
-          "chinese": "与“预期”意义接近"
+          "chinese": "预期；占先；加速；提前使用"
         },
         {
           "word": "doubt",
           "phonetic": "/ˈdaʊt/",
-          "partOfSpeech": "v.",
-          "chinese": "与“预期”意义相反"
+          "partOfSpeech": "v. / n.",
+          "chinese": "怀疑；疑惑；不信"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "expectation",
+          "phonetic": "/ˌɛkspɛˈkteɪʃən/",
+          "partOfSpeech": "n.",
+          "chinese": "期待；指望；展望"
+        },
+        {
+          "word": "unexpected",
+          "phonetic": "/ˌʌnɪˈkspɛktɪd/",
+          "partOfSpeech": "adj.",
+          "chinese": "料想不到的；突然的；意外的"
         }
       ]
     }
@@ -268,9 +307,9 @@
       "type": "meaning_choice",
       "prompt": "“expect”最核心的中文含义是？",
       "options": [
-        "处理；应对",
-        "价值；重视",
-        "预期；期待"
+        "预期；期待",
+        "减少；降低",
+        "朋友"
       ],
       "answer": "预期；期待",
       "stage": "T0",
@@ -281,9 +320,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “expect”？",
       "options": [
-        "the importance or usefulness of something",
-        "to think that something will happen",
-        "to deal with a situation or task"
+        "to make something smaller or less",
+        "a person you know and like",
+        "to think that something will happen"
       ],
       "answer": "to think that something will happen",
       "stage": "T0",
@@ -294,10 +333,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“期待某人做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
       "options": [
+        "what to expect",
         "expect someone to do",
         "expect to see",
-        "as expected",
-        "what to expect"
+        "as expected"
       ],
       "answer": "expect someone to do",
       "stage": "T1",
@@ -308,10 +347,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “expect” 最直接近义词？",
       "options": [
+        "anticipate",
         "doubt",
-        "handle",
-        "value",
-        "anticipate"
+        "reduce",
+        "friend"
       ],
       "answer": "anticipate",
       "stage": "T2",
@@ -322,10 +361,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “expect” 最直接反义词？",
       "options": [
-        "handle",
-        "value",
-        "doubt",
-        "anticipate"
+        "anticipate",
+        "reduce",
+        "friend",
+        "doubt"
       ],
       "answer": "doubt",
       "stage": "T2",
@@ -334,14 +373,14 @@
     {
       "id": "expect-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “expect” 的相关近义词？",
+      "prompt": "根据本词卡辨析，哪个词被列为 “expect” 的派生词？",
       "options": [
-        "value",
-        "anticipate",
         "doubt",
-        "handle"
+        "reduce",
+        "expectation",
+        "anticipate"
       ],
-      "answer": "anticipate",
+      "answer": "expectation",
       "stage": "T3",
       "ai": false
     },
@@ -374,10 +413,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“预计会看到”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "expect someone to do",
         "as expected",
         "what to expect",
-        "expect to see",
-        "expect someone to do"
+        "expect to see"
       ],
       "answer": "expect to see",
       "stage": "T1",
@@ -388,10 +427,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：We expect the _____ next week.（中文：我们预计下周会有结果。）",
       "options": [
-        "problem",
+        "dialogue",
+        "depends",
         "results",
-        "difficult",
-        "honest"
+        "unnecessary"
       ],
       "answer": "results",
       "stage": "T2",
@@ -400,12 +439,12 @@
     {
       "id": "expect-v-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“期待某人做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
+      "prompt": "用法辨析：哪一项既表示“期待某人做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
       "options": [
+        "what to expect",
         "expect someone to do",
         "expect to see",
-        "as expected",
-        "what to expect"
+        "as expected"
       ],
       "answer": "expect someone to do",
       "stage": "T2",
@@ -414,12 +453,12 @@
     {
       "id": "expect-v-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“预计会看到”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "搭配辨析：哪一项既表示“预计会看到”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "expect to see",
         "expect someone to do",
         "as expected",
-        "what to expect",
-        "expect to see"
+        "what to expect"
       ],
       "answer": "expect to see",
       "stage": "T3",
@@ -510,9 +549,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

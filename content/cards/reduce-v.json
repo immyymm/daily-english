@@ -11,6 +11,13 @@
     }
   ],
   "cocaRankLabel": "v. 第 809 名",
+  "learningPriority": {
+    "sequence": 39,
+    "group": "verb",
+    "groupLabel": "动词",
+    "groupOrder": 1,
+    "primaryCocaRank": 809
+  },
   "phonetic": "/rɪˈduːs/",
   "syllables": "reduce（约 2 音节）",
   "partOfSpeech": "v.",
@@ -18,7 +25,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "模板结构版",
+    "完整词卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -64,9 +71,9 @@
         "note": "不定式 to 后接动词原形；不要把不定式和 -ing 形式混合。"
       }
     ],
-    "directSynonym": "decrease /dɪˈkriːs/（与“减少”意义接近）",
+    "directSynonym": "decrease /dɪˈkriːs/（减少；减少量）",
     "directAntonym": "increase /ˌɪˈnkriːs/（增加）",
-    "derivatives": "本词暂无需额外强记的高频派生词",
+    "derivatives": "reduction",
     "example": "A clear plan can reduce unnecessary stress.",
     "exampleChinese": "清晰的计划可以减少不必要的压力。"
   },
@@ -174,8 +181,8 @@
     {
       "word": "decrease",
       "phonetic": "/dɪˈkriːs/",
-      "partOfSpeech": "v.",
-      "chinese": "与“减少”意义接近",
+      "partOfSpeech": "v. / n.",
+      "chinese": "减少；减少量",
       "difference": "reduce 是本卡核心搭配 “reduce stress” 中的中性常用选择；decrease 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -183,12 +190,20 @@
     {
       "word": "increase",
       "phonetic": "/ˌɪˈnkriːs/",
-      "partOfSpeech": "v.",
+      "partOfSpeech": "v. / n.",
       "chinese": "增加",
       "usage": "在本卡核心义下与 reduce 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
-  "derivatives": [],
+  "derivatives": [
+    {
+      "word": "reduction",
+      "phonetic": "/rəˈdʌkʃən/",
+      "partOfSpeech": "n.",
+      "chinese": "减少；缩影；变化",
+      "note": "这是 reduce 的常用词族成员；请按上方词性放到句子的正确位置。"
+    }
+  ],
   "confusables": [],
   "relatedVocabulary": [
     {
@@ -197,14 +212,25 @@
         {
           "word": "decrease",
           "phonetic": "/dɪˈkriːs/",
-          "partOfSpeech": "v.",
-          "chinese": "与“减少”意义接近"
+          "partOfSpeech": "v. / n.",
+          "chinese": "减少；减少量"
         },
         {
           "word": "increase",
           "phonetic": "/ɪnˈkriːs/",
           "partOfSpeech": "v. / n.",
           "chinese": "增加"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "reduction",
+          "phonetic": "/rəˈdʌkʃən/",
+          "partOfSpeech": "n.",
+          "chinese": "减少；缩影；变化"
         }
       ]
     }
@@ -258,9 +284,9 @@
       "type": "meaning_choice",
       "prompt": "“reduce”最核心的中文含义是？",
       "options": [
-        "努力",
-        "成功",
-        "减少；降低"
+        "决定",
+        "减少；降低",
+        "家庭；家人"
       ],
       "answer": "减少；降低",
       "stage": "T0",
@@ -271,9 +297,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “reduce”？",
       "options": [
-        "the achievement of a desired result",
         "to make something smaller or less",
-        "physical or mental energy used to do something"
+        "a group of related people",
+        "a choice made after thinking"
       ],
       "answer": "to make something smaller or less",
       "stage": "T0",
@@ -299,8 +325,8 @@
       "prompt": "哪个词是词卡中列出的 “reduce” 最直接近义词？",
       "options": [
         "increase",
-        "effort",
-        "success",
+        "family",
+        "decision",
         "decrease"
       ],
       "answer": "decrease",
@@ -312,8 +338,8 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “reduce” 最直接反义词？",
       "options": [
-        "effort",
-        "success",
+        "family",
+        "decision",
         "increase",
         "decrease"
       ],
@@ -324,14 +350,14 @@
     {
       "id": "reduce-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “reduce” 的相关近义词？",
+      "prompt": "根据本词卡辨析，哪个词被列为 “reduce” 的派生词？",
       "options": [
-        "success",
+        "family",
+        "reduction",
         "decrease",
-        "increase",
-        "effort"
+        "increase"
       ],
-      "answer": "decrease",
+      "answer": "reduction",
       "stage": "T3",
       "ai": false
     },
@@ -378,10 +404,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：A clear plan can reduce _____ stress.（中文：清晰的计划可以减少不必要的压力。）",
       "options": [
-        "arrive",
+        "between",
         "unnecessary",
-        "use",
-        "quick"
+        "supports",
+        "today"
       ],
       "answer": "unnecessary",
       "stage": "T2",
@@ -500,9 +526,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

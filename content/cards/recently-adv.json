@@ -11,14 +11,21 @@
     }
   ],
   "cocaRankLabel": "adv. 第 774 名",
+  "learningPriority": {
+    "sequence": 144,
+    "group": "adverb",
+    "groupLabel": "副词",
+    "groupOrder": 4,
+    "primaryCocaRank": 774
+  },
   "phonetic": "/ˈriːsəntli/",
   "syllables": "recently（约 3 音节）",
   "partOfSpeech": "adv.",
   "frequencyBand": "COCA 高频精选 · adv. 第 774 名",
-  "difficulty": "进阶",
+  "difficulty": "应用",
   "tags": [
     "adv.",
-    "模板结构版",
+    "完整词卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -64,9 +71,9 @@
         "note": "recently 本身已经是本卡要学的形式，不要再次机械添加 -ly。"
       }
     ],
-    "directSynonym": "lately /ˈleɪtliː/（与“最近”意义接近）",
-    "directAntonym": "formerly /ˈfɔːrmɚliː/（与“最近”意义相反）",
-    "derivatives": "本词暂无需额外强记的高频派生词",
+    "directSynonym": "lately /ˈleɪtliː/（近来；最近）",
+    "directAntonym": "formerly /ˈfɔːrmɚliː/（从前；以前）",
+    "derivatives": "recent",
     "example": "I have recently started keeping a journal.",
     "exampleChinese": "我最近开始写日记了。"
   },
@@ -190,7 +197,7 @@
       "word": "lately",
       "phonetic": "/ˈleɪtliː/",
       "partOfSpeech": "adv.",
-      "chinese": "与“最近”意义接近",
+      "chinese": "近来；最近",
       "difference": "recently 是本卡核心搭配 “have recently done” 中的中性常用选择；lately 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -199,11 +206,19 @@
       "word": "formerly",
       "phonetic": "/ˈfɔːrmɚliː/",
       "partOfSpeech": "adv.",
-      "chinese": "与“最近”意义相反",
+      "chinese": "从前；以前",
       "usage": "在本卡核心义下与 recently 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
-  "derivatives": [],
+  "derivatives": [
+    {
+      "word": "recent",
+      "phonetic": "/ˈriːsənt/",
+      "partOfSpeech": "adj.",
+      "chinese": "最近的；近代的；最新的",
+      "note": "这是 recently 的常用词族成员；请按上方词性放到句子的正确位置。"
+    }
+  ],
   "confusables": [],
   "relatedVocabulary": [
     {
@@ -213,13 +228,24 @@
           "word": "lately",
           "phonetic": "/ˈleɪtliː/",
           "partOfSpeech": "adv.",
-          "chinese": "与“最近”意义接近"
+          "chinese": "近来；最近"
         },
         {
           "word": "formerly",
           "phonetic": "/ˈfɔːrmɚliː/",
           "partOfSpeech": "adv.",
-          "chinese": "与“最近”意义相反"
+          "chinese": "从前；以前"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "recent",
+          "phonetic": "/ˈriːsənt/",
+          "partOfSpeech": "adj.",
+          "chinese": "最近的；近代的；最新的"
         }
       ]
     }
@@ -273,9 +299,9 @@
       "type": "meaning_choice",
       "prompt": "“recently”最核心的中文含义是？",
       "options": [
-        "健康",
-        "情况；局面",
-        "最近"
+        "保护",
+        "最近",
+        "创造；创建"
       ],
       "answer": "最近",
       "stage": "T0",
@@ -286,9 +312,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “recently”？",
       "options": [
-        "the set of conditions at a particular time",
         "not long ago",
-        "the condition of body and mind"
+        "to make something new",
+        "to keep someone or something safe"
       ],
       "answer": "not long ago",
       "stage": "T0",
@@ -313,8 +339,8 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “recently” 最直接近义词？",
       "options": [
-        "health",
-        "situation",
+        "create",
+        "protect",
         "lately",
         "formerly"
       ],
@@ -327,10 +353,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “recently” 最直接反义词？",
       "options": [
-        "situation",
+        "protect",
         "formerly",
         "lately",
-        "health"
+        "create"
       ],
       "answer": "formerly",
       "stage": "T2",
@@ -339,14 +365,14 @@
     {
       "id": "recently-adv-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “recently” 的相关近义词？",
+      "prompt": "根据本词卡辨析，哪个词被列为 “recently” 的派生词？",
       "options": [
+        "recent",
         "lately",
         "formerly",
-        "health",
-        "situation"
+        "create"
       ],
-      "answer": "lately",
+      "answer": "recent",
       "stage": "T3",
       "ai": false
     },
@@ -394,9 +420,9 @@
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：I have recently _____ keeping a journal.（中文：我最近开始写日记了。）",
       "options": [
         "started",
-        "important",
-        "depends",
-        "help"
+        "meaningful",
+        "account",
+        "time"
       ],
       "answer": "started",
       "stage": "T2",
@@ -515,9 +541,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

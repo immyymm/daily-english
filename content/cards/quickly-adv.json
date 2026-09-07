@@ -11,14 +11,21 @@
     }
   ],
   "cocaRankLabel": "adv. 第 812 名",
+  "learningPriority": {
+    "sequence": 147,
+    "group": "adverb",
+    "groupLabel": "副词",
+    "groupOrder": 4,
+    "primaryCocaRank": 812
+  },
   "phonetic": "/ˈkwɪkli/",
   "syllables": "quickly（约 2 音节）",
   "partOfSpeech": "adv.",
   "frequencyBand": "COCA 高频精选 · adv. 第 812 名",
-  "difficulty": "进阶",
+  "difficulty": "应用",
   "tags": [
     "adv.",
-    "模板结构版",
+    "完整词卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -64,9 +71,9 @@
         "note": "quickly 本身已经是本卡要学的形式，不要再次机械添加 -ly。"
       }
     ],
-    "directSynonym": "rapidly /ˈræpədliː/（与“迅速地”意义接近）",
-    "directAntonym": "slowly /ˈsloʊliː/（与“迅速地”意义相反）",
-    "derivatives": "本词暂无需额外强记的高频派生词",
+    "directSynonym": "rapidly /ˈræpədliː/（飞快地；迅速地；赶紧地）",
+    "directAntonym": "slowly /ˈsloʊliː/（慢慢地；迟缓地）",
+    "derivatives": "quick",
     "example": "Try to recall the word quickly.",
     "exampleChinese": "试着快速回忆这个词。"
   },
@@ -190,7 +197,7 @@
       "word": "rapidly",
       "phonetic": "/ˈræpədliː/",
       "partOfSpeech": "adv.",
-      "chinese": "与“迅速地”意义接近",
+      "chinese": "飞快地；迅速地；赶紧地",
       "difference": "quickly 是本卡核心搭配 “respond quickly” 中的中性常用选择；rapidly 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -199,11 +206,19 @@
       "word": "slowly",
       "phonetic": "/ˈsloʊliː/",
       "partOfSpeech": "adv.",
-      "chinese": "与“迅速地”意义相反",
+      "chinese": "慢慢地；迟缓地",
       "usage": "在本卡核心义下与 quickly 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
-  "derivatives": [],
+  "derivatives": [
+    {
+      "word": "quick",
+      "phonetic": "/ˈkwɪk/",
+      "partOfSpeech": "n. / adj. / adv.",
+      "chinese": "快的；迅速的；敏捷的；灵敏的",
+      "note": "这是 quickly 的常用词族成员；请按上方词性放到句子的正确位置。"
+    }
+  ],
   "confusables": [],
   "relatedVocabulary": [
     {
@@ -213,13 +228,24 @@
           "word": "rapidly",
           "phonetic": "/ˈræpədliː/",
           "partOfSpeech": "adv.",
-          "chinese": "与“迅速地”意义接近"
+          "chinese": "飞快地；迅速地；赶紧地"
         },
         {
           "word": "slowly",
           "phonetic": "/ˈsloʊliː/",
           "partOfSpeech": "adv.",
-          "chinese": "与“迅速地”意义相反"
+          "chinese": "慢慢地；迟缓地"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "quick",
+          "phonetic": "/ˈkwɪk/",
+          "partOfSpeech": "n. / adj. / adv.",
+          "chinese": "快的；迅速的；敏捷的；灵敏的"
         }
       ]
     }
@@ -273,9 +299,9 @@
       "type": "meaning_choice",
       "prompt": "“quickly”最核心的中文含义是？",
       "options": [
-        "阅读；读懂",
-        "支持；支撑",
-        "迅速地"
+        "接受；认可",
+        "迅速地",
+        "跟随；遵循"
       ],
       "answer": "迅速地",
       "stage": "T0",
@@ -286,9 +312,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “quickly”？",
       "options": [
-        "to help someone or hold something up",
         "at a fast speed",
-        "to understand written words"
+        "to go after or act according to something",
+        "to agree to receive or believe something"
       ],
       "answer": "at a fast speed",
       "stage": "T0",
@@ -299,10 +325,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“快速回应”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "quickly become",
         "respond quickly",
         "learn quickly",
-        "as quickly as possible"
+        "as quickly as possible",
+        "quickly become"
       ],
       "answer": "respond quickly",
       "stage": "T1",
@@ -313,10 +339,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “quickly” 最直接近义词？",
       "options": [
-        "rapidly",
         "slowly",
-        "read",
-        "support"
+        "follow",
+        "accept",
+        "rapidly"
       ],
       "answer": "rapidly",
       "stage": "T2",
@@ -327,10 +353,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “quickly” 最直接反义词？",
       "options": [
-        "rapidly",
-        "read",
-        "support",
-        "slowly"
+        "follow",
+        "accept",
+        "slowly",
+        "rapidly"
       ],
       "answer": "slowly",
       "stage": "T2",
@@ -339,14 +365,14 @@
     {
       "id": "quickly-adv-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “quickly” 的相关近义词？",
+      "prompt": "根据本词卡辨析，哪个词被列为 “quickly” 的派生词？",
       "options": [
-        "read",
-        "support",
+        "follow",
+        "quick",
         "rapidly",
         "slowly"
       ],
-      "answer": "rapidly",
+      "answer": "quick",
       "stage": "T3",
       "ai": false
     },
@@ -379,10 +405,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“学得快”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "respond quickly",
         "as quickly as possible",
         "quickly become",
-        "learn quickly"
+        "learn quickly",
+        "respond quickly"
       ],
       "answer": "learn quickly",
       "stage": "T1",
@@ -393,10 +419,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Try to recall the _____ quickly.（中文：试着快速回忆这个词。）",
       "options": [
-        "decision",
-        "reviewing",
+        "explaining",
         "word",
-        "example"
+        "steps",
+        "responsibility"
       ],
       "answer": "word",
       "stage": "T2",
@@ -405,12 +431,12 @@
     {
       "id": "quickly-adv-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“快速回应”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "搭配辨析：哪一项既表示“快速回应”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "quickly become",
         "respond quickly",
         "learn quickly",
-        "as quickly as possible"
+        "as quickly as possible",
+        "quickly become"
       ],
       "answer": "respond quickly",
       "stage": "T2",
@@ -419,12 +445,12 @@
     {
       "id": "quickly-adv-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“学得快”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "用法辨析：哪一项既表示“学得快”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "learn quickly",
         "respond quickly",
         "as quickly as possible",
-        "quickly become"
+        "quickly become",
+        "learn quickly"
       ],
       "answer": "learn quickly",
       "stage": "T3",
@@ -515,9 +541,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

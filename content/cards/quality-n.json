@@ -11,6 +11,13 @@
     }
   ],
   "cocaRankLabel": "n. 第 811 名",
+  "learningPriority": {
+    "sequence": 97,
+    "group": "noun",
+    "groupLabel": "名词",
+    "groupOrder": 2,
+    "primaryCocaRank": 811
+  },
   "phonetic": "/ˈkwɑːləti/",
   "syllables": "quality（约 3 音节）",
   "partOfSpeech": "n.",
@@ -18,7 +25,7 @@
   "difficulty": "进阶",
   "tags": [
     "n.",
-    "模板结构版",
+    "完整词卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -64,9 +71,9 @@
         "note": "不要只按中文逐字替换；优先把本卡高频搭配作为完整句块记忆。"
       }
     ],
-    "directSynonym": "standard /ˈstændɚd/（与“质量”意义接近）",
-    "directAntonym": "inferiority /ˌɪnfɪriːˈɔːrɪˌtiː/（与“质量”意义相反）",
-    "derivatives": "本词暂无需额外强记的高频派生词",
+    "directSynonym": "standard /ˈstændɚd/（标准；规格；旗；军旗）",
+    "directAntonym": "inferiority /ˌɪnfɪriːˈɔːrɪˌtiː/（自卑；次等）",
+    "derivatives": "qualitative",
     "example": "Focus on the quality of your practice.",
     "exampleChinese": "关注练习的质量。"
   },
@@ -174,8 +181,8 @@
     {
       "word": "standard",
       "phonetic": "/ˈstændɚd/",
-      "partOfSpeech": "n.",
-      "chinese": "与“质量”意义接近",
+      "partOfSpeech": "n. / adj.",
+      "chinese": "标准；规格；旗；军旗",
       "difference": "quality 是本卡核心搭配 “high quality” 中的中性常用选择；standard 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -184,11 +191,19 @@
       "word": "inferiority",
       "phonetic": "/ˌɪnfɪriːˈɔːrɪˌtiː/",
       "partOfSpeech": "n.",
-      "chinese": "与“质量”意义相反",
+      "chinese": "自卑；次等",
       "usage": "在本卡核心义下与 quality 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
-  "derivatives": [],
+  "derivatives": [
+    {
+      "word": "qualitative",
+      "phonetic": "/ˈkwɑləˌteɪtɪv/",
+      "partOfSpeech": "adj.",
+      "chinese": "性质的；质的；定性的",
+      "note": "这是 quality 的常用词族成员；请按上方词性放到句子的正确位置。"
+    }
+  ],
   "confusables": [],
   "relatedVocabulary": [
     {
@@ -197,14 +212,25 @@
         {
           "word": "standard",
           "phonetic": "/ˈstændɚd/",
-          "partOfSpeech": "n.",
-          "chinese": "与“质量”意义接近"
+          "partOfSpeech": "n. / adj.",
+          "chinese": "标准；规格；旗；军旗"
         },
         {
           "word": "inferiority",
           "phonetic": "/ˌɪnfɪriːˈɔːrɪˌtiː/",
           "partOfSpeech": "n.",
-          "chinese": "与“质量”意义相反"
+          "chinese": "自卑；次等"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "qualitative",
+          "phonetic": "/ˈkwɑləˌteɪtɪv/",
+          "partOfSpeech": "adj.",
+          "chinese": "性质的；质的；定性的"
         }
       ]
     }
@@ -258,9 +284,9 @@
       "type": "meaning_choice",
       "prompt": "“quality”最核心的中文含义是？",
       "options": [
-        "相似的",
-        "足够地；足够的",
-        "质量；品质"
+        "质量；品质",
+        "确定的；某个",
+        "尤其；特别"
       ],
       "answer": "质量；品质",
       "stage": "T0",
@@ -271,9 +297,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “quality”？",
       "options": [
-        "as much as is needed",
-        "how good or bad something is",
-        "almost the same but not exactly"
+        "sure or known without doubt",
+        "more than usual or more than others",
+        "how good or bad something is"
       ],
       "answer": "how good or bad something is",
       "stage": "T0",
@@ -298,10 +324,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “quality” 最直接近义词？",
       "options": [
-        "enough",
+        "especially",
         "standard",
         "inferiority",
-        "similar"
+        "certain"
       ],
       "answer": "standard",
       "stage": "T2",
@@ -314,8 +340,8 @@
       "options": [
         "inferiority",
         "standard",
-        "similar",
-        "enough"
+        "certain",
+        "especially"
       ],
       "answer": "inferiority",
       "stage": "T2",
@@ -324,14 +350,14 @@
     {
       "id": "quality-n-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “quality” 的相关近义词？",
+      "prompt": "根据本词卡辨析，哪个词被列为 “quality” 的派生词？",
       "options": [
+        "standard",
         "inferiority",
-        "similar",
-        "enough",
-        "standard"
+        "certain",
+        "qualitative"
       ],
-      "answer": "standard",
+      "answer": "qualitative",
       "stage": "T3",
       "ai": false
     },
@@ -378,9 +404,9 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Focus on the quality of your _____.（中文：关注练习的质量。）",
       "options": [
-        "one",
-        "minutes",
-        "week",
+        "answer",
+        "useful",
+        "steps",
         "practice"
       ],
       "answer": "practice",
@@ -500,9 +526,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

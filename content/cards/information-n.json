@@ -11,6 +11,13 @@
     }
   ],
   "cocaRankLabel": "n. 第 320 名",
+  "learningPriority": {
+    "sequence": 73,
+    "group": "noun",
+    "groupLabel": "名词",
+    "groupOrder": 2,
+    "primaryCocaRank": 320
+  },
   "phonetic": "/ˌɪnfərˈmeɪʃən/",
   "syllables": "in·for·ma·tion",
   "partOfSpeech": "n.",
@@ -18,7 +25,7 @@
   "difficulty": "进阶",
   "tags": [
     "n.",
-    "模板结构版",
+    "完整词卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -64,9 +71,9 @@
         "note": "不要只按中文逐字替换；优先把本卡高频搭配作为完整句块记忆。"
       }
     ],
-    "directSynonym": "data /ˈdeɪtə/（与“信息”意义接近）",
-    "directAntonym": "misinformation /ˌmɪsɪnfɚˈmeɪʃən/（与“信息”意义相反）",
-    "derivatives": "本词暂无需额外强记的高频派生词",
+    "directSynonym": "data /ˈdeɪtə/（数据；资料）",
+    "directAntonym": "misinformation /ˌmɪsɪnfɚˈmeɪʃən/（错误的消息；误传）",
+    "derivatives": "informative",
     "example": "This page provides practical information for travelers.",
     "exampleChinese": "这个页面为旅行者提供实用信息。"
   },
@@ -175,7 +182,7 @@
       "word": "data",
       "phonetic": "/ˈdeɪtə/",
       "partOfSpeech": "n.",
-      "chinese": "与“信息”意义接近",
+      "chinese": "数据；资料",
       "difference": "information 是本卡核心搭配 “useful information” 中的中性常用选择；data 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -184,11 +191,19 @@
       "word": "misinformation",
       "phonetic": "/ˌmɪsɪnfɚˈmeɪʃən/",
       "partOfSpeech": "n.",
-      "chinese": "与“信息”意义相反",
+      "chinese": "错误的消息；误传",
       "usage": "在本卡核心义下与 information 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
-  "derivatives": [],
+  "derivatives": [
+    {
+      "word": "informative",
+      "phonetic": "/ˌɪˈnfɔːrmətɪv/",
+      "partOfSpeech": "adj.",
+      "chinese": "提供消息的；见闻广博的",
+      "note": "这是 information 的常用词族成员；请按上方词性放到句子的正确位置。"
+    }
+  ],
   "confusables": [],
   "relatedVocabulary": [
     {
@@ -198,13 +213,24 @@
           "word": "data",
           "phonetic": "/ˈdeɪtə/",
           "partOfSpeech": "n.",
-          "chinese": "与“信息”意义接近"
+          "chinese": "数据；资料"
         },
         {
           "word": "misinformation",
           "phonetic": "/ˌmɪsɪnfɚˈmeɪʃən/",
           "partOfSpeech": "n.",
-          "chinese": "与“信息”意义相反"
+          "chinese": "错误的消息；误传"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "informative",
+          "phonetic": "/ˌɪˈnfɔːrmətɪv/",
+          "partOfSpeech": "adj.",
+          "chinese": "提供消息的；见闻广博的"
         }
       ]
     }
@@ -259,8 +285,8 @@
       "prompt": "“information”最核心的中文含义是？",
       "options": [
         "信息",
-        "成功",
-        "最近"
+        "机会",
+        "准备好的"
       ],
       "answer": "信息",
       "stage": "T0",
@@ -271,8 +297,8 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “information”？",
       "options": [
-        "the achievement of a desired result",
-        "not long ago",
+        "a good chance to do something",
+        "prepared for what will happen",
         "facts or details about something"
       ],
       "answer": "facts or details about something",
@@ -298,10 +324,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “information” 最直接近义词？",
       "options": [
-        "recently",
+        "ready",
         "data",
         "misinformation",
-        "success"
+        "opportunity"
       ],
       "answer": "data",
       "stage": "T2",
@@ -314,8 +340,8 @@
       "options": [
         "misinformation",
         "data",
-        "success",
-        "recently"
+        "opportunity",
+        "ready"
       ],
       "answer": "misinformation",
       "stage": "T2",
@@ -324,14 +350,14 @@
     {
       "id": "information-n-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “information” 的相关近义词？",
+      "prompt": "根据本词卡辨析，哪个词被列为 “information” 的派生词？",
       "options": [
+        "data",
         "misinformation",
-        "success",
-        "recently",
-        "data"
+        "opportunity",
+        "informative"
       ],
-      "answer": "data",
+      "answer": "informative",
       "stage": "T3",
       "ai": false
     },
@@ -378,9 +404,9 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：This page provides practical information for _____.（中文：这个页面为旅行者提供实用信息。）",
       "options": [
-        "quick",
-        "started",
-        "whole",
+        "practice",
+        "try",
+        "useful",
         "travelers"
       ],
       "answer": "travelers",
@@ -500,9 +526,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

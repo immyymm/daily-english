@@ -11,6 +11,13 @@
     }
   ],
   "cocaRankLabel": "n. 第 789 名",
+  "learningPriority": {
+    "sequence": 96,
+    "group": "noun",
+    "groupLabel": "名词",
+    "groupOrder": 2,
+    "primaryCocaRank": 789
+  },
   "phonetic": "/əˈbɪləti/",
   "syllables": "a·bil·i·ty",
   "partOfSpeech": "n.",
@@ -18,7 +25,7 @@
   "difficulty": "进阶",
   "tags": [
     "n.",
-    "模板结构版",
+    "完整词卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -65,8 +72,8 @@
       }
     ],
     "directSynonym": "skill /ˈskɪl/（技能）",
-    "directAntonym": "inability /ˌɪnəˈbɪlɪtiː/（与“能力”意义相反）",
-    "derivatives": "本词暂无需额外强记的高频派生词",
+    "directAntonym": "inability /ˌɪnəˈbɪlɪtiː/（无能；无力）",
+    "derivatives": "able · unable",
     "example": "Practice improves your ability to recall words.",
     "exampleChinese": "练习会提高你回忆单词的能力。"
   },
@@ -194,11 +201,26 @@
       "word": "inability",
       "phonetic": "/ˌɪnəˈbɪlɪtiː/",
       "partOfSpeech": "n.",
-      "chinese": "与“能力”意义相反",
+      "chinese": "无能；无力",
       "usage": "在本卡核心义下与 ability 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
-  "derivatives": [],
+  "derivatives": [
+    {
+      "word": "able",
+      "phonetic": "/ˈeɪbəl/",
+      "partOfSpeech": "adj.",
+      "chinese": "能干的；能够的",
+      "note": "这是 ability 的常用词族成员；请按上方词性放到句子的正确位置。"
+    },
+    {
+      "word": "unable",
+      "phonetic": "/əˈneɪbəl/",
+      "partOfSpeech": "adj.",
+      "chinese": "不能的；不会的",
+      "note": "这是 ability 的常用词族成员；请按上方词性放到句子的正确位置。"
+    }
+  ],
   "confusables": [],
   "relatedVocabulary": [
     {
@@ -214,7 +236,24 @@
           "word": "inability",
           "phonetic": "/ˌɪnəˈbɪlɪtiː/",
           "partOfSpeech": "n.",
-          "chinese": "与“能力”意义相反"
+          "chinese": "无能；无力"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "able",
+          "phonetic": "/ˈeɪbəl/",
+          "partOfSpeech": "adj.",
+          "chinese": "能干的；能够的"
+        },
+        {
+          "word": "unable",
+          "phonetic": "/əˈneɪbəl/",
+          "partOfSpeech": "adj.",
+          "chinese": "不能的；不会的"
         }
       ]
     }
@@ -268,9 +307,9 @@
       "type": "meaning_choice",
       "prompt": "“ability”最核心的中文含义是？",
       "options": [
-        "相似的",
+        "也许；可能",
         "能力",
-        "注意力；关注"
+        "清楚的；清除"
       ],
       "answer": "能力",
       "stage": "T0",
@@ -282,8 +321,8 @@
       "prompt": "哪一项英文释义最符合词卡中的 “ability”？",
       "options": [
         "the power or skill to do something",
-        "the act of carefully noticing something",
-        "almost the same but not exactly"
+        "easy to understand or see",
+        "used to say that something may be true"
       ],
       "answer": "the power or skill to do something",
       "stage": "T0",
@@ -294,10 +333,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“做某事的能力”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
       "options": [
-        "ability to do",
         "develop an ability",
         "natural ability",
-        "academic ability"
+        "academic ability",
+        "ability to do"
       ],
       "answer": "ability to do",
       "stage": "T1",
@@ -308,10 +347,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “ability” 最直接近义词？",
       "options": [
-        "inability",
-        "attention",
-        "similar",
-        "skill"
+        "clear",
+        "perhaps",
+        "skill",
+        "inability"
       ],
       "answer": "skill",
       "stage": "T2",
@@ -322,10 +361,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “ability” 最直接反义词？",
       "options": [
-        "attention",
-        "similar",
+        "perhaps",
         "inability",
-        "skill"
+        "skill",
+        "clear"
       ],
       "answer": "inability",
       "stage": "T2",
@@ -334,14 +373,14 @@
     {
       "id": "ability-n-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “ability” 的相关近义词？",
+      "prompt": "根据本词卡辨析，哪个词被列为 “ability” 的派生词？",
       "options": [
-        "similar",
+        "able",
         "skill",
         "inability",
-        "attention"
+        "clear"
       ],
-      "answer": "skill",
+      "answer": "able",
       "stage": "T3",
       "ai": false
     },
@@ -374,10 +413,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“培养能力”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "natural ability",
         "academic ability",
         "develop an ability",
-        "ability to do"
+        "ability to do",
+        "natural ability"
       ],
       "answer": "develop an ability",
       "stage": "T1",
@@ -388,10 +427,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Practice improves your ability to _____ words.（中文：练习会提高你回忆单词的能力。）",
       "options": [
-        "used",
         "recall",
-        "preposition",
-        "one"
+        "point",
+        "try",
+        "breakfast"
       ],
       "answer": "recall",
       "stage": "T2",
@@ -400,12 +439,12 @@
     {
       "id": "ability-n-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“做某事的能力”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
+      "prompt": "用法辨析：哪一项既表示“做某事的能力”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
       "options": [
-        "ability to do",
         "develop an ability",
         "natural ability",
-        "academic ability"
+        "academic ability",
+        "ability to do"
       ],
       "answer": "ability to do",
       "stage": "T2",
@@ -414,12 +453,12 @@
     {
       "id": "ability-n-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“培养能力”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "搭配辨析：哪一项既表示“培养能力”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "ability to do",
         "natural ability",
         "academic ability",
-        "develop an ability"
+        "develop an ability",
+        "ability to do"
       ],
       "answer": "develop an ability",
       "stage": "T3",
@@ -510,9 +549,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

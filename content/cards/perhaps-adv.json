@@ -11,6 +11,13 @@
     }
   ],
   "cocaRankLabel": "adv. 第 506 名",
+  "learningPriority": {
+    "sequence": 139,
+    "group": "adverb",
+    "groupLabel": "副词",
+    "groupOrder": 4,
+    "primaryCocaRank": 506
+  },
   "phonetic": "/pərˈhæps/",
   "syllables": "perhaps（约 2 音节）",
   "partOfSpeech": "adv.",
@@ -18,7 +25,7 @@
   "difficulty": "应用",
   "tags": [
     "adv.",
-    "模板结构版",
+    "完整词卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -64,8 +71,8 @@
         "note": "perhaps 本身已经是本卡要学的形式，不要再次机械添加 -ly。"
       }
     ],
-    "directSynonym": "maybe /ˈmeɪbiː/（与“也许”意义接近）",
-    "directAntonym": "certainly /ˈsɝːtənliː/（与“也许”意义相反）",
+    "directSynonym": "maybe /ˈmeɪbiː/（也许；大概；可能性）",
+    "directAntonym": "certainly /ˈsɝːtənliː/（确定地）",
     "derivatives": "本词暂无需额外强记的高频派生词",
     "example": "Perhaps we should try a different approach.",
     "exampleChinese": "也许我们应该尝试不同的方法。"
@@ -189,8 +196,8 @@
     {
       "word": "maybe",
       "phonetic": "/ˈmeɪbiː/",
-      "partOfSpeech": "adv.",
-      "chinese": "与“也许”意义接近",
+      "partOfSpeech": "n. / adv.",
+      "chinese": "也许；大概；可能性",
       "difference": "perhaps 是本卡核心搭配 “perhaps because” 中的中性常用选择；maybe 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -199,7 +206,7 @@
       "word": "certainly",
       "phonetic": "/ˈsɝːtənliː/",
       "partOfSpeech": "adv.",
-      "chinese": "与“也许”意义相反",
+      "chinese": "确定地",
       "usage": "在本卡核心义下与 perhaps 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
@@ -212,14 +219,14 @@
         {
           "word": "maybe",
           "phonetic": "/ˈmeɪbiː/",
-          "partOfSpeech": "adv.",
-          "chinese": "与“也许”意义接近"
+          "partOfSpeech": "n. / adv.",
+          "chinese": "也许；大概；可能性"
         },
         {
           "word": "certainly",
           "phonetic": "/ˈsɝːtənliː/",
           "partOfSpeech": "adv.",
-          "chinese": "与“也许”意义相反"
+          "chinese": "确定地"
         }
       ]
     }
@@ -273,9 +280,9 @@
       "type": "meaning_choice",
       "prompt": "“perhaps”最核心的中文含义是？",
       "options": [
-        "理解；明白",
         "也许；可能",
-        "钱；货币"
+        "写；写作",
+        "发展；培养"
       ],
       "answer": "也许；可能",
       "stage": "T0",
@@ -286,9 +293,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “perhaps”？",
       "options": [
-        "used to say that something may be true",
-        "what people use to buy things",
-        "to know the meaning or reason for something"
+        "to form words on a surface or compose text",
+        "to grow or cause something to grow",
+        "used to say that something may be true"
       ],
       "answer": "used to say that something may be true",
       "stage": "T0",
@@ -299,10 +306,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“也许因为”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "perhaps the most important",
         "perhaps because",
         "perhaps we should",
-        "perhaps not"
+        "perhaps not",
+        "perhaps the most important"
       ],
       "answer": "perhaps because",
       "stage": "T1",
@@ -313,10 +320,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “perhaps” 最直接近义词？",
       "options": [
-        "maybe",
         "certainly",
-        "money",
-        "understand"
+        "write",
+        "develop",
+        "maybe"
       ],
       "answer": "maybe",
       "stage": "T2",
@@ -327,10 +334,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “perhaps” 最直接反义词？",
       "options": [
-        "maybe",
-        "money",
-        "understand",
-        "certainly"
+        "write",
+        "develop",
+        "certainly",
+        "maybe"
       ],
       "answer": "certainly",
       "stage": "T2",
@@ -341,10 +348,10 @@
       "type": "meaning_choice",
       "prompt": "根据本词卡辨析，哪个词被列为 “perhaps” 的相关近义词？",
       "options": [
-        "money",
-        "understand",
+        "develop",
         "maybe",
-        "certainly"
+        "certainly",
+        "write"
       ],
       "answer": "maybe",
       "stage": "T3",
@@ -379,10 +386,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“也许我们应该”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "perhaps because",
         "perhaps not",
         "perhaps the most important",
-        "perhaps we should"
+        "perhaps we should",
+        "perhaps because"
       ],
       "answer": "perhaps we should",
       "stage": "T1",
@@ -393,10 +400,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Perhaps we should _____ a different approach.（中文：也许我们应该尝试不同的方法。）",
       "options": [
-        "why",
-        "translating",
+        "supports",
         "try",
-        "time"
+        "down",
+        "habit"
       ],
       "answer": "try",
       "stage": "T2",
@@ -405,12 +412,12 @@
     {
       "id": "perhaps-adv-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“也许因为”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "搭配辨析：哪一项既表示“也许因为”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "perhaps the most important",
         "perhaps because",
         "perhaps we should",
-        "perhaps not"
+        "perhaps not",
+        "perhaps the most important"
       ],
       "answer": "perhaps because",
       "stage": "T2",
@@ -419,12 +426,12 @@
     {
       "id": "perhaps-adv-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“也许我们应该”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "用法辨析：哪一项既表示“也许我们应该”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "perhaps we should",
         "perhaps because",
         "perhaps not",
-        "perhaps the most important"
+        "perhaps the most important",
+        "perhaps we should"
       ],
       "answer": "perhaps we should",
       "stage": "T3",
@@ -515,9 +522,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

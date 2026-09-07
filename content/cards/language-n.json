@@ -11,14 +11,21 @@
     }
   ],
   "cocaRankLabel": "n. 第 713 名",
+  "learningPriority": {
+    "sequence": 95,
+    "group": "noun",
+    "groupLabel": "名词",
+    "groupOrder": 2,
+    "primaryCocaRank": 713
+  },
   "phonetic": "/ˈlæŋɡwɪdʒ/",
   "syllables": "lan·guage",
   "partOfSpeech": "n.",
   "frequencyBand": "COCA 高频精选 · n. 第 713 名",
-  "difficulty": "应用",
+  "difficulty": "进阶",
   "tags": [
     "n.",
-    "模板结构版",
+    "完整词卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -64,9 +71,9 @@
         "note": "不要只按中文逐字替换；优先把本卡高频搭配作为完整句块记忆。"
       }
     ],
-    "directSynonym": "speech /ˈspiːtʃ/（与“语言”意义接近）",
-    "directAntonym": "silence /ˈsaɪləns/（与“语言”意义相反）",
-    "derivatives": "本词暂无需额外强记的高频派生词",
+    "directSynonym": "speech /ˈspiːtʃ/（演讲；说话；谈话；言语）",
+    "directAntonym": "silence /ˈsaɪləns/（沉默；无声；静寂；湮没）",
+    "derivatives": "linguistic",
     "example": "Language learning takes time and practice.",
     "exampleChinese": "语言学习需要时间和练习。"
   },
@@ -175,7 +182,7 @@
       "word": "speech",
       "phonetic": "/ˈspiːtʃ/",
       "partOfSpeech": "n.",
-      "chinese": "与“语言”意义接近",
+      "chinese": "演讲；说话；谈话；言语",
       "difference": "language 是本卡核心搭配 “language learning” 中的中性常用选择；speech 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -183,12 +190,20 @@
     {
       "word": "silence",
       "phonetic": "/ˈsaɪləns/",
-      "partOfSpeech": "n.",
-      "chinese": "与“语言”意义相反",
+      "partOfSpeech": "v. / n. / interj.",
+      "chinese": "沉默；无声；静寂；湮没",
       "usage": "在本卡核心义下与 language 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
-  "derivatives": [],
+  "derivatives": [
+    {
+      "word": "linguistic",
+      "phonetic": "/lɪˈŋɡwɪstɪk/",
+      "partOfSpeech": "adj.",
+      "chinese": "语言的；语言学的",
+      "note": "这是 language 的常用词族成员；请按上方词性放到句子的正确位置。"
+    }
+  ],
   "confusables": [
     {
       "word": "luggage",
@@ -206,13 +221,24 @@
           "word": "speech",
           "phonetic": "/ˈspiːtʃ/",
           "partOfSpeech": "n.",
-          "chinese": "与“语言”意义接近"
+          "chinese": "演讲；说话；谈话；言语"
         },
         {
           "word": "silence",
           "phonetic": "/ˈsaɪləns/",
-          "partOfSpeech": "n.",
-          "chinese": "与“语言”意义相反"
+          "partOfSpeech": "v. / n. / interj.",
+          "chinese": "沉默；无声；静寂；湮没"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "linguistic",
+          "phonetic": "/lɪˈŋɡwɪstɪk/",
+          "partOfSpeech": "adj.",
+          "chinese": "语言的；语言学的"
         }
       ]
     }
@@ -266,9 +292,9 @@
       "type": "meaning_choice",
       "prompt": "“language”最核心的中文含义是？",
       "options": [
-        "语言",
-        "改变；变化",
-        "影响"
+        "可能的；可行的",
+        "很可能",
+        "语言"
       ],
       "answer": "语言",
       "stage": "T0",
@@ -279,9 +305,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “language”？",
       "options": [
-        "to become or make something different",
-        "to cause a change in someone or something",
-        "a system people use to communicate"
+        "used when something is likely",
+        "a system people use to communicate",
+        "able to happen or be done"
       ],
       "answer": "a system people use to communicate",
       "stage": "T0",
@@ -292,10 +318,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“语言学习”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "language learning",
         "foreign language",
         "body language",
-        "spoken language",
-        "language learning"
+        "spoken language"
       ],
       "answer": "language learning",
       "stage": "T1",
@@ -306,10 +332,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “language” 最直接近义词？",
       "options": [
+        "silence",
         "luggage",
-        "change",
-        "speech",
-        "silence"
+        "possible",
+        "speech"
       ],
       "answer": "speech",
       "stage": "T2",
@@ -320,10 +346,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “language” 最直接反义词？",
       "options": [
-        "change",
+        "luggage",
+        "possible",
         "silence",
-        "speech",
-        "luggage"
+        "speech"
       ],
       "answer": "silence",
       "stage": "T2",
@@ -334,10 +360,10 @@
       "type": "meaning_choice",
       "prompt": "根据本词卡辨析，哪个词被列为 “language” 的易混词？",
       "options": [
+        "possible",
         "luggage",
         "speech",
-        "silence",
-        "change"
+        "silence"
       ],
       "answer": "luggage",
       "stage": "T3",
@@ -372,10 +398,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“外语”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "body language",
         "spoken language",
         "foreign language",
-        "language learning",
-        "body language"
+        "language learning"
       ],
       "answer": "foreign language",
       "stage": "T1",
@@ -386,10 +412,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Language _____ takes time and practice.（中文：语言学习需要时间和练习。）",
       "options": [
+        "faster",
         "learning",
-        "whole",
-        "memory",
-        "current"
+        "soon",
+        "arrive"
       ],
       "answer": "learning",
       "stage": "T2",
@@ -398,12 +424,12 @@
     {
       "id": "language-n-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“语言学习”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "搭配辨析：哪一项既表示“语言学习”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "language learning",
         "foreign language",
         "body language",
-        "spoken language",
-        "language learning"
+        "spoken language"
       ],
       "answer": "language learning",
       "stage": "T2",
@@ -412,12 +438,12 @@
     {
       "id": "language-n-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“外语”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "用法辨析：哪一项既表示“外语”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "language learning",
         "body language",
         "spoken language",
-        "foreign language",
-        "language learning"
+        "foreign language"
       ],
       "answer": "foreign language",
       "stage": "T3",
@@ -508,9 +534,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

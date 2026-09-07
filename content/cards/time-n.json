@@ -17,14 +17,21 @@
     }
   ],
   "cocaRankLabel": "n. 第 54 名；v. 第 4660 名",
+  "learningPriority": {
+    "sequence": 55,
+    "group": "noun",
+    "groupLabel": "名词",
+    "groupOrder": 2,
+    "primaryCocaRank": 54
+  },
   "phonetic": "/taɪm/",
   "syllables": "time（单音节）",
   "partOfSpeech": "n. / v.",
   "frequencyBand": "COCA 高频精选 · n. 第 54 名；v. 第 4660 名",
-  "difficulty": "应用",
+  "difficulty": "进阶",
   "tags": [
     "n.",
-    "模板结构版",
+    "完整词卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -70,9 +77,9 @@
         "note": "不要只按中文逐字替换；优先把本卡高频搭配作为完整句块记忆。"
       }
     ],
-    "directSynonym": "period /ˈpɪriːəd/（与“时间”意义接近）",
-    "directAntonym": "timeless /ˈtaɪmləs/（与“时间”意义相反）",
-    "derivatives": "本词暂无需额外强记的高频派生词",
+    "directSynonym": "period /ˈpɪriːəd/（时期；节段；节；句点）",
+    "directAntonym": "timeless /ˈtaɪmləs/（无时间限制的；不受时间影响的；永恒的）",
+    "derivatives": "timely",
     "example": "She arrived on time for the interview.",
     "exampleChinese": "她准时到达面试地点。"
   },
@@ -187,8 +194,8 @@
     {
       "word": "period",
       "phonetic": "/ˈpɪriːəd/",
-      "partOfSpeech": "n. / v.",
-      "chinese": "与“时间”意义接近",
+      "partOfSpeech": "n. / adj. / interj.",
+      "chinese": "时期；节段；节；句点",
       "difference": "time 是本卡核心搭配 “on time” 中的中性常用选择；period 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -196,12 +203,20 @@
     {
       "word": "timeless",
       "phonetic": "/ˈtaɪmləs/",
-      "partOfSpeech": "n. / v.",
-      "chinese": "与“时间”意义相反",
+      "partOfSpeech": "adj.",
+      "chinese": "无时间限制的；不受时间影响的；永恒的",
       "usage": "在本卡核心义下与 time 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
-  "derivatives": [],
+  "derivatives": [
+    {
+      "word": "timely",
+      "phonetic": "/ˈtaɪmliː/",
+      "partOfSpeech": "adj. / adv.",
+      "chinese": "及时的；适时的；及时地",
+      "note": "这是 time 的常用词族成员；请按上方词性放到句子的正确位置。"
+    }
+  ],
   "confusables": [],
   "relatedVocabulary": [
     {
@@ -210,14 +225,25 @@
         {
           "word": "period",
           "phonetic": "/ˈpɪriːəd/",
-          "partOfSpeech": "n. / v.",
-          "chinese": "与“时间”意义接近"
+          "partOfSpeech": "n. / adj. / interj.",
+          "chinese": "时期；节段；节；句点"
         },
         {
           "word": "timeless",
           "phonetic": "/ˈtaɪmləs/",
-          "partOfSpeech": "n. / v.",
-          "chinese": "与“时间”意义相反"
+          "partOfSpeech": "adj.",
+          "chinese": "无时间限制的；不受时间影响的；永恒的"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "timely",
+          "phonetic": "/ˈtaɪmliː/",
+          "partOfSpeech": "adj. / adv.",
+          "chinese": "及时的；适时的；及时地"
         }
       ]
     }
@@ -271,9 +297,9 @@
       "type": "meaning_choice",
       "prompt": "“time”最核心的中文含义是？",
       "options": [
-        "理解；明白",
-        "依赖；取决于",
-        "时间；计时"
+        "时间；计时",
+        "服务",
+        "益处；使受益"
       ],
       "answer": "时间；计时",
       "stage": "T0",
@@ -284,9 +310,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “time”？",
       "options": [
-        "to be decided by or need something",
-        "the measured flow in which events happen",
-        "to know the meaning or reason for something"
+        "work done to help or provide something for people",
+        "an advantage or helpful effect",
+        "the measured flow in which events happen"
       ],
       "answer": "the measured flow in which events happen",
       "stage": "T0",
@@ -297,10 +323,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“准时”，又符合这个形式线索：完整搭配中使用介词 on？",
       "options": [
+        "on time",
         "in time",
         "spend time doing",
-        "from time to time",
-        "on time"
+        "from time to time"
       ],
       "answer": "on time",
       "stage": "T1",
@@ -311,10 +337,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “time” 最直接近义词？",
       "options": [
-        "understand",
-        "depend",
-        "period",
-        "timeless"
+        "timeless",
+        "service",
+        "benefit",
+        "period"
       ],
       "answer": "period",
       "stage": "T2",
@@ -325,10 +351,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “time” 最直接反义词？",
       "options": [
-        "depend",
+        "service",
+        "benefit",
         "timeless",
-        "period",
-        "understand"
+        "period"
       ],
       "answer": "timeless",
       "stage": "T2",
@@ -337,14 +363,14 @@
     {
       "id": "time-n-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “time” 的相关近义词？",
+      "prompt": "根据本词卡辨析，哪个词被列为 “time” 的派生词？",
       "options": [
+        "service",
+        "timely",
         "period",
-        "timeless",
-        "understand",
-        "depend"
+        "timeless"
       ],
-      "answer": "period",
+      "answer": "timely",
       "stage": "T3",
       "ai": false
     },
@@ -377,10 +403,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“及时”，又符合这个形式线索：完整搭配中使用介词 in？",
       "options": [
+        "spend time doing",
         "from time to time",
         "in time",
-        "on time",
-        "spend time doing"
+        "on time"
       ],
       "answer": "in time",
       "stage": "T1",
@@ -391,10 +417,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：She arrived on time for the _____.（中文：她准时到达面试地点。）",
       "options": [
+        "problem",
         "interview",
-        "why",
-        "situation",
-        "practice"
+        "excellent",
+        "regular"
       ],
       "answer": "interview",
       "stage": "T2",
@@ -403,12 +429,12 @@
     {
       "id": "time-n-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“准时”，又符合这个形式线索：完整搭配中使用介词 on？",
+      "prompt": "搭配辨析：哪一项既表示“准时”，又符合这个形式线索：完整搭配中使用介词 on？",
       "options": [
+        "on time",
         "in time",
         "spend time doing",
-        "from time to time",
-        "on time"
+        "from time to time"
       ],
       "answer": "on time",
       "stage": "T2",
@@ -417,12 +443,12 @@
     {
       "id": "time-n-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“及时”，又符合这个形式线索：完整搭配中使用介词 in？",
+      "prompt": "用法辨析：哪一项既表示“及时”，又符合这个形式线索：完整搭配中使用介词 in？",
       "options": [
+        "on time",
         "spend time doing",
         "from time to time",
-        "in time",
-        "on time"
+        "in time"
       ],
       "answer": "in time",
       "stage": "T3",
@@ -513,9 +539,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

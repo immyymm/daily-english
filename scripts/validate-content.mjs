@@ -7,11 +7,15 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const allCardsPath = path.join(root, 'public', 'data', 'all-cards.json');
 const manifestPath = path.join(root, 'public', 'data', 'manifest.json');
 const releasePath = path.join(root, 'content', 'release.json');
+const auditPath = path.join(root, 'content', 'coca-audit.json');
+const wordMetadataPath = path.join(root, 'scripts', 'word-metadata.json');
 const runtimeReleasePath = path.join(root, 'src', 'config', 'release.ts');
 const templateLockPath = path.join(root, 'content', 'templates', 'template-lock.json');
 const allCards = JSON.parse(await fs.readFile(allCardsPath, 'utf8'));
 const manifest = JSON.parse(await fs.readFile(manifestPath, 'utf8'));
 const release = JSON.parse(await fs.readFile(releasePath, 'utf8'));
+const cocaAudit = JSON.parse(await fs.readFile(auditPath, 'utf8'));
+const wordMetadata = JSON.parse(await fs.readFile(wordMetadataPath, 'utf8'));
 const runtimeRelease = await fs.readFile(runtimeReleasePath, 'utf8');
 const templatePath = path.join(root, 'content', 'templates', release.templateVersion + '.md');
 const template = await fs.readFile(templatePath, 'utf8');
@@ -96,8 +100,12 @@ if (!lockedExample.includes('# 模板格式测试：work') || !lockedTemplate.in
   errors.push('Locked template or work example no longer matches the user-provided baseline.');
 }
 
-if (allCards.cards.length !== 150) errors.push('Expected 150 cards.');
-if (manifest.dailyFiles.length !== 30) errors.push('Expected 30 daily files.');
+const expectedCardCount = cocaAudit.selection?.selectedCards ?? 150;
+const expectedDayCount = Math.ceil(expectedCardCount / 5);
+if (!cocaAudit.selection?.allSelectedWordsFound || cocaAudit.selection?.missingWords?.length) errors.push('COCA audit has missing selected words.');
+if (wordMetadata.missing?.length || Object.keys(wordMetadata.entries ?? {}).length < 450) errors.push('Offline relation/derivative metadata extraction is incomplete.');
+if (allCards.cards.length !== expectedCardCount) errors.push('Expected ' + expectedCardCount + ' audited cards.');
+if (manifest.dailyFiles.length !== expectedDayCount) errors.push('Expected ' + expectedDayCount + ' daily files.');
 if (new Set(allCards.cards.map((card) => card.id)).size !== allCards.cards.length) errors.push('Duplicate card IDs.');
 if (manifest.contentVersion !== release.contentVersion || allCards.contentVersion !== release.contentVersion) errors.push('Content version differs from content/release.json.');
 if (allCards.templateVersion !== expectedTemplateVersion || manifest.templateVersion !== expectedTemplateVersion) errors.push('Template version is not locked to ' + expectedTemplateVersion + '.');
@@ -115,8 +123,14 @@ if (!referenceCard || referenceCard.word !== templateLock.referenceCard.word || 
   errors.push('The locked work reference card no longer exactly matches its recorded example shape.');
 }
 
-for (const card of allCards.cards) {
-  const required = ['id', 'word', 'phonetic', 'syllables', 'partOfSpeech', 'coreMemory', 'meanings', 'contextPhrases', 'fixedPhrases', 'synonyms', 'antonyms', 'derivatives', 'confusables', 'relatedVocabulary', 'examples', 'studyFocus', 'questions', 'detailLevel', 'templateVersion', 'contentVersion', 'reviewed'];
+const learningGroups = ['verb', 'noun', 'adjective', 'adverb', 'other'];
+const expectedOrderedIds = cocaAudit.orderedCards?.map((entry) => entry.cardId) ?? [];
+if (expectedOrderedIds.length !== allCards.cards.length || expectedOrderedIds.some((id, index) => allCards.cards[index]?.id !== id)) {
+  errors.push('Card order differs from the audited primary-POS then COCA-rank order.');
+}
+
+for (const [cardIndex, card] of allCards.cards.entries()) {
+  const required = ['id', 'word', 'phonetic', 'syllables', 'partOfSpeech', 'learningPriority', 'coreMemory', 'meanings', 'contextPhrases', 'fixedPhrases', 'synonyms', 'antonyms', 'derivatives', 'confusables', 'relatedVocabulary', 'examples', 'studyFocus', 'questions', 'detailLevel', 'templateVersion', 'contentVersion', 'reviewed'];
   for (const field of required) {
     if (card[field] === undefined || card[field] === null) {
       errors.push(card.id + ': missing ' + field);
@@ -126,20 +140,27 @@ for (const card of allCards.cards) {
   if (requiredReviewedWords.has(card.word) && !card.reviewed) errors.push(card.id + ': required human-reviewed card is not reviewed.');
   if (card.word === 'work' && card.detailLevel !== 'template-reference') errors.push(card.id + ': locked work card must be template-reference.');
   if (card.word !== 'work' && card.reviewed && card.detailLevel !== 'template-curated') errors.push(card.id + ': reviewed card must be template-curated.');
-  if (!card.reviewed && card.detailLevel !== 'template-structured') errors.push(card.id + ': non-reviewed card must be labeled template-structured.');
+  if (!card.reviewed && card.detailLevel !== 'template-complete') errors.push(card.id + ': every non-reference/non-curated card must be a complete static card.');
   if (card.detailLevel === 'template-reference' && (card.word !== 'work' || !matchesShape(card, referenceShape))) errors.push(card.id + ': reference label is reserved for the exact locked work example.');
   if (card.detailLevel === 'template-curated' && !meetsCuratedBenchmark(card)) errors.push(card.id + ': human-curated label does not meet the curated richness benchmark.');
-  if (card.detailLevel === 'template-structured' && meetsCuratedBenchmark(card)) errors.push(card.id + ': card meets the curated benchmark and should be promoted explicitly.');
   if (forbiddenGeneratedCopy.some((pattern) => pattern.test(JSON.stringify(card)))) errors.push(card.id + ': forbidden meta-learning filler or mechanical expansion found.');
-  if (card.tags.includes('人工精校') !== card.reviewed) errors.push(card.id + ': review tag does not match reviewed status.');
-  if (!card.reviewed && !card.tags.includes('模板结构版')) errors.push(card.id + ': template-structured card tag is missing.');
+  if (card.tags.some((tag) => /(人工精校|模板结构版|待深度补全)/.test(tag))) errors.push(card.id + ': internal production labels must not appear in app tags.');
+  if (!card.tags.includes('完整词卡')) errors.push(card.id + ': complete-card tag is missing.');
+  const expectedPriority = cocaAudit.orderedCards?.[cardIndex];
+  if (!expectedPriority
+    || card.learningPriority.sequence !== cardIndex + 1
+    || card.learningPriority.group !== expectedPriority.primaryGroup
+    || card.learningPriority.primaryCocaRank !== expectedPriority.primaryCocaRank
+    || card.learningPriority.groupOrder !== learningGroups.indexOf(card.learningPriority.group) + 1) {
+    errors.push(card.id + ': learning priority metadata differs from the COCA audit.');
+  }
   if (card.meanings.length < 1) errors.push(card.id + ': expected at least one meaning.');
   if (card.partOfSpeech.includes('/') && card.meanings.length < 2) errors.push(card.id + ': multiple parts of speech need separate meanings.');
   if (!Array.isArray(card.cocaRanks) || card.cocaRanks.length < 1 || !card.cocaRankLabel) errors.push(card.id + ': missing exact COCA rank data.');
   if (!Array.isArray(card.coreMemory.structures) || card.coreMemory.structures.length < 3) errors.push(card.id + ': expected at least three core structures.');
   if (!Array.isArray(card.coreMemory.commonErrors) || card.coreMemory.commonErrors.length < 2) errors.push(card.id + ': expected at least two concrete error corrections.');
   if (card.synonyms.length < 1 || card.antonyms.length < 1) errors.push(card.id + ': missing semantic contrast.');
-  if (card.reviewed) {
+  if (card.detailLevel === 'template-curated' || card.detailLevel === 'template-reference') {
     if (card.contextPhrases.length < 4) errors.push(card.id + ': reviewed card needs at least four real context categories.');
     if (card.contextPhrases.reduce((sum, group) => sum + group.items.length, 0) < 12) errors.push(card.id + ': reviewed card needs at least twelve curated context phrases.');
     if (card.fixedPhrases.length < 8) errors.push(card.id + ': reviewed card needs at least eight fixed phrases with real examples.');
@@ -178,6 +199,7 @@ for (const card of allCards.cards) {
   if (card.derivatives.some((item) => item.word.toLowerCase() === card.word.toLowerCase())) errors.push(card.id + ': target word repeated as a derivative.');
   if (card.confusables.some((item) => item.word.toLowerCase() === card.word.toLowerCase())) errors.push(card.id + ': target word repeated as a confusable.');
   if ([...card.synonyms, ...card.antonyms, ...card.derivatives, ...card.confusables].some((item) => !item.partOfSpeech || /^(word|word family)$/i.test(item.partOfSpeech))) errors.push(card.id + ': relation word has an unknown or invented part of speech.');
+  if ([...card.synonyms, ...card.antonyms, ...card.derivatives].some((item) => !item.chinese || /与“.+”意义(接近|相反)/.test(item.chinese))) errors.push(card.id + ': relation or derivative needs an actual Chinese meaning, not a relationship placeholder.');
   if (card.coreMemory.commonErrors.some((item) => !item.wrong || !item.right || item.wrong === item.right)) errors.push(card.id + ': invalid error correction pair.');
   if (card.questions.length < 15) errors.push(card.id + ': expected at least fifteen questions sourced from the complete card.');
   if (new Set(card.questions.map((question) => question.id)).size !== card.questions.length) errors.push(card.id + ': duplicate question IDs.');
@@ -266,8 +288,8 @@ for (const item of manifest.dailyFiles) {
   scheduledIds.push(...daily.cards.map((card) => card.id));
 }
 
-if (scheduledIds.length !== 150 || new Set(scheduledIds).size !== 150) {
-  errors.push('The 30-day schedule must contain each card exactly once.');
+if (scheduledIds.length !== expectedCardCount || new Set(scheduledIds).size !== expectedCardCount) {
+  errors.push('The static schedule must contain each audited card exactly once.');
 }
 
 if (errors.length) {
@@ -277,5 +299,5 @@ if (errors.length) {
 
 const referenceCount = allCards.cards.filter((card) => card.detailLevel === 'template-reference').length;
 const curatedCount = allCards.cards.filter((card) => card.detailLevel === 'template-curated').length;
-const structuredCount = allCards.cards.filter((card) => card.detailLevel === 'template-structured').length;
-console.log('Content validation passed: all ' + allCards.cards.length + ' cards contain the ten required sections; ' + referenceCount + ' exactly matches the locked work reference, ' + curatedCount + ' are human-curated detailed, and ' + structuredCount + ' are explicitly labeled template-structured, 30 days, 5 unique cards per day.');
+const completeCount = allCards.cards.filter((card) => card.detailLevel === 'template-complete').length;
+console.log('Content validation passed: all ' + allCards.cards.length + ' cards are complete static cards in verb/noun/adjective/adverb/other and COCA-rank order; ' + referenceCount + ' locked reference, ' + curatedCount + ' curated detailed, ' + completeCount + ' template-complete, ' + manifest.dailyFiles.length + ' days, 5 unique cards per full day.');

@@ -99,6 +99,13 @@ export interface WordCard {
     frequency: number;
     partOfSpeech: string;
   }>;
+  learningPriority: {
+    sequence: number;
+    group: 'verb' | 'noun' | 'adjective' | 'adverb' | 'other';
+    groupLabel: string;
+    groupOrder: number;
+    primaryCocaRank: number;
+  };
   cocaRankLabel?: string;
   phonetic: string;
   syllables: string;
@@ -188,7 +195,7 @@ export interface WordCard {
   };
   questions: CardQuestion[];
   reviewStages: Record<ReviewStage, QuestionType[]>;
-  detailLevel: 'template-reference' | 'template-curated' | 'template-structured';
+  detailLevel: 'template-reference' | 'template-curated' | 'template-complete';
   templateVersion: string;
   contentVersion: string;
   reviewed: boolean;

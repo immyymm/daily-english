@@ -17,6 +17,13 @@
     }
   ],
   "cocaRankLabel": "adv. 第 352 名；d 第 838 名",
+  "learningPriority": {
+    "sequence": 137,
+    "group": "adverb",
+    "groupLabel": "副词",
+    "groupOrder": 4,
+    "primaryCocaRank": 352
+  },
   "phonetic": "/ɪˈnʌf/",
   "syllables": "enough（约 2 音节）",
   "partOfSpeech": "adv. / adj.",
@@ -24,7 +31,7 @@
   "difficulty": "应用",
   "tags": [
     "adv.",
-    "模板结构版",
+    "完整词卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -70,8 +77,8 @@
         "note": "较长形容词通常用 more 构成比较级，不重复加 -er。"
       }
     ],
-    "directSynonym": "sufficient /səˈfɪʃənt/（与“足够地”意义接近）",
-    "directAntonym": "insufficient /ˌɪnsəˈfɪʃənt/（与“足够地”意义相反）",
+    "directSynonym": "sufficient /səˈfɪʃənt/（充分的；足够的）",
+    "directAntonym": "insufficient /ˌɪnsəˈfɪʃənt/（不够的；不能胜任的；不充足的）",
     "derivatives": "本词暂无需额外强记的高频派生词",
     "example": "Five focused minutes can be enough.",
     "exampleChinese": "专注的五分钟也可能足够。"
@@ -202,8 +209,8 @@
     {
       "word": "sufficient",
       "phonetic": "/səˈfɪʃənt/",
-      "partOfSpeech": "adv. / adj.",
-      "chinese": "与“足够地”意义接近",
+      "partOfSpeech": "adj.",
+      "chinese": "充分的；足够的",
       "difference": "enough 是本卡核心搭配 “good enough” 中的中性常用选择；sufficient 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -211,8 +218,8 @@
     {
       "word": "insufficient",
       "phonetic": "/ˌɪnsəˈfɪʃənt/",
-      "partOfSpeech": "adv. / adj.",
-      "chinese": "与“足够地”意义相反",
+      "partOfSpeech": "adj.",
+      "chinese": "不够的；不能胜任的；不充足的",
       "usage": "在本卡核心义下与 enough 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
@@ -233,14 +240,14 @@
         {
           "word": "sufficient",
           "phonetic": "/səˈfɪʃənt/",
-          "partOfSpeech": "adv. / adj.",
-          "chinese": "与“足够地”意义接近"
+          "partOfSpeech": "adj.",
+          "chinese": "充分的；足够的"
         },
         {
           "word": "insufficient",
           "phonetic": "/ˌɪnsəˈfɪʃənt/",
-          "partOfSpeech": "adv. / adj.",
-          "chinese": "与“足够地”意义相反"
+          "partOfSpeech": "adj.",
+          "chinese": "不够的；不能胜任的；不充足的"
         }
       ]
     }
@@ -294,9 +301,9 @@
       "type": "meaning_choice",
       "prompt": "“enough”最核心的中文含义是？",
       "options": [
-        "继续",
-        "足够地；足够的",
-        "故事；报道"
+        "似乎；看起来",
+        "解释；说明",
+        "足够地；足够的"
       ],
       "answer": "足够地；足够的",
       "stage": "T0",
@@ -307,9 +314,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “enough”？",
       "options": [
+        "to make something clear",
         "as much as is needed",
-        "an account of events",
-        "to keep doing something without stopping"
+        "to appear to be true"
       ],
       "answer": "as much as is needed",
       "stage": "T0",
@@ -320,10 +327,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“足够好”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "enough time",
         "old enough to",
         "not enough",
-        "good enough"
+        "good enough",
+        "enough time"
       ],
       "answer": "good enough",
       "stage": "T1",
@@ -334,10 +341,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “enough” 最直接近义词？",
       "options": [
-        "too",
-        "story",
+        "seem",
         "sufficient",
-        "insufficient"
+        "insufficient",
+        "too"
       ],
       "answer": "sufficient",
       "stage": "T2",
@@ -348,10 +355,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “enough” 最直接反义词？",
       "options": [
-        "story",
         "insufficient",
         "sufficient",
-        "too"
+        "too",
+        "seem"
       ],
       "answer": "insufficient",
       "stage": "T2",
@@ -362,10 +369,10 @@
       "type": "meaning_choice",
       "prompt": "根据本词卡辨析，哪个词被列为 “enough” 的易混词？",
       "options": [
-        "too",
         "sufficient",
         "insufficient",
-        "story"
+        "seem",
+        "too"
       ],
       "answer": "too",
       "stage": "T3",
@@ -400,10 +407,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“足够时间”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "not enough",
         "enough time",
         "good enough",
-        "old enough to"
+        "old enough to",
+        "not enough"
       ],
       "answer": "enough time",
       "stage": "T1",
@@ -414,10 +421,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Five focused _____ can be enough.（中文：专注的五分钟也可能足够。）",
       "options": [
-        "minutes",
-        "using",
-        "reading",
-        "useful"
+        "difficult",
+        "phrase",
+        "problem",
+        "minutes"
       ],
       "answer": "minutes",
       "stage": "T2",
@@ -426,12 +433,12 @@
     {
       "id": "enough-adv-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“足够好”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "搭配辨析：哪一项既表示“足够好”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "enough time",
         "old enough to",
         "not enough",
-        "good enough"
+        "good enough",
+        "enough time"
       ],
       "answer": "good enough",
       "stage": "T2",
@@ -440,12 +447,12 @@
     {
       "id": "enough-adv-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“足够时间”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "用法辨析：哪一项既表示“足够时间”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "old enough to",
         "not enough",
         "enough time",
-        "good enough"
+        "good enough",
+        "old enough to"
       ],
       "answer": "enough time",
       "stage": "T3",
@@ -536,9 +543,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

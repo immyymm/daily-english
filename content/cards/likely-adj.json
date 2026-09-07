@@ -17,15 +17,22 @@
     }
   ],
   "cocaRankLabel": "adj. 第 651 名；adv. 第 2108 名",
+  "learningPriority": {
+    "sequence": 117,
+    "group": "adjective",
+    "groupLabel": "形容词",
+    "groupOrder": 3,
+    "primaryCocaRank": 651
+  },
   "phonetic": "/ˈlaɪkli/",
   "syllables": "like·ly",
   "partOfSpeech": "adj. / adv.",
   "frequencyBand": "COCA 高频精选 · adj. 第 651 名；adv. 第 2108 名",
-  "difficulty": "基础",
+  "difficulty": "应用",
   "tags": [
     "adj.",
-    "人工精校",
-    "高频表达"
+    "完整词卡",
+    "主动词汇"
   ],
   "coreMemory": {
     "chinese": "可能的；很可能",
@@ -511,9 +518,9 @@
       "type": "meaning_choice",
       "prompt": "“likely”最核心的中文含义是？",
       "options": [
+        "改变；变化",
         "可能的；很可能",
-        "提供；提议",
-        "保护"
+        "已经"
       ],
       "answer": "可能的；很可能",
       "stage": "T0",
@@ -524,9 +531,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “likely”？",
       "options": [
-        "to say that you are willing to give something",
-        "to keep someone or something safe",
-        "expected to happen or probably true"
+        "expected to happen or probably true",
+        "before now or earlier than expected",
+        "to become or make something different"
       ],
       "answer": "expected to happen or probably true",
       "stage": "T0",
@@ -537,10 +544,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“很可能做某事”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
       "options": [
-        "it is likely that + clause",
         "more or less likely",
         "the most likely explanation",
-        "be likely to do something"
+        "be likely to do something",
+        "it is likely that + clause"
       ],
       "answer": "be likely to do something",
       "stage": "T1",
@@ -551,10 +558,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “likely” 最直接近义词？",
       "options": [
-        "like",
-        "offer",
+        "already",
         "probable",
-        "unlikely"
+        "unlikely",
+        "like"
       ],
       "answer": "probable",
       "stage": "T2",
@@ -565,10 +572,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “likely” 最直接反义词？",
       "options": [
-        "offer",
         "unlikely",
         "probable",
-        "like"
+        "like",
+        "already"
       ],
       "answer": "unlikely",
       "stage": "T2",
@@ -579,10 +586,10 @@
       "type": "meaning_choice",
       "prompt": "根据本词卡辨析，哪个词被列为 “likely” 的易混词？",
       "options": [
-        "like",
         "probable",
         "unlikely",
-        "offer"
+        "already",
+        "like"
       ],
       "answer": "like",
       "stage": "T3",
@@ -617,10 +624,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“很可能……”，又符合这个形式线索：使用形式主语 it，后面接 that 完整从句？",
       "options": [
-        "the most likely explanation",
         "it is likely that + clause",
         "be likely to do something",
-        "more or less likely"
+        "more or less likely",
+        "the most likely explanation"
       ],
       "answer": "it is likely that + clause",
       "stage": "T1",
@@ -631,10 +638,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：It is likely to _____ this afternoon.（中文：今天下午很可能会下雨。）",
       "options": [
-        "rain",
-        "help",
-        "account",
-        "useful"
+        "completed",
+        "whole",
+        "used",
+        "rain"
       ],
       "answer": "rain",
       "stage": "T2",
@@ -643,12 +650,12 @@
     {
       "id": "likely-adj-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“很可能会”，又符合这个形式线索：使用 be + likely + to + 动词原式，不加 more 或 less 构成比较？",
+      "prompt": "搭配辨析：哪一项既表示“很可能会”，又符合这个形式线索：使用 be + likely + to + 动词原式，不加 more 或 less 构成比较？",
       "options": [
-        "it is likely that",
         "more likely to",
         "less likely to",
-        "be likely to"
+        "be likely to",
+        "it is likely that"
       ],
       "answer": "be likely to",
       "stage": "T2",
@@ -657,12 +664,12 @@
     {
       "id": "likely-adj-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“很可能……”，又符合这个形式线索：使用形式主语 it，后面接 that 完整从句？",
+      "prompt": "用法辨析：哪一项既表示“很可能……”，又符合这个形式线索：使用形式主语 it，后面接 that 完整从句？",
       "options": [
-        "more likely to",
         "less likely to",
         "it is likely that",
-        "be likely to"
+        "be likely to",
+        "more likely to"
       ],
       "answer": "it is likely that",
       "stage": "T3",
@@ -755,7 +762,7 @@
   },
   "detailLevel": "template-curated",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": true,
-  "sourceNote": "从用户提供的 COCA 词表筛选；本卡依照用户词卡模板人工精校；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

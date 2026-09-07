@@ -11,6 +11,13 @@
     }
   ],
   "cocaRankLabel": "v. 第 599 名",
+  "learningPriority": {
+    "sequence": 34,
+    "group": "verb",
+    "groupLabel": "动词",
+    "groupOrder": 1,
+    "primaryCocaRank": 599
+  },
   "phonetic": "/ˈriːəlaɪz/",
   "syllables": "realize（约 2 音节）",
   "partOfSpeech": "v.",
@@ -18,7 +25,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "模板结构版",
+    "完整词卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -64,9 +71,9 @@
         "note": "不定式 to 后接动词原形；不要把不定式和 -ing 形式混合。"
       }
     ],
-    "directSynonym": "recognize /ˈrɛkəˌɡnaɪz/（与“意识到”意义接近）",
-    "directAntonym": "overlook /ˈoʊvɚˌlʊk/（与“意识到”意义相反）",
-    "derivatives": "本词暂无需额外强记的高频派生词",
+    "directSynonym": "recognize /ˈrɛkəˌɡnaɪz/（认出；认可；承认；公认）",
+    "directAntonym": "overlook /ˈoʊvɚˌlʊk/（俯瞰；远眺；没注意到；眺望）",
+    "derivatives": "realization",
     "example": "I realized that I had used the wrong word.",
     "exampleChinese": "我意识到自己用错了词。"
   },
@@ -175,7 +182,7 @@
       "word": "recognize",
       "phonetic": "/ˈrɛkəˌɡnaɪz/",
       "partOfSpeech": "v.",
-      "chinese": "与“意识到”意义接近",
+      "chinese": "认出；认可；承认；公认",
       "difference": "realize 是本卡核心搭配 “realize that” 中的中性常用选择；recognize 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -183,12 +190,20 @@
     {
       "word": "overlook",
       "phonetic": "/ˈoʊvɚˌlʊk/",
-      "partOfSpeech": "v.",
-      "chinese": "与“意识到”意义相反",
+      "partOfSpeech": "v. / n.",
+      "chinese": "俯瞰；远眺；没注意到；眺望",
       "usage": "在本卡核心义下与 realize 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
-  "derivatives": [],
+  "derivatives": [
+    {
+      "word": "realization",
+      "phonetic": "/ˈriːləˈzeɪʃən/",
+      "partOfSpeech": "n.",
+      "chinese": "实现；领悟；实得",
+      "note": "这是 realize 的常用词族成员；请按上方词性放到句子的正确位置。"
+    }
+  ],
   "confusables": [],
   "relatedVocabulary": [
     {
@@ -198,13 +213,24 @@
           "word": "recognize",
           "phonetic": "/ˈrɛkəˌɡnaɪz/",
           "partOfSpeech": "v.",
-          "chinese": "与“意识到”意义接近"
+          "chinese": "认出；认可；承认；公认"
         },
         {
           "word": "overlook",
           "phonetic": "/ˈoʊvɚˌlʊk/",
-          "partOfSpeech": "v.",
-          "chinese": "与“意识到”意义相反"
+          "partOfSpeech": "v. / n.",
+          "chinese": "俯瞰；远眺；没注意到；眺望"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "realization",
+          "phonetic": "/ˈriːləˈzeɪʃən/",
+          "partOfSpeech": "n.",
+          "chinese": "实现；领悟；实得"
         }
       ]
     }
@@ -258,9 +284,9 @@
       "type": "meaning_choice",
       "prompt": "“realize”最核心的中文含义是？",
       "options": [
-        "负责的；有责任的",
         "意识到；实现",
-        "关系"
+        "鼓励；促进",
+        "水平；级别"
       ],
       "answer": "意识到；实现",
       "stage": "T0",
@@ -271,9 +297,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “realize”？",
       "options": [
-        "to suddenly understand something clearly",
-        "the way people or things are connected",
-        "having a duty to deal with something"
+        "to give someone confidence or support",
+        "a position on a scale of amount or quality",
+        "to suddenly understand something clearly"
       ],
       "answer": "to suddenly understand something clearly",
       "stage": "T0",
@@ -300,8 +326,8 @@
       "options": [
         "recognize",
         "overlook",
-        "relationship",
-        "responsible"
+        "encourage",
+        "level"
       ],
       "answer": "recognize",
       "stage": "T2",
@@ -313,8 +339,8 @@
       "prompt": "哪个词是词卡中列出的 “realize” 最直接反义词？",
       "options": [
         "recognize",
-        "relationship",
-        "responsible",
+        "encourage",
+        "level",
         "overlook"
       ],
       "answer": "overlook",
@@ -324,14 +350,14 @@
     {
       "id": "realize-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “realize” 的相关近义词？",
+      "prompt": "根据本词卡辨析，哪个词被列为 “realize” 的派生词？",
       "options": [
-        "relationship",
-        "responsible",
-        "recognize",
-        "overlook"
+        "overlook",
+        "encourage",
+        "realization",
+        "recognize"
       ],
-      "answer": "recognize",
+      "answer": "realization",
       "stage": "T3",
       "ai": false
     },
@@ -378,10 +404,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：I realized that I had _____ the wrong word.（中文：我意识到自己用错了词。）",
       "options": [
-        "final",
-        "put",
+        "current",
+        "test",
         "used",
-        "any"
+        "speak"
       ],
       "answer": "used",
       "stage": "T2",
@@ -500,9 +526,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

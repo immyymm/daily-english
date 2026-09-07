@@ -11,14 +11,21 @@
     }
   ],
   "cocaRankLabel": "adv. 第 305 名",
+  "learningPriority": {
+    "sequence": 133,
+    "group": "adverb",
+    "groupLabel": "副词",
+    "groupOrder": 4,
+    "primaryCocaRank": 305
+  },
   "phonetic": "/haʊˈevər/",
   "syllables": "however（约 3 音节）",
   "partOfSpeech": "adv.",
   "frequencyBand": "COCA 高频精选 · adv. 第 305 名",
-  "difficulty": "进阶",
+  "difficulty": "应用",
   "tags": [
     "adv.",
-    "模板结构版",
+    "完整词卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -64,8 +71,8 @@
         "note": "however 本身已经是本卡要学的形式，不要再次机械添加 -ly。"
       }
     ],
-    "directSynonym": "nevertheless /ˌnɛvɚðəˈlɛs/（与“然而”意义接近）",
-    "directAntonym": "therefore /ˈðɛˌrfɔːr/（与“然而”意义相反）",
+    "directSynonym": "nevertheless /ˌnɛvɚðəˈlɛs/（然而；虽然如此）",
+    "directAntonym": "therefore /ˈðɛˌrfɔːr/（因此；所以）",
     "derivatives": "本词暂无需额外强记的高频派生词",
     "example": "The task is short; however, it requires focus.",
     "exampleChinese": "任务很短，不过需要专注。"
@@ -189,8 +196,8 @@
     {
       "word": "nevertheless",
       "phonetic": "/ˌnɛvɚðəˈlɛs/",
-      "partOfSpeech": "adv.",
-      "chinese": "与“然而”意义接近",
+      "partOfSpeech": "adv. / conj.",
+      "chinese": "然而；虽然如此",
       "difference": "however 是本卡核心搭配 “however difficult” 中的中性常用选择；nevertheless 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -199,7 +206,7 @@
       "word": "therefore",
       "phonetic": "/ˈðɛˌrfɔːr/",
       "partOfSpeech": "adv.",
-      "chinese": "与“然而”意义相反",
+      "chinese": "因此；所以",
       "usage": "在本卡核心义下与 however 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
@@ -212,14 +219,14 @@
         {
           "word": "nevertheless",
           "phonetic": "/ˌnɛvɚðəˈlɛs/",
-          "partOfSpeech": "adv.",
-          "chinese": "与“然而”意义接近"
+          "partOfSpeech": "adv. / conj.",
+          "chinese": "然而；虽然如此"
         },
         {
           "word": "therefore",
           "phonetic": "/ˈðɛˌrfɔːr/",
           "partOfSpeech": "adv.",
-          "chinese": "与“然而”意义相反"
+          "chinese": "因此；所以"
         }
       ]
     }
@@ -273,9 +280,9 @@
       "type": "meaning_choice",
       "prompt": "“however”最核心的中文含义是？",
       "options": [
-        "学习；得知",
-        "益处；使受益",
-        "然而；不过"
+        "然而；不过",
+        "直接地；径直",
+        "建议；表明"
       ],
       "answer": "然而；不过",
       "stage": "T0",
@@ -286,9 +293,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “however”？",
       "options": [
-        "an advantage or helpful effect",
-        "used to introduce a contrast",
-        "to gain knowledge or a skill"
+        "without anything in between",
+        "to offer an idea for someone to consider",
+        "used to introduce a contrast"
       ],
       "answer": "used to introduce a contrast",
       "stage": "T0",
@@ -299,10 +306,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“然而，结果……”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "however, the result",
-        "however difficult",
         "however much",
-        "however long it takes"
+        "however long it takes",
+        "however, the result",
+        "however difficult"
       ],
       "answer": "however, the result",
       "stage": "T1",
@@ -313,10 +320,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “however” 最直接近义词？",
       "options": [
+        "suggest",
+        "nevertheless",
         "therefore",
-        "learn",
-        "benefit",
-        "nevertheless"
+        "directly"
       ],
       "answer": "nevertheless",
       "stage": "T2",
@@ -327,10 +334,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “however” 最直接反义词？",
       "options": [
-        "learn",
-        "benefit",
         "therefore",
-        "nevertheless"
+        "nevertheless",
+        "directly",
+        "suggest"
       ],
       "answer": "therefore",
       "stage": "T2",
@@ -341,10 +348,10 @@
       "type": "meaning_choice",
       "prompt": "根据本词卡辨析，哪个词被列为 “however” 的相关近义词？",
       "options": [
-        "benefit",
-        "nevertheless",
         "therefore",
-        "learn"
+        "directly",
+        "suggest",
+        "nevertheless"
       ],
       "answer": "nevertheless",
       "stage": "T3",
@@ -379,10 +386,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“无论多困难”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "however much",
-        "however long it takes",
         "however difficult",
-        "however, the result"
+        "however, the result",
+        "however much",
+        "however long it takes"
       ],
       "answer": "however difficult",
       "stage": "T1",
@@ -393,10 +400,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：The task is short; however, it _____ focus.（中文：任务很短，不过需要专注。）",
       "options": [
-        "habit",
-        "requires",
-        "faster",
-        "regular"
+        "question",
+        "reviewing",
+        "idea",
+        "requires"
       ],
       "answer": "requires",
       "stage": "T2",
@@ -407,10 +414,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“然而，结果……”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "however, the result",
-        "however difficult",
         "however much",
-        "however long it takes"
+        "however long it takes",
+        "however, the result",
+        "however difficult"
       ],
       "answer": "however, the result",
       "stage": "T2",
@@ -421,10 +428,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“无论多困难”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "however, the result",
-        "however much",
         "however long it takes",
-        "however difficult"
+        "however difficult",
+        "however, the result",
+        "however much"
       ],
       "answer": "however difficult",
       "stage": "T3",
@@ -515,9 +522,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

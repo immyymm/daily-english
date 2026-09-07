@@ -11,6 +11,13 @@
     }
   ],
   "cocaRankLabel": "n. 第 336 名",
+  "learningPriority": {
+    "sequence": 75,
+    "group": "noun",
+    "groupLabel": "名词",
+    "groupOrder": 2,
+    "primaryCocaRank": 336
+  },
   "phonetic": "/ˈriːzən/",
   "syllables": "reason（约 2 音节）",
   "partOfSpeech": "n. / v.",
@@ -18,7 +25,7 @@
   "difficulty": "进阶",
   "tags": [
     "n.",
-    "模板结构版",
+    "完整词卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -64,9 +71,9 @@
         "note": "不要只按中文逐字替换；优先把本卡高频搭配作为完整句块记忆。"
       }
     ],
-    "directSynonym": "cause /ˈkɑz/（与“原因”意义接近）",
+    "directSynonym": "cause /ˈkɑz/（原因；目标；引起；使产生）",
     "directAntonym": "result /rɪˈzʌlt/（结果）",
-    "derivatives": "本词暂无需额外强记的高频派生词",
+    "derivatives": "reasonable · unreasonable",
     "example": "What is the main reason for your choice?",
     "exampleChinese": "你做出这个选择的主要原因是什么？"
   },
@@ -181,8 +188,8 @@
     {
       "word": "cause",
       "phonetic": "/ˈkɑz/",
-      "partOfSpeech": "n. / v.",
-      "chinese": "与“原因”意义接近",
+      "partOfSpeech": "v. / n.",
+      "chinese": "原因；目标；引起；使产生",
       "difference": "reason 是本卡核心搭配 “the reason for” 中的中性常用选择；cause 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -190,12 +197,27 @@
     {
       "word": "result",
       "phonetic": "/rɪˈzʌlt/",
-      "partOfSpeech": "n. / v.",
+      "partOfSpeech": "v. / n.",
       "chinese": "结果",
       "usage": "在本卡核心义下与 reason 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
-  "derivatives": [],
+  "derivatives": [
+    {
+      "word": "reasonable",
+      "phonetic": "/ˈriːzənəbəl/",
+      "partOfSpeech": "adj.",
+      "chinese": "合理的；明理的；适当的",
+      "note": "这是 reason 的常用词族成员；请按上方词性放到句子的正确位置。"
+    },
+    {
+      "word": "unreasonable",
+      "phonetic": "/əˈnriːznəbəl/",
+      "partOfSpeech": "adj.",
+      "chinese": "不合理的；过度的；不切实际的",
+      "note": "这是 reason 的常用词族成员；请按上方词性放到句子的正确位置。"
+    }
+  ],
   "confusables": [],
   "relatedVocabulary": [
     {
@@ -204,14 +226,31 @@
         {
           "word": "cause",
           "phonetic": "/ˈkɑz/",
-          "partOfSpeech": "n. / v.",
-          "chinese": "与“原因”意义接近"
+          "partOfSpeech": "v. / n.",
+          "chinese": "原因；目标；引起；使产生"
         },
         {
           "word": "result",
           "phonetic": "/rɪˈzʌlt/",
           "partOfSpeech": "n. / v.",
           "chinese": "结果"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "reasonable",
+          "phonetic": "/ˈriːzənəbəl/",
+          "partOfSpeech": "adj.",
+          "chinese": "合理的；明理的；适当的"
+        },
+        {
+          "word": "unreasonable",
+          "phonetic": "/əˈnriːznəbəl/",
+          "partOfSpeech": "adj.",
+          "chinese": "不合理的；过度的；不切实际的"
         }
       ]
     }
@@ -265,9 +304,9 @@
       "type": "meaning_choice",
       "prompt": "“reason”最核心的中文含义是？",
       "options": [
-        "选择",
-        "有用的",
-        "原因；推理"
+        "困难的",
+        "原因；推理",
+        "注意力；关注"
       ],
       "answer": "原因；推理",
       "stage": "T0",
@@ -278,9 +317,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “reason”？",
       "options": [
-        "helpful for doing or achieving something",
         "a cause or explanation for something",
-        "an act or possibility of choosing"
+        "the act of carefully noticing something",
+        "not easy to do or understand"
       ],
       "answer": "a cause or explanation for something",
       "stage": "T0",
@@ -291,10 +330,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“……的原因”，又符合这个形式线索：完整搭配中使用介词 for？",
       "options": [
-        "main reason",
-        "for some reason",
         "the reason for",
-        "reason why"
+        "reason why",
+        "main reason",
+        "for some reason"
       ],
       "answer": "the reason for",
       "stage": "T1",
@@ -305,10 +344,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “reason” 最直接近义词？",
       "options": [
-        "useful",
-        "cause",
         "result",
-        "choice"
+        "attention",
+        "difficult",
+        "cause"
       ],
       "answer": "cause",
       "stage": "T2",
@@ -319,10 +358,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “reason” 最直接反义词？",
       "options": [
+        "attention",
+        "difficult",
         "result",
-        "cause",
-        "choice",
-        "useful"
+        "cause"
       ],
       "answer": "result",
       "stage": "T2",
@@ -331,14 +370,14 @@
     {
       "id": "reason-n-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “reason” 的相关近义词？",
+      "prompt": "根据本词卡辨析，哪个词被列为 “reason” 的派生词？",
       "options": [
-        "result",
-        "choice",
-        "useful",
-        "cause"
+        "attention",
+        "reasonable",
+        "cause",
+        "result"
       ],
-      "answer": "cause",
+      "answer": "reasonable",
       "stage": "T3",
       "ai": false
     },
@@ -371,10 +410,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“……的理由”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "reason why",
-        "the reason for",
         "main reason",
-        "for some reason"
+        "for some reason",
+        "reason why",
+        "the reason for"
       ],
       "answer": "reason why",
       "stage": "T1",
@@ -385,10 +424,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：What is the main reason for your _____?（中文：你做出这个选择的主要原因是什么？）",
       "options": [
-        "depends",
-        "polite",
-        "minutes",
-        "choice"
+        "put",
+        "choice",
+        "preposition",
+        "pronounce"
       ],
       "answer": "choice",
       "stage": "T2",
@@ -399,10 +438,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“……的原因”，又符合这个形式线索：完整搭配中使用介词 for？",
       "options": [
-        "main reason",
-        "for some reason",
         "the reason for",
-        "reason why"
+        "reason why",
+        "main reason",
+        "for some reason"
       ],
       "answer": "the reason for",
       "stage": "T2",
@@ -413,10 +452,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“……的理由”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "for some reason",
-        "reason why",
         "the reason for",
-        "main reason"
+        "main reason",
+        "for some reason",
+        "reason why"
       ],
       "answer": "reason why",
       "stage": "T3",
@@ -507,9 +546,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

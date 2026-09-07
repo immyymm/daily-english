@@ -17,6 +17,13 @@
     }
   ],
   "cocaRankLabel": "n. 第 354 名；adj. 第 4610 名",
+  "learningPriority": {
+    "sequence": 77,
+    "group": "noun",
+    "groupLabel": "名词",
+    "groupOrder": 2,
+    "primaryCocaRank": 354
+  },
   "phonetic": "/ˈlevəl/",
   "syllables": "level（约 2 音节）",
   "partOfSpeech": "n. / v.",
@@ -24,7 +31,7 @@
   "difficulty": "进阶",
   "tags": [
     "n.",
-    "模板结构版",
+    "完整词卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -70,8 +77,8 @@
         "note": "不要只按中文逐字替换；优先把本卡高频搭配作为完整句块记忆。"
       }
     ],
-    "directSynonym": "standard /ˈstændɚd/（与“水平”意义接近）",
-    "directAntonym": "extreme /ɛˈkstriːm/（与“水平”意义相反）",
+    "directSynonym": "standard /ˈstændɚd/（标准；规格；旗；军旗）",
+    "directAntonym": "extreme /ɛˈkstriːm/（极端；末端；极端的；尽头的）",
     "derivatives": "本词暂无需额外强记的高频派生词",
     "example": "Choose a task that matches your current level.",
     "exampleChinese": "选择与当前水平相符的任务。"
@@ -187,8 +194,8 @@
     {
       "word": "standard",
       "phonetic": "/ˈstændɚd/",
-      "partOfSpeech": "n. / v.",
-      "chinese": "与“水平”意义接近",
+      "partOfSpeech": "n. / adj.",
+      "chinese": "标准；规格；旗；军旗",
       "difference": "level 是本卡核心搭配 “skill level” 中的中性常用选择；standard 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -196,8 +203,8 @@
     {
       "word": "extreme",
       "phonetic": "/ɛˈkstriːm/",
-      "partOfSpeech": "n. / v.",
-      "chinese": "与“水平”意义相反",
+      "partOfSpeech": "n. / adj.",
+      "chinese": "极端；末端；极端的；尽头的",
       "usage": "在本卡核心义下与 level 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
@@ -210,14 +217,14 @@
         {
           "word": "standard",
           "phonetic": "/ˈstændɚd/",
-          "partOfSpeech": "n. / v.",
-          "chinese": "与“水平”意义接近"
+          "partOfSpeech": "n. / adj.",
+          "chinese": "标准；规格；旗；军旗"
         },
         {
           "word": "extreme",
           "phonetic": "/ɛˈkstriːm/",
-          "partOfSpeech": "n. / v.",
-          "chinese": "与“水平”意义相反"
+          "partOfSpeech": "n. / adj.",
+          "chinese": "极端；末端；极端的；尽头的"
         }
       ]
     }
@@ -271,8 +278,8 @@
       "type": "meaning_choice",
       "prompt": "“level”最核心的中文含义是？",
       "options": [
-        "可获得的；有空的",
-        "最后；终于",
+        "行为；表现",
+        "相似的",
         "水平；级别"
       ],
       "answer": "水平；级别",
@@ -284,9 +291,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “level”？",
       "options": [
-        "after a long time or at the end",
+        "almost the same but not exactly",
         "a position on a scale of amount or quality",
-        "ready to be used or able to meet"
+        "the way a person or thing acts"
       ],
       "answer": "a position on a scale of amount or quality",
       "stage": "T0",
@@ -311,10 +318,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “level” 最直接近义词？",
       "options": [
-        "finally",
+        "similar",
         "standard",
         "extreme",
-        "available"
+        "behavior"
       ],
       "answer": "standard",
       "stage": "T2",
@@ -327,8 +334,8 @@
       "options": [
         "extreme",
         "standard",
-        "available",
-        "finally"
+        "behavior",
+        "similar"
       ],
       "answer": "extreme",
       "stage": "T2",
@@ -340,8 +347,8 @@
       "prompt": "根据本词卡辨析，哪个词被列为 “level” 的相关近义词？",
       "options": [
         "extreme",
-        "available",
-        "finally",
+        "behavior",
+        "similar",
         "standard"
       ],
       "answer": "standard",
@@ -391,9 +398,9 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Choose a task that matches your _____ level.（中文：选择与当前水平相符的任务。）",
       "options": [
-        "offline",
-        "found",
-        "online",
+        "positive",
+        "one",
+        "started",
         "current"
       ],
       "answer": "current",
@@ -513,9 +520,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

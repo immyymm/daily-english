@@ -10,7 +10,7 @@ describe('daily card selection', () => {
     expect(cardsForStudyDay(cards, 30)).toHaveLength(5);
   });
 
-  it('starts a reinforcement cycle after day 30', () => {
-    expect(cardsForStudyDay(cards, 31).map((card) => card.id)).toEqual(['card-0', 'card-1', 'card-2', 'card-3', 'card-4']);
+  it('does not silently loop back to old new-word cards after the catalog ends', () => {
+    expect(cardsForStudyDay(cards, 31)).toEqual([]);
   });
 });

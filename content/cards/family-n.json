@@ -11,14 +11,21 @@
     }
   ],
   "cocaRankLabel": "n. 第 171 名",
+  "learningPriority": {
+    "sequence": 56,
+    "group": "noun",
+    "groupLabel": "名词",
+    "groupOrder": 2,
+    "primaryCocaRank": 171
+  },
   "phonetic": "/ˈfæməli/",
   "syllables": "family（约 3 音节）",
   "partOfSpeech": "n.",
   "frequencyBand": "COCA 高频精选 · n. 第 171 名",
-  "difficulty": "应用",
+  "difficulty": "进阶",
   "tags": [
     "n.",
-    "模板结构版",
+    "完整词卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -64,9 +71,9 @@
         "note": "不要只按中文逐字替换；优先把本卡高频搭配作为完整句块记忆。"
       }
     ],
-    "directSynonym": "household /ˈhaʊˌshoʊld/（与“家庭”意义接近）",
-    "directAntonym": "stranger /ˈstreɪndʒɚ/（与“家庭”意义相反）",
-    "derivatives": "本词暂无需额外强记的高频派生词",
+    "directSynonym": "household /ˈhaʊˌshoʊld/（一家人；家庭；家族；王室）",
+    "directAntonym": "stranger /ˈstreɪndʒɚ/（陌生人；门外汉）",
+    "derivatives": "familial",
     "example": "My family supports my learning plan.",
     "exampleChinese": "我的家人支持我的学习计划。"
   },
@@ -174,8 +181,8 @@
     {
       "word": "household",
       "phonetic": "/ˈhaʊˌshoʊld/",
-      "partOfSpeech": "n.",
-      "chinese": "与“家庭”意义接近",
+      "partOfSpeech": "n. / adj.",
+      "chinese": "一家人；家庭；家族；王室",
       "difference": "family 是本卡核心搭配 “family member” 中的中性常用选择；household 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -184,11 +191,19 @@
       "word": "stranger",
       "phonetic": "/ˈstreɪndʒɚ/",
       "partOfSpeech": "n.",
-      "chinese": "与“家庭”意义相反",
+      "chinese": "陌生人；门外汉",
       "usage": "在本卡核心义下与 family 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
-  "derivatives": [],
+  "derivatives": [
+    {
+      "word": "familial",
+      "phonetic": "/fəˈmɪljəl/",
+      "partOfSpeech": "adj.",
+      "chinese": "家族的；家庭的",
+      "note": "这是 family 的常用词族成员；请按上方词性放到句子的正确位置。"
+    }
+  ],
   "confusables": [
     {
       "word": "familiar",
@@ -205,14 +220,25 @@
         {
           "word": "household",
           "phonetic": "/ˈhaʊˌshoʊld/",
-          "partOfSpeech": "n.",
-          "chinese": "与“家庭”意义接近"
+          "partOfSpeech": "n. / adj.",
+          "chinese": "一家人；家庭；家族；王室"
         },
         {
           "word": "stranger",
           "phonetic": "/ˈstreɪndʒɚ/",
           "partOfSpeech": "n.",
-          "chinese": "与“家庭”意义相反"
+          "chinese": "陌生人；门外汉"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "familial",
+          "phonetic": "/fəˈmɪljəl/",
+          "partOfSpeech": "adj.",
+          "chinese": "家族的；家庭的"
         }
       ]
     }
@@ -266,9 +292,9 @@
       "type": "meaning_choice",
       "prompt": "“family”最核心的中文含义是？",
       "options": [
-        "家庭；家人",
-        "情况；局面",
-        "预期；期待"
+        "信息",
+        "技能；技巧",
+        "家庭；家人"
       ],
       "answer": "家庭；家人",
       "stage": "T0",
@@ -279,9 +305,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “family”？",
       "options": [
-        "the set of conditions at a particular time",
-        "to think that something will happen",
-        "a group of related people"
+        "an ability learned through practice",
+        "a group of related people",
+        "facts or details about something"
       ],
       "answer": "a group of related people",
       "stage": "T0",
@@ -292,10 +318,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“家庭成员”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "start a family",
-        "family member",
         "close family",
-        "family life"
+        "family life",
+        "start a family",
+        "family member"
       ],
       "answer": "family member",
       "stage": "T1",
@@ -306,10 +332,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “family” 最直接近义词？",
       "options": [
-        "household",
-        "stranger",
         "familiar",
-        "situation"
+        "information",
+        "household",
+        "stranger"
       ],
       "answer": "household",
       "stage": "T2",
@@ -320,10 +346,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “family” 最直接反义词？",
       "options": [
+        "information",
+        "stranger",
         "household",
-        "familiar",
-        "situation",
-        "stranger"
+        "familiar"
       ],
       "answer": "stranger",
       "stage": "T2",
@@ -334,10 +360,10 @@
       "type": "meaning_choice",
       "prompt": "根据本词卡辨析，哪个词被列为 “family” 的易混词？",
       "options": [
-        "stranger",
-        "situation",
         "familiar",
-        "household"
+        "household",
+        "stranger",
+        "information"
       ],
       "answer": "familiar",
       "stage": "T3",
@@ -372,10 +398,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“近亲”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "family member",
-        "family life",
         "start a family",
-        "close family"
+        "close family",
+        "family member",
+        "family life"
       ],
       "answer": "close family",
       "stage": "T1",
@@ -386,10 +412,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：My family _____ my learning plan.（中文：我的家人支持我的学习计划。）",
       "options": [
-        "results",
-        "account",
         "supports",
-        "depends"
+        "travelers",
+        "practice",
+        "way"
       ],
       "answer": "supports",
       "stage": "T2",
@@ -400,10 +426,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“家庭成员”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "start a family",
-        "family member",
         "close family",
-        "family life"
+        "family life",
+        "start a family",
+        "family member"
       ],
       "answer": "family member",
       "stage": "T2",
@@ -414,10 +440,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“近亲”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "close family",
-        "family member",
         "family life",
-        "start a family"
+        "start a family",
+        "close family",
+        "family member"
       ],
       "answer": "close family",
       "stage": "T3",
@@ -508,9 +534,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

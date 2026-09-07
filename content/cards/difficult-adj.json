@@ -11,14 +11,21 @@
     }
   ],
   "cocaRankLabel": "adj. 第 711 名",
+  "learningPriority": {
+    "sequence": 118,
+    "group": "adjective",
+    "groupLabel": "形容词",
+    "groupOrder": 3,
+    "primaryCocaRank": 711
+  },
   "phonetic": "/ˈdɪfɪkəlt/",
   "syllables": "dif·fi·cult",
   "partOfSpeech": "adj.",
   "frequencyBand": "COCA 高频精选 · adj. 第 711 名",
-  "difficulty": "进阶",
+  "difficulty": "应用",
   "tags": [
     "adj.",
-    "模板结构版",
+    "完整词卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -64,9 +71,9 @@
         "note": "较长形容词通常用 more 构成比较级，不重复加 -er。"
       }
     ],
-    "directSynonym": "hard /ˈhɑrd/（与“困难的”意义接近）",
-    "directAntonym": "easy /ˈiːziː/（与“困难的”意义相反）",
-    "derivatives": "本词暂无需额外强记的高频派生词",
+    "directSynonym": "hard /ˈhɑrd/（坚硬的；硬的；难的；艰苦的）",
+    "directAntonym": "easy /ˈiːziː/（容易的；缓缓的；舒适的；从容的）",
+    "derivatives": "difficulty",
     "example": "I find this sound difficult to pronounce.",
     "exampleChinese": "我觉得这个音很难发。"
   },
@@ -174,8 +181,8 @@
     {
       "word": "hard",
       "phonetic": "/ˈhɑrd/",
-      "partOfSpeech": "adj.",
-      "chinese": "与“困难的”意义接近",
+      "partOfSpeech": "adj. / adv.",
+      "chinese": "坚硬的；硬的；难的；艰苦的",
       "difference": "difficult 是本卡核心搭配 “find something difficult” 中的中性常用选择；hard 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -183,12 +190,20 @@
     {
       "word": "easy",
       "phonetic": "/ˈiːziː/",
-      "partOfSpeech": "adj.",
-      "chinese": "与“困难的”意义相反",
+      "partOfSpeech": "adj. / adv.",
+      "chinese": "容易的；缓缓的；舒适的；从容的",
       "usage": "在本卡核心义下与 difficult 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
-  "derivatives": [],
+  "derivatives": [
+    {
+      "word": "difficulty",
+      "phonetic": "/ˈdɪfəkəltiː/",
+      "partOfSpeech": "n.",
+      "chinese": "困难；难点",
+      "note": "这是 difficult 的常用词族成员；请按上方词性放到句子的正确位置。"
+    }
+  ],
   "confusables": [],
   "relatedVocabulary": [
     {
@@ -197,14 +212,25 @@
         {
           "word": "hard",
           "phonetic": "/ˈhɑrd/",
-          "partOfSpeech": "adj.",
-          "chinese": "与“困难的”意义接近"
+          "partOfSpeech": "adj. / adv.",
+          "chinese": "坚硬的；硬的；难的；艰苦的"
         },
         {
           "word": "easy",
           "phonetic": "/ˈiːziː/",
-          "partOfSpeech": "adj.",
-          "chinese": "与“困难的”意义相反"
+          "partOfSpeech": "adj. / adv.",
+          "chinese": "容易的；缓缓的；舒适的；从容的"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "difficulty",
+          "phonetic": "/ˈdɪfəkəltiː/",
+          "partOfSpeech": "n.",
+          "chinese": "困难；难点"
         }
       ]
     }
@@ -258,9 +284,9 @@
       "type": "meaning_choice",
       "prompt": "“difficult”最核心的中文含义是？",
       "options": [
-        "阅读；读懂",
         "困难的",
-        "实际上；其实"
+        "一起；共同",
+        "创造；创建"
       ],
       "answer": "困难的",
       "stage": "T0",
@@ -271,9 +297,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “difficult”？",
       "options": [
-        "not easy to do or understand",
-        "used to state what is really true",
-        "to understand written words"
+        "with another person or thing",
+        "to make something new",
+        "not easy to do or understand"
       ],
       "answer": "not easy to do or understand",
       "stage": "T0",
@@ -284,10 +310,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“觉得某事困难”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
       "options": [
-        "difficult to understand",
-        "difficult for someone",
         "a difficult decision",
-        "find something difficult"
+        "find something difficult",
+        "difficult to understand",
+        "difficult for someone"
       ],
       "answer": "find something difficult",
       "stage": "T1",
@@ -298,10 +324,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “difficult” 最直接近义词？",
       "options": [
-        "actually",
-        "read",
         "hard",
-        "easy"
+        "easy",
+        "together",
+        "create"
       ],
       "answer": "hard",
       "stage": "T2",
@@ -312,10 +338,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “difficult” 最直接反义词？",
       "options": [
-        "read",
-        "easy",
         "hard",
-        "actually"
+        "together",
+        "create",
+        "easy"
       ],
       "answer": "easy",
       "stage": "T2",
@@ -324,14 +350,14 @@
     {
       "id": "difficult-adj-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “difficult” 的相关近义词？",
+      "prompt": "根据本词卡辨析，哪个词被列为 “difficult” 的派生词？",
       "options": [
-        "hard",
         "easy",
-        "actually",
-        "read"
+        "together",
+        "difficulty",
+        "hard"
       ],
-      "answer": "hard",
+      "answer": "difficulty",
       "stage": "T3",
       "ai": false
     },
@@ -364,10 +390,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“难以理解”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "a difficult decision",
-        "difficult to understand",
         "find something difficult",
-        "difficult for someone"
+        "difficult for someone",
+        "a difficult decision",
+        "difficult to understand"
       ],
       "answer": "difficult to understand",
       "stage": "T1",
@@ -378,10 +404,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：I find this sound difficult to _____.（中文：我觉得这个音很难发。）",
       "options": [
+        "meaningful",
+        "ideal",
         "pronounce",
-        "simple",
-        "example",
-        "speaking"
+        "used"
       ],
       "answer": "pronounce",
       "stage": "T2",
@@ -392,10 +418,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“觉得某事困难”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
       "options": [
-        "difficult to understand",
-        "difficult for someone",
         "a difficult decision",
-        "find something difficult"
+        "find something difficult",
+        "difficult to understand",
+        "difficult for someone"
       ],
       "answer": "find something difficult",
       "stage": "T2",
@@ -406,10 +432,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“难以理解”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "difficult for someone",
-        "a difficult decision",
         "difficult to understand",
-        "find something difficult"
+        "find something difficult",
+        "difficult for someone",
+        "a difficult decision"
       ],
       "answer": "difficult to understand",
       "stage": "T3",
@@ -500,9 +526,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

@@ -11,6 +11,13 @@
     }
   ],
   "cocaRankLabel": "v. 第 881 名",
+  "learningPriority": {
+    "sequence": 41,
+    "group": "verb",
+    "groupLabel": "动词",
+    "groupOrder": 1,
+    "primaryCocaRank": 881
+  },
   "phonetic": "/prɪˈper/",
   "syllables": "pre·pare",
   "partOfSpeech": "v.",
@@ -18,7 +25,7 @@
   "difficulty": "基础",
   "tags": [
     "v.",
-    "模板结构版",
+    "完整词卡",
     "高频表达"
   ],
   "coreMemory": {
@@ -65,8 +72,8 @@
       }
     ],
     "directSynonym": "ready /ˈrɛdiː/（准备好的）",
-    "directAntonym": "neglect /nəˈɡlɛkt/（与“准备”意义相反）",
-    "derivatives": "本词暂无需额外强记的高频派生词",
+    "directAntonym": "neglect /nəˈɡlɛkt/（疏忽；忽略；漏做；忽视）",
+    "derivatives": "preparation · prepared",
     "example": "She prepared for the interview by practicing aloud.",
     "exampleChinese": "她通过大声练习为面试做准备。"
   },
@@ -174,7 +181,7 @@
     {
       "word": "ready",
       "phonetic": "/ˈrɛdiː/",
-      "partOfSpeech": "v.",
+      "partOfSpeech": "v. / n. / adj. / adv.",
       "chinese": "准备好的",
       "difference": "prepare 是本卡核心搭配 “prepare for a test” 中的中性常用选择；ready 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
@@ -183,12 +190,27 @@
     {
       "word": "neglect",
       "phonetic": "/nəˈɡlɛkt/",
-      "partOfSpeech": "v.",
-      "chinese": "与“准备”意义相反",
+      "partOfSpeech": "v. / n.",
+      "chinese": "疏忽；忽略；漏做；忽视",
       "usage": "在本卡核心义下与 prepare 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
-  "derivatives": [],
+  "derivatives": [
+    {
+      "word": "preparation",
+      "phonetic": "/ˌprɛpɚˈeɪʃən/",
+      "partOfSpeech": "n.",
+      "chinese": "准备；预备；预习",
+      "note": "这是 prepare 的常用词族成员；请按上方词性放到句子的正确位置。"
+    },
+    {
+      "word": "prepared",
+      "phonetic": "/priːˈpɛrd/",
+      "partOfSpeech": "adj.",
+      "chinese": "准备好的；特制的",
+      "note": "这是 prepare 的常用词族成员；请按上方词性放到句子的正确位置。"
+    }
+  ],
   "confusables": [],
   "relatedVocabulary": [
     {
@@ -203,8 +225,25 @@
         {
           "word": "neglect",
           "phonetic": "/nəˈɡlɛkt/",
-          "partOfSpeech": "v.",
-          "chinese": "与“准备”意义相反"
+          "partOfSpeech": "v. / n.",
+          "chinese": "疏忽；忽略；漏做；忽视"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "preparation",
+          "phonetic": "/ˌprɛpɚˈeɪʃən/",
+          "partOfSpeech": "n.",
+          "chinese": "准备；预备；预习"
+        },
+        {
+          "word": "prepared",
+          "phonetic": "/priːˈpɛrd/",
+          "partOfSpeech": "adj.",
+          "chinese": "准备好的；特制的"
         }
       ]
     }
@@ -258,8 +297,8 @@
       "type": "meaning_choice",
       "prompt": "“prepare”最核心的中文含义是？",
       "options": [
-        "发现",
-        "进步；进展",
+        "问题；难题",
+        "关系",
         "准备"
       ],
       "answer": "准备",
@@ -271,9 +310,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “prepare”？",
       "options": [
-        "movement toward a better or more complete state",
+        "the way people or things are connected",
         "to make ready for something",
-        "to find something for the first time"
+        "a situation that needs a solution"
       ],
       "answer": "to make ready for something",
       "stage": "T0",
@@ -298,10 +337,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “prepare” 最直接近义词？",
       "options": [
-        "progress",
+        "relationship",
         "ready",
         "neglect",
-        "discover"
+        "problem"
       ],
       "answer": "ready",
       "stage": "T2",
@@ -314,8 +353,8 @@
       "options": [
         "neglect",
         "ready",
-        "discover",
-        "progress"
+        "problem",
+        "relationship"
       ],
       "answer": "neglect",
       "stage": "T2",
@@ -324,14 +363,14 @@
     {
       "id": "prepare-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “prepare” 的相关近义词？",
+      "prompt": "根据本词卡辨析，哪个词被列为 “prepare” 的派生词？",
       "options": [
+        "ready",
         "neglect",
-        "discover",
-        "progress",
-        "ready"
+        "problem",
+        "preparation"
       ],
-      "answer": "ready",
+      "answer": "preparation",
       "stage": "T3",
       "ai": false
     },
@@ -378,9 +417,9 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：She prepared for the _____ by practicing aloud.（中文：她通过大声练习为面试做准备。）",
       "options": [
-        "better",
-        "steady",
-        "polite",
+        "solved",
+        "any",
+        "abroad",
         "interview"
       ],
       "answer": "interview",
@@ -500,9 +539,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

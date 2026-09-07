@@ -11,6 +11,13 @@
     }
   ],
   "cocaRankLabel": "n. 第 342 名",
+  "learningPriority": {
+    "sequence": 76,
+    "group": "noun",
+    "groupLabel": "名词",
+    "groupOrder": 2,
+    "primaryCocaRank": 342
+  },
   "phonetic": "/kəˈmjuːnəti/",
   "syllables": "com·mu·ni·ty",
   "partOfSpeech": "n.",
@@ -18,7 +25,7 @@
   "difficulty": "进阶",
   "tags": [
     "n.",
-    "模板结构版",
+    "完整词卡",
     "主动词汇"
   ],
   "coreMemory": {
@@ -64,9 +71,9 @@
         "note": "不要只按中文逐字替换；优先把本卡高频搭配作为完整句块记忆。"
       }
     ],
-    "directSynonym": "group /ˈɡruːp/（与“社区”意义接近）",
-    "directAntonym": "individual /ˌɪndəˈvɪdʒəwəl/（与“社区”意义相反）",
-    "derivatives": "本词暂无需额外强记的高频派生词",
+    "directSynonym": "group /ˈɡruːp/（团体；组；团；群）",
+    "directAntonym": "individual /ˌɪndəˈvɪdʒəwəl/（人；个人；个体；个别的）",
+    "derivatives": "communal",
     "example": "The project brought the community together.",
     "exampleChinese": "这个项目让社区团结在一起。"
   },
@@ -174,8 +181,8 @@
     {
       "word": "group",
       "phonetic": "/ˈɡruːp/",
-      "partOfSpeech": "n.",
-      "chinese": "与“社区”意义接近",
+      "partOfSpeech": "v. / n.",
+      "chinese": "团体；组；团；群",
       "difference": "community 是本卡核心搭配 “local community” 中的中性常用选择；group 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -183,12 +190,20 @@
     {
       "word": "individual",
       "phonetic": "/ˌɪndəˈvɪdʒəwəl/",
-      "partOfSpeech": "n.",
-      "chinese": "与“社区”意义相反",
+      "partOfSpeech": "n. / adj.",
+      "chinese": "人；个人；个体；个别的",
       "usage": "在本卡核心义下与 community 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
-  "derivatives": [],
+  "derivatives": [
+    {
+      "word": "communal",
+      "phonetic": "/kəˈmjuːnəl/",
+      "partOfSpeech": "adj.",
+      "chinese": "公有的；公社的",
+      "note": "这是 community 的常用词族成员；请按上方词性放到句子的正确位置。"
+    }
+  ],
   "confusables": [],
   "relatedVocabulary": [
     {
@@ -197,14 +212,25 @@
         {
           "word": "group",
           "phonetic": "/ˈɡruːp/",
-          "partOfSpeech": "n.",
-          "chinese": "与“社区”意义接近"
+          "partOfSpeech": "v. / n.",
+          "chinese": "团体；组；团；群"
         },
         {
           "word": "individual",
           "phonetic": "/ˌɪndəˈvɪdʒəwəl/",
-          "partOfSpeech": "n.",
-          "chinese": "与“社区”意义相反"
+          "partOfSpeech": "n. / adj.",
+          "chinese": "人；个人；个体；个别的"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "communal",
+          "phonetic": "/kəˈmjuːnəl/",
+          "partOfSpeech": "adj.",
+          "chinese": "公有的；公社的"
         }
       ]
     }
@@ -258,9 +284,9 @@
       "type": "meaning_choice",
       "prompt": "“community”最核心的中文含义是？",
       "options": [
-        "建议；忠告",
-        "几乎；差不多",
-        "社区；群体"
+        "社区；群体",
+        "目标",
+        "常见的；共同的"
       ],
       "answer": "社区；群体",
       "stage": "T0",
@@ -271,9 +297,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “community”？",
       "options": [
-        "almost but not completely",
-        "people who live together or share an interest",
-        "an opinion about what someone should do"
+        "something you want to achieve",
+        "happening often or shared by many",
+        "people who live together or share an interest"
       ],
       "answer": "people who live together or share an interest",
       "stage": "T0",
@@ -284,10 +310,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“当地社区”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "community members",
-        "local community",
         "online community",
-        "community service"
+        "community service",
+        "community members",
+        "local community"
       ],
       "answer": "local community",
       "stage": "T1",
@@ -298,10 +324,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “community” 最直接近义词？",
       "options": [
+        "goal",
+        "common",
         "group",
-        "individual",
-        "advice",
-        "nearly"
+        "individual"
       ],
       "answer": "group",
       "stage": "T2",
@@ -312,10 +338,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “community” 最直接反义词？",
       "options": [
+        "common",
+        "individual",
         "group",
-        "advice",
-        "nearly",
-        "individual"
+        "goal"
       ],
       "answer": "individual",
       "stage": "T2",
@@ -324,14 +350,14 @@
     {
       "id": "community-n-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “community” 的相关近义词？",
+      "prompt": "根据本词卡辨析，哪个词被列为 “community” 的派生词？",
       "options": [
-        "advice",
-        "nearly",
+        "communal",
         "group",
-        "individual"
+        "individual",
+        "goal"
       ],
-      "answer": "group",
+      "answer": "communal",
       "stage": "T3",
       "ai": false
     },
@@ -364,10 +390,10 @@
       "type": "collocation",
       "prompt": "句型应用：哪一项既表示“网络社区”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "local community",
-        "community service",
         "community members",
-        "online community"
+        "online community",
+        "local community",
+        "community service"
       ],
       "answer": "online community",
       "stage": "T1",
@@ -378,10 +404,10 @@
       "type": "collocation",
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：The project brought the community _____.（中文：这个项目让社区团结在一起。）",
       "options": [
-        "finished",
-        "abroad",
         "together",
-        "practical"
+        "week",
+        "mistake",
+        "finished"
       ],
       "answer": "together",
       "stage": "T2",
@@ -392,10 +418,10 @@
       "type": "collocation",
       "prompt": "用法辨析：哪一项既表示“当地社区”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "community members",
-        "local community",
         "online community",
-        "community service"
+        "community service",
+        "community members",
+        "local community"
       ],
       "answer": "local community",
       "stage": "T2",
@@ -406,10 +432,10 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“网络社区”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "online community",
-        "local community",
         "community service",
-        "community members"
+        "community members",
+        "online community",
+        "local community"
       ],
       "answer": "online community",
       "stage": "T3",
@@ -500,9 +526,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }

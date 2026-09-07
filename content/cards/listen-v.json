@@ -11,15 +11,22 @@
     }
   ],
   "cocaRankLabel": "v. 第 460 名",
+  "learningPriority": {
+    "sequence": 24,
+    "group": "verb",
+    "groupLabel": "动词",
+    "groupOrder": 1,
+    "primaryCocaRank": 460
+  },
   "phonetic": "/ˈlɪsən/",
   "syllables": "listen（约 2 音节）",
   "partOfSpeech": "v.",
   "frequencyBand": "COCA 高频精选 · v. 第 460 名",
-  "difficulty": "应用",
+  "difficulty": "基础",
   "tags": [
     "v.",
-    "模板结构版",
-    "主动词汇"
+    "完整词卡",
+    "高频表达"
   ],
   "coreMemory": {
     "chinese": "听；倾听",
@@ -64,9 +71,9 @@
         "note": "不定式 to 后接动词原形；不要把不定式和 -ing 形式混合。"
       }
     ],
-    "directSynonym": "hear /ˈhiːr/（与“听”意义接近）",
-    "directAntonym": "ignore /ˌɪˈɡnɔːr/（与“听”意义相反）",
-    "derivatives": "本词暂无需额外强记的高频派生词",
+    "directSynonym": "hear /ˈhiːr/（听到；倾听；听说；审理）",
+    "directAntonym": "ignore /ˌɪˈɡnɔːr/（不理睬；忽视；驳回；忽略）",
+    "derivatives": "listener",
     "example": "Listen to the whole sentence before answering.",
     "exampleChinese": "回答前先听完整个句子。"
   },
@@ -175,7 +182,7 @@
       "word": "hear",
       "phonetic": "/ˈhiːr/",
       "partOfSpeech": "v.",
-      "chinese": "与“听”意义接近",
+      "chinese": "听到；倾听；听说；审理",
       "difference": "listen 是本卡核心搭配 “listen to” 中的中性常用选择；hear 含义接近，但语体、宾语范围和固定搭配可能不同，不能机械互换。"
     }
   ],
@@ -184,11 +191,19 @@
       "word": "ignore",
       "phonetic": "/ˌɪˈɡnɔːr/",
       "partOfSpeech": "v.",
-      "chinese": "与“听”意义相反",
+      "chinese": "不理睬；忽视；驳回；忽略",
       "usage": "在本卡核心义下与 listen 构成最直接的语义对比；实际使用前仍要核对词性和句型。"
     }
   ],
-  "derivatives": [],
+  "derivatives": [
+    {
+      "word": "listener",
+      "phonetic": "/ˈlɪsənɚ/",
+      "partOfSpeech": "n.",
+      "chinese": "收听者；听众",
+      "note": "这是 listen 的常用词族成员；请按上方词性放到句子的正确位置。"
+    }
+  ],
   "confusables": [
     {
       "word": "hear",
@@ -206,13 +221,24 @@
           "word": "hear",
           "phonetic": "/ˈhiːr/",
           "partOfSpeech": "v.",
-          "chinese": "与“听”意义接近"
+          "chinese": "听到；倾听；听说；审理"
         },
         {
           "word": "ignore",
           "phonetic": "/ˌɪˈɡnɔːr/",
           "partOfSpeech": "v.",
-          "chinese": "与“听”意义相反"
+          "chinese": "不理睬；忽视；驳回；忽略"
+        }
+      ]
+    },
+    {
+      "category": "词族与构词联系",
+      "items": [
+        {
+          "word": "listener",
+          "phonetic": "/ˈlɪsənɚ/",
+          "partOfSpeech": "n.",
+          "chinese": "收听者；听众"
         }
       ]
     }
@@ -266,9 +292,9 @@
       "type": "meaning_choice",
       "prompt": "“listen”最核心的中文含义是？",
       "options": [
-        "活动",
-        "提供；提议",
-        "听；倾听"
+        "家；在家",
+        "听；倾听",
+        "准备"
       ],
       "answer": "听；倾听",
       "stage": "T0",
@@ -279,9 +305,9 @@
       "type": "meaning_choice",
       "prompt": "哪一项英文释义最符合词卡中的 “listen”？",
       "options": [
-        "to say that you are willing to give something",
         "to pay attention to sound",
-        "something that people do"
+        "to make ready for something",
+        "the place where you live"
       ],
       "answer": "to pay attention to sound",
       "stage": "T0",
@@ -306,8 +332,8 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “listen” 最直接近义词？",
       "options": [
-        "activity",
-        "offer",
+        "prepare",
+        "home",
         "hear",
         "ignore"
       ],
@@ -320,10 +346,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “listen” 最直接反义词？",
       "options": [
-        "offer",
+        "home",
         "ignore",
         "hear",
-        "activity"
+        "prepare"
       ],
       "answer": "ignore",
       "stage": "T2",
@@ -336,8 +362,8 @@
       "options": [
         "hear",
         "ignore",
-        "activity",
-        "offer"
+        "prepare",
+        "home"
       ],
       "answer": "hear",
       "stage": "T3",
@@ -387,9 +413,9 @@
       "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Listen to the _____ sentence before answering.（中文：回答前先听完整个句子。）",
       "options": [
         "whole",
-        "outdoor",
-        "help",
-        "walking"
+        "interview",
+        "yourself",
+        "useful"
       ],
       "answer": "whole",
       "stage": "T2",
@@ -508,9 +534,9 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-structured",
+  "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.08.19.6",
+  "contentVersion": "2026.09.07.1",
   "reviewed": false,
-  "sourceNote": "从用户提供的 COCA 词表筛选；十章结构已齐全，但尚未达到锁定 work 示例的详细度门槛，待逐卡深度补全；音标为美式发音。"
+  "sourceNote": "从用户提供的 COCA 词表筛选；已依照锁定词卡模板离线完整生成并通过内容、词性、词频、例句与题目校验；音标为美式发音。"
 }
