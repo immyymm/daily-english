@@ -251,6 +251,7 @@ for (const [cardIndex, card] of allCards.cards.entries()) {
     .filter((entry) => fixedPhraseSet.has(entry.phrase.toLowerCase().replace(/[^a-z]+/g, ' ').trim()));
   if (!card.reviewed && duplicatedContextPhrases.length > 1) errors.push(card.id + ': context phrases repeat fixed phrases instead of adding real sentence context.');
   if (card.meanings.some((meaning) => !meaning.english || !meaning.chinese || !meaning.example || !meaning.translation)) errors.push(card.id + ': every meaning needs bilingual definition and example evidence.');
+  if (new Set(card.meanings.map((meaning) => meaning.example.trim().toLowerCase())).size !== card.meanings.length) errors.push(card.id + ': meaning rows must use distinct example evidence.');
   if (card.fixedPhrases.some((entry) => !entry.chinese || !entry.example || !entry.translation)) errors.push(card.id + ': every fixed phrase needs a Chinese meaning and a bilingual example.');
   if (new Set(card.examples.map((example) => example.english)).size !== card.examples.length) errors.push(card.id + ': duplicate example sentences.');
   if (card.derivatives.some((item) => item.word.toLowerCase() === card.word.toLowerCase())) errors.push(card.id + ': target word repeated as a derivative.');

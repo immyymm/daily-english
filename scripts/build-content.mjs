@@ -278,7 +278,9 @@ function normalizeMeanings(item, override) {
       partOfSpeech: item.p.split('/')[0].trim(),
       english: entry.definition,
       chinese: item.zh,
-      ...examplePool[0]
+      // Use another verified target-word example so two meaning rows never
+      // repeat the same sentence merely to satisfy the template.
+      ...(examplePool[index + (secondary ? 2 : 1)] ?? examplePool[0])
     }))
   ];
   const seenDefinitions = new Set();
@@ -490,9 +492,17 @@ function vocabularyItem(word, fallbackPos = 'word', fallbackChinese = '与本词
   return {
     word,
     phonetic: known?.ipa ?? ipaFor(word),
-    partOfSpeech: fallbackPos !== 'word' ? fallbackPos : known?.p ?? metadata?.partOfSpeech ?? ecdictPartOfSpeech(word, fallbackPos),
+    partOfSpeech: known?.p ?? (fallbackPos !== 'word' ? fallbackPos : metadata?.partOfSpeech ?? ecdictPartOfSpeech(word, fallbackPos)),
     chinese: known ? firstMeaning(known.zh) : metadata?.chinese ?? conciseChinese(word, fallbackChinese)
   };
+}
+
+function isHighValueRelatedCandidate(entry) {
+  const word = dictionaryHeadword(entry.word ?? '');
+  const dictionary = ecdictEntries[word];
+  return activeWords.has(word)
+    || dictionary?.oxford === '1'
+    || Number(dictionary?.collins ?? 0) >= 3;
 }
 
 function normalizeRelated(item, index, override, derivatives, synonyms, antonyms, confusableItems) {
@@ -509,8 +519,12 @@ function normalizeRelated(item, index, override, derivatives, synonyms, antonyms
     ...antonyms.map((entry) => entry.word),
     ...confusableItems.map((entry) => entry.word)
   ];
-  const semanticParents = selectCommonCandidates(wordnetEntries[item.w]?.hypernyms, excluded, 4);
-  const concreteActions = selectCommonCandidates(wordnetEntries[item.w]?.hyponyms, [...excluded, ...semanticParents.map((entry) => entry.word)], 4);
+  const semanticParents = selectCommonCandidates(wordnetEntries[item.w]?.hypernyms, excluded, 12)
+    .filter(isHighValueRelatedCandidate)
+    .slice(0, 4);
+  const concreteActions = selectCommonCandidates(wordnetEntries[item.w]?.hyponyms, [...excluded, ...semanticParents.map((entry) => entry.word)], 16)
+    .filter(isHighValueRelatedCandidate)
+    .slice(0, 4);
   const contextExamples = priorityEntries[item.w]?.uses?.map((entry) => entry[2])
     ?? (curatedExamples[item.w] ?? []).map((entry) => entry[0]);
   const companionCandidates = contextExamples
