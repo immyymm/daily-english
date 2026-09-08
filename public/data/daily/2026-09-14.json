@@ -1,7 +1,7 @@
 {
   "date": "2026-09-14",
   "dayNumber": 29,
-  "contentVersion": "2026.09.08.2",
+  "contentVersion": "2026.09.09.4",
   "templateVersion": "learning-template-2026.08.19.2",
   "cards": [
     {
@@ -34,7 +34,7 @@
         "主动词汇"
       ],
       "coreMemory": {
-        "chinese": "设法做到；管理",
+        "chinese": "设法做到；管理；负责；应付；处理；勉强维持",
         "english": "v. to succeed in doing something difficult；v. to control or be responsible for a business, team, or activity；v. to deal successfully with a situation or available resources",
         "structure": "manage to do something /ˈmænɪdʒ ˈtuː ˈduː ˈsʌmθɪŋ/（设法做成某事）；manage a team or project /ˈmænɪdʒ ə ˈtiːm ˈɔːr ˈprɑdʒɛkt/（管理团队或项目）；manage without something /ˈmænɪdʒ wɪˈθaʊt ˈsʌmθɪŋ/（没有某物也能应付）；manage on an amount of money /ˈmænɪdʒ ˈɑn ˈæn əˈmaʊnt ˈʌv ˈmʌniː/（靠一定数额的钱维持生活）",
         "structures": [
@@ -85,7 +85,7 @@
         ],
         "directSynonym": "handle /ˈhændəl/（处理；应付）；run /ˈrʌn/（经营；管理）；cope /ˈkoʊp/（应付；对付）；succeed /səˈksiːd/（成功）",
         "directAntonym": "fail /ˈfeɪl/（未能；失败）；mismanage /mɪˈsmænɪdʒ/（管理不善）；neglect /nəˈɡlɛkt/（疏于管理；忽视）",
-        "derivatives": "manager · management · manageable · mismanage",
+        "derivatives": "mismanage · manager · management · manageable",
         "example": "She managed to finish the report on time.",
         "exampleChinese": "她设法按时完成了报告。"
       },
@@ -327,6 +327,13 @@
       ],
       "derivatives": [
         {
+          "word": "mismanage",
+          "phonetic": "/mɪˈsmænɪdʒ/",
+          "partOfSpeech": "v.",
+          "chinese": "管理不善",
+          "note": "否定前缀 mis- 表示“错误地”。"
+        },
+        {
           "word": "manager",
           "phonetic": "/ˈmænədʒɚ/",
           "partOfSpeech": "n.",
@@ -346,13 +353,6 @@
           "partOfSpeech": "adj.",
           "chinese": "可处理的；应付得来的",
           "note": "常形容任务量、成本或问题。"
-        },
-        {
-          "word": "mismanage",
-          "phonetic": "/mɪˈsmænɪdʒ/",
-          "partOfSpeech": "v.",
-          "chinese": "管理不善",
-          "note": "否定前缀 mis- 表示“错误地”。"
         }
       ],
       "confusables": [
@@ -531,11 +531,11 @@
           "type": "meaning_choice",
           "prompt": "“manage”最核心的中文含义是？",
           "options": [
-            "保持；保留；继续",
-            "设法做到；管理",
-            "知道；了解；认识"
+            "保持",
+            "设法做到",
+            "知道"
           ],
-          "answer": "设法做到；管理",
+          "answer": "设法做到",
           "stage": "T0",
           "ai": false
         },
@@ -555,7 +555,7 @@
         {
           "id": "manage-v-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "核心结构辨析：哪一项既表示“设法做成某事”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
+          "prompt": "核心结构辨析：哪一项既表示“设法做成某事”，又符合这个形式线索：完整结构中使用 to + 动词原形；do 只是语法占位符，要换成符合语境的具体动词原形？",
           "options": [
             "manage without something",
             "manage on an amount of money",
@@ -619,7 +619,7 @@
         {
           "id": "manage-v-recall-chinese",
           "type": "recall",
-          "prompt": "写出符合“设法做到；管理”（v.）的本课目标词。",
+          "prompt": "写出符合“设法做到”（v.）的本课目标词。",
           "answer": "manage",
           "stage": "T1",
           "ai": false
@@ -663,7 +663,7 @@
         {
           "id": "manage-v-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "搭配辨析：哪一项既表示“设法做成某事”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
+          "prompt": "搭配辨析：哪一项既表示“设法做成某事”，又符合这个形式线索：完整结构中使用 to + 动词原形；do 只是语法占位符，要换成符合语境的具体动词原形？",
           "options": [
             "manage a project",
             "manage your time",
@@ -699,7 +699,7 @@
         {
           "id": "manage-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “manage” 写一个自然、真实的英文句子，含义必须符合词卡核心义“设法做到；管理”。",
+          "prompt": "请用 “manage” 写一个自然、真实的英文句子，含义必须符合词卡核心义“设法做到”。",
           "answer": "",
           "stage": "T2",
           "ai": true
@@ -775,7 +775,7 @@
       },
       "detailLevel": "template-curated",
       "templateVersion": "learning-template-2026.08.19.2",
-      "contentVersion": "2026.09.08.2",
+      "contentVersion": "2026.09.09.4",
       "reviewed": true,
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
@@ -809,7 +809,7 @@
         "主动词汇"
       ],
       "coreMemory": {
-        "chinese": "改善；提高",
+        "chinese": "改善；提高；好转",
         "english": "v. to make something better in quality, condition, or ability；v. to become better than before",
         "structure": "improve something /ɪmˈpruːv ˈsʌmθɪŋ/（改善或提高某事物）；improve on something /ɪmˈpruːv ˈɑn ˈsʌmθɪŋ/（比原有事物做得更好）；improve at something /ɪmˈpruːv ˈæt ˈsʌmθɪŋ/（在某方面进步）；improve by ten percent /ɪmˈpruːv ˈbaɪ ˈtɛn pɚˈsɛnt/（提高百分之十）",
         "structures": [
@@ -1243,9 +1243,9 @@
           "chinese": "她开始规律睡眠后，健康状况好转了。"
         },
         {
-          "scene": "产品迭代",
-          "english": "We are trying to improve the app based on user feedback.",
-          "chinese": "我们正根据用户反馈改进这个应用。"
+          "scene": "服务改进",
+          "english": "The hotel is trying to improve its service based on guest feedback.",
+          "chinese": "这家酒店正根据客人的反馈改进服务。"
         },
         {
           "scene": "数据变化",
@@ -1286,8 +1286,8 @@
           "prompt": "“improve”最核心的中文含义是？",
           "options": [
             "改善；提高",
-            "将会；愿意",
-            "离开；留下；使处于"
+            "将会",
+            "离开"
           ],
           "answer": "改善；提高",
           "stage": "T0",
@@ -1309,7 +1309,7 @@
         {
           "id": "improve-v-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "核心结构辨析：哪一项既表示“改善或提高某事物”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
+          "prompt": "核心结构辨析：哪一项既表示“改善或提高某事物”，又符合这个形式线索：结构中直接带有事物宾语，不在目标词与宾语之间增加介词？",
           "options": [
             "improve by ten percent",
             "improve something",
@@ -1529,7 +1529,7 @@
       },
       "detailLevel": "template-curated",
       "templateVersion": "learning-template-2026.08.19.2",
-      "contentVersion": "2026.09.08.2",
+      "contentVersion": "2026.09.09.4",
       "reviewed": true,
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
@@ -1564,7 +1564,7 @@
       ],
       "coreMemory": {
         "chinese": "发现",
-        "english": "v. to find something for the first time；v. find unexpectedly",
+        "english": "v. to find something for the first time",
         "structure": "discover the truth /dɪˈskʌvər ðə ˈtruːθ/（发现真相）；discover a new way /dɪˈskʌvər ə ˈnuː ˈweɪ/（发现新方法）；discover that /dɪˈskʌvər ˈðæt/（发现……）；recently discovered /ˈriːsəntliː dɪˈskʌvɚd/（最近发现的）",
         "structures": [
           {
@@ -1588,26 +1588,26 @@
             "chinese": "最近发现的"
           }
         ],
-        "commonError": "❌ discover accident → ✅ discover by accident；❌ to discovering → ✅ to discover",
+        "commonError": "❌ discover with accident → ✅ discover by accident；❌ to discovering → ✅ to discover",
         "commonErrors": [
           {
-            "wrong": "discover accident",
-            "wrongPhonetic": "/dɪˈskʌvər ˈæksədənt/",
+            "wrong": "discover with accident",
+            "wrongPhonetic": "/dɪˈskʌvər ˈwɪð ˈæksədənt/",
             "right": "discover by accident",
             "rightPhonetic": "/dɪˈskʌvər ˈbaɪ ˈæksədənt/",
-            "note": "在“discover by accident”这个常用搭配中，介词 by 负责连接后面的对象或范围，不能省略或随意换成其他介词。"
+            "note": "在“discover by accident”所表达的这个具体含义中，要用介词 by；换成 with 会破坏这个固定结构或改变原意。"
           },
           {
             "wrong": "to discovering",
             "wrongPhonetic": "/ˈtuː dɪˈskʌvɚɪŋ/",
             "right": "to discover",
             "rightPhonetic": "/ˈtuː dɪˈskʌvər/",
-            "note": "这里的 to 是不定式标记，后面要用 discover 的原形，不能再加 -ing。"
+            "note": "这里的 to 是不定式标记，后面要用 discover 的原形，不能改成 discovering。"
           }
         ],
-        "directSynonym": "find /ˈfaɪnd/（找到）",
-        "directAntonym": "lose /ˈluːz/（失去）",
-        "derivatives": "discovery · discoverer",
+        "directSynonym": "find /ˈfaɪnd/（找到；发现）",
+        "directAntonym": "overlook /ˈoʊvɚˌlʊk/（忽略；未发现）",
+        "derivatives": "discovery",
         "example": "You may discover a better way to remember it.",
         "exampleChinese": "你可能会发现更好的记忆方法。"
       },
@@ -1618,13 +1618,6 @@
           "chinese": "发现",
           "example": "The investigation helped them discover the truth.",
           "translation": "调查帮助他们发现了真相。"
-        },
-        {
-          "partOfSpeech": "v.",
-          "english": "find unexpectedly",
-          "chinese": "发现",
-          "example": "I discovered a new way to organize my notes.",
-          "translation": "我发现了一种整理笔记的新方法。"
         }
       ],
       "contextPhrases": [
@@ -1632,14 +1625,14 @@
           "category": "核心动作与结构",
           "items": [
             {
-              "phrase": "helped them discover the truth",
-              "phonetic": "/ˈhɛlpt ˈðɛm dɪˈskʌvər ðə ˈtruːθ/",
-              "chinese": "发现真相；原句语境：调查帮助他们发现了真相。"
+              "phrase": "discover the truth",
+              "phonetic": "/dɪˈskʌvər ðə ˈtruːθ/",
+              "chinese": "发现真相"
             },
             {
-              "phrase": "I discovered a new way to",
-              "phonetic": "/ˈaɪ dɪˈskʌvɚd ə ˈnuː ˈweɪ ˈtuː/",
-              "chinese": "发现新方法；原句语境：我发现了一种整理笔记的新方法。"
+              "phrase": "discover a new way",
+              "phonetic": "/dɪˈskʌvər ə ˈnuː ˈweɪ/",
+              "chinese": "发现新方法"
             }
           ]
         },
@@ -1647,14 +1640,14 @@
           "category": "日常与工作语境",
           "items": [
             {
-              "phrase": "She discovered that the shop closed",
-              "phonetic": "/ˈʃiː dɪˈskʌvɚd ˈðæt ðə ˈʃɑp ˈkloʊzd/",
-              "chinese": "发现……；原句语境：她发现这家店星期日很早就关门。"
+              "phrase": "discover that",
+              "phonetic": "/dɪˈskʌvər ˈðæt/",
+              "chinese": "发现……"
             },
             {
-              "phrase": "Scientists recently discovered a new species in",
-              "phonetic": "/ˈsaɪəntɪsts ˈriːsəntliː dɪˈskʌvɚd ə ˈnuː ˈspiːʃiːz ɪn/",
-              "chinese": "最近发现的；原句语境：科学家最近在该地区发现了一个新物种。"
+              "phrase": "recently discovered",
+              "phonetic": "/ˈriːsəntliː dɪˈskʌvɚd/",
+              "chinese": "最近发现的"
             }
           ]
         },
@@ -1662,14 +1655,14 @@
           "category": "高频扩展表达",
           "items": [
             {
-              "phrase": "He discovered the old photograph by",
-              "phonetic": "/ˈhiː dɪˈskʌvɚd ðə ˈoʊld ˈfoʊtəˌɡræf ˈbaɪ/",
-              "chinese": "偶然发现；原句语境：他偶然发现了那张旧照片。"
+              "phrase": "discover by accident",
+              "phonetic": "/dɪˈskʌvər ˈbaɪ ˈæksədənt/",
+              "chinese": "偶然发现"
             },
             {
-              "phrase": "The research team made an important discovery",
-              "phonetic": "/ðə riːˈsɝːtʃ ˈtiːm ˈmeɪd ˈæn ˌɪˈmpɔːrtənt dɪˈskʌvɚiː/",
-              "chinese": "作出发现；原句语境：研究团队取得了一项重要发现。"
+              "phrase": "make a discovery",
+              "phonetic": "/ˈmeɪk ə dɪˈskʌvɚiː/",
+              "chinese": "作出发现"
             }
           ]
         }
@@ -1722,18 +1715,18 @@
         {
           "word": "find",
           "phonetic": "/ˈfaɪnd/",
-          "partOfSpeech": "v. / n.",
-          "chinese": "找到",
-          "difference": "find 侧重“找到”。对应的常用英文义是 “to find something for the first time”。discover 在本卡搭配“discover a new way”中表达“发现”；换词时要同时检查宾语和介词。"
+          "partOfSpeech": "v.",
+          "chinese": "找到；发现",
+          "difference": "discover 与 find 在本卡义项下意思接近。find 可指找到已知目标；discover 常强调首次发现此前未知的事实或事物。"
         }
       ],
       "antonyms": [
         {
-          "word": "lose",
-          "phonetic": "/ˈluːz/",
+          "word": "overlook",
+          "phonetic": "/ˈoʊvɚˌlʊk/",
           "partOfSpeech": "v.",
-          "chinese": "失去",
-          "usage": "在“发现”这个义项下，lose（失去）与 discover 形成对比。对应的常用英文义是 “opposite of discover”。只在这个明确义项和句型中对比，不把两个词的所有用法都视为相反。"
+          "chinese": "忽略；未发现",
+          "usage": "discover 与 overlook 在本卡义项下形成明确对比。discover 表示发现某事；overlook 表示未注意到。"
         }
       ],
       "derivatives": [
@@ -1743,13 +1736,6 @@
           "partOfSpeech": "n.",
           "chinese": "发现；被发现的事物",
           "note": "discovery 是 discover 的常用词族形式；作 n. 时表示“发现；被发现的事物”。"
-        },
-        {
-          "word": "discoverer",
-          "phonetic": "/dɪˈskʌvɚɚ/",
-          "partOfSpeech": "n.",
-          "chinese": "发现者",
-          "note": "discoverer 是 discover 的常用词族形式，作 n. 使用；对应的常用英文义是 “someone who is the first to observe something”。"
         }
       ],
       "confusables": [
@@ -1763,89 +1749,25 @@
       ],
       "relatedVocabulary": [
         {
-          "category": "语义上位词：这个动作属于什么类别",
+          "category": "语义关联：一起理解更清楚",
           "items": [
             {
-              "word": "see",
-              "phonetic": "/ˈsiː/",
+              "word": "find",
+              "phonetic": "/ˈfaɪnd/",
               "partOfSpeech": "v.",
-              "chinese": "看见"
+              "chinese": "发现；找到"
             },
             {
-              "word": "hear",
-              "phonetic": "/ˈhiːr/",
+              "word": "explore",
+              "phonetic": "/ɪˈksplɔːr/",
               "partOfSpeech": "v.",
-              "chinese": "听见"
+              "chinese": "探索"
             },
             {
-              "word": "learn",
-              "phonetic": "/lɜːrn/",
+              "word": "overlook",
+              "phonetic": "/ˈoʊvɚˌlʊk/",
               "partOfSpeech": "v.",
-              "chinese": "学习"
-            },
-            {
-              "word": "sight",
-              "phonetic": "/ˈsaɪt/",
-              "partOfSpeech": "v.",
-              "chinese": "景观；视力；眼界"
-            }
-          ]
-        },
-        {
-          "category": "具体动作：相关的更具体表达",
-          "items": [
-            {
-              "word": "sense",
-              "phonetic": "/ˈsɛns/",
-              "partOfSpeech": "v.",
-              "chinese": "感应；感觉；感官"
-            },
-            {
-              "word": "catch",
-              "phonetic": "/ˈkætʃ/",
-              "partOfSpeech": "v.",
-              "chinese": "捕捉；陷阱；捕捉之物"
-            },
-            {
-              "word": "spring",
-              "phonetic": "/ˈsprɪŋ/",
-              "partOfSpeech": "v.",
-              "chinese": "春天；弹簧；跳跃"
-            },
-            {
-              "word": "blow",
-              "phonetic": "/ˈbloʊ/",
-              "partOfSpeech": "v.",
-              "chinese": "吹；打击；殴打"
-            }
-          ]
-        },
-        {
-          "category": "真实语境：例句中常与本词同现的词",
-          "items": [
-            {
-              "word": "help",
-              "phonetic": "/ˈhɛlp/",
-              "partOfSpeech": "v.",
-              "chinese": "帮助"
-            },
-            {
-              "word": "shop",
-              "phonetic": "/ˈʃɑp/",
-              "partOfSpeech": "n.",
-              "chinese": "商店；工厂；车间"
-            },
-            {
-              "word": "note",
-              "phonetic": "/ˈnoʊt/",
-              "partOfSpeech": "n.",
-              "chinese": "笔记；记录；注解"
-            },
-            {
-              "word": "organize",
-              "phonetic": "/ˈɔːrɡəˌnaɪz/",
-              "partOfSpeech": "v.",
-              "chinese": "组织；有机化；给予生机"
+              "chinese": "忽略"
             }
           ]
         }
@@ -1888,9 +1810,9 @@
         }
       ],
       "studyFocus": {
-        "coreMeaning": "先掌握“发现”这个核心义，再用本卡的 1 个常用义项辨别不同语境。",
+        "coreMeaning": "先掌握“发现”这个核心义，再用本卡的固定搭配和真实例句巩固这个义项。",
         "keyCollocation": "把“discover a new way”连同介词、宾语和动词形式作为整个句块记忆。",
-        "commonMistake": "在“discover by accident”这个常用搭配中，介词 by 负责连接后面的对象或范围，不能省略或随意换成其他介词。",
+        "commonMistake": "在“discover by accident”所表达的这个具体含义中，要用介词 by；换成 with 会破坏这个固定结构或改变原意。",
         "mustUseExample": "You may discover a better way to remember it.（你可能会发现更好的记忆方法。）"
       },
       "questions": [
@@ -1899,8 +1821,8 @@
           "type": "meaning_choice",
           "prompt": "“discover”最核心的中文含义是？",
           "options": [
-            "会；愿意；过去常常",
-            "放；安置；表达",
+            "会",
+            "放",
             "发现"
           ],
           "answer": "发现",
@@ -1939,7 +1861,7 @@
           "type": "meaning_choice",
           "prompt": "哪个词是词卡中列出的 “discover” 最直接近义词？",
           "options": [
-            "lose",
+            "overlook",
             "invent",
             "would",
             "find"
@@ -1955,10 +1877,10 @@
           "options": [
             "invent",
             "would",
-            "lose",
+            "overlook",
             "find"
           ],
-          "answer": "lose",
+          "answer": "overlook",
           "stage": "T2",
           "ai": false
         },
@@ -1970,7 +1892,7 @@
             "would",
             "invent",
             "find",
-            "lose"
+            "overlook"
           ],
           "answer": "invent",
           "stage": "T3",
@@ -2083,7 +2005,7 @@
         {
           "id": "discover-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “discover” 和 “helped them discover the truth” 结构，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “discover” 和 “discover the truth” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2143,7 +2065,7 @@
       },
       "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.2",
-      "contentVersion": "2026.09.08.2",
+      "contentVersion": "2026.09.09.4",
       "reviewed": false,
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
@@ -2183,8 +2105,8 @@
         "主动词汇"
       ],
       "coreMemory": {
-        "chinese": "处理；应对",
-        "english": "v. to deal with a situation or task；n. the part of an object that you hold；v. be in charge of, act on, or dispose of",
+        "chinese": "处理；应对；把手；柄",
+        "english": "v. to deal with a situation, task；n. the part of an object that you hold",
         "structure": "handle a problem /ˈhændl ə ˈprɑbləm/（处理问题）；handle the pressure /ˈhændl ðə ˈprɛʃɚ/（应对压力）；handle with care /ˈhændl ˈwɪð ˈkɛr/（小心轻放）；easy to handle /ˈiːziː ˈtuː ˈhændl/（容易处理）",
         "structures": [
           {
@@ -2208,33 +2130,33 @@
             "chinese": "容易处理"
           }
         ],
-        "commonError": "❌ handle care → ✅ handle with care；❌ get a handle → ✅ get a handle on",
+        "commonError": "❌ handle at care → ✅ handle with care；❌ get a handle at → ✅ get a handle on",
         "commonErrors": [
           {
-            "wrong": "handle care",
-            "wrongPhonetic": "/ˈhændl ˈkɛr/",
+            "wrong": "handle at care",
+            "wrongPhonetic": "/ˈhændl ˈæt ˈkɛr/",
             "right": "handle with care",
             "rightPhonetic": "/ˈhændl ˈwɪð ˈkɛr/",
-            "note": "在“handle with care”这个常用搭配中，介词 with 负责连接后面的对象或范围，不能省略或随意换成其他介词。"
+            "note": "在“handle with care”所表达的这个具体含义中，要用介词 with；换成 at 会破坏这个固定结构或改变原意。"
           },
           {
-            "wrong": "get a handle",
-            "wrongPhonetic": "/ˈɡɛt ə ˈhændl/",
+            "wrong": "get a handle at",
+            "wrongPhonetic": "/ˈɡɛt ə ˈhændl ˈæt/",
             "right": "get a handle on",
             "rightPhonetic": "/ˈɡɛt ə ˈhændl ˈɑn/",
-            "note": "在“get a handle on”这个常用搭配中，介词 on 负责连接后面的对象或范围，不能省略或随意换成其他介词。"
+            "note": "在“get a handle on”所表达的这个具体含义中，要用介词 on；换成 at 会破坏这个固定结构或改变原意。"
           }
         ],
-        "directSynonym": "manage /ˈmænədʒ/（设法做到）",
-        "directAntonym": "mishandle /mɪˈshændəl/（虐待；胡乱处理）",
-        "derivatives": "handler · handling",
+        "directSynonym": "manage /ˈmænədʒ/（处理；应对）",
+        "directAntonym": "mishandle /mɪˈshændəl/（处理不当）",
+        "derivatives": "本词暂无需额外强记的高频派生词",
         "example": "She handled the difficult question well.",
         "exampleChinese": "她很好地应对了那个难题。"
       },
       "meanings": [
         {
           "partOfSpeech": "v.",
-          "english": "to deal with a situation or task",
+          "english": "to deal with a situation, task",
           "chinese": "处理；应对",
           "example": "She handled the problem calmly.",
           "translation": "她冷静地处理了这个问题。"
@@ -2245,13 +2167,6 @@
           "chinese": "把手；柄",
           "example": "The handle on this cup is very small.",
           "translation": "这个杯子的把手很小。"
-        },
-        {
-          "partOfSpeech": "v.",
-          "english": "be in charge of, act on, or dispose of",
-          "chinese": "处理；应对",
-          "example": "This package is marked “Handle with care.”",
-          "translation": "这个包裹上标着“小心轻放”。"
         }
       ],
       "contextPhrases": [
@@ -2259,14 +2174,14 @@
           "category": "核心动作与结构",
           "items": [
             {
-              "phrase": "She handled the problem calmly",
-              "phonetic": "/ˈʃiː ˈhændəld ðə ˈprɑbləm ˈkɑmliː/",
-              "chinese": "处理问题；原句语境：她冷静地处理了这个问题。"
+              "phrase": "handle a problem",
+              "phonetic": "/ˈhændl ə ˈprɑbləm/",
+              "chinese": "处理问题"
             },
             {
-              "phrase": "everyone can handle the pressure of the",
-              "phonetic": "/ˈɛvriːˌwʌn ˈkæn ˈhændl ðə ˈprɛʃɚ ˈʌv ðə/",
-              "chinese": "应对压力；原句语境：不是每个人都能承受这份工作的压力。"
+              "phrase": "handle the pressure",
+              "phonetic": "/ˈhændl ðə ˈprɛʃɚ/",
+              "chinese": "应对压力"
             }
           ]
         },
@@ -2274,14 +2189,14 @@
           "category": "日常与工作语境",
           "items": [
             {
-              "phrase": "is marked Handle with care",
-              "phonetic": "/ˈɪz ˈmɑrkt ˈhændl ˈwɪð ˈkɛr/",
-              "chinese": "小心轻放；原句语境：这个包裹上标着“小心轻放”。"
+              "phrase": "handle with care",
+              "phonetic": "/ˈhændl ˈwɪð ˈkɛr/",
+              "chinese": "小心轻放"
             },
             {
               "phrase": "easy to handle",
               "phonetic": "/ˈiːziː ˈtuː ˈhændl/",
-              "chinese": "容易处理；原句语境：这个新软件很容易操作。"
+              "chinese": "容易处理"
             }
           ]
         },
@@ -2289,14 +2204,14 @@
           "category": "高频扩展表达",
           "items": [
             {
-              "phrase": "getting a handle on the new system",
-              "phonetic": "/ˈɡɛtɪŋ ə ˈhændl ˈɑn ðə ˈnuː ˈsɪstəm/",
-              "chinese": "弄清；掌握；原句语境：我终于开始掌握这个新系统了。"
+              "phrase": "get a handle on",
+              "phonetic": "/ˈɡɛt ə ˈhændl ˈɑn/",
+              "chinese": "弄清；掌握"
             },
             {
-              "phrase": "The door handle is loose",
-              "phonetic": "/ðə ˈdɔːr ˈhændl ˈɪz ˈluːs/",
-              "chinese": "门把手；原句语境：门把手松了。"
+              "phrase": "door handle",
+              "phonetic": "/ˈdɔːr ˈhændl/",
+              "chinese": "门把手"
             }
           ]
         }
@@ -2350,8 +2265,8 @@
           "word": "manage",
           "phonetic": "/ˈmænədʒ/",
           "partOfSpeech": "v.",
-          "chinese": "设法做到",
-          "difference": "manage 侧重“设法做到”。对应的常用英文义是 “to deal with a situation or task”。handle 在本卡搭配“handle a problem”中表达“处理”；换词时要同时检查宾语和介词。"
+          "chinese": "处理；应对",
+          "difference": "handle 与 manage 在本卡义项下意思接近。manage 强调统筹或成功应付；handle 常指直接处理具体事务、物品或问题。"
         }
       ],
       "antonyms": [
@@ -2359,106 +2274,33 @@
           "word": "mishandle",
           "phonetic": "/mɪˈshændəl/",
           "partOfSpeech": "v.",
-          "chinese": "虐待；胡乱处理",
-          "usage": "在“处理”这个义项下，mishandle（虐待；胡乱处理）与 handle 形成对比。对应的常用英文义是 “opposite of handle”。只在这个明确义项和句型中对比，不把两个词的所有用法都视为相反。"
+          "chinese": "处理不当",
+          "usage": "handle 与 mishandle 在本卡义项下形成明确对比。handle 表示处理；mishandle 明确表示处理方式错误。"
         }
       ],
-      "derivatives": [
-        {
-          "word": "handler",
-          "phonetic": "/ˈhændlɚ/",
-          "partOfSpeech": "n.",
-          "chinese": "处理者；操作者；拳击教练",
-          "note": "handler 是 handle 的常用词族形式；作 n. 时表示“处理者；操作者；拳击教练”。"
-        },
-        {
-          "word": "handling",
-          "phonetic": "/ˈhændlɪŋ/",
-          "partOfSpeech": "n.",
-          "chinese": "处理；操作的",
-          "note": "handling 是 handle 的常用词族形式，作 n. 使用；对应的常用英文义是 “the management of someone or something”。"
-        }
-      ],
+      "derivatives": [],
       "confusables": [],
       "relatedVocabulary": [
         {
-          "category": "语义上位词：这个动作属于什么类别",
+          "category": "语义关联：一起理解更清楚",
           "items": [
             {
-              "word": "control",
-              "phonetic": "/kəˈntroʊl/",
+              "word": "manage",
+              "phonetic": "/ˈmænədʒ/",
               "partOfSpeech": "v.",
-              "chinese": "控制；管理；克制"
+              "chinese": "处理"
             },
             {
-              "word": "touch",
-              "phonetic": "/ˈtʌtʃ/",
+              "word": "deal with",
+              "phonetic": "/ˈdiːl ˈwɪð/",
+              "partOfSpeech": "phr.",
+              "chinese": "应对；处理"
+            },
+            {
+              "word": "mishandle",
+              "phonetic": "/mɪˈshændəl/",
               "partOfSpeech": "v.",
-              "chinese": "触觉；碰；触"
-            },
-            {
-              "word": "command",
-              "phonetic": "/kəˈmænd/",
-              "partOfSpeech": "v.",
-              "chinese": "命令；指挥；控制"
-            }
-          ]
-        },
-        {
-          "category": "具体动作：相关的更具体表达",
-          "items": [
-            {
-              "word": "work",
-              "phonetic": "/ˈwɝːk/",
-              "partOfSpeech": "v.",
-              "chinese": "工作"
-            },
-            {
-              "word": "process",
-              "phonetic": "/ˈprɑˌsɛs/",
-              "partOfSpeech": "v.",
-              "chinese": "程序；进行；过程"
-            },
-            {
-              "word": "direct",
-              "phonetic": "/dɚˈɛkt/",
-              "partOfSpeech": "v.",
-              "chinese": "直接的；坦白的；指示；指挥"
-            },
-            {
-              "word": "conduct",
-              "phonetic": "/ˈkɑndəkt/",
-              "partOfSpeech": "v.",
-              "chinese": "行为；举动；指导；为人"
-            }
-          ]
-        },
-        {
-          "category": "真实语境：例句中常与本词同现的词",
-          "items": [
-            {
-              "word": "care",
-              "phonetic": "/ˈkɛr/",
-              "partOfSpeech": "n.",
-              "chinese": "小心；照料；忧虑"
-            },
-            {
-              "word": "pressure",
-              "phonetic": "/ˈprɛʃɚ/",
-              "partOfSpeech": "n.",
-              "chinese": "压；榨；按"
-            },
-            {
-              "word": "mark",
-              "phonetic": "/ˈmɑrk/",
-              "partOfSpeech": "n.",
-              "chinese": "标志；分数；马克"
-            },
-            {
-              "word": "getting",
-              "phonetic": "/ˈɡɛtɪŋ/",
-              "partOfSpeech": "n.",
-              "chinese": "采煤；采掘；获得"
+              "chinese": "处理不当"
             }
           ]
         }
@@ -2501,9 +2343,9 @@
         }
       ],
       "studyFocus": {
-        "coreMeaning": "先掌握“处理”这个核心义，再用本卡的 2 个常用义项辨别不同语境。",
+        "coreMeaning": "先掌握“处理；应对”这个核心义，再对比另外 1 个常用义项，辨别不同语境。",
         "keyCollocation": "把“handle a problem”连同介词、宾语和动词形式作为整个句块记忆。",
-        "commonMistake": "在“handle with care”这个常用搭配中，介词 with 负责连接后面的对象或范围，不能省略或随意换成其他介词。",
+        "commonMistake": "在“handle with care”所表达的这个具体含义中，要用介词 with；换成 at 会破坏这个固定结构或改变原意。",
         "mustUseExample": "She handled the difficult question well.（她很好地应对了那个难题。）"
       },
       "questions": [
@@ -2512,9 +2354,9 @@
           "type": "meaning_choice",
           "prompt": "“handle”最核心的中文含义是？",
           "options": [
-            "喜欢；愿意；觉得好",
+            "喜欢",
             "处理；应对",
-            "制作；使得；作出"
+            "制作"
           ],
           "answer": "处理；应对",
           "stage": "T0",
@@ -2525,11 +2367,11 @@
           "type": "meaning_choice",
           "prompt": "哪一项英文释义最符合词卡中的 “handle”？",
           "options": [
-            "to deal with a situation or task",
+            "to deal with a situation, task",
             "to create, produce, cause, or perform an action",
             "to enjoy, approve of, or prefer someone or something"
           ],
-          "answer": "to deal with a situation or task",
+          "answer": "to deal with a situation, task",
           "stage": "T0",
           "ai": false
         },
@@ -2578,21 +2420,21 @@
         {
           "id": "handle-v-contrast-choice",
           "type": "meaning_choice",
-          "prompt": "根据本词卡辨析，哪个词被列为 “handle” 的派生词？",
+          "prompt": "根据本词卡辨析，哪个词被列为 “handle” 的相关近义词？",
           "options": [
-            "handler",
             "manage",
             "mishandle",
-            "make"
+            "make",
+            "like"
           ],
-          "answer": "handler",
+          "answer": "manage",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "handle-v-recall-definition",
           "type": "recall",
-          "prompt": "根据英文释义写出目标词：to deal with a situation or task",
+          "prompt": "根据英文释义写出目标词：to deal with a situation, task",
           "answer": "handle",
           "stage": "T1",
           "ai": false
@@ -2600,7 +2442,7 @@
         {
           "id": "handle-v-recall-chinese",
           "type": "recall",
-          "prompt": "写出符合“处理；应对”（v. / n.）的本课目标词。",
+          "prompt": "写出符合“处理；应对”（v.）的本课目标词。",
           "answer": "handle",
           "stage": "T1",
           "ai": false
@@ -2696,7 +2538,7 @@
         {
           "id": "handle-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “handle” 和 “She handled the problem calmly” 结构，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “handle” 和 “handle a problem” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2756,7 +2598,7 @@
       },
       "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.2",
-      "contentVersion": "2026.09.08.2",
+      "contentVersion": "2026.09.09.4",
       "reviewed": false,
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
@@ -2791,7 +2633,7 @@
       ],
       "coreMemory": {
         "chinese": "实现；达到",
-        "english": "v. to succeed in reaching a goal；v. to gain with effort",
+        "english": "v. to succeed in reaching a goal",
         "structure": "achieve a goal /əˈtʃiːv ə ˈɡoʊl/（实现目标）；achieve success /əˈtʃiːv səˈksɛs/（取得成功）；achieve a balance /əˈtʃiːv ə ˈbæləns/（达到平衡）；achieve better results /əˈtʃiːv ˈbɛtɚ rɪˈzʌlts/（取得更好结果）",
         "structures": [
           {
@@ -2815,26 +2657,26 @@
             "chinese": "取得更好结果"
           }
         ],
-        "commonError": "❌ a sense achievement → ✅ a sense of achievement；❌ to achieveing → ✅ to achieve",
+        "commonError": "❌ a sense for achievement → ✅ a sense of achievement；❌ to achieving → ✅ to achieve",
         "commonErrors": [
           {
-            "wrong": "a sense achievement",
-            "wrongPhonetic": "/ə ˈsɛns əˈtʃiːvmənt/",
+            "wrong": "a sense for achievement",
+            "wrongPhonetic": "/ə ˈsɛns ˈfɔːr əˈtʃiːvmənt/",
             "right": "a sense of achievement",
             "rightPhonetic": "/ə ˈsɛns ˈʌv əˈtʃiːvmənt/",
-            "note": "在“a sense of achievement”这个常用搭配中，介词 of 负责连接后面的对象或范围，不能省略或随意换成其他介词。"
+            "note": "在“a sense of achievement”所表达的这个具体含义中，要用介词 of；换成 for 会破坏这个固定结构或改变原意。"
           },
           {
-            "wrong": "to achieveing",
-            "wrongPhonetic": "/ˈtuː achieveing/",
+            "wrong": "to achieving",
+            "wrongPhonetic": "/ˈtuː əˈtʃiːvɪŋ/",
             "right": "to achieve",
             "rightPhonetic": "/ˈtuː əˈtʃiːv/",
-            "note": "这里的 to 是不定式标记，后面要用 achieve 的原形，不能再加 -ing。"
+            "note": "这里的 to 是不定式标记，后面要用 achieve 的原形，不能改成 achieving。"
           }
         ],
-        "directSynonym": "accomplish /əˈkɑmplɪʃ/（完成；达到；实现；使完美）",
-        "directAntonym": "fail /ˈfeɪl/（失败；缺乏；中断；衰退）",
-        "derivatives": "achievement · achiever",
+        "directSynonym": "accomplish /əˈkɑmplɪʃ/（完成；实现）",
+        "directAntonym": "fail /ˈfeɪl/（未能实现；失败）",
+        "derivatives": "achievement",
         "example": "Small steps can help you achieve a big goal.",
         "exampleChinese": "小步前进可以帮助你实现大目标。"
       },
@@ -2845,13 +2687,6 @@
           "chinese": "实现；达到",
           "example": "Consistent practice can help you achieve your goal.",
           "translation": "持续练习可以帮助你实现目标。"
-        },
-        {
-          "partOfSpeech": "v.",
-          "english": "to gain with effort",
-          "chinese": "实现；达到",
-          "example": "The team achieved success through patient work.",
-          "translation": "团队通过耐心工作取得了成功。"
         }
       ],
       "contextPhrases": [
@@ -2859,14 +2694,14 @@
           "category": "核心动作与结构",
           "items": [
             {
-              "phrase": "help you achieve your goal",
-              "phonetic": "/ˈhɛlp ˈjuː əˈtʃiːv ˈjɔːr ˈɡoʊl/",
-              "chinese": "实现目标；原句语境：持续练习可以帮助你实现目标。"
+              "phrase": "achieve a goal",
+              "phonetic": "/əˈtʃiːv ə ˈɡoʊl/",
+              "chinese": "实现目标"
             },
             {
-              "phrase": "The team achieved success through patient work",
-              "phonetic": "/ðə ˈtiːm əˈtʃiːvd səˈksɛs ˈθruː ˈpeɪʃənt ˈwɝːk/",
-              "chinese": "取得成功；原句语境：团队通过耐心工作取得了成功。"
+              "phrase": "achieve success",
+              "phonetic": "/əˈtʃiːv səˈksɛs/",
+              "chinese": "取得成功"
             }
           ]
         },
@@ -2874,14 +2709,14 @@
           "category": "日常与工作语境",
           "items": [
             {
-              "phrase": "difficult to achieve a balance between work",
-              "phonetic": "/ˈdɪfəkəlt ˈtuː əˈtʃiːv ə ˈbæləns bɪˈtwiːn ˈwɝːk/",
-              "chinese": "达到平衡；原句语境：在工作和休息之间取得平衡并不容易。"
+              "phrase": "achieve a balance",
+              "phonetic": "/əˈtʃiːv ə ˈbæləns/",
+              "chinese": "达到平衡"
             },
             {
-              "phrase": "helped us achieve better results",
-              "phonetic": "/ˈhɛlpt ˈʌs əˈtʃiːv ˈbɛtɚ rɪˈzʌlts/",
-              "chinese": "取得更好结果；原句语境：更清晰的流程帮助我们取得了更好的结果。"
+              "phrase": "achieve better results",
+              "phonetic": "/əˈtʃiːv ˈbɛtɚ rɪˈzʌlts/",
+              "chinese": "取得更好结果"
             }
           ]
         },
@@ -2889,14 +2724,14 @@
           "category": "高频扩展表达",
           "items": [
             {
-              "phrase": "hard to achieve her dream",
-              "phonetic": "/ˈhɑrd ˈtuː əˈtʃiːv ˈhɝː ˈdriːm/",
-              "chinese": "努力实现；原句语境：她为实现梦想而努力。"
+              "phrase": "work hard to achieve",
+              "phonetic": "/ˈwɝːk ˈhɑrd ˈtuː əˈtʃiːv/",
+              "chinese": "努力实现"
             },
             {
-              "phrase": "Finishing the course gave me a real sense of achievement",
-              "phonetic": "/ˈfɪnɪʃɪŋ ðə ˈkɔːrs ˈɡeɪv ˈmiː ə ˈriːl ˈsɛns ˈʌv əˈtʃiːvmənt/",
-              "chinese": "成就感；原句语境：完成课程给了我真正的成就感。"
+              "phrase": "a sense of achievement",
+              "phonetic": "/ə ˈsɛns ˈʌv əˈtʃiːvmənt/",
+              "chinese": "成就感"
             }
           ]
         }
@@ -2950,17 +2785,17 @@
           "word": "accomplish",
           "phonetic": "/əˈkɑmplɪʃ/",
           "partOfSpeech": "v.",
-          "chinese": "完成；达到；实现；使完美",
-          "difference": "accomplish 侧重“完成；达到；实现；使完美”。对应的常用英文义是 “to succeed in reaching a goal”。achieve 在本卡搭配“achieve a goal”中表达“实现”；换词时要同时检查宾语和介词。"
+          "chinese": "完成；实现",
+          "difference": "achieve 与 accomplish 在本卡义项下意思接近。accomplish 常搭配任务或工作；achieve 更常搭配目标、成绩和成功。"
         }
       ],
       "antonyms": [
         {
           "word": "fail",
           "phonetic": "/ˈfeɪl/",
-          "partOfSpeech": "v. / n.",
-          "chinese": "失败；缺乏；中断；衰退",
-          "usage": "在“实现”这个义项下，fail（失败；缺乏；中断；衰退）与 achieve 形成对比。对应的常用英文义是 “opposite of achieve”。只在这个明确义项和句型中对比，不把两个词的所有用法都视为相反。"
+          "partOfSpeech": "v.",
+          "chinese": "未能实现；失败",
+          "usage": "achieve 与 fail 在本卡义项下形成明确对比。achieve 表示成功达到目标；fail 表示未能达到。"
         }
       ],
       "derivatives": [
@@ -2970,89 +2805,30 @@
           "partOfSpeech": "n.",
           "chinese": "完成；成就；功业",
           "note": "achievement 是 achieve 的常用词族形式；作 n. 时表示“完成；成就；功业”。"
-        },
-        {
-          "word": "achiever",
-          "phonetic": "/əˈtʃiːvɚ/",
-          "partOfSpeech": "n.",
-          "chinese": "获得成功的人",
-          "note": "achiever 是 achieve 的常用词族形式，作 n. 使用；对应的常用英文义是 “a person with a record of successes”。"
         }
       ],
       "confusables": [],
       "relatedVocabulary": [
         {
-          "category": "语义上位词：这个动作属于什么类别",
+          "category": "语义关联：一起理解更清楚",
           "items": [
             {
-              "word": "win",
-              "phonetic": "/ˈwɪn/",
-              "partOfSpeech": "v.",
-              "chinese": "赢"
+              "word": "goal",
+              "phonetic": "/ˈɡoʊl/",
+              "partOfSpeech": "n.",
+              "chinese": "目标"
             },
             {
               "word": "succeed",
               "phonetic": "/səˈksiːd/",
               "partOfSpeech": "v.",
-              "chinese": "成功；继承；继续"
-            }
-          ]
-        },
-        {
-          "category": "具体动作：相关的更具体表达",
-          "items": [
-            {
-              "word": "begin",
-              "phonetic": "/bɪˈɡɪn/",
-              "partOfSpeech": "v.",
-              "chinese": "开始"
+              "chinese": "成功"
             },
             {
-              "word": "reach",
-              "phonetic": "/riːtʃ/",
-              "partOfSpeech": "v.",
-              "chinese": "到达"
-            },
-            {
-              "word": "manage",
-              "phonetic": "/ˈmænɪdʒ/",
-              "partOfSpeech": "v.",
-              "chinese": "设法做到"
-            },
-            {
-              "word": "make",
-              "phonetic": "/ˈmeɪk/",
-              "partOfSpeech": "v.",
-              "chinese": "制作"
-            }
-          ]
-        },
-        {
-          "category": "真实语境：例句中常与本词同现的词",
-          "items": [
-            {
-              "word": "work",
-              "phonetic": "/ˈwɝːk/",
-              "partOfSpeech": "v.",
-              "chinese": "工作"
-            },
-            {
-              "word": "help",
-              "phonetic": "/ˈhɛlp/",
-              "partOfSpeech": "v.",
-              "chinese": "帮助"
-            },
-            {
-              "word": "result",
-              "phonetic": "/rɪˈzʌlt/",
-              "partOfSpeech": "n.",
-              "chinese": "结果；成绩；答案；产生"
-            },
-            {
-              "word": "process",
-              "phonetic": "/ˈprɑˌsɛs/",
-              "partOfSpeech": "n.",
-              "chinese": "程序；进行；过程"
+              "word": "progress",
+              "phonetic": "/ˈprɑˌɡrɛs/",
+              "partOfSpeech": "n. / v.",
+              "chinese": "进步；进展"
             }
           ]
         }
@@ -3095,9 +2871,9 @@
         }
       ],
       "studyFocus": {
-        "coreMeaning": "先掌握“实现”这个核心义，再用本卡的 1 个常用义项辨别不同语境。",
+        "coreMeaning": "先掌握“实现；达到”这个核心义，再用本卡的固定搭配和真实例句巩固这个义项。",
         "keyCollocation": "把“achieve a goal”连同介词、宾语和动词形式作为整个句块记忆。",
-        "commonMistake": "在“a sense of achievement”这个常用搭配中，介词 of 负责连接后面的对象或范围，不能省略或随意换成其他介词。",
+        "commonMistake": "在“a sense of achievement”所表达的这个具体含义中，要用介词 of；换成 for 会破坏这个固定结构或改变原意。",
         "mustUseExample": "Small steps can help you achieve a big goal.（小步前进可以帮助你实现大目标。）"
       },
       "questions": [
@@ -3107,8 +2883,8 @@
           "prompt": "“achieve”最核心的中文含义是？",
           "options": [
             "实现；达到",
-            "想；认为；思考",
-            "帮助；有助于"
+            "想",
+            "帮助"
           ],
           "answer": "实现；达到",
           "stage": "T0",
@@ -3290,7 +3066,7 @@
         {
           "id": "achieve-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “achieve” 和 “help you achieve your goal” 结构，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “achieve” 和 “achieve a goal” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -3350,7 +3126,7 @@
       },
       "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.2",
-      "contentVersion": "2026.09.08.2",
+      "contentVersion": "2026.09.09.4",
       "reviewed": false,
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     }

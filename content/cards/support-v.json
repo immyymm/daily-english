@@ -34,7 +34,7 @@
     "主动词汇"
   ],
   "coreMemory": {
-    "chinese": "支持；支撑",
+    "chinese": "支持；帮助；赞成；支撑；承受；证实；为……提供依据",
     "english": "v. to help or encourage a person, idea, or activity；v. to hold the weight of something and keep it in position；v. to provide evidence that makes a statement believable；n. help, encouragement, or practical assistance",
     "structure": "support someone or something /səˈpɔːrt ˈsʌˌmwʌn ˈɔːr ˈsʌmθɪŋ/（支持某人或某事）；support someone in doing something /səˈpɔːrt ˈsʌˌmwʌn ɪn ˈduːɪŋ ˈsʌmθɪŋ/（支持某人做某事）；support a claim with evidence /səˈpɔːrt ə ˈkleɪm ˈwɪð ˈɛvədəns/（用证据支持观点）；provide support for something /prəˈvaɪd səˈpɔːrt ˈfɔːr ˈsʌmθɪŋ/（为某事提供支持）",
     "structures": [
@@ -85,7 +85,7 @@
     ],
     "directSynonym": "assist /əˈsɪst/（协助）；back /ˈbæk/（支持；为……撑腰）；sustain /səˈsteɪn/（维持；支撑）；encourage /ɛˈnkɝːɪdʒ/（鼓励）",
     "directAntonym": "oppose /əˈpoʊz/（反对）；undermine /ˈʌndɚˌmaɪn/（削弱；暗中破坏）；abandon /əˈbændən/（抛弃；放弃支持）",
-    "derivatives": "supportive · supporter · supporting · unsupported",
+    "derivatives": "supporter · supportive · supporting · unsupported",
     "example": "Her family supported her decision to study abroad.",
     "exampleChinese": "她的家人支持她出国学习的决定。"
   },
@@ -268,8 +268,8 @@
       "phrase": "technical support",
       "phonetic": "/ˈtɛknɪkəl səˈpɔːrt/",
       "chinese": "技术支持",
-      "example": "Please contact technical support if the app stops working.",
-      "translation": "如果应用停止运行，请联系技术支持。"
+      "example": "The laboratory provides technical support for new equipment.",
+      "translation": "实验室为新设备提供技术支持。"
     },
     {
       "phrase": "a source of support",
@@ -334,18 +334,18 @@
   ],
   "derivatives": [
     {
-      "word": "supportive",
-      "phonetic": "/səˈpɔːrtɪv/",
-      "partOfSpeech": "adj.",
-      "chinese": "给予支持的",
-      "note": "常形容人、环境或态度，如 a supportive teacher。"
-    },
-    {
       "word": "supporter",
       "phonetic": "/səˈpɔːrtɚ/",
       "partOfSpeech": "n.",
       "chinese": "支持者；拥护者",
       "note": "指支持某人、球队、组织或观点的人。"
+    },
+    {
+      "word": "supportive",
+      "phonetic": "/səˈpɔːrtɪv/",
+      "partOfSpeech": "adj.",
+      "chinese": "给予支持的",
+      "note": "常形容人、环境或态度，如 a supportive teacher。"
     },
     {
       "word": "supporting",
@@ -531,11 +531,11 @@
       "type": "meaning_choice",
       "prompt": "“support”最核心的中文含义是？",
       "options": [
-        "支持；支撑",
-        "分享；共同拥有",
-        "去；前往；进展"
+        "支持；帮助；赞成",
+        "分享",
+        "去"
       ],
-      "answer": "支持；支撑",
+      "answer": "支持；帮助；赞成",
       "stage": "T0",
       "ai": false
     },
@@ -555,7 +555,7 @@
     {
       "id": "support-v-structure-choice-v3",
       "type": "meaning_choice",
-      "prompt": "核心结构辨析：哪一项既表示“支持某人或某事”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
+      "prompt": "核心结构辨析：哪一项既表示“支持某人或某事”，又符合这个形式线索：结构中直接带有事物宾语，不在目标词与宾语之间增加介词？",
       "options": [
         "support someone in doing something",
         "support a claim with evidence",
@@ -619,7 +619,7 @@
     {
       "id": "support-v-recall-chinese",
       "type": "recall",
-      "prompt": "写出符合“支持；支撑”（v. / n.）的本课目标词。",
+      "prompt": "写出符合“支持；帮助；赞成”（v.）的本课目标词。",
       "answer": "support",
       "stage": "T1",
       "ai": false
@@ -635,7 +635,7 @@
     {
       "id": "support-v-collocation-structure-meaning-v3",
       "type": "collocation",
-      "prompt": "句型应用：哪一项既表示“支持某人做某事”，又符合这个形式线索：目标词后的 doing 表示要换成符合语境的动词 -ing 形式？",
+      "prompt": "句型应用：哪一项既表示“支持某人做某事”，又符合这个形式线索：完整结构中的 doing 是语法占位符，要换成符合语境的动词 -ing 形式？",
       "options": [
         "provide support for something",
         "support someone in doing something",
@@ -663,7 +663,7 @@
     {
       "id": "support-v-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“支持某人做某事”，又符合这个形式线索：目标词后的 doing 表示要换成符合语境的动词 -ing 形式？",
+      "prompt": "用法辨析：哪一项既表示“支持某人做某事”，又符合这个形式线索：完整结构中的 doing 是语法占位符，要换成符合语境的动词 -ing 形式？",
       "options": [
         "support a decision",
         "support a claim with evidence",
@@ -699,7 +699,7 @@
     {
       "id": "support-v-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “support” 写一个自然、真实的英文句子，含义必须符合词卡核心义“支持；支撑”。",
+      "prompt": "请用 “support” 写一个自然、真实的英文句子，含义必须符合词卡核心义“支持；帮助；赞成”。",
       "answer": "",
       "stage": "T2",
       "ai": true
@@ -775,7 +775,7 @@
   },
   "detailLevel": "template-curated",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.09.08.2",
+  "contentVersion": "2026.09.09.4",
   "reviewed": true,
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

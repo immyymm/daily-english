@@ -1,7 +1,7 @@
 {
   "date": "2026-09-03",
   "dayNumber": 18,
-  "contentVersion": "2026.09.08.2",
+  "contentVersion": "2026.09.09.4",
   "templateVersion": "learning-template-2026.08.19.2",
   "cards": [
     {
@@ -34,8 +34,8 @@
         "主动词汇"
       ],
       "coreMemory": {
-        "chinese": "死亡；消失；停止运转",
-        "english": "v. to stop living, disappear, or stop functioning；v. pass from physical life and lose all bodily attributes and functions necessary to sustain life",
+        "chinese": "死亡；死去；消失；逐渐减弱；停止运转；没电",
+        "english": "v. to stop living；v. to gradually disappear or become weaker；v. to stop functioning because power or energy is gone",
         "structure": "die of something /ˈdaɪ ˈʌv ˈsʌmθɪŋ/（死于疾病或内因）；die from something /ˈdaɪ ˈfrʌm ˈsʌmθɪŋ/（死于外部原因）；die out /ˈdaɪ ˈaʊt/（灭绝；消失）；die down /ˈdaɪ ˈdaʊn/（逐渐平息）",
         "structures": [
           {
@@ -59,21 +59,21 @@
             "chinese": "逐渐平息"
           }
         ],
-        "commonError": "❌ be dying doing something → ✅ be dying to do something；❌ die something → ✅ die of something",
+        "commonError": "❌ be dying to does something → ✅ be dying to do something；❌ die for something → ✅ die of something",
         "commonErrors": [
           {
-            "wrong": "be dying doing something",
-            "wrongPhonetic": "/ˈbiː ˈdaɪɪŋ ˈduːɪŋ ˈsʌmθɪŋ/",
+            "wrong": "be dying to does something",
+            "wrongPhonetic": "/ˈbiː ˈdaɪɪŋ ˈtuː ˈdʌz ˈsʌmθɪŋ/",
             "right": "be dying to do something",
             "rightPhonetic": "/ˈbiː ˈdaɪɪŋ ˈtuː ˈduː ˈsʌmθɪŋ/",
-            "note": "这个结构要用 die + to + 动词原形；do 只是词卡里的动词占位符，真实句子要换成 finish、check 等具体动词。"
+            "note": "在“be dying to do something”中，这个 to 是不定式标记，后面必须接动词原形。do 只是语法占位符，真实表达要把它换成 finish、check 等符合语境的动词原形。"
           },
           {
-            "wrong": "die something",
-            "wrongPhonetic": "/ˈdaɪ ˈsʌmθɪŋ/",
+            "wrong": "die for something",
+            "wrongPhonetic": "/ˈdaɪ ˈfɔːr ˈsʌmθɪŋ/",
             "right": "die of something",
             "rightPhonetic": "/ˈdaɪ ˈʌv ˈsʌmθɪŋ/",
-            "note": "在“die of something”这个常用搭配中，介词 of 负责连接后面的对象或范围，不能省略或随意换成其他介词。"
+            "note": "在“die of something”所表达的这个具体含义中，要用介词 of；换成 for 会破坏这个固定结构或改变原意。"
           }
         ],
         "directSynonym": "perish /ˈpɛrɪʃ/（死亡；毁灭）",
@@ -85,17 +85,24 @@
       "meanings": [
         {
           "partOfSpeech": "v.",
-          "english": "to stop living, disappear, or stop functioning",
-          "chinese": "死亡；消失；停止运转",
+          "english": "to stop living",
+          "chinese": "死亡；死去",
           "example": "Many people still die of preventable diseases.",
           "translation": "仍有许多人死于可预防的疾病。"
         },
         {
           "partOfSpeech": "v.",
-          "english": "pass from physical life and lose all bodily attributes and functions necessary to sustain life",
-          "chinese": "死亡；消失；停止运转",
-          "example": "Plants may die from too much heat.",
-          "translation": "植物可能因高温而死亡。"
+          "english": "to gradually disappear or become weaker",
+          "chinese": "消失；逐渐减弱",
+          "example": "Some local expressions die out over time.",
+          "translation": "一些地方表达会逐渐消失。"
+        },
+        {
+          "partOfSpeech": "v.",
+          "english": "to stop functioning because power or energy is gone",
+          "chinese": "停止运转；没电",
+          "example": "My phone died before I could call her.",
+          "translation": "我还没来得及给她打电话，手机就没电了。"
         }
       ],
       "contextPhrases": [
@@ -103,14 +110,14 @@
           "category": "核心动作与结构",
           "items": [
             {
-              "phrase": "people still die of preventable diseases",
-              "phonetic": "/ˈpiːpəl ˈstɪl ˈdaɪ ˈʌv prɪˈvɛntəbəl dɪˈziːzəz/",
-              "chinese": "死于疾病或内因；原句语境：仍有许多人死于可预防的疾病。"
+              "phrase": "die of something",
+              "phonetic": "/ˈdaɪ ˈʌv ˈsʌmθɪŋ/",
+              "chinese": "死于疾病或内因"
             },
             {
-              "phrase": "Plants may die from too much heat",
-              "phonetic": "/ˈplænts ˈmeɪ ˈdaɪ ˈfrʌm ˈtuː ˈmʌtʃ ˈhiːt/",
-              "chinese": "死于外部原因；原句语境：植物可能因高温而死亡。"
+              "phrase": "die from something",
+              "phonetic": "/ˈdaɪ ˈfrʌm ˈsʌmθɪŋ/",
+              "chinese": "死于外部原因"
             }
           ]
         },
@@ -118,14 +125,14 @@
           "category": "日常与工作语境",
           "items": [
             {
-              "phrase": "local expressions die out over time",
-              "phonetic": "/ˈloʊkəl ɪˈksprɛʃənz ˈdaɪ ˈaʊt ˈoʊvɚ ˈtaɪm/",
-              "chinese": "灭绝；消失；原句语境：一些地方表达会逐渐消失。"
+              "phrase": "die out",
+              "phonetic": "/ˈdaɪ ˈaʊt/",
+              "chinese": "灭绝；消失"
             },
             {
-              "phrase": "began to die down after midnight",
-              "phonetic": "/bɪˈɡæn ˈtuː ˈdaɪ ˈdaʊn ˈæftɚ ˈmɪˌdnaɪt/",
-              "chinese": "逐渐平息；原句语境：午夜后噪声开始逐渐减弱。"
+              "phrase": "die down",
+              "phonetic": "/ˈdaɪ ˈdaʊn/",
+              "chinese": "逐渐平息"
             }
           ]
         },
@@ -133,14 +140,14 @@
           "category": "高频扩展表达",
           "items": [
             {
-              "phrase": "Sounds often die away as you move",
-              "phonetic": "/ˈsaʊndz ˈɔːfən ˈdaɪ əˈweɪ ˈæz ˈjuː ˈmuːv/",
-              "chinese": "逐渐消失；原句语境：离公路越远，声音往往越微弱。"
+              "phrase": "die away",
+              "phonetic": "/ˈdaɪ əˈweɪ/",
+              "chinese": "逐渐消失"
             },
             {
-              "phrase": "I am dying to know the result",
-              "phonetic": "/ˈaɪ ˈæm ˈdaɪɪŋ ˈtuː ˈnoʊ ðə rɪˈzʌlt/",
-              "chinese": "非常想做某事；原句语境：我非常想知道结果。"
+              "phrase": "be dying to do something",
+              "phonetic": "/ˈbiː ˈdaɪɪŋ ˈtuː ˈduː ˈsʌmθɪŋ/",
+              "chinese": "非常想做某事"
             }
           ]
         }
@@ -195,7 +202,7 @@
           "phonetic": "/ˈpɛrɪʃ/",
           "partOfSpeech": "v.",
           "chinese": "死亡；毁灭",
-          "difference": "perish 侧重“死亡；毁灭”。对应的常用英文义是 “to stop living, disappear, or stop functioning”。die 在本卡搭配“die of something”中表达“死亡”；换词时要同时检查宾语和介词。"
+          "difference": "perish 更侧重“死亡；毁灭”；die 的核心义是“死亡”。两者意思接近，但替换时仍要核对宾语、介词和具体语境。"
         }
       ],
       "antonyms": [
@@ -204,7 +211,7 @@
           "phonetic": "/ˈlaɪv/",
           "partOfSpeech": "v.",
           "chinese": "活着；生活",
-          "usage": "在“死亡”这个义项下，live（活着；生活）与 die 形成对比。对应的常用英文义是 “opposite of die”。只在这个明确义项和句型中对比，不把两个词的所有用法都视为相反。"
+          "usage": "当 die 表示“死亡”时，live 表示“活着；生活”。两者只在这个明确义项下构成直接对比，其他用法不能一概互换。"
         }
       ],
       "derivatives": [
@@ -233,89 +240,25 @@
       "confusables": [],
       "relatedVocabulary": [
         {
-          "category": "语义上位词：这个动作属于什么类别",
+          "category": "语义关联：一起理解更清楚",
           "items": [
             {
-              "word": "feel",
-              "phonetic": "/ˈfiːl/",
-              "partOfSpeech": "v.",
-              "chinese": "感觉"
-            },
-            {
-              "word": "turn",
-              "phonetic": "/ˈtɝːn/",
-              "partOfSpeech": "v.",
-              "chinese": "转动"
-            },
-            {
-              "word": "change",
-              "phonetic": "/tʃeɪndʒ/",
-              "partOfSpeech": "v. / n.",
-              "chinese": "改变"
-            },
-            {
-              "word": "experience",
-              "phonetic": "/ɪˈkspɪriːəns/",
-              "partOfSpeech": "v.",
-              "chinese": "经历；经验；体验"
-            }
-          ]
-        },
-        {
-          "category": "具体动作：相关的更具体表达",
-          "items": [
-            {
-              "word": "fall",
-              "phonetic": "/ˈfɔːl/",
-              "partOfSpeech": "v.",
-              "chinese": "落下"
-            },
-            {
-              "word": "blow",
-              "phonetic": "/ˈbloʊ/",
-              "partOfSpeech": "v.",
-              "chinese": "吹；打击；殴打"
-            },
-            {
-              "word": "yield",
-              "phonetic": "/ˈjiːld/",
-              "partOfSpeech": "v.",
-              "chinese": "生产量；投资收益；出产"
-            },
-            {
-              "word": "go down",
-              "phonetic": "/ˈɡoʊ ˈdaʊn/",
-              "partOfSpeech": "v.",
-              "chinese": "下去；下沉；坠落"
-            }
-          ]
-        },
-        {
-          "category": "真实语境：例句中常与本词同现的词",
-          "items": [
-            {
-              "word": "move",
-              "phonetic": "/ˈmuːv/",
-              "partOfSpeech": "v.",
-              "chinese": "移动"
-            },
-            {
-              "word": "know",
-              "phonetic": "/ˈnoʊ/",
-              "partOfSpeech": "v.",
-              "chinese": "知道"
-            },
-            {
-              "word": "people",
-              "phonetic": "/ˈpiːpəl/",
+              "word": "death",
+              "phonetic": "/ˈdɛθ/",
               "partOfSpeech": "n.",
-              "chinese": "人；人民；民族"
+              "chinese": "死亡"
             },
             {
-              "word": "result",
-              "phonetic": "/rɪˈzʌlt/",
-              "partOfSpeech": "n.",
-              "chinese": "结果；成绩；答案；产生"
+              "word": "alive",
+              "phonetic": "/əˈlaɪv/",
+              "partOfSpeech": "adj.",
+              "chinese": "活着的"
+            },
+            {
+              "word": "survive",
+              "phonetic": "/sɚˈvaɪv/",
+              "partOfSpeech": "v.",
+              "chinese": "幸存"
             }
           ]
         }
@@ -353,9 +296,9 @@
         }
       ],
       "studyFocus": {
-        "coreMeaning": "先掌握“死亡”这个核心义，再用本卡的 1 个常用义项辨别不同语境。",
+        "coreMeaning": "先掌握“死亡；死去”这个核心义，再对比另外 2 个常用义项，辨别不同语境。",
         "keyCollocation": "把“die of something”连同介词、宾语和动词形式作为整个句块记忆。",
-        "commonMistake": "这个结构要用 die + to + 动词原形；do 只是词卡里的动词占位符，真实句子要换成 finish、check 等具体动词。",
+        "commonMistake": "在“be dying to do something”中，这个 to 是不定式标记，后面必须接动词原形。do 只是语法占位符，真实表达要把它换成 finish、check 等符合语境的动词原形。",
         "mustUseExample": "Many people still die of preventable diseases.（仍有许多人死于可预防的疾病。）"
       },
       "questions": [
@@ -364,11 +307,11 @@
           "type": "meaning_choice",
           "prompt": "“die”最核心的中文含义是？",
           "options": [
-            "听；倾听",
-            "分享；共同拥有",
-            "死亡；消失；停止运转"
+            "听",
+            "分享",
+            "死亡；死去"
           ],
-          "answer": "死亡；消失；停止运转",
+          "answer": "死亡；死去",
           "stage": "T0",
           "ai": false
         },
@@ -378,10 +321,10 @@
           "prompt": "哪一项英文释义最符合词卡中的 “die”？",
           "options": [
             "to give part of something to others",
-            "to stop living, disappear, or stop functioning",
+            "to stop living",
             "to pay attention to sound"
           ],
-          "answer": "to stop living, disappear, or stop functioning",
+          "answer": "to stop living",
           "stage": "T0",
           "ai": false
         },
@@ -444,7 +387,7 @@
         {
           "id": "die-v-recall-definition",
           "type": "recall",
-          "prompt": "根据英文释义写出目标词：to stop living, disappear, or stop functioning",
+          "prompt": "根据英文释义写出目标词：to stop living",
           "answer": "die",
           "stage": "T1",
           "ai": false
@@ -452,7 +395,7 @@
         {
           "id": "die-v-recall-chinese",
           "type": "recall",
-          "prompt": "写出符合“死亡；消失；停止运转”（v.）的本课目标词。",
+          "prompt": "写出符合“死亡；死去”（v.）的本课目标词。",
           "answer": "die",
           "stage": "T1",
           "ai": false
@@ -532,7 +475,7 @@
         {
           "id": "die-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “die” 写一个自然、真实的英文句子，含义必须符合词卡核心义“死亡；消失；停止运转”。",
+          "prompt": "请用 “die” 写一个自然、真实的英文句子，含义必须符合词卡核心义“死亡；死去”。",
           "answer": "",
           "stage": "T2",
           "ai": true
@@ -548,7 +491,7 @@
         {
           "id": "die-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “die” 和 “people still die of preventable diseases” 结构，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “die” 和 “die out” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -608,7 +551,7 @@
       },
       "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.2",
-      "contentVersion": "2026.09.08.2",
+      "contentVersion": "2026.09.09.4",
       "reviewed": false,
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
@@ -642,8 +585,8 @@
         "主动词汇"
       ],
       "coreMemory": {
-        "chinese": "购买；买下；相信",
-        "english": "v. to obtain something by paying money or accept an idea as true；v. obtain by purchase",
+        "chinese": "购买；买下；相信；接受",
+        "english": "v. to obtain something by paying money for it；v. to accept or believe an idea or explanation",
         "structure": "buy something online /ˈbaɪ ˈsʌmθɪŋ ˈɔːˌnlaɪn/（在网上购买某物）；buy something for someone /ˈbaɪ ˈsʌmθɪŋ ˈfɔːr ˈsʌˌmwʌn/（给某人买某物）；buy something from someone /ˈbaɪ ˈsʌmθɪŋ ˈfrʌm ˈsʌˌmwʌn/（从某人处购买某物）；buy into an idea /ˈbaɪ ˈɪntuː ˈæn aɪˈdiːə/（接受并相信某种观点）",
         "structures": [
           {
@@ -667,43 +610,43 @@
             "chinese": "接受并相信某种观点"
           }
         ],
-        "commonError": "❌ buy something someone → ✅ buy something for someone；❌ buy something someone → ✅ buy something from someone",
+        "commonError": "❌ buy something at someone → ✅ buy something for someone；❌ buy something at someone → ✅ buy something from someone",
         "commonErrors": [
           {
-            "wrong": "buy something someone",
-            "wrongPhonetic": "/ˈbaɪ ˈsʌmθɪŋ ˈsʌˌmwʌn/",
+            "wrong": "buy something at someone",
+            "wrongPhonetic": "/ˈbaɪ ˈsʌmθɪŋ ˈæt ˈsʌˌmwʌn/",
             "right": "buy something for someone",
             "rightPhonetic": "/ˈbaɪ ˈsʌmθɪŋ ˈfɔːr ˈsʌˌmwʌn/",
-            "note": "在“buy something for someone”这个常用搭配中，介词 for 负责连接后面的对象或范围，不能省略或随意换成其他介词。"
+            "note": "在“buy something for someone”所表达的这个具体含义中，要用介词 for；换成 at 会破坏这个固定结构或改变原意。"
           },
           {
-            "wrong": "buy something someone",
-            "wrongPhonetic": "/ˈbaɪ ˈsʌmθɪŋ ˈsʌˌmwʌn/",
+            "wrong": "buy something at someone",
+            "wrongPhonetic": "/ˈbaɪ ˈsʌmθɪŋ ˈæt ˈsʌˌmwʌn/",
             "right": "buy something from someone",
             "rightPhonetic": "/ˈbaɪ ˈsʌmθɪŋ ˈfrʌm ˈsʌˌmwʌn/",
-            "note": "在“buy something from someone”这个常用搭配中，介词 from 负责连接后面的对象或范围，不能省略或随意换成其他介词。"
+            "note": "在“buy something from someone”所表达的这个具体含义中，要用介词 from；换成 at 会破坏这个固定结构或改变原意。"
           }
         ],
         "directSynonym": "purchase /ˈpɝːtʃəs/（购买；采购）",
         "directAntonym": "sell /ˈsɛl/（出售；卖出）",
-        "derivatives": "buyer · buying",
+        "derivatives": "buyer",
         "example": "I usually buy books online.",
         "exampleChinese": "我通常在网上买书。"
       },
       "meanings": [
         {
           "partOfSpeech": "v.",
-          "english": "to obtain something by paying money or accept an idea as true",
-          "chinese": "购买；买下；相信",
+          "english": "to obtain something by paying money for it",
+          "chinese": "购买；买下",
           "example": "I usually buy books online.",
           "translation": "我通常在网上买书。"
         },
         {
           "partOfSpeech": "v.",
-          "english": "obtain by purchase",
-          "chinese": "购买；买下；相信",
-          "example": "I usually buy something useful for my parents when I travel.",
-          "translation": "旅行时，我通常会给父母买些实用的东西。"
+          "english": "to accept or believe an idea or explanation",
+          "chinese": "相信；接受",
+          "example": "Not everyone will buy into the new plan immediately.",
+          "translation": "不是每个人都会立刻接受新计划。"
         }
       ],
       "contextPhrases": [
@@ -711,14 +654,14 @@
           "category": "核心动作与结构",
           "items": [
             {
-              "phrase": "I usually buy books online",
-              "phonetic": "/ˈaɪ ˈjuːʒəwəliː ˈbaɪ ˈbʊks ˈɔːˌnlaɪn/",
-              "chinese": "在网上购买某物；原句语境：我通常在网上买书。"
+              "phrase": "buy something online",
+              "phonetic": "/ˈbaɪ ˈsʌmθɪŋ ˈɔːˌnlaɪn/",
+              "chinese": "在网上购买某物"
             },
             {
-              "phrase": "I usually buy something useful for my",
-              "phonetic": "/ˈaɪ ˈjuːʒəwəliː ˈbaɪ ˈsʌmθɪŋ ˈjuːsfəl ˈfɔːr ˈmaɪ/",
-              "chinese": "给某人买某物；原句语境：旅行时，我通常会给父母买些实用的东西。"
+              "phrase": "buy something for someone",
+              "phonetic": "/ˈbaɪ ˈsʌmθɪŋ ˈfɔːr ˈsʌˌmwʌn/",
+              "chinese": "给某人买某物"
             }
           ]
         },
@@ -726,14 +669,14 @@
           "category": "日常与工作语境",
           "items": [
             {
-              "phrase": "We buy fresh vegetables from a",
-              "phonetic": "/ˈwiː ˈbaɪ ˈfrɛʃ ˈvɛdʒtəbəlz ˈfrʌm ə/",
-              "chinese": "从某人处购买某物；原句语境：我们从当地农户那里购买新鲜蔬菜。"
+              "phrase": "buy something from someone",
+              "phonetic": "/ˈbaɪ ˈsʌmθɪŋ ˈfrʌm ˈsʌˌmwʌn/",
+              "chinese": "从某人处购买某物"
             },
             {
-              "phrase": "everyone will buy into the new plan",
-              "phonetic": "/ˈɛvriːˌwʌn ˈwɪl ˈbaɪ ˈɪntuː ðə ˈnuː ˈplæn/",
-              "chinese": "接受并相信某种观点；原句语境：不是每个人都会立刻接受新计划。"
+              "phrase": "buy into an idea",
+              "phonetic": "/ˈbaɪ ˈɪntuː ˈæn aɪˈdiːə/",
+              "chinese": "接受并相信某种观点"
             }
           ]
         },
@@ -741,14 +684,14 @@
           "category": "高频扩展表达",
           "items": [
             {
-              "phrase": "fix will buy us time to find",
-              "phonetic": "/ˈfɪks ˈwɪl ˈbaɪ ˈʌs ˈtaɪm ˈtuː ˈfaɪnd/",
-              "chinese": "争取时间；原句语境：临时修复会为我们争取时间寻找更好的方案。"
+              "phrase": "buy time",
+              "phonetic": "/ˈbaɪ ˈtaɪm/",
+              "chinese": "争取时间"
             },
             {
-              "phrase": "Money cannot buy genuine trust",
-              "phonetic": "/ˈmʌniː ˈkænɑt ˈbaɪ ˈdʒɛnjəwən ˈtrʌst/",
-              "chinese": "买不到某物；无法用钱获得；原句语境：金钱买不到真正的信任。"
+              "phrase": "cannot buy something",
+              "phonetic": "/ˈkænɑt ˈbaɪ ˈsʌmθɪŋ/",
+              "chinese": "买不到某物；无法用钱获得"
             }
           ]
         }
@@ -803,7 +746,7 @@
           "phonetic": "/ˈpɝːtʃəs/",
           "partOfSpeech": "v.",
           "chinese": "购买；采购",
-          "difference": "purchase 侧重“购买；采购”。对应的常用英文义是 “to obtain something by paying money or accept an idea as true”。buy 在本卡搭配“buy something online”中表达“购买”；换词时要同时检查宾语和介词。"
+          "difference": "purchase 更侧重“购买；采购”；buy 的核心义是“购买”。两者意思接近，但替换时仍要核对宾语、介词和具体语境。"
         }
       ],
       "antonyms": [
@@ -812,7 +755,7 @@
           "phonetic": "/ˈsɛl/",
           "partOfSpeech": "v.",
           "chinese": "出售；卖出",
-          "usage": "在“购买”这个义项下，sell（出售；卖出）与 buy 形成对比。对应的常用英文义是 “opposite of buy”。只在这个明确义项和句型中对比，不把两个词的所有用法都视为相反。"
+          "usage": "当 buy 表示“购买”时，sell 表示“出售；卖出”。两者只在这个明确义项下构成直接对比，其他用法不能一概互换。"
         }
       ],
       "derivatives": [
@@ -820,85 +763,32 @@
           "word": "buyer",
           "phonetic": "/ˈbaɪɚ/",
           "partOfSpeech": "n.",
-          "chinese": "买家；采购员",
-          "note": "指购买商品或负责采购的人。"
-        },
-        {
-          "word": "buying",
-          "phonetic": "/ˈbaɪɪŋ/",
-          "partOfSpeech": "n.",
-          "chinese": "购买；采购",
-          "note": "常见于 buying decision、buying power。"
+          "chinese": "买家；采购者",
+          "note": "指购买商品的人或负责采购的人。"
         }
       ],
       "confusables": [],
       "relatedVocabulary": [
         {
-          "category": "语义上位词：这个动作属于什么类别",
+          "category": "语义关联：一起理解更清楚",
           "items": [
             {
-              "word": "be",
-              "phonetic": "/ˈbiː/",
+              "word": "sell",
+              "phonetic": "/ˈsɛl/",
               "partOfSpeech": "v.",
-              "chinese": "是"
-            },
-            {
-              "word": "get",
-              "phonetic": "/ˈɡɛt/",
-              "partOfSpeech": "v.",
-              "chinese": "得到"
-            },
-            {
-              "word": "believe",
-              "phonetic": "/bɪˈliːv/",
-              "partOfSpeech": "v.",
-              "chinese": "相信"
+              "chinese": "出售"
             },
             {
               "word": "pay",
               "phonetic": "/ˈpeɪ/",
               "partOfSpeech": "v.",
-              "chinese": "支付"
-            }
-          ]
-        },
-        {
-          "category": "具体动作：相关的更具体表达",
-          "items": [
-            {
-              "word": "take",
-              "phonetic": "/ˈteɪk/",
-              "partOfSpeech": "v.",
-              "chinese": "拿"
-            }
-          ]
-        },
-        {
-          "category": "真实语境：例句中常与本词同现的词",
-          "items": [
-            {
-              "word": "find",
-              "phonetic": "/ˈfaɪnd/",
-              "partOfSpeech": "v.",
-              "chinese": "找到"
+              "chinese": "付款"
             },
             {
-              "word": "parent",
-              "phonetic": "/ˈpɛrənt/",
-              "partOfSpeech": "n.",
-              "chinese": "父母；父母亲；根源"
-            },
-            {
-              "word": "plan",
-              "phonetic": "/ˈplæn/",
-              "partOfSpeech": "n.",
-              "chinese": "计划；方案；策略"
-            },
-            {
-              "word": "better",
-              "phonetic": "/ˈbɛtɚ/",
-              "partOfSpeech": "n.",
-              "chinese": "较好的；比较好"
+              "word": "purchase",
+              "phonetic": "/ˈpɝːtʃəs/",
+              "partOfSpeech": "v. / n.",
+              "chinese": "购买"
             }
           ]
         }
@@ -936,9 +826,9 @@
         }
       ],
       "studyFocus": {
-        "coreMeaning": "先掌握“购买”这个核心义，再用本卡的 1 个常用义项辨别不同语境。",
+        "coreMeaning": "先掌握“购买；买下”这个核心义，再对比另外 1 个常用义项，辨别不同语境。",
         "keyCollocation": "把“buy something online”连同介词、宾语和动词形式作为整个句块记忆。",
-        "commonMistake": "在“buy something for someone”这个常用搭配中，介词 for 负责连接后面的对象或范围，不能省略或随意换成其他介词。",
+        "commonMistake": "在“buy something for someone”所表达的这个具体含义中，要用介词 for；换成 at 会破坏这个固定结构或改变原意。",
         "mustUseExample": "I usually buy books online.（我通常在网上买书。）"
       },
       "questions": [
@@ -947,11 +837,11 @@
           "type": "meaning_choice",
           "prompt": "“buy”最核心的中文含义是？",
           "options": [
-            "意识到；实现",
-            "购买；买下；相信",
-            "同意；达成一致"
+            "意识到",
+            "购买；买下",
+            "同意"
           ],
-          "answer": "购买；买下；相信",
+          "answer": "购买；买下",
           "stage": "T0",
           "ai": false
         },
@@ -960,18 +850,18 @@
           "type": "meaning_choice",
           "prompt": "哪一项英文释义最符合词卡中的 “buy”？",
           "options": [
-            "to obtain something by paying money or accept an idea as true",
+            "to obtain something by paying money for it",
             "to have the same opinion or accept a proposal",
             "to suddenly understand something clearly"
           ],
-          "answer": "to obtain something by paying money or accept an idea as true",
+          "answer": "to obtain something by paying money for it",
           "stage": "T0",
           "ai": false
         },
         {
           "id": "buy-v-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "核心结构辨析：哪一项既表示“在网上购买某物”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
+          "prompt": "核心结构辨析：哪一项既表示“在网上购买某物”，又符合这个形式线索：结构中直接带有事物宾语，不在目标词与宾语之间增加介词？",
           "options": [
             "buy something online",
             "buy something for someone",
@@ -1027,7 +917,7 @@
         {
           "id": "buy-v-recall-definition",
           "type": "recall",
-          "prompt": "根据英文释义写出目标词：to obtain something by paying money or accept an idea as true",
+          "prompt": "根据英文释义写出目标词：to obtain something by paying money for it",
           "answer": "buy",
           "stage": "T1",
           "ai": false
@@ -1035,7 +925,7 @@
         {
           "id": "buy-v-recall-chinese",
           "type": "recall",
-          "prompt": "写出符合“购买；买下；相信”（v.）的本课目标词。",
+          "prompt": "写出符合“购买；买下”（v.）的本课目标词。",
           "answer": "buy",
           "stage": "T1",
           "ai": false
@@ -1079,7 +969,7 @@
         {
           "id": "buy-v-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "搭配辨析：哪一项既表示“在网上购买某物”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
+          "prompt": "搭配辨析：哪一项既表示“在网上购买某物”，又符合这个形式线索：结构中直接带有事物宾语，不在目标词与宾语之间增加介词？",
           "options": [
             "buy something online",
             "buy something for someone",
@@ -1115,7 +1005,7 @@
         {
           "id": "buy-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “buy” 写一个自然、真实的英文句子，含义必须符合词卡核心义“购买；买下；相信”。",
+          "prompt": "请用 “buy” 写一个自然、真实的英文句子，含义必须符合词卡核心义“购买；买下”。",
           "answer": "",
           "stage": "T2",
           "ai": true
@@ -1131,7 +1021,7 @@
         {
           "id": "buy-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “buy” 和 “I usually buy books online” 结构，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “buy” 和 “buy something online” 结构，并避免中文直译；something 要替换成实际的事物或内容。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1191,7 +1081,7 @@
       },
       "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.2",
-      "contentVersion": "2026.09.08.2",
+      "contentVersion": "2026.09.09.4",
       "reviewed": false,
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
@@ -1225,8 +1115,8 @@
         "主动词汇"
       ],
       "coreMemory": {
-        "chinese": "发送；寄出；派遣",
-        "english": "v. to cause something or someone to go to a destination；v. cause to go somewhere",
+        "chinese": "发送；寄出；派遣；派去；发出；散发",
+        "english": "v. to cause a message, letter, or object to go to someone；v. to arrange for a person to go somewhere；v. to cause something to be distributed or emitted",
         "structure": "send someone a message /ˈsɛnd ˈsʌˌmwʌn ə ˈmɛsədʒ/（给某人发消息）；send something to someone /ˈsɛnd ˈsʌmθɪŋ ˈtuː ˈsʌˌmwʌn/（把某物发给某人）；send someone to a place /ˈsɛnd ˈsʌˌmwʌn ˈtuː ə ˈpleɪs/（派某人去某地）；send something back /ˈsɛnd ˈsʌmθɪŋ ˈbæk/（退回；寄回某物）",
         "structures": [
           {
@@ -1250,43 +1140,50 @@
             "chinese": "退回；寄回某物"
           }
         ],
-        "commonError": "❌ send someone → ✅ send for someone；❌ to sending → ✅ to send",
+        "commonError": "❌ send at someone → ✅ send for someone；❌ to sending → ✅ to send",
         "commonErrors": [
           {
-            "wrong": "send someone",
-            "wrongPhonetic": "/ˈsɛnd ˈsʌˌmwʌn/",
+            "wrong": "send at someone",
+            "wrongPhonetic": "/ˈsɛnd ˈæt ˈsʌˌmwʌn/",
             "right": "send for someone",
             "rightPhonetic": "/ˈsɛnd ˈfɔːr ˈsʌˌmwʌn/",
-            "note": "在“send for someone”这个常用搭配中，介词 for 负责连接后面的对象或范围，不能省略或随意换成其他介词。"
+            "note": "在“send for someone”所表达的这个具体含义中，要用介词 for；换成 at 会破坏这个固定结构或改变原意。"
           },
           {
             "wrong": "to sending",
             "wrongPhonetic": "/ˈtuː ˈsɛndɪŋ/",
             "right": "to send",
             "rightPhonetic": "/ˈtuː ˈsɛnd/",
-            "note": "这里的 to 是不定式标记，后面要用 send 的原形，不能再加 -ing。"
+            "note": "这里的 to 是不定式标记，后面要用 send 的原形，不能改成 sending。"
           }
         ],
         "directSynonym": "dispatch /dɪˈspætʃ/（派送；发送）",
         "directAntonym": "receive /rəˈsiːv/（收到；接收）",
-        "derivatives": "sender · sending · sendee",
+        "derivatives": "sender",
         "example": "Please send me a message when you arrive.",
         "exampleChinese": "到达后请给我发消息。"
       },
       "meanings": [
         {
           "partOfSpeech": "v.",
-          "english": "to cause something or someone to go to a destination",
-          "chinese": "发送；寄出；派遣",
+          "english": "to cause a message, letter, or object to go to someone",
+          "chinese": "发送；寄出",
           "example": "Please send me a message when you arrive.",
           "translation": "到达后请给我发消息。"
         },
         {
           "partOfSpeech": "v.",
-          "english": "cause to go somewhere",
-          "chinese": "发送；寄出；派遣",
-          "example": "I will send the document to the team this afternoon.",
-          "translation": "我今天下午会把文件发给团队。"
+          "english": "to arrange for a person to go somewhere",
+          "chinese": "派遣；派去",
+          "example": "The company will send her to Beijing for training.",
+          "translation": "公司会派她去北京培训。"
+        },
+        {
+          "partOfSpeech": "v.",
+          "english": "to cause something to be distributed or emitted",
+          "chinese": "发出；散发",
+          "example": "We send out a reminder every Friday.",
+          "translation": "我们每周五发出提醒。"
         }
       ],
       "contextPhrases": [
@@ -1294,14 +1191,14 @@
           "category": "核心动作与结构",
           "items": [
             {
-              "phrase": "Please send me a message when",
-              "phonetic": "/ˈpliːz ˈsɛnd ˈmiː ə ˈmɛsədʒ ˈwɛn/",
-              "chinese": "给某人发消息；原句语境：到达后请给我发消息。"
+              "phrase": "send someone a message",
+              "phonetic": "/ˈsɛnd ˈsʌˌmwʌn ə ˈmɛsədʒ/",
+              "chinese": "给某人发消息"
             },
             {
-              "phrase": "I will send the document to the",
-              "phonetic": "/ˈaɪ ˈwɪl ˈsɛnd ðə ˈdɑkjəmɛnt ˈtuː ðə/",
-              "chinese": "把某物发给某人；原句语境：我今天下午会把文件发给团队。"
+              "phrase": "send something to someone",
+              "phonetic": "/ˈsɛnd ˈsʌmθɪŋ ˈtuː ˈsʌˌmwʌn/",
+              "chinese": "把某物发给某人"
             }
           ]
         },
@@ -1309,14 +1206,14 @@
           "category": "日常与工作语境",
           "items": [
             {
-              "phrase": "company will send her to Beijing for",
-              "phonetic": "/ˈkʌmpəˌniː ˈwɪl ˈsɛnd ˈhɝː ˈtuː ˌbeɪˈʒɪŋ ˈfɔːr/",
-              "chinese": "派某人去某地；原句语境：公司会派她去北京培训。"
+              "phrase": "send someone to a place",
+              "phonetic": "/ˈsɛnd ˈsʌˌmwʌn ˈtuː ə ˈpleɪs/",
+              "chinese": "派某人去某地"
             },
             {
-              "phrase": "Send the product back if",
-              "phonetic": "/ˈsɛnd ðə ˈprɑdəkt ˈbæk ˈɪf/",
-              "chinese": "退回；寄回某物；原句语境：如果产品损坏，请把它寄回。"
+              "phrase": "send something back",
+              "phonetic": "/ˈsɛnd ˈsʌmθɪŋ ˈbæk/",
+              "chinese": "退回；寄回某物"
             }
           ]
         },
@@ -1324,14 +1221,14 @@
           "category": "高频扩展表达",
           "items": [
             {
-              "phrase": "We send out a reminder every",
-              "phonetic": "/ˈwiː ˈsɛnd ˈaʊt ə riːˈmaɪndɚ ˈɛvɚiː/",
-              "chinese": "发出；分发某物；原句语境：我们每周五发出提醒。"
+              "phrase": "send out something",
+              "phonetic": "/ˈsɛnd ˈaʊt ˈsʌmθɪŋ/",
+              "chinese": "发出；分发某物"
             },
             {
-              "phrase": "The receptionist sent for a doctor immediately",
-              "phonetic": "/ðə rɪˈsɛpʃənɪst ˈsɛnt ˈfɔːr ə ˈdɑktɚ ˌɪˈmiːˌdiːətliː/",
-              "chinese": "派人去请某人；原句语境：接待员立即派人去请医生。"
+              "phrase": "send for someone",
+              "phonetic": "/ˈsɛnd ˈfɔːr ˈsʌˌmwʌn/",
+              "chinese": "派人去请某人"
             }
           ]
         }
@@ -1386,7 +1283,7 @@
           "phonetic": "/dɪˈspætʃ/",
           "partOfSpeech": "v.",
           "chinese": "派送；发送",
-          "difference": "dispatch 侧重“派送；发送”。对应的常用英文义是 “to cause something or someone to go to a destination”。send 在本卡搭配“send someone a message”中表达“发送”；换词时要同时检查宾语和介词。"
+          "difference": "dispatch 更侧重“派送；发送”；send 的核心义是“发送”。两者意思接近，但替换时仍要核对宾语、介词和具体语境。"
         }
       ],
       "antonyms": [
@@ -1395,7 +1292,7 @@
           "phonetic": "/rəˈsiːv/",
           "partOfSpeech": "v.",
           "chinese": "收到；接收",
-          "usage": "在“发送”这个义项下，receive（收到；接收）与 send 形成对比。对应的常用英文义是 “opposite of send”。只在这个明确义项和句型中对比，不把两个词的所有用法都视为相反。"
+          "usage": "当 send 表示“发送”时，receive 表示“收到；接收”。两者只在这个明确义项下构成直接对比，其他用法不能一概互换。"
         }
       ],
       "derivatives": [
@@ -1403,110 +1300,32 @@
           "word": "sender",
           "phonetic": "/ˈsɛndɚ/",
           "partOfSpeech": "n.",
-          "chinese": "发送者；寄件人",
-          "note": "常用于邮件、包裹和信息。"
-        },
-        {
-          "word": "sending",
-          "phonetic": "/ˈsɛndɪŋ/",
-          "partOfSpeech": "n.",
-          "chinese": "发送；派遣",
-          "note": "较少单独使用，多见于技术语境。"
-        },
-        {
-          "word": "sendee",
-          "phonetic": "/sendee/",
-          "partOfSpeech": "n.",
-          "chinese": "接收人；收件人",
-          "note": "sendee 是 send 的常用词族形式，作 n. 使用；对应的常用英文义是 “the intended recipient of a message”。"
+          "chinese": "寄件人；发送者",
+          "note": "指寄出信件、包裹或信息的人。"
         }
       ],
       "confusables": [],
       "relatedVocabulary": [
         {
-          "category": "语义上位词：这个动作属于什么类别",
+          "category": "语义关联：一起理解更清楚",
           "items": [
             {
-              "word": "move",
-              "phonetic": "/ˈmuːv/",
+              "word": "receive",
+              "phonetic": "/rəˈsiːv/",
               "partOfSpeech": "v.",
-              "chinese": "移动"
+              "chinese": "收到"
             },
             {
-              "word": "air",
-              "phonetic": "/ˈɛr/",
+              "word": "deliver",
+              "phonetic": "/dɪˈlɪvɚ/",
               "partOfSpeech": "v.",
-              "chinese": "空气；旋律；态度"
+              "chinese": "递送"
             },
             {
-              "word": "transport",
-              "phonetic": "/træˈnspɔːrt/",
-              "partOfSpeech": "v.",
-              "chinese": "运输；运输工具；激动"
-            },
-            {
-              "word": "transfer",
-              "phonetic": "/træˈnsfɝː/",
-              "partOfSpeech": "v.",
-              "chinese": "迁移；移动；传递"
-            }
-          ]
-        },
-        {
-          "category": "具体动作：相关的更具体表达",
-          "items": [
-            {
-              "word": "turn",
-              "phonetic": "/ˈtɝːn/",
-              "partOfSpeech": "v.",
-              "chinese": "转动"
-            },
-            {
-              "word": "express",
-              "phonetic": "/ɪkˈspres/",
-              "partOfSpeech": "v.",
-              "chinese": "表达"
-            },
-            {
-              "word": "project",
-              "phonetic": "/ˈprɑdʒɛkt/",
-              "partOfSpeech": "v.",
-              "chinese": "计划；设计；事业"
-            },
-            {
-              "word": "throw",
-              "phonetic": "/ˈθroʊ/",
-              "partOfSpeech": "v.",
-              "chinese": "投；掷；抛"
-            }
-          ]
-        },
-        {
-          "category": "真实语境：例句中常与本词同现的词",
-          "items": [
-            {
-              "word": "back",
-              "phonetic": "/ˈbæk/",
-              "partOfSpeech": "n.",
-              "chinese": "后面的；使后退；支持"
-            },
-            {
-              "word": "product",
-              "phonetic": "/ˈprɑdəkt/",
-              "partOfSpeech": "n.",
-              "chinese": "产品；结果；乘积"
-            },
-            {
-              "word": "arrive",
-              "phonetic": "/ɚˈaɪv/",
-              "partOfSpeech": "v.",
-              "chinese": "到达；抵达"
-            },
-            {
-              "word": "please",
-              "phonetic": "/ˈpliːz/",
-              "partOfSpeech": "v.",
-              "chinese": "请；使高兴；合...的心意"
+              "word": "message",
+              "phonetic": "/ˈmɛsədʒ/",
+              "partOfSpeech": "n. / v.",
+              "chinese": "消息；发消息"
             }
           ]
         }
@@ -1544,9 +1363,9 @@
         }
       ],
       "studyFocus": {
-        "coreMeaning": "先掌握“发送”这个核心义，再用本卡的 1 个常用义项辨别不同语境。",
+        "coreMeaning": "先掌握“发送；寄出”这个核心义，再对比另外 2 个常用义项，辨别不同语境。",
         "keyCollocation": "把“send someone a message”连同介词、宾语和动词形式作为整个句块记忆。",
-        "commonMistake": "在“send for someone”这个常用搭配中，介词 for 负责连接后面的对象或范围，不能省略或随意换成其他介词。",
+        "commonMistake": "在“send for someone”所表达的这个具体含义中，要用介词 for；换成 at 会破坏这个固定结构或改变原意。",
         "mustUseExample": "Please send me a message when you arrive.（到达后请给我发消息。）"
       },
       "questions": [
@@ -1555,11 +1374,11 @@
           "type": "meaning_choice",
           "prompt": "“send”最核心的中文含义是？",
           "options": [
-            "发送；寄出；派遣",
-            "切；削减；中断",
+            "发送；寄出",
+            "切",
             "描述"
           ],
-          "answer": "发送；寄出；派遣",
+          "answer": "发送；寄出",
           "stage": "T0",
           "ai": false
         },
@@ -1570,9 +1389,9 @@
           "options": [
             "to divide with a sharp tool, reduce, or interrupt something",
             "to say what someone or something is like",
-            "to cause something or someone to go to a destination"
+            "to cause a message, letter, or object to go to someone"
           ],
-          "answer": "to cause something or someone to go to a destination",
+          "answer": "to cause a message, letter, or object to go to someone",
           "stage": "T0",
           "ai": false
         },
@@ -1635,7 +1454,7 @@
         {
           "id": "send-v-recall-definition",
           "type": "recall",
-          "prompt": "根据英文释义写出目标词：to cause something or someone to go to a destination",
+          "prompt": "根据英文释义写出目标词：to cause a message, letter, or object to go to someone",
           "answer": "send",
           "stage": "T1",
           "ai": false
@@ -1643,7 +1462,7 @@
         {
           "id": "send-v-recall-chinese",
           "type": "recall",
-          "prompt": "写出符合“发送；寄出；派遣”（v.）的本课目标词。",
+          "prompt": "写出符合“发送；寄出”（v.）的本课目标词。",
           "answer": "send",
           "stage": "T1",
           "ai": false
@@ -1659,7 +1478,7 @@
         {
           "id": "send-v-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "句型应用：哪一项既表示“把某物发给某人”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
+          "prompt": "句型应用：哪一项既表示“把某物发给某人”，又符合这个形式线索：完整搭配中使用介词 to？",
           "options": [
             "send something back",
             "send something to someone",
@@ -1701,7 +1520,7 @@
         {
           "id": "send-v-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "搭配辨析：哪一项既表示“把某物发给某人”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
+          "prompt": "搭配辨析：哪一项既表示“把某物发给某人”，又符合这个形式线索：完整搭配中使用介词 to？",
           "options": [
             "send someone to a place",
             "send something back",
@@ -1723,7 +1542,7 @@
         {
           "id": "send-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “send” 写一个自然、真实的英文句子，含义必须符合词卡核心义“发送；寄出；派遣”。",
+          "prompt": "请用 “send” 写一个自然、真实的英文句子，含义必须符合词卡核心义“发送；寄出”。",
           "answer": "",
           "stage": "T2",
           "ai": true
@@ -1739,7 +1558,7 @@
         {
           "id": "send-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “send” 和 “Please send me a message when” 结构，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “send” 和 “send someone a message” 结构，并避免中文直译；someone 要替换成实际的人或代词。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1799,7 +1618,7 @@
       },
       "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.2",
-      "contentVersion": "2026.09.08.2",
+      "contentVersion": "2026.09.09.4",
       "reviewed": false,
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
@@ -1839,8 +1658,8 @@
         "主动词汇"
       ],
       "coreMemory": {
-        "chinese": "走路；步行；陪同",
-        "english": "v. to move on foot or accompany someone on foot；v. accompany or escort",
+        "chinese": "走路；步行；陪……走；步行送",
+        "english": "v. to move from one place to another on foot；v. to go somewhere with someone who is walking",
         "structure": "walk to a place /ˈwɔːk ˈtuː ə ˈpleɪs/（步行去某地）；walk along something /ˈwɔːk əˈlɔːŋ ˈsʌmθɪŋ/（沿着某处走）；walk someone home /ˈwɔːk ˈsʌˌmwʌn ˈhoʊm/（陪某人走回家）；walk away from something /ˈwɔːk əˈweɪ ˈfrʌm ˈsʌmθɪŋ/（离开；摆脱某事）",
         "structures": [
           {
@@ -1864,25 +1683,25 @@
             "chinese": "离开；摆脱某事"
           }
         ],
-        "commonError": "❌ walk away something → ✅ walk away from something；❌ walk a room → ✅ walk into a room",
+        "commonError": "❌ walk away at something → ✅ walk away from something；❌ walk at a room → ✅ walk into a room",
         "commonErrors": [
           {
-            "wrong": "walk away something",
-            "wrongPhonetic": "/ˈwɔːk əˈweɪ ˈsʌmθɪŋ/",
+            "wrong": "walk away at something",
+            "wrongPhonetic": "/ˈwɔːk əˈweɪ ˈæt ˈsʌmθɪŋ/",
             "right": "walk away from something",
             "rightPhonetic": "/ˈwɔːk əˈweɪ ˈfrʌm ˈsʌmθɪŋ/",
-            "note": "在“walk away from something”这个常用搭配中，介词 from 负责连接后面的对象或范围，不能省略或随意换成其他介词。"
+            "note": "在“walk away from something”所表达的这个具体含义中，要用介词 from；换成 at 会破坏这个固定结构或改变原意。"
           },
           {
-            "wrong": "walk a room",
-            "wrongPhonetic": "/ˈwɔːk ə ˈruːm/",
+            "wrong": "walk at a room",
+            "wrongPhonetic": "/ˈwɔːk ˈæt ə ˈruːm/",
             "right": "walk into a room",
             "rightPhonetic": "/ˈwɔːk ˈɪntuː ə ˈruːm/",
-            "note": "在“walk into a room”这个常用搭配中，介词 into 负责连接后面的对象或范围，不能省略或随意换成其他介词。"
+            "note": "在“walk into a room”所表达的这个具体含义中，要用介词 into；换成 at 会破坏这个固定结构或改变原意。"
           }
         ],
         "directSynonym": "stroll /ˈstroʊl/（散步；漫步）",
-        "directAntonym": "run /ˈrʌn/（跑；奔跑）",
+        "directAntonym": "stand still /ˈstænd ˈstɪl/（站着不动）",
         "derivatives": "walker · walking",
         "example": "I walk to work when the weather is good.",
         "exampleChinese": "天气好时我步行上班。"
@@ -1890,17 +1709,17 @@
       "meanings": [
         {
           "partOfSpeech": "v.",
-          "english": "to move on foot or accompany someone on foot",
-          "chinese": "走路；步行；陪同",
+          "english": "to move from one place to another on foot",
+          "chinese": "走路；步行",
           "example": "I walk to work when the weather is good.",
           "translation": "天气好时我步行上班。"
         },
         {
           "partOfSpeech": "v.",
-          "english": "accompany or escort",
-          "chinese": "走路；步行；陪同",
-          "example": "We often walk along the river after dinner.",
-          "translation": "晚饭后我们经常沿河散步。"
+          "english": "to go somewhere with someone who is walking",
+          "chinese": "陪……走；步行送",
+          "example": "I walked my friend home after dinner.",
+          "translation": "晚饭后我步行送朋友回家。"
         }
       ],
       "contextPhrases": [
@@ -1908,14 +1727,14 @@
           "category": "核心动作与结构",
           "items": [
             {
-              "phrase": "I walk to work when the",
-              "phonetic": "/ˈaɪ ˈwɔːk ˈtuː ˈwɝːk ˈwɛn ðə/",
-              "chinese": "步行去某地；原句语境：天气好时我步行上班。"
+              "phrase": "walk to a place",
+              "phonetic": "/ˈwɔːk ˈtuː ə ˈpleɪs/",
+              "chinese": "步行去某地"
             },
             {
-              "phrase": "We often walk along the river after",
-              "phonetic": "/ˈwiː ˈɔːfən ˈwɔːk əˈlɔːŋ ðə ˈrɪvɚ ˈæftɚ/",
-              "chinese": "沿着某处走；原句语境：晚饭后我们经常沿河散步。"
+              "phrase": "walk along something",
+              "phonetic": "/ˈwɔːk əˈlɔːŋ ˈsʌmθɪŋ/",
+              "chinese": "沿着某处走"
             }
           ]
         },
@@ -1923,14 +1742,14 @@
           "category": "日常与工作语境",
           "items": [
             {
-              "phrase": "I will walk you home after the",
-              "phonetic": "/ˈaɪ ˈwɪl ˈwɔːk ˈjuː ˈhoʊm ˈæftɚ ðə/",
-              "chinese": "陪某人走回家；原句语境：会议结束后我陪你走回家。"
+              "phrase": "walk someone home",
+              "phonetic": "/ˈwɔːk ˈsʌˌmwʌn ˈhoʊm/",
+              "chinese": "陪某人走回家"
             },
             {
-              "phrase": "You can walk away from an unfair",
-              "phonetic": "/ˈjuː ˈkæn ˈwɔːk əˈweɪ ˈfrʌm ˈæn əˈnfɛr/",
-              "chinese": "离开；摆脱某事；原句语境：你可以退出不公平的协议。"
+              "phrase": "walk away from something",
+              "phonetic": "/ˈwɔːk əˈweɪ ˈfrʌm ˈsʌmθɪŋ/",
+              "chinese": "离开；摆脱某事"
             }
           ]
         },
@@ -1938,14 +1757,14 @@
           "category": "高频扩展表达",
           "items": [
             {
-              "phrase": "saw her walk into the room and",
-              "phonetic": "/ˈsɔː ˈhɝː ˈwɔːk ˈɪntuː ðə ˈruːm ənd/",
-              "chinese": "走进房间；原句语境：我看见她走进房间并作了自我介绍。"
+              "phrase": "walk into a room",
+              "phonetic": "/ˈwɔːk ˈɪntuː ə ˈruːm/",
+              "chinese": "走进房间"
             },
             {
-              "phrase": "trainer will walk you through the process",
-              "phonetic": "/ˈtreɪnɚ ˈwɪl ˈwɔːk ˈjuː ˈθruː ðə ˈprɑˌsɛs/",
-              "chinese": "带某人逐步了解某事；原句语境：培训师会带你逐步了解流程。"
+              "phrase": "walk someone through something",
+              "phonetic": "/ˈwɔːk ˈsʌˌmwʌn ˈθruː ˈsʌmθɪŋ/",
+              "chinese": "带某人逐步了解某事"
             }
           ]
         }
@@ -2000,16 +1819,16 @@
           "phonetic": "/ˈstroʊl/",
           "partOfSpeech": "v.",
           "chinese": "散步；漫步",
-          "difference": "stroll 侧重“散步；漫步”。对应的常用英文义是 “to move on foot or accompany someone on foot”。walk 在本卡搭配“walk to a place”中表达“走路”；换词时要同时检查宾语和介词。"
+          "difference": "walk 与 stroll 在本卡义项下意思接近。stroll 指轻松、缓慢地走；walk 是不限定速度和目的的一般“步行”。"
         }
       ],
       "antonyms": [
         {
-          "word": "run",
-          "phonetic": "/ˈrʌn/",
-          "partOfSpeech": "v.",
-          "chinese": "跑；奔跑",
-          "usage": "在“走路”这个义项下，run（跑；奔跑）与 walk 形成对比。对应的常用英文义是 “opposite of walk”。只在这个明确义项和句型中对比，不把两个词的所有用法都视为相反。"
+          "word": "stand still",
+          "phonetic": "/ˈstænd ˈstɪl/",
+          "partOfSpeech": "phr.",
+          "chinese": "站着不动",
+          "usage": "walk 与 stand still 在本卡义项下形成明确对比。walk 表示步行移动；stand still 表示站在原地不移动。"
         }
       ],
       "derivatives": [
@@ -2031,83 +1850,25 @@
       "confusables": [],
       "relatedVocabulary": [
         {
-          "category": "语义上位词：这个动作属于什么类别",
+          "category": "语义关联：一起理解更清楚",
           "items": [
             {
-              "word": "go",
-              "phonetic": "/ˈɡoʊ/",
-              "partOfSpeech": "v.",
-              "chinese": "去"
+              "word": "step",
+              "phonetic": "/ˈstɛp/",
+              "partOfSpeech": "n. / v.",
+              "chinese": "脚步；迈步"
             },
             {
-              "word": "move",
-              "phonetic": "/ˈmuːv/",
-              "partOfSpeech": "v.",
-              "chinese": "移动"
-            },
-            {
-              "word": "hit",
-              "phonetic": "/ˈhɪt/",
-              "partOfSpeech": "v.",
-              "chinese": "击打"
-            },
-            {
-              "word": "cover",
-              "phonetic": "/ˈkʌvɚ/",
-              "partOfSpeech": "v.",
-              "chinese": "盖子；封面；藉口"
-            }
-          ]
-        },
-        {
-          "category": "具体动作：相关的更具体表达",
-          "items": [
-            {
-              "word": "foot",
-              "phonetic": "/ˈfʊt/",
-              "partOfSpeech": "v.",
-              "chinese": "脚；步调；英尺"
-            },
-            {
-              "word": "tap",
-              "phonetic": "/ˈtæp/",
-              "partOfSpeech": "v.",
-              "chinese": "轻打；水龙头；轻打"
-            },
-            {
-              "word": "toe",
-              "phonetic": "/ˈtoʊ/",
-              "partOfSpeech": "v.",
-              "chinese": "足趾；趾部；脚趾"
-            }
-          ]
-        },
-        {
-          "category": "真实语境：例句中常与本词同现的词",
-          "items": [
-            {
-              "word": "work",
-              "phonetic": "/ˈwɝːk/",
-              "partOfSpeech": "v.",
-              "chinese": "工作"
-            },
-            {
-              "word": "process",
-              "phonetic": "/ˈprɑˌsɛs/",
+              "word": "path",
+              "phonetic": "/ˈpæθ/",
               "partOfSpeech": "n.",
-              "chinese": "程序；进行；过程"
+              "chinese": "小路；路径"
             },
             {
-              "word": "meeting",
-              "phonetic": "/ˈmiːtɪŋ/",
-              "partOfSpeech": "n.",
-              "chinese": "会议；会面"
-            },
-            {
-              "word": "agreement",
-              "phonetic": "/əˈɡriːmənt/",
-              "partOfSpeech": "n.",
-              "chinese": "同意；合约；协议"
+              "word": "run",
+              "phonetic": "/ˈrʌn/",
+              "partOfSpeech": "v.",
+              "chinese": "跑"
             }
           ]
         }
@@ -2145,9 +1906,9 @@
         }
       ],
       "studyFocus": {
-        "coreMeaning": "先掌握“走路”这个核心义，再用本卡的 1 个常用义项辨别不同语境。",
+        "coreMeaning": "先掌握“走路；步行”这个核心义，再对比另外 1 个常用义项，辨别不同语境。",
         "keyCollocation": "把“walk to a place”连同介词、宾语和动词形式作为整个句块记忆。",
-        "commonMistake": "在“walk away from something”这个常用搭配中，介词 from 负责连接后面的对象或范围，不能省略或随意换成其他介词。",
+        "commonMistake": "在“walk away from something”所表达的这个具体含义中，要用介词 from；换成 at 会破坏这个固定结构或改变原意。",
         "mustUseExample": "I walk to work when the weather is good.（天气好时我步行上班。）"
       },
       "questions": [
@@ -2157,10 +1918,10 @@
           "prompt": "“walk”最核心的中文含义是？",
           "options": [
             "决定",
-            "增加；增长",
-            "走路；步行；陪同"
+            "增加",
+            "走路；步行"
           ],
-          "answer": "走路；步行；陪同",
+          "answer": "走路；步行",
           "stage": "T0",
           "ai": false
         },
@@ -2170,17 +1931,17 @@
           "prompt": "哪一项英文释义最符合词卡中的 “walk”？",
           "options": [
             "to become or make something greater",
-            "to move on foot or accompany someone on foot",
+            "to move from one place to another on foot",
             "to make a choice after thinking"
           ],
-          "answer": "to move on foot or accompany someone on foot",
+          "answer": "to move from one place to another on foot",
           "stage": "T0",
           "ai": false
         },
         {
           "id": "walk-v-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "核心结构辨析：哪一项既表示“步行去某地”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+          "prompt": "核心结构辨析：哪一项既表示“步行去某地”，又符合这个形式线索：完整搭配中使用介词 to？",
           "options": [
             "walk someone home",
             "walk away from something",
@@ -2198,7 +1959,7 @@
           "options": [
             "increase",
             "stroll",
-            "run",
+            "stand still",
             "decide"
           ],
           "answer": "stroll",
@@ -2210,12 +1971,12 @@
           "type": "meaning_choice",
           "prompt": "哪个词是词卡中列出的 “walk” 最直接反义词？",
           "options": [
-            "run",
+            "stand still",
             "stroll",
             "decide",
             "increase"
           ],
-          "answer": "run",
+          "answer": "stand still",
           "stage": "T2",
           "ai": false
         },
@@ -2225,7 +1986,7 @@
           "prompt": "根据本词卡辨析，哪个词被列为 “walk” 的派生词？",
           "options": [
             "stroll",
-            "run",
+            "stand still",
             "decide",
             "walker"
           ],
@@ -2236,7 +1997,7 @@
         {
           "id": "walk-v-recall-definition",
           "type": "recall",
-          "prompt": "根据英文释义写出目标词：to move on foot or accompany someone on foot",
+          "prompt": "根据英文释义写出目标词：to move from one place to another on foot",
           "answer": "walk",
           "stage": "T1",
           "ai": false
@@ -2244,7 +2005,7 @@
         {
           "id": "walk-v-recall-chinese",
           "type": "recall",
-          "prompt": "写出符合“走路；步行；陪同”（v.）的本课目标词。",
+          "prompt": "写出符合“走路；步行”（v.）的本课目标词。",
           "answer": "walk",
           "stage": "T1",
           "ai": false
@@ -2260,7 +2021,7 @@
         {
           "id": "walk-v-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "句型应用：哪一项既表示“沿着某处走”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
+          "prompt": "句型应用：哪一项既表示“沿着某处走”，又符合这个形式线索：完整搭配中使用介词 along？",
           "options": [
             "walk along something",
             "walk to a place",
@@ -2288,7 +2049,7 @@
         {
           "id": "walk-v-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "搭配辨析：哪一项既表示“步行去某地”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+          "prompt": "搭配辨析：哪一项既表示“步行去某地”，又符合这个形式线索：完整搭配中使用介词 to？",
           "options": [
             "walk someone home",
             "walk away from something",
@@ -2302,7 +2063,7 @@
         {
           "id": "walk-v-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "用法辨析：哪一项既表示“沿着某处走”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
+          "prompt": "用法辨析：哪一项既表示“沿着某处走”，又符合这个形式线索：完整搭配中使用介词 along？",
           "options": [
             "walk away from something",
             "walk along something",
@@ -2324,7 +2085,7 @@
         {
           "id": "walk-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “walk” 写一个自然、真实的英文句子，含义必须符合词卡核心义“走路；步行；陪同”。",
+          "prompt": "请用 “walk” 写一个自然、真实的英文句子，含义必须符合词卡核心义“走路；步行”。",
           "answer": "",
           "stage": "T2",
           "ai": true
@@ -2340,7 +2101,7 @@
         {
           "id": "walk-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “walk” 和 “I walk to work when the” 结构，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “walk” 和 “walk to a place” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2400,7 +2161,7 @@
       },
       "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.2",
-      "contentVersion": "2026.09.08.2",
+      "contentVersion": "2026.09.09.4",
       "reviewed": false,
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
@@ -2434,8 +2195,8 @@
         "主动词汇"
       ],
       "coreMemory": {
-        "chinese": "生长；增长；变得",
-        "english": "v. to become larger, develop, or change gradually；v. pass into a condition gradually, take on a specific property or attribute",
+        "chinese": "生长；长大；增长；扩大；逐渐变得",
+        "english": "v. to become larger or develop naturally；v. to increase in size, number, or importance；v. to gradually become a particular state",
         "structure": "grow quickly /ˈɡroʊ ˈkwɪkliː/（快速增长或成长）；grow into something /ˈɡroʊ ˈɪntuː ˈsʌmθɪŋ/（成长为；发展成某物）；grow up /ˈɡroʊ ˈʌp/（长大）；grow tired of something /ˈɡroʊ ˈtaɪɚd ˈʌv ˈsʌmθɪŋ/（逐渐厌倦某事）",
         "structures": [
           {
@@ -2459,43 +2220,50 @@
             "chinese": "逐渐厌倦某事"
           }
         ],
-        "commonError": "❌ grow something → ✅ grow into something；❌ grow tired something → ✅ grow tired of something",
+        "commonError": "❌ grow at something → ✅ grow into something；❌ grow tired for something → ✅ grow tired of something",
         "commonErrors": [
           {
-            "wrong": "grow something",
-            "wrongPhonetic": "/ˈɡroʊ ˈsʌmθɪŋ/",
+            "wrong": "grow at something",
+            "wrongPhonetic": "/ˈɡroʊ ˈæt ˈsʌmθɪŋ/",
             "right": "grow into something",
             "rightPhonetic": "/ˈɡroʊ ˈɪntuː ˈsʌmθɪŋ/",
-            "note": "在“grow into something”这个常用搭配中，介词 into 负责连接后面的对象或范围，不能省略或随意换成其他介词。"
+            "note": "在“grow into something”所表达的这个具体含义中，要用介词 into；换成 at 会破坏这个固定结构或改变原意。"
           },
           {
-            "wrong": "grow tired something",
-            "wrongPhonetic": "/ˈɡroʊ ˈtaɪɚd ˈsʌmθɪŋ/",
+            "wrong": "grow tired for something",
+            "wrongPhonetic": "/ˈɡroʊ ˈtaɪɚd ˈfɔːr ˈsʌmθɪŋ/",
             "right": "grow tired of something",
             "rightPhonetic": "/ˈɡroʊ ˈtaɪɚd ˈʌv ˈsʌmθɪŋ/",
-            "note": "在“grow tired of something”这个常用搭配中，介词 of 负责连接后面的对象或范围，不能省略或随意换成其他介词。"
+            "note": "在“grow tired of something”所表达的这个具体含义中，要用介词 of；换成 for 会破坏这个固定结构或改变原意。"
           }
         ],
         "directSynonym": "develop /dɪˈvɛləp/（发展；成长）",
         "directAntonym": "shrink /ˈʃrɪŋk/（缩小；减少）",
-        "derivatives": "growth · growing · grower",
+        "derivatives": "growth · grower · growing",
         "example": "The small company continues to grow quickly.",
         "exampleChinese": "这家小公司继续快速发展。"
       },
       "meanings": [
         {
           "partOfSpeech": "v.",
-          "english": "to become larger, develop, or change gradually",
-          "chinese": "生长；增长；变得",
+          "english": "to become larger or develop naturally",
+          "chinese": "生长；长大",
+          "example": "These plants grow quickly in warm weather.",
+          "translation": "这些植物在温暖天气里生长得很快。"
+        },
+        {
+          "partOfSpeech": "v.",
+          "english": "to increase in size, number, or importance",
+          "chinese": "增长；扩大",
           "example": "The small company continues to grow quickly.",
           "translation": "这家小公司继续快速发展。"
         },
         {
           "partOfSpeech": "v.",
-          "english": "pass into a condition gradually, take on a specific property or attribute",
-          "chinese": "生长；增长；变得",
-          "example": "A daily habit can grow into a lasting skill.",
-          "translation": "每日习惯能发展成持久技能。"
+          "english": "to gradually become a particular state",
+          "chinese": "逐渐变得",
+          "example": "She grew more confident after each presentation.",
+          "translation": "每次演讲后她都变得更自信。"
         }
       ],
       "contextPhrases": [
@@ -2503,14 +2271,14 @@
           "category": "核心动作与结构",
           "items": [
             {
-              "phrase": "continues to grow quickly",
-              "phonetic": "/kəˈntɪnjuːz ˈtuː ˈɡroʊ ˈkwɪkliː/",
-              "chinese": "快速增长或成长；原句语境：这家小公司继续快速发展。"
+              "phrase": "grow quickly",
+              "phonetic": "/ˈɡroʊ ˈkwɪkliː/",
+              "chinese": "快速增长或成长"
             },
             {
-              "phrase": "habit can grow into a lasting skill",
-              "phonetic": "/ˈhæbət ˈkæn ˈɡroʊ ˈɪntuː ə ˈlæstɪŋ ˈskɪl/",
-              "chinese": "成长为；发展成某物；原句语境：每日习惯能发展成持久技能。"
+              "phrase": "grow into something",
+              "phonetic": "/ˈɡroʊ ˈɪntuː ˈsʌmθɪŋ/",
+              "chinese": "成长为；发展成某物"
             }
           ]
         },
@@ -2518,14 +2286,14 @@
           "category": "日常与工作语境",
           "items": [
             {
-              "phrase": "Children grow up at different speeds",
-              "phonetic": "/ˈtʃɪldrən ˈɡroʊ ˈʌp ˈæt ˈdɪfɚənt ˈspiːdz/",
-              "chinese": "长大；原句语境：孩子们成长的速度各不相同。"
+              "phrase": "grow up",
+              "phonetic": "/ˈɡroʊ ˈʌp/",
+              "chinese": "长大"
             },
             {
-              "phrase": "Learners may grow tired of repetitive questions",
-              "phonetic": "/ˈlɝːnɚz ˈmeɪ ˈɡroʊ ˈtaɪɚd ˈʌv rɪˈpɛtɪtɪv ˈkwɛstʃənz/",
-              "chinese": "逐渐厌倦某事；原句语境：学习者可能逐渐厌倦重复的题目。"
+              "phrase": "grow tired of something",
+              "phonetic": "/ˈɡroʊ ˈtaɪɚd ˈʌv ˈsʌmθɪŋ/",
+              "chinese": "逐渐厌倦某事"
             }
           ]
         },
@@ -2533,14 +2301,14 @@
           "category": "高频扩展表达",
           "items": [
             {
-              "phrase": "You will grow in confidence as you",
-              "phonetic": "/ˈjuː ˈwɪl ˈɡroʊ ɪn ˈkɑnfədəns ˈæz ˈjuː/",
-              "chinese": "越来越自信；原句语境：随着开口次数增加，你会越来越自信。"
+              "phrase": "grow in confidence",
+              "phonetic": "/ˈɡroʊ ɪn ˈkɑnfədəns/",
+              "chinese": "越来越自信"
             },
             {
-              "phrase": "We grow tomatoes from seed every",
-              "phonetic": "/ˈwiː ˈɡroʊ təˈmeɪtoʊz ˈfrʌm ˈsiːd ˈɛvɚiː/",
-              "chinese": "用种子种植某物；原句语境：我们每年春天用种子种番茄。"
+              "phrase": "grow something from seed",
+              "phonetic": "/ˈɡroʊ ˈsʌmθɪŋ ˈfrʌm ˈsiːd/",
+              "chinese": "用种子种植某物"
             }
           ]
         }
@@ -2595,7 +2363,7 @@
           "phonetic": "/dɪˈvɛləp/",
           "partOfSpeech": "v.",
           "chinese": "发展；成长",
-          "difference": "develop 侧重“发展；成长”。对应的常用英文义是 “to become larger, develop, or change gradually”。grow 在本卡搭配“grow quickly”中表达“生长”；换词时要同时检查宾语和介词。"
+          "difference": "develop 更侧重“发展；成长”；grow 的核心义是“生长”。两者意思接近，但替换时仍要核对宾语、介词和具体语境。"
         }
       ],
       "antonyms": [
@@ -2604,7 +2372,7 @@
           "phonetic": "/ˈʃrɪŋk/",
           "partOfSpeech": "v.",
           "chinese": "缩小；减少",
-          "usage": "在“生长”这个义项下，shrink（缩小；减少）与 grow 形成对比。对应的常用英文义是 “opposite of grow”。只在这个明确义项和句型中对比，不把两个词的所有用法都视为相反。"
+          "usage": "当 grow 表示“生长”时，shrink 表示“缩小；减少”。两者只在这个明确义项下构成直接对比，其他用法不能一概互换。"
         }
       ],
       "derivatives": [
@@ -2616,18 +2384,18 @@
           "note": "可指身体、经济或能力增长。"
         },
         {
-          "word": "growing",
-          "phonetic": "/ˈɡroʊɪŋ/",
-          "partOfSpeech": "adj.",
-          "chinese": "日益增加的",
-          "note": "常修饰 concern、demand、number。"
-        },
-        {
           "word": "grower",
           "phonetic": "/ˈɡroʊɚ/",
           "partOfSpeech": "n.",
           "chinese": "种植者；生产者",
           "note": "常用于农业语境。"
+        },
+        {
+          "word": "growing",
+          "phonetic": "/ˈɡroʊɪŋ/",
+          "partOfSpeech": "adj.",
+          "chinese": "日益增加的",
+          "note": "常修饰 concern、demand、number。"
         }
       ],
       "confusables": [
@@ -2641,83 +2409,25 @@
       ],
       "relatedVocabulary": [
         {
-          "category": "语义上位词：这个动作属于什么类别",
+          "category": "语义关联：一起理解更清楚",
           "items": [
-            {
-              "word": "become",
-              "phonetic": "/bɪˈkʌm/",
-              "partOfSpeech": "v.",
-              "chinese": "变成"
-            },
-            {
-              "word": "change",
-              "phonetic": "/tʃeɪndʒ/",
-              "partOfSpeech": "v. / n.",
-              "chinese": "改变"
-            },
             {
               "word": "increase",
-              "phonetic": "/ɪnˈkriːs/",
-              "partOfSpeech": "v. / n.",
-              "chinese": "增加"
-            }
-          ]
-        },
-        {
-          "category": "具体动作：相关的更具体表达",
-          "items": [
-            {
-              "word": "turn",
-              "phonetic": "/ˈtɝːn/",
+              "phonetic": "/ˌɪˈnkriːs/",
               "partOfSpeech": "v.",
-              "chinese": "转动"
+              "chinese": "增长"
             },
             {
-              "word": "rise",
-              "phonetic": "/ˈraɪz/",
+              "word": "develop",
+              "phonetic": "/dɪˈvɛləp/",
               "partOfSpeech": "v.",
-              "chinese": "上升；增加；上涨"
-            },
-            {
-              "word": "climb",
-              "phonetic": "/ˈklaɪm/",
-              "partOfSpeech": "v.",
-              "chinese": "攀登；上升；爬"
+              "chinese": "发展"
             },
             {
               "word": "expand",
               "phonetic": "/ɪˈkspænd/",
               "partOfSpeech": "v.",
-              "chinese": "使膨胀；详述；扩张"
-            }
-          ]
-        },
-        {
-          "category": "真实语境：例句中常与本词同现的词",
-          "items": [
-            {
-              "word": "see",
-              "phonetic": "/ˈsiː/",
-              "partOfSpeech": "v.",
-              "chinese": "看见"
-            },
-            {
-              "word": "continue",
-              "phonetic": "/kənˈtɪnjuː/",
-              "partOfSpeech": "v.",
-              "chinese": "继续"
-            },
-            {
-              "word": "speak",
-              "phonetic": "/spiːk/",
-              "partOfSpeech": "v.",
-              "chinese": "说话"
-            },
-            {
-              "word": "question",
-              "phonetic": "/ˈkwɛstʃən/",
-              "partOfSpeech": "n.",
-              "chinese": "问题；询问；询问"
+              "chinese": "扩大"
             }
           ]
         }
@@ -2755,9 +2465,9 @@
         }
       ],
       "studyFocus": {
-        "coreMeaning": "先掌握“生长”这个核心义，再用本卡的 1 个常用义项辨别不同语境。",
+        "coreMeaning": "先掌握“生长；长大”这个核心义，再对比另外 2 个常用义项，辨别不同语境。",
         "keyCollocation": "把“grow quickly”连同介词、宾语和动词形式作为整个句块记忆。",
-        "commonMistake": "在“grow into something”这个常用搭配中，介词 into 负责连接后面的对象或范围，不能省略或随意换成其他介词。",
+        "commonMistake": "在“grow into something”所表达的这个具体含义中，要用介词 into；换成 at 会破坏这个固定结构或改变原意。",
         "mustUseExample": "The small company continues to grow quickly.（这家小公司继续快速发展。）"
       },
       "questions": [
@@ -2767,10 +2477,10 @@
           "prompt": "“grow”最核心的中文含义是？",
           "options": [
             "保护",
-            "生长；增长；变得",
-            "经过；通过；传递"
+            "生长；长大",
+            "经过"
           ],
-          "answer": "生长；增长；变得",
+          "answer": "生长；长大",
           "stage": "T0",
           "ai": false
         },
@@ -2779,11 +2489,11 @@
           "type": "meaning_choice",
           "prompt": "哪一项英文释义最符合词卡中的 “grow”？",
           "options": [
-            "to become larger, develop, or change gradually",
+            "to become larger or develop naturally",
             "to move past, succeed in a test, or give something to someone",
             "to keep someone or something safe"
           ],
-          "answer": "to become larger, develop, or change gradually",
+          "answer": "to become larger or develop naturally",
           "stage": "T0",
           "ai": false
         },
@@ -2846,7 +2556,7 @@
         {
           "id": "grow-v-recall-definition",
           "type": "recall",
-          "prompt": "根据英文释义写出目标词：to become larger, develop, or change gradually",
+          "prompt": "根据英文释义写出目标词：to become larger or develop naturally",
           "answer": "grow",
           "stage": "T1",
           "ai": false
@@ -2854,7 +2564,7 @@
         {
           "id": "grow-v-recall-chinese",
           "type": "recall",
-          "prompt": "写出符合“生长；增长；变得”（v.）的本课目标词。",
+          "prompt": "写出符合“生长；长大”（v.）的本课目标词。",
           "answer": "grow",
           "stage": "T1",
           "ai": false
@@ -2934,7 +2644,7 @@
         {
           "id": "grow-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “grow” 写一个自然、真实的英文句子，含义必须符合词卡核心义“生长；增长；变得”。",
+          "prompt": "请用 “grow” 写一个自然、真实的英文句子，含义必须符合词卡核心义“生长；长大”。",
           "answer": "",
           "stage": "T2",
           "ai": true
@@ -2950,7 +2660,7 @@
         {
           "id": "grow-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “grow” 和 “continues to grow quickly” 结构，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “grow” 和 “grow quickly” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -3010,7 +2720,7 @@
       },
       "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.2",
-      "contentVersion": "2026.09.08.2",
+      "contentVersion": "2026.09.09.4",
       "reviewed": false,
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     }

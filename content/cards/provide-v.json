@@ -28,7 +28,7 @@
     "主动词汇"
   ],
   "coreMemory": {
-    "chinese": "提供",
+    "chinese": "提供；供给；使可以使用；供养；为……提供生活所需",
     "english": "v. to give someone something that they need；v. to make a service, opportunity, or resource available；v. to support someone by giving them the money or things they need",
     "structure": "provide something /prəˈvaɪd ˈsʌmθɪŋ/（提供某物）；provide someone with something /prəˈvaɪd ˈsʌˌmwʌn ˈwɪð ˈsʌmθɪŋ/（向某人提供某物）；provide something for someone /prəˈvaɪd ˈsʌmθɪŋ ˈfɔːr ˈsʌˌmwʌn/（为某人提供某物）；provide for someone /prəˈvaɪd ˈfɔːr ˈsʌˌmwʌn/（供养某人；为某人提供生活所需）",
     "structures": [
@@ -79,7 +79,7 @@
     ],
     "directSynonym": "supply /səˈplaɪ/（供应；供给）；offer /ˈɔːfɚ/（主动提供；提出）；give /ˈɡɪv/（给；给予）；furnish /ˈfɝːnɪʃ/（提供；配备）",
     "directAntonym": "withhold /wɪˈθhoʊld/（拒绝给予；扣留）；deny /dɪˈnaɪ/（拒绝给予；不准）；deprive /dɪˈpraɪv/（剥夺）",
-    "derivatives": "provider · provision · provided · providing",
+    "derivatives": "provider · provision · provisional",
     "example": "The course provides students with useful tools.",
     "exampleChinese": "这门课程为学生提供实用工具。"
   },
@@ -335,18 +335,11 @@
       "note": "正式用词；provision of services 表示“服务的提供”，法律文本中还可表示“条款”。"
     },
     {
-      "word": "provided",
-      "phonetic": "/prəˈvaɪdɪd/",
-      "partOfSpeech": "conj.",
-      "chinese": "只要；如果",
-      "note": "常用结构 provided that，较正式；它不是 provide 的普通过去式义项。"
-    },
-    {
-      "word": "providing",
-      "phonetic": "/prəˈvaɪdɪŋ/",
-      "partOfSpeech": "conj.",
-      "chinese": "只要；如果",
-      "note": "providing that 与 provided that 含义相同，口语中也可见。"
+      "word": "provisional",
+      "phonetic": "/prəˈvɪʒənəl/",
+      "partOfSpeech": "adj.",
+      "chinese": "临时的；暂定的",
+      "note": "来自 provision 这一词族，常见于 provisional plan、provisional date。"
     }
   ],
   "confusables": [
@@ -525,11 +518,11 @@
       "type": "meaning_choice",
       "prompt": "“provide”最核心的中文含义是？",
       "options": [
-        "提供",
-        "设置；放置；确定",
-        "同意；达成一致"
+        "提供；供给",
+        "设置",
+        "同意"
       ],
-      "answer": "提供",
+      "answer": "提供；供给",
       "stage": "T0",
       "ai": false
     },
@@ -549,7 +542,7 @@
     {
       "id": "provide-v-structure-choice-v3",
       "type": "meaning_choice",
-      "prompt": "核心结构辨析：哪一项既表示“提供某物”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
+      "prompt": "核心结构辨析：哪一项既表示“提供某物”，又符合这个形式线索：结构中直接带有事物宾语，不在目标词与宾语之间增加介词？",
       "options": [
         "provide something for someone",
         "provide for someone",
@@ -613,7 +606,7 @@
     {
       "id": "provide-v-recall-chinese",
       "type": "recall",
-      "prompt": "写出符合“提供”（v.）的本课目标词。",
+      "prompt": "写出符合“提供；供给”（v.）的本课目标词。",
       "answer": "provide",
       "stage": "T1",
       "ai": false
@@ -693,7 +686,7 @@
     {
       "id": "provide-v-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “provide” 写一个自然、真实的英文句子，含义必须符合词卡核心义“提供”。",
+      "prompt": "请用 “provide” 写一个自然、真实的英文句子，含义必须符合词卡核心义“提供；供给”。",
       "answer": "",
       "stage": "T2",
       "ai": true
@@ -769,7 +762,7 @@
   },
   "detailLevel": "template-curated",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.09.08.2",
+  "contentVersion": "2026.09.09.4",
   "reviewed": true,
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

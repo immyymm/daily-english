@@ -300,7 +300,7 @@ export const curatedExamples = {
   encourage: [
     ['My teacher encouraged me to speak more confidently.', '老师鼓励我更自信地说话。'],
     ['Open questions encourage discussion.', '开放式问题可以促进讨论。'],
-    ['We strongly encourage users to update the app.', '我们强烈建议用户更新应用。'],
+    ['We strongly encourage visitors to book in advance.', '我们强烈建议游客提前预订。'],
     ['Clear praise can encourage positive behavior.', '明确的表扬可以鼓励积极行为。'],
     ['Her words of encouragement helped me continue.', '她鼓励的话帮助我坚持了下去。'],
     ['I felt encouraged by the progress I had made.', '我的进步让我受到了鼓舞。']

@@ -2,6 +2,8 @@ import fs from 'node:fs/promises';
 import crypto from 'node:crypto';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { directRelationPacks } from './relation-packs.mjs';
+import { manualDerivativePacks, manualMeaningPacks, manualRelatedPacks } from './deep-card-rules.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const allCardsPath = path.join(root, 'public', 'data', 'all-cards.json');
@@ -26,6 +28,14 @@ const templatePath = path.join(root, 'content', 'templates', release.templateVer
 const template = await fs.readFile(templatePath, 'utf8');
 const templateLock = JSON.parse(await fs.readFile(templateLockPath, 'utf8'));
 const errors = [];
+const summarizeChineseMeanings = (meanings) => {
+  const seen = new Set();
+  return meanings
+    .flatMap((meaning) => meaning.chinese.split('；'))
+    .map((gloss) => gloss.trim())
+    .filter((gloss) => gloss && !seen.has(gloss) && seen.add(gloss))
+    .join('；');
+};
 const expectedTemplateVersion = release.templateVersion;
 const expectedLockVersion = release.templateLockVersion;
 const expectedSnapshotHashes = {
@@ -51,6 +61,9 @@ const forbiddenGeneratedCopy = [
   /语体、宾语范围和固定搭配可能不同/,
   /实际使用前仍要核对词性和句型/,
   /这是 .+ 的常用词族成员/,
+  /对应的常用英文义是/,
+  /原句语境：/,
+  /\b(?:review mode|cloud sync|sync failure|saved progress|search box|this button|the app)\b/i,
   /人工精校|AI 生成|自动生成|程序运行|JSON 对象|confidence:/i
 ];
 
@@ -156,6 +169,30 @@ for (const [cardIndex, card] of allCards.cards.entries()) {
   if (card.detailLevel === 'template-reference' && (card.word !== 'work' || !matchesShape(card, referenceShape))) errors.push(card.id + ': reference label is reserved for the exact locked work example.');
   if (card.detailLevel === 'template-curated' && !meetsCuratedBenchmark(card)) errors.push(card.id + ': human-curated label does not meet the curated richness benchmark.');
   if (forbiddenGeneratedCopy.some((pattern) => pattern.test(JSON.stringify(card)))) errors.push(card.id + ': forbidden meta-learning filler or mechanical expansion found.');
+  const visibleContent = [
+    card.coreMemory.example,
+    card.coreMemory.exampleChinese,
+    ...card.meanings.flatMap((item) => [item.english, item.chinese, item.example, item.translation]),
+    ...card.contextPhrases.flatMap((group) => group.items.flatMap((item) => [item.phrase, item.chinese])),
+    ...card.fixedPhrases.flatMap((item) => [item.phrase, item.chinese, item.example, item.translation]),
+    ...card.synonyms.flatMap((item) => [item.word, item.chinese, item.difference]),
+    ...card.antonyms.flatMap((item) => [item.word, item.chinese, item.usage]),
+    ...card.derivatives.flatMap((item) => [item.word, item.chinese, item.note]),
+    ...card.confusables.flatMap((item) => [item.word, item.chinese, item.difference]),
+    ...card.relatedVocabulary.flatMap((group) => group.items.flatMap((item) => [item.word, item.chinese])),
+    ...card.examples.flatMap((item) => [item.english, item.chinese]),
+    ...Object.values(card.studyFocus)
+  ].filter(Boolean).join('\n');
+  if (/\b(?:app|apps|browser|deployment|server|sync|cached version|saved (?:answer|progress))\b/i.test(visibleContent)) {
+    errors.push(card.id + ': product, deployment, or synchronization diagnostics leaked into learner-facing card content.');
+  }
+  if (/\b(?:search box|old cards?|saved position|progress (?:is|was) saved|record returned|new interface)\b/i.test(visibleContent)) {
+    errors.push(card.id + ': product-interface state leaked into learner-facing card content.');
+  }
+  if (/\b(?:JSON|confidence:)\b|The assistant's final|I(?:'|’)ll output|system text|程序运行|自动生成|人工精校/i.test(visibleContent)) {
+    errors.push(card.id + ': model reasoning, serialization text, or internal production labels leaked into learner-facing content.');
+  }
+  if (/\b0 个常用义项\b/.test(visibleContent)) errors.push(card.id + ': single-sense focus text must not claim there are zero additional meanings.');
   if (card.tags.some((tag) => /(人工精校|模板结构版|待深度补全)/.test(tag))) errors.push(card.id + ': internal production labels must not appear in app tags.');
   const expectedPriority = cocaAudit.orderedCards?.[cardIndex];
   if (!expectedPriority
@@ -165,7 +202,7 @@ for (const [cardIndex, card] of allCards.cards.entries()) {
     || card.learningPriority.groupOrder !== learningGroups.indexOf(card.learningPriority.group) + 1) {
     errors.push(card.id + ': learning priority metadata differs from the COCA audit.');
   }
-  if (card.meanings.length < 2) errors.push(card.id + ': a detailed card needs at least two distinct, useful meanings.');
+  if (card.meanings.length < 1) errors.push(card.id + ': a detailed card needs at least one fully evidenced meaning.');
   if (card.partOfSpeech.includes('/') && card.meanings.length < 2) errors.push(card.id + ': multiple parts of speech need separate meanings.');
   if (!Array.isArray(card.cocaRanks) || card.cocaRanks.length < 1 || !card.cocaRankLabel) errors.push(card.id + ': missing exact COCA rank data.');
   if (!Array.isArray(card.coreMemory.structures) || card.coreMemory.structures.length < 3) errors.push(card.id + ': expected at least three core structures.');
@@ -191,7 +228,6 @@ for (const [cardIndex, card] of allCards.cards.entries()) {
     if (card.contextPhrases.length < 3) errors.push(card.id + ': template-detailed card needs at least three real context categories.');
     if (card.contextPhrases.reduce((sum, group) => sum + group.items.length, 0) < 6) errors.push(card.id + ': template-detailed card needs at least six curated context phrases.');
     if (card.fixedPhrases.length < 6) errors.push(card.id + ': template-detailed card needs at least six fixed phrases with real examples.');
-    if (!card.relatedVocabulary.length) errors.push(card.id + ': template-detailed card needs at least one semantic category.');
     if (card.examples.length < 6) errors.push(card.id + ': template-detailed card needs at least six natural high-frequency examples.');
     const irregularTargetForms = {
       be: ['am', 'is', 'are', 'was', 'were', 'been', 'being'],
@@ -245,20 +281,79 @@ for (const [cardIndex, card] of allCards.cards.entries()) {
     if (card.fixedPhrases.some((entry) => !usesTarget(entry.example))) errors.push(card.id + ': every fixed-phrase example must use the target word or an inflected form.');
     if (card.examples.some((entry) => !usesTarget(entry.english))) errors.push(card.id + ': every high-frequency example must use the target word or an inflected form.');
   }
-  const fixedPhraseSet = new Set(card.fixedPhrases.map((entry) => entry.phrase.toLowerCase().replace(/[^a-z]+/g, ' ').trim()));
-  const duplicatedContextPhrases = card.contextPhrases
-    .flatMap((group) => group.items)
-    .filter((entry) => fixedPhraseSet.has(entry.phrase.toLowerCase().replace(/[^a-z]+/g, ' ').trim()));
-  if (!card.reviewed && duplicatedContextPhrases.length > 1) errors.push(card.id + ': context phrases repeat fixed phrases instead of adding real sentence context.');
   if (card.meanings.some((meaning) => !meaning.english || !meaning.chinese || !meaning.example || !meaning.translation)) errors.push(card.id + ': every meaning needs bilingual definition and example evidence.');
+  const normalizedEnglishMeanings = card.meanings.map((meaning) => meaning.english.toLowerCase().replace(/[^a-z]+/g, ' ').trim());
+  const normalizedChineseMeanings = card.meanings.map((meaning) => `${meaning.partOfSpeech}:${meaning.chinese.replace(/[\s，,]/g, '').trim()}`);
+  if (new Set(normalizedEnglishMeanings).size !== card.meanings.length) errors.push(card.id + ': duplicate English meaning rows create false detail.');
+  if (new Set(normalizedChineseMeanings).size !== card.meanings.length) errors.push(card.id + ': different English definitions must not reuse the same Chinese meaning.');
+  const expectedCoreChinese = summarizeChineseMeanings(card.meanings);
+  if (card.coreMemory.chinese !== expectedCoreChinese) errors.push(card.id + ': core Chinese summary must be derived from the visible bilingual meaning rows.');
+  const expectedVerbIpa = { use: '/juːz/', live: '/lɪv/', lead: '/liːd/' }[card.word];
+  if (expectedVerbIpa && card.phonetic !== expectedVerbIpa) errors.push(card.id + ': homographic verb has the wrong pronunciation.');
   if (new Set(card.meanings.map((meaning) => meaning.example.trim().toLowerCase())).size !== card.meanings.length) errors.push(card.id + ': meaning rows must use distinct example evidence.');
+  if (!card.reviewed && manualMeaningPacks[card.word] && card.meanings.length !== manualMeaningPacks[card.word].length) {
+    errors.push(card.id + ': human-reviewed common-sense meaning pack was not preserved exactly.');
+  }
   if (card.fixedPhrases.some((entry) => !entry.chinese || !entry.example || !entry.translation)) errors.push(card.id + ': every fixed phrase needs a Chinese meaning and a bilingual example.');
   if (new Set(card.examples.map((example) => example.english)).size !== card.examples.length) errors.push(card.id + ': duplicate example sentences.');
   if (card.derivatives.some((item) => item.word.toLowerCase() === card.word.toLowerCase())) errors.push(card.id + ': target word repeated as a derivative.');
+  const forbiddenDerivativePairs = new Set(['affect:effect', 'affect:effective', 'bring:bringing', 'come:comer', 'eat:edible', 'end:finally', 'feel:felt', 'get:getter', 'join:joint', 'leave:leaving', 'let:letter', 'like:looking', 'live:liver', 'look:looker', 'pass:passenger', 'put:putting', 'set:settlement', 'solve:solvent', 'serve:server']);
+  if (card.derivatives.some((item) => forbiddenDerivativePairs.has(`${card.word}:${item.word.toLowerCase()}`))) errors.push(card.id + ': semantically misleading or low-value derivative found.');
+  if (card.derivatives.some((item) => !/(?:^|[\s/])(v\.|n\.|adj\.|adv\.)(?:$|[\s/])/i.test(item.partOfSpeech))) errors.push(card.id + ': derivative must use a learnable verb, noun, adjective, or adverb part of speech.');
+  const derivativePosRank = (value) => Math.min(...['v.', 'n.', 'adj.', 'adv.'].map((part, index) => value.toLowerCase().split(/\s*\/\s*/).includes(part) ? index : 99));
+  if (card.derivatives.some((item, index) => index > 0 && derivativePosRank(card.derivatives[index - 1].partOfSpeech) > derivativePosRank(item.partOfSpeech))) {
+    errors.push(card.id + ': derivatives must be ordered as verb, noun, adjective, then adverb.');
+  }
+  if (!card.reviewed && Object.hasOwn(manualDerivativePacks, card.word)) {
+    const expectedDerivatives = manualDerivativePacks[card.word].map(([word, partOfSpeech, chinese]) => `${word}|${partOfSpeech}|${chinese}`);
+    const actualDerivatives = card.derivatives.map((item) => `${item.word}|${item.partOfSpeech}|${item.chinese}`);
+    if (expectedDerivatives.length !== actualDerivatives.length || expectedDerivatives.some((item, index) => item !== actualDerivatives[index])) {
+      errors.push(card.id + ': locked high-value derivative pack changed or received automatic padding.');
+    }
+  }
   if (card.confusables.some((item) => item.word.toLowerCase() === card.word.toLowerCase())) errors.push(card.id + ': target word repeated as a confusable.');
   if ([...card.synonyms, ...card.antonyms, ...card.derivatives, ...card.confusables].some((item) => !item.partOfSpeech || /^(word|word family)$/i.test(item.partOfSpeech))) errors.push(card.id + ': relation word has an unknown or invented part of speech.');
   if ([...card.synonyms, ...card.antonyms, ...card.derivatives].some((item) => !item.chinese || /与“.+”意义(接近|相反)/.test(item.chinese))) errors.push(card.id + ': relation or derivative needs an actual Chinese meaning, not a relationship placeholder.');
   if (card.coreMemory.commonErrors.some((item) => !item.wrong || !item.right || item.wrong === item.right)) errors.push(card.id + ': invalid error correction pair.');
+  if (card.coreMemory.commonErrors.some((item) => /这个结构要用\s+\w+\s*\+\s*to/.test(item.note))) {
+    errors.push(card.id + ': grammar note incorrectly attributes an embedded infinitive to the target word.');
+  }
+  if (card.coreMemory.commonErrors.some((item) => /^(can|could|may|might|must|should|will|would)\s+to\s+\1$/i.test(item.wrong))) {
+    errors.push(card.id + ': mechanically generated modal error is not a meaningful correction pair.');
+  }
+  if (card.coreMemory.commonErrors.some((item) => item.wrong.toLowerCase() === 'sell someone an idea')) errors.push(card.id + ': a valid double-object sell construction must not be labelled wrong.');
+  const contextEntries = card.contextPhrases.flatMap((group) => group.items);
+  const allowedSubjectConstructions = /^(?:it\s+(?:seems|appears|takes)|there\s+(?:is|are))\b/i;
+  if (contextEntries.some((entry) => {
+    const words = entry.phrase.trim().split(/\s+/);
+    return words.length > 6 && /^(?:i|you|we|they|he|she|the|a|an)\b/i.test(entry.phrase) && !allowedSubjectConstructions.test(entry.phrase);
+  })) {
+    errors.push(card.id + ': context phrases must be reusable chunks, not copied sentence openings.');
+  }
+  if (contextEntries.some((entry) => {
+    const words = entry.phrase.trim().split(/\s+/);
+    return words.length > 12 || /\b(?:the|a|an|your|my|his|her|our|their)$/i.test(entry.phrase.trim());
+  })) errors.push(card.id + ': context phrase is empty, overlong, or cut off before its complement.');
+  if (card.relatedVocabulary.some((group) => /例句中常与本词同现|真实语境/.test(group.category))) {
+    errors.push(card.id + ': arbitrary words copied from examples are not semantic related vocabulary.');
+  }
+  if (manualRelatedPacks[card.word]) {
+    const expectedRelated = manualRelatedPacks[card.word].map(([word, partOfSpeech, chinese]) => `${word}|${partOfSpeech}|${chinese}`);
+    const actualRelated = card.relatedVocabulary.flatMap((group) => group.items).map((item) => `${item.word}|${item.partOfSpeech}|${item.chinese}`);
+    if (expectedRelated.length !== actualRelated.length || expectedRelated.some((item, index) => item !== actualRelated[index])) {
+      errors.push(card.id + ': sense-safe related vocabulary pack changed or was padded mechanically.');
+    }
+  }
+  if (!card.reviewed && directRelationPacks[card.word]) {
+    for (const key of ['synonyms', 'antonyms']) {
+      const expectedRelations = directRelationPacks[card.word][key].map(([word, partOfSpeech, chinese]) => `${word}|${partOfSpeech}|${chinese}`);
+      const actualRelations = card[key].map((item) => `${item.word}|${item.partOfSpeech}|${item.chinese}`);
+      if (expectedRelations.length !== actualRelations.length || expectedRelations.some((item, index) => item !== actualRelations[index])) {
+        errors.push(card.id + ': current-sense ' + key + ' pack changed or fell back to broad dictionary data.');
+      }
+    }
+  }
+  if (card.derivatives.some((item) => /(较少见|不常用|生僻)/.test(item.note ?? ''))) errors.push(card.id + ': rare derivatives must not be included just to fill the section.');
   if (card.questions.length < 15) errors.push(card.id + ': expected at least fifteen questions sourced from the complete card.');
   if (new Set(card.questions.map((question) => question.id)).size !== card.questions.length) errors.push(card.id + ': duplicate question IDs.');
   if (new Set(card.questions.map((question) => question.prompt)).size !== card.questions.length) errors.push(card.id + ': duplicate question prompts.');
@@ -269,6 +364,10 @@ for (const [cardIndex, card] of allCards.cards.entries()) {
   if (card.questions.filter((question) => question.type === 'meaning_choice').length < 5) errors.push(card.id + ': expected rich meaning and relation choices.');
   if (card.questions.filter((question) => question.type === 'collocation').length < 5) errors.push(card.id + ': expected collocation questions from several card sections.');
   if (card.questions.some((question) => question.options && (!question.options.includes(question.answer) || new Set(question.options).size !== question.options.length))) errors.push(card.id + ': invalid choice options.');
+  const coreMeaningQuestion = card.questions.find((question) => question.id.endsWith('-meaning-core'));
+  if (!coreMeaningQuestion || coreMeaningQuestion.answer !== card.meanings[0].chinese) {
+    errors.push(card.id + ': core-meaning question must test the first highlighted meaning, not an aggregated gloss.');
+  }
   const clozeQuestions = card.questions.filter((question) => question.type === 'collocation' && !question.options);
   if (clozeQuestions.some((question) => !question.prompt.includes('_____') || !question.answer?.trim())) {
     errors.push(card.id + ': every non-choice collocation question needs one real blank and a non-empty answer.');
@@ -287,6 +386,12 @@ for (const [cardIndex, card] of allCards.cards.entries()) {
   }
   if (card.questions.some((question) => question.prompt.includes('优先记住') || question.prompt.includes('词卡结构辨义'))) {
     errors.push(card.id + ': vague or implementation-oriented structure wording found.');
+  }
+  if (card.coreMemory.commonErrors.some((entry) => /\b(?:discoverring|happenning|openning|offerring|listenning|visitting)\b/i.test(entry.wrong))) {
+    errors.push(card.id + ': generated error contains a fake English -ing spelling.');
+  }
+  if (card.coreMemory.commonErrors.some((entry) => /^\w+ something$/i.test(entry.wrong) && /that \+ clause/i.test(entry.right))) {
+    errors.push(card.id + ': a valid transitive pattern is mislabeled as the error for a that-clause.');
   }
   const typedObjectiveQuestions = card.questions.filter((question) => !question.ai && !question.options);
   if (typedObjectiveQuestions.some((question) => !/^[A-Za-z]+(?:'[A-Za-z]+)?$/.test(question.answer.trim()))) {
@@ -311,6 +416,12 @@ for (const [cardIndex, card] of allCards.cards.entries()) {
   const structureQuestions = card.questions.filter((question) => question.id.includes('structure-choice-v3') || question.id.includes('collocation-structure-meaning-v3') || question.id.includes('collocation-fixed-'));
   if (structureQuestions.some((question) => !question.prompt.includes('形式线索：'))) {
     errors.push(card.id + ': every structure choice needs a distinguishing form clue.');
+  }
+  if (structureQuestions.some((question) => /目标词后接\s+to\s*\+/.test(question.prompt))) {
+    errors.push(card.id + ': structure question wrongly claims every embedded infinitive follows the target word directly.');
+  }
+  if (structureQuestions.some((question) => /目标词后直接接事物宾语/.test(question.prompt))) {
+    errors.push(card.id + ': obsolete blanket direct-object clue found.');
   }
   const slotPrompts = card.questions.filter((question) => question.ai && /\b(to do|doing|done|someone|something|yourself|A|B)\b/.test(question.prompt));
   if (slotPrompts.some((question) => !/(代表|替换|不要求)/.test(question.prompt))) {
@@ -370,14 +481,19 @@ const metrics = Object.keys(shapeFor(allCards.cards[0])).reduce((summary, key) =
 }, {});
 await fs.writeFile(qualityReportPath, JSON.stringify({
   contentVersion: release.contentVersion,
-  generatedAt: '2026-09-08',
+  generatedAt: '2026-09-09',
   totalCards: allCards.cards.length,
   lexicalSources: ['user-provided COCA word list', 'Princeton WordNet via wordnet-db@3.1.14', 'ECDICT'],
   checks: {
     bilingualMeanings: true,
+    distinctBilingualMeanings: true,
     phraseExamples: true,
+    reusableContextChunks: true,
     senseSpecificRelations: true,
+    commonDerivativesOnly: true,
+    reviewedRelatedPacks: true,
     noMechanicalFiller: true,
+    noProductDiagnostics: true,
     noRuntimeDictionaryApi: true,
     allCardsValidated: true
   },

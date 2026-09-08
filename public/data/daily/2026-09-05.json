@@ -1,7 +1,7 @@
 {
   "date": "2026-09-05",
   "dayNumber": 20,
-  "contentVersion": "2026.09.08.2",
+  "contentVersion": "2026.09.09.4",
   "templateVersion": "learning-template-2026.08.19.2",
   "cards": [
     {
@@ -35,7 +35,7 @@
       ],
       "coreMemory": {
         "chinese": "预期；期待",
-        "english": "v. to think that something will happen；v. regard something as probable or likely",
+        "english": "v. to think that something will happen",
         "structure": "expect someone to do /ɪkˈspekt ˈsʌˌmwʌn ˈtuː ˈduː/（期待某人做）；expect to see /ɪkˈspekt ˈtuː ˈsiː/（预计会看到）；as expected /ˈæz ɪˈkspɛktəd/（正如预期）；what to expect /ˈwʌt ˈtuː ɪkˈspekt/（会发生什么）",
         "structures": [
           {
@@ -59,26 +59,26 @@
             "chinese": "会发生什么"
           }
         ],
-        "commonError": "❌ can to expect → ✅ can expect；❌ expect someone doing something → ✅ expect someone to do something",
+        "commonError": "❌ expect someone to does → ✅ expect someone to do；❌ expect someone to does something → ✅ expect someone to do something",
         "commonErrors": [
           {
-            "wrong": "can to expect",
-            "wrongPhonetic": "/ˈkæn ˈtuː ɪkˈspekt/",
-            "right": "can expect",
-            "rightPhonetic": "/ˈkæn ɪkˈspekt/",
-            "note": "情态动词 can 后面直接接 expect 的原形，不加 to。"
+            "wrong": "expect someone to does",
+            "wrongPhonetic": "/ɪkˈspekt ˈsʌˌmwʌn ˈtuː ˈdʌz/",
+            "right": "expect someone to do",
+            "rightPhonetic": "/ɪkˈspekt ˈsʌˌmwʌn ˈtuː ˈduː/",
+            "note": "在“expect someone to do”中，这个 to 是不定式标记，后面必须接动词原形。do 只是语法占位符，真实表达要把它换成 finish、check 等符合语境的动词原形。"
           },
           {
-            "wrong": "expect someone doing something",
-            "wrongPhonetic": "/ɪkˈspekt ˈsʌˌmwʌn ˈduːɪŋ ˈsʌmθɪŋ/",
+            "wrong": "expect someone to does something",
+            "wrongPhonetic": "/ɪkˈspekt ˈsʌˌmwʌn ˈtuː ˈdʌz ˈsʌmθɪŋ/",
             "right": "expect someone to do something",
             "rightPhonetic": "/ɪkˈspekt ˈsʌˌmwʌn ˈtuː ˈduː ˈsʌmθɪŋ/",
-            "note": "这个结构要用 expect + to + 动词原形；do 只是词卡里的动词占位符，真实句子要换成 finish、check 等具体动词。"
+            "note": "在“expect someone to do something”中，这个 to 是不定式标记，后面必须接动词原形。do 只是语法占位符，真实表达要把它换成 finish、check 等符合语境的动词原形。"
           }
         ],
-        "directSynonym": "anticipate /æˈntɪsəˌpeɪt/（预期；占先；加速；提前使用）",
-        "directAntonym": "doubt /ˈdaʊt/（怀疑；疑惑；不信）",
-        "derivatives": "expectation · unexpected · expectancy",
+        "directSynonym": "anticipate /æˈntɪsəˌpeɪt/（预期；预料）",
+        "directAntonym": "doubt /ˈdaʊt/（怀疑；不确信）",
+        "derivatives": "expectation · unexpected",
         "example": "We expect the results next week.",
         "exampleChinese": "我们预计下周会有结果。"
       },
@@ -89,13 +89,6 @@
           "chinese": "预期；期待",
           "example": "I expect everyone to arrive on time.",
           "translation": "我希望每个人都准时到达。"
-        },
-        {
-          "partOfSpeech": "v.",
-          "english": "regard something as probable or likely",
-          "chinese": "预期；期待",
-          "example": "We expect to see better results next month.",
-          "translation": "我们预计下个月会看到更好的结果。"
         }
       ],
       "contextPhrases": [
@@ -103,14 +96,14 @@
           "category": "核心动作与结构",
           "items": [
             {
-              "phrase": "I expect everyone to arrive on",
-              "phonetic": "/ˈaɪ ɪkˈspekt ˈɛvriːˌwʌn ˈtuː ɚˈaɪv ˈɑn/",
-              "chinese": "期待某人做；原句语境：我希望每个人都准时到达。"
+              "phrase": "expect someone to do",
+              "phonetic": "/ɪkˈspekt ˈsʌˌmwʌn ˈtuː ˈduː/",
+              "chinese": "期待某人做"
             },
             {
-              "phrase": "We expect to see better results",
-              "phonetic": "/ˈwiː ɪkˈspekt ˈtuː ˈsiː ˈbɛtɚ rɪˈzʌlts/",
-              "chinese": "预计会看到；原句语境：我们预计下个月会看到更好的结果。"
+              "phrase": "expect to see",
+              "phonetic": "/ɪkˈspekt ˈtuː ˈsiː/",
+              "chinese": "预计会看到"
             }
           ]
         },
@@ -118,14 +111,14 @@
           "category": "日常与工作语境",
           "items": [
             {
-              "phrase": "As expected the morning train was",
-              "phonetic": "/ˈæz ɪˈkspɛktəd ðə ˈmɔːrnɪŋ ˈtreɪn ˈwɑz/",
-              "chinese": "正如预期；原句语境：不出所料，早班火车很拥挤。"
+              "phrase": "as expected",
+              "phonetic": "/ˈæz ɪˈkspɛktəd/",
+              "chinese": "正如预期"
             },
             {
-              "phrase": "what to expect on the first day",
-              "phonetic": "/ˈwʌt ˈtuː ɪkˈspekt ˈɑn ðə ˈfɝːst ˈdeɪ/",
-              "chinese": "会发生什么；原句语境：指南说明了第一天可能会遇到什么。"
+              "phrase": "what to expect",
+              "phonetic": "/ˈwʌt ˈtuː ɪkˈspekt/",
+              "chinese": "会发生什么"
             }
           ]
         },
@@ -133,14 +126,14 @@
           "category": "高频扩展表达",
           "items": [
             {
-              "phrase": "not always expect the worst",
-              "phonetic": "/ˈnɑt ˈɔːˌlweɪz ɪkˈspekt ðə ˈwɝːst/",
-              "chinese": "做最坏打算；原句语境：认真准备，但不要总做最坏的打算。"
+              "phrase": "expect the worst",
+              "phonetic": "/ɪkˈspekt ðə ˈwɝːst/",
+              "chinese": "做最坏打算"
             },
             {
-              "phrase": "applicants are expected to provide two references",
-              "phonetic": "/ˈæplɪkənts ˈɑr ɪˈkspɛktəd ˈtuː prəˈvaɪd ˈtuː ˈrɛfɚənsɪz/",
-              "chinese": "被期望；预计会；原句语境：所有申请人都需要提供两名推荐人。"
+              "phrase": "be expected to",
+              "phonetic": "/ˈbiː ɪˈkspɛktəd ˈtuː/",
+              "chinese": "被期望；预计会"
             }
           ]
         }
@@ -194,17 +187,17 @@
           "word": "anticipate",
           "phonetic": "/æˈntɪsəˌpeɪt/",
           "partOfSpeech": "v.",
-          "chinese": "预期；占先；加速；提前使用",
-          "difference": "anticipate 侧重“预期；占先；加速；提前使用”。对应的常用英文义是 “to think that something will happen”。expect 在本卡搭配“expect someone to do something”中表达“预期”；换词时要同时检查宾语和介词。"
+          "chinese": "预期；预料",
+          "difference": "expect 与 anticipate 在本卡义项下意思接近。anticipate 较正式，也可含提前准备之意；expect 是最常用的“预期”。"
         }
       ],
       "antonyms": [
         {
           "word": "doubt",
           "phonetic": "/ˈdaʊt/",
-          "partOfSpeech": "v. / n.",
-          "chinese": "怀疑；疑惑；不信",
-          "usage": "在“预期”这个义项下，doubt（怀疑；疑惑；不信）与 expect 形成对比。对应的常用英文义是 “opposite of expect”。只在这个明确义项和句型中对比，不把两个词的所有用法都视为相反。"
+          "partOfSpeech": "v.",
+          "chinese": "怀疑；不确信",
+          "usage": "expect 与 doubt 在本卡义项下形成明确对比。expect 表示认为某事很可能发生；doubt 表示不确定或不相信会发生。"
         }
       ],
       "derivatives": [
@@ -221,13 +214,6 @@
           "partOfSpeech": "adj.",
           "chinese": "料想不到的；突然的；意外的",
           "note": "unexpected 是 expect 的常用词族形式；作 adj. 时表示“料想不到的；突然的；意外的”。"
-        },
-        {
-          "word": "expectancy",
-          "phonetic": "/ɪˈkspɛktənsiː/",
-          "partOfSpeech": "n.",
-          "chinese": "期待；期望的事物；嘱望",
-          "note": "expectancy 是 expect 的常用词族形式，作 n. 使用；对应的常用英文义是 “something expected (as on the basis of a norm)”。"
         }
       ],
       "confusables": [
@@ -248,89 +234,25 @@
       ],
       "relatedVocabulary": [
         {
-          "category": "语义上位词：这个动作属于什么类别",
+          "category": "语义关联：一起理解更清楚",
           "items": [
             {
-              "word": "see",
-              "phonetic": "/ˈsiː/",
+              "word": "anticipate",
+              "phonetic": "/æˈntɪsəˌpeɪt/",
               "partOfSpeech": "v.",
-              "chinese": "看见"
+              "chinese": "预期"
             },
             {
-              "word": "look",
-              "phonetic": "/ˈlʊk/",
-              "partOfSpeech": "v.",
-              "chinese": "看"
-            },
-            {
-              "word": "consider",
-              "phonetic": "/kənˈsɪdər/",
-              "partOfSpeech": "v.",
-              "chinese": "考虑"
-            },
-            {
-              "word": "view",
-              "phonetic": "/ˈvjuː/",
-              "partOfSpeech": "v.",
-              "chinese": "视野；风景；见解"
-            }
-          ]
-        },
-        {
-          "category": "具体动作：相关的更具体表达",
-          "items": [
-            {
-              "word": "think",
-              "phonetic": "/ˈθɪŋk/",
-              "partOfSpeech": "v.",
-              "chinese": "想"
-            },
-            {
-              "word": "call",
-              "phonetic": "/ˈkɔːl/",
-              "partOfSpeech": "v.",
-              "chinese": "打电话"
-            },
-            {
-              "word": "believe",
-              "phonetic": "/bɪˈliːv/",
-              "partOfSpeech": "v.",
-              "chinese": "相信"
-            },
-            {
-              "word": "suppose",
-              "phonetic": "/səˈpoʊz/",
-              "partOfSpeech": "v.",
-              "chinese": "推想；假设；以为"
-            }
-          ]
-        },
-        {
-          "category": "真实语境：例句中常与本词同现的词",
-          "items": [
-            {
-              "word": "provide",
-              "phonetic": "/prəˈvaɪd/",
-              "partOfSpeech": "v.",
-              "chinese": "提供"
-            },
-            {
-              "word": "explain",
-              "phonetic": "/ɪkˈspleɪn/",
-              "partOfSpeech": "v.",
-              "chinese": "解释"
-            },
-            {
-              "word": "prepare",
-              "phonetic": "/prɪˈper/",
-              "partOfSpeech": "v.",
-              "chinese": "准备"
-            },
-            {
-              "word": "result",
-              "phonetic": "/rɪˈzʌlt/",
+              "word": "prediction",
+              "phonetic": "/priːˈdɪkʃən/",
               "partOfSpeech": "n.",
-              "chinese": "结果；成绩；答案；产生"
+              "chinese": "预测"
+            },
+            {
+              "word": "surprise",
+              "phonetic": "/sɚˈpraɪz/",
+              "partOfSpeech": "n. / v.",
+              "chinese": "惊讶；使惊讶"
             }
           ]
         }
@@ -373,9 +295,9 @@
         }
       ],
       "studyFocus": {
-        "coreMeaning": "先掌握“预期”这个核心义，再用本卡的 1 个常用义项辨别不同语境。",
+        "coreMeaning": "先掌握“预期；期待”这个核心义，再用本卡的固定搭配和真实例句巩固这个义项。",
         "keyCollocation": "把“expect someone to do something”连同介词、宾语和动词形式作为整个句块记忆。",
-        "commonMistake": "情态动词 can 后面直接接 expect 的原形，不加 to。",
+        "commonMistake": "在“expect someone to do”中，这个 to 是不定式标记，后面必须接动词原形。do 只是语法占位符，真实表达要把它换成 finish、check 等符合语境的动词原形。",
         "mustUseExample": "We expect the results next week.（我们预计下周会有结果。）"
       },
       "questions": [
@@ -384,9 +306,9 @@
           "type": "meaning_choice",
           "prompt": "“expect”最核心的中文含义是？",
           "options": [
-            "注意到；通知",
+            "注意到",
             "预期；期待",
-            "收到；接受；接待"
+            "收到"
           ],
           "answer": "预期；期待",
           "stage": "T0",
@@ -408,7 +330,7 @@
         {
           "id": "expect-v-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "核心结构辨析：哪一项既表示“期待某人做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
+          "prompt": "核心结构辨析：哪一项既表示“期待某人做”，又符合这个形式线索：完整结构中使用 to + 动词原形；do 只是语法占位符，要换成符合语境的具体动词原形？",
           "options": [
             "expect to see",
             "as expected",
@@ -488,7 +410,7 @@
         {
           "id": "expect-v-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "句型应用：哪一项既表示“预计会看到”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+          "prompt": "句型应用：哪一项既表示“预计会看到”，又符合这个形式线索：完整搭配中使用介词 to？",
           "options": [
             "what to expect",
             "expect to see",
@@ -516,7 +438,7 @@
         {
           "id": "expect-v-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "用法辨析：哪一项既表示“期待某人做”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
+          "prompt": "用法辨析：哪一项既表示“期待某人做”，又符合这个形式线索：完整结构中使用 to + 动词原形；do 只是语法占位符，要换成符合语境的具体动词原形？",
           "options": [
             "expect to see",
             "as expected",
@@ -530,7 +452,7 @@
         {
           "id": "expect-v-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "搭配辨析：哪一项既表示“预计会看到”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+          "prompt": "搭配辨析：哪一项既表示“预计会看到”，又符合这个形式线索：完整搭配中使用介词 to？",
           "options": [
             "as expected",
             "what to expect",
@@ -568,7 +490,7 @@
         {
           "id": "expect-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “expect” 和 “I expect everyone to arrive on” 结构，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “expect” 和 “expect to see” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -628,7 +550,7 @@
       },
       "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.2",
-      "contentVersion": "2026.09.08.2",
+      "contentVersion": "2026.09.09.4",
       "reviewed": false,
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
@@ -668,8 +590,8 @@
         "主动词汇"
       ],
       "coreMemory": {
-        "chinese": "落下；跌倒；下降",
-        "english": "v. to move downward, drop in amount, or enter a state；v. move downward and lower, but not necessarily all the way",
+        "chinese": "落下；跌倒；下降；减少；进入某种状态；变得",
+        "english": "v. to move downward or drop to the ground；v. to decrease in amount, level, or value；v. to enter a particular state",
         "structure": "fall to the ground /ˈfɔːl ˈtuː ðə ˈɡraʊnd/（落到地上）；fall by ten percent /ˈfɔːl ˈbaɪ ˈtɛn pɚˈsɛnt/（下降百分之十）；fall asleep /ˈfɔːl əˈsliːp/（入睡）；fall behind /ˈfɔːl bɪˈhaɪnd/（落后）",
         "structures": [
           {
@@ -693,43 +615,50 @@
             "chinese": "落后"
           }
         ],
-        "commonError": "❌ fall ten percent → ✅ fall by ten percent；❌ fall a category → ✅ fall into a category",
+        "commonError": "❌ fall with ten percent → ✅ fall by ten percent；❌ fall at a category → ✅ fall into a category",
         "commonErrors": [
           {
-            "wrong": "fall ten percent",
-            "wrongPhonetic": "/ˈfɔːl ˈtɛn pɚˈsɛnt/",
+            "wrong": "fall with ten percent",
+            "wrongPhonetic": "/ˈfɔːl ˈwɪð ˈtɛn pɚˈsɛnt/",
             "right": "fall by ten percent",
             "rightPhonetic": "/ˈfɔːl ˈbaɪ ˈtɛn pɚˈsɛnt/",
-            "note": "在“fall by ten percent”这个常用搭配中，介词 by 负责连接后面的对象或范围，不能省略或随意换成其他介词。"
+            "note": "在“fall by ten percent”所表达的这个具体含义中，要用介词 by；换成 with 会破坏这个固定结构或改变原意。"
           },
           {
-            "wrong": "fall a category",
-            "wrongPhonetic": "/ˈfɔːl ə ˈkætəˌɡɔːriː/",
+            "wrong": "fall at a category",
+            "wrongPhonetic": "/ˈfɔːl ˈæt ə ˈkætəˌɡɔːriː/",
             "right": "fall into a category",
             "rightPhonetic": "/ˈfɔːl ˈɪntuː ə ˈkætəˌɡɔːriː/",
-            "note": "在“fall into a category”这个常用搭配中，介词 into 负责连接后面的对象或范围，不能省略或随意换成其他介词。"
+            "note": "在“fall into a category”所表达的这个具体含义中，要用介词 into；换成 at 会破坏这个固定结构或改变原意。"
           }
         ],
         "directSynonym": "drop /ˈdrɑp/（落下；下降）",
         "directAntonym": "rise /ˈraɪz/（上升；升起）",
-        "derivatives": "fallen · falling · faller",
+        "derivatives": "fallen · falling",
         "example": "Be careful not to fall to the ground on the icy path.",
         "exampleChinese": "结冰的路上小心别摔倒。"
       },
       "meanings": [
         {
           "partOfSpeech": "v.",
-          "english": "to move downward, drop in amount, or enter a state",
-          "chinese": "落下；跌倒；下降",
+          "english": "to move downward or drop to the ground",
+          "chinese": "落下；跌倒",
           "example": "Be careful not to fall to the ground on the icy path.",
           "translation": "结冰的路上小心别摔倒。"
         },
         {
           "partOfSpeech": "v.",
-          "english": "move downward and lower, but not necessarily all the way",
-          "chinese": "落下；跌倒；下降",
+          "english": "to decrease in amount, level, or value",
+          "chinese": "下降；减少",
           "example": "Sales may fall by ten percent this quarter.",
           "translation": "本季度销售额可能下降百分之十。"
+        },
+        {
+          "partOfSpeech": "v.",
+          "english": "to enter a particular state",
+          "chinese": "进入某种状态；变得",
+          "example": "I often fall asleep quickly after reading.",
+          "translation": "我经常读完书很快入睡。"
         }
       ],
       "contextPhrases": [
@@ -737,14 +666,14 @@
           "category": "核心动作与结构",
           "items": [
             {
-              "phrase": "not to fall to the ground on",
-              "phonetic": "/ˈnɑt ˈtuː ˈfɔːl ˈtuː ðə ˈɡraʊnd ˈɑn/",
-              "chinese": "落到地上；原句语境：结冰的路上小心别摔倒。"
+              "phrase": "fall to the ground",
+              "phonetic": "/ˈfɔːl ˈtuː ðə ˈɡraʊnd/",
+              "chinese": "落到地上"
             },
             {
-              "phrase": "Sales may fall by ten percent this",
-              "phonetic": "/ˈseɪlz ˈmeɪ ˈfɔːl ˈbaɪ ˈtɛn pɚˈsɛnt ˈðɪs/",
-              "chinese": "下降百分之十；原句语境：本季度销售额可能下降百分之十。"
+              "phrase": "fall by ten percent",
+              "phonetic": "/ˈfɔːl ˈbaɪ ˈtɛn pɚˈsɛnt/",
+              "chinese": "下降百分之十"
             }
           ]
         },
@@ -752,14 +681,14 @@
           "category": "日常与工作语境",
           "items": [
             {
-              "phrase": "I often fall asleep quickly after reading",
-              "phonetic": "/ˈaɪ ˈɔːfən ˈfɔːl əˈsliːp ˈkwɪkliː ˈæftɚ ˈriːdɪŋ/",
-              "chinese": "入睡；原句语境：我经常读完书很快入睡。"
+              "phrase": "fall asleep",
+              "phonetic": "/ˈfɔːl əˈsliːp/",
+              "chinese": "入睡"
             },
             {
-              "phrase": "easy to fall behind when reviews are",
-              "phonetic": "/ˈiːziː ˈtuː ˈfɔːl bɪˈhaɪnd ˈwɛn riːˈvjuːz ˈɑr/",
-              "chinese": "落后；原句语境：反复跳过复习很容易落后。"
+              "phrase": "fall behind",
+              "phonetic": "/ˈfɔːl bɪˈhaɪnd/",
+              "chinese": "落后"
             }
           ]
         },
@@ -767,14 +696,14 @@
           "category": "高频扩展表达",
           "items": [
             {
-              "phrase": "does not fall into the same category",
-              "phonetic": "/ˈdʌz ˈnɑt ˈfɔːl ˈɪntuː ðə ˈseɪm ˈkætəˌɡɔːriː/",
-              "chinese": "归入某一类别；原句语境：这个例子不属于同一类别。"
+              "phrase": "fall into a category",
+              "phonetic": "/ˈfɔːl ˈɪntuː ə ˈkætəˌɡɔːriː/",
+              "chinese": "归入某一类别"
             },
             {
-              "phrase": "box will fall apart if you lift",
-              "phonetic": "/ˈbɑks ˈwɪl ˈfɔːl əˈpɑrt ˈɪf ˈjuː ˈlɪft/",
-              "chinese": "破裂；散架；原句语境：这个旧箱子一抬就会散架。"
+              "phrase": "fall apart",
+              "phonetic": "/ˈfɔːl əˈpɑrt/",
+              "chinese": "破裂；散架"
             }
           ]
         }
@@ -829,7 +758,7 @@
           "phonetic": "/ˈdrɑp/",
           "partOfSpeech": "v.",
           "chinese": "落下；下降",
-          "difference": "drop 侧重“落下；下降”。对应的常用英文义是 “to move downward, drop in amount, or enter a state”。fall 在本卡搭配“fall to the ground”中表达“落下”；换词时要同时检查宾语和介词。"
+          "difference": "drop 更侧重“落下；下降”；fall 的核心义是“落下”。两者意思接近，但替换时仍要核对宾语、介词和具体语境。"
         }
       ],
       "antonyms": [
@@ -838,7 +767,7 @@
           "phonetic": "/ˈraɪz/",
           "partOfSpeech": "v.",
           "chinese": "上升；升起",
-          "usage": "在“落下”这个义项下，rise（上升；升起）与 fall 形成对比。对应的常用英文义是 “opposite of fall”。只在这个明确义项和句型中对比，不把两个词的所有用法都视为相反。"
+          "usage": "当 fall 表示“落下”时，rise 表示“上升；升起”。两者只在这个明确义项下构成直接对比，其他用法不能一概互换。"
         }
       ],
       "derivatives": [
@@ -855,13 +784,6 @@
           "partOfSpeech": "adj.",
           "chinese": "下降的",
           "note": "常修饰 prices、rates、numbers。"
-        },
-        {
-          "word": "faller",
-          "phonetic": "/ˈfɔːlɚ/",
-          "partOfSpeech": "n.",
-          "chinese": "砍伐树木的人",
-          "note": "faller 是 fall 的常用词族形式，作 n. 使用；对应的常用英文义是 “a person who falls”。"
         }
       ],
       "confusables": [
@@ -875,89 +797,25 @@
       ],
       "relatedVocabulary": [
         {
-          "category": "语义上位词：这个动作属于什么类别",
+          "category": "语义关联：一起理解更清楚",
           "items": [
             {
-              "word": "be",
-              "phonetic": "/ˈbiː/",
+              "word": "rise",
+              "phonetic": "/ˈraɪz/",
               "partOfSpeech": "v.",
-              "chinese": "是"
+              "chinese": "上升"
             },
             {
-              "word": "go",
-              "phonetic": "/ˈɡoʊ/",
+              "word": "drop",
+              "phonetic": "/ˈdrɑp/",
+              "partOfSpeech": "v. / n.",
+              "chinese": "下降；落下"
+            },
+            {
+              "word": "decrease",
+              "phonetic": "/dɪˈkriːs/",
               "partOfSpeech": "v.",
-              "chinese": "去"
-            },
-            {
-              "word": "turn",
-              "phonetic": "/ˈtɝːn/",
-              "partOfSpeech": "v.",
-              "chinese": "转动"
-            },
-            {
-              "word": "move",
-              "phonetic": "/ˈmuːv/",
-              "partOfSpeech": "v.",
-              "chinese": "移动"
-            }
-          ]
-        },
-        {
-          "category": "具体动作：相关的更具体表达",
-          "items": [
-            {
-              "word": "set",
-              "phonetic": "/ˈsɛt/",
-              "partOfSpeech": "v.",
-              "chinese": "设置"
-            },
-            {
-              "word": "correct",
-              "phonetic": "/kɚˈɛkt/",
-              "partOfSpeech": "v.",
-              "chinese": "正确的；合适的；改正"
-            },
-            {
-              "word": "decline",
-              "phonetic": "/dɪˈklaɪn/",
-              "partOfSpeech": "v.",
-              "chinese": "衰退；跌落；下降；使降低"
-            },
-            {
-              "word": "light",
-              "phonetic": "/ˈlaɪt/",
-              "partOfSpeech": "v.",
-              "chinese": "光；光亮；灯"
-            }
-          ]
-        },
-        {
-          "category": "真实语境：例句中常与本词同现的词",
-          "items": [
-            {
-              "word": "ground",
-              "phonetic": "/ˈɡraʊnd/",
-              "partOfSpeech": "n.",
-              "chinese": "土地；战场；场地"
-            },
-            {
-              "word": "review",
-              "phonetic": "/ˌriːˈvjuː/",
-              "partOfSpeech": "n.",
-              "chinese": "检讨；复习；回顾；检阅"
-            },
-            {
-              "word": "lift",
-              "phonetic": "/ˈlɪft/",
-              "partOfSpeech": "n.",
-              "chinese": "举起；帮助；昂扬"
-            },
-            {
-              "word": "reading",
-              "phonetic": "/ˈriːdɪŋ/",
-              "partOfSpeech": "n.",
-              "chinese": "阅读；知识；读物；阅读的"
+              "chinese": "减少"
             }
           ]
         }
@@ -995,9 +853,9 @@
         }
       ],
       "studyFocus": {
-        "coreMeaning": "先掌握“落下”这个核心义，再用本卡的 1 个常用义项辨别不同语境。",
+        "coreMeaning": "先掌握“落下；跌倒”这个核心义，再对比另外 2 个常用义项，辨别不同语境。",
         "keyCollocation": "把“fall to the ground”连同介词、宾语和动词形式作为整个句块记忆。",
-        "commonMistake": "在“fall by ten percent”这个常用搭配中，介词 by 负责连接后面的对象或范围，不能省略或随意换成其他介词。",
+        "commonMistake": "在“fall by ten percent”所表达的这个具体含义中，要用介词 by；换成 with 会破坏这个固定结构或改变原意。",
         "mustUseExample": "Be careful not to fall to the ground on the icy path.（结冰的路上小心别摔倒。）"
       },
       "questions": [
@@ -1006,11 +864,11 @@
           "type": "meaning_choice",
           "prompt": "“fall”最核心的中文含义是？",
           "options": [
-            "落下；跌倒；下降",
-            "以……为基础；把基地设在",
+            "落下；跌倒",
+            "以……为基础",
             "影响"
           ],
-          "answer": "落下；跌倒；下降",
+          "answer": "落下；跌倒",
           "stage": "T0",
           "ai": false
         },
@@ -1021,16 +879,16 @@
           "options": [
             "to use something as the foundation for a decision or locate operations somewhere",
             "to cause a change in someone or something",
-            "to move downward, drop in amount, or enter a state"
+            "to move downward or drop to the ground"
           ],
-          "answer": "to move downward, drop in amount, or enter a state",
+          "answer": "to move downward or drop to the ground",
           "stage": "T0",
           "ai": false
         },
         {
           "id": "fall-v-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "核心结构辨析：哪一项既表示“落到地上”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+          "prompt": "核心结构辨析：哪一项既表示“落到地上”，又符合这个形式线索：完整搭配中使用介词 to？",
           "options": [
             "fall asleep",
             "fall behind",
@@ -1086,7 +944,7 @@
         {
           "id": "fall-v-recall-definition",
           "type": "recall",
-          "prompt": "根据英文释义写出目标词：to move downward, drop in amount, or enter a state",
+          "prompt": "根据英文释义写出目标词：to move downward or drop to the ground",
           "answer": "fall",
           "stage": "T1",
           "ai": false
@@ -1094,7 +952,7 @@
         {
           "id": "fall-v-recall-chinese",
           "type": "recall",
-          "prompt": "写出符合“落下；跌倒；下降”（v.）的本课目标词。",
+          "prompt": "写出符合“落下；跌倒”（v.）的本课目标词。",
           "answer": "fall",
           "stage": "T1",
           "ai": false
@@ -1138,7 +996,7 @@
         {
           "id": "fall-v-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "搭配辨析：哪一项既表示“落到地上”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+          "prompt": "搭配辨析：哪一项既表示“落到地上”，又符合这个形式线索：完整搭配中使用介词 to？",
           "options": [
             "fall asleep",
             "fall behind",
@@ -1174,7 +1032,7 @@
         {
           "id": "fall-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “fall” 写一个自然、真实的英文句子，含义必须符合词卡核心义“落下；跌倒；下降”。",
+          "prompt": "请用 “fall” 写一个自然、真实的英文句子，含义必须符合词卡核心义“落下；跌倒”。",
           "answer": "",
           "stage": "T2",
           "ai": true
@@ -1190,7 +1048,7 @@
         {
           "id": "fall-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “fall” 和 “not to fall to the ground on” 结构，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “fall” 和 “fall to the ground” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1250,7 +1108,7 @@
       },
       "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.2",
-      "contentVersion": "2026.09.08.2",
+      "contentVersion": "2026.09.09.4",
       "reviewed": false,
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
@@ -1284,8 +1142,8 @@
         "主动词汇"
       ],
       "coreMemory": {
-        "chinese": "出现；显得；似乎",
-        "english": "v. to become visible, be present, or seem to have a quality；v. give a certain impression or have a certain outward aspect",
+        "chinese": "出现；显现；出席；显得；似乎",
+        "english": "v. to become visible or begin to be seen；v. to be present in a place, text, or event；v. to seem to have a particular quality",
         "structure": "appear on a screen /əˈpɪr ˈɑn ə ˈskriːn/（出现在屏幕上）；appear to be something /əˈpɪr ˈtuː ˈbiː ˈsʌmθɪŋ/（似乎是某种情况）；appear in something /əˈpɪr ɪn ˈsʌmθɪŋ/（出现在某物中）；appear from somewhere /əˈpɪr ˈfrʌm ˈsʌˌmwɛr/（从某处出现）",
         "structures": [
           {
@@ -1309,24 +1167,24 @@
             "chinese": "从某处出现"
           }
         ],
-        "commonError": "❌ appear likely doing something → ✅ appear likely to do something；❌ appear a screen → ✅ appear on a screen",
+        "commonError": "❌ appear likely to does something → ✅ appear likely to do something；❌ appear at a screen → ✅ appear on a screen",
         "commonErrors": [
           {
-            "wrong": "appear likely doing something",
-            "wrongPhonetic": "/əˈpɪr ˈlaɪkliː ˈduːɪŋ ˈsʌmθɪŋ/",
+            "wrong": "appear likely to does something",
+            "wrongPhonetic": "/əˈpɪr ˈlaɪkliː ˈtuː ˈdʌz ˈsʌmθɪŋ/",
             "right": "appear likely to do something",
             "rightPhonetic": "/əˈpɪr ˈlaɪkliː ˈtuː ˈduː ˈsʌmθɪŋ/",
-            "note": "这个结构要用 appear + to + 动词原形；do 只是词卡里的动词占位符，真实句子要换成 finish、check 等具体动词。"
+            "note": "在“appear likely to do something”中，这个 to 是不定式标记，后面必须接动词原形。do 只是语法占位符，真实表达要把它换成 finish、check 等符合语境的动词原形。"
           },
           {
-            "wrong": "appear a screen",
-            "wrongPhonetic": "/əˈpɪr ə ˈskriːn/",
+            "wrong": "appear at a screen",
+            "wrongPhonetic": "/əˈpɪr ˈæt ə ˈskriːn/",
             "right": "appear on a screen",
             "rightPhonetic": "/əˈpɪr ˈɑn ə ˈskriːn/",
-            "note": "在“appear on a screen”这个常用搭配中，介词 on 负责连接后面的对象或范围，不能省略或随意换成其他介词。"
+            "note": "在“appear on a screen”所表达的这个具体含义中，要用介词 on；换成 at 会破坏这个固定结构或改变原意。"
           }
         ],
-        "directSynonym": "seem /ˈsiːm/（似乎；看起来）",
+        "directSynonym": "come into view /ˈkʌm ˈɪntuː ˈvjuː/（出现；进入视野）",
         "directAntonym": "disappear /ˌdɪsəˈpɪr/（消失；不见）",
         "derivatives": "appearance · apparent · apparently",
         "example": "Her name appears on the screen during the opening credits.",
@@ -1335,17 +1193,24 @@
       "meanings": [
         {
           "partOfSpeech": "v.",
-          "english": "to become visible, be present, or seem to have a quality",
-          "chinese": "出现；显得；似乎",
+          "english": "to become visible or begin to be seen",
+          "chinese": "出现；显现",
           "example": "Her name appears on the screen during the opening credits.",
           "translation": "片头字幕出现时，她的名字会显示在屏幕上。"
         },
         {
           "partOfSpeech": "v.",
-          "english": "give a certain impression or have a certain outward aspect",
-          "chinese": "出现；显得；似乎",
-          "example": "The task appears to be easier than yesterday’s.",
-          "translation": "这项任务似乎比昨天的容易。"
+          "english": "to be present in a place, text, or event",
+          "chinese": "出现；出席",
+          "example": "The character first appears in the second chapter.",
+          "translation": "这个人物首次出现在第二章。"
+        },
+        {
+          "partOfSpeech": "v.",
+          "english": "to seem to have a particular quality",
+          "chinese": "显得；似乎",
+          "example": "The task appears easier after you read the example.",
+          "translation": "读完例句后，这项任务似乎容易了一些。"
         }
       ],
       "contextPhrases": [
@@ -1353,14 +1218,14 @@
           "category": "核心动作与结构",
           "items": [
             {
-              "phrase": "Her name appears on the screen during",
-              "phonetic": "/ˈhɝː ˈneɪm əˈpɪrz ˈɑn ðə ˈskriːn ˈdʊrɪŋ/",
-              "chinese": "出现在屏幕上；原句语境：片头字幕出现时，她的名字会显示在屏幕上。"
+              "phrase": "appear on a screen",
+              "phonetic": "/əˈpɪr ˈɑn ə ˈskriːn/",
+              "chinese": "出现在屏幕上"
             },
             {
-              "phrase": "The task appears to be easier than",
-              "phonetic": "/ðə ˈtæsk əˈpɪrz ˈtuː ˈbiː ˈiːziːɚ ˈðæn/",
-              "chinese": "似乎是某种情况；原句语境：这项任务似乎比昨天的容易。"
+              "phrase": "appear to be something",
+              "phonetic": "/əˈpɪr ˈtuː ˈbiː ˈsʌmθɪŋ/",
+              "chinese": "似乎是某种情况"
             }
           ]
         },
@@ -1368,14 +1233,14 @@
           "category": "日常与工作语境",
           "items": [
             {
-              "phrase": "phrase often appears in business emails",
-              "phonetic": "/ˈfreɪz ˈɔːfən əˈpɪrz ɪn ˈbɪznəs iːˈmeɪlz/",
-              "chinese": "出现在某物中；原句语境：这个短语经常出现在商务邮件中。"
+              "phrase": "appear in something",
+              "phonetic": "/əˈpɪr ɪn ˈsʌmθɪŋ/",
+              "chinese": "出现在某物中"
             },
             {
-              "phrase": "small boat appeared from behind the island",
-              "phonetic": "/ˈsmɔːl ˈboʊt əˈpɪrd ˈfrʌm bɪˈhaɪnd ðə ˈaɪlənd/",
-              "chinese": "从某处出现；原句语境：一艘小船从岛后出现。"
+              "phrase": "appear from somewhere",
+              "phonetic": "/əˈpɪr ˈfrʌm ˈsʌˌmwɛr/",
+              "chinese": "从某处出现"
             }
           ]
         },
@@ -1383,14 +1248,14 @@
           "category": "高频扩展表达",
           "items": [
             {
-              "phrase": "The team appears likely to reach its",
-              "phonetic": "/ðə ˈtiːm əˈpɪrz ˈlaɪkliː ˈtuː ˈriːtʃ ˈɪts/",
-              "chinese": "看起来很可能做某事；原句语境：团队看起来很可能实现目标。"
+              "phrase": "appear likely to do something",
+              "phonetic": "/əˈpɪr ˈlaɪkliː ˈtuː ˈduː ˈsʌmθɪŋ/",
+              "chinese": "看起来很可能做某事"
             },
             {
-              "phrase": "character first appears in the second chapter",
-              "phonetic": "/ˈkɛrɪktɚ ˈfɝːst əˈpɪrz ɪn ðə ˈsɛkənd ˈtʃæptɚ/",
-              "chinese": "首次出现；原句语境：这个人物首次出现在第二章。"
+              "phrase": "first appear",
+              "phonetic": "/ˈfɝːst əˈpɪr/",
+              "chinese": "首次出现"
             }
           ]
         }
@@ -1441,11 +1306,11 @@
       ],
       "synonyms": [
         {
-          "word": "seem",
-          "phonetic": "/ˈsiːm/",
-          "partOfSpeech": "v.",
-          "chinese": "似乎；看起来",
-          "difference": "seem 侧重“似乎；看起来”。对应的常用英文义是 “to become visible, be present, or seem to have a quality”。appear 在本卡搭配“appear on a screen”中表达“出现”；换词时要同时检查宾语和介词。"
+          "word": "come into view",
+          "phonetic": "/ˈkʌm ˈɪntuː ˈvjuː/",
+          "partOfSpeech": "phr.",
+          "chinese": "出现；进入视野",
+          "difference": "appear 与 come into view 在本卡义项下意思接近。appear 的核心义是从看不见变为看得见；seem 只对应“似乎”这一系动词用法。"
         }
       ],
       "antonyms": [
@@ -1454,7 +1319,7 @@
           "phonetic": "/ˌdɪsəˈpɪr/",
           "partOfSpeech": "v.",
           "chinese": "消失；不见",
-          "usage": "在“出现”这个义项下，disappear（消失；不见）与 appear 形成对比。对应的常用英文义是 “opposite of appear”。只在这个明确义项和句型中对比，不把两个词的所有用法都视为相反。"
+          "usage": "appear 与 disappear 在本卡义项下形成明确对比。appear 表示出现；disappear 表示从视野中消失。"
         }
       ],
       "derivatives": [
@@ -1491,89 +1356,25 @@
       ],
       "relatedVocabulary": [
         {
-          "category": "语义上位词：这个动作属于什么类别",
+          "category": "语义关联：一起理解更清楚",
           "items": [
             {
-              "word": "be",
-              "phonetic": "/ˈbiː/",
+              "word": "disappear",
+              "phonetic": "/ˌdɪsəˈpɪr/",
               "partOfSpeech": "v.",
-              "chinese": "是"
+              "chinese": "消失"
             },
             {
-              "word": "do",
-              "phonetic": "/ˈduː/",
+              "word": "seem",
+              "phonetic": "/ˈsiːm/",
               "partOfSpeech": "v.",
-              "chinese": "做"
+              "chinese": "似乎"
             },
             {
-              "word": "happen",
-              "phonetic": "/ˈhæpən/",
-              "partOfSpeech": "v.",
-              "chinese": "发生"
-            },
-            {
-              "word": "perform",
-              "phonetic": "/pɚˈfɔːrm/",
-              "partOfSpeech": "v.",
-              "chinese": "进行；履行；完成"
-            }
-          ]
-        },
-        {
-          "category": "具体动作：相关的更具体表达",
-          "items": [
-            {
-              "word": "feel",
-              "phonetic": "/ˈfiːl/",
-              "partOfSpeech": "v.",
-              "chinese": "感觉"
-            },
-            {
-              "word": "cut",
-              "phonetic": "/ˈkʌt/",
-              "partOfSpeech": "v.",
-              "chinese": "切"
-            },
-            {
-              "word": "make",
-              "phonetic": "/ˈmeɪk/",
-              "partOfSpeech": "v.",
-              "chinese": "制作"
-            },
-            {
-              "word": "rise",
-              "phonetic": "/ˈraɪz/",
-              "partOfSpeech": "v.",
-              "chinese": "上升；增加；上涨"
-            }
-          ]
-        },
-        {
-          "category": "真实语境：例句中常与本词同现的词",
-          "items": [
-            {
-              "word": "reach",
-              "phonetic": "/riːtʃ/",
-              "partOfSpeech": "v.",
-              "chinese": "到达"
-            },
-            {
-              "word": "name",
-              "phonetic": "/ˈneɪm/",
-              "partOfSpeech": "n.",
-              "chinese": "名字；名称；姓名"
-            },
-            {
-              "word": "credit",
-              "phonetic": "/ˈkrɛdət/",
-              "partOfSpeech": "n.",
-              "chinese": "信用；信任；荣誉"
-            },
-            {
-              "word": "screen",
-              "phonetic": "/ˈskriːn/",
-              "partOfSpeech": "n.",
-              "chinese": "幕；银幕；屏风"
+              "word": "visible",
+              "phonetic": "/ˈvɪzəbəl/",
+              "partOfSpeech": "adj.",
+              "chinese": "看得见的"
             }
           ]
         }
@@ -1611,9 +1412,9 @@
         }
       ],
       "studyFocus": {
-        "coreMeaning": "先掌握“出现”这个核心义，再用本卡的 1 个常用义项辨别不同语境。",
+        "coreMeaning": "先掌握“出现；显现”这个核心义，再对比另外 2 个常用义项，辨别不同语境。",
         "keyCollocation": "把“appear on a screen”连同介词、宾语和动词形式作为整个句块记忆。",
-        "commonMistake": "这个结构要用 appear + to + 动词原形；do 只是词卡里的动词占位符，真实句子要换成 finish、check 等具体动词。",
+        "commonMistake": "在“appear likely to do something”中，这个 to 是不定式标记，后面必须接动词原形。do 只是语法占位符，真实表达要把它换成 finish、check 等符合语境的动词原形。",
         "mustUseExample": "Her name appears on the screen during the opening credits.（片头字幕出现时，她的名字会显示在屏幕上。）"
       },
       "questions": [
@@ -1622,11 +1423,11 @@
           "type": "meaning_choice",
           "prompt": "“appear”最核心的中文含义是？",
           "options": [
-            "挑选；采摘；捡起",
-            "设法做到；管理",
-            "出现；显得；似乎"
+            "挑选",
+            "设法做到",
+            "出现；显现"
           ],
-          "answer": "出现；显得；似乎",
+          "answer": "出现；显现",
           "stage": "T0",
           "ai": false
         },
@@ -1636,10 +1437,10 @@
           "prompt": "哪一项英文释义最符合词卡中的 “appear”？",
           "options": [
             "to succeed in doing or controlling something",
-            "to become visible, be present, or seem to have a quality",
+            "to become visible or begin to be seen",
             "to choose, gather, or lift something"
           ],
-          "answer": "to become visible, be present, or seem to have a quality",
+          "answer": "to become visible or begin to be seen",
           "stage": "T0",
           "ai": false
         },
@@ -1662,12 +1463,12 @@
           "type": "meaning_choice",
           "prompt": "哪个词是词卡中列出的 “appear” 最直接近义词？",
           "options": [
-            "seem",
+            "come into view",
             "disappear",
-            "pick",
-            "manage"
+            "seem",
+            "pick"
           ],
-          "answer": "seem",
+          "answer": "come into view",
           "stage": "T2",
           "ai": false
         },
@@ -1676,9 +1477,9 @@
           "type": "meaning_choice",
           "prompt": "哪个词是词卡中列出的 “appear” 最直接反义词？",
           "options": [
+            "come into view",
             "seem",
             "pick",
-            "manage",
             "disappear"
           ],
           "answer": "disappear",
@@ -1690,10 +1491,10 @@
           "type": "meaning_choice",
           "prompt": "根据本词卡辨析，哪个词被列为 “appear” 的易混词？",
           "options": [
+            "disappear",
             "pick",
-            "manage",
             "seem",
-            "disappear"
+            "come into view"
           ],
           "answer": "seem",
           "stage": "T3",
@@ -1702,7 +1503,7 @@
         {
           "id": "appear-v-recall-definition",
           "type": "recall",
-          "prompt": "根据英文释义写出目标词：to become visible, be present, or seem to have a quality",
+          "prompt": "根据英文释义写出目标词：to become visible or begin to be seen",
           "answer": "appear",
           "stage": "T1",
           "ai": false
@@ -1710,7 +1511,7 @@
         {
           "id": "appear-v-recall-chinese",
           "type": "recall",
-          "prompt": "写出符合“出现；显得；似乎”（v.）的本课目标词。",
+          "prompt": "写出符合“出现；显现”（v.）的本课目标词。",
           "answer": "appear",
           "stage": "T1",
           "ai": false
@@ -1726,7 +1527,7 @@
         {
           "id": "appear-v-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "句型应用：哪一项既表示“似乎是某种情况”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
+          "prompt": "句型应用：哪一项既表示“似乎是某种情况”，又符合这个形式线索：完整结构中使用 to be，后面接名词、形容词或其他补语？",
           "options": [
             "appear on a screen",
             "appear in something",
@@ -1768,7 +1569,7 @@
         {
           "id": "appear-v-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "搭配辨析：哪一项既表示“似乎是某种情况”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
+          "prompt": "搭配辨析：哪一项既表示“似乎是某种情况”，又符合这个形式线索：完整结构中使用 to be，后面接名词、形容词或其他补语？",
           "options": [
             "appear to be something",
             "appear on a screen",
@@ -1790,7 +1591,7 @@
         {
           "id": "appear-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “appear” 写一个自然、真实的英文句子，含义必须符合词卡核心义“出现；显得；似乎”。",
+          "prompt": "请用 “appear” 写一个自然、真实的英文句子，含义必须符合词卡核心义“出现；显现”。",
           "answer": "",
           "stage": "T2",
           "ai": true
@@ -1806,7 +1607,7 @@
         {
           "id": "appear-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “appear” 和 “Her name appears on the screen during” 结构，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “appear” 和 “appear on a screen” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1866,7 +1667,7 @@
       },
       "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.2",
-      "contentVersion": "2026.09.08.2",
+      "contentVersion": "2026.09.09.4",
       "reviewed": false,
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
@@ -1900,8 +1701,8 @@
         "主动词汇"
       ],
       "coreMemory": {
-        "chinese": "服务；供应；起作用",
-        "english": "v. to provide help or food, perform a duty, or be useful for a purpose；v. serve a purpose, role, or function",
+        "chinese": "服务；接待；供应；端上；起作用；可用作；任职；履行职责",
+        "english": "v. to help customers or provide a service；v. to provide food or drink；v. to be useful for a particular purpose；v. to perform a particular duty or role",
         "structure": "serve a customer /ˈsɝːv ə ˈkʌstəmɚ/（为顾客服务）；serve food /ˈsɝːv ˈfuːd/（上菜；供应食物）；serve as something /ˈsɝːv ˈæz ˈsʌmθɪŋ/（充当；担任）；serve a purpose /ˈsɝːv ə ˈpɝːpəs/（发挥作用；达到目的）",
         "structures": [
           {
@@ -1925,43 +1726,57 @@
             "chinese": "发挥作用；达到目的"
           }
         ],
-        "commonError": "❌ serve a committee → ✅ serve on a committee；❌ to serveing → ✅ to serve",
+        "commonError": "❌ serve at a committee → ✅ serve on a committee；❌ to serving → ✅ to serve",
         "commonErrors": [
           {
-            "wrong": "serve a committee",
-            "wrongPhonetic": "/ˈsɝːv ə kəˈmɪtiː/",
+            "wrong": "serve at a committee",
+            "wrongPhonetic": "/ˈsɝːv ˈæt ə kəˈmɪtiː/",
             "right": "serve on a committee",
             "rightPhonetic": "/ˈsɝːv ˈɑn ə kəˈmɪtiː/",
-            "note": "在“serve on a committee”这个常用搭配中，介词 on 负责连接后面的对象或范围，不能省略或随意换成其他介词。"
+            "note": "在“serve on a committee”所表达的这个具体含义中，要用介词 on；换成 at 会破坏这个固定结构或改变原意。"
           },
           {
-            "wrong": "to serveing",
-            "wrongPhonetic": "/ˈtuː serveing/",
+            "wrong": "to serving",
+            "wrongPhonetic": "/ˈtuː ˈsɝːvɪŋ/",
             "right": "to serve",
             "rightPhonetic": "/ˈtuː ˈsɝːv/",
-            "note": "这里的 to 是不定式标记，后面要用 serve 的原形，不能再加 -ing。"
+            "note": "这里的 to 是不定式标记，后面要用 serve 的原形，不能改成 serving。"
           }
         ],
         "directSynonym": "assist /əˈsɪst/（帮助；协助）",
         "directAntonym": "neglect /nəˈɡlɛkt/（疏忽；不服务）",
-        "derivatives": "service · server · serving · servant · servitor",
+        "derivatives": "service · serving",
         "example": "Good staff serve every customer politely.",
         "exampleChinese": "优秀员工会礼貌地服务每位顾客。"
       },
       "meanings": [
         {
           "partOfSpeech": "v.",
-          "english": "to provide help or food, perform a duty, or be useful for a purpose",
-          "chinese": "服务；供应；起作用",
+          "english": "to help customers or provide a service",
+          "chinese": "服务；接待",
           "example": "Good staff serve every customer politely.",
           "translation": "优秀员工会礼貌地服务每位顾客。"
         },
         {
           "partOfSpeech": "v.",
-          "english": "serve a purpose, role, or function",
-          "chinese": "服务；供应；起作用",
+          "english": "to provide food or drink",
+          "chinese": "供应；端上",
           "example": "The restaurant serves breakfast until ten.",
           "translation": "这家餐厅供应早餐到十点。"
+        },
+        {
+          "partOfSpeech": "v.",
+          "english": "to be useful for a particular purpose",
+          "chinese": "起作用；可用作",
+          "example": "This sentence can serve as a useful model.",
+          "translation": "这个句子可以作为实用范例。"
+        },
+        {
+          "partOfSpeech": "v.",
+          "english": "to perform a particular duty or role",
+          "chinese": "任职；履行职责",
+          "example": "She served as team leader for two years.",
+          "translation": "她担任了两年团队负责人。"
         }
       ],
       "contextPhrases": [
@@ -1969,14 +1784,14 @@
           "category": "核心动作与结构",
           "items": [
             {
-              "phrase": "Good staff serve every customer politely",
-              "phonetic": "/ˈɡʊd ˈstæf ˈsɝːv ˈɛvɚiː ˈkʌstəmɚ pəˈlaɪtliː/",
-              "chinese": "为顾客服务；原句语境：优秀员工会礼貌地服务每位顾客。"
+              "phrase": "serve a customer",
+              "phonetic": "/ˈsɝːv ə ˈkʌstəmɚ/",
+              "chinese": "为顾客服务"
             },
             {
-              "phrase": "The restaurant serves breakfast until ten",
-              "phonetic": "/ðə ˈrɛstɚˌɑnt ˈsɝːvz ˈbrɛkfəst əˈntɪl ˈtɛn/",
-              "chinese": "上菜；供应食物；原句语境：这家餐厅供应早餐到十点。"
+              "phrase": "serve food",
+              "phonetic": "/ˈsɝːv ˈfuːd/",
+              "chinese": "上菜；供应食物"
             }
           ]
         },
@@ -1984,14 +1799,14 @@
           "category": "日常与工作语境",
           "items": [
             {
-              "phrase": "sentence can serve as a useful model",
-              "phonetic": "/ˈsɛntəns ˈkæn ˈsɝːv ˈæz ə ˈjuːsfəl ˈmɑdəl/",
-              "chinese": "充当；担任；原句语境：这个句子可以作为实用范例。"
+              "phrase": "serve as something",
+              "phonetic": "/ˈsɝːv ˈæz ˈsʌmθɪŋ/",
+              "chinese": "充当；担任"
             },
             {
-              "phrase": "question should serve a clear learning purpose",
-              "phonetic": "/ˈkwɛstʃən ˈʃʊd ˈsɝːv ə ˈklɪr ˈlɝːnɪŋ ˈpɝːpəs/",
-              "chinese": "发挥作用；达到目的；原句语境：每道题都应该有明确的学习目的。"
+              "phrase": "serve a purpose",
+              "phonetic": "/ˈsɝːv ə ˈpɝːpəs/",
+              "chinese": "发挥作用；达到目的"
             }
           ]
         },
@@ -1999,14 +1814,14 @@
           "category": "高频扩展表达",
           "items": [
             {
-              "phrase": "She serves on the school s",
-              "phonetic": "/ˈʃiː ˈsɝːvz ˈɑn ðə ˈskuːl ˈɛs/",
-              "chinese": "在委员会任职；原句语境：她在学校安全委员会任职。"
+              "phrase": "serve on a committee",
+              "phonetic": "/ˈsɝːv ˈɑn ə kəˈmɪtiː/",
+              "chinese": "在委员会任职"
             },
             {
-              "phrase": "habit will serve you well in future",
-              "phonetic": "/ˈhæbət ˈwɪl ˈsɝːv ˈjuː ˈwɛl ɪn ˈfjuːtʃɚ/",
-              "chinese": "对某人很有帮助；原句语境：这个习惯会在今后的对话中给你很大帮助。"
+              "phrase": "serve someone well",
+              "phonetic": "/ˈsɝːv ˈsʌˌmwʌn ˈwɛl/",
+              "chinese": "对某人很有帮助"
             }
           ]
         }
@@ -2059,18 +1874,18 @@
         {
           "word": "assist",
           "phonetic": "/əˈsɪst/",
-          "partOfSpeech": "v. / n.",
+          "partOfSpeech": "v.",
           "chinese": "帮助；协助",
-          "difference": "assist 侧重“帮助；协助”。对应的常用英文义是 “to provide help or food, perform a duty, or be useful for a purpose”。serve 在本卡搭配“serve a customer”中表达“服务”；换词时要同时检查宾语和介词。"
+          "difference": "assist 更侧重“帮助；协助”；serve 的核心义是“服务”。两者意思接近，但替换时仍要核对宾语、介词和具体语境。"
         }
       ],
       "antonyms": [
         {
           "word": "neglect",
           "phonetic": "/nəˈɡlɛkt/",
-          "partOfSpeech": "v. / n.",
+          "partOfSpeech": "v.",
           "chinese": "疏忽；不服务",
-          "usage": "在“服务”这个义项下，neglect（疏忽；不服务）与 serve 形成对比。对应的常用英文义是 “opposite of serve”。只在这个明确义项和句型中对比，不把两个词的所有用法都视为相反。"
+          "usage": "当 serve 表示“服务”时，neglect 表示“疏忽；不服务”。两者只在这个明确义项下构成直接对比，其他用法不能一概互换。"
         }
       ],
       "derivatives": [
@@ -2078,72 +1893,28 @@
           "word": "service",
           "phonetic": "/ˈsɝːvəs/",
           "partOfSpeech": "n.",
-          "chinese": "服务；维修",
-          "note": "可指提供帮助的活动或设备维护。"
-        },
-        {
-          "word": "server",
-          "phonetic": "/ˈsɝːvɚ/",
-          "partOfSpeech": "n.",
-          "chinese": "服务员；服务器",
-          "note": "可指提供餐饮服务的人或网络设备。"
+          "chinese": "服务；公共事业服务",
+          "note": "表示为他人提供帮助或满足需要的活动。"
         },
         {
           "word": "serving",
           "phonetic": "/ˈsɝːvɪŋ/",
           "partOfSpeech": "n.",
           "chinese": "一份食物；服务行为",
-          "note": "常见于 serving size。"
-        },
-        {
-          "word": "servant",
-          "phonetic": "/ˈsɝːvənt/",
-          "partOfSpeech": "n.",
-          "chinese": "仆人；有用物；公务员",
-          "note": "servant 是 serve 的常用词族形式，作 n. 使用；对应的常用英文义是 “in a subordinate position”。"
-        },
-        {
-          "word": "servitor",
-          "phonetic": "/servitor/",
-          "partOfSpeech": "n.",
-          "chinese": "仆人；跟班；工读生",
-          "note": "servitor 是 serve 的常用词族形式，作 n. 使用；对应的常用英文义是 “someone who performs the duties of an attendant for someone else”。"
+          "note": "常见于 serving size，表示一次食用的份量。"
         }
       ],
       "confusables": [],
       "relatedVocabulary": [
         {
-          "category": "语义上位词：这个动作属于什么类别",
+          "category": "语义关联：一起理解更清楚",
           "items": [
             {
-              "word": "do",
-              "phonetic": "/ˈduː/",
-              "partOfSpeech": "v.",
-              "chinese": "做"
+              "word": "service",
+              "phonetic": "/ˈsɝːvəs/",
+              "partOfSpeech": "n.",
+              "chinese": "服务"
             },
-            {
-              "word": "go",
-              "phonetic": "/ˈɡoʊ/",
-              "partOfSpeech": "v.",
-              "chinese": "去"
-            },
-            {
-              "word": "work",
-              "phonetic": "/ˈwɝːk/",
-              "partOfSpeech": "v.",
-              "chinese": "工作"
-            },
-            {
-              "word": "provide",
-              "phonetic": "/prəˈvaɪd/",
-              "partOfSpeech": "v.",
-              "chinese": "提供"
-            }
-          ]
-        },
-        {
-          "category": "具体动作：相关的更具体表达",
-          "items": [
             {
               "word": "help",
               "phonetic": "/ˈhɛlp/",
@@ -2151,51 +1922,10 @@
               "chinese": "帮助"
             },
             {
-              "word": "sit",
-              "phonetic": "/ˈsɪt/",
+              "word": "provide",
+              "phonetic": "/prəˈvaɪd/",
               "partOfSpeech": "v.",
-              "chinese": "坐"
-            },
-            {
-              "word": "act",
-              "phonetic": "/ˈækt/",
-              "partOfSpeech": "v.",
-              "chinese": "行动；行为；幕"
-            },
-            {
-              "word": "staff",
-              "phonetic": "/ˈstæf/",
-              "partOfSpeech": "v.",
-              "chinese": "全体人员；工作班子；棍棒"
-            }
-          ]
-        },
-        {
-          "category": "真实语境：例句中常与本词同现的词",
-          "items": [
-            {
-              "word": "learn",
-              "phonetic": "/lɜːrn/",
-              "partOfSpeech": "v.",
-              "chinese": "学习"
-            },
-            {
-              "word": "question",
-              "phonetic": "/ˈkwɛstʃən/",
-              "partOfSpeech": "n.",
-              "chinese": "问题；询问；询问"
-            },
-            {
-              "word": "clear",
-              "phonetic": "/ˈklɪr/",
-              "partOfSpeech": "n.",
-              "chinese": "清楚的；明确的；澄清的；清晰地"
-            },
-            {
-              "word": "model",
-              "phonetic": "/ˈmɑdəl/",
-              "partOfSpeech": "n.",
-              "chinese": "模型；模范；模特儿"
+              "chinese": "提供"
             }
           ]
         }
@@ -2233,9 +1963,9 @@
         }
       ],
       "studyFocus": {
-        "coreMeaning": "先掌握“服务”这个核心义，再用本卡的 1 个常用义项辨别不同语境。",
+        "coreMeaning": "先掌握“服务；接待”这个核心义，再对比另外 3 个常用义项，辨别不同语境。",
         "keyCollocation": "把“serve a customer”连同介词、宾语和动词形式作为整个句块记忆。",
-        "commonMistake": "在“serve on a committee”这个常用搭配中，介词 on 负责连接后面的对象或范围，不能省略或随意换成其他介词。",
+        "commonMistake": "在“serve on a committee”所表达的这个具体含义中，要用介词 on；换成 at 会破坏这个固定结构或改变原意。",
         "mustUseExample": "Good staff serve every customer politely.（优秀员工会礼貌地服务每位顾客。）"
       },
       "questions": [
@@ -2244,11 +1974,11 @@
           "type": "meaning_choice",
           "prompt": "“serve”最核心的中文含义是？",
           "options": [
-            "改善；提高",
-            "服务；供应；起作用",
-            "驾驶；驱动；迫使"
+            "改善",
+            "服务；接待",
+            "驾驶"
           ],
-          "answer": "服务；供应；起作用",
+          "answer": "服务；接待",
           "stage": "T0",
           "ai": false
         },
@@ -2257,11 +1987,11 @@
           "type": "meaning_choice",
           "prompt": "哪一项英文释义最符合词卡中的 “serve”？",
           "options": [
-            "to provide help or food, perform a duty, or be useful for a purpose",
+            "to help customers or provide a service",
             "to control a vehicle, power a process, or strongly motivate someone",
             "to make something better"
           ],
-          "answer": "to provide help or food, perform a duty, or be useful for a purpose",
+          "answer": "to help customers or provide a service",
           "stage": "T0",
           "ai": false
         },
@@ -2324,7 +2054,7 @@
         {
           "id": "serve-v-recall-definition",
           "type": "recall",
-          "prompt": "根据英文释义写出目标词：to provide help or food, perform a duty, or be useful for a purpose",
+          "prompt": "根据英文释义写出目标词：to help customers or provide a service",
           "answer": "serve",
           "stage": "T1",
           "ai": false
@@ -2332,7 +2062,7 @@
         {
           "id": "serve-v-recall-chinese",
           "type": "recall",
-          "prompt": "写出符合“服务；供应；起作用”（v.）的本课目标词。",
+          "prompt": "写出符合“服务；接待”（v.）的本课目标词。",
           "answer": "serve",
           "stage": "T1",
           "ai": false
@@ -2412,7 +2142,7 @@
         {
           "id": "serve-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “serve” 写一个自然、真实的英文句子，含义必须符合词卡核心义“服务；供应；起作用”。",
+          "prompt": "请用 “serve” 写一个自然、真实的英文句子，含义必须符合词卡核心义“服务；接待”。",
           "answer": "",
           "stage": "T2",
           "ai": true
@@ -2428,7 +2158,7 @@
         {
           "id": "serve-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “serve” 和 “Good staff serve every customer politely” 结构，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “serve” 和 “serve a customer” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2488,7 +2218,7 @@
       },
       "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.2",
-      "contentVersion": "2026.09.08.2",
+      "contentVersion": "2026.09.09.4",
       "reviewed": false,
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
@@ -2528,8 +2258,8 @@
         "主动词汇"
       ],
       "coreMemory": {
-        "chinese": "打破；弄坏；中断",
-        "english": "v. to damage, divide, interrupt, or fail to obey something；v. terminate",
+        "chinese": "弄坏；打破；分开；拆分；违反；违背；中断；打断",
+        "english": "v. to damage something so that it no longer works or stays whole；v. to divide something into smaller parts；v. to fail to obey a rule, law, or promise；v. to interrupt or stop an activity or period of time",
         "structure": "break a rule /ˈbreɪk ə ˈruːl/（违反规则）；break something into parts /ˈbreɪk ˈsʌmθɪŋ ˈɪntuː ˈpɑrts/（把某物分成几部分）；break a habit /ˈbreɪk ə ˈhæbət/（戒掉习惯）；break down /ˈbreɪk ˈdaʊn/（出故障；分解）",
         "structures": [
           {
@@ -2553,43 +2283,57 @@
             "chinese": "出故障；分解"
           }
         ],
-        "commonError": "❌ break something parts → ✅ break something into parts；❌ to breaking → ✅ to break",
+        "commonError": "❌ break something at parts → ✅ break something into parts；❌ to breaking → ✅ to break",
         "commonErrors": [
           {
-            "wrong": "break something parts",
-            "wrongPhonetic": "/ˈbreɪk ˈsʌmθɪŋ ˈpɑrts/",
+            "wrong": "break something at parts",
+            "wrongPhonetic": "/ˈbreɪk ˈsʌmθɪŋ ˈæt ˈpɑrts/",
             "right": "break something into parts",
             "rightPhonetic": "/ˈbreɪk ˈsʌmθɪŋ ˈɪntuː ˈpɑrts/",
-            "note": "在“break something into parts”这个常用搭配中，介词 into 负责连接后面的对象或范围，不能省略或随意换成其他介词。"
+            "note": "在“break something into parts”所表达的这个具体含义中，要用介词 into；换成 at 会破坏这个固定结构或改变原意。"
           },
           {
             "wrong": "to breaking",
             "wrongPhonetic": "/ˈtuː ˈbreɪkɪŋ/",
             "right": "to break",
             "rightPhonetic": "/ˈtuː ˈbreɪk/",
-            "note": "这里的 to 是不定式标记，后面要用 break 的原形，不能再加 -ing。"
+            "note": "这里的 to 是不定式标记，后面要用 break 的原形，不能改成 breaking。"
           }
         ],
         "directSynonym": "shatter /ˈʃætɚ/（打碎；粉碎）",
         "directAntonym": "repair /rɪˈpɛr/（修理；修复）",
-        "derivatives": "breakage · breakable · breakdown · breach · breaker",
+        "derivatives": "breakage · breakdown · breakable",
         "example": "Do not break the rule just because the task feels difficult.",
         "exampleChinese": "不要因为任务困难就违反规则。"
       },
       "meanings": [
         {
           "partOfSpeech": "v.",
-          "english": "to damage, divide, interrupt, or fail to obey something",
-          "chinese": "打破；弄坏；中断",
+          "english": "to damage something so that it no longer works or stays whole",
+          "chinese": "弄坏；打破",
+          "example": "Be careful not to break the glass.",
+          "translation": "小心不要打碎玻璃。"
+        },
+        {
+          "partOfSpeech": "v.",
+          "english": "to divide something into smaller parts",
+          "chinese": "分开；拆分",
+          "example": "Break the sentence into smaller parts before translating it.",
+          "translation": "翻译前把句子分成更小的部分。"
+        },
+        {
+          "partOfSpeech": "v.",
+          "english": "to fail to obey a rule, law, or promise",
+          "chinese": "违反；违背",
           "example": "Do not break the rule just because the task feels difficult.",
           "translation": "不要因为任务困难就违反规则。"
         },
         {
           "partOfSpeech": "v.",
-          "english": "terminate",
-          "chinese": "打破；弄坏；中断",
-          "example": "Break the sentence into smaller parts before translating it.",
-          "translation": "翻译前把句子分成更小的部分。"
+          "english": "to interrupt or stop an activity or period of time",
+          "chinese": "中断；打断",
+          "example": "The connection broke during the call.",
+          "translation": "通话时连接中断了。"
         }
       ],
       "contextPhrases": [
@@ -2597,14 +2341,14 @@
           "category": "核心动作与结构",
           "items": [
             {
-              "phrase": "Do not break the rule just because",
-              "phonetic": "/ˈduː ˈnɑt ˈbreɪk ðə ˈruːl ˈdʒʌst bɪˈkɔːz/",
-              "chinese": "违反规则；原句语境：不要因为任务困难就违反规则。"
+              "phrase": "break a rule",
+              "phonetic": "/ˈbreɪk ə ˈruːl/",
+              "chinese": "违反规则"
             },
             {
-              "phrase": "Break the sentence into smaller",
-              "phonetic": "/ˈbreɪk ðə ˈsɛntəns ˈɪntuː ˈsmɔːlɚ/",
-              "chinese": "把某物分成几部分；原句语境：翻译前把句子分成更小的部分。"
+              "phrase": "break something into parts",
+              "phonetic": "/ˈbreɪk ˈsʌmθɪŋ ˈɪntuː ˈpɑrts/",
+              "chinese": "把某物分成几部分"
             }
           ]
         },
@@ -2612,14 +2356,14 @@
           "category": "日常与工作语境",
           "items": [
             {
-              "phrase": "time to break the habit of translating",
-              "phonetic": "/ˈtaɪm ˈtuː ˈbreɪk ðə ˈhæbət ˈʌv træˈnzleɪtɪŋ/",
-              "chinese": "戒掉习惯；原句语境：改掉逐字翻译的习惯需要时间。"
+              "phrase": "break a habit",
+              "phonetic": "/ˈbreɪk ə ˈhæbət/",
+              "chinese": "戒掉习惯"
             },
             {
-              "phrase": "machine may break down without regular maintenance",
-              "phonetic": "/məˈʃiːn ˈmeɪ ˈbreɪk ˈdaʊn wɪˈθaʊt ˈrɛɡjəlɚ ˈmeɪntənəns/",
-              "chinese": "出故障；分解；原句语境：旧机器不定期维护可能会出故障。"
+              "phrase": "break down",
+              "phonetic": "/ˈbreɪk ˈdaʊn/",
+              "chinese": "出故障；分解"
             }
           ]
         },
@@ -2627,14 +2371,14 @@
           "category": "高频扩展表达",
           "items": [
             {
-              "phrase": "fire could break out if the wiring",
-              "phonetic": "/ˈfaɪɚ ˈkʊd ˈbreɪk ˈaʊt ˈɪf ðə ˈwaɪrɪŋ/",
-              "chinese": "突然发生；原句语境：电线损坏可能引发火灾。"
+              "phrase": "break out",
+              "phonetic": "/ˈbreɪk ˈaʊt/",
+              "chinese": "突然发生"
             },
             {
-              "phrase": "had to break the bad news to",
-              "phonetic": "/ˈhæd ˈtuː ˈbreɪk ðə ˈbæd ˈnuːz ˈtuː/",
-              "chinese": "把消息告诉某人；原句语境：我不得不把坏消息告诉团队。"
+              "phrase": "break the news to someone",
+              "phonetic": "/ˈbreɪk ðə ˈnuːz ˈtuː ˈsʌˌmwʌn/",
+              "chinese": "把消息告诉某人"
             }
           ]
         }
@@ -2689,7 +2433,7 @@
           "phonetic": "/ˈʃætɚ/",
           "partOfSpeech": "v.",
           "chinese": "打碎；粉碎",
-          "difference": "shatter 侧重“打碎；粉碎”。对应的常用英文义是 “to damage, divide, interrupt, or fail to obey something”。break 在本卡搭配“break a rule”中表达“打破”；换词时要同时检查宾语和介词。"
+          "difference": "shatter 更侧重“打碎；粉碎”；break 的核心义是“打破”。两者意思接近，但替换时仍要核对宾语、介词和具体语境。"
         }
       ],
       "antonyms": [
@@ -2698,7 +2442,7 @@
           "phonetic": "/rɪˈpɛr/",
           "partOfSpeech": "v.",
           "chinese": "修理；修复",
-          "usage": "在“打破”这个义项下，repair（修理；修复）与 break 形成对比。对应的常用英文义是 “opposite of break”。只在这个明确义项和句型中对比，不把两个词的所有用法都视为相反。"
+          "usage": "当 break 表示“打破”时，repair 表示“修理；修复”。两者只在这个明确义项下构成直接对比，其他用法不能一概互换。"
         }
       ],
       "derivatives": [
@@ -2710,13 +2454,6 @@
           "note": "常用于运输或保险语境。"
         },
         {
-          "word": "breakable",
-          "phonetic": "/ˈbreɪkəbəl/",
-          "partOfSpeech": "adj.",
-          "chinese": "易碎的",
-          "note": "表示容易破损。"
-        },
-        {
           "word": "breakdown",
           "phonetic": "/ˈbreɪˌkdaʊn/",
           "partOfSpeech": "n.",
@@ -2724,106 +2461,35 @@
           "note": "含义由具体语境决定。"
         },
         {
-          "word": "breach",
-          "phonetic": "/ˈbriːtʃ/",
-          "partOfSpeech": "n.",
-          "chinese": "裂口；违背；破坏",
-          "note": "breach 是 break 的常用词族形式，作 n. 使用；对应的常用英文义是 “a failure to perform some promised act or obligation”。"
-        },
-        {
-          "word": "breaker",
-          "phonetic": "/ˈbreɪkɚ/",
-          "partOfSpeech": "n.",
-          "chinese": "断路器",
-          "note": "breaker 是 break 的常用词族形式，作 n. 使用；对应的常用英文义是 “a quarry worker who splits off blocks of stone”。"
+          "word": "breakable",
+          "phonetic": "/ˈbreɪkəbəl/",
+          "partOfSpeech": "adj.",
+          "chinese": "易碎的",
+          "note": "表示容易破损。"
         }
       ],
       "confusables": [],
       "relatedVocabulary": [
         {
-          "category": "语义上位词：这个动作属于什么类别",
+          "category": "语义关联：一起理解更清楚",
           "items": [
             {
-              "word": "end",
-              "phonetic": "/ˈɛnd/",
+              "word": "repair",
+              "phonetic": "/rɪˈpɛr/",
               "partOfSpeech": "v.",
-              "chinese": "结束"
+              "chinese": "修理"
             },
             {
               "word": "damage",
               "phonetic": "/ˈdæmədʒ/",
-              "partOfSpeech": "v.",
-              "chinese": "损害；伤害；损害"
+              "partOfSpeech": "v. / n.",
+              "chinese": "损坏"
             },
             {
-              "word": "separate",
-              "phonetic": "/ˈsɛpɚˌeɪt/",
+              "word": "divide",
+              "phonetic": "/dɪˈvaɪd/",
               "partOfSpeech": "v.",
-              "chinese": "独立件；抽印本；分开的；各别的"
-            },
-            {
-              "word": "destroy",
-              "phonetic": "/dɪˈstrɔɪ/",
-              "partOfSpeech": "v.",
-              "chinese": "破坏；毁坏；消灭"
-            }
-          ]
-        },
-        {
-          "category": "具体动作：相关的更具体表达",
-          "items": [
-            {
-              "word": "run",
-              "phonetic": "/ˈrʌn/",
-              "partOfSpeech": "v.",
-              "chinese": "跑"
-            },
-            {
-              "word": "stop",
-              "phonetic": "/ˈstɑp/",
-              "partOfSpeech": "v.",
-              "chinese": "停止"
-            },
-            {
-              "word": "freeze",
-              "phonetic": "/ˈfriːz/",
-              "partOfSpeech": "v.",
-              "chinese": "冻结；冷冻；僵硬"
-            },
-            {
-              "word": "burst",
-              "phonetic": "/ˈbɝːst/",
-              "partOfSpeech": "v.",
-              "chinese": "破裂；突发；爆发"
-            }
-          ]
-        },
-        {
-          "category": "真实语境：例句中常与本词同现的词",
-          "items": [
-            {
-              "word": "feel",
-              "phonetic": "/ˈfiːl/",
-              "partOfSpeech": "v.",
-              "chinese": "感觉"
-            },
-            {
-              "word": "take",
-              "phonetic": "/ˈteɪk/",
-              "partOfSpeech": "v.",
-              "chinese": "拿"
-            },
-            {
-              "word": "word",
-              "phonetic": "/ˈwɝːd/",
-              "partOfSpeech": "n.",
-              "chinese": "话；消息；词"
-            },
-            {
-              "word": "part",
-              "phonetic": "/ˈpɑrt/",
-              "partOfSpeech": "n.",
-              "chinese": "部分；局部；零件"
+              "chinese": "分开"
             }
           ]
         }
@@ -2861,9 +2527,9 @@
         }
       ],
       "studyFocus": {
-        "coreMeaning": "先掌握“打破”这个核心义，再用本卡的 1 个常用义项辨别不同语境。",
+        "coreMeaning": "先掌握“弄坏；打破”这个核心义，再对比另外 3 个常用义项，辨别不同语境。",
         "keyCollocation": "把“break a rule”连同介词、宾语和动词形式作为整个句块记忆。",
-        "commonMistake": "在“break something into parts”这个常用搭配中，介词 into 负责连接后面的对象或范围，不能省略或随意换成其他介词。",
+        "commonMistake": "在“break something into parts”所表达的这个具体含义中，要用介词 into；换成 at 会破坏这个固定结构或改变原意。",
         "mustUseExample": "Do not break the rule just because the task feels difficult.（不要因为任务困难就违反规则。）"
       },
       "questions": [
@@ -2872,11 +2538,11 @@
           "type": "meaning_choice",
           "prompt": "“break”最核心的中文含义是？",
           "options": [
-            "打破；弄坏；中断",
-            "到达；达到",
+            "弄坏；打破",
+            "到达",
             "发现"
           ],
-          "answer": "打破；弄坏；中断",
+          "answer": "弄坏；打破",
           "stage": "T0",
           "ai": false
         },
@@ -2887,9 +2553,9 @@
           "options": [
             "to arrive at a place or level",
             "to find something for the first time",
-            "to damage, divide, interrupt, or fail to obey something"
+            "to damage something so that it no longer works or stays whole"
           ],
-          "answer": "to damage, divide, interrupt, or fail to obey something",
+          "answer": "to damage something so that it no longer works or stays whole",
           "stage": "T0",
           "ai": false
         },
@@ -2952,7 +2618,7 @@
         {
           "id": "break-v-recall-definition",
           "type": "recall",
-          "prompt": "根据英文释义写出目标词：to damage, divide, interrupt, or fail to obey something",
+          "prompt": "根据英文释义写出目标词：to damage something so that it no longer works or stays whole",
           "answer": "break",
           "stage": "T1",
           "ai": false
@@ -2960,7 +2626,7 @@
         {
           "id": "break-v-recall-chinese",
           "type": "recall",
-          "prompt": "写出符合“打破；弄坏；中断”（v.）的本课目标词。",
+          "prompt": "写出符合“弄坏；打破”（v.）的本课目标词。",
           "answer": "break",
           "stage": "T1",
           "ai": false
@@ -3040,7 +2706,7 @@
         {
           "id": "break-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “break” 写一个自然、真实的英文句子，含义必须符合词卡核心义“打破；弄坏；中断”。",
+          "prompt": "请用 “break” 写一个自然、真实的英文句子，含义必须符合词卡核心义“弄坏；打破”。",
           "answer": "",
           "stage": "T2",
           "ai": true
@@ -3056,7 +2722,7 @@
         {
           "id": "break-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “break” 和 “Do not break the rule just because” 结构，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “break” 和 “break a rule” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -3116,7 +2782,7 @@
       },
       "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.2",
-      "contentVersion": "2026.09.08.2",
+      "contentVersion": "2026.09.09.4",
       "reviewed": false,
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     }

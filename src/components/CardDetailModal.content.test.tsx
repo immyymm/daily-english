@@ -17,7 +17,7 @@ describe('CardDetailModal template content', () => {
       />,
     );
 
-    const dialog = screen.getByRole('dialog', { name: '完整单词词卡' });
+    const dialog = screen.getByRole('dialog', { name: '单词词卡' });
     expect(within(dialog).getByText('释义')).toBeInTheDocument();
     expect(within(dialog).getByText('音节与美式音标')).toBeInTheDocument();
     expect(within(dialog).getByText('provide someone with something')).toBeInTheDocument();
@@ -52,8 +52,8 @@ describe('CardDetailModal template content', () => {
     expect(meaningItems).toHaveLength(provideCard.meanings.length);
     const meaningListOrder = Array.from(dialog.querySelector('.memory-meaning-list')?.children ?? [])
       .map((element) => element.className);
-    expect(meaningListOrder).toEqual(['memory-core-summary', ...provideCard.meanings.map(() => 'memory-meaning-item')]);
-    expect(dialog.querySelector('.memory-core-summary')).toHaveTextContent('v.提供核心义');
+    expect(meaningListOrder).toEqual(['memory-meaning-item core', ...provideCard.meanings.slice(1).map(() => 'memory-meaning-item')]);
+    expect(meaningItems[0]).toHaveTextContent('核心义');
     expect(meaningItems[0]).toHaveTextContent('提供；供给');
     expect(meaningItems[0]).toHaveTextContent('to give someone something that they need');
     expect(meaningItems[1]).toHaveTextContent('提供；使可以使用');

@@ -1,7 +1,7 @@
 {
   "date": "2026-08-29",
   "dayNumber": 13,
-  "contentVersion": "2026.09.08.2",
+  "contentVersion": "2026.09.09.4",
   "templateVersion": "learning-template-2026.08.19.2",
   "cards": [
     {
@@ -34,7 +34,7 @@
         "主动词汇"
       ],
       "coreMemory": {
-        "chinese": "提供",
+        "chinese": "提供；供给；使可以使用；供养；为……提供生活所需",
         "english": "v. to give someone something that they need；v. to make a service, opportunity, or resource available；v. to support someone by giving them the money or things they need",
         "structure": "provide something /prəˈvaɪd ˈsʌmθɪŋ/（提供某物）；provide someone with something /prəˈvaɪd ˈsʌˌmwʌn ˈwɪð ˈsʌmθɪŋ/（向某人提供某物）；provide something for someone /prəˈvaɪd ˈsʌmθɪŋ ˈfɔːr ˈsʌˌmwʌn/（为某人提供某物）；provide for someone /prəˈvaɪd ˈfɔːr ˈsʌˌmwʌn/（供养某人；为某人提供生活所需）",
         "structures": [
@@ -85,7 +85,7 @@
         ],
         "directSynonym": "supply /səˈplaɪ/（供应；供给）；offer /ˈɔːfɚ/（主动提供；提出）；give /ˈɡɪv/（给；给予）；furnish /ˈfɝːnɪʃ/（提供；配备）",
         "directAntonym": "withhold /wɪˈθhoʊld/（拒绝给予；扣留）；deny /dɪˈnaɪ/（拒绝给予；不准）；deprive /dɪˈpraɪv/（剥夺）",
-        "derivatives": "provider · provision · provided · providing",
+        "derivatives": "provider · provision · provisional",
         "example": "The course provides students with useful tools.",
         "exampleChinese": "这门课程为学生提供实用工具。"
       },
@@ -341,18 +341,11 @@
           "note": "正式用词；provision of services 表示“服务的提供”，法律文本中还可表示“条款”。"
         },
         {
-          "word": "provided",
-          "phonetic": "/prəˈvaɪdɪd/",
-          "partOfSpeech": "conj.",
-          "chinese": "只要；如果",
-          "note": "常用结构 provided that，较正式；它不是 provide 的普通过去式义项。"
-        },
-        {
-          "word": "providing",
-          "phonetic": "/prəˈvaɪdɪŋ/",
-          "partOfSpeech": "conj.",
-          "chinese": "只要；如果",
-          "note": "providing that 与 provided that 含义相同，口语中也可见。"
+          "word": "provisional",
+          "phonetic": "/prəˈvɪʒənəl/",
+          "partOfSpeech": "adj.",
+          "chinese": "临时的；暂定的",
+          "note": "来自 provision 这一词族，常见于 provisional plan、provisional date。"
         }
       ],
       "confusables": [
@@ -531,11 +524,11 @@
           "type": "meaning_choice",
           "prompt": "“provide”最核心的中文含义是？",
           "options": [
-            "提供",
-            "设置；放置；确定",
-            "同意；达成一致"
+            "提供；供给",
+            "设置",
+            "同意"
           ],
-          "answer": "提供",
+          "answer": "提供；供给",
           "stage": "T0",
           "ai": false
         },
@@ -555,7 +548,7 @@
         {
           "id": "provide-v-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "核心结构辨析：哪一项既表示“提供某物”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
+          "prompt": "核心结构辨析：哪一项既表示“提供某物”，又符合这个形式线索：结构中直接带有事物宾语，不在目标词与宾语之间增加介词？",
           "options": [
             "provide something for someone",
             "provide for someone",
@@ -619,7 +612,7 @@
         {
           "id": "provide-v-recall-chinese",
           "type": "recall",
-          "prompt": "写出符合“提供”（v.）的本课目标词。",
+          "prompt": "写出符合“提供；供给”（v.）的本课目标词。",
           "answer": "provide",
           "stage": "T1",
           "ai": false
@@ -699,7 +692,7 @@
         {
           "id": "provide-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “provide” 写一个自然、真实的英文句子，含义必须符合词卡核心义“提供”。",
+          "prompt": "请用 “provide” 写一个自然、真实的英文句子，含义必须符合词卡核心义“提供；供给”。",
           "answer": "",
           "stage": "T2",
           "ai": true
@@ -775,7 +768,7 @@
       },
       "detailLevel": "template-curated",
       "templateVersion": "learning-template-2026.08.19.2",
-      "contentVersion": "2026.09.08.2",
+      "contentVersion": "2026.09.09.4",
       "reviewed": true,
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
@@ -809,8 +802,8 @@
         "主动词汇"
       ],
       "coreMemory": {
-        "chinese": "失去；丢失；输掉",
-        "english": "v. to no longer have something or fail to win；v. fail to keep or to maintain",
+        "chinese": "失去；输掉",
+        "english": "v. to no longer have something；v. to fail to win",
         "structure": "lose your way /ˈluːz ˈjɔːr ˈweɪ/（迷路；失去方向）；lose something important /ˈluːz ˈsʌmθɪŋ ˌɪˈmpɔːrtənt/（丢失重要物品）；lose interest in something /ˈluːz ˈɪntrəst ɪn ˈsʌmθɪŋ/（对某事失去兴趣）；lose touch with someone /ˈluːz ˈtʌtʃ ˈwɪð ˈsʌˌmwʌn/（与某人失去联系）",
         "structures": [
           {
@@ -834,43 +827,43 @@
             "chinese": "与某人失去联系"
           }
         ],
-        "commonError": "❌ lose interest something → ✅ lose interest in something；❌ lose touch someone → ✅ lose touch with someone",
+        "commonError": "❌ lose interest at something → ✅ lose interest in something；❌ lose touch at someone → ✅ lose touch with someone",
         "commonErrors": [
           {
-            "wrong": "lose interest something",
-            "wrongPhonetic": "/ˈluːz ˈɪntrəst ˈsʌmθɪŋ/",
+            "wrong": "lose interest at something",
+            "wrongPhonetic": "/ˈluːz ˈɪntrəst ˈæt ˈsʌmθɪŋ/",
             "right": "lose interest in something",
             "rightPhonetic": "/ˈluːz ˈɪntrəst ɪn ˈsʌmθɪŋ/",
-            "note": "在“lose interest in something”这个常用搭配中，介词 in 负责连接后面的对象或范围，不能省略或随意换成其他介词。"
+            "note": "在“lose interest in something”所表达的这个具体含义中，要用介词 in；换成 at 会破坏这个固定结构或改变原意。"
           },
           {
-            "wrong": "lose touch someone",
-            "wrongPhonetic": "/ˈluːz ˈtʌtʃ ˈsʌˌmwʌn/",
+            "wrong": "lose touch at someone",
+            "wrongPhonetic": "/ˈluːz ˈtʌtʃ ˈæt ˈsʌˌmwʌn/",
             "right": "lose touch with someone",
             "rightPhonetic": "/ˈluːz ˈtʌtʃ ˈwɪð ˈsʌˌmwʌn/",
-            "note": "在“lose touch with someone”这个常用搭配中，介词 with 负责连接后面的对象或范围，不能省略或随意换成其他介词。"
+            "note": "在“lose touch with someone”所表达的这个具体含义中，要用介词 with；换成 at 会破坏这个固定结构或改变原意。"
           }
         ],
         "directSynonym": "misplace /mɪˈspleɪs/（放错；遗失）",
         "directAntonym": "find /ˈfaɪnd/（找到；发现）",
-        "derivatives": "loss · lost · loser · losings",
+        "derivatives": "loss · loser · lost",
         "example": "It is easy to lose your way without a clear plan.",
         "exampleChinese": "没有清晰计划很容易迷失方向。"
       },
       "meanings": [
         {
           "partOfSpeech": "v.",
-          "english": "to no longer have something or fail to win",
-          "chinese": "失去；丢失；输掉",
-          "example": "It is easy to lose your way without a clear plan.",
-          "translation": "没有清晰计划很容易迷失方向。"
+          "english": "to no longer have something",
+          "chinese": "失去",
+          "example": "Try the new method—you have nothing to lose.",
+          "translation": "试试新方法吧，你没有什么可失去的。"
         },
         {
           "partOfSpeech": "v.",
-          "english": "fail to keep or to maintain",
-          "chinese": "失去；丢失；输掉",
-          "example": "Be careful not to lose your saved notes.",
-          "translation": "小心别丢失保存的笔记。"
+          "english": "to fail to win",
+          "chinese": "输掉",
+          "example": "Our team may lose a game and still learn from it.",
+          "translation": "我们队可能输掉比赛，但仍能从中学习。"
         }
       ],
       "contextPhrases": [
@@ -878,14 +871,14 @@
           "category": "核心动作与结构",
           "items": [
             {
-              "phrase": "easy to lose your way without a",
-              "phonetic": "/ˈiːziː ˈtuː ˈluːz ˈjɔːr ˈweɪ wɪˈθaʊt ə/",
-              "chinese": "迷路；失去方向；原句语境：没有清晰计划很容易迷失方向。"
+              "phrase": "lose your way",
+              "phonetic": "/ˈluːz ˈjɔːr ˈweɪ/",
+              "chinese": "迷路；失去方向"
             },
             {
-              "phrase": "not to lose your saved notes",
-              "phonetic": "/ˈnɑt ˈtuː ˈluːz ˈjɔːr ˈseɪvd ˈnoʊts/",
-              "chinese": "丢失重要物品；原句语境：小心别丢失保存的笔记。"
+              "phrase": "lose something important",
+              "phonetic": "/ˈluːz ˈsʌmθɪŋ ˌɪˈmpɔːrtənt/",
+              "chinese": "丢失重要物品"
             }
           ]
         },
@@ -893,14 +886,14 @@
           "category": "日常与工作语境",
           "items": [
             {
-              "phrase": "make learners lose interest",
-              "phonetic": "/ˈmeɪk ˈlɝːnɚz ˈluːz ˈɪntrəst/",
-              "chinese": "对某事失去兴趣；原句语境：重复的练习会让学习者失去兴趣。"
+              "phrase": "lose interest in something",
+              "phonetic": "/ˈluːz ˈɪntrəst ɪn ˈsʌmθɪŋ/",
+              "chinese": "对某事失去兴趣"
             },
             {
-              "phrase": "want to lose touch with my old",
-              "phonetic": "/ˈwɑnt ˈtuː ˈluːz ˈtʌtʃ ˈwɪð ˈmaɪ ˈoʊld/",
-              "chinese": "与某人失去联系；原句语境：我不想和老同学失去联系。"
+              "phrase": "lose touch with someone",
+              "phonetic": "/ˈluːz ˈtʌtʃ ˈwɪð ˈsʌˌmwʌn/",
+              "chinese": "与某人失去联系"
             }
           ]
         },
@@ -908,14 +901,14 @@
           "category": "高频扩展表达",
           "items": [
             {
-              "phrase": "team may lose a game and still",
-              "phonetic": "/ˈtiːm ˈmeɪ ˈluːz ə ˈɡeɪm ənd ˈstɪl/",
-              "chinese": "输掉比赛；原句语境：我们队可能输掉比赛，但仍能从中学习。"
+              "phrase": "lose a game",
+              "phonetic": "/ˈluːz ə ˈɡeɪm/",
+              "chinese": "输掉比赛"
             },
             {
-              "phrase": "nothing to lose",
-              "phonetic": "/ˈnʌθɪŋ ˈtuː ˈluːz/",
-              "chinese": "没有什么可失去的；原句语境：试试新方法吧，你没有什么可失去的。"
+              "phrase": "have nothing to lose",
+              "phonetic": "/ˈhæv ˈnʌθɪŋ ˈtuː ˈluːz/",
+              "chinese": "没有什么可失去的"
             }
           ]
         }
@@ -932,8 +925,8 @@
           "phrase": "lose something important",
           "phonetic": "/ˈluːz ˈsʌmθɪŋ ˌɪˈmpɔːrtənt/",
           "chinese": "丢失重要物品",
-          "example": "Be careful not to lose your saved notes.",
-          "translation": "小心别丢失保存的笔记。"
+          "example": "Be careful not to lose your passport.",
+          "translation": "小心别把护照弄丢了。"
         },
         {
           "phrase": "lose interest in something",
@@ -970,16 +963,16 @@
           "phonetic": "/mɪˈspleɪs/",
           "partOfSpeech": "v.",
           "chinese": "放错；遗失",
-          "difference": "misplace 侧重“放错；遗失”。对应的常用英文义是 “to no longer have something or fail to win”。lose 在本卡搭配“lose your way”中表达“失去”；换词时要同时检查宾语和介词。"
+          "difference": "misplace 更侧重“放错；遗失”；lose 的核心义是“失去”。两者意思接近，但替换时仍要核对宾语、介词和具体语境。"
         }
       ],
       "antonyms": [
         {
           "word": "find",
           "phonetic": "/ˈfaɪnd/",
-          "partOfSpeech": "v. / n.",
+          "partOfSpeech": "v.",
           "chinese": "找到；发现",
-          "usage": "在“失去”这个义项下，find（找到；发现）与 lose 形成对比。对应的常用英文义是 “opposite of lose”。只在这个明确义项和句型中对比，不把两个词的所有用法都视为相反。"
+          "usage": "当 lose 表示“失去”时，find 表示“找到；发现”。两者只在这个明确义项下构成直接对比，其他用法不能一概互换。"
         }
       ],
       "derivatives": [
@@ -991,13 +984,6 @@
           "note": "可指数据、金钱、机会或亲人离世。"
         },
         {
-          "word": "lost",
-          "phonetic": "/ˈlɔːst/",
-          "partOfSpeech": "adj.",
-          "chinese": "迷路的；丢失的",
-          "note": "常见于 get lost、lost data。"
-        },
-        {
           "word": "loser",
           "phonetic": "/ˈluːzɚ/",
           "partOfSpeech": "n.",
@@ -1005,11 +991,11 @@
           "note": "指比赛或竞争中失败的人。"
         },
         {
-          "word": "losings",
-          "phonetic": "/losings/",
-          "partOfSpeech": "n.",
-          "chinese": "与本词同词族",
-          "note": "losings 是 lose 的常用词族形式，作 n. 使用；对应的常用英文义是 “something lost (especially money lost at gambling)”。"
+          "word": "lost",
+          "phonetic": "/ˈlɔːst/",
+          "partOfSpeech": "adj.",
+          "chinese": "迷路的；丢失的",
+          "note": "常见于 get lost、lost data。"
         }
       ],
       "confusables": [
@@ -1023,83 +1009,25 @@
       ],
       "relatedVocabulary": [
         {
-          "category": "语义上位词：这个动作属于什么类别",
+          "category": "语义关联：一起理解更清楚",
           "items": [
             {
-              "word": "suffer",
-              "phonetic": "/ˈsʌfɚ/",
-              "partOfSpeech": "v.",
-              "chinese": "遭受；经历；忍受"
-            },
-            {
-              "word": "withdraw",
-              "phonetic": "/wɪˈðdrɔː/",
-              "partOfSpeech": "v.",
-              "chinese": "撤回；取回；撤消"
-            },
-            {
-              "word": "decline",
-              "phonetic": "/dɪˈklaɪn/",
-              "partOfSpeech": "v.",
-              "chinese": "衰退；跌落；下降；使降低"
-            }
-          ]
-        },
-        {
-          "category": "具体动作：相关的更具体表达",
-          "items": [
-            {
-              "word": "leave",
-              "phonetic": "/ˈliːv/",
-              "partOfSpeech": "v.",
-              "chinese": "离开"
-            },
-            {
-              "word": "drop",
-              "phonetic": "/ˈdrɑp/",
-              "partOfSpeech": "v.",
-              "chinese": "滴；微量；落下"
-            },
-            {
-              "word": "forget",
-              "phonetic": "/fɚˈɡɛt/",
-              "partOfSpeech": "v.",
-              "chinese": "忘记；忽略；忘"
-            },
-            {
-              "word": "go down",
-              "phonetic": "/ˈɡoʊ ˈdaʊn/",
-              "partOfSpeech": "v.",
-              "chinese": "下去；下沉；坠落"
-            }
-          ]
-        },
-        {
-          "category": "真实语境：例句中常与本词同现的词",
-          "items": [
-            {
-              "word": "want",
-              "phonetic": "/ˈwɑnt/",
-              "partOfSpeech": "v.",
-              "chinese": "想要"
-            },
-            {
-              "word": "learn",
-              "phonetic": "/lɜːrn/",
-              "partOfSpeech": "v.",
-              "chinese": "学习"
-            },
-            {
-              "word": "make",
-              "phonetic": "/ˈmeɪk/",
-              "partOfSpeech": "v.",
-              "chinese": "制作"
-            },
-            {
-              "word": "clear",
-              "phonetic": "/ˈklɪr/",
+              "word": "loss",
+              "phonetic": "/ˈlɔːs/",
               "partOfSpeech": "n.",
-              "chinese": "清楚的；明确的；澄清的；清晰地"
+              "chinese": "损失"
+            },
+            {
+              "word": "miss",
+              "phonetic": "/ˈmɪs/",
+              "partOfSpeech": "v.",
+              "chinese": "错过；未击中"
+            },
+            {
+              "word": "find",
+              "phonetic": "/ˈfaɪnd/",
+              "partOfSpeech": "v.",
+              "chinese": "找到"
             }
           ]
         }
@@ -1112,8 +1040,8 @@
         },
         {
           "scene": "工作或学习",
-          "english": "Be careful not to lose your saved notes.",
-          "chinese": "小心别丢失保存的笔记。"
+          "english": "Be careful not to lose your passport.",
+          "chinese": "小心别把护照弄丢了。"
         },
         {
           "scene": "常见搭配",
@@ -1137,9 +1065,9 @@
         }
       ],
       "studyFocus": {
-        "coreMeaning": "先掌握“失去”这个核心义，再用本卡的 1 个常用义项辨别不同语境。",
+        "coreMeaning": "先掌握“失去”这个核心义，再对比另外 1 个常用义项，辨别不同语境。",
         "keyCollocation": "把“lose your way”连同介词、宾语和动词形式作为整个句块记忆。",
-        "commonMistake": "在“lose interest in something”这个常用搭配中，介词 in 负责连接后面的对象或范围，不能省略或随意换成其他介词。",
+        "commonMistake": "在“lose interest in something”所表达的这个具体含义中，要用介词 in；换成 at 会破坏这个固定结构或改变原意。",
         "mustUseExample": "It is easy to lose your way without a clear plan.（没有清晰计划很容易迷失方向。）"
       },
       "questions": [
@@ -1148,11 +1076,11 @@
           "type": "meaning_choice",
           "prompt": "“lose”最核心的中文含义是？",
           "options": [
-            "允许；使能够",
-            "切；削减；中断",
-            "失去；丢失；输掉"
+            "允许",
+            "切",
+            "失去"
           ],
-          "answer": "失去；丢失；输掉",
+          "answer": "失去",
           "stage": "T0",
           "ai": false
         },
@@ -1162,10 +1090,10 @@
           "prompt": "哪一项英文释义最符合词卡中的 “lose”？",
           "options": [
             "to divide with a sharp tool, reduce, or interrupt something",
-            "to no longer have something or fail to win",
+            "to no longer have something",
             "to let someone do something"
           ],
-          "answer": "to no longer have something or fail to win",
+          "answer": "to no longer have something",
           "stage": "T0",
           "ai": false
         },
@@ -1228,7 +1156,7 @@
         {
           "id": "lose-v-recall-definition",
           "type": "recall",
-          "prompt": "根据英文释义写出目标词：to no longer have something or fail to win",
+          "prompt": "根据英文释义写出目标词：to no longer have something",
           "answer": "lose",
           "stage": "T1",
           "ai": false
@@ -1236,7 +1164,7 @@
         {
           "id": "lose-v-recall-chinese",
           "type": "recall",
-          "prompt": "写出符合“失去；丢失；输掉”（v.）的本课目标词。",
+          "prompt": "写出符合“失去”（v.）的本课目标词。",
           "answer": "lose",
           "stage": "T1",
           "ai": false
@@ -1252,7 +1180,7 @@
         {
           "id": "lose-v-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "句型应用：哪一项既表示“丢失重要物品”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
+          "prompt": "句型应用：哪一项既表示“丢失重要物品”，又符合这个形式线索：结构中直接带有事物宾语，不在目标词与宾语之间增加介词？",
           "options": [
             "lose your way",
             "lose interest in something",
@@ -1271,7 +1199,7 @@
             "apple",
             "useful",
             "way",
-            "study"
+            "enter"
           ],
           "answer": "way",
           "stage": "T2",
@@ -1294,7 +1222,7 @@
         {
           "id": "lose-v-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "搭配辨析：哪一项既表示“丢失重要物品”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
+          "prompt": "搭配辨析：哪一项既表示“丢失重要物品”，又符合这个形式线索：结构中直接带有事物宾语，不在目标词与宾语之间增加介词？",
           "options": [
             "lose something important",
             "lose your way",
@@ -1316,7 +1244,7 @@
         {
           "id": "lose-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “lose” 写一个自然、真实的英文句子，含义必须符合词卡核心义“失去；丢失；输掉”。",
+          "prompt": "请用 “lose” 写一个自然、真实的英文句子，含义必须符合词卡核心义“失去”。",
           "answer": "",
           "stage": "T2",
           "ai": true
@@ -1332,7 +1260,7 @@
         {
           "id": "lose-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “lose” 和 “easy to lose your way without a” 结构，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “lose” 和 “lose your way” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1392,7 +1320,7 @@
       },
       "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.2",
-      "contentVersion": "2026.09.08.2",
+      "contentVersion": "2026.09.09.4",
       "reviewed": false,
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
@@ -1426,7 +1354,7 @@
         "主动词汇"
       ],
       "coreMemory": {
-        "chinese": "理解；明白",
+        "chinese": "理解；明白；了解；弄懂；体谅",
         "english": "v. to know the meaning of words, ideas, or actions；v. to know why or how something happens；v. to recognize and accept another person’s feelings or situation",
         "structure": "understand something /ˌʌndərˈstænd ˈsʌmθɪŋ/（理解某事）；understand why, how, or what /ˌʌndərˈstænd ˈwaɪ ˈhaʊ ˈɔːr ˈwʌt/（理解为什么、如何或什么）；understand that + clause /ˌʌndərˈstænd ˈðæt ˈklɔːz/（明白……这一事实）；make yourself understood /ˈmeɪk jɚˈsɛlf ˌʌndɚˈstʊd/（让别人明白你的意思）",
         "structures": [
@@ -1477,7 +1405,7 @@
         ],
         "directSynonym": "comprehend /ˌkɑmpriːˈhɛnd/（理解；领会）；grasp /ˈɡræsp/（理解；领会）；follow /ˈfɑloʊ/（听懂；跟得上）；appreciate /əˈpriːʃiːˌeɪt/（理解并重视）",
         "directAntonym": "misunderstand /ˌmɪsəndɚˈstænd/（误解）；misinterpret /mɪsɪˈntɝːprət/（误读；错误解释）；confuse /kəˈnfjuːz/（使困惑；混淆）",
-        "derivatives": "understanding · understandable · misunderstanding · misunderstood",
+        "derivatives": "understanding · misunderstanding · understandable · misunderstood",
         "example": "I understand why you need more time.",
         "exampleChinese": "我理解你为什么需要更多时间。"
       },
@@ -1726,18 +1654,18 @@
           "note": "非常常用；an understanding of 表示“对……的理解”。"
         },
         {
-          "word": "understandable",
-          "phonetic": "/ˌʌndɚˈstændəbəl/",
-          "partOfSpeech": "adj.",
-          "chinese": "可以理解的；情有可原的",
-          "note": "既可表示内容容易理解，也可表示人的反应合情合理。"
-        },
-        {
           "word": "misunderstanding",
           "phonetic": "/ˌmɪsəndɚˈstændɪŋ/",
           "partOfSpeech": "n.",
           "chinese": "误解；误会",
           "note": "常见结构 clear up a misunderstanding。"
+        },
+        {
+          "word": "understandable",
+          "phonetic": "/ˌʌndɚˈstændəbəl/",
+          "partOfSpeech": "adj.",
+          "chinese": "可以理解的；情有可原的",
+          "note": "既可表示内容容易理解，也可表示人的反应合情合理。"
         },
         {
           "word": "misunderstood",
@@ -1918,7 +1846,7 @@
           "options": [
             "决定",
             "理解；明白",
-            "赢；获得；赢得"
+            "赢"
           ],
           "answer": "理解；明白",
           "stage": "T0",
@@ -1940,7 +1868,7 @@
         {
           "id": "understand-v-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "核心结构辨析：哪一项既表示“理解某事”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
+          "prompt": "核心结构辨析：哪一项既表示“理解某事”，又符合这个形式线索：结构中直接带有事物宾语，不在目标词与宾语之间增加介词？",
           "options": [
             "understand something",
             "understand why, how, or what",
@@ -2160,7 +2088,7 @@
       },
       "detailLevel": "template-curated",
       "templateVersion": "learning-template-2026.08.19.2",
-      "contentVersion": "2026.09.08.2",
+      "contentVersion": "2026.09.09.4",
       "reviewed": true,
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
@@ -2195,7 +2123,7 @@
       ],
       "coreMemory": {
         "chinese": "等待；等候",
-        "english": "v. to stay until someone arrives or something happens；v. stay in one place and anticipate or expect something",
+        "english": "v. to stay until someone arrives, something happens",
         "structure": "wait for someone /ˈweɪt ˈfɔːr ˈsʌˌmwʌn/（等待某人）；wait to do something /ˈweɪt ˈtuː ˈduː ˈsʌmθɪŋ/（等候做某事）；cannot wait to do something /ˈkænɑt ˈweɪt ˈtuː ˈduː ˈsʌmθɪŋ/（迫不及待做某事）；wait and see /ˈweɪt ənd ˈsiː/（等等看）",
         "structures": [
           {
@@ -2219,40 +2147,33 @@
             "chinese": "等等看"
           }
         ],
-        "commonError": "❌ wait doing something → ✅ wait to do something；❌ cannot wait doing something → ✅ cannot wait to do something",
+        "commonError": "❌ wait to does something → ✅ wait to do something；❌ cannot wait to does something → ✅ cannot wait to do something",
         "commonErrors": [
           {
-            "wrong": "wait doing something",
-            "wrongPhonetic": "/ˈweɪt ˈduːɪŋ ˈsʌmθɪŋ/",
+            "wrong": "wait to does something",
+            "wrongPhonetic": "/ˈweɪt ˈtuː ˈdʌz ˈsʌmθɪŋ/",
             "right": "wait to do something",
             "rightPhonetic": "/ˈweɪt ˈtuː ˈduː ˈsʌmθɪŋ/",
-            "note": "这个结构要用 wait + to + 动词原形；do 只是词卡里的动词占位符，真实句子要换成 finish、check 等具体动词。"
+            "note": "在“wait to do something”中，这个 to 是不定式标记，后面必须接动词原形。do 只是语法占位符，真实表达要把它换成 finish、check 等符合语境的动词原形。"
           },
           {
-            "wrong": "cannot wait doing something",
-            "wrongPhonetic": "/ˈkænɑt ˈweɪt ˈduːɪŋ ˈsʌmθɪŋ/",
+            "wrong": "cannot wait to does something",
+            "wrongPhonetic": "/ˈkænɑt ˈweɪt ˈtuː ˈdʌz ˈsʌmθɪŋ/",
             "right": "cannot wait to do something",
             "rightPhonetic": "/ˈkænɑt ˈweɪt ˈtuː ˈduː ˈsʌmθɪŋ/",
-            "note": "这个结构要用 wait + to + 动词原形；do 只是词卡里的动词占位符，真实句子要换成 finish、check 等具体动词。"
+            "note": "在“cannot wait to do something”中，这个 to 是不定式标记，后面必须接动词原形。do 只是语法占位符，真实表达要把它换成 finish、check 等符合语境的动词原形。"
           }
         ],
         "directSynonym": "await /əˈweɪt/（等待；等候）",
         "directAntonym": "proceed /prəˈsiːd/（继续进行；前进）",
-        "derivatives": "waiter · waiting · waitress",
+        "derivatives": "本词暂无需额外强记的高频派生词",
         "example": "I will wait for you outside the station.",
         "exampleChinese": "我会在车站外等你。"
       },
       "meanings": [
         {
           "partOfSpeech": "v.",
-          "english": "to stay until someone arrives or something happens",
-          "chinese": "等待；等候",
-          "example": "I will wait for you outside the station.",
-          "translation": "我会在车站外等你。"
-        },
-        {
-          "partOfSpeech": "v.",
-          "english": "stay in one place and anticipate or expect something",
+          "english": "to stay until someone arrives, something happens",
           "chinese": "等待；等候",
           "example": "Please wait to submit until you have checked the sentence.",
           "translation": "检查完句子后再提交。"
@@ -2263,14 +2184,14 @@
           "category": "核心动作与结构",
           "items": [
             {
-              "phrase": "I will wait for you outside the",
-              "phonetic": "/ˈaɪ ˈwɪl ˈweɪt ˈfɔːr ˈjuː ˈaʊˈtsaɪd ðə/",
-              "chinese": "等待某人；原句语境：我会在车站外等你。"
+              "phrase": "wait for someone",
+              "phonetic": "/ˈweɪt ˈfɔːr ˈsʌˌmwʌn/",
+              "chinese": "等待某人"
             },
             {
-              "phrase": "Please wait to submit until you",
-              "phonetic": "/ˈpliːz ˈweɪt ˈtuː səˈbmɪt əˈntɪl ˈjuː/",
-              "chinese": "等候做某事；原句语境：检查完句子后再提交。"
+              "phrase": "wait to do something",
+              "phonetic": "/ˈweɪt ˈtuː ˈduː ˈsʌmθɪŋ/",
+              "chinese": "等候做某事"
             }
           ]
         },
@@ -2278,14 +2199,14 @@
           "category": "日常与工作语境",
           "items": [
             {
-              "phrase": "I cannot wait to try the new",
-              "phonetic": "/ˈaɪ ˈkænɑt ˈweɪt ˈtuː ˈtraɪ ðə ˈnuː/",
-              "chinese": "迫不及待做某事；原句语境：我迫不及待想试试新课程。"
+              "phrase": "cannot wait to do something",
+              "phonetic": "/ˈkænɑt ˈweɪt ˈtuː ˈduː ˈsʌmθɪŋ/",
+              "chinese": "迫不及待做某事"
             },
             {
-              "phrase": "Let us wait and see whether the",
-              "phonetic": "/ˈlɛt ˈʌs ˈweɪt ənd ˈsiː ˈwɛðɚ ðə/",
-              "chinese": "等等看；原句语境：我们等等看天气是否好转。"
+              "phrase": "wait and see",
+              "phonetic": "/ˈweɪt ənd ˈsiː/",
+              "chinese": "等等看"
             }
           ]
         },
@@ -2293,14 +2214,14 @@
           "category": "高频扩展表达",
           "items": [
             {
-              "phrase": "keep you waiting",
-              "phonetic": "/ˈkiːp ˈjuː ˈweɪtɪŋ/",
-              "chinese": "让某人久等；原句语境：很抱歉让你久等。"
+              "phrase": "keep someone waiting",
+              "phonetic": "/ˈkiːp ˈsʌˌmwʌn ˈweɪtɪŋ/",
+              "chinese": "让某人久等"
             },
             {
-              "phrase": "had to wait in line for twenty",
-              "phonetic": "/ˈhæd ˈtuː ˈweɪt ɪn ˈlaɪn ˈfɔːr ˈtwɛntiː/",
-              "chinese": "排队等候；原句语境：我们排了二十分钟的队。"
+              "phrase": "wait in line",
+              "phonetic": "/ˈweɪt ɪn ˈlaɪn/",
+              "chinese": "排队等候"
             }
           ]
         }
@@ -2355,7 +2276,7 @@
           "phonetic": "/əˈweɪt/",
           "partOfSpeech": "v.",
           "chinese": "等待；等候",
-          "difference": "await 侧重“等待；等候”。对应的常用英文义是 “to stay until someone arrives or something happens”。wait 在本卡搭配“wait for someone”中表达“等待”；换词时要同时检查宾语和介词。"
+          "difference": "await 更侧重“等待；等候”；wait 的核心义是“等待”。两者意思接近，但替换时仍要核对宾语、介词和具体语境。"
         }
       ],
       "antonyms": [
@@ -2364,32 +2285,10 @@
           "phonetic": "/prəˈsiːd/",
           "partOfSpeech": "v.",
           "chinese": "继续进行；前进",
-          "usage": "在“等待”这个义项下，proceed（继续进行；前进）与 wait 形成对比。对应的常用英文义是 “opposite of wait”。只在这个明确义项和句型中对比，不把两个词的所有用法都视为相反。"
+          "usage": "当 wait 表示“等待”时，proceed 表示“继续进行；前进”。两者只在这个明确义项下构成直接对比，其他用法不能一概互换。"
         }
       ],
-      "derivatives": [
-        {
-          "word": "waiter",
-          "phonetic": "/ˈweɪtɚ/",
-          "partOfSpeech": "n.",
-          "chinese": "男服务员",
-          "note": "指餐厅中提供服务的男性员工。"
-        },
-        {
-          "word": "waiting",
-          "phonetic": "/ˈweɪtɪŋ/",
-          "partOfSpeech": "n. / adj.",
-          "chinese": "等待；等候的",
-          "note": "常见于 waiting room、waiting time。"
-        },
-        {
-          "word": "waitress",
-          "phonetic": "/ˈweɪtrəs/",
-          "partOfSpeech": "n.",
-          "chinese": "女侍者；女服务员",
-          "note": "waitress 是 wait 的常用词族形式，作 n. 使用；对应的常用英文义是 “a woman waiter”。"
-        }
-      ],
+      "derivatives": [],
       "confusables": [
         {
           "word": "expect",
@@ -2401,77 +2300,25 @@
       ],
       "relatedVocabulary": [
         {
-          "category": "语义上位词：这个动作属于什么类别",
-          "items": [
-            {
-              "word": "work",
-              "phonetic": "/ˈwɝːk/",
-              "partOfSpeech": "v.",
-              "chinese": "工作"
-            },
-            {
-              "word": "move",
-              "phonetic": "/ˈmuːv/",
-              "partOfSpeech": "v.",
-              "chinese": "移动"
-            },
-            {
-              "word": "act",
-              "phonetic": "/ˈækt/",
-              "partOfSpeech": "v.",
-              "chinese": "行动；行为；幕"
-            }
-          ]
-        },
-        {
-          "category": "具体动作：相关的更具体表达",
+          "category": "语义关联：一起理解更清楚",
           "items": [
             {
               "word": "delay",
               "phonetic": "/dɪˈleɪ/",
-              "partOfSpeech": "v.",
-              "chinese": "耽搁；迟滞；耽搁"
+              "partOfSpeech": "n. / v.",
+              "chinese": "延迟"
             },
             {
-              "word": "anticipate",
-              "phonetic": "/æˈntɪsəˌpeɪt/",
-              "partOfSpeech": "v.",
-              "chinese": "预期；占先；加速；提前使用"
-            },
-            {
-              "word": "look for",
-              "phonetic": "/ˈlʊk ˈfɔːr/",
-              "partOfSpeech": "v.",
-              "chinese": "寻找；期待"
-            }
-          ]
-        },
-        {
-          "category": "真实语境：例句中常与本词同现的词",
-          "items": [
-            {
-              "word": "keep",
-              "phonetic": "/ˈkiːp/",
-              "partOfSpeech": "v.",
-              "chinese": "保持"
-            },
-            {
-              "word": "improve",
-              "phonetic": "/ɪmˈpruːv/",
-              "partOfSpeech": "v.",
-              "chinese": "改善"
-            },
-            {
-              "word": "line",
-              "phonetic": "/ˈlaɪn/",
+              "word": "patience",
+              "phonetic": "/ˈpeɪʃəns/",
               "partOfSpeech": "n.",
-              "chinese": "列；线；绳"
+              "chinese": "耐心"
             },
             {
-              "word": "station",
-              "phonetic": "/ˈsteɪʃən/",
-              "partOfSpeech": "n.",
-              "chinese": "车站；站；局"
+              "word": "hurry",
+              "phonetic": "/ˈhɝːiː/",
+              "partOfSpeech": "v. / n.",
+              "chinese": "赶紧；匆忙"
             }
           ]
         }
@@ -2509,9 +2356,9 @@
         }
       ],
       "studyFocus": {
-        "coreMeaning": "先掌握“等待”这个核心义，再用本卡的 1 个常用义项辨别不同语境。",
+        "coreMeaning": "先掌握“等待；等候”这个核心义，再用本卡的固定搭配和真实例句巩固这个义项。",
         "keyCollocation": "把“wait for someone”连同介词、宾语和动词形式作为整个句块记忆。",
-        "commonMistake": "这个结构要用 wait + to + 动词原形；do 只是词卡里的动词占位符，真实句子要换成 finish、check 等具体动词。",
+        "commonMistake": "在“wait to do something”中，这个 to 是不定式标记，后面必须接动词原形。do 只是语法占位符，真实表达要把它换成 finish、check 等符合语境的动词原形。",
         "mustUseExample": "I will wait for you outside the station.（我会在车站外等你。）"
       },
       "questions": [
@@ -2521,8 +2368,8 @@
           "prompt": "“wait”最核心的中文含义是？",
           "options": [
             "等待；等候",
-            "带领；导致；领先",
-            "经过；通过；传递"
+            "带领",
+            "经过"
           ],
           "answer": "等待；等候",
           "stage": "T0",
@@ -2535,9 +2382,9 @@
           "options": [
             "to guide, be ahead, or cause a particular result",
             "to move past, succeed in a test, or give something to someone",
-            "to stay until someone arrives or something happens"
+            "to stay until someone arrives, something happens"
           ],
-          "answer": "to stay until someone arrives or something happens",
+          "answer": "to stay until someone arrives, something happens",
           "stage": "T0",
           "ai": false
         },
@@ -2600,7 +2447,7 @@
         {
           "id": "wait-v-recall-definition",
           "type": "recall",
-          "prompt": "根据英文释义写出目标词：to stay until someone arrives or something happens",
+          "prompt": "根据英文释义写出目标词：to stay until someone arrives, something happens",
           "answer": "wait",
           "stage": "T1",
           "ai": false
@@ -2624,7 +2471,7 @@
         {
           "id": "wait-v-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "句型应用：哪一项既表示“等候做某事”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
+          "prompt": "句型应用：哪一项既表示“等候做某事”，又符合这个形式线索：完整结构中使用 to + 动词原形；do 只是语法占位符，要换成符合语境的具体动词原形？",
           "options": [
             "wait and see",
             "wait to do something",
@@ -2666,7 +2513,7 @@
         {
           "id": "wait-v-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "搭配辨析：哪一项既表示“等候做某事”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
+          "prompt": "搭配辨析：哪一项既表示“等候做某事”，又符合这个形式线索：完整结构中使用 to + 动词原形；do 只是语法占位符，要换成符合语境的具体动词原形？",
           "options": [
             "cannot wait to do something",
             "wait and see",
@@ -2704,7 +2551,7 @@
         {
           "id": "wait-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “wait” 和 “I will wait for you outside the” 结构，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “wait” 和 “cannot wait to do something” 结构，并避免中文直译；do 代表任意合适的动词原形，不要求写出单词 do；something 要替换成实际的事物或内容。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2764,7 +2611,7 @@
       },
       "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.2",
-      "contentVersion": "2026.09.08.2",
+      "contentVersion": "2026.09.09.4",
       "reviewed": false,
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
@@ -2799,7 +2646,7 @@
       ],
       "coreMemory": {
         "chinese": "遇见；会面；满足",
-        "english": "v. to come together, encounter, or satisfy a requirement；v. come together",
+        "english": "v. to come together；v. to encounter；v. to satisfy a requirement",
         "structure": "meet someone /ˈmiːt ˈsʌˌmwʌn/（与某人见面）；meet a requirement /ˈmiːt ə rɪˈkwaɪrmənt/（满足要求）；meet a deadline /ˈmiːt ə ˈdɛˌdlaɪn/（按期完成）；meet someone’s needs /ˈmiːt someone’s ˈniːdz/（满足某人的需要）",
         "structures": [
           {
@@ -2823,41 +2670,48 @@
             "chinese": "满足某人的需要"
           }
         ],
-        "commonError": "❌ meet someone → ✅ meet with someone；❌ to meeting → ✅ to meet",
+        "commonError": "❌ meet at someone → ✅ meet with someone；❌ to meeting → ✅ to meet",
         "commonErrors": [
           {
-            "wrong": "meet someone",
-            "wrongPhonetic": "/ˈmiːt ˈsʌˌmwʌn/",
+            "wrong": "meet at someone",
+            "wrongPhonetic": "/ˈmiːt ˈæt ˈsʌˌmwʌn/",
             "right": "meet with someone",
             "rightPhonetic": "/ˈmiːt ˈwɪð ˈsʌˌmwʌn/",
-            "note": "在“meet with someone”这个常用搭配中，介词 with 负责连接后面的对象或范围，不能省略或随意换成其他介词。"
+            "note": "在“meet with someone”所表达的这个具体含义中，要用介词 with；换成 at 会破坏这个固定结构或改变原意。"
           },
           {
             "wrong": "to meeting",
             "wrongPhonetic": "/ˈtuː ˈmiːtɪŋ/",
             "right": "to meet",
             "rightPhonetic": "/ˈtuː ˈmiːt/",
-            "note": "这里的 to 是不定式标记，后面要用 meet 的原形，不能再加 -ing。"
+            "note": "这里的 to 是不定式标记，后面要用 meet 的原形，不能改成 meeting。"
           }
         ],
         "directSynonym": "encounter /ɪˈnkaʊntɚ/（遇到；邂逅）",
         "directAntonym": "avoid /əˈvɔɪd/（避开；避免）",
-        "derivatives": "meeting · meeter",
+        "derivatives": "meeting",
         "example": "I will meet my study partner after work.",
         "exampleChinese": "下班后我会和学习伙伴见面。"
       },
       "meanings": [
         {
           "partOfSpeech": "v.",
-          "english": "to come together, encounter, or satisfy a requirement",
-          "chinese": "遇见；会面；满足",
+          "english": "to come together",
+          "chinese": "遇见",
           "example": "I will meet my study partner after work.",
           "translation": "下班后我会和学习伙伴见面。"
         },
         {
           "partOfSpeech": "v.",
-          "english": "come together",
-          "chinese": "遇见；会面；满足",
+          "english": "to encounter",
+          "chinese": "会面",
+          "example": "I am meeting with my manager this afternoon.",
+          "translation": "我今天下午要和经理会面。"
+        },
+        {
+          "partOfSpeech": "v.",
+          "english": "to satisfy a requirement",
+          "chinese": "满足",
           "example": "Every new card must meet the full content requirements.",
           "translation": "每张新词卡都必须满足完整内容要求。"
         }
@@ -2867,14 +2721,14 @@
           "category": "核心动作与结构",
           "items": [
             {
-              "phrase": "I will meet my study partner after",
-              "phonetic": "/ˈaɪ ˈwɪl ˈmiːt ˈmaɪ ˈstʌdiː ˈpɑrtnɚ ˈæftɚ/",
-              "chinese": "与某人见面；原句语境：下班后我会和学习伙伴见面。"
+              "phrase": "meet someone",
+              "phonetic": "/ˈmiːt ˈsʌˌmwʌn/",
+              "chinese": "与某人见面"
             },
             {
-              "phrase": "card must meet the full content requirements",
-              "phonetic": "/ˈkɑrd ˈmʌst ˈmiːt ðə ˈfʊl ˈkɑntɛnt rɪˈkwaɪrmənts/",
-              "chinese": "满足要求；原句语境：每张新词卡都必须满足完整内容要求。"
+              "phrase": "meet a requirement",
+              "phonetic": "/ˈmiːt ə rɪˈkwaɪrmənt/",
+              "chinese": "满足要求"
             }
           ]
         },
@@ -2882,14 +2736,14 @@
           "category": "日常与工作语境",
           "items": [
             {
-              "phrase": "need to meet the Friday deadline",
-              "phonetic": "/ˈniːd ˈtuː ˈmiːt ðə ˈfraɪdiː ˈdɛˌdlaɪn/",
-              "chinese": "按期完成；原句语境：我们需要在周五截止日期前完成。"
+              "phrase": "meet a deadline",
+              "phonetic": "/ˈmiːt ə ˈdɛˌdlaɪn/",
+              "chinese": "按期完成"
             },
             {
-              "phrase": "plan should meet the learner s actual",
-              "phonetic": "/ˈplæn ˈʃʊd ˈmiːt ðə ˈlɝːnɚ ˈɛs ˈæktʃəwəl/",
-              "chinese": "满足某人的需要；原句语境：修订后的计划应该满足学习者的实际需要。"
+              "phrase": "meet someone’s needs",
+              "phonetic": "/ˈmiːt someone’s ˈniːdz/",
+              "chinese": "满足某人的需要"
             }
           ]
         },
@@ -2897,14 +2751,14 @@
           "category": "高频扩展表达",
           "items": [
             {
-              "phrase": "I am meeting with my manager this",
-              "phonetic": "/ˈaɪ ˈæm ˈmiːtɪŋ ˈwɪð ˈmaɪ ˈmænədʒɚ ˈðɪs/",
-              "chinese": "与某人会面；原句语境：我今天下午要和经理会面。"
+              "phrase": "meet with someone",
+              "phonetic": "/ˈmiːt ˈwɪð ˈsʌˌmwʌn/",
+              "chinese": "与某人会面"
             },
             {
-              "phrase": "agreed to meet halfway",
-              "phonetic": "/əˈɡriːd ˈtuː ˈmiːt ˈhæˈfweɪ/",
-              "chinese": "相互妥协；各让一步；原句语境：双方同意各让一步。"
+              "phrase": "meet halfway",
+              "phonetic": "/ˈmiːt ˈhæˈfweɪ/",
+              "chinese": "相互妥协；各让一步"
             }
           ]
         }
@@ -2959,7 +2813,7 @@
           "phonetic": "/ɪˈnkaʊntɚ/",
           "partOfSpeech": "v.",
           "chinese": "遇到；邂逅",
-          "difference": "encounter 侧重“遇到；邂逅”。对应的常用英文义是 “to come together, encounter, or satisfy a requirement”。meet 在本卡搭配“meet someone”中表达“遇见”；换词时要同时检查宾语和介词。"
+          "difference": "encounter 更侧重“遇到；邂逅”；meet 的核心义是“遇见”。两者意思接近，但替换时仍要核对宾语、介词和具体语境。"
         }
       ],
       "antonyms": [
@@ -2968,7 +2822,7 @@
           "phonetic": "/əˈvɔɪd/",
           "partOfSpeech": "v.",
           "chinese": "避开；避免",
-          "usage": "在“遇见”这个义项下，avoid（避开；避免）与 meet 形成对比。对应的常用英文义是 “opposite of meet”。只在这个明确义项和句型中对比，不把两个词的所有用法都视为相反。"
+          "usage": "当 meet 表示“遇见”时，avoid 表示“避开；避免”。两者只在这个明确义项下构成直接对比，其他用法不能一概互换。"
         }
       ],
       "derivatives": [
@@ -2978,13 +2832,6 @@
           "partOfSpeech": "n.",
           "chinese": "会议；会面",
           "note": "可指正式会议或一般见面。"
-        },
-        {
-          "word": "meeter",
-          "phonetic": "/meeter/",
-          "partOfSpeech": "n.",
-          "chinese": "迎面来的船",
-          "note": "meeter 是 meet 的常用词族形式，作 n. 使用；对应的常用英文义是 “a person who is present and participates in a meeting”。"
         }
       ],
       "confusables": [
@@ -2998,89 +2845,25 @@
       ],
       "relatedVocabulary": [
         {
-          "category": "语义上位词：这个动作属于什么类别",
+          "category": "语义关联：一起理解更清楚",
           "items": [
             {
-              "word": "have",
-              "phonetic": "/ˈhæv/",
-              "partOfSpeech": "v.",
-              "chinese": "有"
+              "word": "encounter",
+              "phonetic": "/ɪˈnkaʊntɚ/",
+              "partOfSpeech": "v. / n.",
+              "chinese": "遇见"
             },
             {
-              "word": "see",
-              "phonetic": "/ˈsiː/",
+              "word": "gather",
+              "phonetic": "/ˈɡæðɚ/",
               "partOfSpeech": "v.",
-              "chinese": "看见"
+              "chinese": "聚集"
             },
             {
-              "word": "provide",
-              "phonetic": "/prəˈvaɪd/",
+              "word": "separate",
+              "phonetic": "/ˈsɛpɚˌeɪt/",
               "partOfSpeech": "v.",
-              "chinese": "提供"
-            },
-            {
-              "word": "experience",
-              "phonetic": "/ɪˈkspɪriːəns/",
-              "partOfSpeech": "v.",
-              "chinese": "经历；经验；体验"
-            }
-          ]
-        },
-        {
-          "category": "具体动作：相关的更具体表达",
-          "items": [
-            {
-              "word": "call",
-              "phonetic": "/ˈkɔːl/",
-              "partOfSpeech": "v.",
-              "chinese": "打电话"
-            },
-            {
-              "word": "stay",
-              "phonetic": "/ˈsteɪ/",
-              "partOfSpeech": "v.",
-              "chinese": "停留"
-            },
-            {
-              "word": "answer",
-              "phonetic": "/ˈænsɚ/",
-              "partOfSpeech": "v.",
-              "chinese": "答案；回答；回报；答辩"
-            },
-            {
-              "word": "visit",
-              "phonetic": "/ˈvɪzɪt/",
-              "partOfSpeech": "v.",
-              "chinese": "拜访；访问；游览"
-            }
-          ]
-        },
-        {
-          "category": "真实语境：例句中常与本词同现的词",
-          "items": [
-            {
-              "word": "work",
-              "phonetic": "/ˈwɝːk/",
-              "partOfSpeech": "v.",
-              "chinese": "工作"
-            },
-            {
-              "word": "need",
-              "phonetic": "/ˈniːd/",
-              "partOfSpeech": "v.",
-              "chinese": "需要"
-            },
-            {
-              "word": "agree",
-              "phonetic": "/əˈɡriː/",
-              "partOfSpeech": "v.",
-              "chinese": "同意"
-            },
-            {
-              "word": "study",
-              "phonetic": "/ˈstʌdiː/",
-              "partOfSpeech": "n.",
-              "chinese": "学习；研究；学科"
+              "chinese": "分开"
             }
           ]
         }
@@ -3118,9 +2901,9 @@
         }
       ],
       "studyFocus": {
-        "coreMeaning": "先掌握“遇见”这个核心义，再用本卡的 1 个常用义项辨别不同语境。",
+        "coreMeaning": "先掌握“遇见”这个核心义，再对比另外 2 个常用义项，辨别不同语境。",
         "keyCollocation": "把“meet someone”连同介词、宾语和动词形式作为整个句块记忆。",
-        "commonMistake": "在“meet with someone”这个常用搭配中，介词 with 负责连接后面的对象或范围，不能省略或随意换成其他介词。",
+        "commonMistake": "在“meet with someone”所表达的这个具体含义中，要用介词 with；换成 at 会破坏这个固定结构或改变原意。",
         "mustUseExample": "I will meet my study partner after work.（下班后我会和学习伙伴见面。）"
       },
       "questions": [
@@ -3130,10 +2913,10 @@
           "prompt": "“meet”最核心的中文含义是？",
           "options": [
             "继续",
-            "吃；进食",
-            "遇见；会面；满足"
+            "吃",
+            "遇见"
           ],
-          "answer": "遇见；会面；满足",
+          "answer": "遇见",
           "stage": "T0",
           "ai": false
         },
@@ -3143,10 +2926,10 @@
           "prompt": "哪一项英文释义最符合词卡中的 “meet”？",
           "options": [
             "to put food in the mouth and swallow it",
-            "to come together, encounter, or satisfy a requirement",
+            "to come together",
             "to keep doing something without stopping"
           ],
-          "answer": "to come together, encounter, or satisfy a requirement",
+          "answer": "to come together",
           "stage": "T0",
           "ai": false
         },
@@ -3209,7 +2992,7 @@
         {
           "id": "meet-v-recall-definition",
           "type": "recall",
-          "prompt": "根据英文释义写出目标词：to come together, encounter, or satisfy a requirement",
+          "prompt": "根据英文释义写出目标词：to come together",
           "answer": "meet",
           "stage": "T1",
           "ai": false
@@ -3217,7 +3000,7 @@
         {
           "id": "meet-v-recall-chinese",
           "type": "recall",
-          "prompt": "写出符合“遇见；会面；满足”（v.）的本课目标词。",
+          "prompt": "写出符合“遇见”（v.）的本课目标词。",
           "answer": "meet",
           "stage": "T1",
           "ai": false
@@ -3297,7 +3080,7 @@
         {
           "id": "meet-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “meet” 写一个自然、真实的英文句子，含义必须符合词卡核心义“遇见；会面；满足”。",
+          "prompt": "请用 “meet” 写一个自然、真实的英文句子，含义必须符合词卡核心义“遇见”。",
           "answer": "",
           "stage": "T2",
           "ai": true
@@ -3313,7 +3096,7 @@
         {
           "id": "meet-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “meet” 和 “I will meet my study partner after” 结构，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “meet” 和 “meet a requirement” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -3373,7 +3156,7 @@
       },
       "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.2",
-      "contentVersion": "2026.09.08.2",
+      "contentVersion": "2026.09.09.4",
       "reviewed": false,
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     }

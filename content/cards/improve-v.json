@@ -28,7 +28,7 @@
     "主动词汇"
   ],
   "coreMemory": {
-    "chinese": "改善；提高",
+    "chinese": "改善；提高；好转",
     "english": "v. to make something better in quality, condition, or ability；v. to become better than before",
     "structure": "improve something /ɪmˈpruːv ˈsʌmθɪŋ/（改善或提高某事物）；improve on something /ɪmˈpruːv ˈɑn ˈsʌmθɪŋ/（比原有事物做得更好）；improve at something /ɪmˈpruːv ˈæt ˈsʌmθɪŋ/（在某方面进步）；improve by ten percent /ɪmˈpruːv ˈbaɪ ˈtɛn pɚˈsɛnt/（提高百分之十）",
     "structures": [
@@ -462,9 +462,9 @@
       "chinese": "她开始规律睡眠后，健康状况好转了。"
     },
     {
-      "scene": "产品迭代",
-      "english": "We are trying to improve the app based on user feedback.",
-      "chinese": "我们正根据用户反馈改进这个应用。"
+      "scene": "服务改进",
+      "english": "The hotel is trying to improve its service based on guest feedback.",
+      "chinese": "这家酒店正根据客人的反馈改进服务。"
     },
     {
       "scene": "数据变化",
@@ -505,8 +505,8 @@
       "prompt": "“improve”最核心的中文含义是？",
       "options": [
         "改善；提高",
-        "将会；愿意",
-        "离开；留下；使处于"
+        "将会",
+        "离开"
       ],
       "answer": "改善；提高",
       "stage": "T0",
@@ -528,7 +528,7 @@
     {
       "id": "improve-v-structure-choice-v3",
       "type": "meaning_choice",
-      "prompt": "核心结构辨析：哪一项既表示“改善或提高某事物”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
+      "prompt": "核心结构辨析：哪一项既表示“改善或提高某事物”，又符合这个形式线索：结构中直接带有事物宾语，不在目标词与宾语之间增加介词？",
       "options": [
         "improve by ten percent",
         "improve something",
@@ -748,7 +748,7 @@
   },
   "detailLevel": "template-curated",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.09.08.2",
+  "contentVersion": "2026.09.09.4",
   "reviewed": true,
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

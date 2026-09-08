@@ -28,7 +28,7 @@
     "主动词汇"
   ],
   "coreMemory": {
-    "chinese": "包括；包含",
+    "chinese": "包括；包含；把……包括在内；让……参与",
     "english": "v. to have someone or something as part of a group, set, or whole；v. to make someone or something part of an activity or group",
     "structure": "include something /ɪnˈkluːd ˈsʌmθɪŋ/（包括某物）；include someone in something /ɪnˈkluːd ˈsʌˌmwʌn ɪn ˈsʌmθɪŋ/（让某人参与某事；把某人包括在内）；be included in something /ˈbiː ˌɪˈnkluːdəd ɪn ˈsʌmθɪŋ/（被包括在某事物中）；including but not limited to /ˌɪˈnkluːdɪŋ ˈbʌt ˈnɑt ˈlɪmətəd ˈtuː/（包括但不限于……）",
     "structures": [
@@ -79,7 +79,7 @@
     ],
     "directSynonym": "contain /kəˈnteɪn/（含有；装有）；cover /ˈkʌvɚ/（包含；涉及）；involve /ˌɪˈnvɑlv/（涉及；需要）；encompass /ɛˈnkʌmpəs/（包含；涵盖）",
     "directAntonym": "exclude /ɪˈkskluːd/（排除；不包括）；omit /oʊˈmɪt/（省略；遗漏）；leave out /ˈliːv ˈaʊt/（遗漏；不包括）",
-    "derivatives": "inclusion · inclusive · included · including",
+    "derivatives": "inclusion · inclusive · included",
     "example": "The price includes breakfast and Wi-Fi.",
     "exampleChinese": "价格包括早餐和无线网络。"
   },
@@ -333,13 +333,6 @@
       "partOfSpeech": "adj.",
       "chinese": "包括在内的",
       "note": "常见表达 tax included、breakfast included。"
-    },
-    {
-      "word": "including",
-      "phonetic": "/ˌɪˈnkluːdɪŋ/",
-      "partOfSpeech": "prep.",
-      "chinese": "包括；包含",
-      "note": "用来引出例子或整体中的一部分，后接名词或名词短语。"
     }
   ],
   "confusables": [
@@ -519,8 +512,8 @@
       "prompt": "“include”最核心的中文含义是？",
       "options": [
         "包括；包含",
-        "生长；增长；变得",
-        "驾驶；驱动；迫使"
+        "生长",
+        "驾驶"
       ],
       "answer": "包括；包含",
       "stage": "T0",
@@ -542,7 +535,7 @@
     {
       "id": "include-v-structure-choice-v3",
       "type": "meaning_choice",
-      "prompt": "核心结构辨析：哪一项既表示“包括某物”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
+      "prompt": "核心结构辨析：哪一项既表示“包括某物”，又符合这个形式线索：结构中直接带有事物宾语，不在目标词与宾语之间增加介词？",
       "options": [
         "be included in something",
         "including but not limited to",
@@ -650,7 +643,7 @@
     {
       "id": "include-v-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“包括某物”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
+      "prompt": "搭配辨析：哪一项既表示“包括某物”，又符合这个形式线索：结构中直接带有事物宾语，不在目标词与宾语之间增加介词？",
       "options": [
         "be included in",
         "include information about",
@@ -762,7 +755,7 @@
   },
   "detailLevel": "template-curated",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.09.08.2",
+  "contentVersion": "2026.09.09.4",
   "reviewed": true,
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

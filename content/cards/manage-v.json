@@ -28,7 +28,7 @@
     "主动词汇"
   ],
   "coreMemory": {
-    "chinese": "设法做到；管理",
+    "chinese": "设法做到；管理；负责；应付；处理；勉强维持",
     "english": "v. to succeed in doing something difficult；v. to control or be responsible for a business, team, or activity；v. to deal successfully with a situation or available resources",
     "structure": "manage to do something /ˈmænɪdʒ ˈtuː ˈduː ˈsʌmθɪŋ/（设法做成某事）；manage a team or project /ˈmænɪdʒ ə ˈtiːm ˈɔːr ˈprɑdʒɛkt/（管理团队或项目）；manage without something /ˈmænɪdʒ wɪˈθaʊt ˈsʌmθɪŋ/（没有某物也能应付）；manage on an amount of money /ˈmænɪdʒ ˈɑn ˈæn əˈmaʊnt ˈʌv ˈmʌniː/（靠一定数额的钱维持生活）",
     "structures": [
@@ -79,7 +79,7 @@
     ],
     "directSynonym": "handle /ˈhændəl/（处理；应付）；run /ˈrʌn/（经营；管理）；cope /ˈkoʊp/（应付；对付）；succeed /səˈksiːd/（成功）",
     "directAntonym": "fail /ˈfeɪl/（未能；失败）；mismanage /mɪˈsmænɪdʒ/（管理不善）；neglect /nəˈɡlɛkt/（疏于管理；忽视）",
-    "derivatives": "manager · management · manageable · mismanage",
+    "derivatives": "mismanage · manager · management · manageable",
     "example": "She managed to finish the report on time.",
     "exampleChinese": "她设法按时完成了报告。"
   },
@@ -321,6 +321,13 @@
   ],
   "derivatives": [
     {
+      "word": "mismanage",
+      "phonetic": "/mɪˈsmænɪdʒ/",
+      "partOfSpeech": "v.",
+      "chinese": "管理不善",
+      "note": "否定前缀 mis- 表示“错误地”。"
+    },
+    {
       "word": "manager",
       "phonetic": "/ˈmænədʒɚ/",
       "partOfSpeech": "n.",
@@ -340,13 +347,6 @@
       "partOfSpeech": "adj.",
       "chinese": "可处理的；应付得来的",
       "note": "常形容任务量、成本或问题。"
-    },
-    {
-      "word": "mismanage",
-      "phonetic": "/mɪˈsmænɪdʒ/",
-      "partOfSpeech": "v.",
-      "chinese": "管理不善",
-      "note": "否定前缀 mis- 表示“错误地”。"
     }
   ],
   "confusables": [
@@ -525,11 +525,11 @@
       "type": "meaning_choice",
       "prompt": "“manage”最核心的中文含义是？",
       "options": [
-        "保持；保留；继续",
-        "设法做到；管理",
-        "知道；了解；认识"
+        "保持",
+        "设法做到",
+        "知道"
       ],
-      "answer": "设法做到；管理",
+      "answer": "设法做到",
       "stage": "T0",
       "ai": false
     },
@@ -549,7 +549,7 @@
     {
       "id": "manage-v-structure-choice-v3",
       "type": "meaning_choice",
-      "prompt": "核心结构辨析：哪一项既表示“设法做成某事”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
+      "prompt": "核心结构辨析：哪一项既表示“设法做成某事”，又符合这个形式线索：完整结构中使用 to + 动词原形；do 只是语法占位符，要换成符合语境的具体动词原形？",
       "options": [
         "manage without something",
         "manage on an amount of money",
@@ -613,7 +613,7 @@
     {
       "id": "manage-v-recall-chinese",
       "type": "recall",
-      "prompt": "写出符合“设法做到；管理”（v.）的本课目标词。",
+      "prompt": "写出符合“设法做到”（v.）的本课目标词。",
       "answer": "manage",
       "stage": "T1",
       "ai": false
@@ -657,7 +657,7 @@
     {
       "id": "manage-v-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“设法做成某事”，又符合这个形式线索：目标词后接 to + 动词原形；do 是语法占位符，不是要逐字写出的单词？",
+      "prompt": "搭配辨析：哪一项既表示“设法做成某事”，又符合这个形式线索：完整结构中使用 to + 动词原形；do 只是语法占位符，要换成符合语境的具体动词原形？",
       "options": [
         "manage a project",
         "manage your time",
@@ -693,7 +693,7 @@
     {
       "id": "manage-v-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “manage” 写一个自然、真实的英文句子，含义必须符合词卡核心义“设法做到；管理”。",
+      "prompt": "请用 “manage” 写一个自然、真实的英文句子，含义必须符合词卡核心义“设法做到”。",
       "answer": "",
       "stage": "T2",
       "ai": true
@@ -769,7 +769,7 @@
   },
   "detailLevel": "template-curated",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.09.08.2",
+  "contentVersion": "2026.09.09.4",
   "reviewed": true,
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

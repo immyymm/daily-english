@@ -34,7 +34,7 @@
     "主动词汇"
   ],
   "coreMemory": {
-    "chinese": "注意到；通知",
+    "chinese": "注意到；察觉；通知；告示；预先通知；通知期",
     "english": "v. to see, hear, or become aware of something；n. a written or spoken announcement that gives information；n. advance warning that something will happen or end",
     "structure": "notice something /ˈnoʊtɪs ˈsʌmθɪŋ/（注意到某事）；notice that + clause /ˈnoʊtɪs ˈðæt ˈklɔːz/（注意到……）；notice someone do something /ˈnoʊtɪs ˈsʌˌmwʌn ˈduː ˈsʌmθɪŋ/（注意到某人做了某事（完整过程））；notice someone doing something /ˈnoʊtɪs ˈsʌˌmwʌn ˈduːɪŋ ˈsʌmθɪŋ/（注意到某人正在做某事）",
     "structures": [
@@ -85,7 +85,7 @@
     ],
     "directSynonym": "observe /əˈbzɝːv/（观察到；观察）；detect /dɪˈtɛkt/（察觉；发现）；spot /ˈspɑt/（发现；认出）；realize /ˈriːəˌlaɪz/（意识到）",
     "directAntonym": "ignore /ˌɪˈɡnɔːr/（忽视；不理会）；overlook /ˈoʊvɚˌlʊk/（忽略；没注意到）；miss /ˈmɪs/（没看见；错过）",
-    "derivatives": "noticeable · noticeably · unnoticed",
+    "derivatives": "noticeable · unnoticed · noticeably",
     "example": "Did you notice a change in her voice?",
     "exampleChinese": "你注意到她声音的变化了吗？"
   },
@@ -334,18 +334,18 @@
       "note": "常修饰 change、difference 和 improvement。"
     },
     {
-      "word": "noticeably",
-      "phonetic": "/ˈnoʊtɪsəbliː/",
-      "partOfSpeech": "adv.",
-      "chinese": "明显地",
-      "note": "说明变化达到能被察觉的程度。"
-    },
-    {
       "word": "unnoticed",
       "phonetic": "/əˈnnoʊtɪst/",
       "partOfSpeech": "adj.",
       "chinese": "未被注意的",
       "note": "常见结构 go unnoticed。"
+    },
+    {
+      "word": "noticeably",
+      "phonetic": "/ˈnoʊtɪsəbliː/",
+      "partOfSpeech": "adv.",
+      "chinese": "明显地",
+      "note": "说明变化达到能被察觉的程度。"
     }
   ],
   "confusables": [
@@ -524,11 +524,11 @@
       "type": "meaning_choice",
       "prompt": "“notice”最核心的中文含义是？",
       "options": [
-        "注意到；通知",
-        "得到；到达；变得",
-        "问；请求；邀请"
+        "注意到；察觉",
+        "得到",
+        "问"
       ],
-      "answer": "注意到；通知",
+      "answer": "注意到；察觉",
       "stage": "T0",
       "ai": false
     },
@@ -548,7 +548,7 @@
     {
       "id": "notice-v-structure-choice-v3",
       "type": "meaning_choice",
-      "prompt": "核心结构辨析：哪一项既表示“注意到某事”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
+      "prompt": "核心结构辨析：哪一项既表示“注意到某事”，又符合这个形式线索：结构中直接带有事物宾语，不在目标词与宾语之间增加介词？",
       "options": [
         "notice something",
         "notice that + clause",
@@ -612,7 +612,7 @@
     {
       "id": "notice-v-recall-chinese",
       "type": "recall",
-      "prompt": "写出符合“注意到；通知”（v. / n.）的本课目标词。",
+      "prompt": "写出符合“注意到；察觉”（v.）的本课目标词。",
       "answer": "notice",
       "stage": "T1",
       "ai": false
@@ -692,7 +692,7 @@
     {
       "id": "notice-v-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “notice” 写一个自然、真实的英文句子，含义必须符合词卡核心义“注意到；通知”。",
+      "prompt": "请用 “notice” 写一个自然、真实的英文句子，含义必须符合词卡核心义“注意到；察觉”。",
       "answer": "",
       "stage": "T2",
       "ai": true
@@ -768,7 +768,7 @@
   },
   "detailLevel": "template-curated",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.09.08.2",
+  "contentVersion": "2026.09.09.4",
   "reviewed": true,
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

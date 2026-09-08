@@ -28,7 +28,7 @@
     "主动词汇"
   ],
   "coreMemory": {
-    "chinese": "创造；创建",
+    "chinese": "创造；创作；创建；造成；引起；营造",
     "english": "v. to make something new that did not exist before；v. to cause a situation, feeling, or result",
     "structure": "create something /kriˈeɪt ˈsʌmθɪŋ/（创造或创建某物）；create something for someone /kriˈeɪt ˈsʌmθɪŋ ˈfɔːr ˈsʌˌmwʌn/（为某人创作或创建某物）；create something from something /kriˈeɪt ˈsʌmθɪŋ ˈfrʌm ˈsʌmθɪŋ/（用某种材料创造某物）；create an opportunity or problem /kriˈeɪt ˈæn ˌɑpɚˈtuːnətiː ˈɔːr ˈprɑbləm/（创造机会或造成问题）",
     "structures": [
@@ -79,7 +79,7 @@
     ],
     "directSynonym": "make /ˈmeɪk/（制作；使产生）；produce /prəˈduːs/（生产；制作；产生）；generate /ˈdʒɛnɚˌeɪt/（产生；生成）；design /dɪˈzaɪn/（设计）",
     "directAntonym": "destroy /dɪˈstrɔɪ/（摧毁；破坏）；erase /ɪˈreɪs/（擦除；抹去）；eliminate /ɪˈlɪməˌneɪt/（消除；淘汰）",
-    "derivatives": "creation · creator · creative · creativity · creatively",
+    "derivatives": "creation · creator · creativity · creative · creatively",
     "example": "Good questions can create meaningful conversations.",
     "exampleChinese": "好的问题可以促成有意义的对话。"
   },
@@ -328,18 +328,18 @@
       "note": "指创作内容、产品或作品的人。"
     },
     {
-      "word": "creative",
-      "phonetic": "/kriːˈeɪtɪv/",
-      "partOfSpeech": "adj.",
-      "chinese": "有创造力的；创意的",
-      "note": "常形容人、想法、工作或解决办法。"
-    },
-    {
       "word": "creativity",
       "phonetic": "/ˌkriːeɪˈtɪvətiː/",
       "partOfSpeech": "n.",
       "chinese": "创造力",
       "note": "不可数名词，常用 show creativity。"
+    },
+    {
+      "word": "creative",
+      "phonetic": "/kriːˈeɪtɪv/",
+      "partOfSpeech": "adj.",
+      "chinese": "有创造力的；创意的",
+      "note": "常形容人、想法、工作或解决办法。"
     },
     {
       "word": "creatively",
@@ -525,11 +525,11 @@
       "type": "meaning_choice",
       "prompt": "“create”最核心的中文含义是？",
       "options": [
-        "创造；创建",
-        "购买；买下；相信",
-        "收到；接受；接待"
+        "创造；创作；创建",
+        "购买",
+        "收到"
       ],
-      "answer": "创造；创建",
+      "answer": "创造；创作；创建",
       "stage": "T0",
       "ai": false
     },
@@ -549,7 +549,7 @@
     {
       "id": "create-v-structure-choice-v3",
       "type": "meaning_choice",
-      "prompt": "核心结构辨析：哪一项既表示“创造或创建某物”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
+      "prompt": "核心结构辨析：哪一项既表示“创造或创建某物”，又符合这个形式线索：结构中直接带有事物宾语，不在目标词与宾语之间增加介词？",
       "options": [
         "create an opportunity or problem",
         "create something",
@@ -613,7 +613,7 @@
     {
       "id": "create-v-recall-chinese",
       "type": "recall",
-      "prompt": "写出符合“创造；创建”（v.）的本课目标词。",
+      "prompt": "写出符合“创造；创作；创建”（v.）的本课目标词。",
       "answer": "create",
       "stage": "T1",
       "ai": false
@@ -693,7 +693,7 @@
     {
       "id": "create-v-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “create” 写一个自然、真实的英文句子，含义必须符合词卡核心义“创造；创建”。",
+      "prompt": "请用 “create” 写一个自然、真实的英文句子，含义必须符合词卡核心义“创造；创作；创建”。",
       "answer": "",
       "stage": "T2",
       "ai": true
@@ -769,7 +769,7 @@
   },
   "detailLevel": "template-curated",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.09.08.2",
+  "contentVersion": "2026.09.09.4",
   "reviewed": true,
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

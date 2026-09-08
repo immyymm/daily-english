@@ -1,7 +1,7 @@
 {
   "date": "2026-08-26",
   "dayNumber": 10,
-  "contentVersion": "2026.09.08.2",
+  "contentVersion": "2026.09.09.4",
   "templateVersion": "learning-template-2026.08.19.2",
   "cards": [
     {
@@ -34,7 +34,7 @@
         "高频表达"
       ],
       "coreMemory": {
-        "chinese": "相信；认为",
+        "chinese": "相信；确信；认为；觉得；信任；信仰",
         "english": "v. to accept that something is true；v. to have an opinion or think that something is true；v. to have confidence or faith in a person, idea, or ability",
         "structure": "believe someone or something /bɪˈliːv ˈsʌˌmwʌn ˈɔːr ˈsʌmθɪŋ/（相信某人或某事）；believe that + clause /bɪˈliːv ˈðæt ˈklɔːz/（相信或认为……）；believe in someone or something /bɪˈliːv ɪn ˈsʌˌmwʌn ˈɔːr ˈsʌmθɪŋ/（信任某人；信仰或相信某种价值）；be believed to be /ˈbiː bɪˈliːvd ˈtuː ˈbiː/（被认为是……）",
         "structures": [
@@ -85,7 +85,7 @@
         ],
         "directSynonym": "trust /ˈtrʌst/（信任；相信）；think /ˈθɪŋk/（认为；觉得）；accept /æˈksɛpt/（接受；相信）；be convinced /ˈbiː kəˈnvɪnst/（确信）",
         "directAntonym": "doubt /ˈdaʊt/（怀疑）；disbelieve /dɪsbəˈliːv/（不相信）；reject /rɪˈdʒɛkt/（拒绝接受）",
-        "derivatives": "belief · believable · unbelievable · believer",
+        "derivatives": "belief · believer · believable · unbelievable",
         "example": "I believe this plan can work.",
         "exampleChinese": "我相信这个计划可行。"
       },
@@ -334,6 +334,13 @@
           "note": "非常常用；注意 believe 结尾是 -ve，belief 结尾是 -f。"
         },
         {
+          "word": "believer",
+          "phonetic": "/bəˈliːvɚ/",
+          "partOfSpeech": "n.",
+          "chinese": "信徒；相信者",
+          "note": "常见结构 a firm believer in，表示“……的坚定信奉者”。"
+        },
+        {
           "word": "believable",
           "phonetic": "/bəˈliːvəbəl/",
           "partOfSpeech": "adj.",
@@ -346,13 +353,6 @@
           "partOfSpeech": "adj.",
           "chinese": "难以置信的；极好的",
           "note": "既可表示“不可信”，口语中也常表示“惊人地好”。"
-        },
-        {
-          "word": "believer",
-          "phonetic": "/bəˈliːvɚ/",
-          "partOfSpeech": "n.",
-          "chinese": "信徒；相信者",
-          "note": "常见结构 a firm believer in，表示“……的坚定信奉者”。"
         }
       ],
       "confusables": [
@@ -531,11 +531,11 @@
           "type": "meaning_choice",
           "prompt": "“believe”最核心的中文含义是？",
           "options": [
-            "相信；认为",
-            "理解；明白",
-            "走路；步行；陪同"
+            "相信；确信",
+            "理解",
+            "走路"
           ],
-          "answer": "相信；认为",
+          "answer": "相信；确信",
           "stage": "T0",
           "ai": false
         },
@@ -555,7 +555,7 @@
         {
           "id": "believe-v-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "核心结构辨析：哪一项既表示“相信某人或某事”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
+          "prompt": "核心结构辨析：哪一项既表示“相信某人或某事”，又符合这个形式线索：结构中直接带有事物宾语，不在目标词与宾语之间增加介词？",
           "options": [
             "be believed to be",
             "believe someone or something",
@@ -619,7 +619,7 @@
         {
           "id": "believe-v-recall-chinese",
           "type": "recall",
-          "prompt": "写出符合“相信；认为”（v.）的本课目标词。",
+          "prompt": "写出符合“相信；确信”（v.）的本课目标词。",
           "answer": "believe",
           "stage": "T1",
           "ai": false
@@ -699,7 +699,7 @@
         {
           "id": "believe-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “believe” 写一个自然、真实的英文句子，含义必须符合词卡核心义“相信；认为”。",
+          "prompt": "请用 “believe” 写一个自然、真实的英文句子，含义必须符合词卡核心义“相信；确信”。",
           "answer": "",
           "stage": "T2",
           "ai": true
@@ -775,7 +775,7 @@
       },
       "detailLevel": "template-curated",
       "templateVersion": "learning-template-2026.08.19.2",
-      "contentVersion": "2026.09.08.2",
+      "contentVersion": "2026.09.09.4",
       "reviewed": true,
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
@@ -815,8 +815,8 @@
         "高频表达"
       ],
       "coreMemory": {
-        "chinese": "玩；演奏；扮演",
-        "english": "v. to take part in a game, perform music, or act a role；v. act or have an effect in a specified way or with a specific effect or outcome",
+        "chinese": "玩；参加游戏；演奏；扮演",
+        "english": "v. to take part in a game or other enjoyable activity；v. to perform music on an instrument；v. to perform the role of a character",
         "structure": "play a game /ˈpleɪ ə ˈɡeɪm/（玩游戏）；play music /ˈpleɪ ˈmjuːzɪk/（播放或演奏音乐）；play a role in something /ˈpleɪ ə ˈroʊl ɪn ˈsʌmθɪŋ/（在某事中起作用）；play with something /ˈpleɪ ˈwɪð ˈsʌmθɪŋ/（摆弄；和某物玩）",
         "structures": [
           {
@@ -840,43 +840,50 @@
             "chinese": "摆弄；和某物玩"
           }
         ],
-        "commonError": "❌ play a role something → ✅ play a role in something；❌ play something → ✅ play with something",
+        "commonError": "❌ play a role at something → ✅ play a role in something；❌ play at something → ✅ play with something",
         "commonErrors": [
           {
-            "wrong": "play a role something",
-            "wrongPhonetic": "/ˈpleɪ ə ˈroʊl ˈsʌmθɪŋ/",
+            "wrong": "play a role at something",
+            "wrongPhonetic": "/ˈpleɪ ə ˈroʊl ˈæt ˈsʌmθɪŋ/",
             "right": "play a role in something",
             "rightPhonetic": "/ˈpleɪ ə ˈroʊl ɪn ˈsʌmθɪŋ/",
-            "note": "在“play a role in something”这个常用搭配中，介词 in 负责连接后面的对象或范围，不能省略或随意换成其他介词。"
+            "note": "在“play a role in something”所表达的这个具体含义中，要用介词 in；换成 at 会破坏这个固定结构或改变原意。"
           },
           {
-            "wrong": "play something",
-            "wrongPhonetic": "/ˈpleɪ ˈsʌmθɪŋ/",
+            "wrong": "play at something",
+            "wrongPhonetic": "/ˈpleɪ ˈæt ˈsʌmθɪŋ/",
             "right": "play with something",
             "rightPhonetic": "/ˈpleɪ ˈwɪð ˈsʌmθɪŋ/",
-            "note": "在“play with something”这个常用搭配中，介词 with 负责连接后面的对象或范围，不能省略或随意换成其他介词。"
+            "note": "在“play with something”所表达的这个具体含义中，要用介词 with；换成 at 会破坏这个固定结构或改变原意。"
           }
         ],
-        "directSynonym": "perform /pɚˈfɔːrm/（表演；演奏）",
-        "directAntonym": "work /ˈwɝːk/（工作；劳动）",
-        "derivatives": "player · playful · playing",
+        "directSynonym": "take part in a game /ˈteɪk ˈpɑrt ɪn ə ˈɡeɪm/（参加游戏或比赛）",
+        "directAntonym": "work /ˈwɝːk/（工作）",
+        "derivatives": "player · playful",
         "example": "We play a short word game at the end of class.",
         "exampleChinese": "我们在下课前玩一个简短的单词游戏。"
       },
       "meanings": [
         {
           "partOfSpeech": "v.",
-          "english": "to take part in a game, perform music, or act a role",
-          "chinese": "玩；演奏；扮演",
+          "english": "to take part in a game or other enjoyable activity",
+          "chinese": "玩；参加游戏",
           "example": "We play a short word game at the end of class.",
           "translation": "我们在下课前玩一个简短的单词游戏。"
         },
         {
           "partOfSpeech": "v.",
-          "english": "act or have an effect in a specified way or with a specific effect or outcome",
-          "chinese": "玩；演奏；扮演",
-          "example": "She plays music quietly while she studies.",
-          "translation": "她学习时会轻声播放音乐。"
+          "english": "to perform music on an instrument",
+          "chinese": "演奏",
+          "example": "She plays the piano after dinner.",
+          "translation": "她晚饭后弹钢琴。"
+        },
+        {
+          "partOfSpeech": "v.",
+          "english": "to perform the role of a character",
+          "chinese": "扮演",
+          "example": "He plays a young doctor in the film.",
+          "translation": "他在电影中扮演一名年轻医生。"
         }
       ],
       "contextPhrases": [
@@ -884,14 +891,14 @@
           "category": "核心动作与结构",
           "items": [
             {
-              "phrase": "We play a short word game",
-              "phonetic": "/ˈwiː ˈpleɪ ə ˈʃɔːrt ˈwɝːd ˈɡeɪm/",
-              "chinese": "玩游戏；原句语境：我们在下课前玩一个简短的单词游戏。"
+              "phrase": "play a game",
+              "phonetic": "/ˈpleɪ ə ˈɡeɪm/",
+              "chinese": "玩游戏"
             },
             {
-              "phrase": "She plays music quietly while she",
-              "phonetic": "/ˈʃiː ˈpleɪz ˈmjuːzɪk ˈkwaɪətliː ˈwaɪl ˈʃiː/",
-              "chinese": "播放或演奏音乐；原句语境：她学习时会轻声播放音乐。"
+              "phrase": "play music",
+              "phonetic": "/ˈpleɪ ˈmjuːzɪk/",
+              "chinese": "播放或演奏音乐"
             }
           ]
         },
@@ -899,14 +906,14 @@
           "category": "日常与工作语境",
           "items": [
             {
-              "phrase": "Context plays an important role in",
-              "phonetic": "/ˈkɑntɛkst ˈpleɪz ˈæn ˌɪˈmpɔːrtənt ˈroʊl ɪn/",
-              "chinese": "在某事中起作用；原句语境：语境在选择正确含义时起重要作用。"
+              "phrase": "play a role in something",
+              "phonetic": "/ˈpleɪ ə ˈroʊl ɪn ˈsʌmθɪŋ/",
+              "chinese": "在某事中起作用"
             },
             {
-              "phrase": "Do not play with the settings during",
-              "phonetic": "/ˈduː ˈnɑt ˈpleɪ ˈwɪð ðə ˈsɛtɪŋz ˈdʊrɪŋ/",
-              "chinese": "摆弄；和某物玩；原句语境：测试期间不要摆弄设置。"
+              "phrase": "play with something",
+              "phonetic": "/ˈpleɪ ˈwɪð ˈsʌmθɪŋ/",
+              "chinese": "摆弄；和某物玩"
             }
           ]
         },
@@ -914,14 +921,14 @@
           "category": "高频扩展表达",
           "items": [
             {
-              "phrase": "team will play against the champions tomorrow",
-              "phonetic": "/ˈtiːm ˈwɪl ˈpleɪ əˈɡɛnst ðə ˈtʃæmpiːənz təˈmɑˌroʊ/",
-              "chinese": "与某人比赛；原句语境：我们队明天将对阵冠军队。"
+              "phrase": "play against someone",
+              "phonetic": "/ˈpleɪ əˈɡɛnst ˈsʌˌmwʌn/",
+              "chinese": "与某人比赛"
             },
             {
-              "phrase": "Play the recording back and",
-              "phonetic": "/ˈpleɪ ðə rəˈkɔːrdɪŋ ˈbæk ənd/",
-              "chinese": "回放某物；原句语境：回放录音，留意最后一个音。"
+              "phrase": "play something back",
+              "phonetic": "/ˈpleɪ ˈsʌmθɪŋ ˈbæk/",
+              "chinese": "回放某物"
             }
           ]
         }
@@ -972,11 +979,11 @@
       ],
       "synonyms": [
         {
-          "word": "perform",
-          "phonetic": "/pɚˈfɔːrm/",
-          "partOfSpeech": "v.",
-          "chinese": "表演；演奏",
-          "difference": "perform 侧重“表演；演奏”。对应的常用英文义是 “to take part in a game, perform music, or act a role”。play 在本卡搭配“play a game”中表达“玩”；换词时要同时检查宾语和介词。"
+          "word": "take part in a game",
+          "phonetic": "/ˈteɪk ˈpɑrt ɪn ə ˈɡeɪm/",
+          "partOfSpeech": "phr.",
+          "chinese": "参加游戏或比赛",
+          "difference": "play 与 take part in a game 在本卡义项下意思接近。play 在游戏或体育语境中表示参加；take part in a game 把这一核心动作完整说出。"
         }
       ],
       "antonyms": [
@@ -984,8 +991,8 @@
           "word": "work",
           "phonetic": "/ˈwɝːk/",
           "partOfSpeech": "v.",
-          "chinese": "工作；劳动",
-          "usage": "在“玩”这个义项下，work（工作；劳动）与 play 形成对比。对应的常用英文义是 “opposite of play”。只在这个明确义项和句型中对比，不把两个词的所有用法都视为相反。"
+          "chinese": "工作",
+          "usage": "play 与 work 在本卡义项下形成明确对比。play 表示玩耍或娱乐时，work 表示从事工作；在演奏、扮演等其他词义下二者并非反义。"
         }
       ],
       "derivatives": [
@@ -1002,101 +1009,30 @@
           "partOfSpeech": "adj.",
           "chinese": "爱玩的；有趣的",
           "note": "常形容语气、设计或性格。"
-        },
-        {
-          "word": "playing",
-          "phonetic": "/ˈpleɪɪŋ/",
-          "partOfSpeech": "n.",
-          "chinese": "游戏；玩耍；竞技",
-          "note": "playing 是 play 的常用词族形式，作 n. 使用；对应的常用英文义是 “the action of taking part in a game or sport or other recreation”。"
         }
       ],
       "confusables": [],
       "relatedVocabulary": [
         {
-          "category": "语义上位词：这个动作属于什么类别",
+          "category": "语义关联：一起理解更清楚",
           "items": [
             {
-              "word": "do",
-              "phonetic": "/ˈduː/",
-              "partOfSpeech": "v.",
-              "chinese": "做"
-            },
-            {
-              "word": "go",
-              "phonetic": "/ˈɡoʊ/",
-              "partOfSpeech": "v.",
-              "chinese": "去"
-            },
-            {
-              "word": "move",
-              "phonetic": "/ˈmuːv/",
-              "partOfSpeech": "v.",
-              "chinese": "移动"
-            },
-            {
-              "word": "act",
-              "phonetic": "/ˈækt/",
-              "partOfSpeech": "v.",
-              "chinese": "行动；行为；幕"
-            }
-          ]
-        },
-        {
-          "category": "具体动作：相关的更具体表达",
-          "items": [
-            {
-              "word": "start",
-              "phonetic": "/ˈstɑrt/",
-              "partOfSpeech": "v.",
-              "chinese": "开始"
-            },
-            {
-              "word": "develop",
-              "phonetic": "/dɪˈveləp/",
-              "partOfSpeech": "v.",
-              "chinese": "发展"
-            },
-            {
-              "word": "die",
-              "phonetic": "/ˈdaɪ/",
-              "partOfSpeech": "v.",
-              "chinese": "死亡"
-            },
-            {
-              "word": "field",
-              "phonetic": "/ˈfiːld/",
-              "partOfSpeech": "v.",
-              "chinese": "领域；田地；场地"
-            }
-          ]
-        },
-        {
-          "category": "真实语境：例句中常与本词同现的词",
-          "items": [
-            {
-              "word": "choose",
-              "phonetic": "/tʃuːz/",
-              "partOfSpeech": "v.",
-              "chinese": "选择"
-            },
-            {
-              "word": "listen",
-              "phonetic": "/ˈlɪsən/",
-              "partOfSpeech": "v.",
-              "chinese": "听"
-            },
-            {
-              "word": "back",
-              "phonetic": "/ˈbæk/",
+              "word": "game",
+              "phonetic": "/ˈɡeɪm/",
               "partOfSpeech": "n.",
-              "chinese": "后面的；使后退；支持"
+              "chinese": "游戏；比赛"
             },
             {
-              "word": "word",
-              "phonetic": "/ˈwɝːd/",
+              "word": "sport",
+              "phonetic": "/ˈspɔːrt/",
               "partOfSpeech": "n.",
-              "chinese": "话；消息；词"
+              "chinese": "运动"
+            },
+            {
+              "word": "perform",
+              "phonetic": "/pɚˈfɔːrm/",
+              "partOfSpeech": "v.",
+              "chinese": "表演；演奏"
             }
           ]
         }
@@ -1134,9 +1070,9 @@
         }
       ],
       "studyFocus": {
-        "coreMeaning": "先掌握“玩”这个核心义，再用本卡的 1 个常用义项辨别不同语境。",
+        "coreMeaning": "先掌握“玩；参加游戏”这个核心义，再对比另外 2 个常用义项，辨别不同语境。",
         "keyCollocation": "把“play a game”连同介词、宾语和动词形式作为整个句块记忆。",
-        "commonMistake": "在“play a role in something”这个常用搭配中，介词 in 负责连接后面的对象或范围，不能省略或随意换成其他介词。",
+        "commonMistake": "在“play a role in something”所表达的这个具体含义中，要用介词 in；换成 at 会破坏这个固定结构或改变原意。",
         "mustUseExample": "We play a short word game at the end of class.（我们在下课前玩一个简短的单词游戏。）"
       },
       "questions": [
@@ -1145,11 +1081,11 @@
           "type": "meaning_choice",
           "prompt": "“play”最核心的中文含义是？",
           "options": [
-            "等待；等候",
-            "生长；增长；变得",
-            "玩；演奏；扮演"
+            "等待",
+            "生长",
+            "玩；参加游戏"
           ],
-          "answer": "玩；演奏；扮演",
+          "answer": "玩；参加游戏",
           "stage": "T0",
           "ai": false
         },
@@ -1159,10 +1095,10 @@
           "prompt": "哪一项英文释义最符合词卡中的 “play”？",
           "options": [
             "to become larger, develop, or change gradually",
-            "to take part in a game, perform music, or act a role",
+            "to take part in a game or other enjoyable activity",
             "to stay until someone arrives or something happens"
           ],
-          "answer": "to take part in a game, perform music, or act a role",
+          "answer": "to take part in a game or other enjoyable activity",
           "stage": "T0",
           "ai": false
         },
@@ -1188,9 +1124,9 @@
             "work",
             "wait",
             "grow",
-            "perform"
+            "take part in a game"
           ],
-          "answer": "perform",
+          "answer": "take part in a game",
           "stage": "T2",
           "ai": false
         },
@@ -1202,7 +1138,7 @@
             "wait",
             "grow",
             "work",
-            "perform"
+            "take part in a game"
           ],
           "answer": "work",
           "stage": "T2",
@@ -1215,7 +1151,7 @@
           "options": [
             "wait",
             "player",
-            "perform",
+            "take part in a game",
             "work"
           ],
           "answer": "player",
@@ -1225,7 +1161,7 @@
         {
           "id": "play-v-recall-definition",
           "type": "recall",
-          "prompt": "根据英文释义写出目标词：to take part in a game, perform music, or act a role",
+          "prompt": "根据英文释义写出目标词：to take part in a game or other enjoyable activity",
           "answer": "play",
           "stage": "T1",
           "ai": false
@@ -1233,7 +1169,7 @@
         {
           "id": "play-v-recall-chinese",
           "type": "recall",
-          "prompt": "写出符合“玩；演奏；扮演”（v.）的本课目标词。",
+          "prompt": "写出符合“玩；参加游戏”（v.）的本课目标词。",
           "answer": "play",
           "stage": "T1",
           "ai": false
@@ -1313,7 +1249,7 @@
         {
           "id": "play-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “play” 写一个自然、真实的英文句子，含义必须符合词卡核心义“玩；演奏；扮演”。",
+          "prompt": "请用 “play” 写一个自然、真实的英文句子，含义必须符合词卡核心义“玩；参加游戏”。",
           "answer": "",
           "stage": "T2",
           "ai": true
@@ -1329,7 +1265,7 @@
         {
           "id": "play-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “play” 和 “We play a short word game” 结构，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “play” 和 “play a game” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1389,7 +1325,7 @@
       },
       "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.2",
-      "contentVersion": "2026.09.08.2",
+      "contentVersion": "2026.09.09.4",
       "reviewed": false,
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
@@ -1429,8 +1365,8 @@
         "高频表达"
       ],
       "coreMemory": {
-        "chinese": "转动；转向；变成",
-        "english": "v. to move around, change direction, or become different；v. change orientation or direction, also in the abstract sense",
+        "chinese": "转动；旋转；转向；转弯；变成；使转变",
+        "english": "v. to move something around a central point；v. to change direction；v. to change or cause something to change into a different state",
         "structure": "turn left /ˈtɝːn ˈlɛft/（向左转）；turn into something /ˈtɝːn ˈɪntuː ˈsʌmθɪŋ/（变成某物）；turn something on /ˈtɝːn ˈsʌmθɪŋ ˈɑn/（打开某设备）；turn something off /ˈtɝːn ˈsʌmθɪŋ ˈɔːf/（关闭某设备）",
         "structures": [
           {
@@ -1454,41 +1390,48 @@
             "chinese": "关闭某设备"
           }
         ],
-        "commonError": "❌ take turns to do something → ✅ take turns doing something；❌ turn something → ✅ turn into something",
+        "commonError": "❌ take turns to doing something → ✅ take turns doing something；❌ turn at something → ✅ turn into something",
         "commonErrors": [
           {
-            "wrong": "take turns to do something",
-            "wrongPhonetic": "/ˈteɪk ˈtɝːnz ˈtuː ˈduː ˈsʌmθɪŋ/",
+            "wrong": "take turns to doing something",
+            "wrongPhonetic": "/ˈteɪk ˈtɝːnz ˈtuː ˈduːɪŋ ˈsʌmθɪŋ/",
             "right": "take turns doing something",
             "rightPhonetic": "/ˈteɪk ˈtɝːnz ˈduːɪŋ ˈsʌmθɪŋ/",
-            "note": "“take turns doing something”是需要动词 -ing 形式的固定结构；doing 是占位符，应换成具体动词的 -ing 形式。"
+            "note": "“take turns doing something”在本义下要求动词 -ing 形式；doing 是语法占位符，应换成具体动词的 -ing 形式，前面不要额外加 to。"
           },
           {
-            "wrong": "turn something",
-            "wrongPhonetic": "/ˈtɝːn ˈsʌmθɪŋ/",
+            "wrong": "turn at something",
+            "wrongPhonetic": "/ˈtɝːn ˈæt ˈsʌmθɪŋ/",
             "right": "turn into something",
             "rightPhonetic": "/ˈtɝːn ˈɪntuː ˈsʌmθɪŋ/",
-            "note": "在“turn into something”这个常用搭配中，介词 into 负责连接后面的对象或范围，不能省略或随意换成其他介词。"
+            "note": "在“turn into something”所表达的这个具体含义中，要用介词 into；换成 at 会破坏这个固定结构或改变原意。"
           }
         ],
         "directSynonym": "rotate /ˈroʊˌteɪt/（旋转；转动）",
-        "directAntonym": "remain /rɪˈmeɪn/（保持不变）",
-        "derivatives": "turning · turnover · turner · turnery",
+        "directAntonym": "keep still /ˈkiːp ˈstɪl/（保持不动）",
+        "derivatives": "turning · turnover",
         "example": "Turn left at the next traffic light.",
         "exampleChinese": "在下一个红绿灯处左转。"
       },
       "meanings": [
         {
           "partOfSpeech": "v.",
-          "english": "to move around, change direction, or become different",
-          "chinese": "转动；转向；变成",
+          "english": "to move something around a central point",
+          "chinese": "转动；旋转",
+          "example": "Turn the handle slowly to open the door.",
+          "translation": "慢慢转动把手把门打开。"
+        },
+        {
+          "partOfSpeech": "v.",
+          "english": "to change direction",
+          "chinese": "转向；转弯",
           "example": "Turn left at the next traffic light.",
           "translation": "在下一个红绿灯处左转。"
         },
         {
           "partOfSpeech": "v.",
-          "english": "change orientation or direction, also in the abstract sense",
-          "chinese": "转动；转向；变成",
+          "english": "to change or cause something to change into a different state",
+          "chinese": "变成；使转变",
           "example": "Daily practice can turn passive words into active vocabulary.",
           "translation": "每日练习能把被动词汇变成主动词汇。"
         }
@@ -1498,14 +1441,14 @@
           "category": "核心动作与结构",
           "items": [
             {
-              "phrase": "Turn left at the next",
-              "phonetic": "/ˈtɝːn ˈlɛft ˈæt ðə ˈnɛkst/",
-              "chinese": "向左转；原句语境：在下一个红绿灯处左转。"
+              "phrase": "turn left",
+              "phonetic": "/ˈtɝːn ˈlɛft/",
+              "chinese": "向左转"
             },
             {
-              "phrase": "practice can turn passive words into active",
-              "phonetic": "/ˈpræktəs ˈkæn ˈtɝːn ˈpæsɪv ˈwɝːdz ˈɪntuː ˈæktɪv/",
-              "chinese": "变成某物；原句语境：每日练习能把被动词汇变成主动词汇。"
+              "phrase": "turn into something",
+              "phonetic": "/ˈtɝːn ˈɪntuː ˈsʌmθɪŋ/",
+              "chinese": "变成某物"
             }
           ]
         },
@@ -1513,14 +1456,14 @@
           "category": "日常与工作语境",
           "items": [
             {
-              "phrase": "Turn the sound on before",
-              "phonetic": "/ˈtɝːn ðə ˈsaʊnd ˈɑn bɪˈfɔːr/",
-              "chinese": "打开某设备；原句语境：发音练习前请打开声音。"
+              "phrase": "turn something on",
+              "phonetic": "/ˈtɝːn ˈsʌmθɪŋ ˈɑn/",
+              "chinese": "打开某设备"
             },
             {
-              "phrase": "Please turn notifications off during the",
-              "phonetic": "/ˈpliːz ˈtɝːn ˌnoʊtəfəˈkeɪʃənz ˈɔːf ˈdʊrɪŋ ðə/",
-              "chinese": "关闭某设备；原句语境：测试期间请关闭通知。"
+              "phrase": "turn something off",
+              "phonetic": "/ˈtɝːn ˈsʌmθɪŋ ˈɔːf/",
+              "chinese": "关闭某设备"
             }
           ]
         },
@@ -1528,14 +1471,14 @@
           "category": "高频扩展表达",
           "items": [
             {
-              "phrase": "missing record turned out to be a",
-              "phonetic": "/ˈmɪsɪŋ rəˈkɔːrd ˈtɝːnd ˈaʊt ˈtuː ˈbiː ə/",
-              "chinese": "结果是；证明是；原句语境：那条缺失的记录最后证明是同步问题。"
+              "phrase": "turn out to be",
+              "phonetic": "/ˈtɝːn ˈaʊt ˈtuː ˈbiː/",
+              "chinese": "结果是；证明是"
             },
             {
-              "phrase": "We take turns reading the dialogue aloud",
-              "phonetic": "/ˈwiː ˈteɪk ˈtɝːnz ˈriːdɪŋ ðə ˈdaɪəˌlɔːɡ əˈlaʊd/",
-              "chinese": "轮流做某事；原句语境：我们轮流朗读对话。"
+              "phrase": "take turns doing something",
+              "phonetic": "/ˈteɪk ˈtɝːnz ˈduːɪŋ ˈsʌmθɪŋ/",
+              "chinese": "轮流做某事"
             }
           ]
         }
@@ -1573,8 +1516,8 @@
           "phrase": "turn out to be",
           "phonetic": "/ˈtɝːn ˈaʊt ˈtuː ˈbiː/",
           "chinese": "结果是；证明是",
-          "example": "The missing record turned out to be a sync problem.",
-          "translation": "那条缺失的记录最后证明是同步问题。"
+          "example": "The quiet guest turned out to be a famous writer.",
+          "translation": "那位安静的客人原来是一位著名作家。"
         },
         {
           "phrase": "take turns doing something",
@@ -1590,16 +1533,16 @@
           "phonetic": "/ˈroʊˌteɪt/",
           "partOfSpeech": "v.",
           "chinese": "旋转；转动",
-          "difference": "rotate 侧重“旋转；转动”。对应的常用英文义是 “to move around, change direction, or become different”。turn 在本卡搭配“turn left”中表达“转动”；换词时要同时检查宾语和介词。"
+          "difference": "turn 与 rotate 在本卡义项下意思接近。rotate 强调围绕中心轴转动；turn 的范围更广，也可表示转向或改变状态。"
         }
       ],
       "antonyms": [
         {
-          "word": "remain",
-          "phonetic": "/rɪˈmeɪn/",
-          "partOfSpeech": "v.",
-          "chinese": "保持不变",
-          "usage": "在“转动”这个义项下，remain（保持不变）与 turn 形成对比。对应的常用英文义是 “opposite of turn”。只在这个明确义项和句型中对比，不把两个词的所有用法都视为相反。"
+          "word": "keep still",
+          "phonetic": "/ˈkiːp ˈstɪl/",
+          "partOfSpeech": "phr.",
+          "chinese": "保持不动",
+          "usage": "turn 与 keep still 在本卡义项下形成明确对比。turn 在核心义中表示转动；keep still 表示保持静止、不转动。"
         }
       ],
       "derivatives": [
@@ -1616,20 +1559,6 @@
           "partOfSpeech": "n.",
           "chinese": "营业额；人员流动率",
           "note": "常用于商业和人力资源语境。"
-        },
-        {
-          "word": "turner",
-          "phonetic": "/ˈtɝːnɚ/",
-          "partOfSpeech": "n.",
-          "chinese": "车工；体育协会会员",
-          "note": "turner 是 turn 的常用词族形式，作 n. 使用；对应的常用英文义是 “cooking utensil having a flat flexible part and a long handle”。"
-        },
-        {
-          "word": "turnery",
-          "phonetic": "/turnery/",
-          "partOfSpeech": "n.",
-          "chinese": "车床加工；车床工件；车工车间",
-          "note": "turnery 是 turn 的常用词族形式，作 n. 使用；对应的常用英文义是 “workshop where objects are made on a lathe”。"
         }
       ],
       "confusables": [
@@ -1643,83 +1572,25 @@
       ],
       "relatedVocabulary": [
         {
-          "category": "语义上位词：这个动作属于什么类别",
+          "category": "语义关联：一起理解更清楚",
           "items": [
             {
-              "word": "go",
-              "phonetic": "/ˈɡoʊ/",
+              "word": "rotate",
+              "phonetic": "/ˈroʊˌteɪt/",
               "partOfSpeech": "v.",
-              "chinese": "去"
+              "chinese": "旋转"
             },
             {
-              "word": "move",
-              "phonetic": "/ˈmuːv/",
-              "partOfSpeech": "v.",
-              "chinese": "移动"
+              "word": "direction",
+              "phonetic": "/dɚˈɛkʃən/",
+              "partOfSpeech": "n.",
+              "chinese": "方向"
             },
             {
               "word": "change",
-              "phonetic": "/tʃeɪndʒ/",
+              "phonetic": "/ˈtʃeɪndʒ/",
               "partOfSpeech": "v. / n.",
-              "chinese": "改变"
-            },
-            {
-              "word": "send",
-              "phonetic": "/ˈsɛnd/",
-              "partOfSpeech": "v.",
-              "chinese": "发送"
-            }
-          ]
-        },
-        {
-          "category": "具体动作：相关的更具体表达",
-          "items": [
-            {
-              "word": "face",
-              "phonetic": "/ˈfeɪs/",
-              "partOfSpeech": "v.",
-              "chinese": "脸；面容；正面"
-            },
-            {
-              "word": "roll",
-              "phonetic": "/ˈroʊl/",
-              "partOfSpeech": "v.",
-              "chinese": "卷；滚动；名单"
-            },
-            {
-              "word": "twist",
-              "phonetic": "/ˈtwɪst/",
-              "partOfSpeech": "v.",
-              "chinese": "一扭；扭曲；曲折"
-            }
-          ]
-        },
-        {
-          "category": "真实语境：例句中常与本词同现的词",
-          "items": [
-            {
-              "word": "take",
-              "phonetic": "/ˈteɪk/",
-              "partOfSpeech": "v.",
-              "chinese": "拿"
-            },
-            {
-              "word": "word",
-              "phonetic": "/ˈwɝːd/",
-              "partOfSpeech": "n.",
-              "chinese": "话；消息；词"
-            },
-            {
-              "word": "record",
-              "phonetic": "/rəˈkɔːrd/",
-              "partOfSpeech": "n.",
-              "chinese": "记录；履历；档案"
-            },
-            {
-              "word": "test",
-              "phonetic": "/ˈtɛst/",
-              "partOfSpeech": "n.",
-              "chinese": "测试；试验；化验；检验"
+              "chinese": "改变；变化"
             }
           ]
         }
@@ -1747,8 +1618,8 @@
         },
         {
           "scene": "易错结构",
-          "english": "The missing record turned out to be a sync problem.",
-          "chinese": "那条缺失的记录最后证明是同步问题。"
+          "english": "The quiet guest turned out to be a famous writer.",
+          "chinese": "那位安静的客人原来是一位著名作家。"
         },
         {
           "scene": "主动表达",
@@ -1757,9 +1628,9 @@
         }
       ],
       "studyFocus": {
-        "coreMeaning": "先掌握“转动”这个核心义，再用本卡的 1 个常用义项辨别不同语境。",
+        "coreMeaning": "先掌握“转动；旋转”这个核心义，再对比另外 2 个常用义项，辨别不同语境。",
         "keyCollocation": "把“turn left”连同介词、宾语和动词形式作为整个句块记忆。",
-        "commonMistake": "“take turns doing something”是需要动词 -ing 形式的固定结构；doing 是占位符，应换成具体动词的 -ing 形式。",
+        "commonMistake": "“take turns doing something”在本义下要求动词 -ing 形式；doing 是语法占位符，应换成具体动词的 -ing 形式，前面不要额外加 to。",
         "mustUseExample": "Turn left at the next traffic light.（在下一个红绿灯处左转。）"
       },
       "questions": [
@@ -1768,11 +1639,11 @@
           "type": "meaning_choice",
           "prompt": "“turn”最核心的中文含义是？",
           "options": [
-            "打开；开放；开始营业",
-            "转动；转向；变成",
-            "遇见；会面；满足"
+            "打开",
+            "转动；旋转",
+            "遇见"
           ],
-          "answer": "转动；转向；变成",
+          "answer": "转动；旋转",
           "stage": "T0",
           "ai": false
         },
@@ -1781,11 +1652,11 @@
           "type": "meaning_choice",
           "prompt": "哪一项英文释义最符合词卡中的 “turn”？",
           "options": [
-            "to move around, change direction, or become different",
+            "to move something around a central point",
             "to come together, encounter, or satisfy a requirement",
             "to make something accessible or begin operating"
           ],
-          "answer": "to move around, change direction, or become different",
+          "answer": "to move something around a central point",
           "stage": "T0",
           "ai": false
         },
@@ -1811,7 +1682,7 @@
             "return",
             "meet",
             "rotate",
-            "remain"
+            "keep still"
           ],
           "answer": "rotate",
           "stage": "T2",
@@ -1823,11 +1694,11 @@
           "prompt": "哪个词是词卡中列出的 “turn” 最直接反义词？",
           "options": [
             "meet",
-            "remain",
+            "keep still",
             "rotate",
             "return"
           ],
-          "answer": "remain",
+          "answer": "keep still",
           "stage": "T2",
           "ai": false
         },
@@ -1838,7 +1709,7 @@
           "options": [
             "return",
             "rotate",
-            "remain",
+            "keep still",
             "meet"
           ],
           "answer": "return",
@@ -1848,7 +1719,7 @@
         {
           "id": "turn-v-recall-definition",
           "type": "recall",
-          "prompt": "根据英文释义写出目标词：to move around, change direction, or become different",
+          "prompt": "根据英文释义写出目标词：to move something around a central point",
           "answer": "turn",
           "stage": "T1",
           "ai": false
@@ -1856,7 +1727,7 @@
         {
           "id": "turn-v-recall-chinese",
           "type": "recall",
-          "prompt": "写出符合“转动；转向；变成”（v.）的本课目标词。",
+          "prompt": "写出符合“转动；旋转”（v.）的本课目标词。",
           "answer": "turn",
           "stage": "T1",
           "ai": false
@@ -1936,7 +1807,7 @@
         {
           "id": "turn-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “turn” 写一个自然、真实的英文句子，含义必须符合词卡核心义“转动；转向；变成”。",
+          "prompt": "请用 “turn” 写一个自然、真实的英文句子，含义必须符合词卡核心义“转动；旋转”。",
           "answer": "",
           "stage": "T2",
           "ai": true
@@ -1952,7 +1823,7 @@
         {
           "id": "turn-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “turn” 和 “Turn left at the next” 结构，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “turn” 和 “turn left” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2012,7 +1883,7 @@
       },
       "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.2",
-      "contentVersion": "2026.09.08.2",
+      "contentVersion": "2026.09.09.4",
       "reviewed": false,
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
@@ -2052,9 +1923,9 @@
         "高频表达"
       ],
       "coreMemory": {
-        "chinese": "跑；运行；经营",
-        "english": "v. to move quickly, operate, or manage an activity or organization；v. move fast by using one's feet, with one foot off the ground at any given time",
-        "structure": "run a business /ˈrʌn ə ˈbɪznəs/（经营企业）；run an app /ˈrʌn ˈæn ˈæp/（运行应用）；run out of something /ˈrʌn ˈaʊt ˈʌv ˈsʌmθɪŋ/（用完某物）；run into a problem /ˈrʌn ˈɪntuː ə ˈprɑbləm/（遇到问题）",
+        "chinese": "跑；奔跑；运行；使运转；经营；管理",
+        "english": "v. to move quickly on foot；v. to make a machine, program, or system operate；v. to manage a business, organization, or activity",
+        "structure": "run a business /ˈrʌn ə ˈbɪznəs/（经营企业）；run a machine /ˈrʌn ə məˈʃiːn/（操作机器；使机器运转）；run out of something /ˈrʌn ˈaʊt ˈʌv ˈsʌmθɪŋ/（用完某物）；run into a problem /ˈrʌn ˈɪntuː ə ˈprɑbləm/（遇到问题）",
         "structures": [
           {
             "phrase": "run a business",
@@ -2062,9 +1933,9 @@
             "chinese": "经营企业"
           },
           {
-            "phrase": "run an app",
-            "phonetic": "/ˈrʌn ˈæn ˈæp/",
-            "chinese": "运行应用"
+            "phrase": "run a machine",
+            "phonetic": "/ˈrʌn ə məˈʃiːn/",
+            "chinese": "操作机器；使机器运转"
           },
           {
             "phrase": "run out of something",
@@ -2077,43 +1948,50 @@
             "chinese": "遇到问题"
           }
         ],
-        "commonError": "❌ run out something → ✅ run out of something；❌ run a problem → ✅ run into a problem",
+        "commonError": "❌ run out for something → ✅ run out of something；❌ run at a problem → ✅ run into a problem",
         "commonErrors": [
           {
-            "wrong": "run out something",
-            "wrongPhonetic": "/ˈrʌn ˈaʊt ˈsʌmθɪŋ/",
+            "wrong": "run out for something",
+            "wrongPhonetic": "/ˈrʌn ˈaʊt ˈfɔːr ˈsʌmθɪŋ/",
             "right": "run out of something",
             "rightPhonetic": "/ˈrʌn ˈaʊt ˈʌv ˈsʌmθɪŋ/",
-            "note": "在“run out of something”这个常用搭配中，介词 of 负责连接后面的对象或范围，不能省略或随意换成其他介词。"
+            "note": "在“run out of something”所表达的这个具体含义中，要用介词 of；换成 for 会破坏这个固定结构或改变原意。"
           },
           {
-            "wrong": "run a problem",
-            "wrongPhonetic": "/ˈrʌn ə ˈprɑbləm/",
+            "wrong": "run at a problem",
+            "wrongPhonetic": "/ˈrʌn ˈæt ə ˈprɑbləm/",
             "right": "run into a problem",
             "rightPhonetic": "/ˈrʌn ˈɪntuː ə ˈprɑbləm/",
-            "note": "在“run into a problem”这个常用搭配中，介词 into 负责连接后面的对象或范围，不能省略或随意换成其他介词。"
+            "note": "在“run into a problem”所表达的这个具体含义中，要用介词 into；换成 at 会破坏这个固定结构或改变原意。"
           }
         ],
-        "directSynonym": "operate /ˈɑpɚˌeɪt/（运行；经营）",
-        "directAntonym": "stop /ˈstɑp/（停止；中止）",
-        "derivatives": "runner · running · runaway",
+        "directSynonym": "move quickly on foot /ˈmuːv ˈkwɪkliː ˈɑn ˈfʊt/（快速跑动）",
+        "directAntonym": "stand still /ˈstænd ˈstɪl/（站着不动）",
+        "derivatives": "runner · running",
         "example": "She runs a small online business from home.",
         "exampleChinese": "她在家经营一家小型网店。"
       },
       "meanings": [
         {
           "partOfSpeech": "v.",
-          "english": "to move quickly, operate, or manage an activity or organization",
-          "chinese": "跑；运行；经营",
-          "example": "She runs a small online business from home.",
-          "translation": "她在家经营一家小型网店。"
+          "english": "to move quickly on foot",
+          "chinese": "跑；奔跑",
+          "example": "She runs in the park every morning.",
+          "translation": "她每天早上在公园跑步。"
         },
         {
           "partOfSpeech": "v.",
-          "english": "move fast by using one's feet, with one foot off the ground at any given time",
-          "chinese": "跑；运行；经营",
-          "example": "This phone can run the app smoothly.",
-          "translation": "这部手机能流畅运行这个应用。"
+          "english": "to make a machine, program, or system operate",
+          "chinese": "运行；使运转",
+          "example": "The workers run the machine in two shifts.",
+          "translation": "工人们分两班操作这台机器。"
+        },
+        {
+          "partOfSpeech": "v.",
+          "english": "to manage a business, organization, or activity",
+          "chinese": "经营；管理",
+          "example": "She runs a small online business from home.",
+          "translation": "她在家经营一家小型网店。"
         }
       ],
       "contextPhrases": [
@@ -2121,14 +1999,14 @@
           "category": "核心动作与结构",
           "items": [
             {
-              "phrase": "She runs a small online business",
-              "phonetic": "/ˈʃiː ˈrʌnz ə ˈsmɔːl ˈɔːˌnlaɪn ˈbɪznəs/",
-              "chinese": "经营企业；原句语境：她在家经营一家小型网店。"
+              "phrase": "run a business",
+              "phonetic": "/ˈrʌn ə ˈbɪznəs/",
+              "chinese": "经营企业"
             },
             {
-              "phrase": "phone can run the app smoothly",
-              "phonetic": "/ˈfoʊn ˈkæn ˈrʌn ðə ˈæp ˈsmuːðliː/",
-              "chinese": "运行应用；原句语境：这部手机能流畅运行这个应用。"
+              "phrase": "run a machine",
+              "phonetic": "/ˈrʌn ə məˈʃiːn/",
+              "chinese": "操作机器；使机器运转"
             }
           ]
         },
@@ -2136,14 +2014,14 @@
           "category": "日常与工作语境",
           "items": [
             {
-              "phrase": "We often run out of time when",
-              "phonetic": "/ˈwiː ˈɔːfən ˈrʌn ˈaʊt ˈʌv ˈtaɪm ˈwɛn/",
-              "chinese": "用完某物；原句语境：议程太长时，我们常常会没有时间。"
+              "phrase": "run out of something",
+              "phonetic": "/ˈrʌn ˈaʊt ˈʌv ˈsʌmθɪŋ/",
+              "chinese": "用完某物"
             },
             {
-              "phrase": "if you run into a problem during",
-              "phonetic": "/ˈɪf ˈjuː ˈrʌn ˈɪntuː ə ˈprɑbləm ˈdʊrɪŋ/",
-              "chinese": "遇到问题；原句语境：复习时如果遇到问题，请告诉我。"
+              "phrase": "run into a problem",
+              "phonetic": "/ˈrʌn ˈɪntuː ə ˈprɑbləm/",
+              "chinese": "遇到问题"
             }
           ]
         },
@@ -2151,14 +2029,14 @@
           "category": "高频扩展表达",
           "items": [
             {
-              "phrase": "Let us run through the questions before",
-              "phonetic": "/ˈlɛt ˈʌs ˈrʌn ˈθruː ðə ˈkwɛstʃənz bɪˈfɔːr/",
-              "chinese": "快速检查或演练某事；原句语境：测试前我们快速过一遍题目。"
+              "phrase": "run through something",
+              "phonetic": "/ˈrʌn ˈθruː ˈsʌmθɪŋ/",
+              "chinese": "快速检查或演练某事"
             },
             {
-              "phrase": "small lamp runs on two batteries",
-              "phonetic": "/ˈsmɔːl ˈlæmp ˈrʌnz ˈɑn ˈtuː ˈbætɚiːz/",
-              "chinese": "靠某物运行；原句语境：这盏小灯靠两节电池供电。"
+              "phrase": "run on something",
+              "phonetic": "/ˈrʌn ˈɑn ˈsʌmθɪŋ/",
+              "chinese": "靠某物运行"
             }
           ]
         }
@@ -2172,11 +2050,11 @@
           "translation": "她在家经营一家小型网店。"
         },
         {
-          "phrase": "run an app",
-          "phonetic": "/ˈrʌn ˈæn ˈæp/",
-          "chinese": "运行应用",
-          "example": "This phone can run the app smoothly.",
-          "translation": "这部手机能流畅运行这个应用。"
+          "phrase": "run a machine",
+          "phonetic": "/ˈrʌn ə məˈʃiːn/",
+          "chinese": "操作机器；使机器运转",
+          "example": "The workers run the machine in two shifts.",
+          "translation": "工人们分两班操作这台机器。"
         },
         {
           "phrase": "run out of something",
@@ -2209,20 +2087,20 @@
       ],
       "synonyms": [
         {
-          "word": "operate",
-          "phonetic": "/ˈɑpɚˌeɪt/",
-          "partOfSpeech": "v.",
-          "chinese": "运行；经营",
-          "difference": "operate 侧重“运行；经营”。对应的常用英文义是 “to move quickly, operate, or manage an activity or organization”。run 在本卡搭配“run a business”中表达“跑”；换词时要同时检查宾语和介词。"
+          "word": "move quickly on foot",
+          "phonetic": "/ˈmuːv ˈkwɪkliː ˈɑn ˈfʊt/",
+          "partOfSpeech": "phr.",
+          "chinese": "快速跑动",
+          "difference": "run 与 move quickly on foot 在本卡义项下意思接近。run 的核心动作是双脚快速移动；operate 只对应“运营、操作”这一独立词义，不能替代核心的“跑”。"
         }
       ],
       "antonyms": [
         {
-          "word": "stop",
-          "phonetic": "/ˈstɑp/",
-          "partOfSpeech": "v. / n.",
-          "chinese": "停止；中止",
-          "usage": "在“跑”这个义项下，stop（停止；中止）与 run 形成对比。对应的常用英文义是 “opposite of run”。只在这个明确义项和句型中对比，不把两个词的所有用法都视为相反。"
+          "word": "stand still",
+          "phonetic": "/ˈstænd ˈstɪl/",
+          "partOfSpeech": "phr.",
+          "chinese": "站着不动",
+          "usage": "run 与 stand still 在本卡义项下形成明确对比。run 表示快速移动；stand still 表示停在原地不动。"
         }
       ],
       "derivatives": [
@@ -2230,22 +2108,15 @@
           "word": "runner",
           "phonetic": "/ˈrʌnɚ/",
           "partOfSpeech": "n.",
-          "chinese": "跑步者；执行程序",
-          "note": "可指运动者，也可用于技术语境。"
+          "chinese": "跑步者；参赛者",
+          "note": "指跑步的人，也可指参加赛跑的人。"
         },
         {
           "word": "running",
           "phonetic": "/ˈrʌnɪŋ/",
           "partOfSpeech": "n. / adj.",
-          "chinese": "跑步；运行中的",
-          "note": "常见于 running water、running app。"
-        },
-        {
-          "word": "runaway",
-          "phonetic": "/ˈrʌnəˌweɪ/",
-          "partOfSpeech": "n.",
-          "chinese": "逃跑；逃走的人；逃亡",
-          "note": "runaway 是 run 的常用词族形式，作 n. 使用；对应的常用英文义是 “someone who flees from an uncongenial situation”。"
+          "chinese": "跑步；持续的；运转中的",
+          "note": "常见于 go running、running water 和 running costs。"
         }
       ],
       "confusables": [
@@ -2259,71 +2130,25 @@
       ],
       "relatedVocabulary": [
         {
-          "category": "语义上位词：这个动作属于什么类别",
+          "category": "语义关联：一起理解更清楚",
           "items": [
             {
-              "word": "be",
-              "phonetic": "/ˈbiː/",
+              "word": "walk",
+              "phonetic": "/ˈwɔːk/",
               "partOfSpeech": "v.",
-              "chinese": "是"
+              "chinese": "走路"
             },
             {
-              "word": "go",
-              "phonetic": "/ˈɡoʊ/",
-              "partOfSpeech": "v.",
-              "chinese": "去"
+              "word": "sprint",
+              "phonetic": "/ˈsprɪnt/",
+              "partOfSpeech": "v. / n.",
+              "chinese": "冲刺；短跑"
             },
             {
-              "word": "work",
-              "phonetic": "/ˈwɝːk/",
+              "word": "operate",
+              "phonetic": "/ˈɑpɚˌeɪt/",
               "partOfSpeech": "v.",
-              "chinese": "工作"
-            },
-            {
-              "word": "leave",
-              "phonetic": "/ˈliːv/",
-              "partOfSpeech": "v.",
-              "chinese": "离开"
-            }
-          ]
-        },
-        {
-          "category": "具体动作：相关的更具体表达",
-          "items": [
-            {
-              "word": "come",
-              "phonetic": "/ˈkʌm/",
-              "partOfSpeech": "v.",
-              "chinese": "来"
-            }
-          ]
-        },
-        {
-          "category": "真实语境：例句中常与本词同现的词",
-          "items": [
-            {
-              "word": "tell",
-              "phonetic": "/ˈtɛl/",
-              "partOfSpeech": "v.",
-              "chinese": "告诉"
-            },
-            {
-              "word": "question",
-              "phonetic": "/ˈkwɛstʃən/",
-              "partOfSpeech": "n.",
-              "chinese": "问题；询问；询问"
-            },
-            {
-              "word": "test",
-              "phonetic": "/ˈtɛst/",
-              "partOfSpeech": "n.",
-              "chinese": "测试；试验；化验；检验"
-            },
-            {
-              "word": "phone",
-              "phonetic": "/ˈfoʊn/",
-              "partOfSpeech": "n.",
-              "chinese": "电话；受话器；耳机"
+              "chinese": "运行；操作"
             }
           ]
         }
@@ -2336,8 +2161,8 @@
         },
         {
           "scene": "工作或学习",
-          "english": "This phone can run the app smoothly.",
-          "chinese": "这部手机能流畅运行这个应用。"
+          "english": "The workers run the machine in two shifts.",
+          "chinese": "工人们分两班操作这台机器。"
         },
         {
           "scene": "常见搭配",
@@ -2361,9 +2186,9 @@
         }
       ],
       "studyFocus": {
-        "coreMeaning": "先掌握“跑”这个核心义，再用本卡的 1 个常用义项辨别不同语境。",
+        "coreMeaning": "先掌握“跑；奔跑”这个核心义，再对比另外 2 个常用义项，辨别不同语境。",
         "keyCollocation": "把“run a business”连同介词、宾语和动词形式作为整个句块记忆。",
-        "commonMistake": "在“run out of something”这个常用搭配中，介词 of 负责连接后面的对象或范围，不能省略或随意换成其他介词。",
+        "commonMistake": "在“run out of something”所表达的这个具体含义中，要用介词 of；换成 for 会破坏这个固定结构或改变原意。",
         "mustUseExample": "She runs a small online business from home.（她在家经营一家小型网店。）"
       },
       "questions": [
@@ -2372,11 +2197,11 @@
           "type": "meaning_choice",
           "prompt": "“run”最核心的中文含义是？",
           "options": [
-            "跑；运行；经营",
-            "感谢；谢谢",
-            "考虑；认为"
+            "跑；奔跑",
+            "感谢",
+            "考虑"
           ],
-          "answer": "跑；运行；经营",
+          "answer": "跑；奔跑",
           "stage": "T0",
           "ai": false
         },
@@ -2387,9 +2212,9 @@
           "options": [
             "to express gratitude to someone",
             "to think carefully about something",
-            "to move quickly, operate, or manage an activity or organization"
+            "to move quickly on foot"
           ],
-          "answer": "to move quickly, operate, or manage an activity or organization",
+          "answer": "to move quickly on foot",
           "stage": "T0",
           "ai": false
         },
@@ -2401,7 +2226,7 @@
             "run out of something",
             "run into a problem",
             "run a business",
-            "run an app"
+            "run a machine"
           ],
           "answer": "run a business",
           "stage": "T1",
@@ -2412,12 +2237,12 @@
           "type": "meaning_choice",
           "prompt": "哪个词是词卡中列出的 “run” 最直接近义词？",
           "options": [
-            "consider",
-            "operate",
-            "stop",
-            "thank"
+            "thank",
+            "move quickly on foot",
+            "stand still",
+            "operate"
           ],
-          "answer": "operate",
+          "answer": "move quickly on foot",
           "stage": "T2",
           "ai": false
         },
@@ -2426,12 +2251,12 @@
           "type": "meaning_choice",
           "prompt": "哪个词是词卡中列出的 “run” 最直接反义词？",
           "options": [
-            "stop",
+            "stand still",
+            "move quickly on foot",
             "operate",
-            "thank",
-            "consider"
+            "thank"
           ],
-          "answer": "stop",
+          "answer": "stand still",
           "stage": "T2",
           "ai": false
         },
@@ -2440,9 +2265,9 @@
           "type": "meaning_choice",
           "prompt": "根据本词卡辨析，哪个词被列为 “run” 的易混词？",
           "options": [
-            "stop",
+            "move quickly on foot",
+            "stand still",
             "thank",
-            "consider",
             "operate"
           ],
           "answer": "operate",
@@ -2452,7 +2277,7 @@
         {
           "id": "run-v-recall-definition",
           "type": "recall",
-          "prompt": "根据英文释义写出目标词：to move quickly, operate, or manage an activity or organization",
+          "prompt": "根据英文释义写出目标词：to move quickly on foot",
           "answer": "run",
           "stage": "T1",
           "ai": false
@@ -2460,7 +2285,7 @@
         {
           "id": "run-v-recall-chinese",
           "type": "recall",
-          "prompt": "写出符合“跑；运行；经营”（v.）的本课目标词。",
+          "prompt": "写出符合“跑；奔跑”（v.）的本课目标词。",
           "answer": "run",
           "stage": "T1",
           "ai": false
@@ -2476,14 +2301,14 @@
         {
           "id": "run-v-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "句型应用：哪一项既表示“运行应用”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+          "prompt": "句型应用：哪一项既表示“操作机器；使机器运转”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "run an app",
+            "run a machine",
             "run a business",
             "run out of something",
             "run into a problem"
           ],
-          "answer": "run an app",
+          "answer": "run a machine",
           "stage": "T1",
           "ai": false
         },
@@ -2509,7 +2334,7 @@
             "run out of something",
             "run into a problem",
             "run a business",
-            "run an app"
+            "run a machine"
           ],
           "answer": "run a business",
           "stage": "T2",
@@ -2518,14 +2343,14 @@
         {
           "id": "run-v-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "用法辨析：哪一项既表示“运行应用”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+          "prompt": "用法辨析：哪一项既表示“操作机器；使机器运转”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "run into a problem",
-            "run an app",
+            "run a machine",
             "run a business",
             "run out of something"
           ],
-          "answer": "run an app",
+          "answer": "run a machine",
           "stage": "T3",
           "ai": false
         },
@@ -2540,7 +2365,7 @@
         {
           "id": "run-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “run” 写一个自然、真实的英文句子，含义必须符合词卡核心义“跑；运行；经营”。",
+          "prompt": "请用 “run” 写一个自然、真实的英文句子，含义必须符合词卡核心义“跑；奔跑”。",
           "answer": "",
           "stage": "T2",
           "ai": true
@@ -2556,7 +2381,7 @@
         {
           "id": "run-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “run” 和 “She runs a small online business” 结构，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “run” 和 “run a business” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2616,7 +2441,7 @@
       },
       "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.2",
-      "contentVersion": "2026.09.08.2",
+      "contentVersion": "2026.09.09.4",
       "reviewed": false,
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
@@ -2646,7 +2471,7 @@
         "groupOrder": 1,
         "primaryCocaRank": 209
       },
-      "phonetic": "/ˈlaɪv/",
+      "phonetic": "/lɪv/",
       "syllables": "live（单音节）",
       "partOfSpeech": "v.",
       "frequencyBand": "COCA 高频精选 · v. 第 209 名；adj. 第 1853 名",
@@ -2656,66 +2481,66 @@
         "高频表达"
       ],
       "coreMemory": {
-        "chinese": "生活；居住；活着",
-        "english": "v. to be alive or make a home in a place；v. have life, be alive",
-        "structure": "live in a place /ˈlaɪv ɪn ə ˈpleɪs/（住在某地）；live with someone /ˈlaɪv ˈwɪð ˈsʌˌmwʌn/（与某人同住）；live a healthy life /ˈlaɪv ə ˈhɛlθiː ˈlaɪf/（过健康的生活）；live on something /ˈlaɪv ˈɑn ˈsʌmθɪŋ/（靠某物生活）",
+        "chinese": "活着；生活；居住；住",
+        "english": "v. to be alive or continue to have life；v. to have your home in a particular place",
+        "structure": "live in a place /lɪv ɪn ə ˈpleɪs/（住在某地）；live with someone /lɪv ˈwɪð ˈsʌˌmwʌn/（与某人同住）；live a healthy life /lɪv ə ˈhɛlθiː ˈlaɪf/（过健康的生活）；live on something /lɪv ˈɑn ˈsʌmθɪŋ/（靠某物生活）",
         "structures": [
           {
             "phrase": "live in a place",
-            "phonetic": "/ˈlaɪv ɪn ə ˈpleɪs/",
+            "phonetic": "/lɪv ɪn ə ˈpleɪs/",
             "chinese": "住在某地"
           },
           {
             "phrase": "live with someone",
-            "phonetic": "/ˈlaɪv ˈwɪð ˈsʌˌmwʌn/",
+            "phonetic": "/lɪv ˈwɪð ˈsʌˌmwʌn/",
             "chinese": "与某人同住"
           },
           {
             "phrase": "live a healthy life",
-            "phonetic": "/ˈlaɪv ə ˈhɛlθiː ˈlaɪf/",
+            "phonetic": "/lɪv ə ˈhɛlθiː ˈlaɪf/",
             "chinese": "过健康的生活"
           },
           {
             "phrase": "live on something",
-            "phonetic": "/ˈlaɪv ˈɑn ˈsʌmθɪŋ/",
+            "phonetic": "/lɪv ˈɑn ˈsʌmθɪŋ/",
             "chinese": "靠某物生活"
           }
         ],
-        "commonError": "❌ live a place → ✅ live in a place；❌ live someone → ✅ live with someone",
+        "commonError": "❌ live at a place → ✅ live in a place；❌ live at someone → ✅ live with someone",
         "commonErrors": [
           {
-            "wrong": "live a place",
-            "wrongPhonetic": "/ˈlaɪv ə ˈpleɪs/",
+            "wrong": "live at a place",
+            "wrongPhonetic": "/lɪv ˈæt ə ˈpleɪs/",
             "right": "live in a place",
-            "rightPhonetic": "/ˈlaɪv ɪn ə ˈpleɪs/",
-            "note": "在“live in a place”这个常用搭配中，介词 in 负责连接后面的对象或范围，不能省略或随意换成其他介词。"
+            "rightPhonetic": "/lɪv ɪn ə ˈpleɪs/",
+            "note": "在“live in a place”所表达的这个具体含义中，要用介词 in；换成 at 会破坏这个固定结构或改变原意。"
           },
           {
-            "wrong": "live someone",
-            "wrongPhonetic": "/ˈlaɪv ˈsʌˌmwʌn/",
+            "wrong": "live at someone",
+            "wrongPhonetic": "/lɪv ˈæt ˈsʌˌmwʌn/",
             "right": "live with someone",
-            "rightPhonetic": "/ˈlaɪv ˈwɪð ˈsʌˌmwʌn/",
-            "note": "在“live with someone”这个常用搭配中，介词 with 负责连接后面的对象或范围，不能省略或随意换成其他介词。"
+            "rightPhonetic": "/lɪv ˈwɪð ˈsʌˌmwʌn/",
+            "note": "在“live with someone”所表达的这个具体含义中，要用介词 with；换成 at 会破坏这个固定结构或改变原意。"
           }
         ],
-        "directSynonym": "reside /rɪˈzaɪd/（居住；定居）",
+        "directSynonym": "be alive /ˈbiː əˈlaɪv/（活着；有生命）",
         "directAntonym": "die /ˈdaɪ/（死亡）",
-        "derivatives": "living · lively · liver",
+        "derivatives": "living · lively",
         "example": "I live in Shanghai and work from home.",
         "exampleChinese": "我住在上海，在家办公。"
       },
       "meanings": [
         {
           "partOfSpeech": "v.",
-          "english": "to be alive or make a home in a place",
-          "chinese": "生活；居住；活着",
+          "english": "to be alive or continue to have life",
+          "chinese": "活着；生活",
           "example": "I live in Shanghai and work from home.",
           "translation": "我住在上海，在家办公。"
         },
         {
           "partOfSpeech": "v.",
-          "english": "have life, be alive",
-          "chinese": "生活；居住；活着",
+          "english": "to have your home in a particular place",
+          "chinese": "居住；住",
           "example": "She lives with her parents near the university.",
           "translation": "她和父母住在大学附近。"
         }
@@ -2725,14 +2550,14 @@
           "category": "核心动作与结构",
           "items": [
             {
-              "phrase": "I live in Shanghai and work",
-              "phonetic": "/ˈaɪ ˈlaɪv ɪn ˈʃæˈŋhaɪ ənd ˈwɝːk/",
-              "chinese": "住在某地；原句语境：我住在上海，在家办公。"
+              "phrase": "live in a place",
+              "phonetic": "/lɪv ɪn ə ˈpleɪs/",
+              "chinese": "住在某地"
             },
             {
-              "phrase": "She lives with her parents near",
-              "phonetic": "/ˈʃiː ˈlɪvz ˈwɪð ˈhɝː ˈpɛrənts ˈnɪr/",
-              "chinese": "与某人同住；原句语境：她和父母住在大学附近。"
+              "phrase": "live with someone",
+              "phonetic": "/lɪv ˈwɪð ˈsʌˌmwʌn/",
+              "chinese": "与某人同住"
             }
           ]
         },
@@ -2740,14 +2565,14 @@
           "category": "日常与工作语境",
           "items": [
             {
-              "phrase": "helps you live a healthier life",
-              "phonetic": "/ˈhɛlps ˈjuː ˈlaɪv ə ˈhɛlθiːɚ ˈlaɪf/",
-              "chinese": "过健康的生活；原句语境：规律睡眠有助于过更健康的生活。"
+              "phrase": "live a healthy life",
+              "phonetic": "/lɪv ə ˈhɛlθiː ˈlaɪf/",
+              "chinese": "过健康的生活"
             },
             {
-              "phrase": "Many students live on a limited budget",
-              "phonetic": "/ˈmɛniː ˈstuːdənts ˈlaɪv ˈɑn ə ˈlɪmətəd ˈbʌdʒɪt/",
-              "chinese": "靠某物生活；原句语境：许多学生靠有限的预算生活。"
+              "phrase": "live on something",
+              "phonetic": "/lɪv ˈɑn ˈsʌmθɪŋ/",
+              "chinese": "靠某物生活"
             }
           ]
         },
@@ -2755,14 +2580,14 @@
           "category": "高频扩展表达",
           "items": [
             {
-              "phrase": "needs to live up to users expectations",
-              "phonetic": "/ˈniːdz ˈtuː ˈlaɪv ˈʌp ˈtuː ˈjuːzɚz ˌɛkspɛˈkteɪʃənz/",
-              "chinese": "达到；不辜负某事；原句语境：新版本需要达到用户的期望。"
+              "phrase": "live up to something",
+              "phonetic": "/lɪv ˈʌp ˈtuː ˈsʌmθɪŋ/",
+              "chinese": "达到；不辜负某事"
             },
             {
-              "phrase": "Some expressions live through generations of change",
-              "phonetic": "/ˈsʌm ɪˈksprɛʃənz ˈlaɪv ˈθruː ˌdʒɛnɚˈeɪʃənz ˈʌv ˈtʃeɪndʒ/",
-              "chinese": "经历并挺过某事；原句语境：有些表达历经数代变化仍在使用。"
+              "phrase": "live through something",
+              "phonetic": "/lɪv ˈθruː ˈsʌmθɪŋ/",
+              "chinese": "经历并挺过某事"
             }
           ]
         }
@@ -2770,42 +2595,42 @@
       "fixedPhrases": [
         {
           "phrase": "live in a place",
-          "phonetic": "/ˈlaɪv ɪn ə ˈpleɪs/",
+          "phonetic": "/lɪv ɪn ə ˈpleɪs/",
           "chinese": "住在某地",
           "example": "I live in Shanghai and work from home.",
           "translation": "我住在上海，在家办公。"
         },
         {
           "phrase": "live with someone",
-          "phonetic": "/ˈlaɪv ˈwɪð ˈsʌˌmwʌn/",
+          "phonetic": "/lɪv ˈwɪð ˈsʌˌmwʌn/",
           "chinese": "与某人同住",
           "example": "She lives with her parents near the university.",
           "translation": "她和父母住在大学附近。"
         },
         {
           "phrase": "live a healthy life",
-          "phonetic": "/ˈlaɪv ə ˈhɛlθiː ˈlaɪf/",
+          "phonetic": "/lɪv ə ˈhɛlθiː ˈlaɪf/",
           "chinese": "过健康的生活",
           "example": "Regular sleep helps you live a healthier life.",
           "translation": "规律睡眠有助于过更健康的生活。"
         },
         {
           "phrase": "live on something",
-          "phonetic": "/ˈlaɪv ˈɑn ˈsʌmθɪŋ/",
+          "phonetic": "/lɪv ˈɑn ˈsʌmθɪŋ/",
           "chinese": "靠某物生活",
           "example": "Many students live on a limited budget.",
           "translation": "许多学生靠有限的预算生活。"
         },
         {
           "phrase": "live up to something",
-          "phonetic": "/ˈlaɪv ˈʌp ˈtuː ˈsʌmθɪŋ/",
+          "phonetic": "/lɪv ˈʌp ˈtuː ˈsʌmθɪŋ/",
           "chinese": "达到；不辜负某事",
-          "example": "The new version needs to live up to users’ expectations.",
-          "translation": "新版本需要达到用户的期望。"
+          "example": "The restaurant must live up to its excellent reputation.",
+          "translation": "这家餐厅必须不负它的盛名。"
         },
         {
           "phrase": "live through something",
-          "phonetic": "/ˈlaɪv ˈθruː ˈsʌmθɪŋ/",
+          "phonetic": "/lɪv ˈθruː ˈsʌmθɪŋ/",
           "chinese": "经历并挺过某事",
           "example": "Some expressions live through generations of change.",
           "translation": "有些表达历经数代变化仍在使用。"
@@ -2813,11 +2638,11 @@
       ],
       "synonyms": [
         {
-          "word": "reside",
-          "phonetic": "/rɪˈzaɪd/",
-          "partOfSpeech": "v.",
-          "chinese": "居住；定居",
-          "difference": "reside 侧重“居住；定居”。对应的常用英文义是 “to be alive or make a home in a place”。live 在本卡搭配“live in a place”中表达“生活”；换词时要同时检查宾语和介词。"
+          "word": "be alive",
+          "phonetic": "/ˈbiː əˈlaɪv/",
+          "partOfSpeech": "phr.",
+          "chinese": "活着；有生命",
+          "difference": "live 与 be alive 在本卡义项下意思接近。live 的核心义是处于有生命的状态；reside 只对应“居住”这一词义。"
         }
       ],
       "antonyms": [
@@ -2826,7 +2651,7 @@
           "phonetic": "/ˈdaɪ/",
           "partOfSpeech": "v.",
           "chinese": "死亡",
-          "usage": "在“生活”这个义项下，die（死亡）与 live 形成对比。对应的常用英文义是 “opposite of live”。只在这个明确义项和句型中对比，不把两个词的所有用法都视为相反。"
+          "usage": "live 与 die 在本卡义项下形成明确对比。live 表示活着；die 表示生命结束。"
         }
       ],
       "derivatives": [
@@ -2843,13 +2668,6 @@
           "partOfSpeech": "adj.",
           "chinese": "活泼的；生动的",
           "note": "常形容人、讨论或场所。"
-        },
-        {
-          "word": "liver",
-          "phonetic": "/ˈlɪvɚ/",
-          "partOfSpeech": "n.",
-          "chinese": "肝脏；生活者；居民",
-          "note": "liver 是 live 的常用词族形式，作 n. 使用；对应的常用英文义是 “someone who lives in a place”。"
         }
       ],
       "confusables": [
@@ -2863,83 +2681,25 @@
       ],
       "relatedVocabulary": [
         {
-          "category": "语义上位词：这个动作属于什么类别",
+          "category": "语义关联：一起理解更清楚",
           "items": [
             {
-              "word": "be",
-              "phonetic": "/ˈbiː/",
-              "partOfSpeech": "v.",
-              "chinese": "是"
+              "word": "life",
+              "phonetic": "/ˈlaɪf/",
+              "partOfSpeech": "n.",
+              "chinese": "生命；生活"
             },
             {
-              "word": "see",
-              "phonetic": "/ˈsiː/",
-              "partOfSpeech": "v.",
-              "chinese": "看见"
+              "word": "home",
+              "phonetic": "/ˈhoʊm/",
+              "partOfSpeech": "n. / adv.",
+              "chinese": "家；在家"
             },
             {
-              "word": "experience",
-              "phonetic": "/ɪˈkspɪriːəns/",
+              "word": "survive",
+              "phonetic": "/sɚˈvaɪv/",
               "partOfSpeech": "v.",
-              "chinese": "经历；经验；体验"
-            }
-          ]
-        },
-        {
-          "category": "具体动作：相关的更具体表达",
-          "items": [
-            {
-              "word": "move",
-              "phonetic": "/ˈmuːv/",
-              "partOfSpeech": "v.",
-              "chinese": "移动"
-            },
-            {
-              "word": "people",
-              "phonetic": "/ˈpiːpəl/",
-              "partOfSpeech": "v.",
-              "chinese": "人；人民；民族"
-            },
-            {
-              "word": "camp",
-              "phonetic": "/ˈkæmp/",
-              "partOfSpeech": "v.",
-              "chinese": "露营；帐篷；露营"
-            },
-            {
-              "word": "occupy",
-              "phonetic": "/ˈɑkjəˌpaɪ/",
-              "partOfSpeech": "v.",
-              "chinese": "占领；占(时间、空间等)；住进"
-            }
-          ]
-        },
-        {
-          "category": "真实语境：例句中常与本词同现的词",
-          "items": [
-            {
-              "word": "work",
-              "phonetic": "/ˈwɝːk/",
-              "partOfSpeech": "v.",
-              "chinese": "工作"
-            },
-            {
-              "word": "need",
-              "phonetic": "/ˈniːd/",
-              "partOfSpeech": "v.",
-              "chinese": "需要"
-            },
-            {
-              "word": "help",
-              "phonetic": "/ˈhɛlp/",
-              "partOfSpeech": "v.",
-              "chinese": "帮助"
-            },
-            {
-              "word": "change",
-              "phonetic": "/tʃeɪndʒ/",
-              "partOfSpeech": "v. / n.",
-              "chinese": "改变"
+              "chinese": "生存"
             }
           ]
         }
@@ -2967,8 +2727,8 @@
         },
         {
           "scene": "易错结构",
-          "english": "The new version needs to live up to users’ expectations.",
-          "chinese": "新版本需要达到用户的期望。"
+          "english": "The restaurant must live up to its excellent reputation.",
+          "chinese": "这家餐厅必须不负它的盛名。"
         },
         {
           "scene": "主动表达",
@@ -2977,9 +2737,9 @@
         }
       ],
       "studyFocus": {
-        "coreMeaning": "先掌握“生活”这个核心义，再用本卡的 1 个常用义项辨别不同语境。",
+        "coreMeaning": "先掌握“活着；生活”这个核心义，再对比另外 1 个常用义项，辨别不同语境。",
         "keyCollocation": "把“live in a place”连同介词、宾语和动词形式作为整个句块记忆。",
-        "commonMistake": "在“live in a place”这个常用搭配中，介词 in 负责连接后面的对象或范围，不能省略或随意换成其他介词。",
+        "commonMistake": "在“live in a place”所表达的这个具体含义中，要用介词 in；换成 at 会破坏这个固定结构或改变原意。",
         "mustUseExample": "I live in Shanghai and work from home.（我住在上海，在家办公。）"
       },
       "questions": [
@@ -2988,11 +2748,11 @@
           "type": "meaning_choice",
           "prompt": "“live”最核心的中文含义是？",
           "options": [
-            "改变；变化",
-            "希望；期望",
-            "生活；居住；活着"
+            "改变",
+            "希望",
+            "活着；生活"
           ],
-          "answer": "生活；居住；活着",
+          "answer": "活着；生活",
           "stage": "T0",
           "ai": false
         },
@@ -3002,10 +2762,10 @@
           "prompt": "哪一项英文释义最符合词卡中的 “live”？",
           "options": [
             "to want something to happen and believe it is possible",
-            "to be alive or make a home in a place",
+            "to be alive or continue to have life",
             "to become or make something different"
           ],
-          "answer": "to be alive or make a home in a place",
+          "answer": "to be alive or continue to have life",
           "stage": "T0",
           "ai": false
         },
@@ -3028,12 +2788,12 @@
           "type": "meaning_choice",
           "prompt": "哪个词是词卡中列出的 “live” 最直接近义词？",
           "options": [
-            "reside",
+            "be alive",
             "die",
             "leave",
             "change"
           ],
-          "answer": "reside",
+          "answer": "be alive",
           "stage": "T2",
           "ai": false
         },
@@ -3042,7 +2802,7 @@
           "type": "meaning_choice",
           "prompt": "哪个词是词卡中列出的 “live” 最直接反义词？",
           "options": [
-            "reside",
+            "be alive",
             "leave",
             "change",
             "die"
@@ -3059,7 +2819,7 @@
             "die",
             "change",
             "leave",
-            "reside"
+            "be alive"
           ],
           "answer": "leave",
           "stage": "T3",
@@ -3068,7 +2828,7 @@
         {
           "id": "live-v-recall-definition",
           "type": "recall",
-          "prompt": "根据英文释义写出目标词：to be alive or make a home in a place",
+          "prompt": "根据英文释义写出目标词：to be alive or continue to have life",
           "answer": "live",
           "stage": "T1",
           "ai": false
@@ -3076,7 +2836,7 @@
         {
           "id": "live-v-recall-chinese",
           "type": "recall",
-          "prompt": "写出符合“生活；居住；活着”（v.）的本课目标词。",
+          "prompt": "写出符合“活着；生活”（v.）的本课目标词。",
           "answer": "live",
           "stage": "T1",
           "ai": false
@@ -3156,7 +2916,7 @@
         {
           "id": "live-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “live” 写一个自然、真实的英文句子，含义必须符合词卡核心义“生活；居住；活着”。",
+          "prompt": "请用 “live” 写一个自然、真实的英文句子，含义必须符合词卡核心义“活着；生活”。",
           "answer": "",
           "stage": "T2",
           "ai": true
@@ -3172,7 +2932,7 @@
         {
           "id": "live-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “live” 和 “I live in Shanghai and work” 结构，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “live” 和 “live in a place” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -3232,7 +2992,7 @@
       },
       "detailLevel": "template-complete",
       "templateVersion": "learning-template-2026.08.19.2",
-      "contentVersion": "2026.09.08.2",
+      "contentVersion": "2026.09.09.4",
       "reviewed": false,
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     }

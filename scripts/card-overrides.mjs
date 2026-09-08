@@ -63,7 +63,7 @@ export const cardOverrides = {
       ['学习方法', 'Reading aloud can improve your pronunciation.', '朗读可以改善你的发音。'],
       ['工作表现', 'The new checklist improved our efficiency.', '新的检查表提高了我们的效率。'],
       ['健康状况', 'Her health improved after she began sleeping regularly.', '她开始规律睡眠后，健康状况好转了。'],
-      ['产品迭代', 'We are trying to improve the app based on user feedback.', '我们正根据用户反馈改进这个应用。'],
+      ['服务改进', 'The hotel is trying to improve its service based on guest feedback.', '这家酒店正根据客人的反馈改进服务。'],
       ['数据变化', 'Customer satisfaction improved by eight percent.', '客户满意度提高了百分之八。'],
       ['逐渐好转', 'The weather should improve later this afternoon.', '今天下午晚些时候天气应该会好转。'],
       ['比较版本', 'This model improves on the previous one in several ways.', '这个型号在几个方面优于上一款。'],
@@ -178,7 +178,7 @@ export const cardOverrides = {
       ['provide support for', '为……提供支持', 'The guide provides support for new learners.', '这份指南为新学习者提供帮助。'],
       ['in support of', '支持；拥护', 'Thousands marched in support of the proposal.', '数千人游行支持这项提议。'],
       ['with the support of', '在……的支持下', 'She completed the project with the support of her team.', '她在团队支持下完成了项目。'],
-      ['technical support', '技术支持', 'Please contact technical support if the app stops working.', '如果应用停止运行，请联系技术支持。'],
+      ['technical support', '技术支持', 'The laboratory provides technical support for new equipment.', '实验室为新设备提供技术支持。'],
       ['a source of support', '支持的来源；支柱', 'Her friends were a major source of support.', '她的朋友是她重要的精神支柱。']
     ],
     synonyms: [
@@ -417,6 +417,7 @@ export const cardOverrides = {
     derivatives: [
       ['provider', 'n.', '提供者；供应商', '非常常用，如 service provider、healthcare provider。'],
       ['provision', 'n.', '提供；供应；条款', '正式用词；provision of services 表示“服务的提供”，法律文本中还可表示“条款”。'],
+      ['provisional', 'adj.', '临时的；暂定的', '来自 provision 这一词族，常见于 provisional plan、provisional date。'],
       ['provided', 'conj.', '只要；如果', '常用结构 provided that，较正式；它不是 provide 的普通过去式义项。'],
       ['providing', 'conj.', '只要；如果', 'providing that 与 provided that 含义相同，口语中也可见。']
     ],

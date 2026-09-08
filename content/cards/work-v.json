@@ -34,7 +34,7 @@
     "高频表达"
   ],
   "coreMemory": {
-    "chinese": "工作；处理；奏效",
+    "chinese": "工作；任职；做；处理；致力于；运转；运行；奏效；起作用；努力解决；逐步完成；劳动；努力；作品；成果",
     "english": "v. to do a job, especially to earn money；v. to spend time and effort doing something；v. to operate or function correctly；v. to produce the result you want；v. to gradually solve or move through something；n. a job or the activities you do in a job；n. effort used to achieve something；n. something produced by an artist, writer, or creator",
     "structure": "work on something /ˈwɝːk ˈɑn ˈsʌmθɪŋ/（从事；处理某事）；work for someone /ˈwɝːk ˈfɔːr ˈsʌˌmwʌn/（为某人或某机构工作）；work as something /ˈwɝːk ˈæz ˈsʌmθɪŋ/（担任某种职业）；work with someone /ˈwɝːk ˈwɪð ˈsʌˌmwʌn/（与某人共事）",
     "structures": [
@@ -85,7 +85,7 @@
     ],
     "directSynonym": "labor /ˈleɪbɚ/（劳动；劳作）；function /ˈfʌŋkʃən/（运转；发挥作用）；operate /ˈɑpɚˌeɪt/（操作；运转）；job /ˈdʒɑb/（工作；职位）；employment /ɛˈmplɔɪmənt/（就业；受雇）",
     "directAntonym": "rest /ˈrɛst/（休息）；relax /rɪˈlæks/（放松）；fail /ˈfeɪl/（失败；失灵）；unemployment /ˌʌnɪˈmplɔɪmənt/（失业）",
-    "derivatives": "worker · working · workable · workplace · workforce · workaholic · workmanship",
+    "derivatives": "worker · workplace · workforce · workaholic · workmanship · working · workable",
     "example": "I need to work on my pronunciation this week.",
     "exampleChinese": "这周我需要改进发音。"
   },
@@ -411,20 +411,6 @@
       "note": "非常常用，可泛指从事某类工作的人。"
     },
     {
-      "word": "working",
-      "phonetic": "/ˈwɝːkɪŋ/",
-      "partOfSpeech": "adj.",
-      "chinese": "工作的；可用的",
-      "note": "常见于 working hours 和 working model。"
-    },
-    {
-      "word": "workable",
-      "phonetic": "/ˈwɝːkəbəl/",
-      "partOfSpeech": "adj.",
-      "chinese": "可行的；行得通的",
-      "note": "常用于计划、方案和解决办法。"
-    },
-    {
       "word": "workplace",
       "phonetic": "/ˈwɝːˌkpleɪs/",
       "partOfSpeech": "n.",
@@ -451,6 +437,20 @@
       "partOfSpeech": "n.",
       "chinese": "工艺；做工",
       "note": "常见于产品质量语境。"
+    },
+    {
+      "word": "working",
+      "phonetic": "/ˈwɝːkɪŋ/",
+      "partOfSpeech": "adj.",
+      "chinese": "工作的；可用的",
+      "note": "常见于 working hours 和 working model。"
+    },
+    {
+      "word": "workable",
+      "phonetic": "/ˈwɝːkəbəl/",
+      "partOfSpeech": "adj.",
+      "chinese": "可行的；行得通的",
+      "note": "常用于计划、方案和解决办法。"
     }
   ],
   "confusables": [
@@ -651,11 +651,11 @@
       "type": "meaning_choice",
       "prompt": "“work”最核心的中文含义是？",
       "options": [
-        "工作；处理；奏效",
-        "展示；表明；带领",
-        "观看；注视；留意"
+        "工作；任职",
+        "展示",
+        "观看"
       ],
-      "answer": "工作；处理；奏效",
+      "answer": "工作；任职",
       "stage": "T0",
       "ai": false
     },
@@ -739,7 +739,7 @@
     {
       "id": "work-v-recall-chinese",
       "type": "recall",
-      "prompt": "写出符合“工作；处理；奏效”（v.）的本课目标词。",
+      "prompt": "写出符合“工作；任职”（v.）的本课目标词。",
       "answer": "work",
       "stage": "T1",
       "ai": false
@@ -819,7 +819,7 @@
     {
       "id": "work-v-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “work” 写一个自然、真实的英文句子，含义必须符合词卡核心义“工作；处理；奏效”。",
+      "prompt": "请用 “work” 写一个自然、真实的英文句子，含义必须符合词卡核心义“工作；任职”。",
       "answer": "",
       "stage": "T2",
       "ai": true
@@ -895,7 +895,7 @@
   },
   "detailLevel": "template-reference",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.09.08.2",
+  "contentVersion": "2026.09.09.4",
   "reviewed": true,
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

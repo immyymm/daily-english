@@ -130,7 +130,7 @@ export function CardDetailModal({ card, progress, open, onClose, onLearn }: Card
   return (
     <ModalShell
       open={open}
-      title="完整单词词卡"
+      title="单词词卡"
       eyebrow={progress?.status ?? '今日新词'}
       onClose={onClose}
       footer={
@@ -180,16 +180,12 @@ export function CardDetailModal({ card, progress, open, onClose, onLearn }: Card
                   <ListenButton text={card.word} label={'播放 ' + card.word + ' 的发音'} />
                 </div>
                 <div className="memory-meaning-list">
-                  <div className="memory-core-summary">
-                    <span>{card.partOfSpeech}</span>
-                    <strong>{card.coreMemory.chinese}</strong>
-                    <em>核心义</em>
-                  </div>
-                  {meaningRows.map((meaning) => (
-                    <div className="memory-meaning-item" key={meaning.partOfSpeech + meaning.english}>
+                  {meaningRows.map((meaning, index) => (
+                    <div className={'memory-meaning-item' + (index === 0 ? ' core' : '')} key={meaning.partOfSpeech + meaning.english}>
                       <div className="memory-meaning-chinese">
                         <span>{meaning.partOfSpeech}</span>
                         <b>{meaning.chinese}</b>
+                        {index === 0 && <em>核心义</em>}
                       </div>
                       <p>{meaning.english}</p>
                     </div>
@@ -295,12 +291,12 @@ export function CardDetailModal({ card, progress, open, onClose, onLearn }: Card
         </LearningSection>
 
         <LearningSection meta={sectionMeta[7]} count={counts.related} open={expanded.has('related')} onToggle={() => toggle('related')}>
-          {card.relatedVocabulary.map((group) => (
+          {card.relatedVocabulary.length ? card.relatedVocabulary.map((group) => (
             <section className="content-card" key={group.category}>
               <span className="content-label">{group.category}</span>
               {group.items.map((item) => <RelationRow key={item.word} word={item.word} phonetic={item.phonetic} partOfSpeech={item.partOfSpeech} meaning={item.chinese} />)}
             </section>
-          ))}
+          )) : <EmptySection>暂无高频且语义直接相关的词，不从例句中随意抽词凑数。</EmptySection>}
         </LearningSection>
       </div>
     </ModalShell>

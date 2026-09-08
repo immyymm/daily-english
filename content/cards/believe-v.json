@@ -28,7 +28,7 @@
     "高频表达"
   ],
   "coreMemory": {
-    "chinese": "相信；认为",
+    "chinese": "相信；确信；认为；觉得；信任；信仰",
     "english": "v. to accept that something is true；v. to have an opinion or think that something is true；v. to have confidence or faith in a person, idea, or ability",
     "structure": "believe someone or something /bɪˈliːv ˈsʌˌmwʌn ˈɔːr ˈsʌmθɪŋ/（相信某人或某事）；believe that + clause /bɪˈliːv ˈðæt ˈklɔːz/（相信或认为……）；believe in someone or something /bɪˈliːv ɪn ˈsʌˌmwʌn ˈɔːr ˈsʌmθɪŋ/（信任某人；信仰或相信某种价值）；be believed to be /ˈbiː bɪˈliːvd ˈtuː ˈbiː/（被认为是……）",
     "structures": [
@@ -79,7 +79,7 @@
     ],
     "directSynonym": "trust /ˈtrʌst/（信任；相信）；think /ˈθɪŋk/（认为；觉得）；accept /æˈksɛpt/（接受；相信）；be convinced /ˈbiː kəˈnvɪnst/（确信）",
     "directAntonym": "doubt /ˈdaʊt/（怀疑）；disbelieve /dɪsbəˈliːv/（不相信）；reject /rɪˈdʒɛkt/（拒绝接受）",
-    "derivatives": "belief · believable · unbelievable · believer",
+    "derivatives": "belief · believer · believable · unbelievable",
     "example": "I believe this plan can work.",
     "exampleChinese": "我相信这个计划可行。"
   },
@@ -328,6 +328,13 @@
       "note": "非常常用；注意 believe 结尾是 -ve，belief 结尾是 -f。"
     },
     {
+      "word": "believer",
+      "phonetic": "/bəˈliːvɚ/",
+      "partOfSpeech": "n.",
+      "chinese": "信徒；相信者",
+      "note": "常见结构 a firm believer in，表示“……的坚定信奉者”。"
+    },
+    {
       "word": "believable",
       "phonetic": "/bəˈliːvəbəl/",
       "partOfSpeech": "adj.",
@@ -340,13 +347,6 @@
       "partOfSpeech": "adj.",
       "chinese": "难以置信的；极好的",
       "note": "既可表示“不可信”，口语中也常表示“惊人地好”。"
-    },
-    {
-      "word": "believer",
-      "phonetic": "/bəˈliːvɚ/",
-      "partOfSpeech": "n.",
-      "chinese": "信徒；相信者",
-      "note": "常见结构 a firm believer in，表示“……的坚定信奉者”。"
     }
   ],
   "confusables": [
@@ -525,11 +525,11 @@
       "type": "meaning_choice",
       "prompt": "“believe”最核心的中文含义是？",
       "options": [
-        "相信；认为",
-        "理解；明白",
-        "走路；步行；陪同"
+        "相信；确信",
+        "理解",
+        "走路"
       ],
-      "answer": "相信；认为",
+      "answer": "相信；确信",
       "stage": "T0",
       "ai": false
     },
@@ -549,7 +549,7 @@
     {
       "id": "believe-v-structure-choice-v3",
       "type": "meaning_choice",
-      "prompt": "核心结构辨析：哪一项既表示“相信某人或某事”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
+      "prompt": "核心结构辨析：哪一项既表示“相信某人或某事”，又符合这个形式线索：结构中直接带有事物宾语，不在目标词与宾语之间增加介词？",
       "options": [
         "be believed to be",
         "believe someone or something",
@@ -613,7 +613,7 @@
     {
       "id": "believe-v-recall-chinese",
       "type": "recall",
-      "prompt": "写出符合“相信；认为”（v.）的本课目标词。",
+      "prompt": "写出符合“相信；确信”（v.）的本课目标词。",
       "answer": "believe",
       "stage": "T1",
       "ai": false
@@ -693,7 +693,7 @@
     {
       "id": "believe-v-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “believe” 写一个自然、真实的英文句子，含义必须符合词卡核心义“相信；认为”。",
+      "prompt": "请用 “believe” 写一个自然、真实的英文句子，含义必须符合词卡核心义“相信；确信”。",
       "answer": "",
       "stage": "T2",
       "ai": true
@@ -769,7 +769,7 @@
   },
   "detailLevel": "template-curated",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.09.08.2",
+  "contentVersion": "2026.09.09.4",
   "reviewed": true,
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

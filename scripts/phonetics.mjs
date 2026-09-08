@@ -33,12 +33,20 @@ function wordIpa(word, targetWord, targetIpa) {
 }
 
 export function ipaFor(text, targetWord = '', targetIpa = '') {
+  const nounUseContext = /\b(?:make(?:\s+good)?\s+use\s+of|the\s+use\s+of|for\s+(?:future\s+)?use|in\s+use|no\s+use)\b/i.test(text);
+  const reducedUsedToContext = /^(?:used\s+to\b|(?:be|get)\s+used\s+to\s+(?!do\b))/i.test(text.trim());
   const tokens = text
     .replace(/[“”"(),.;:!?]/g, ' ')
     .split(/([\s/-]+)/)
     .filter((token) => token && !/^\s+$/.test(token));
   const rendered = tokens.map((token) => {
     if (token === '/' || token === '-') return token;
+    const normalized = token.toLowerCase().replace(/^[^a-z']+|[^a-z']+$/g, '');
+    if (nounUseContext && normalized === 'use') {
+      return wordIpa(token, '', '');
+    }
+    if (reducedUsedToContext && normalized === 'used') return 'juːst';
+    if (reducedUsedToContext && normalized === 'to') return 'tə';
     return wordIpa(token, targetWord, targetIpa);
   }).filter(Boolean).join(' ').replace(/\s+([/-])\s+/g, '$1');
   return '/' + rendered + '/';

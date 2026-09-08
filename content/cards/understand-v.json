@@ -28,7 +28,7 @@
     "主动词汇"
   ],
   "coreMemory": {
-    "chinese": "理解；明白",
+    "chinese": "理解；明白；了解；弄懂；体谅",
     "english": "v. to know the meaning of words, ideas, or actions；v. to know why or how something happens；v. to recognize and accept another person’s feelings or situation",
     "structure": "understand something /ˌʌndərˈstænd ˈsʌmθɪŋ/（理解某事）；understand why, how, or what /ˌʌndərˈstænd ˈwaɪ ˈhaʊ ˈɔːr ˈwʌt/（理解为什么、如何或什么）；understand that + clause /ˌʌndərˈstænd ˈðæt ˈklɔːz/（明白……这一事实）；make yourself understood /ˈmeɪk jɚˈsɛlf ˌʌndɚˈstʊd/（让别人明白你的意思）",
     "structures": [
@@ -79,7 +79,7 @@
     ],
     "directSynonym": "comprehend /ˌkɑmpriːˈhɛnd/（理解；领会）；grasp /ˈɡræsp/（理解；领会）；follow /ˈfɑloʊ/（听懂；跟得上）；appreciate /əˈpriːʃiːˌeɪt/（理解并重视）",
     "directAntonym": "misunderstand /ˌmɪsəndɚˈstænd/（误解）；misinterpret /mɪsɪˈntɝːprət/（误读；错误解释）；confuse /kəˈnfjuːz/（使困惑；混淆）",
-    "derivatives": "understanding · understandable · misunderstanding · misunderstood",
+    "derivatives": "understanding · misunderstanding · understandable · misunderstood",
     "example": "I understand why you need more time.",
     "exampleChinese": "我理解你为什么需要更多时间。"
   },
@@ -328,18 +328,18 @@
       "note": "非常常用；an understanding of 表示“对……的理解”。"
     },
     {
-      "word": "understandable",
-      "phonetic": "/ˌʌndɚˈstændəbəl/",
-      "partOfSpeech": "adj.",
-      "chinese": "可以理解的；情有可原的",
-      "note": "既可表示内容容易理解，也可表示人的反应合情合理。"
-    },
-    {
       "word": "misunderstanding",
       "phonetic": "/ˌmɪsəndɚˈstændɪŋ/",
       "partOfSpeech": "n.",
       "chinese": "误解；误会",
       "note": "常见结构 clear up a misunderstanding。"
+    },
+    {
+      "word": "understandable",
+      "phonetic": "/ˌʌndɚˈstændəbəl/",
+      "partOfSpeech": "adj.",
+      "chinese": "可以理解的；情有可原的",
+      "note": "既可表示内容容易理解，也可表示人的反应合情合理。"
     },
     {
       "word": "misunderstood",
@@ -520,7 +520,7 @@
       "options": [
         "决定",
         "理解；明白",
-        "赢；获得；赢得"
+        "赢"
       ],
       "answer": "理解；明白",
       "stage": "T0",
@@ -542,7 +542,7 @@
     {
       "id": "understand-v-structure-choice-v3",
       "type": "meaning_choice",
-      "prompt": "核心结构辨析：哪一项既表示“理解某事”，又符合这个形式线索：目标词后直接接事物宾语，不额外加介词？",
+      "prompt": "核心结构辨析：哪一项既表示“理解某事”，又符合这个形式线索：结构中直接带有事物宾语，不在目标词与宾语之间增加介词？",
       "options": [
         "understand something",
         "understand why, how, or what",
@@ -762,7 +762,7 @@
   },
   "detailLevel": "template-curated",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.09.08.2",
+  "contentVersion": "2026.09.09.4",
   "reviewed": true,
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }
