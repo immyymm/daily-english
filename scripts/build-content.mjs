@@ -17,6 +17,7 @@ import ecdictEnrichmentData from './ecdict-enrichment.json' with { type: 'json' 
 import { manualConfusableWords, manualDerivativePacks, manualMeaningPacks, manualRelatedPacks } from './deep-card-rules.mjs';
 import { directRelationPacks } from './relation-packs.mjs';
 import { curatedSynonymWords, semanticFallbackSynonyms, semanticPhraseChinese } from './semantic-fallbacks.mjs';
+import tatoebaExampleData from './tatoeba-examples.json' with { type: 'json' };
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(scriptDir, '..');
@@ -26,6 +27,80 @@ const publicDataDir = path.join(root, 'public', 'data');
 const launchDate = new Date('2026-08-17T12:00:00+08:00');
 const release = JSON.parse(await fs.readFile(path.join(root, 'content', 'release.json'), 'utf8'));
 const { contentVersion, templateVersion } = release;
+const detailFloorFailures = [];
+
+// Sparse verbs need a few additional, hand-checked examples so every published
+// card can meet the same visible detail floor without fabricating relations.
+const manualSupplementalExamples = {
+  base: [
+    ['We based our estimate on last year\'s sales figures.', '我们根据去年的销售数据作出了估算。'],
+    ['The film is based on a true story.', '这部电影根据真实故事改编。'],
+    ['You should base your decision on reliable evidence.', '你应该根据可靠的证据作出决定。']
+  ],
+  build: [
+    ['The team built a simple tool to track its progress.', '团队制作了一个用于跟踪进度的简单工具。'],
+    ['We need to build trust with our customers.', '我们需要与客户建立信任。']
+  ],
+  break: [
+    ['Be careful not to break the glass.', '小心别打碎玻璃。']
+  ],
+  affect: [
+    ['The delay affected everyone on the team.', '这次延误影响了团队中的每个人。']
+  ],
+  describe: [
+    ['She described the process in simple terms.', '她用简单的语言描述了这个过程。']
+  ],
+  encourage: [
+    ['Good teachers encourage students to ask questions.', '优秀的老师会鼓励学生提问。'],
+    ['The coach encouraged the players to stay focused.', '教练鼓励队员们保持专注。'],
+    ['Her parents encouraged her to apply for the scholarship.', '她的父母鼓励她申请奖学金。']
+  ],
+  end: [
+    ['The meeting ended with a clear action plan.', '会议以一份明确的行动计划结束。']
+  ],
+  fall: [
+    ['Temperatures usually fall after sunset.', '日落后气温通常会下降。']
+  ],
+  handle: [
+    ['She handled the complaint calmly and professionally.', '她冷静而专业地处理了这起投诉。']
+  ],
+  include: [
+    ['The package includes free technical support for one year.', '这个套餐包括一年的免费技术支持。'],
+    ['Please include your phone number in the application.', '请在申请表中填写你的电话号码。']
+  ],
+  mean: [
+    ['I did not mean any harm.', '我没有恶意。']
+  ],
+  report: [
+    ['Please report any damage to the front desk.', '如有损坏，请向前台报告。'],
+    ['The newspaper reported that the road had reopened.', '报纸报道称那条道路已经重新开放。'],
+    ['Several employees reported feeling unwell after lunch.', '几名员工报告说午饭后感到不适。']
+  ],
+  require: [
+    ['This job requires strong communication skills.', '这份工作要求具备很强的沟通能力。']
+  ],
+  solve: [
+    ['We solved the problem by checking each step.', '我们通过逐步检查解决了这个问题。']
+  ],
+  sit: [
+    ['Sit near the window if you want more light.', '如果你想要更明亮的光线，就坐在窗边。']
+  ],
+  win: [
+    ['The proposal won broad support from local residents.', '这项提案赢得了当地居民的广泛支持。']
+  ]
+};
+
+function supplementalExamplesFor(word) {
+  const manual = (manualSupplementalExamples[word] ?? []).map(([english, chinese]) => ({ english, chinese, source: 'manual' }));
+  const corpus = (tatoebaExampleData.entries[word] ?? []).map((entry) => ({ ...entry, source: 'tatoeba' }));
+  const seen = new Set();
+  return [...manual, ...corpus].filter((entry) => {
+    const key = entry.english.toLowerCase().replace(/\s+/g, ' ').trim();
+    if (!key || seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
 
 const slug = (value) => value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const primaryPos = (value) => value.split('/')[0].trim().replace('.', '');
@@ -238,12 +313,22 @@ function extractTargetChunk(text, targetWord) {
   const includeSubject = targetIndex > 0
     && /^(it|there)$/i.test(words[targetIndex - 1].text)
     && /^(seem|appear|take|be|happen)$/i.test(targetWord);
-  const start = includeSubject ? targetIndex - 1 : targetIndex;
+  const targetForm = words[targetIndex].text;
+  const previousForm = words[targetIndex - 1]?.text.toLowerCase();
+  const includeAuxiliary = targetWord !== 'be' && targetIndex > 0
+    && /^(?:am|is|are|was|were|be|been|being|has|have|had)$/.test(previousForm ?? '')
+    && (/(?:ed|ing)$/i.test(targetForm) || (irregularForms[targetWord.toLowerCase()] ?? []).includes(targetForm.toLowerCase()));
+  const start = includeSubject || includeAuxiliary ? targetIndex - 1 : targetIndex;
   const available = words.slice(start, Math.min(words.length, start + 12));
   const boundary = available.findIndex((word, index) => index >= 3 && /^(because|although|though|while|when|unless|but|if)$/i.test(word.text));
   return available
     .slice(0, boundary >= 0 ? boundary : available.length)
-    .map((word, index) => index === (includeSubject ? 1 : 0) ? (includeSubject ? word.text : targetWord) : word.text)
+    .map((word, index) => {
+      if (includeAuxiliary && index === 0) return /^(?:has|have|had)$/i.test(word.text) ? 'have' : 'be';
+      if (includeAuxiliary && index === 1) return word.text.toLowerCase();
+      if (index === (includeSubject ? 1 : 0)) return includeSubject ? word.text : targetWord;
+      return word.text;
+    })
     .join(' ');
 }
 
@@ -484,12 +569,37 @@ function normalizeErrors(item, override, tuples) {
   }));
 }
 
+function supplementalPhraseRows(item) {
+  const seen = new Set();
+  return supplementalExamplesFor(item.w).map((entry) => ({
+    ...entry,
+    phrase: extractTargetChunk(entry.english, item.w)
+  })).filter((entry) => {
+    const normalized = entry.phrase.toLowerCase().replace(/[^a-z']+/g, ' ').trim();
+    const wordCount = wordsWithOffsets(entry.phrase).length;
+    const sentenceWords = wordsWithOffsets(entry.english);
+    const targetForms = inflectedForms(item.w.toLowerCase());
+    const targetIndex = sentenceWords.findIndex((word) => targetForms.has(word.text.toLowerCase()));
+    const dependsOnRelativeSubject = targetIndex > 0 && /^who$/i.test(sentenceWords[targetIndex - 1].text);
+    if (wordCount < 2 || wordCount > 10 || /\b(?:a|an|the|my|your|his|her|our|their|to|of|for|with|on|in|at|from|by|as)$/.test(normalized)
+      || dependsOnRelativeSubject || /^(?:can|could|do|will|would) do is\b/i.test(normalized) || seen.has(normalized)) return false;
+    seen.add(normalized);
+    return true;
+  });
+}
+
 function normalizeContexts(item, override, tuples) {
   const contextLabels = item.p.startsWith('v.')
     ? ['核心动作与结构', '日常与工作语境', '高频扩展表达', '补充常用语境']
     : item.p.startsWith('n.')
       ? ['核心名词搭配', '日常与工作语境', '高频扩展表达', '补充常用语境']
       : ['核心用法', '日常与工作语境', '高频扩展表达', '补充常用语境'];
+  if (override?.contexts) {
+    return override.contexts.filter(([, items]) => items.length).map(([category, items]) => ({
+      category,
+      items: items.map(([phrase, chinese]) => ({ phrase, phonetic: ipaFor(phrase, item.w, item.ipa), chinese }))
+    }));
+  }
   const examples = priorityEntries[item.w]?.uses
     ?? (curatedExamples[item.w] ?? [[item.ex, item.exZh]]).map(([example, translation], index) => [
       tuples[index]?.[0] ?? item.coll,
@@ -501,11 +611,19 @@ function normalizeContexts(item, override, tuples) {
   // context labels and reserve the complete sentences for fixed-phrase examples.
   const contextItems = examples.map((entry, index) => [entry[0], entry[1], index])
     .filter(([phrase], index, source) => source.findIndex(([candidate]) => candidate.toLowerCase() === phrase.toLowerCase()) === index);
-  const generatedGroups = Array.from({ length: Math.ceil(contextItems.length / 2) }, (_, index) => [
-    contextLabels[index] ?? '补充常用语境',
-    contextItems.slice(index * 2, index * 2 + 2).map(([phrase, chinese]) => [phrase, chinese])
+  const seenPhrases = new Set(contextItems.map(([phrase]) => phrase.toLowerCase().replace(/[^a-z']+/g, ' ').trim()));
+  for (const entry of supplementalPhraseRows(item)) {
+    const key = entry.phrase.toLowerCase().replace(/[^a-z']+/g, ' ').trim();
+    if (seenPhrases.has(key)) continue;
+    contextItems.push([entry.phrase, entry.chinese, contextItems.length]);
+    seenPhrases.add(key);
+    if (contextItems.length >= 10) break;
+  }
+  const groupSize = Math.ceil(contextItems.length / contextLabels.length);
+  const source = contextLabels.map((label, index) => [
+    label,
+    contextItems.slice(index * groupSize, index * groupSize + groupSize).map(([phrase, chinese]) => [phrase, chinese])
   ]);
-  const source = override?.contexts ?? generatedGroups;
   return source.filter(([, items]) => items.length).map(([category, items]) => ({
     category,
     items: items.map(([phrase, chinese]) => ({ phrase, phonetic: ipaFor(phrase, item.w, item.ipa), chinese }))
@@ -513,14 +631,48 @@ function normalizeContexts(item, override, tuples) {
 }
 
 function normalizeFixedPhrases(item, override, tuples) {
+  if (override?.phrases) {
+    const source = [...override.phrases];
+    if (item.w !== 'work') {
+      const seenPhrases = new Set(source.map(([phrase]) => phrase.toLowerCase().replace(/[^a-z']+/g, ' ').trim()));
+      const seenExamples = new Set(source.map(([, , example]) => example.toLowerCase().replace(/\s+/g, ' ').trim()));
+      for (const entry of supplementalPhraseRows(item)) {
+        const phraseKey = entry.phrase.toLowerCase().replace(/[^a-z']+/g, ' ').trim();
+        const exampleKey = entry.english.toLowerCase().replace(/\s+/g, ' ').trim();
+        if (seenPhrases.has(phraseKey) || seenExamples.has(exampleKey)) continue;
+        source.push([entry.phrase, firstMeaning(item.zh), entry.english, entry.chinese]);
+        seenPhrases.add(phraseKey);
+        seenExamples.add(exampleKey);
+        if (source.length >= 10) break;
+      }
+    }
+    return source.map(([phrase, chinese, example, translation]) => ({
+      phrase,
+      phonetic: ipaFor(phrase, item.w, item.ipa),
+      chinese,
+      example,
+      translation
+    }));
+  }
   const priorityExamples = priorityEntries[item.w]?.uses?.map((entry) => [entry[2], entry[3]]);
   const examples = priorityExamples ?? curatedExamples[item.w] ?? [[item.ex, item.exZh]];
-  const source = override?.phrases ?? tuples.slice(0, examples.length).map(([phrase, chinese], index) => [
+  const source = tuples.slice(0, examples.length).map(([phrase, chinese], index) => [
     phrase,
     chinese,
     examples[index][0],
     examples[index][1]
   ]);
+  const seenPhrases = new Set(source.map(([phrase]) => phrase.toLowerCase().replace(/[^a-z']+/g, ' ').trim()));
+  const seenExamples = new Set(source.map(([, , example]) => example.toLowerCase().replace(/\s+/g, ' ').trim()));
+  for (const entry of supplementalPhraseRows(item)) {
+    const phraseKey = entry.phrase.toLowerCase().replace(/[^a-z']+/g, ' ').trim();
+    const exampleKey = entry.english.toLowerCase().replace(/\s+/g, ' ').trim();
+    if (seenPhrases.has(phraseKey) || seenExamples.has(exampleKey)) continue;
+    source.push([entry.phrase, firstMeaning(item.zh), entry.english, entry.chinese]);
+    seenPhrases.add(phraseKey);
+    seenExamples.add(exampleKey);
+    if (source.length >= 10) break;
+  }
   return source.map(([phrase, chinese, example, translation]) => ({
     phrase,
     phonetic: ipaFor(phrase, item.w, item.ipa),
@@ -758,10 +910,20 @@ function normalizeExamples(item, override) {
     english,
     chinese
   }));
-  return [
+  const result = [
     { scene: '核心真实用法', english: item.ex, chinese: item.exZh },
     ...generated.filter((entry) => entry.english !== item.ex)
   ];
+  const seen = new Set(result.map((entry) => entry.english.toLowerCase().replace(/\s+/g, ' ').trim()));
+  const sceneLabels = ['日常交流', '工作沟通', '学习表达', '书面表达', '常见场景'];
+  for (const entry of supplementalExamplesFor(item.w)) {
+    const key = entry.english.toLowerCase().replace(/\s+/g, ' ').trim();
+    if (seen.has(key)) continue;
+    result.push({ scene: sceneLabels[(result.length - 6) % sceneLabels.length], english: entry.english, chinese: entry.chinese });
+    seen.add(key);
+    if (result.length >= 10) break;
+  }
+  return result;
 }
 
 function rotateOptions(options, seed) {
@@ -961,6 +1123,14 @@ function makeCard(item, index) {
   const confusableItems = normalizeConfusables(item, override, synonyms, antonyms);
   const relatedVocabulary = normalizeRelated(item, index, override, derivatives, synonyms, antonyms, confusableItems);
   const examples = normalizeExamples(item, override);
+  if (!override) {
+    const contextItemCount = contextPhrases.reduce((sum, group) => sum + group.items.length, 0);
+    const relatedItemCount = relatedVocabulary.reduce((sum, group) => sum + group.items.length, 0);
+    if (contextPhrases.length < 4 || contextItemCount < 10 || fixedPhrases.length < 10
+      || synonyms.length < 4 || relatedVocabulary.length < 3 || relatedItemCount < 8 || examples.length < 10) {
+      detailFloorFailures.push(`${item.w}: ${contextPhrases.length} context groups/${contextItemCount} contexts, ${fixedPhrases.length} fixed phrases, ${synonyms.length} synonyms, ${relatedVocabulary.length} related groups/${relatedItemCount} related words, ${examples.length} examples`);
+    }
+  }
   const wordFamily = derivatives.map((entry) => entry.word);
   const additionalMeaningFocus = meanings.length > 1
     ? `再对比另外 ${meanings.length - 1} 个常用义项，辨别不同语境。`
@@ -1101,6 +1271,9 @@ for (const directory of [contentCardsDir, publicDailyDir]) {
 }
 
 const cards = orderedLexicon.map(makeCard);
+if (detailFloorFailures.length) {
+  throw new Error(`Published detail floor failed:\n${detailFloorFailures.join('\n')}`);
+}
 for (const card of cards) {
   await fs.writeFile(path.join(contentCardsDir, card.id + '.json'), JSON.stringify(card, null, 2) + '\n', 'utf8');
 }
@@ -1124,7 +1297,7 @@ await fs.writeFile(path.join(publicDataDir, 'manifest.json'), JSON.stringify({
   cardsPerDay: 5, scheduleStart: formatDate(launchDate), dailyFiles
 }, null, 2) + '\n', 'utf8');
 await fs.writeFile(path.join(root, 'content', 'content-manifest.json'), JSON.stringify({
-  source: 'COCA词频单词表.xlsx', generatedAt: '2026-09-09', contentVersion, templateVersion,
+  source: 'COCA词频单词表.xlsx', generatedAt: '2026-09-10', contentVersion, templateVersion,
   generationMode: 'one-time-static',
   orderingPolicy: 'verbs-only-then-coca-verb-rank',
   detailLevel: 'template-complete',

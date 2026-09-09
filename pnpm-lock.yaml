@@ -57,6 +57,9 @@ importers:
       jsdom:
         specifier: ^25.0.1
         version: 25.0.1
+      opencc-js:
+        specifier: 1.4.1
+        version: 1.4.1
       typescript:
         specifier: ~5.7.2
         version: 5.7.3
@@ -3246,6 +3249,9 @@ packages:
         optional: true
       zod:
         optional: true
+
+  opencc-js@1.4.1:
+    resolution: {integrity: sha512-2lPLcrg7cnh1ATSduOxhnk/jq6KlR6w+5Ihl4wF7Z5e5Rva4vxTyugV5rZ7EiUCOZl+EDOLetIix+BhgYDCC+A==}
 
   os-paths@4.4.0:
     resolution: {integrity: sha512-wrAwOeXp1RRMFfQY8Sy7VaGVmPocaLwSFOYCGKSyo8qmJ+/yaafCl5BCA1IQZWqFSRBrKDYFeR9d/VyQzfH/jg==}
@@ -7276,6 +7282,8 @@ snapshots:
     optionalDependencies:
       ws: 8.21.3
       zod: 3.25.76
+
+  opencc-js@1.4.1: {}
 
   os-paths@4.4.0: {}
 

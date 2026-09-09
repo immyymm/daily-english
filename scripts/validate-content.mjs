@@ -13,6 +13,7 @@ const auditPath = path.join(root, 'content', 'coca-audit.json');
 const wordMetadataPath = path.join(root, 'scripts', 'word-metadata.json');
 const wordnetEnrichmentPath = path.join(root, 'scripts', 'wordnet-enrichment.json');
 const ecdictEnrichmentPath = path.join(root, 'scripts', 'ecdict-enrichment.json');
+const tatoebaExamplesPath = path.join(root, 'scripts', 'tatoeba-examples.json');
 const qualityReportPath = path.join(root, 'content', 'content-quality-report.json');
 const runtimeReleasePath = path.join(root, 'src', 'config', 'release.ts');
 const templateLockPath = path.join(root, 'content', 'templates', 'template-lock.json');
@@ -23,6 +24,7 @@ const cocaAudit = JSON.parse(await fs.readFile(auditPath, 'utf8'));
 const wordMetadata = JSON.parse(await fs.readFile(wordMetadataPath, 'utf8'));
 const wordnetEnrichment = JSON.parse(await fs.readFile(wordnetEnrichmentPath, 'utf8'));
 const ecdictEnrichment = JSON.parse(await fs.readFile(ecdictEnrichmentPath, 'utf8'));
+const tatoebaExamples = JSON.parse(await fs.readFile(tatoebaExamplesPath, 'utf8'));
 const runtimeRelease = await fs.readFile(runtimeReleasePath, 'utf8');
 const templatePath = path.join(root, 'content', 'templates', release.templateVersion + '.md');
 const template = await fs.readFile(templatePath, 'utf8');
@@ -70,6 +72,7 @@ const forbiddenGeneratedCopy = [
 const sha256 = (content) => crypto.createHash('sha256').update(content).digest('hex').toUpperCase();
 const referenceShape = templateLock.referenceCard.recordedShape;
 const curatedCardMinimums = templateLock.curatedCardMinimums;
+const publishedCardMinimums = templateLock.publishedCardMinimums;
 const shapeFor = (card) => ({
   meaningRows: card.meanings.length,
   contextCategories: card.contextPhrases.length,
@@ -105,6 +108,14 @@ if (templateLock.lockVersion !== expectedLockVersion || !templateLock.immutable 
       errors.push(reference.role + ': locked snapshot hash changed; create a new explicit lock version instead of editing it in place.');
     }
   }
+}
+if (!publishedCardMinimums || publishedCardMinimums.contextItems < 10 || publishedCardMinimums.fixedPhrases < 10 || publishedCardMinimums.highFrequencyExamples < 10) {
+  errors.push('Published-card detail floor is missing or weaker than the approved complete-card benchmark.');
+}
+if (tatoebaExamples.source?.license !== 'CC BY 2.0 France'
+  || !tatoebaExamples.source?.attribution?.includes('tatoeba.org')
+  || Object.keys(tatoebaExamples.entries ?? {}).length !== 150) {
+  errors.push('Supplementary bilingual corpus metadata or card coverage is incomplete.');
 }
 
 const lockedTemplate = await fs.readFile(path.join(root, 'content', 'templates', 'learning-template.locked.md'), 'utf8');
@@ -168,6 +179,7 @@ for (const [cardIndex, card] of allCards.cards.entries()) {
   if (!card.reviewed && card.detailLevel !== 'template-complete') errors.push(card.id + ': every non-reference/non-curated card must be a complete static card.');
   if (card.detailLevel === 'template-reference' && (card.word !== 'work' || !matchesShape(card, referenceShape))) errors.push(card.id + ': reference label is reserved for the exact locked work example.');
   if (card.detailLevel === 'template-curated' && !meetsCuratedBenchmark(card)) errors.push(card.id + ': human-curated label does not meet the curated richness benchmark.');
+  if (card.detailLevel === 'template-complete' && !meetsShape(card, publishedCardMinimums)) errors.push(card.id + ': published card does not meet the locked catalog-wide detail floor.');
   if (forbiddenGeneratedCopy.some((pattern) => pattern.test(JSON.stringify(card)))) errors.push(card.id + ': forbidden meta-learning filler or mechanical expansion found.');
   const visibleContent = [
     card.coreMemory.example,
@@ -229,10 +241,10 @@ for (const [cardIndex, card] of allCards.cards.entries()) {
     if (card.fixedPhrases.some((entry) => !usesTarget(entry.example))) errors.push(card.id + ': every curated fixed-phrase example must actually use the target word or an inflected form.');
     if (card.examples.some((entry) => !usesTarget(entry.english))) errors.push(card.id + ': every curated high-frequency example must actually use the target word or an inflected form.');
   } else {
-    if (card.contextPhrases.length < 3) errors.push(card.id + ': template-detailed card needs at least three real context categories.');
-    if (card.contextPhrases.reduce((sum, group) => sum + group.items.length, 0) < 6) errors.push(card.id + ': template-detailed card needs at least six curated context phrases.');
-    if (card.fixedPhrases.length < 6) errors.push(card.id + ': template-detailed card needs at least six fixed phrases with real examples.');
-    if (card.examples.length < 6) errors.push(card.id + ': template-detailed card needs at least six natural high-frequency examples.');
+    if (card.contextPhrases.length < publishedCardMinimums.contextCategories) errors.push(card.id + ': template-detailed card needs four real context categories.');
+    if (card.contextPhrases.reduce((sum, group) => sum + group.items.length, 0) < publishedCardMinimums.contextItems) errors.push(card.id + ': template-detailed card needs at least ten evidence-backed context phrases.');
+    if (card.fixedPhrases.length < publishedCardMinimums.fixedPhrases) errors.push(card.id + ': template-detailed card needs at least ten fixed phrases with real examples.');
+    if (card.examples.length < publishedCardMinimums.highFrequencyExamples) errors.push(card.id + ': template-detailed card needs at least ten natural bilingual examples.');
     const irregularTargetForms = {
       be: ['am', 'is', 'are', 'was', 'were', 'been', 'being'],
       become: ['became'],
@@ -485,9 +497,9 @@ const metrics = Object.keys(shapeFor(allCards.cards[0])).reduce((summary, key) =
 }, {});
 await fs.writeFile(qualityReportPath, JSON.stringify({
   contentVersion: release.contentVersion,
-  generatedAt: '2026-09-09',
+  generatedAt: '2026-09-10',
   totalCards: allCards.cards.length,
-  lexicalSources: ['user-provided COCA word list', 'Princeton WordNet via wordnet-db@3.1.14', 'ECDICT'],
+  lexicalSources: ['user-provided COCA word list', 'Princeton WordNet via wordnet-db@3.1.14', 'ECDICT', 'Tatoeba Mandarin Chinese-English selected export via ManyThings (CC BY 2.0 France)'],
   checks: {
     bilingualMeanings: true,
     distinctBilingualMeanings: true,
@@ -499,6 +511,7 @@ await fs.writeFile(qualityReportPath, JSON.stringify({
     noMechanicalFiller: true,
     noProductDiagnostics: true,
     noRuntimeDictionaryApi: true,
+    corpusAttributionRetained: true,
     allCardsValidated: true
   },
   metrics,

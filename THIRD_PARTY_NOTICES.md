@@ -26,3 +26,17 @@ APP 运行时不向 WordNet 或其他词典 API 发送请求。WordNet 数据按
 
 - 项目与数据封装：https://www.npmjs.com/package/wordnet-db
 - WordNet 许可说明：https://wordnet.princeton.edu/license-and-commercial-use
+
+## Tatoeba Mandarin Chinese–English sentence pairs
+
+Some supplementary bilingual example sentences were selected from the
+ManyThings export of Tatoeba Mandarin Chinese–English sentence pairs (snapshot
+dated 2026-02-13).
+
+- Source: https://www.manythings.org/anki/
+- Original project: https://tatoeba.org/
+- License: Creative Commons Attribution 2.0 France
+- Attribution supplied by the dataset: www.manythings.org/anki and tatoeba.org
+
+Sentence-level contributor attribution is retained in
+`scripts/tatoeba-examples.json`.

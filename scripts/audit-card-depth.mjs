@@ -1,7 +1,9 @@
 import fs from 'node:fs';
 
 const catalog = JSON.parse(fs.readFileSync(new URL('../public/data/all-cards.json', import.meta.url), 'utf8'));
+const templateLock = JSON.parse(fs.readFileSync(new URL('../content/templates/template-lock.json', import.meta.url), 'utf8'));
 const cards = catalog.cards;
+const minimums = templateLock.publishedCardMinimums;
 const metrics = (card) => ({
   word: card.word,
   meanings: card.meanings.length,
@@ -25,8 +27,11 @@ const summary = Object.fromEntries(fields.map((field) => [field, {
 const failures = [];
 for (const card of cards.filter((entry) => entry.detailLevel === 'template-complete')) {
   const row = metrics(card);
-  if (row.synonyms < 3) failures.push(`${card.word}: fewer than 3 sense-specific synonyms`);
-  if (row.relatedGroups < 3 || row.relatedItems < 7) failures.push(`${card.word}: related taxonomy is too small (${row.relatedGroups} groups/${row.relatedItems} items)`);
+  if (card.contextPhrases.length < minimums.contextCategories || row.contexts < minimums.contextItems) failures.push(`${card.word}: context detail floor failed (${card.contextPhrases.length} groups/${row.contexts} items)`);
+  if (row.fixed < minimums.fixedPhrases) failures.push(`${card.word}: fewer than ${minimums.fixedPhrases} fixed phrases`);
+  if (row.synonyms < minimums.synonyms) failures.push(`${card.word}: fewer than ${minimums.synonyms} sense-specific synonyms`);
+  if (row.relatedGroups < minimums.relatedCategories || row.relatedItems < minimums.relatedItems) failures.push(`${card.word}: related taxonomy is too small (${row.relatedGroups} groups/${row.relatedItems} items)`);
+  if (row.examples < minimums.highFrequencyExamples) failures.push(`${card.word}: fewer than ${minimums.highFrequencyExamples} natural bilingual examples`);
   const relationEntries = [...card.synonyms, ...card.antonyms, ...card.confusables];
   if (relationEntries.some((entry) => !entry.chinese || !entry.partOfSpeech || !entry.phonetic)) failures.push(`${card.word}: incomplete relation metadata`);
   if (card.synonyms.some((entry) => !entry.difference || entry.difference.length < 35)) failures.push(`${card.word}: synonym distinction is too short`);
