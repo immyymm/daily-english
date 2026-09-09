@@ -2,6 +2,18 @@
 // Each gloss and note describes only the sense taught on the card; dictionary
 // meanings from unrelated parts of speech must never leak into the UI.
 export const directRelationPacks = {
+  go: {
+    synonyms: [
+      ['travel', 'v.', '行进；旅行', 'travel 更强调从一地到另一地的过程，常涉及较长距离；go 是最一般的“去、移动”。'],
+      ['move', 'v.', '移动；前进', 'move 强调位置发生变化；go 还可表示前往目的地、事情进展或进入某种状态。'],
+      ['proceed', 'v.', '继续进行；前进', 'proceed 较正式，强调按步骤继续；go 更口语，使用范围也更广。'],
+      ['depart', 'v.', '离开；出发', 'depart 较正式，只对应 go 的“离开、出发”义项，不表示运转或状态变化。']
+    ],
+    antonyms: [
+      ['stay', 'v.', '停留；留下', 'go 表示离开或前往别处；stay 表示留在原地或维持当前位置。'],
+      ['come', 'v.', '来；来到', 'go 通常表示离开说话者或参照点，come 表示向说话者或参照点靠近。']
+    ]
+  },
   call: {
     synonyms: [['phone', 'v.', '给……打电话', 'phone 只表示通过电话联系；call 还可以表示称呼、命名和召唤。']],
     antonyms: [['hang up', 'phr.', '挂断电话', 'call 表示打电话、建立通话；hang up 表示结束并挂断这次通话。']]

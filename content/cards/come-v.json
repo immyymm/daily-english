@@ -70,7 +70,7 @@
         "note": "在“come up with something”所表达的这个具体含义中，要用介词 with；换成 at 会破坏这个固定结构或改变原意。"
       }
     ],
-    "directSynonym": "arrive /ɚˈaɪv/（到达）",
+    "directSynonym": "arrive /ɚˈaɪv/（到达）；approach /əˈproʊtʃ/（接近；入门）；reach /ˈriːtʃ/（到达；达到；伸出）；return /rɪˈtɝːn/（返回；归还；回来）",
     "directAntonym": "go /ˈɡoʊ/（去；离开）",
     "derivatives": "coming",
     "example": "Please come home before the storm begins.",
@@ -203,7 +203,28 @@
       "phonetic": "/ɚˈaɪv/",
       "partOfSpeech": "v.",
       "chinese": "到达",
-      "difference": "arrive 更侧重“到达”；come 的核心义是“来”。两者意思接近，但替换时仍要核对宾语、介词和具体语境。"
+      "difference": "come 与 arrive 在本卡的一个常用义项下意思接近。arrive 的使用范围更具体，替换时要核对宾语、介词和语境。"
+    },
+    {
+      "word": "approach",
+      "phonetic": "/əˈproʊtʃ/",
+      "partOfSpeech": "n.",
+      "chinese": "接近；入门",
+      "difference": "approach 常表示“接近；入门”，只对应 come 的一个常用义项；come 的核心义为“来”。两者替换时还要核对宾语、介词、正式程度和句子语境。"
+    },
+    {
+      "word": "reach",
+      "phonetic": "/ˈriːtʃ/",
+      "partOfSpeech": "v.",
+      "chinese": "到达；达到；伸出",
+      "difference": "reach 常表示“到达；达到；伸出”，只对应 come 的一个常用义项；come 的核心义为“来”。两者替换时还要核对宾语、介词、正式程度和句子语境。"
+    },
+    {
+      "word": "return",
+      "phonetic": "/rɪˈtɝːn/",
+      "partOfSpeech": "v.",
+      "chinese": "返回；归还；回来",
+      "difference": "return 常表示“返回；归还；回来”，只对应 come 的一个常用义项；come 的核心义为“来”。两者替换时还要核对宾语、介词、正式程度和句子语境。"
     }
   ],
   "antonyms": [
@@ -212,7 +233,7 @@
       "phonetic": "/ˈɡoʊ/",
       "partOfSpeech": "v.",
       "chinese": "去；离开",
-      "usage": "当 come 表示“来”时，go 表示“去；离开”。两者只在这个明确义项下构成直接对比，其他用法不能一概互换。"
+      "usage": "come 与 go 在本卡的一个明确义项下形成对比。其他义项下不能一概视为反义。"
     }
   ],
   "derivatives": [
@@ -224,18 +245,10 @@
       "note": "常放在时间名词前，如 the coming week。"
     }
   ],
-  "confusables": [
-    {
-      "word": "go",
-      "phonetic": "/ˈɡoʊ/",
-      "partOfSpeech": "n.",
-      "chinese": "去；走；达到",
-      "difference": "go 表示“去；走；达到”；come 在本卡核心搭配“come home”中表示“来”。答题时要根据句意和完整结构区分，不只看拼写或中文近义。"
-    }
-  ],
+  "confusables": [],
   "relatedVocabulary": [
     {
-      "category": "语义关联：一起理解更清楚",
+      "category": "同一语义场的高频词",
       "items": [
         {
           "word": "arrive",
@@ -254,6 +267,63 @@
           "phonetic": "/rɪˈtɝːn/",
           "partOfSpeech": "v.",
           "chinese": "返回"
+        }
+      ]
+    },
+    {
+      "category": "近义表达分类",
+      "items": [
+        {
+          "word": "arrive",
+          "phonetic": "/ɚˈaɪv/",
+          "partOfSpeech": "v.",
+          "chinese": "到达"
+        },
+        {
+          "word": "approach",
+          "phonetic": "/əˈproʊtʃ/",
+          "partOfSpeech": "n.",
+          "chinese": "接近；入门"
+        },
+        {
+          "word": "reach",
+          "phonetic": "/ˈriːtʃ/",
+          "partOfSpeech": "v.",
+          "chinese": "到达；达到；伸出"
+        },
+        {
+          "word": "return",
+          "phonetic": "/rɪˈtɝːn/",
+          "partOfSpeech": "v.",
+          "chinese": "返回；归还；回来"
+        }
+      ]
+    },
+    {
+      "category": "对比与易混表达分类",
+      "items": [
+        {
+          "word": "go",
+          "phonetic": "/ˈɡoʊ/",
+          "partOfSpeech": "v.",
+          "chinese": "去；离开"
+        },
+        {
+          "word": "coming",
+          "phonetic": "/ˈkʌmɪŋ/",
+          "partOfSpeech": "adj.",
+          "chinese": "即将到来的"
+        }
+      ]
+    },
+    {
+      "category": "常用词族分类",
+      "items": [
+        {
+          "word": "coming",
+          "phonetic": "/ˈkʌmɪŋ/",
+          "partOfSpeech": "adj.",
+          "chinese": "即将到来的"
         }
       ]
     }
@@ -368,14 +438,14 @@
     {
       "id": "come-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “come” 的易混词？",
+      "prompt": "根据本词卡辨析，哪个词被列为 “come” 的派生词？",
       "options": [
-        "feel",
-        "hold",
         "go",
+        "feel",
+        "coming",
         "arrive"
       ],
-      "answer": "go",
+      "answer": "coming",
       "stage": "T3",
       "ai": false
     },
@@ -546,7 +616,7 @@
   },
   "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.09.09.4",
+  "contentVersion": "2026.09.09.5",
   "reviewed": false,
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

@@ -95,7 +95,13 @@ function pointedWords(synset, symbols) {
     const targetWordIndex = Number.parseInt(pointer.sourceTarget.slice(2), 16) - 1;
     const selectedWords = targetWordIndex >= 0 ? [target.words[targetWordIndex]] : target.words;
     for (const word of selectedWords.filter(Boolean)) {
-      items.push({ word, partOfSpeech: target.partOfSpeech, definition: target.definition, relation: pointer.symbol });
+      items.push({
+        word,
+        partOfSpeech: target.partOfSpeech,
+        definition: target.definition,
+        sourceDefinition: synset.definition,
+        relation: pointer.symbol
+      });
     }
   }
   return items;
@@ -105,7 +111,12 @@ const entries = {};
 for (const word of targets) {
   const offsets = indexes.verb.get(word) ?? [];
   const synsets = offsets.map((offset) => dataMaps.v.get(offset)).filter(Boolean);
-  const meanings = synsets
+  // WordNet orders synsets by estimated familiarity. Learner-facing semantic
+  // relations must be drawn from the same common-sense window as the visible
+  // meanings; relations from remote senses are technically valid but often
+  // misleading (for example, an antonym that only applies to a rare idiom).
+  const commonSynsets = synsets.slice(0, 5);
+  const meanings = commonSynsets
     .filter((synset, index, source) => synset.definition && source.findIndex((candidate) => candidate.definition === synset.definition) === index)
     .slice(0, 5)
     .map((synset) => ({
@@ -113,14 +124,14 @@ for (const word of targets) {
       example: synset.examples[0] ?? '',
       senseWords: synset.words.slice(0, 6)
     }));
-  const synonyms = uniqueByWord(synsets.flatMap((synset) => synset.words
+  const synonyms = uniqueByWord(commonSynsets.flatMap((synset) => synset.words
     .filter((candidate) => candidate.toLowerCase() !== word.toLowerCase())
     .map((candidate) => ({ word: candidate, partOfSpeech: 'v.', definition: synset.definition }))
   ), new Set([word])).slice(0, 12);
-  const antonyms = uniqueByWord(synsets.flatMap((synset) => pointedWords(synset, new Set(['!']))), new Set([word])).slice(0, 8);
-  const derivatives = uniqueByWord(synsets.flatMap((synset) => pointedWords(synset, new Set(['+']))), new Set([word])).slice(0, 12);
-  const hypernyms = uniqueByWord(synsets.flatMap((synset) => pointedWords(synset, new Set(['@']))), new Set([word])).slice(0, 16);
-  const hyponyms = uniqueByWord(synsets.flatMap((synset) => pointedWords(synset, new Set(['~']))), new Set([word])).slice(0, 24);
+  const antonyms = uniqueByWord(commonSynsets.flatMap((synset) => pointedWords(synset, new Set(['!']))), new Set([word])).slice(0, 8);
+  const derivatives = uniqueByWord(commonSynsets.flatMap((synset) => pointedWords(synset, new Set(['+']))), new Set([word])).slice(0, 12);
+  const hypernyms = uniqueByWord(commonSynsets.flatMap((synset) => pointedWords(synset, new Set(['@']))), new Set([word])).slice(0, 16);
+  const hyponyms = uniqueByWord(commonSynsets.flatMap((synset) => pointedWords(synset, new Set(['~']))), new Set([word])).slice(0, 24);
   const related = uniqueByWord([...hypernyms, ...hyponyms], new Set([word])).slice(0, 24);
   entries[word] = { meanings, synonyms, antonyms, derivatives, hypernyms, hyponyms, related };
 }

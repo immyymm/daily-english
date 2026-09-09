@@ -594,28 +594,28 @@ export const manualRelatedPacks = {
 // Only include genuinely useful confusions. Words without a common confusion
 // intentionally keep this section empty instead of receiving filler.
 export const manualConfusableWords = {
-  accept: ['except', 'expect'], affect: ['effect'], allow: ['let'], appear: ['seem'],
+  accept: ['except', 'expect'], affect: ['effect'], allow: ['let'], appear: ['seem'], be: ['there is', 'have', 'become'],
   avoid: ['prevent'], base: ['basis'], become: ['begin'], believe: ['believe in'],
   borrow: ['lend'], bring: ['take'], choose: ['chose', 'choice'], come: ['go'],
-  compare: ['contrast'], consider: ['regard'], continue: ['continuous'], could: ['would'],
+  can: ['could', 'may'], compare: ['contrast'], consider: ['regard'], continue: ['continuous'], could: ['would', 'can', 'might'],
   decide: ['decision'], depend: ['rely'], describe: ['description'], discover: ['invent'],
   do: ['make'], drive: ['ride'], encourage: ['courage'], expect: ['hope', 'wait'],
   explain: ['describe'], express: ['expression'], fall: ['feel'], feel: ['fill'],
-  find: ['found'], give: ['offer'], go: ['come'], grow: ['raise'], have: ['there is'],
+  find: ['found'], give: ['offer'], go: ['come', 'get', 'become', 'leave'], grow: ['raise'], have: ['there is'],
   hear: ['listen'], hold: ['keep'], hope: ['wish'], increase: ['rise', 'raise'],
   learn: ['study', 'teach'], leave: ['live'], lend: ['borrow'], let: ['allow'],
   lie: ['lay'], listen: ['hear'], live: ['leave'], look: ['see', 'watch'],
-  lose: ['loose'], make: ['do'], manage: ['control'], may: ['might'],
+  lose: ['loose'], make: ['do'], manage: ['control'], may: ['might', 'can', 'must'], might: ['may', 'could', 'must'], must: ['should', 'have to', 'need to'],
   mean: ['meaning'], meet: ['meat'], notice: ['note'], offer: ['provide'],
   pass: ['past'], pick: ['choose'], prefer: ['rather'], prepare: ['prevent'],
-  provide: ['offer', 'supply'], pull: ['push'], raise: ['rise', 'grow'],
+  protect: ['prevent', 'preserve'], provide: ['offer', 'supply'], pull: ['push'], raise: ['rise', 'grow'],
   read: ['study'], realize: ['recognize'], receive: ['accept'], reduce: ['decrease'],
   remember: ['remind'], report: ['record'], return: ['go back'], run: ['operate'],
-  say: ['tell', 'speak'], see: ['look', 'watch'], set: ['sit'], share: ['divide'],
+  say: ['tell', 'speak'], see: ['look', 'watch'], seem: ['look like', 'appear to'], set: ['sit'], share: ['divide'],
   show: ['display', 'prove'], sit: ['set'], speak: ['talk', 'say'],
   spend: ['cost', 'pay'], stand: ['sit'], start: ['begin'], stay: ['remain'],
-  stop: ['prevent'], suggest: ['recommend'], support: ['assist'], take: ['bring'],
+  should: ['must', 'ought to', 'had better'], stop: ['prevent'], suggest: ['recommend'], support: ['assist'], take: ['bring'],
   talk: ['speak'], tell: ['say'], thank: ['think'], think: ['thought'],
   turn: ['return'], use: ['used to'], wait: ['expect'], wear: ['where'],
-  will: ['would'], win: ['earn'], work: ['job'], write: ['right']
+  will: ['would', 'be going to'], would: ['will', 'could', 'used to'], win: ['earn'], work: ['job'], write: ['right']
 };

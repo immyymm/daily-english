@@ -70,7 +70,7 @@
         "note": "这里的 to 是不定式标记，后面要用 reduce 的原形，不能改成 reducing。"
       }
     ],
-    "directSynonym": "decrease /dɪˈkriːs/（减少；降低）",
+    "directSynonym": "decrease /dɪˈkriːs/（减少；降低）；lower /ˈloʊɚ/（降低；跌落；减弱）；cut /ˈkʌt/（切；割；减少）；diminish /dɪˈmɪnɪʃ/（(使)减少；(使)变小）",
     "directAntonym": "increase /ˌɪˈnkriːs/（增加；提高）",
     "derivatives": "reduction",
     "example": "A clear plan can reduce unnecessary stress.",
@@ -182,7 +182,28 @@
       "phonetic": "/dɪˈkriːs/",
       "partOfSpeech": "v.",
       "chinese": "减少；降低",
-      "difference": "reduce 与 decrease 在本卡义项下意思接近。reduce 通常是及物动词，强调使某物减少；decrease 也可不及物。"
+      "difference": "reduce 与 decrease 在本卡的一个常用义项下意思接近。reduce 通常是及物动词，强调使某物减少；decrease 也可不及物。"
+    },
+    {
+      "word": "lower",
+      "phonetic": "/ˈloʊɚ/",
+      "partOfSpeech": "v.",
+      "chinese": "降低；跌落；减弱",
+      "difference": "lower 常表示“降低；跌落；减弱”，只对应 reduce 的一个常用义项；reduce 的核心义为“减少”。两者替换时还要核对宾语、介词、正式程度和句子语境。"
+    },
+    {
+      "word": "cut",
+      "phonetic": "/ˈkʌt/",
+      "partOfSpeech": "v.",
+      "chinese": "切；割；减少",
+      "difference": "cut 常表示“切；割；减少”，只对应 reduce 的一个常用义项；reduce 的核心义为“减少”。两者替换时还要核对宾语、介词、正式程度和句子语境。"
+    },
+    {
+      "word": "diminish",
+      "phonetic": "/dɪˈmɪnɪʃ/",
+      "partOfSpeech": "v.",
+      "chinese": "(使)减少；(使)变小",
+      "difference": "diminish 常表示“(使)减少；(使)变小”，只对应 reduce 的一个常用义项；reduce 的核心义为“减少”。两者替换时还要核对宾语、介词、正式程度和句子语境。"
     }
   ],
   "antonyms": [
@@ -191,7 +212,7 @@
       "phonetic": "/ˌɪˈnkriːs/",
       "partOfSpeech": "v.",
       "chinese": "增加；提高",
-      "usage": "reduce 与 increase 在本卡义项下形成明确对比。reduce 使数量或程度降低；increase 使其升高。"
+      "usage": "reduce 与 increase 在本卡的一个明确义项下形成对比。reduce 使数量或程度降低；increase 使其升高。"
     }
   ],
   "derivatives": [
@@ -203,18 +224,10 @@
       "note": "reduction 是 reduce 的常用词族形式；作 n. 时表示“减少；缩影；变化”。"
     }
   ],
-  "confusables": [
-    {
-      "word": "decrease",
-      "phonetic": "/dɪˈkriːs/",
-      "partOfSpeech": "n.",
-      "chinese": "减少；减少量；减少",
-      "difference": "decrease 表示“减少；减少量；减少”；reduce 在本卡核心搭配“reduce stress”中表示“减少”。答题时要根据句意和完整结构区分，不只看拼写或中文近义。"
-    }
-  ],
+  "confusables": [],
   "relatedVocabulary": [
     {
-      "category": "语义关联：一起理解更清楚",
+      "category": "同一语义场的高频词",
       "items": [
         {
           "word": "decrease",
@@ -233,6 +246,63 @@
           "phonetic": "/ˌɪˈnkriːs/",
           "partOfSpeech": "v.",
           "chinese": "增加"
+        }
+      ]
+    },
+    {
+      "category": "近义表达分类",
+      "items": [
+        {
+          "word": "decrease",
+          "phonetic": "/dɪˈkriːs/",
+          "partOfSpeech": "v.",
+          "chinese": "减少；降低"
+        },
+        {
+          "word": "lower",
+          "phonetic": "/ˈloʊɚ/",
+          "partOfSpeech": "v.",
+          "chinese": "降低；跌落；减弱"
+        },
+        {
+          "word": "cut",
+          "phonetic": "/ˈkʌt/",
+          "partOfSpeech": "v.",
+          "chinese": "切；割；减少"
+        },
+        {
+          "word": "diminish",
+          "phonetic": "/dɪˈmɪnɪʃ/",
+          "partOfSpeech": "v.",
+          "chinese": "(使)减少；(使)变小"
+        }
+      ]
+    },
+    {
+      "category": "对比与易混表达分类",
+      "items": [
+        {
+          "word": "increase",
+          "phonetic": "/ˌɪˈnkriːs/",
+          "partOfSpeech": "v.",
+          "chinese": "增加；提高"
+        },
+        {
+          "word": "reduction",
+          "phonetic": "/rəˈdʌkʃən/",
+          "partOfSpeech": "n.",
+          "chinese": "减少；缩影；变化"
+        }
+      ]
+    },
+    {
+      "category": "常用词族分类",
+      "items": [
+        {
+          "word": "reduction",
+          "phonetic": "/rəˈdʌkʃən/",
+          "partOfSpeech": "n.",
+          "chinese": "减少；缩影；变化"
         }
       ]
     }
@@ -352,14 +422,14 @@
     {
       "id": "reduce-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “reduce” 的易混词？",
+      "prompt": "根据本词卡辨析，哪个词被列为 “reduce” 的派生词？",
       "options": [
-        "call",
+        "have",
+        "reduction",
         "decrease",
-        "increase",
-        "have"
+        "increase"
       ],
-      "answer": "decrease",
+      "answer": "reduction",
       "stage": "T3",
       "ai": false
     },
@@ -530,7 +600,7 @@
   },
   "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.09.09.4",
+  "contentVersion": "2026.09.09.5",
   "reviewed": false,
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

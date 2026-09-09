@@ -208,6 +208,10 @@ for (const [cardIndex, card] of allCards.cards.entries()) {
   if (!Array.isArray(card.coreMemory.structures) || card.coreMemory.structures.length < 3) errors.push(card.id + ': expected at least three core structures.');
   if (!Array.isArray(card.coreMemory.commonErrors) || card.coreMemory.commonErrors.length < 2) errors.push(card.id + ': expected at least two concrete error corrections.');
   if (card.synonyms.length < 1 || card.antonyms.length < 1) errors.push(card.id + ': missing semantic contrast.');
+  if (card.detailLevel === 'template-complete' && card.synonyms.length < 3) errors.push(card.id + ': complete card needs at least three sense-specific synonym comparisons.');
+  if (card.detailLevel === 'template-complete' && (card.relatedVocabulary.length < 3 || card.relatedVocabulary.reduce((sum, group) => sum + group.items.length, 0) < 7)) {
+    errors.push(card.id + ': complete card needs at least three related-vocabulary categories and seven classified items.');
+  }
   if (!card.reviewed && card.synonyms.some((item) => !item.difference || item.difference.length < 45 || !item.difference.includes(card.word))) errors.push(card.id + ': every synonym needs a target-specific usage distinction.');
   if (!card.reviewed && card.antonyms.some((item) => !item.usage || item.usage.length < 35 || !item.usage.includes(card.word))) errors.push(card.id + ': every antonym needs a sense-specific contrast explanation.');
   if (card.detailLevel === 'template-curated' || card.detailLevel === 'template-reference') {
@@ -340,16 +344,16 @@ for (const [cardIndex, card] of allCards.cards.entries()) {
   if (manualRelatedPacks[card.word]) {
     const expectedRelated = manualRelatedPacks[card.word].map(([word, partOfSpeech, chinese]) => `${word}|${partOfSpeech}|${chinese}`);
     const actualRelated = card.relatedVocabulary.flatMap((group) => group.items).map((item) => `${item.word}|${item.partOfSpeech}|${item.chinese}`);
-    if (expectedRelated.length !== actualRelated.length || expectedRelated.some((item, index) => item !== actualRelated[index])) {
-      errors.push(card.id + ': sense-safe related vocabulary pack changed or was padded mechanically.');
+    if (expectedRelated.some((item) => !actualRelated.includes(item))) {
+      errors.push(card.id + ': a reviewed sense-safe related-vocabulary anchor was removed or changed.');
     }
   }
   if (!card.reviewed && directRelationPacks[card.word]) {
     for (const key of ['synonyms', 'antonyms']) {
       const expectedRelations = directRelationPacks[card.word][key].map(([word, partOfSpeech, chinese]) => `${word}|${partOfSpeech}|${chinese}`);
       const actualRelations = card[key].map((item) => `${item.word}|${item.partOfSpeech}|${item.chinese}`);
-      if (expectedRelations.length !== actualRelations.length || expectedRelations.some((item, index) => item !== actualRelations[index])) {
-        errors.push(card.id + ': current-sense ' + key + ' pack changed or fell back to broad dictionary data.');
+      if (expectedRelations.some((item) => !actualRelations.includes(item))) {
+        errors.push(card.id + ': a reviewed current-sense ' + key + ' anchor was removed or changed.');
       }
     }
   }

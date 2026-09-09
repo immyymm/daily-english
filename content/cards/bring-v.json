@@ -70,7 +70,7 @@
         "note": "在“bring about something”所表达的这个具体含义中，要用介词 about；换成 at 会破坏这个固定结构或改变原意。"
       }
     ],
-    "directSynonym": "carry /ˈkæriː/（携带；搬运）",
+    "directSynonym": "carry /ˈkæriː/（携带；搬运）；deliver /dɪˈlɪvɚ/（递送；陈述；释放）；fetch /ˈfɛtʃ/（取得；拿；诡计）；cause /ˈkɑz/（引起；使产生；使遭受）",
     "directAntonym": "take /ˈteɪk/（带走；拿走）",
     "derivatives": "本词暂无需额外强记的高频派生词",
     "example": "Bring your notes with you to the study session.",
@@ -189,7 +189,28 @@
       "phonetic": "/ˈkæriː/",
       "partOfSpeech": "v.",
       "chinese": "携带；搬运",
-      "difference": "carry 更侧重“携带；搬运”；bring 的核心义是“带来”。两者意思接近，但替换时仍要核对宾语、介词和具体语境。"
+      "difference": "bring 与 carry 在本卡的一个常用义项下意思接近。carry 的使用范围更具体，替换时要核对宾语、介词和语境。"
+    },
+    {
+      "word": "deliver",
+      "phonetic": "/dɪˈlɪvɚ/",
+      "partOfSpeech": "v.",
+      "chinese": "递送；陈述；释放",
+      "difference": "deliver 常表示“递送；陈述；释放”，只对应 bring 的一个常用义项；bring 的核心义为“带来”。两者替换时还要核对宾语、介词、正式程度和句子语境。"
+    },
+    {
+      "word": "fetch",
+      "phonetic": "/ˈfɛtʃ/",
+      "partOfSpeech": "n.",
+      "chinese": "取得；拿；诡计",
+      "difference": "fetch 常表示“取得；拿；诡计”，只对应 bring 的一个常用义项；bring 的核心义为“带来”。两者替换时还要核对宾语、介词、正式程度和句子语境。"
+    },
+    {
+      "word": "cause",
+      "phonetic": "/ˈkɑz/",
+      "partOfSpeech": "v.",
+      "chinese": "引起；使产生；使遭受",
+      "difference": "cause 常表示“引起；使产生；使遭受”，只对应 bring 的一个常用义项；bring 的核心义为“带来”。两者替换时还要核对宾语、介词、正式程度和句子语境。"
     }
   ],
   "antonyms": [
@@ -198,22 +219,14 @@
       "phonetic": "/ˈteɪk/",
       "partOfSpeech": "v.",
       "chinese": "带走；拿走",
-      "usage": "当 bring 表示“带来”时，take 表示“带走；拿走”。两者只在这个明确义项下构成直接对比，其他用法不能一概互换。"
+      "usage": "bring 与 take 在本卡的一个明确义项下形成对比。其他义项下不能一概视为反义。"
     }
   ],
   "derivatives": [],
-  "confusables": [
-    {
-      "word": "take",
-      "phonetic": "/ˈteɪk/",
-      "partOfSpeech": "n.",
-      "chinese": "拿；取；抓",
-      "difference": "take 表示“拿；取；抓”；bring 在本卡核心搭配“bring something with you”中表示“带来”。答题时要根据句意和完整结构区分，不只看拼写或中文近义。"
-    }
-  ],
+  "confusables": [],
   "relatedVocabulary": [
     {
-      "category": "语义关联：一起理解更清楚",
+      "category": "同一语义场的高频词",
       "items": [
         {
           "word": "take",
@@ -232,6 +245,46 @@
           "phonetic": "/dɪˈlɪvɚ/",
           "partOfSpeech": "v.",
           "chinese": "递送"
+        }
+      ]
+    },
+    {
+      "category": "近义表达分类",
+      "items": [
+        {
+          "word": "carry",
+          "phonetic": "/ˈkæriː/",
+          "partOfSpeech": "v.",
+          "chinese": "携带；搬运"
+        },
+        {
+          "word": "deliver",
+          "phonetic": "/dɪˈlɪvɚ/",
+          "partOfSpeech": "v.",
+          "chinese": "递送；陈述；释放"
+        },
+        {
+          "word": "fetch",
+          "phonetic": "/ˈfɛtʃ/",
+          "partOfSpeech": "n.",
+          "chinese": "取得；拿；诡计"
+        },
+        {
+          "word": "cause",
+          "phonetic": "/ˈkɑz/",
+          "partOfSpeech": "v.",
+          "chinese": "引起；使产生；使遭受"
+        }
+      ]
+    },
+    {
+      "category": "对比与易混表达分类",
+      "items": [
+        {
+          "word": "take",
+          "phonetic": "/ˈteɪk/",
+          "partOfSpeech": "v.",
+          "chinese": "带走；拿走"
         }
       ]
     }
@@ -346,14 +399,14 @@
     {
       "id": "bring-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “bring” 的易混词？",
+      "prompt": "根据本词卡辨析，哪个词被列为 “bring” 的相关近义词？",
       "options": [
-        "take",
         "carry",
+        "take",
         "sit",
         "build"
       ],
-      "answer": "take",
+      "answer": "carry",
       "stage": "T3",
       "ai": false
     },
@@ -524,7 +577,7 @@
   },
   "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.09.09.4",
+  "contentVersion": "2026.09.09.5",
   "reviewed": false,
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

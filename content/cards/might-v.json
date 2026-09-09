@@ -70,7 +70,7 @@
         "note": "在“you might want to do something”中，这个 to 是不定式标记，后面必须接动词原形。do 只是语法占位符，真实表达要把它换成 finish、check 等符合语境的动词原形。"
       }
     ],
-    "directSynonym": "may /ˈmeɪ/（可能；也许）",
+    "directSynonym": "may /ˈmeɪ/（可能；也许）；could possibly /ˈkʊd ˈpɑsəbliː/（有可能）；perhaps /pɚˈhæps/（也许；可能）；could /ˈkʊd/（可以；能）",
     "directAntonym": "certainly will /ˈsɝːtənliː ˈwɪl/（肯定会）",
     "derivatives": "本词暂无需额外强记的高频派生词",
     "example": "You might remember the word better after using it.",
@@ -196,7 +196,28 @@
       "phonetic": "/ˈmeɪ/",
       "partOfSpeech": "aux.",
       "chinese": "可能；也许",
-      "difference": "might 与 may 在本卡义项下意思接近。may 通常比 might 的可能性语气稍强；might 也常用于谨慎建议和非真实情境。"
+      "difference": "might 与 may 在本卡的一个常用义项下意思接近。may 通常比 might 的可能性语气稍强；might 也常用于谨慎建议和非真实情境。"
+    },
+    {
+      "word": "could possibly",
+      "phonetic": "/ˈkʊd ˈpɑsəbliː/",
+      "partOfSpeech": "phr.",
+      "chinese": "有可能",
+      "difference": "might 与 could possibly 在本卡的一个常用义项下意思接近。could possibly 常用于更委婉的推测或请求；might 更简洁。"
+    },
+    {
+      "word": "perhaps",
+      "phonetic": "/pɚˈhæps/",
+      "partOfSpeech": "adv.",
+      "chinese": "也许；可能",
+      "difference": "might 与 perhaps 在本卡的一个常用义项下意思接近。perhaps 是句子副词；might 是情态动词，后面直接接动词原形。"
+    },
+    {
+      "word": "could",
+      "phonetic": "/ˈkʊd/",
+      "partOfSpeech": "v.",
+      "chinese": "可以；能",
+      "difference": "could 常表示“可以；能”，只对应 might 的一个常用义项；might 的核心义为“可能”。两者替换时还要核对宾语、介词、正式程度和句子语境。"
     }
   ],
   "antonyms": [
@@ -205,14 +226,22 @@
       "phonetic": "/ˈsɝːtənliː ˈwɪl/",
       "partOfSpeech": "phr.",
       "chinese": "肯定会",
-      "usage": "might 与 certainly will 在本卡义项下形成明确对比。might 保留明显的不确定性；certainly will 表示说话者有很强把握。"
+      "usage": "might 与 certainly will 在本卡的一个明确义项下形成对比。might 保留明显的不确定性；certainly will 表示说话者有很强把握。"
     }
   ],
   "derivatives": [],
-  "confusables": [],
+  "confusables": [
+    {
+      "word": "must",
+      "phonetic": "/ˈmʌst/",
+      "partOfSpeech": "v.",
+      "chinese": "必须",
+      "difference": "must 表示“必须”；might 在本卡核心搭配“might do something”中表示“可能”。答题时要根据句意和完整结构区分，不只看拼写或中文近义。"
+    }
+  ],
   "relatedVocabulary": [
     {
-      "category": "语义关联：一起理解更清楚",
+      "category": "同一语义场的高频词",
       "items": [
         {
           "word": "possibility",
@@ -231,6 +260,52 @@
           "phonetic": "/əˈnsɝːtəntiː/",
           "partOfSpeech": "n.",
           "chinese": "不确定性"
+        }
+      ]
+    },
+    {
+      "category": "近义表达分类",
+      "items": [
+        {
+          "word": "may",
+          "phonetic": "/ˈmeɪ/",
+          "partOfSpeech": "aux.",
+          "chinese": "可能；也许"
+        },
+        {
+          "word": "could possibly",
+          "phonetic": "/ˈkʊd ˈpɑsəbliː/",
+          "partOfSpeech": "phr.",
+          "chinese": "有可能"
+        },
+        {
+          "word": "perhaps",
+          "phonetic": "/pɚˈhæps/",
+          "partOfSpeech": "adv.",
+          "chinese": "也许；可能"
+        },
+        {
+          "word": "could",
+          "phonetic": "/ˈkʊd/",
+          "partOfSpeech": "v.",
+          "chinese": "可以；能"
+        }
+      ]
+    },
+    {
+      "category": "对比与易混表达分类",
+      "items": [
+        {
+          "word": "certainly will",
+          "phonetic": "/ˈsɝːtənliː ˈwɪl/",
+          "partOfSpeech": "phr.",
+          "chinese": "肯定会"
+        },
+        {
+          "word": "must",
+          "phonetic": "/ˈmʌst/",
+          "partOfSpeech": "v.",
+          "chinese": "必须"
         }
       ]
     }
@@ -319,8 +394,8 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “might” 最直接近义词？",
       "options": [
+        "must",
         "provide",
-        "buy",
         "may",
         "certainly will"
       ],
@@ -333,10 +408,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “might” 最直接反义词？",
       "options": [
-        "buy",
+        "provide",
         "certainly will",
         "may",
-        "provide"
+        "must"
       ],
       "answer": "certainly will",
       "stage": "T2",
@@ -345,14 +420,14 @@
     {
       "id": "might-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “might” 的相关近义词？",
+      "prompt": "根据本词卡辨析，哪个词被列为 “might” 的易混词？",
       "options": [
+        "must",
         "may",
         "certainly will",
-        "provide",
-        "buy"
+        "provide"
       ],
-      "answer": "may",
+      "answer": "must",
       "stage": "T3",
       "ai": false
     },
@@ -523,7 +598,7 @@
   },
   "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.09.09.4",
+  "contentVersion": "2026.09.09.5",
   "reviewed": false,
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

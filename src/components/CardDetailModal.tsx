@@ -287,7 +287,7 @@ export function CardDetailModal({ card, progress, open, onClose, onLearn }: Card
         </LearningSection>
 
         <LearningSection meta={sectionMeta[6]} count={counts.confusables} open={expanded.has('confusables')} onToggle={() => toggle('confusables')}>
-          {card.confusables.length ? <div className="relation-list">{card.confusables.map((item) => <RelationRow key={item.word} word={item.word} phonetic={item.phonetic} partOfSpeech={item.partOfSpeech} meaning={item.chinese} note={item.difference} />)}</div> : <EmptySection>暂无高频且真正容易混淆的词，不为凑数量加入生僻内容。</EmptySection>}
+          {card.confusables.length ? <div className="relation-list">{card.confusables.map((item) => <RelationRow key={item.word} word={item.word} phonetic={item.phonetic} partOfSpeech={item.partOfSpeech} meaning={item.chinese} note={item.difference} />)}</div> : <EmptySection>这个词在当前核心义下没有需要额外辨析的高频易混词。</EmptySection>}
         </LearningSection>
 
         <LearningSection meta={sectionMeta[7]} count={counts.related} open={expanded.has('related')} onToggle={() => toggle('related')}>

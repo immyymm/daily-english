@@ -76,7 +76,7 @@
         "note": "在“increase from A to B”所表达的这个具体含义中，要用介词 from；换成 at 会破坏这个固定结构或改变原意。"
       }
     ],
-    "directSynonym": "raise /ˈreɪz/（提高；增加）",
+    "directSynonym": "raise /ˈreɪz/（提高；增加）；rise /ˈraɪz/（上升；增加）；grow /ˈɡroʊ/（增长；扩大）；boost /ˈbuːst/（促进；提高）",
     "directAntonym": "decrease /dɪˈkriːs/（减少；降低）",
     "derivatives": "本词暂无需额外强记的高频派生词",
     "example": "Regular speaking practice increases confidence.",
@@ -202,7 +202,28 @@
       "phonetic": "/ˈreɪz/",
       "partOfSpeech": "v.",
       "chinese": "提高；增加",
-      "difference": "increase 与 raise 在本卡义项下意思接近。raise 是及物动词，必须接宾语；increase 既可及物，也可不及物。"
+      "difference": "increase 与 raise 在本卡的一个常用义项下意思接近。raise 是及物动词，必须接宾语；increase 既可及物，也可不及物。"
+    },
+    {
+      "word": "rise",
+      "phonetic": "/ˈraɪz/",
+      "partOfSpeech": "v.",
+      "chinese": "上升；增加",
+      "difference": "increase 与 rise 在本卡的一个常用义项下意思接近。rise 是不及物动词，不直接接宾语；increase 可及物也可不及物。"
+    },
+    {
+      "word": "grow",
+      "phonetic": "/ˈɡroʊ/",
+      "partOfSpeech": "v.",
+      "chinese": "增长；扩大",
+      "difference": "increase 与 grow 在本卡的一个常用义项下意思接近。grow 常强调逐渐或自然增长；increase 是更一般的“增加”。"
+    },
+    {
+      "word": "boost",
+      "phonetic": "/ˈbuːst/",
+      "partOfSpeech": "v.",
+      "chinese": "促进；提高",
+      "difference": "increase 与 boost 在本卡的一个常用义项下意思接近。boost 是及物动词，常强调主动推动数量、信心或表现上升。"
     }
   ],
   "antonyms": [
@@ -211,29 +232,14 @@
       "phonetic": "/dɪˈkriːs/",
       "partOfSpeech": "v.",
       "chinese": "减少；降低",
-      "usage": "increase 与 decrease 在本卡义项下形成明确对比。increase 表示数量或程度上升；decrease 表示下降。"
+      "usage": "increase 与 decrease 在本卡的一个明确义项下形成对比。increase 表示数量或程度上升；decrease 表示下降。"
     }
   ],
   "derivatives": [],
-  "confusables": [
-    {
-      "word": "rise",
-      "phonetic": "/ˈraɪz/",
-      "partOfSpeech": "n.",
-      "chinese": "上升；增加；上涨",
-      "difference": "rise 表示“上升；增加；上涨”；increase 在本卡核心搭配“increase confidence”中表示“增加”。答题时要根据句意和完整结构区分，不只看拼写或中文近义。"
-    },
-    {
-      "word": "raise",
-      "phonetic": "/ˈreɪz/",
-      "partOfSpeech": "n.",
-      "chinese": "上升；高地；增高",
-      "difference": "raise 表示“上升；高地；增高”；increase 在本卡核心搭配“increase confidence”中表示“增加”。答题时要根据句意和完整结构区分，不只看拼写或中文近义。"
-    }
-  ],
+  "confusables": [],
   "relatedVocabulary": [
     {
-      "category": "语义关联：一起理解更清楚",
+      "category": "同一语义场的高频词",
       "items": [
         {
           "word": "decrease",
@@ -252,6 +258,46 @@
           "phonetic": "/ˈraɪz/",
           "partOfSpeech": "v. / n.",
           "chinese": "上升"
+        }
+      ]
+    },
+    {
+      "category": "近义表达分类",
+      "items": [
+        {
+          "word": "raise",
+          "phonetic": "/ˈreɪz/",
+          "partOfSpeech": "v.",
+          "chinese": "提高；增加"
+        },
+        {
+          "word": "rise",
+          "phonetic": "/ˈraɪz/",
+          "partOfSpeech": "v.",
+          "chinese": "上升；增加"
+        },
+        {
+          "word": "grow",
+          "phonetic": "/ˈɡroʊ/",
+          "partOfSpeech": "v.",
+          "chinese": "增长；扩大"
+        },
+        {
+          "word": "boost",
+          "phonetic": "/ˈbuːst/",
+          "partOfSpeech": "v.",
+          "chinese": "促进；提高"
+        }
+      ]
+    },
+    {
+      "category": "对比与易混表达分类",
+      "items": [
+        {
+          "word": "decrease",
+          "phonetic": "/dɪˈkriːs/",
+          "partOfSpeech": "v.",
+          "chinese": "减少；降低"
         }
       ]
     }
@@ -345,8 +391,8 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “increase” 最直接近义词？",
       "options": [
-        "rise",
         "prefer",
+        "work",
         "raise",
         "decrease"
       ],
@@ -359,10 +405,10 @@
       "type": "meaning_choice",
       "prompt": "哪个词是词卡中列出的 “increase” 最直接反义词？",
       "options": [
-        "prefer",
+        "work",
         "decrease",
         "raise",
-        "rise"
+        "prefer"
       ],
       "answer": "decrease",
       "stage": "T2",
@@ -371,14 +417,14 @@
     {
       "id": "increase-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “increase” 的易混词？",
+      "prompt": "根据本词卡辨析，哪个词被列为 “increase” 的相关近义词？",
       "options": [
-        "rise",
         "raise",
         "decrease",
-        "prefer"
+        "prefer",
+        "work"
       ],
-      "answer": "rise",
+      "answer": "raise",
       "stage": "T3",
       "ai": false
     },
@@ -549,7 +595,7 @@
   },
   "detailLevel": "template-complete",
   "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.09.09.4",
+  "contentVersion": "2026.09.09.5",
   "reviewed": false,
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }
