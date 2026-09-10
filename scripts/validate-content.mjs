@@ -311,6 +311,12 @@ for (const [cardIndex, card] of allCards.cards.entries()) {
     errors.push(card.id + ': human-reviewed common-sense meaning pack was not preserved exactly.');
   }
   if (card.fixedPhrases.some((entry) => !entry.chinese || !entry.example || !entry.translation)) errors.push(card.id + ': every fixed phrase needs a Chinese meaning and a bilingual example.');
+  const incompletePhraseEnding = /\b(?:a|an|the|my|your|his|her|our|their|is|are|was|were|has|had|one more)$/i;
+  const sentenceFragmentInsidePhrase = /\b(?:otherwise you will|next month|during the)\b/i;
+  if (card.fixedPhrases.some((entry) => entry.phrase.trim().split(/\s+/).length > 8)) errors.push(card.id + ': fixed phrase is an overlong sentence fragment rather than a reusable chunk.');
+  if (card.fixedPhrases.some((entry) => incompletePhraseEnding.test(entry.phrase.trim()) || sentenceFragmentInsidePhrase.test(entry.phrase))) {
+    errors.push(card.id + ': fixed phrase ends mid-structure or contains leaked sentence context.');
+  }
   if (new Set(card.examples.map((example) => example.english)).size !== card.examples.length) errors.push(card.id + ': duplicate example sentences.');
   if (card.derivatives.some((item) => item.word.toLowerCase() === card.word.toLowerCase())) errors.push(card.id + ': target word repeated as a derivative.');
   const forbiddenDerivativePairs = new Set(['affect:effect', 'affect:effective', 'bring:bringing', 'come:comer', 'eat:edible', 'end:finally', 'feel:felt', 'get:getter', 'join:joint', 'leave:leaving', 'let:letter', 'like:looking', 'live:liver', 'look:looker', 'pass:passenger', 'put:putting', 'set:settlement', 'solve:solvent', 'serve:server']);

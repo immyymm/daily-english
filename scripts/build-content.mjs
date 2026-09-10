@@ -32,6 +32,50 @@ const detailFloorFailures = [];
 // Sparse verbs need a few additional, hand-checked examples so every published
 // card can meet the same visible detail floor without fabricating relations.
 const manualSupplementalExamples = {
+  be: [
+    ['She is interested in modern art.', '她对现代艺术感兴趣。', '对现代艺术感兴趣'],
+    ['You are responsible for checking the figures.', '你负责核对这些数字。', '负责核对数据'],
+    ['He is good at solving practical problems.', '他善于解决实际问题。', '善于解决实际问题'],
+    ['Please be ready for the meeting at nine.', '请为九点的会议做好准备。', '为会议做好准备']
+  ],
+  have: [
+    ['We have breakfast at seven every morning.', '我们每天早上七点吃早餐。', '吃早餐'],
+    ['Have a look at this report.', '看一下这份报告。', '看一下这份报告'],
+    ['They had a short conversation after lunch.', '他们午饭后简短地谈了一会儿。', '进行简短交谈'],
+    ['I have no idea why the train is late.', '我不知道火车为什么晚点。', '不知道；不清楚']
+  ],
+  do: [
+    ['I do my homework after dinner.', '我晚饭后做作业。', '做作业'],
+    ['Our company does business with local suppliers.', '我们公司与当地供应商做生意。', '与当地供应商做生意'],
+    ['The storm did serious damage to the roof.', '暴风雨严重损坏了屋顶。', '对屋顶造成严重损坏'],
+    ['They do research on language learning.', '他们研究语言学习。', '研究语言学习']
+  ],
+  say: [
+    ['Please say hello to your family.', '请代我向你的家人问好。', '向家人问好'],
+    ['You can say no to an unfair request.', '你可以拒绝不公平的要求。', '拒绝不公平的要求'],
+    ['It is difficult to say for certain.', '这很难说准。', '说准；确定地说'],
+    ['She said something clearly and calmly.', '她清楚而冷静地说了些话。', '清楚地说出某事'],
+    ['Please say your name clearly.', '请清楚地说出你的名字。', '清楚地说出名字'],
+    ['She said goodbye to her colleagues before leaving.', '她离开前向同事们道别。', '向同事道别']
+  ],
+  go: [
+    ['They go abroad every summer.', '他们每年夏天都出国。', '出国'],
+    ['We go shopping on Saturday morning.', '我们星期六早上去购物。', '去购物'],
+    ['I usually go by bus.', '我通常乘公交车去。', '乘公交车去'],
+    ['The lights went out during the storm.', '暴风雨期间灯灭了。', '熄灭；停止运转']
+  ],
+  can: [
+    ['We can afford to wait one more day.', '我们承担得起再等一天。', '能够承担；负担得起'],
+    ['Can you please open the window?', '请问你能打开窗户吗？', '能否请你……'],
+    ['She can speak three languages fluently.', '她能流利地说三种语言。', '会说三种语言'],
+    ['You can always ask for help.', '你随时都可以寻求帮助。', '随时可以寻求帮助']
+  ],
+  make: [
+    ['The news made everyone happy.', '这个消息使大家都很高兴。', '使大家高兴'],
+    ['This small shop makes money by selling coffee.', '这家小店靠卖咖啡赚钱。', '赚钱'],
+    ['Please make room for the visitors.', '请给来访者腾出空间。', '为来访者腾出空间'],
+    ['We can make progress with daily practice.', '每天练习能让我们取得进步。', '取得进步']
+  ],
   base: [
     ['We based our estimate on last year\'s sales figures.', '我们根据去年的销售数据作出了估算。'],
     ['The film is based on a true story.', '这部电影根据真实故事改编。'],
@@ -69,12 +113,14 @@ const manualSupplementalExamples = {
     ['Please include your phone number in the application.', '请在申请表中填写你的电话号码。']
   ],
   mean: [
-    ['I did not mean any harm.', '我没有恶意。']
+    ['I did not mean any harm.', '我没有恶意。'],
+    ['What does this word mean in context?', '这个词在语境中是什么意思？']
   ],
   report: [
     ['Please report any damage to the front desk.', '如有损坏，请向前台报告。'],
     ['The newspaper reported that the road had reopened.', '报纸报道称那条道路已经重新开放。'],
-    ['Several employees reported feeling unwell after lunch.', '几名员工报告说午饭后感到不适。']
+    ['Several employees reported feeling unwell after lunch.', '几名员工报告说午饭后感到不适。'],
+    ['Please report the problem to your manager.', '请向你的经理报告这个问题。']
   ],
   require: [
     ['This job requires strong communication skills.', '这份工作要求具备很强的沟通能力。']
@@ -87,11 +133,34 @@ const manualSupplementalExamples = {
   ],
   win: [
     ['The proposal won broad support from local residents.', '这项提案赢得了当地居民的广泛支持。']
+  ],
+  know: [
+    ['Do you know the answer?', '你知道答案吗？'],
+    ['I know her well.', '我很了解她。'],
+    ['This town is known for its old buildings.', '这个小镇以古老建筑闻名。'],
+    ['I know him by name, but I have never met him.', '我知道他的名字，但从未见过他。']
+  ],
+  think: [
+    ['Think about the problem before answering.', '回答前先想一想这个问题。'],
+    ['She thinks highly of her former teacher.', '她对以前的老师评价很高。'],
+    ['We need to think ahead and prepare early.', '我们需要提前考虑并及早准备。']
+  ],
+  hope: [
+    ['We hope for better weather tomorrow.', '我们希望明天天气更好。'],
+    ['I hope to hear from you soon.', '我希望很快收到你的消息。']
+  ],
+  decide: [
+    ['They decided against buying the expensive model.', '他们决定不买那个昂贵的型号。'],
+    ['We need to decide on a date for the meeting.', '我们需要确定会议日期。'],
+    ['She could not decide between the two options.', '她无法在两个选项之间作出决定。']
+  ],
+  suggest: [
+    ['She suggested taking a short break.', '她建议短暂休息一下。']
   ]
 };
 
 function supplementalExamplesFor(word) {
-  const manual = (manualSupplementalExamples[word] ?? []).map(([english, chinese]) => ({ english, chinese, source: 'manual' }));
+  const manual = (manualSupplementalExamples[word] ?? []).map(([english, chinese, phraseChinese]) => ({ english, chinese, phraseChinese, source: 'manual' }));
   const corpus = (tatoebaExampleData.entries[word] ?? []).map((entry) => ({ ...entry, source: 'tatoeba' }));
   const seen = new Set();
   return [...manual, ...corpus].filter((entry) => {
@@ -319,9 +388,23 @@ function extractTargetChunk(text, targetWord) {
     && /^(?:am|is|are|was|were|be|been|being|has|have|had)$/.test(previousForm ?? '')
     && (/(?:ed|ing)$/i.test(targetForm) || (irregularForms[targetWord.toLowerCase()] ?? []).includes(targetForm.toLowerCase()));
   const start = includeSubject || includeAuxiliary ? targetIndex - 1 : targetIndex;
-  const available = words.slice(start, Math.min(words.length, start + 12));
-  const boundary = available.findIndex((word, index) => index >= 3 && /^(because|although|though|while|when|unless|but|if)$/i.test(word.text));
-  return available
+  const startOffset = words[start].index;
+  const punctuationOffset = text.slice(startOffset).search(/[,;:!?]/);
+  const clauseEnd = punctuationOffset >= 0 ? startOffset + punctuationOffset : text.length;
+  const available = words
+    .slice(start)
+    .filter((word) => word.index < clauseEnd)
+    .slice(0, 6);
+  const boundary = available.findIndex((word, index) => {
+    if (index < 2) return false;
+    const token = word.text.toLowerCase();
+    if (/^(?:because|although|though|while|when|unless|but|otherwise|than|if)$/.test(token)) return true;
+    if (/^(?:during|before|after|next|last|every|tomorrow|today|tonight|yesterday|soon|now)$/.test(token)) return true;
+    if (index >= 3 && /^(?:and|or)$/.test(token)) return true;
+    if (index >= 3 && /^(?:i|you|he|she|it|we|they|who|which)$/.test(token)) return true;
+    return false;
+  });
+  const chunk = available
     .slice(0, boundary >= 0 ? boundary : available.length)
     .map((word, index) => {
       if (includeAuxiliary && index === 0) return /^(?:has|have|had)$/i.test(word.text) ? 'have' : 'be';
@@ -329,7 +412,30 @@ function extractTargetChunk(text, targetWord) {
       if (index === (includeSubject ? 1 : 0)) return includeSubject ? word.text : targetWord;
       return word.text;
     })
-    .join(' ');
+    .join(' ')
+    .replace(/\s+(?:a|an|the|my|your|his|her|our|their|to|of|for|with|on|in|at|from|by|as|and|or)$/i, '')
+    .trim();
+
+  // Turn clause fragments into reusable grammar frames where the lexical
+  // pattern matters more than the particular subject in the source sentence.
+  if (/^(?:say|think|believe|know|understand|report|suggest|realize|hope|expect|appear)\s+that\b/i.test(chunk)) {
+    return `${includeSubject ? 'it ' : ''}${targetWord} that + clause`;
+  }
+  if (/^(?:say|think|believe|know|understand|report|suggest|realize|hope|expect)\s+(?:i|you|he|she|it|we|they)\b/i.test(chunk)) {
+    return `${targetWord} that + clause`;
+  }
+  if (/^(?:know|understand|explain|decide|remember|realize|discover)\s+(?:what|why|how|who|where|when)\b/i.test(chunk)) {
+    return `${targetWord} wh- + clause`;
+  }
+  if (/^compare\s+(?:to|with)\b/i.test(chunk)) {
+    return /^compare\s+to\b/i.test(chunk) ? 'compare A to B' : 'compare A with B';
+  }
+  if (/^get\s+in\s+touch\b/i.test(chunk)) return 'get in touch with someone';
+  if (/^it\s+take\b/i.test(chunk)) return 'it takes + time + to do something';
+  if (/^have\s+no\s+idea\b/i.test(chunk)) return 'have no idea';
+  if (/^have\s+to\s+do\s+is\b/i.test(chunk)) return 'have to do something';
+  if (/^can\s+afford\s+to\b/i.test(chunk)) return 'can afford to do something';
+  return chunk;
 }
 
 function phraseSpecificError(item, phrase, fallbackIndex) {
@@ -581,8 +687,14 @@ function supplementalPhraseRows(item) {
     const targetForms = inflectedForms(item.w.toLowerCase());
     const targetIndex = sentenceWords.findIndex((word) => targetForms.has(word.text.toLowerCase()));
     const dependsOnRelativeSubject = targetIndex > 0 && /^who$/i.test(sentenceWords[targetIndex - 1].text);
-    if (wordCount < 2 || wordCount > 10 || /\b(?:a|an|the|my|your|his|her|our|their|to|of|for|with|on|in|at|from|by|as)$/.test(normalized)
-      || dependsOnRelativeSubject || /^(?:can|could|do|will|would) do is\b/i.test(normalized) || seen.has(normalized)) return false;
+    if (wordCount < 2 || wordCount > 7 || /\b(?:a|an|the|my|your|his|her|our|their|to|of|for|with|on|in|at|from|by|as)$/.test(normalized)
+      || dependsOnRelativeSubject
+      || /^(?:can|could|do|will|would) do is\b/i.test(normalized)
+      || /^(?:do|say|think)\s+is\b/i.test(normalized)
+      || /^say\s+thin\b/i.test(normalized)
+      || /\b(?:is|are|was|were|do|does|did|have|has|had|right|during|before|after)$/i.test(normalized)
+      || /\b(?:otherwise|you will|he will|she will|they will|we will)\b/i.test(normalized)
+      || seen.has(normalized)) return false;
     seen.add(normalized);
     return true;
   });
@@ -640,7 +752,7 @@ function normalizeFixedPhrases(item, override, tuples) {
         const phraseKey = entry.phrase.toLowerCase().replace(/[^a-z']+/g, ' ').trim();
         const exampleKey = entry.english.toLowerCase().replace(/\s+/g, ' ').trim();
         if (seenPhrases.has(phraseKey) || seenExamples.has(exampleKey)) continue;
-        source.push([entry.phrase, firstMeaning(item.zh), entry.english, entry.chinese]);
+        source.push([entry.phrase, entry.phraseChinese ?? entry.chinese.replace(/[。！？!?]+$/, ''), entry.english, entry.chinese]);
         seenPhrases.add(phraseKey);
         seenExamples.add(exampleKey);
         if (source.length >= 10) break;
@@ -668,7 +780,7 @@ function normalizeFixedPhrases(item, override, tuples) {
     const phraseKey = entry.phrase.toLowerCase().replace(/[^a-z']+/g, ' ').trim();
     const exampleKey = entry.english.toLowerCase().replace(/\s+/g, ' ').trim();
     if (seenPhrases.has(phraseKey) || seenExamples.has(exampleKey)) continue;
-    source.push([entry.phrase, firstMeaning(item.zh), entry.english, entry.chinese]);
+    source.push([entry.phrase, entry.phraseChinese ?? entry.chinese.replace(/[。！？!?]+$/, ''), entry.english, entry.chinese]);
     seenPhrases.add(phraseKey);
     seenExamples.add(exampleKey);
     if (source.length >= 10) break;

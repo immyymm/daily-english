@@ -1,10 +1,12 @@
-import { fireEvent, render, screen, within } from '@testing-library/react';
-import { describe, expect, it, vi } from 'vitest';
+import { cleanup, fireEvent, render, screen, within } from '@testing-library/react';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 import provideCardJson from '../../content/cards/provide-v.json';
 import type { WordCard } from '../types';
 import { CardDetailModal } from './CardDetailModal';
 
 const provideCard = provideCardJson as unknown as WordCard;
+
+afterEach(cleanup);
 
 describe('CardDetailModal template content', () => {
   it('renders complete meanings and keeps every lexical entry in the same mobile reading order', () => {
@@ -95,5 +97,31 @@ describe('CardDetailModal template content', () => {
     expect(visibleText).not.toContain('模板版本');
     expect(visibleText).not.toContain('内容版本');
     expect(visibleText).not.toContain('待深度补全');
+  });
+
+  it('does not repeat an identical Chinese gloss as the example translation', () => {
+    const fixedPhrase = {
+      ...provideCard.fixedPhrases[0],
+      phrase: 'provide a clear answer',
+      chinese: '给出明确答复。',
+      translation: '给出明确答复',
+    };
+    const card = { ...provideCard, fixedPhrases: [fixedPhrase] };
+
+    render(
+      <CardDetailModal
+        open
+        card={card}
+        onClose={vi.fn()}
+        onLearn={vi.fn().mockResolvedValue(undefined)}
+      />,
+    );
+
+    const dialog = screen.getByRole('dialog', { name: '单词词卡' });
+    const phraseToggle = Array.from(dialog.querySelectorAll<HTMLButtonElement>('.learning-section-toggle'))
+      .find((button) => button.textContent?.includes('固定搭配和短语'));
+    expect(phraseToggle).toBeDefined();
+    fireEvent.click(phraseToggle!);
+    expect(within(dialog).getAllByText('给出明确答复。')).toHaveLength(1);
   });
 });

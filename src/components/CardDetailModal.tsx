@@ -71,6 +71,11 @@ function speak(text: string) {
   window.speechSynthesis.speak(utterance);
 }
 
+function sameChineseText(left: string, right: string) {
+  const normalize = (value: string) => value.replace(/[\s，。！？、；：,.!?;:]/g, '');
+  return normalize(left) === normalize(right);
+}
+
 function ListenButton({ text, label = '播放发音' }: { text: string; label?: string }) {
   return <button className="mini-sound" onClick={() => speak(text)} aria-label={label}><Volume2 size={16} /></button>;
 }
@@ -255,12 +260,16 @@ export function CardDetailModal({ card, progress, open, onClose, onLearn }: Card
         </LearningSection>
 
         <LearningSection meta={sectionMeta[1]} count={counts.phrases} open={expanded.has('phrases')} onToggle={() => toggle('phrases')}>
-          {card.fixedPhrases.map((item) => (
-            <section className="fixed-card" key={item.phrase}>
-              <LexicalEntry className="fixed-head" term={item.phrase} meaning={item.chinese} phonetic={item.phonetic} />
-              <p className="fixed-example">{item.example}</p><span>{item.translation}</span>
-            </section>
-          ))}
+          {card.fixedPhrases.map((item) => {
+            const repeatsMeaning = sameChineseText(item.chinese, item.translation);
+            return (
+              <section className="fixed-card" key={item.phrase}>
+                <LexicalEntry className="fixed-head" term={item.phrase} meaning={item.chinese} phonetic={item.phonetic} />
+                <p className="fixed-example">{item.example}</p>
+                {!repeatsMeaning && <span>{item.translation}</span>}
+              </section>
+            );
+          })}
         </LearningSection>
 
         <LearningSection meta={sectionMeta[2]} count={counts.context} open={expanded.has('context')} onToggle={() => toggle('context')}>
