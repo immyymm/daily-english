@@ -64,6 +64,12 @@ const manualSupplementalExamples = {
     ['I usually go by bus.', '我通常乘公交车去。', '乘公交车去'],
     ['The lights went out during the storm.', '暴风雨期间灯灭了。', '熄灭；停止运转']
   ],
+  let: [
+    ['My parents let me stay out late on Fridays.', '我父母允许我星期五晚些回家。', '让某人晚归', 'let someone stay out late'],
+    ['The hotel lets guests use the pool until ten.', '这家酒店允许客人使用泳池到十点。', '允许某人使用某物', 'let someone use something'],
+    ['Let the soup cool before you taste it.', '先让汤凉下来再尝。', '让某物冷却', 'let something cool'],
+    ['She would not let go of the rope.', '她不肯松开绳子。', '松开绳子', 'let go of the rope']
+  ],
   can: [
     ['We can afford to wait one more day.', '我们承担得起再等一天。', '能够承担；负担得起'],
     ['Can you please open the window?', '请问你能打开窗户吗？', '能否请你……'],
@@ -75,6 +81,10 @@ const manualSupplementalExamples = {
     ['This small shop makes money by selling coffee.', '这家小店靠卖咖啡赚钱。', '赚钱'],
     ['Please make room for the visitors.', '请给来访者腾出空间。', '为来访者腾出空间'],
     ['We can make progress with daily practice.', '每天练习能让我们取得进步。', '取得进步']
+  ],
+  love: [
+    ['I love this city for its quiet parks.', '我喜欢这座城市安静的公园。', '因为某事物的特点而喜欢它', 'love something for something'],
+    ['She loves having friends over for dinner.', '她喜欢邀请朋友来家里吃饭。', '喜欢邀请朋友来家里', 'love having someone over']
   ],
   base: [
     ['We based our estimate on last year\'s sales figures.', '我们根据去年的销售数据作出了估算。'],
@@ -108,6 +118,14 @@ const manualSupplementalExamples = {
   handle: [
     ['She handled the complaint calmly and professionally.', '她冷静而专业地处理了这起投诉。']
   ],
+  happen: [
+    ['Accidents can happen anywhere.', '事故在任何地方都可能发生。', '在任何地方发生', 'happen anywhere'],
+    ['The change happened gradually.', '这一变化是逐渐发生的。', '逐渐发生', 'happen gradually']
+  ],
+  drive: [
+    ['She drives carefully in heavy traffic.', '她在拥挤的车流中谨慎驾驶。', '谨慎驾驶', 'drive carefully'],
+    ['A small motor drives the pump.', '一台小型电动机驱动这台泵。', '驱动机器', 'drive a machine']
+  ],
   include: [
     ['The package includes free technical support for one year.', '这个套餐包括一年的免费技术支持。'],
     ['Please include your phone number in the application.', '请在申请表中填写你的电话号码。']
@@ -115,6 +133,19 @@ const manualSupplementalExamples = {
   mean: [
     ['I did not mean any harm.', '我没有恶意。'],
     ['What does this word mean in context?', '这个词在语境中是什么意思？']
+  ],
+  realize: [
+    ['I suddenly realized that I had left my keys at home.', '我突然意识到钥匙落在家里了。', '意识到某事', 'realize that + clause'],
+    ['I did not realize the importance of clear instructions.', '我没有意识到清晰说明的重要性。', '意识到某事的重要性', 'realize the importance of something'],
+    ['Do you realize what this change means?', '你意识到这项变化意味着什么吗？', '意识到某事意味着什么', 'realize what something means'],
+    ['Over time, she came to realize the value of patience.', '慢慢地，她开始认识到耐心的价值。', '逐渐认识到某事', 'come to realize something']
+  ],
+  compare: [
+    ['We compared the two proposals carefully.', '我们仔细比较了这两个方案。', '比较两个方案', 'compare two proposals'],
+    ['Do not compare yourself with other people.', '不要拿自己与别人比较。', '拿自己与别人比较', 'compare yourself with others'],
+    ['Compare prices before you place an order.', '下单前先比较价格。', '比较价格', 'compare prices'],
+    ['The two teams compared notes after the experiment.', '两个团队在实验后交换了意见。', '交换意见', 'compare notes'],
+    ['This report compares current sales with last year\'s figures.', '这份报告把当前销量与去年的数据作了比较。', '把当前销量与过去数据比较', 'compare current sales with past figures']
   ],
   report: [
     ['Please report any damage to the front desk.', '如有损坏，请向前台报告。'],
@@ -126,7 +157,9 @@ const manualSupplementalExamples = {
     ['This job requires strong communication skills.', '这份工作要求具备很强的沟通能力。']
   ],
   solve: [
-    ['We solved the problem by checking each step.', '我们通过逐步检查解决了这个问题。']
+    ['We solved the problem by checking each step.', '我们通过逐步检查解决了这个问题。'],
+    ['The team solved the puzzle in ten minutes.', '团队在十分钟内解开了这个谜题。', '解开谜题', 'solve a puzzle'],
+    ['Good communication can solve many misunderstandings.', '良好的沟通能化解许多误会。', '化解误会', 'solve a misunderstanding']
   ],
   sit: [
     ['Sit near the window if you want more light.', '如果你想要更明亮的光线，就坐在窗边。']
@@ -149,18 +182,24 @@ const manualSupplementalExamples = {
     ['We hope for better weather tomorrow.', '我们希望明天天气更好。'],
     ['I hope to hear from you soon.', '我希望很快收到你的消息。']
   ],
+  expect: [
+    ['We expect strong demand this summer.', '我们预计今年夏天需求旺盛。', '预计需求旺盛', 'expect strong demand'],
+    ['I expect a reply by Friday.', '我预计星期五前会收到回复。', '预计收到回复', 'expect a reply']
+  ],
   decide: [
     ['They decided against buying the expensive model.', '他们决定不买那个昂贵的型号。'],
     ['We need to decide on a date for the meeting.', '我们需要确定会议日期。'],
     ['She could not decide between the two options.', '她无法在两个选项之间作出决定。']
   ],
   suggest: [
-    ['She suggested taking a short break.', '她建议短暂休息一下。']
+    ['She suggested taking a short break.', '她建议短暂休息一下。'],
+    ['The evidence suggests a different explanation.', '证据表明可能有另一种解释。', '表明另一种可能性', 'suggest another possibility'],
+    ['Can you suggest a good place for lunch?', '你能推荐一个适合吃午饭的地方吗？', '推荐某物', 'suggest something']
   ]
 };
 
 function supplementalExamplesFor(word) {
-  const manual = (manualSupplementalExamples[word] ?? []).map(([english, chinese, phraseChinese]) => ({ english, chinese, phraseChinese, source: 'manual' }));
+  const manual = (manualSupplementalExamples[word] ?? []).map(([english, chinese, phraseChinese, phrase]) => ({ english, chinese, phraseChinese, phrase, source: 'manual' }));
   const corpus = (tatoebaExampleData.entries[word] ?? []).map((entry) => ({ ...entry, source: 'tatoeba' }));
   const seen = new Set();
   return [...manual, ...corpus].filter((entry) => {
@@ -169,6 +208,61 @@ function supplementalExamplesFor(word) {
     seen.add(key);
     return true;
   });
+}
+
+function concisePhraseChinese(item, phrase, sentenceChinese, explicitChinese) {
+  const clean = (value = '') => value
+    .replace(/\s+/g, '')
+    .replace(/[。！？!?；;]+$/g, '')
+    .trim();
+  const explicit = clean(explicitChinese);
+  if (explicit) return explicit;
+  const mapped = clean(semanticPhraseChinese[phrase.toLowerCase()] ?? semanticPhraseChinese[phrase]);
+  if (mapped) return mapped;
+
+  const senseTokens = item.zh
+    .split('；')
+    .map((value) => clean(value).replace(/[…·]/g, ''))
+    .filter(Boolean);
+  const clauses = clean(sentenceChinese)
+    .split(/[，,：:]/)
+    .map((value) => value.trim())
+    .filter(Boolean);
+  const rankedClauses = clauses
+    .map((value) => ({
+      value,
+      score: senseTokens.reduce((score, token) => {
+        if (value.includes(token)) return score + 4;
+        if (token.length >= 2 && (value.includes(token.slice(0, 2)) || value.includes(token.slice(-2)))) return score + 2;
+        return score;
+      }, 0)
+    }))
+    .sort((left, right) => right.score - left.score || left.value.length - right.value.length);
+  const bestClause = rankedClauses[0];
+  let selected = bestClause?.value ?? clean(sentenceChinese);
+
+  // When the translation contains the target sense after a sentence subject,
+  // keep the predicate phrase instead of copying the whole sentence into the
+  // context label. Preserve a preceding Chinese negation where applicable.
+  if ((bestClause?.score ?? 0) > 0) {
+    const matchedToken = [...senseTokens]
+      .filter((token) => token.length >= 2 && selected.includes(token))
+      .sort((left, right) => right.length - left.length)[0];
+    if (matchedToken) {
+      const tokenIndex = selected.indexOf(matchedToken);
+      const startIndex = tokenIndex > 0 && /[不没未]/.test(selected[tokenIndex - 1]) ? tokenIndex - 1 : tokenIndex;
+      if (startIndex > 0) selected = selected.slice(startIndex);
+    }
+  }
+
+  selected = selected
+    .replace(/^(?:请问|除了|如果|虽然|因为|即使|无论|当|请|麻烦|务必|千万|究竟|到底)+/, '')
+    .replace(/^(?:我们|你们|他们|她们|它们|大家|有人|没有人|这个|这些|这次|这份|这项|这家|这本|这场|这种|那个|那些|那次|那份|那项|那家|那本|那场|那种|谁|我|你|他|她|它|这|那)(?:也|都|还|已经|曾经|通常|经常|一直|完全|可能|应该|必须|需要|想要|不想|没能|没有|不会|不能|无法|并不|绝不)*/, '')
+    .replace(/^(?:也|都|还|已经|曾经|通常|经常|一直|完全|可能|应该|必须|需要|想要|不想|没能|没有|不会|不能|无法|并不|绝不|再)+/, '')
+    .replace(/[吗呢吧]$/g, '')
+    .replace(/[。！？!?；;]+$/g, '')
+    .trim();
+  return selected || firstMeaning(item.zh);
 }
 
 const slug = (value) => value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
@@ -404,7 +498,7 @@ function extractTargetChunk(text, targetWord) {
     if (index >= 3 && /^(?:i|you|he|she|it|we|they|who|which)$/.test(token)) return true;
     return false;
   });
-  const chunk = available
+  let chunk = available
     .slice(0, boundary >= 0 ? boundary : available.length)
     .map((word, index) => {
       if (includeAuxiliary && index === 0) return /^(?:has|have|had)$/i.test(word.text) ? 'have' : 'be';
@@ -414,6 +508,15 @@ function extractTargetChunk(text, targetWord) {
     })
     .join(' ')
     .replace(/\s+(?:a|an|the|my|your|his|her|our|their|to|of|for|with|on|in|at|from|by|as|and|or)$/i, '')
+    .trim();
+
+  // Remove sentence-only time/place tails and repair common dangling chunks.
+  // The result must be a reusable expression a learner can transfer to a new
+  // sentence, not a clipped quotation from the corpus example.
+  chunk = chunk
+    .replace(/\s+(?:on|at|during|before|after|until|by)\s+(?:(?:monday|tuesday|wednesday|thursday|friday|saturday|sunday)|(?:this|next|last|every)\b|(?:morning|afternoon|evening|night|week|month|year)\b).*$/i, '')
+    .replace(/\s+(?:next|last|every)\s+(?:morning|afternoon|evening|night|week|month|year).*$/i, '')
+    .replace(/\s+(?:time|wherever|until)$/i, '')
     .trim();
 
   // Turn clause fragments into reusable grammar frames where the lexical
@@ -427,14 +530,18 @@ function extractTargetChunk(text, targetWord) {
   if (/^(?:know|understand|explain|decide|remember|realize|discover)\s+(?:what|why|how|who|where|when)\b/i.test(chunk)) {
     return `${targetWord} wh- + clause`;
   }
-  if (/^compare\s+(?:to|with)\b/i.test(chunk)) {
-    return /^compare\s+to\b/i.test(chunk) ? 'compare A to B' : 'compare A with B';
-  }
+  if (/^compare\b.+\bto\b.+/i.test(chunk)) return 'compare A to B';
+  if (/^compare\b.+\bwith\b.+/i.test(chunk)) return 'compare A with B';
+  if (/^compare\s+(?:to|with)\b/i.test(chunk)) return /^compare\s+to\b/i.test(chunk) ? 'compare A to B' : 'compare A with B';
   if (/^get\s+in\s+touch\b/i.test(chunk)) return 'get in touch with someone';
   if (/^it\s+take\b/i.test(chunk)) return 'it takes + time + to do something';
   if (/^have\s+no\s+idea\b/i.test(chunk)) return 'have no idea';
   if (/^have\s+to\s+do\s+is\b/i.test(chunk)) return 'have to do something';
   if (/^can\s+afford\s+to\b/i.test(chunk)) return 'can afford to do something';
+  if (/^(?:find|discover|decide|know|understand|explain)\s+(?:what|why|how|who|where|when)\b/i.test(chunk)) return `${targetWord} wh- + clause`;
+  if (/^give\s+(?:me|you|him|her|us|them)\s+(?:what|something)?$/i.test(chunk)) return 'give someone something';
+  if (/^follow\s+(?:me|you|him|her|us|them)(?:\s+wherever)?$/i.test(chunk)) return 'follow someone';
+  if (/\b(?:about|for|with|from|of|on|at|into|through)$/i.test(chunk)) return `${chunk} something`;
   return chunk;
 }
 
@@ -675,29 +782,436 @@ function normalizeErrors(item, override, tuples) {
   }));
 }
 
+// Corpus sentences are valuable example evidence, but a clipped sentence is
+// not automatically a reusable collocation. These reviewed corrections turn
+// sentence-specific fragments into transferable phrase patterns and give each
+// one an exact Chinese gloss. The full bilingual corpus sentence is retained
+// separately as the fixed-phrase example.
+const supplementalPhraseCorrections = new Map(Object.entries({
+  'get|get there': ['get there', '到达那里'],
+  'get|get yourself something to eat': ['get yourself something to eat', '给自己弄点吃的'],
+  'get|get over the difficulties': ['get over difficulties', '克服困难'],
+  'get|get home': ['get home', '到家'],
+  'can|can you please open the window': ['can you please do something', '能否请你做某事'],
+  'know|know someone well': ['know someone well', '很了解某人'],
+  "know|be known for someone's old buildings": ['be known for something', '以某物闻名'],
+  'know|know someone by name': ['know someone by name', '知道某人的名字'],
+  'know|know wh- + clause': ['know wh- + clause', '知道具体信息'],
+  'will|will do you good': ['will do someone good', '将对某人有好处'],
+  'will|will melt on the stove': ['will melt', '将会融化'],
+  'will|will attend the meeting': ['will attend a meeting', '将会参加会议'],
+  'will|will miss the train': ['will miss something', '将会错过某物'],
+  "would|would not betray someone's friends": ['would not betray someone', '不会背叛某人'],
+  'would|would not think like that': ['would not think that way', '不会那样想'],
+  'would|would make someone happy': ['would make someone happy', '会让某人高兴'],
+  "would|would keep someone's promise": ['would keep a promise', '会信守承诺'],
+  "think|think highly of someone's former teacher": ['think highly of someone', '对某人评价很高'],
+  'think|think ahead and prepare early': ['think ahead', '提前考虑'],
+  'think|think like that': ['think that way', '那样想'],
+  'see|see a brown wallet around here': ['see something nearby', '在附近看见某物'],
+  'see|see someone': ['see someone', '见某人'],
+  "come|come over to someone's house": ['come over to someone\'s house', '到某人家里来'],
+  "come|come to someone's house": ['come to someone\'s house', '来到某人家'],
+  'want|want someone to call the police': ['want someone to call the police', '想让某人报警'],
+  'want|want to eat noodles': ['want to eat something', '想吃某物'],
+  'want|want to order': ['want to order something', '想点某物'],
+  'want|want to go': ['want to go somewhere', '想去某地'],
+  'could|could you call someone back': ['could you call someone back', '能否给某人回电话'],
+  'could|could you cook this meat': ['could you cook something longer', '能否把某物再煮久一点'],
+  'could|could you keep this luggage': ['could you keep something', '能否保管某物'],
+  'could|could you please not smoke': ['could you please not do something', '能否请你不要做某事'],
+  "look|look like you've just seen": ['look as if you have seen a ghost', '看起来像见了鬼'],
+  'tell|tell someone a little about yourself': ['tell someone about yourself', '向某人介绍自己'],
+  'tell|tell someone how to get there': ['tell someone how to get somewhere', '告诉某人如何到某地'],
+  'tell|tell someone the truth': ['tell someone the truth', '告诉某人真相'],
+  'tell|tell someone': ['tell someone something', '告诉某人某事'],
+  'give|give someone two knives': ['give someone some utensils', '给某人一些餐具'],
+  'give|give to you': ['give something to someone', '把某物给某人'],
+  'need|need more time to finish': ['need more time', '需要更多时间'],
+  'need|need some medicine to kill': ['need some medicine', '需要一些药'],
+  'need|need to ask': ['need to ask a question', '需要提一个问题'],
+  'need|need to find somewhere to practice': ['need somewhere to practice', '需要一个练习场所'],
+  'ask|ask someone': ['ask someone something', '询问某人某事'],
+  'ask|ask you a silly question': ['ask someone a question', '问某人一个问题'],
+  'ask|ask someone about something': ['ask someone about something', '向某人询问某事'],
+  'talk|talk to you about something': ['talk to someone about something', '与某人谈论某事'],
+  'keep|keep this luggage until p m': ['keep something until a set time', '把某物保管到指定时间'],
+  'keep|keep a dictionary close at hand': ['keep something close at hand', '把某物放在手边'],
+  "keep|keep someone's promise": ['keep a promise', '信守承诺'],
+  'put|put a hand gently on something': ['put a hand on something', '把手放在某物上'],
+  'put|put the chair in front': ['put something in front of something', '把某物放在另一物前面'],
+  "put|put on someone's hat to go": ['put on a hat', '戴上帽子'],
+  'put|put off for a week': ['put something off for a week', '把某事推迟一周'],
+  'like|like cracking sunflower seeds with something': ['like doing something', '喜欢做某事'],
+  'like|like dogs and someone sister likes': ['like one thing but not another', '喜欢一物而不喜欢另一物'],
+  'like|like spring the best of something': ['like something best', '最喜欢某物'],
+  "help|help yourself to anything you'd like": ['help yourself to something', '随意取用某物'],
+  'help|help someone': ['help someone with something', '帮助某人做某事'],
+  'help|help you lose weight': ['help someone do something', '帮助某人做某事'],
+  'start|start until they arrive': ['not start until someone arrives', '等某人到达后再开始'],
+  'start|start is the main problem': ['decide when to start', '决定何时开始'],
+  'show|show someone': ['show someone something', '给某人看某物'],
+  "show|show you something in someone's office": ['show someone something', '给某人看某物'],
+  'bring|bring someone a glass of tea': ['bring someone a drink', '给某人拿一杯饮料'],
+  'bring|bring you success': ['bring someone success', '给某人带来成功'],
+  'bring|bring someone down': ['bring someone down', '击垮某人'],
+  'love|love someone more': ['love someone deeply', '深爱某人'],
+  'love|love you': ['love someone', '爱某人'],
+  'lose|lose you again': ['lose someone', '失去某人'],
+  'meet|meet with someone': ['meet with someone', '与某人会面'],
+  'thank|thank you for agreeing to meet': ['thank someone for meeting', '感谢某人赴约'],
+  'thank|thank you for always taking care': ['thank someone for taking care of something', '感谢某人一直照料某事'],
+  'thank|thank you for drawing a bird': ['thank someone for doing something', '感谢某人做某事'],
+  'stand|stand by you whatever happens': ['stand by someone whatever happens', '无论如何都支持某人'],
+  'stand|stand by someone in case': ['stand by someone in trouble', '在某人遇到困难时支持他'],
+  'speak|speak to you about something': ['speak to someone about something', '与某人谈论某事'],
+  'speak|speak with you in private': ['speak with someone in private', '与某人私下交谈'],
+  "allow|allow you to use someone's pen": ['allow someone to use something', '允许某人使用某物'],
+  'allow|allow you to do that': ['allow someone to do something', '允许某人做某事'],
+  'consider|consider you one of someone\'s closest': ['consider someone a close friend', '把某人视为亲密朋友'],
+  'build|build a simple tool to track': ['build a tool to track something', '制作工具来跟踪某事'],
+  'serve|serve it': ['serve a drink', '端上一杯饮料'],
+  'listen|listen to others': ['listen to other people', '听取他人的意见'],
+  'base|be based on mutual trust': ['be based on mutual trust', '建立在相互信任的基础上'],
+  'hit|hit someone\'s head against a rock': ['hit your head against something', '头撞到某物上'],
+  'discover|discover that she had run out': ['discover that something has run out', '发现某物已经用完'],
+  'express|express someone deep sorrow': ['express deep sorrow', '表达深切悲伤'],
+  'solve|solve the problem by checking each': ['solve a problem step by step', '逐步解决问题'],
+  'open|open source': ['be open source', '采用开源方式'],
+  'spend|spend your winter vacation': ['spend a vacation somewhere', '在某地度假'],
+  'mean|mean to do that': ['mean to do something', '有意做某事'],
+  "feel|feel any pain in someone's stomach": ['feel pain somewhere', '感到某处疼痛'],
+  'run|run out': ['run out', '用完；耗尽'],
+  'come|come to an end': ['come to an end', '结束'],
+  'must|must come to an end': ['must come to an end', '必须结束'],
+  'feel|feel any pain in your stomach': ['feel pain somewhere', '感到某处疼痛'],
+  'put|put on someone hat to go': ['put on a hat', '戴上帽子'],
+  'try|try to have a positive attitude': ['try to stay positive', '努力保持积极态度'],
+  'stop|stop getting yourself worked up over': ['stop getting worked up over something', '不再为某事烦躁'],
+  "look|look after someone's dog": ["look after someone's pet", '照顾某人的宠物'],
+  'tell|tell someone how to use': ['tell someone how to use something', '告诉某人如何使用某物'],
+  'call|call someone back a bit later': ['call someone back later', '稍后给某人回电话'],
+  'call|call someone': ['call someone', '给某人打电话'],
+  "talk|talk about someone's past": ["talk about someone's past", '谈论某人的过去'],
+  'help|help someone find a job': ['help someone find a job', '帮助某人找工作'],
+  'help|help someone wash these dishes': ['help someone wash the dishes', '帮助某人洗餐具'],
+  "help|help someone find someone's dog": ['help someone find a pet', '帮助某人寻找宠物'],
+  'show|show someone on the map': ['show someone something on a map', '在地图上给某人指出某地'],
+  'show|show you something in someone\'s office': ['show someone something', '给某人看某物'],
+  "hear|hear someone's son play the violin": ['hear someone play an instrument', '听见某人演奏乐器'],
+  'hear|hear someone': ['hear someone', '听见某人'],
+  'hear|hear someone sobbing in someone bedroom': ['hear someone sobbing', '听见某人在抽泣'],
+  "move|move someone's furniture": ["move someone's furniture", '搬运某人的家具'],
+  'love|love someone': ['love someone', '爱某人'],
+  'hold|hold this seat for someone': ['hold a seat for someone', '为某人留座'],
+  "pay|pay more attention to someone's warnings": ["pay attention to someone's warning", '留意某人的警告'],
+  'meet|meet someone requirements': ["meet someone's requirements", '满足某人的要求'],
+  'thank|thank you for inviting someone': ['thank someone for an invitation', '感谢某人的邀请'],
+  "change|change someone's plans": ["change someone's plans", '改变某人的计划'],
+  'kill|kill someone': ['kill someone', '杀死某人'],
+  'follow|follow someone': ['follow someone', '跟随某人'],
+  'follow|follow someone advice': ["follow someone's advice", '听从某人的建议'],
+  "follow|follow someone's advice": ["follow someone's advice", '听从某人的建议'],
+  'remember|remember someone\'s mother teaching someone': ['remember someone teaching you something', '记得某人教过自己的事'],
+  'allow|allow someone to go abroad': ['allow someone to go abroad', '允许某人出国'],
+  "continue|continue to do someone's jobs": ["continue doing someone's work", '继续完成某人的工作'],
+  "add|add someone's name to the list": ["add someone's name to a list", '把某人的名字加入名单'],
+  'send|send someone another ticket': ['send someone another ticket', '再寄给某人一张票'],
+  'send|send it to someone by fax': ['send something to someone by fax', '把某物传真给某人'],
+  'send|send someone a letter': ['send someone a letter', '给某人寄信'],
+  "grow|grow strawberries in someone's greenhouse": ['grow something in a greenhouse', '在温室里种植某物'],
+  "offer|offer someone's congratulations": ['offer congratulations to someone', '向某人表示祝贺'],
+  'expect|expect someone back by six o\'clock': ['expect someone back by a set time', '预计某人在指定时间前回来'],
+  'expect|expect a lot from someone': ['expect a lot from someone', '对某人抱有很高期望'],
+  'serve|serve someone someone\'s meal first': ['serve someone a meal', '给某人上餐'],
+  "listen|listen to someone's advice": ["listen to someone's advice", '听取某人的建议'],
+  "agree|agree to someone's proposal": ["agree to someone's proposal", '同意某人的提议'],
+  'agree|agree with someone on that point': ['agree with someone on a point', '在某一点上同意某人'],
+  'pass|pass someone the maple syrup': ['pass someone something', '把某物递给某人'],
+  'pass|pass someone the mashed potatoes': ['pass someone some food', '把食物递给某人'],
+  'pass|pass someone the pepper': ['pass someone the pepper', '把胡椒递给某人'],
+  "pass|pass someone's driving test": ['pass a driving test', '通过驾驶考试'],
+  'sell|sell your car to someone': ['sell something to someone', '把某物卖给某人'],
+  "sell|sell someone's house": ['sell a house', '出售房屋'],
+  'pick|pick someone up': ['pick someone up', '接某人'],
+  "drive|drive someone's car": ["drive someone's car", '驾驶某人的汽车'],
+  'explain|explain to someone the difficult situation': ['explain a difficult situation to someone', '向某人解释困难处境'],
+  "hit|hit the ball with someone's racket": ['hit a ball with a racket', '用球拍击球'],
+  'pull|pull someone out of the mud': ['pull someone out of something', '把某人从某处拉出来'],
+  "raise|raise someone's salary": ["raise someone's salary", '给某人加薪'],
+  'return|return the book to someone': ['return something to someone', '把某物还给某人'],
+  "join|join someone's party": ['join a party', '参加聚会'],
+  'join|join someone for dinner': ['join someone for a meal', '与某人一起用餐'],
+  "share|share a bedroom with someone's sister": ['share a room with someone', '与某人合住一间房'],
+  'describe|describe someone as a detective': ['describe someone as something', '把某人描述为某种身份'],
+  'protect|protect someone': ['protect someone', '保护某人'],
+  "protect|protect someone's son": ["protect someone's child", '保护某人的孩子'],
+  "accept|accept someone's offer": ["accept someone's offer", '接受某人的提议'],
+  "accept|accept someone's apologies": ["accept someone's apology", '接受某人的道歉'],
+  "accept|accept someone's invitation": ["accept someone's invitation", '接受某人的邀请'],
+  'achieve|achieve great success in someone business': ['achieve success in business', '在事业上取得成功'],
+  "express|express someone's thanks": ['express thanks', '表达谢意'],
+  'express|express someone feeling': ["express someone's feelings", '表达某人的感受'],
+  'encourage|encourage someone to apply for something': ['encourage someone to apply for something', '鼓励某人申请某项机会']
+}));
+
 function supplementalPhraseRows(item) {
   const seen = new Set();
-  return supplementalExamplesFor(item.w).map((entry) => ({
-    ...entry,
-    phrase: extractTargetChunk(entry.english, item.w)
-  })).filter((entry) => {
+  return supplementalExamplesFor(item.w).map((entry) => {
+    const extractedPhrase = entry.phrase ?? extractTargetChunk(entry.english, item.w)
+      .replace(/\b(?:me|him|her|us|them)\b/gi, 'someone')
+      .replace(/\b(?:my|his|her|our|their)\b/gi, "someone's");
+    const correction = supplementalPhraseCorrections.get(`${item.w}|${extractedPhrase.toLowerCase()}`);
+    const phrase = correction?.[0] ?? extractedPhrase;
+    return {
+      ...entry,
+      phrase,
+      phraseChinese: correction?.[1] ?? concisePhraseChinese(item, phrase, entry.chinese, entry.phraseChinese)
+    };
+  }).filter((entry) => {
     const normalized = entry.phrase.toLowerCase().replace(/[^a-z']+/g, ' ').trim();
     const wordCount = wordsWithOffsets(entry.phrase).length;
     const sentenceWords = wordsWithOffsets(entry.english);
     const targetForms = inflectedForms(item.w.toLowerCase());
     const targetIndex = sentenceWords.findIndex((word) => targetForms.has(word.text.toLowerCase()));
     const dependsOnRelativeSubject = targetIndex > 0 && /^who$/i.test(sentenceWords[targetIndex - 1].text);
-    if (wordCount < 2 || wordCount > 7 || /\b(?:a|an|the|my|your|his|her|our|their|to|of|for|with|on|in|at|from|by|as)$/.test(normalized)
+    if (wordCount < 2 || wordCount > 6 || /\b(?:a|an|the|my|your|his|her|our|their|to|of|for|with|on|in|at|from|by|as|about|until|wherever|what|who|why|how|when)$/.test(normalized)
       || dependsOnRelativeSubject
       || /^(?:can|could|do|will|would) do is\b/i.test(normalized)
       || /^(?:do|say|think)\s+is\b/i.test(normalized)
       || /^say\s+thin\b/i.test(normalized)
-      || /\b(?:is|are|was|were|do|does|did|have|has|had|right|during|before|after)$/i.test(normalized)
+      || /\b(?:is|are|was|were|do|does|did|have|has|had|right|during|before|after|looking|new|same)$/i.test(normalized)
       || /\b(?:otherwise|you will|he will|she will|they will|we will)\b/i.test(normalized)
       || seen.has(normalized)) return false;
     seen.add(normalized);
     return true;
   });
+}
+
+const reusablePhraseCompletions = new Map([
+  ['write about', 'write about something'],
+  ['read about', 'read about something'],
+  ['provide information about', 'provide information about something'],
+  ['understand why', 'understand why something happens'],
+  ['understand how', 'understand how something works'],
+  ['learn about', 'learn about something'],
+  ['include information about', 'include information about something'],
+  ['speak about', 'speak about something'],
+  ['continue until', 'continue until something happens'],
+  ['explain why', 'explain why something happens'],
+  ['explain how', 'explain how to do something'],
+  ['notice someone looking', 'notice someone doing something'],
+  ['express concern about', 'express concern about something'],
+  ['should not be confused with', 'should not be confused with something'],
+  ['mean a lot to', 'mean a lot to someone'],
+  ['become aware of', 'become aware of something'],
+  ['become involved in', 'become involved in something'],
+  ['what became of', 'what became of something'],
+  ['does not seem to', 'does not seem to do something'],
+  ['seem to be a little under', 'seem to be under the weather'],
+  ['provide access to', 'provide access to something'],
+  ['include a copy of', 'include a copy of something'],
+  ['including but not limited to', 'including but not limited to something'],
+  ['follow up on', 'follow up on something'],
+  ['allow time for', 'allow time for something'],
+  ['allow access to', 'allow access to something'],
+  ['be allowed to', 'be allowed to do something'],
+  ['spend money on', 'spend money on something'],
+  ['spend the day with', 'spend the day with someone'],
+  ['be expected to', 'be expected to do something'],
+  ['be required to', 'be required to do something'],
+  ['listen to', 'listen to someone or something'],
+  ['listen for', 'listen for something'],
+  ['decide against', 'decide against doing something'],
+  ['reach out to', 'reach out to someone'],
+  ['have no choice but to', 'have no choice but to do something'],
+  ['choice of', 'choice of something'],
+  ['develop an interest in', 'develop an interest in something'],
+  ['describe something as', 'describe something as something'],
+  ['increase the risk of', 'increase the risk of something'],
+  ['an increase in', 'an increase in something'],
+  ['protect someone from', 'protect someone from something'],
+  ['be protected by', 'be protected by someone or something'],
+  ['compared with', 'compared with something'],
+  ['cannot compare with', 'cannot compare with something'],
+  ['accept someone as', 'accept someone as something'],
+  ['prepare someone for', 'prepare someone for something'],
+  ['be prepared to', 'be prepared to do something'],
+  ['be affected by', 'be affected by something'],
+  ['get a handle on', 'get a handle on something'],
+  ['depend on', 'depend on someone or something'],
+  ['depend heavily on', 'depend heavily on something'],
+  ['depending on', 'depending on something'],
+  ['accept the fact that', 'accept the fact that + clause'],
+  ['believe that', 'believe that + clause'],
+  ['discover that', 'discover that + clause'],
+  ['mean that', 'mean that + clause'],
+  ['realize that', 'realize that + clause'],
+  ['suggest that', 'suggest that + clause'],
+  ['the fact remains that', 'the fact remains that + clause'],
+  ['it seems that', 'it seems that + clause']
+]);
+
+// A corpus sentence may yield a useful English chunk while its source Chinese
+// still describes the whole sentence. Keep this reviewed table in the builder
+// so every regeneration emits a transferable phrase plus a phrase-only gloss.
+const reviewedContextCorrections = new Map(Object.entries({
+  'achieve|achieve anything': ['achieve something', '取得成就'],
+  "achieve|achieve someone's goals in three years": ['achieve a goal within a set time', '在期限内达成目标'],
+  'agree|agree with some of your opinions': ['agree with some points', '同意部分观点'],
+  'agree|agree with you at all': ['not agree with someone at all', '完全不同意某人'],
+  "ask|ask for your teacher's permission": ["ask for someone's permission", '征得某人许可'],
+  'avoid|avoid a traffic jam': ['avoid a traffic jam', '避开交通拥堵'],
+  'avoid|avoid discussing personal subjects with something': ['avoid discussing personal topics with someone', '避免与某人讨论私人话题'],
+  'avoid|avoid making any more trouble': ['avoid causing more trouble', '避免再惹麻烦'],
+  "base|base someone's estimate": ['base an estimate on something', '以某事为估算依据'],
+  'base|base your decision on reliable evidence': ['base a decision on reliable evidence', '依据可靠证据作决定'],
+  'base|be based on a true story': ['be based on a true story', '根据真实故事改编'],
+  'become|become a teacher': ['become a teacher', '成为教师'],
+  'break|break up with something': ['break up with someone', '与某人分手'],
+  'call|call the police': ['call the police', '报警'],
+  'cause|cause you all this trouble': ['cause someone trouble', '给某人添麻烦'],
+  'cause|cause you any trouble': ['cause someone trouble', '给某人添麻烦'],
+  'choose|choose any book': ['choose any book', '任选一本书'],
+  'choose|choose any one from among these': ['choose one from several options', '从多个选项中挑一个'],
+  'choose|choose the color': ['choose a color', '选择颜色'],
+  'come|come tonight': ['come tonight', '今晚来'],
+  'continue|continue the meeting': ['continue a meeting', '继续开会'],
+  'consider|be considered very qualified for something': ['be considered qualified for something', '被认为胜任某事'],
+  'consider|consider fruit to be the healthiest': ['consider something healthy', '认为某物健康'],
+  'depend|depend on you': ['depend on someone', '依靠某人'],
+  'depend|depend on your own efforts': ["depend on one's own efforts", '取决于自身努力'],
+  'depend|you can depend on me': ['depend on someone', '依靠某人'],
+  'describe|describe the process in simple terms': ['describe a process in simple terms', '用简单语言描述过程'],
+  'develop|develop an android application': ['develop an application', '开发应用程序'],
+  'develop|develop political awareness': ['develop political awareness', '培养政治意识'],
+  'discover|have discovered some startling facts': ['discover surprising facts', '发现惊人事实'],
+  'end|end in a fight': ['end in a fight', '以打斗收场'],
+  'end|end well': ['end well', '有圆满结局'],
+  'explain|explain the exact meaning of this': ['explain the exact meaning of something', '解释某事的确切含义'],
+  'explain|explain wh- + clause': ['explain wh- + clause', '解释具体情况'],
+  'fall|fall far from the tree': ['not fall far from the tree', '与父母很相像'],
+  'find|find wh- + clause': ['find wh- + clause', '查明具体信息'],
+  'give|give up smoking': ['give up smoking', '戒烟'],
+  'give|give up the idea': ['give up an idea', '放弃一个想法'],
+  'give|give up the plan': ['give up a plan', '放弃计划'],
+  'grow|grow in this soil': ['grow in a type of soil', '在某种土壤中生长'],
+  'grow|grow on trees': ['grow on trees', '长在树上'],
+  'handle|handle children': ['handle children', '应对孩子'],
+  'handle|handle this': ['handle something', '处理某事'],
+  'hold|hold your tongue': ["hold one's tongue", '保持沉默'],
+  'hope|hope everything will be fine': ['hope everything will be fine', '希望一切顺利'],
+  'hope|hope for better weather': ['hope for better weather', '希望天气好转'],
+  'hope|hope to hear': ['hope to hear from someone', '希望收到某人消息'],
+  'hope|hope to see': ['hope to see someone again', '希望再次见到某人'],
+  "increase|increase someone's lifespan": ["increase someone's lifespan", '延长某人寿命'],
+  'kill|kill many people': ['kill many people', '造成多人死亡'],
+  'lead|lead a hard life': ['lead a hard life', '过艰苦生活'],
+  'learn|learn a language': ['learn a language', '学习一门语言'],
+  'learn|learn about something': ['learn about something', '了解某事'],
+  'learn|learn to hold your tongue': ["learn to hold one's tongue", '学会保持沉默'],
+  'leave|leave the room': ['leave a room', '离开房间'],
+  'leave|leave the room immediately': ['leave a room immediately', '立即离开房间'],
+  'like|like someone to do something': ['would like someone to do something', '希望某人做某事'],
+  'live|live beyond your income': ["live beyond one's means", '入不敷出'],
+  'look|look more mature': ['look more mature', '显得更成熟'],
+  'lose|lose weight': ['lose weight', '减重'],
+  'love|love to sing with your band': ['love to sing with a band', '喜欢和乐队一起唱歌'],
+  'love|love you more': ['love someone deeply', '深爱某人'],
+  'may|may be that': ['may be that + clause', '可能……'],
+  'may|may I do something': ['may I do something', '我可以做某事吗'],
+  'meet|meet nice people like': ['meet nice people', '结识友善的人'],
+  'meet|meet tomorrow morning at nine': ['meet at a set time', '在约定时间见面'],
+  'might|might as well begin': ['might as well begin', '不妨开始'],
+  'might|might think': ['might think something', '可能认为某事'],
+  'move|move to a safer location': ['move to a safer place', '转移到更安全的地方'],
+  'move|move your stuff to the other': ['move your things to another room', '把物品搬到另一个房间'],
+  'need|need any help': ['need help', '需要帮助'],
+  'notice|notice someone doing something': ['notice someone doing something', '注意到某人正在做某事'],
+  'open|open an account here': ['open an account', '开设账户'],
+  'pick|pick out any book': ['pick out a book', '挑选一本书'],
+  'play|play chess': ['play chess', '下国际象棋'],
+  'play|play guitar in a psychedelic rock': ['play guitar in a rock band', '在摇滚乐队弹吉他'],
+  'play|play the piano': ['play the piano', '弹钢琴'],
+  'play|play with friends': ['play with friends', '和朋友玩'],
+  'pull|pull a cart': ['pull a cart', '拉车'],
+  'pull|pull strings': ['pull strings', '托关系；暗中运作'],
+  'pull|pull the weeds': ['pull weeds', '拔草'],
+  'reach|reach a compromise': ['reach a compromise', '达成妥协'],
+  'reach|reach that goal': ['reach a goal', '达成目标'],
+  'reach|reach the park by either road': ['reach a place by either route', '经任一路线到达某地'],
+  'read|read a lot': ['read a lot', '大量阅读'],
+  'read|read the book from cover': ['read a book from cover to cover', '从头到尾读完一本书'],
+  'reduce|reduce the price': ['reduce a price', '降低价格'],
+  'reduce|reduce the price a bit': ['reduce a price slightly', '稍微降低价格'],
+  'remember|remember the way': ['remember how someone did something', '记得某人做事的方式'],
+  'remember|remember wh- + clause': ['remember wh- + clause', '记得具体情况'],
+  'report|report the problem to your manager': ['report a problem to someone', '向某人报告问题'],
+  'return|return this book to the library': ['return a book to the library', '把书还给图书馆'],
+  'sell|sell your newly built house': ['sell a newly built house', '出售新建房屋'],
+  'send|send for the doctor': ['send for a doctor', '派人去请医生'],
+  'share|share certain characteristics with human beings': ['share characteristics with someone', '与某人具有共同特征'],
+  'should|should concentrate on other things': ['should concentrate on something else', '应该专注于其他事情'],
+  'should|should talk about this': ['should talk about something', '应该谈论某事'],
+  'show|show it': ['show something', '展示某物'],
+  'show|show it to your parents': ['show something to someone', '把某物给某人看'],
+  'show|show you': ['show someone something', '给某人看某物'],
+  'solve|solve the problem': ['solve a problem', '解决问题'],
+  'solve|solve the problem by myself': ['solve a problem independently', '独立解决问题'],
+  'spend|spend more time together': ['spend more time together', '花更多时间相处'],
+  'spend|spend the night': ['spend the night somewhere', '在某地过夜'],
+  'stay|stay a little longer': ['stay a little longer', '再多待一会'],
+  'stay|stay in bed all day': ['stay in bed all day', '整天卧床'],
+  'suggest|suggest anything': ['suggest something', '提出建议'],
+  'suggest|suggest doing': ['suggest doing something', '建议做某事'],
+  'suggest|suggest that + clause': ['suggest that + clause', '建议……；表明……'],
+  'take|take shelter under a tree': ['take shelter under a tree', '在树下避雨'],
+  'talk|talk about this': ['talk about something', '谈论某事'],
+  'thank|thank you from the bottom': ['thank someone from the bottom of your heart', '衷心感谢某人'],
+  'think|think about the problem': ['think about a problem', '思考问题'],
+  'think|think highly of someone former teacher': ['think highly of someone', '对某人评价很高'],
+  'try|try to make the most': ['try to make the most of something', '尽量充分利用某物'],
+  'turn|turn down': ['turn down an offer', '拒绝提议'],
+  'turn|turn off the lights': ['turn off the lights', '关灯'],
+  'use|use some salt': ['use some salt', '加一些盐'],
+  'use|use the washing machine': ['use a washing machine', '使用洗衣机'],
+  'wait|wait any longer': ['wait any longer', '再等下去'],
+  'wait|wait for a few minutes': ['wait for a few minutes', '等几分钟'],
+  'wait|wait here': ['wait here', '在这里等候'],
+  'watch|watch baseball games on TV': ['watch baseball games on TV', '在电视上看棒球比赛'],
+  'watch|watch movies': ['watch movies', '看电影'],
+  'watch|watch out for cars': ['watch out for cars', '当心车辆'],
+  'wear|wear a helmet': ['wear a helmet', '戴头盔'],
+  'wear|wear short sleeved shirts': ['wear short-sleeved shirts', '穿短袖衬衫'],
+  'wear|wear this': ['wear something', '穿戴某物'],
+  'win|win broad support from local residents': ['win broad local support', '赢得当地广泛支持'],
+  'write|write a poem': ['write a poem', '写诗'],
+  "hold|hold a meeting at o'clock this": ['hold a meeting at a set time', '在约定时间开会'],
+  'pay|pay for that': ['pay for something', '为某物付款'],
+  'receive|receive quite a few letters this': ['receive many letters', '收到许多信件'],
+  'solve|solve this': ['solve something', '解决某事'],
+  'speak|speak to someone like that': ['speak to someone that way', '以那种方式和某人说话'],
+  'wait|wait until the end of this': ['wait until the end of something', '等到某事结束'],
+  'win|win this': ['win something', '赢得某事物']
+}).map(([key, value]) => [key.toLowerCase(), value]));
+
+function reviewedContextEntry(item, phrase, chinese) {
+  const reusablePhrase = normalizeReusablePhrase(phrase);
+  const correction = reviewedContextCorrections.get(`${item.w}|${reusablePhrase.toLowerCase()}`)
+    ?? reviewedContextCorrections.get(`${item.w}|${phrase.trim().toLowerCase()}`);
+  return {
+    phrase: correction?.[0] ?? reusablePhrase,
+    chinese: normalizePhraseGloss(correction?.[1] ?? chinese)
+  };
+}
+
+function normalizeReusablePhrase(phrase) {
+  const value = phrase.trim();
+  return reusablePhraseCompletions.get(value.toLowerCase()) ?? value;
+}
+
+function normalizePhraseGloss(chinese) {
+  return chinese.trim().replace(/[。！？!?；;]+$/g, '');
 }
 
 function normalizeContexts(item, override, tuples) {
@@ -709,7 +1223,10 @@ function normalizeContexts(item, override, tuples) {
   if (override?.contexts) {
     return override.contexts.filter(([, items]) => items.length).map(([category, items]) => ({
       category,
-      items: items.map(([phrase, chinese]) => ({ phrase, phonetic: ipaFor(phrase, item.w, item.ipa), chinese }))
+      items: items.map(([phrase, chinese]) => {
+        const normalized = reviewedContextEntry(item, phrase, chinese);
+        return { phrase: normalized.phrase, phonetic: ipaFor(normalized.phrase, item.w, item.ipa), chinese: normalized.chinese };
+      })
     }));
   }
   const examples = priorityEntries[item.w]?.uses
@@ -721,13 +1238,17 @@ function normalizeContexts(item, override, tuples) {
     ]);
   // The source packs contain reviewed, reusable chunks. Keep those chunks as
   // context labels and reserve the complete sentences for fixed-phrase examples.
-  const contextItems = examples.map((entry, index) => [entry[0], entry[1], index])
+  const contextItems = examples.map((entry, index) => {
+    const normalized = reviewedContextEntry(item, entry[0], entry[1]);
+    return [normalized.phrase, normalized.chinese, index];
+  })
     .filter(([phrase], index, source) => source.findIndex(([candidate]) => candidate.toLowerCase() === phrase.toLowerCase()) === index);
   const seenPhrases = new Set(contextItems.map(([phrase]) => phrase.toLowerCase().replace(/[^a-z']+/g, ' ').trim()));
   for (const entry of supplementalPhraseRows(item)) {
-    const key = entry.phrase.toLowerCase().replace(/[^a-z']+/g, ' ').trim();
+    const normalized = reviewedContextEntry(item, entry.phrase, entry.phraseChinese);
+    const key = normalized.phrase.toLowerCase().replace(/[^a-z']+/g, ' ').trim();
     if (seenPhrases.has(key)) continue;
-    contextItems.push([entry.phrase, entry.chinese, contextItems.length]);
+    contextItems.push([normalized.phrase, normalized.chinese, contextItems.length]);
     seenPhrases.add(key);
     if (contextItems.length >= 10) break;
   }
@@ -738,7 +1259,10 @@ function normalizeContexts(item, override, tuples) {
   ]);
   return source.filter(([, items]) => items.length).map(([category, items]) => ({
     category,
-    items: items.map(([phrase, chinese]) => ({ phrase, phonetic: ipaFor(phrase, item.w, item.ipa), chinese }))
+    items: items.map(([phrase, chinese]) => {
+      const normalized = reviewedContextEntry(item, phrase, chinese);
+      return { phrase: normalized.phrase, phonetic: ipaFor(normalized.phrase, item.w, item.ipa), chinese: normalized.chinese };
+    })
   }));
 }
 
@@ -752,19 +1276,22 @@ function normalizeFixedPhrases(item, override, tuples) {
         const phraseKey = entry.phrase.toLowerCase().replace(/[^a-z']+/g, ' ').trim();
         const exampleKey = entry.english.toLowerCase().replace(/\s+/g, ' ').trim();
         if (seenPhrases.has(phraseKey) || seenExamples.has(exampleKey)) continue;
-        source.push([entry.phrase, entry.phraseChinese ?? entry.chinese.replace(/[。！？!?]+$/, ''), entry.english, entry.chinese]);
+        source.push([entry.phrase, entry.phraseChinese, entry.english, entry.chinese]);
         seenPhrases.add(phraseKey);
         seenExamples.add(exampleKey);
         if (source.length >= 10) break;
       }
     }
-    return source.map(([phrase, chinese, example, translation]) => ({
-      phrase,
-      phonetic: ipaFor(phrase, item.w, item.ipa),
-      chinese,
-      example,
-      translation
-    }));
+    return source.map(([phrase, chinese, example, translation]) => {
+      const normalized = reviewedContextEntry(item, phrase, chinese);
+      return {
+        phrase: normalized.phrase,
+        phonetic: ipaFor(normalized.phrase, item.w, item.ipa),
+        chinese: normalized.chinese,
+        example,
+        translation
+      };
+    });
   }
   const priorityExamples = priorityEntries[item.w]?.uses?.map((entry) => [entry[2], entry[3]]);
   const examples = priorityExamples ?? curatedExamples[item.w] ?? [[item.ex, item.exZh]];
@@ -780,18 +1307,21 @@ function normalizeFixedPhrases(item, override, tuples) {
     const phraseKey = entry.phrase.toLowerCase().replace(/[^a-z']+/g, ' ').trim();
     const exampleKey = entry.english.toLowerCase().replace(/\s+/g, ' ').trim();
     if (seenPhrases.has(phraseKey) || seenExamples.has(exampleKey)) continue;
-    source.push([entry.phrase, entry.phraseChinese ?? entry.chinese.replace(/[。！？!?]+$/, ''), entry.english, entry.chinese]);
+    source.push([entry.phrase, entry.phraseChinese, entry.english, entry.chinese]);
     seenPhrases.add(phraseKey);
     seenExamples.add(exampleKey);
     if (source.length >= 10) break;
   }
-  return source.map(([phrase, chinese, example, translation]) => ({
-    phrase,
-    phonetic: ipaFor(phrase, item.w, item.ipa),
-    chinese,
-    example,
-    translation
-  }));
+  return source.map(([phrase, chinese, example, translation]) => {
+    const normalized = reviewedContextEntry(item, phrase, chinese);
+    return {
+      phrase: normalized.phrase,
+      phonetic: ipaFor(normalized.phrase, item.w, item.ipa),
+      chinese: normalized.chinese,
+      example,
+      translation
+    };
+  });
 }
 
 function normalizeRelations(item, override, key) {
@@ -817,8 +1347,8 @@ function normalizeRelations(item, override, key) {
     partOfSpeech,
     chinese: chinese || conciseChinese(word, key === 'synonyms' ? '相近表达' : '相反表达'),
     [noteKey]: key === 'synonyms'
-      ? `${item.w} 与 ${word} 在本卡的一个常用义项下意思接近。${note || `${word} 的使用范围更具体，替换时要核对宾语、介词和语境。`}`
-      : `${item.w} 与 ${word} 在本卡的一个明确义项下形成对比。${note || '其他义项下不能一概视为反义。'}`
+      ? `${word} 表示“${chinese || conciseChinese(word, '相近含义')}”，与 ${item.w} 的“${firstMeaning(item.zh)}”义相近。${note || `两词只有在这一义项重合时才能互换；${item.w} 的其他常用义不一定适用。`}`
+      : `${word} 表示“${chinese || conciseChinese(word, '相反含义')}”，与 ${item.w} 的“${firstMeaning(item.zh)}”义形成对比。${note || '这种反义关系只适用于上述明确义项。'}`
   }));
   const supplemental = key === 'synonyms'
     ? (curatedSynonymWords[item.w] ?? []).map((word) => {
@@ -829,7 +1359,7 @@ function normalizeRelations(item, override, key) {
         phonetic: ipaFor(word),
         partOfSpeech,
         chinese,
-        difference: `${word} 常表示“${chinese}”，只对应 ${item.w} 的一个常用义项；${item.w} 的核心义为“${firstMeaning(item.zh)}”。两者替换时还要核对宾语、介词、正式程度和句子语境。`
+        difference: `${word} 常表示“${chinese}”，与 ${item.w} 的“${firstMeaning(item.zh)}”义有重合。${word} 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。`
       };
     })
     : [];
@@ -974,7 +1504,7 @@ function normalizeConfusables(item, override, synonyms = [], antonyms = []) {
       phonetic: ipaFor(word),
       partOfSpeech,
       chinese,
-      difference: `${word} 表示“${chinese}”；${item.w} 在本卡核心搭配“${item.coll}”中表示“${firstMeaning(item.zh)}”。答题时要根据句意和完整结构区分，不只看拼写或中文近义。`
+      difference: `${word} 表示“${chinese}”，而 ${item.w} 在“${item.coll}”中表示“${firstMeaning(item.zh)}”。两者容易因拼写、发音或相近语境而混淆，使用时要根据完整句义和固定搭配区分。`
     };
   });
 }
@@ -1246,7 +1776,7 @@ function makeCard(item, index) {
   const wordFamily = derivatives.map((entry) => entry.word);
   const additionalMeaningFocus = meanings.length > 1
     ? `再对比另外 ${meanings.length - 1} 个常用义项，辨别不同语境。`
-    : '再用本卡的固定搭配和真实例句巩固这个义项。';
+    : '再用高频固定搭配和真实例句巩固这个义项。';
   const focus = override?.focus ?? [
     `先掌握“${meanings[0].chinese}”这个核心义，${additionalMeaningFocus}`,
     `把“${item.coll}”连同介词、宾语和动词形式作为整个句块记忆。`,

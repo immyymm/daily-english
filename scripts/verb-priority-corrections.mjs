@@ -3,6 +3,21 @@
 // Keys use "word|phrase" so the source entry remains stable and the correction
 // is deterministic during every future content build.
 export const verbPriorityUseCorrections = {
+  'be|be able to do something': ['After a few weeks of rest, she will be able to walk again.', '休息几周后，她将能够重新走路。'],
+  'can|can do something': ['She can solve this problem without any help.', '她不需要任何帮助就能解决这个问题。'],
+  'could|could do something': ['We could take the earlier train tomorrow.', '我们明天可以乘坐较早的那班火车。'],
+  'go|go with something': ['This blue scarf goes well with your coat.', '这条蓝围巾与你的外套很相配。'],
+  'need|meet someone’s needs': ['The flexible schedule meets the needs of working parents.', '灵活的时间安排满足了在职父母的需要。'],
+  'work|work out': ['I hope everything works out in the end.', '我希望最后一切都能顺利解决。'],
+  'put|put off doing something': ['Do not put off calling the doctor.', '不要推迟给医生打电话。'],
+  'might|might as well do something': ['We might as well walk because the station is nearby.', '车站就在附近，我们不妨走路去。'],
+  'turn|turn something off': ['Please turn the television off before you leave.', '离开前请关掉电视。'],
+  'wait|wait to do something': ['Please wait to cross until the light turns green.', '请等到绿灯亮了再过马路。'],
+  'meet|meet a requirement': ['This passport photo meets all the official requirements.', '这张护照照片符合全部官方要求。'],
+  'lead|lead someone through something': ['A local guide led us through the old town.', '一名当地导游带领我们游览了老城区。'],
+  'base|be based on something': ['The estimate is based on last year’s sales figures.', '这项估算以去年的销售数据为依据。'],
+  'pull|pull something out': ['Pull the handle out slowly and carefully.', '缓慢、小心地把手柄拉出来。'],
+  'fall|fall into a category': ['These plants fall into three main categories.', '这些植物分为三个主要类别。'],
   'use|use something to do something': ['Use this key to open the back door.', '用这把钥匙打开后门。'],
   'use|be used to do something': ['This room is used to store old books.', '这个房间用来存放旧书。'],
   'use|use something for something': ['We use this room for small meetings.', '我们用这个房间开小型会议。'],

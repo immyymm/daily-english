@@ -44,6 +44,7 @@ const expectedSnapshotHashes = {
   'canonical-template': '9A5AB81BC487F47015B7D3C74E732089481A14E49120C63FACEDA082AE67141A',
   'canonical-example': 'DF9D024B49143DFDE1C53AE3C40EE77B86CDE5BC1A1A7CD3382980E260447CFD'
 };
+const expectedAppliedSpecificationHash = '72328A9D38BF5F86069DFA0A34EED2B44AE53A754820AA60ECCFA163510564B9';
 
 for (const [key, value] of Object.entries(release)) {
   if (!runtimeRelease.includes(`${key}: '${value}'`)) {
@@ -109,8 +110,27 @@ if (templateLock.lockVersion !== expectedLockVersion || !templateLock.immutable 
     }
   }
 }
+if (templateLock.appliedSpecification?.path !== `content/templates/${expectedTemplateVersion}.md`
+  || templateLock.appliedSpecification?.sha256 !== expectedAppliedSpecificationHash
+  || sha256(await fs.readFile(templatePath)) !== expectedAppliedSpecificationHash) {
+  errors.push('Applied eight-section specification is not hash-locked to the approved release.');
+}
 if (!publishedCardMinimums || publishedCardMinimums.contextItems < 10 || publishedCardMinimums.fixedPhrases < 10 || publishedCardMinimums.highFrequencyExamples < 10) {
   errors.push('Published-card detail floor is missing or weaker than the approved complete-card benchmark.');
+}
+const expectedLearnerOrder = ['核心记忆', '固定搭配和短语', '常用语境词组', '派生词', '近义词', '反义词', '易混词', '同类词汇分类'];
+if (JSON.stringify(templateLock.learnerFacingSectionOrder) !== JSON.stringify(expectedLearnerOrder)) {
+  errors.push('Learner-facing section order differs from the approved eight-section layout.');
+}
+if (!templateLock.qualityContract?.contextChineseMustBePhraseGloss
+  || templateLock.qualityContract?.contextChineseMaxCharacters !== 14
+  || !templateLock.qualityContract?.fixedPhraseRequiresBilingualExample
+  || !templateLock.qualityContract?.coreMeaningFirst
+  || !templateLock.qualityContract?.allEnglishItemsRequireAmericanIpa
+  || !templateLock.qualityContract?.forbidMetaOrProductCopy
+  || !templateLock.qualityContract?.forbidMechanicalFiller
+  || !templateLock.qualityContract?.forbidSentenceFragmentsAsPhrases) {
+  errors.push('The immutable semantic-quality contract is incomplete.');
 }
 if (tatoebaExamples.source?.license !== 'CC BY 2.0 France'
   || !tatoebaExamples.source?.attribution?.includes('tatoeba.org')
@@ -145,7 +165,7 @@ if (manifest.dailyFiles.length !== expectedDayCount) errors.push('Expected ' + e
 if (new Set(allCards.cards.map((card) => card.id)).size !== allCards.cards.length) errors.push('Duplicate card IDs.');
 if (manifest.contentVersion !== release.contentVersion || allCards.contentVersion !== release.contentVersion) errors.push('Content version differs from content/release.json.');
 if (allCards.templateVersion !== expectedTemplateVersion || manifest.templateVersion !== expectedTemplateVersion) errors.push('Template version is not locked to ' + expectedTemplateVersion + '.');
-const templateHeadings = ['### 1. 核心记忆表', '### 2. 词性与释义', '### 3. 常用语境词组', '### 4. 固定搭配和短语', '### 5. 近义词', '### 6. 反义词', '### 7. 派生词', '### 8. 易混词', '### 9. 同类词汇分类', '### 10. 高频例句', '## 学习重点'];
+const templateHeadings = ['### 1. 核心记忆', '### 2. 固定搭配和短语', '### 3. 常用语境词组', '### 4. 派生词', '### 5. 近义词', '### 6. 反义词', '### 7. 易混词', '### 8. 同类词汇分类', '## 后台例句与练习数据', '## 禁止内容'];
 let previousHeadingIndex = -1;
 for (const heading of templateHeadings) {
   const headingIndex = template.indexOf(heading);
@@ -204,6 +224,9 @@ for (const [cardIndex, card] of allCards.cards.entries()) {
   if (/\b(?:JSON|confidence:)\b|The assistant's final|I(?:'|’)ll output|system text|程序运行|自动生成|人工精校/i.test(visibleContent)) {
     errors.push(card.id + ': model reasoning, serialization text, or internal production labels leaked into learner-facing content.');
   }
+  if (/(?:本卡|目标词|答题时|词卡结构|核心搭配“|这个例句与上面|要学的短语是|练习短语是)/.test(visibleContent)) {
+    errors.push(card.id + ': authoring or assessment language leaked into learner-facing explanations.');
+  }
   if (/\b0 个常用义项\b/.test(visibleContent)) errors.push(card.id + ': single-sense focus text must not claim there are zero additional meanings.');
   if (card.tags.some((tag) => /(人工精校|模板结构版|待深度补全)/.test(tag))) errors.push(card.id + ': internal production labels must not appear in app tags.');
   const expectedPriority = cocaAudit.orderedCards?.[cardIndex];
@@ -217,8 +240,8 @@ for (const [cardIndex, card] of allCards.cards.entries()) {
   if (card.meanings.length < 1) errors.push(card.id + ': a detailed card needs at least one fully evidenced meaning.');
   if (card.partOfSpeech.includes('/') && card.meanings.length < 2) errors.push(card.id + ': multiple parts of speech need separate meanings.');
   if (!Array.isArray(card.cocaRanks) || card.cocaRanks.length < 1 || !card.cocaRankLabel) errors.push(card.id + ': missing exact COCA rank data.');
-  if (!Array.isArray(card.coreMemory.structures) || card.coreMemory.structures.length < 3) errors.push(card.id + ': expected at least three core structures.');
-  if (!Array.isArray(card.coreMemory.commonErrors) || card.coreMemory.commonErrors.length < 2) errors.push(card.id + ': expected at least two concrete error corrections.');
+  if (!Array.isArray(card.coreMemory.structures) || card.coreMemory.structures.length < templateLock.qualityContract.coreStructures) errors.push(card.id + ': expected at least three core structures.');
+  if (!Array.isArray(card.coreMemory.commonErrors) || card.coreMemory.commonErrors.length < templateLock.qualityContract.commonErrorPairs) errors.push(card.id + ': expected at least two concrete error corrections.');
   if (card.synonyms.length < 1 || card.antonyms.length < 1) errors.push(card.id + ': missing semantic contrast.');
   if (card.detailLevel === 'template-complete' && card.synonyms.length < 3) errors.push(card.id + ': complete card needs at least three sense-specific synonym comparisons.');
   if (card.detailLevel === 'template-complete' && (card.relatedVocabulary.length < 3 || card.relatedVocabulary.reduce((sum, group) => sum + group.items.length, 0) < 7)) {
@@ -311,10 +334,12 @@ for (const [cardIndex, card] of allCards.cards.entries()) {
     errors.push(card.id + ': human-reviewed common-sense meaning pack was not preserved exactly.');
   }
   if (card.fixedPhrases.some((entry) => !entry.chinese || !entry.example || !entry.translation)) errors.push(card.id + ': every fixed phrase needs a Chinese meaning and a bilingual example.');
-  const incompletePhraseEnding = /\b(?:a|an|the|my|your|his|her|our|their|is|are|was|were|has|had|one more)$/i;
-  const sentenceFragmentInsidePhrase = /\b(?:otherwise you will|next month|during the)\b/i;
+  const incompletePhraseEnding = /\b(?:a|an|the|my|your|his|her|our|their|is|are|was|were|has|had|one more|about|until|wherever|what|who|why|how|when|looking|new|same)$/i;
+  const sentenceFragmentInsidePhrase = /\b(?:otherwise you will|next month|during the|you will|he will|she will|they will|we will)\b/i;
+  const acceptedCompleteIdioms = new Set(['if you will', 'stay the same']);
   if (card.fixedPhrases.some((entry) => entry.phrase.trim().split(/\s+/).length > 8)) errors.push(card.id + ': fixed phrase is an overlong sentence fragment rather than a reusable chunk.');
-  if (card.fixedPhrases.some((entry) => incompletePhraseEnding.test(entry.phrase.trim()) || sentenceFragmentInsidePhrase.test(entry.phrase))) {
+  if (card.fixedPhrases.some((entry) => !acceptedCompleteIdioms.has(entry.phrase.trim().toLowerCase())
+    && (incompletePhraseEnding.test(entry.phrase.trim()) || sentenceFragmentInsidePhrase.test(entry.phrase)))) {
     errors.push(card.id + ': fixed phrase ends mid-structure or contains leaked sentence context.');
   }
   if (new Set(card.examples.map((example) => example.english)).size !== card.examples.length) errors.push(card.id + ': duplicate example sentences.');
@@ -345,7 +370,21 @@ for (const [cardIndex, card] of allCards.cards.entries()) {
   }
   if (card.coreMemory.commonErrors.some((item) => item.wrong.toLowerCase() === 'sell someone an idea')) errors.push(card.id + ': a valid double-object sell construction must not be labelled wrong.');
   const contextEntries = card.contextPhrases.flatMap((group) => group.items);
+  if (new Set(contextEntries.map((entry) => entry.phrase.toLowerCase().replace(/[^a-z']+/g, ' ').trim())).size !== contextEntries.length) {
+    errors.push(card.id + ': duplicate context phrases create false detail.');
+  }
+  if (contextEntries.some((entry) => !entry.chinese.trim() || /[。！？!?；;]$/.test(entry.chinese.trim()))) {
+    errors.push(card.id + ': context Chinese must be a concise phrase gloss, not a copied sentence translation.');
+  }
+  if (contextEntries.some((entry) => [...entry.chinese.replace(/\s/g, '')].length > templateLock.qualityContract.contextChineseMaxCharacters)) {
+    errors.push(card.id + ': context Chinese exceeds the locked phrase-gloss length limit.');
+  }
+  if (contextEntries.some((entry) => !acceptedCompleteIdioms.has(entry.phrase.trim().toLowerCase())
+    && (incompletePhraseEnding.test(entry.phrase.trim()) || sentenceFragmentInsidePhrase.test(entry.phrase)))) {
+    errors.push(card.id + ': context phrase ends mid-structure or contains leaked sentence context.');
+  }
   const allowedSubjectConstructions = /^(?:it\s+(?:seems|appears|takes)|there\s+(?:is|are))\b/i;
+  const allowedLongGrammarFrame = /\b(?:someone|something|doing something|do something|A|B)\b/i;
   if (contextEntries.some((entry) => {
     const words = entry.phrase.trim().split(/\s+/);
     return words.length > 6 && /^(?:i|you|we|they|he|she|the|a|an)\b/i.test(entry.phrase) && !allowedSubjectConstructions.test(entry.phrase);
@@ -354,8 +393,16 @@ for (const [cardIndex, card] of allCards.cards.entries()) {
   }
   if (contextEntries.some((entry) => {
     const words = entry.phrase.trim().split(/\s+/);
-    return words.length > 12 || /\b(?:the|a|an|your|my|his|her|our|their)$/i.test(entry.phrase.trim());
+    return words.length > 8
+      || (words.length > 6 && !allowedSubjectConstructions.test(entry.phrase) && !allowedLongGrammarFrame.test(entry.phrase))
+      || /\b(?:the|a|an|your|my|his|her|our|their)$/i.test(entry.phrase.trim());
   })) errors.push(card.id + ': context phrase is empty, overlong, or cut off before its complement.');
+  if (card.synonyms.some((entry) => /使用范围更具体，替换时要核对宾语、介词和语境|在本卡的一个常用义项下意思接近/.test(entry.difference))) {
+    errors.push(card.id + ': generic synonym filler survived the semantic audit.');
+  }
+  if (card.antonyms.some((entry) => /其他义项下不能一概视为反义|在本卡的一个明确义项下形成对比/.test(entry.usage))) {
+    errors.push(card.id + ': generic antonym filler survived the semantic audit.');
+  }
   if (card.relatedVocabulary.some((group) => /例句中常与本词同现|真实语境/.test(group.category))) {
     errors.push(card.id + ': arbitrary words copied from examples are not semantic related vocabulary.');
   }

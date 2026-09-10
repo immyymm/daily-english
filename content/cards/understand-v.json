@@ -136,13 +136,13 @@
       "category": "原因与过程",
       "items": [
         {
-          "phrase": "understand why",
-          "phonetic": "/ˌʌndərˈstænd ˈwaɪ/",
+          "phrase": "understand why something happens",
+          "phonetic": "/ˌʌndərˈstænd ˈwaɪ ˈsʌmθɪŋ ˈhæpənz/",
           "chinese": "理解为什么"
         },
         {
-          "phrase": "understand how",
-          "phonetic": "/ˌʌndərˈstænd ˈhaʊ/",
+          "phrase": "understand how something works",
+          "phonetic": "/ˌʌndərˈstænd ˈhaʊ ˈsʌmθɪŋ ˈwɝːks/",
           "chinese": "理解如何……"
         },
         {
@@ -210,15 +210,15 @@
   ],
   "fixedPhrases": [
     {
-      "phrase": "understand why",
-      "phonetic": "/ˌʌndərˈstænd ˈwaɪ/",
+      "phrase": "understand why something happens",
+      "phonetic": "/ˌʌndərˈstænd ˈwaɪ ˈsʌmθɪŋ ˈhæpənz/",
       "chinese": "理解为什么",
       "example": "I understand why you need more time.",
       "translation": "我理解你为什么需要更多时间。"
     },
     {
-      "phrase": "understand how",
-      "phonetic": "/ˌʌndərˈstænd ˈhaʊ/",
+      "phrase": "understand how something works",
+      "phonetic": "/ˌʌndərˈstænd ˈhaʊ ˈsʌmθɪŋ ˈwɝːks/",
       "chinese": "理解如何……",
       "example": "First, make sure you understand how the feature works.",
       "translation": "首先，确保你了解这个功能如何运作。"
@@ -268,7 +268,7 @@
     {
       "phrase": "understand that + clause",
       "phonetic": "/ˌʌndərˈstænd ˈðæt ˈklɔːz/",
-      "chinese": "人应该明白世界在变",
+      "chinese": "明白世界在变",
       "example": "People should understand that the world is changing.",
       "translation": "人应该明白世界在变。"
     },
@@ -664,28 +664,28 @@
     {
       "id": "understand-v-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“理解为什么”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "搭配辨析：哪一项既表示“理解为什么”，又符合这个形式线索：结构中直接带有事物宾语，不在目标词与宾语之间增加介词？",
       "options": [
-        "understand why",
-        "understand how",
+        "understand why something happens",
+        "understand how something works",
         "understand what someone means",
         "fully understand"
       ],
-      "answer": "understand why",
+      "answer": "understand why something happens",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "understand-v-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“理解如何……”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "用法辨析：哪一项既表示“理解如何……”，又符合这个形式线索：结构中直接带有事物宾语，不在目标词与宾语之间增加介词？",
       "options": [
-        "understand why",
+        "understand why something happens",
         "understand what someone means",
         "fully understand",
-        "understand how"
+        "understand how something works"
       ],
-      "answer": "understand how",
+      "answer": "understand how something works",
       "stage": "T3",
       "ai": false
     },
@@ -708,7 +708,7 @@
     {
       "id": "understand-v-sentence-phrase",
       "type": "free_sentence",
-      "prompt": "请使用 “understand why” 结构写一个与自己有关的自然英文句子。",
+      "prompt": "请使用 “understand why something happens” 结构写一个与自己有关的自然英文句子；something 要替换成实际的事物或内容。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -775,8 +775,8 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.08.19.2",
-  "contentVersion": "2026.09.10.2",
+  "templateVersion": "learning-template-2026.09.10.3",
+  "contentVersion": "2026.09.10.3",
   "reviewed": true,
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

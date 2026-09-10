@@ -2,10 +2,10 @@
 // build if any value drifts, while keeping Vercel Functions independent of JSON
 // module-resolution differences.
 export const releaseConfig = {
-  releaseVersion: '2026.09.10.2',
-  contentVersion: '2026.09.10.2',
-  templateVersion: 'learning-template-2026.08.19.2',
-  templateLockVersion: '2026.08.19.2',
+  releaseVersion: '2026.09.10.3',
+  contentVersion: '2026.09.10.3',
+  templateVersion: 'learning-template-2026.09.10.3',
+  templateLockVersion: '2026.09.10.3',
   evaluationRubricVersion: '2026.08.19.2',
   reviewScheduleVersion: '2026.08.19.2'
 } as const;
