@@ -1152,7 +1152,7 @@ function duplicateSet(values, normalize = compact) {
   return new Set([...counts.entries()].filter(([, count]) => count > 1).map(([key]) => key));
 }
 
-function checkTemplateAndManifest(collectionIssues, { catalog, manifest, release, templateLock, templateText }) {
+function checkTemplateAndManifest(collectionIssues, { catalog, manifest, release, templateLock, templateText, catalogDigest }) {
   const cards = safeArray(catalog?.cards);
   const cardIds = cards.map((card) => compact(card?.id));
   const manifestIds = safeArray(manifest?.cardIds).map(compact);
@@ -1345,7 +1345,9 @@ function checkTemplateAndManifest(collectionIssues, { catalog, manifest, release
     || release.contentVersion !== manifest?.contentVersion
     || release.templateVersion !== catalog?.templateVersion
     || release.templateVersion !== manifest?.templateVersion
-    || release.templateLockVersion !== templateLock?.lockVersion) {
+    || release.templateLockVersion !== templateLock?.lockVersion
+    || (release.catalogHash && release.catalogHash !== manifest?.catalogHash)
+    || (release.catalogHash && catalogDigest && release.catalogHash !== catalogDigest)) {
     pushIssue(collectionIssues, {
       code: 'RELEASE_VERSION_MISMATCH',
       path: 'release/catalog/manifest/templateLock',
@@ -1358,7 +1360,10 @@ function checkTemplateAndManifest(collectionIssues, { catalog, manifest, release
         catalogTemplate: catalog?.templateVersion,
         manifestTemplate: manifest?.templateVersion,
         releaseLock: release?.templateLockVersion,
-        lockVersion: templateLock?.lockVersion
+        lockVersion: templateLock?.lockVersion,
+        releaseCatalogHash: release?.catalogHash,
+        manifestCatalogHash: manifest?.catalogHash,
+        catalogDigest
       }
     });
   }
@@ -1459,7 +1464,8 @@ export function reviewCatalog({
     manifest: safeManifest,
     release,
     templateLock: safeTemplateLock,
-    templateText: String(templateText ?? '')
+    templateText: String(templateText ?? ''),
+    catalogDigest: sourceDigests?.allCards?.sha256
   });
   const minimums = resolveReviewMinimums(safeTemplateLock);
   const duplicateCardIds = duplicateSet(cards.map((card) => card?.id));

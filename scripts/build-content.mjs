@@ -45,9 +45,41 @@ const contentCardsDir = path.join(root, 'content', 'cards');
 const publicDailyDir = path.join(root, 'public', 'data', 'daily');
 const publicDataDir = path.join(root, 'public', 'data');
 const launchDate = new Date('2026-08-17T12:00:00+08:00');
+const LOCKED_ACTIVE_RELEASE = Object.freeze({
+  releaseVersion: '2026.09.11.1',
+  contentVersion: '2026.09.11.1',
+  templateVersion: 'learning-template-2026.09.11.1',
+  templateLockVersion: '2026.09.11.1',
+  catalogHash: '5FFC8AC4A300193486681AB1DE1134A96774C813AEDF8F90D8E42565121EDBED',
+  evaluationRubricVersion: '2026.08.19.2',
+  reviewScheduleVersion: '2026.08.19.2',
+  appliedSpecificationHash: '0A180D2A870DDD9077C897F43B0D1578F264C71DFF9DE091660C6A0940D6DFBA'
+});
 const release = JSON.parse(await fs.readFile(path.join(root, 'content', 'release.json'), 'utf8'));
 const { contentVersion, templateVersion } = release;
 const templateLock = JSON.parse(await fs.readFile(path.join(root, 'content', 'templates', 'template-lock.json'), 'utf8'));
+for (const field of ['releaseVersion', 'contentVersion', 'templateVersion', 'templateLockVersion', 'catalogHash', 'evaluationRubricVersion', 'reviewScheduleVersion']) {
+  if (release[field] !== LOCKED_ACTIVE_RELEASE[field]) {
+    throw new Error(`Release field ${field} must remain locked to ${LOCKED_ACTIVE_RELEASE[field]}; create and approve a new immutable release instead of rolling this one back or editing it in place.`);
+  }
+}
+if (!templateLock.immutable
+  || templateLock.lockVersion !== LOCKED_ACTIVE_RELEASE.templateLockVersion
+  || templateLock.appliedSpecification?.path !== `content/templates/${LOCKED_ACTIVE_RELEASE.templateVersion}.md`
+  || templateLock.appliedSpecification?.sha256 !== LOCKED_ACTIVE_RELEASE.appliedSpecificationHash) {
+  throw new Error('Template lock does not identify the approved immutable 2026.09.11.1 specification.');
+}
+const activeTemplatePath = path.join(root, templateLock.appliedSpecification.path);
+const activeTemplateHash = createHash('sha256').update(await fs.readFile(activeTemplatePath)).digest('hex').toUpperCase();
+if (activeTemplateHash !== LOCKED_ACTIVE_RELEASE.appliedSpecificationHash) {
+  throw new Error('Approved 2026.09.11.1 template bytes changed; create a new release instead of editing the locked specification.');
+}
+const versionedTemplateNames = (await fs.readdir(path.dirname(activeTemplatePath)))
+  .filter((name) => /^learning-template-\d{4}\.\d{2}\.\d{2}\.\d+\.md$/.test(name))
+  .sort();
+if (JSON.stringify(versionedTemplateNames) !== JSON.stringify([path.basename(activeTemplatePath)])) {
+  throw new Error(`Template directory must contain only the active versioned specification ${path.basename(activeTemplatePath)}; found ${versionedTemplateNames.join(', ') || 'none'}.`);
+}
 const CODE_RELATION_MINIMUMS = Object.freeze({ antonyms: 3, confusables: 2 });
 const CODE_REFERENCE_RELATION_MINIMUMS = Object.freeze({ antonyms: 4, confusables: 4 });
 const publishedMinimums = templateLock.publishedCardMinimums;
@@ -2355,6 +2387,12 @@ if (detailFloorFailures.length) {
   throw new Error(`Published detail floor failed:\n${detailFloorFailures.join('\n')}`);
 }
 
+const catalogJson = JSON.stringify({ contentVersion, templateVersion, total: cards.length, cards }, null, 2) + '\n';
+const catalogHash = createHash('sha256').update(catalogJson).digest('hex').toUpperCase();
+if (catalogHash !== LOCKED_ACTIVE_RELEASE.catalogHash) {
+  throw new Error(`Generated catalog hash ${catalogHash} differs from immutable release ${LOCKED_ACTIVE_RELEASE.catalogHash}; card changes require a newly approved release version.`);
+}
+
 // Never destroy the last valid catalog before the complete replacement has
 // been generated and passed every in-memory quality gate above.
 await fs.mkdir(contentCardsDir, { recursive: true });
@@ -2382,8 +2420,6 @@ for (let dayIndex = 0; dayIndex < totalDays; dayIndex += 1) {
   dailyFiles.push({ dayNumber: dayIndex + 1, date: dateKey, file: 'data/daily/' + fileName, cardIds: dailyCards.map((card) => card.id) });
 }
 
-const catalogJson = JSON.stringify({ contentVersion, templateVersion, total: cards.length, cards }, null, 2) + '\n';
-const catalogHash = createHash('sha256').update(catalogJson).digest('hex').toUpperCase();
 const releaseId = release.releaseVersion;
 await fs.writeFile(path.join(publicDataDir, 'all-cards.json'), catalogJson, 'utf8');
 await fs.writeFile(path.join(publicDataDir, 'manifest.json'), JSON.stringify({

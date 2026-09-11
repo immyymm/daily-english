@@ -1,10 +1,11 @@
 import type { ContentBundle, WordCard } from '../types';
+import { releaseConfig } from '../config/release';
 
 interface ContentManifest {
   contentVersion: string;
   templateVersion: string;
-  catalogHash?: string;
-  releaseId?: string;
+  catalogHash: string;
+  releaseId: string;
 }
 
 export interface ContentUpdateResult {
@@ -35,7 +36,17 @@ async function fetchManifest(): Promise<ContentManifest> {
   const response = await fetch(manifestUrl.toString(), { cache: 'no-store' });
   if (!response.ok) throw new Error('词卡版本信息加载失败');
   const manifest = (await response.json()) as ContentManifest;
-  if (!manifest.contentVersion || !manifest.templateVersion) throw new Error('词卡版本信息无效');
+  const normalizedCatalogHash = manifest.catalogHash?.trim().toUpperCase();
+  if (!manifest.contentVersion || !manifest.templateVersion || !normalizedCatalogHash || !manifest.releaseId) {
+    throw new Error('词卡版本信息无效');
+  }
+  if (manifest.contentVersion !== releaseConfig.contentVersion
+    || manifest.templateVersion !== releaseConfig.templateVersion
+    || manifest.releaseId !== releaseConfig.releaseVersion
+    || normalizedCatalogHash !== releaseConfig.catalogHash) {
+    throw new Error('词卡版本不是当前固定发布版本，请刷新应用');
+  }
+  manifest.catalogHash = normalizedCatalogHash;
   return manifest;
 }
 
@@ -57,17 +68,15 @@ async function sha256Hex(text: string) {
 async function fetchBundle(manifest: ContentManifest): Promise<ContentBundle> {
   const url = new URL('data/all-cards.json', dataBaseUrl());
   url.searchParams.set('v', manifest.contentVersion);
-  if (manifest.catalogHash) url.searchParams.set('catalog', manifest.catalogHash);
-  if (manifest.releaseId) url.searchParams.set('release', manifest.releaseId);
+  url.searchParams.set('catalog', manifest.catalogHash);
+  url.searchParams.set('release', manifest.releaseId);
   const response = await fetch(url.toString(), { cache: 'no-store' });
   if (!response.ok) throw new Error('词卡内容加载失败');
   const catalogText = await response.text();
-  if (manifest.catalogHash) {
-    const expectedHash = manifest.catalogHash.trim().toUpperCase();
-    if (!/^[0-9A-F]{64}$/.test(expectedHash)) throw new Error('词卡版本校验信息无效');
-    const actualHash = await sha256Hex(catalogText);
-    if (actualHash !== expectedHash) throw new Error('词卡内容校验失败，请稍后重试');
-  }
+  const expectedHash = manifest.catalogHash;
+  if (!/^[0-9A-F]{64}$/.test(expectedHash)) throw new Error('词卡版本校验信息无效');
+  const actualHash = await sha256Hex(catalogText);
+  if (actualHash !== expectedHash) throw new Error('词卡内容校验失败，请稍后重试');
   let bundle: ContentBundle;
   try {
     bundle = JSON.parse(catalogText) as ContentBundle;
@@ -75,7 +84,10 @@ async function fetchBundle(manifest: ContentManifest): Promise<ContentBundle> {
     throw new Error('词卡内容格式无效');
   }
   if (!Array.isArray(bundle.cards) || bundle.cards.length === 0) throw new Error('词卡内容为空');
-  if (bundle.contentVersion !== manifest.contentVersion || bundle.templateVersion !== manifest.templateVersion) {
+  if (bundle.contentVersion !== manifest.contentVersion
+    || bundle.templateVersion !== manifest.templateVersion
+    || bundle.contentVersion !== releaseConfig.contentVersion
+    || bundle.templateVersion !== releaseConfig.templateVersion) {
     throw new Error('词卡更新未完成，请刷新后重试');
   }
   return bundle;

@@ -24,7 +24,7 @@
 
 ## 内容文件
 
-- `content/release.json`：唯一发布版本源；内容、模板锁、评分规则和复习算法版本均从这里校验
+- `content/release.json`：唯一发布版本源；内容、模板锁、目录 SHA-256、评分规则和复习算法版本均从这里校验
 - `content/cards/*.json`：一词一文件，共 150 个可维护的源词卡
 - `public/data/daily/YYYY-MM-DD.json`：每天 5 张完整词卡，共 30 天
 - `public/data/all-cards.json`：全部 150 张词卡的单文件汇总
@@ -36,6 +36,8 @@
 - `content/templates/template-test-work.locked.md`：用户原始 `work` 示例的不可变快照
 - `content/templates/template-lock.json`：两个快照的来源和 SHA-256 锁定记录
 - `content/templates/learning-template-2026.09.11.1.md`：当前发布规范与逐卡硬性完整度门槛
+
+模板目录只保留当前发布规范 `learning-template-2026.09.11.1.md`；旧版规范由 Git 历史保存，不再与现行规则并列。生成器会在写入任何词卡前校验当前发布编号、模板编号、模板 SHA-256、目录 SHA-256 和唯一版本化规范文件；客户端与发布后验证也会复核同一身份。任一编号或内容发生联动回退、原地修改或混入旧规范都会失败，必须显式创建并批准新版本。
 
 浏览器不能在运行时写回 GitHub 或 Vercel 项目文件，因此全部词卡和每日文件均在构建前一次性生成。完成 150 个新词后不会偷偷回到第 1 天重新发新词；已学词仍按 T0–T7 遗忘曲线独立复习。
 

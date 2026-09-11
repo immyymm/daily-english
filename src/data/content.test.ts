@@ -1,5 +1,4 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { createHash } from 'node:crypto';
 import {
   cardsForStudyDay,
   clearContentCache,
@@ -8,6 +7,7 @@ import {
   watchForContentUpdates
 } from './content';
 import type { ContentBundle, WordCard } from '../types';
+import { releaseConfig } from '../config/release';
 
 const cards = Array.from({ length: 150 }, (_, index) => ({ id: 'card-' + index } as WordCard));
 
@@ -26,17 +26,21 @@ const jsonResponse = (body: unknown) => new Response(JSON.stringify(body), {
   status: 200,
   headers: { 'Content-Type': 'application/json' }
 });
-const catalogHash = (body: unknown) => createHash('sha256')
-  .update(JSON.stringify(body))
-  .digest('hex')
-  .toUpperCase();
+const digestBytes = (hex: string) => Uint8Array.from(hex.match(/.{2}/g) ?? [], (byte) => Number.parseInt(byte, 16)).buffer;
 
 const bundle = (word: string): ContentBundle => ({
-  contentVersion: 'cards-v1',
-  templateVersion: 'template-v1',
+  contentVersion: releaseConfig.contentVersion,
+  templateVersion: releaseConfig.templateVersion,
   total: 1,
   cards: [{ id: 'test-v', word } as WordCard]
 });
+
+const lockedManifest = {
+  contentVersion: releaseConfig.contentVersion,
+  templateVersion: releaseConfig.templateVersion,
+  catalogHash: releaseConfig.catalogHash,
+  releaseId: releaseConfig.releaseVersion
+};
 
 describe('content catalog updates', () => {
   const fetchMock = vi.fn<typeof fetch>();
@@ -45,6 +49,11 @@ describe('content catalog updates', () => {
     clearContentCache();
     fetchMock.mockReset();
     vi.stubGlobal('fetch', fetchMock);
+    vi.stubGlobal('crypto', {
+      subtle: {
+        digest: vi.fn().mockResolvedValue(digestBytes(releaseConfig.catalogHash))
+      }
+    });
   });
 
   afterEach(() => {
@@ -53,56 +62,31 @@ describe('content catalog updates', () => {
     delete (document as unknown as { visibilityState?: DocumentVisibilityState }).visibilityState;
   });
 
-  it('loads a content-only catalog update even when the public version string is unchanged', async () => {
-    const firstBundle = bundle('old wording');
-    const updatedBundle = bundle('new detailed wording');
+  it('loads only the immutable catalog identified by the compiled release', async () => {
+    const currentBundle = bundle('locked detailed wording');
     fetchMock
-      .mockResolvedValueOnce(jsonResponse({
-        contentVersion: 'cards-v1',
-        templateVersion: 'template-v1',
-        catalogHash: catalogHash(firstBundle),
-        releaseId: 'release-before'
-      }))
-      .mockResolvedValueOnce(jsonResponse(firstBundle))
-      .mockResolvedValueOnce(jsonResponse({
-        contentVersion: 'cards-v1',
-        templateVersion: 'template-v1',
-        catalogHash: catalogHash(updatedBundle),
-        releaseId: 'release-after'
-      }))
-      .mockResolvedValueOnce(jsonResponse(updatedBundle));
+      .mockResolvedValueOnce(jsonResponse(lockedManifest))
+      .mockResolvedValueOnce(jsonResponse(currentBundle))
+      .mockResolvedValueOnce(jsonResponse(lockedManifest));
 
-    expect((await loadContent()).cards[0].word).toBe('old wording');
+    expect((await loadContent()).cards[0].word).toBe('locked detailed wording');
     const update = await revalidateContent();
 
-    expect(update.changed).toBe(true);
-    expect(update.bundle.cards[0].word).toBe('new detailed wording');
-    expect((await loadContent()).cards[0].word).toBe('new detailed wording');
-    expect(fetchMock).toHaveBeenCalledTimes(4);
+    expect(update.changed).toBe(false);
+    expect(update.bundle.cards[0].word).toBe('locked detailed wording');
+    expect((await loadContent()).cards[0].word).toBe('locked detailed wording');
+    expect(fetchMock).toHaveBeenCalledTimes(3);
     expect(fetchMock.mock.calls[2][0].toString()).toContain('manifest.json?check=');
-    expect(fetchMock.mock.calls[3][0].toString()).toContain(`catalog=${catalogHash(updatedBundle)}`);
-    expect(fetchMock.mock.calls[3][0].toString()).toContain('release=release-after');
+    expect(fetchMock.mock.calls[1][0].toString()).toContain(`catalog=${releaseConfig.catalogHash}`);
+    expect(fetchMock.mock.calls[1][0].toString()).toContain(`release=${releaseConfig.releaseVersion}`);
     expect(fetchMock.mock.calls.every(([, init]) => init?.cache === 'no-store')).toBe(true);
   });
 
   it('rechecks on background resume, pageshow and focus without touching IndexedDB', async () => {
-    const firstBundle = bundle('old wording');
-    const updatedBundle = bundle('new detailed wording');
-    const oldManifest = {
-      contentVersion: 'cards-v1',
-      templateVersion: 'template-v1',
-      catalogHash: catalogHash(firstBundle),
-      releaseId: 'release-before'
-    };
-    const newManifest = {
-      contentVersion: 'cards-v1',
-      templateVersion: 'template-v1',
-      catalogHash: catalogHash(updatedBundle),
-      releaseId: 'release-after'
-    };
+    const currentBundle = bundle('locked detailed wording');
     fetchMock
-      .mockResolvedValueOnce(jsonResponse(oldManifest))
-      .mockResolvedValueOnce(jsonResponse(firstBundle));
+      .mockResolvedValueOnce(jsonResponse(lockedManifest))
+      .mockResolvedValueOnce(jsonResponse(currentBundle));
     await loadContent();
 
     const indexedDbOpen = vi.fn();
@@ -114,62 +98,65 @@ describe('content catalog updates', () => {
     document.dispatchEvent(new Event('visibilitychange'));
     expect(fetchMock).toHaveBeenCalledTimes(2);
 
-    fetchMock
-      .mockResolvedValueOnce(jsonResponse(newManifest))
-      .mockResolvedValueOnce(jsonResponse(updatedBundle));
+    fetchMock.mockResolvedValueOnce(jsonResponse(lockedManifest));
     Object.defineProperty(document, 'visibilityState', { configurable: true, value: 'visible' });
     document.dispatchEvent(new Event('visibilitychange'));
-    await vi.waitFor(() => expect(onUpdate).toHaveBeenCalledWith(updatedBundle));
+    await vi.waitFor(() => expect(fetchMock).toHaveBeenCalledTimes(3));
+    await revalidateContent();
 
-    fetchMock.mockResolvedValueOnce(jsonResponse(newManifest));
+    fetchMock.mockResolvedValueOnce(jsonResponse(lockedManifest));
     window.dispatchEvent(new Event('pageshow'));
+    await revalidateContent();
+    expect(fetchMock).toHaveBeenCalledTimes(4);
+
+    fetchMock.mockResolvedValueOnce(jsonResponse(lockedManifest));
+    window.dispatchEvent(new Event('focus'));
     await revalidateContent();
     expect(fetchMock).toHaveBeenCalledTimes(5);
 
-    fetchMock.mockResolvedValueOnce(jsonResponse(newManifest));
-    window.dispatchEvent(new Event('focus'));
-    await revalidateContent();
-    expect(fetchMock).toHaveBeenCalledTimes(6);
-
-    expect(onUpdate).toHaveBeenCalledTimes(1);
-    expect((await loadContent()).cards[0].word).toBe('new detailed wording');
+    expect(onUpdate).not.toHaveBeenCalled();
+    expect((await loadContent()).cards[0].word).toBe('locked detailed wording');
     expect(indexedDbOpen).not.toHaveBeenCalled();
     expect(fetchMock.mock.calls.every(([, init]) => init?.cache === 'no-store')).toBe(true);
 
     stopWatching();
     window.dispatchEvent(new Event('focus'));
     await Promise.resolve();
-    expect(fetchMock).toHaveBeenCalledTimes(6);
+    expect(fetchMock).toHaveBeenCalledTimes(5);
   });
 
-  it('rejects a catalog whose bytes do not match the manifest and keeps the prior verified bundle', async () => {
+  it('rejects a foreign manifest and keeps the prior verified bundle', async () => {
     const firstBundle = bundle('verified wording');
-    const expectedBundle = bundle('expected new wording');
-    const staleBundle = bundle('stale CDN wording');
     fetchMock
-      .mockResolvedValueOnce(jsonResponse({
-        contentVersion: 'cards-v1',
-        templateVersion: 'template-v1',
-        catalogHash: catalogHash(firstBundle),
-        releaseId: 'release-before'
-      }))
+      .mockResolvedValueOnce(jsonResponse(lockedManifest))
       .mockResolvedValueOnce(jsonResponse(firstBundle));
 
     expect((await loadContent()).cards[0].word).toBe('verified wording');
 
     const indexedDbOpen = vi.fn();
     vi.stubGlobal('indexedDB', { open: indexedDbOpen });
-    fetchMock
-      .mockResolvedValueOnce(jsonResponse({
-        contentVersion: 'cards-v1',
-        templateVersion: 'template-v1',
-        catalogHash: catalogHash(expectedBundle),
-        releaseId: 'release-after'
-      }))
-      .mockResolvedValueOnce(jsonResponse(staleBundle));
+    fetchMock.mockResolvedValueOnce(jsonResponse({
+      ...lockedManifest,
+      contentVersion: '2026.09.10.4'
+    }));
 
-    await expect(revalidateContent()).rejects.toThrow('词卡内容校验失败');
+    await expect(revalidateContent()).rejects.toThrow('词卡版本不是当前固定发布版本');
     expect((await loadContent()).cards[0].word).toBe('verified wording');
     expect(indexedDbOpen).not.toHaveBeenCalled();
+    expect(fetchMock).toHaveBeenCalledTimes(3);
+  });
+
+  it('rejects catalog bytes that do not match the locked hash', async () => {
+    const currentBundle = bundle('tampered wording');
+    vi.stubGlobal('crypto', {
+      subtle: {
+        digest: vi.fn().mockResolvedValue(digestBytes('0'.repeat(64)))
+      }
+    });
+    fetchMock
+      .mockResolvedValueOnce(jsonResponse(lockedManifest))
+      .mockResolvedValueOnce(jsonResponse(currentBundle));
+
+    await expect(loadContent()).rejects.toThrow('词卡内容校验失败');
   });
 });

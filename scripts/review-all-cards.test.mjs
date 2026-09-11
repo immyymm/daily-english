@@ -258,6 +258,12 @@ afterEach(async () => {
 describe('full 150-card review', () => {
   it('locks build, verify, and production deployment to the complete ordered review chain', async () => {
     const packageJson = JSON.parse(await fs.readFile(path.join(projectRoot, 'package.json'), 'utf8'));
+    const release = JSON.parse(await fs.readFile(path.join(projectRoot, 'content', 'release.json'), 'utf8'));
+    const runtimeRelease = await fs.readFile(path.join(projectRoot, 'src', 'config', 'release.ts'), 'utf8');
+    const buildScript = await fs.readFile(path.join(projectRoot, 'scripts', 'build-content.mjs'), 'utf8');
+    const validateScript = await fs.readFile(path.join(projectRoot, 'scripts', 'validate-content.mjs'), 'utf8');
+    const versionedTemplates = (await fs.readdir(path.join(projectRoot, 'content', 'templates')))
+      .filter((name) => /^learning-template-\d{4}\.\d{2}\.\d{2}\.\d+\.md$/.test(name));
     const requiredStages = [
       'pnpm run content:build',
       'pnpm run content:validate',
@@ -277,6 +283,24 @@ describe('full 150-card review', () => {
       }
     }
     expect(packageJson.scripts['predeploy:production']).toBe('pnpm run verify');
+    expect(release).toMatchObject({
+      releaseVersion: '2026.09.11.1',
+      contentVersion: '2026.09.11.1',
+      templateVersion: 'learning-template-2026.09.11.1',
+      templateLockVersion: '2026.09.11.1',
+      catalogHash: '5FFC8AC4A300193486681AB1DE1134A96774C813AEDF8F90D8E42565121EDBED',
+      evaluationRubricVersion: '2026.08.19.2',
+      reviewScheduleVersion: '2026.08.19.2'
+    });
+    expect(versionedTemplates).toEqual(['learning-template-2026.09.11.1.md']);
+    for (const source of [runtimeRelease, buildScript, validateScript]) {
+      expect(source).toContain("releaseVersion: '2026.09.11.1'");
+      expect(source).toContain("contentVersion: '2026.09.11.1'");
+      expect(source).toContain("templateVersion: 'learning-template-2026.09.11.1'");
+      expect(source).toContain("catalogHash: '5FFC8AC4A300193486681AB1DE1134A96774C813AEDF8F90D8E42565121EDBED'");
+      expect(source).toContain("evaluationRubricVersion: '2026.08.19.2'");
+      expect(source).toContain("reviewScheduleVersion: '2026.08.19.2'");
+    }
   });
 
   it('keeps explicit floors while allowing omitted adaptive counts to resolve to zero', () => {

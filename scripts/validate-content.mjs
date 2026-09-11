@@ -11,6 +11,7 @@ import { hasMultiplePrimaryStressesForSingleWord, isAmericanIpa, isLowValueDeriv
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const allCardsPath = path.join(root, 'public', 'data', 'all-cards.json');
+const contentCardsDir = path.join(root, 'content', 'cards');
 const manifestPath = path.join(root, 'public', 'data', 'manifest.json');
 const contentManifestPath = path.join(root, 'content', 'content-manifest.json');
 const releasePath = path.join(root, 'content', 'release.json');
@@ -22,6 +23,16 @@ const tatoebaExamplesPath = path.join(root, 'scripts', 'tatoeba-examples.json');
 const qualityReportPath = path.join(root, 'content', 'content-quality-report.json');
 const runtimeReleasePath = path.join(root, 'src', 'config', 'release.ts');
 const templateLockPath = path.join(root, 'content', 'templates', 'template-lock.json');
+const LOCKED_ACTIVE_RELEASE = Object.freeze({
+  releaseVersion: '2026.09.11.1',
+  contentVersion: '2026.09.11.1',
+  templateVersion: 'learning-template-2026.09.11.1',
+  templateLockVersion: '2026.09.11.1',
+  catalogHash: '5FFC8AC4A300193486681AB1DE1134A96774C813AEDF8F90D8E42565121EDBED',
+  evaluationRubricVersion: '2026.08.19.2',
+  reviewScheduleVersion: '2026.08.19.2',
+  appliedSpecificationHash: '0A180D2A870DDD9077C897F43B0D1578F264C71DFF9DE091660C6A0940D6DFBA'
+});
 const allCardsRaw = await fs.readFile(allCardsPath, 'utf8');
 const allCards = JSON.parse(allCardsRaw);
 const manifest = JSON.parse(await fs.readFile(manifestPath, 'utf8'));
@@ -33,7 +44,7 @@ const wordnetEnrichment = JSON.parse(await fs.readFile(wordnetEnrichmentPath, 'u
 const ecdictEnrichment = JSON.parse(await fs.readFile(ecdictEnrichmentPath, 'utf8'));
 const tatoebaExamples = JSON.parse(await fs.readFile(tatoebaExamplesPath, 'utf8'));
 const runtimeRelease = await fs.readFile(runtimeReleasePath, 'utf8');
-const templatePath = path.join(root, 'content', 'templates', release.templateVersion + '.md');
+const templatePath = path.join(root, 'content', 'templates', LOCKED_ACTIVE_RELEASE.templateVersion + '.md');
 const template = await fs.readFile(templatePath, 'utf8');
 const templateLock = JSON.parse(await fs.readFile(templateLockPath, 'utf8'));
 const errors = [];
@@ -147,13 +158,28 @@ const summarizeChineseMeanings = (meanings) => {
     .filter((gloss) => gloss && !seen.has(gloss) && seen.add(gloss))
     .join('；');
 };
-const expectedTemplateVersion = release.templateVersion;
-const expectedLockVersion = release.templateLockVersion;
+const expectedTemplateVersion = LOCKED_ACTIVE_RELEASE.templateVersion;
+const expectedLockVersion = LOCKED_ACTIVE_RELEASE.templateLockVersion;
 const expectedSnapshotHashes = {
   'canonical-template': '9A5AB81BC487F47015B7D3C74E732089481A14E49120C63FACEDA082AE67141A',
   'canonical-example': 'DF9D024B49143DFDE1C53AE3C40EE77B86CDE5BC1A1A7CD3382980E260447CFD'
 };
-const expectedAppliedSpecificationHash = '0A180D2A870DDD9077C897F43B0D1578F264C71DFF9DE091660C6A0940D6DFBA';
+const expectedAppliedSpecificationHash = LOCKED_ACTIVE_RELEASE.appliedSpecificationHash;
+
+const versionedTemplatePattern = /^learning-template-\d{4}\.\d{2}\.\d{2}\.\d+\.md$/;
+const expectedVersionedTemplateName = path.basename(templatePath);
+const versionedTemplateNames = (await fs.readdir(path.dirname(templateLockPath)))
+  .filter((name) => versionedTemplatePattern.test(name))
+  .sort();
+if (JSON.stringify(versionedTemplateNames) !== JSON.stringify([expectedVersionedTemplateName])) {
+  errors.push(`Template directory must retain exactly the active release specification ${expectedVersionedTemplateName}; found ${versionedTemplateNames.join(', ') || 'none'}. Historical specifications belong in Git history, not beside the active rule.`);
+}
+
+for (const field of ['releaseVersion', 'contentVersion', 'templateVersion', 'templateLockVersion', 'catalogHash', 'evaluationRubricVersion', 'reviewScheduleVersion']) {
+  if (release[field] !== LOCKED_ACTIVE_RELEASE[field]) {
+    errors.push(`Release field ${field} must remain locked to ${LOCKED_ACTIVE_RELEASE[field]}; create and approve a new immutable release instead of changing this release in place.`);
+  }
+}
 
 for (const [key, value] of Object.entries(release)) {
   if (!runtimeRelease.includes(`${key}: '${value}'`)) {
@@ -181,8 +207,10 @@ const forbiddenGeneratedCopy = [
 
 const sha256 = (content) => crypto.createHash('sha256').update(content).digest('hex').toUpperCase();
 const catalogHash = sha256(allCardsRaw);
+if (catalogHash !== LOCKED_ACTIVE_RELEASE.catalogHash) errors.push('Published catalog bytes differ from the immutable 2026.09.11.1 catalog hash.');
 if (manifest.catalogHash !== catalogHash) errors.push('Public manifest catalogHash does not match the exact all-cards.json bytes.');
 if (contentManifest.catalogHash !== catalogHash) errors.push('Content manifest catalogHash does not match the exact all-cards.json bytes.');
+if (release.catalogHash !== catalogHash) errors.push('Release manifest catalogHash does not match the exact all-cards.json bytes.');
 if (manifest.releaseId !== release.releaseVersion) errors.push('Public manifest releaseId differs from content/release.json.');
 if (contentManifest.releaseId !== release.releaseVersion) errors.push('Content manifest releaseId differs from content/release.json.');
 if (contentManifest.catalogHash !== manifest.catalogHash || contentManifest.releaseId !== manifest.releaseId) {
@@ -315,8 +343,35 @@ if (Object.keys(manualCardPacks).length !== expectedCardCount - 1 || Object.hasO
 }
 if (manifest.dailyFiles.length !== expectedDayCount) errors.push('Expected ' + expectedDayCount + ' daily files.');
 if (new Set(allCards.cards.map((card) => card.id)).size !== allCards.cards.length) errors.push('Duplicate card IDs.');
-if (manifest.contentVersion !== release.contentVersion || allCards.contentVersion !== release.contentVersion) errors.push('Content version differs from content/release.json.');
-if (allCards.templateVersion !== expectedTemplateVersion || manifest.templateVersion !== expectedTemplateVersion) errors.push('Template version is not locked to ' + expectedTemplateVersion + '.');
+if (manifest.contentVersion !== release.contentVersion
+  || contentManifest.contentVersion !== release.contentVersion
+  || allCards.contentVersion !== release.contentVersion) {
+  errors.push('Catalog, public manifest, and content manifest must all use the locked content version.');
+}
+if (allCards.templateVersion !== expectedTemplateVersion
+  || manifest.templateVersion !== expectedTemplateVersion
+  || contentManifest.templateVersion !== expectedTemplateVersion) {
+  errors.push('Catalog, public manifest, and content manifest must all use the locked template version ' + expectedTemplateVersion + '.');
+}
+if (allCards.total !== expectedCardCount || manifest.totalCards !== expectedCardCount) errors.push('Catalog and public manifest totals must equal the 150-card release contract.');
+if (manifest.totalDays !== expectedDayCount || manifest.cardsPerDay !== 5) errors.push('Public manifest schedule metadata differs from the fixed 30-day, five-card plan.');
+
+const catalogCardIds = allCards.cards.map((card) => card.id);
+const reviewedCardIds = allCards.cards.filter((card) => card.reviewed === true).map((card) => card.id);
+const referenceCardIds = allCards.cards.filter((card) => card.detailLevel === 'template-reference').map((card) => card.id);
+const curatedCardIds = allCards.cards.filter((card) => card.detailLevel === 'template-curated').map((card) => card.id);
+const completeCardIds = allCards.cards.filter((card) => card.detailLevel === 'template-complete').map((card) => card.id);
+for (const [field, expected] of [
+  ['cardIds', catalogCardIds],
+  ['reviewedCardIds', reviewedCardIds],
+  ['referenceCardIds', referenceCardIds],
+  ['curatedDetailedCardIds', curatedCardIds],
+  ['completeCardIds', completeCardIds]
+]) {
+  if (JSON.stringify(contentManifest[field] ?? []) !== JSON.stringify(expected)) {
+    errors.push(`Content manifest ${field} does not exactly match the locked catalog.`);
+  }
+}
 const templateHeadings = ['### 1. 核心记忆', '### 2. 固定搭配和短语', '### 3. 常用语境词组', '### 4. 派生词', '### 5. 近义词', '### 6. 反义词', '### 7. 易混词', '### 8. 同类词汇分类', '## 后台例句与练习数据', '## 禁止内容'];
 let previousHeadingIndex = -1;
 for (const heading of templateHeadings) {
@@ -345,6 +400,7 @@ for (const [cardIndex, card] of allCards.cards.entries()) {
     }
   }
   if (card.templateVersion !== expectedTemplateVersion) errors.push(card.id + ': wrong template version.');
+  if (card.contentVersion !== LOCKED_ACTIVE_RELEASE.contentVersion) errors.push(card.id + ': wrong content version.');
   if (card.reviewed !== true) {
     strictQualityError(card, 'PUBLISH_REVIEWED', 'reviewed', 'an unreviewed card cannot enter the published catalog; complete the per-card review before release', card.reviewed);
   }
@@ -910,11 +966,38 @@ for (const [cardIndex, card] of allCards.cards.entries()) {
 }
 
 const scheduledIds = [];
+const catalogCardsById = new Map(allCards.cards.map((card) => [card.id, card]));
+const storedCardFileNames = (await fs.readdir(contentCardsDir))
+  .filter((name) => name.endsWith('.json'))
+  .sort();
+const expectedCardFileNames = catalogCardIds.map((id) => `${id}.json`).sort();
+if (JSON.stringify(storedCardFileNames) !== JSON.stringify(expectedCardFileNames)) {
+  errors.push('content/cards must contain exactly one current JSON file for every locked catalog card.');
+}
+for (const cardId of catalogCardIds) {
+  const storedCard = JSON.parse(await fs.readFile(path.join(contentCardsDir, `${cardId}.json`), 'utf8'));
+  if (JSON.stringify(storedCard) !== JSON.stringify(catalogCardsById.get(cardId))) {
+    errors.push(`content/cards/${cardId}.json differs from the locked all-cards catalog object.`);
+  }
+}
 for (const item of manifest.dailyFiles) {
   const dailyPath = path.join(root, 'public', item.file);
   const daily = JSON.parse(await fs.readFile(dailyPath, 'utf8'));
   if (daily.cards.length !== 5) errors.push(item.file + ': expected 5 cards.');
-  scheduledIds.push(...daily.cards.map((card) => card.id));
+  if (daily.contentVersion !== LOCKED_ACTIVE_RELEASE.contentVersion || daily.templateVersion !== expectedTemplateVersion) {
+    errors.push(item.file + ': daily pack uses a stale content or template version.');
+  }
+  const dailyCardIds = daily.cards.map((card) => card.id);
+  if (JSON.stringify(item.cardIds ?? []) !== JSON.stringify(dailyCardIds)) {
+    errors.push(item.file + ': manifest cardIds differ from the cards stored in the daily pack.');
+  }
+  for (const dailyCard of daily.cards) {
+    const catalogCard = catalogCardsById.get(dailyCard.id);
+    if (!catalogCard || JSON.stringify(dailyCard) !== JSON.stringify(catalogCard)) {
+      errors.push(item.file + ': embedded card ' + dailyCard.id + ' differs from the locked catalog object.');
+    }
+  }
+  scheduledIds.push(...dailyCardIds);
 }
 
 if (scheduledIds.length !== expectedCardCount || new Set(scheduledIds).size !== expectedCardCount) {
