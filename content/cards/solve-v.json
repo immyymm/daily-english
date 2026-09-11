@@ -28,9 +28,9 @@
     "主动词汇"
   ],
   "coreMemory": {
-    "chinese": "解决；解答",
-    "english": "v. to find an answer to a problem",
-    "structure": "solve a problem /sɑːlv ə ˈprɑbləm/（解决问题）；solve an equation /sɑːlv ˈæn ɪˈkweɪʒən/（解方程）；help solve /ˈhɛlp sɑːlv/（帮助解决）；difficult to solve /ˈdɪfəkəlt ˈtuː sɑːlv/（难以解决）",
+    "chinese": "解决；解答；破解；求解；解（方程）",
+    "english": "v. to find an answer to a problem, question, puzzle, or difficult situation；v. to calculate the value of an unknown quantity in mathematics",
+    "structure": "solve a problem /sɑːlv ə ˈprɑbləm/（解决问题）；solve a puzzle /sɑːlv ə ˈpʌzəl/（解开谜题）；solve a crime /sɑːlv ə ˈkraɪm/（侦破案件）；solve an equation /sɑːlv ˈæn ɪˈkweɪʒən/（解方程）",
     "structures": [
       {
         "phrase": "solve a problem",
@@ -38,121 +38,158 @@
         "chinese": "解决问题"
       },
       {
+        "phrase": "solve a puzzle",
+        "phonetic": "/sɑːlv ə ˈpʌzəl/",
+        "chinese": "解开谜题"
+      },
+      {
+        "phrase": "solve a crime",
+        "phonetic": "/sɑːlv ə ˈkraɪm/",
+        "chinese": "侦破案件"
+      },
+      {
         "phrase": "solve an equation",
         "phonetic": "/sɑːlv ˈæn ɪˈkweɪʒən/",
         "chinese": "解方程"
-      },
-      {
-        "phrase": "help solve",
-        "phonetic": "/ˈhɛlp sɑːlv/",
-        "chinese": "帮助解决"
-      },
-      {
-        "phrase": "difficult to solve",
-        "phonetic": "/ˈdɪfəkəlt ˈtuː sɑːlv/",
-        "chinese": "难以解决"
       }
     ],
-    "commonError": "❌ can to solve → ✅ can solve；❌ to solving → ✅ to solve",
+    "commonError": "❌ We need to solve about this problem. → ✅ We need to solve this problem.；❌ They found a solution for the traffic problem. → ✅ They found a solution to the traffic problem.",
     "commonErrors": [
       {
-        "wrong": "can to solve",
-        "wrongPhonetic": "/ˈkæn ˈtuː sɑːlv/",
-        "right": "can solve",
-        "rightPhonetic": "/ˈkæn sɑːlv/",
-        "note": "情态动词 can 后面直接接 solve 的原形，不加 to。"
+        "wrong": "We need to solve about this problem.",
+        "wrongPhonetic": "/ˈwiː ˈniːd ˈtuː sɑːlv əˈbaʊt ˈðɪs ˈprɑbləm/",
+        "right": "We need to solve this problem.",
+        "rightPhonetic": "/ˈwiː ˈniːd ˈtuː sɑːlv ˈðɪs ˈprɑbləm/",
+        "note": "solve 是及物动词，直接接 problem，不加 about。"
       },
       {
-        "wrong": "to solving",
-        "wrongPhonetic": "/ˈtuː ˈsɑlvɪŋ/",
-        "right": "to solve",
-        "rightPhonetic": "/ˈtuː sɑːlv/",
-        "note": "这里的 to 是不定式标记，后面要用 solve 的原形，不能改成 solving。"
+        "wrong": "They found a solution for the traffic problem.",
+        "wrongPhonetic": "/ˈðeɪ ˈfaʊnd ə səˈluːʃən ˈfɔːr ðə ˈtræfɪk ˈprɑbləm/",
+        "right": "They found a solution to the traffic problem.",
+        "rightPhonetic": "/ˈðeɪ ˈfaʊnd ə səˈluːʃən ˈtuː ðə ˈtræfɪk ˈprɑbləm/",
+        "note": "名词 solution 后表示所解决的问题通常用介词 to。"
       }
     ],
-    "directSynonym": "resolve /riːˈzɑlv/（解决；化解）；answer /ˈænsɚ/（答案；回答；回报）；fix /ˈfɪks/（困境；方位；维修）；work out /ˈwɝːk ˈaʊt/（解决；算出）",
+    "directSynonym": "resolve /riˈzɑlv/（解决）；work out /ˈwɝːk ˈaʊt/（解出）；answer /ˈænsɚ/（解答）；crack /ˈkræk/（破解）；settle /ˈsɛtəl/（解决）",
     "directAntonym": "complicate /ˈkɑmpləˌkeɪt/（使复杂化）",
-    "derivatives": "solution · solvable",
+    "derivatives": "solver · solution · solvable · unsolved",
     "example": "We need more information to solve this problem.",
     "exampleChinese": "我们需要更多信息来解决这个问题。"
   },
   "meanings": [
     {
       "partOfSpeech": "v.",
-      "english": "to find an answer to a problem",
-      "chinese": "解决；解答",
-      "example": "We need to solve this problem before Friday.",
-      "translation": "我们需要在星期五前解决这个问题。"
+      "english": "to find an answer to a problem, question, puzzle, or difficult situation",
+      "chinese": "解决；解答；破解",
+      "example": "We need more evidence to solve the case.",
+      "translation": "我们需要更多证据来侦破此案。"
+    },
+    {
+      "partOfSpeech": "v.",
+      "english": "to calculate the value of an unknown quantity in mathematics",
+      "chinese": "求解；解（方程）",
+      "example": "Can you solve this equation without a calculator?",
+      "translation": "你能不用计算器解这个方程吗？"
     }
   ],
   "contextPhrases": [
     {
-      "category": "核心动作与结构",
+      "category": "问题与困难",
       "items": [
         {
-          "phrase": "solve a problem",
-          "phonetic": "/sɑːlv ə ˈprɑbləm/",
-          "chinese": "解决问题"
+          "phrase": "solve a practical problem",
+          "phonetic": "/sɑːlv ə ˈpræktəkəl ˈprɑbləm/",
+          "chinese": "解决实际问题"
         },
         {
-          "phrase": "solve an equation",
-          "phonetic": "/sɑːlv ˈæn ɪˈkweɪʒən/",
-          "chinese": "解方程"
+          "phrase": "solve a resource-allocation problem",
+          "phonetic": "/sɑːlv ə ˌriːsɔːrsˌæləˈkeɪʃən ˈprɑbləm/",
+          "chinese": "解决资源分配问题"
         },
         {
-          "phrase": "help solve",
-          "phonetic": "/ˈhɛlp sɑːlv/",
-          "chinese": "帮助解决"
+          "phrase": "solve a difficult logistics problem",
+          "phonetic": "/sɑːlv ə ˈdɪfəkəlt ləˈdʒɪstɪks ˈprɑbləm/",
+          "chinese": "解决棘手的物流问题"
+        },
+        {
+          "phrase": "solve a staffing problem",
+          "phonetic": "/sɑːlv ə ˈstæfɪŋ ˈprɑbləm/",
+          "chinese": "解决人员配置问题"
         }
       ]
     },
     {
-      "category": "日常与工作语境",
+      "category": "调查与谜题",
       "items": [
         {
-          "phrase": "difficult to solve",
-          "phonetic": "/ˈdɪfəkəlt ˈtuː sɑːlv/",
-          "chinese": "难以解决"
+          "phrase": "solve a complex mystery",
+          "phonetic": "/sɑːlv ə ˈkɑmplɛks ˈmɪstɚi/",
+          "chinese": "解开复杂谜团"
         },
         {
-          "phrase": "solve the mystery",
-          "phonetic": "/sɑːlv ðə ˈmɪstɚiː/",
-          "chinese": "揭开谜团"
+          "phrase": "solve the crime using evidence",
+          "phonetic": "/sɑːlv ðə ˈkraɪm ˈjuːzɪŋ ˈɛvədəns/",
+          "chinese": "利用证据破案"
         },
         {
-          "phrase": "problem-solving skills",
-          "phonetic": "/ˈprɑbləm-ˈsɑlvɪŋ ˈskɪlz/",
-          "chinese": "解决问题的能力"
+          "phrase": "solve a logic puzzle",
+          "phonetic": "/sɑːlv ə ˈlɑdʒɪk ˈpʌzəl/",
+          "chinese": "解开逻辑谜题"
+        },
+        {
+          "phrase": "solve the puzzle before noon",
+          "phonetic": "/sɑːlv ðə ˈpʌzəl bɪˈfɔːr ˈnuːn/",
+          "chinese": "中午前解开谜题"
         }
       ]
     },
     {
-      "category": "高频扩展表达",
+      "category": "数学与技术",
       "items": [
         {
-          "phrase": "solve a problem step by step",
-          "phonetic": "/sɑːlv ə ˈprɑbləm ˈstɛp ˈbaɪ ˈstɛp/",
-          "chinese": "逐步解决问题"
+          "phrase": "solve the equation step by step",
+          "phonetic": "/sɑːlv ðə ɪˈkweɪʒən ˈstɛp ˈbaɪ ˈstɛp/",
+          "chinese": "逐步解方程"
         },
         {
-          "phrase": "solve a puzzle",
-          "phonetic": "/sɑːlv ə ˈpʌzəl/",
-          "chinese": "解开谜题"
+          "phrase": "solve a technical issue remotely",
+          "phonetic": "/sɑːlv ə ˈtɛknɪkəl ˈɪʃu riˈmoʊtli/",
+          "chinese": "远程解决技术问题"
         },
         {
-          "phrase": "solve a misunderstanding",
-          "phonetic": "/sɑːlv ə ˌmɪsəndɚˈstændɪŋ/",
-          "chinese": "化解误会"
+          "phrase": "solve for the unknown value",
+          "phonetic": "/sɑːlv ˈfɔːr ðə ənˈnoʊn ˈvælju/",
+          "chinese": "求未知数的值"
+        },
+        {
+          "phrase": "solve a network failure on site",
+          "phonetic": "/sɑːlv ə ˈnɛˌtwɝːk ˈfeɪljɚ ˈɑn ˈsaɪt/",
+          "chinese": "现场解决网络故障"
         }
       ]
     },
     {
-      "category": "补充常用语境",
+      "category": "合作与方法",
       "items": [
         {
-          "phrase": "solve something",
-          "phonetic": "/sɑːlv ˈsʌmθɪŋ/",
-          "chinese": "解决某事"
+          "phrase": "solve the problem together",
+          "phonetic": "/sɑːlv ðə ˈprɑbləm təˈɡɛðɚ/",
+          "chinese": "共同解决问题"
+        },
+        {
+          "phrase": "solve it with a simpler method",
+          "phonetic": "/sɑːlv ˈɪt ˈwɪð ə ˈsɪmpəlɚ ˈmɛθəd/",
+          "chinese": "用更简单的方法解决"
+        },
+        {
+          "phrase": "solve recurring errors at the source",
+          "phonetic": "/sɑːlv rɪˈkɝːɪŋ ˈɛrɚz ˈæt ðə ˈsɔːrs/",
+          "chinese": "从源头解决反复出现的错误"
+        },
+        {
+          "phrase": "solve recurring scheduling problems through automation",
+          "phonetic": "/sɑːlv rɪˈkɝːɪŋ ˈskɛdʒʊlɪŋ ˈprɑbləmz ˈθruː ɔːtəˈmeɪʃən/",
+          "chinese": "自动化解决排程问题"
         }
       ]
     }
@@ -162,101 +199,122 @@
       "phrase": "solve a problem",
       "phonetic": "/sɑːlv ə ˈprɑbləm/",
       "chinese": "解决问题",
-      "example": "We need to solve this problem before Friday.",
-      "translation": "我们需要在星期五前解决这个问题。"
-    },
-    {
-      "phrase": "solve an equation",
-      "phonetic": "/sɑːlv ˈæn ɪˈkweɪʒən/",
-      "chinese": "解方程",
-      "example": "The students learned how to solve the equation.",
-      "translation": "学生们学会了如何解这个方程。"
-    },
-    {
-      "phrase": "help solve",
-      "phonetic": "/ˈhɛlp sɑːlv/",
-      "chinese": "帮助解决",
-      "example": "Better communication could help solve the conflict.",
-      "translation": "更好的沟通可能有助于解决冲突。"
-    },
-    {
-      "phrase": "difficult to solve",
-      "phonetic": "/ˈdɪfəkəlt ˈtuː sɑːlv/",
-      "chinese": "难以解决",
-      "example": "Some technical problems are difficult to solve remotely.",
-      "translation": "有些技术问题很难远程解决。"
-    },
-    {
-      "phrase": "solve the mystery",
-      "phonetic": "/sɑːlv ðə ˈmɪstɚiː/",
-      "chinese": "揭开谜团",
-      "example": "The detective finally solved the mystery.",
-      "translation": "侦探终于解开了谜团。"
-    },
-    {
-      "phrase": "problem-solving skills",
-      "phonetic": "/ˈprɑbləm-ˈsɑlvɪŋ ˈskɪlz/",
-      "chinese": "解决问题的能力",
-      "example": "This activity develops problem-solving skills.",
-      "translation": "这项活动培养解决问题的能力。"
-    },
-    {
-      "phrase": "solve a problem step by step",
-      "phonetic": "/sɑːlv ə ˈprɑbləm ˈstɛp ˈbaɪ ˈstɛp/",
-      "chinese": "逐步解决问题",
-      "example": "We solved the problem by checking each step.",
-      "translation": "我们通过逐步检查解决了这个问题。"
+      "example": "Engineers solved the drainage problem by widening the outlet.",
+      "translation": "工程师通过拓宽出水口解决了排水问题。"
     },
     {
       "phrase": "solve a puzzle",
       "phonetic": "/sɑːlv ə ˈpʌzəl/",
       "chinese": "解开谜题",
-      "example": "The team solved the puzzle in ten minutes.",
-      "translation": "团队在十分钟内解开了这个谜题。"
+      "example": "The children solved the map puzzle without any hints.",
+      "translation": "孩子们没有提示就解开了地图谜题。"
     },
     {
-      "phrase": "solve a misunderstanding",
-      "phonetic": "/sɑːlv ə ˌmɪsəndɚˈstændɪŋ/",
-      "chinese": "化解误会",
-      "example": "Good communication can solve many misunderstandings.",
-      "translation": "良好的沟通能化解许多误会。"
+      "phrase": "solve a crime",
+      "phonetic": "/sɑːlv ə ˈkraɪm/",
+      "chinese": "侦破案件",
+      "example": "A fingerprint on the window helped detectives solve the crime.",
+      "translation": "窗户上的一枚指纹帮助侦探侦破了案件。"
     },
     {
-      "phrase": "solve a problem",
-      "phonetic": "/sɑːlv ə ˈprɑbləm/",
-      "chinese": "解决问题",
-      "example": "None of the teachers could solve the problem.",
-      "translation": "所有的老师都无法解决这个问题。"
+      "phrase": "solve an equation",
+      "phonetic": "/sɑːlv ˈæn ɪˈkweɪʒən/",
+      "chinese": "解方程",
+      "example": "Students learned to solve the equation using two different methods.",
+      "translation": "学生们学会了用两种不同方法解这个方程。"
+    },
+    {
+      "phrase": "solve a mystery",
+      "phonetic": "/sɑːlv ə ˈmɪstɚi/",
+      "chinese": "解开谜团",
+      "example": "New satellite images may solve the mystery of the missing vessel.",
+      "translation": "新的卫星图像可能会解开船只失踪之谜。"
+    },
+    {
+      "phrase": "solve for x",
+      "phonetic": "/sɑːlv ˈfɔːr ˈɛks/",
+      "chinese": "求x的值",
+      "example": "First simplify both sides of the equation, then solve for x.",
+      "translation": "先化简方程两边，再求x的值。"
+    },
+    {
+      "phrase": "solve something together",
+      "phonetic": "/sɑːlv ˈsʌmθɪŋ təˈɡɛðɚ/",
+      "chinese": "共同解决某事",
+      "example": "Residents and engineers solved the flooding issue together.",
+      "translation": "居民和工程师共同解决了积水问题。"
+    },
+    {
+      "phrase": "solve something efficiently",
+      "phonetic": "/sɑːlv ˈsʌmθɪŋ ɪˈfɪʃəntli/",
+      "chinese": "高效解决某事",
+      "example": "A searchable database helps staff solve customer problems efficiently.",
+      "translation": "可搜索数据库帮助员工高效解决顾客的问题。"
+    },
+    {
+      "phrase": "solve a problem at the source",
+      "phonetic": "/sɑːlv ə ˈprɑbləm ˈæt ðə ˈsɔːrs/",
+      "chinese": "从源头解决问题",
+      "example": "Replacing the leaking pipe solved the damp problem at the source.",
+      "translation": "更换漏水管道从源头解决了潮湿问题。"
+    },
+    {
+      "phrase": "solve a technical issue",
+      "phonetic": "/sɑːlv ə ˈtɛknɪkəl ˈɪʃu/",
+      "chinese": "解决技术问题",
+      "example": "A remote technician solved the technical issue in ten minutes.",
+      "translation": "远程技术员在十分钟内解决了技术问题。"
+    },
+    {
+      "phrase": "solve a logic problem",
+      "phonetic": "/sɑːlv ə ˈlɑdʒɪk ˈprɑbləm/",
+      "chinese": "解决逻辑问题",
+      "example": "The candidate solved the logic problem step by step.",
+      "translation": "应聘者一步一步解决了这道逻辑题。"
+    },
+    {
+      "phrase": "solve a supply problem",
+      "phonetic": "/sɑːlv ə səˈplaɪ ˈprɑbləm/",
+      "chinese": "解决供应问题",
+      "example": "The hospital solved its oxygen supply problem by adding a second storage tank.",
+      "translation": "医院通过增设第二个储罐解决了氧气供应问题。"
     }
   ],
   "synonyms": [
     {
       "word": "resolve",
-      "phonetic": "/riːˈzɑlv/",
+      "phonetic": "/riˈzɑlv/",
       "partOfSpeech": "v.",
-      "chinese": "解决；化解",
-      "difference": "resolve 表示“解决；化解”，与 solve 的“解决”义相近。resolve 常用于问题、争端或困难；solve 也常用于题目、谜题和计算问题。"
-    },
-    {
-      "word": "answer",
-      "phonetic": "/ˈænsɚ/",
-      "partOfSpeech": "n.",
-      "chinese": "答案；回答；回报",
-      "difference": "answer 常表示“答案；回答；回报”，与 solve 的“解决”义有重合。answer 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
-    },
-    {
-      "word": "fix",
-      "phonetic": "/ˈfɪks/",
-      "partOfSpeech": "n.",
-      "chinese": "困境；方位；维修",
-      "difference": "fix 常表示“困境；方位；维修”，与 solve 的“解决”义有重合。fix 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+      "chinese": "解决",
+      "difference": "常用于问题、冲突或争议；solve 适合有答案的问题和谜题，resolve 更常用于争端。"
     },
     {
       "word": "work out",
       "phonetic": "/ˈwɝːk ˈaʊt/",
-      "partOfSpeech": "phr.",
-      "chinese": "解决；算出",
-      "difference": "work out 常表示“解决；算出”，与 solve 的“解决”义有重合。work out 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+      "partOfSpeech": "v.",
+      "chinese": "解出",
+      "difference": "口语，常指算出或想出办法；solve 语体中性，也可接案件、方程和技术故障。"
+    },
+    {
+      "word": "answer",
+      "phonetic": "/ˈænsɚ/",
+      "partOfSpeech": "v.",
+      "chinese": "解答",
+      "difference": "answer 通常接 question，可只给出回答；solve 强调找到完整办法或答案，可接 problem、equation、crime 或 puzzle。"
+    },
+    {
+      "word": "crack",
+      "phonetic": "/ˈkræk/",
+      "partOfSpeech": "v.",
+      "chinese": "破解",
+      "difference": "口语，常指难题、密码或案件；solve 比 crack 中性正式，不带口语挑战色彩。"
+    },
+    {
+      "word": "settle",
+      "phonetic": "/ˈsɛtəl/",
+      "partOfSpeech": "v.",
+      "chinese": "解决",
+      "difference": "侧重结束争端或确定事项；solve 也可处理数学和技术问题，不限争议事项。"
     }
   ],
   "antonyms": [
@@ -265,116 +323,133 @@
       "phonetic": "/ˈkɑmpləˌkeɪt/",
       "partOfSpeech": "v.",
       "chinese": "使复杂化",
-      "usage": "complicate 表示“使复杂化”，与 solve 的“解决”义形成对比。solve 使问题得到答案或消失；complicate 使问题更难处理。"
+      "usage": "与使问题得到解决相对，但不是所有 solve 义项的严格反义词"
     }
   ],
   "derivatives": [
     {
+      "word": "solver",
+      "phonetic": "/ˈsɑlvɚ/",
+      "partOfSpeech": "n.",
+      "chinese": "解决者；解题程序",
+      "note": "可指善于解决问题的人或计算机求解器。"
+    },
+    {
       "word": "solution",
       "phonetic": "/səˈluːʃən/",
       "partOfSpeech": "n.",
-      "chinese": "解决；解答；溶液",
-      "note": "solution 是 solve 的常用词族形式；作 n. 时表示“解决；解答；溶液”。"
+      "chinese": "解决办法；答案；溶液",
+      "note": "常见于 find a solution to a problem。"
     },
     {
       "word": "solvable",
       "phonetic": "/ˈsɑlvəbəl/",
       "partOfSpeech": "adj.",
-      "chinese": "可以解的；可以解决的",
-      "note": "solvable 是 solve 的常用词族形式；作 adj. 时表示“可以解的；可以解决的”。"
+      "chinese": "可解决的；可解的",
+      "note": "常修饰 problem、equation 和 case。"
+    },
+    {
+      "word": "unsolved",
+      "phonetic": "/ˌʌnˈsɑːlvd/",
+      "partOfSpeech": "adj.",
+      "chinese": "未解决的；未破解的",
+      "note": "常形容 mystery、crime 和 problem。"
     }
   ],
-  "confusables": [],
+  "confusables": [
+    {
+      "word": "dissolve",
+      "phonetic": "/dɪˈzɑlv/",
+      "partOfSpeech": "v.",
+      "chinese": "溶解；解散",
+      "difference": "dissolve 比 solve 多 dis-，表示溶解或使组织解散，不表示解决问题。"
+    }
+  ],
   "relatedVocabulary": [
     {
-      "category": "同一语义场的高频词",
+      "category": "问题类型",
       "items": [
         {
-          "word": "answer",
-          "phonetic": "/ˈænsɚ/",
-          "partOfSpeech": "n. / v.",
-          "chinese": "答案；回答"
-        },
-        {
-          "word": "problem",
-          "phonetic": "/ˈprɑbləm/",
+          "word": "puzzle",
+          "phonetic": "/ˈpʌzəl/",
           "partOfSpeech": "n.",
-          "chinese": "问题"
+          "chinese": "谜题"
         },
         {
-          "word": "complicate",
-          "phonetic": "/ˈkɑmpləˌkeɪt/",
-          "partOfSpeech": "v.",
-          "chinese": "使复杂化"
+          "word": "equation",
+          "phonetic": "/ɪˈkweɪʒən/",
+          "partOfSpeech": "n.",
+          "chinese": "方程"
+        },
+        {
+          "word": "case",
+          "phonetic": "/ˈkeɪs/",
+          "partOfSpeech": "n.",
+          "chinese": "案件"
+        },
+        {
+          "word": "conflict",
+          "phonetic": "/ˈkɑnflɪkt/",
+          "partOfSpeech": "n.",
+          "chinese": "冲突"
         }
       ]
     },
     {
-      "category": "近义表达分类",
+      "category": "解题材料",
       "items": [
         {
-          "word": "resolve",
-          "phonetic": "/riːˈzɑlv/",
-          "partOfSpeech": "v.",
-          "chinese": "解决；化解"
-        },
-        {
-          "word": "answer",
-          "phonetic": "/ˈænsɚ/",
+          "word": "evidence",
+          "phonetic": "/ˈɛvədəns/",
           "partOfSpeech": "n.",
-          "chinese": "答案；回答；回报"
+          "chinese": "证据"
         },
         {
-          "word": "fix",
-          "phonetic": "/ˈfɪks/",
+          "word": "clue",
+          "phonetic": "/ˈkluː/",
           "partOfSpeech": "n.",
-          "chinese": "困境；方位；维修"
+          "chinese": "线索"
         },
         {
-          "word": "work out",
-          "phonetic": "/ˈwɝːk ˈaʊt/",
-          "partOfSpeech": "phr.",
-          "chinese": "解决；算出"
+          "word": "method",
+          "phonetic": "/ˈmɛθəd/",
+          "partOfSpeech": "n.",
+          "chinese": "方法"
+        },
+        {
+          "word": "calculation",
+          "phonetic": "/ˌkælkjəˈleɪʃən/",
+          "partOfSpeech": "n.",
+          "chinese": "计算"
         }
       ]
     },
     {
-      "category": "对比与易混表达分类",
+      "category": "解决结果",
       "items": [
         {
-          "word": "complicate",
-          "phonetic": "/ˈkɑmpləˌkeɪt/",
-          "partOfSpeech": "v.",
-          "chinese": "使复杂化"
-        },
-        {
-          "word": "solution",
-          "phonetic": "/səˈluːʃən/",
+          "word": "outcome",
+          "phonetic": "/ˈaʊtˌkʌm/",
           "partOfSpeech": "n.",
-          "chinese": "解决；解答；溶液"
+          "chinese": "结果"
         },
         {
-          "word": "solvable",
-          "phonetic": "/ˈsɑlvəbəl/",
-          "partOfSpeech": "adj.",
-          "chinese": "可以解的；可以解决的"
-        }
-      ]
-    },
-    {
-      "category": "常用词族分类",
-      "items": [
-        {
-          "word": "solution",
-          "phonetic": "/səˈluːʃən/",
+          "word": "remedy",
+          "phonetic": "/ˈrɛmədi/",
           "partOfSpeech": "n.",
-          "chinese": "解决；解答；溶液"
+          "chinese": "补救办法"
         },
         {
-          "word": "solvable",
-          "phonetic": "/ˈsɑlvəbəl/",
-          "partOfSpeech": "adj.",
-          "chinese": "可以解的；可以解决的"
+          "word": "agreement",
+          "phonetic": "/əˈɡriːmənt/",
+          "partOfSpeech": "n.",
+          "chinese": "协议"
+        },
+        {
+          "word": "breakthrough",
+          "phonetic": "/ˈbreɪkˌθruː/",
+          "partOfSpeech": "n.",
+          "chinese": "突破"
         }
       ]
     }
@@ -386,81 +461,91 @@
       "chinese": "我们需要更多信息来解决这个问题。"
     },
     {
-      "scene": "日常使用",
-      "english": "We need to solve this problem before Friday.",
-      "chinese": "我们需要在星期五前解决这个问题。"
-    },
-    {
-      "scene": "工作或学习",
-      "english": "The students learned how to solve the equation.",
-      "chinese": "学生们学会了如何解这个方程。"
-    },
-    {
-      "scene": "常见搭配",
-      "english": "Better communication could help solve the conflict.",
-      "chinese": "更好的沟通可能有助于解决冲突。"
-    },
-    {
-      "scene": "真实语境",
-      "english": "Some technical problems are difficult to solve remotely.",
-      "chinese": "有些技术问题很难远程解决。"
-    },
-    {
-      "scene": "易错结构",
-      "english": "The detective finally solved the mystery.",
-      "chinese": "侦探终于解开了谜团。"
-    },
-    {
-      "scene": "主动表达",
-      "english": "This activity develops problem-solving skills.",
-      "chinese": "这项活动培养解决问题的能力。"
+      "scene": "日常交流",
+      "english": "Engineers solved the drainage problem by widening the outlet.",
+      "chinese": "工程师通过拓宽出水口解决了排水问题。"
     },
     {
       "scene": "工作沟通",
-      "english": "We solved the problem by checking each step.",
-      "chinese": "我们通过逐步检查解决了这个问题。"
+      "english": "The children solved the map puzzle without any hints.",
+      "chinese": "孩子们没有提示就解开了地图谜题。"
     },
     {
       "scene": "学习表达",
-      "english": "The team solved the puzzle in ten minutes.",
-      "chinese": "团队在十分钟内解开了这个谜题。"
+      "english": "A fingerprint on the window helped detectives solve the crime.",
+      "chinese": "窗户上的一枚指纹帮助侦探侦破了案件。"
     },
     {
       "scene": "书面表达",
-      "english": "Good communication can solve many misunderstandings.",
-      "chinese": "良好的沟通能化解许多误会。"
+      "english": "Students learned to solve the equation using two different methods.",
+      "chinese": "学生们学会了用两种不同方法解这个方程。"
+    },
+    {
+      "scene": "日常交流",
+      "english": "New satellite images may solve the mystery of the missing vessel.",
+      "chinese": "新的卫星图像可能会解开船只失踪之谜。"
+    },
+    {
+      "scene": "工作沟通",
+      "english": "First simplify both sides of the equation, then solve for x.",
+      "chinese": "先化简方程两边，再求x的值。"
+    },
+    {
+      "scene": "学习表达",
+      "english": "Residents and engineers solved the flooding issue together.",
+      "chinese": "居民和工程师共同解决了积水问题。"
+    },
+    {
+      "scene": "书面表达",
+      "english": "A searchable database helps staff solve customer problems efficiently.",
+      "chinese": "可搜索数据库帮助员工高效解决顾客的问题。"
+    },
+    {
+      "scene": "日常交流",
+      "english": "Replacing the leaking pipe solved the damp problem at the source.",
+      "chinese": "更换漏水管道从源头解决了潮湿问题。"
+    },
+    {
+      "scene": "工作沟通",
+      "english": "A remote technician solved the technical issue in ten minutes.",
+      "chinese": "远程技术员在十分钟内解决了技术问题。"
+    },
+    {
+      "scene": "学习表达",
+      "english": "The candidate solved the logic problem step by step.",
+      "chinese": "应聘者一步一步解决了这道逻辑题。"
     }
   ],
   "studyFocus": {
-    "coreMeaning": "先掌握“解决；解答”这个核心义，再用高频固定搭配和真实例句巩固这个义项。",
+    "coreMeaning": "先掌握“解决；解答；破解”这个核心义，再对比另外 1 个常用义项，辨别不同语境。",
     "keyCollocation": "把“solve a problem”连同介词、宾语和动词形式作为整个句块记忆。",
-    "commonMistake": "情态动词 can 后面直接接 solve 的原形，不加 to。",
+    "commonMistake": "solve 是及物动词，直接接 problem，不加 about。",
     "mustUseExample": "We need more information to solve this problem.（我们需要更多信息来解决这个问题。）"
   },
   "questions": [
     {
       "id": "solve-v-meaning-core",
       "type": "meaning_choice",
-      "prompt": "“solve”最核心的中文含义是？",
+      "prompt": "“solve”最常见的核心中文义是哪一项？",
       "options": [
         "似乎",
-        "解决；解答",
+        "解决；解答；破解",
         "能"
       ],
-      "answer": "解决；解答",
+      "answer": "解决；解答；破解",
       "stage": "T0",
       "ai": false
     },
     {
       "id": "solve-v-meaning-english",
       "type": "meaning_choice",
-      "prompt": "哪一项英文释义最符合词卡中的 “solve”？",
+      "prompt": "“solve”最常见的英文释义是哪一项？",
       "options": [
-        "to find an answer to a problem",
+        "to find an answer to a problem, question, puzzle, or difficult situation",
         "used for past ability, possibility, or polite suggestions and requests",
         "to appear to be true"
       ],
-      "answer": "to find an answer to a problem",
+      "answer": "to find an answer to a problem, question, puzzle, or difficult situation",
       "stage": "T0",
       "ai": false
     },
@@ -469,10 +554,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“解决问题”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "difficult to solve",
-        "solve a problem",
         "solve an equation",
-        "help solve"
+        "solve a problem",
+        "solve a puzzle",
+        "solve a crime"
       ],
       "answer": "solve a problem",
       "stage": "T1",
@@ -481,12 +566,12 @@
     {
       "id": "solve-v-synonym-choice",
       "type": "meaning_choice",
-      "prompt": "哪个词是词卡中列出的 “solve” 最直接近义词？",
+      "prompt": "在“解决”这个义项下，哪个词与“solve”意思最接近？",
       "options": [
         "resolve",
-        "complicate",
-        "could",
-        "seem"
+        "be",
+        "have",
+        "do"
       ],
       "answer": "resolve",
       "stage": "T2",
@@ -495,11 +580,11 @@
     {
       "id": "solve-v-antonym-choice",
       "type": "meaning_choice",
-      "prompt": "哪个词是词卡中列出的 “solve” 最直接反义词？",
+      "prompt": "在“解决；解答；破解”这个义项下，哪个词与“solve”意思相反？",
       "options": [
-        "resolve",
-        "could",
-        "seem",
+        "be",
+        "have",
+        "do",
         "complicate"
       ],
       "answer": "complicate",
@@ -509,21 +594,21 @@
     {
       "id": "solve-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “solve” 的派生词？",
+      "prompt": "结合拼写、发音和用法，哪一项需要与“solve”重点区分？",
       "options": [
-        "complicate",
-        "could",
-        "solution",
-        "resolve"
+        "have",
+        "do",
+        "dissolve",
+        "be"
       ],
-      "answer": "solution",
+      "answer": "dissolve",
       "stage": "T3",
       "ai": false
     },
     {
       "id": "solve-v-recall-definition",
       "type": "recall",
-      "prompt": "根据英文释义写出目标词：to find an answer to a problem",
+      "prompt": "根据英文释义写出对应单词：to find an answer to a problem, question, puzzle, or difficult situation",
       "answer": "solve",
       "stage": "T1",
       "ai": false
@@ -531,7 +616,7 @@
     {
       "id": "solve-v-recall-chinese",
       "type": "recall",
-      "prompt": "写出符合“解决；解答”（v.）的本课目标词。",
+      "prompt": "写出表示“解决；解答；破解”（v.）的英文单词。",
       "answer": "solve",
       "stage": "T1",
       "ai": false
@@ -547,27 +632,21 @@
     {
       "id": "solve-v-collocation-structure-meaning-v3",
       "type": "collocation",
-      "prompt": "句型应用：哪一项既表示“解方程”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "句型应用：哪一项既表示“解开谜题”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "solve a problem",
-        "help solve",
-        "difficult to solve",
-        "solve an equation"
+        "solve a crime",
+        "solve an equation",
+        "solve a puzzle"
       ],
-      "answer": "solve an equation",
+      "answer": "solve a puzzle",
       "stage": "T1",
       "ai": false
     },
     {
       "id": "solve-v-collocation-example-context-v3",
       "type": "collocation",
-      "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：We need more information to solve this _____.（中文：我们需要更多信息来解决这个问题。）",
-      "options": [
-        "difficult",
-        "whole",
-        "problem",
-        "take"
-      ],
+      "prompt": "根据完整句意和中文提示补全原句：We need more information to solve this _____.（中文：我们需要更多信息来解决这个问题。）",
       "answer": "problem",
       "stage": "T2",
       "ai": false
@@ -575,43 +654,43 @@
     {
       "id": "solve-v-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“解决问题”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "用法辨析：哪一项既表示“解开谜团”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "difficult to solve",
+        "solve a crime",
+        "solve a mystery",
         "solve a problem",
-        "solve an equation",
-        "help solve"
+        "solve a puzzle"
       ],
-      "answer": "solve a problem",
+      "answer": "solve a mystery",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "solve-v-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“解方程”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "搭配辨析：哪一项既表示“求x的值”，又符合这个形式线索：完整搭配中使用介词 for？",
       "options": [
-        "solve an equation",
+        "solve for x",
         "solve a problem",
-        "help solve",
-        "difficult to solve"
+        "solve a puzzle",
+        "solve a crime"
       ],
-      "answer": "solve an equation",
+      "answer": "solve for x",
       "stage": "T3",
       "ai": false
     },
     {
       "id": "solve-v-example-cloze",
       "type": "collocation",
-      "prompt": "根据句意补全词卡核心例句：We need more information to _____ this problem.（填写 solve 的正确形式）",
-      "answer": "solve",
+      "prompt": "根据句意和中文提示补全另一个常用例句：Engineers _____ the drainage problem by widening the outlet.（填写 solve 的正确形式）（中文：工程师通过拓宽出水口解决了排水问题。）",
+      "answer": "solved",
       "stage": "T3",
       "ai": false
     },
     {
       "id": "solve-v-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “solve” 写一个自然、真实的英文句子，含义必须符合词卡核心义“解决；解答”。",
+      "prompt": "请用 “solve” 写一个自然、真实的英文句子，含义必须符合核心义“解决；解答；破解”。",
       "answer": "",
       "stage": "T2",
       "ai": true
@@ -619,7 +698,7 @@
     {
       "id": "solve-v-sentence-phrase",
       "type": "free_sentence",
-      "prompt": "请使用 “solve a problem” 结构写一个与自己有关的自然英文句子。",
+      "prompt": "请使用 “solve a mystery” 结构写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -627,7 +706,7 @@
     {
       "id": "solve-v-dialogue",
       "type": "dialogue",
-      "prompt": "写一段 2–4 轮真实对话，自然使用 “solve” 和 “solve a problem” 结构，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “solve” 和 “solve a practical problem” 结构，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -685,9 +764,10 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-complete",
-  "templateVersion": "learning-template-2026.09.10.3",
-  "contentVersion": "2026.09.10.3",
-  "reviewed": false,
+  "detailLevel": "template-curated",
+  "templateVersion": "learning-template-2026.09.10.4",
+  "contentVersion": "2026.09.10.4",
+  "reviewed": true,
+  "curationSource": "manual-semantic-pack-2026.09.10.4",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

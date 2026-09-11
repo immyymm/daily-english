@@ -1,8 +1,8 @@
 {
   "date": "2026-09-09",
   "dayNumber": 24,
-  "contentVersion": "2026.09.10.3",
-  "templateVersion": "learning-template-2026.09.10.3",
+  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.10.4",
   "cards": [
     {
       "id": "drive-v",
@@ -40,9 +40,9 @@
         "主动词汇"
       ],
       "coreMemory": {
-        "chinese": "驾驶；开车；驱动；推动；迫使；驱使",
-        "english": "v. to control and operate a car or other vehicle；v. to provide the power or force that makes something happen；v. to force or strongly motivate someone to act",
-        "structure": "drive a car /ˈdraɪv ə ˈkɑr/（开车）；drive someone somewhere /ˈdraɪv ˈsʌˌmwʌn ˈsʌˌmwɛr/（开车送某人去某地）；drive change /ˈdraɪv ˈtʃeɪndʒ/（推动改变）；drive someone to do something /ˈdraɪv ˈsʌˌmwʌn ˈtuː ˈduː ˈsʌmθɪŋ/（迫使某人做某事）",
+        "chinese": "驾驶；开车；开车送；推动；驱使；驱动（机器或部件）",
+        "english": "v. to control and operate a vehicle；v. to take someone somewhere in a vehicle；v. to cause or strongly influence change, activity, or behavior；v. to provide the power that makes a machine or part move",
+        "structure": "drive a car /ˈdraɪv ə ˈkɑr/（开车）；drive home /ˈdraɪv ˈhoʊm/（开车回家）；drive to the airport /ˈdraɪv ˈtuː ðə ˈɛrˌpɔːrt/（开车去机场）；drive safely /ˈdraɪv ˈseɪfli/（安全驾驶）",
         "structures": [
           {
             "phrase": "drive a car",
@@ -50,135 +50,172 @@
             "chinese": "开车"
           },
           {
-            "phrase": "drive someone somewhere",
-            "phonetic": "/ˈdraɪv ˈsʌˌmwʌn ˈsʌˌmwɛr/",
-            "chinese": "开车送某人去某地"
+            "phrase": "drive home",
+            "phonetic": "/ˈdraɪv ˈhoʊm/",
+            "chinese": "开车回家"
           },
           {
-            "phrase": "drive change",
-            "phonetic": "/ˈdraɪv ˈtʃeɪndʒ/",
-            "chinese": "推动改变"
+            "phrase": "drive to the airport",
+            "phonetic": "/ˈdraɪv ˈtuː ðə ˈɛrˌpɔːrt/",
+            "chinese": "开车去机场"
           },
           {
-            "phrase": "drive someone to do something",
-            "phonetic": "/ˈdraɪv ˈsʌˌmwʌn ˈtuː ˈduː ˈsʌmθɪŋ/",
-            "chinese": "迫使某人做某事"
+            "phrase": "drive safely",
+            "phonetic": "/ˈdraɪv ˈseɪfli/",
+            "chinese": "安全驾驶"
           }
         ],
-        "commonError": "❌ drive someone to does something → ✅ drive someone to do something；❌ to driving → ✅ to drive",
+        "commonError": "❌ He drives a bicycle to work. → ✅ He rides a bicycle to work.；❌ She drove me at the airport. → ✅ She drove me to the airport.",
         "commonErrors": [
           {
-            "wrong": "drive someone to does something",
-            "wrongPhonetic": "/ˈdraɪv ˈsʌˌmwʌn ˈtuː ˈdʌz ˈsʌmθɪŋ/",
-            "right": "drive someone to do something",
-            "rightPhonetic": "/ˈdraɪv ˈsʌˌmwʌn ˈtuː ˈduː ˈsʌmθɪŋ/",
-            "note": "在“drive someone to do something”中，这个 to 是不定式标记，后面必须接动词原形。do 只是语法占位符，真实表达要把它换成 finish、check 等符合语境的动词原形。"
+            "wrong": "He drives a bicycle to work.",
+            "wrongPhonetic": "/ˈhiː ˈdraɪvz ə ˈbaɪsɪkəl ˈtuː ˈwɝːk/",
+            "right": "He rides a bicycle to work.",
+            "rightPhonetic": "/ˈhiː ˈraɪdz ə ˈbaɪsɪkəl ˈtuː ˈwɝːk/",
+            "note": "驾驶汽车用 drive，骑自行车用 ride。"
           },
           {
-            "wrong": "to driving",
-            "wrongPhonetic": "/ˈtuː ˈdraɪvɪŋ/",
-            "right": "to drive",
-            "rightPhonetic": "/ˈtuː ˈdraɪv/",
-            "note": "这里的 to 是不定式标记，后面要用 drive 的原形，不能改成 driving。"
+            "wrong": "She drove me at the airport.",
+            "wrongPhonetic": "/ˈʃiː ˈdroʊv ˈmiː ˈæt ðə ˈɛrˌpɔːrt/",
+            "right": "She drove me to the airport.",
+            "rightPhonetic": "/ˈʃiː ˈdroʊv ˈmiː ˈtuː ðə ˈɛrˌpɔːrt/",
+            "note": "表示开车送到目的地用 drive someone to a place。"
           }
         ],
-        "directSynonym": "operate /ˈɑpɚˌeɪt/（操作；驾驶）；steer /ˈstɪr/（相近的常用表达）；force /ˈfɔːrs/（力量；武力；势力）；power /ˈpaʊɚ/（相近的常用表达）",
-        "directAntonym": "stop /ˈstɑp/（停止；使停下）",
-        "derivatives": "driver · driving",
+        "directSynonym": "steer /ˈstɪr/（驾驶；操纵方向）；operate /ˈɑpɚˌeɪt/（操作）；transport /trænˈspɔːrt/（运送）；propel /prəˈpɛl/（推动）；motivate /ˈmoʊtəˌveɪt/（驱动）",
+        "directAntonym": "",
+        "derivatives": "driver · driving · driven",
         "example": "I drive a car to work twice a week.",
         "exampleChinese": "我每周开车上班两次。"
       },
       "meanings": [
         {
           "partOfSpeech": "v.",
-          "english": "to control and operate a car or other vehicle",
+          "english": "to control and operate a vehicle",
           "chinese": "驾驶；开车",
-          "example": "She drives to work every morning.",
-          "translation": "她每天早上开车上班。"
+          "example": "She drives to work twice a week.",
+          "translation": "她每周开车上班两次。"
         },
         {
           "partOfSpeech": "v.",
-          "english": "to provide the power or force that makes something happen",
-          "chinese": "驱动；推动",
-          "example": "Customer demand drives product development.",
-          "translation": "客户需求推动产品开发。"
+          "english": "to take someone somewhere in a vehicle",
+          "chinese": "开车送",
+          "example": "Could you drive me to the airport?",
+          "translation": "你能开车送我去机场吗？"
         },
         {
           "partOfSpeech": "v.",
-          "english": "to force or strongly motivate someone to act",
-          "chinese": "迫使；驱使",
-          "example": "The repeated failures drove us to redesign the process.",
-          "translation": "反复失败迫使我们重新设计流程。"
+          "english": "to cause or strongly influence change, activity, or behavior",
+          "chinese": "推动；驱使",
+          "example": "Customer demand is driving rapid growth.",
+          "translation": "客户需求正推动快速增长。"
+        },
+        {
+          "partOfSpeech": "v.",
+          "english": "to provide the power that makes a machine or part move",
+          "chinese": "驱动（机器或部件）",
+          "example": "A small electric motor drives the cooling fan.",
+          "translation": "一台小型电动机驱动冷却风扇。"
         }
       ],
       "contextPhrases": [
         {
-          "category": "核心动作与结构",
+          "category": "驾驶与路线",
           "items": [
             {
-              "phrase": "drive a car",
-              "phonetic": "/ˈdraɪv ə ˈkɑr/",
-              "chinese": "开车"
+              "phrase": "drive along the coast",
+              "phonetic": "/ˈdraɪv əˈlɔːŋ ðə ˈkoʊst/",
+              "chinese": "沿海岸驾车"
             },
             {
-              "phrase": "drive someone somewhere",
-              "phonetic": "/ˈdraɪv ˈsʌˌmwʌn ˈsʌˌmwɛr/",
-              "chinese": "开车送某人去某地"
+              "phrase": "drive through heavy traffic",
+              "phonetic": "/ˈdraɪv ˈθruː ˈhɛvi ˈtræfɪk/",
+              "chinese": "在拥堵车流中驾驶"
             },
             {
-              "phrase": "drive change",
-              "phonetic": "/ˈdraɪv ˈtʃeɪndʒ/",
-              "chinese": "推动改变"
+              "phrase": "drive across the border",
+              "phonetic": "/ˈdraɪv əˈkrɔːs ðə ˈbɔːrdɚ/",
+              "chinese": "驾车越过边境"
+            },
+            {
+              "phrase": "drive on icy roads cautiously",
+              "phonetic": "/ˈdraɪv ˈɑn ˈaɪsi ˈroʊdz ˈkɔːʃəsli/",
+              "chinese": "在结冰道路上谨慎驾驶"
             }
           ]
         },
         {
-          "category": "日常与工作语境",
+          "category": "接送与出行",
           "items": [
             {
-              "phrase": "drive someone to do something",
-              "phonetic": "/ˈdraɪv ˈsʌˌmwʌn ˈtuː ˈduː ˈsʌmθɪŋ/",
-              "chinese": "迫使某人做某事"
+              "phrase": "drive a colleague to the airport",
+              "phonetic": "/ˈdraɪv ə ˈkɑliɡ ˈtuː ðə ˈɛrˌpɔːrt/",
+              "chinese": "开车送同事去机场"
             },
             {
-              "phrase": "drive something forward",
-              "phonetic": "/ˈdraɪv ˈsʌmθɪŋ ˈfɔːrwɚd/",
-              "chinese": "推动某事前进"
+              "phrase": "drive the children home",
+              "phonetic": "/ˈdraɪv ðə ˈtʃɪldrən ˈhoʊm/",
+              "chinese": "开车送孩子回家"
             },
             {
-              "phrase": "drive someone crazy",
-              "phonetic": "/ˈdraɪv ˈsʌˌmwʌn ˈkreɪziː/",
-              "chinese": "把某人逼疯；使极其恼火"
+              "phrase": "drive to work before dawn",
+              "phonetic": "/ˈdraɪv ˈtuː ˈwɝːk bɪˈfɔːr ˈdɔːn/",
+              "chinese": "黎明前开车上班"
+            },
+            {
+              "phrase": "drive a patient to the clinic",
+              "phonetic": "/ˈdraɪv ə ˈpeɪʃənt ˈtuː ðə ˈklɪnɪk/",
+              "chinese": "开车送患者去诊所"
             }
           ]
         },
         {
-          "category": "高频扩展表达",
+          "category": "动力与原因",
           "items": [
             {
-              "phrase": "drive carefully",
-              "phonetic": "/ˈdraɪv ˈkɛrfəliː/",
-              "chinese": "谨慎驾驶"
+              "phrase": "drive economic growth",
+              "phonetic": "/ˈdraɪv ˌɛkəˈnɑmɪk ˈɡroʊθ/",
+              "chinese": "推动经济增长"
             },
             {
-              "phrase": "drive a machine",
-              "phonetic": "/ˈdraɪv ə məˈʃiːn/",
-              "chinese": "驱动机器"
+              "phrase": "drive demand for clean energy",
+              "phonetic": "/ˈdraɪv dɪˈmænd ˈfɔːr ˈkliːn ˈɛnɚdʒi/",
+              "chinese": "推动清洁能源需求"
             },
             {
-              "phrase": "drive someone's car",
-              "phonetic": "/ˈdraɪv ˈsʌˌmwʌnz ˈkɑr/",
-              "chinese": "驾驶某人的汽车"
+              "phrase": "drive people to leave",
+              "phonetic": "/ˈdraɪv ˈpiːpəl ˈtuː ˈliːv/",
+              "chinese": "迫使人们离开"
+            },
+            {
+              "phrase": "drive innovation across the sector",
+              "phonetic": "/ˈdraɪv ˌɪnəˈveɪʃən əˈkrɔːs ðə ˈsɛktɚ/",
+              "chinese": "推动整个行业创新"
             }
           ]
         },
         {
-          "category": "补充常用语境",
+          "category": "机器与项目",
           "items": [
             {
-              "phrase": "drive this thing",
-              "phonetic": "/ˈdraɪv ˈðɪs ˈθɪŋ/",
-              "chinese": "驾驶这玩意儿"
+              "phrase": "drive a motor with electricity",
+              "phonetic": "/ˈdraɪv ə ˈmoʊtɚ ˈwɪð ɪˌlɛkˈtrɪsəti/",
+              "chinese": "用电驱动马达"
+            },
+            {
+              "phrase": "drive the wheels directly",
+              "phonetic": "/ˈdraɪv ðə ˈwiːlz dɚˈɛktli/",
+              "chinese": "直接驱动车轮"
+            },
+            {
+              "phrase": "drive the project forward",
+              "phonetic": "/ˈdraɪv ðə ˈprɑdʒɛkt ˈfɔːrwɚd/",
+              "chinese": "推动项目向前"
+            },
+            {
+              "phrase": "drive a pump at constant speed",
+              "phonetic": "/ˈdraɪv ə ˈpʌmp ˈæt ˈkɑnstənt ˈspiːd/",
+              "chinese": "以恒定速度驱动水泵"
             }
           ]
         }
@@ -188,140 +225,160 @@
           "phrase": "drive a car",
           "phonetic": "/ˈdraɪv ə ˈkɑr/",
           "chinese": "开车",
-          "example": "I drive a car to work twice a week.",
-          "translation": "我每周开车上班两次。"
+          "example": "My aunt learned to drive a car in her forties.",
+          "translation": "我姑姑四十多岁才学会开车。"
         },
         {
-          "phrase": "drive someone somewhere",
-          "phonetic": "/ˈdraɪv ˈsʌˌmwʌn ˈsʌˌmwɛr/",
-          "chinese": "开车送某人去某地",
-          "example": "Can you drive me to the station tomorrow?",
-          "translation": "你明天能开车送我去车站吗？"
+          "phrase": "drive home",
+          "phonetic": "/ˈdraɪv ˈhoʊm/",
+          "chinese": "开车回家",
+          "example": "We drove home slowly through the heavy rain.",
+          "translation": "我们冒着大雨慢慢开车回家。"
         },
         {
-          "phrase": "drive change",
-          "phonetic": "/ˈdraɪv ˈtʃeɪndʒ/",
-          "chinese": "推动改变",
-          "example": "Honest feedback can drive meaningful change.",
-          "translation": "真实反馈能推动有意义的改变。"
+          "phrase": "drive to the airport",
+          "phonetic": "/ˈdraɪv ˈtuː ðə ˈɛrˌpɔːrt/",
+          "chinese": "开车去机场",
+          "example": "Sam drove to the airport before sunrise to meet his sister.",
+          "translation": "萨姆日出前开车去机场接妹妹。"
         },
         {
-          "phrase": "drive someone to do something",
-          "phonetic": "/ˈdraɪv ˈsʌˌmwʌn ˈtuː ˈduː ˈsʌmθɪŋ/",
-          "chinese": "迫使某人做某事",
-          "example": "The repeated failures drove us to redesign the process.",
-          "translation": "反复失败迫使我们重新设计流程。"
+          "phrase": "drive safely",
+          "phonetic": "/ˈdraɪv ˈseɪfli/",
+          "chinese": "安全驾驶",
+          "example": "Drivers must drive safely on the icy mountain road.",
+          "translation": "司机在结冰的山路上必须安全驾驶。"
         },
         {
-          "phrase": "drive something forward",
-          "phonetic": "/ˈdraɪv ˈsʌmθɪŋ ˈfɔːrwɚd/",
-          "chinese": "推动某事前进",
-          "example": "A clear goal helps drive the project forward.",
-          "translation": "清晰目标有助于推动项目前进。"
+          "phrase": "drive someone to work",
+          "phonetic": "/ˈdraɪv ˈsʌmˌwʌn ˈtuː ˈwɝːk/",
+          "chinese": "开车送某人上班",
+          "example": "Her neighbor drove her to work while her car was being repaired.",
+          "translation": "她的车维修期间，邻居开车送她上班。"
         },
         {
-          "phrase": "drive someone crazy",
-          "phonetic": "/ˈdraɪv ˈsʌˌmwʌn ˈkreɪziː/",
-          "chinese": "把某人逼疯；使极其恼火",
-          "example": "The constant noise drives me crazy.",
-          "translation": "持续的噪声让我非常烦躁。"
+          "phrase": "drive growth",
+          "phonetic": "/ˈdraɪv ˈɡroʊθ/",
+          "chinese": "推动增长",
+          "example": "Investment in broadband has driven growth in the region.",
+          "translation": "宽带投资推动了该地区的增长。"
         },
         {
-          "phrase": "drive carefully",
-          "phonetic": "/ˈdraɪv ˈkɛrfəliː/",
-          "chinese": "谨慎驾驶",
-          "example": "She drives carefully in heavy traffic.",
-          "translation": "她在拥挤的车流中谨慎驾驶。"
+          "phrase": "drive innovation",
+          "phonetic": "/ˈdraɪv ˌɪnəˈveɪʃən/",
+          "chinese": "推动创新",
+          "example": "Competition often drives innovation in renewable energy.",
+          "translation": "竞争往往推动可再生能源领域的创新。"
+        },
+        {
+          "phrase": "drive demand",
+          "phonetic": "/ˈdraɪv dɪˈmænd/",
+          "chinese": "推动需求",
+          "example": "Lower ticket prices drove demand for weekend trains.",
+          "translation": "票价下调推动了周末列车的需求。"
+        },
+        {
+          "phrase": "drive a hard bargain",
+          "phonetic": "/ˈdraɪv ə ˈhɑrd ˈbɑrɡən/",
+          "chinese": "极力讨价还价",
+          "example": "The buyer drove a hard bargain and secured a lower price.",
+          "translation": "买方极力讨价还价，最终争取到了更低的价格。"
         },
         {
           "phrase": "drive a machine",
           "phonetic": "/ˈdraɪv ə məˈʃiːn/",
           "chinese": "驱动机器",
-          "example": "A small motor drives the pump.",
-          "translation": "一台小型电动机驱动这台泵。"
+          "example": "A small electric motor drives the cutting machine.",
+          "translation": "一台小型电动机驱动这台切割机。"
         },
         {
-          "phrase": "drive someone's car",
-          "phonetic": "/ˈdraɪv ˈsʌˌmwʌnz ˈkɑr/",
-          "chinese": "驾驶某人的汽车",
-          "example": "Did your uncle let you drive his car?",
-          "translation": "你叔叔让你开他的车了吗？"
+          "phrase": "drive someone crazy",
+          "phonetic": "/ˈdraɪv ˈsʌmˌwʌn ˈkreɪzi/",
+          "chinese": "把某人逼疯",
+          "example": "The constant drilling next door is driving me crazy.",
+          "translation": "隔壁不停的钻孔声快把我逼疯了。"
         },
         {
-          "phrase": "drive this thing",
-          "phonetic": "/ˈdraɪv ˈðɪs ˈθɪŋ/",
-          "chinese": "驾驶这玩意儿",
-          "example": "Do you know how to drive this thing?",
-          "translation": "你知道怎么驾驶这玩意儿吗？"
+          "phrase": "drive away customers",
+          "phonetic": "/ˈdraɪv əˈweɪ ˈkʌstəmɚz/",
+          "chinese": "赶走顾客",
+          "example": "Long waits and rude service will drive away customers.",
+          "translation": "长时间等待和粗鲁服务会赶走顾客。"
         }
       ],
       "synonyms": [
         {
-          "word": "operate",
-          "phonetic": "/ˈɑpɚˌeɪt/",
-          "partOfSpeech": "v.",
-          "chinese": "操作；驾驶",
-          "difference": "operate 表示“操作；驾驶”，与 drive 的“驾驶”义相近。两词只有在这一义项重合时才能互换；drive 的其他常用义不一定适用。"
-        },
-        {
           "word": "steer",
           "phonetic": "/ˈstɪr/",
           "partOfSpeech": "v.",
-          "chinese": "相近的常用表达",
-          "difference": "steer 常表示“相近的常用表达”，与 drive 的“驾驶”义有重合。steer 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+          "chinese": "驾驶；操纵方向",
+          "difference": "强调控制行进方向；drive 还强调车辆动力或完整驾驶行为，不只转向。"
         },
         {
-          "word": "force",
-          "phonetic": "/ˈfɔːrs/",
-          "partOfSpeech": "n.",
-          "chinese": "力量；武力；势力",
-          "difference": "force 常表示“力量；武力；势力”，与 drive 的“驾驶”义有重合。force 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+          "word": "operate",
+          "phonetic": "/ˈɑpɚˌeɪt/",
+          "partOfSpeech": "v.",
+          "chinese": "操作",
+          "difference": "适用于车辆或机器，范围比 drive 广"
         },
         {
-          "word": "power",
-          "phonetic": "/ˈpaʊɚ/",
+          "word": "transport",
+          "phonetic": "/trænˈspɔːrt/",
           "partOfSpeech": "v.",
-          "chinese": "相近的常用表达",
-          "difference": "power 常表示“相近的常用表达”，与 drive 的“驾驶”义有重合。power 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
-        }
-      ],
-      "antonyms": [
+          "chinese": "运送",
+          "difference": "强调把人或物送到别处；drive someone 强调亲自驾车送达，不只是运输安排。"
+        },
         {
-          "word": "stop",
-          "phonetic": "/ˈstɑp/",
+          "word": "propel",
+          "phonetic": "/prəˈpɛl/",
           "partOfSpeech": "v.",
-          "chinese": "停止；使停下",
-          "usage": "stop 表示“停止；使停下”，与 drive 的“驾驶”义形成对比。这种反义关系只适用于上述明确义项。"
+          "chinese": "推动",
+          "difference": "强调提供向前的动力；drive 也能以需求、政策等抽象因素作主语。"
+        },
+        {
+          "word": "motivate",
+          "phonetic": "/ˈmoʊtəˌveɪt/",
+          "partOfSpeech": "v.",
+          "chinese": "驱动",
+          "difference": "只对应促使人采取行动的比喻义；drive 可表示外部力量驱使，motivate 常涉及心理动力。"
         }
       ],
+      "antonyms": [],
       "derivatives": [
         {
           "word": "driver",
           "phonetic": "/ˈdraɪvɚ/",
           "partOfSpeech": "n.",
           "chinese": "驾驶员；驱动因素",
-          "note": "可指开车的人或造成变化的因素。"
+          "note": "既可指开车的人，也可指促成变化的主要因素。"
         },
         {
           "word": "driving",
           "phonetic": "/ˈdraɪvɪŋ/",
           "partOfSpeech": "n. / adj.",
           "chinese": "驾驶；推动的",
-          "note": "常见于 driving force。"
+          "note": "常见于 driving lesson 和 driving force。"
+        },
+        {
+          "word": "driven",
+          "phonetic": "/ˈdrɪvən/",
+          "partOfSpeech": "adj.",
+          "chinese": "有干劲的；由……驱动的",
+          "note": "可形容目标感强的人或动力来源。"
         }
       ],
       "confusables": [
         {
           "word": "ride",
           "phonetic": "/ˈraɪd/",
-          "partOfSpeech": "n.",
-          "chinese": "骑马；乘坐；乘车",
-          "difference": "ride 表示“骑马；乘坐；乘车”，而 drive 在“drive a car”中表示“驾驶”。两者容易因拼写、发音或相近语境而混淆，使用时要根据完整句义和固定搭配区分。"
+          "partOfSpeech": "v.",
+          "chinese": "骑；乘坐",
+          "difference": "drive 强调操控汽车，ride 用于骑车或作为乘客乘坐"
         }
       ],
       "relatedVocabulary": [
         {
-          "category": "同一语义场的高频词",
+          "category": "道路交通",
           "items": [
             {
               "word": "vehicle",
@@ -330,91 +387,80 @@
               "chinese": "车辆"
             },
             {
-              "word": "driver",
-              "phonetic": "/ˈdraɪvɚ/",
+              "word": "highway",
+              "phonetic": "/ˈhaɪˌweɪ/",
               "partOfSpeech": "n.",
-              "chinese": "司机"
+              "chinese": "公路"
             },
             {
-              "word": "transport",
-              "phonetic": "/træˈnspɔːrt/",
-              "partOfSpeech": "v.",
-              "chinese": "运输"
+              "word": "traffic",
+              "phonetic": "/ˈtræfɪk/",
+              "partOfSpeech": "n.",
+              "chinese": "交通"
+            },
+            {
+              "word": "intersection",
+              "phonetic": "/ˌɪntɚˈsɛkʃən/",
+              "partOfSpeech": "n.",
+              "chinese": "十字路口"
             }
           ]
         },
         {
-          "category": "近义表达分类",
+          "category": "车辆操作",
           "items": [
             {
-              "word": "operate",
-              "phonetic": "/ˈɑpɚˌeɪt/",
-              "partOfSpeech": "v.",
-              "chinese": "操作；驾驶"
+              "word": "brake",
+              "phonetic": "/ˈbreɪk/",
+              "partOfSpeech": "n. / v.",
+              "chinese": "刹车"
             },
             {
-              "word": "steer",
-              "phonetic": "/ˈstɪr/",
-              "partOfSpeech": "v.",
-              "chinese": "相近的常用表达"
-            },
-            {
-              "word": "force",
-              "phonetic": "/ˈfɔːrs/",
+              "word": "accelerator",
+              "phonetic": "/ækˈsɛlɚˌeɪtɚ/",
               "partOfSpeech": "n.",
-              "chinese": "力量；武力；势力"
+              "chinese": "油门"
             },
             {
-              "word": "power",
-              "phonetic": "/ˈpaʊɚ/",
-              "partOfSpeech": "v.",
-              "chinese": "相近的常用表达"
+              "word": "gear",
+              "phonetic": "/ˈɡɪr/",
+              "partOfSpeech": "n.",
+              "chinese": "挡位"
+            },
+            {
+              "word": "mirror",
+              "phonetic": "/ˈmɪrɚ/",
+              "partOfSpeech": "n.",
+              "chinese": "后视镜"
             }
           ]
         },
         {
-          "category": "对比与易混表达分类",
+          "category": "推动因素",
           "items": [
             {
-              "word": "stop",
-              "phonetic": "/ˈstɑp/",
-              "partOfSpeech": "v.",
-              "chinese": "停止；使停下"
-            },
-            {
-              "word": "ride",
-              "phonetic": "/ˈraɪd/",
+              "word": "motivation",
+              "phonetic": "/ˌmoʊtəˈveɪʃən/",
               "partOfSpeech": "n.",
-              "chinese": "骑马；乘坐；乘车"
+              "chinese": "动力"
             },
             {
-              "word": "driver",
-              "phonetic": "/ˈdraɪvɚ/",
+              "word": "incentive",
+              "phonetic": "/ˌɪnˈsɛntɪv/",
               "partOfSpeech": "n.",
-              "chinese": "驾驶员；驱动因素"
+              "chinese": "激励"
             },
             {
-              "word": "driving",
-              "phonetic": "/ˈdraɪvɪŋ/",
-              "partOfSpeech": "n. / adj.",
-              "chinese": "驾驶；推动的"
-            }
-          ]
-        },
-        {
-          "category": "常用词族分类",
-          "items": [
-            {
-              "word": "driver",
-              "phonetic": "/ˈdraɪvɚ/",
+              "word": "pressure",
+              "phonetic": "/ˈprɛʃɚ/",
               "partOfSpeech": "n.",
-              "chinese": "驾驶员；驱动因素"
+              "chinese": "压力"
             },
             {
-              "word": "driving",
-              "phonetic": "/ˈdraɪvɪŋ/",
-              "partOfSpeech": "n. / adj.",
-              "chinese": "驾驶；推动的"
+              "word": "ambition",
+              "phonetic": "/æmˈbɪʃən/",
+              "partOfSpeech": "n.",
+              "chinese": "抱负"
             }
           ]
         }
@@ -426,62 +472,72 @@
           "chinese": "我每周开车上班两次。"
         },
         {
-          "scene": "工作或学习",
-          "english": "Can you drive me to the station tomorrow?",
-          "chinese": "你明天能开车送我去车站吗？"
-        },
-        {
-          "scene": "常见搭配",
-          "english": "Honest feedback can drive meaningful change.",
-          "chinese": "真实反馈能推动有意义的改变。"
-        },
-        {
-          "scene": "真实语境",
-          "english": "The repeated failures drove us to redesign the process.",
-          "chinese": "反复失败迫使我们重新设计流程。"
-        },
-        {
-          "scene": "易错结构",
-          "english": "A clear goal helps drive the project forward.",
-          "chinese": "清晰目标有助于推动项目前进。"
-        },
-        {
-          "scene": "主动表达",
-          "english": "The constant noise drives me crazy.",
-          "chinese": "持续的噪声让我非常烦躁。"
-        },
-        {
           "scene": "日常交流",
-          "english": "She drives carefully in heavy traffic.",
-          "chinese": "她在拥挤的车流中谨慎驾驶。"
+          "english": "My aunt learned to drive a car in her forties.",
+          "chinese": "我姑姑四十多岁才学会开车。"
         },
         {
           "scene": "工作沟通",
-          "english": "A small motor drives the pump.",
-          "chinese": "一台小型电动机驱动这台泵。"
+          "english": "We drove home slowly through the heavy rain.",
+          "chinese": "我们冒着大雨慢慢开车回家。"
         },
         {
           "scene": "学习表达",
-          "english": "Did your uncle let you drive his car?",
-          "chinese": "你叔叔让你开他的车了吗？"
+          "english": "Sam drove to the airport before sunrise to meet his sister.",
+          "chinese": "萨姆日出前开车去机场接妹妹。"
         },
         {
           "scene": "书面表达",
-          "english": "Do you know how to drive a car?",
-          "chinese": "你知道如何开车吗？"
+          "english": "Drivers must drive safely on the icy mountain road.",
+          "chinese": "司机在结冰的山路上必须安全驾驶。"
+        },
+        {
+          "scene": "日常交流",
+          "english": "Her neighbor drove her to work while her car was being repaired.",
+          "chinese": "她的车维修期间，邻居开车送她上班。"
+        },
+        {
+          "scene": "工作沟通",
+          "english": "Investment in broadband has driven growth in the region.",
+          "chinese": "宽带投资推动了该地区的增长。"
+        },
+        {
+          "scene": "学习表达",
+          "english": "Competition often drives innovation in renewable energy.",
+          "chinese": "竞争往往推动可再生能源领域的创新。"
+        },
+        {
+          "scene": "书面表达",
+          "english": "Lower ticket prices drove demand for weekend trains.",
+          "chinese": "票价下调推动了周末列车的需求。"
+        },
+        {
+          "scene": "日常交流",
+          "english": "The buyer drove a hard bargain and secured a lower price.",
+          "chinese": "买方极力讨价还价，最终争取到了更低的价格。"
+        },
+        {
+          "scene": "工作沟通",
+          "english": "A small electric motor drives the cutting machine.",
+          "chinese": "一台小型电动机驱动这台切割机。"
+        },
+        {
+          "scene": "学习表达",
+          "english": "The constant drilling next door is driving me crazy.",
+          "chinese": "隔壁不停的钻孔声快把我逼疯了。"
         }
       ],
       "studyFocus": {
-        "coreMeaning": "先掌握“驾驶；开车”这个核心义，再对比另外 2 个常用义项，辨别不同语境。",
+        "coreMeaning": "先掌握“驾驶；开车”这个核心义，再对比另外 3 个常用义项，辨别不同语境。",
         "keyCollocation": "把“drive a car”连同介词、宾语和动词形式作为整个句块记忆。",
-        "commonMistake": "在“drive someone to do something”中，这个 to 是不定式标记，后面必须接动词原形。do 只是语法占位符，真实表达要把它换成 finish、check 等符合语境的动词原形。",
+        "commonMistake": "驾驶汽车用 drive，骑自行车用 ride。",
         "mustUseExample": "I drive a car to work twice a week.（我每周开车上班两次。）"
       },
       "questions": [
         {
           "id": "drive-v-meaning-core",
           "type": "meaning_choice",
-          "prompt": "“drive”最核心的中文含义是？",
+          "prompt": "“drive”最常见的核心中文义是哪一项？",
           "options": [
             "保护",
             "将会",
@@ -494,13 +550,13 @@
         {
           "id": "drive-v-meaning-english",
           "type": "meaning_choice",
-          "prompt": "哪一项英文释义最符合词卡中的 “drive”？",
+          "prompt": "“drive”最常见的英文释义是哪一项？",
           "options": [
             "used to talk about the future, willingness, or a decision",
-            "to control and operate a car or other vehicle",
+            "to control and operate a vehicle",
             "to keep someone or something safe"
           ],
-          "answer": "to control and operate a car or other vehicle",
+          "answer": "to control and operate a vehicle",
           "stage": "T0",
           "ai": false
         },
@@ -509,9 +565,9 @@
           "type": "meaning_choice",
           "prompt": "核心结构辨析：哪一项既表示“开车”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "drive someone somewhere",
-            "drive change",
-            "drive someone to do something",
+            "drive home",
+            "drive to the airport",
+            "drive safely",
             "drive a car"
           ],
           "answer": "drive a car",
@@ -521,40 +577,40 @@
         {
           "id": "drive-v-synonym-choice",
           "type": "meaning_choice",
-          "prompt": "哪个词是词卡中列出的 “drive” 最直接近义词？",
+          "prompt": "在“驾驶；操纵方向”这个义项下，哪个词与“drive”意思最接近？",
           "options": [
-            "ride",
-            "protect",
+            "have",
+            "do",
+            "steer",
+            "be"
+          ],
+          "answer": "steer",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "drive-v-synonym-choice-2",
+          "type": "meaning_choice",
+          "prompt": "除“steer”外，在“操作”这个义项下，哪个词也与“drive”意思接近？",
+          "options": [
+            "do",
             "operate",
-            "stop"
+            "be",
+            "have"
           ],
           "answer": "operate",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "drive-v-antonym-choice",
-          "type": "meaning_choice",
-          "prompt": "哪个词是词卡中列出的 “drive” 最直接反义词？",
-          "options": [
-            "protect",
-            "stop",
-            "operate",
-            "ride"
-          ],
-          "answer": "stop",
-          "stage": "T2",
-          "ai": false
-        },
-        {
           "id": "drive-v-contrast-choice",
           "type": "meaning_choice",
-          "prompt": "根据本词卡辨析，哪个词被列为 “drive” 的易混词？",
+          "prompt": "结合拼写、发音和用法，哪一项需要与“drive”重点区分？",
           "options": [
             "ride",
-            "operate",
-            "stop",
-            "protect"
+            "be",
+            "have",
+            "do"
           ],
           "answer": "ride",
           "stage": "T3",
@@ -563,7 +619,7 @@
         {
           "id": "drive-v-recall-definition",
           "type": "recall",
-          "prompt": "根据英文释义写出目标词：to control and operate a car or other vehicle",
+          "prompt": "根据英文释义写出对应单词：to control and operate a vehicle",
           "answer": "drive",
           "stage": "T1",
           "ai": false
@@ -571,7 +627,7 @@
         {
           "id": "drive-v-recall-chinese",
           "type": "recall",
-          "prompt": "写出符合“驾驶；开车”（v.）的本课目标词。",
+          "prompt": "写出表示“驾驶；开车”（v.）的英文单词。",
           "answer": "drive",
           "stage": "T1",
           "ai": false
@@ -587,27 +643,21 @@
         {
           "id": "drive-v-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "句型应用：哪一项既表示“开车送某人去某地”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+          "prompt": "句型应用：哪一项既表示“开车回家”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "drive someone to do something",
-            "drive someone somewhere",
+            "drive safely",
+            "drive home",
             "drive a car",
-            "drive change"
+            "drive to the airport"
           ],
-          "answer": "drive someone somewhere",
+          "answer": "drive home",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "drive-v-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：I drive a _____ to work twice a week.（中文：我每周开车上班两次。）",
-          "options": [
-            "car",
-            "account",
-            "review",
-            "teacher"
-          ],
+          "prompt": "根据完整句意和中文提示补全原句：I drive a _____ to work twice a week.（中文：我每周开车上班两次。）",
           "answer": "car",
           "stage": "T2",
           "ai": false
@@ -615,35 +665,35 @@
         {
           "id": "drive-v-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "用法辨析：哪一项既表示“开车”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+          "prompt": "用法辨析：哪一项既表示“开车送某人上班”，又符合这个形式线索：完整搭配中使用介词 to？",
           "options": [
-            "drive someone somewhere",
-            "drive change",
-            "drive someone to do something",
-            "drive a car"
+            "drive a car",
+            "drive home",
+            "drive to the airport",
+            "drive someone to work"
           ],
-          "answer": "drive a car",
+          "answer": "drive someone to work",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "drive-v-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "搭配辨析：哪一项既表示“开车送某人去某地”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+          "prompt": "搭配辨析：哪一项既表示“推动增长”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "drive change",
-            "drive someone to do something",
-            "drive someone somewhere",
+            "drive home",
+            "drive to the airport",
+            "drive growth",
             "drive a car"
           ],
-          "answer": "drive someone somewhere",
+          "answer": "drive growth",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "drive-v-example-cloze",
           "type": "collocation",
-          "prompt": "根据句意补全词卡核心例句：I _____ a car to work twice a week.（填写 drive 的正确形式）",
+          "prompt": "根据句意和中文提示补全另一个常用例句：My aunt learned to _____ a car in her forties.（填写 drive 的正确形式）（中文：我姑姑四十多岁才学会开车。）",
           "answer": "drive",
           "stage": "T3",
           "ai": false
@@ -651,7 +701,7 @@
         {
           "id": "drive-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “drive” 写一个自然、真实的英文句子，含义必须符合词卡核心义“驾驶；开车”。",
+          "prompt": "请用 “drive” 写一个自然、真实的英文句子，含义必须符合核心义“驾驶；开车”。",
           "answer": "",
           "stage": "T2",
           "ai": true
@@ -659,7 +709,7 @@
         {
           "id": "drive-v-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请使用 “drive a car” 结构写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “drive someone to work” 结构写一个与自己有关的自然英文句子；someone 要替换成实际的人或代词。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -667,7 +717,7 @@
         {
           "id": "drive-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “drive” 和 “drive a car” 结构，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “drive” 和 “drive along the coast” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -725,10 +775,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "template-complete",
-      "templateVersion": "learning-template-2026.09.10.3",
-      "contentVersion": "2026.09.10.3",
-      "reviewed": false,
+      "detailLevel": "template-curated",
+      "templateVersion": "learning-template-2026.09.10.4",
+      "contentVersion": "2026.09.10.4",
+      "reviewed": true,
+      "curationSource": "manual-semantic-pack-2026.09.10.4",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -767,19 +818,14 @@
         "主动词汇"
       ],
       "coreMemory": {
-        "chinese": "到达；抵达；达到；达成；联系；与……取得联系",
-        "english": "v. to arrive at a place；v. to achieve a level, goal, agreement, or decision；v. to contact or communicate with someone",
-        "structure": "reach a goal /riːtʃ ə ˈɡoʊl/（达到目标）；reach an agreement /riːtʃ ˈæn əˈɡriːmənt/（达成协议）；reach a decision /riːtʃ ə dɪˈsɪʒən/（作出决定）；reach out to /riːtʃ ˈaʊt ˈtuː/（主动联系）",
+        "chinese": "到达；抵达；达到；实现；伸手够到；触及；联系上；与……取得联系",
+        "english": "v. to arrive at a place or point；v. to achieve a particular level, amount, or goal；v. to stretch out a hand or arm to touch or take something；v. to contact or communicate with someone",
+        "structure": "reach a place /riːtʃ ə ˈpleɪs/（到达某地）；reach a decision /riːtʃ ə dɪˈsɪʒən/（作出决定）；reach an agreement /riːtʃ ˈæn əˈɡriːmənt/（达成协议）；reach a goal /riːtʃ ə ˈɡoʊl/（实现目标）",
         "structures": [
           {
-            "phrase": "reach a goal",
-            "phonetic": "/riːtʃ ə ˈɡoʊl/",
-            "chinese": "达到目标"
-          },
-          {
-            "phrase": "reach an agreement",
-            "phonetic": "/riːtʃ ˈæn əˈɡriːmənt/",
-            "chinese": "达成协议"
+            "phrase": "reach a place",
+            "phonetic": "/riːtʃ ə ˈpleɪs/",
+            "chinese": "到达某地"
           },
           {
             "phrase": "reach a decision",
@@ -787,229 +833,292 @@
             "chinese": "作出决定"
           },
           {
-            "phrase": "reach out to",
-            "phonetic": "/riːtʃ ˈaʊt ˈtuː/",
-            "chinese": "主动联系"
-          }
-        ],
-        "commonError": "❌ can to reach → ✅ can reach；❌ to reaching → ✅ to reach",
-        "commonErrors": [
-          {
-            "wrong": "can to reach",
-            "wrongPhonetic": "/ˈkæn ˈtuː riːtʃ/",
-            "right": "can reach",
-            "rightPhonetic": "/ˈkæn riːtʃ/",
-            "note": "情态动词 can 后面直接接 reach 的原形，不加 to。"
+            "phrase": "reach an agreement",
+            "phonetic": "/riːtʃ ˈæn əˈɡriːmənt/",
+            "chinese": "达成协议"
           },
           {
-            "wrong": "to reaching",
-            "wrongPhonetic": "/ˈtuː ˈriːtʃɪŋ/",
-            "right": "to reach",
-            "rightPhonetic": "/ˈtuː riːtʃ/",
-            "note": "这里的 to 是不定式标记，后面要用 reach 的原形，不能改成 reaching。"
+            "phrase": "reach a goal",
+            "phonetic": "/riːtʃ ə ˈɡoʊl/",
+            "chinese": "实现目标"
           }
         ],
-        "directSynonym": "arrive at /ɚˈaɪv ˈæt/（到达；抵达）；attain /əˈteɪn/（达到；获得）；contact /ˈkɑˌntækt/（联系；交际；熟人）；get to /ˈɡɛt ˈtuː/（到达；联系到）",
-        "directAntonym": "miss /ˈmɪs/（未达到；错过）",
-        "derivatives": "reachable",
+        "commonError": "❌ We reached to the station at noon. → ✅ We reached the station at noon.；❌ They reached at an agreement. → ✅ They reached an agreement.",
+        "commonErrors": [
+          {
+            "wrong": "We reached to the station at noon.",
+            "wrongPhonetic": "/ˈwiː ˈriːtʃt ˈtuː ðə ˈsteɪʃən ˈæt ˈnuːn/",
+            "right": "We reached the station at noon.",
+            "rightPhonetic": "/ˈwiː ˈriːtʃt ðə ˈsteɪʃən ˈæt ˈnuːn/",
+            "note": "reach 表示到达时是及物动词，地点前不加 to。"
+          },
+          {
+            "wrong": "They reached at an agreement.",
+            "wrongPhonetic": "/ˈðeɪ ˈriːtʃt ˈæt ˈæn əˈɡriːmənt/",
+            "right": "They reached an agreement.",
+            "rightPhonetic": "/ˈðeɪ ˈriːtʃt ˈæn əˈɡriːmənt/",
+            "note": "固定搭配是 reach an agreement，不能加 at。"
+          }
+        ],
+        "directSynonym": "get to /ˈɡɛt ˈtuː/（到达）；attain /əˈteɪn/（达到）；achieve /əˈtʃiːv/（实现）；contact /ˈkɑnˌtækt/（联系到）；extend /ɪkˈstɛnd/（延伸）",
+        "directAntonym": "miss /ˈmɪs/（未赶上；未达到）",
+        "derivatives": "overreach · outreach · reachability · reachable · unreachable · far-reaching",
         "example": "We finally reached an agreement.",
         "exampleChinese": "我们终于达成了协议。"
       },
       "meanings": [
         {
           "partOfSpeech": "v.",
-          "english": "to arrive at a place",
+          "english": "to arrive at a place or point",
           "chinese": "到达；抵达",
-          "example": "They reached the top of the mountain before noon.",
-          "translation": "他们中午前到达了山顶。"
+          "example": "We reached the village before dark.",
+          "translation": "我们天黑前到达了村庄。"
         },
         {
           "partOfSpeech": "v.",
-          "english": "to achieve a level, goal, agreement, or decision",
-          "chinese": "达到；达成",
-          "example": "She reached her goal after months of practice.",
-          "translation": "经过几个月练习，她达成了目标。"
+          "english": "to achieve a particular level, amount, or goal",
+          "chinese": "达到；实现",
+          "example": "Sales reached a record level in May.",
+          "translation": "销售额在五月达到创纪录水平。"
+        },
+        {
+          "partOfSpeech": "v.",
+          "english": "to stretch out a hand or arm to touch or take something",
+          "chinese": "伸手够到；触及",
+          "example": "She reached for the book on the top shelf.",
+          "translation": "她伸手去拿顶层书架上的书。"
         },
         {
           "partOfSpeech": "v.",
           "english": "to contact or communicate with someone",
-          "chinese": "联系；与……取得联系",
-          "example": "Do not hesitate to reach out to me for help.",
-          "translation": "需要帮助时请随时联系我。"
+          "chinese": "联系上；与……取得联系",
+          "example": "You can reach me by email after six.",
+          "translation": "六点后你可以通过邮件联系我。"
         }
       ],
       "contextPhrases": [
         {
-          "category": "核心动作与结构",
+          "category": "目的地与路程",
           "items": [
             {
-              "phrase": "reach a goal",
-              "phonetic": "/riːtʃ ə ˈɡoʊl/",
-              "chinese": "达到目标"
+              "phrase": "reach the summit at sunrise",
+              "phonetic": "/riːtʃ ðə ˈsʌmət ˈæt ˈsʌnˌraɪz/",
+              "chinese": "日出时到达山顶"
             },
             {
-              "phrase": "reach an agreement",
-              "phonetic": "/riːtʃ ˈæn əˈɡriːmənt/",
-              "chinese": "达成协议"
+              "phrase": "reach the station in twenty minutes",
+              "phonetic": "/riːtʃ ðə ˈsteɪʃən ɪn ˈtwɛnti ˈmɪnəts/",
+              "chinese": "二十分钟内到达车站"
             },
             {
-              "phrase": "reach a decision",
-              "phonetic": "/riːtʃ ə dɪˈsɪʒən/",
-              "chinese": "作出决定"
+              "phrase": "reach safety after crossing the river",
+              "phonetic": "/riːtʃ ˈseɪfti ˈæftɚ ˈkrɔːsɪŋ ðə ˈrɪvɚ/",
+              "chinese": "过河后到达安全地带"
+            },
+            {
+              "phrase": "reach the border before nightfall",
+              "phonetic": "/riːtʃ ðə ˈbɔːrdɚ bɪˈfɔːr ˈnaɪtˌfɔːl/",
+              "chinese": "天黑前到达边境"
             }
           ]
         },
         {
-          "category": "日常与工作语境",
+          "category": "数值与阶段",
           "items": [
             {
-              "phrase": "reach out to someone",
-              "phonetic": "/riːtʃ ˈaʊt ˈtuː ˈsʌˌmwʌn/",
-              "chinese": "主动联系"
+              "phrase": "reach full capacity",
+              "phonetic": "/riːtʃ ˈfʊl kəˈpæsəti/",
+              "chinese": "达到满负荷"
             },
             {
-              "phrase": "within reach",
-              "phonetic": "/wɪˈðɪn riːtʃ/",
-              "chinese": "够得着；可实现"
+              "phrase": "reach the final stage",
+              "phonetic": "/riːtʃ ðə ˈfaɪnəl ˈsteɪdʒ/",
+              "chinese": "进入最后阶段"
             },
             {
-              "phrase": "reach the top",
-              "phonetic": "/riːtʃ ðə ˈtɑp/",
-              "chinese": "到达顶端"
+              "phrase": "reach a wider audience",
+              "phonetic": "/riːtʃ ə ˈwaɪdɚ ˈɑdiəns/",
+              "chinese": "覆盖更广泛的受众"
+            },
+            {
+              "phrase": "reach a stable temperature",
+              "phonetic": "/riːtʃ ə ˈsteɪbəl ˈtɛmprətʃɚ/",
+              "chinese": "达到稳定温度"
             }
           ]
         },
         {
-          "category": "高频扩展表达",
+          "category": "协商与判断",
           "items": [
             {
-              "phrase": "reach a place by either route",
-              "phonetic": "/riːtʃ ə ˈpleɪs ˈbaɪ ˈiːðɚ ˈruːt/",
-              "chinese": "经任一路线到达某地"
+              "phrase": "reach common ground",
+              "phonetic": "/riːtʃ ˈkɑmən ˈɡraʊnd/",
+              "chinese": "找到共同点"
             },
             {
-              "phrase": "reach yet",
-              "phonetic": "/riːtʃ ˈjɛt/",
-              "chinese": "看上去老"
+              "phrase": "reach a fair settlement",
+              "phonetic": "/riːtʃ ə ˈfɛr ˈsɛtəlmənt/",
+              "chinese": "达成公平的和解"
             },
             {
-              "phrase": "reach a compromise",
-              "phonetic": "/riːtʃ ə ˈkɑmprəˌmaɪz/",
-              "chinese": "达成妥协"
+              "phrase": "reach the same judgment independently",
+              "phonetic": "/riːtʃ ðə ˈseɪm ˈdʒʌdʒmənt ˌɪndɪˈpɛndəntli/",
+              "chinese": "各自得出相同判断"
+            },
+            {
+              "phrase": "reach a workable compromise",
+              "phonetic": "/riːtʃ ə ˈwɝːkəbəl ˈkɑmprəˌmaɪz/",
+              "chinese": "达成可行的妥协"
             }
           ]
         },
         {
-          "category": "补充常用语境",
+          "category": "接触与沟通",
           "items": [
             {
-              "phrase": "reach the level of the windows",
-              "phonetic": "/riːtʃ ðə ˈlɛvəl ˈʌv ðə ˈwɪndoʊz/",
-              "chinese": "洪水涌到了窗户的高度"
+              "phrase": "reach across the table",
+              "phonetic": "/riːtʃ əˈkrɔːs ðə ˈteɪbəl/",
+              "chinese": "伸手越过桌面"
+            },
+            {
+              "phrase": "reach into a pocket",
+              "phonetic": "/riːtʃ ˈɪntu ə ˈpɑkət/",
+              "chinese": "把手伸进口袋"
+            },
+            {
+              "phrase": "reach customers through social media",
+              "phonetic": "/riːtʃ ˈkʌstəmɚz ˈθruː ˈsoʊʃəl ˈmiːdiə/",
+              "chinese": "通过社交媒体触达顾客"
+            },
+            {
+              "phrase": "reach the switch from your seat",
+              "phonetic": "/riːtʃ ðə ˈswɪtʃ ˈfrʌm ˈjɔːr ˈsiːt/",
+              "chinese": "坐着就能伸手够到开关"
             }
           ]
         }
       ],
       "fixedPhrases": [
         {
-          "phrase": "reach a goal",
-          "phonetic": "/riːtʃ ə ˈɡoʊl/",
-          "chinese": "达到目标",
-          "example": "She reached her goal after months of practice.",
-          "translation": "经过几个月练习，她达成了目标。"
-        },
-        {
-          "phrase": "reach an agreement",
-          "phonetic": "/riːtʃ ˈæn əˈɡriːmənt/",
-          "chinese": "达成协议",
-          "example": "Both sides finally reached an agreement.",
-          "translation": "双方终于达成了协议。"
+          "phrase": "reach a place",
+          "phonetic": "/riːtʃ ə ˈpleɪs/",
+          "chinese": "到达某地",
+          "example": "The rescue team reached the village shortly after midnight.",
+          "translation": "救援队在午夜过后不久抵达了村庄。"
         },
         {
           "phrase": "reach a decision",
           "phonetic": "/riːtʃ ə dɪˈsɪʒən/",
           "chinese": "作出决定",
-          "example": "We need more information before we reach a decision.",
-          "translation": "作出决定前我们需要更多信息。"
+          "example": "The jury reached a decision after two days of discussion.",
+          "translation": "陪审团讨论两天后作出了决定。"
         },
         {
-          "phrase": "reach out to someone",
-          "phonetic": "/riːtʃ ˈaʊt ˈtuː ˈsʌˌmwʌn/",
-          "chinese": "主动联系",
-          "example": "Do not hesitate to reach out to me for help.",
-          "translation": "需要帮助时请随时联系我。"
-        },
-        {
-          "phrase": "within reach",
-          "phonetic": "/wɪˈðɪn riːtʃ/",
-          "chinese": "够得着；可实现",
-          "example": "The top shelf is just within reach.",
-          "translation": "最上面的架子刚好够得着。"
-        },
-        {
-          "phrase": "reach the top",
-          "phonetic": "/riːtʃ ðə ˈtɑp/",
-          "chinese": "到达顶端",
-          "example": "They reached the top of the mountain before noon.",
-          "translation": "他们中午前到达了山顶。"
-        },
-        {
-          "phrase": "reach a place by either route",
-          "phonetic": "/riːtʃ ə ˈpleɪs ˈbaɪ ˈiːðɚ ˈruːt/",
-          "chinese": "经任一路线到达某地",
-          "example": "You can reach the park by either road.",
-          "translation": "哪条路都可以去公园哦。"
-        },
-        {
-          "phrase": "reach yet",
-          "phonetic": "/riːtʃ ˈjɛt/",
-          "chinese": "看上去老",
-          "example": "He looks old, but he hasn't reached 30 yet.",
-          "translation": "他看上去老，但他还不到30岁。"
+          "phrase": "reach an agreement",
+          "phonetic": "/riːtʃ ˈæn əˈɡriːmənt/",
+          "chinese": "达成协议",
+          "example": "Both sides reached an agreement on working hours.",
+          "translation": "双方就工作时间达成了协议。"
         },
         {
           "phrase": "reach a goal",
           "phonetic": "/riːtʃ ə ˈɡoʊl/",
-          "chinese": "达成目标",
-          "example": "He never gave up hope that he would reach that goal.",
-          "translation": "他从没放弃达成那个目标的希望。"
+          "chinese": "实现目标",
+          "example": "Regular practice helped her reach her goal of running ten kilometers.",
+          "translation": "规律训练帮助她实现了跑十公里的目标。"
         },
         {
-          "phrase": "reach a compromise",
-          "phonetic": "/riːtʃ ə ˈkɑmprəˌmaɪz/",
-          "chinese": "达成妥协",
-          "example": "In the end, we reached a compromise.",
-          "translation": "最后我们达成了协议。"
+          "phrase": "reach a conclusion",
+          "phonetic": "/riːtʃ ə kənˈkluːʒən/",
+          "chinese": "得出结论",
+          "example": "The investigators reached a conclusion only after reviewing all the footage.",
+          "translation": "调查人员看完所有录像后才得出结论。"
+        },
+        {
+          "phrase": "reach a record high",
+          "phonetic": "/riːtʃ ə ˈrɛkərd ˈhaɪ/",
+          "chinese": "达到历史新高",
+          "example": "Demand for electric bicycles reached a record high in July.",
+          "translation": "电动自行车的需求在七月达到历史新高。"
+        },
+        {
+          "phrase": "reach for something",
+          "phonetic": "/riːtʃ ˈfɔːr ˈsʌmθɪŋ/",
+          "chinese": "伸手去拿某物",
+          "example": "He reached for the handrail when the bus moved suddenly.",
+          "translation": "公交车突然启动时，他伸手抓住了扶手。"
+        },
+        {
+          "phrase": "reach out to someone",
+          "phonetic": "/riːtʃ ˈaʊt ˈtuː ˈsʌmˌwʌn/",
+          "chinese": "主动联系某人",
+          "example": "The counselor reached out to families affected by the fire.",
+          "translation": "辅导员主动联系了受火灾影响的家庭。"
+        },
+        {
+          "phrase": "within reach",
+          "phonetic": "/wɪˈðɪn riːtʃ/",
+          "chinese": "伸手可及；可以实现",
+          "example": "Keep the emergency phone within reach of the bed.",
+          "translation": "把紧急电话放在床边伸手可及的地方。"
+        },
+        {
+          "phrase": "reach someone by phone",
+          "phonetic": "/riːtʃ ˈsʌmˌwʌn ˈbaɪ ˈfoʊn/",
+          "chinese": "通过电话联系到某人",
+          "example": "I finally reached the technician by phone this morning.",
+          "translation": "今天早晨我终于通过电话联系到了技术员。"
+        },
+        {
+          "phrase": "reach the destination",
+          "phonetic": "/riːtʃ ðə ˌdɛstəˈneɪʃən/",
+          "chinese": "到达目的地",
+          "example": "The hikers reached their destination before the storm began.",
+          "translation": "徒步者在暴风雨来临前到达了目的地。"
+        },
+        {
+          "phrase": "reach a peak",
+          "phonetic": "/riːtʃ ə ˈpiːk/",
+          "chinese": "达到峰值",
+          "example": "Electricity use usually reaches a peak on hot afternoons.",
+          "translation": "用电量通常在炎热的下午达到峰值。"
         }
       ],
       "synonyms": [
         {
-          "word": "arrive at",
-          "phonetic": "/ɚˈaɪv ˈæt/",
-          "partOfSpeech": "phr.",
-          "chinese": "到达；抵达",
-          "difference": "arrive at 表示“到达；抵达”，与 reach 的“到达”义相近。arrive at 与 reach 都可表示到达地点；reach 直接接地点宾语，arrive at 需要介词 at。"
+          "word": "get to",
+          "phonetic": "/ˈɡɛt ˈtuː/",
+          "partOfSpeech": "phr.v.",
+          "chinese": "到达",
+          "difference": "口语表达，可直接接地点；不表示伸手；reach 比 get to 中性正式，也可接水平、目标或联系人。"
         },
         {
           "word": "attain",
           "phonetic": "/əˈteɪn/",
           "partOfSpeech": "v.",
-          "chinese": "达到；获得",
-          "difference": "attain 常表示“达到；获得”，与 reach 的“到达”义有重合。attain 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+          "chinese": "达到",
+          "difference": "较正式，常接水平、地位或标准；reach 更常用，除水平外还可接地点和人。"
+        },
+        {
+          "word": "achieve",
+          "phonetic": "/əˈtʃiːv/",
+          "partOfSpeech": "v.",
+          "chinese": "实现",
+          "difference": "强调通过努力取得目标或结果；reach 可表示到达位置或联系上某人，不一定靠努力。"
         },
         {
           "word": "contact",
-          "phonetic": "/ˈkɑˌntækt/",
-          "partOfSpeech": "n.",
-          "chinese": "联系；交际；熟人",
-          "difference": "contact 常表示“联系；交际；熟人”，与 reach 的“到达”义有重合。contact 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+          "phonetic": "/ˈkɑnˌtækt/",
+          "partOfSpeech": "v.",
+          "chinese": "联系到",
+          "difference": "只对应成功与某人取得联系；reach 除联系义外还可表示抵达、达到或伸手。"
         },
         {
-          "word": "get to",
-          "phonetic": "/ˈɡɛt ˈtuː/",
-          "partOfSpeech": "phr.",
-          "chinese": "到达；联系到",
-          "difference": "get to 常表示“到达；联系到”，与 reach 的“到达”义有重合。get to 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+          "word": "extend",
+          "phonetic": "/ɪkˈstɛnd/",
+          "partOfSpeech": "v.",
+          "chinese": "延伸",
+          "difference": "只对应范围、道路或肢体达到某处；reach 可表示成功触及终点，不只是延伸到某处。"
         }
       ],
       "antonyms": [
@@ -1017,98 +1126,148 @@
           "word": "miss",
           "phonetic": "/ˈmɪs/",
           "partOfSpeech": "v.",
-          "chinese": "未达到；错过",
-          "usage": "miss 表示“未达到；错过”，与 reach 的“到达”义形成对比。reach 表示到达目标或地点；miss 在对应语境中表示没有达到或错过。"
+          "chinese": "未赶上；未达到",
+          "usage": "对应未能到达目标、班次或标准；reach 表示成功到达，miss 表示未赶上或未达到。"
         }
       ],
       "derivatives": [
+        {
+          "word": "overreach",
+          "phonetic": "/ˈoʊvɚˌriːtʃ/",
+          "partOfSpeech": "v. / n.",
+          "chinese": "做得过头；过度扩张",
+          "note": "作动词指目标超出能力，作名词指过度伸展或扩张。"
+        },
+        {
+          "word": "outreach",
+          "phonetic": "/ˈaʊˌtriːtʃ/",
+          "partOfSpeech": "n.",
+          "chinese": "外展服务；主动接触",
+          "note": "常指机构主动联系并服务社区。"
+        },
+        {
+          "word": "reachability",
+          "phonetic": "/ˌriːtʃəˈbɪləti/",
+          "partOfSpeech": "n.",
+          "chinese": "可达性；可联系性",
+          "note": "用于地点、网络或人员能否到达或联系。"
+        },
         {
           "word": "reachable",
           "phonetic": "/ˈriːtʃəbəl/",
           "partOfSpeech": "adj.",
           "chinese": "可到达的；可联系到的",
-          "note": "reachable 是 reach 的常用词族形式；作 adj. 时表示“可到达的；可联系到的”。"
+          "note": "常形容地点、目标或人员。"
+        },
+        {
+          "word": "unreachable",
+          "phonetic": "/ˌʌnˈriːtʃəbəl/",
+          "partOfSpeech": "adj.",
+          "chinese": "无法到达的；联系不上的",
+          "note": "表示地点、目标或人员不能到达或联系。"
+        },
+        {
+          "word": "far-reaching",
+          "phonetic": "/ˌfɑːrˈriːtʃɪŋ/",
+          "partOfSpeech": "adj.",
+          "chinese": "影响深远的",
+          "note": "常修饰 consequence、reform 或 decision。"
         }
       ],
-      "confusables": [],
+      "confusables": [
+        {
+          "word": "arrive",
+          "phonetic": "/ɚˈaɪv/",
+          "partOfSpeech": "v.",
+          "chinese": "到达",
+          "difference": "reach 直接接地点，arrive 后要用 at 或 in"
+        }
+      ],
       "relatedVocabulary": [
         {
-          "category": "同一语义场的高频词",
+          "category": "地点与路程",
           "items": [
             {
-              "word": "arrive",
-              "phonetic": "/ɚˈaɪv/",
-              "partOfSpeech": "v.",
-              "chinese": "到达"
+              "word": "destination",
+              "phonetic": "/ˌdɛstəˈneɪʃən/",
+              "partOfSpeech": "n.",
+              "chinese": "目的地"
             },
             {
-              "word": "contact",
-              "phonetic": "/ˈkɑˌntækt/",
-              "partOfSpeech": "v. / n.",
-              "chinese": "联系"
+              "word": "distance",
+              "phonetic": "/ˈdɪstəns/",
+              "partOfSpeech": "n.",
+              "chinese": "距离"
+            },
+            {
+              "word": "route",
+              "phonetic": "/ˈruːt/",
+              "partOfSpeech": "n.",
+              "chinese": "路线"
+            },
+            {
+              "word": "summit",
+              "phonetic": "/ˈsʌmət/",
+              "partOfSpeech": "n.",
+              "chinese": "顶峰"
+            }
+          ]
+        },
+        {
+          "category": "目标与水平",
+          "items": [
+            {
+              "word": "goal",
+              "phonetic": "/ˈɡoʊl/",
+              "partOfSpeech": "n.",
+              "chinese": "目标"
             },
             {
               "word": "target",
               "phonetic": "/ˈtɑrɡət/",
               "partOfSpeech": "n.",
-              "chinese": "目标"
-            }
-          ]
-        },
-        {
-          "category": "近义表达分类",
-          "items": [
-            {
-              "word": "arrive at",
-              "phonetic": "/ɚˈaɪv ˈæt/",
-              "partOfSpeech": "phr.",
-              "chinese": "到达；抵达"
+              "chinese": "指标"
             },
             {
-              "word": "attain",
-              "phonetic": "/əˈteɪn/",
-              "partOfSpeech": "v.",
-              "chinese": "达到；获得"
-            },
-            {
-              "word": "contact",
-              "phonetic": "/ˈkɑˌntækt/",
+              "word": "milestone",
+              "phonetic": "/ˈmaɪlˌstoʊn/",
               "partOfSpeech": "n.",
-              "chinese": "联系；交际；熟人"
+              "chinese": "里程碑"
             },
             {
-              "word": "get to",
-              "phonetic": "/ˈɡɛt ˈtuː/",
-              "partOfSpeech": "phr.",
-              "chinese": "到达；联系到"
+              "word": "capacity",
+              "phonetic": "/kəˈpæsəti/",
+              "partOfSpeech": "n.",
+              "chinese": "容量"
             }
           ]
         },
         {
-          "category": "对比与易混表达分类",
+          "category": "沟通渠道",
           "items": [
             {
-              "word": "miss",
-              "phonetic": "/ˈmɪs/",
-              "partOfSpeech": "v.",
-              "chinese": "未达到；错过"
+              "word": "telephone",
+              "phonetic": "/ˈtɛləˌfoʊn/",
+              "partOfSpeech": "n.",
+              "chinese": "电话"
             },
             {
-              "word": "reachable",
-              "phonetic": "/ˈriːtʃəbəl/",
-              "partOfSpeech": "adj.",
-              "chinese": "可到达的；可联系到的"
-            }
-          ]
-        },
-        {
-          "category": "常用词族分类",
-          "items": [
+              "word": "email",
+              "phonetic": "/iˈmeɪl/",
+              "partOfSpeech": "n.",
+              "chinese": "电子邮件"
+            },
             {
-              "word": "reachable",
-              "phonetic": "/ˈriːtʃəbəl/",
-              "partOfSpeech": "adj.",
-              "chinese": "可到达的；可联系到的"
+              "word": "address",
+              "phonetic": "/ˈædrɛs/",
+              "partOfSpeech": "n.",
+              "chinese": "地址"
+            },
+            {
+              "word": "connection",
+              "phonetic": "/kəˈnɛkʃən/",
+              "partOfSpeech": "n.",
+              "chinese": "联系；连接"
             }
           ]
         }
@@ -1120,62 +1279,72 @@
           "chinese": "我们终于达成了协议。"
         },
         {
-          "scene": "日常使用",
-          "english": "She reached her goal after months of practice.",
-          "chinese": "经过几个月练习，她达成了目标。"
-        },
-        {
-          "scene": "工作或学习",
-          "english": "Both sides finally reached an agreement.",
-          "chinese": "双方终于达成了协议。"
-        },
-        {
-          "scene": "常见搭配",
-          "english": "We need more information before we reach a decision.",
-          "chinese": "作出决定前我们需要更多信息。"
-        },
-        {
-          "scene": "真实语境",
-          "english": "Do not hesitate to reach out to me for help.",
-          "chinese": "需要帮助时请随时联系我。"
-        },
-        {
-          "scene": "易错结构",
-          "english": "The top shelf is just within reach.",
-          "chinese": "最上面的架子刚好够得着。"
-        },
-        {
-          "scene": "主动表达",
-          "english": "They reached the top of the mountain before noon.",
-          "chinese": "他们中午前到达了山顶。"
+          "scene": "日常交流",
+          "english": "The rescue team reached the village shortly after midnight.",
+          "chinese": "救援队在午夜过后不久抵达了村庄。"
         },
         {
           "scene": "工作沟通",
-          "english": "You can reach the park by either road.",
-          "chinese": "哪条路都可以去公园哦。"
+          "english": "The jury reached a decision after two days of discussion.",
+          "chinese": "陪审团讨论两天后作出了决定。"
         },
         {
           "scene": "学习表达",
-          "english": "He looks old, but he hasn't reached 30 yet.",
-          "chinese": "他看上去老，但他还不到30岁。"
+          "english": "Both sides reached an agreement on working hours.",
+          "chinese": "双方就工作时间达成了协议。"
         },
         {
           "scene": "书面表达",
-          "english": "He never gave up hope that he would reach that goal.",
-          "chinese": "他从没放弃达成那个目标的希望。"
+          "english": "Regular practice helped her reach her goal of running ten kilometers.",
+          "chinese": "规律训练帮助她实现了跑十公里的目标。"
+        },
+        {
+          "scene": "日常交流",
+          "english": "The investigators reached a conclusion only after reviewing all the footage.",
+          "chinese": "调查人员看完所有录像后才得出结论。"
+        },
+        {
+          "scene": "工作沟通",
+          "english": "Demand for electric bicycles reached a record high in July.",
+          "chinese": "电动自行车的需求在七月达到历史新高。"
+        },
+        {
+          "scene": "学习表达",
+          "english": "He reached for the handrail when the bus moved suddenly.",
+          "chinese": "公交车突然启动时，他伸手抓住了扶手。"
+        },
+        {
+          "scene": "书面表达",
+          "english": "The counselor reached out to families affected by the fire.",
+          "chinese": "辅导员主动联系了受火灾影响的家庭。"
+        },
+        {
+          "scene": "日常交流",
+          "english": "Keep the emergency phone within reach of the bed.",
+          "chinese": "把紧急电话放在床边伸手可及的地方。"
+        },
+        {
+          "scene": "工作沟通",
+          "english": "I finally reached the technician by phone this morning.",
+          "chinese": "今天早晨我终于通过电话联系到了技术员。"
+        },
+        {
+          "scene": "学习表达",
+          "english": "The hikers reached their destination before the storm began.",
+          "chinese": "徒步者在暴风雨来临前到达了目的地。"
         }
       ],
       "studyFocus": {
-        "coreMeaning": "先掌握“到达；抵达”这个核心义，再对比另外 2 个常用义项，辨别不同语境。",
+        "coreMeaning": "先掌握“到达；抵达”这个核心义，再对比另外 3 个常用义项，辨别不同语境。",
         "keyCollocation": "把“reach an agreement”连同介词、宾语和动词形式作为整个句块记忆。",
-        "commonMistake": "情态动词 can 后面直接接 reach 的原形，不加 to。",
+        "commonMistake": "reach 表示到达时是及物动词，地点前不加 to。",
         "mustUseExample": "We finally reached an agreement.（我们终于达成了协议。）"
       },
       "questions": [
         {
           "id": "reach-v-meaning-core",
           "type": "meaning_choice",
-          "prompt": "“reach”最核心的中文含义是？",
+          "prompt": "“reach”最常见的核心中文义是哪一项？",
           "options": [
             "会",
             "到达；抵达",
@@ -1188,53 +1357,53 @@
         {
           "id": "reach-v-meaning-english",
           "type": "meaning_choice",
-          "prompt": "哪一项英文释义最符合词卡中的 “reach”？",
+          "prompt": "“reach”最常见的英文释义是哪一项？",
           "options": [
-            "to arrive at a place",
+            "to arrive at a place or point",
             "to examine how things are alike or different",
             "used for imagined situations, polite requests, preferences, or past habits"
           ],
-          "answer": "to arrive at a place",
+          "answer": "to arrive at a place or point",
           "stage": "T0",
           "ai": false
         },
         {
           "id": "reach-v-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "核心结构辨析：哪一项既表示“达到目标”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+          "prompt": "核心结构辨析：哪一项既表示“到达某地”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "reach a decision",
-            "reach out to",
+            "reach an agreement",
             "reach a goal",
-            "reach an agreement"
+            "reach a place",
+            "reach a decision"
           ],
-          "answer": "reach a goal",
+          "answer": "reach a place",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "reach-v-synonym-choice",
           "type": "meaning_choice",
-          "prompt": "哪个词是词卡中列出的 “reach” 最直接近义词？",
+          "prompt": "在“达到”这个义项下，哪个词与“reach”意思最接近？",
           "options": [
-            "would",
-            "arrive at",
-            "miss",
-            "compare"
+            "do",
+            "attain",
+            "be",
+            "have"
           ],
-          "answer": "arrive at",
+          "answer": "attain",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "reach-v-antonym-choice",
           "type": "meaning_choice",
-          "prompt": "哪个词是词卡中列出的 “reach” 最直接反义词？",
+          "prompt": "在“到达；抵达”这个义项下，哪个词与“reach”意思相反？",
           "options": [
             "miss",
-            "arrive at",
-            "compare",
-            "would"
+            "be",
+            "have",
+            "do"
           ],
           "answer": "miss",
           "stage": "T2",
@@ -1243,21 +1412,21 @@
         {
           "id": "reach-v-contrast-choice",
           "type": "meaning_choice",
-          "prompt": "根据本词卡辨析，哪个词被列为 “reach” 的派生词？",
+          "prompt": "结合拼写、发音和用法，哪一项需要与“reach”重点区分？",
           "options": [
-            "arrive at",
-            "miss",
-            "compare",
-            "reachable"
+            "be",
+            "have",
+            "do",
+            "arrive"
           ],
-          "answer": "reachable",
+          "answer": "arrive",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "reach-v-recall-definition",
           "type": "recall",
-          "prompt": "根据英文释义写出目标词：to arrive at a place",
+          "prompt": "根据英文释义写出对应单词：to arrive at a place or point",
           "answer": "reach",
           "stage": "T1",
           "ai": false
@@ -1265,7 +1434,7 @@
         {
           "id": "reach-v-recall-chinese",
           "type": "recall",
-          "prompt": "写出符合“到达；抵达”（v.）的本课目标词。",
+          "prompt": "写出表示“到达；抵达”（v.）的英文单词。",
           "answer": "reach",
           "stage": "T1",
           "ai": false
@@ -1281,27 +1450,21 @@
         {
           "id": "reach-v-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "句型应用：哪一项既表示“达成协议”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+          "prompt": "句型应用：哪一项既表示“作出决定”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "reach an agreement",
-            "reach a goal",
             "reach a decision",
-            "reach out to"
+            "reach a place",
+            "reach an agreement",
+            "reach a goal"
           ],
-          "answer": "reach an agreement",
+          "answer": "reach a decision",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "reach-v-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：We finally reached an _____.（中文：我们终于达成了协议。）",
-          "options": [
-            "two",
-            "like",
-            "practicing",
-            "agreement"
-          ],
+          "prompt": "根据完整句意和中文提示补全原句：We finally reached an _____.（中文：我们终于达成了协议。）",
           "answer": "agreement",
           "stage": "T2",
           "ai": false
@@ -1309,35 +1472,35 @@
         {
           "id": "reach-v-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "搭配辨析：哪一项既表示“达到目标”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+          "prompt": "搭配辨析：哪一项既表示“得出结论”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "reach a decision",
-            "reach out to someone",
-            "reach a goal",
-            "reach an agreement"
+            "reach an agreement",
+            "reach a conclusion",
+            "reach a place"
           ],
-          "answer": "reach a goal",
+          "answer": "reach a conclusion",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "reach-v-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "用法辨析：哪一项既表示“达成协议”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+          "prompt": "用法辨析：哪一项既表示“达到历史新高”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "reach out to someone",
             "reach an agreement",
-            "reach a goal",
+            "reach a record high",
+            "reach a place",
             "reach a decision"
           ],
-          "answer": "reach an agreement",
+          "answer": "reach a record high",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "reach-v-example-cloze",
           "type": "collocation",
-          "prompt": "根据句意补全词卡核心例句：We finally _____ an agreement.（填写 reach 的正确形式）",
+          "prompt": "根据句意和中文提示补全另一个常用例句：The rescue team _____ the village shortly after midnight.（填写 reach 的正确形式）（中文：救援队在午夜过后不久抵达了村庄。）",
           "answer": "reached",
           "stage": "T3",
           "ai": false
@@ -1345,7 +1508,7 @@
         {
           "id": "reach-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “reach” 写一个自然、真实的英文句子，含义必须符合词卡核心义“到达；抵达”。",
+          "prompt": "请用 “reach” 写一个自然、真实的英文句子，含义必须符合核心义“到达；抵达”。",
           "answer": "",
           "stage": "T2",
           "ai": true
@@ -1353,7 +1516,7 @@
         {
           "id": "reach-v-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请使用 “reach a goal” 结构写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “reach a conclusion” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1361,7 +1524,7 @@
         {
           "id": "reach-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “reach” 和 “reach a goal” 结构，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “reach” 和 “reach the summit at sunrise” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1419,10 +1582,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "template-complete",
-      "templateVersion": "learning-template-2026.09.10.3",
-      "contentVersion": "2026.09.10.3",
-      "reviewed": false,
+      "detailLevel": "template-curated",
+      "templateVersion": "learning-template-2026.09.10.4",
+      "contentVersion": "2026.09.10.4",
+      "reviewed": true,
+      "curationSource": "manual-semantic-pack-2026.09.10.4",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -1455,9 +1619,9 @@
         "主动词汇"
       ],
       "coreMemory": {
-        "chinese": "保持；仍然是",
-        "english": "v. to continue to be in the same state",
-        "structure": "remain calm /rɪˈmeɪn ˈkɑm/（保持冷静）；remain unchanged /rɪˈmeɪn əˈntʃeɪndʒd/（保持不变）；remain in place /rɪˈmeɪn ɪn ˈpleɪs/（留在原地）；remain to be seen /rɪˈmeɪn ˈtuː ˈbiː ˈsiːn/（尚待观察）",
+        "chinese": "仍然是；保持不变；留下；逗留；剩下；余留；仍需；尚待",
+        "english": "v. to continue to be in the same state or condition；v. to stay in the same place；v. to be left after other people or things have gone or been used；v. to still need to be done, decided, or explained",
+        "structure": "remain calm /rɪˈmeɪn ˈkɑm/（保持冷静）；remain unchanged /rɪˈmeɪn ənˈtʃeɪndʒd/（保持不变）；remain silent /rɪˈmeɪn ˈsaɪlənt/（保持沉默）；remain open /rɪˈmeɪn ˈoʊpən/（继续开放）",
         "structures": [
           {
             "phrase": "remain calm",
@@ -1466,120 +1630,171 @@
           },
           {
             "phrase": "remain unchanged",
-            "phonetic": "/rɪˈmeɪn əˈntʃeɪndʒd/",
+            "phonetic": "/rɪˈmeɪn ənˈtʃeɪndʒd/",
             "chinese": "保持不变"
           },
           {
-            "phrase": "remain in place",
-            "phonetic": "/rɪˈmeɪn ɪn ˈpleɪs/",
-            "chinese": "留在原地"
+            "phrase": "remain silent",
+            "phonetic": "/rɪˈmeɪn ˈsaɪlənt/",
+            "chinese": "保持沉默"
           },
           {
-            "phrase": "remain to be seen",
-            "phonetic": "/rɪˈmeɪn ˈtuː ˈbiː ˈsiːn/",
-            "chinese": "尚待观察"
+            "phrase": "remain open",
+            "phonetic": "/rɪˈmeɪn ˈoʊpən/",
+            "chinese": "继续开放"
           }
         ],
-        "commonError": "❌ remain at place → ✅ remain in place；❌ to remaining → ✅ to remain",
+        "commonError": "❌ The door remained opening all night. → ✅ The door remained open all night.；❌ Only two questions are remained. → ✅ Only two questions remain.",
         "commonErrors": [
           {
-            "wrong": "remain at place",
-            "wrongPhonetic": "/rɪˈmeɪn ˈæt ˈpleɪs/",
-            "right": "remain in place",
-            "rightPhonetic": "/rɪˈmeɪn ɪn ˈpleɪs/",
-            "note": "在“remain in place”所表达的这个具体含义中，要用介词 in；换成 at 会破坏这个固定结构或改变原意。"
+            "wrong": "The door remained opening all night.",
+            "wrongPhonetic": "/ðə ˈdɔːr rɪˈmeɪnd ˈoʊpənɪŋ ˈɔːl ˈnaɪt/",
+            "right": "The door remained open all night.",
+            "rightPhonetic": "/ðə ˈdɔːr rɪˈmeɪnd ˈoʊpən ˈɔːl ˈnaɪt/",
+            "note": "remain 作系动词时后接形容词 open 表示状态。"
           },
           {
-            "wrong": "to remaining",
-            "wrongPhonetic": "/ˈtuː rɪˈmeɪnɪŋ/",
-            "right": "to remain",
-            "rightPhonetic": "/ˈtuː rɪˈmeɪn/",
-            "note": "这里的 to 是不定式标记，后面要用 remain 的原形，不能改成 remaining。"
+            "wrong": "Only two questions are remained.",
+            "wrongPhonetic": "/ˈoʊnli ˈtuː ˈkwɛstʃənz ˈɑr rɪˈmeɪnd/",
+            "right": "Only two questions remain.",
+            "rightPhonetic": "/ˈoʊnli ˈtuː ˈkwɛstʃənz rɪˈmeɪn/",
+            "note": "表示剩余通常用主动结构 remain，不用 are remained。"
           }
         ],
-        "directSynonym": "stay /ˈsteɪ/（保持；停留）；continue /kəˈntɪnjuː/（继续；延续；延长）；persist /pɚˈsɪst/（坚持；固执；持续）；be left /ˈbiː ˈlɛft/（剩下；留下）",
-        "directAntonym": "change /ˈtʃeɪndʒ/（改变；变化）",
-        "derivatives": "本词暂无需额外强记的高频派生词",
+        "directSynonym": "stay /ˈsteɪ/（保持；留下）；continue /kənˈtɪnju/（继续）；persist /pɚˈsɪst/（持续存在）；last /ˈlæst/（持续）；linger /ˈlɪŋɡɚ/（逗留；残留）",
+        "directAntonym": "leave /ˈliːv/（离开）；change /ˈtʃeɪndʒ/（改变）",
+        "derivatives": "remainder · remaining",
         "example": "Please remain calm and try again.",
         "exampleChinese": "请保持冷静并再试一次。"
       },
       "meanings": [
         {
           "partOfSpeech": "v.",
-          "english": "to continue to be in the same state",
-          "chinese": "保持；仍然是",
-          "example": "Please remain calm while we check the system.",
-          "translation": "我们检查系统时请保持冷静。"
+          "english": "to continue to be in the same state or condition",
+          "chinese": "仍然是；保持不变",
+          "example": "The door remained closed all morning.",
+          "translation": "那扇门整个上午一直关着。"
+        },
+        {
+          "partOfSpeech": "v.",
+          "english": "to stay in the same place",
+          "chinese": "留下；逗留",
+          "example": "Two nurses remained with the patient.",
+          "translation": "两名护士留在患者身边。"
+        },
+        {
+          "partOfSpeech": "v.",
+          "english": "to be left after other people or things have gone or been used",
+          "chinese": "剩下；余留",
+          "example": "Only a small amount of food remains.",
+          "translation": "只剩下少量食物。"
+        },
+        {
+          "partOfSpeech": "v.",
+          "english": "to still need to be done, decided, or explained",
+          "chinese": "仍需；尚待",
+          "example": "Several questions remain unanswered.",
+          "translation": "还有几个问题尚未得到回答。"
         }
       ],
       "contextPhrases": [
         {
-          "category": "核心动作与结构",
+          "category": "状态持续",
           "items": [
             {
-              "phrase": "remain calm",
-              "phonetic": "/rɪˈmeɪn ˈkɑm/",
-              "chinese": "保持冷静"
+              "phrase": "remain fully operational",
+              "phonetic": "/rɪˈmeɪn ˈfʊli ˌɑpɚˈeɪʃənəl/",
+              "chinese": "保持完全运转"
             },
             {
-              "phrase": "remain unchanged",
-              "phonetic": "/rɪˈmeɪn əˈntʃeɪndʒd/",
-              "chinese": "保持不变"
+              "phrase": "remain relevant today",
+              "phonetic": "/rɪˈmeɪn ˈrɛləvənt təˈdeɪ/",
+              "chinese": "如今仍然适用"
             },
             {
-              "phrase": "remain in place",
-              "phonetic": "/rɪˈmeɪn ɪn ˈpleɪs/",
-              "chinese": "留在原地"
+              "phrase": "remain deeply divided",
+              "phonetic": "/rɪˈmeɪn ˈdiːpli dɪˈvaɪdɪd/",
+              "chinese": "仍存在严重分歧"
+            },
+            {
+              "phrase": "remain legally binding",
+              "phonetic": "/rɪˈmeɪn ˈliːɡəli ˈbaɪndɪŋ/",
+              "chinese": "仍具有法律约束力"
             }
           ]
         },
         {
-          "category": "日常与工作语境",
+          "category": "地点停留",
           "items": [
             {
-              "phrase": "remain to be seen",
-              "phonetic": "/rɪˈmeɪn ˈtuː ˈbiː ˈsiːn/",
-              "chinese": "尚待观察"
+              "phrase": "remain at the scene",
+              "phonetic": "/rɪˈmeɪn ˈæt ðə ˈsiːn/",
+              "chinese": "留在现场"
             },
             {
-              "phrase": "the fact remains that + clause",
-              "phonetic": "/ðə ˈfækt rɪˈmeɪnz ˈðæt ˈklɔːz/",
-              "chinese": "事实仍然是"
+              "phrase": "remain indoors during the storm",
+              "phonetic": "/rɪˈmeɪn ˈɪnˌdɔːrz ˈdʊrɪŋ ðə ˈstɔːrm/",
+              "chinese": "暴风雨期间留在室内"
             },
             {
-              "phrase": "remain open",
-              "phonetic": "/rɪˈmeɪn ˈoʊpən/",
-              "chinese": "保持开放"
+              "phrase": "remain behind after class",
+              "phonetic": "/rɪˈmeɪn bɪˈhaɪnd ˈæftɚ ˈklæs/",
+              "chinese": "课后留下"
+            },
+            {
+              "phrase": "remain nearby until morning",
+              "phonetic": "/rɪˈmeɪn ˌnɪrˈbaɪ ənˈtɪl ˈmɔːrnɪŋ/",
+              "chinese": "留在附近直到早晨"
             }
           ]
         },
         {
-          "category": "高频扩展表达",
+          "category": "数量余留",
           "items": [
             {
-              "phrase": "remain silent",
-              "phonetic": "/rɪˈmeɪn ˈsaɪlənt/",
-              "chinese": "保持沉默"
+              "phrase": "remain in limited supply",
+              "phonetic": "/rɪˈmeɪn ɪn ˈlɪmətəd səˈplaɪ/",
+              "chinese": "供应仍然有限"
             },
             {
-              "phrase": "remain seated for a few minutes",
-              "phonetic": "/rɪˈmeɪn ˈsiːtɪd ˈfɔːr ə ˈfjuː ˈmɪnəts/",
-              "chinese": "坐一会"
+              "phrase": "funds remain after expenses are paid",
+              "phonetic": "/ˈfʌndz rɪˈmeɪn ˈæftɚ ɪkˈspɛnsəz ˈɑr ˈpeɪd/",
+              "chinese": "支付开支后仍有资金剩余"
             },
             {
-              "phrase": "remain seated",
-              "phonetic": "/rɪˈmeɪn ˈsiːtɪd/",
-              "chinese": "更想继续坐着"
+              "phrase": "remain available for future use",
+              "phonetic": "/rɪˈmeɪn əˈveɪləbəl ˈfɔːr ˈfjuːtʃɚ ˈjuːs/",
+              "chinese": "留待以后使用"
+            },
+            {
+              "phrase": "salt remains after the water evaporates",
+              "phonetic": "/ˈsɔːlt rɪˈmeɪnz ˈæftɚ ðə ˈwɔːtɚ ɪˈvæpɚˌeɪts/",
+              "chinese": "水分蒸发后盐会残留下来"
             }
           ]
         },
         {
-          "category": "补充常用语境",
+          "category": "任务待办",
           "items": [
             {
-              "phrase": "remain anonymous",
-              "phonetic": "/rɪˈmeɪn əˈnɑnəməs/",
-              "chinese": "保持匿名身份"
+              "phrase": "remain under investigation",
+              "phonetic": "/rɪˈmeɪn ˈʌndɚ ˌɪnˌvɛstəˈɡeɪʃən/",
+              "chinese": "仍在调查中"
+            },
+            {
+              "phrase": "remain difficult to explain",
+              "phonetic": "/rɪˈmeɪn ˈdɪfəkəlt ˈtuː ɪkˈspleɪn/",
+              "chinese": "仍难以解释"
+            },
+            {
+              "phrase": "remain on the waiting list",
+              "phonetic": "/rɪˈmeɪn ˈɑn ðə ˈweɪtɪŋ ˈlɪst/",
+              "chinese": "仍在等候名单上"
+            },
+            {
+              "phrase": "remain unresolved for years",
+              "phonetic": "/rɪˈmeɪn ənrɪˈzɑlvd ˈfɔːr ˈjɪrz/",
+              "chinese": "多年仍未解决"
             }
           ]
         }
@@ -1589,71 +1804,85 @@
           "phrase": "remain calm",
           "phonetic": "/rɪˈmeɪn ˈkɑm/",
           "chinese": "保持冷静",
-          "example": "Please remain calm while we check the system.",
-          "translation": "我们检查系统时请保持冷静。"
+          "example": "The pilot remained calm throughout the emergency landing.",
+          "translation": "飞行员在整个紧急着陆过程中保持冷静。"
         },
         {
           "phrase": "remain unchanged",
-          "phonetic": "/rɪˈmeɪn əˈntʃeɪndʒd/",
+          "phonetic": "/rɪˈmeɪn ənˈtʃeɪndʒd/",
           "chinese": "保持不变",
-          "example": "The price has remained unchanged for three years.",
-          "translation": "这个价格三年来一直没有变化。"
-        },
-        {
-          "phrase": "remain in place",
-          "phonetic": "/rɪˈmeɪn ɪn ˈpleɪs/",
-          "chinese": "留在原地",
-          "example": "The old sign will remain in place.",
-          "translation": "旧标志将保留在原处。"
-        },
-        {
-          "phrase": "remain to be seen",
-          "phonetic": "/rɪˈmeɪn ˈtuː ˈbiː ˈsiːn/",
-          "chinese": "尚待观察",
-          "example": "Whether the plan will succeed remains to be seen.",
-          "translation": "这个计划能否成功还有待观察。"
-        },
-        {
-          "phrase": "the fact remains that + clause",
-          "phonetic": "/ðə ˈfækt rɪˈmeɪnz ˈðæt ˈklɔːz/",
-          "chinese": "事实仍然是",
-          "example": "The fact remains that we need more time.",
-          "translation": "事实仍然是我们需要更多时间。"
-        },
-        {
-          "phrase": "remain open",
-          "phonetic": "/rɪˈmeɪn ˈoʊpən/",
-          "chinese": "保持开放",
-          "example": "The museum will remain open until nine tonight.",
-          "translation": "博物馆今晚将开放到九点。"
+          "example": "Ticket prices will remain unchanged until the end of the year.",
+          "translation": "票价将在年底前保持不变。"
         },
         {
           "phrase": "remain silent",
           "phonetic": "/rɪˈmeɪn ˈsaɪlənt/",
           "chinese": "保持沉默",
-          "example": "I thought it best to remain silent.",
-          "translation": "我想最好还是保持沉默。"
+          "example": "The witness remained silent during questioning.",
+          "translation": "证人在询问过程中保持沉默。"
         },
         {
-          "phrase": "remain seated for a few minutes",
-          "phonetic": "/rɪˈmeɪn ˈsiːtɪd ˈfɔːr ə ˈfjuː ˈmɪnəts/",
-          "chinese": "坐一会",
-          "example": "Please remain seated for a few minutes.",
-          "translation": "请坐一会。"
+          "phrase": "remain open",
+          "phonetic": "/rɪˈmeɪn ˈoʊpən/",
+          "chinese": "继续开放",
+          "example": "The emergency shelter will remain open through the weekend.",
+          "translation": "紧急避难所将在整个周末继续开放。"
         },
         {
-          "phrase": "remain seated",
-          "phonetic": "/rɪˈmeɪn ˈsiːtɪd/",
-          "chinese": "更想继续坐着",
-          "example": "I prefer to remain seated.",
-          "translation": "我更想继续坐着。"
+          "phrase": "remain in place",
+          "phonetic": "/rɪˈmeɪn ɪn ˈpleɪs/",
+          "chinese": "留在原位",
+          "example": "The temporary barriers must remain in place during repairs.",
+          "translation": "维修期间临时护栏必须留在原位。"
         },
         {
-          "phrase": "remain anonymous",
-          "phonetic": "/rɪˈmeɪn əˈnɑnəməs/",
-          "chinese": "保持匿名身份",
-          "example": "You want to remain anonymous.",
-          "translation": "你想保持匿名身份。"
+          "phrase": "remain with someone",
+          "phonetic": "/rɪˈmeɪn ˈwɪð ˈsʌmˌwʌn/",
+          "chinese": "留在某人身边",
+          "example": "A nurse remained with the child until his parents arrived.",
+          "translation": "一名护士一直陪着孩子，直到他的父母到来。"
+        },
+        {
+          "phrase": "remain to be seen",
+          "phonetic": "/rɪˈmeɪn ˈtuː ˈbiː ˈsiːn/",
+          "chinese": "尚待观察",
+          "example": "Whether the new policy will reduce traffic remains to be seen.",
+          "translation": "新政策能否减少交通流量仍有待观察。"
+        },
+        {
+          "phrase": "little remains of something",
+          "phonetic": "/ˈlɪtəl rɪˈmeɪnz ˈʌv ˈsʌmθɪŋ/",
+          "chinese": "某物所剩无几",
+          "example": "Little remains of the original wooden bridge after the fire.",
+          "translation": "火灾过后，那座原木桥几乎没有留下什么。"
+        },
+        {
+          "phrase": "remain a mystery",
+          "phonetic": "/rɪˈmeɪn ə ˈmɪstɚi/",
+          "chinese": "仍是谜",
+          "example": "The source of the strange signal remains a mystery.",
+          "translation": "奇怪信号的来源仍然是个谜。"
+        },
+        {
+          "phrase": "remain committed to something",
+          "phonetic": "/rɪˈmeɪn kəˈmɪtɪd ˈtuː ˈsʌmθɪŋ/",
+          "chinese": "仍然致力于某事",
+          "example": "The charity remains committed to providing free meals.",
+          "translation": "该慈善机构仍然致力于提供免费餐食。"
+        },
+        {
+          "phrase": "remain under observation",
+          "phonetic": "/rɪˈmeɪn ˈʌndɚ ˌɑbzɚˈveɪʃən/",
+          "chinese": "继续接受观察",
+          "example": "The patient will remain under observation overnight.",
+          "translation": "患者将留院观察一晚。"
+        },
+        {
+          "phrase": "remain in effect",
+          "phonetic": "/rɪˈmeɪn ɪn ɪˈfɛkt/",
+          "chinese": "继续有效",
+          "example": "The water-use restrictions will remain in effect until further notice.",
+          "translation": "用水限制将持续有效，直至另行通知。"
         }
       ],
       "synonyms": [
@@ -1661,103 +1890,164 @@
           "word": "stay",
           "phonetic": "/ˈsteɪ/",
           "partOfSpeech": "v.",
-          "chinese": "保持；停留",
-          "difference": "stay 表示“保持；停留”，与 remain 的“保持”义相近。stay 更常用于地点或短期状态；remain 稍正式，也常接形容词。"
+          "chinese": "保持；留下",
+          "difference": "较口语，可指位置或状态持续；remain 较正式，可接状态补语，也可表示剩余。"
         },
         {
           "word": "continue",
-          "phonetic": "/kəˈntɪnjuː/",
+          "phonetic": "/kənˈtɪnju/",
           "partOfSpeech": "v.",
-          "chinese": "继续；延续；延长",
-          "difference": "continue 常表示“继续；延续；延长”，与 remain 的“保持”义有重合。continue 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+          "chinese": "继续",
+          "difference": "强调动作或过程不断；remain 说明状态或位置不变，不强调动作过程。"
         },
         {
           "word": "persist",
           "phonetic": "/pɚˈsɪst/",
           "partOfSpeech": "v.",
-          "chinese": "坚持；固执；持续",
-          "difference": "persist 常表示“坚持；固执；持续”，与 remain 的“保持”义有重合。persist 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+          "chinese": "持续存在",
+          "difference": "常指问题或困难不消失；remain 是中性持续，persist 常暗示问题顽固存在。"
         },
         {
-          "word": "be left",
-          "phonetic": "/ˈbiː ˈlɛft/",
-          "partOfSpeech": "phr.",
-          "chinese": "剩下；留下",
-          "difference": "be left 常表示“剩下；留下”，与 remain 的“保持”义有重合。be left 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+          "word": "last",
+          "phonetic": "/ˈlæst/",
+          "partOfSpeech": "v.",
+          "chinese": "持续",
+          "difference": "强调在一段时间内维持；remain 还可表示留下的数量，不只持续多久。"
+        },
+        {
+          "word": "linger",
+          "phonetic": "/ˈlɪŋɡɚ/",
+          "partOfSpeech": "v.",
+          "chinese": "逗留；残留",
+          "difference": "暗示停留得比预期久；remain 不含不情愿或超过预期的意味。"
         }
       ],
       "antonyms": [
         {
+          "word": "leave",
+          "phonetic": "/ˈliːv/",
+          "partOfSpeech": "v.",
+          "chinese": "离开",
+          "usage": "只与留在某地的义项相对；remain 表示继续留在原处，leave 表示从该处离开。"
+        },
+        {
           "word": "change",
           "phonetic": "/ˈtʃeɪndʒ/",
           "partOfSpeech": "v.",
-          "chinese": "改变；变化",
-          "usage": "change 表示“改变；变化”，与 remain 的“保持”义形成对比。remain 表示状态继续不变；change 表示变成不同状态。"
+          "chinese": "改变",
+          "usage": "只与保持某状态不变的义项相对；remain 可保持原状态，change 表示进入不同状态。"
         }
       ],
-      "derivatives": [],
-      "confusables": [],
+      "derivatives": [
+        {
+          "word": "remainder",
+          "phonetic": "/rɪˈmeɪndɚ/",
+          "partOfSpeech": "n.",
+          "chinese": "剩余部分；余数",
+          "note": "可指留下的部分或数学中的余数。"
+        },
+        {
+          "word": "remaining",
+          "phonetic": "/rɪˈmeɪnɪŋ/",
+          "partOfSpeech": "adj.",
+          "chinese": "剩余的；留下的",
+          "note": "常放在名词前，如 remaining time。"
+        }
+      ],
+      "confusables": [
+        {
+          "word": "remind",
+          "phonetic": "/riˈmaɪnd/",
+          "partOfSpeech": "v.",
+          "chinese": "提醒",
+          "difference": "remain 表示保持或留下，remind 表示使某人想起"
+        }
+      ],
       "relatedVocabulary": [
         {
-          "category": "同一语义场的高频词",
+          "category": "持续状态",
           "items": [
             {
-              "word": "stay",
-              "phonetic": "/ˈsteɪ/",
-              "partOfSpeech": "v.",
-              "chinese": "保持；停留"
+              "word": "stability",
+              "phonetic": "/stəˈbɪlɪti/",
+              "partOfSpeech": "n.",
+              "chinese": "稳定"
             },
             {
-              "word": "unchanged",
-              "phonetic": "/əˈntʃeɪndʒd/",
-              "partOfSpeech": "adj.",
-              "chinese": "未改变的"
+              "word": "continuity",
+              "phonetic": "/ˌkɑntəˈnuːəti/",
+              "partOfSpeech": "n.",
+              "chinese": "连续性"
             },
             {
-              "word": "leave",
-              "phonetic": "/ˈliːv/",
-              "partOfSpeech": "v.",
-              "chinese": "离开"
+              "word": "condition",
+              "phonetic": "/kənˈdɪʃən/",
+              "partOfSpeech": "n.",
+              "chinese": "状态"
+            },
+            {
+              "word": "duration",
+              "phonetic": "/dʊˈreɪʃən/",
+              "partOfSpeech": "n.",
+              "chinese": "持续时间"
             }
           ]
         },
         {
-          "category": "近义表达分类",
+          "category": "剩余部分",
           "items": [
             {
-              "word": "stay",
-              "phonetic": "/ˈsteɪ/",
-              "partOfSpeech": "v.",
-              "chinese": "保持；停留"
+              "word": "remnant",
+              "phonetic": "/ˈrɛmnənt/",
+              "partOfSpeech": "n.",
+              "chinese": "残余；遗留部分"
             },
             {
-              "word": "continue",
-              "phonetic": "/kəˈntɪnjuː/",
-              "partOfSpeech": "v.",
-              "chinese": "继续；延续；延长"
+              "word": "balance",
+              "phonetic": "/ˈbæləns/",
+              "partOfSpeech": "n.",
+              "chinese": "余款；剩余量"
             },
             {
-              "word": "persist",
-              "phonetic": "/pɚˈsɪst/",
-              "partOfSpeech": "v.",
-              "chinese": "坚持；固执；持续"
+              "word": "residue",
+              "phonetic": "/ˈrɛzəˌduː/",
+              "partOfSpeech": "n.",
+              "chinese": "残留物"
             },
             {
-              "word": "be left",
-              "phonetic": "/ˈbiː ˈlɛft/",
-              "partOfSpeech": "phr.",
-              "chinese": "剩下；留下"
+              "word": "surplus",
+              "phonetic": "/ˈsɝːpləs/",
+              "partOfSpeech": "n.",
+              "chinese": "盈余"
             }
           ]
         },
         {
-          "category": "对比与易混表达分类",
+          "category": "未决事项",
           "items": [
             {
-              "word": "change",
-              "phonetic": "/ˈtʃeɪndʒ/",
-              "partOfSpeech": "v.",
-              "chinese": "改变；变化"
+              "word": "uncertainty",
+              "phonetic": "/ənˈsɝːtənti/",
+              "partOfSpeech": "n.",
+              "chinese": "不确定性"
+            },
+            {
+              "word": "question",
+              "phonetic": "/ˈkwɛstʃən/",
+              "partOfSpeech": "n.",
+              "chinese": "问题"
+            },
+            {
+              "word": "mystery",
+              "phonetic": "/ˈmɪstɚi/",
+              "partOfSpeech": "n.",
+              "chinese": "谜"
+            },
+            {
+              "word": "backlog",
+              "phonetic": "/ˈbæˌklɑɡ/",
+              "partOfSpeech": "n.",
+              "chinese": "积压工作"
             }
           ]
         }
@@ -1769,81 +2059,91 @@
           "chinese": "请保持冷静并再试一次。"
         },
         {
-          "scene": "日常使用",
-          "english": "Please remain calm while we check the system.",
-          "chinese": "我们检查系统时请保持冷静。"
-        },
-        {
-          "scene": "工作或学习",
-          "english": "The price has remained unchanged for three years.",
-          "chinese": "这个价格三年来一直没有变化。"
-        },
-        {
-          "scene": "常见搭配",
-          "english": "The old sign will remain in place.",
-          "chinese": "旧标志将保留在原处。"
-        },
-        {
-          "scene": "真实语境",
-          "english": "Whether the plan will succeed remains to be seen.",
-          "chinese": "这个计划能否成功还有待观察。"
-        },
-        {
-          "scene": "易错结构",
-          "english": "The fact remains that we need more time.",
-          "chinese": "事实仍然是我们需要更多时间。"
-        },
-        {
-          "scene": "主动表达",
-          "english": "The museum will remain open until nine tonight.",
-          "chinese": "博物馆今晚将开放到九点。"
+          "scene": "日常交流",
+          "english": "The pilot remained calm throughout the emergency landing.",
+          "chinese": "飞行员在整个紧急着陆过程中保持冷静。"
         },
         {
           "scene": "工作沟通",
-          "english": "I thought it best to remain silent.",
-          "chinese": "我想最好还是保持沉默。"
+          "english": "Ticket prices will remain unchanged until the end of the year.",
+          "chinese": "票价将在年底前保持不变。"
         },
         {
           "scene": "学习表达",
-          "english": "Please remain seated for a few minutes.",
-          "chinese": "请坐一会。"
+          "english": "The witness remained silent during questioning.",
+          "chinese": "证人在询问过程中保持沉默。"
         },
         {
           "scene": "书面表达",
-          "english": "Not knowing what to say, he remained silent.",
-          "chinese": "因为不知道该说什么, 他保持沉默。"
+          "english": "The emergency shelter will remain open through the weekend.",
+          "chinese": "紧急避难所将在整个周末继续开放。"
+        },
+        {
+          "scene": "日常交流",
+          "english": "The temporary barriers must remain in place during repairs.",
+          "chinese": "维修期间临时护栏必须留在原位。"
+        },
+        {
+          "scene": "工作沟通",
+          "english": "A nurse remained with the child until his parents arrived.",
+          "chinese": "一名护士一直陪着孩子，直到他的父母到来。"
+        },
+        {
+          "scene": "学习表达",
+          "english": "Whether the new policy will reduce traffic remains to be seen.",
+          "chinese": "新政策能否减少交通流量仍有待观察。"
+        },
+        {
+          "scene": "书面表达",
+          "english": "Little remains of the original wooden bridge after the fire.",
+          "chinese": "火灾过后，那座原木桥几乎没有留下什么。"
+        },
+        {
+          "scene": "日常交流",
+          "english": "The source of the strange signal remains a mystery.",
+          "chinese": "奇怪信号的来源仍然是个谜。"
+        },
+        {
+          "scene": "工作沟通",
+          "english": "The charity remains committed to providing free meals.",
+          "chinese": "该慈善机构仍然致力于提供免费餐食。"
+        },
+        {
+          "scene": "学习表达",
+          "english": "The patient will remain under observation overnight.",
+          "chinese": "患者将留院观察一晚。"
         }
       ],
       "studyFocus": {
-        "coreMeaning": "先掌握“保持；仍然是”这个核心义，再用高频固定搭配和真实例句巩固这个义项。",
+        "coreMeaning": "先掌握“仍然是；保持不变”这个核心义，再对比另外 3 个常用义项，辨别不同语境。",
         "keyCollocation": "把“remain calm”连同介词、宾语和动词形式作为整个句块记忆。",
-        "commonMistake": "在“remain in place”所表达的这个具体含义中，要用介词 in；换成 at 会破坏这个固定结构或改变原意。",
+        "commonMistake": "remain 作系动词时后接形容词 open 表示状态。",
         "mustUseExample": "Please remain calm and try again.（请保持冷静并再试一次。）"
       },
       "questions": [
         {
           "id": "remain-v-meaning-core",
           "type": "meaning_choice",
-          "prompt": "“remain”最核心的中文含义是？",
+          "prompt": "“remain”最常见的核心中文义是哪一项？",
           "options": [
-            "保持；仍然是",
+            "仍然是；保持不变",
             "减少",
             "制作"
           ],
-          "answer": "保持；仍然是",
+          "answer": "仍然是；保持不变",
           "stage": "T0",
           "ai": false
         },
         {
           "id": "remain-v-meaning-english",
           "type": "meaning_choice",
-          "prompt": "哪一项英文释义最符合词卡中的 “remain”？",
+          "prompt": "“remain”最常见的英文释义是哪一项？",
           "options": [
             "to make something smaller or less",
             "to create, produce, cause, or perform an action",
-            "to continue to be in the same state"
+            "to continue to be in the same state or condition"
           ],
-          "answer": "to continue to be in the same state",
+          "answer": "to continue to be in the same state or condition",
           "stage": "T0",
           "ai": false
         },
@@ -1852,10 +2152,10 @@
           "type": "meaning_choice",
           "prompt": "核心结构辨析：哪一项既表示“保持冷静”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "remain to be seen",
+            "remain open",
             "remain calm",
             "remain unchanged",
-            "remain in place"
+            "remain silent"
           ],
           "answer": "remain calm",
           "stage": "T1",
@@ -1864,12 +2164,12 @@
         {
           "id": "remain-v-synonym-choice",
           "type": "meaning_choice",
-          "prompt": "哪个词是词卡中列出的 “remain” 最直接近义词？",
+          "prompt": "在“保持；留下”这个义项下，哪个词与“remain”意思最接近？",
           "options": [
             "stay",
-            "change",
-            "reduce",
-            "make"
+            "be",
+            "have",
+            "do"
           ],
           "answer": "stay",
           "stage": "T2",
@@ -1878,35 +2178,35 @@
         {
           "id": "remain-v-antonym-choice",
           "type": "meaning_choice",
-          "prompt": "哪个词是词卡中列出的 “remain” 最直接反义词？",
+          "prompt": "在“仍然是；保持不变”这个义项下，哪个词与“remain”意思相反？",
           "options": [
-            "stay",
-            "reduce",
-            "make",
-            "change"
+            "be",
+            "have",
+            "do",
+            "leave"
           ],
-          "answer": "change",
+          "answer": "leave",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "remain-v-contrast-choice",
           "type": "meaning_choice",
-          "prompt": "根据本词卡辨析，哪个词被列为 “remain” 的相关近义词？",
+          "prompt": "结合拼写、发音和用法，哪一项需要与“remain”重点区分？",
           "options": [
-            "reduce",
-            "make",
-            "stay",
-            "change"
+            "have",
+            "do",
+            "remind",
+            "be"
           ],
-          "answer": "stay",
+          "answer": "remind",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "remain-v-recall-definition",
           "type": "recall",
-          "prompt": "根据英文释义写出目标词：to continue to be in the same state",
+          "prompt": "根据英文释义写出对应单词：to continue to be in the same state or condition",
           "answer": "remain",
           "stage": "T1",
           "ai": false
@@ -1914,7 +2214,7 @@
         {
           "id": "remain-v-recall-chinese",
           "type": "recall",
-          "prompt": "写出符合“保持；仍然是”（v.）的本课目标词。",
+          "prompt": "写出表示“仍然是；保持不变”（v.）的英文单词。",
           "answer": "remain",
           "stage": "T1",
           "ai": false
@@ -1933,8 +2233,8 @@
           "prompt": "句型应用：哪一项既表示“保持不变”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "remain calm",
-            "remain in place",
-            "remain to be seen",
+            "remain silent",
+            "remain open",
             "remain unchanged"
           ],
           "answer": "remain unchanged",
@@ -1944,13 +2244,7 @@
         {
           "id": "remain-v-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Please remain _____ and try again.（中文：请保持冷静并再试一次。）",
-          "options": [
-            "decision",
-            "home",
-            "calm",
-            "unnecessary"
-          ],
+          "prompt": "根据完整句意和中文提示补全原句：Please remain _____ and try again.（中文：请保持冷静并再试一次。）",
           "answer": "calm",
           "stage": "T2",
           "ai": false
@@ -1958,43 +2252,43 @@
         {
           "id": "remain-v-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "用法辨析：哪一项既表示“保持冷静”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+          "prompt": "用法辨析：哪一项既表示“留在原位”，又符合这个形式线索：完整搭配中使用介词 in？",
           "options": [
-            "remain to be seen",
+            "remain silent",
+            "remain in place",
             "remain calm",
-            "remain unchanged",
-            "remain in place"
+            "remain unchanged"
           ],
-          "answer": "remain calm",
+          "answer": "remain in place",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "remain-v-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "搭配辨析：哪一项既表示“保持不变”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+          "prompt": "搭配辨析：哪一项既表示“留在某人身边”，又符合这个形式线索：完整搭配中使用介词 with？",
           "options": [
-            "remain unchanged",
+            "remain with someone",
             "remain calm",
-            "remain in place",
-            "remain to be seen"
+            "remain unchanged",
+            "remain silent"
           ],
-          "answer": "remain unchanged",
+          "answer": "remain with someone",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "remain-v-example-cloze",
           "type": "collocation",
-          "prompt": "根据句意补全词卡核心例句：Please _____ calm and try again.（填写 remain 的正确形式）",
-          "answer": "remain",
+          "prompt": "根据句意和中文提示补全另一个常用例句：The pilot _____ calm throughout the emergency landing.（填写 remain 的正确形式）（中文：飞行员在整个紧急着陆过程中保持冷静。）",
+          "answer": "remained",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "remain-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “remain” 写一个自然、真实的英文句子，含义必须符合词卡核心义“保持；仍然是”。",
+          "prompt": "请用 “remain” 写一个自然、真实的英文句子，含义必须符合核心义“仍然是；保持不变”。",
           "answer": "",
           "stage": "T2",
           "ai": true
@@ -2002,7 +2296,7 @@
         {
           "id": "remain-v-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请使用 “remain calm” 结构写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “remain in place” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2010,7 +2304,7 @@
         {
           "id": "remain-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “remain” 和 “remain calm” 结构，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “remain” 和 “remain fully operational” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2068,10 +2362,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "template-complete",
-      "templateVersion": "learning-template-2026.09.10.3",
-      "contentVersion": "2026.09.10.3",
-      "reviewed": false,
+      "detailLevel": "template-curated",
+      "templateVersion": "learning-template-2026.09.10.4",
+      "contentVersion": "2026.09.10.4",
+      "reviewed": true,
+      "curationSource": "manual-semantic-pack-2026.09.10.4",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -2104,205 +2399,256 @@
         "主动词汇"
       ],
       "coreMemory": {
-        "chinese": "解释；说明",
-        "english": "v. to make something clear",
-        "structure": "explain something clearly /ɪkˈspleɪn ˈsʌmθɪŋ ˈklɪrliː/（清楚解释某事）；explain why /ɪkˈspleɪn ˈwaɪ/（解释原因）；explain how /ɪkˈspleɪn ˈhaʊ/（解释方法）；explain something to someone /ɪkˈspleɪn ˈsʌmθɪŋ ˈtuː ˈsʌˌmwʌn/（向某人解释某事）",
+        "chinese": "解释；说明；说明……的原因；为……辩解",
+        "english": "v. to make an idea, process, or situation clear by describing it；v. to give a reason for an action or event",
+        "structure": "explain a concept /ɪkˈspleɪn ə ˈkɑnsɛpt/（解释概念）；explain the rules /ɪkˈspleɪn ðə ˈruːlz/（解释规则）；explain why something happened /ɪkˈspleɪn ˈwaɪ ˈsʌmθɪŋ ˈhæpənd/（解释某事为何发生）；explain how something works /ɪkˈspleɪn ˈhaʊ ˈsʌmθɪŋ ˈwɝːks/（解释某物如何运作）",
         "structures": [
           {
-            "phrase": "explain something clearly",
-            "phonetic": "/ɪkˈspleɪn ˈsʌmθɪŋ ˈklɪrliː/",
-            "chinese": "清楚解释某事"
+            "phrase": "explain a concept",
+            "phonetic": "/ɪkˈspleɪn ə ˈkɑnsɛpt/",
+            "chinese": "解释概念"
           },
           {
-            "phrase": "explain why",
-            "phonetic": "/ɪkˈspleɪn ˈwaɪ/",
-            "chinese": "解释原因"
+            "phrase": "explain the rules",
+            "phonetic": "/ɪkˈspleɪn ðə ˈruːlz/",
+            "chinese": "解释规则"
           },
           {
-            "phrase": "explain how",
-            "phonetic": "/ɪkˈspleɪn ˈhaʊ/",
-            "chinese": "解释方法"
+            "phrase": "explain why something happened",
+            "phonetic": "/ɪkˈspleɪn ˈwaɪ ˈsʌmθɪŋ ˈhæpənd/",
+            "chinese": "解释某事为何发生"
           },
           {
-            "phrase": "explain something to someone",
-            "phonetic": "/ɪkˈspleɪn ˈsʌmθɪŋ ˈtuː ˈsʌˌmwʌn/",
-            "chinese": "向某人解释某事"
+            "phrase": "explain how something works",
+            "phonetic": "/ɪkˈspleɪn ˈhaʊ ˈsʌmθɪŋ ˈwɝːks/",
+            "chinese": "解释某物如何运作"
           }
         ],
-        "commonError": "❌ can to explain → ✅ can explain；❌ to explaining → ✅ to explain",
+        "commonError": "❌ Can you explain me this rule? → ✅ Can you explain this rule to me?；❌ He explained about the delay. → ✅ He explained the delay.",
         "commonErrors": [
           {
-            "wrong": "can to explain",
-            "wrongPhonetic": "/ˈkæn ˈtuː ɪkˈspleɪn/",
-            "right": "can explain",
-            "rightPhonetic": "/ˈkæn ɪkˈspleɪn/",
-            "note": "情态动词 can 后面直接接 explain 的原形，不加 to。"
+            "wrong": "Can you explain me this rule?",
+            "wrongPhonetic": "/ˈkæn ˈjuː ɪkˈspleɪn ˈmiː ˈðɪs ˈruːl/",
+            "right": "Can you explain this rule to me?",
+            "rightPhonetic": "/ˈkæn ˈjuː ɪkˈspleɪn ˈðɪs ˈruːl ˈtuː ˈmiː/",
+            "note": "explain 不接双宾语，听者用 to 引出。"
           },
           {
-            "wrong": "to explaining",
-            "wrongPhonetic": "/ˈtuː ɪˈkspleɪnɪŋ/",
-            "right": "to explain",
-            "rightPhonetic": "/ˈtuː ɪkˈspleɪn/",
-            "note": "这里的 to 是不定式标记，后面要用 explain 的原形，不能改成 explaining。"
+            "wrong": "He explained about the delay.",
+            "wrongPhonetic": "/ˈhiː ɪkˈspleɪnd əˈbaʊt ðə dɪˈleɪ/",
+            "right": "He explained the delay.",
+            "rightPhonetic": "/ˈhiː ɪkˈspleɪnd ðə dɪˈleɪ/",
+            "note": "explain 可直接接要说明的事情，不必加 about。"
           }
         ],
-        "directSynonym": "clarify /ˈklɛrəˌfaɪ/（澄清；阐明）；describe /dɪˈskraɪb/（描述；描绘；画）；account for /əˈkaʊnt ˈfɔːr/（解释；说明原因）；make clear /ˈmeɪk ˈklɪr/（解释清楚；阐明）",
-        "directAntonym": "confuse /kəˈnfjuːz/（使困惑；使混淆）",
-        "derivatives": "explanation",
+        "directSynonym": "clarify /ˈklɛrəˌfaɪ/（澄清）；spell out /ˈspɛl ˈaʊt/（详细说明）；interpret /ˌɪnˈtɝːprət/（解释）；account for /əˈkaʊnt ˈfɔːr/（解释原因）；illustrate /ˈɪləˌstreɪt/（阐明）",
+        "directAntonym": "obscure /əbˈskjʊr/（使含糊）",
+        "derivatives": "explanation · explainable · unexplained · self-explanatory · explanatory",
         "example": "Could you explain this phrase to me?",
         "exampleChinese": "你能给我解释一下这个短语吗？"
       },
       "meanings": [
         {
           "partOfSpeech": "v.",
-          "english": "to make something clear",
+          "english": "to make an idea, process, or situation clear by describing it",
           "chinese": "解释；说明",
-          "example": "Could you explain the rule clearly?",
-          "translation": "你能把这条规则解释清楚吗？"
+          "example": "Can you explain how this device works?",
+          "translation": "你能解释一下这个设备如何工作吗？"
+        },
+        {
+          "partOfSpeech": "v.",
+          "english": "to give a reason for an action or event",
+          "chinese": "说明……的原因；为……辩解",
+          "example": "She explained why the meeting had been delayed.",
+          "translation": "她解释了会议推迟的原因。"
         }
       ],
       "contextPhrases": [
         {
-          "category": "核心动作与结构",
+          "category": "原因与过程",
           "items": [
             {
-              "phrase": "explain something clearly",
-              "phonetic": "/ɪkˈspleɪn ˈsʌmθɪŋ ˈklɪrliː/",
-              "chinese": "清楚解释某事"
+              "phrase": "explain the cause clearly",
+              "phonetic": "/ɪkˈspleɪn ðə ˈkɑz ˈklɪrli/",
+              "chinese": "清楚解释原因"
             },
             {
-              "phrase": "explain why something happens",
-              "phonetic": "/ɪkˈspleɪn ˈwaɪ ˈsʌmθɪŋ ˈhæpənz/",
-              "chinese": "解释原因"
+              "phrase": "explain how the device works",
+              "phonetic": "/ɪkˈspleɪn ˈhaʊ ðə dɪˈvaɪs ˈwɝːks/",
+              "chinese": "解释设备如何运作"
             },
             {
-              "phrase": "explain how to do something",
-              "phonetic": "/ɪkˈspleɪn ˈhaʊ ˈtuː ˈduː ˈsʌmθɪŋ/",
-              "chinese": "解释方法"
+              "phrase": "explain why the schedule changed",
+              "phonetic": "/ɪkˈspleɪn ˈwaɪ ðə ˈskɛdʒʊl ˈtʃeɪndʒd/",
+              "chinese": "解释日程变更的原因"
+            },
+            {
+              "phrase": "explain why the result matters",
+              "phonetic": "/ɪkˈspleɪn ˈwaɪ ðə rɪˈzʌlt ˈmætɚz/",
+              "chinese": "解释结果为何重要"
             }
           ]
         },
         {
-          "category": "日常与工作语境",
+          "category": "规则与概念",
           "items": [
             {
-              "phrase": "explain something to someone",
-              "phonetic": "/ɪkˈspleɪn ˈsʌmθɪŋ ˈtuː ˈsʌˌmwʌn/",
-              "chinese": "向某人解释某事"
+              "phrase": "explain the rules in plain language",
+              "phonetic": "/ɪkˈspleɪn ðə ˈruːlz ɪn ˈpleɪn ˈlæŋɡwədʒ/",
+              "chinese": "用浅显语言解释规则"
             },
             {
-              "phrase": "hard to explain",
-              "phonetic": "/ˈhɑrd ˈtuː ɪkˈspleɪn/",
-              "chinese": "难以解释"
+              "phrase": "explain a difficult concept step by step",
+              "phonetic": "/ɪkˈspleɪn ə ˈdɪfəkəlt ˈkɑnsɛpt ˈstɛp ˈbaɪ ˈstɛp/",
+              "chinese": "逐步解释难懂概念"
             },
             {
-              "phrase": "explain yourself",
-              "phonetic": "/ɪkˈspleɪn jɚˈsɛlf/",
-              "chinese": "解释自己的行为"
+              "phrase": "explain the difference with examples",
+              "phonetic": "/ɪkˈspleɪn ðə ˈdɪfɚəns ˈwɪð ɪɡˈzæmpəlz/",
+              "chinese": "用例子解释差异"
+            },
+            {
+              "phrase": "explain a technical term simply",
+              "phonetic": "/ɪkˈspleɪn ə ˈtɛknɪkəl ˈtɝːm ˈsɪmpli/",
+              "chinese": "简单解释技术术语"
             }
           ]
         },
         {
-          "category": "高频扩展表达",
+          "category": "行为与责任",
           "items": [
             {
-              "phrase": "explain the rules to someone",
-              "phonetic": "/ɪkˈspleɪn ðə ˈruːlz ˈtuː ˈsʌˌmwʌn/",
-              "chinese": "解释规则好"
+              "phrase": "explain your decision to the team",
+              "phonetic": "/ɪkˈspleɪn ˈjɔːr dɪˈsɪʒən ˈtuː ðə ˈtiːm/",
+              "chinese": "向团队解释你的决定"
             },
             {
-              "phrase": "explain the exact meaning of something",
-              "phonetic": "/ɪkˈspleɪn ðə ɪˈɡzækt ˈmiːnɪŋ ˈʌv ˈsʌmθɪŋ/",
-              "chinese": "解释某事的确切含义"
+              "phrase": "explain an unexpected absence",
+              "phonetic": "/ɪkˈspleɪn ˈæn ˌʌnɪkˈspɛktɪd ˈæbsəns/",
+              "chinese": "解释意外缺席"
             },
             {
-              "phrase": "explain wh- + clause",
-              "phonetic": "/ɪkˈspleɪn wh ˈklɔːz/",
-              "chinese": "解释具体情况"
+              "phrase": "explain what went wrong",
+              "phonetic": "/ɪkˈspleɪn ˈwʌt ˈwɛnt ˈrɔːŋ/",
+              "chinese": "解释出了什么问题"
+            },
+            {
+              "phrase": "explain the delay honestly",
+              "phonetic": "/ɪkˈspleɪn ðə dɪˈleɪ ˈɑnəstli/",
+              "chinese": "诚实解释延误原因"
             }
           ]
         },
         {
-          "category": "补充常用语境",
+          "category": "证据与说明",
           "items": [
             {
-              "phrase": "explain a difficult situation to someone",
-              "phonetic": "/ɪkˈspleɪn ə ˈdɪfəkəlt ˌsɪtʃuːˈeɪʃən ˈtuː ˈsʌˌmwʌn/",
-              "chinese": "向某人解释困难处境"
+              "phrase": "explain the result scientifically",
+              "phonetic": "/ɪkˈspleɪn ðə rɪˈzʌlt ˌsaɪənˈtɪfɪkəli/",
+              "chinese": "从科学角度解释结果"
+            },
+            {
+              "phrase": "explain the pattern in the data",
+              "phonetic": "/ɪkˈspleɪn ðə ˈpætɚn ɪn ðə ˈdeɪtə/",
+              "chinese": "解释数据中的规律"
+            },
+            {
+              "phrase": "explain the term in context",
+              "phonetic": "/ɪkˈspleɪn ðə ˈtɝːm ɪn ˈkɑntɛkst/",
+              "chinese": "结合语境解释术语"
+            },
+            {
+              "phrase": "explain the evidence in the appendix",
+              "phonetic": "/ɪkˈspleɪn ðə ˈɛvədəns ɪn ðə əˈpɛndɪks/",
+              "chinese": "解释附录中的证据"
             }
           ]
         }
       ],
       "fixedPhrases": [
         {
-          "phrase": "explain something clearly",
-          "phonetic": "/ɪkˈspleɪn ˈsʌmθɪŋ ˈklɪrliː/",
-          "chinese": "清楚解释某事",
-          "example": "Could you explain the rule clearly?",
-          "translation": "你能把这条规则解释清楚吗？"
+          "phrase": "explain a concept",
+          "phonetic": "/ɪkˈspleɪn ə ˈkɑnsɛpt/",
+          "chinese": "解释概念",
+          "example": "The teacher used a diagram to explain the concept of gravity.",
+          "translation": "老师用图示解释了重力这一概念。"
         },
         {
-          "phrase": "explain why something happens",
-          "phonetic": "/ɪkˈspleɪn ˈwaɪ ˈsʌmθɪŋ ˈhæpənz/",
-          "chinese": "解释原因",
-          "example": "She explained why the meeting had been canceled.",
-          "translation": "她解释了会议取消的原因。"
+          "phrase": "explain the rules",
+          "phonetic": "/ɪkˈspleɪn ðə ˈruːlz/",
+          "chinese": "解释规则",
+          "example": "A referee explained the rules before the match began.",
+          "translation": "比赛开始前，一名裁判讲解了规则。"
         },
         {
-          "phrase": "explain how to do something",
-          "phonetic": "/ɪkˈspleɪn ˈhaʊ ˈtuː ˈduː ˈsʌmθɪŋ/",
-          "chinese": "解释方法",
-          "example": "This video explains how the system works.",
-          "translation": "这个视频解释了系统的工作原理。"
+          "phrase": "explain why something happened",
+          "phonetic": "/ɪkˈspleɪn ˈwaɪ ˈsʌmθɪŋ ˈhæpənd/",
+          "chinese": "解释某事为何发生",
+          "example": "The report explains why the bridge failed during the storm.",
+          "translation": "报告解释了这座桥为何在暴风雨中损坏。"
+        },
+        {
+          "phrase": "explain how something works",
+          "phonetic": "/ɪkˈspleɪn ˈhaʊ ˈsʌmθɪŋ ˈwɝːks/",
+          "chinese": "解释某物如何运作",
+          "example": "This short video explains how the braking system works.",
+          "translation": "这段短视频解释了制动系统的工作原理。"
+        },
+        {
+          "phrase": "explain a decision",
+          "phonetic": "/ɪkˈspleɪn ə dɪˈsɪʒən/",
+          "chinese": "解释决定",
+          "example": "The director met the staff to explain her decision.",
+          "translation": "主管与员工见面，解释了她的决定。"
+        },
+        {
+          "phrase": "explain the difference",
+          "phonetic": "/ɪkˈspleɪn ðə ˈdɪfɚəns/",
+          "chinese": "解释差异",
+          "example": "Could you explain the difference between these two insurance plans?",
+          "translation": "你能解释一下这两种保险方案的区别吗？"
         },
         {
           "phrase": "explain something to someone",
-          "phonetic": "/ɪkˈspleɪn ˈsʌmθɪŋ ˈtuː ˈsʌˌmwʌn/",
+          "phonetic": "/ɪkˈspleɪn ˈsʌmθɪŋ ˈtuː ˈsʌmˌwʌn/",
           "chinese": "向某人解释某事",
-          "example": "I explained the problem to my manager.",
-          "translation": "我向经理解释了这个问题。"
+          "example": "I explained the delay to the waiting passengers.",
+          "translation": "我向等候的乘客解释了延误原因。"
         },
         {
-          "phrase": "hard to explain",
-          "phonetic": "/ˈhɑrd ˈtuː ɪkˈspleɪn/",
-          "chinese": "难以解释",
-          "example": "The difference is hard to explain in one sentence.",
-          "translation": "这种差别很难用一句话解释清楚。"
+          "phrase": "explain in detail",
+          "phonetic": "/ɪkˈspleɪn ɪn dɪˈteɪl/",
+          "chinese": "详细解释",
+          "example": "The technician explained in detail how to reset the device.",
+          "translation": "技术员详细说明了如何重置设备。"
+        },
+        {
+          "phrase": "explain clearly",
+          "phonetic": "/ɪkˈspleɪn ˈklɪrli/",
+          "chinese": "清楚解释",
+          "example": "The clerk explained clearly which documents were still missing.",
+          "translation": "办事员清楚说明了还缺哪些文件。"
         },
         {
           "phrase": "explain yourself",
           "phonetic": "/ɪkˈspleɪn jɚˈsɛlf/",
-          "chinese": "解释自己的行为",
-          "example": "You were absent all morning; please explain yourself.",
-          "translation": "你整个上午都不在，请解释一下。"
+          "chinese": "为自己的言行作出说明",
+          "example": "You left without warning, so you need to explain yourself.",
+          "translation": "你没打招呼就离开了，因此需要作出解释。"
         },
         {
-          "phrase": "explain the rules to someone",
-          "phonetic": "/ɪkˈspleɪn ðə ˈruːlz ˈtuː ˈsʌˌmwʌn/",
-          "chinese": "解释规则好",
-          "example": "Would you please explain the rules to me?",
-          "translation": "请你为我解释规则好吗?"
+          "phrase": "explain away something",
+          "phonetic": "/ɪkˈspleɪn əˈweɪ ˈsʌmθɪŋ/",
+          "chinese": "为某事辩解；把某事淡化掉",
+          "example": "The company could not explain away the gap in its accounts.",
+          "translation": "公司无法为账目中的缺口找到说辞。"
         },
         {
-          "phrase": "explain the exact meaning of something",
-          "phonetic": "/ɪkˈspleɪn ðə ɪˈɡzækt ˈmiːnɪŋ ˈʌv ˈsʌmθɪŋ/",
-          "chinese": "解释某事的确切含义",
-          "example": "Can you explain the exact meaning of this word?",
-          "translation": "你能否说出这个词的精确意思?"
-        },
-        {
-          "phrase": "explain wh- + clause",
-          "phonetic": "/ɪkˈspleɪn wh ˈklɔːz/",
-          "chinese": "解释具体情况",
-          "example": "Can you explain why you were late?",
-          "translation": "你能解释一下你为什么迟到吗？"
-        },
-        {
-          "phrase": "explain a difficult situation to someone",
-          "phonetic": "/ɪkˈspleɪn ə ˈdɪfəkəlt ˌsɪtʃuːˈeɪʃən ˈtuː ˈsʌˌmwʌn/",
-          "chinese": "向某人解释困难处境",
-          "example": "Explain to him the difficult situation you are in.",
-          "translation": "给他讲解一下你的困境。"
+          "phrase": "explain the meaning",
+          "phonetic": "/ɪkˈspleɪn ðə ˈmiːnɪŋ/",
+          "chinese": "解释含义",
+          "example": "The guide explained the meaning of the symbols on the wall.",
+          "translation": "导游解释了墙上那些符号的含义。"
         }
       ],
       "synonyms": [
@@ -2310,38 +2656,45 @@
           "word": "clarify",
           "phonetic": "/ˈklɛrəˌfaɪ/",
           "partOfSpeech": "v.",
-          "chinese": "澄清；阐明",
-          "difference": "clarify 表示“澄清；阐明”，与 explain 的“解释”义相近。clarify 强调消除已有疑惑；explain 更广泛地说明原因、过程或含义。"
+          "chinese": "澄清",
+          "difference": "强调消除含糊或误解；explain 可从头说明原因或过程，不只消除歧义。"
         },
         {
-          "word": "describe",
-          "phonetic": "/dɪˈskraɪb/",
+          "word": "spell out",
+          "phonetic": "/ˈspɛl ˈaʊt/",
+          "partOfSpeech": "phr.v.",
+          "chinese": "详细说明",
+          "difference": "较口语，强调把细节说得非常清楚；explain 语体中性，细节多少由语境决定。"
+        },
+        {
+          "word": "interpret",
+          "phonetic": "/ˌɪnˈtɝːprət/",
           "partOfSpeech": "v.",
-          "chinese": "描述；描绘；画",
-          "difference": "describe 常表示“描述；描绘；画”，与 explain 的“解释”义有重合。describe 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+          "chinese": "解释",
+          "difference": "强调说明语言、符号或事件的意义；explain 可说明原因和机制，不限解释符号意义。"
         },
         {
           "word": "account for",
           "phonetic": "/əˈkaʊnt ˈfɔːr/",
-          "partOfSpeech": "phr.",
-          "chinese": "解释；说明原因",
-          "difference": "account for 常表示“解释；说明原因”，与 explain 的“解释”义有重合。account for 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+          "partOfSpeech": "phr.v.",
+          "chinese": "解释原因",
+          "difference": "account for 专门说明某事为何发生或某数量如何构成；explain 还可说明概念、规则和操作过程。"
         },
         {
-          "word": "make clear",
-          "phonetic": "/ˈmeɪk ˈklɪr/",
-          "partOfSpeech": "phr.",
-          "chinese": "解释清楚；阐明",
-          "difference": "make clear 常表示“解释清楚；阐明”，与 explain 的“解释”义有重合。make clear 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+          "word": "illustrate",
+          "phonetic": "/ˈɪləˌstreɪt/",
+          "partOfSpeech": "v.",
+          "chinese": "阐明",
+          "difference": "通过例子、图表或对比使内容清楚；explain 关注原因和意义，describe 更关注特征。"
         }
       ],
       "antonyms": [
         {
-          "word": "confuse",
-          "phonetic": "/kəˈnfjuːz/",
+          "word": "obscure",
+          "phonetic": "/əbˈskjʊr/",
           "partOfSpeech": "v.",
-          "chinese": "使困惑；使混淆",
-          "usage": "confuse 表示“使困惑；使混淆”，与 explain 的“解释”义形成对比。explain 使内容更清楚；confuse 使内容更难理解。"
+          "chinese": "使含糊",
+          "usage": "与使意义清楚的 explain 相对"
         }
       ],
       "derivatives": [
@@ -2349,89 +2702,132 @@
           "word": "explanation",
           "phonetic": "/ˌɛkspləˈneɪʃən/",
           "partOfSpeech": "n.",
-          "chinese": "解释；说明；辩解；表明",
-          "note": "explanation 是 explain 的常用词族形式；作 n. 时表示“解释；说明；辩解；表明”。"
+          "chinese": "解释；说明",
+          "note": "常用 give an explanation for something。"
+        },
+        {
+          "word": "explainable",
+          "phonetic": "/ɪkˈspleɪnəbəl/",
+          "partOfSpeech": "adj.",
+          "chinese": "可解释的",
+          "note": "指某种现象、差异或行为能够给出合理原因。"
+        },
+        {
+          "word": "unexplained",
+          "phonetic": "/ˌʌnɪkˈspleɪnd/",
+          "partOfSpeech": "adj.",
+          "chinese": "未作解释的；原因不明的",
+          "note": "常修饰 absence、change 或 event。"
+        },
+        {
+          "word": "self-explanatory",
+          "phonetic": "/ˌsɛlfɪkˈsplænətɔːri/",
+          "partOfSpeech": "adj.",
+          "chinese": "不言自明的",
+          "note": "指内容本身足够清楚，无需另作解释。"
+        },
+        {
+          "word": "explanatory",
+          "phonetic": "/ɪkˈsplænəˌtɔːri/",
+          "partOfSpeech": "adj.",
+          "chinese": "解释性的；说明性的",
+          "note": "常修饰 note、diagram 或 text。"
         }
       ],
-      "confusables": [],
+      "confusables": [
+        {
+          "word": "describe",
+          "phonetic": "/dɪˈskraɪb/",
+          "partOfSpeech": "v.",
+          "chinese": "描述",
+          "difference": "explain 使原因或意义清楚，describe 说明外观、特征或过程"
+        }
+      ],
       "relatedVocabulary": [
         {
-          "category": "同一语义场的高频词",
+          "category": "说明材料",
           "items": [
             {
-              "word": "clarify",
-              "phonetic": "/ˈklɛrəˌfaɪ/",
-              "partOfSpeech": "v.",
-              "chinese": "澄清"
+              "word": "example",
+              "phonetic": "/ɪɡˈzæmpəl/",
+              "partOfSpeech": "n.",
+              "chinese": "例子"
+            },
+            {
+              "word": "diagram",
+              "phonetic": "/ˈdaɪəˌɡræm/",
+              "partOfSpeech": "n.",
+              "chinese": "图示"
+            },
+            {
+              "word": "definition",
+              "phonetic": "/ˌdɛfəˈnɪʃən/",
+              "partOfSpeech": "n.",
+              "chinese": "定义"
+            },
+            {
+              "word": "instruction",
+              "phonetic": "/ˌɪnˈstrʌkʃən/",
+              "partOfSpeech": "n.",
+              "chinese": "说明"
+            }
+          ]
+        },
+        {
+          "category": "原因逻辑",
+          "items": [
+            {
+              "word": "cause",
+              "phonetic": "/ˈkɑz/",
+              "partOfSpeech": "n.",
+              "chinese": "原因"
             },
             {
               "word": "reason",
               "phonetic": "/ˈriːzən/",
               "partOfSpeech": "n.",
-              "chinese": "原因"
+              "chinese": "理由"
             },
             {
-              "word": "confuse",
-              "phonetic": "/kəˈnfjuːz/",
-              "partOfSpeech": "v.",
-              "chinese": "使困惑"
-            }
-          ]
-        },
-        {
-          "category": "近义表达分类",
-          "items": [
-            {
-              "word": "clarify",
-              "phonetic": "/ˈklɛrəˌfaɪ/",
-              "partOfSpeech": "v.",
-              "chinese": "澄清；阐明"
-            },
-            {
-              "word": "describe",
-              "phonetic": "/dɪˈskraɪb/",
-              "partOfSpeech": "v.",
-              "chinese": "描述；描绘；画"
-            },
-            {
-              "word": "account for",
-              "phonetic": "/əˈkaʊnt ˈfɔːr/",
-              "partOfSpeech": "phr.",
-              "chinese": "解释；说明原因"
-            },
-            {
-              "word": "make clear",
-              "phonetic": "/ˈmeɪk ˈklɪr/",
-              "partOfSpeech": "phr.",
-              "chinese": "解释清楚；阐明"
-            }
-          ]
-        },
-        {
-          "category": "对比与易混表达分类",
-          "items": [
-            {
-              "word": "confuse",
-              "phonetic": "/kəˈnfjuːz/",
-              "partOfSpeech": "v.",
-              "chinese": "使困惑；使混淆"
-            },
-            {
-              "word": "explanation",
-              "phonetic": "/ˌɛkspləˈneɪʃən/",
+              "word": "process",
+              "phonetic": "/ˈprɑˌsɛs/",
               "partOfSpeech": "n.",
-              "chinese": "解释；说明；辩解；表明"
+              "chinese": "过程"
+            },
+            {
+              "word": "mechanism",
+              "phonetic": "/ˈmɛkəˌnɪzəm/",
+              "partOfSpeech": "n.",
+              "chinese": "机制"
             }
           ]
         },
         {
-          "category": "常用词族分类",
+          "category": "理解结果",
           "items": [
             {
-              "word": "explanation",
-              "phonetic": "/ˌɛkspləˈneɪʃən/",
+              "word": "meaning",
+              "phonetic": "/ˈmiːnɪŋ/",
               "partOfSpeech": "n.",
-              "chinese": "解释；说明；辩解；表明"
+              "chinese": "含义"
+            },
+            {
+              "word": "context",
+              "phonetic": "/ˈkɑntɛkst/",
+              "partOfSpeech": "n.",
+              "chinese": "语境"
+            },
+            {
+              "word": "detail",
+              "phonetic": "/dɪˈteɪl/",
+              "partOfSpeech": "n.",
+              "chinese": "细节"
+            },
+            {
+              "word": "interpretation",
+              "phonetic": "/ˌɪnˌtɝːprɪˈteɪʃən/",
+              "partOfSpeech": "n.",
+              "chinese": "理解；解释"
             }
           ]
         }
@@ -2443,62 +2839,72 @@
           "chinese": "你能给我解释一下这个短语吗？"
         },
         {
-          "scene": "日常使用",
-          "english": "Could you explain the rule clearly?",
-          "chinese": "你能把这条规则解释清楚吗？"
-        },
-        {
-          "scene": "工作或学习",
-          "english": "She explained why the meeting had been canceled.",
-          "chinese": "她解释了会议取消的原因。"
-        },
-        {
-          "scene": "常见搭配",
-          "english": "This video explains how the system works.",
-          "chinese": "这个视频解释了系统的工作原理。"
-        },
-        {
-          "scene": "真实语境",
-          "english": "I explained the problem to my manager.",
-          "chinese": "我向经理解释了这个问题。"
-        },
-        {
-          "scene": "易错结构",
-          "english": "The difference is hard to explain in one sentence.",
-          "chinese": "这种差别很难用一句话解释清楚。"
-        },
-        {
-          "scene": "主动表达",
-          "english": "You were absent all morning; please explain yourself.",
-          "chinese": "你整个上午都不在，请解释一下。"
+          "scene": "日常交流",
+          "english": "The teacher used a diagram to explain the concept of gravity.",
+          "chinese": "老师用图示解释了重力这一概念。"
         },
         {
           "scene": "工作沟通",
-          "english": "Would you please explain the rules to me?",
-          "chinese": "请你为我解释规则好吗?"
+          "english": "A referee explained the rules before the match began.",
+          "chinese": "比赛开始前，一名裁判讲解了规则。"
         },
         {
           "scene": "学习表达",
-          "english": "Can you explain the exact meaning of this word?",
-          "chinese": "你能否说出这个词的精确意思?"
+          "english": "The report explains why the bridge failed during the storm.",
+          "chinese": "报告解释了这座桥为何在暴风雨中损坏。"
         },
         {
           "scene": "书面表达",
-          "english": "Can you explain why you were late?",
-          "chinese": "你能解释一下你为什么迟到吗？"
+          "english": "This short video explains how the braking system works.",
+          "chinese": "这段短视频解释了制动系统的工作原理。"
+        },
+        {
+          "scene": "日常交流",
+          "english": "The director met the staff to explain her decision.",
+          "chinese": "主管与员工见面，解释了她的决定。"
+        },
+        {
+          "scene": "工作沟通",
+          "english": "Could you explain the difference between these two insurance plans?",
+          "chinese": "你能解释一下这两种保险方案的区别吗？"
+        },
+        {
+          "scene": "学习表达",
+          "english": "I explained the delay to the waiting passengers.",
+          "chinese": "我向等候的乘客解释了延误原因。"
+        },
+        {
+          "scene": "书面表达",
+          "english": "The technician explained in detail how to reset the device.",
+          "chinese": "技术员详细说明了如何重置设备。"
+        },
+        {
+          "scene": "日常交流",
+          "english": "The clerk explained clearly which documents were still missing.",
+          "chinese": "办事员清楚说明了还缺哪些文件。"
+        },
+        {
+          "scene": "工作沟通",
+          "english": "You left without warning, so you need to explain yourself.",
+          "chinese": "你没打招呼就离开了，因此需要作出解释。"
+        },
+        {
+          "scene": "学习表达",
+          "english": "The company could not explain away the gap in its accounts.",
+          "chinese": "公司无法为账目中的缺口找到说辞。"
         }
       ],
       "studyFocus": {
-        "coreMeaning": "先掌握“解释；说明”这个核心义，再用高频固定搭配和真实例句巩固这个义项。",
+        "coreMeaning": "先掌握“解释；说明”这个核心义，再对比另外 1 个常用义项，辨别不同语境。",
         "keyCollocation": "把“explain something to someone”连同介词、宾语和动词形式作为整个句块记忆。",
-        "commonMistake": "情态动词 can 后面直接接 explain 的原形，不加 to。",
+        "commonMistake": "explain 不接双宾语，听者用 to 引出。",
         "mustUseExample": "Could you explain this phrase to me?（你能给我解释一下这个短语吗？）"
       },
       "questions": [
         {
           "id": "explain-v-meaning-core",
           "type": "meaning_choice",
-          "prompt": "“explain”最核心的中文含义是？",
+          "prompt": "“explain”最常见的核心中文义是哪一项？",
           "options": [
             "接受",
             "想",
@@ -2511,38 +2917,38 @@
         {
           "id": "explain-v-meaning-english",
           "type": "meaning_choice",
-          "prompt": "哪一项英文释义最符合词卡中的 “explain”？",
+          "prompt": "“explain”最常见的英文释义是哪一项？",
           "options": [
             "to use the mind, form an opinion, or consider something",
-            "to make something clear",
+            "to make an idea, process, or situation clear by describing it",
             "to agree to receive or believe something"
           ],
-          "answer": "to make something clear",
+          "answer": "to make an idea, process, or situation clear by describing it",
           "stage": "T0",
           "ai": false
         },
         {
           "id": "explain-v-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "核心结构辨析：哪一项既表示“清楚解释某事”，又符合这个形式线索：结构中直接带有事物宾语，不在目标词与宾语之间增加介词？",
+          "prompt": "核心结构辨析：哪一项既表示“解释概念”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "explain something clearly",
-            "explain why",
-            "explain how",
-            "explain something to someone"
+            "explain a concept",
+            "explain the rules",
+            "explain why something happened",
+            "explain how something works"
           ],
-          "answer": "explain something clearly",
+          "answer": "explain a concept",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "explain-v-synonym-choice",
           "type": "meaning_choice",
-          "prompt": "哪个词是词卡中列出的 “explain” 最直接近义词？",
+          "prompt": "在“澄清”这个义项下，哪个词与“explain”意思最接近？",
           "options": [
-            "confuse",
-            "accept",
-            "think",
+            "be",
+            "have",
+            "do",
             "clarify"
           ],
           "answer": "clarify",
@@ -2552,35 +2958,35 @@
         {
           "id": "explain-v-antonym-choice",
           "type": "meaning_choice",
-          "prompt": "哪个词是词卡中列出的 “explain” 最直接反义词？",
+          "prompt": "在“解释；说明”这个义项下，哪个词与“explain”意思相反？",
           "options": [
-            "accept",
-            "think",
-            "confuse",
-            "clarify"
+            "have",
+            "do",
+            "obscure",
+            "be"
           ],
-          "answer": "confuse",
+          "answer": "obscure",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "explain-v-contrast-choice",
           "type": "meaning_choice",
-          "prompt": "根据本词卡辨析，哪个词被列为 “explain” 的派生词？",
+          "prompt": "结合拼写、发音和用法，哪一项需要与“explain”重点区分？",
           "options": [
-            "accept",
-            "explanation",
-            "clarify",
-            "confuse"
+            "do",
+            "describe",
+            "be",
+            "have"
           ],
-          "answer": "explanation",
+          "answer": "describe",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "explain-v-recall-definition",
           "type": "recall",
-          "prompt": "根据英文释义写出目标词：to make something clear",
+          "prompt": "根据英文释义写出对应单词：to make an idea, process, or situation clear by describing it",
           "answer": "explain",
           "stage": "T1",
           "ai": false
@@ -2588,7 +2994,7 @@
         {
           "id": "explain-v-recall-chinese",
           "type": "recall",
-          "prompt": "写出符合“解释；说明”（v.）的本课目标词。",
+          "prompt": "写出表示“解释；说明”（v.）的英文单词。",
           "answer": "explain",
           "stage": "T1",
           "ai": false
@@ -2604,27 +3010,21 @@
         {
           "id": "explain-v-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "句型应用：哪一项既表示“解释原因”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+          "prompt": "句型应用：哪一项既表示“解释规则”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "explain how",
-            "explain something to someone",
-            "explain why",
-            "explain something clearly"
+            "explain why something happened",
+            "explain how something works",
+            "explain the rules",
+            "explain a concept"
           ],
-          "answer": "explain why",
+          "answer": "explain the rules",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "explain-v-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Could you explain this _____ to me?（中文：你能给我解释一下这个短语吗？）",
-          "options": [
-            "new",
-            "phrase",
-            "responsibility",
-            "about"
-          ],
+          "prompt": "根据完整句意和中文提示补全原句：Could you explain this _____ to me?（中文：你能给我解释一下这个短语吗？）",
           "answer": "phrase",
           "stage": "T2",
           "ai": false
@@ -2632,35 +3032,35 @@
         {
           "id": "explain-v-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "搭配辨析：哪一项既表示“清楚解释某事”，又符合这个形式线索：结构中直接带有事物宾语，不在目标词与宾语之间增加介词？",
+          "prompt": "搭配辨析：哪一项既表示“解释决定”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "explain something clearly",
-            "explain why something happens",
-            "explain how to do something",
-            "explain something to someone"
+            "explain a decision",
+            "explain a concept",
+            "explain the rules",
+            "explain why something happened"
           ],
-          "answer": "explain something clearly",
+          "answer": "explain a decision",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "explain-v-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "用法辨析：哪一项既表示“解释原因”，又符合这个形式线索：结构中直接带有事物宾语，不在目标词与宾语之间增加介词？",
+          "prompt": "用法辨析：哪一项既表示“解释差异”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "explain something clearly",
-            "explain how to do something",
-            "explain something to someone",
-            "explain why something happens"
+            "explain a concept",
+            "explain the rules",
+            "explain why something happened",
+            "explain the difference"
           ],
-          "answer": "explain why something happens",
+          "answer": "explain the difference",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "explain-v-example-cloze",
           "type": "collocation",
-          "prompt": "根据句意补全词卡核心例句：Could you _____ this phrase to me?（填写 explain 的正确形式）",
+          "prompt": "根据句意和中文提示补全另一个常用例句：The teacher used a diagram to _____ the concept of gravity.（填写 explain 的正确形式）（中文：老师用图示解释了重力这一概念。）",
           "answer": "explain",
           "stage": "T3",
           "ai": false
@@ -2668,7 +3068,7 @@
         {
           "id": "explain-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “explain” 写一个自然、真实的英文句子，含义必须符合词卡核心义“解释；说明”。",
+          "prompt": "请用 “explain” 写一个自然、真实的英文句子，含义必须符合核心义“解释；说明”。",
           "answer": "",
           "stage": "T2",
           "ai": true
@@ -2676,7 +3076,7 @@
         {
           "id": "explain-v-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请使用 “explain something clearly” 结构写一个与自己有关的自然英文句子；something 要替换成实际的事物或内容。",
+          "prompt": "请使用 “explain a decision” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2684,7 +3084,7 @@
         {
           "id": "explain-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “explain” 和 “explain something clearly” 结构，并避免中文直译；something 要替换成实际的事物或内容。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “explain” 和 “explain the cause clearly” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2742,10 +3142,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "template-complete",
-      "templateVersion": "learning-template-2026.09.10.3",
-      "contentVersion": "2026.09.10.3",
-      "reviewed": false,
+      "detailLevel": "template-curated",
+      "templateVersion": "learning-template-2026.09.10.4",
+      "contentVersion": "2026.09.10.4",
+      "reviewed": true,
+      "curationSource": "manual-semantic-pack-2026.09.10.4",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -2784,226 +3185,263 @@
         "主动词汇"
       ],
       "coreMemory": {
-        "chinese": "击打；击中；撞击；碰撞；达到；到达；突然影响；沉重打击",
-        "english": "v. to strike someone or something with force；v. to collide with someone or something；v. to reach a particular level, number, or target；v. to affect someone suddenly and strongly",
-        "structure": "hit the ball /ˈhɪt ðə ˈbɔːl/（击球）；hit a target /ˈhɪt ə ˈtɑrɡət/（击中或达到目标）；hit someone hard /ˈhɪt ˈsʌˌmwʌn ˈhɑrd/（重重打击某人）；hit a problem /ˈhɪt ə ˈprɑbləm/（遇到问题）",
+        "chinese": "打；击；撞；达到；到达；袭击；严重影响",
+        "english": "v. to bring your hand or an object against someone or something with force；v. to reach a particular level, place, or target；v. to affect someone or something suddenly and badly",
+        "structure": "hit a ball /ˈhɪt ə ˈbɔːl/（击球）；hit a target /ˈhɪt ə ˈtɑrɡət/（击中目标）；hit the wall /ˈhɪt ðə ˈwɔːl/（遇到极限；撞墙）；hit your head /ˈhɪt ˈjɔːr ˈhɛd/（撞到头）",
         "structures": [
           {
-            "phrase": "hit the ball",
-            "phonetic": "/ˈhɪt ðə ˈbɔːl/",
+            "phrase": "hit a ball",
+            "phonetic": "/ˈhɪt ə ˈbɔːl/",
             "chinese": "击球"
           },
           {
             "phrase": "hit a target",
             "phonetic": "/ˈhɪt ə ˈtɑrɡət/",
-            "chinese": "击中或达到目标"
+            "chinese": "击中目标"
           },
           {
-            "phrase": "hit someone hard",
-            "phonetic": "/ˈhɪt ˈsʌˌmwʌn ˈhɑrd/",
-            "chinese": "重重打击某人"
+            "phrase": "hit the wall",
+            "phonetic": "/ˈhɪt ðə ˈwɔːl/",
+            "chinese": "遇到极限；撞墙"
           },
           {
-            "phrase": "hit a problem",
-            "phonetic": "/ˈhɪt ə ˈprɑbləm/",
-            "chinese": "遇到问题"
+            "phrase": "hit your head",
+            "phonetic": "/ˈhɪt ˈjɔːr ˈhɛd/",
+            "chinese": "撞到头"
           }
         ],
-        "commonError": "❌ can to hit → ✅ can hit；❌ to hitting → ✅ to hit",
+        "commonError": "❌ The ball has hit the wall a minute ago. → ✅ The ball hit the wall a minute ago.；❌ The car hit to a tree. → ✅ The car hit a tree.",
         "commonErrors": [
           {
-            "wrong": "can to hit",
-            "wrongPhonetic": "/ˈkæn ˈtuː ˈhɪt/",
-            "right": "can hit",
-            "rightPhonetic": "/ˈkæn ˈhɪt/",
-            "note": "情态动词 can 后面直接接 hit 的原形，不加 to。"
+            "wrong": "The ball has hit the wall a minute ago.",
+            "wrongPhonetic": "/ðə ˈbɔːl ˈhæz ˈhɪt ðə ˈwɔːl ə ˈmɪnət əˈɡoʊ/",
+            "right": "The ball hit the wall a minute ago.",
+            "rightPhonetic": "/ðə ˈbɔːl ˈhɪt ðə ˈwɔːl ə ˈmɪnət əˈɡoʊ/",
+            "note": "a minute ago 是明确结束的过去时间，句子应使用一般过去时。"
           },
           {
-            "wrong": "to hitting",
-            "wrongPhonetic": "/ˈtuː ˈhɪtɪŋ/",
-            "right": "to hit",
-            "rightPhonetic": "/ˈtuː ˈhɪt/",
-            "note": "这里的 to 是不定式标记，后面要用 hit 的原形，不能改成 hitting。"
+            "wrong": "The car hit to a tree.",
+            "wrongPhonetic": "/ðə ˈkɑr ˈhɪt ˈtuː ə ˈtriː/",
+            "right": "The car hit a tree.",
+            "rightPhonetic": "/ðə ˈkɑr ˈhɪt ə ˈtriː/",
+            "note": "hit 是及物动词，碰撞对象前不加 to。"
           }
         ],
-        "directSynonym": "strike /ˈstraɪk/（击打；撞击）；reach /ˈriːtʃ/（到达；达到；伸出）；affect /əˈfɛkt/（影响；感动；假装）；impact /ˌɪˈmpækt/（冲击；冲突；影响）",
-        "directAntonym": "miss /ˈmɪs/（没有击中；错过）",
-        "derivatives": "本词暂无需额外强记的高频派生词",
+        "directSynonym": "strike /ˈstraɪk/（击打）；bang /ˈbæŋ/（猛撞）；collide /kəˈlaɪd/（相撞）；reach /ˈriːtʃ/（达到）；affect /əˈfɛkt/（影响）",
+        "directAntonym": "miss /ˈmɪs/（未击中）",
+        "derivatives": "hitter",
         "example": "Try to hit the ball with the center of the racket.",
         "exampleChinese": "尽量用球拍中心击球。"
       },
       "meanings": [
         {
           "partOfSpeech": "v.",
-          "english": "to strike someone or something with force",
-          "chinese": "击打；击中",
-          "example": "Try to hit the ball with the center of the racket.",
-          "translation": "尽量用球拍中心击球。"
+          "english": "to bring your hand or an object against someone or something with force",
+          "chinese": "打；击；撞",
+          "example": "The ball hit the window.",
+          "translation": "球击中了窗户。"
         },
         {
           "partOfSpeech": "v.",
-          "english": "to collide with someone or something",
-          "chinese": "撞击；碰撞",
-          "example": "The car hit a tree beside the road.",
-          "translation": "汽车撞上了路边的一棵树。"
-        },
-        {
-          "partOfSpeech": "v.",
-          "english": "to reach a particular level, number, or target",
+          "english": "to reach a particular level, place, or target",
           "chinese": "达到；到达",
-          "example": "We hope to hit our weekly learning target.",
-          "translation": "我们希望达到每周学习目标。"
+          "example": "Temperatures hit forty degrees.",
+          "translation": "气温达到了四十度。"
         },
         {
           "partOfSpeech": "v.",
-          "english": "to affect someone suddenly and strongly",
-          "chinese": "突然影响；沉重打击",
-          "example": "The unexpected news hit him hard.",
-          "translation": "这个意外消息对他打击很大。"
+          "english": "to affect someone or something suddenly and badly",
+          "chinese": "袭击；严重影响",
+          "example": "The recession hit small firms hardest.",
+          "translation": "经济衰退对小企业打击最大。"
         }
       ],
       "contextPhrases": [
         {
-          "category": "核心动作与结构",
+          "category": "撞击与碰撞",
           "items": [
             {
-              "phrase": "hit the ball",
-              "phonetic": "/ˈhɪt ðə ˈbɔːl/",
-              "chinese": "击球"
+              "phrase": "hit the wall at low speed",
+              "phonetic": "/ˈhɪt ðə ˈwɔːl ˈæt ˈloʊ ˈspiːd/",
+              "chinese": "低速撞上墙"
             },
             {
-              "phrase": "hit a target",
-              "phonetic": "/ˈhɪt ə ˈtɑrɡət/",
-              "chinese": "击中或达到目标"
+              "phrase": "hit the ball with a bat",
+              "phonetic": "/ˈhɪt ðə ˈbɔːl ˈwɪð ə ˈbæt/",
+              "chinese": "用球棒击球"
             },
             {
-              "phrase": "hit someone hard",
-              "phonetic": "/ˈhɪt ˈsʌˌmwʌn ˈhɑrd/",
-              "chinese": "重重打击某人"
+              "phrase": "hit your head on the shelf",
+              "phonetic": "/ˈhɪt ˈjɔːr ˈhɛd ˈɑn ðə ˈʃɛlf/",
+              "chinese": "头撞到架子"
+            },
+            {
+              "phrase": "hit the ground with a heavy thud",
+              "phonetic": "/ˈhɪt ðə ˈɡraʊnd ˈwɪð ə ˈhɛvi ˈθʌd/",
+              "chinese": "重重撞到地面"
             }
           ]
         },
         {
-          "category": "日常与工作语境",
+          "category": "目标与数值",
           "items": [
             {
-              "phrase": "hit a problem",
-              "phonetic": "/ˈhɪt ə ˈprɑbləm/",
-              "chinese": "遇到问题"
+              "phrase": "hit the monthly target",
+              "phonetic": "/ˈhɪt ðə ˈmʌnθli ˈtɑrɡət/",
+              "chinese": "达到月度目标"
             },
             {
-              "phrase": "hit the road",
-              "phonetic": "/ˈhɪt ðə ˈroʊd/",
-              "chinese": "出发；上路"
+              "phrase": "hit a record high",
+              "phonetic": "/ˈhɪt ə ˈrɛkərd ˈhaɪ/",
+              "chinese": "创下历史新高"
             },
             {
-              "phrase": "hit record",
-              "phonetic": "/ˈhɪt rəˈkɔːrd/",
-              "chinese": "按下录音键"
+              "phrase": "hit the correct note",
+              "phonetic": "/ˈhɪt ðə kɚˈɛkt ˈnoʊt/",
+              "chinese": "唱准音符"
+            },
+            {
+              "phrase": "hit the sales forecast exactly",
+              "phonetic": "/ˈhɪt ðə ˈseɪlz ˈfɔːrˌkæst ɪɡˈzæktli/",
+              "chinese": "恰好达到销售预测"
             }
           ]
         },
         {
-          "category": "高频扩展表达",
+          "category": "灾害与影响",
           "items": [
             {
-              "phrase": "hit by a car",
-              "phonetic": "/ˈhɪt ˈbaɪ ə ˈkɑr/",
-              "chinese": "被车撞过"
+              "phrase": "hit the coast overnight",
+              "phonetic": "/ˈhɪt ðə ˈkoʊst ˌoʊvɚˈnaɪt/",
+              "chinese": "夜间袭击海岸"
             },
             {
-              "phrase": "hit by the truck",
-              "phonetic": "/ˈhɪt ˈbaɪ ðə ˈtrʌk/",
-              "chinese": "差点被卡车撞上"
+              "phrase": "hit small businesses hardest",
+              "phonetic": "/ˈhɪt ˈsmɔːl ˈbɪznəsəz ˈhɑrdəst/",
+              "chinese": "对小企业打击最大"
             },
             {
-              "phrase": "hit your head against something",
-              "phonetic": "/ˈhɪt ˈjɔːr ˈhɛd əˈɡɛnst ˈsʌmθɪŋ/",
-              "chinese": "头撞到某物上"
+              "phrase": "hit demand unexpectedly",
+              "phonetic": "/ˈhɪt dɪˈmænd ˌʌnɪkˈspɛktɪdli/",
+              "chinese": "意外冲击需求"
+            },
+            {
+              "phrase": "hit farming communities badly",
+              "phonetic": "/ˈhɪt ˈfɑrmɪŋ kəˈmjuːnətiz ˈbædli/",
+              "chinese": "严重冲击农业社区"
             }
           ]
         },
         {
-          "category": "补充常用语境",
+          "category": "突然领悟",
           "items": [
             {
-              "phrase": "hit a ball with a racket",
-              "phonetic": "/ˈhɪt ə ˈbɔːl ˈwɪð ə ˈrækɪt/",
-              "chinese": "用球拍击球"
+              "phrase": "hit upon a simple solution",
+              "phonetic": "/ˈhɪt əˈpɑn ə ˈsɪmpəl səˈluːʃən/",
+              "chinese": "偶然想到简单办法"
+            },
+            {
+              "phrase": "hit a major snag in the project",
+              "phonetic": "/ˈhɪt ə ˈmeɪdʒɚ ˈsnæɡ ɪn ðə ˈprɑdʒɛkt/",
+              "chinese": "项目遇到重大障碍"
+            },
+            {
+              "phrase": "hit the headlines worldwide",
+              "phonetic": "/ˈhɪt ðə ˈhɛdˌlaɪnz ˌwɝːldˈwaɪd/",
+              "chinese": "登上世界各地头条"
+            },
+            {
+              "phrase": "hit on the answer by chance",
+              "phonetic": "/ˈhɪt ˈɑn ðə ˈænsɚ ˈbaɪ ˈtʃæns/",
+              "chinese": "偶然想到答案"
             }
           ]
         }
       ],
       "fixedPhrases": [
         {
-          "phrase": "hit the ball",
-          "phonetic": "/ˈhɪt ðə ˈbɔːl/",
+          "phrase": "hit a ball",
+          "phonetic": "/ˈhɪt ə ˈbɔːl/",
           "chinese": "击球",
-          "example": "Try to hit the ball with the center of the racket.",
-          "translation": "尽量用球拍中心击球。"
+          "example": "She hit the ball over the fence on her second swing.",
+          "translation": "她第二次挥拍就把球打过了围栏。"
         },
         {
           "phrase": "hit a target",
           "phonetic": "/ˈhɪt ə ˈtɑrɡət/",
-          "chinese": "击中或达到目标",
-          "example": "We hope to hit our weekly learning target.",
-          "translation": "我们希望达到每周学习目标。"
+          "chinese": "击中目标",
+          "example": "Only two arrows hit the center of the target.",
+          "translation": "只有两支箭射中了靶心。"
         },
         {
-          "phrase": "hit someone hard",
-          "phonetic": "/ˈhɪt ˈsʌˌmwʌn ˈhɑrd/",
-          "chinese": "重重打击某人",
-          "example": "The unexpected news hit him hard.",
-          "translation": "这个意外消息对他打击很大。"
+          "phrase": "hit the wall",
+          "phonetic": "/ˈhɪt ðə ˈwɔːl/",
+          "chinese": "遇到极限；撞墙",
+          "example": "After thirty kilometers, the runner hit the wall and had to slow down.",
+          "translation": "跑了三十公里后，选手体力到了极限，不得不减速。"
         },
         {
-          "phrase": "hit a problem",
-          "phonetic": "/ˈhɪt ə ˈprɑbləm/",
-          "chinese": "遇到问题",
-          "example": "We hit a problem during the final test.",
-          "translation": "我们在最终测试中遇到了问题。"
+          "phrase": "hit your head",
+          "phonetic": "/ˈhɪt ˈjɔːr ˈhɛd/",
+          "chinese": "撞到头",
+          "example": "He hit his head on the low doorway.",
+          "translation": "他撞到了低矮的门框上。"
+        },
+        {
+          "phrase": "hit an all-time low",
+          "phonetic": "/ˈhɪt ˈæn ˈɔːlˌtaɪm ˈloʊ/",
+          "chinese": "跌至历史最低点",
+          "example": "Public confidence in the service hit an all-time low after the outage.",
+          "translation": "服务中断后，公众信任度跌至历史最低点。"
+        },
+        {
+          "phrase": "hit the brakes",
+          "phonetic": "/ˈhɪt ðə ˈbreɪks/",
+          "chinese": "猛踩刹车",
+          "example": "The driver hit the brakes when a deer crossed the road.",
+          "translation": "一只鹿穿过公路时，司机猛踩了刹车。"
         },
         {
           "phrase": "hit the road",
           "phonetic": "/ˈhɪt ðə ˈroʊd/",
-          "chinese": "出发；上路",
-          "example": "We should hit the road before traffic gets heavy.",
-          "translation": "我们应该在交通拥堵前出发。"
+          "chinese": "出发上路",
+          "example": "We packed the van and hit the road before dawn.",
+          "translation": "我们装好面包车，在黎明前出发上路。"
         },
         {
-          "phrase": "hit record",
-          "phonetic": "/ˈhɪt rəˈkɔːrd/",
-          "chinese": "按下录音键",
-          "example": "Hit record when you are ready to speak.",
-          "translation": "准备好说话时按下录音键。"
+          "phrase": "hit the headlines",
+          "phonetic": "/ˈhɪt ðə ˈhɛdˌlaɪnz/",
+          "chinese": "成为头条新闻",
+          "example": "The discovery hit the headlines around the world.",
+          "translation": "这项发现登上了世界各地的新闻头条。"
         },
         {
-          "phrase": "hit by a car",
-          "phonetic": "/ˈhɪt ˈbaɪ ə ˈkɑr/",
-          "chinese": "被车撞过",
-          "example": "Have you ever been hit by a car?",
-          "translation": "你被车撞过吗?"
+          "phrase": "hit hard",
+          "phonetic": "/ˈhɪt ˈhɑrd/",
+          "chinese": "造成沉重打击",
+          "example": "The drought hit small farms particularly hard.",
+          "translation": "干旱对小型农场造成了尤其沉重的打击。"
         },
         {
-          "phrase": "hit by the truck",
-          "phonetic": "/ˈhɪt ˈbaɪ ðə ˈtrʌk/",
-          "chinese": "差点被卡车撞上",
-          "example": "I barely escaped being hit by the truck.",
-          "translation": "我差点被卡车撞上。"
+          "phrase": "hit back",
+          "phonetic": "/ˈhɪt ˈbæk/",
+          "chinese": "反击；回击",
+          "example": "The minister hit back at claims that the funds had been wasted.",
+          "translation": "部长反驳了资金遭浪费的说法。"
         },
         {
-          "phrase": "hit your head against something",
-          "phonetic": "/ˈhɪt ˈjɔːr ˈhɛd əˈɡɛnst ˈsʌmθɪŋ/",
-          "chinese": "头撞到某物上",
-          "example": "He hit his head against a rock.",
-          "translation": "他的头撞到了一块岩石。"
+          "phrase": "hit upon an idea",
+          "phonetic": "/ˈhɪt əˈpɑn ˈæn aɪˈdiːə/",
+          "chinese": "偶然想到主意",
+          "example": "During the train journey, she hit upon an idea for reducing waste.",
+          "translation": "乘火车途中，她偶然想到了一个减少浪费的办法。"
         },
         {
-          "phrase": "hit a ball with a racket",
-          "phonetic": "/ˈhɪt ə ˈbɔːl ˈwɪð ə ˈrækɪt/",
-          "chinese": "用球拍击球",
-          "example": "He hit the ball with his racket.",
-          "translation": "他用他的球拍击球。"
+          "phrase": "hit rock bottom",
+          "phonetic": "/ˈhɪt ˈrɑk ˈbɑtəm/",
+          "chinese": "跌至谷底",
+          "example": "His confidence hit rock bottom after the third rejection.",
+          "translation": "第三次被拒后，他的自信心跌到了谷底。"
         }
       ],
       "synonyms": [
@@ -3011,29 +3449,36 @@
           "word": "strike",
           "phonetic": "/ˈstraɪk/",
           "partOfSpeech": "v.",
-          "chinese": "击打；撞击",
-          "difference": "strike 表示“击打；撞击”，与 hit 的“击打”义相近。两词只有在这一义项重合时才能互换；hit 的其他常用义不一定适用。"
+          "chinese": "击打",
+          "difference": "较正式，强调一次有力碰撞；hit 更日常，可指一次普通接触，也有达到数值等义。"
+        },
+        {
+          "word": "bang",
+          "phonetic": "/ˈbæŋ/",
+          "partOfSpeech": "v.",
+          "chinese": "猛撞",
+          "difference": "强调发出响声的碰撞；hit 不要求发出声响，宾语可为人、物或目标。"
+        },
+        {
+          "word": "collide",
+          "phonetic": "/kəˈlaɪd/",
+          "partOfSpeech": "v.",
+          "chinese": "相撞",
+          "difference": "collide 通常是不及物动词，要用 collide with 表示两个移动体相撞；hit 可直接接被击中或被撞的对象。"
         },
         {
           "word": "reach",
           "phonetic": "/ˈriːtʃ/",
           "partOfSpeech": "v.",
-          "chinese": "到达；达到；伸出",
-          "difference": "reach 常表示“到达；达到；伸出”，与 hit 的“击打”义有重合。reach 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+          "chinese": "达到",
+          "difference": "只对应数值、水平或目标义；hit 可指达到数值，但还保留物理击打和冲击义。"
         },
         {
           "word": "affect",
           "phonetic": "/əˈfɛkt/",
           "partOfSpeech": "v.",
-          "chinese": "影响；感动；假装",
-          "difference": "affect 常表示“影响；感动；假装”，与 hit 的“击打”义有重合。affect 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
-        },
-        {
-          "word": "impact",
-          "phonetic": "/ˌɪˈmpækt/",
-          "partOfSpeech": "n.",
-          "chinese": "冲击；冲突；影响",
-          "difference": "impact 常表示“冲击；冲突；影响”，与 hit 的“击打”义有重合。impact 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+          "chinese": "影响",
+          "difference": "只对应灾难或变化带来冲击的义项；hit 可表示突发冲击，affect 的影响范围和时间更宽。"
         }
       ],
       "antonyms": [
@@ -3041,73 +3486,113 @@
           "word": "miss",
           "phonetic": "/ˈmɪs/",
           "partOfSpeech": "v.",
-          "chinese": "没有击中；错过",
-          "usage": "miss 表示“没有击中；错过”，与 hit 的“击打”义形成对比。这种反义关系只适用于上述明确义项。"
+          "chinese": "未击中",
+          "usage": "只与击中目标的义项直接相对；hit 表示击中指定目标，miss 表示没有碰到或达到目标。"
         }
       ],
-      "derivatives": [],
-      "confusables": [],
+      "derivatives": [
+        {
+          "word": "hitter",
+          "phonetic": "/ˈhɪtɚ/",
+          "partOfSpeech": "n.",
+          "chinese": "击球手；击打者",
+          "note": "最常见于棒球等球类运动。"
+        }
+      ],
+      "confusables": [
+        {
+          "word": "beat",
+          "phonetic": "/ˈbiːt/",
+          "partOfSpeech": "v.",
+          "chinese": "反复击打；打败",
+          "difference": "hit 可指一次击中，beat 常指反复击打或战胜对手"
+        }
+      ],
       "relatedVocabulary": [
         {
-          "category": "同一语义场的高频词",
+          "category": "碰撞要素",
           "items": [
-            {
-              "word": "miss",
-              "phonetic": "/ˈmɪs/",
-              "partOfSpeech": "v.",
-              "chinese": "没击中；错过"
-            },
-            {
-              "word": "strike",
-              "phonetic": "/ˈstraɪk/",
-              "partOfSpeech": "v.",
-              "chinese": "击打"
-            },
-            {
-              "word": "target",
-              "phonetic": "/ˈtɑrɡət/",
-              "partOfSpeech": "n.",
-              "chinese": "目标；靶子"
-            }
-          ]
-        },
-        {
-          "category": "近义表达分类",
-          "items": [
-            {
-              "word": "strike",
-              "phonetic": "/ˈstraɪk/",
-              "partOfSpeech": "v.",
-              "chinese": "击打；撞击"
-            },
-            {
-              "word": "reach",
-              "phonetic": "/ˈriːtʃ/",
-              "partOfSpeech": "v.",
-              "chinese": "到达；达到；伸出"
-            },
-            {
-              "word": "affect",
-              "phonetic": "/əˈfɛkt/",
-              "partOfSpeech": "v.",
-              "chinese": "影响；感动；假装"
-            },
             {
               "word": "impact",
-              "phonetic": "/ˌɪˈmpækt/",
+              "phonetic": "/ˈɪmpækt/",
               "partOfSpeech": "n.",
-              "chinese": "冲击；冲突；影响"
+              "chinese": "撞击；影响"
+            },
+            {
+              "word": "collision",
+              "phonetic": "/kəˈlɪʒən/",
+              "partOfSpeech": "n.",
+              "chinese": "碰撞"
+            },
+            {
+              "word": "force",
+              "phonetic": "/ˈfɔːrs/",
+              "partOfSpeech": "n.",
+              "chinese": "力"
+            },
+            {
+              "word": "surface",
+              "phonetic": "/ˈsɝːfəs/",
+              "partOfSpeech": "n.",
+              "chinese": "表面"
             }
           ]
         },
         {
-          "category": "对比与易混表达分类",
+          "category": "球类运动",
           "items": [
             {
-              "word": "miss",
-              "phonetic": "/ˈmɪs/",
-              "partOfSpeech": "v.",
-              "chinese": "没有击中；错过"
+              "word": "bat",
+              "phonetic": "/ˈbæt/",
+              "partOfSpeech": "n.",
+              "chinese": "球棒"
+            },
+            {
+              "word": "ball",
+              "phonetic": "/ˈbɔːl/",
+              "partOfSpeech": "n.",
+              "chinese": "球"
+            },
+            {
+              "word": "pitch",
+              "phonetic": "/ˈpɪtʃ/",
+              "partOfSpeech": "n.",
+              "chinese": "投球"
+            },
+            {
+              "word": "score",
+              "phonetic": "/ˈskɔːr/",
+              "partOfSpeech": "n.",
+              "chinese": "得分"
+            }
+          ]
+        },
+        {
+          "category": "冲击结果",
+          "items": [
+            {
+              "word": "damage",
+              "phonetic": "/ˈdæmədʒ/",
+              "partOfSpeech": "n.",
+              "chinese": "损害"
+            },
+            {
+              "word": "injury",
+              "phonetic": "/ˈɪndʒɚi/",
+              "partOfSpeech": "n.",
+              "chinese": "伤害"
+            },
+            {
+              "word": "shock",
+              "phonetic": "/ˈʃɑk/",
+              "partOfSpeech": "n.",
+              "chinese": "冲击"
+            },
+            {
+              "word": "loss",
+              "phonetic": "/ˈlɔːs/",
+              "partOfSpeech": "n.",
+              "chinese": "损失"
             }
           ]
         }
@@ -3119,81 +3604,91 @@
           "chinese": "尽量用球拍中心击球。"
         },
         {
-          "scene": "工作或学习",
-          "english": "We hope to hit our weekly learning target.",
-          "chinese": "我们希望达到每周学习目标。"
-        },
-        {
-          "scene": "常见搭配",
-          "english": "The unexpected news hit him hard.",
-          "chinese": "这个意外消息对他打击很大。"
-        },
-        {
-          "scene": "真实语境",
-          "english": "We hit a problem during the final test.",
-          "chinese": "我们在最终测试中遇到了问题。"
-        },
-        {
-          "scene": "易错结构",
-          "english": "We should hit the road before traffic gets heavy.",
-          "chinese": "我们应该在交通拥堵前出发。"
-        },
-        {
-          "scene": "主动表达",
-          "english": "Hit record when you are ready to speak.",
-          "chinese": "准备好说话时按下录音键。"
-        },
-        {
           "scene": "日常交流",
-          "english": "Have you ever been hit by a car?",
-          "chinese": "你被车撞过吗?"
+          "english": "She hit the ball over the fence on her second swing.",
+          "chinese": "她第二次挥拍就把球打过了围栏。"
         },
         {
           "scene": "工作沟通",
-          "english": "I barely escaped being hit by the truck.",
-          "chinese": "我差点被卡车撞上。"
+          "english": "Only two arrows hit the center of the target.",
+          "chinese": "只有两支箭射中了靶心。"
         },
         {
           "scene": "学习表达",
-          "english": "He hit his head against a rock.",
-          "chinese": "他的头撞到了一块岩石。"
+          "english": "After thirty kilometers, the runner hit the wall and had to slow down.",
+          "chinese": "跑了三十公里后，选手体力到了极限，不得不减速。"
         },
         {
           "scene": "书面表达",
-          "english": "He hit the ball with his racket.",
-          "chinese": "他用他的球拍击球。"
+          "english": "He hit his head on the low doorway.",
+          "chinese": "他撞到了低矮的门框上。"
+        },
+        {
+          "scene": "日常交流",
+          "english": "Public confidence in the service hit an all-time low after the outage.",
+          "chinese": "服务中断后，公众信任度跌至历史最低点。"
+        },
+        {
+          "scene": "工作沟通",
+          "english": "The driver hit the brakes when a deer crossed the road.",
+          "chinese": "一只鹿穿过公路时，司机猛踩了刹车。"
+        },
+        {
+          "scene": "学习表达",
+          "english": "We packed the van and hit the road before dawn.",
+          "chinese": "我们装好面包车，在黎明前出发上路。"
+        },
+        {
+          "scene": "书面表达",
+          "english": "The discovery hit the headlines around the world.",
+          "chinese": "这项发现登上了世界各地的新闻头条。"
+        },
+        {
+          "scene": "日常交流",
+          "english": "The drought hit small farms particularly hard.",
+          "chinese": "干旱对小型农场造成了尤其沉重的打击。"
+        },
+        {
+          "scene": "工作沟通",
+          "english": "The minister hit back at claims that the funds had been wasted.",
+          "chinese": "部长反驳了资金遭浪费的说法。"
+        },
+        {
+          "scene": "学习表达",
+          "english": "During the train journey, she hit upon an idea for reducing waste.",
+          "chinese": "乘火车途中，她偶然想到了一个减少浪费的办法。"
         }
       ],
       "studyFocus": {
-        "coreMeaning": "先掌握“击打；击中”这个核心义，再对比另外 3 个常用义项，辨别不同语境。",
+        "coreMeaning": "先掌握“打；击；撞”这个核心义，再对比另外 2 个常用义项，辨别不同语境。",
         "keyCollocation": "把“hit the ball”连同介词、宾语和动词形式作为整个句块记忆。",
-        "commonMistake": "情态动词 can 后面直接接 hit 的原形，不加 to。",
+        "commonMistake": "a minute ago 是明确结束的过去时间，句子应使用一般过去时。",
         "mustUseExample": "Try to hit the ball with the center of the racket.（尽量用球拍中心击球。）"
       },
       "questions": [
         {
           "id": "hit-v-meaning-core",
           "type": "meaning_choice",
-          "prompt": "“hit”最核心的中文含义是？",
+          "prompt": "“hit”最常见的核心中文义是哪一项？",
           "options": [
             "看见",
-            "击打；击中",
+            "打；击；撞",
             "准备"
           ],
-          "answer": "击打；击中",
+          "answer": "打；击；撞",
           "stage": "T0",
           "ai": false
         },
         {
           "id": "hit-v-meaning-english",
           "type": "meaning_choice",
-          "prompt": "哪一项英文释义最符合词卡中的 “hit”？",
+          "prompt": "“hit”最常见的英文释义是哪一项？",
           "options": [
-            "to strike someone or something with force",
+            "to bring your hand or an object against someone or something with force",
             "to make ready for something",
             "to perceive with the eyes, understand, or meet someone"
           ],
-          "answer": "to strike someone or something with force",
+          "answer": "to bring your hand or an object against someone or something with force",
           "stage": "T0",
           "ai": false
         },
@@ -3203,23 +3698,23 @@
           "prompt": "核心结构辨析：哪一项既表示“击球”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "hit a target",
-            "hit someone hard",
-            "hit a problem",
-            "hit the ball"
+            "hit the wall",
+            "hit your head",
+            "hit a ball"
           ],
-          "answer": "hit the ball",
+          "answer": "hit a ball",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "hit-v-synonym-choice",
           "type": "meaning_choice",
-          "prompt": "哪个词是词卡中列出的 “hit” 最直接近义词？",
+          "prompt": "在“击打”这个义项下，哪个词与“hit”意思最接近？",
           "options": [
-            "prepare",
-            "see",
+            "have",
+            "do",
             "strike",
-            "miss"
+            "be"
           ],
           "answer": "strike",
           "stage": "T2",
@@ -3228,12 +3723,12 @@
         {
           "id": "hit-v-antonym-choice",
           "type": "meaning_choice",
-          "prompt": "哪个词是词卡中列出的 “hit” 最直接反义词？",
+          "prompt": "在“打；击；撞”这个义项下，哪个词与“hit”意思相反？",
           "options": [
-            "see",
+            "do",
             "miss",
-            "strike",
-            "prepare"
+            "be",
+            "have"
           ],
           "answer": "miss",
           "stage": "T2",
@@ -3242,21 +3737,21 @@
         {
           "id": "hit-v-contrast-choice",
           "type": "meaning_choice",
-          "prompt": "根据本词卡辨析，哪个词被列为 “hit” 的相关近义词？",
+          "prompt": "结合拼写、发音和用法，哪一项需要与“hit”重点区分？",
           "options": [
-            "strike",
-            "miss",
-            "prepare",
-            "see"
+            "beat",
+            "be",
+            "have",
+            "do"
           ],
-          "answer": "strike",
+          "answer": "beat",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "hit-v-recall-definition",
           "type": "recall",
-          "prompt": "根据英文释义写出目标词：to strike someone or something with force",
+          "prompt": "根据英文释义写出对应单词：to bring your hand or an object against someone or something with force",
           "answer": "hit",
           "stage": "T1",
           "ai": false
@@ -3264,7 +3759,7 @@
         {
           "id": "hit-v-recall-chinese",
           "type": "recall",
-          "prompt": "写出符合“击打；击中”（v.）的本课目标词。",
+          "prompt": "写出表示“打；击；撞”（v.）的英文单词。",
           "answer": "hit",
           "stage": "T1",
           "ai": false
@@ -3280,12 +3775,12 @@
         {
           "id": "hit-v-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "句型应用：哪一项既表示“击中或达到目标”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+          "prompt": "句型应用：哪一项既表示“击中目标”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "hit a problem",
+            "hit your head",
             "hit a target",
-            "hit the ball",
-            "hit someone hard"
+            "hit a ball",
+            "hit the wall"
           ],
           "answer": "hit a target",
           "stage": "T1",
@@ -3294,13 +3789,7 @@
         {
           "id": "hit-v-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Try to hit the _____ with the center of the racket.（中文：尽量用球拍中心击球。）",
-          "options": [
-            "ball",
-            "interview",
-            "difference",
-            "reviewing"
-          ],
+          "prompt": "根据完整句意和中文提示补全原句：Try to hit the _____ with the center of the racket.（中文：尽量用球拍中心击球。）",
           "answer": "ball",
           "stage": "T2",
           "ai": false
@@ -3308,35 +3797,35 @@
         {
           "id": "hit-v-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "用法辨析：哪一项既表示“击球”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+          "prompt": "用法辨析：哪一项既表示“跌至历史最低点”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "hit a ball",
             "hit a target",
-            "hit someone hard",
-            "hit a problem",
-            "hit the ball"
+            "hit the wall",
+            "hit an all-time low"
           ],
-          "answer": "hit the ball",
+          "answer": "hit an all-time low",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "hit-v-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "搭配辨析：哪一项既表示“击中或达到目标”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+          "prompt": "搭配辨析：哪一项既表示“猛踩刹车”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "hit someone hard",
-            "hit a problem",
             "hit a target",
-            "hit the ball"
+            "hit the wall",
+            "hit the brakes",
+            "hit a ball"
           ],
-          "answer": "hit a target",
+          "answer": "hit the brakes",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "hit-v-example-cloze",
           "type": "collocation",
-          "prompt": "根据句意补全词卡核心例句：Try to _____ the ball with the center of the racket.（填写 hit 的正确形式）",
+          "prompt": "根据句意和中文提示补全另一个常用例句：She _____ the ball over the fence on her second swing.（填写 hit 的正确形式）（中文：她第二次挥拍就把球打过了围栏。）",
           "answer": "hit",
           "stage": "T3",
           "ai": false
@@ -3344,7 +3833,7 @@
         {
           "id": "hit-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “hit” 写一个自然、真实的英文句子，含义必须符合词卡核心义“击打；击中”。",
+          "prompt": "请用 “hit” 写一个自然、真实的英文句子，含义必须符合核心义“打；击；撞”。",
           "answer": "",
           "stage": "T2",
           "ai": true
@@ -3352,7 +3841,7 @@
         {
           "id": "hit-v-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请使用 “hit the ball” 结构写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “hit an all-time low” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -3360,7 +3849,7 @@
         {
           "id": "hit-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “hit” 和 “hit the ball” 结构，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “hit” 和 “hit the wall at low speed” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -3418,10 +3907,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "template-complete",
-      "templateVersion": "learning-template-2026.09.10.3",
-      "contentVersion": "2026.09.10.3",
-      "reviewed": false,
+      "detailLevel": "template-curated",
+      "templateVersion": "learning-template-2026.09.10.4",
+      "contentVersion": "2026.09.10.4",
+      "reviewed": true,
+      "curationSource": "manual-semantic-pack-2026.09.10.4",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     }
   ]

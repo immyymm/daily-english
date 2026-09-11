@@ -34,9 +34,9 @@
     "主动词汇"
   ],
   "coreMemory": {
-    "chinese": "导致；引起",
-    "english": "v. to make something happen, especially a result, problem",
-    "structure": "cause a problem /ˈkɑz ə ˈprɑbləm/（引起问题）；cause someone to do something /ˈkɑz ˈsʌˌmwʌn ˈtuː ˈduː ˈsʌmθɪŋ/（导致某人做某事）；cause damage to something /ˈkɑz ˈdæmədʒ ˈtuː ˈsʌmθɪŋ/（对某物造成损害）；cause concern /ˈkɑz kəˈnsɝːn/（引起担忧）",
+    "chinese": "导致；引起；使发生；使某人产生某种感受或经历",
+    "english": "v. to make something happen, especially a result, change, or problem；v. to make someone feel or experience something",
+    "structure": "cause a problem /ˈkɑz ə ˈprɑbləm/（引起问题）；cause damage to something /ˈkɑz ˈdæmədʒ ˈtuː ˈsʌmθɪŋ/（对某物造成损害）；cause someone trouble /ˈkɑz ˈsʌmˌwʌn ˈtrʌbəl/（给某人带来麻烦）；cause concern /ˈkɑz kənˈsɝːn/（引起担忧）",
     "structures": [
       {
         "phrase": "cause a problem",
@@ -44,121 +44,158 @@
         "chinese": "引起问题"
       },
       {
-        "phrase": "cause someone to do something",
-        "phonetic": "/ˈkɑz ˈsʌˌmwʌn ˈtuː ˈduː ˈsʌmθɪŋ/",
-        "chinese": "导致某人做某事"
-      },
-      {
         "phrase": "cause damage to something",
         "phonetic": "/ˈkɑz ˈdæmədʒ ˈtuː ˈsʌmθɪŋ/",
         "chinese": "对某物造成损害"
       },
       {
+        "phrase": "cause someone trouble",
+        "phonetic": "/ˈkɑz ˈsʌmˌwʌn ˈtrʌbəl/",
+        "chinese": "给某人带来麻烦"
+      },
+      {
         "phrase": "cause concern",
-        "phonetic": "/ˈkɑz kəˈnsɝːn/",
+        "phonetic": "/ˈkɑz kənˈsɝːn/",
         "chinese": "引起担忧"
       }
     ],
-    "commonError": "❌ cause someone to does something → ✅ cause someone to do something；❌ cause something with doing something → ✅ cause something by doing something",
+    "commonError": "❌ The delay caused us miss the train. → ✅ The delay caused us to miss the train.；❌ What caused of the failure? → ✅ What caused the failure?",
     "commonErrors": [
       {
-        "wrong": "cause someone to does something",
-        "wrongPhonetic": "/ˈkɑz ˈsʌˌmwʌn ˈtuː ˈdʌz ˈsʌmθɪŋ/",
-        "right": "cause someone to do something",
-        "rightPhonetic": "/ˈkɑz ˈsʌˌmwʌn ˈtuː ˈduː ˈsʌmθɪŋ/",
-        "note": "在“cause someone to do something”中，这个 to 是不定式标记，后面必须接动词原形。do 只是语法占位符，真实表达要把它换成 finish、check 等符合语境的动词原形。"
+        "wrong": "The delay caused us miss the train.",
+        "wrongPhonetic": "/ðə dɪˈleɪ ˈkɑzd ˈʌs ˈmɪs ðə ˈtreɪn/",
+        "right": "The delay caused us to miss the train.",
+        "rightPhonetic": "/ðə dɪˈleɪ ˈkɑzd ˈʌs ˈtuː ˈmɪs ðə ˈtreɪn/",
+        "note": "cause someone 后必须接 to do。"
       },
       {
-        "wrong": "cause something with doing something",
-        "wrongPhonetic": "/ˈkɑz ˈsʌmθɪŋ ˈwɪð ˈduːɪŋ ˈsʌmθɪŋ/",
-        "right": "cause something by doing something",
-        "rightPhonetic": "/ˈkɑz ˈsʌmθɪŋ ˈbaɪ ˈduːɪŋ ˈsʌmθɪŋ/",
-        "note": "在“cause something by doing something”所表达的这个具体含义中，要用介词 by；换成 with 会破坏这个固定结构或改变原意。"
+        "wrong": "What caused of the failure?",
+        "wrongPhonetic": "/ˈwʌt ˈkɑzd ˈʌv ðə ˈfeɪljɚ/",
+        "right": "What caused the failure?",
+        "rightPhonetic": "/ˈwʌt ˈkɑzd ðə ˈfeɪljɚ/",
+        "note": "cause 作动词直接接结果，of 只用于名词结构 the cause of。"
       }
     ],
-    "directSynonym": "produce /prəˈduːs/（产生；造成）；create /kriːˈeɪt/（创造；建造；引起）；lead to /ˈlɛd ˈtuː/（导致；通向）；bring about /ˈbrɪŋ əˈbaʊt/（导致；引起）",
-    "directAntonym": "prevent /prɪˈvɛnt/（阻止；防止）",
-    "derivatives": "causal · causally",
+    "directSynonym": "bring about /ˈbrɪŋ əˈbaʊt/（导致）；lead to /liːd ˈtuː/（导致）；produce /prəˈduːs/（产生）；trigger /ˈtrɪɡɚ/（触发）；provoke /prəˈvoʊk/（引起）",
+    "directAntonym": "prevent /prɪˈvɛnt/（防止）",
+    "derivatives": "causation · causal · causative · causally",
     "example": "A missing context can cause a serious misunderstanding.",
     "exampleChinese": "缺少语境会导致严重误解。"
   },
   "meanings": [
     {
       "partOfSpeech": "v.",
-      "english": "to make something happen, especially a result, problem",
-      "chinese": "导致；引起",
-      "example": "A missing context can cause a serious misunderstanding.",
-      "translation": "缺少语境会导致严重误解。"
+      "english": "to make something happen, especially a result, change, or problem",
+      "chinese": "导致；引起；使发生",
+      "example": "Heavy rain caused severe flooding.",
+      "translation": "暴雨造成了严重洪水。"
+    },
+    {
+      "partOfSpeech": "v.",
+      "english": "to make someone feel or experience something",
+      "chinese": "使某人产生某种感受或经历",
+      "example": "The delay caused us considerable inconvenience.",
+      "translation": "这次延误给我们造成了很大不便。"
     }
   ],
   "contextPhrases": [
     {
-      "category": "核心动作与结构",
+      "category": "事故与损害",
       "items": [
         {
-          "phrase": "cause a problem",
-          "phonetic": "/ˈkɑz ə ˈprɑbləm/",
-          "chinese": "引起问题"
+          "phrase": "cause serious injury",
+          "phonetic": "/ˈkɑz ˈsɪriəs ˈɪndʒɚi/",
+          "chinese": "造成重伤"
         },
         {
-          "phrase": "cause someone to do something",
-          "phonetic": "/ˈkɑz ˈsʌˌmwʌn ˈtuː ˈduː ˈsʌmθɪŋ/",
-          "chinese": "导致某人做某事"
+          "phrase": "cause structural failure",
+          "phonetic": "/ˈkɑz ˈstrʌktʃɚəl ˈfeɪljɚ/",
+          "chinese": "导致结构失效"
         },
         {
-          "phrase": "cause damage to something",
-          "phonetic": "/ˈkɑz ˈdæmədʒ ˈtuː ˈsʌmθɪŋ/",
-          "chinese": "对某物造成损害"
+          "phrase": "cause widespread disruption",
+          "phonetic": "/ˈkɑz ˈwaɪdˌsprɛd dɪsˈrʌpʃən/",
+          "chinese": "造成大范围中断"
+        },
+        {
+          "phrase": "cause permanent damage",
+          "phonetic": "/ˈkɑz ˈpɝːmənənt ˈdæmədʒ/",
+          "chinese": "造成永久损害"
         }
       ]
     },
     {
-      "category": "日常与工作语境",
+      "category": "健康与感受",
       "items": [
         {
-          "phrase": "cause concern",
-          "phonetic": "/ˈkɑz kəˈnsɝːn/",
-          "chinese": "引起担忧"
+          "phrase": "cause severe anxiety",
+          "phonetic": "/ˈkɑz səˈvɪr æŋˈzaɪəti/",
+          "chinese": "引发严重焦虑"
         },
         {
-          "phrase": "cause confusion",
-          "phonetic": "/ˈkɑz kəˈnfjuːʒən/",
-          "chinese": "引起困惑"
+          "phrase": "cause temporary discomfort",
+          "phonetic": "/ˈkɑz ˈtɛmpɚˌɛri dɪˈskʌmfɚt/",
+          "chinese": "造成短暂不适"
         },
         {
-          "phrase": "cause something by doing something",
-          "phonetic": "/ˈkɑz ˈsʌmθɪŋ ˈbaɪ ˈduːɪŋ ˈsʌmθɪŋ/",
-          "chinese": "因做某事而导致某事"
+          "phrase": "cause loss of hearing",
+          "phonetic": "/ˈkɑz ˈlɔːs ˈʌv ˈhɪrɪŋ/",
+          "chinese": "导致听力损失"
+        },
+        {
+          "phrase": "cause intense embarrassment",
+          "phonetic": "/ˈkɑz ˌɪnˈtɛns ɪmˈbɛrəsmənt/",
+          "chinese": "使人非常尴尬"
         }
       ]
     },
     {
-      "category": "高频扩展表达",
+      "category": "经济与环境",
       "items": [
         {
-          "phrase": "cause any more trouble",
-          "phonetic": "/ˈkɑz ˈɛniː ˈmɔːr ˈtrʌbəl/",
-          "chinese": "惹事了"
+          "phrase": "cause unemployment to increase",
+          "phonetic": "/ˈkɑz ˌʌnɪmˈplɔɪmənt ˈtuː ɪnˈkriːs/",
+          "chinese": "导致失业增加"
         },
         {
-          "phrase": "cause someone trouble",
-          "phonetic": "/ˈkɑz ˈsʌˌmwʌn ˈtrʌbəl/",
-          "chinese": "给某人添麻烦"
+          "phrase": "cause harm to wildlife",
+          "phonetic": "/ˈkɑz ˈhɑrm ˈtuː ˈwaɪldˌlaɪf/",
+          "chinese": "对野生动物造成伤害"
         },
         {
-          "phrase": "cause a great disaster",
-          "phonetic": "/ˈkɑz ə ˈɡreɪt dɪˈzæstɚ/",
-          "chinese": "失之毫厘"
+          "phrase": "cause demand to fall",
+          "phonetic": "/ˈkɑz dɪˈmænd ˈtuː ˈfɔːl/",
+          "chinese": "导致需求下降"
+        },
+        {
+          "phrase": "cause water levels to drop",
+          "phonetic": "/ˈkɑz ˈwɔːtɚ ˈlɛvəlz ˈtuː ˈdrɑp/",
+          "chinese": "导致水位下降"
         }
       ]
     },
     {
-      "category": "补充常用语境",
+      "category": "行为与结果",
       "items": [
         {
-          "phrase": "cause skin cancer",
-          "phonetic": "/ˈkɑz ˈskɪn ˈkænsɚ/",
-          "chinese": "导致皮肤癌"
+          "phrase": "cause people to hesitate",
+          "phonetic": "/ˈkɑz ˈpiːpəl ˈtuː ˈhɛzəˌteɪt/",
+          "chinese": "使人们犹豫"
+        },
+        {
+          "phrase": "cause the system to restart",
+          "phonetic": "/ˈkɑz ðə ˈsɪstəm ˈtuː riˈstɑrt/",
+          "chinese": "使系统重启"
+        },
+        {
+          "phrase": "cause unexpected side effects",
+          "phonetic": "/ˈkɑz ˌʌnɪkˈspɛktɪd ˈsaɪd ɪˈfɛkts/",
+          "chinese": "导致意外副作用"
+        },
+        {
+          "phrase": "cause the alarm to sound",
+          "phonetic": "/ˈkɑz ðə əˈlɑrm ˈtuː ˈsaʊnd/",
+          "chinese": "使警报响起"
         }
       ]
     }
@@ -168,101 +205,122 @@
       "phrase": "cause a problem",
       "phonetic": "/ˈkɑz ə ˈprɑbləm/",
       "chinese": "引起问题",
-      "example": "A missing context can cause a serious misunderstanding.",
-      "translation": "缺少语境会导致严重误解。"
-    },
-    {
-      "phrase": "cause someone to do something",
-      "phonetic": "/ˈkɑz ˈsʌˌmwʌn ˈtuː ˈduː ˈsʌmθɪŋ/",
-      "chinese": "导致某人做某事",
-      "example": "The delay caused us to change the schedule.",
-      "translation": "延误导致我们更改日程。"
+      "example": "The missing file caused a problem during the final audit.",
+      "translation": "缺失的文件在最终审核中引起了问题。"
     },
     {
       "phrase": "cause damage to something",
       "phonetic": "/ˈkɑz ˈdæmədʒ ˈtuː ˈsʌmθɪŋ/",
       "chinese": "对某物造成损害",
-      "example": "Heavy rain can cause damage to old buildings.",
-      "translation": "暴雨会对老建筑造成损害。"
+      "example": "Salt water can cause serious damage to the engine.",
+      "translation": "盐水会对发动机造成严重损害。"
+    },
+    {
+      "phrase": "cause someone trouble",
+      "phonetic": "/ˈkɑz ˈsʌmˌwʌn ˈtrʌbəl/",
+      "chinese": "给某人带来麻烦",
+      "example": "I am sorry the schedule change caused you so much trouble.",
+      "translation": "很抱歉日程变更给你带来了这么多麻烦。"
     },
     {
       "phrase": "cause concern",
-      "phonetic": "/ˈkɑz kəˈnsɝːn/",
+      "phonetic": "/ˈkɑz kənˈsɝːn/",
       "chinese": "引起担忧",
-      "example": "The sudden drop in sales caused concern.",
-      "translation": "销售额突然下降引起了担忧。"
+      "example": "The sudden fall in water pressure caused concern among residents.",
+      "translation": "水压突然下降引起了居民的担忧。"
     },
     {
       "phrase": "cause confusion",
-      "phonetic": "/ˈkɑz kəˈnfjuːʒən/",
-      "chinese": "引起困惑",
-      "example": "Vague wording can cause confusion for learners.",
-      "translation": "含糊措辞会让学习者困惑。"
+      "phonetic": "/ˈkɑz kənˈfjuːʒən/",
+      "chinese": "造成混乱",
+      "example": "Using two different labels for the same room caused confusion.",
+      "translation": "同一房间使用两个不同名称造成了混乱。"
     },
     {
-      "phrase": "cause something by doing something",
-      "phonetic": "/ˈkɑz ˈsʌmθɪŋ ˈbaɪ ˈduːɪŋ ˈsʌmθɪŋ/",
-      "chinese": "因做某事而导致某事",
-      "example": "You may cause an accident by driving too fast.",
-      "translation": "开车太快可能会引发事故。"
+      "phrase": "cause an accident",
+      "phonetic": "/ˈkɑz ˈæn ˈæksədənt/",
+      "chinese": "导致事故",
+      "example": "Poor visibility caused an accident on the coastal road.",
+      "translation": "能见度低导致沿海公路发生了一起事故。"
     },
     {
-      "phrase": "cause any more trouble",
-      "phonetic": "/ˈkɑz ˈɛniː ˈmɔːr ˈtrʌbəl/",
-      "chinese": "惹事了",
-      "example": "I don't want to cause any more trouble.",
-      "translation": "我不想再惹事了。"
+      "phrase": "cause a delay",
+      "phonetic": "/ˈkɑz ə dɪˈleɪ/",
+      "chinese": "导致延误",
+      "example": "A signal failure caused a forty-minute delay.",
+      "translation": "信号故障导致了四十分钟的延误。"
     },
     {
-      "phrase": "cause someone trouble",
-      "phonetic": "/ˈkɑz ˈsʌˌmwʌn ˈtrʌbəl/",
-      "chinese": "给某人添麻烦",
-      "example": "I'm sorry to cause you all this trouble.",
-      "translation": "我很抱歉给你惹来所有的这些麻烦。"
+      "phrase": "cause pain",
+      "phonetic": "/ˈkɑz ˈpeɪn/",
+      "chinese": "引起疼痛",
+      "example": "Stop the exercise if it causes pain in your knee.",
+      "translation": "如果这项运动引起膝盖疼痛，就停下来。"
     },
     {
-      "phrase": "cause someone trouble",
-      "phonetic": "/ˈkɑz ˈsʌˌmwʌn ˈtrʌbəl/",
-      "chinese": "给某人添麻烦",
-      "example": "We don't want to cause you any trouble.",
-      "translation": "我们不想给你添麻烦。"
+      "phrase": "cause a reaction",
+      "phonetic": "/ˈkɑz ə riˈækʃən/",
+      "chinese": "引起反应",
+      "example": "This medicine may cause an allergic reaction in some patients.",
+      "translation": "这种药可能使部分患者出现过敏反应。"
     },
     {
-      "phrase": "cause a great disaster",
-      "phonetic": "/ˈkɑz ə ˈɡreɪt dɪˈzæstɚ/",
-      "chinese": "失之毫厘",
-      "example": "Slight inattention can cause a great disaster.",
-      "translation": "失之毫厘，谬之千里。"
+      "phrase": "cause prices to rise",
+      "phonetic": "/ˈkɑz ˈpraɪsəz ˈtuː ˈraɪz/",
+      "chinese": "导致价格上涨",
+      "example": "A poor harvest could cause food prices to rise.",
+      "translation": "歉收可能导致食品价格上涨。"
+    },
+    {
+      "phrase": "cause someone to do something",
+      "phonetic": "/ˈkɑz ˈsʌmˌwʌn ˈtuː ˈduː ˈsʌmθɪŋ/",
+      "chinese": "使某人做某事",
+      "example": "The alarm caused everyone to leave the building immediately.",
+      "translation": "警报使所有人立即离开了大楼。"
+    },
+    {
+      "phrase": "be caused by something",
+      "phonetic": "/ˈbiː ˈkɑzd ˈbaɪ ˈsʌmθɪŋ/",
+      "chinese": "由某事物引起",
+      "example": "The network failure was caused by a damaged cable.",
+      "translation": "网络故障是由一根受损电缆造成的。"
     }
   ],
   "synonyms": [
     {
-      "word": "produce",
-      "phonetic": "/prəˈduːs/",
+      "word": "bring about",
+      "phonetic": "/ˈbrɪŋ əˈbaʊt/",
       "partOfSpeech": "v.",
-      "chinese": "产生；造成",
-      "difference": "produce 表示“产生；造成”，与 cause 的“导致”义相近。两词只有在这一义项重合时才能互换；cause 的其他常用义不一定适用。"
-    },
-    {
-      "word": "create",
-      "phonetic": "/kriːˈeɪt/",
-      "partOfSpeech": "v.",
-      "chinese": "创造；建造；引起",
-      "difference": "create 常表示“创造；建造；引起”，与 cause 的“导致”义有重合。create 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+      "chinese": "导致",
+      "difference": "常指促成变化或结果；cause 直接强调因果关系，语体比 bring about 更简洁。"
     },
     {
       "word": "lead to",
-      "phonetic": "/ˈlɛd ˈtuː/",
-      "partOfSpeech": "phr.",
-      "chinese": "导致；通向",
-      "difference": "lead to 常表示“导致；通向”，与 cause 的“导致”义有重合。lead to 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+      "phonetic": "/liːd ˈtuː/",
+      "partOfSpeech": "v.",
+      "chinese": "导致",
+      "difference": "突出因果链条，主语常是事件；cause 可直接接结果作宾语，不必使用介词 to。"
     },
     {
-      "word": "bring about",
-      "phonetic": "/ˈbrɪŋ əˈbaʊt/",
-      "partOfSpeech": "phr.",
-      "chinese": "导致；引起",
-      "difference": "bring about 常表示“导致；引起”，与 cause 的“导致”义有重合。bring about 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+      "word": "produce",
+      "phonetic": "/prəˈduːs/",
+      "partOfSpeech": "v.",
+      "chinese": "产生",
+      "difference": "常指产生效果、结果或反应；cause 常用于负面或中性结果，produce 的搭配范围不同。"
+    },
+    {
+      "word": "trigger",
+      "phonetic": "/ˈtrɪɡɚ/",
+      "partOfSpeech": "v.",
+      "chinese": "触发",
+      "difference": "强调使事件突然开始；cause 不要求结果突然发生，trigger 往往强调启动点。"
+    },
+    {
+      "word": "provoke",
+      "phonetic": "/prəˈvoʊk/",
+      "partOfSpeech": "v.",
+      "chinese": "引起",
+      "difference": "常指激起反应、争议或情绪；cause 语气中性，不暗示故意激起反应。"
     }
   ],
   "antonyms": [
@@ -270,117 +328,134 @@
       "word": "prevent",
       "phonetic": "/prɪˈvɛnt/",
       "partOfSpeech": "v.",
-      "chinese": "阻止；防止",
-      "usage": "prevent 表示“阻止；防止”，与 cause 的“导致”义形成对比。这种反义关系只适用于上述明确义项。"
+      "chinese": "防止",
+      "usage": "cause 表示使某个结果发生；prevent 表示阻止同一结果发生，只在这一因果义项上相对。"
     }
   ],
   "derivatives": [
     {
+      "word": "causation",
+      "phonetic": "/ˌkɔːˈzeɪʃən/",
+      "partOfSpeech": "n.",
+      "chinese": "因果关系；致使",
+      "note": "正式用语，强调一个因素导致另一个结果。"
+    },
+    {
       "word": "causal",
       "phonetic": "/ˈkɔːzəl/",
       "partOfSpeech": "adj.",
-      "chinese": "因果关系的",
-      "note": "常用于 causal relationship。"
+      "chinese": "因果的；构成原因的",
+      "note": "常见于 causal relationship 和 causal factor。"
+    },
+    {
+      "word": "causative",
+      "phonetic": "/ˈkɑzətɪv/",
+      "partOfSpeech": "adj.",
+      "chinese": "使役的；引起……的",
+      "note": "常用于语法中的使役结构，或医学中的致病因素语境。"
     },
     {
       "word": "causally",
-      "phonetic": "/causally/",
+      "phonetic": "/ˈkɔːzəli/",
       "partOfSpeech": "adv.",
       "chinese": "在因果关系上",
-      "note": "多用于正式或学术语境。"
+      "note": "多用于学术语境，说明因果层面的联系。"
     }
   ],
-  "confusables": [],
+  "confusables": [
+    {
+      "word": "because",
+      "phonetic": "/bɪˈkɔːz/",
+      "partOfSpeech": "conj.",
+      "chinese": "因为",
+      "difference": "cause 是名词或动词，because 是连接原因从句的连词"
+    }
+  ],
   "relatedVocabulary": [
     {
-      "category": "同一语义场的高频词",
+      "category": "原因因素",
       "items": [
         {
-          "word": "reason",
-          "phonetic": "/ˈriːzən/",
+          "word": "factor",
+          "phonetic": "/ˈfæktɚ/",
           "partOfSpeech": "n.",
-          "chinese": "原因"
+          "chinese": "因素"
+        },
+        {
+          "word": "catalyst",
+          "phonetic": "/ˈkætələst/",
+          "partOfSpeech": "n.",
+          "chinese": "促成因素"
+        },
+        {
+          "word": "source",
+          "phonetic": "/ˈsɔːrs/",
+          "partOfSpeech": "n.",
+          "chinese": "根源"
+        },
+        {
+          "word": "condition",
+          "phonetic": "/kənˈdɪʃən/",
+          "partOfSpeech": "n.",
+          "chinese": "条件"
+        }
+      ]
+    },
+    {
+      "category": "结果后果",
+      "items": [
+        {
+          "word": "result",
+          "phonetic": "/rɪˈzʌlt/",
+          "partOfSpeech": "n.",
+          "chinese": "结果"
+        },
+        {
+          "word": "consequence",
+          "phonetic": "/ˈkɑnsəkwəns/",
+          "partOfSpeech": "n.",
+          "chinese": "后果"
+        },
+        {
+          "word": "outcome",
+          "phonetic": "/ˈaʊtˌkʌm/",
+          "partOfSpeech": "n.",
+          "chinese": "结果"
         },
         {
           "word": "effect",
           "phonetic": "/ɪˈfɛkt/",
           "partOfSpeech": "n.",
-          "chinese": "结果；影响"
-        },
-        {
-          "word": "result",
-          "phonetic": "/rɪˈzʌlt/",
-          "partOfSpeech": "n. / v.",
-          "chinese": "结果；导致"
+          "chinese": "影响"
         }
       ]
     },
     {
-      "category": "近义表达分类",
+      "category": "风险损害",
       "items": [
         {
-          "word": "produce",
-          "phonetic": "/prəˈduːs/",
-          "partOfSpeech": "v.",
-          "chinese": "产生；造成"
+          "word": "risk",
+          "phonetic": "/ˈrɪsk/",
+          "partOfSpeech": "n.",
+          "chinese": "风险"
         },
         {
-          "word": "create",
-          "phonetic": "/kriːˈeɪt/",
-          "partOfSpeech": "v.",
-          "chinese": "创造；建造；引起"
+          "word": "damage",
+          "phonetic": "/ˈdæmədʒ/",
+          "partOfSpeech": "n.",
+          "chinese": "损害"
         },
         {
-          "word": "lead to",
-          "phonetic": "/ˈlɛd ˈtuː/",
-          "partOfSpeech": "phr.",
-          "chinese": "导致；通向"
+          "word": "injury",
+          "phonetic": "/ˈɪndʒɚi/",
+          "partOfSpeech": "n.",
+          "chinese": "伤害"
         },
         {
-          "word": "bring about",
-          "phonetic": "/ˈbrɪŋ əˈbaʊt/",
-          "partOfSpeech": "phr.",
-          "chinese": "导致；引起"
-        }
-      ]
-    },
-    {
-      "category": "对比与易混表达分类",
-      "items": [
-        {
-          "word": "prevent",
-          "phonetic": "/prɪˈvɛnt/",
-          "partOfSpeech": "v.",
-          "chinese": "阻止；防止"
-        },
-        {
-          "word": "causal",
-          "phonetic": "/ˈkɔːzəl/",
-          "partOfSpeech": "adj.",
-          "chinese": "因果关系的"
-        },
-        {
-          "word": "causally",
-          "phonetic": "/causally/",
-          "partOfSpeech": "adv.",
-          "chinese": "在因果关系上"
-        }
-      ]
-    },
-    {
-      "category": "常用词族分类",
-      "items": [
-        {
-          "word": "causal",
-          "phonetic": "/ˈkɔːzəl/",
-          "partOfSpeech": "adj.",
-          "chinese": "因果关系的"
-        },
-        {
-          "word": "causally",
-          "phonetic": "/causally/",
-          "partOfSpeech": "adv.",
-          "chinese": "在因果关系上"
+          "word": "disruption",
+          "phonetic": "/dɪsˈrʌpʃən/",
+          "partOfSpeech": "n.",
+          "chinese": "中断"
         }
       ]
     }
@@ -392,81 +467,91 @@
       "chinese": "缺少语境会导致严重误解。"
     },
     {
-      "scene": "工作或学习",
-      "english": "The delay caused us to change the schedule.",
-      "chinese": "延误导致我们更改日程。"
-    },
-    {
-      "scene": "常见搭配",
-      "english": "Heavy rain can cause damage to old buildings.",
-      "chinese": "暴雨会对老建筑造成损害。"
-    },
-    {
-      "scene": "真实语境",
-      "english": "The sudden drop in sales caused concern.",
-      "chinese": "销售额突然下降引起了担忧。"
-    },
-    {
-      "scene": "易错结构",
-      "english": "Vague wording can cause confusion for learners.",
-      "chinese": "含糊措辞会让学习者困惑。"
-    },
-    {
-      "scene": "主动表达",
-      "english": "You may cause an accident by driving too fast.",
-      "chinese": "开车太快可能会引发事故。"
-    },
-    {
       "scene": "日常交流",
-      "english": "I don't want to cause any more trouble.",
-      "chinese": "我不想再惹事了。"
+      "english": "The missing file caused a problem during the final audit.",
+      "chinese": "缺失的文件在最终审核中引起了问题。"
     },
     {
       "scene": "工作沟通",
-      "english": "I'm sorry to cause you all this trouble.",
-      "chinese": "我很抱歉给你惹来所有的这些麻烦。"
+      "english": "Salt water can cause serious damage to the engine.",
+      "chinese": "盐水会对发动机造成严重损害。"
     },
     {
       "scene": "学习表达",
-      "english": "We don't want to cause you any trouble.",
-      "chinese": "我们不想给你添麻烦。"
+      "english": "I am sorry the schedule change caused you so much trouble.",
+      "chinese": "很抱歉日程变更给你带来了这么多麻烦。"
     },
     {
       "scene": "书面表达",
-      "english": "Slight inattention can cause a great disaster.",
-      "chinese": "失之毫厘，谬之千里。"
+      "english": "The sudden fall in water pressure caused concern among residents.",
+      "chinese": "水压突然下降引起了居民的担忧。"
+    },
+    {
+      "scene": "日常交流",
+      "english": "Using two different labels for the same room caused confusion.",
+      "chinese": "同一房间使用两个不同名称造成了混乱。"
+    },
+    {
+      "scene": "工作沟通",
+      "english": "Poor visibility caused an accident on the coastal road.",
+      "chinese": "能见度低导致沿海公路发生了一起事故。"
+    },
+    {
+      "scene": "学习表达",
+      "english": "A signal failure caused a forty-minute delay.",
+      "chinese": "信号故障导致了四十分钟的延误。"
+    },
+    {
+      "scene": "书面表达",
+      "english": "Stop the exercise if it causes pain in your knee.",
+      "chinese": "如果这项运动引起膝盖疼痛，就停下来。"
+    },
+    {
+      "scene": "日常交流",
+      "english": "This medicine may cause an allergic reaction in some patients.",
+      "chinese": "这种药可能使部分患者出现过敏反应。"
+    },
+    {
+      "scene": "工作沟通",
+      "english": "A poor harvest could cause food prices to rise.",
+      "chinese": "歉收可能导致食品价格上涨。"
+    },
+    {
+      "scene": "学习表达",
+      "english": "The alarm caused everyone to leave the building immediately.",
+      "chinese": "警报使所有人立即离开了大楼。"
     }
   ],
   "studyFocus": {
-    "coreMeaning": "先掌握“导致；引起”这个核心义，再用高频固定搭配和真实例句巩固这个义项。",
+    "coreMeaning": "先掌握“导致；引起；使发生”这个核心义，再对比另外 1 个常用义项，辨别不同语境。",
     "keyCollocation": "把“cause a problem”连同介词、宾语和动词形式作为整个句块记忆。",
-    "commonMistake": "在“cause someone to do something”中，这个 to 是不定式标记，后面必须接动词原形。do 只是语法占位符，真实表达要把它换成 finish、check 等符合语境的动词原形。",
+    "commonMistake": "cause someone 后必须接 to do。",
     "mustUseExample": "A missing context can cause a serious misunderstanding.（缺少语境会导致严重误解。）"
   },
   "questions": [
     {
       "id": "cause-v-meaning-core",
       "type": "meaning_choice",
-      "prompt": "“cause”最核心的中文含义是？",
+      "prompt": "“cause”最常见的核心中文义是哪一项？",
       "options": [
         "使用",
-        "导致；引起",
+        "导致；引起；使发生",
         "发现"
       ],
-      "answer": "导致；引起",
+      "answer": "导致；引起；使发生",
       "stage": "T0",
       "ai": false
     },
     {
       "id": "cause-v-meaning-english",
       "type": "meaning_choice",
-      "prompt": "哪一项英文释义最符合词卡中的 “cause”？",
+      "prompt": "“cause”最常见的英文释义是哪一项？",
       "options": [
-        "to make something happen, especially a result, problem",
+        "to make something happen, especially a result, change, or problem",
         "to find something for the first time",
         "to employ something for a purpose"
       ],
-      "answer": "to make something happen, especially a result, problem",
+      "answer": "to make something happen, especially a result, change, or problem",
       "stage": "T0",
       "ai": false
     },
@@ -477,8 +562,8 @@
       "options": [
         "cause concern",
         "cause a problem",
-        "cause someone to do something",
-        "cause damage to something"
+        "cause damage to something",
+        "cause someone trouble"
       ],
       "answer": "cause a problem",
       "stage": "T1",
@@ -487,12 +572,12 @@
     {
       "id": "cause-v-synonym-choice",
       "type": "meaning_choice",
-      "prompt": "哪个词是词卡中列出的 “cause” 最直接近义词？",
+      "prompt": "在“产生”这个义项下，哪个词与“cause”意思最接近？",
       "options": [
         "produce",
-        "prevent",
-        "discover",
-        "use"
+        "be",
+        "have",
+        "do"
       ],
       "answer": "produce",
       "stage": "T2",
@@ -501,11 +586,11 @@
     {
       "id": "cause-v-antonym-choice",
       "type": "meaning_choice",
-      "prompt": "哪个词是词卡中列出的 “cause” 最直接反义词？",
+      "prompt": "在“导致；引起；使发生”这个义项下，哪个词与“cause”意思相反？",
       "options": [
-        "produce",
-        "discover",
-        "use",
+        "be",
+        "have",
+        "do",
         "prevent"
       ],
       "answer": "prevent",
@@ -515,21 +600,21 @@
     {
       "id": "cause-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “cause” 的派生词？",
+      "prompt": "哪一项是“cause”的常用派生词？",
       "options": [
-        "prevent",
-        "discover",
-        "causal",
-        "produce"
+        "admission",
+        "affection",
+        "causation",
+        "increase"
       ],
-      "answer": "causal",
+      "answer": "causation",
       "stage": "T3",
       "ai": false
     },
     {
       "id": "cause-v-recall-definition",
       "type": "recall",
-      "prompt": "根据英文释义写出目标词：to make something happen, especially a result, problem",
+      "prompt": "根据英文释义写出对应单词：to make something happen, especially a result, change, or problem",
       "answer": "cause",
       "stage": "T1",
       "ai": false
@@ -537,7 +622,7 @@
     {
       "id": "cause-v-recall-chinese",
       "type": "recall",
-      "prompt": "写出符合“导致；引起”（v.）的本课目标词。",
+      "prompt": "写出表示“导致；引起；使发生”（v.）的英文单词。",
       "answer": "cause",
       "stage": "T1",
       "ai": false
@@ -553,27 +638,21 @@
     {
       "id": "cause-v-collocation-structure-meaning-v3",
       "type": "collocation",
-      "prompt": "句型应用：哪一项既表示“导致某人做某事”，又符合这个形式线索：完整结构中使用 to + 动词原形；do 只是语法占位符，要换成符合语境的具体动词原形？",
+      "prompt": "句型应用：哪一项既表示“对某物造成损害”，又符合这个形式线索：完整搭配中使用介词 to？",
       "options": [
         "cause a problem",
-        "cause damage to something",
+        "cause someone trouble",
         "cause concern",
-        "cause someone to do something"
+        "cause damage to something"
       ],
-      "answer": "cause someone to do something",
+      "answer": "cause damage to something",
       "stage": "T1",
       "ai": false
     },
     {
       "id": "cause-v-collocation-example-context-v3",
       "type": "collocation",
-      "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：A missing context can cause a _____ misunderstanding.（中文：缺少语境会导致严重误解。）",
-      "options": [
-        "key",
-        "difficult",
-        "serious",
-        "better"
-      ],
+      "prompt": "根据完整句意和中文提示补全原句：A missing context can cause a _____ misunderstanding.（中文：缺少语境会导致严重误解。）",
       "answer": "serious",
       "stage": "T2",
       "ai": false
@@ -581,43 +660,43 @@
     {
       "id": "cause-v-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“引起问题”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "用法辨析：哪一项既表示“造成混乱”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "cause concern",
+        "cause someone trouble",
+        "cause confusion",
         "cause a problem",
-        "cause someone to do something",
         "cause damage to something"
       ],
-      "answer": "cause a problem",
+      "answer": "cause confusion",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "cause-v-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“导致某人做某事”，又符合这个形式线索：完整结构中使用 to + 动词原形；do 只是语法占位符，要换成符合语境的具体动词原形？",
+      "prompt": "搭配辨析：哪一项既表示“导致事故”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "cause someone to do something",
+        "cause an accident",
         "cause a problem",
         "cause damage to something",
-        "cause concern"
+        "cause someone trouble"
       ],
-      "answer": "cause someone to do something",
+      "answer": "cause an accident",
       "stage": "T3",
       "ai": false
     },
     {
       "id": "cause-v-example-cloze",
       "type": "collocation",
-      "prompt": "根据句意补全词卡核心例句：A missing context can _____ a serious misunderstanding.（填写 cause 的正确形式）；A、B 要替换成实际比较内容",
-      "answer": "cause",
+      "prompt": "根据句意和中文提示补全另一个常用例句：The missing file _____ a problem during the final audit.（填写 cause 的正确形式）（中文：缺失的文件在最终审核中引起了问题。）",
+      "answer": "caused",
       "stage": "T3",
       "ai": false
     },
     {
       "id": "cause-v-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “cause” 写一个自然、真实的英文句子，含义必须符合词卡核心义“导致；引起”。",
+      "prompt": "请用 “cause” 写一个自然、真实的英文句子，含义必须符合核心义“导致；引起；使发生”。",
       "answer": "",
       "stage": "T2",
       "ai": true
@@ -625,7 +704,7 @@
     {
       "id": "cause-v-sentence-phrase",
       "type": "free_sentence",
-      "prompt": "请使用 “cause a problem” 结构写一个与自己有关的自然英文句子。",
+      "prompt": "请使用 “cause confusion” 结构写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -633,7 +712,7 @@
     {
       "id": "cause-v-dialogue",
       "type": "dialogue",
-      "prompt": "写一段 2–4 轮真实对话，自然使用 “cause” 和 “cause a problem” 结构，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “cause” 和 “cause serious injury” 结构，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -691,9 +770,10 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-complete",
-  "templateVersion": "learning-template-2026.09.10.3",
-  "contentVersion": "2026.09.10.3",
-  "reviewed": false,
+  "detailLevel": "template-curated",
+  "templateVersion": "learning-template-2026.09.10.4",
+  "contentVersion": "2026.09.10.4",
+  "reviewed": true,
+  "curationSource": "manual-semantic-pack-2026.09.10.4",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

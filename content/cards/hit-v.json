@@ -34,226 +34,263 @@
     "主动词汇"
   ],
   "coreMemory": {
-    "chinese": "击打；击中；撞击；碰撞；达到；到达；突然影响；沉重打击",
-    "english": "v. to strike someone or something with force；v. to collide with someone or something；v. to reach a particular level, number, or target；v. to affect someone suddenly and strongly",
-    "structure": "hit the ball /ˈhɪt ðə ˈbɔːl/（击球）；hit a target /ˈhɪt ə ˈtɑrɡət/（击中或达到目标）；hit someone hard /ˈhɪt ˈsʌˌmwʌn ˈhɑrd/（重重打击某人）；hit a problem /ˈhɪt ə ˈprɑbləm/（遇到问题）",
+    "chinese": "打；击；撞；达到；到达；袭击；严重影响",
+    "english": "v. to bring your hand or an object against someone or something with force；v. to reach a particular level, place, or target；v. to affect someone or something suddenly and badly",
+    "structure": "hit a ball /ˈhɪt ə ˈbɔːl/（击球）；hit a target /ˈhɪt ə ˈtɑrɡət/（击中目标）；hit the wall /ˈhɪt ðə ˈwɔːl/（遇到极限；撞墙）；hit your head /ˈhɪt ˈjɔːr ˈhɛd/（撞到头）",
     "structures": [
       {
-        "phrase": "hit the ball",
-        "phonetic": "/ˈhɪt ðə ˈbɔːl/",
+        "phrase": "hit a ball",
+        "phonetic": "/ˈhɪt ə ˈbɔːl/",
         "chinese": "击球"
       },
       {
         "phrase": "hit a target",
         "phonetic": "/ˈhɪt ə ˈtɑrɡət/",
-        "chinese": "击中或达到目标"
+        "chinese": "击中目标"
       },
       {
-        "phrase": "hit someone hard",
-        "phonetic": "/ˈhɪt ˈsʌˌmwʌn ˈhɑrd/",
-        "chinese": "重重打击某人"
+        "phrase": "hit the wall",
+        "phonetic": "/ˈhɪt ðə ˈwɔːl/",
+        "chinese": "遇到极限；撞墙"
       },
       {
-        "phrase": "hit a problem",
-        "phonetic": "/ˈhɪt ə ˈprɑbləm/",
-        "chinese": "遇到问题"
+        "phrase": "hit your head",
+        "phonetic": "/ˈhɪt ˈjɔːr ˈhɛd/",
+        "chinese": "撞到头"
       }
     ],
-    "commonError": "❌ can to hit → ✅ can hit；❌ to hitting → ✅ to hit",
+    "commonError": "❌ The ball has hit the wall a minute ago. → ✅ The ball hit the wall a minute ago.；❌ The car hit to a tree. → ✅ The car hit a tree.",
     "commonErrors": [
       {
-        "wrong": "can to hit",
-        "wrongPhonetic": "/ˈkæn ˈtuː ˈhɪt/",
-        "right": "can hit",
-        "rightPhonetic": "/ˈkæn ˈhɪt/",
-        "note": "情态动词 can 后面直接接 hit 的原形，不加 to。"
+        "wrong": "The ball has hit the wall a minute ago.",
+        "wrongPhonetic": "/ðə ˈbɔːl ˈhæz ˈhɪt ðə ˈwɔːl ə ˈmɪnət əˈɡoʊ/",
+        "right": "The ball hit the wall a minute ago.",
+        "rightPhonetic": "/ðə ˈbɔːl ˈhɪt ðə ˈwɔːl ə ˈmɪnət əˈɡoʊ/",
+        "note": "a minute ago 是明确结束的过去时间，句子应使用一般过去时。"
       },
       {
-        "wrong": "to hitting",
-        "wrongPhonetic": "/ˈtuː ˈhɪtɪŋ/",
-        "right": "to hit",
-        "rightPhonetic": "/ˈtuː ˈhɪt/",
-        "note": "这里的 to 是不定式标记，后面要用 hit 的原形，不能改成 hitting。"
+        "wrong": "The car hit to a tree.",
+        "wrongPhonetic": "/ðə ˈkɑr ˈhɪt ˈtuː ə ˈtriː/",
+        "right": "The car hit a tree.",
+        "rightPhonetic": "/ðə ˈkɑr ˈhɪt ə ˈtriː/",
+        "note": "hit 是及物动词，碰撞对象前不加 to。"
       }
     ],
-    "directSynonym": "strike /ˈstraɪk/（击打；撞击）；reach /ˈriːtʃ/（到达；达到；伸出）；affect /əˈfɛkt/（影响；感动；假装）；impact /ˌɪˈmpækt/（冲击；冲突；影响）",
-    "directAntonym": "miss /ˈmɪs/（没有击中；错过）",
-    "derivatives": "本词暂无需额外强记的高频派生词",
+    "directSynonym": "strike /ˈstraɪk/（击打）；bang /ˈbæŋ/（猛撞）；collide /kəˈlaɪd/（相撞）；reach /ˈriːtʃ/（达到）；affect /əˈfɛkt/（影响）",
+    "directAntonym": "miss /ˈmɪs/（未击中）",
+    "derivatives": "hitter",
     "example": "Try to hit the ball with the center of the racket.",
     "exampleChinese": "尽量用球拍中心击球。"
   },
   "meanings": [
     {
       "partOfSpeech": "v.",
-      "english": "to strike someone or something with force",
-      "chinese": "击打；击中",
-      "example": "Try to hit the ball with the center of the racket.",
-      "translation": "尽量用球拍中心击球。"
+      "english": "to bring your hand or an object against someone or something with force",
+      "chinese": "打；击；撞",
+      "example": "The ball hit the window.",
+      "translation": "球击中了窗户。"
     },
     {
       "partOfSpeech": "v.",
-      "english": "to collide with someone or something",
-      "chinese": "撞击；碰撞",
-      "example": "The car hit a tree beside the road.",
-      "translation": "汽车撞上了路边的一棵树。"
-    },
-    {
-      "partOfSpeech": "v.",
-      "english": "to reach a particular level, number, or target",
+      "english": "to reach a particular level, place, or target",
       "chinese": "达到；到达",
-      "example": "We hope to hit our weekly learning target.",
-      "translation": "我们希望达到每周学习目标。"
+      "example": "Temperatures hit forty degrees.",
+      "translation": "气温达到了四十度。"
     },
     {
       "partOfSpeech": "v.",
-      "english": "to affect someone suddenly and strongly",
-      "chinese": "突然影响；沉重打击",
-      "example": "The unexpected news hit him hard.",
-      "translation": "这个意外消息对他打击很大。"
+      "english": "to affect someone or something suddenly and badly",
+      "chinese": "袭击；严重影响",
+      "example": "The recession hit small firms hardest.",
+      "translation": "经济衰退对小企业打击最大。"
     }
   ],
   "contextPhrases": [
     {
-      "category": "核心动作与结构",
+      "category": "撞击与碰撞",
       "items": [
         {
-          "phrase": "hit the ball",
-          "phonetic": "/ˈhɪt ðə ˈbɔːl/",
-          "chinese": "击球"
+          "phrase": "hit the wall at low speed",
+          "phonetic": "/ˈhɪt ðə ˈwɔːl ˈæt ˈloʊ ˈspiːd/",
+          "chinese": "低速撞上墙"
         },
         {
-          "phrase": "hit a target",
-          "phonetic": "/ˈhɪt ə ˈtɑrɡət/",
-          "chinese": "击中或达到目标"
+          "phrase": "hit the ball with a bat",
+          "phonetic": "/ˈhɪt ðə ˈbɔːl ˈwɪð ə ˈbæt/",
+          "chinese": "用球棒击球"
         },
         {
-          "phrase": "hit someone hard",
-          "phonetic": "/ˈhɪt ˈsʌˌmwʌn ˈhɑrd/",
-          "chinese": "重重打击某人"
+          "phrase": "hit your head on the shelf",
+          "phonetic": "/ˈhɪt ˈjɔːr ˈhɛd ˈɑn ðə ˈʃɛlf/",
+          "chinese": "头撞到架子"
+        },
+        {
+          "phrase": "hit the ground with a heavy thud",
+          "phonetic": "/ˈhɪt ðə ˈɡraʊnd ˈwɪð ə ˈhɛvi ˈθʌd/",
+          "chinese": "重重撞到地面"
         }
       ]
     },
     {
-      "category": "日常与工作语境",
+      "category": "目标与数值",
       "items": [
         {
-          "phrase": "hit a problem",
-          "phonetic": "/ˈhɪt ə ˈprɑbləm/",
-          "chinese": "遇到问题"
+          "phrase": "hit the monthly target",
+          "phonetic": "/ˈhɪt ðə ˈmʌnθli ˈtɑrɡət/",
+          "chinese": "达到月度目标"
         },
         {
-          "phrase": "hit the road",
-          "phonetic": "/ˈhɪt ðə ˈroʊd/",
-          "chinese": "出发；上路"
+          "phrase": "hit a record high",
+          "phonetic": "/ˈhɪt ə ˈrɛkərd ˈhaɪ/",
+          "chinese": "创下历史新高"
         },
         {
-          "phrase": "hit record",
-          "phonetic": "/ˈhɪt rəˈkɔːrd/",
-          "chinese": "按下录音键"
+          "phrase": "hit the correct note",
+          "phonetic": "/ˈhɪt ðə kɚˈɛkt ˈnoʊt/",
+          "chinese": "唱准音符"
+        },
+        {
+          "phrase": "hit the sales forecast exactly",
+          "phonetic": "/ˈhɪt ðə ˈseɪlz ˈfɔːrˌkæst ɪɡˈzæktli/",
+          "chinese": "恰好达到销售预测"
         }
       ]
     },
     {
-      "category": "高频扩展表达",
+      "category": "灾害与影响",
       "items": [
         {
-          "phrase": "hit by a car",
-          "phonetic": "/ˈhɪt ˈbaɪ ə ˈkɑr/",
-          "chinese": "被车撞过"
+          "phrase": "hit the coast overnight",
+          "phonetic": "/ˈhɪt ðə ˈkoʊst ˌoʊvɚˈnaɪt/",
+          "chinese": "夜间袭击海岸"
         },
         {
-          "phrase": "hit by the truck",
-          "phonetic": "/ˈhɪt ˈbaɪ ðə ˈtrʌk/",
-          "chinese": "差点被卡车撞上"
+          "phrase": "hit small businesses hardest",
+          "phonetic": "/ˈhɪt ˈsmɔːl ˈbɪznəsəz ˈhɑrdəst/",
+          "chinese": "对小企业打击最大"
         },
         {
-          "phrase": "hit your head against something",
-          "phonetic": "/ˈhɪt ˈjɔːr ˈhɛd əˈɡɛnst ˈsʌmθɪŋ/",
-          "chinese": "头撞到某物上"
+          "phrase": "hit demand unexpectedly",
+          "phonetic": "/ˈhɪt dɪˈmænd ˌʌnɪkˈspɛktɪdli/",
+          "chinese": "意外冲击需求"
+        },
+        {
+          "phrase": "hit farming communities badly",
+          "phonetic": "/ˈhɪt ˈfɑrmɪŋ kəˈmjuːnətiz ˈbædli/",
+          "chinese": "严重冲击农业社区"
         }
       ]
     },
     {
-      "category": "补充常用语境",
+      "category": "突然领悟",
       "items": [
         {
-          "phrase": "hit a ball with a racket",
-          "phonetic": "/ˈhɪt ə ˈbɔːl ˈwɪð ə ˈrækɪt/",
-          "chinese": "用球拍击球"
+          "phrase": "hit upon a simple solution",
+          "phonetic": "/ˈhɪt əˈpɑn ə ˈsɪmpəl səˈluːʃən/",
+          "chinese": "偶然想到简单办法"
+        },
+        {
+          "phrase": "hit a major snag in the project",
+          "phonetic": "/ˈhɪt ə ˈmeɪdʒɚ ˈsnæɡ ɪn ðə ˈprɑdʒɛkt/",
+          "chinese": "项目遇到重大障碍"
+        },
+        {
+          "phrase": "hit the headlines worldwide",
+          "phonetic": "/ˈhɪt ðə ˈhɛdˌlaɪnz ˌwɝːldˈwaɪd/",
+          "chinese": "登上世界各地头条"
+        },
+        {
+          "phrase": "hit on the answer by chance",
+          "phonetic": "/ˈhɪt ˈɑn ðə ˈænsɚ ˈbaɪ ˈtʃæns/",
+          "chinese": "偶然想到答案"
         }
       ]
     }
   ],
   "fixedPhrases": [
     {
-      "phrase": "hit the ball",
-      "phonetic": "/ˈhɪt ðə ˈbɔːl/",
+      "phrase": "hit a ball",
+      "phonetic": "/ˈhɪt ə ˈbɔːl/",
       "chinese": "击球",
-      "example": "Try to hit the ball with the center of the racket.",
-      "translation": "尽量用球拍中心击球。"
+      "example": "She hit the ball over the fence on her second swing.",
+      "translation": "她第二次挥拍就把球打过了围栏。"
     },
     {
       "phrase": "hit a target",
       "phonetic": "/ˈhɪt ə ˈtɑrɡət/",
-      "chinese": "击中或达到目标",
-      "example": "We hope to hit our weekly learning target.",
-      "translation": "我们希望达到每周学习目标。"
+      "chinese": "击中目标",
+      "example": "Only two arrows hit the center of the target.",
+      "translation": "只有两支箭射中了靶心。"
     },
     {
-      "phrase": "hit someone hard",
-      "phonetic": "/ˈhɪt ˈsʌˌmwʌn ˈhɑrd/",
-      "chinese": "重重打击某人",
-      "example": "The unexpected news hit him hard.",
-      "translation": "这个意外消息对他打击很大。"
+      "phrase": "hit the wall",
+      "phonetic": "/ˈhɪt ðə ˈwɔːl/",
+      "chinese": "遇到极限；撞墙",
+      "example": "After thirty kilometers, the runner hit the wall and had to slow down.",
+      "translation": "跑了三十公里后，选手体力到了极限，不得不减速。"
     },
     {
-      "phrase": "hit a problem",
-      "phonetic": "/ˈhɪt ə ˈprɑbləm/",
-      "chinese": "遇到问题",
-      "example": "We hit a problem during the final test.",
-      "translation": "我们在最终测试中遇到了问题。"
+      "phrase": "hit your head",
+      "phonetic": "/ˈhɪt ˈjɔːr ˈhɛd/",
+      "chinese": "撞到头",
+      "example": "He hit his head on the low doorway.",
+      "translation": "他撞到了低矮的门框上。"
+    },
+    {
+      "phrase": "hit an all-time low",
+      "phonetic": "/ˈhɪt ˈæn ˈɔːlˌtaɪm ˈloʊ/",
+      "chinese": "跌至历史最低点",
+      "example": "Public confidence in the service hit an all-time low after the outage.",
+      "translation": "服务中断后，公众信任度跌至历史最低点。"
+    },
+    {
+      "phrase": "hit the brakes",
+      "phonetic": "/ˈhɪt ðə ˈbreɪks/",
+      "chinese": "猛踩刹车",
+      "example": "The driver hit the brakes when a deer crossed the road.",
+      "translation": "一只鹿穿过公路时，司机猛踩了刹车。"
     },
     {
       "phrase": "hit the road",
       "phonetic": "/ˈhɪt ðə ˈroʊd/",
-      "chinese": "出发；上路",
-      "example": "We should hit the road before traffic gets heavy.",
-      "translation": "我们应该在交通拥堵前出发。"
+      "chinese": "出发上路",
+      "example": "We packed the van and hit the road before dawn.",
+      "translation": "我们装好面包车，在黎明前出发上路。"
     },
     {
-      "phrase": "hit record",
-      "phonetic": "/ˈhɪt rəˈkɔːrd/",
-      "chinese": "按下录音键",
-      "example": "Hit record when you are ready to speak.",
-      "translation": "准备好说话时按下录音键。"
+      "phrase": "hit the headlines",
+      "phonetic": "/ˈhɪt ðə ˈhɛdˌlaɪnz/",
+      "chinese": "成为头条新闻",
+      "example": "The discovery hit the headlines around the world.",
+      "translation": "这项发现登上了世界各地的新闻头条。"
     },
     {
-      "phrase": "hit by a car",
-      "phonetic": "/ˈhɪt ˈbaɪ ə ˈkɑr/",
-      "chinese": "被车撞过",
-      "example": "Have you ever been hit by a car?",
-      "translation": "你被车撞过吗?"
+      "phrase": "hit hard",
+      "phonetic": "/ˈhɪt ˈhɑrd/",
+      "chinese": "造成沉重打击",
+      "example": "The drought hit small farms particularly hard.",
+      "translation": "干旱对小型农场造成了尤其沉重的打击。"
     },
     {
-      "phrase": "hit by the truck",
-      "phonetic": "/ˈhɪt ˈbaɪ ðə ˈtrʌk/",
-      "chinese": "差点被卡车撞上",
-      "example": "I barely escaped being hit by the truck.",
-      "translation": "我差点被卡车撞上。"
+      "phrase": "hit back",
+      "phonetic": "/ˈhɪt ˈbæk/",
+      "chinese": "反击；回击",
+      "example": "The minister hit back at claims that the funds had been wasted.",
+      "translation": "部长反驳了资金遭浪费的说法。"
     },
     {
-      "phrase": "hit your head against something",
-      "phonetic": "/ˈhɪt ˈjɔːr ˈhɛd əˈɡɛnst ˈsʌmθɪŋ/",
-      "chinese": "头撞到某物上",
-      "example": "He hit his head against a rock.",
-      "translation": "他的头撞到了一块岩石。"
+      "phrase": "hit upon an idea",
+      "phonetic": "/ˈhɪt əˈpɑn ˈæn aɪˈdiːə/",
+      "chinese": "偶然想到主意",
+      "example": "During the train journey, she hit upon an idea for reducing waste.",
+      "translation": "乘火车途中，她偶然想到了一个减少浪费的办法。"
     },
     {
-      "phrase": "hit a ball with a racket",
-      "phonetic": "/ˈhɪt ə ˈbɔːl ˈwɪð ə ˈrækɪt/",
-      "chinese": "用球拍击球",
-      "example": "He hit the ball with his racket.",
-      "translation": "他用他的球拍击球。"
+      "phrase": "hit rock bottom",
+      "phonetic": "/ˈhɪt ˈrɑk ˈbɑtəm/",
+      "chinese": "跌至谷底",
+      "example": "His confidence hit rock bottom after the third rejection.",
+      "translation": "第三次被拒后，他的自信心跌到了谷底。"
     }
   ],
   "synonyms": [
@@ -261,29 +298,36 @@
       "word": "strike",
       "phonetic": "/ˈstraɪk/",
       "partOfSpeech": "v.",
-      "chinese": "击打；撞击",
-      "difference": "strike 表示“击打；撞击”，与 hit 的“击打”义相近。两词只有在这一义项重合时才能互换；hit 的其他常用义不一定适用。"
+      "chinese": "击打",
+      "difference": "较正式，强调一次有力碰撞；hit 更日常，可指一次普通接触，也有达到数值等义。"
+    },
+    {
+      "word": "bang",
+      "phonetic": "/ˈbæŋ/",
+      "partOfSpeech": "v.",
+      "chinese": "猛撞",
+      "difference": "强调发出响声的碰撞；hit 不要求发出声响，宾语可为人、物或目标。"
+    },
+    {
+      "word": "collide",
+      "phonetic": "/kəˈlaɪd/",
+      "partOfSpeech": "v.",
+      "chinese": "相撞",
+      "difference": "collide 通常是不及物动词，要用 collide with 表示两个移动体相撞；hit 可直接接被击中或被撞的对象。"
     },
     {
       "word": "reach",
       "phonetic": "/ˈriːtʃ/",
       "partOfSpeech": "v.",
-      "chinese": "到达；达到；伸出",
-      "difference": "reach 常表示“到达；达到；伸出”，与 hit 的“击打”义有重合。reach 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+      "chinese": "达到",
+      "difference": "只对应数值、水平或目标义；hit 可指达到数值，但还保留物理击打和冲击义。"
     },
     {
       "word": "affect",
       "phonetic": "/əˈfɛkt/",
       "partOfSpeech": "v.",
-      "chinese": "影响；感动；假装",
-      "difference": "affect 常表示“影响；感动；假装”，与 hit 的“击打”义有重合。affect 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
-    },
-    {
-      "word": "impact",
-      "phonetic": "/ˌɪˈmpækt/",
-      "partOfSpeech": "n.",
-      "chinese": "冲击；冲突；影响",
-      "difference": "impact 常表示“冲击；冲突；影响”，与 hit 的“击打”义有重合。impact 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+      "chinese": "影响",
+      "difference": "只对应灾难或变化带来冲击的义项；hit 可表示突发冲击，affect 的影响范围和时间更宽。"
     }
   ],
   "antonyms": [
@@ -291,73 +335,113 @@
       "word": "miss",
       "phonetic": "/ˈmɪs/",
       "partOfSpeech": "v.",
-      "chinese": "没有击中；错过",
-      "usage": "miss 表示“没有击中；错过”，与 hit 的“击打”义形成对比。这种反义关系只适用于上述明确义项。"
+      "chinese": "未击中",
+      "usage": "只与击中目标的义项直接相对；hit 表示击中指定目标，miss 表示没有碰到或达到目标。"
     }
   ],
-  "derivatives": [],
-  "confusables": [],
+  "derivatives": [
+    {
+      "word": "hitter",
+      "phonetic": "/ˈhɪtɚ/",
+      "partOfSpeech": "n.",
+      "chinese": "击球手；击打者",
+      "note": "最常见于棒球等球类运动。"
+    }
+  ],
+  "confusables": [
+    {
+      "word": "beat",
+      "phonetic": "/ˈbiːt/",
+      "partOfSpeech": "v.",
+      "chinese": "反复击打；打败",
+      "difference": "hit 可指一次击中，beat 常指反复击打或战胜对手"
+    }
+  ],
   "relatedVocabulary": [
     {
-      "category": "同一语义场的高频词",
+      "category": "碰撞要素",
       "items": [
-        {
-          "word": "miss",
-          "phonetic": "/ˈmɪs/",
-          "partOfSpeech": "v.",
-          "chinese": "没击中；错过"
-        },
-        {
-          "word": "strike",
-          "phonetic": "/ˈstraɪk/",
-          "partOfSpeech": "v.",
-          "chinese": "击打"
-        },
-        {
-          "word": "target",
-          "phonetic": "/ˈtɑrɡət/",
-          "partOfSpeech": "n.",
-          "chinese": "目标；靶子"
-        }
-      ]
-    },
-    {
-      "category": "近义表达分类",
-      "items": [
-        {
-          "word": "strike",
-          "phonetic": "/ˈstraɪk/",
-          "partOfSpeech": "v.",
-          "chinese": "击打；撞击"
-        },
-        {
-          "word": "reach",
-          "phonetic": "/ˈriːtʃ/",
-          "partOfSpeech": "v.",
-          "chinese": "到达；达到；伸出"
-        },
-        {
-          "word": "affect",
-          "phonetic": "/əˈfɛkt/",
-          "partOfSpeech": "v.",
-          "chinese": "影响；感动；假装"
-        },
         {
           "word": "impact",
-          "phonetic": "/ˌɪˈmpækt/",
+          "phonetic": "/ˈɪmpækt/",
           "partOfSpeech": "n.",
-          "chinese": "冲击；冲突；影响"
+          "chinese": "撞击；影响"
+        },
+        {
+          "word": "collision",
+          "phonetic": "/kəˈlɪʒən/",
+          "partOfSpeech": "n.",
+          "chinese": "碰撞"
+        },
+        {
+          "word": "force",
+          "phonetic": "/ˈfɔːrs/",
+          "partOfSpeech": "n.",
+          "chinese": "力"
+        },
+        {
+          "word": "surface",
+          "phonetic": "/ˈsɝːfəs/",
+          "partOfSpeech": "n.",
+          "chinese": "表面"
         }
       ]
     },
     {
-      "category": "对比与易混表达分类",
+      "category": "球类运动",
       "items": [
         {
-          "word": "miss",
-          "phonetic": "/ˈmɪs/",
-          "partOfSpeech": "v.",
-          "chinese": "没有击中；错过"
+          "word": "bat",
+          "phonetic": "/ˈbæt/",
+          "partOfSpeech": "n.",
+          "chinese": "球棒"
+        },
+        {
+          "word": "ball",
+          "phonetic": "/ˈbɔːl/",
+          "partOfSpeech": "n.",
+          "chinese": "球"
+        },
+        {
+          "word": "pitch",
+          "phonetic": "/ˈpɪtʃ/",
+          "partOfSpeech": "n.",
+          "chinese": "投球"
+        },
+        {
+          "word": "score",
+          "phonetic": "/ˈskɔːr/",
+          "partOfSpeech": "n.",
+          "chinese": "得分"
+        }
+      ]
+    },
+    {
+      "category": "冲击结果",
+      "items": [
+        {
+          "word": "damage",
+          "phonetic": "/ˈdæmədʒ/",
+          "partOfSpeech": "n.",
+          "chinese": "损害"
+        },
+        {
+          "word": "injury",
+          "phonetic": "/ˈɪndʒɚi/",
+          "partOfSpeech": "n.",
+          "chinese": "伤害"
+        },
+        {
+          "word": "shock",
+          "phonetic": "/ˈʃɑk/",
+          "partOfSpeech": "n.",
+          "chinese": "冲击"
+        },
+        {
+          "word": "loss",
+          "phonetic": "/ˈlɔːs/",
+          "partOfSpeech": "n.",
+          "chinese": "损失"
         }
       ]
     }
@@ -369,81 +453,91 @@
       "chinese": "尽量用球拍中心击球。"
     },
     {
-      "scene": "工作或学习",
-      "english": "We hope to hit our weekly learning target.",
-      "chinese": "我们希望达到每周学习目标。"
-    },
-    {
-      "scene": "常见搭配",
-      "english": "The unexpected news hit him hard.",
-      "chinese": "这个意外消息对他打击很大。"
-    },
-    {
-      "scene": "真实语境",
-      "english": "We hit a problem during the final test.",
-      "chinese": "我们在最终测试中遇到了问题。"
-    },
-    {
-      "scene": "易错结构",
-      "english": "We should hit the road before traffic gets heavy.",
-      "chinese": "我们应该在交通拥堵前出发。"
-    },
-    {
-      "scene": "主动表达",
-      "english": "Hit record when you are ready to speak.",
-      "chinese": "准备好说话时按下录音键。"
-    },
-    {
       "scene": "日常交流",
-      "english": "Have you ever been hit by a car?",
-      "chinese": "你被车撞过吗?"
+      "english": "She hit the ball over the fence on her second swing.",
+      "chinese": "她第二次挥拍就把球打过了围栏。"
     },
     {
       "scene": "工作沟通",
-      "english": "I barely escaped being hit by the truck.",
-      "chinese": "我差点被卡车撞上。"
+      "english": "Only two arrows hit the center of the target.",
+      "chinese": "只有两支箭射中了靶心。"
     },
     {
       "scene": "学习表达",
-      "english": "He hit his head against a rock.",
-      "chinese": "他的头撞到了一块岩石。"
+      "english": "After thirty kilometers, the runner hit the wall and had to slow down.",
+      "chinese": "跑了三十公里后，选手体力到了极限，不得不减速。"
     },
     {
       "scene": "书面表达",
-      "english": "He hit the ball with his racket.",
-      "chinese": "他用他的球拍击球。"
+      "english": "He hit his head on the low doorway.",
+      "chinese": "他撞到了低矮的门框上。"
+    },
+    {
+      "scene": "日常交流",
+      "english": "Public confidence in the service hit an all-time low after the outage.",
+      "chinese": "服务中断后，公众信任度跌至历史最低点。"
+    },
+    {
+      "scene": "工作沟通",
+      "english": "The driver hit the brakes when a deer crossed the road.",
+      "chinese": "一只鹿穿过公路时，司机猛踩了刹车。"
+    },
+    {
+      "scene": "学习表达",
+      "english": "We packed the van and hit the road before dawn.",
+      "chinese": "我们装好面包车，在黎明前出发上路。"
+    },
+    {
+      "scene": "书面表达",
+      "english": "The discovery hit the headlines around the world.",
+      "chinese": "这项发现登上了世界各地的新闻头条。"
+    },
+    {
+      "scene": "日常交流",
+      "english": "The drought hit small farms particularly hard.",
+      "chinese": "干旱对小型农场造成了尤其沉重的打击。"
+    },
+    {
+      "scene": "工作沟通",
+      "english": "The minister hit back at claims that the funds had been wasted.",
+      "chinese": "部长反驳了资金遭浪费的说法。"
+    },
+    {
+      "scene": "学习表达",
+      "english": "During the train journey, she hit upon an idea for reducing waste.",
+      "chinese": "乘火车途中，她偶然想到了一个减少浪费的办法。"
     }
   ],
   "studyFocus": {
-    "coreMeaning": "先掌握“击打；击中”这个核心义，再对比另外 3 个常用义项，辨别不同语境。",
+    "coreMeaning": "先掌握“打；击；撞”这个核心义，再对比另外 2 个常用义项，辨别不同语境。",
     "keyCollocation": "把“hit the ball”连同介词、宾语和动词形式作为整个句块记忆。",
-    "commonMistake": "情态动词 can 后面直接接 hit 的原形，不加 to。",
+    "commonMistake": "a minute ago 是明确结束的过去时间，句子应使用一般过去时。",
     "mustUseExample": "Try to hit the ball with the center of the racket.（尽量用球拍中心击球。）"
   },
   "questions": [
     {
       "id": "hit-v-meaning-core",
       "type": "meaning_choice",
-      "prompt": "“hit”最核心的中文含义是？",
+      "prompt": "“hit”最常见的核心中文义是哪一项？",
       "options": [
         "看见",
-        "击打；击中",
+        "打；击；撞",
         "准备"
       ],
-      "answer": "击打；击中",
+      "answer": "打；击；撞",
       "stage": "T0",
       "ai": false
     },
     {
       "id": "hit-v-meaning-english",
       "type": "meaning_choice",
-      "prompt": "哪一项英文释义最符合词卡中的 “hit”？",
+      "prompt": "“hit”最常见的英文释义是哪一项？",
       "options": [
-        "to strike someone or something with force",
+        "to bring your hand or an object against someone or something with force",
         "to make ready for something",
         "to perceive with the eyes, understand, or meet someone"
       ],
-      "answer": "to strike someone or something with force",
+      "answer": "to bring your hand or an object against someone or something with force",
       "stage": "T0",
       "ai": false
     },
@@ -453,23 +547,23 @@
       "prompt": "核心结构辨析：哪一项既表示“击球”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "hit a target",
-        "hit someone hard",
-        "hit a problem",
-        "hit the ball"
+        "hit the wall",
+        "hit your head",
+        "hit a ball"
       ],
-      "answer": "hit the ball",
+      "answer": "hit a ball",
       "stage": "T1",
       "ai": false
     },
     {
       "id": "hit-v-synonym-choice",
       "type": "meaning_choice",
-      "prompt": "哪个词是词卡中列出的 “hit” 最直接近义词？",
+      "prompt": "在“击打”这个义项下，哪个词与“hit”意思最接近？",
       "options": [
-        "prepare",
-        "see",
+        "have",
+        "do",
         "strike",
-        "miss"
+        "be"
       ],
       "answer": "strike",
       "stage": "T2",
@@ -478,12 +572,12 @@
     {
       "id": "hit-v-antonym-choice",
       "type": "meaning_choice",
-      "prompt": "哪个词是词卡中列出的 “hit” 最直接反义词？",
+      "prompt": "在“打；击；撞”这个义项下，哪个词与“hit”意思相反？",
       "options": [
-        "see",
+        "do",
         "miss",
-        "strike",
-        "prepare"
+        "be",
+        "have"
       ],
       "answer": "miss",
       "stage": "T2",
@@ -492,21 +586,21 @@
     {
       "id": "hit-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “hit” 的相关近义词？",
+      "prompt": "结合拼写、发音和用法，哪一项需要与“hit”重点区分？",
       "options": [
-        "strike",
-        "miss",
-        "prepare",
-        "see"
+        "beat",
+        "be",
+        "have",
+        "do"
       ],
-      "answer": "strike",
+      "answer": "beat",
       "stage": "T3",
       "ai": false
     },
     {
       "id": "hit-v-recall-definition",
       "type": "recall",
-      "prompt": "根据英文释义写出目标词：to strike someone or something with force",
+      "prompt": "根据英文释义写出对应单词：to bring your hand or an object against someone or something with force",
       "answer": "hit",
       "stage": "T1",
       "ai": false
@@ -514,7 +608,7 @@
     {
       "id": "hit-v-recall-chinese",
       "type": "recall",
-      "prompt": "写出符合“击打；击中”（v.）的本课目标词。",
+      "prompt": "写出表示“打；击；撞”（v.）的英文单词。",
       "answer": "hit",
       "stage": "T1",
       "ai": false
@@ -530,12 +624,12 @@
     {
       "id": "hit-v-collocation-structure-meaning-v3",
       "type": "collocation",
-      "prompt": "句型应用：哪一项既表示“击中或达到目标”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "句型应用：哪一项既表示“击中目标”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "hit a problem",
+        "hit your head",
         "hit a target",
-        "hit the ball",
-        "hit someone hard"
+        "hit a ball",
+        "hit the wall"
       ],
       "answer": "hit a target",
       "stage": "T1",
@@ -544,13 +638,7 @@
     {
       "id": "hit-v-collocation-example-context-v3",
       "type": "collocation",
-      "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Try to hit the _____ with the center of the racket.（中文：尽量用球拍中心击球。）",
-      "options": [
-        "ball",
-        "interview",
-        "difference",
-        "reviewing"
-      ],
+      "prompt": "根据完整句意和中文提示补全原句：Try to hit the _____ with the center of the racket.（中文：尽量用球拍中心击球。）",
       "answer": "ball",
       "stage": "T2",
       "ai": false
@@ -558,35 +646,35 @@
     {
       "id": "hit-v-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“击球”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "用法辨析：哪一项既表示“跌至历史最低点”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "hit a ball",
         "hit a target",
-        "hit someone hard",
-        "hit a problem",
-        "hit the ball"
+        "hit the wall",
+        "hit an all-time low"
       ],
-      "answer": "hit the ball",
+      "answer": "hit an all-time low",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "hit-v-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“击中或达到目标”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "搭配辨析：哪一项既表示“猛踩刹车”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "hit someone hard",
-        "hit a problem",
         "hit a target",
-        "hit the ball"
+        "hit the wall",
+        "hit the brakes",
+        "hit a ball"
       ],
-      "answer": "hit a target",
+      "answer": "hit the brakes",
       "stage": "T3",
       "ai": false
     },
     {
       "id": "hit-v-example-cloze",
       "type": "collocation",
-      "prompt": "根据句意补全词卡核心例句：Try to _____ the ball with the center of the racket.（填写 hit 的正确形式）",
+      "prompt": "根据句意和中文提示补全另一个常用例句：She _____ the ball over the fence on her second swing.（填写 hit 的正确形式）（中文：她第二次挥拍就把球打过了围栏。）",
       "answer": "hit",
       "stage": "T3",
       "ai": false
@@ -594,7 +682,7 @@
     {
       "id": "hit-v-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “hit” 写一个自然、真实的英文句子，含义必须符合词卡核心义“击打；击中”。",
+      "prompt": "请用 “hit” 写一个自然、真实的英文句子，含义必须符合核心义“打；击；撞”。",
       "answer": "",
       "stage": "T2",
       "ai": true
@@ -602,7 +690,7 @@
     {
       "id": "hit-v-sentence-phrase",
       "type": "free_sentence",
-      "prompt": "请使用 “hit the ball” 结构写一个与自己有关的自然英文句子。",
+      "prompt": "请使用 “hit an all-time low” 结构写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -610,7 +698,7 @@
     {
       "id": "hit-v-dialogue",
       "type": "dialogue",
-      "prompt": "写一段 2–4 轮真实对话，自然使用 “hit” 和 “hit the ball” 结构，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “hit” 和 “hit the wall at low speed” 结构，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -668,9 +756,10 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-complete",
-  "templateVersion": "learning-template-2026.09.10.3",
-  "contentVersion": "2026.09.10.3",
-  "reviewed": false,
+  "detailLevel": "template-curated",
+  "templateVersion": "learning-template-2026.09.10.4",
+  "contentVersion": "2026.09.10.4",
+  "reviewed": true,
+  "curationSource": "manual-semantic-pack-2026.09.10.4",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

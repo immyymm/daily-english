@@ -34,9 +34,9 @@
     "主动词汇"
   ],
   "coreMemory": {
-    "chinese": "带领；领导；导致；引起；领先",
-    "english": "v. to guide or be in charge of a person, group, or activity；v. to cause a particular result；v. to be ahead of others in a race, competition, or situation",
-    "structure": "lead a team /liːd ə ˈtiːm/（带领团队）；lead to something /liːd ˈtuː ˈsʌmθɪŋ/（导致某事）；lead someone to do something /liːd ˈsʌˌmwʌn ˈtuː ˈduː ˈsʌmθɪŋ/（促使某人做某事）；lead the way /liːd ðə ˈweɪ/（带头；引路）",
+    "chinese": "带领；领导；领路；领先；导致；促使",
+    "english": "v. to guide, direct, or be in charge of people；v. to go first and show the way；v. to cause or result in something",
+    "structure": "lead a team /liːd ə ˈtiːm/（带领团队）；lead someone somewhere /liːd ˈsʌmˌwʌn ˈsʌmˌwɛr/（带某人去某处）；lead someone through something /liːd ˈsʌmˌwʌn ˈθruː ˈsʌmθɪŋ/（引导某人完成某事）；lead to something /liːd ˈtuː ˈsʌmθɪŋ/（导致某事）",
     "structures": [
       {
         "phrase": "lead a team",
@@ -44,40 +44,40 @@
         "chinese": "带领团队"
       },
       {
+        "phrase": "lead someone somewhere",
+        "phonetic": "/liːd ˈsʌmˌwʌn ˈsʌmˌwɛr/",
+        "chinese": "带某人去某处"
+      },
+      {
+        "phrase": "lead someone through something",
+        "phonetic": "/liːd ˈsʌmˌwʌn ˈθruː ˈsʌmθɪŋ/",
+        "chinese": "引导某人完成某事"
+      },
+      {
         "phrase": "lead to something",
         "phonetic": "/liːd ˈtuː ˈsʌmθɪŋ/",
         "chinese": "导致某事"
-      },
-      {
-        "phrase": "lead someone to do something",
-        "phonetic": "/liːd ˈsʌˌmwʌn ˈtuː ˈduː ˈsʌmθɪŋ/",
-        "chinese": "促使某人做某事"
-      },
-      {
-        "phrase": "lead the way",
-        "phonetic": "/liːd ðə ˈweɪ/",
-        "chinese": "带头；引路"
       }
     ],
-    "commonError": "❌ lead someone to does something → ✅ lead someone to do something；❌ lead with example → ✅ lead by example",
+    "commonError": "❌ lead a busy living → ✅ lead a busy life；❌ It leaded to a delay → ✅ It led to a delay",
     "commonErrors": [
       {
-        "wrong": "lead someone to does something",
-        "wrongPhonetic": "/liːd ˈsʌˌmwʌn ˈtuː ˈdʌz ˈsʌmθɪŋ/",
-        "right": "lead someone to do something",
-        "rightPhonetic": "/liːd ˈsʌˌmwʌn ˈtuː ˈduː ˈsʌmθɪŋ/",
-        "note": "在“lead someone to do something”中，这个 to 是不定式标记，后面必须接动词原形。do 只是语法占位符，真实表达要把它换成 finish、check 等符合语境的动词原形。"
+        "wrong": "lead a busy living",
+        "wrongPhonetic": "/liːd ə ˈbɪzi ˈlɪvɪŋ/",
+        "right": "lead a busy life",
+        "rightPhonetic": "/liːd ə ˈbɪzi ˈlaɪf/",
+        "note": "表示“过着……的生活”的固定搭配是 lead a ... life"
       },
       {
-        "wrong": "lead with example",
-        "wrongPhonetic": "/liːd ˈwɪð ɪˈɡzæmpəl/",
-        "right": "lead by example",
-        "rightPhonetic": "/liːd ˈbaɪ ɪˈɡzæmpəl/",
-        "note": "在“lead by example”所表达的这个具体含义中，要用介词 by；换成 with 会破坏这个固定结构或改变原意。"
+        "wrong": "It leaded to a delay",
+        "wrongPhonetic": "/ˈɪt ˈlɛdɪd ˈtuː ə dɪˈleɪ/",
+        "right": "It led to a delay",
+        "rightPhonetic": "/ˈɪt ˈlɛd ˈtuː ə dɪˈleɪ/",
+        "note": "lead 的普通过去式是 led，不是 leaded"
       }
     ],
-    "directSynonym": "guide /ˈɡaɪd/（引导；带领）；direct /dɚˈɛkt/（指示；指挥；命令）；head /ˈhɛd/（头；头脑；领袖）；conduct /ˈkɑndəkt/（为人；指挥；管理）",
-    "directAntonym": "follow /ˈfɑloʊ/（跟随；遵循）",
+    "directSynonym": "guide /ˈɡaɪd/（引导）；direct /dɚˈɛkt/（指挥；指导）；head /ˈhɛd/（领导）；command /kəˈmænd/（指挥；统率）；cause /ˈkɑz/（导致）",
+    "directAntonym": "follow /ˈfɑloʊ/（跟随）",
     "derivatives": "leader · leadership · leading",
     "example": "She leads a small design team.",
     "exampleChinese": "她带领一个小型设计团队。"
@@ -85,94 +85,124 @@
   "meanings": [
     {
       "partOfSpeech": "v.",
-      "english": "to guide or be in charge of a person, group, or activity",
+      "english": "to guide, direct, or be in charge of people",
       "chinese": "带领；领导",
-      "example": "She leads a small design team.",
-      "translation": "她带领一个小型设计团队。"
+      "example": "She leads the research team.",
+      "translation": "她领导研究团队。"
     },
     {
       "partOfSpeech": "v.",
-      "english": "to cause a particular result",
-      "chinese": "导致；引起",
-      "example": "Unclear questions can lead to unreliable results.",
-      "translation": "不清楚的题目会导致不可靠的结果。"
+      "english": "to go first and show the way",
+      "chinese": "领路；领先",
+      "example": "A guide led us through the cave.",
+      "translation": "一名向导带我们穿过洞穴。"
     },
     {
       "partOfSpeech": "v.",
-      "english": "to be ahead of others in a race, competition, or situation",
-      "chinese": "领先",
-      "example": "Our team leads by two points at halftime.",
-      "translation": "半场结束时我们队领先两分。"
+      "english": "to cause or result in something",
+      "chinese": "导致；促使",
+      "example": "Stress can lead to poor sleep.",
+      "translation": "压力可能导致睡眠不佳。"
     }
   ],
   "contextPhrases": [
     {
-      "category": "核心动作与结构",
+      "category": "引导与方向",
       "items": [
         {
-          "phrase": "lead a team",
-          "phonetic": "/liːd ə ˈtiːm/",
-          "chinese": "带领团队"
+          "phrase": "lead visitors through the museum",
+          "phonetic": "/liːd ˈvɪzɪtɚz ˈθruː ðə mjuˈziːəm/",
+          "chinese": "带领游客参观博物馆"
         },
         {
-          "phrase": "lead to something",
-          "phonetic": "/liːd ˈtuː ˈsʌmθɪŋ/",
-          "chinese": "导致某事"
+          "phrase": "lead the horse to water",
+          "phonetic": "/liːd ðə ˈhɔːrs ˈtuː ˈwɔːtɚ/",
+          "chinese": "把马牵到水边"
         },
         {
-          "phrase": "lead someone to do something",
-          "phonetic": "/liːd ˈsʌˌmwʌn ˈtuː ˈduː ˈsʌmθɪŋ/",
-          "chinese": "促使某人做某事"
+          "phrase": "lead the way upstairs",
+          "phonetic": "/liːd ðə ˈweɪ əpˈstɛrz/",
+          "chinese": "在前面带路上楼"
+        },
+        {
+          "phrase": "lead someone safely home",
+          "phonetic": "/liːd ˈsʌmˌwʌn ˈseɪfli ˈhoʊm/",
+          "chinese": "安全地带某人回家"
         }
       ]
     },
     {
-      "category": "日常与工作语境",
+      "category": "领导与管理",
       "items": [
         {
-          "phrase": "lead the way",
-          "phonetic": "/liːd ðə ˈweɪ/",
-          "chinese": "带头；引路"
+          "phrase": "lead a research team",
+          "phonetic": "/liːd ə ˈriːsɝːtʃ ˈtiːm/",
+          "chinese": "领导研究团队"
         },
         {
-          "phrase": "lead by example",
-          "phonetic": "/liːd ˈbaɪ ɪˈɡzæmpəl/",
-          "chinese": "以身作则"
+          "phrase": "lead junior staff by example",
+          "phonetic": "/liːd ˈdʒuːnjɚ ˈstæf ˈbaɪ ɪɡˈzæmpəl/",
+          "chinese": "以身作则带领初级员工"
         },
         {
-          "phrase": "lead someone through something",
-          "phonetic": "/liːd ˈsʌˌmwʌn ˈθruː ˈsʌmθɪŋ/",
-          "chinese": "带领某人逐步完成某事"
+          "phrase": "lead negotiations with suppliers",
+          "phonetic": "/liːd nəˌɡoʊʃiˈeɪʃənz ˈwɪð səˈplaɪɚz/",
+          "chinese": "主导与供应商的谈判"
+        },
+        {
+          "phrase": "lead the company through change",
+          "phonetic": "/liːd ðə ˈkʌmpəˌniː ˈθruː ˈtʃeɪndʒ/",
+          "chinese": "带领公司度过变革"
         }
       ]
     },
     {
-      "category": "高频扩展表达",
+      "category": "导致与处于首位",
       "items": [
         {
-          "phrase": "lead to a serious accident",
-          "phonetic": "/liːd ˈtuː ə ˈsɪriːəs ˈæksədənt/",
-          "chinese": "导致严重的事故"
+          "phrase": "lead to better outcomes",
+          "phonetic": "/liːd ˈtuː ˈbɛtɚ ˈaʊtˌkʌmz/",
+          "chinese": "导致更好结果"
         },
         {
-          "phrase": "lead to a car wreck",
-          "phonetic": "/liːd ˈtuː ə ˈkɑr ˈrɛk/",
-          "chinese": "导致车祸"
+          "phrase": "lead the market in sales",
+          "phonetic": "/liːd ðə ˈmɑrkət ɪn ˈseɪlz/",
+          "chinese": "在销量上领先市场"
         },
         {
-          "phrase": "lead a busy life",
-          "phonetic": "/liːd ə ˈbɪziː ˈlaɪf/",
-          "chinese": "有一个忙碌的生活"
+          "phrase": "lead by three points",
+          "phonetic": "/liːd ˈbaɪ ˈθriː ˈpɔɪnts/",
+          "chinese": "以三分领先"
+        },
+        {
+          "phrase": "lead a busy professional life",
+          "phonetic": "/liːd ə ˈbɪzi prəˈfɛʃənəl ˈlaɪf/",
+          "chinese": "过忙碌的职业生活"
         }
       ]
     },
     {
-      "category": "补充常用语境",
+      "category": "线索与表达顺序",
       "items": [
         {
-          "phrase": "lead a hard life",
-          "phonetic": "/liːd ə ˈhɑrd ˈlaɪf/",
-          "chinese": "过艰苦生活"
+          "phrase": "lead someone to a conclusion",
+          "phonetic": "/liːd ˈsʌmˌwʌn ˈtuː ə kənˈkluːʒən/",
+          "chinese": "使某人得出结论"
+        },
+        {
+          "phrase": "lead investigators to the suspect",
+          "phonetic": "/liːd ˌɪnˈvɛstəˌɡeɪtɚz ˈtuː ðə ˈsʌspɛkt/",
+          "chinese": "引导调查人员找到嫌疑人"
+        },
+        {
+          "phrase": "lead with the strongest point",
+          "phonetic": "/liːd ˈwɪð ðə ˈstrɔːŋɡəst ˈpɔɪnt/",
+          "chinese": "以最有力的论点开头"
+        },
+        {
+          "phrase": "lead a discussion with a question",
+          "phonetic": "/liːd ə dɪˈskʌʃən ˈwɪð ə ˈkwɛstʃən/",
+          "chinese": "用一个问题引导讨论"
         }
       ]
     }
@@ -182,71 +212,85 @@
       "phrase": "lead a team",
       "phonetic": "/liːd ə ˈtiːm/",
       "chinese": "带领团队",
-      "example": "She leads a small design team.",
-      "translation": "她带领一个小型设计团队。"
+      "example": "She leads a twelve-person research team.",
+      "translation": "她带领一支十二人的研究团队。"
+    },
+    {
+      "phrase": "lead someone somewhere",
+      "phonetic": "/liːd ˈsʌmˌwʌn ˈsʌmˌwɛr/",
+      "chinese": "带某人去某处",
+      "example": "A volunteer led us to the emergency exit.",
+      "translation": "一名志愿者带我们去了紧急出口。"
+    },
+    {
+      "phrase": "lead someone through something",
+      "phonetic": "/liːd ˈsʌmˌwʌn ˈθruː ˈsʌmθɪŋ/",
+      "chinese": "引导某人完成某事",
+      "example": "The nurse led me through each step of the procedure.",
+      "translation": "护士引导我完成了这项操作的每一步。"
     },
     {
       "phrase": "lead to something",
       "phonetic": "/liːd ˈtuː ˈsʌmθɪŋ/",
       "chinese": "导致某事",
-      "example": "Unclear questions can lead to unreliable results.",
-      "translation": "不清楚的题目会导致不可靠的结果。"
+      "example": "Poor drainage can lead to serious flooding.",
+      "translation": "排水不良可能导致严重洪水。"
     },
     {
       "phrase": "lead someone to do something",
-      "phonetic": "/liːd ˈsʌˌmwʌn ˈtuː ˈduː ˈsʌmθɪŋ/",
+      "phonetic": "/liːd ˈsʌmˌwʌn ˈtuː ˈduː ˈsʌmθɪŋ/",
       "chinese": "促使某人做某事",
-      "example": "The evidence led us to change the plan.",
-      "translation": "证据促使我们改变计划。"
+      "example": "The new evidence led investigators to reopen the case.",
+      "translation": "新证据促使调查人员重启案件。"
     },
     {
       "phrase": "lead the way",
       "phonetic": "/liːd ðə ˈweɪ/",
       "chinese": "带头；引路",
-      "example": "Good examples lead the way to natural expression.",
-      "translation": "好的例句为自然表达指明方向。"
+      "example": "Local schools are leading the way in waste reduction.",
+      "translation": "当地学校在减少废弃物方面走在前列。"
     },
     {
       "phrase": "lead by example",
-      "phonetic": "/liːd ˈbaɪ ɪˈɡzæmpəl/",
+      "phonetic": "/liːd ˈbaɪ ɪɡˈzæmpəl/",
       "chinese": "以身作则",
-      "example": "Effective teachers lead by example.",
-      "translation": "优秀的老师以身作则。"
-    },
-    {
-      "phrase": "lead someone through something",
-      "phonetic": "/liːd ˈsʌˌmwʌn ˈθruː ˈsʌmθɪŋ/",
-      "chinese": "带领某人逐步完成某事",
-      "example": "A local guide led us through the old town.",
-      "translation": "一名当地导游带领我们游览了老城区。"
-    },
-    {
-      "phrase": "lead to a serious accident",
-      "phonetic": "/liːd ˈtuː ə ˈsɪriːəs ˈæksədənt/",
-      "chinese": "导致严重的事故",
-      "example": "Carelessness can lead to a serious accident.",
-      "translation": "粗心大意可能导致严重的事故。"
-    },
-    {
-      "phrase": "lead to a car wreck",
-      "phonetic": "/liːd ˈtuː ə ˈkɑr ˈrɛk/",
-      "chinese": "导致车祸",
-      "example": "Driving on a slippery road can lead to a car wreck.",
-      "translation": "在光滑的路上开车会导致车祸。"
+      "example": "Good supervisors lead by example rather than by threats.",
+      "translation": "优秀的主管以身作则，而不是靠威胁。"
     },
     {
       "phrase": "lead a busy life",
-      "phonetic": "/liːd ə ˈbɪziː ˈlaɪf/",
-      "chinese": "有一个忙碌的生活",
-      "example": "I lead a busy life.",
-      "translation": "我有一个忙碌的生活。"
+      "phonetic": "/liːd ə ˈbɪzi ˈlaɪf/",
+      "chinese": "过忙碌的生活",
+      "example": "Despite leading a busy life, he calls his parents weekly.",
+      "translation": "尽管生活忙碌，他每周仍给父母打电话。"
     },
     {
-      "phrase": "lead a hard life",
-      "phonetic": "/liːd ə ˈhɑrd ˈlaɪf/",
-      "chinese": "过艰苦生活",
-      "example": "He led a hard life after that.",
-      "translation": "自那以后他便过起了艰难的生活。"
+      "phrase": "lead the market",
+      "phonetic": "/liːd ðə ˈmɑrkət/",
+      "chinese": "领先市场",
+      "example": "The company leads the market in battery safety.",
+      "translation": "该公司在电池安全领域领跑市场。"
+    },
+    {
+      "phrase": "take the lead",
+      "phonetic": "/ˈteɪk ðə liːd/",
+      "chinese": "取得领先；带头",
+      "example": "Mina took the lead in organizing the relief effort.",
+      "translation": "米娜带头组织了救援工作。"
+    },
+    {
+      "phrase": "in the lead",
+      "phonetic": "/ɪn ðə liːd/",
+      "chinese": "处于领先地位",
+      "example": "Our runner remained in the lead until the final lap.",
+      "translation": "我们的选手直到最后一圈仍处于领先。"
+    },
+    {
+      "phrase": "follow someone's lead",
+      "phonetic": "/ˈfɑloʊ ˈsʌmˌwʌnz liːd/",
+      "chinese": "效仿某人",
+      "example": "Other cities soon followed Seoul's lead.",
+      "translation": "其他城市很快效仿了首尔。"
     }
   ],
   "synonyms": [
@@ -254,29 +298,36 @@
       "word": "guide",
       "phonetic": "/ˈɡaɪd/",
       "partOfSpeech": "v.",
-      "chinese": "引导；带领",
-      "difference": "guide 表示“引导；带领”，与 lead 的“带领”义相近。两词只有在这一义项重合时才能互换；lead 的其他常用义不一定适用。"
+      "chinese": "引导",
+      "difference": "强调指路或提供方向；带路、领导团队和导致结果的搭配结构不同"
     },
     {
       "word": "direct",
       "phonetic": "/dɚˈɛkt/",
       "partOfSpeech": "v.",
-      "chinese": "指示；指挥；命令",
-      "difference": "direct 常表示“指示；指挥；命令”，与 lead 的“带领”义有重合。direct 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+      "chinese": "指挥；指导",
+      "difference": "强调控制行动或工作；带路、领导团队和导致结果的搭配结构不同"
     },
     {
       "word": "head",
       "phonetic": "/ˈhɛd/",
-      "partOfSpeech": "n.",
-      "chinese": "头；头脑；领袖",
-      "difference": "head 常表示“头；头脑；领袖”，与 lead 的“带领”义有重合。head 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+      "partOfSpeech": "v.",
+      "chinese": "领导",
+      "difference": "强调担任组织或团队负责人；带路、领导团队和导致结果的搭配结构不同"
     },
     {
-      "word": "conduct",
-      "phonetic": "/ˈkɑndəkt/",
+      "word": "command",
+      "phonetic": "/kəˈmænd/",
       "partOfSpeech": "v.",
-      "chinese": "为人；指挥；管理",
-      "difference": "conduct 常表示“为人；指挥；管理”，与 lead 的“带领”义有重合。conduct 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+      "chinese": "指挥；统率",
+      "difference": "强调对人员或部队拥有指挥权；带路、领导团队和导致结果的搭配结构不同"
+    },
+    {
+      "word": "cause",
+      "phonetic": "/ˈkɑz/",
+      "partOfSpeech": "v.",
+      "chinese": "导致",
+      "difference": "只对应 lead to 的致使义；带路、领导团队和导致结果的搭配结构不同"
     }
   ],
   "antonyms": [
@@ -284,8 +335,8 @@
       "word": "follow",
       "phonetic": "/ˈfɑloʊ/",
       "partOfSpeech": "v.",
-      "chinese": "跟随；遵循",
-      "usage": "follow 表示“跟随；遵循”，与 lead 的“带领”义形成对比。这种反义关系只适用于上述明确义项。"
+      "chinese": "跟随",
+      "usage": "只在行进顺序或角色上与 lead 相对"
     }
   ],
   "derivatives": [
@@ -293,127 +344,118 @@
       "word": "leader",
       "phonetic": "/ˈliːdɚ/",
       "partOfSpeech": "n.",
-      "chinese": "领导者；带头人",
-      "note": "指带领群体的人。"
+      "chinese": "领导者；领先者",
+      "note": "指带领团体或处于领先地位的人或组织"
     },
     {
       "word": "leadership",
       "phonetic": "/ˈliːdɚˌʃɪp/",
       "partOfSpeech": "n.",
-      "chinese": "领导力；领导层",
-      "note": "可指能力或管理团队。"
+      "chinese": "领导；领导力；领导层",
+      "note": "可指领导行为、领导能力，也可集合指组织的领导层"
     },
     {
       "word": "leading",
       "phonetic": "/ˈliːdɪŋ/",
       "partOfSpeech": "adj.",
       "chinese": "领先的；主要的",
-      "note": "常修饰 company、expert、role。"
+      "note": "常见于 leading expert/company/cause"
     }
   ],
-  "confusables": [],
+  "confusables": [
+    {
+      "word": "led",
+      "phonetic": "/ˈlɛd/",
+      "partOfSpeech": "v.",
+      "chinese": "lead 的过去式和过去分词",
+      "difference": "动词 lead /liːd/ 的过去式是 led /lɛd/；不要写成 leaded（特定材料义除外）"
+    }
+  ],
   "relatedVocabulary": [
     {
-      "category": "同一语义场的高频词",
+      "category": "团队与角色",
       "items": [
         {
-          "word": "guide",
-          "phonetic": "/ˈɡaɪd/",
-          "partOfSpeech": "v. / n.",
-          "chinese": "引导；指南"
-        },
-        {
-          "word": "leader",
-          "phonetic": "/ˈliːdɚ/",
+          "word": "manager",
+          "phonetic": "/ˈmænədʒɚ/",
           "partOfSpeech": "n.",
-          "chinese": "领导者"
+          "chinese": "管理者"
         },
         {
-          "word": "follow",
-          "phonetic": "/ˈfɑloʊ/",
-          "partOfSpeech": "v.",
-          "chinese": "跟随"
+          "word": "captain",
+          "phonetic": "/ˈkæptən/",
+          "partOfSpeech": "n.",
+          "chinese": "队长"
+        },
+        {
+          "word": "director",
+          "phonetic": "/dɚˈɛktɚ/",
+          "partOfSpeech": "n.",
+          "chinese": "主管；导演"
+        },
+        {
+          "word": "member",
+          "phonetic": "/ˈmɛmbɚ/",
+          "partOfSpeech": "n.",
+          "chinese": "成员"
         }
       ]
     },
     {
-      "category": "近义表达分类",
+      "category": "方向与路线",
       "items": [
         {
-          "word": "guide",
-          "phonetic": "/ˈɡaɪd/",
-          "partOfSpeech": "v.",
-          "chinese": "引导；带领"
-        },
-        {
-          "word": "direct",
-          "phonetic": "/dɚˈɛkt/",
-          "partOfSpeech": "v.",
-          "chinese": "指示；指挥；命令"
-        },
-        {
-          "word": "head",
-          "phonetic": "/ˈhɛd/",
+          "word": "mentor",
+          "phonetic": "/ˈmɛnˌtɔːr/",
           "partOfSpeech": "n.",
-          "chinese": "头；头脑；领袖"
+          "chinese": "导师；指导者"
         },
         {
-          "word": "conduct",
-          "phonetic": "/ˈkɑndəkt/",
-          "partOfSpeech": "v.",
-          "chinese": "为人；指挥；管理"
+          "word": "path",
+          "phonetic": "/ˈpæθ/",
+          "partOfSpeech": "n.",
+          "chinese": "路径"
+        },
+        {
+          "word": "destination",
+          "phonetic": "/ˌdɛstəˈneɪʃən/",
+          "partOfSpeech": "n.",
+          "chinese": "目的地"
+        },
+        {
+          "word": "route",
+          "phonetic": "/ˈruːt/",
+          "partOfSpeech": "n.",
+          "chinese": "路线"
         }
       ]
     },
     {
-      "category": "对比与易混表达分类",
+      "category": "原因与结果",
       "items": [
         {
-          "word": "follow",
-          "phonetic": "/ˈfɑloʊ/",
-          "partOfSpeech": "v.",
-          "chinese": "跟随；遵循"
-        },
-        {
-          "word": "leader",
-          "phonetic": "/ˈliːdɚ/",
+          "word": "factor",
+          "phonetic": "/ˈfæktɚ/",
           "partOfSpeech": "n.",
-          "chinese": "领导者；带头人"
+          "chinese": "因素"
         },
         {
-          "word": "leadership",
-          "phonetic": "/ˈliːdɚˌʃɪp/",
+          "word": "effect",
+          "phonetic": "/ɪˈfɛkt/",
           "partOfSpeech": "n.",
-          "chinese": "领导力；领导层"
+          "chinese": "结果；影响"
         },
         {
-          "word": "leading",
-          "phonetic": "/ˈliːdɪŋ/",
-          "partOfSpeech": "adj.",
-          "chinese": "领先的；主要的"
-        }
-      ]
-    },
-    {
-      "category": "常用词族分类",
-      "items": [
-        {
-          "word": "leader",
-          "phonetic": "/ˈliːdɚ/",
+          "word": "outcome",
+          "phonetic": "/ˈaʊtˌkʌm/",
           "partOfSpeech": "n.",
-          "chinese": "领导者；带头人"
+          "chinese": "结果"
         },
         {
-          "word": "leadership",
-          "phonetic": "/ˈliːdɚˌʃɪp/",
+          "word": "consequence",
+          "phonetic": "/ˈkɑnsəkwəns/",
           "partOfSpeech": "n.",
-          "chinese": "领导力；领导层"
-        },
-        {
-          "word": "leading",
-          "phonetic": "/ˈliːdɪŋ/",
-          "partOfSpeech": "adj.",
-          "chinese": "领先的；主要的"
+          "chinese": "后果"
         }
       ]
     }
@@ -425,62 +467,72 @@
       "chinese": "她带领一个小型设计团队。"
     },
     {
-      "scene": "工作或学习",
-      "english": "Unclear questions can lead to unreliable results.",
-      "chinese": "不清楚的题目会导致不可靠的结果。"
-    },
-    {
-      "scene": "常见搭配",
-      "english": "The evidence led us to change the plan.",
-      "chinese": "证据促使我们改变计划。"
-    },
-    {
-      "scene": "真实语境",
-      "english": "Good examples lead the way to natural expression.",
-      "chinese": "好的例句为自然表达指明方向。"
-    },
-    {
-      "scene": "易错结构",
-      "english": "Effective teachers lead by example.",
-      "chinese": "优秀的老师以身作则。"
-    },
-    {
-      "scene": "主动表达",
-      "english": "A local guide led us through the old town.",
-      "chinese": "一名当地导游带领我们游览了老城区。"
-    },
-    {
       "scene": "日常交流",
-      "english": "Carelessness can lead to a serious accident.",
-      "chinese": "粗心大意可能导致严重的事故。"
+      "english": "She leads a twelve-person research team.",
+      "chinese": "她带领一支十二人的研究团队。"
     },
     {
       "scene": "工作沟通",
-      "english": "Driving on a slippery road can lead to a car wreck.",
-      "chinese": "在光滑的路上开车会导致车祸。"
+      "english": "A volunteer led us to the emergency exit.",
+      "chinese": "一名志愿者带我们去了紧急出口。"
     },
     {
       "scene": "学习表达",
-      "english": "I lead a busy life.",
-      "chinese": "我有一个忙碌的生活。"
+      "english": "The nurse led me through each step of the procedure.",
+      "chinese": "护士引导我完成了这项操作的每一步。"
     },
     {
       "scene": "书面表达",
-      "english": "He led a hard life after that.",
-      "chinese": "自那以后他便过起了艰难的生活。"
+      "english": "Poor drainage can lead to serious flooding.",
+      "chinese": "排水不良可能导致严重洪水。"
+    },
+    {
+      "scene": "日常交流",
+      "english": "The new evidence led investigators to reopen the case.",
+      "chinese": "新证据促使调查人员重启案件。"
+    },
+    {
+      "scene": "工作沟通",
+      "english": "Local schools are leading the way in waste reduction.",
+      "chinese": "当地学校在减少废弃物方面走在前列。"
+    },
+    {
+      "scene": "学习表达",
+      "english": "Good supervisors lead by example rather than by threats.",
+      "chinese": "优秀的主管以身作则，而不是靠威胁。"
+    },
+    {
+      "scene": "书面表达",
+      "english": "Despite leading a busy life, he calls his parents weekly.",
+      "chinese": "尽管生活忙碌，他每周仍给父母打电话。"
+    },
+    {
+      "scene": "日常交流",
+      "english": "The company leads the market in battery safety.",
+      "chinese": "该公司在电池安全领域领跑市场。"
+    },
+    {
+      "scene": "工作沟通",
+      "english": "Mina took the lead in organizing the relief effort.",
+      "chinese": "米娜带头组织了救援工作。"
+    },
+    {
+      "scene": "学习表达",
+      "english": "Our runner remained in the lead until the final lap.",
+      "chinese": "我们的选手直到最后一圈仍处于领先。"
     }
   ],
   "studyFocus": {
     "coreMeaning": "先掌握“带领；领导”这个核心义，再对比另外 2 个常用义项，辨别不同语境。",
     "keyCollocation": "把“lead a team”连同介词、宾语和动词形式作为整个句块记忆。",
-    "commonMistake": "在“lead someone to do something”中，这个 to 是不定式标记，后面必须接动词原形。do 只是语法占位符，真实表达要把它换成 finish、check 等符合语境的动词原形。",
+    "commonMistake": "表示“过着……的生活”的固定搭配是 lead a ... life",
     "mustUseExample": "She leads a small design team.（她带领一个小型设计团队。）"
   },
   "questions": [
     {
       "id": "lead-v-meaning-core",
       "type": "meaning_choice",
-      "prompt": "“lead”最核心的中文含义是？",
+      "prompt": "“lead”最常见的核心中文义是哪一项？",
       "options": [
         "返回",
         "带领；领导",
@@ -493,13 +545,13 @@
     {
       "id": "lead-v-meaning-english",
       "type": "meaning_choice",
-      "prompt": "哪一项英文释义最符合词卡中的 “lead”？",
+      "prompt": "“lead”最常见的英文释义是哪一项？",
       "options": [
-        "to guide or be in charge of a person, group, or activity",
+        "to guide, direct, or be in charge of people",
         "to become visible, be present, or seem to have a quality",
         "to go back, give something back, or come back to a state"
       ],
-      "answer": "to guide or be in charge of a person, group, or activity",
+      "answer": "to guide, direct, or be in charge of people",
       "stage": "T0",
       "ai": false
     },
@@ -508,10 +560,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“带领团队”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "lead someone to do something",
-        "lead the way",
+        "lead someone through something",
+        "lead to something",
         "lead a team",
-        "lead to something"
+        "lead someone somewhere"
       ],
       "answer": "lead a team",
       "stage": "T1",
@@ -520,12 +572,12 @@
     {
       "id": "lead-v-synonym-choice",
       "type": "meaning_choice",
-      "prompt": "哪个词是词卡中列出的 “lead” 最直接近义词？",
+      "prompt": "在“引导”这个义项下，哪个词与“lead”意思最接近？",
       "options": [
-        "return",
+        "do",
         "guide",
-        "follow",
-        "appear"
+        "be",
+        "have"
       ],
       "answer": "guide",
       "stage": "T2",
@@ -534,12 +586,12 @@
     {
       "id": "lead-v-antonym-choice",
       "type": "meaning_choice",
-      "prompt": "哪个词是词卡中列出的 “lead” 最直接反义词？",
+      "prompt": "在“带领；领导”这个义项下，哪个词与“lead”意思相反？",
       "options": [
         "follow",
-        "guide",
-        "appear",
-        "return"
+        "be",
+        "have",
+        "do"
       ],
       "answer": "follow",
       "stage": "T2",
@@ -548,21 +600,21 @@
     {
       "id": "lead-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “lead” 的派生词？",
+      "prompt": "结合拼写、发音和用法，哪一项需要与“lead”重点区分？",
       "options": [
-        "guide",
-        "follow",
-        "appear",
-        "leader"
+        "be",
+        "have",
+        "do",
+        "led"
       ],
-      "answer": "leader",
+      "answer": "led",
       "stage": "T3",
       "ai": false
     },
     {
       "id": "lead-v-recall-definition",
       "type": "recall",
-      "prompt": "根据英文释义写出目标词：to guide or be in charge of a person, group, or activity",
+      "prompt": "根据英文释义写出对应单词：to guide, direct, or be in charge of people",
       "answer": "lead",
       "stage": "T1",
       "ai": false
@@ -570,7 +622,7 @@
     {
       "id": "lead-v-recall-chinese",
       "type": "recall",
-      "prompt": "写出符合“带领；领导”（v.）的本课目标词。",
+      "prompt": "写出表示“带领；领导”（v.）的英文单词。",
       "answer": "lead",
       "stage": "T1",
       "ai": false
@@ -586,27 +638,21 @@
     {
       "id": "lead-v-collocation-structure-meaning-v3",
       "type": "collocation",
-      "prompt": "句型应用：哪一项既表示“导致某事”，又符合这个形式线索：完整搭配中使用介词 to？",
+      "prompt": "句型应用：哪一项既表示“带某人去某处”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "lead to something",
+        "lead someone somewhere",
         "lead a team",
-        "lead someone to do something",
-        "lead the way"
+        "lead someone through something",
+        "lead to something"
       ],
-      "answer": "lead to something",
+      "answer": "lead someone somewhere",
       "stage": "T1",
       "ai": false
     },
     {
       "id": "lead-v-collocation-example-context-v3",
       "type": "collocation",
-      "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：She leads a _____ design team.（中文：她带领一个小型设计团队。）",
-      "options": [
-        "screen",
-        "home",
-        "situation",
-        "small"
-      ],
+      "prompt": "根据完整句意和中文提示补全原句：She leads a _____ design team.（中文：她带领一个小型设计团队。）",
       "answer": "small",
       "stage": "T2",
       "ai": false
@@ -614,35 +660,35 @@
     {
       "id": "lead-v-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“带领团队”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "搭配辨析：哪一项既表示“促使某人做某事”，又符合这个形式线索：完整结构中使用 to + 动词原形；do 只是语法占位符，要换成符合语境的具体动词原形？",
       "options": [
+        "lead someone somewhere",
+        "lead someone through something",
         "lead someone to do something",
-        "lead the way",
-        "lead a team",
-        "lead to something"
+        "lead a team"
       ],
-      "answer": "lead a team",
+      "answer": "lead someone to do something",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "lead-v-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“导致某事”，又符合这个形式线索：完整搭配中使用介词 to？",
+      "prompt": "用法辨析：哪一项既表示“带头；引路”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "lead someone through something",
         "lead the way",
-        "lead to something",
         "lead a team",
-        "lead someone to do something"
+        "lead someone somewhere"
       ],
-      "answer": "lead to something",
+      "answer": "lead the way",
       "stage": "T3",
       "ai": false
     },
     {
       "id": "lead-v-example-cloze",
       "type": "collocation",
-      "prompt": "根据句意补全词卡核心例句：She _____ a small design team.（填写 lead 的正确形式）",
+      "prompt": "根据句意和中文提示补全另一个常用例句：She _____ a twelve-person research team.（填写 lead 的正确形式）（中文：她带领一支十二人的研究团队。）",
       "answer": "leads",
       "stage": "T3",
       "ai": false
@@ -650,7 +696,7 @@
     {
       "id": "lead-v-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “lead” 写一个自然、真实的英文句子，含义必须符合词卡核心义“带领；领导”。",
+      "prompt": "请用 “lead” 写一个自然、真实的英文句子，含义必须符合核心义“带领；领导”。",
       "answer": "",
       "stage": "T2",
       "ai": true
@@ -658,7 +704,7 @@
     {
       "id": "lead-v-sentence-phrase",
       "type": "free_sentence",
-      "prompt": "请使用 “lead a team” 结构写一个与自己有关的自然英文句子。",
+      "prompt": "请使用 “lead someone to do something” 结构写一个与自己有关的自然英文句子；do 代表任意合适的动词原形，不要求写出单词 do；someone 要替换成实际的人或代词；something 要替换成实际的事物或内容。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -666,7 +712,7 @@
     {
       "id": "lead-v-dialogue",
       "type": "dialogue",
-      "prompt": "写一段 2–4 轮真实对话，自然使用 “lead” 和 “lead a team” 结构，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “lead” 和 “lead visitors through the museum” 结构，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -724,9 +770,10 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-complete",
-  "templateVersion": "learning-template-2026.09.10.3",
-  "contentVersion": "2026.09.10.3",
-  "reviewed": false,
+  "detailLevel": "template-curated",
+  "templateVersion": "learning-template-2026.09.10.4",
+  "contentVersion": "2026.09.10.4",
+  "reviewed": true,
+  "curationSource": "manual-semantic-pack-2026.09.10.4",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

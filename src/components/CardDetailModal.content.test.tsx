@@ -1,10 +1,13 @@
 import { cleanup, fireEvent, render, screen, within } from '@testing-library/react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
+import avoidCardJson from '../../content/cards/avoid-v.json';
+import encourageCardJson from '../../content/cards/encourage-v.json';
 import provideCardJson from '../../content/cards/provide-v.json';
 import type { WordCard } from '../types';
 import { CardDetailModal } from './CardDetailModal';
 
 const provideCard = provideCardJson as unknown as WordCard;
+const screenshotRegressionCards = [avoidCardJson, encourageCardJson] as unknown as WordCard[];
 
 afterEach(cleanup);
 
@@ -56,10 +59,11 @@ describe('CardDetailModal template content', () => {
       .map((element) => element.className);
     expect(meaningListOrder).toEqual(['memory-meaning-item core', ...provideCard.meanings.slice(1).map(() => 'memory-meaning-item')]);
     expect(meaningItems[0]).toHaveTextContent('核心义');
-    expect(meaningItems[0]).toHaveTextContent('提供；供给');
-    expect(meaningItems[0]).toHaveTextContent('to give someone something that they need');
-    expect(meaningItems[1]).toHaveTextContent('提供；使可以使用');
-    expect(meaningItems[2]).toHaveTextContent('供养；为……提供生活所需');
+    provideCard.meanings.forEach((meaning, index) => {
+      expect(meaningItems[index]).toHaveTextContent(meaning.partOfSpeech);
+      expect(meaningItems[index]).toHaveTextContent(meaning.chinese);
+      expect(meaningItems[index]).toHaveTextContent(meaning.english);
+    });
 
     const pronunciation = dialog.querySelector('.memory-pronunciation-row .memory-pronunciation');
     expect(pronunciation).toHaveTextContent('pro·vide');
@@ -123,5 +127,39 @@ describe('CardDetailModal template content', () => {
     expect(phraseToggle).toBeDefined();
     fireEvent.click(phraseToggle!);
     expect(within(dialog).getAllByText('给出明确答复。')).toHaveLength(1);
+  });
+
+  it.each(screenshotRegressionCards)('keeps the expanded detail floor visible for $word', (card) => {
+    expect(card.meanings.length).toBeGreaterThanOrEqual(2);
+    expect(card.fixedPhrases.length).toBeGreaterThanOrEqual(12);
+    expect(card.contextPhrases).toHaveLength(4);
+    expect(card.contextPhrases.flatMap((group) => group.items)).toHaveLength(16);
+    expect(card.derivatives.length).toBeGreaterThanOrEqual(4);
+    expect(card.synonyms.length).toBeGreaterThanOrEqual(5);
+    expect(card.examples.length).toBeGreaterThanOrEqual(12);
+    expect(card.questions.length).toBeGreaterThanOrEqual(15);
+
+    render(
+      <CardDetailModal
+        open
+        card={card}
+        onClose={vi.fn()}
+        onLearn={vi.fn().mockResolvedValue(undefined)}
+      />,
+    );
+
+    const dialog = screen.getByRole('dialog', { name: '单词词卡' });
+    const sectionCounts = new Map(
+      Array.from(dialog.querySelectorAll('.learning-section-toggle')).map((button) => {
+        const name = button.querySelector('.section-name')?.firstChild?.textContent ?? '';
+        const count = button.querySelector('.section-name small')?.textContent ?? '';
+        return [name, count];
+      }),
+    );
+    expect(sectionCounts.get('固定搭配和短语')).toBe(`${card.fixedPhrases.length} 项内容`);
+    expect(sectionCounts.get('常用语境词组')).toBe('16 项内容');
+    expect(sectionCounts.get('派生词')).toBe(`${card.derivatives.length} 项内容`);
+    expect(sectionCounts.get('近义词')).toBe(`${card.synonyms.length} 项内容`);
+    expect(sectionCounts.get('同类词汇分类')).toBe('12 项内容');
   });
 });

@@ -1,5 +1,5 @@
 {
-  "lockVersion": "2026.09.10.3",
+  "lockVersion": "2026.09.10.4",
   "immutable": true,
   "sourceReferences": [
     {
@@ -18,8 +18,8 @@
     }
   ],
   "appliedSpecification": {
-    "path": "content/templates/learning-template-2026.09.10.3.md",
-    "sha256": "72328A9D38BF5F86069DFA0A34EED2B44AE53A754820AA60ECCFA163510564B9"
+    "path": "content/templates/learning-template-2026.09.10.4.md",
+    "sha256": "B8321515077C1942009C865975F24D2E7CB067A827EF30D3E4C84A82D1CCA189"
   },
   "referenceCard": {
     "word": "work",
@@ -39,25 +39,20 @@
     }
   },
   "curatedCardMinimums": {
-    "contextCategories": 4,
     "contextItems": 16,
-    "fixedPhrases": 10,
-    "synonyms": 4,
-    "antonyms": 3,
-    "derivatives": 3,
-    "confusables": 2,
-    "relatedCategories": 3,
+    "fixedPhrases": 12,
+    "synonyms": 5,
     "relatedItems": 12,
-    "highFrequencyExamples": 10
+    "highFrequencyExamples": 12
   },
   "publishedCardMinimums": {
     "contextCategories": 4,
-    "contextItems": 10,
-    "fixedPhrases": 10,
-    "synonyms": 4,
+    "contextItems": 16,
+    "fixedPhrases": 12,
+    "synonyms": 5,
     "relatedCategories": 3,
-    "relatedItems": 8,
-    "highFrequencyExamples": 10
+    "relatedItems": 12,
+    "highFrequencyExamples": 12
   },
   "learnerFacingSectionOrder": [
     "核心记忆",
@@ -72,6 +67,9 @@
   "qualityContract": {
     "coreStructures": 3,
     "commonErrorPairs": 2,
+    "allPublishedCardsReviewed": true,
+    "curatedContextCategories": 4,
+    "curatedRelatedCategories": 3,
     "contextChineseMustBePhraseGloss": true,
     "contextChineseMaxCharacters": 14,
     "fixedPhraseRequiresBilingualExample": true,
@@ -80,7 +78,17 @@
     "derivativePartOfSpeechOrder": ["v.", "n.", "adj.", "adv."],
     "forbidMetaOrProductCopy": true,
     "forbidMechanicalFiller": true,
-    "forbidSentenceFragmentsAsPhrases": true
+    "forbidSentenceFragmentsAsPhrases": true,
+    "forbidCrossSectionDuplicates": true,
+    "forbidFakeAdaptiveSectionPadding": true,
+    "forbidQuestionMetaLanguage": true,
+    "forbidPseudoIpa": true,
+    "allCardsRequireManualSemanticPack": true,
+    "forbidAutomaticContextPadding": true,
+    "forbidWordNetRelatedFallback": true,
+    "requireWordSpecificCommonErrors": true,
+    "requireManualRelationNotes": true,
+    "forbidGenericFixedExampleCarriers": true
   },
   "adaptiveSections": {
     "meaningRows": "只列有独立双语释义与例句证据的常用义项，不拆分同义改写凑数。",

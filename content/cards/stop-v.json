@@ -34,9 +34,9 @@
     "主动词汇"
   ],
   "coreMemory": {
-    "chinese": "停止；阻止",
-    "english": "v. to end an action；v. to prevent something from happening",
-    "structure": "stop doing something /ˈstɑp ˈduːɪŋ ˈsʌmθɪŋ/（停止做某事）；stop to do something /ˈstɑp ˈtuː ˈduː ˈsʌmθɪŋ/（停下来去做另一件事）；stop someone from doing something /ˈstɑp ˈsʌˌmwʌn ˈfrʌm ˈduːɪŋ ˈsʌmθɪŋ/（阻止某人做某事）；come to a stop /ˈkʌm ˈtuː ə ˈstɑp/（停下来）",
+    "chinese": "停止；阻止；制止；停留；停靠",
+    "english": "v. to cease doing something or cease happening；v. to prevent someone or something from doing or continuing；v. to pause at or visit a place",
+    "structure": "stop doing something /ˈstɑp ˈduːɪŋ ˈsʌmθɪŋ/（停止做某事）；stop to do something /ˈstɑp ˈtuː ˈduː ˈsʌmθɪŋ/（停下手中的事去做另一件事）；stop someone from doing /ˈstɑp ˈsʌmˌwʌn ˈfrʌm ˈduːɪŋ/（阻止某人做某事）；stop at a place /ˈstɑp ˈæt ə ˈpleɪs/（在某地停靠）",
     "structures": [
       {
         "phrase": "stop doing something",
@@ -46,126 +46,163 @@
       {
         "phrase": "stop to do something",
         "phonetic": "/ˈstɑp ˈtuː ˈduː ˈsʌmθɪŋ/",
-        "chinese": "停下来去做另一件事"
+        "chinese": "停下手中的事去做另一件事"
       },
       {
-        "phrase": "stop someone from doing something",
-        "phonetic": "/ˈstɑp ˈsʌˌmwʌn ˈfrʌm ˈduːɪŋ ˈsʌmθɪŋ/",
+        "phrase": "stop someone from doing",
+        "phonetic": "/ˈstɑp ˈsʌmˌwʌn ˈfrʌm ˈduːɪŋ/",
         "chinese": "阻止某人做某事"
       },
       {
-        "phrase": "come to a stop",
-        "phonetic": "/ˈkʌm ˈtuː ə ˈstɑp/",
-        "chinese": "停下来"
+        "phrase": "stop at a place",
+        "phonetic": "/ˈstɑp ˈæt ə ˈpleɪs/",
+        "chinese": "在某地停靠"
       }
     ],
-    "commonError": "❌ stop to doing something → ✅ stop doing something；❌ stop to does something → ✅ stop to do something",
+    "commonError": "❌ stop to smoke → ✅ stop smoking；❌ stop me to enter → ✅ stop me from entering",
     "commonErrors": [
       {
-        "wrong": "stop to doing something",
-        "wrongPhonetic": "/ˈstɑp ˈtuː ˈduːɪŋ ˈsʌmθɪŋ/",
-        "right": "stop doing something",
-        "rightPhonetic": "/ˈstɑp ˈduːɪŋ ˈsʌmθɪŋ/",
-        "note": "“stop doing something”在本义下要求动词 -ing 形式；doing 是语法占位符，应换成具体动词的 -ing 形式，前面不要额外加 to。"
+        "wrong": "stop to smoke",
+        "wrongPhonetic": "/ˈstɑp ˈtuː ˈsmoʊk/",
+        "right": "stop smoking",
+        "rightPhonetic": "/ˈstɑp ˈsmoʊkɪŋ/",
+        "note": "stop doing 表示“停止正在做的事”；stop to do 表示“停下别的事去做……”"
       },
       {
-        "wrong": "stop to does something",
-        "wrongPhonetic": "/ˈstɑp ˈtuː ˈdʌz ˈsʌmθɪŋ/",
-        "right": "stop to do something",
-        "rightPhonetic": "/ˈstɑp ˈtuː ˈduː ˈsʌmθɪŋ/",
-        "note": "在“stop to do something”中，这个 to 是不定式标记，后面必须接动词原形。do 只是语法占位符，真实表达要把它换成 finish、check 等符合语境的动词原形。"
+        "wrong": "stop me to enter",
+        "wrongPhonetic": "/ˈstɑp ˈmiː ˈtuː ˈɛntɚ/",
+        "right": "stop me from entering",
+        "rightPhonetic": "/ˈstɑp ˈmiː ˈfrʌm ˈɛntɚɪŋ/",
+        "note": "“阻止某人做某事”用 stop someone from doing，不用 stop someone to do"
       }
     ],
-    "directSynonym": "cease /ˈsiːs/（停止；终止）；halt /ˈhɔːlt/（使停止；使立定）；end /ˈɛnd/（结束；终结；终止）；quit /ˈkwɪt/（离开；辞职；停止）",
-    "directAntonym": "continue /kəˈntɪnjuː/（继续）",
-    "derivatives": "stoppage",
+    "directSynonym": "cease /ˈsiːs/（停止）；halt /ˈhɔːlt/（使停下；停下）；discontinue /dɪskənˈtɪnju/（停止提供或进行）；prevent /prɪˈvɛnt/（阻止）；end /ˈɛnd/（结束）",
+    "directAntonym": "continue /kənˈtɪnju/（继续）；start /ˈstɑrt/（开始）",
+    "derivatives": "stoppage · stopper · unstoppable",
     "example": "Stop translating every word before you understand the sentence.",
     "exampleChinese": "不要在理解句子前逐字翻译。"
   },
   "meanings": [
     {
       "partOfSpeech": "v.",
-      "english": "to end an action",
+      "english": "to cease doing something or cease happening",
       "chinese": "停止",
-      "example": "Stop translating every word before you understand the sentence.",
-      "translation": "不要在理解句子前逐字翻译。"
+      "example": "Weather reports say the rain will stop before noon.",
+      "translation": "天气预报说这场雨会在中午前停。"
     },
     {
       "partOfSpeech": "v.",
-      "english": "to prevent something from happening",
-      "chinese": "阻止",
-      "example": "Heavy rain did not stop us from visiting the museum.",
-      "translation": "大雨没有阻止我们参观博物馆。"
+      "english": "to prevent someone or something from doing or continuing",
+      "chinese": "阻止；制止",
+      "example": "A barrier stopped cars from entering.",
+      "translation": "一道障碍阻止车辆进入。"
+    },
+    {
+      "partOfSpeech": "v.",
+      "english": "to pause at or visit a place",
+      "chinese": "停留；停靠",
+      "example": "The train stops at every station.",
+      "translation": "这列火车每站都停。"
     }
   ],
   "contextPhrases": [
     {
-      "category": "核心动作与结构",
+      "category": "结束动作",
       "items": [
         {
-          "phrase": "stop doing something",
-          "phonetic": "/ˈstɑp ˈduːɪŋ ˈsʌmθɪŋ/",
-          "chinese": "停止做某事"
+          "phrase": "stop talking immediately",
+          "phonetic": "/ˈstɑp ˈtɔːkɪŋ ˌɪˈmiːˌdiːətli/",
+          "chinese": "立即停止说话"
         },
         {
-          "phrase": "stop to do something",
-          "phonetic": "/ˈstɑp ˈtuː ˈduː ˈsʌmθɪŋ/",
-          "chinese": "停下来去做另一件事"
+          "phrase": "stop wasting water",
+          "phonetic": "/ˈstɑp ˈweɪstɪŋ ˈwɔːtɚ/",
+          "chinese": "停止浪费水"
         },
         {
-          "phrase": "stop someone from doing something",
-          "phonetic": "/ˈstɑp ˈsʌˌmwʌn ˈfrʌm ˈduːɪŋ ˈsʌmθɪŋ/",
-          "chinese": "阻止某人做某事"
+          "phrase": "stop the engine",
+          "phonetic": "/ˈstɑp ðə ˈɛndʒən/",
+          "chinese": "关停发动机"
+        },
+        {
+          "phrase": "stop production temporarily",
+          "phonetic": "/ˈstɑp prəˈdʌkʃən ˌtɛmpɚˈɛrəli/",
+          "chinese": "暂时停产"
         }
       ]
     },
     {
-      "category": "日常与工作语境",
+      "category": "停留与停靠",
       "items": [
         {
-          "phrase": "come to a stop",
-          "phonetic": "/ˈkʌm ˈtuː ə ˈstɑp/",
-          "chinese": "停下来"
+          "phrase": "stop at the next station",
+          "phonetic": "/ˈstɑp ˈæt ðə ˈnɛkst ˈsteɪʃən/",
+          "chinese": "在下一站停靠"
         },
         {
-          "phrase": "stop by",
-          "phonetic": "/ˈstɑp ˈbaɪ/",
-          "chinese": "顺便拜访"
+          "phrase": "stop for a quick lunch",
+          "phonetic": "/ˈstɑp ˈfɔːr ə ˈkwɪk ˈlʌntʃ/",
+          "chinese": "停下来快速吃个午饭"
         },
         {
-          "phrase": "stop working",
-          "phonetic": "/ˈstɑp ˈwɝːkɪŋ/",
-          "chinese": "停止运转"
+          "phrase": "stop by the office",
+          "phonetic": "/ˈstɑp ˈbaɪ ðə ˈɔːfɪs/",
+          "chinese": "顺路去办公室"
+        },
+        {
+          "phrase": "stop on the way home",
+          "phonetic": "/ˈstɑp ˈɑn ðə ˈweɪ ˈhoʊm/",
+          "chinese": "回家路上停一下"
         }
       ]
     },
     {
-      "category": "高频扩展表达",
+      "category": "阻止与中断",
       "items": [
         {
-          "phrase": "stop getting worked up over something",
-          "phonetic": "/ˈstɑp ˈɡɛtɪŋ ˈwɝːkt ˈʌp ˈoʊvɚ ˈsʌmθɪŋ/",
-          "chinese": "不再为某事烦躁"
+          "phrase": "stop someone from leaving",
+          "phonetic": "/ˈstɑp ˈsʌmˌwʌn ˈfrʌm ˈliːvɪŋ/",
+          "chinese": "阻止某人离开"
         },
         {
-          "phrase": "stop smoking",
-          "phonetic": "/ˈstɑp ˈsmoʊkɪŋ/",
-          "chinese": "努力去戒烟"
+          "phrase": "stop the spread of disease",
+          "phonetic": "/ˈstɑp ðə ˈsprɛd ˈʌv dɪˈziːz/",
+          "chinese": "阻止疾病传播"
         },
         {
-          "phrase": "stop that from happening",
-          "phonetic": "/ˈstɑp ˈðæt ˈfrʌm ˈhæpənɪŋ/",
-          "chinese": "阻止它发生"
+          "phrase": "stop payment on a check",
+          "phonetic": "/ˈstɑp ˈpeɪmənt ˈɑn ə ˈtʃɛk/",
+          "chinese": "止付一张支票"
+        },
+        {
+          "phrase": "stop short of an apology",
+          "phonetic": "/ˈstɑp ˈʃɔːrt ˈʌv ˈæn əˈpɑləˌdʒiː/",
+          "chinese": "没有真正道歉"
         }
       ]
     },
     {
-      "category": "补充常用语境",
+      "category": "设备与结果",
       "items": [
         {
-          "phrase": "stop eating such sweet ice cream",
-          "phonetic": "/ˈstɑp ˈiːtɪŋ ˈsʌtʃ ˈswiːt ˈaɪs ˈkriːm/",
-          "chinese": "停止吃那么甜的冰激凌"
+          "phrase": "the clock stopped at noon",
+          "phonetic": "/ðə ˈklɑk ˈstɑpt ˈæt ˈnuːn/",
+          "chinese": "钟在中午停了"
+        },
+        {
+          "phrase": "stop a leak quickly",
+          "phonetic": "/ˈstɑp ə ˈliːk ˈkwɪkli/",
+          "chinese": "迅速堵住泄漏"
+        },
+        {
+          "phrase": "stop the recording",
+          "phonetic": "/ˈstɑp ðə rəˈkɔːrdɪŋ/",
+          "chinese": "停止录音"
+        },
+        {
+          "phrase": "nothing can stop progress",
+          "phonetic": "/ˈnʌθɪŋ ˈkæn ˈstɑp ˈprɑːɡrɛs/",
+          "chinese": "没有什么能阻止进步"
         }
       ]
     }
@@ -175,71 +212,85 @@
       "phrase": "stop doing something",
       "phonetic": "/ˈstɑp ˈduːɪŋ ˈsʌmθɪŋ/",
       "chinese": "停止做某事",
-      "example": "Stop translating every word before you understand the sentence.",
-      "translation": "不要在理解句子前逐字翻译。"
+      "example": "He stopped checking his phone during meals.",
+      "translation": "他不再在吃饭时看手机。"
     },
     {
       "phrase": "stop to do something",
       "phonetic": "/ˈstɑp ˈtuː ˈduː ˈsʌmθɪŋ/",
-      "chinese": "停下来去做另一件事",
-      "example": "I stopped to check the pronunciation before continuing.",
-      "translation": "我停下来查了发音，然后继续。"
+      "chinese": "停下手中的事去做另一件事",
+      "example": "We stopped to ask for directions.",
+      "translation": "我们停下来问路。"
     },
     {
-      "phrase": "stop someone from doing something",
-      "phonetic": "/ˈstɑp ˈsʌˌmwʌn ˈfrʌm ˈduːɪŋ ˈsʌmθɪŋ/",
+      "phrase": "stop someone from doing",
+      "phonetic": "/ˈstɑp ˈsʌmˌwʌn ˈfrʌm ˈduːɪŋ/",
       "chinese": "阻止某人做某事",
-      "example": "Heavy rain did not stop us from visiting the museum.",
-      "translation": "大雨没有阻止我们参观博物馆。"
+      "example": "Nothing stopped her from completing the race.",
+      "translation": "没有什么阻止她完成比赛。"
+    },
+    {
+      "phrase": "stop at a place",
+      "phonetic": "/ˈstɑp ˈæt ə ˈpleɪs/",
+      "chinese": "在某地停靠",
+      "example": "The bus stops at the hospital entrance.",
+      "translation": "公交车在医院门口停靠。"
+    },
+    {
+      "phrase": "stop for something",
+      "phonetic": "/ˈstɑp ˈfɔːr ˈsʌmθɪŋ/",
+      "chinese": "停下来进行某活动",
+      "example": "Let's stop for coffee on the way.",
+      "translation": "我们路上停下来喝杯咖啡吧。"
+    },
+    {
+      "phrase": "stop by",
+      "phonetic": "/ˈstɑp ˈbaɪ/",
+      "chinese": "顺路短暂拜访",
+      "example": "I will stop by after work.",
+      "translation": "我下班后会顺路来一趟。"
     },
     {
       "phrase": "come to a stop",
       "phonetic": "/ˈkʌm ˈtuː ə ˈstɑp/",
       "chinese": "停下来",
-      "example": "The bus came to a stop near the station.",
-      "translation": "公交车在车站附近停了下来。"
+      "example": "The train came to a sudden stop.",
+      "translation": "火车突然停了下来。"
     },
     {
-      "phrase": "stop by",
-      "phonetic": "/ˈstɑp ˈbaɪ/",
-      "chinese": "顺便拜访",
-      "example": "I will stop by the library after work.",
-      "translation": "下班后我会顺便去图书馆。"
+      "phrase": "put a stop to",
+      "phonetic": "/ˈpʊt ə ˈstɑp ˈtuː/",
+      "chinese": "制止；使停止",
+      "example": "New controls put a stop to the fraud.",
+      "translation": "新管控措施制止了欺诈。"
     },
     {
-      "phrase": "stop working",
-      "phonetic": "/ˈstɑp ˈwɝːkɪŋ/",
-      "chinese": "停止运转",
-      "example": "The old printer sometimes stops working without warning.",
-      "translation": "旧打印机有时会毫无预兆地停止工作。"
+      "phrase": "stop short of",
+      "phonetic": "/ˈstɑp ˈʃɔːrt ˈʌv/",
+      "chinese": "差一点；没有真正做到",
+      "example": "The report stopped short of blaming any individual.",
+      "translation": "报告并未真正归咎于任何个人。"
     },
     {
-      "phrase": "stop getting worked up over something",
-      "phonetic": "/ˈstɑp ˈɡɛtɪŋ ˈwɝːkt ˈʌp ˈoʊvɚ ˈsʌmθɪŋ/",
-      "chinese": "不再为某事烦躁",
-      "example": "Stop getting yourself worked up over little things.",
-      "translation": "不要让自己因为一些小事而烦躁了。"
+      "phrase": "stop at nothing",
+      "phonetic": "/ˈstɑp ˈæt ˈnʌθɪŋ/",
+      "chinese": "不择手段",
+      "example": "They would stop at nothing to hide the evidence.",
+      "translation": "他们会不择手段地隐藏证据。"
     },
     {
-      "phrase": "stop smoking",
-      "phonetic": "/ˈstɑp ˈsmoʊkɪŋ/",
-      "chinese": "努力去戒烟",
-      "example": "You should make an effort to stop smoking.",
-      "translation": "你应该努力去戒烟。"
+      "phrase": "stop payment on",
+      "phonetic": "/ˈstɑp ˈpeɪmənt ˈɑn/",
+      "chinese": "止付",
+      "example": "She stopped payment on the missing check.",
+      "translation": "她对遗失的支票办理了止付。"
     },
     {
-      "phrase": "stop that from happening",
-      "phonetic": "/ˈstɑp ˈðæt ˈfrʌm ˈhæpənɪŋ/",
-      "chinese": "阻止它发生",
-      "example": "I tried to stop that from happening.",
-      "translation": "我试着阻止它发生。"
-    },
-    {
-      "phrase": "stop eating such sweet ice cream",
-      "phonetic": "/ˈstɑp ˈiːtɪŋ ˈsʌtʃ ˈswiːt ˈaɪs ˈkriːm/",
-      "chinese": "停止吃那么甜的冰激凌",
-      "example": "I've got to stop eating such sweet ice cream.",
-      "translation": "我必须停止吃那么甜的冰激凌。"
+      "phrase": "stop dead",
+      "phonetic": "/ˈstɑp ˈdɛd/",
+      "chinese": "突然完全停住",
+      "example": "The deer stopped dead in the road.",
+      "translation": "那只鹿突然在路上停住了。"
     }
   ],
   "synonyms": [
@@ -247,38 +298,52 @@
       "word": "cease",
       "phonetic": "/ˈsiːs/",
       "partOfSpeech": "v.",
-      "chinese": "停止；终止",
-      "difference": "cease 表示“停止；终止”，与 stop 的“停止”义相近。两词只有在这一义项重合时才能互换；stop 的其他常用义不一定适用。"
+      "chinese": "停止",
+      "difference": "正式用语，可及物或不及物；须区分主动停止、阻止他人和终止供应等结构"
     },
     {
       "word": "halt",
       "phonetic": "/ˈhɔːlt/",
       "partOfSpeech": "v.",
-      "chinese": "使停止；使立定",
-      "difference": "halt 常表示“使停止；使立定”，与 stop 的“停止”义有重合。halt 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+      "chinese": "使停下；停下",
+      "difference": "强调动作或进程中止；须区分主动停止、阻止他人和终止供应等结构"
+    },
+    {
+      "word": "discontinue",
+      "phonetic": "/dɪskənˈtɪnju/",
+      "partOfSpeech": "v.",
+      "chinese": "停止提供或进行",
+      "difference": "常用于产品、服务、做法；须区分主动停止、阻止他人和终止供应等结构"
+    },
+    {
+      "word": "prevent",
+      "phonetic": "/prɪˈvɛnt/",
+      "partOfSpeech": "v.",
+      "chinese": "阻止",
+      "difference": "对应 stop someone from doing 的阻止义"
     },
     {
       "word": "end",
       "phonetic": "/ˈɛnd/",
       "partOfSpeech": "v.",
-      "chinese": "结束；终结；终止",
-      "difference": "end 常表示“结束；终结；终止”，与 stop 的“停止”义有重合。end 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
-    },
-    {
-      "word": "quit",
-      "phonetic": "/ˈkwɪt/",
-      "partOfSpeech": "v.",
-      "chinese": "离开；辞职；停止",
-      "difference": "quit 常表示“离开；辞职；停止”，与 stop 的“停止”义有重合。quit 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+      "chinese": "结束",
+      "difference": "强调使事件或状态到达终点；须区分主动停止、阻止他人和终止供应等结构"
     }
   ],
   "antonyms": [
     {
       "word": "continue",
-      "phonetic": "/kəˈntɪnjuː/",
+      "phonetic": "/kənˈtɪnju/",
       "partOfSpeech": "v.",
       "chinese": "继续",
-      "usage": "continue 表示“继续”，与 stop 的“停止”义形成对比。这种反义关系只适用于上述明确义项。"
+      "usage": "与停止活动或过程相反；须区分主动停止、阻止他人和终止供应等结构"
+    },
+    {
+      "word": "start",
+      "phonetic": "/ˈstɑrt/",
+      "partOfSpeech": "v.",
+      "chinese": "开始",
+      "usage": "与使机器或活动停止相反；须区分主动停止、阻止他人和终止供应等结构"
     }
   ],
   "derivatives": [
@@ -286,103 +351,118 @@
       "word": "stoppage",
       "phonetic": "/ˈstɑpɪdʒ/",
       "partOfSpeech": "n.",
-      "chinese": "停止；停工；中断",
-      "note": "常指工作、比赛或供应暂时停止。"
+      "chinese": "停顿；停工",
+      "note": "常指工作、比赛或供应的中断"
+    },
+    {
+      "word": "stopper",
+      "phonetic": "/ˈstɑpɚ/",
+      "partOfSpeech": "n.",
+      "chinese": "塞子；阻挡物",
+      "note": "指封住容器或阻止运动的物件"
+    },
+    {
+      "word": "unstoppable",
+      "phonetic": "/ənˈstɑpəbəl/",
+      "partOfSpeech": "adj.",
+      "chinese": "无法阻挡的",
+      "note": "形容人、力量或趋势强到无法被停下或有效遏制"
     }
   ],
   "confusables": [
     {
-      "word": "prevent",
-      "phonetic": "/prɪˈvɛnt/",
+      "word": "quit",
+      "phonetic": "/ˈkwɪt/",
       "partOfSpeech": "v.",
-      "chinese": "预防；防止；阻止",
-      "difference": "prevent 表示“预防；防止；阻止”，而 stop 在“stop doing something”中表示“停止”。两者容易因拼写、发音或相近语境而混淆，使用时要根据完整句义和固定搭配区分。"
+      "chinese": "停止；退出",
+      "difference": "stop 可临时停止任何动作；quit 常指永久放弃习惯、工作或活动"
     }
   ],
   "relatedVocabulary": [
     {
-      "category": "同一语义场的高频词",
+      "category": "中止状态",
       "items": [
-        {
-          "word": "cease",
-          "phonetic": "/ˈsiːs/",
-          "partOfSpeech": "v.",
-          "chinese": "停止"
-        },
         {
           "word": "pause",
           "phonetic": "/ˈpɔːz/",
-          "partOfSpeech": "v. / n.",
+          "partOfSpeech": "n.",
           "chinese": "暂停"
         },
         {
-          "word": "continue",
-          "phonetic": "/kəˈntɪnjuː/",
-          "partOfSpeech": "v.",
-          "chinese": "继续"
-        }
-      ]
-    },
-    {
-      "category": "近义表达分类",
-      "items": [
-        {
-          "word": "cease",
-          "phonetic": "/ˈsiːs/",
-          "partOfSpeech": "v.",
-          "chinese": "停止；终止"
-        },
-        {
-          "word": "halt",
-          "phonetic": "/ˈhɔːlt/",
-          "partOfSpeech": "v.",
-          "chinese": "使停止；使立定"
-        },
-        {
-          "word": "end",
-          "phonetic": "/ˈɛnd/",
-          "partOfSpeech": "v.",
-          "chinese": "结束；终结；终止"
-        },
-        {
-          "word": "quit",
-          "phonetic": "/ˈkwɪt/",
-          "partOfSpeech": "v.",
-          "chinese": "离开；辞职；停止"
-        }
-      ]
-    },
-    {
-      "category": "对比与易混表达分类",
-      "items": [
-        {
-          "word": "continue",
-          "phonetic": "/kəˈntɪnjuː/",
-          "partOfSpeech": "v.",
-          "chinese": "继续"
-        },
-        {
-          "word": "prevent",
-          "phonetic": "/prɪˈvɛnt/",
-          "partOfSpeech": "v.",
-          "chinese": "预防；防止；阻止"
-        },
-        {
-          "word": "stoppage",
-          "phonetic": "/ˈstɑpɪdʒ/",
+          "word": "break",
+          "phonetic": "/ˈbreɪk/",
           "partOfSpeech": "n.",
-          "chinese": "停止；停工；中断"
+          "chinese": "休息；中断"
+        },
+        {
+          "word": "shutdown",
+          "phonetic": "/ˈʃʌtˌdaʊn/",
+          "partOfSpeech": "n.",
+          "chinese": "停工；关闭"
+        },
+        {
+          "word": "closure",
+          "phonetic": "/ˈkloʊʒɚ/",
+          "partOfSpeech": "n.",
+          "chinese": "关闭"
         }
       ]
     },
     {
-      "category": "常用词族分类",
+      "category": "交通停靠",
       "items": [
         {
-          "word": "stoppage",
-          "phonetic": "/ˈstɑpɪdʒ/",
+          "word": "station",
+          "phonetic": "/ˈsteɪʃən/",
           "partOfSpeech": "n.",
-          "chinese": "停止；停工；中断"
+          "chinese": "车站"
+        },
+        {
+          "word": "platform",
+          "phonetic": "/ˈplætˌfɔːrm/",
+          "partOfSpeech": "n.",
+          "chinese": "站台"
+        },
+        {
+          "word": "terminal",
+          "phonetic": "/ˈtɝːmənəl/",
+          "partOfSpeech": "n.",
+          "chinese": "终点站"
+        },
+        {
+          "word": "layover",
+          "phonetic": "/ˈleɪˌoʊvɚ/",
+          "partOfSpeech": "n.",
+          "chinese": "中途停留"
+        }
+      ]
+    },
+    {
+      "category": "阻止措施",
+      "items": [
+        {
+          "word": "barrier",
+          "phonetic": "/ˈbæriɚ/",
+          "partOfSpeech": "n.",
+          "chinese": "障碍物"
+        },
+        {
+          "word": "restriction",
+          "phonetic": "/riˈstrɪkʃən/",
+          "partOfSpeech": "n.",
+          "chinese": "限制"
+        },
+        {
+          "word": "ban",
+          "phonetic": "/ˈbæn/",
+          "partOfSpeech": "n.",
+          "chinese": "禁令"
+        },
+        {
+          "word": "intervention",
+          "phonetic": "/ˌɪntɚˈvɛnʃən/",
+          "partOfSpeech": "n.",
+          "chinese": "干预"
         }
       ]
     }
@@ -394,62 +474,72 @@
       "chinese": "不要在理解句子前逐字翻译。"
     },
     {
-      "scene": "工作或学习",
-      "english": "I stopped to check the pronunciation before continuing.",
-      "chinese": "我停下来查了发音，然后继续。"
-    },
-    {
-      "scene": "常见搭配",
-      "english": "Heavy rain did not stop us from visiting the museum.",
-      "chinese": "大雨没有阻止我们参观博物馆。"
-    },
-    {
-      "scene": "真实语境",
-      "english": "The bus came to a stop near the station.",
-      "chinese": "公交车在车站附近停了下来。"
-    },
-    {
-      "scene": "易错结构",
-      "english": "I will stop by the library after work.",
-      "chinese": "下班后我会顺便去图书馆。"
-    },
-    {
-      "scene": "主动表达",
-      "english": "The old printer sometimes stops working without warning.",
-      "chinese": "旧打印机有时会毫无预兆地停止工作。"
-    },
-    {
       "scene": "日常交流",
-      "english": "Stop getting yourself worked up over little things.",
-      "chinese": "不要让自己因为一些小事而烦躁了。"
+      "english": "He stopped checking his phone during meals.",
+      "chinese": "他不再在吃饭时看手机。"
     },
     {
       "scene": "工作沟通",
-      "english": "You should make an effort to stop smoking.",
-      "chinese": "你应该努力去戒烟。"
+      "english": "We stopped to ask for directions.",
+      "chinese": "我们停下来问路。"
     },
     {
       "scene": "学习表达",
-      "english": "I couldn't get him to stop smoking.",
-      "chinese": "我无法让他停止吸烟。"
+      "english": "Nothing stopped her from completing the race.",
+      "chinese": "没有什么阻止她完成比赛。"
     },
     {
       "scene": "书面表达",
-      "english": "I tried to stop that from happening.",
-      "chinese": "我试着阻止它发生。"
+      "english": "The bus stops at the hospital entrance.",
+      "chinese": "公交车在医院门口停靠。"
+    },
+    {
+      "scene": "日常交流",
+      "english": "Let's stop for coffee on the way.",
+      "chinese": "我们路上停下来喝杯咖啡吧。"
+    },
+    {
+      "scene": "工作沟通",
+      "english": "I will stop by after work.",
+      "chinese": "我下班后会顺路来一趟。"
+    },
+    {
+      "scene": "学习表达",
+      "english": "The train came to a sudden stop.",
+      "chinese": "火车突然停了下来。"
+    },
+    {
+      "scene": "书面表达",
+      "english": "New controls put a stop to the fraud.",
+      "chinese": "新管控措施制止了欺诈。"
+    },
+    {
+      "scene": "日常交流",
+      "english": "The report stopped short of blaming any individual.",
+      "chinese": "报告并未真正归咎于任何个人。"
+    },
+    {
+      "scene": "工作沟通",
+      "english": "They would stop at nothing to hide the evidence.",
+      "chinese": "他们会不择手段地隐藏证据。"
+    },
+    {
+      "scene": "学习表达",
+      "english": "She stopped payment on the missing check.",
+      "chinese": "她对遗失的支票办理了止付。"
     }
   ],
   "studyFocus": {
-    "coreMeaning": "先掌握“停止”这个核心义，再对比另外 1 个常用义项，辨别不同语境。",
+    "coreMeaning": "先掌握“停止”这个核心义，再对比另外 2 个常用义项，辨别不同语境。",
     "keyCollocation": "把“stop doing something”连同介词、宾语和动词形式作为整个句块记忆。",
-    "commonMistake": "“stop doing something”在本义下要求动词 -ing 形式；doing 是语法占位符，应换成具体动词的 -ing 形式，前面不要额外加 to。",
+    "commonMistake": "stop doing 表示“停止正在做的事”；stop to do 表示“停下别的事去做……”",
     "mustUseExample": "Stop translating every word before you understand the sentence.（不要在理解句子前逐字翻译。）"
   },
   "questions": [
     {
       "id": "stop-v-meaning-core",
       "type": "meaning_choice",
-      "prompt": "“stop”最核心的中文含义是？",
+      "prompt": "“stop”最常见的核心中文义是哪一项？",
       "options": [
         "记得",
         "需要",
@@ -462,13 +552,13 @@
     {
       "id": "stop-v-meaning-english",
       "type": "meaning_choice",
-      "prompt": "哪一项英文释义最符合词卡中的 “stop”？",
+      "prompt": "“stop”最常见的英文释义是哪一项？",
       "options": [
         "to need something or make it necessary",
-        "to end an action",
+        "to cease doing something or cease happening",
         "to keep or bring something back to mind"
       ],
-      "answer": "to end an action",
+      "answer": "to cease doing something or cease happening",
       "stage": "T0",
       "ai": false
     },
@@ -479,8 +569,8 @@
       "options": [
         "stop doing something",
         "stop to do something",
-        "stop someone from doing something",
-        "come to a stop"
+        "stop someone from doing",
+        "stop at a place"
       ],
       "answer": "stop doing something",
       "stage": "T1",
@@ -489,11 +579,11 @@
     {
       "id": "stop-v-synonym-choice",
       "type": "meaning_choice",
-      "prompt": "哪个词是词卡中列出的 “stop” 最直接近义词？",
+      "prompt": "在“停止”这个义项下，哪个词与“stop”意思最接近？",
       "options": [
-        "continue",
-        "prevent",
-        "remember",
+        "be",
+        "have",
+        "do",
         "cease"
       ],
       "answer": "cease",
@@ -503,12 +593,12 @@
     {
       "id": "stop-v-antonym-choice",
       "type": "meaning_choice",
-      "prompt": "哪个词是词卡中列出的 “stop” 最直接反义词？",
+      "prompt": "在“停止”这个义项下，哪个词与“stop”意思相反？",
       "options": [
-        "prevent",
-        "remember",
+        "have",
+        "do",
         "continue",
-        "cease"
+        "be"
       ],
       "answer": "continue",
       "stage": "T2",
@@ -517,21 +607,21 @@
     {
       "id": "stop-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “stop” 的易混词？",
+      "prompt": "结合拼写、发音和用法，哪一项需要与“stop”重点区分？",
       "options": [
-        "remember",
-        "prevent",
-        "cease",
-        "continue"
+        "do",
+        "quit",
+        "be",
+        "have"
       ],
-      "answer": "prevent",
+      "answer": "quit",
       "stage": "T3",
       "ai": false
     },
     {
       "id": "stop-v-recall-definition",
       "type": "recall",
-      "prompt": "根据英文释义写出目标词：to end an action",
+      "prompt": "根据英文释义写出对应单词：to cease doing something or cease happening",
       "answer": "stop",
       "stage": "T1",
       "ai": false
@@ -539,7 +629,7 @@
     {
       "id": "stop-v-recall-chinese",
       "type": "recall",
-      "prompt": "写出符合“停止”（v.）的本课目标词。",
+      "prompt": "写出表示“停止”（v.）的英文单词。",
       "answer": "stop",
       "stage": "T1",
       "ai": false
@@ -555,10 +645,10 @@
     {
       "id": "stop-v-collocation-structure-meaning-v3",
       "type": "collocation",
-      "prompt": "句型应用：哪一项既表示“停下来去做另一件事”，又符合这个形式线索：完整结构中使用 to + 动词原形；do 只是语法占位符，要换成符合语境的具体动词原形？",
+      "prompt": "句型应用：哪一项既表示“停下手中的事去做另一件事”，又符合这个形式线索：完整结构中使用 to + 动词原形；do 只是语法占位符，要换成符合语境的具体动词原形？",
       "options": [
-        "stop someone from doing something",
-        "come to a stop",
+        "stop someone from doing",
+        "stop at a place",
         "stop to do something",
         "stop doing something"
       ],
@@ -569,13 +659,7 @@
     {
       "id": "stop-v-collocation-example-context-v3",
       "type": "collocation",
-      "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Stop _____ every word before you understand the sentence.（中文：不要在理解句子前逐字翻译。）",
-      "options": [
-        "serious",
-        "translating",
-        "save",
-        "careful"
-      ],
+      "prompt": "根据完整句意和中文提示补全原句：Stop _____ every word before you understand the sentence.（中文：不要在理解句子前逐字翻译。）",
       "answer": "translating",
       "stage": "T2",
       "ai": false
@@ -583,43 +667,43 @@
     {
       "id": "stop-v-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“停止做某事”，又符合这个形式线索：完整结构中的 doing 是语法占位符，要换成符合语境的动词 -ing 形式？",
+      "prompt": "搭配辨析：哪一项既表示“停下来进行某活动”，又符合这个形式线索：完整搭配中使用介词 for？",
       "options": [
+        "stop for something",
         "stop doing something",
         "stop to do something",
-        "stop someone from doing something",
-        "come to a stop"
+        "stop someone from doing"
       ],
-      "answer": "stop doing something",
+      "answer": "stop for something",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "stop-v-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“停下来去做另一件事”，又符合这个形式线索：完整结构中使用 to + 动词原形；do 只是语法占位符，要换成符合语境的具体动词原形？",
+      "prompt": "用法辨析：哪一项既表示“顺路短暂拜访”，又符合这个形式线索：完整搭配中使用介词 by？",
       "options": [
         "stop doing something",
-        "stop someone from doing something",
-        "come to a stop",
-        "stop to do something"
+        "stop to do something",
+        "stop someone from doing",
+        "stop by"
       ],
-      "answer": "stop to do something",
+      "answer": "stop by",
       "stage": "T3",
       "ai": false
     },
     {
       "id": "stop-v-example-cloze",
       "type": "collocation",
-      "prompt": "根据句意补全词卡核心例句：_____ translating every word before you understand the sentence.（填写 stop 的正确形式）",
-      "answer": "Stop",
+      "prompt": "根据句意和中文提示补全另一个常用例句：He _____ checking his phone during meals.（填写 stop 的正确形式）（中文：他不再在吃饭时看手机。）",
+      "answer": "stopped",
       "stage": "T3",
       "ai": false
     },
     {
       "id": "stop-v-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “stop” 写一个自然、真实的英文句子，含义必须符合词卡核心义“停止”。",
+      "prompt": "请用 “stop” 写一个自然、真实的英文句子，含义必须符合核心义“停止”。",
       "answer": "",
       "stage": "T2",
       "ai": true
@@ -627,7 +711,7 @@
     {
       "id": "stop-v-sentence-phrase",
       "type": "free_sentence",
-      "prompt": "请使用 “stop doing something” 结构写一个与自己有关的自然英文句子；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing；something 要替换成实际的事物或内容。",
+      "prompt": "请使用 “stop for something” 结构写一个与自己有关的自然英文句子；something 要替换成实际的事物或内容。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -635,7 +719,7 @@
     {
       "id": "stop-v-dialogue",
       "type": "dialogue",
-      "prompt": "写一段 2–4 轮真实对话，自然使用 “stop” 和 “come to a stop” 结构，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “stop” 和 “stop talking immediately” 结构，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -693,9 +777,10 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-complete",
-  "templateVersion": "learning-template-2026.09.10.3",
-  "contentVersion": "2026.09.10.3",
-  "reviewed": false,
+  "detailLevel": "template-curated",
+  "templateVersion": "learning-template-2026.09.10.4",
+  "contentVersion": "2026.09.10.4",
+  "reviewed": true,
+  "curationSource": "manual-semantic-pack-2026.09.10.4",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

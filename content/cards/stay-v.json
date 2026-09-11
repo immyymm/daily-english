@@ -34,9 +34,9 @@
     "主动词汇"
   ],
   "coreMemory": {
-    "chinese": "停留；保持",
-    "english": "v. to remain in a place；v. to continue in a state",
-    "structure": "stay at home /ˈsteɪ ˈæt ˈhoʊm/（待在家里）；stay focused /ˈsteɪ ˈfoʊkəst/（保持专注）；stay in touch with someone /ˈsteɪ ɪn ˈtʌtʃ ˈwɪð ˈsʌˌmwʌn/（与某人保持联系）；stay away from something /ˈsteɪ əˈweɪ ˈfrʌm ˈsʌmθɪŋ/（远离某物）",
+    "chinese": "停留；暂住；保持",
+    "english": "v. to remain in a place or live somewhere temporarily；v. to remain in a particular condition",
+    "structure": "stay at home /ˈsteɪ ˈæt ˈhoʊm/（待在家里）；stay in a hotel /ˈsteɪ ɪn ə hoʊˈtɛl/（住在酒店）；stay with someone /ˈsteɪ ˈwɪð ˈsʌmˌwʌn/（住在某人家）；stay for a period /ˈsteɪ ˈfɔːr ə ˈpɪriəd/（停留一段时间）",
     "structures": [
       {
         "phrase": "stay at home",
@@ -44,39 +44,39 @@
         "chinese": "待在家里"
       },
       {
-        "phrase": "stay focused",
-        "phonetic": "/ˈsteɪ ˈfoʊkəst/",
-        "chinese": "保持专注"
+        "phrase": "stay in a hotel",
+        "phonetic": "/ˈsteɪ ɪn ə hoʊˈtɛl/",
+        "chinese": "住在酒店"
       },
       {
-        "phrase": "stay in touch with someone",
-        "phonetic": "/ˈsteɪ ɪn ˈtʌtʃ ˈwɪð ˈsʌˌmwʌn/",
-        "chinese": "与某人保持联系"
+        "phrase": "stay with someone",
+        "phonetic": "/ˈsteɪ ˈwɪð ˈsʌmˌwʌn/",
+        "chinese": "住在某人家"
       },
       {
-        "phrase": "stay away from something",
-        "phonetic": "/ˈsteɪ əˈweɪ ˈfrʌm ˈsʌmθɪŋ/",
-        "chinese": "远离某物"
+        "phrase": "stay for a period",
+        "phonetic": "/ˈsteɪ ˈfɔːr ə ˈpɪriəd/",
+        "chinese": "停留一段时间"
       }
     ],
-    "commonError": "❌ stay on home → ✅ stay at home；❌ stay at touch with someone → ✅ stay in touch with someone",
+    "commonError": "❌ stay in home → ✅ stay at home；❌ stay to be calm → ✅ stay calm",
     "commonErrors": [
       {
-        "wrong": "stay on home",
-        "wrongPhonetic": "/ˈsteɪ ˈɑn ˈhoʊm/",
+        "wrong": "stay in home",
+        "wrongPhonetic": "/ˈsteɪ ɪn ˈhoʊm/",
         "right": "stay at home",
         "rightPhonetic": "/ˈsteɪ ˈæt ˈhoʊm/",
-        "note": "在“stay at home”所表达的这个具体含义中，要用介词 at；换成 on 会破坏这个固定结构或改变原意。"
+        "note": "固定表达是 stay at home；说待在房子里可用 stay in the house"
       },
       {
-        "wrong": "stay at touch with someone",
-        "wrongPhonetic": "/ˈsteɪ ˈæt ˈtʌtʃ ˈwɪð ˈsʌˌmwʌn/",
-        "right": "stay in touch with someone",
-        "rightPhonetic": "/ˈsteɪ ɪn ˈtʌtʃ ˈwɪð ˈsʌˌmwʌn/",
-        "note": "在“stay in touch with someone”所表达的这个具体含义中，要用介词 in；换成 at 会破坏这个固定结构或改变原意。"
+        "wrong": "stay to be calm",
+        "wrongPhonetic": "/ˈsteɪ ˈtuː ˈbiː ˈkɑm/",
+        "right": "stay calm",
+        "rightPhonetic": "/ˈsteɪ ˈkɑm/",
+        "note": "stay 作系动词表示保持状态时直接接形容词，不加 to be"
       }
     ],
-    "directSynonym": "remain /rɪˈmeɪn/（保持；留下）；reside /rɪˈzaɪd/（住；居留；属于）；wait /ˈweɪt/（等候；期待；延缓）；continue /kəˈntɪnjuː/（继续；延续；延长）",
+    "directSynonym": "stop over /ˈstɑp ˈoʊvɚ/（中途短暂停留）；reside /rɪˈzaɪd/（居住）；lodge /ˈlɑdʒ/（暂住）；linger /ˈlɪŋɡɚ/（逗留）；keep /ˈkiːp/（保持）",
     "directAntonym": "leave /ˈliːv/（离开）",
     "derivatives": "本词暂无需额外强记的高频派生词",
     "example": "I usually stay at home on rainy evenings.",
@@ -85,87 +85,117 @@
   "meanings": [
     {
       "partOfSpeech": "v.",
-      "english": "to remain in a place",
-      "chinese": "停留",
-      "example": "I usually stay at home on rainy evenings.",
-      "translation": "下雨的晚上我通常待在家里。"
+      "english": "to remain in a place or live somewhere temporarily",
+      "chinese": "停留；暂住",
+      "example": "We stayed at a hotel near the station.",
+      "translation": "我们住在车站附近的酒店。"
     },
     {
       "partOfSpeech": "v.",
-      "english": "to continue in a state",
+      "english": "to remain in a particular condition",
       "chinese": "保持",
-      "example": "Try to stay focused for ten minutes at a time.",
-      "translation": "尽量每次专注十分钟。"
+      "example": "Please stay calm.",
+      "translation": "请保持冷静。"
     }
   ],
   "contextPhrases": [
     {
-      "category": "核心动作与结构",
+      "category": "停留与居住",
       "items": [
         {
-          "phrase": "stay at home",
-          "phonetic": "/ˈsteɪ ˈæt ˈhoʊm/",
-          "chinese": "待在家里"
+          "phrase": "stay at a small hotel",
+          "phonetic": "/ˈsteɪ ˈæt ə ˈsmɔːl hoʊˈtɛl/",
+          "chinese": "住在一家小酒店"
         },
         {
-          "phrase": "stay focused",
-          "phonetic": "/ˈsteɪ ˈfoʊkəst/",
-          "chinese": "保持专注"
+          "phrase": "stay with relatives",
+          "phonetic": "/ˈsteɪ ˈwɪð ˈrɛlətɪvz/",
+          "chinese": "住在亲戚家"
         },
         {
-          "phrase": "stay in touch with someone",
-          "phonetic": "/ˈsteɪ ɪn ˈtʌtʃ ˈwɪð ˈsʌˌmwʌn/",
-          "chinese": "与某人保持联系"
+          "phrase": "stay overnight in Boston",
+          "phonetic": "/ˈsteɪ ˌoʊvɚˈnaɪt ɪn ˈbɑstən/",
+          "chinese": "在波士顿过夜"
+        },
+        {
+          "phrase": "stay for another week",
+          "phonetic": "/ˈsteɪ ˈfɔːr əˈnʌðɚ ˈwiːk/",
+          "chinese": "再待一周"
         }
       ]
     },
     {
-      "category": "日常与工作语境",
+      "category": "保持状态",
       "items": [
         {
-          "phrase": "stay away from something",
-          "phonetic": "/ˈsteɪ əˈweɪ ˈfrʌm ˈsʌmθɪŋ/",
-          "chinese": "远离某物"
+          "phrase": "stay calm under pressure",
+          "phonetic": "/ˈsteɪ ˈkɑm ˈʌndɚ ˈprɛʃɚ/",
+          "chinese": "在压力下保持冷静"
         },
         {
-          "phrase": "stay up late",
-          "phonetic": "/ˈsteɪ ˈʌp ˈleɪt/",
-          "chinese": "熬夜"
+          "phrase": "stay awake during the lecture",
+          "phonetic": "/ˈsteɪ əˈweɪk ˈdʊrɪŋ ðə ˈlɛktʃɚ/",
+          "chinese": "讲座期间保持清醒"
         },
         {
-          "phrase": "stay the same",
-          "phonetic": "/ˈsteɪ ðə ˈseɪm/",
-          "chinese": "保持不变"
+          "phrase": "stay focused on the task",
+          "phonetic": "/ˈsteɪ ˈfoʊkəst ˈɑn ðə ˈtæsk/",
+          "chinese": "集中注意力做任务"
+        },
+        {
+          "phrase": "stay healthy through exercise",
+          "phonetic": "/ˈsteɪ ˈhɛlθi ˈθruː ˈɛksɚˌsaɪz/",
+          "chinese": "通过锻炼保持健康"
         }
       ]
     },
     {
-      "category": "高频扩展表达",
+      "category": "位置与限制",
       "items": [
         {
-          "phrase": "stay in bed all day",
-          "phonetic": "/ˈsteɪ ɪn ˈbɛd ˈɔːl ˈdeɪ/",
-          "chinese": "整天卧床"
+          "phrase": "stay away from the edge",
+          "phonetic": "/ˈsteɪ əˈweɪ ˈfrʌm ðə ˈɛdʒ/",
+          "chinese": "远离边缘"
         },
         {
-          "phrase": "stay a little longer",
-          "phonetic": "/ˈsteɪ ə ˈlɪtəl ˈlɔːŋɡɚ/",
-          "chinese": "再多待一会"
+          "phrase": "stay within the budget",
+          "phonetic": "/ˈsteɪ wɪˈðɪn ðə ˈbʌdʒɪt/",
+          "chinese": "不超出预算"
         },
         {
-          "phrase": "stay there for three weeks",
-          "phonetic": "/ˈsteɪ ˈðɛr ˈfɔːr ˈθriː ˈwiːks/",
-          "chinese": "会在那里待上三周"
+          "phrase": "stay behind after class",
+          "phonetic": "/ˈsteɪ bɪˈhaɪnd ˈæftɚ ˈklæs/",
+          "chinese": "下课后留下"
+        },
+        {
+          "phrase": "stay out of trouble",
+          "phonetic": "/ˈsteɪ ˈaʊt ˈʌv ˈtrʌbəl/",
+          "chinese": "避免惹麻烦"
         }
       ]
     },
     {
-      "category": "补充常用语境",
+      "category": "延期与支撑",
       "items": [
         {
-          "phrase": "stay as long",
-          "phonetic": "/ˈsteɪ ˈæz ˈlɔːŋ/",
-          "chinese": "待多久就待多久"
+          "phrase": "stay the execution",
+          "phonetic": "/ˈsteɪ ðə ˌɛksəˈkjuːʃən/",
+          "chinese": "暂缓执行"
+        },
+        {
+          "phrase": "stay a court order",
+          "phonetic": "/ˈsteɪ ə ˈkɔːrt ˈɔːrdɚ/",
+          "chinese": "暂停执行法院命令"
+        },
+        {
+          "phrase": "stay someone's hand",
+          "phonetic": "/ˈsteɪ ˈsʌmˌwʌnz ˈhænd/",
+          "chinese": "阻止某人动手"
+        },
+        {
+          "phrase": "stay the course",
+          "phonetic": "/ˈsteɪ ðə ˈkɔːrs/",
+          "chinese": "坚持到底"
         }
       ]
     }
@@ -175,101 +205,122 @@
       "phrase": "stay at home",
       "phonetic": "/ˈsteɪ ˈæt ˈhoʊm/",
       "chinese": "待在家里",
-      "example": "I usually stay at home on rainy evenings.",
-      "translation": "下雨的晚上我通常待在家里。"
+      "example": "She stayed at home to care for her son.",
+      "translation": "她留在家里照顾儿子。"
+    },
+    {
+      "phrase": "stay in a hotel",
+      "phonetic": "/ˈsteɪ ɪn ə hoʊˈtɛl/",
+      "chinese": "住在酒店",
+      "example": "We stayed in a small hotel near the station.",
+      "translation": "我们住在车站附近的一家小酒店。"
+    },
+    {
+      "phrase": "stay with someone",
+      "phonetic": "/ˈsteɪ ˈwɪð ˈsʌmˌwʌn/",
+      "chinese": "住在某人家",
+      "example": "I stayed with my aunt during the conference.",
+      "translation": "会议期间我住在姨妈家。"
+    },
+    {
+      "phrase": "stay for a period",
+      "phonetic": "/ˈsteɪ ˈfɔːr ə ˈpɪriəd/",
+      "chinese": "停留一段时间",
+      "example": "Can you stay for another ten minutes?",
+      "translation": "你能再待十分钟吗？"
+    },
+    {
+      "phrase": "stay until + time or event",
+      "phonetic": "/ˈsteɪ ənˈtɪl ˈtaɪm ˈɔːr ɪˈvɛnt/",
+      "chinese": "待到某时或某事件",
+      "example": "We stayed until the final speaker had finished.",
+      "translation": "我们一直待到最后一位发言人结束。"
     },
     {
       "phrase": "stay focused",
       "phonetic": "/ˈsteɪ ˈfoʊkəst/",
       "chinese": "保持专注",
-      "example": "Try to stay focused for ten minutes at a time.",
-      "translation": "尽量每次专注十分钟。"
+      "example": "Turn off notifications to stay focused.",
+      "translation": "关闭通知以保持专注。"
     },
     {
-      "phrase": "stay in touch with someone",
-      "phonetic": "/ˈsteɪ ɪn ˈtʌtʃ ˈwɪð ˈsʌˌmwʌn/",
-      "chinese": "与某人保持联系",
-      "example": "I stay in touch with my classmates online.",
-      "translation": "我通过网络和同学保持联系。"
+      "phrase": "stay calm",
+      "phonetic": "/ˈsteɪ ˈkɑm/",
+      "chinese": "保持冷静",
+      "example": "Try to stay calm and follow the evacuation signs.",
+      "translation": "尽量保持冷静并遵循疏散标志。"
     },
     {
-      "phrase": "stay away from something",
-      "phonetic": "/ˈsteɪ əˈweɪ ˈfrʌm ˈsʌmθɪŋ/",
-      "chinese": "远离某物",
-      "example": "Stay away from word-for-word translation when the context differs.",
-      "translation": "语境不同时，要避免逐字翻译。"
+      "phrase": "stay in touch",
+      "phonetic": "/ˈsteɪ ɪn ˈtʌtʃ/",
+      "chinese": "保持联系",
+      "example": "We have stayed in touch since university.",
+      "translation": "大学毕业后我们一直保持联系。"
+    },
+    {
+      "phrase": "stay away from",
+      "phonetic": "/ˈsteɪ əˈweɪ ˈfrʌm/",
+      "chinese": "远离",
+      "example": "Children should stay away from the damaged fence.",
+      "translation": "孩子们应远离损坏的围栏。"
     },
     {
       "phrase": "stay up late",
       "phonetic": "/ˈsteɪ ˈʌp ˈleɪt/",
       "chinese": "熬夜",
-      "example": "Do not stay up late just to finish one lesson.",
-      "translation": "不要为了完成一节课而熬夜。"
+      "example": "He stayed up late to watch the eclipse.",
+      "translation": "他熬夜观看月食。"
     },
     {
       "phrase": "stay the same",
       "phonetic": "/ˈsteɪ ðə ˈseɪm/",
       "chinese": "保持不变",
-      "example": "The word can stay the same while its function changes.",
-      "translation": "同一个词可以形式不变而功能改变。"
+      "example": "Ticket prices will stay the same this year.",
+      "translation": "今年票价将保持不变。"
     },
     {
-      "phrase": "stay in bed all day",
-      "phonetic": "/ˈsteɪ ɪn ˈbɛd ˈɔːl ˈdeɪ/",
-      "chinese": "整天卧床",
-      "example": "I had to stay in bed all day.",
-      "translation": "我不得不一整天都呆在床上。"
-    },
-    {
-      "phrase": "stay a little longer",
-      "phonetic": "/ˈsteɪ ə ˈlɪtəl ˈlɔːŋɡɚ/",
-      "chinese": "再多待一会",
-      "example": "I want you to stay a little longer.",
-      "translation": "我想让你再待一会。"
-    },
-    {
-      "phrase": "stay there for three weeks",
-      "phonetic": "/ˈsteɪ ˈðɛr ˈfɔːr ˈθriː ˈwiːks/",
-      "chinese": "会在那里待上三周",
-      "example": "We're going to stay there for three weeks.",
-      "translation": "我们会在那里待上三周。"
-    },
-    {
-      "phrase": "stay as long",
-      "phonetic": "/ˈsteɪ ˈæz ˈlɔːŋ/",
-      "chinese": "待多久就待多久",
-      "example": "You can stay as long as you like.",
-      "translation": "你想要待多久就待多久。"
+      "phrase": "stay on course",
+      "phonetic": "/ˈsteɪ ˈɑn ˈkɔːrs/",
+      "chinese": "保持正确方向",
+      "example": "Regular reviews help the project stay on course.",
+      "translation": "定期审查有助于项目保持正确方向。"
     }
   ],
   "synonyms": [
     {
-      "word": "remain",
-      "phonetic": "/rɪˈmeɪn/",
-      "partOfSpeech": "v.",
-      "chinese": "保持；留下",
-      "difference": "remain 表示“保持；留下”，与 stay 的“停留”义相近。两词只有在这一义项重合时才能互换；stay 的其他常用义不一定适用。"
+      "word": "stop over",
+      "phonetic": "/ˈstɑp ˈoʊvɚ/",
+      "partOfSpeech": "phr.v.",
+      "chinese": "中途短暂停留",
+      "difference": "专指旅途中临时过夜或停留，不能替代保持某种状态的 stay"
     },
     {
       "word": "reside",
       "phonetic": "/rɪˈzaɪd/",
       "partOfSpeech": "v.",
-      "chinese": "住；居留；属于",
-      "difference": "reside 常表示“住；居留；属于”，与 stay 的“停留”义有重合。reside 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+      "chinese": "居住",
+      "difference": "正式，强调长期住所；地点停留、短期住宿和状态保持所接补语不同"
     },
     {
-      "word": "wait",
-      "phonetic": "/ˈweɪt/",
+      "word": "lodge",
+      "phonetic": "/ˈlɑdʒ/",
       "partOfSpeech": "v.",
-      "chinese": "等候；期待；延缓",
-      "difference": "wait 常表示“等候；期待；延缓”，与 stay 的“停留”义有重合。wait 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+      "chinese": "暂住",
+      "difference": "强调短期住在旅馆或他人处；地点停留、短期住宿和状态保持所接补语不同"
     },
     {
-      "word": "continue",
-      "phonetic": "/kəˈntɪnjuː/",
+      "word": "linger",
+      "phonetic": "/ˈlɪŋɡɚ/",
       "partOfSpeech": "v.",
-      "chinese": "继续；延续；延长",
-      "difference": "continue 常表示“继续；延续；延长”，与 stay 的“停留”义有重合。continue 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+      "chinese": "逗留",
+      "difference": "强调比预期停留更久；地点停留、短期住宿和状态保持所接补语不同"
+    },
+    {
+      "word": "keep",
+      "phonetic": "/ˈkiːp/",
+      "partOfSpeech": "v.",
+      "chinese": "保持",
+      "difference": "只在 keep calm/quiet 等结构中对应状态义"
     }
   ],
   "antonyms": [
@@ -278,72 +329,104 @@
       "phonetic": "/ˈliːv/",
       "partOfSpeech": "v.",
       "chinese": "离开",
-      "usage": "leave 表示“离开”，与 stay 的“停留”义形成对比。这种反义关系只适用于上述明确义项。"
+      "usage": "与留在某地相反；地点停留、短期住宿和状态保持所接补语不同"
     }
   ],
   "derivatives": [],
-  "confusables": [],
+  "confusables": [
+    {
+      "word": "remain",
+      "phonetic": "/rɪˈmeɪn/",
+      "partOfSpeech": "v.",
+      "chinese": "仍然是；留下",
+      "difference": "stay 更日常，可指暂住或保持状态；remain 较正式，强调在变化后仍然不变"
+    }
+  ],
   "relatedVocabulary": [
     {
-      "category": "同一语义场的高频词",
+      "category": "住宿场所",
       "items": [
         {
-          "word": "remain",
-          "phonetic": "/rɪˈmeɪn/",
-          "partOfSpeech": "v.",
-          "chinese": "保持；留下"
+          "word": "hotel",
+          "phonetic": "/hoʊˈtɛl/",
+          "partOfSpeech": "n.",
+          "chinese": "酒店"
         },
         {
-          "word": "leave",
-          "phonetic": "/ˈliːv/",
-          "partOfSpeech": "v.",
-          "chinese": "离开"
+          "word": "hostel",
+          "phonetic": "/ˈhɑstəl/",
+          "partOfSpeech": "n.",
+          "chinese": "青年旅舍"
         },
         {
-          "word": "continue",
-          "phonetic": "/kəˈntɪnjuː/",
-          "partOfSpeech": "v.",
-          "chinese": "继续"
+          "word": "guesthouse",
+          "phonetic": "/ˈɡɛstˌhaʊs/",
+          "partOfSpeech": "n.",
+          "chinese": "宾馆"
+        },
+        {
+          "word": "accommodation",
+          "phonetic": "/əˌkɑməˈdeɪʃən/",
+          "partOfSpeech": "n.",
+          "chinese": "住宿"
         }
       ]
     },
     {
-      "category": "近义表达分类",
+      "category": "持续状态",
       "items": [
         {
-          "word": "remain",
-          "phonetic": "/rɪˈmeɪn/",
-          "partOfSpeech": "v.",
-          "chinese": "保持；留下"
+          "word": "calm",
+          "phonetic": "/ˈkɑm/",
+          "partOfSpeech": "adj.",
+          "chinese": "冷静的"
         },
         {
-          "word": "reside",
-          "phonetic": "/rɪˈzaɪd/",
-          "partOfSpeech": "v.",
-          "chinese": "住；居留；属于"
+          "word": "awake",
+          "phonetic": "/əˈweɪk/",
+          "partOfSpeech": "adj.",
+          "chinese": "醒着的"
         },
         {
-          "word": "wait",
-          "phonetic": "/ˈweɪt/",
-          "partOfSpeech": "v.",
-          "chinese": "等候；期待；延缓"
+          "word": "alert",
+          "phonetic": "/əˈlɝːt/",
+          "partOfSpeech": "adj.",
+          "chinese": "警觉的"
         },
         {
-          "word": "continue",
-          "phonetic": "/kəˈntɪnjuː/",
-          "partOfSpeech": "v.",
-          "chinese": "继续；延续；延长"
+          "word": "stable",
+          "phonetic": "/ˈsteɪbəl/",
+          "partOfSpeech": "adj.",
+          "chinese": "稳定的"
         }
       ]
     },
     {
-      "category": "对比与易混表达分类",
+      "category": "时间与停留",
       "items": [
         {
-          "word": "leave",
-          "phonetic": "/ˈliːv/",
-          "partOfSpeech": "v.",
-          "chinese": "离开"
+          "word": "visit",
+          "phonetic": "/ˈvɪzɪt/",
+          "partOfSpeech": "n.",
+          "chinese": "停留；拜访"
+        },
+        {
+          "word": "night",
+          "phonetic": "/ˈnaɪt/",
+          "partOfSpeech": "n.",
+          "chinese": "夜晚"
+        },
+        {
+          "word": "duration",
+          "phonetic": "/dʊˈreɪʃən/",
+          "partOfSpeech": "n.",
+          "chinese": "持续时间"
+        },
+        {
+          "word": "departure",
+          "phonetic": "/dɪˈpɑrtʃɚ/",
+          "partOfSpeech": "n.",
+          "chinese": "离开；出发"
         }
       ]
     }
@@ -355,81 +438,91 @@
       "chinese": "下雨的晚上我通常待在家里。"
     },
     {
-      "scene": "工作或学习",
-      "english": "Try to stay focused for ten minutes at a time.",
-      "chinese": "尽量每次专注十分钟。"
-    },
-    {
-      "scene": "常见搭配",
-      "english": "I stay in touch with my classmates online.",
-      "chinese": "我通过网络和同学保持联系。"
-    },
-    {
-      "scene": "真实语境",
-      "english": "Stay away from word-for-word translation when the context differs.",
-      "chinese": "语境不同时，要避免逐字翻译。"
-    },
-    {
-      "scene": "易错结构",
-      "english": "Do not stay up late just to finish one lesson.",
-      "chinese": "不要为了完成一节课而熬夜。"
-    },
-    {
-      "scene": "主动表达",
-      "english": "The word can stay the same while its function changes.",
-      "chinese": "同一个词可以形式不变而功能改变。"
-    },
-    {
       "scene": "日常交流",
-      "english": "I had to stay in bed all day.",
-      "chinese": "我不得不一整天都呆在床上。"
+      "english": "She stayed at home to care for her son.",
+      "chinese": "她留在家里照顾儿子。"
     },
     {
       "scene": "工作沟通",
-      "english": "I have to stay in bed all day.",
-      "chinese": "我不得不一整天都待在床上。"
+      "english": "We stayed in a small hotel near the station.",
+      "chinese": "我们住在车站附近的一家小酒店。"
     },
     {
       "scene": "学习表达",
-      "english": "I want you to stay a little longer.",
-      "chinese": "我想让你再待一会。"
+      "english": "I stayed with my aunt during the conference.",
+      "chinese": "会议期间我住在姨妈家。"
     },
     {
       "scene": "书面表达",
-      "english": "We're going to stay there for three weeks.",
-      "chinese": "我们会在那里待上三周。"
+      "english": "Can you stay for another ten minutes?",
+      "chinese": "你能再待十分钟吗？"
+    },
+    {
+      "scene": "日常交流",
+      "english": "We stayed until the final speaker had finished.",
+      "chinese": "我们一直待到最后一位发言人结束。"
+    },
+    {
+      "scene": "工作沟通",
+      "english": "Turn off notifications to stay focused.",
+      "chinese": "关闭通知以保持专注。"
+    },
+    {
+      "scene": "学习表达",
+      "english": "Try to stay calm and follow the evacuation signs.",
+      "chinese": "尽量保持冷静并遵循疏散标志。"
+    },
+    {
+      "scene": "书面表达",
+      "english": "We have stayed in touch since university.",
+      "chinese": "大学毕业后我们一直保持联系。"
+    },
+    {
+      "scene": "日常交流",
+      "english": "Children should stay away from the damaged fence.",
+      "chinese": "孩子们应远离损坏的围栏。"
+    },
+    {
+      "scene": "工作沟通",
+      "english": "He stayed up late to watch the eclipse.",
+      "chinese": "他熬夜观看月食。"
+    },
+    {
+      "scene": "学习表达",
+      "english": "Ticket prices will stay the same this year.",
+      "chinese": "今年票价将保持不变。"
     }
   ],
   "studyFocus": {
-    "coreMeaning": "先掌握“停留”这个核心义，再对比另外 1 个常用义项，辨别不同语境。",
+    "coreMeaning": "先掌握“停留；暂住”这个核心义，再对比另外 1 个常用义项，辨别不同语境。",
     "keyCollocation": "把“stay at home”连同介词、宾语和动词形式作为整个句块记忆。",
-    "commonMistake": "在“stay at home”所表达的这个具体含义中，要用介词 at；换成 on 会破坏这个固定结构或改变原意。",
+    "commonMistake": "固定表达是 stay at home；说待在房子里可用 stay in the house",
     "mustUseExample": "I usually stay at home on rainy evenings.（下雨的晚上我通常待在家里。）"
   },
   "questions": [
     {
       "id": "stay-v-meaning-core",
       "type": "meaning_choice",
-      "prompt": "“stay”最核心的中文含义是？",
+      "prompt": "“stay”最常见的核心中文义是哪一项？",
       "options": [
         "加入",
-        "停留",
+        "停留；暂住",
         "结束"
       ],
-      "answer": "停留",
+      "answer": "停留；暂住",
       "stage": "T0",
       "ai": false
     },
     {
       "id": "stay-v-meaning-english",
       "type": "meaning_choice",
-      "prompt": "哪一项英文释义最符合词卡中的 “stay”？",
+      "prompt": "“stay”最常见的英文释义是哪一项？",
       "options": [
-        "to remain in a place",
+        "to remain in a place or live somewhere temporarily",
         "to finish or cause something to finish",
         "to become part of a group or connect things together"
       ],
-      "answer": "to remain in a place",
+      "answer": "to remain in a place or live somewhere temporarily",
       "stage": "T0",
       "ai": false
     },
@@ -438,9 +531,9 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“待在家里”，又符合这个形式线索：完整搭配中使用介词 at？",
       "options": [
-        "stay focused",
-        "stay in touch with someone",
-        "stay away from something",
+        "stay in a hotel",
+        "stay with someone",
+        "stay for a period",
         "stay at home"
       ],
       "answer": "stay at home",
@@ -450,26 +543,26 @@
     {
       "id": "stay-v-synonym-choice",
       "type": "meaning_choice",
-      "prompt": "哪个词是词卡中列出的 “stay” 最直接近义词？",
+      "prompt": "在“居住”这个义项下，哪个词与“stay”意思最接近？",
       "options": [
-        "end",
-        "join",
-        "remain",
-        "leave"
+        "have",
+        "do",
+        "reside",
+        "be"
       ],
-      "answer": "remain",
+      "answer": "reside",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "stay-v-antonym-choice",
       "type": "meaning_choice",
-      "prompt": "哪个词是词卡中列出的 “stay” 最直接反义词？",
+      "prompt": "在“停留；暂住”这个义项下，哪个词与“stay”意思相反？",
       "options": [
-        "join",
+        "do",
         "leave",
-        "remain",
-        "end"
+        "be",
+        "have"
       ],
       "answer": "leave",
       "stage": "T2",
@@ -478,12 +571,12 @@
     {
       "id": "stay-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “stay” 的相关近义词？",
+      "prompt": "结合拼写、发音和用法，哪一项需要与“stay”重点区分？",
       "options": [
         "remain",
-        "leave",
-        "end",
-        "join"
+        "be",
+        "have",
+        "do"
       ],
       "answer": "remain",
       "stage": "T3",
@@ -492,7 +585,7 @@
     {
       "id": "stay-v-recall-definition",
       "type": "recall",
-      "prompt": "根据英文释义写出目标词：to remain in a place",
+      "prompt": "根据英文释义写出对应单词：to remain in a place or live somewhere temporarily",
       "answer": "stay",
       "stage": "T1",
       "ai": false
@@ -500,7 +593,7 @@
     {
       "id": "stay-v-recall-chinese",
       "type": "recall",
-      "prompt": "写出符合“停留”（v.）的本课目标词。",
+      "prompt": "写出表示“停留；暂住”（v.）的英文单词。",
       "answer": "stay",
       "stage": "T1",
       "ai": false
@@ -516,27 +609,21 @@
     {
       "id": "stay-v-collocation-structure-meaning-v3",
       "type": "collocation",
-      "prompt": "句型应用：哪一项既表示“保持专注”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "句型应用：哪一项既表示“住在酒店”，又符合这个形式线索：完整搭配中使用介词 in？",
       "options": [
-        "stay away from something",
-        "stay focused",
+        "stay for a period",
+        "stay in a hotel",
         "stay at home",
-        "stay in touch with someone"
+        "stay with someone"
       ],
-      "answer": "stay focused",
+      "answer": "stay in a hotel",
       "stage": "T1",
       "ai": false
     },
     {
       "id": "stay-v-collocation-example-context-v3",
       "type": "collocation",
-      "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：I usually stay at _____ on rainy evenings.（中文：下雨的晚上我通常待在家里。）",
-      "options": [
-        "home",
-        "meeting",
-        "small",
-        "ready"
-      ],
+      "prompt": "根据完整句意和中文提示补全原句：I usually stay at _____ on rainy evenings.（中文：下雨的晚上我通常待在家里。）",
       "answer": "home",
       "stage": "T2",
       "ai": false
@@ -544,14 +631,14 @@
     {
       "id": "stay-v-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“待在家里”，又符合这个形式线索：完整搭配中使用介词 at？",
+      "prompt": "用法辨析：哪一项既表示“待到某时或某事件”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "stay focused",
-        "stay in touch with someone",
-        "stay away from something",
-        "stay at home"
+        "stay at home",
+        "stay in a hotel",
+        "stay with someone",
+        "stay until + time or event"
       ],
-      "answer": "stay at home",
+      "answer": "stay until + time or event",
       "stage": "T2",
       "ai": false
     },
@@ -560,8 +647,8 @@
       "type": "collocation",
       "prompt": "搭配辨析：哪一项既表示“保持专注”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "stay in touch with someone",
-        "stay away from something",
+        "stay in a hotel",
+        "stay with someone",
         "stay focused",
         "stay at home"
       ],
@@ -572,15 +659,15 @@
     {
       "id": "stay-v-example-cloze",
       "type": "collocation",
-      "prompt": "根据句意补全词卡核心例句：I usually _____ at home on rainy evenings.（填写 stay 的正确形式）",
-      "answer": "stay",
+      "prompt": "根据句意和中文提示补全另一个常用例句：She _____ at home to care for her son.（填写 stay 的正确形式）（中文：她留在家里照顾儿子。）",
+      "answer": "stayed",
       "stage": "T3",
       "ai": false
     },
     {
       "id": "stay-v-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “stay” 写一个自然、真实的英文句子，含义必须符合词卡核心义“停留”。",
+      "prompt": "请用 “stay” 写一个自然、真实的英文句子，含义必须符合核心义“停留；暂住”。",
       "answer": "",
       "stage": "T2",
       "ai": true
@@ -588,7 +675,7 @@
     {
       "id": "stay-v-sentence-phrase",
       "type": "free_sentence",
-      "prompt": "请使用 “stay at home” 结构写一个与自己有关的自然英文句子。",
+      "prompt": "请使用 “stay until + time or event” 结构写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -596,7 +683,7 @@
     {
       "id": "stay-v-dialogue",
       "type": "dialogue",
-      "prompt": "写一段 2–4 轮真实对话，自然使用 “stay” 和 “stay at home” 结构，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “stay” 和 “stay at a small hotel” 结构，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -654,9 +741,10 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-complete",
-  "templateVersion": "learning-template-2026.09.10.3",
-  "contentVersion": "2026.09.10.3",
-  "reviewed": false,
+  "detailLevel": "template-curated",
+  "templateVersion": "learning-template-2026.09.10.4",
+  "contentVersion": "2026.09.10.4",
+  "reviewed": true,
+  "curationSource": "manual-semantic-pack-2026.09.10.4",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

@@ -28,9 +28,9 @@
     "主动词汇"
   ],
   "coreMemory": {
-    "chinese": "接受；收下；承认；认可",
-    "english": "v. to agree to receive or take something that is offered；v. to recognize that something is true, valid, or your responsibility",
-    "structure": "accept an offer /əkˈsept ˈæn ˈɔːfɚ/（接受提议）；accept responsibility /əkˈsept riːˌspɑnsəˈbɪlətiː/（承担责任）；accept the fact that /əkˈsept ðə ˈfækt ˈðæt/（接受……这一事实）；widely accepted /ˈwaɪdliː æˈksɛptɪd/（被广泛接受）",
+    "chinese": "接受；收下；承认；接受现实；接纳；受理",
+    "english": "v. to willingly receive or agree to take something offered；v. to recognize that something is true or cannot be changed；v. to allow someone or something to join, enter, or be used",
+    "structure": "accept an offer /əkˈsept ˈæn ˈɔːfɚ/（接受提议）；accept an invitation /əkˈsept ˈæn ˌɪnvɪˈteɪʃən/（接受邀请）；accept responsibility /əkˈsept riˌspɑnsəˈbɪləti/（承担责任）；accept the truth /əkˈsept ðə ˈtruːθ/（接受事实）",
     "structures": [
       {
         "phrase": "accept an offer",
@@ -38,128 +38,165 @@
         "chinese": "接受提议"
       },
       {
+        "phrase": "accept an invitation",
+        "phonetic": "/əkˈsept ˈæn ˌɪnvɪˈteɪʃən/",
+        "chinese": "接受邀请"
+      },
+      {
         "phrase": "accept responsibility",
-        "phonetic": "/əkˈsept riːˌspɑnsəˈbɪlətiː/",
+        "phonetic": "/əkˈsept riˌspɑnsəˈbɪləti/",
         "chinese": "承担责任"
       },
       {
-        "phrase": "accept the fact that",
-        "phonetic": "/əkˈsept ðə ˈfækt ˈðæt/",
-        "chinese": "接受……这一事实"
-      },
-      {
-        "phrase": "widely accepted",
-        "phonetic": "/ˈwaɪdliː æˈksɛptɪd/",
-        "chinese": "被广泛接受"
+        "phrase": "accept the truth",
+        "phonetic": "/əkˈsept ðə ˈtruːθ/",
+        "chinese": "接受事实"
       }
     ],
-    "commonError": "❌ can to accept → ✅ can accept；❌ to accepting → ✅ to accept",
+    "commonError": "❌ He accepted to join the committee. → ✅ He agreed to join the committee.；❌ The store accepts to pay by card. → ✅ The store accepts payment by card.",
     "commonErrors": [
       {
-        "wrong": "can to accept",
-        "wrongPhonetic": "/ˈkæn ˈtuː əkˈsept/",
-        "right": "can accept",
-        "rightPhonetic": "/ˈkæn əkˈsept/",
-        "note": "情态动词 can 后面直接接 accept 的原形，不加 to。"
+        "wrong": "He accepted to join the committee.",
+        "wrongPhonetic": "/ˈhiː ækˈsɛptɪd ˈtuː ˈdʒɔɪn ðə kəˈmɪti/",
+        "right": "He agreed to join the committee.",
+        "rightPhonetic": "/ˈhiː əˈɡriːd ˈtuː ˈdʒɔɪn ðə kəˈmɪti/",
+        "note": "accept 通常不接 to do，表示同意做事用 agree to do。"
       },
       {
-        "wrong": "to accepting",
-        "wrongPhonetic": "/ˈtuː æˈksɛptɪŋ/",
-        "right": "to accept",
-        "rightPhonetic": "/ˈtuː əkˈsept/",
-        "note": "这里的 to 是不定式标记，后面要用 accept 的原形，不能改成 accepting。"
+        "wrong": "The store accepts to pay by card.",
+        "wrongPhonetic": "/ðə ˈstɔːr ækˈsɛpts ˈtuː ˈpeɪ ˈbaɪ ˈkɑrd/",
+        "right": "The store accepts payment by card.",
+        "rightPhonetic": "/ðə ˈstɔːr ækˈsɛpts ˈpeɪmənt ˈbaɪ ˈkɑrd/",
+        "note": "accept 后接名词 payment，不接 to pay 表示付款方式。"
       }
     ],
-    "directSynonym": "receive /rəˈsiːv/（收到；接收）；admit /əˈdmɪt/（承认；接受；允许进入）；approve /əˈpruːv/（赞同；核准；为...提供证据）；take /ˈteɪk/（拿；取；抓）",
-    "directAntonym": "reject /rɪˈdʒɛkt/（拒绝；不接受）",
-    "derivatives": "acceptance · acceptable",
+    "directSynonym": "receive /rəˈsiːv/（接收）；take /ˈteɪk/（接受）；approve /əˈpruːv/（批准）；acknowledge /ækˈnɑlɪdʒ/（承认）；embrace /ɛmˈbreɪs/（欣然接受）",
+    "directAntonym": "reject /rɪˈdʒɛkt/（拒绝）；decline /dɪˈklaɪn/（婉拒）",
+    "derivatives": "acceptance · acceptability · acceptable · unacceptable · acceptably",
     "example": "He accepted responsibility for the mistake.",
     "exampleChinese": "他为这个错误承担了责任。"
   },
   "meanings": [
     {
       "partOfSpeech": "v.",
-      "english": "to agree to receive or take something that is offered",
+      "english": "to willingly receive or agree to take something offered",
       "chinese": "接受；收下",
-      "example": "She accepted the offer after careful thought.",
-      "translation": "她仔细考虑后接受了这份提议。"
+      "example": "He accepted the invitation immediately.",
+      "translation": "他立即接受了邀请。"
     },
     {
       "partOfSpeech": "v.",
-      "english": "to recognize that something is true, valid, or your responsibility",
-      "chinese": "承认；认可",
-      "example": "He accepted responsibility for the error.",
-      "translation": "他为这个错误承担了责任。"
+      "english": "to recognize that something is true or cannot be changed",
+      "chinese": "承认；接受现实",
+      "example": "We must accept that mistakes happen.",
+      "translation": "我们必须承认错误难免会发生。"
+    },
+    {
+      "partOfSpeech": "v.",
+      "english": "to allow someone or something to join, enter, or be used",
+      "chinese": "接纳；受理；接受",
+      "example": "The program accepts applicants from any country.",
+      "translation": "该项目接受来自任何国家的申请者。"
     }
   ],
   "contextPhrases": [
     {
-      "category": "核心动作与结构",
+      "category": "提议与邀请",
       "items": [
         {
-          "phrase": "accept an offer",
-          "phonetic": "/əkˈsept ˈæn ˈɔːfɚ/",
-          "chinese": "接受提议"
+          "phrase": "accept a formal invitation",
+          "phonetic": "/əkˈsept ə ˈfɔːrməl ˌɪnvɪˈteɪʃən/",
+          "chinese": "接受正式邀请"
         },
         {
-          "phrase": "accept responsibility",
-          "phonetic": "/əkˈsept riːˌspɑnsəˈbɪlətiː/",
-          "chinese": "承担责任"
+          "phrase": "accept the revised offer",
+          "phonetic": "/əkˈsept ðə rɪˈvaɪzd ˈɔːfɚ/",
+          "chinese": "接受修改后的提议"
         },
         {
-          "phrase": "accept the fact that + clause",
-          "phonetic": "/əkˈsept ðə ˈfækt ˈðæt ˈklɔːz/",
-          "chinese": "接受……这一事实"
+          "phrase": "accept an apology sincerely",
+          "phonetic": "/əkˈsept ˈæn əˈpɑləˌdʒiː sɪnˈsɪrli/",
+          "chinese": "真诚接受道歉"
+        },
+        {
+          "phrase": "accept a dinner invitation",
+          "phonetic": "/əkˈsept ə ˈdɪnɚ ˌɪnvɪˈteɪʃən/",
+          "chinese": "接受晚餐邀请"
         }
       ]
     },
     {
-      "category": "日常与工作语境",
+      "category": "事实与责任",
       "items": [
         {
-          "phrase": "widely accepted",
-          "phonetic": "/ˈwaɪdliː æˈksɛptɪd/",
-          "chinese": "被广泛接受"
+          "phrase": "accept full responsibility",
+          "phonetic": "/əkˈsept ˈfʊl riˌspɑnsəˈbɪləti/",
+          "chinese": "承担全部责任"
         },
         {
-          "phrase": "accept someone as something",
-          "phonetic": "/əkˈsept ˈsʌˌmwʌn ˈæz ˈsʌmθɪŋ/",
-          "chinese": "接受某人为……"
+          "phrase": "accept the facts calmly",
+          "phonetic": "/əkˈsept ðə ˈfækts ˈkɑmli/",
+          "chinese": "平静接受事实"
         },
         {
-          "phrase": "cannot accept",
-          "phonetic": "/ˈkænɑt əkˈsept/",
-          "chinese": "无法接受"
+          "phrase": "accept that mistakes happen",
+          "phonetic": "/əkˈsept ˈðæt mɪˈsteɪks ˈhæpən/",
+          "chinese": "接受犯错在所难免"
+        },
+        {
+          "phrase": "accept the consequences of your choice",
+          "phonetic": "/əkˈsept ðə ˈkɑnsəˌkwɛnsəz ˈʌv ˈjɔːr ˈtʃɔɪs/",
+          "chinese": "接受选择带来的后果"
         }
       ]
     },
     {
-      "category": "高频扩展表达",
+      "category": "付款与申请",
       "items": [
         {
-          "phrase": "accept the offer",
-          "phonetic": "/əkˈsept ðə ˈɔːfɚ/",
-          "chinese": "接受报价"
+          "phrase": "accept payment by card",
+          "phonetic": "/əkˈsept ˈpeɪmənt ˈbaɪ ˈkɑrd/",
+          "chinese": "接受刷卡付款"
         },
         {
-          "phrase": "accept someone's offer",
-          "phonetic": "/əkˈsept ˈsʌˌmwʌnz ˈɔːfɚ/",
-          "chinese": "接受某人的提议"
+          "phrase": "accept applications until Friday",
+          "phonetic": "/əkˈsept ˌæpləˈkeɪʃənz ənˈtɪl ˈfraɪdi/",
+          "chinese": "接受申请至星期五"
         },
         {
-          "phrase": "accept someone's apology",
-          "phonetic": "/əkˈsept ˈsʌˌmwʌnz əˈpɑləˌdʒiː/",
-          "chinese": "接受某人的道歉"
+          "phrase": "accept online reservations",
+          "phonetic": "/əkˈsept ˈɔːnˌlaɪn ˌrɛzɚˈveɪʃənz/",
+          "chinese": "接受在线预订"
+        },
+        {
+          "phrase": "accept contactless payments",
+          "phonetic": "/əkˈsept ˈkɑntæktˌlɛs ˈpeɪmənts/",
+          "chinese": "接受非接触式付款"
         }
       ]
     },
     {
-      "category": "补充常用语境",
+      "category": "认可与接纳",
       "items": [
         {
-          "phrase": "accept someone's invitation",
-          "phonetic": "/əkˈsept ˈsʌˌmwʌnz ˌɪnvɪˈteɪʃən/",
-          "chinese": "接受某人的邀请"
+          "phrase": "accept someone as an equal",
+          "phonetic": "/əkˈsept ˈsʌmˌwʌn ˈæz ˈæn ˈiːkwəl/",
+          "chinese": "平等接纳某人"
+        },
+        {
+          "phrase": "accept a result as valid",
+          "phonetic": "/əkˈsept ə rɪˈzʌlt ˈæz ˈvælɪd/",
+          "chinese": "认可结果有效"
+        },
+        {
+          "phrase": "accept change gradually",
+          "phonetic": "/əkˈsept ˈtʃeɪndʒ ˈɡrædʒuəli/",
+          "chinese": "逐渐接受变化"
+        },
+        {
+          "phrase": "accept cultural differences",
+          "phonetic": "/əkˈsept ˈkʌltʃɚəl ˈdɪfɚənsɪz/",
+          "chinese": "接纳文化差异"
         }
       ]
     }
@@ -169,71 +206,85 @@
       "phrase": "accept an offer",
       "phonetic": "/əkˈsept ˈæn ˈɔːfɚ/",
       "chinese": "接受提议",
-      "example": "She accepted the offer after careful thought.",
-      "translation": "她仔细考虑后接受了这份提议。"
+      "example": "After reviewing the benefits, she accepted the job offer.",
+      "translation": "了解各项福利后，她接受了这份工作邀请。"
+    },
+    {
+      "phrase": "accept an invitation",
+      "phonetic": "/əkˈsept ˈæn ˌɪnvɪˈteɪʃən/",
+      "chinese": "接受邀请",
+      "example": "The scientist accepted an invitation to speak at the conference.",
+      "translation": "这位科学家接受了在会议上发言的邀请。"
     },
     {
       "phrase": "accept responsibility",
-      "phonetic": "/əkˈsept riːˌspɑnsəˈbɪlətiː/",
+      "phonetic": "/əkˈsept riˌspɑnsəˈbɪləti/",
       "chinese": "承担责任",
-      "example": "He accepted responsibility for the error.",
-      "translation": "他为这个错误承担了责任。"
+      "example": "The contractor accepted responsibility for the faulty wiring.",
+      "translation": "承包商为有问题的布线承担了责任。"
     },
     {
-      "phrase": "accept the fact that + clause",
-      "phonetic": "/əkˈsept ðə ˈfækt ˈðæt ˈklɔːz/",
+      "phrase": "accept the truth",
+      "phonetic": "/əkˈsept ðə ˈtruːθ/",
+      "chinese": "接受事实",
+      "example": "It took him several weeks to accept the truth about the closure.",
+      "translation": "他花了几周时间才接受关闭的事实。"
+    },
+    {
+      "phrase": "accept payment",
+      "phonetic": "/əkˈsept ˈpeɪmənt/",
+      "chinese": "接受付款",
+      "example": "The clinic accepts payment by card or bank transfer.",
+      "translation": "诊所接受刷卡或银行转账付款。"
+    },
+    {
+      "phrase": "accept an application",
+      "phonetic": "/əkˈsept ˈæn ˌæpləˈkeɪʃən/",
+      "chinese": "受理申请",
+      "example": "The office will not accept an incomplete application.",
+      "translation": "办事处不受理材料不完整的申请。"
+    },
+    {
+      "phrase": "accept a gift",
+      "phonetic": "/əkˈsept ə ˈɡɪft/",
+      "chinese": "收下礼物",
+      "example": "She accepted the handmade gift with genuine gratitude.",
+      "translation": "她满怀感激地收下了这份手工礼物。"
+    },
+    {
+      "phrase": "accept an apology",
+      "phonetic": "/əkˈsept ˈæn əˈpɑləˌdʒiː/",
+      "chinese": "接受道歉",
+      "example": "He accepted her apology but asked for time to rebuild trust.",
+      "translation": "他接受了她的道歉，但表示重建信任需要时间。"
+    },
+    {
+      "phrase": "accept someone as a member",
+      "phonetic": "/əkˈsept ˈsʌmˌwʌn ˈæz ə ˈmɛmbɚ/",
+      "chinese": "接纳某人为成员",
+      "example": "The association accepted three students as full members.",
+      "translation": "协会接纳了三名学生为正式会员。"
+    },
+    {
+      "phrase": "accept that + clause",
+      "phonetic": "/əkˈsept ˈðæt ˈklɔːz/",
       "chinese": "接受……这一事实",
-      "example": "We have to accept the fact that plans can change.",
-      "translation": "我们必须接受计划可能改变这一事实。"
+      "example": "We must accept that the repairs will take longer than expected.",
+      "translation": "我们必须接受维修时间会超过预期这一事实。"
     },
     {
-      "phrase": "widely accepted",
-      "phonetic": "/ˈwaɪdliː æˈksɛptɪd/",
-      "chinese": "被广泛接受",
-      "example": "Online learning is now widely accepted.",
-      "translation": "在线学习现在已被广泛接受。"
+      "phrase": "accept defeat",
+      "phonetic": "/əkˈsept dɪˈfiːt/",
+      "chinese": "承认失败",
+      "example": "The champion accepted defeat and congratulated her opponent.",
+      "translation": "冠军接受了失败，并向对手表示祝贺。"
     },
     {
-      "phrase": "accept someone as something",
-      "phonetic": "/əkˈsept ˈsʌˌmwʌn ˈæz ˈsʌmθɪŋ/",
-      "chinese": "接受某人为……",
-      "example": "The group accepted him as a full member.",
-      "translation": "这个团体接纳他为正式成员。"
-    },
-    {
-      "phrase": "cannot accept",
-      "phonetic": "/ˈkænɑt əkˈsept/",
-      "chinese": "无法接受",
-      "example": "I cannot accept that explanation without evidence.",
-      "translation": "没有证据，我无法接受那个解释。"
-    },
-    {
-      "phrase": "accept the offer",
-      "phonetic": "/əkˈsept ðə ˈɔːfɚ/",
-      "chinese": "接受报价",
-      "example": "I had no choice but to accept the offer.",
-      "translation": "除了接受报价，我别无选择。"
-    },
-    {
-      "phrase": "accept someone's offer",
-      "phonetic": "/əkˈsept ˈsʌˌmwʌnz ˈɔːfɚ/",
-      "chinese": "接受某人的提议",
-      "example": "It was foolish of you to accept his offer.",
-      "translation": "你真笨去接受他的提议。"
-    },
-    {
-      "phrase": "accept someone's apology",
-      "phonetic": "/əkˈsept ˈsʌˌmwʌnz əˈpɑləˌdʒiː/",
-      "chinese": "接受某人的道歉",
-      "example": "He did not accept my apologies.",
-      "translation": "他不接受我的道歉。"
-    },
-    {
-      "phrase": "accept someone's invitation",
-      "phonetic": "/əkˈsept ˈsʌˌmwʌnz ˌɪnvɪˈteɪʃən/",
-      "chinese": "接受某人的邀请",
-      "example": "He did not accept their invitation.",
-      "translation": "他没有接受他们的邀请。"
+      "phrase": "accept the terms",
+      "phonetic": "/əkˈsept ðə ˈtɝːmz/",
+      "chinese": "接受条款",
+      "example": "Both companies accepted the terms of the settlement.",
+      "translation": "两家公司都接受了和解条款。"
     }
   ],
   "synonyms": [
@@ -241,29 +292,36 @@
       "word": "receive",
       "phonetic": "/rəˈsiːv/",
       "partOfSpeech": "v.",
-      "chinese": "收到；接收",
-      "difference": "receive 表示“收到；接收”，与 accept 的“接受”义相近。receive 只说明收到；accept 还表示愿意接纳、认可或承担。"
-    },
-    {
-      "word": "admit",
-      "phonetic": "/əˈdmɪt/",
-      "partOfSpeech": "v.",
-      "chinese": "承认；接受；允许进入",
-      "difference": "admit 常表示“承认；接受；允许进入”，与 accept 的“接受”义有重合。admit 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
-    },
-    {
-      "word": "approve",
-      "phonetic": "/əˈpruːv/",
-      "partOfSpeech": "v.",
-      "chinese": "赞同；核准；为...提供证据",
-      "difference": "approve 常表示“赞同；核准；为...提供证据”，与 accept 的“接受”义有重合。approve 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+      "chinese": "接收",
+      "difference": "只表示收到，不一定愿意接受；accept 还表示愿意认可或同意，receive 不含这一态度。"
     },
     {
       "word": "take",
       "phonetic": "/ˈteɪk/",
       "partOfSpeech": "v.",
-      "chinese": "拿；取；抓",
-      "difference": "take 常表示“拿；取；抓”，与 accept 的“接受”义有重合。take 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+      "chinese": "接受",
+      "difference": "口语化，常接工作、提议或付款；accept 比 take 正式，也可接事实、责任和申请。"
+    },
+    {
+      "word": "approve",
+      "phonetic": "/əˈpruːv/",
+      "partOfSpeech": "v.",
+      "chinese": "批准",
+      "difference": "表示正式同意，不等同于亲自收下；accept 可是个人收下事物，不要求机构审批。"
+    },
+    {
+      "word": "acknowledge",
+      "phonetic": "/ækˈnɑlɪdʒ/",
+      "partOfSpeech": "v.",
+      "chinese": "承认",
+      "difference": "强调承认事实、责任或存在；accept 还可接邀请、礼物或成员，不只承认事实。"
+    },
+    {
+      "word": "embrace",
+      "phonetic": "/ɛmˈbreɪs/",
+      "partOfSpeech": "v.",
+      "chinese": "欣然接受",
+      "difference": "语气积极，常指变化、理念或机会；accept 语气中性，不必带积极欢迎或拥抱变化的态度。"
     }
   ],
   "antonyms": [
@@ -271,138 +329,148 @@
       "word": "reject",
       "phonetic": "/rɪˈdʒɛkt/",
       "partOfSpeech": "v.",
-      "chinese": "拒绝；不接受",
-      "usage": "reject 表示“拒绝；不接受”，与 accept 的“接受”义形成对比。accept 表示接纳；reject 表示明确拒绝。"
+      "chinese": "拒绝",
+      "usage": "与接受提议、申请或物品直接相对；accept 表示同意接纳，reject 表示明确不接受。"
+    },
+    {
+      "word": "decline",
+      "phonetic": "/dɪˈklaɪn/",
+      "partOfSpeech": "v.",
+      "chinese": "婉拒",
+      "usage": "较礼貌地拒绝邀请或提议；accept 可收下邀请或提议，decline 是礼貌谢绝。"
     }
   ],
   "derivatives": [
     {
       "word": "acceptance",
-      "phonetic": "/æˈksɛptəns/",
+      "phonetic": "/ækˈsɛptəns/",
       "partOfSpeech": "n.",
-      "chinese": "接受；接纳；承认；同意",
-      "note": "acceptance 是 accept 的常用词族形式；作 n. 时表示“接受；接纳；承认；同意”。"
+      "chinese": "接受；认可；接纳",
+      "note": "常见于 acceptance of change 和 university acceptance。"
+    },
+    {
+      "word": "acceptability",
+      "phonetic": "/əkˌsɛptəˈbɪləti/",
+      "partOfSpeech": "n.",
+      "chinese": "可接受性",
+      "note": "指方案、行为或质量被接受的程度。"
     },
     {
       "word": "acceptable",
-      "phonetic": "/æˈksɛptəbəl/",
+      "phonetic": "/ækˈsɛptəbəl/",
       "partOfSpeech": "adj.",
-      "chinese": "可接受的；合意的；可忍受的",
-      "note": "acceptable 是 accept 的常用词族形式；作 adj. 时表示“可接受的；合意的；可忍受的”。"
+      "chinese": "可接受的；合格的",
+      "note": "常形容标准、行为或解决方案。"
+    },
+    {
+      "word": "unacceptable",
+      "phonetic": "/ˌʌnəkˈsɛptəbəl/",
+      "partOfSpeech": "adj.",
+      "chinese": "不可接受的",
+      "note": "表示行为、质量或风险超过可容忍范围。"
+    },
+    {
+      "word": "acceptably",
+      "phonetic": "/ækˈsɛptəbli/",
+      "partOfSpeech": "adv.",
+      "chinese": "可接受地；合格地",
+      "note": "说明表现达到最低或合理标准。"
     }
   ],
   "confusables": [
     {
       "word": "except",
-      "phonetic": "/ɪˈksɛpt/",
-      "partOfSpeech": "v.",
-      "chinese": "与 accept 容易混淆的表达",
-      "difference": "except 表示“与 accept 容易混淆的表达”，而 accept 在“accept responsibility”中表示“接受”。两者容易因拼写、发音或相近语境而混淆，使用时要根据完整句义和固定搭配区分。"
-    },
-    {
-      "word": "expect",
-      "phonetic": "/ɪˈkspɛkt/",
-      "partOfSpeech": "v.",
-      "chinese": "预期；盼望；期待",
-      "difference": "expect 表示“预期；盼望；期待”，而 accept 在“accept responsibility”中表示“接受”。两者容易因拼写、发音或相近语境而混淆，使用时要根据完整句义和固定搭配区分。"
+      "phonetic": "/ɪkˈsɛpt/",
+      "partOfSpeech": "prep./conj.",
+      "chinese": "除……之外",
+      "difference": "accept 是动词“接受”，except 表示排除，发音和拼写不同"
     }
   ],
   "relatedVocabulary": [
     {
-      "category": "同一语义场的高频词",
+      "category": "提议文件",
       "items": [
         {
-          "word": "approve",
-          "phonetic": "/əˈpruːv/",
-          "partOfSpeech": "v.",
-          "chinese": "赞成；批准"
-        },
-        {
-          "word": "receive",
-          "phonetic": "/rəˈsiːv/",
-          "partOfSpeech": "v.",
-          "chinese": "收到"
-        },
-        {
-          "word": "reject",
-          "phonetic": "/rɪˈdʒɛkt/",
-          "partOfSpeech": "v.",
-          "chinese": "拒绝"
-        }
-      ]
-    },
-    {
-      "category": "近义表达分类",
-      "items": [
-        {
-          "word": "receive",
-          "phonetic": "/rəˈsiːv/",
-          "partOfSpeech": "v.",
-          "chinese": "收到；接收"
-        },
-        {
-          "word": "admit",
-          "phonetic": "/əˈdmɪt/",
-          "partOfSpeech": "v.",
-          "chinese": "承认；接受；允许进入"
-        },
-        {
-          "word": "approve",
-          "phonetic": "/əˈpruːv/",
-          "partOfSpeech": "v.",
-          "chinese": "赞同；核准；为...提供证据"
-        },
-        {
-          "word": "take",
-          "phonetic": "/ˈteɪk/",
-          "partOfSpeech": "v.",
-          "chinese": "拿；取；抓"
-        }
-      ]
-    },
-    {
-      "category": "对比与易混表达分类",
-      "items": [
-        {
-          "word": "reject",
-          "phonetic": "/rɪˈdʒɛkt/",
-          "partOfSpeech": "v.",
-          "chinese": "拒绝；不接受"
-        },
-        {
-          "word": "except",
-          "phonetic": "/ɪˈksɛpt/",
-          "partOfSpeech": "v.",
-          "chinese": "与 accept 容易混淆的表达"
-        },
-        {
-          "word": "expect",
-          "phonetic": "/ɪˈkspɛkt/",
-          "partOfSpeech": "v.",
-          "chinese": "预期；盼望；期待"
-        },
-        {
-          "word": "acceptance",
-          "phonetic": "/æˈksɛptəns/",
+          "word": "invitation",
+          "phonetic": "/ˌɪnvɪˈteɪʃən/",
           "partOfSpeech": "n.",
-          "chinese": "接受；接纳；承认；同意"
+          "chinese": "邀请"
+        },
+        {
+          "word": "offer",
+          "phonetic": "/ˈɔːfɚ/",
+          "partOfSpeech": "n.",
+          "chinese": "提议"
+        },
+        {
+          "word": "application",
+          "phonetic": "/ˌæpləˈkeɪʃən/",
+          "partOfSpeech": "n.",
+          "chinese": "申请"
+        },
+        {
+          "word": "contract",
+          "phonetic": "/ˈkɑːntrækt/",
+          "partOfSpeech": "n.",
+          "chinese": "合同"
         }
       ]
     },
     {
-      "category": "常用词族分类",
+      "category": "责任现实",
       "items": [
         {
-          "word": "acceptance",
-          "phonetic": "/æˈksɛptəns/",
+          "word": "responsibility",
+          "phonetic": "/riˌspɑnsəˈbɪləti/",
           "partOfSpeech": "n.",
-          "chinese": "接受；接纳；承认；同意"
+          "chinese": "责任"
         },
         {
-          "word": "acceptable",
-          "phonetic": "/æˈksɛptəbəl/",
-          "partOfSpeech": "adj.",
-          "chinese": "可接受的；合意的；可忍受的"
+          "word": "reality",
+          "phonetic": "/ˌriːˈæləˌtiː/",
+          "partOfSpeech": "n.",
+          "chinese": "现实"
+        },
+        {
+          "word": "consequence",
+          "phonetic": "/ˈkɑnsəkwəns/",
+          "partOfSpeech": "n.",
+          "chinese": "后果"
+        },
+        {
+          "word": "limitation",
+          "phonetic": "/ˌlɪmɪˈteɪʃən/",
+          "partOfSpeech": "n.",
+          "chinese": "限制"
+        }
+      ]
+    },
+    {
+      "category": "资格认可",
+      "items": [
+        {
+          "word": "approval",
+          "phonetic": "/əˈpruːvəl/",
+          "partOfSpeech": "n.",
+          "chinese": "批准"
+        },
+        {
+          "word": "admission",
+          "phonetic": "/ædˈmɪʃən/",
+          "partOfSpeech": "n.",
+          "chinese": "准许进入"
+        },
+        {
+          "word": "eligibility",
+          "phonetic": "/ˌɛlɪdʒəˈbɪlɪti/",
+          "partOfSpeech": "n.",
+          "chinese": "合格资格"
+        },
+        {
+          "word": "standard",
+          "phonetic": "/ˈstændɚd/",
+          "partOfSpeech": "n.",
+          "chinese": "标准"
         }
       ]
     }
@@ -414,62 +482,72 @@
       "chinese": "他为这个错误承担了责任。"
     },
     {
-      "scene": "日常使用",
-      "english": "She accepted the offer after careful thought.",
-      "chinese": "她仔细考虑后接受了这份提议。"
-    },
-    {
-      "scene": "工作或学习",
-      "english": "He accepted responsibility for the error.",
-      "chinese": "他为这个错误承担了责任。"
-    },
-    {
-      "scene": "常见搭配",
-      "english": "We have to accept the fact that plans can change.",
-      "chinese": "我们必须接受计划可能改变这一事实。"
-    },
-    {
-      "scene": "真实语境",
-      "english": "Online learning is now widely accepted.",
-      "chinese": "在线学习现在已被广泛接受。"
-    },
-    {
-      "scene": "易错结构",
-      "english": "The group accepted him as a full member.",
-      "chinese": "这个团体接纳他为正式成员。"
-    },
-    {
-      "scene": "主动表达",
-      "english": "I cannot accept that explanation without evidence.",
-      "chinese": "没有证据，我无法接受那个解释。"
+      "scene": "日常交流",
+      "english": "After reviewing the benefits, she accepted the job offer.",
+      "chinese": "了解各项福利后，她接受了这份工作邀请。"
     },
     {
       "scene": "工作沟通",
-      "english": "I had no choice but to accept the offer.",
-      "chinese": "除了接受报价，我别无选择。"
+      "english": "The scientist accepted an invitation to speak at the conference.",
+      "chinese": "这位科学家接受了在会议上发言的邀请。"
     },
     {
       "scene": "学习表达",
-      "english": "It was foolish of you to accept his offer.",
-      "chinese": "你真笨去接受他的提议。"
+      "english": "The contractor accepted responsibility for the faulty wiring.",
+      "chinese": "承包商为有问题的布线承担了责任。"
     },
     {
       "scene": "书面表达",
-      "english": "He did not accept my apologies.",
-      "chinese": "他不接受我的道歉。"
+      "english": "It took him several weeks to accept the truth about the closure.",
+      "chinese": "他花了几周时间才接受关闭的事实。"
+    },
+    {
+      "scene": "日常交流",
+      "english": "The clinic accepts payment by card or bank transfer.",
+      "chinese": "诊所接受刷卡或银行转账付款。"
+    },
+    {
+      "scene": "工作沟通",
+      "english": "The office will not accept an incomplete application.",
+      "chinese": "办事处不受理材料不完整的申请。"
+    },
+    {
+      "scene": "学习表达",
+      "english": "She accepted the handmade gift with genuine gratitude.",
+      "chinese": "她满怀感激地收下了这份手工礼物。"
+    },
+    {
+      "scene": "书面表达",
+      "english": "He accepted her apology but asked for time to rebuild trust.",
+      "chinese": "他接受了她的道歉，但表示重建信任需要时间。"
+    },
+    {
+      "scene": "日常交流",
+      "english": "The association accepted three students as full members.",
+      "chinese": "协会接纳了三名学生为正式会员。"
+    },
+    {
+      "scene": "工作沟通",
+      "english": "We must accept that the repairs will take longer than expected.",
+      "chinese": "我们必须接受维修时间会超过预期这一事实。"
+    },
+    {
+      "scene": "学习表达",
+      "english": "The champion accepted defeat and congratulated her opponent.",
+      "chinese": "冠军接受了失败，并向对手表示祝贺。"
     }
   ],
   "studyFocus": {
-    "coreMeaning": "先掌握“接受；收下”这个核心义，再对比另外 1 个常用义项，辨别不同语境。",
+    "coreMeaning": "先掌握“接受；收下”这个核心义，再对比另外 2 个常用义项，辨别不同语境。",
     "keyCollocation": "把“accept responsibility”连同介词、宾语和动词形式作为整个句块记忆。",
-    "commonMistake": "情态动词 can 后面直接接 accept 的原形，不加 to。",
+    "commonMistake": "accept 通常不接 to do，表示同意做事用 agree to do。",
     "mustUseExample": "He accepted responsibility for the mistake.（他为这个错误承担了责任。）"
   },
   "questions": [
     {
       "id": "accept-v-meaning-core",
       "type": "meaning_choice",
-      "prompt": "“accept”最核心的中文含义是？",
+      "prompt": "“accept”最常见的核心中文义是哪一项？",
       "options": [
         "接受；收下",
         "做",
@@ -482,13 +560,13 @@
     {
       "id": "accept-v-meaning-english",
       "type": "meaning_choice",
-      "prompt": "哪一项英文释义最符合词卡中的 “accept”？",
+      "prompt": "“accept”最常见的英文释义是哪一项？",
       "options": [
         "to perform an action, activity, or piece of work",
         "used to express possibility or formal permission",
-        "to agree to receive or take something that is offered"
+        "to willingly receive or agree to take something offered"
       ],
-      "answer": "to agree to receive or take something that is offered",
+      "answer": "to willingly receive or agree to take something offered",
       "stage": "T0",
       "ai": false
     },
@@ -497,9 +575,9 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“接受提议”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "accept an invitation",
         "accept responsibility",
-        "accept the fact that",
-        "widely accepted",
+        "accept the truth",
         "accept an offer"
       ],
       "answer": "accept an offer",
@@ -509,12 +587,12 @@
     {
       "id": "accept-v-synonym-choice",
       "type": "meaning_choice",
-      "prompt": "哪个词是词卡中列出的 “accept” 最直接近义词？",
+      "prompt": "在“接收”这个义项下，哪个词与“accept”意思最接近？",
       "options": [
-        "except",
+        "have",
         "do",
         "receive",
-        "reject"
+        "be"
       ],
       "answer": "receive",
       "stage": "T2",
@@ -523,12 +601,12 @@
     {
       "id": "accept-v-antonym-choice",
       "type": "meaning_choice",
-      "prompt": "哪个词是词卡中列出的 “accept” 最直接反义词？",
+      "prompt": "在“接受；收下”这个义项下，哪个词与“accept”意思相反？",
       "options": [
         "do",
         "reject",
-        "receive",
-        "except"
+        "be",
+        "have"
       ],
       "answer": "reject",
       "stage": "T2",
@@ -537,21 +615,21 @@
     {
       "id": "accept-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “accept” 的易混词？",
+      "prompt": "哪一项是“accept”的常用派生词？",
       "options": [
-        "except",
-        "receive",
-        "reject",
-        "do"
+        "acceptance",
+        "increase",
+        "adjustment",
+        "appearance"
       ],
-      "answer": "except",
+      "answer": "acceptance",
       "stage": "T3",
       "ai": false
     },
     {
       "id": "accept-v-recall-definition",
       "type": "recall",
-      "prompt": "根据英文释义写出目标词：to agree to receive or take something that is offered",
+      "prompt": "根据英文释义写出对应单词：to willingly receive or agree to take something offered",
       "answer": "accept",
       "stage": "T1",
       "ai": false
@@ -559,7 +637,7 @@
     {
       "id": "accept-v-recall-chinese",
       "type": "recall",
-      "prompt": "写出符合“接受；收下”（v.）的本课目标词。",
+      "prompt": "写出表示“接受；收下”（v.）的英文单词。",
       "answer": "accept",
       "stage": "T1",
       "ai": false
@@ -575,27 +653,21 @@
     {
       "id": "accept-v-collocation-structure-meaning-v3",
       "type": "collocation",
-      "prompt": "句型应用：哪一项既表示“承担责任”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "句型应用：哪一项既表示“接受邀请”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "widely accepted",
-        "accept responsibility",
+        "accept the truth",
+        "accept an invitation",
         "accept an offer",
-        "accept the fact that"
+        "accept responsibility"
       ],
-      "answer": "accept responsibility",
+      "answer": "accept an invitation",
       "stage": "T1",
       "ai": false
     },
     {
       "id": "accept-v-collocation-example-context-v3",
       "type": "collocation",
-      "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：He accepted _____ for the mistake.（中文：他为这个错误承担了责任。）",
-      "options": [
-        "responsibility",
-        "best",
-        "see",
-        "quieter"
-      ],
+      "prompt": "根据完整句意和中文提示补全原句：He accepted _____ for the mistake.（中文：他为这个错误承担了责任。）",
       "answer": "responsibility",
       "stage": "T2",
       "ai": false
@@ -603,35 +675,35 @@
     {
       "id": "accept-v-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“接受提议”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "用法辨析：哪一项既表示“接受付款”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "accept an offer",
+        "accept an invitation",
         "accept responsibility",
-        "accept the fact that + clause",
-        "widely accepted",
-        "accept an offer"
+        "accept payment"
       ],
-      "answer": "accept an offer",
+      "answer": "accept payment",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "accept-v-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“承担责任”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "搭配辨析：哪一项既表示“受理申请”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "accept the fact that + clause",
-        "widely accepted",
+        "accept an invitation",
         "accept responsibility",
+        "accept an application",
         "accept an offer"
       ],
-      "answer": "accept responsibility",
+      "answer": "accept an application",
       "stage": "T3",
       "ai": false
     },
     {
       "id": "accept-v-example-cloze",
       "type": "collocation",
-      "prompt": "根据句意补全词卡核心例句：He _____ responsibility for the mistake.（填写 accept 的正确形式）",
+      "prompt": "根据句意和中文提示补全另一个常用例句：After reviewing the benefits, she _____ the job offer.（填写 accept 的正确形式）（中文：了解各项福利后，她接受了这份工作邀请。）",
       "answer": "accepted",
       "stage": "T3",
       "ai": false
@@ -639,7 +711,7 @@
     {
       "id": "accept-v-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “accept” 写一个自然、真实的英文句子，含义必须符合词卡核心义“接受；收下”。",
+      "prompt": "请用 “accept” 写一个自然、真实的英文句子，含义必须符合核心义“接受；收下”。",
       "answer": "",
       "stage": "T2",
       "ai": true
@@ -647,7 +719,7 @@
     {
       "id": "accept-v-sentence-phrase",
       "type": "free_sentence",
-      "prompt": "请使用 “accept an offer” 结构写一个与自己有关的自然英文句子。",
+      "prompt": "请使用 “accept payment” 结构写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -655,7 +727,7 @@
     {
       "id": "accept-v-dialogue",
       "type": "dialogue",
-      "prompt": "写一段 2–4 轮真实对话，自然使用 “accept” 和 “accept an offer” 结构，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “accept” 和 “accept a formal invitation” 结构，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -713,9 +785,10 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-complete",
-  "templateVersion": "learning-template-2026.09.10.3",
-  "contentVersion": "2026.09.10.3",
-  "reviewed": false,
+  "detailLevel": "template-curated",
+  "templateVersion": "learning-template-2026.09.10.4",
+  "contentVersion": "2026.09.10.4",
+  "reviewed": true,
+  "curationSource": "manual-semantic-pack-2026.09.10.4",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

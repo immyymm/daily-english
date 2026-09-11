@@ -34,9 +34,9 @@
     "主动词汇"
   ],
   "coreMemory": {
-    "chinese": "走路；步行；陪……走；步行送",
-    "english": "v. to move from one place to another on foot；v. to go somewhere with someone who is walking",
-    "structure": "walk to a place /ˈwɔːk ˈtuː ə ˈpleɪs/（步行去某地）；walk along something /ˈwɔːk əˈlɔːŋ ˈsʌmθɪŋ/（沿着某处走）；walk someone home /ˈwɔːk ˈsʌˌmwʌn ˈhoʊm/（陪某人走回家）；walk away from something /ˈwɔːk əˈweɪ ˈfrʌm ˈsʌmθɪŋ/（离开；摆脱某事）",
+    "chinese": "走；步行；陪走；遛；逐步指导",
+    "english": "v. to move on foot at a regular pace；v. to accompany someone on foot or take an animal for exercise；v. to guide someone step by step through a process",
+    "structure": "walk to a place /ˈwɔːk ˈtuː ə ˈpleɪs/（步行去某地）；walk along something /ˈwɔːk əˈlɔːŋ ˈsʌmθɪŋ/（沿着某处走）；walk through something /ˈwɔːk ˈθruː ˈsʌmθɪŋ/（步行穿过某处）；walk across something /ˈwɔːk əˈkrɔːs ˈsʌmθɪŋ/（走过某物）",
     "structures": [
       {
         "phrase": "walk to a place",
@@ -49,123 +49,160 @@
         "chinese": "沿着某处走"
       },
       {
-        "phrase": "walk someone home",
-        "phonetic": "/ˈwɔːk ˈsʌˌmwʌn ˈhoʊm/",
-        "chinese": "陪某人走回家"
+        "phrase": "walk through something",
+        "phonetic": "/ˈwɔːk ˈθruː ˈsʌmθɪŋ/",
+        "chinese": "步行穿过某处"
       },
       {
-        "phrase": "walk away from something",
-        "phonetic": "/ˈwɔːk əˈweɪ ˈfrʌm ˈsʌmθɪŋ/",
-        "chinese": "离开；摆脱某事"
+        "phrase": "walk across something",
+        "phonetic": "/ˈwɔːk əˈkrɔːs ˈsʌmθɪŋ/",
+        "chinese": "走过某物"
       }
     ],
-    "commonError": "❌ walk away at something → ✅ walk away from something；❌ walk at a room → ✅ walk into a room",
+    "commonError": "❌ walk to home → ✅ walk home；❌ walk by foot → ✅ walk / go on foot",
     "commonErrors": [
       {
-        "wrong": "walk away at something",
-        "wrongPhonetic": "/ˈwɔːk əˈweɪ ˈæt ˈsʌmθɪŋ/",
-        "right": "walk away from something",
-        "rightPhonetic": "/ˈwɔːk əˈweɪ ˈfrʌm ˈsʌmθɪŋ/",
-        "note": "在“walk away from something”所表达的这个具体含义中，要用介词 from；换成 at 会破坏这个固定结构或改变原意。"
+        "wrong": "walk to home",
+        "wrongPhonetic": "/ˈwɔːk ˈtuː ˈhoʊm/",
+        "right": "walk home",
+        "rightPhonetic": "/ˈwɔːk ˈhoʊm/",
+        "note": "home 作方向副词时前面不加 to"
       },
       {
-        "wrong": "walk at a room",
-        "wrongPhonetic": "/ˈwɔːk ˈæt ə ˈruːm/",
-        "right": "walk into a room",
-        "rightPhonetic": "/ˈwɔːk ˈɪntuː ə ˈruːm/",
-        "note": "在“walk into a room”所表达的这个具体含义中，要用介词 into；换成 at 会破坏这个固定结构或改变原意。"
+        "wrong": "walk by foot",
+        "wrongPhonetic": "/ˈwɔːk ˈbaɪ ˈfʊt/",
+        "right": "walk / go on foot",
+        "rightPhonetic": "/ˈwɔːk ˈɡoʊ ˈɑn ˈfʊt/",
+        "note": "walk 本身就表示步行；与 go 搭配时用 on foot，不用 by foot"
       }
     ],
-    "directSynonym": "stroll /ˈstroʊl/（散步；漫步）；go on foot /ˈɡoʊ ˈɑn ˈfʊt/（步行前往）；hike /ˈhaɪk/（远足；徒步旅行）；step /ˈstɛp/（迈步；踩）",
+    "directSynonym": "stroll /ˈstroʊl/（散步）；stride /ˈstraɪd/（大步走）；hike /ˈhaɪk/（远足）；pace /ˈpeɪs/（踱步）；proceed on foot /prəˈsiːd ˈɑn ˈfʊt/（步行前进）",
     "directAntonym": "stand still /ˈstænd ˈstɪl/（站着不动）",
-    "derivatives": "walker · walking",
+    "derivatives": "walker · walking · walkway · walkable",
     "example": "I walk to work when the weather is good.",
     "exampleChinese": "天气好时我步行上班。"
   },
   "meanings": [
     {
       "partOfSpeech": "v.",
-      "english": "to move from one place to another on foot",
-      "chinese": "走路；步行",
-      "example": "I walk to work when the weather is good.",
-      "translation": "天气好时我步行上班。"
+      "english": "to move on foot at a regular pace",
+      "chinese": "走；步行",
+      "example": "We walked home after dinner.",
+      "translation": "晚饭后我们步行回家。"
     },
     {
       "partOfSpeech": "v.",
-      "english": "to go somewhere with someone who is walking",
-      "chinese": "陪……走；步行送",
-      "example": "I walked my friend home after dinner.",
-      "translation": "晚饭后我步行送朋友回家。"
+      "english": "to accompany someone on foot or take an animal for exercise",
+      "chinese": "陪走；遛",
+      "example": "I walk the dog every morning.",
+      "translation": "我每天早上遛狗。"
+    },
+    {
+      "partOfSpeech": "v.",
+      "english": "to guide someone step by step through a process",
+      "chinese": "逐步指导",
+      "example": "She walked me through the application.",
+      "translation": "她逐步指导我完成申请。"
     }
   ],
   "contextPhrases": [
     {
-      "category": "核心动作与结构",
+      "category": "步行与路线",
       "items": [
         {
-          "phrase": "walk to a place",
-          "phonetic": "/ˈwɔːk ˈtuː ə ˈpleɪs/",
-          "chinese": "步行去某地"
+          "phrase": "walk along the river",
+          "phonetic": "/ˈwɔːk əˈlɔːŋ ðə ˈrɪvɚ/",
+          "chinese": "沿河步行"
         },
         {
-          "phrase": "walk along something",
-          "phonetic": "/ˈwɔːk əˈlɔːŋ ˈsʌmθɪŋ/",
-          "chinese": "沿着某处走"
+          "phrase": "walk home after work",
+          "phonetic": "/ˈwɔːk ˈhoʊm ˈæftɚ ˈwɝːk/",
+          "chinese": "下班后走路回家"
         },
         {
-          "phrase": "walk someone home",
-          "phonetic": "/ˈwɔːk ˈsʌˌmwʌn ˈhoʊm/",
-          "chinese": "陪某人走回家"
+          "phrase": "walk across the bridge",
+          "phonetic": "/ˈwɔːk əˈkrɔːs ðə ˈbrɪdʒ/",
+          "chinese": "步行过桥"
+        },
+        {
+          "phrase": "walk for thirty minutes",
+          "phonetic": "/ˈwɔːk ˈfɔːr ˈθɝːˌdiː ˈmɪnəts/",
+          "chinese": "步行三十分钟"
         }
       ]
     },
     {
-      "category": "日常与工作语境",
+      "category": "陪同与牵引",
       "items": [
         {
-          "phrase": "walk away from something",
-          "phonetic": "/ˈwɔːk əˈweɪ ˈfrʌm ˈsʌmθɪŋ/",
-          "chinese": "离开；摆脱某事"
+          "phrase": "walk a child to school",
+          "phonetic": "/ˈwɔːk ə ˈtʃaɪld ˈtuː ˈskuːl/",
+          "chinese": "陪孩子走路上学"
         },
         {
-          "phrase": "walk into a room",
-          "phonetic": "/ˈwɔːk ˈɪntuː ə ˈruːm/",
-          "chinese": "走进房间"
+          "phrase": "walk the dog before breakfast",
+          "phonetic": "/ˈwɔːk ðə ˈdɔːɡ bɪˈfɔːr ˈbrɛkfəst/",
+          "chinese": "早饭前遛狗"
         },
         {
-          "phrase": "walk someone through something",
-          "phonetic": "/ˈwɔːk ˈsʌˌmwʌn ˈθruː ˈsʌmθɪŋ/",
-          "chinese": "带某人逐步了解某事"
+          "phrase": "walk someone to the door",
+          "phonetic": "/ˈwɔːk ˈsʌmˌwʌn ˈtuː ðə ˈdɔːr/",
+          "chinese": "把某人送到门口"
+        },
+        {
+          "phrase": "walk a bicycle uphill",
+          "phonetic": "/ˈwɔːk ə ˈbaɪsɪkəl ˌʌpˈhɪl/",
+          "chinese": "推自行车上坡"
         }
       ]
     },
     {
-      "category": "高频扩展表达",
+      "category": "方式与经历",
       "items": [
         {
-          "phrase": "walk any more",
-          "phonetic": "/ˈwɔːk ˈɛniː ˈmɔːr/",
-          "chinese": "太累了"
+          "phrase": "walk slowly with a cane",
+          "phonetic": "/ˈwɔːk ˈsloʊli ˈwɪð ə ˈkeɪn/",
+          "chinese": "拄手杖慢慢走"
         },
         {
-          "phrase": "walk on the ceiling",
-          "phonetic": "/ˈwɔːk ˈɑn ðə ˈsiːlɪŋ/",
-          "chinese": "苍蝇能在天花板上走"
+          "phrase": "walk barefoot on the sand",
+          "phonetic": "/ˈwɔːk ˈbɛrˌfʊt ˈɑn ðə ˈsænd/",
+          "chinese": "赤脚走在沙滩上"
         },
         {
-          "phrase": "walk to school in minutes",
-          "phonetic": "/ˈwɔːk ˈtuː ˈskuːl ɪn ˈmɪnəts/",
-          "chinese": "走路10分钟能到学校"
+          "phrase": "walk away from an argument",
+          "phonetic": "/ˈwɔːk əˈweɪ ˈfrʌm ˈæn ˈɑrɡjəmənt/",
+          "chinese": "从争吵中走开"
+        },
+        {
+          "phrase": "walk someone through the process",
+          "phonetic": "/ˈwɔːk ˈsʌmˌwʌn ˈθruː ðə ˈprɑˌsɛs/",
+          "chinese": "逐步向某人讲解流程"
         }
       ]
     },
     {
-      "category": "补充常用语境",
+      "category": "职场与出场",
       "items": [
         {
-          "phrase": "walk in the country",
-          "phonetic": "/ˈwɔːk ɪn ðə ˈkʌntriː/",
-          "chinese": "喜欢在乡间散步"
+          "phrase": "walk off the job",
+          "phonetic": "/ˈwɔːk ˈɔːf ðə ˈdʒɑb/",
+          "chinese": "离开工作岗位以示抗议"
+        },
+        {
+          "phrase": "walk into a new role",
+          "phonetic": "/ˈwɔːk ˈɪntu ə ˈnuː ˈroʊl/",
+          "chinese": "轻松进入新角色"
+        },
+        {
+          "phrase": "walk free after the trial",
+          "phonetic": "/ˈwɔːk ˈfriː ˈæftɚ ðə ˈtraɪəl/",
+          "chinese": "庭审后无罪获释"
+        },
+        {
+          "phrase": "walk someone out of the building",
+          "phonetic": "/ˈwɔːk ˈsʌmˌwʌn ˈaʊt ˈʌv ðə ˈbɪldɪŋ/",
+          "chinese": "陪某人走出大楼"
         }
       ]
     }
@@ -175,71 +212,85 @@
       "phrase": "walk to a place",
       "phonetic": "/ˈwɔːk ˈtuː ə ˈpleɪs/",
       "chinese": "步行去某地",
-      "example": "I walk to work when the weather is good.",
-      "translation": "天气好时我步行上班。"
+      "example": "I walk to the office when the weather is mild.",
+      "translation": "天气温和时我步行去办公室。"
     },
     {
       "phrase": "walk along something",
       "phonetic": "/ˈwɔːk əˈlɔːŋ ˈsʌmθɪŋ/",
       "chinese": "沿着某处走",
-      "example": "We often walk along the river after dinner.",
-      "translation": "晚饭后我们经常沿河散步。"
+      "example": "We walked along the river after dinner.",
+      "translation": "晚饭后我们沿河散步。"
+    },
+    {
+      "phrase": "walk through something",
+      "phonetic": "/ˈwɔːk ˈθruː ˈsʌmθɪŋ/",
+      "chinese": "步行穿过某处",
+      "example": "Visitors walked through the restored garden.",
+      "translation": "游客步行穿过修复后的花园。"
+    },
+    {
+      "phrase": "walk across something",
+      "phonetic": "/ˈwɔːk əˈkrɔːs ˈsʌmθɪŋ/",
+      "chinese": "走过某物",
+      "example": "She walked across the bridge before sunrise.",
+      "translation": "她在日出前走过了桥。"
     },
     {
       "phrase": "walk someone home",
-      "phonetic": "/ˈwɔːk ˈsʌˌmwʌn ˈhoʊm/",
+      "phonetic": "/ˈwɔːk ˈsʌmˌwʌn ˈhoʊm/",
       "chinese": "陪某人走回家",
-      "example": "I will walk you home after the meeting.",
-      "translation": "会议结束后我陪你走回家。"
+      "example": "I walked my neighbor home after the concert.",
+      "translation": "音乐会后我陪邻居走回家。"
     },
     {
-      "phrase": "walk away from something",
-      "phonetic": "/ˈwɔːk əˈweɪ ˈfrʌm ˈsʌmθɪŋ/",
-      "chinese": "离开；摆脱某事",
-      "example": "You can walk away from an unfair agreement.",
-      "translation": "你可以退出不公平的协议。"
+      "phrase": "walk the dog",
+      "phonetic": "/ˈwɔːk ðə ˈdɔːɡ/",
+      "chinese": "遛狗",
+      "example": "He walks the dog before breakfast every day.",
+      "translation": "他每天早餐前遛狗。"
+    },
+    {
+      "phrase": "walk away from",
+      "phonetic": "/ˈwɔːk əˈweɪ ˈfrʌm/",
+      "chinese": "离开；退出",
+      "example": "Both sides risk losing if they walk away from the talks.",
+      "translation": "如果双方退出谈判，都可能蒙受损失。"
     },
     {
       "phrase": "walk into a room",
-      "phonetic": "/ˈwɔːk ˈɪntuː ə ˈruːm/",
+      "phonetic": "/ˈwɔːk ˈɪntu ə ˈruːm/",
       "chinese": "走进房间",
-      "example": "I saw her walk into the room and introduce herself.",
-      "translation": "我看见她走进房间并作了自我介绍。"
+      "example": "A nurse walked into the room carrying a tray.",
+      "translation": "一名护士端着托盘走进房间。"
     },
     {
       "phrase": "walk someone through something",
-      "phonetic": "/ˈwɔːk ˈsʌˌmwʌn ˈθruː ˈsʌmθɪŋ/",
+      "phonetic": "/ˈwɔːk ˈsʌmˌwʌn ˈθruː ˈsʌmθɪŋ/",
       "chinese": "带某人逐步了解某事",
-      "example": "The trainer will walk you through the process.",
-      "translation": "培训师会带你逐步了解流程。"
+      "example": "The adviser walked us through the application process.",
+      "translation": "顾问带我们逐步了解申请流程。"
     },
     {
-      "phrase": "walk any more",
-      "phonetic": "/ˈwɔːk ˈɛniː ˈmɔːr/",
-      "chinese": "太累了",
-      "example": "I am too tired to walk any more.",
-      "translation": "我太累了，走不动了。"
+      "phrase": "go for a walk",
+      "phonetic": "/ˈɡoʊ ˈfɔːr ə ˈwɔːk/",
+      "chinese": "去散步",
+      "example": "Let's go for a walk before it gets dark.",
+      "translation": "趁天黑前我们去散步吧。"
     },
     {
-      "phrase": "walk on the ceiling",
-      "phonetic": "/ˈwɔːk ˈɑn ðə ˈsiːlɪŋ/",
-      "chinese": "苍蝇能在天花板上走",
-      "example": "A fly can walk on the ceiling.",
-      "translation": "苍蝇能在天花板上走。"
+      "phrase": "within walking distance",
+      "phonetic": "/wɪˈðɪn ˈwɔːkɪŋ ˈdɪstəns/",
+      "chinese": "在步行可达范围内",
+      "example": "The station is within walking distance of the hotel.",
+      "translation": "车站离酒店步行可达。"
     },
     {
-      "phrase": "walk to school in minutes",
-      "phonetic": "/ˈwɔːk ˈtuː ˈskuːl ɪn ˈmɪnəts/",
-      "chinese": "走路10分钟能到学校",
-      "example": "I can walk to school in 10 minutes.",
-      "translation": "我走路10分钟能到学校 。"
-    },
-    {
-      "phrase": "walk in the country",
-      "phonetic": "/ˈwɔːk ɪn ðə ˈkʌntriː/",
-      "chinese": "喜欢在乡间散步",
-      "example": "I like to walk in the country.",
-      "translation": "我喜欢在乡间散步。"
+      "phrase": "walk on eggshells",
+      "phonetic": "/ˈwɔːk ˈɑn ˈɛɡˌʃɛlz/",
+      "chinese": "小心翼翼行事",
+      "example": "Everyone felt they had to walk on eggshells around the angry director.",
+      "translation": "大家觉得在愤怒的主管身边必须小心翼翼。"
     }
   ],
   "synonyms": [
@@ -247,29 +298,36 @@
       "word": "stroll",
       "phonetic": "/ˈstroʊl/",
       "partOfSpeech": "v.",
-      "chinese": "散步；漫步",
-      "difference": "stroll 表示“散步；漫步”，与 walk 的“走路”义相近。stroll 指轻松、缓慢地走；walk 是不限定速度和目的的一般“步行”。"
+      "chinese": "散步",
+      "difference": "强调轻松缓慢地走；步态、速度、距离和是否休闲都有语义限制"
     },
     {
-      "word": "go on foot",
-      "phonetic": "/ˈɡoʊ ˈɑn ˈfʊt/",
-      "partOfSpeech": "phr.",
-      "chinese": "步行前往",
-      "difference": "go on foot 表示“步行前往”，与 walk 的“走路”义相近。go on foot 强调交通方式；walk 既可表示这种方式，也可只描述走路动作。"
+      "word": "stride",
+      "phonetic": "/ˈstraɪd/",
+      "partOfSpeech": "v.",
+      "chinese": "大步走",
+      "difference": "强调步幅大且自信；步态、速度、距离和是否休闲都有语义限制"
     },
     {
       "word": "hike",
       "phonetic": "/ˈhaɪk/",
       "partOfSpeech": "v.",
-      "chinese": "远足；徒步旅行",
-      "difference": "hike 表示“远足；徒步旅行”，与 walk 的“走路”义相近。hike 通常指距离较长、以户外活动为目的的步行。"
+      "chinese": "远足",
+      "difference": "强调在乡野长距离步行；步态、速度、距离和是否休闲都有语义限制"
     },
     {
-      "word": "step",
-      "phonetic": "/ˈstɛp/",
+      "word": "pace",
+      "phonetic": "/ˈpeɪs/",
       "partOfSpeech": "v.",
-      "chinese": "迈步；踩",
-      "difference": "step 表示“迈步；踩”，与 walk 的“走路”义相近。step 强调一次或短距离的迈步动作；walk 表示连续步行。"
+      "chinese": "踱步",
+      "difference": "强调来回走动，常因焦虑或思考；步态、速度、距离和是否休闲都有语义限制"
+    },
+    {
+      "word": "proceed on foot",
+      "phonetic": "/prəˈsiːd ˈɑn ˈfʊt/",
+      "partOfSpeech": "phr.",
+      "chinese": "步行前进",
+      "difference": "正式说明不用交通工具；步态、速度、距离和是否休闲都有语义限制"
     }
   ],
   "antonyms": [
@@ -278,7 +336,7 @@
       "phonetic": "/ˈstænd ˈstɪl/",
       "partOfSpeech": "phr.",
       "chinese": "站着不动",
-      "usage": "stand still 表示“站着不动”，与 walk 的“走路”义形成对比。walk 表示步行移动；stand still 表示站在原地不移动。"
+      "usage": "与步行移动相对；步态、速度、距离和是否休闲都有语义限制"
     }
   ],
   "derivatives": [
@@ -286,108 +344,125 @@
       "word": "walker",
       "phonetic": "/ˈwɔːkɚ/",
       "partOfSpeech": "n.",
-      "chinese": "步行者；助行器",
-      "note": "可指步行的人或帮助行走的器具。"
+      "chinese": "步行者；助行架",
+      "note": "可指走路的人或辅助行走的器具"
     },
     {
       "word": "walking",
       "phonetic": "/ˈwɔːkɪŋ/",
-      "partOfSpeech": "n. / adj.",
+      "partOfSpeech": "n./adj.",
       "chinese": "步行；步行的",
-      "note": "常见于 walking distance、walking tour。"
+      "note": "常见于 walking distance/tour/shoes"
+    },
+    {
+      "word": "walkway",
+      "phonetic": "/ˈwɔːˌkweɪ/",
+      "partOfSpeech": "n.",
+      "chinese": "人行通道",
+      "note": "指专供行人通行的路径，常见于车站、机场或建筑之间"
+    },
+    {
+      "word": "walkable",
+      "phonetic": "/ˈwɔːkəbəl/",
+      "partOfSpeech": "adj.",
+      "chinese": "适合步行的；步行可达的",
+      "note": "可形容街区便于步行，也可形容目的地距离近到能够走到"
     }
   ],
-  "confusables": [],
+  "confusables": [
+    {
+      "word": "work",
+      "phonetic": "/ˈwɝːk/",
+      "partOfSpeech": "v./n.",
+      "chinese": "工作；起作用",
+      "difference": "walk /wɔːk/ 与 work /wɝːrk/ 拼写相近但元音、含义均不同"
+    }
+  ],
   "relatedVocabulary": [
     {
-      "category": "同一语义场的高频词",
+      "category": "步行路面",
       "items": [
+        {
+          "word": "sidewalk",
+          "phonetic": "/ˈsaɪˌdwɔːk/",
+          "partOfSpeech": "n.",
+          "chinese": "人行道"
+        },
+        {
+          "word": "trail",
+          "phonetic": "/ˈtreɪl/",
+          "partOfSpeech": "n.",
+          "chinese": "小径"
+        },
+        {
+          "word": "crosswalk",
+          "phonetic": "/ˈkrɑˌswɑk/",
+          "partOfSpeech": "n.",
+          "chinese": "人行横道"
+        },
+        {
+          "word": "footpath",
+          "phonetic": "/ˈfʊtˌpæθ/",
+          "partOfSpeech": "n.",
+          "chinese": "步道"
+        }
+      ]
+    },
+    {
+      "category": "行走装备",
+      "items": [
+        {
+          "word": "shoe",
+          "phonetic": "/ˈʃuː/",
+          "partOfSpeech": "n.",
+          "chinese": "鞋"
+        },
+        {
+          "word": "cane",
+          "phonetic": "/ˈkeɪn/",
+          "partOfSpeech": "n.",
+          "chinese": "手杖"
+        },
+        {
+          "word": "pedometer",
+          "phonetic": "/pɪˈdɑːmətər/",
+          "partOfSpeech": "n.",
+          "chinese": "计步器"
+        },
+        {
+          "word": "backpack",
+          "phonetic": "/ˈbækˌpæk/",
+          "partOfSpeech": "n.",
+          "chinese": "背包"
+        }
+      ]
+    },
+    {
+      "category": "速度与距离",
+      "items": [
+        {
+          "word": "gait",
+          "phonetic": "/ˈɡeɪt/",
+          "partOfSpeech": "n.",
+          "chinese": "步态"
+        },
         {
           "word": "step",
           "phonetic": "/ˈstɛp/",
-          "partOfSpeech": "n. / v.",
-          "chinese": "脚步；迈步"
-        },
-        {
-          "word": "path",
-          "phonetic": "/ˈpæθ/",
           "partOfSpeech": "n.",
-          "chinese": "小路；路径"
+          "chinese": "脚步"
         },
         {
-          "word": "run",
-          "phonetic": "/ˈrʌn/",
-          "partOfSpeech": "v.",
-          "chinese": "跑"
-        }
-      ]
-    },
-    {
-      "category": "近义表达分类",
-      "items": [
-        {
-          "word": "stroll",
-          "phonetic": "/ˈstroʊl/",
-          "partOfSpeech": "v.",
-          "chinese": "散步；漫步"
-        },
-        {
-          "word": "go on foot",
-          "phonetic": "/ˈɡoʊ ˈɑn ˈfʊt/",
-          "partOfSpeech": "phr.",
-          "chinese": "步行前往"
-        },
-        {
-          "word": "hike",
-          "phonetic": "/ˈhaɪk/",
-          "partOfSpeech": "v.",
-          "chinese": "远足；徒步旅行"
-        },
-        {
-          "word": "step",
-          "phonetic": "/ˈstɛp/",
-          "partOfSpeech": "v.",
-          "chinese": "迈步；踩"
-        }
-      ]
-    },
-    {
-      "category": "对比与易混表达分类",
-      "items": [
-        {
-          "word": "stand still",
-          "phonetic": "/ˈstænd ˈstɪl/",
-          "partOfSpeech": "phr.",
-          "chinese": "站着不动"
-        },
-        {
-          "word": "walker",
-          "phonetic": "/ˈwɔːkɚ/",
+          "word": "distance",
+          "phonetic": "/ˈdɪstəns/",
           "partOfSpeech": "n.",
-          "chinese": "步行者；助行器"
+          "chinese": "距离"
         },
         {
-          "word": "walking",
-          "phonetic": "/ˈwɔːkɪŋ/",
-          "partOfSpeech": "n. / adj.",
-          "chinese": "步行；步行的"
-        }
-      ]
-    },
-    {
-      "category": "常用词族分类",
-      "items": [
-        {
-          "word": "walker",
-          "phonetic": "/ˈwɔːkɚ/",
+          "word": "mileage",
+          "phonetic": "/ˈmaɪlədʒ/",
           "partOfSpeech": "n.",
-          "chinese": "步行者；助行器"
-        },
-        {
-          "word": "walking",
-          "phonetic": "/ˈwɔːkɪŋ/",
-          "partOfSpeech": "n. / adj.",
-          "chinese": "步行；步行的"
+          "chinese": "行走里程"
         }
       ]
     }
@@ -399,81 +474,91 @@
       "chinese": "天气好时我步行上班。"
     },
     {
-      "scene": "工作或学习",
-      "english": "We often walk along the river after dinner.",
-      "chinese": "晚饭后我们经常沿河散步。"
-    },
-    {
-      "scene": "常见搭配",
-      "english": "I will walk you home after the meeting.",
-      "chinese": "会议结束后我陪你走回家。"
-    },
-    {
-      "scene": "真实语境",
-      "english": "You can walk away from an unfair agreement.",
-      "chinese": "你可以退出不公平的协议。"
-    },
-    {
-      "scene": "易错结构",
-      "english": "I saw her walk into the room and introduce herself.",
-      "chinese": "我看见她走进房间并作了自我介绍。"
-    },
-    {
-      "scene": "主动表达",
-      "english": "The trainer will walk you through the process.",
-      "chinese": "培训师会带你逐步了解流程。"
-    },
-    {
       "scene": "日常交流",
-      "english": "I am too tired to walk any more.",
-      "chinese": "我太累了，走不动了。"
+      "english": "I walk to the office when the weather is mild.",
+      "chinese": "天气温和时我步行去办公室。"
     },
     {
       "scene": "工作沟通",
-      "english": "A fly can walk on the ceiling.",
-      "chinese": "苍蝇能在天花板上走。"
+      "english": "We walked along the river after dinner.",
+      "chinese": "晚饭后我们沿河散步。"
     },
     {
       "scene": "学习表达",
-      "english": "I can walk to school in 10 minutes.",
-      "chinese": "我走路10分钟能到学校 。"
+      "english": "Visitors walked through the restored garden.",
+      "chinese": "游客步行穿过修复后的花园。"
     },
     {
       "scene": "书面表达",
-      "english": "I like to walk in the country.",
-      "chinese": "我喜欢在乡间散步。"
+      "english": "She walked across the bridge before sunrise.",
+      "chinese": "她在日出前走过了桥。"
+    },
+    {
+      "scene": "日常交流",
+      "english": "I walked my neighbor home after the concert.",
+      "chinese": "音乐会后我陪邻居走回家。"
+    },
+    {
+      "scene": "工作沟通",
+      "english": "He walks the dog before breakfast every day.",
+      "chinese": "他每天早餐前遛狗。"
+    },
+    {
+      "scene": "学习表达",
+      "english": "Both sides risk losing if they walk away from the talks.",
+      "chinese": "如果双方退出谈判，都可能蒙受损失。"
+    },
+    {
+      "scene": "书面表达",
+      "english": "A nurse walked into the room carrying a tray.",
+      "chinese": "一名护士端着托盘走进房间。"
+    },
+    {
+      "scene": "日常交流",
+      "english": "The adviser walked us through the application process.",
+      "chinese": "顾问带我们逐步了解申请流程。"
+    },
+    {
+      "scene": "工作沟通",
+      "english": "Let's go for a walk before it gets dark.",
+      "chinese": "趁天黑前我们去散步吧。"
+    },
+    {
+      "scene": "学习表达",
+      "english": "The station is within walking distance of the hotel.",
+      "chinese": "车站离酒店步行可达。"
     }
   ],
   "studyFocus": {
-    "coreMeaning": "先掌握“走路；步行”这个核心义，再对比另外 1 个常用义项，辨别不同语境。",
+    "coreMeaning": "先掌握“走；步行”这个核心义，再对比另外 2 个常用义项，辨别不同语境。",
     "keyCollocation": "把“walk to a place”连同介词、宾语和动词形式作为整个句块记忆。",
-    "commonMistake": "在“walk away from something”所表达的这个具体含义中，要用介词 from；换成 at 会破坏这个固定结构或改变原意。",
+    "commonMistake": "home 作方向副词时前面不加 to",
     "mustUseExample": "I walk to work when the weather is good.（天气好时我步行上班。）"
   },
   "questions": [
     {
       "id": "walk-v-meaning-core",
       "type": "meaning_choice",
-      "prompt": "“walk”最核心的中文含义是？",
+      "prompt": "“walk”最常见的核心中文义是哪一项？",
       "options": [
         "决定",
         "增加",
-        "走路；步行"
+        "走；步行"
       ],
-      "answer": "走路；步行",
+      "answer": "走；步行",
       "stage": "T0",
       "ai": false
     },
     {
       "id": "walk-v-meaning-english",
       "type": "meaning_choice",
-      "prompt": "哪一项英文释义最符合词卡中的 “walk”？",
+      "prompt": "“walk”最常见的英文释义是哪一项？",
       "options": [
         "to become or make something greater",
-        "to move from one place to another on foot",
+        "to move on foot at a regular pace",
         "to make a choice after thinking"
       ],
-      "answer": "to move from one place to another on foot",
+      "answer": "to move on foot at a regular pace",
       "stage": "T0",
       "ai": false
     },
@@ -482,8 +567,8 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“步行去某地”，又符合这个形式线索：完整搭配中使用介词 to？",
       "options": [
-        "walk someone home",
-        "walk away from something",
+        "walk through something",
+        "walk across something",
         "walk to a place",
         "walk along something"
       ],
@@ -494,12 +579,12 @@
     {
       "id": "walk-v-synonym-choice",
       "type": "meaning_choice",
-      "prompt": "哪个词是词卡中列出的 “walk” 最直接近义词？",
+      "prompt": "在“散步”这个义项下，哪个词与“walk”意思最接近？",
       "options": [
-        "increase",
+        "do",
         "stroll",
-        "stand still",
-        "decide"
+        "be",
+        "have"
       ],
       "answer": "stroll",
       "stage": "T2",
@@ -508,12 +593,12 @@
     {
       "id": "walk-v-antonym-choice",
       "type": "meaning_choice",
-      "prompt": "哪个词是词卡中列出的 “walk” 最直接反义词？",
+      "prompt": "在“走；步行”这个义项下，哪个词与“walk”意思相反？",
       "options": [
         "stand still",
-        "stroll",
-        "decide",
-        "increase"
+        "account for",
+        "be aware of",
+        "be bound to"
       ],
       "answer": "stand still",
       "stage": "T2",
@@ -522,11 +607,11 @@
     {
       "id": "walk-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “walk” 的派生词？",
+      "prompt": "哪一项是“walk”的常用派生词？",
       "options": [
-        "stroll",
-        "stand still",
-        "decide",
+        "increase",
+        "accent",
+        "access",
         "walker"
       ],
       "answer": "walker",
@@ -536,7 +621,7 @@
     {
       "id": "walk-v-recall-definition",
       "type": "recall",
-      "prompt": "根据英文释义写出目标词：to move from one place to another on foot",
+      "prompt": "根据英文释义写出对应单词：to move on foot at a regular pace",
       "answer": "walk",
       "stage": "T1",
       "ai": false
@@ -544,7 +629,7 @@
     {
       "id": "walk-v-recall-chinese",
       "type": "recall",
-      "prompt": "写出符合“走路；步行”（v.）的本课目标词。",
+      "prompt": "写出表示“走；步行”（v.）的英文单词。",
       "answer": "walk",
       "stage": "T1",
       "ai": false
@@ -564,8 +649,8 @@
       "options": [
         "walk along something",
         "walk to a place",
-        "walk someone home",
-        "walk away from something"
+        "walk through something",
+        "walk across something"
       ],
       "answer": "walk along something",
       "stage": "T1",
@@ -574,13 +659,7 @@
     {
       "id": "walk-v-collocation-example-context-v3",
       "type": "collocation",
-      "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：I walk to _____ when the weather is good.（中文：天气好时我步行上班。）",
-      "options": [
-        "start",
-        "confidence",
-        "better",
-        "work"
-      ],
+      "prompt": "根据完整句意和中文提示补全原句：I walk to _____ when the weather is good.（中文：天气好时我步行上班。）",
       "answer": "work",
       "stage": "T2",
       "ai": false
@@ -588,35 +667,35 @@
     {
       "id": "walk-v-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“步行去某地”，又符合这个形式线索：完整搭配中使用介词 to？",
+      "prompt": "搭配辨析：哪一项既表示“陪某人走回家”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "walk along something",
+        "walk through something",
         "walk someone home",
-        "walk away from something",
-        "walk to a place",
-        "walk along something"
+        "walk to a place"
       ],
-      "answer": "walk to a place",
+      "answer": "walk someone home",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "walk-v-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“沿着某处走”，又符合这个形式线索：完整搭配中使用介词 along？",
+      "prompt": "用法辨析：哪一项既表示“遛狗”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "walk away from something",
-        "walk along something",
+        "walk through something",
+        "walk the dog",
         "walk to a place",
-        "walk someone home"
+        "walk along something"
       ],
-      "answer": "walk along something",
+      "answer": "walk the dog",
       "stage": "T3",
       "ai": false
     },
     {
       "id": "walk-v-example-cloze",
       "type": "collocation",
-      "prompt": "根据句意补全词卡核心例句：I _____ to work when the weather is good.（填写 walk 的正确形式）",
+      "prompt": "根据句意和中文提示补全另一个常用例句：I _____ to the office when the weather is mild.（填写 walk 的正确形式）（中文：天气温和时我步行去办公室。）",
       "answer": "walk",
       "stage": "T3",
       "ai": false
@@ -624,7 +703,7 @@
     {
       "id": "walk-v-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “walk” 写一个自然、真实的英文句子，含义必须符合词卡核心义“走路；步行”。",
+      "prompt": "请用 “walk” 写一个自然、真实的英文句子，含义必须符合核心义“走；步行”。",
       "answer": "",
       "stage": "T2",
       "ai": true
@@ -632,7 +711,7 @@
     {
       "id": "walk-v-sentence-phrase",
       "type": "free_sentence",
-      "prompt": "请使用 “walk to a place” 结构写一个与自己有关的自然英文句子。",
+      "prompt": "请使用 “walk someone home” 结构写一个与自己有关的自然英文句子；someone 要替换成实际的人或代词。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -640,7 +719,7 @@
     {
       "id": "walk-v-dialogue",
       "type": "dialogue",
-      "prompt": "写一段 2–4 轮真实对话，自然使用 “walk” 和 “walk to a place” 结构，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “walk” 和 “walk along the river” 结构，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -698,9 +777,10 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-complete",
-  "templateVersion": "learning-template-2026.09.10.3",
-  "contentVersion": "2026.09.10.3",
-  "reviewed": false,
+  "detailLevel": "template-curated",
+  "templateVersion": "learning-template-2026.09.10.4",
+  "contentVersion": "2026.09.10.4",
+  "reviewed": true,
+  "curationSource": "manual-semantic-pack-2026.09.10.4",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

@@ -27,7 +27,7 @@ export const curatedPhrases = {
   develop: [['develop a habit', '养成习惯'], ['develop a skill', '培养技能'], ['develop a plan', '制定方案'], ['develop an interest in', '培养对……的兴趣'], ['develop over time', '逐步发展'], ['research and development', '研究与开发']],
   decide: [['decide to do', '决定做'], ['decide against', '决定不做'], ['decide between', '在……之间决定'], ['decide whether', '决定是否'], ['make up your mind', '下定决心'], ['you decide', '由你决定']],
   explain: [['explain something clearly', '清楚解释某事'], ['explain why', '解释原因'], ['explain how', '解释方法'], ['explain something to someone', '向某人解释某事'], ['hard to explain', '难以解释'], ['explain yourself', '解释自己的行为']],
-  suggest: [['suggest doing', '建议做'], ['suggest that', '建议；表明……'], ['strongly suggest', '强烈建议'], ['evidence suggests', '证据表明'], ['suggest an alternative', '提出替代方案'], ['may I suggest', '我可以建议……吗']],
+  suggest: [['suggest doing', '建议做'], ['suggest that', '建议；表明……'], ['strongly suggest', '强烈建议'], ['evidence suggests', '证据表明'], ['suggest an alternative', '提出替代方案'], ['suggest a solution', '提出解决办法'], ['may I suggest', '委婉提出建议']],
   require: [['require someone to do', '要求某人做'], ['require careful planning', '需要周密计划'], ['be required to', '被要求做'], ['as required', '按要求'], ['meet the requirements', '满足要求'], ['no experience required', '无需经验']],
   prepare: [['prepare for a test', '备考'], ['prepare a meal', '准备饭菜'], ['prepare a report', '准备报告'], ['prepare someone for', '使某人为……做好准备'], ['be prepared to', '准备好做'], ['well prepared', '准备充分的']],
   achieve: [['achieve a goal', '实现目标'], ['achieve success', '取得成功'], ['achieve a balance', '达到平衡'], ['achieve better results', '取得更好结果'], ['work hard to achieve', '努力实现'], ['a sense of achievement', '成就感']],

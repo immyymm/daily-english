@@ -28,9 +28,9 @@
     "主动词汇"
   ],
   "coreMemory": {
-    "chinese": "建造；建立",
-    "english": "v. to construct something；v. to develop it gradually",
-    "structure": "build a house /ˈbɪld ə ˈhaʊs/（建造房屋）；build a habit /ˈbɪld ə ˈhæbət/（养成习惯）；build confidence /ˈbɪld ˈkɑnfədəns/（建立信心）；build on something /ˈbɪld ˈɑn ˈsʌmθɪŋ/（以某事为基础继续发展）",
+    "chinese": "建造；修建；逐步建立；发展；逐渐增强；积累",
+    "english": "v. to make a structure by putting materials and parts together；v. to create or develop something gradually；v. to increase gradually in strength, amount, or intensity",
+    "structure": "build a house /ˈbɪld ə ˈhaʊs/（建造房屋）；build a bridge /ˈbɪld ə ˈbrɪdʒ/（建桥）；build something from materials /ˈbɪld ˈsʌmθɪŋ ˈfrʌm məˈtɪriəlz/（用材料建造某物）；build a team /ˈbɪld ə ˈtiːm/（组建团队）",
     "structures": [
       {
         "phrase": "build a house",
@@ -38,128 +38,165 @@
         "chinese": "建造房屋"
       },
       {
-        "phrase": "build a habit",
-        "phonetic": "/ˈbɪld ə ˈhæbət/",
-        "chinese": "养成习惯"
+        "phrase": "build a bridge",
+        "phonetic": "/ˈbɪld ə ˈbrɪdʒ/",
+        "chinese": "建桥"
       },
       {
-        "phrase": "build confidence",
-        "phonetic": "/ˈbɪld ˈkɑnfədəns/",
-        "chinese": "建立信心"
+        "phrase": "build something from materials",
+        "phonetic": "/ˈbɪld ˈsʌmθɪŋ ˈfrʌm məˈtɪriəlz/",
+        "chinese": "用材料建造某物"
       },
       {
-        "phrase": "build on something",
-        "phonetic": "/ˈbɪld ˈɑn ˈsʌmθɪŋ/",
-        "chinese": "以某事为基础继续发展"
+        "phrase": "build a team",
+        "phonetic": "/ˈbɪld ə ˈtiːm/",
+        "chinese": "组建团队"
       }
     ],
-    "commonError": "❌ build at something → ✅ build on something；❌ build something at something → ✅ build something into something",
+    "commonError": "❌ build up a house → ✅ build a house；❌ build experience by years → ✅ build experience over the years",
     "commonErrors": [
       {
-        "wrong": "build at something",
-        "wrongPhonetic": "/ˈbɪld ˈæt ˈsʌmθɪŋ/",
-        "right": "build on something",
-        "rightPhonetic": "/ˈbɪld ˈɑn ˈsʌmθɪŋ/",
-        "note": "在“build on something”所表达的这个具体含义中，要用介词 on；换成 at 会破坏这个固定结构或改变原意。"
+        "wrong": "build up a house",
+        "wrongPhonetic": "/ˈbɪld ˈʌp ə ˈhaʊs/",
+        "right": "build a house",
+        "rightPhonetic": "/ˈbɪld ə ˈhaʊs/",
+        "note": "建造具体建筑直接用 build；build up 强调逐渐增强、积累"
       },
       {
-        "wrong": "build something at something",
-        "wrongPhonetic": "/ˈbɪld ˈsʌmθɪŋ ˈæt ˈsʌmθɪŋ/",
-        "right": "build something into something",
-        "rightPhonetic": "/ˈbɪld ˈsʌmθɪŋ ˈɪntuː ˈsʌmθɪŋ/",
-        "note": "在“build something into something”所表达的这个具体含义中，要用介词 into；换成 at 会破坏这个固定结构或改变原意。"
+        "wrong": "build experience by years",
+        "wrongPhonetic": "/ˈbɪld ɪkˈspɪriəns ˈbaɪ ˈjɪrz/",
+        "right": "build experience over the years",
+        "rightPhonetic": "/ˈbɪld ɪkˈspɪriəns ˈoʊvɚ ðə ˈjɪrz/",
+        "note": "表示经验在多年间逐渐累积用 over the years，不用 by years"
       }
     ],
-    "directSynonym": "construct /kəˈnstrʌkt/（建造；构筑）；create /kriːˈeɪt/（创造；建造；引起）；develop /dɪˈvɛləp/（发展；使发达；进步）；establish /ɪˈstæblɪʃ/（建立；确立；制定）",
-    "directAntonym": "destroy /dɪˈstrɔɪ/（破坏；摧毁）",
-    "derivatives": "builder · building · built",
+    "directSynonym": "construct /kənˈstrʌkt/（建造）；assemble /əˈsɛmbəl/（组装）；develop /dɪˈvɛləp/（发展；建立）；form /ˈfɔːrm/（组成；建立）；accumulate /əˈkjuːmjəˌleɪt/（积累）",
+    "directAntonym": "demolish /dɪˈmɑlɪʃ/（拆毁）；dismantle /dɪˈsmæntəl/（拆解；瓦解）",
+    "derivatives": "rebuild · builder · building",
     "example": "They plan to build a small house near the lake.",
     "exampleChinese": "他们计划在湖边建一座小房子。"
   },
   "meanings": [
     {
       "partOfSpeech": "v.",
-      "english": "to construct something",
-      "chinese": "建造",
-      "example": "They plan to build a small house near the lake.",
-      "translation": "他们计划在湖边建一座小房子。"
+      "english": "to make a structure by putting materials and parts together",
+      "chinese": "建造；修建",
+      "example": "They plan to build a bridge across the river.",
+      "translation": "他们计划在河上修建一座桥。"
     },
     {
       "partOfSpeech": "v.",
-      "english": "to develop it gradually",
-      "chinese": "建立",
-      "example": "Speaking regularly will build your confidence.",
-      "translation": "经常开口会增强你的信心。"
+      "english": "to create or develop something gradually",
+      "chinese": "逐步建立；发展",
+      "example": "Trust takes years to build.",
+      "translation": "信任需要多年才能建立。"
+    },
+    {
+      "partOfSpeech": "v.",
+      "english": "to increase gradually in strength, amount, or intensity",
+      "chinese": "逐渐增强；积累",
+      "example": "Pressure continued to build throughout the week.",
+      "translation": "整个星期压力都在不断增大。"
     }
   ],
   "contextPhrases": [
     {
-      "category": "核心动作与结构",
+      "category": "建筑与制造",
       "items": [
         {
-          "phrase": "build a house",
-          "phonetic": "/ˈbɪld ə ˈhaʊs/",
-          "chinese": "建造房屋"
+          "phrase": "build a house from timber",
+          "phonetic": "/ˈbɪld ə ˈhaʊs ˈfrʌm ˈtɪmbɚ/",
+          "chinese": "用木材建房"
         },
         {
-          "phrase": "build a habit",
-          "phonetic": "/ˈbɪld ə ˈhæbət/",
-          "chinese": "养成习惯"
+          "phrase": "build a wall around the garden",
+          "phonetic": "/ˈbɪld ə ˈwɔːl ɚˈaʊnd ðə ˈɡɑrdən/",
+          "chinese": "在花园周围砌墙"
         },
         {
-          "phrase": "build confidence",
-          "phonetic": "/ˈbɪld ˈkɑnfədəns/",
-          "chinese": "建立信心"
+          "phrase": "build a working prototype",
+          "phonetic": "/ˈbɪld ə ˈwɝːkɪŋ ˈproʊtəˌtaɪp/",
+          "chinese": "制作可运作的原型"
+        },
+        {
+          "phrase": "build the parts by hand",
+          "phonetic": "/ˈbɪld ðə ˈpɑrts ˈbaɪ ˈhænd/",
+          "chinese": "手工组装部件"
         }
       ]
     },
     {
-      "category": "日常与工作语境",
+      "category": "能力与关系",
       "items": [
         {
-          "phrase": "build on something",
-          "phonetic": "/ˈbɪld ˈɑn ˈsʌmθɪŋ/",
-          "chinese": "以某事为基础继续发展"
+          "phrase": "build professional experience",
+          "phonetic": "/ˈbɪld prəˈfɛʃənəl ɪkˈspɪriəns/",
+          "chinese": "积累职业经验"
         },
         {
-          "phrase": "build something into something",
-          "phonetic": "/ˈbɪld ˈsʌmθɪŋ ˈɪntuː ˈsʌmθɪŋ/",
-          "chinese": "把某物纳入某物"
+          "phrase": "build trust with customers",
+          "phonetic": "/ˈbɪld ˈtrʌst ˈwɪð ˈkʌstəmɚz/",
+          "chinese": "与客户建立信任"
         },
         {
-          "phrase": "build up something",
-          "phonetic": "/ˈbɪld ˈʌp ˈsʌmθɪŋ/",
-          "chinese": "逐步积累或增强某物"
+          "phrase": "build a strong team",
+          "phonetic": "/ˈbɪld ə ˈstrɔːŋ ˈtiːm/",
+          "chinese": "打造强大团队"
+        },
+        {
+          "phrase": "build confidence through practice",
+          "phonetic": "/ˈbɪld ˈkɑnfədəns ˈθruː ˈpræktəs/",
+          "chinese": "通过练习建立自信"
         }
       ]
     },
     {
-      "category": "高频扩展表达",
+      "category": "增强与软件",
       "items": [
         {
-          "phrase": "build a tool to track something",
-          "phonetic": "/ˈbɪld ə ˈtuːl ˈtuː ˈtræk ˈsʌmθɪŋ/",
-          "chinese": "制作工具来跟踪某事"
+          "phrase": "tension begins to build",
+          "phonetic": "/ˈtɛnʃən bɪˈɡɪnz ˈtuː ˈbɪld/",
+          "chinese": "紧张气氛开始增强"
         },
         {
-          "phrase": "build trust with someone's customers",
-          "phonetic": "/ˈbɪld ˈtrʌst ˈwɪð ˈsʌˌmwʌnz ˈkʌstəmɚz/",
-          "chinese": "建立信任"
+          "phrase": "build on earlier research",
+          "phonetic": "/ˈbɪld ˈɑn ˈɝːliɚ ˈriːsɝːtʃ/",
+          "chinese": "以早期研究为基础继续发展"
         },
         {
-          "phrase": "build model planes",
-          "phonetic": "/ˈbɪld ˈmɑdəl ˈpleɪnz/",
-          "chinese": "建造模型飞机"
+          "phrase": "build an application from source",
+          "phonetic": "/ˈbɪld ˈæn ˌæpləˈkeɪʃən ˈfrʌm ˈsɔːrs/",
+          "chinese": "从源代码构建应用"
+        },
+        {
+          "phrase": "build support for reform",
+          "phonetic": "/ˈbɪld səˈpɔːrt ˈfɔːr rəˈfɔːrm/",
+          "chinese": "为改革积聚支持"
         }
       ]
     },
     {
-      "category": "补充常用语境",
+      "category": "数据与体能积累",
       "items": [
         {
-          "phrase": "build a bridge",
-          "phonetic": "/ˈbɪld ə ˈbrɪdʒ/",
-          "chinese": "决定建一座桥"
+          "phrase": "build a reliable database",
+          "phonetic": "/ˈbɪld ə rɪˈlaɪəbəl ˈdeɪtəˌbeɪs/",
+          "chinese": "建立可靠数据库"
+        },
+        {
+          "phrase": "build muscle through training",
+          "phonetic": "/ˈbɪld ˈmʌsəl ˈθruː ˈtreɪnɪŋ/",
+          "chinese": "通过训练增强肌肉"
+        },
+        {
+          "phrase": "build up financial reserves",
+          "phonetic": "/ˈbɪld ˈʌp fəˈnænʃəl rɪˈzɝːvz/",
+          "chinese": "积累财务储备"
+        },
+        {
+          "phrase": "build toward a final conclusion",
+          "phonetic": "/ˈbɪld təˈwɔːrd ə ˈfaɪnəl kənˈkluːʒən/",
+          "chinese": "逐步推向最终结论"
         }
       ]
     }
@@ -169,238 +206,257 @@
       "phrase": "build a house",
       "phonetic": "/ˈbɪld ə ˈhaʊs/",
       "chinese": "建造房屋",
-      "example": "They plan to build a small house near the lake.",
-      "translation": "他们计划在湖边建一座小房子。"
+      "example": "They are building a low-energy house beside the lake.",
+      "translation": "他们正在湖边建造一栋低能耗房屋。"
     },
     {
-      "phrase": "build a habit",
-      "phonetic": "/ˈbɪld ə ˈhæbət/",
-      "chinese": "养成习惯",
-      "example": "Short daily sessions help you build a lasting habit.",
-      "translation": "每日短时学习有助于养成持久习惯。"
+      "phrase": "build a bridge",
+      "phonetic": "/ˈbɪld ə ˈbrɪdʒ/",
+      "chinese": "建桥",
+      "example": "The council plans to build a pedestrian bridge across the river.",
+      "translation": "市议会计划在河上建一座人行桥。"
+    },
+    {
+      "phrase": "build something from materials",
+      "phonetic": "/ˈbɪld ˈsʌmθɪŋ ˈfrʌm məˈtɪriəlz/",
+      "chinese": "用材料建造某物",
+      "example": "The shelter was built from recycled timber.",
+      "translation": "这座避难所用再生木材建成。"
+    },
+    {
+      "phrase": "build a team",
+      "phonetic": "/ˈbɪld ə ˈtiːm/",
+      "chinese": "组建团队",
+      "example": "She built a team with complementary skills.",
+      "translation": "她组建了一支技能互补的团队。"
     },
     {
       "phrase": "build confidence",
       "phonetic": "/ˈbɪld ˈkɑnfədəns/",
       "chinese": "建立信心",
-      "example": "Speaking regularly will build your confidence.",
-      "translation": "经常开口会增强你的信心。"
+      "example": "Regular practice will build your confidence.",
+      "translation": "经常练习会增强你的信心。"
+    },
+    {
+      "phrase": "build trust",
+      "phonetic": "/ˈbɪld ˈtrʌst/",
+      "chinese": "建立信任",
+      "example": "Transparent decisions help build public trust.",
+      "translation": "透明的决策有助于建立公众信任。"
+    },
+    {
+      "phrase": "build a habit",
+      "phonetic": "/ˈbɪld ə ˈhæbət/",
+      "chinese": "养成习惯",
+      "example": "Start with five minutes a day to build the habit.",
+      "translation": "每天先做五分钟来养成习惯。"
     },
     {
       "phrase": "build on something",
       "phonetic": "/ˈbɪld ˈɑn ˈsʌmθɪŋ/",
-      "chinese": "以某事为基础继续发展",
-      "example": "Today’s lesson builds on what you learned yesterday.",
-      "translation": "今天的课程建立在你昨天所学的基础上。"
+      "chinese": "以某物为基础继续发展",
+      "example": "The new course builds on skills learned last term.",
+      "translation": "新课程以学生上学期学到的技能为基础。"
     },
     {
       "phrase": "build something into something",
-      "phonetic": "/ˈbɪld ˈsʌmθɪŋ ˈɪntuː ˈsʌmθɪŋ/",
-      "chinese": "把某物纳入某物",
-      "example": "We need to build regular review into the weekly plan.",
-      "translation": "我们需要把定期复习纳入每周计划。"
+      "phonetic": "/ˈbɪld ˈsʌmθɪŋ ˈɪntu ˈsʌmθɪŋ/",
+      "chinese": "把某事纳入某事",
+      "example": "We built regular breaks into the schedule.",
+      "translation": "我们把定期休息纳入了日程。"
     },
     {
-      "phrase": "build up something",
-      "phonetic": "/ˈbɪld ˈʌp ˈsʌmθɪŋ/",
+      "phrase": "build something up",
+      "phonetic": "/ˈbɪld ˈsʌmθɪŋ ˈʌp/",
       "chinese": "逐步积累或增强某物",
-      "example": "Reading widely helps you build up your vocabulary.",
-      "translation": "广泛阅读有助于逐步扩大词汇量。"
+      "example": "She built up her savings over several years.",
+      "translation": "她用了几年逐步积累存款。"
     },
     {
-      "phrase": "build a tool to track something",
-      "phonetic": "/ˈbɪld ə ˈtuːl ˈtuː ˈtræk ˈsʌmθɪŋ/",
-      "chinese": "制作工具来跟踪某事",
-      "example": "The team built a simple tool to track its progress.",
-      "translation": "团队制作了一个用于跟踪进度的简单工具。"
+      "phrase": "build up to something",
+      "phonetic": "/ˈbɪld ˈʌp ˈtuː ˈsʌmθɪŋ/",
+      "chinese": "逐步发展到某事",
+      "example": "The music builds up to a dramatic finale.",
+      "translation": "音乐逐步推进至戏剧性的终曲。"
     },
     {
-      "phrase": "build trust with someone's customers",
-      "phonetic": "/ˈbɪld ˈtrʌst ˈwɪð ˈsʌˌmwʌnz ˈkʌstəmɚz/",
-      "chinese": "建立信任",
-      "example": "We need to build trust with our customers.",
-      "translation": "我们需要与客户建立信任。"
-    },
-    {
-      "phrase": "build model planes",
-      "phonetic": "/ˈbɪld ˈmɑdəl ˈpleɪnz/",
-      "chinese": "建造模型飞机",
-      "example": "He likes to build model planes.",
-      "translation": "他喜欢建造模型飞机。"
-    },
-    {
-      "phrase": "build a bridge",
-      "phonetic": "/ˈbɪld ə ˈbrɪdʒ/",
-      "chinese": "决定建一座桥",
-      "example": "They decided to build a bridge.",
-      "translation": "他们决定建一座桥。"
+      "phrase": "built to last",
+      "phonetic": "/ˈbɪlt ˈtuː ˈlæst/",
+      "chinese": "建造得经久耐用",
+      "example": "These tools are simple but built to last.",
+      "translation": "这些工具虽简单，却经久耐用。"
     }
   ],
   "synonyms": [
     {
       "word": "construct",
-      "phonetic": "/kəˈnstrʌkt/",
+      "phonetic": "/kənˈstrʌkt/",
       "partOfSpeech": "v.",
-      "chinese": "建造；构筑",
-      "difference": "construct 表示“建造；构筑”，与 build 的“建造”义相近。两词只有在这一义项重合时才能互换；build 的其他常用义不一定适用。"
+      "chinese": "建造",
+      "difference": "正式，主要指建筑、道路或大型结构；实体建造、零件组装和抽象积累所接宾语不同"
     },
     {
-      "word": "create",
-      "phonetic": "/kriːˈeɪt/",
+      "word": "assemble",
+      "phonetic": "/əˈsɛmbəl/",
       "partOfSpeech": "v.",
-      "chinese": "创造；建造；引起",
-      "difference": "create 常表示“创造；建造；引起”，与 build 的“建造”义有重合。create 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+      "chinese": "组装",
+      "difference": "强调把零部件组合起来；实体建造、零件组装和抽象积累所接宾语不同"
     },
     {
       "word": "develop",
       "phonetic": "/dɪˈvɛləp/",
       "partOfSpeech": "v.",
-      "chinese": "发展；使发达；进步",
-      "difference": "develop 常表示“发展；使发达；进步”，与 build 的“建造”义有重合。develop 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+      "chinese": "发展；建立",
+      "difference": "对应逐步形成能力、业务或关系；实体建造、零件组装和抽象积累所接宾语不同"
     },
     {
-      "word": "establish",
-      "phonetic": "/ɪˈstæblɪʃ/",
+      "word": "form",
+      "phonetic": "/ˈfɔːrm/",
       "partOfSpeech": "v.",
-      "chinese": "建立；确立；制定",
-      "difference": "establish 常表示“建立；确立；制定”，与 build 的“建造”义有重合。establish 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+      "chinese": "组成；建立",
+      "difference": "可指组建团队或形成关系，不强调像 build 那样逐步累积"
+    },
+    {
+      "word": "accumulate",
+      "phonetic": "/əˈkjuːmjəˌleɪt/",
+      "partOfSpeech": "v.",
+      "chinese": "积累",
+      "difference": "只对应 build up 储蓄、力量、压力等"
     }
   ],
   "antonyms": [
     {
-      "word": "destroy",
-      "phonetic": "/dɪˈstrɔɪ/",
+      "word": "demolish",
+      "phonetic": "/dɪˈmɑlɪʃ/",
       "partOfSpeech": "v.",
-      "chinese": "破坏；摧毁",
-      "usage": "destroy 表示“破坏；摧毁”，与 build 的“建造”义形成对比。这种反义关系只适用于上述明确义项。"
+      "chinese": "拆毁",
+      "usage": "与建造实体结构相反；实体建造、零件组装和抽象积累所接宾语不同"
+    },
+    {
+      "word": "dismantle",
+      "phonetic": "/dɪˈsmæntəl/",
+      "partOfSpeech": "v.",
+      "chinese": "拆解；瓦解",
+      "usage": "与组装或逐步建立相反；实体建造、零件组装和抽象积累所接宾语不同"
     }
   ],
   "derivatives": [
     {
+      "word": "rebuild",
+      "phonetic": "/riˈbɪld/",
+      "partOfSpeech": "v.",
+      "chinese": "重建；重新建立",
+      "note": "可指物理重建或恢复关系、信任"
+    },
+    {
       "word": "builder",
       "phonetic": "/ˈbɪldɚ/",
       "partOfSpeech": "n.",
-      "chinese": "建造者；建设者",
-      "note": "可指建筑工人或创建事物的人。"
+      "chinese": "建筑者；建造商",
+      "note": "可指建筑工人、承建商或构建工具"
     },
     {
       "word": "building",
       "phonetic": "/ˈbɪldɪŋ/",
       "partOfSpeech": "n.",
       "chinese": "建筑物；建设",
-      "note": "可指实体建筑或建设过程。"
-    },
-    {
-      "word": "built",
-      "phonetic": "/ˈbɪlt/",
-      "partOfSpeech": "adj.",
-      "chinese": "建成的；体格……的",
-      "note": "常见于 well-built、purpose-built。"
+      "note": "可数时指建筑，不可数时指建设过程"
     }
   ],
-  "confusables": [],
+  "confusables": [
+    {
+      "word": "establish",
+      "phonetic": "/ɪˈstæblɪʃ/",
+      "partOfSpeech": "v.",
+      "chinese": "建立；设立",
+      "difference": "build 强调逐步累积和发展；establish 更正式，强调使机构、制度或事实稳固存在"
+    }
+  ],
   "relatedVocabulary": [
     {
-      "category": "同一语义场的高频词",
+      "category": "建筑材料",
       "items": [
         {
-          "word": "construct",
-          "phonetic": "/kəˈnstrʌkt/",
-          "partOfSpeech": "v.",
-          "chinese": "建造"
-        },
-        {
-          "word": "structure",
-          "phonetic": "/ˈstrʌktʃɚ/",
+          "word": "brick",
+          "phonetic": "/ˈbrɪk/",
           "partOfSpeech": "n.",
-          "chinese": "结构"
+          "chinese": "砖"
         },
         {
-          "word": "destroy",
-          "phonetic": "/dɪˈstrɔɪ/",
-          "partOfSpeech": "v.",
-          "chinese": "摧毁"
+          "word": "timber",
+          "phonetic": "/ˈtɪmbɚ/",
+          "partOfSpeech": "n.",
+          "chinese": "木材"
+        },
+        {
+          "word": "concrete",
+          "phonetic": "/ˈkɑːnkriːt/",
+          "partOfSpeech": "n.",
+          "chinese": "混凝土"
+        },
+        {
+          "word": "steel",
+          "phonetic": "/ˈstiːl/",
+          "partOfSpeech": "n.",
+          "chinese": "钢"
         }
       ]
     },
     {
-      "category": "近义表达分类",
+      "category": "工程过程",
       "items": [
         {
-          "word": "construct",
-          "phonetic": "/kəˈnstrʌkt/",
-          "partOfSpeech": "v.",
-          "chinese": "建造；构筑"
+          "word": "foundation",
+          "phonetic": "/faʊnˈdeɪʃən/",
+          "partOfSpeech": "n.",
+          "chinese": "地基"
         },
         {
-          "word": "create",
-          "phonetic": "/kriːˈeɪt/",
-          "partOfSpeech": "v.",
-          "chinese": "创造；建造；引起"
+          "word": "framework",
+          "phonetic": "/ˈfreɪmˌwɝːk/",
+          "partOfSpeech": "n.",
+          "chinese": "框架"
         },
         {
-          "word": "develop",
-          "phonetic": "/dɪˈvɛləp/",
-          "partOfSpeech": "v.",
-          "chinese": "发展；使发达；进步"
+          "word": "construction",
+          "phonetic": "/kənˈstrʌkʃən/",
+          "partOfSpeech": "n.",
+          "chinese": "施工"
         },
         {
-          "word": "establish",
-          "phonetic": "/ɪˈstæblɪʃ/",
-          "partOfSpeech": "v.",
-          "chinese": "建立；确立；制定"
+          "word": "site",
+          "phonetic": "/ˈsaɪt/",
+          "partOfSpeech": "n.",
+          "chinese": "工地"
         }
       ]
     },
     {
-      "category": "对比与易混表达分类",
+      "category": "能力与累积",
       "items": [
         {
-          "word": "destroy",
-          "phonetic": "/dɪˈstrɔɪ/",
-          "partOfSpeech": "v.",
-          "chinese": "破坏；摧毁"
-        },
-        {
-          "word": "builder",
-          "phonetic": "/ˈbɪldɚ/",
+          "word": "experience",
+          "phonetic": "/ɪkˈspɪriəns/",
           "partOfSpeech": "n.",
-          "chinese": "建造者；建设者"
+          "chinese": "经验"
         },
         {
-          "word": "building",
-          "phonetic": "/ˈbɪldɪŋ/",
+          "word": "trust",
+          "phonetic": "/ˈtrʌst/",
           "partOfSpeech": "n.",
-          "chinese": "建筑物；建设"
+          "chinese": "信任"
         },
         {
-          "word": "built",
-          "phonetic": "/ˈbɪlt/",
-          "partOfSpeech": "adj.",
-          "chinese": "建成的；体格……的"
-        }
-      ]
-    },
-    {
-      "category": "常用词族分类",
-      "items": [
-        {
-          "word": "builder",
-          "phonetic": "/ˈbɪldɚ/",
+          "word": "confidence",
+          "phonetic": "/ˈkɑnfədəns/",
           "partOfSpeech": "n.",
-          "chinese": "建造者；建设者"
+          "chinese": "自信"
         },
         {
-          "word": "building",
-          "phonetic": "/ˈbɪldɪŋ/",
+          "word": "momentum",
+          "phonetic": "/moʊˈmɛntəm/",
           "partOfSpeech": "n.",
-          "chinese": "建筑物；建设"
-        },
-        {
-          "word": "built",
-          "phonetic": "/ˈbɪlt/",
-          "partOfSpeech": "adj.",
-          "chinese": "建成的；体格……的"
+          "chinese": "势头"
         }
       ]
     }
@@ -412,81 +468,91 @@
       "chinese": "他们计划在湖边建一座小房子。"
     },
     {
-      "scene": "工作或学习",
-      "english": "Short daily sessions help you build a lasting habit.",
-      "chinese": "每日短时学习有助于养成持久习惯。"
-    },
-    {
-      "scene": "常见搭配",
-      "english": "Speaking regularly will build your confidence.",
-      "chinese": "经常开口会增强你的信心。"
-    },
-    {
-      "scene": "真实语境",
-      "english": "Today’s lesson builds on what you learned yesterday.",
-      "chinese": "今天的课程建立在你昨天所学的基础上。"
-    },
-    {
-      "scene": "易错结构",
-      "english": "We need to build regular review into the weekly plan.",
-      "chinese": "我们需要把定期复习纳入每周计划。"
-    },
-    {
-      "scene": "主动表达",
-      "english": "Reading widely helps you build up your vocabulary.",
-      "chinese": "广泛阅读有助于逐步扩大词汇量。"
-    },
-    {
       "scene": "日常交流",
-      "english": "The team built a simple tool to track its progress.",
-      "chinese": "团队制作了一个用于跟踪进度的简单工具。"
+      "english": "They are building a low-energy house beside the lake.",
+      "chinese": "他们正在湖边建造一栋低能耗房屋。"
     },
     {
       "scene": "工作沟通",
-      "english": "We need to build trust with our customers.",
-      "chinese": "我们需要与客户建立信任。"
+      "english": "The council plans to build a pedestrian bridge across the river.",
+      "chinese": "市议会计划在河上建一座人行桥。"
     },
     {
       "scene": "学习表达",
-      "english": "He likes to build model planes.",
-      "chinese": "他喜欢建造模型飞机。"
+      "english": "The shelter was built from recycled timber.",
+      "chinese": "这座避难所用再生木材建成。"
     },
     {
       "scene": "书面表达",
-      "english": "They decided to build a bridge.",
-      "chinese": "他们决定建一座桥。"
+      "english": "She built a team with complementary skills.",
+      "chinese": "她组建了一支技能互补的团队。"
+    },
+    {
+      "scene": "日常交流",
+      "english": "Regular practice will build your confidence.",
+      "chinese": "经常练习会增强你的信心。"
+    },
+    {
+      "scene": "工作沟通",
+      "english": "Transparent decisions help build public trust.",
+      "chinese": "透明的决策有助于建立公众信任。"
+    },
+    {
+      "scene": "学习表达",
+      "english": "Start with five minutes a day to build the habit.",
+      "chinese": "每天先做五分钟来养成习惯。"
+    },
+    {
+      "scene": "书面表达",
+      "english": "The new course builds on skills learned last term.",
+      "chinese": "新课程以学生上学期学到的技能为基础。"
+    },
+    {
+      "scene": "日常交流",
+      "english": "We built regular breaks into the schedule.",
+      "chinese": "我们把定期休息纳入了日程。"
+    },
+    {
+      "scene": "工作沟通",
+      "english": "She built up her savings over several years.",
+      "chinese": "她用了几年逐步积累存款。"
+    },
+    {
+      "scene": "学习表达",
+      "english": "The music builds up to a dramatic finale.",
+      "chinese": "音乐逐步推进至戏剧性的终曲。"
     }
   ],
   "studyFocus": {
-    "coreMeaning": "先掌握“建造”这个核心义，再对比另外 1 个常用义项，辨别不同语境。",
+    "coreMeaning": "先掌握“建造；修建”这个核心义，再对比另外 2 个常用义项，辨别不同语境。",
     "keyCollocation": "把“build a house”连同介词、宾语和动词形式作为整个句块记忆。",
-    "commonMistake": "在“build on something”所表达的这个具体含义中，要用介词 on；换成 at 会破坏这个固定结构或改变原意。",
+    "commonMistake": "建造具体建筑直接用 build；build up 强调逐渐增强、积累",
     "mustUseExample": "They plan to build a small house near the lake.（他们计划在湖边建一座小房子。）"
   },
   "questions": [
     {
       "id": "build-v-meaning-core",
       "type": "meaning_choice",
-      "prompt": "“build”最核心的中文含义是？",
+      "prompt": "“build”最常见的核心中文义是哪一项？",
       "options": [
         "支持",
         "避免",
-        "建造"
+        "建造；修建"
       ],
-      "answer": "建造",
+      "answer": "建造；修建",
       "stage": "T0",
       "ai": false
     },
     {
       "id": "build-v-meaning-english",
       "type": "meaning_choice",
-      "prompt": "哪一项英文释义最符合词卡中的 “build”？",
+      "prompt": "“build”最常见的英文释义是哪一项？",
       "options": [
         "to keep away from something",
-        "to construct something",
+        "to make a structure by putting materials and parts together",
         "to help someone or hold something up"
       ],
-      "answer": "to construct something",
+      "answer": "to make a structure by putting materials and parts together",
       "stage": "T0",
       "ai": false
     },
@@ -496,9 +562,9 @@
       "prompt": "核心结构辨析：哪一项既表示“建造房屋”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "build a house",
-        "build a habit",
-        "build confidence",
-        "build on something"
+        "build a bridge",
+        "build something from materials",
+        "build a team"
       ],
       "answer": "build a house",
       "stage": "T1",
@@ -507,11 +573,11 @@
     {
       "id": "build-v-synonym-choice",
       "type": "meaning_choice",
-      "prompt": "哪个词是词卡中列出的 “build” 最直接近义词？",
+      "prompt": "在“建造”这个义项下，哪个词与“build”意思最接近？",
       "options": [
-        "destroy",
-        "support",
-        "avoid",
+        "be",
+        "have",
+        "do",
         "construct"
       ],
       "answer": "construct",
@@ -521,35 +587,35 @@
     {
       "id": "build-v-antonym-choice",
       "type": "meaning_choice",
-      "prompt": "哪个词是词卡中列出的 “build” 最直接反义词？",
+      "prompt": "在“建造；修建”这个义项下，哪个词与“build”意思相反？",
       "options": [
-        "support",
-        "avoid",
-        "destroy",
-        "construct"
+        "have",
+        "do",
+        "demolish",
+        "be"
       ],
-      "answer": "destroy",
+      "answer": "demolish",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "build-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “build” 的派生词？",
+      "prompt": "结合拼写、发音和用法，哪一项需要与“build”重点区分？",
       "options": [
-        "support",
-        "builder",
-        "construct",
-        "destroy"
+        "do",
+        "establish",
+        "be",
+        "have"
       ],
-      "answer": "builder",
+      "answer": "establish",
       "stage": "T3",
       "ai": false
     },
     {
       "id": "build-v-recall-definition",
       "type": "recall",
-      "prompt": "根据英文释义写出目标词：to construct something",
+      "prompt": "根据英文释义写出对应单词：to make a structure by putting materials and parts together",
       "answer": "build",
       "stage": "T1",
       "ai": false
@@ -557,7 +623,7 @@
     {
       "id": "build-v-recall-chinese",
       "type": "recall",
-      "prompt": "写出符合“建造”（v.）的本课目标词。",
+      "prompt": "写出表示“建造；修建”（v.）的英文单词。",
       "answer": "build",
       "stage": "T1",
       "ai": false
@@ -573,27 +639,21 @@
     {
       "id": "build-v-collocation-structure-meaning-v3",
       "type": "collocation",
-      "prompt": "句型应用：哪一项既表示“养成习惯”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "句型应用：哪一项既表示“建桥”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "build confidence",
-        "build on something",
-        "build a habit",
+        "build something from materials",
+        "build a team",
+        "build a bridge",
         "build a house"
       ],
-      "answer": "build a habit",
+      "answer": "build a bridge",
       "stage": "T1",
       "ai": false
     },
     {
       "id": "build-v-collocation-example-context-v3",
       "type": "collocation",
-      "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：They plan to build a _____ house near the lake.（中文：他们计划在湖边建一座小房子。）",
-      "options": [
-        "about",
-        "small",
-        "decision",
-        "translating"
-      ],
+      "prompt": "根据完整句意和中文提示补全原句：They plan to build a _____ house near the lake.（中文：他们计划在湖边建一座小房子。）",
       "answer": "small",
       "stage": "T2",
       "ai": false
@@ -601,43 +661,43 @@
     {
       "id": "build-v-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“建造房屋”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "搭配辨析：哪一项既表示“建立信心”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "build a house",
-        "build a habit",
         "build confidence",
-        "build on something"
+        "build a house",
+        "build a bridge",
+        "build something from materials"
       ],
-      "answer": "build a house",
+      "answer": "build confidence",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "build-v-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“养成习惯”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "用法辨析：哪一项既表示“建立信任”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "build a house",
-        "build confidence",
-        "build on something",
-        "build a habit"
+        "build a bridge",
+        "build something from materials",
+        "build trust"
       ],
-      "answer": "build a habit",
+      "answer": "build trust",
       "stage": "T3",
       "ai": false
     },
     {
       "id": "build-v-example-cloze",
       "type": "collocation",
-      "prompt": "根据句意补全词卡核心例句：They plan to _____ a small house near the lake.（填写 build 的正确形式）",
-      "answer": "build",
+      "prompt": "根据句意和中文提示补全另一个常用例句：They are _____ a low-energy house beside the lake.（填写 build 的正确形式）（中文：他们正在湖边建造一栋低能耗房屋。）",
+      "answer": "building",
       "stage": "T3",
       "ai": false
     },
     {
       "id": "build-v-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “build” 写一个自然、真实的英文句子，含义必须符合词卡核心义“建造”。",
+      "prompt": "请用 “build” 写一个自然、真实的英文句子，含义必须符合核心义“建造；修建”。",
       "answer": "",
       "stage": "T2",
       "ai": true
@@ -645,7 +705,7 @@
     {
       "id": "build-v-sentence-phrase",
       "type": "free_sentence",
-      "prompt": "请使用 “build a house” 结构写一个与自己有关的自然英文句子。",
+      "prompt": "请使用 “build confidence” 结构写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -653,7 +713,7 @@
     {
       "id": "build-v-dialogue",
       "type": "dialogue",
-      "prompt": "写一段 2–4 轮真实对话，自然使用 “build” 和 “build a house” 结构，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “build” 和 “build a house from timber” 结构，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -711,9 +771,10 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-complete",
-  "templateVersion": "learning-template-2026.09.10.3",
-  "contentVersion": "2026.09.10.3",
-  "reviewed": false,
+  "detailLevel": "template-curated",
+  "templateVersion": "learning-template-2026.09.10.4",
+  "contentVersion": "2026.09.10.4",
+  "reviewed": true,
+  "curationSource": "manual-semantic-pack-2026.09.10.4",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

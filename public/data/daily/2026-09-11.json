@@ -1,8 +1,8 @@
 {
   "date": "2026-09-11",
   "dayNumber": 26,
-  "contentVersion": "2026.09.10.3",
-  "templateVersion": "learning-template-2026.09.10.3",
+  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.10.4",
   "cards": [
     {
       "id": "cause-v",
@@ -40,9 +40,9 @@
         "主动词汇"
       ],
       "coreMemory": {
-        "chinese": "导致；引起",
-        "english": "v. to make something happen, especially a result, problem",
-        "structure": "cause a problem /ˈkɑz ə ˈprɑbləm/（引起问题）；cause someone to do something /ˈkɑz ˈsʌˌmwʌn ˈtuː ˈduː ˈsʌmθɪŋ/（导致某人做某事）；cause damage to something /ˈkɑz ˈdæmədʒ ˈtuː ˈsʌmθɪŋ/（对某物造成损害）；cause concern /ˈkɑz kəˈnsɝːn/（引起担忧）",
+        "chinese": "导致；引起；使发生；使某人产生某种感受或经历",
+        "english": "v. to make something happen, especially a result, change, or problem；v. to make someone feel or experience something",
+        "structure": "cause a problem /ˈkɑz ə ˈprɑbləm/（引起问题）；cause damage to something /ˈkɑz ˈdæmədʒ ˈtuː ˈsʌmθɪŋ/（对某物造成损害）；cause someone trouble /ˈkɑz ˈsʌmˌwʌn ˈtrʌbəl/（给某人带来麻烦）；cause concern /ˈkɑz kənˈsɝːn/（引起担忧）",
         "structures": [
           {
             "phrase": "cause a problem",
@@ -50,121 +50,158 @@
             "chinese": "引起问题"
           },
           {
-            "phrase": "cause someone to do something",
-            "phonetic": "/ˈkɑz ˈsʌˌmwʌn ˈtuː ˈduː ˈsʌmθɪŋ/",
-            "chinese": "导致某人做某事"
-          },
-          {
             "phrase": "cause damage to something",
             "phonetic": "/ˈkɑz ˈdæmədʒ ˈtuː ˈsʌmθɪŋ/",
             "chinese": "对某物造成损害"
           },
           {
+            "phrase": "cause someone trouble",
+            "phonetic": "/ˈkɑz ˈsʌmˌwʌn ˈtrʌbəl/",
+            "chinese": "给某人带来麻烦"
+          },
+          {
             "phrase": "cause concern",
-            "phonetic": "/ˈkɑz kəˈnsɝːn/",
+            "phonetic": "/ˈkɑz kənˈsɝːn/",
             "chinese": "引起担忧"
           }
         ],
-        "commonError": "❌ cause someone to does something → ✅ cause someone to do something；❌ cause something with doing something → ✅ cause something by doing something",
+        "commonError": "❌ The delay caused us miss the train. → ✅ The delay caused us to miss the train.；❌ What caused of the failure? → ✅ What caused the failure?",
         "commonErrors": [
           {
-            "wrong": "cause someone to does something",
-            "wrongPhonetic": "/ˈkɑz ˈsʌˌmwʌn ˈtuː ˈdʌz ˈsʌmθɪŋ/",
-            "right": "cause someone to do something",
-            "rightPhonetic": "/ˈkɑz ˈsʌˌmwʌn ˈtuː ˈduː ˈsʌmθɪŋ/",
-            "note": "在“cause someone to do something”中，这个 to 是不定式标记，后面必须接动词原形。do 只是语法占位符，真实表达要把它换成 finish、check 等符合语境的动词原形。"
+            "wrong": "The delay caused us miss the train.",
+            "wrongPhonetic": "/ðə dɪˈleɪ ˈkɑzd ˈʌs ˈmɪs ðə ˈtreɪn/",
+            "right": "The delay caused us to miss the train.",
+            "rightPhonetic": "/ðə dɪˈleɪ ˈkɑzd ˈʌs ˈtuː ˈmɪs ðə ˈtreɪn/",
+            "note": "cause someone 后必须接 to do。"
           },
           {
-            "wrong": "cause something with doing something",
-            "wrongPhonetic": "/ˈkɑz ˈsʌmθɪŋ ˈwɪð ˈduːɪŋ ˈsʌmθɪŋ/",
-            "right": "cause something by doing something",
-            "rightPhonetic": "/ˈkɑz ˈsʌmθɪŋ ˈbaɪ ˈduːɪŋ ˈsʌmθɪŋ/",
-            "note": "在“cause something by doing something”所表达的这个具体含义中，要用介词 by；换成 with 会破坏这个固定结构或改变原意。"
+            "wrong": "What caused of the failure?",
+            "wrongPhonetic": "/ˈwʌt ˈkɑzd ˈʌv ðə ˈfeɪljɚ/",
+            "right": "What caused the failure?",
+            "rightPhonetic": "/ˈwʌt ˈkɑzd ðə ˈfeɪljɚ/",
+            "note": "cause 作动词直接接结果，of 只用于名词结构 the cause of。"
           }
         ],
-        "directSynonym": "produce /prəˈduːs/（产生；造成）；create /kriːˈeɪt/（创造；建造；引起）；lead to /ˈlɛd ˈtuː/（导致；通向）；bring about /ˈbrɪŋ əˈbaʊt/（导致；引起）",
-        "directAntonym": "prevent /prɪˈvɛnt/（阻止；防止）",
-        "derivatives": "causal · causally",
+        "directSynonym": "bring about /ˈbrɪŋ əˈbaʊt/（导致）；lead to /liːd ˈtuː/（导致）；produce /prəˈduːs/（产生）；trigger /ˈtrɪɡɚ/（触发）；provoke /prəˈvoʊk/（引起）",
+        "directAntonym": "prevent /prɪˈvɛnt/（防止）",
+        "derivatives": "causation · causal · causative · causally",
         "example": "A missing context can cause a serious misunderstanding.",
         "exampleChinese": "缺少语境会导致严重误解。"
       },
       "meanings": [
         {
           "partOfSpeech": "v.",
-          "english": "to make something happen, especially a result, problem",
-          "chinese": "导致；引起",
-          "example": "A missing context can cause a serious misunderstanding.",
-          "translation": "缺少语境会导致严重误解。"
+          "english": "to make something happen, especially a result, change, or problem",
+          "chinese": "导致；引起；使发生",
+          "example": "Heavy rain caused severe flooding.",
+          "translation": "暴雨造成了严重洪水。"
+        },
+        {
+          "partOfSpeech": "v.",
+          "english": "to make someone feel or experience something",
+          "chinese": "使某人产生某种感受或经历",
+          "example": "The delay caused us considerable inconvenience.",
+          "translation": "这次延误给我们造成了很大不便。"
         }
       ],
       "contextPhrases": [
         {
-          "category": "核心动作与结构",
+          "category": "事故与损害",
           "items": [
             {
-              "phrase": "cause a problem",
-              "phonetic": "/ˈkɑz ə ˈprɑbləm/",
-              "chinese": "引起问题"
+              "phrase": "cause serious injury",
+              "phonetic": "/ˈkɑz ˈsɪriəs ˈɪndʒɚi/",
+              "chinese": "造成重伤"
             },
             {
-              "phrase": "cause someone to do something",
-              "phonetic": "/ˈkɑz ˈsʌˌmwʌn ˈtuː ˈduː ˈsʌmθɪŋ/",
-              "chinese": "导致某人做某事"
+              "phrase": "cause structural failure",
+              "phonetic": "/ˈkɑz ˈstrʌktʃɚəl ˈfeɪljɚ/",
+              "chinese": "导致结构失效"
             },
             {
-              "phrase": "cause damage to something",
-              "phonetic": "/ˈkɑz ˈdæmədʒ ˈtuː ˈsʌmθɪŋ/",
-              "chinese": "对某物造成损害"
+              "phrase": "cause widespread disruption",
+              "phonetic": "/ˈkɑz ˈwaɪdˌsprɛd dɪsˈrʌpʃən/",
+              "chinese": "造成大范围中断"
+            },
+            {
+              "phrase": "cause permanent damage",
+              "phonetic": "/ˈkɑz ˈpɝːmənənt ˈdæmədʒ/",
+              "chinese": "造成永久损害"
             }
           ]
         },
         {
-          "category": "日常与工作语境",
+          "category": "健康与感受",
           "items": [
             {
-              "phrase": "cause concern",
-              "phonetic": "/ˈkɑz kəˈnsɝːn/",
-              "chinese": "引起担忧"
+              "phrase": "cause severe anxiety",
+              "phonetic": "/ˈkɑz səˈvɪr æŋˈzaɪəti/",
+              "chinese": "引发严重焦虑"
             },
             {
-              "phrase": "cause confusion",
-              "phonetic": "/ˈkɑz kəˈnfjuːʒən/",
-              "chinese": "引起困惑"
+              "phrase": "cause temporary discomfort",
+              "phonetic": "/ˈkɑz ˈtɛmpɚˌɛri dɪˈskʌmfɚt/",
+              "chinese": "造成短暂不适"
             },
             {
-              "phrase": "cause something by doing something",
-              "phonetic": "/ˈkɑz ˈsʌmθɪŋ ˈbaɪ ˈduːɪŋ ˈsʌmθɪŋ/",
-              "chinese": "因做某事而导致某事"
+              "phrase": "cause loss of hearing",
+              "phonetic": "/ˈkɑz ˈlɔːs ˈʌv ˈhɪrɪŋ/",
+              "chinese": "导致听力损失"
+            },
+            {
+              "phrase": "cause intense embarrassment",
+              "phonetic": "/ˈkɑz ˌɪnˈtɛns ɪmˈbɛrəsmənt/",
+              "chinese": "使人非常尴尬"
             }
           ]
         },
         {
-          "category": "高频扩展表达",
+          "category": "经济与环境",
           "items": [
             {
-              "phrase": "cause any more trouble",
-              "phonetic": "/ˈkɑz ˈɛniː ˈmɔːr ˈtrʌbəl/",
-              "chinese": "惹事了"
+              "phrase": "cause unemployment to increase",
+              "phonetic": "/ˈkɑz ˌʌnɪmˈplɔɪmənt ˈtuː ɪnˈkriːs/",
+              "chinese": "导致失业增加"
             },
             {
-              "phrase": "cause someone trouble",
-              "phonetic": "/ˈkɑz ˈsʌˌmwʌn ˈtrʌbəl/",
-              "chinese": "给某人添麻烦"
+              "phrase": "cause harm to wildlife",
+              "phonetic": "/ˈkɑz ˈhɑrm ˈtuː ˈwaɪldˌlaɪf/",
+              "chinese": "对野生动物造成伤害"
             },
             {
-              "phrase": "cause a great disaster",
-              "phonetic": "/ˈkɑz ə ˈɡreɪt dɪˈzæstɚ/",
-              "chinese": "失之毫厘"
+              "phrase": "cause demand to fall",
+              "phonetic": "/ˈkɑz dɪˈmænd ˈtuː ˈfɔːl/",
+              "chinese": "导致需求下降"
+            },
+            {
+              "phrase": "cause water levels to drop",
+              "phonetic": "/ˈkɑz ˈwɔːtɚ ˈlɛvəlz ˈtuː ˈdrɑp/",
+              "chinese": "导致水位下降"
             }
           ]
         },
         {
-          "category": "补充常用语境",
+          "category": "行为与结果",
           "items": [
             {
-              "phrase": "cause skin cancer",
-              "phonetic": "/ˈkɑz ˈskɪn ˈkænsɚ/",
-              "chinese": "导致皮肤癌"
+              "phrase": "cause people to hesitate",
+              "phonetic": "/ˈkɑz ˈpiːpəl ˈtuː ˈhɛzəˌteɪt/",
+              "chinese": "使人们犹豫"
+            },
+            {
+              "phrase": "cause the system to restart",
+              "phonetic": "/ˈkɑz ðə ˈsɪstəm ˈtuː riˈstɑrt/",
+              "chinese": "使系统重启"
+            },
+            {
+              "phrase": "cause unexpected side effects",
+              "phonetic": "/ˈkɑz ˌʌnɪkˈspɛktɪd ˈsaɪd ɪˈfɛkts/",
+              "chinese": "导致意外副作用"
+            },
+            {
+              "phrase": "cause the alarm to sound",
+              "phonetic": "/ˈkɑz ðə əˈlɑrm ˈtuː ˈsaʊnd/",
+              "chinese": "使警报响起"
             }
           ]
         }
@@ -174,101 +211,122 @@
           "phrase": "cause a problem",
           "phonetic": "/ˈkɑz ə ˈprɑbləm/",
           "chinese": "引起问题",
-          "example": "A missing context can cause a serious misunderstanding.",
-          "translation": "缺少语境会导致严重误解。"
-        },
-        {
-          "phrase": "cause someone to do something",
-          "phonetic": "/ˈkɑz ˈsʌˌmwʌn ˈtuː ˈduː ˈsʌmθɪŋ/",
-          "chinese": "导致某人做某事",
-          "example": "The delay caused us to change the schedule.",
-          "translation": "延误导致我们更改日程。"
+          "example": "The missing file caused a problem during the final audit.",
+          "translation": "缺失的文件在最终审核中引起了问题。"
         },
         {
           "phrase": "cause damage to something",
           "phonetic": "/ˈkɑz ˈdæmədʒ ˈtuː ˈsʌmθɪŋ/",
           "chinese": "对某物造成损害",
-          "example": "Heavy rain can cause damage to old buildings.",
-          "translation": "暴雨会对老建筑造成损害。"
+          "example": "Salt water can cause serious damage to the engine.",
+          "translation": "盐水会对发动机造成严重损害。"
+        },
+        {
+          "phrase": "cause someone trouble",
+          "phonetic": "/ˈkɑz ˈsʌmˌwʌn ˈtrʌbəl/",
+          "chinese": "给某人带来麻烦",
+          "example": "I am sorry the schedule change caused you so much trouble.",
+          "translation": "很抱歉日程变更给你带来了这么多麻烦。"
         },
         {
           "phrase": "cause concern",
-          "phonetic": "/ˈkɑz kəˈnsɝːn/",
+          "phonetic": "/ˈkɑz kənˈsɝːn/",
           "chinese": "引起担忧",
-          "example": "The sudden drop in sales caused concern.",
-          "translation": "销售额突然下降引起了担忧。"
+          "example": "The sudden fall in water pressure caused concern among residents.",
+          "translation": "水压突然下降引起了居民的担忧。"
         },
         {
           "phrase": "cause confusion",
-          "phonetic": "/ˈkɑz kəˈnfjuːʒən/",
-          "chinese": "引起困惑",
-          "example": "Vague wording can cause confusion for learners.",
-          "translation": "含糊措辞会让学习者困惑。"
+          "phonetic": "/ˈkɑz kənˈfjuːʒən/",
+          "chinese": "造成混乱",
+          "example": "Using two different labels for the same room caused confusion.",
+          "translation": "同一房间使用两个不同名称造成了混乱。"
         },
         {
-          "phrase": "cause something by doing something",
-          "phonetic": "/ˈkɑz ˈsʌmθɪŋ ˈbaɪ ˈduːɪŋ ˈsʌmθɪŋ/",
-          "chinese": "因做某事而导致某事",
-          "example": "You may cause an accident by driving too fast.",
-          "translation": "开车太快可能会引发事故。"
+          "phrase": "cause an accident",
+          "phonetic": "/ˈkɑz ˈæn ˈæksədənt/",
+          "chinese": "导致事故",
+          "example": "Poor visibility caused an accident on the coastal road.",
+          "translation": "能见度低导致沿海公路发生了一起事故。"
         },
         {
-          "phrase": "cause any more trouble",
-          "phonetic": "/ˈkɑz ˈɛniː ˈmɔːr ˈtrʌbəl/",
-          "chinese": "惹事了",
-          "example": "I don't want to cause any more trouble.",
-          "translation": "我不想再惹事了。"
+          "phrase": "cause a delay",
+          "phonetic": "/ˈkɑz ə dɪˈleɪ/",
+          "chinese": "导致延误",
+          "example": "A signal failure caused a forty-minute delay.",
+          "translation": "信号故障导致了四十分钟的延误。"
         },
         {
-          "phrase": "cause someone trouble",
-          "phonetic": "/ˈkɑz ˈsʌˌmwʌn ˈtrʌbəl/",
-          "chinese": "给某人添麻烦",
-          "example": "I'm sorry to cause you all this trouble.",
-          "translation": "我很抱歉给你惹来所有的这些麻烦。"
+          "phrase": "cause pain",
+          "phonetic": "/ˈkɑz ˈpeɪn/",
+          "chinese": "引起疼痛",
+          "example": "Stop the exercise if it causes pain in your knee.",
+          "translation": "如果这项运动引起膝盖疼痛，就停下来。"
         },
         {
-          "phrase": "cause someone trouble",
-          "phonetic": "/ˈkɑz ˈsʌˌmwʌn ˈtrʌbəl/",
-          "chinese": "给某人添麻烦",
-          "example": "We don't want to cause you any trouble.",
-          "translation": "我们不想给你添麻烦。"
+          "phrase": "cause a reaction",
+          "phonetic": "/ˈkɑz ə riˈækʃən/",
+          "chinese": "引起反应",
+          "example": "This medicine may cause an allergic reaction in some patients.",
+          "translation": "这种药可能使部分患者出现过敏反应。"
         },
         {
-          "phrase": "cause a great disaster",
-          "phonetic": "/ˈkɑz ə ˈɡreɪt dɪˈzæstɚ/",
-          "chinese": "失之毫厘",
-          "example": "Slight inattention can cause a great disaster.",
-          "translation": "失之毫厘，谬之千里。"
+          "phrase": "cause prices to rise",
+          "phonetic": "/ˈkɑz ˈpraɪsəz ˈtuː ˈraɪz/",
+          "chinese": "导致价格上涨",
+          "example": "A poor harvest could cause food prices to rise.",
+          "translation": "歉收可能导致食品价格上涨。"
+        },
+        {
+          "phrase": "cause someone to do something",
+          "phonetic": "/ˈkɑz ˈsʌmˌwʌn ˈtuː ˈduː ˈsʌmθɪŋ/",
+          "chinese": "使某人做某事",
+          "example": "The alarm caused everyone to leave the building immediately.",
+          "translation": "警报使所有人立即离开了大楼。"
+        },
+        {
+          "phrase": "be caused by something",
+          "phonetic": "/ˈbiː ˈkɑzd ˈbaɪ ˈsʌmθɪŋ/",
+          "chinese": "由某事物引起",
+          "example": "The network failure was caused by a damaged cable.",
+          "translation": "网络故障是由一根受损电缆造成的。"
         }
       ],
       "synonyms": [
         {
-          "word": "produce",
-          "phonetic": "/prəˈduːs/",
+          "word": "bring about",
+          "phonetic": "/ˈbrɪŋ əˈbaʊt/",
           "partOfSpeech": "v.",
-          "chinese": "产生；造成",
-          "difference": "produce 表示“产生；造成”，与 cause 的“导致”义相近。两词只有在这一义项重合时才能互换；cause 的其他常用义不一定适用。"
-        },
-        {
-          "word": "create",
-          "phonetic": "/kriːˈeɪt/",
-          "partOfSpeech": "v.",
-          "chinese": "创造；建造；引起",
-          "difference": "create 常表示“创造；建造；引起”，与 cause 的“导致”义有重合。create 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+          "chinese": "导致",
+          "difference": "常指促成变化或结果；cause 直接强调因果关系，语体比 bring about 更简洁。"
         },
         {
           "word": "lead to",
-          "phonetic": "/ˈlɛd ˈtuː/",
-          "partOfSpeech": "phr.",
-          "chinese": "导致；通向",
-          "difference": "lead to 常表示“导致；通向”，与 cause 的“导致”义有重合。lead to 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+          "phonetic": "/liːd ˈtuː/",
+          "partOfSpeech": "v.",
+          "chinese": "导致",
+          "difference": "突出因果链条，主语常是事件；cause 可直接接结果作宾语，不必使用介词 to。"
         },
         {
-          "word": "bring about",
-          "phonetic": "/ˈbrɪŋ əˈbaʊt/",
-          "partOfSpeech": "phr.",
-          "chinese": "导致；引起",
-          "difference": "bring about 常表示“导致；引起”，与 cause 的“导致”义有重合。bring about 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+          "word": "produce",
+          "phonetic": "/prəˈduːs/",
+          "partOfSpeech": "v.",
+          "chinese": "产生",
+          "difference": "常指产生效果、结果或反应；cause 常用于负面或中性结果，produce 的搭配范围不同。"
+        },
+        {
+          "word": "trigger",
+          "phonetic": "/ˈtrɪɡɚ/",
+          "partOfSpeech": "v.",
+          "chinese": "触发",
+          "difference": "强调使事件突然开始；cause 不要求结果突然发生，trigger 往往强调启动点。"
+        },
+        {
+          "word": "provoke",
+          "phonetic": "/prəˈvoʊk/",
+          "partOfSpeech": "v.",
+          "chinese": "引起",
+          "difference": "常指激起反应、争议或情绪；cause 语气中性，不暗示故意激起反应。"
         }
       ],
       "antonyms": [
@@ -276,117 +334,134 @@
           "word": "prevent",
           "phonetic": "/prɪˈvɛnt/",
           "partOfSpeech": "v.",
-          "chinese": "阻止；防止",
-          "usage": "prevent 表示“阻止；防止”，与 cause 的“导致”义形成对比。这种反义关系只适用于上述明确义项。"
+          "chinese": "防止",
+          "usage": "cause 表示使某个结果发生；prevent 表示阻止同一结果发生，只在这一因果义项上相对。"
         }
       ],
       "derivatives": [
         {
+          "word": "causation",
+          "phonetic": "/ˌkɔːˈzeɪʃən/",
+          "partOfSpeech": "n.",
+          "chinese": "因果关系；致使",
+          "note": "正式用语，强调一个因素导致另一个结果。"
+        },
+        {
           "word": "causal",
           "phonetic": "/ˈkɔːzəl/",
           "partOfSpeech": "adj.",
-          "chinese": "因果关系的",
-          "note": "常用于 causal relationship。"
+          "chinese": "因果的；构成原因的",
+          "note": "常见于 causal relationship 和 causal factor。"
+        },
+        {
+          "word": "causative",
+          "phonetic": "/ˈkɑzətɪv/",
+          "partOfSpeech": "adj.",
+          "chinese": "使役的；引起……的",
+          "note": "常用于语法中的使役结构，或医学中的致病因素语境。"
         },
         {
           "word": "causally",
-          "phonetic": "/causally/",
+          "phonetic": "/ˈkɔːzəli/",
           "partOfSpeech": "adv.",
           "chinese": "在因果关系上",
-          "note": "多用于正式或学术语境。"
+          "note": "多用于学术语境，说明因果层面的联系。"
         }
       ],
-      "confusables": [],
+      "confusables": [
+        {
+          "word": "because",
+          "phonetic": "/bɪˈkɔːz/",
+          "partOfSpeech": "conj.",
+          "chinese": "因为",
+          "difference": "cause 是名词或动词，because 是连接原因从句的连词"
+        }
+      ],
       "relatedVocabulary": [
         {
-          "category": "同一语义场的高频词",
+          "category": "原因因素",
           "items": [
             {
-              "word": "reason",
-              "phonetic": "/ˈriːzən/",
+              "word": "factor",
+              "phonetic": "/ˈfæktɚ/",
               "partOfSpeech": "n.",
-              "chinese": "原因"
+              "chinese": "因素"
+            },
+            {
+              "word": "catalyst",
+              "phonetic": "/ˈkætələst/",
+              "partOfSpeech": "n.",
+              "chinese": "促成因素"
+            },
+            {
+              "word": "source",
+              "phonetic": "/ˈsɔːrs/",
+              "partOfSpeech": "n.",
+              "chinese": "根源"
+            },
+            {
+              "word": "condition",
+              "phonetic": "/kənˈdɪʃən/",
+              "partOfSpeech": "n.",
+              "chinese": "条件"
+            }
+          ]
+        },
+        {
+          "category": "结果后果",
+          "items": [
+            {
+              "word": "result",
+              "phonetic": "/rɪˈzʌlt/",
+              "partOfSpeech": "n.",
+              "chinese": "结果"
+            },
+            {
+              "word": "consequence",
+              "phonetic": "/ˈkɑnsəkwəns/",
+              "partOfSpeech": "n.",
+              "chinese": "后果"
+            },
+            {
+              "word": "outcome",
+              "phonetic": "/ˈaʊtˌkʌm/",
+              "partOfSpeech": "n.",
+              "chinese": "结果"
             },
             {
               "word": "effect",
               "phonetic": "/ɪˈfɛkt/",
               "partOfSpeech": "n.",
-              "chinese": "结果；影响"
-            },
-            {
-              "word": "result",
-              "phonetic": "/rɪˈzʌlt/",
-              "partOfSpeech": "n. / v.",
-              "chinese": "结果；导致"
+              "chinese": "影响"
             }
           ]
         },
         {
-          "category": "近义表达分类",
+          "category": "风险损害",
           "items": [
             {
-              "word": "produce",
-              "phonetic": "/prəˈduːs/",
-              "partOfSpeech": "v.",
-              "chinese": "产生；造成"
+              "word": "risk",
+              "phonetic": "/ˈrɪsk/",
+              "partOfSpeech": "n.",
+              "chinese": "风险"
             },
             {
-              "word": "create",
-              "phonetic": "/kriːˈeɪt/",
-              "partOfSpeech": "v.",
-              "chinese": "创造；建造；引起"
+              "word": "damage",
+              "phonetic": "/ˈdæmədʒ/",
+              "partOfSpeech": "n.",
+              "chinese": "损害"
             },
             {
-              "word": "lead to",
-              "phonetic": "/ˈlɛd ˈtuː/",
-              "partOfSpeech": "phr.",
-              "chinese": "导致；通向"
+              "word": "injury",
+              "phonetic": "/ˈɪndʒɚi/",
+              "partOfSpeech": "n.",
+              "chinese": "伤害"
             },
             {
-              "word": "bring about",
-              "phonetic": "/ˈbrɪŋ əˈbaʊt/",
-              "partOfSpeech": "phr.",
-              "chinese": "导致；引起"
-            }
-          ]
-        },
-        {
-          "category": "对比与易混表达分类",
-          "items": [
-            {
-              "word": "prevent",
-              "phonetic": "/prɪˈvɛnt/",
-              "partOfSpeech": "v.",
-              "chinese": "阻止；防止"
-            },
-            {
-              "word": "causal",
-              "phonetic": "/ˈkɔːzəl/",
-              "partOfSpeech": "adj.",
-              "chinese": "因果关系的"
-            },
-            {
-              "word": "causally",
-              "phonetic": "/causally/",
-              "partOfSpeech": "adv.",
-              "chinese": "在因果关系上"
-            }
-          ]
-        },
-        {
-          "category": "常用词族分类",
-          "items": [
-            {
-              "word": "causal",
-              "phonetic": "/ˈkɔːzəl/",
-              "partOfSpeech": "adj.",
-              "chinese": "因果关系的"
-            },
-            {
-              "word": "causally",
-              "phonetic": "/causally/",
-              "partOfSpeech": "adv.",
-              "chinese": "在因果关系上"
+              "word": "disruption",
+              "phonetic": "/dɪsˈrʌpʃən/",
+              "partOfSpeech": "n.",
+              "chinese": "中断"
             }
           ]
         }
@@ -398,81 +473,91 @@
           "chinese": "缺少语境会导致严重误解。"
         },
         {
-          "scene": "工作或学习",
-          "english": "The delay caused us to change the schedule.",
-          "chinese": "延误导致我们更改日程。"
-        },
-        {
-          "scene": "常见搭配",
-          "english": "Heavy rain can cause damage to old buildings.",
-          "chinese": "暴雨会对老建筑造成损害。"
-        },
-        {
-          "scene": "真实语境",
-          "english": "The sudden drop in sales caused concern.",
-          "chinese": "销售额突然下降引起了担忧。"
-        },
-        {
-          "scene": "易错结构",
-          "english": "Vague wording can cause confusion for learners.",
-          "chinese": "含糊措辞会让学习者困惑。"
-        },
-        {
-          "scene": "主动表达",
-          "english": "You may cause an accident by driving too fast.",
-          "chinese": "开车太快可能会引发事故。"
-        },
-        {
           "scene": "日常交流",
-          "english": "I don't want to cause any more trouble.",
-          "chinese": "我不想再惹事了。"
+          "english": "The missing file caused a problem during the final audit.",
+          "chinese": "缺失的文件在最终审核中引起了问题。"
         },
         {
           "scene": "工作沟通",
-          "english": "I'm sorry to cause you all this trouble.",
-          "chinese": "我很抱歉给你惹来所有的这些麻烦。"
+          "english": "Salt water can cause serious damage to the engine.",
+          "chinese": "盐水会对发动机造成严重损害。"
         },
         {
           "scene": "学习表达",
-          "english": "We don't want to cause you any trouble.",
-          "chinese": "我们不想给你添麻烦。"
+          "english": "I am sorry the schedule change caused you so much trouble.",
+          "chinese": "很抱歉日程变更给你带来了这么多麻烦。"
         },
         {
           "scene": "书面表达",
-          "english": "Slight inattention can cause a great disaster.",
-          "chinese": "失之毫厘，谬之千里。"
+          "english": "The sudden fall in water pressure caused concern among residents.",
+          "chinese": "水压突然下降引起了居民的担忧。"
+        },
+        {
+          "scene": "日常交流",
+          "english": "Using two different labels for the same room caused confusion.",
+          "chinese": "同一房间使用两个不同名称造成了混乱。"
+        },
+        {
+          "scene": "工作沟通",
+          "english": "Poor visibility caused an accident on the coastal road.",
+          "chinese": "能见度低导致沿海公路发生了一起事故。"
+        },
+        {
+          "scene": "学习表达",
+          "english": "A signal failure caused a forty-minute delay.",
+          "chinese": "信号故障导致了四十分钟的延误。"
+        },
+        {
+          "scene": "书面表达",
+          "english": "Stop the exercise if it causes pain in your knee.",
+          "chinese": "如果这项运动引起膝盖疼痛，就停下来。"
+        },
+        {
+          "scene": "日常交流",
+          "english": "This medicine may cause an allergic reaction in some patients.",
+          "chinese": "这种药可能使部分患者出现过敏反应。"
+        },
+        {
+          "scene": "工作沟通",
+          "english": "A poor harvest could cause food prices to rise.",
+          "chinese": "歉收可能导致食品价格上涨。"
+        },
+        {
+          "scene": "学习表达",
+          "english": "The alarm caused everyone to leave the building immediately.",
+          "chinese": "警报使所有人立即离开了大楼。"
         }
       ],
       "studyFocus": {
-        "coreMeaning": "先掌握“导致；引起”这个核心义，再用高频固定搭配和真实例句巩固这个义项。",
+        "coreMeaning": "先掌握“导致；引起；使发生”这个核心义，再对比另外 1 个常用义项，辨别不同语境。",
         "keyCollocation": "把“cause a problem”连同介词、宾语和动词形式作为整个句块记忆。",
-        "commonMistake": "在“cause someone to do something”中，这个 to 是不定式标记，后面必须接动词原形。do 只是语法占位符，真实表达要把它换成 finish、check 等符合语境的动词原形。",
+        "commonMistake": "cause someone 后必须接 to do。",
         "mustUseExample": "A missing context can cause a serious misunderstanding.（缺少语境会导致严重误解。）"
       },
       "questions": [
         {
           "id": "cause-v-meaning-core",
           "type": "meaning_choice",
-          "prompt": "“cause”最核心的中文含义是？",
+          "prompt": "“cause”最常见的核心中文义是哪一项？",
           "options": [
             "使用",
-            "导致；引起",
+            "导致；引起；使发生",
             "发现"
           ],
-          "answer": "导致；引起",
+          "answer": "导致；引起；使发生",
           "stage": "T0",
           "ai": false
         },
         {
           "id": "cause-v-meaning-english",
           "type": "meaning_choice",
-          "prompt": "哪一项英文释义最符合词卡中的 “cause”？",
+          "prompt": "“cause”最常见的英文释义是哪一项？",
           "options": [
-            "to make something happen, especially a result, problem",
+            "to make something happen, especially a result, change, or problem",
             "to find something for the first time",
             "to employ something for a purpose"
           ],
-          "answer": "to make something happen, especially a result, problem",
+          "answer": "to make something happen, especially a result, change, or problem",
           "stage": "T0",
           "ai": false
         },
@@ -483,8 +568,8 @@
           "options": [
             "cause concern",
             "cause a problem",
-            "cause someone to do something",
-            "cause damage to something"
+            "cause damage to something",
+            "cause someone trouble"
           ],
           "answer": "cause a problem",
           "stage": "T1",
@@ -493,12 +578,12 @@
         {
           "id": "cause-v-synonym-choice",
           "type": "meaning_choice",
-          "prompt": "哪个词是词卡中列出的 “cause” 最直接近义词？",
+          "prompt": "在“产生”这个义项下，哪个词与“cause”意思最接近？",
           "options": [
             "produce",
-            "prevent",
-            "discover",
-            "use"
+            "be",
+            "have",
+            "do"
           ],
           "answer": "produce",
           "stage": "T2",
@@ -507,11 +592,11 @@
         {
           "id": "cause-v-antonym-choice",
           "type": "meaning_choice",
-          "prompt": "哪个词是词卡中列出的 “cause” 最直接反义词？",
+          "prompt": "在“导致；引起；使发生”这个义项下，哪个词与“cause”意思相反？",
           "options": [
-            "produce",
-            "discover",
-            "use",
+            "be",
+            "have",
+            "do",
             "prevent"
           ],
           "answer": "prevent",
@@ -521,21 +606,21 @@
         {
           "id": "cause-v-contrast-choice",
           "type": "meaning_choice",
-          "prompt": "根据本词卡辨析，哪个词被列为 “cause” 的派生词？",
+          "prompt": "哪一项是“cause”的常用派生词？",
           "options": [
-            "prevent",
-            "discover",
-            "causal",
-            "produce"
+            "admission",
+            "affection",
+            "causation",
+            "increase"
           ],
-          "answer": "causal",
+          "answer": "causation",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "cause-v-recall-definition",
           "type": "recall",
-          "prompt": "根据英文释义写出目标词：to make something happen, especially a result, problem",
+          "prompt": "根据英文释义写出对应单词：to make something happen, especially a result, change, or problem",
           "answer": "cause",
           "stage": "T1",
           "ai": false
@@ -543,7 +628,7 @@
         {
           "id": "cause-v-recall-chinese",
           "type": "recall",
-          "prompt": "写出符合“导致；引起”（v.）的本课目标词。",
+          "prompt": "写出表示“导致；引起；使发生”（v.）的英文单词。",
           "answer": "cause",
           "stage": "T1",
           "ai": false
@@ -559,27 +644,21 @@
         {
           "id": "cause-v-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "句型应用：哪一项既表示“导致某人做某事”，又符合这个形式线索：完整结构中使用 to + 动词原形；do 只是语法占位符，要换成符合语境的具体动词原形？",
+          "prompt": "句型应用：哪一项既表示“对某物造成损害”，又符合这个形式线索：完整搭配中使用介词 to？",
           "options": [
             "cause a problem",
-            "cause damage to something",
+            "cause someone trouble",
             "cause concern",
-            "cause someone to do something"
+            "cause damage to something"
           ],
-          "answer": "cause someone to do something",
+          "answer": "cause damage to something",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "cause-v-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：A missing context can cause a _____ misunderstanding.（中文：缺少语境会导致严重误解。）",
-          "options": [
-            "key",
-            "difficult",
-            "serious",
-            "better"
-          ],
+          "prompt": "根据完整句意和中文提示补全原句：A missing context can cause a _____ misunderstanding.（中文：缺少语境会导致严重误解。）",
           "answer": "serious",
           "stage": "T2",
           "ai": false
@@ -587,43 +666,43 @@
         {
           "id": "cause-v-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "用法辨析：哪一项既表示“引起问题”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+          "prompt": "用法辨析：哪一项既表示“造成混乱”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "cause concern",
+            "cause someone trouble",
+            "cause confusion",
             "cause a problem",
-            "cause someone to do something",
             "cause damage to something"
           ],
-          "answer": "cause a problem",
+          "answer": "cause confusion",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "cause-v-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "搭配辨析：哪一项既表示“导致某人做某事”，又符合这个形式线索：完整结构中使用 to + 动词原形；do 只是语法占位符，要换成符合语境的具体动词原形？",
+          "prompt": "搭配辨析：哪一项既表示“导致事故”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "cause someone to do something",
+            "cause an accident",
             "cause a problem",
             "cause damage to something",
-            "cause concern"
+            "cause someone trouble"
           ],
-          "answer": "cause someone to do something",
+          "answer": "cause an accident",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "cause-v-example-cloze",
           "type": "collocation",
-          "prompt": "根据句意补全词卡核心例句：A missing context can _____ a serious misunderstanding.（填写 cause 的正确形式）；A、B 要替换成实际比较内容",
-          "answer": "cause",
+          "prompt": "根据句意和中文提示补全另一个常用例句：The missing file _____ a problem during the final audit.（填写 cause 的正确形式）（中文：缺失的文件在最终审核中引起了问题。）",
+          "answer": "caused",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "cause-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “cause” 写一个自然、真实的英文句子，含义必须符合词卡核心义“导致；引起”。",
+          "prompt": "请用 “cause” 写一个自然、真实的英文句子，含义必须符合核心义“导致；引起；使发生”。",
           "answer": "",
           "stage": "T2",
           "ai": true
@@ -631,7 +710,7 @@
         {
           "id": "cause-v-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请使用 “cause a problem” 结构写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “cause confusion” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -639,7 +718,7 @@
         {
           "id": "cause-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “cause” 和 “cause a problem” 结构，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “cause” 和 “cause serious injury” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -697,10 +776,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "template-complete",
-      "templateVersion": "learning-template-2026.09.10.3",
-      "contentVersion": "2026.09.10.3",
-      "reviewed": false,
+      "detailLevel": "template-curated",
+      "templateVersion": "learning-template-2026.09.10.4",
+      "contentVersion": "2026.09.10.4",
+      "reviewed": true,
+      "curationSource": "manual-semantic-pack-2026.09.10.4",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -733,323 +813,435 @@
         "主动词汇"
       ],
       "coreMemory": {
-        "chinese": "加入；参加；和……一起；参与；连接；接合",
-        "english": "v. to become a member or participant in a group or activity；v. to go or do something together with someone；v. to connect two or more things",
-        "structure": "join a group /ˈdʒɔɪn ə ˈɡruːp/（加入群组）；join someone for something /ˈdʒɔɪn ˈsʌˌmwʌn ˈfɔːr ˈsʌmθɪŋ/（和某人一起做某事）；join in something /ˈdʒɔɪn ɪn ˈsʌmθɪŋ/（参与某活动）；join something to something /ˈdʒɔɪn ˈsʌmθɪŋ ˈtuː ˈsʌmθɪŋ/（把某物与某物连接）",
+        "chinese": "加入；成为……的一员；参加；和……一起；连接；接合",
+        "english": "v. to become a member of a group or organization；v. to take part with another person in an activity；v. to connect two things or meet at a point",
+        "structure": "join a team /ˈdʒɔɪn ə ˈtiːm/（加入团队）；join a club /ˈdʒɔɪn ə ˈklʌb/（加入俱乐部）；join an organization /ˈdʒɔɪn ˈæn ˌɔːrɡənəˈzeɪʃən/（加入组织）；join someone for dinner /ˈdʒɔɪn ˈsʌmˌwʌn ˈfɔːr ˈdɪnɚ/（与某人共进晚餐）",
         "structures": [
           {
-            "phrase": "join a group",
-            "phonetic": "/ˈdʒɔɪn ə ˈɡruːp/",
-            "chinese": "加入群组"
+            "phrase": "join a team",
+            "phonetic": "/ˈdʒɔɪn ə ˈtiːm/",
+            "chinese": "加入团队"
           },
           {
-            "phrase": "join someone for something",
-            "phonetic": "/ˈdʒɔɪn ˈsʌˌmwʌn ˈfɔːr ˈsʌmθɪŋ/",
-            "chinese": "和某人一起做某事"
+            "phrase": "join a club",
+            "phonetic": "/ˈdʒɔɪn ə ˈklʌb/",
+            "chinese": "加入俱乐部"
           },
           {
-            "phrase": "join in something",
-            "phonetic": "/ˈdʒɔɪn ɪn ˈsʌmθɪŋ/",
-            "chinese": "参与某活动"
+            "phrase": "join an organization",
+            "phonetic": "/ˈdʒɔɪn ˈæn ˌɔːrɡənəˈzeɪʃən/",
+            "chinese": "加入组织"
           },
           {
-            "phrase": "join something to something",
-            "phonetic": "/ˈdʒɔɪn ˈsʌmθɪŋ ˈtuː ˈsʌmθɪŋ/",
-            "chinese": "把某物与某物连接"
+            "phrase": "join someone for dinner",
+            "phonetic": "/ˈdʒɔɪn ˈsʌmˌwʌn ˈfɔːr ˈdɪnɚ/",
+            "chinese": "与某人共进晚餐"
           }
         ],
-        "commonError": "❌ join someone at something → ✅ join someone for something；❌ join at something → ✅ join in something",
+        "commonError": "❌ She joined in the chess club. → ✅ She joined the chess club.；❌ Would you like to join with us for dinner? → ✅ Would you like to join us for dinner?",
         "commonErrors": [
           {
-            "wrong": "join someone at something",
-            "wrongPhonetic": "/ˈdʒɔɪn ˈsʌˌmwʌn ˈæt ˈsʌmθɪŋ/",
-            "right": "join someone for something",
-            "rightPhonetic": "/ˈdʒɔɪn ˈsʌˌmwʌn ˈfɔːr ˈsʌmθɪŋ/",
-            "note": "在“join someone for something”所表达的这个具体含义中，要用介词 for；换成 at 会破坏这个固定结构或改变原意。"
+            "wrong": "She joined in the chess club.",
+            "wrongPhonetic": "/ˈʃiː ˈdʒɔɪnd ɪn ðə ˈtʃɛs ˈklʌb/",
+            "right": "She joined the chess club.",
+            "rightPhonetic": "/ˈʃiː ˈdʒɔɪnd ðə ˈtʃɛs ˈklʌb/",
+            "note": "加入组织或团体时 join 直接接宾语，不加 in。"
           },
           {
-            "wrong": "join at something",
-            "wrongPhonetic": "/ˈdʒɔɪn ˈæt ˈsʌmθɪŋ/",
-            "right": "join in something",
-            "rightPhonetic": "/ˈdʒɔɪn ɪn ˈsʌmθɪŋ/",
-            "note": "在“join in something”所表达的这个具体含义中，要用介词 in；换成 at 会破坏这个固定结构或改变原意。"
+            "wrong": "Would you like to join with us for dinner?",
+            "wrongPhonetic": "/ˈwʊd ˈjuː ˈlaɪk ˈtuː ˈdʒɔɪn ˈwɪð ˈʌs ˈfɔːr ˈdɪnɚ/",
+            "right": "Would you like to join us for dinner?",
+            "rightPhonetic": "/ˈwʊd ˈjuː ˈlaɪk ˈtuː ˈdʒɔɪn ˈʌs ˈfɔːr ˈdɪnɚ/",
+            "note": "表示和某人一起参加活动通常直接用 join someone。"
           }
         ],
-        "directSynonym": "unite /ˈjuːˌnaɪt/（联合；连接）；connect /kəˈnɛkt/（连接；联合；联系）；participate /pɑˈrtɪsəˌpeɪt/（相近的常用表达）；link /ˈlɪŋk/（环；连结物；链接）",
-        "directAntonym": "separate /ˈsɛpɚˌeɪt/（分开；分离）",
-        "derivatives": "本词暂无需额外强记的高频派生词",
+        "directSynonym": "enter /ˈɛntɚ/（加入）；enroll /ɛnˈroʊl/（报名加入）；participate /pɑrˈtɪsəˌpeɪt/（参加）；connect /kəˈnɛkt/（连接）；unite /ˈjuːˌnaɪt/（联合）",
+        "directAntonym": "leave /ˈliːv/（退出）；separate /ˈsɛpɚˌeɪt/（分开）",
+        "derivatives": "rejoin · joiner · joining",
         "example": "I joined a small speaking group last month.",
         "exampleChinese": "我上个月加入了一个小型口语小组。"
       },
       "meanings": [
         {
           "partOfSpeech": "v.",
-          "english": "to become a member or participant in a group or activity",
-          "chinese": "加入；参加",
-          "example": "I joined a small speaking group last month.",
-          "translation": "我上个月加入了一个小型口语小组。"
+          "english": "to become a member of a group or organization",
+          "chinese": "加入；成为……的一员",
+          "example": "He joined the research team last year.",
+          "translation": "他去年加入了研究团队。"
         },
         {
           "partOfSpeech": "v.",
-          "english": "to go or do something together with someone",
-          "chinese": "和……一起；参与",
-          "example": "Would you like to join us for lunch?",
+          "english": "to take part with another person in an activity",
+          "chinese": "参加；和……一起",
+          "example": "Will you join us for lunch?",
           "translation": "你愿意和我们一起吃午饭吗？"
         },
         {
           "partOfSpeech": "v.",
-          "english": "to connect two or more things",
+          "english": "to connect two things or meet at a point",
           "chinese": "连接；接合",
-          "example": "Join the two pieces with a small screw.",
-          "translation": "用一颗小螺丝把两块连接起来。"
+          "example": "This path joins the main road near the bridge.",
+          "translation": "这条小路在桥附近与主路相接。"
         }
       ],
       "contextPhrases": [
         {
-          "category": "核心动作与结构",
+          "category": "组织与成员",
           "items": [
             {
-              "phrase": "join a group",
-              "phonetic": "/ˈdʒɔɪn ə ˈɡruːp/",
-              "chinese": "加入群组"
+              "phrase": "join the national association",
+              "phonetic": "/ˈdʒɔɪn ðə ˈnæʃənəl əˌsoʊsiˈeɪʃən/",
+              "chinese": "加入全国协会"
             },
             {
-              "phrase": "join someone for something",
-              "phonetic": "/ˈdʒɔɪn ˈsʌˌmwʌn ˈfɔːr ˈsʌmθɪŋ/",
-              "chinese": "和某人一起做某事"
+              "phrase": "join a research group",
+              "phonetic": "/ˈdʒɔɪn ə ˈriːsɝːtʃ ˈɡruːp/",
+              "chinese": "加入研究小组"
             },
             {
-              "phrase": "join in something",
-              "phonetic": "/ˈdʒɔɪn ɪn ˈsʌmθɪŋ/",
-              "chinese": "参与某活动"
+              "phrase": "join the teaching staff",
+              "phonetic": "/ˈdʒɔɪn ðə ˈtiːtʃɪŋ ˈstæf/",
+              "chinese": "加入教师队伍"
+            },
+            {
+              "phrase": "join the professional network",
+              "phonetic": "/ˈdʒɔɪn ðə prəˈfɛʃənəl ˈnɛˌtwɝːk/",
+              "chinese": "加入专业网络"
             }
           ]
         },
         {
-          "category": "日常与工作语境",
+          "category": "活动与社交",
           "items": [
             {
-              "phrase": "join something to something",
-              "phonetic": "/ˈdʒɔɪn ˈsʌmθɪŋ ˈtuː ˈsʌmθɪŋ/",
-              "chinese": "把某物与某物连接"
+              "phrase": "join friends for lunch",
+              "phonetic": "/ˈdʒɔɪn ˈfrɛndz ˈfɔːr ˈlʌntʃ/",
+              "chinese": "和朋友一起吃午饭"
             },
             {
-              "phrase": "join forces with someone",
-              "phonetic": "/ˈdʒɔɪn ˈfɔːrsɪz ˈwɪð ˈsʌˌmwʌn/",
-              "chinese": "与某人联手"
+              "phrase": "join the audience in applause",
+              "phonetic": "/ˈdʒɔɪn ðə ˈɑdiəns ɪn əˈplɔːz/",
+              "chinese": "和观众一起鼓掌"
             },
             {
-              "phrase": "join together",
-              "phonetic": "/ˈdʒɔɪn təˈɡɛðɚ/",
-              "chinese": "连接在一起；联合"
+              "phrase": "join a guided tour",
+              "phonetic": "/ˈdʒɔɪn ə ˈɡaɪdəd ˈtʊr/",
+              "chinese": "参加导览团"
+            },
+            {
+              "phrase": "join a community cleanup",
+              "phonetic": "/ˈdʒɔɪn ə kəˈmjuːnəti ˈkliːˌnʌp/",
+              "chinese": "参加社区清洁活动"
             }
           ]
         },
         {
-          "category": "高频扩展表达",
+          "category": "连接与汇合",
           "items": [
             {
-              "phrase": "join your group",
-              "phonetic": "/ˈdʒɔɪn ˈjɔːr ˈɡruːp/",
-              "chinese": "加入你们的团对"
+              "phrase": "join the pipes securely",
+              "phonetic": "/ˈdʒɔɪn ðə ˈpaɪps sɪˈkjʊrli/",
+              "chinese": "牢固连接管道"
             },
             {
-              "phrase": "join a demonstration",
-              "phonetic": "/ˈdʒɔɪn ə ˌdɛməˈnstreɪʃən/",
-              "chinese": "要参加一个示威游行"
+              "phrase": "join the two paths near the lake",
+              "phonetic": "/ˈdʒɔɪn ðə ˈtuː ˈpæðz ˈnɪr ðə ˈleɪk/",
+              "chinese": "在湖边连接两条小路"
             },
             {
-              "phrase": "join a party",
-              "phonetic": "/ˈdʒɔɪn ə ˈpɑrtiː/",
-              "chinese": "参加聚会"
+              "phrase": "join the main road ahead",
+              "phonetic": "/ˈdʒɔɪn ðə ˈmeɪn ˈroʊd əˈhɛd/",
+              "chinese": "在前方汇入主路"
+            },
+            {
+              "phrase": "join the wires with a terminal",
+              "phonetic": "/ˈdʒɔɪn ðə ˈwaɪɚz ˈwɪð ə ˈtɝːmənəl/",
+              "chinese": "用接线端子连接电线"
             }
           ]
         },
         {
-          "category": "补充常用语境",
+          "category": "合作与参与",
           "items": [
             {
-              "phrase": "join someone for a meal",
-              "phonetic": "/ˈdʒɔɪn ˈsʌˌmwʌn ˈfɔːr ə ˈmiːl/",
-              "chinese": "与某人一起用餐"
+              "phrase": "join a cross-departmental effort",
+              "phonetic": "/ˈdʒɔɪn ə ˌkrɔːsdɪˌpɑːrtˈmɛntəl ˈɛfɚt/",
+              "chinese": "加入跨部门协作行动"
+            },
+            {
+              "phrase": "join the debate voluntarily",
+              "phonetic": "/ˈdʒɔɪn ðə dəˈbeɪt ˌvɑlənˈtɛrəli/",
+              "chinese": "自愿参加辩论"
+            },
+            {
+              "phrase": "join others in calling for change",
+              "phonetic": "/ˈdʒɔɪn ˈʌðɚz ɪn ˈkɔːlɪŋ ˈfɔːr ˈtʃeɪndʒ/",
+              "chinese": "与他人一道呼吁变革"
+            },
+            {
+              "phrase": "join colleagues in supporting the plan",
+              "phonetic": "/ˈdʒɔɪn ˈkɑliɡz ɪn səˈpɔːrtɪŋ ðə ˈplæn/",
+              "chinese": "与同事一起支持计划"
             }
           ]
         }
       ],
       "fixedPhrases": [
         {
-          "phrase": "join a group",
-          "phonetic": "/ˈdʒɔɪn ə ˈɡruːp/",
-          "chinese": "加入群组",
-          "example": "I joined a small speaking group last month.",
-          "translation": "我上个月加入了一个小型口语小组。"
+          "phrase": "join a team",
+          "phonetic": "/ˈdʒɔɪn ə ˈtiːm/",
+          "chinese": "加入团队",
+          "example": "She joined the pediatric team in March.",
+          "translation": "她三月加入了儿科团队。"
         },
         {
-          "phrase": "join someone for something",
-          "phonetic": "/ˈdʒɔɪn ˈsʌˌmwʌn ˈfɔːr ˈsʌmθɪŋ/",
-          "chinese": "和某人一起做某事",
-          "example": "Would you like to join us for lunch?",
-          "translation": "你愿意和我们一起吃午饭吗？"
+          "phrase": "join a club",
+          "phonetic": "/ˈdʒɔɪn ə ˈklʌb/",
+          "chinese": "加入俱乐部",
+          "example": "I joined a local running club to train for my first race.",
+          "translation": "我加入了当地跑步俱乐部，为第一次比赛训练。"
         },
         {
-          "phrase": "join in something",
-          "phonetic": "/ˈdʒɔɪn ɪn ˈsʌmθɪŋ/",
-          "chinese": "参与某活动",
-          "example": "Everyone is welcome to join in the discussion.",
-          "translation": "欢迎每个人参与讨论。"
+          "phrase": "join an organization",
+          "phonetic": "/ˈdʒɔɪn ˈæn ˌɔːrɡənəˈzeɪʃən/",
+          "chinese": "加入组织",
+          "example": "He joined the conservation organization as a volunteer.",
+          "translation": "他以志愿者身份加入了这个环保组织。"
         },
         {
-          "phrase": "join something to something",
-          "phonetic": "/ˈdʒɔɪn ˈsʌmθɪŋ ˈtuː ˈsʌmθɪŋ/",
-          "chinese": "把某物与某物连接",
-          "example": "Join the two pieces with a small screw.",
-          "translation": "用一颗小螺丝把两块连接起来。"
+          "phrase": "join someone for dinner",
+          "phonetic": "/ˈdʒɔɪn ˈsʌmˌwʌn ˈfɔːr ˈdɪnɚ/",
+          "chinese": "与某人共进晚餐",
+          "example": "Would you like to join us for dinner after the concert?",
+          "translation": "音乐会结束后，你愿意和我们一起吃晚饭吗？"
+        },
+        {
+          "phrase": "join in an activity",
+          "phonetic": "/ˈdʒɔɪn ɪn ˈæn ækˈtɪvəti/",
+          "chinese": "参加活动",
+          "example": "Even the youngest children joined in the beach cleanup.",
+          "translation": "就连年龄最小的孩子也参加了海滩清理活动。"
         },
         {
           "phrase": "join forces with someone",
-          "phonetic": "/ˈdʒɔɪn ˈfɔːrsɪz ˈwɪð ˈsʌˌmwʌn/",
+          "phonetic": "/ˈdʒɔɪn ˈfɔːrsɪz ˈwɪð ˈsʌmˌwʌn/",
           "chinese": "与某人联手",
-          "example": "Our team will join forces with a local charity.",
-          "translation": "我们团队将与当地一家慈善机构合作。"
+          "example": "The two villages joined forces to repair the damaged bridge.",
+          "translation": "两个村庄联手修复受损的桥梁。"
         },
         {
-          "phrase": "join together",
-          "phonetic": "/ˈdʒɔɪn təˈɡɛðɚ/",
-          "chinese": "连接在一起；联合",
-          "example": "These two sections join together at the center.",
-          "translation": "这两个部分在中心连接在一起。"
+          "phrase": "join two pieces together",
+          "phonetic": "/ˈdʒɔɪn ˈtuː ˈpiːsəz təˈɡɛðɚ/",
+          "chinese": "把两部分连接起来",
+          "example": "Use these metal clips to join the two panels together.",
+          "translation": "用这些金属夹把两块面板连接起来。"
         },
         {
-          "phrase": "join your group",
-          "phonetic": "/ˈdʒɔɪn ˈjɔːr ˈɡruːp/",
-          "chinese": "加入你们的团对",
-          "example": "I'd like to join your group.",
-          "translation": "我想加入你们的团对。"
+          "phrase": "join the queue",
+          "phonetic": "/ˈdʒɔɪn ðə ˈkjuː/",
+          "chinese": "排队",
+          "example": "We joined the queue outside the ticket office at eight.",
+          "translation": "我们八点在售票处外排起了队。"
         },
         {
-          "phrase": "join a demonstration",
-          "phonetic": "/ˈdʒɔɪn ə ˌdɛməˈnstreɪʃən/",
-          "chinese": "要参加一个示威游行",
-          "example": "I'm going to join a demonstration.",
-          "translation": "我要参加一个示威游行。"
+          "phrase": "join a meeting online",
+          "phonetic": "/ˈdʒɔɪn ə ˈmiːtɪŋ ˈɔːnˌlaɪn/",
+          "chinese": "在线参加会议",
+          "example": "Remote staff can join the meeting online through a secure link.",
+          "translation": "远程员工可以通过安全链接在线参加会议。"
         },
         {
-          "phrase": "join a party",
-          "phonetic": "/ˈdʒɔɪn ə ˈpɑrtiː/",
-          "chinese": "参加聚会",
-          "example": "Why don't you join our party?",
-          "translation": "你为什么不参加我们的派对？"
+          "phrase": "join the conversation",
+          "phonetic": "/ˈdʒɔɪn ðə ˌkɑnvɚˈseɪʃən/",
+          "chinese": "加入谈话",
+          "example": "Mina joined the conversation when the topic turned to public transport.",
+          "translation": "话题转到公共交通时，米娜加入了谈话。"
         },
         {
-          "phrase": "join someone for a meal",
-          "phonetic": "/ˈdʒɔɪn ˈsʌˌmwʌn ˈfɔːr ə ˈmiːl/",
-          "chinese": "与某人一起用餐",
-          "example": "Won't you join us for dinner?",
-          "translation": "你不来跟我们一起吃晚饭吗？"
+          "phrase": "join hands",
+          "phonetic": "/ˈdʒɔɪn ˈhændz/",
+          "chinese": "手拉手；携手合作",
+          "example": "Residents and businesses joined hands to reopen the community center.",
+          "translation": "居民和企业携手合作，重新开放了社区中心。"
+        },
+        {
+          "phrase": "join one road to another",
+          "phonetic": "/ˈdʒɔɪn ˈwʌn ˈroʊd ˈtuː əˈnʌðɚ/",
+          "chinese": "把一条路与另一条路连接起来",
+          "example": "A short tunnel joins the village road to the main highway.",
+          "translation": "一条短隧道把村道与主干公路连接起来。"
         }
       ],
       "synonyms": [
         {
-          "word": "unite",
-          "phonetic": "/ˈjuːˌnaɪt/",
+          "word": "enter",
+          "phonetic": "/ˈɛntɚ/",
           "partOfSpeech": "v.",
-          "chinese": "联合；连接",
-          "difference": "unite 表示“联合；连接”，与 join 的“加入”义相近。两词只有在这一义项重合时才能互换；join 的其他常用义不一定适用。"
+          "chinese": "加入",
+          "difference": "强调进入比赛、行业或组织；join 可直接接团体、活动者或连接对象。"
+        },
+        {
+          "word": "enroll",
+          "phonetic": "/ɛnˈroʊl/",
+          "partOfSpeech": "v.",
+          "chinese": "报名加入",
+          "difference": "常指课程、学校或计划；join 适用于俱乐部、团队等，不限正式课程注册。"
+        },
+        {
+          "word": "participate",
+          "phonetic": "/pɑrˈtɪsəˌpeɪt/",
+          "partOfSpeech": "v.",
+          "chinese": "参加",
+          "difference": "participate 是不及物动词，通常用 participate in an activity；join 可直接接团体或某人，也可表示连接。"
         },
         {
           "word": "connect",
           "phonetic": "/kəˈnɛkt/",
           "partOfSpeech": "v.",
-          "chinese": "连接；联合；联系",
-          "difference": "connect 常表示“连接；联合；联系”，与 join 的“加入”义有重合。connect 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+          "chinese": "连接",
+          "difference": "对应把物体或系统接在一起；join 还可表示加入群体，不只连接物体或系统。"
         },
         {
-          "word": "participate",
-          "phonetic": "/pɑˈrtɪsəˌpeɪt/",
+          "word": "unite",
+          "phonetic": "/ˈjuːˌnaɪt/",
           "partOfSpeech": "v.",
-          "chinese": "相近的常用表达",
-          "difference": "participate 常表示“相近的常用表达”，与 join 的“加入”义有重合。participate 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
-        },
-        {
-          "word": "link",
-          "phonetic": "/ˈlɪŋk/",
-          "partOfSpeech": "n.",
-          "chinese": "环；连结物；链接",
-          "difference": "link 常表示“环；连结物；链接”，与 join 的“加入”义有重合。link 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+          "chinese": "联合",
+          "difference": "强调使人或群体形成整体；join 可保持各部分身份，unite 更强调形成整体。"
         }
       ],
       "antonyms": [
         {
+          "word": "leave",
+          "phonetic": "/ˈliːv/",
+          "partOfSpeech": "v.",
+          "chinese": "退出",
+          "usage": "与加入团体的义项相对；join 表示成为团体成员，leave 表示退出该团体。"
+        },
+        {
           "word": "separate",
           "phonetic": "/ˈsɛpɚˌeɪt/",
           "partOfSpeech": "v.",
-          "chinese": "分开；分离",
-          "usage": "separate 表示“分开；分离”，与 join 的“加入”义形成对比。这种反义关系只适用于上述明确义项。"
+          "chinese": "分开",
+          "usage": "与连接两个部分的义项相对；join 可连接两个部分，separate 则把它们分开。"
         }
       ],
-      "derivatives": [],
-      "confusables": [],
+      "derivatives": [
+        {
+          "word": "rejoin",
+          "phonetic": "/riˈdʒɔɪn/",
+          "partOfSpeech": "v.",
+          "chinese": "重新加入；回到",
+          "note": "指离开后再次加入团体、路线或谈话。"
+        },
+        {
+          "word": "joiner",
+          "phonetic": "/ˈdʒɔɪnɚ/",
+          "partOfSpeech": "n.",
+          "chinese": "参加者；木工",
+          "note": "可指加入组织的人；英式英语中也指细木工。"
+        },
+        {
+          "word": "joining",
+          "phonetic": "/ˈdʒɔɪnɪŋ/",
+          "partOfSpeech": "n. / adj.",
+          "chinese": "连接；加入的",
+          "note": "常见于 joining instructions 和 joining process。"
+        }
+      ],
+      "confusables": [
+        {
+          "word": "joint",
+          "phonetic": "/ˈdʒɔɪnt/",
+          "partOfSpeech": "n./adj.",
+          "chinese": "接合处；共同的",
+          "difference": "join 是动词，joint 是名词或形容词"
+        }
+      ],
       "relatedVocabulary": [
         {
-          "category": "同一语义场的高频词",
+          "category": "组织成员",
           "items": [
-            {
-              "word": "connect",
-              "phonetic": "/kəˈnɛkt/",
-              "partOfSpeech": "v.",
-              "chinese": "连接"
-            },
-            {
-              "word": "separate",
-              "phonetic": "/ˈsɛpɚˌeɪt/",
-              "partOfSpeech": "v.",
-              "chinese": "分开"
-            },
             {
               "word": "member",
               "phonetic": "/ˈmɛmbɚ/",
               "partOfSpeech": "n.",
               "chinese": "成员"
-            }
-          ]
-        },
-        {
-          "category": "近义表达分类",
-          "items": [
-            {
-              "word": "unite",
-              "phonetic": "/ˈjuːˌnaɪt/",
-              "partOfSpeech": "v.",
-              "chinese": "联合；连接"
             },
             {
-              "word": "connect",
-              "phonetic": "/kəˈnɛkt/",
-              "partOfSpeech": "v.",
-              "chinese": "连接；联合；联系"
-            },
-            {
-              "word": "participate",
-              "phonetic": "/pɑˈrtɪsəˌpeɪt/",
-              "partOfSpeech": "v.",
-              "chinese": "相近的常用表达"
-            },
-            {
-              "word": "link",
-              "phonetic": "/ˈlɪŋk/",
+              "word": "membership",
+              "phonetic": "/ˈmɛmbɚˌʃɪp/",
               "partOfSpeech": "n.",
-              "chinese": "环；连结物；链接"
+              "chinese": "成员资格"
+            },
+            {
+              "word": "committee",
+              "phonetic": "/kəˈmɪti/",
+              "partOfSpeech": "n.",
+              "chinese": "委员会"
+            },
+            {
+              "word": "association",
+              "phonetic": "/əˌsoʊsiˈeɪʃən/",
+              "partOfSpeech": "n.",
+              "chinese": "协会"
             }
           ]
         },
         {
-          "category": "对比与易混表达分类",
+          "category": "集体活动",
           "items": [
             {
-              "word": "separate",
-              "phonetic": "/ˈsɛpɚˌeɪt/",
-              "partOfSpeech": "v.",
-              "chinese": "分开；分离"
+              "word": "meeting",
+              "phonetic": "/ˈmiːtɪŋ/",
+              "partOfSpeech": "n.",
+              "chinese": "会议"
+            },
+            {
+              "word": "tour",
+              "phonetic": "/ˈtʊr/",
+              "partOfSpeech": "n.",
+              "chinese": "参观团"
+            },
+            {
+              "word": "discussion",
+              "phonetic": "/dɪˈskʌʃən/",
+              "partOfSpeech": "n.",
+              "chinese": "讨论"
+            },
+            {
+              "word": "ceremony",
+              "phonetic": "/ˈsɛrəˌmoʊni/",
+              "partOfSpeech": "n.",
+              "chinese": "仪式"
+            }
+          ]
+        },
+        {
+          "category": "连接部件",
+          "items": [
+            {
+              "word": "bridge",
+              "phonetic": "/ˈbrɪdʒ/",
+              "partOfSpeech": "n.",
+              "chinese": "桥梁"
+            },
+            {
+              "word": "connector",
+              "phonetic": "/kəˈnɛktɚ/",
+              "partOfSpeech": "n.",
+              "chinese": "连接器"
+            },
+            {
+              "word": "seam",
+              "phonetic": "/ˈsiːm/",
+              "partOfSpeech": "n.",
+              "chinese": "接缝"
+            },
+            {
+              "word": "junction",
+              "phonetic": "/ˈdʒʌŋkʃən/",
+              "partOfSpeech": "n.",
+              "chinese": "交汇处"
             }
           ]
         }
@@ -1061,144 +1253,154 @@
           "chinese": "我上个月加入了一个小型口语小组。"
         },
         {
-          "scene": "工作或学习",
-          "english": "Would you like to join us for lunch?",
-          "chinese": "你愿意和我们一起吃午饭吗？"
-        },
-        {
-          "scene": "常见搭配",
-          "english": "Everyone is welcome to join in the discussion.",
-          "chinese": "欢迎每个人参与讨论。"
-        },
-        {
-          "scene": "真实语境",
-          "english": "Join the two pieces with a small screw.",
-          "chinese": "用一颗小螺丝把两块连接起来。"
-        },
-        {
-          "scene": "易错结构",
-          "english": "Our team will join forces with a local charity.",
-          "chinese": "我们团队将与当地一家慈善机构合作。"
-        },
-        {
-          "scene": "主动表达",
-          "english": "These two sections join together at the center.",
-          "chinese": "这两个部分在中心连接在一起。"
-        },
-        {
           "scene": "日常交流",
-          "english": "Which group do you want to join?",
-          "chinese": "你想加入哪一组？"
+          "english": "She joined the pediatric team in March.",
+          "chinese": "她三月加入了儿科团队。"
         },
         {
           "scene": "工作沟通",
-          "english": "I'd like to join your group.",
-          "chinese": "我想加入你们的团对。"
+          "english": "I joined a local running club to train for my first race.",
+          "chinese": "我加入了当地跑步俱乐部，为第一次比赛训练。"
         },
         {
           "scene": "学习表达",
-          "english": "I'm going to join a demonstration.",
-          "chinese": "我要参加一个示威游行。"
+          "english": "He joined the conservation organization as a volunteer.",
+          "chinese": "他以志愿者身份加入了这个环保组织。"
         },
         {
           "scene": "书面表达",
-          "english": "Why don't you join our party?",
-          "chinese": "你为什么不参加我们的派对？"
+          "english": "Would you like to join us for dinner after the concert?",
+          "chinese": "音乐会结束后，你愿意和我们一起吃晚饭吗？"
+        },
+        {
+          "scene": "日常交流",
+          "english": "Even the youngest children joined in the beach cleanup.",
+          "chinese": "就连年龄最小的孩子也参加了海滩清理活动。"
+        },
+        {
+          "scene": "工作沟通",
+          "english": "The two villages joined forces to repair the damaged bridge.",
+          "chinese": "两个村庄联手修复受损的桥梁。"
+        },
+        {
+          "scene": "学习表达",
+          "english": "Use these metal clips to join the two panels together.",
+          "chinese": "用这些金属夹把两块面板连接起来。"
+        },
+        {
+          "scene": "书面表达",
+          "english": "We joined the queue outside the ticket office at eight.",
+          "chinese": "我们八点在售票处外排起了队。"
+        },
+        {
+          "scene": "日常交流",
+          "english": "Remote staff can join the meeting online through a secure link.",
+          "chinese": "远程员工可以通过安全链接在线参加会议。"
+        },
+        {
+          "scene": "工作沟通",
+          "english": "Mina joined the conversation when the topic turned to public transport.",
+          "chinese": "话题转到公共交通时，米娜加入了谈话。"
+        },
+        {
+          "scene": "学习表达",
+          "english": "Residents and businesses joined hands to reopen the community center.",
+          "chinese": "居民和企业携手合作，重新开放了社区中心。"
         }
       ],
       "studyFocus": {
-        "coreMeaning": "先掌握“加入；参加”这个核心义，再对比另外 2 个常用义项，辨别不同语境。",
+        "coreMeaning": "先掌握“加入；成为……的一员”这个核心义，再对比另外 2 个常用义项，辨别不同语境。",
         "keyCollocation": "把“join a group”连同介词、宾语和动词形式作为整个句块记忆。",
-        "commonMistake": "在“join someone for something”所表达的这个具体含义中，要用介词 for；换成 at 会破坏这个固定结构或改变原意。",
+        "commonMistake": "加入组织或团体时 join 直接接宾语，不加 in。",
         "mustUseExample": "I joined a small speaking group last month.（我上个月加入了一个小型口语小组。）"
       },
       "questions": [
         {
           "id": "join-v-meaning-core",
           "type": "meaning_choice",
-          "prompt": "“join”最核心的中文含义是？",
+          "prompt": "“join”最常见的核心中文义是哪一项？",
           "options": [
-            "加入；参加",
+            "加入；成为……的一员",
             "处理",
             "告诉"
           ],
-          "answer": "加入；参加",
+          "answer": "加入；成为……的一员",
           "stage": "T0",
           "ai": false
         },
         {
           "id": "join-v-meaning-english",
           "type": "meaning_choice",
-          "prompt": "哪一项英文释义最符合词卡中的 “join”？",
+          "prompt": "“join”最常见的英文释义是哪一项？",
           "options": [
             "to deal with a situation or task",
             "to give information, narrate, or recognize a difference",
-            "to become a member or participant in a group or activity"
+            "to become a member of a group or organization"
           ],
-          "answer": "to become a member or participant in a group or activity",
+          "answer": "to become a member of a group or organization",
           "stage": "T0",
           "ai": false
         },
         {
           "id": "join-v-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "核心结构辨析：哪一项既表示“加入群组”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+          "prompt": "核心结构辨析：哪一项既表示“加入团队”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "join a group",
-            "join someone for something",
-            "join in something",
-            "join something to something"
+            "join a team",
+            "join a club",
+            "join an organization",
+            "join someone for dinner"
           ],
-          "answer": "join a group",
+          "answer": "join a team",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "join-v-synonym-choice",
           "type": "meaning_choice",
-          "prompt": "哪个词是词卡中列出的 “join” 最直接近义词？",
+          "prompt": "在“加入”这个义项下，哪个词与“join”意思最接近？",
           "options": [
-            "separate",
-            "handle",
-            "tell",
-            "unite"
+            "be",
+            "have",
+            "do",
+            "enter"
           ],
-          "answer": "unite",
+          "answer": "enter",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "join-v-antonym-choice",
           "type": "meaning_choice",
-          "prompt": "哪个词是词卡中列出的 “join” 最直接反义词？",
+          "prompt": "在“加入；成为……的一员”这个义项下，哪个词与“join”意思相反？",
           "options": [
-            "handle",
-            "tell",
-            "separate",
-            "unite"
+            "have",
+            "do",
+            "leave",
+            "be"
           ],
-          "answer": "separate",
+          "answer": "leave",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "join-v-contrast-choice",
           "type": "meaning_choice",
-          "prompt": "根据本词卡辨析，哪个词被列为 “join” 的相关近义词？",
+          "prompt": "哪一项是“join”的常用派生词？",
           "options": [
-            "tell",
-            "unite",
-            "separate",
-            "handle"
+            "do",
+            "rejoin",
+            "be",
+            "have"
           ],
-          "answer": "unite",
+          "answer": "rejoin",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "join-v-recall-definition",
           "type": "recall",
-          "prompt": "根据英文释义写出目标词：to become a member or participant in a group or activity",
+          "prompt": "根据英文释义写出对应单词：to become a member of a group or organization",
           "answer": "join",
           "stage": "T1",
           "ai": false
@@ -1206,7 +1408,7 @@
         {
           "id": "join-v-recall-chinese",
           "type": "recall",
-          "prompt": "写出符合“加入；参加”（v.）的本课目标词。",
+          "prompt": "写出表示“加入；成为……的一员”（v.）的英文单词。",
           "answer": "join",
           "stage": "T1",
           "ai": false
@@ -1222,27 +1424,21 @@
         {
           "id": "join-v-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "句型应用：哪一项既表示“和某人一起做某事”，又符合这个形式线索：完整搭配中使用介词 for？",
+          "prompt": "句型应用：哪一项既表示“加入俱乐部”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "join in something",
-            "join something to something",
-            "join someone for something",
-            "join a group"
+            "join an organization",
+            "join someone for dinner",
+            "join a club",
+            "join a team"
           ],
-          "answer": "join someone for something",
+          "answer": "join a club",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "join-v-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：I joined a _____ speaking group last month.（中文：我上个月加入了一个小型口语小组。）",
-          "options": [
-            "remember",
-            "small",
-            "difficult",
-            "reason"
-          ],
+          "prompt": "根据完整句意和中文提示补全原句：I joined a _____ speaking group last month.（中文：我上个月加入了一个小型口语小组。）",
           "answer": "small",
           "stage": "T2",
           "ai": false
@@ -1250,35 +1446,35 @@
         {
           "id": "join-v-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "搭配辨析：哪一项既表示“加入群组”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+          "prompt": "搭配辨析：哪一项既表示“参加活动”，又符合这个形式线索：完整搭配中使用介词 in？",
           "options": [
-            "join a group",
-            "join someone for something",
-            "join in something",
-            "join something to something"
+            "join in an activity",
+            "join a team",
+            "join a club",
+            "join an organization"
           ],
-          "answer": "join a group",
+          "answer": "join in an activity",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "join-v-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "用法辨析：哪一项既表示“和某人一起做某事”，又符合这个形式线索：完整搭配中使用介词 for？",
+          "prompt": "用法辨析：哪一项既表示“与某人联手”，又符合这个形式线索：完整搭配中使用介词 with？",
           "options": [
-            "join a group",
-            "join in something",
-            "join something to something",
-            "join someone for something"
+            "join a team",
+            "join a club",
+            "join an organization",
+            "join forces with someone"
           ],
-          "answer": "join someone for something",
+          "answer": "join forces with someone",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "join-v-example-cloze",
           "type": "collocation",
-          "prompt": "根据句意补全词卡核心例句：I _____ a small speaking group last month.（填写 join 的正确形式）",
+          "prompt": "根据句意和中文提示补全另一个常用例句：She _____ the pediatric team in March.（填写 join 的正确形式）（中文：她三月加入了儿科团队。）",
           "answer": "joined",
           "stage": "T3",
           "ai": false
@@ -1286,7 +1482,7 @@
         {
           "id": "join-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “join” 写一个自然、真实的英文句子，含义必须符合词卡核心义“加入；参加”。",
+          "prompt": "请用 “join” 写一个自然、真实的英文句子，含义必须符合核心义“加入；成为……的一员”。",
           "answer": "",
           "stage": "T2",
           "ai": true
@@ -1294,7 +1490,7 @@
         {
           "id": "join-v-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请使用 “join a group” 结构写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “join in an activity” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -1302,7 +1498,7 @@
         {
           "id": "join-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “join” 和 “join a group” 结构，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “join” 和 “join the national association” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -1360,10 +1556,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "template-complete",
-      "templateVersion": "learning-template-2026.09.10.3",
-      "contentVersion": "2026.09.10.3",
-      "reviewed": false,
+      "detailLevel": "template-curated",
+      "templateVersion": "learning-template-2026.09.10.4",
+      "contentVersion": "2026.09.10.4",
+      "reviewed": true,
+      "curationSource": "manual-semantic-pack-2026.09.10.4",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -1396,360 +1593,448 @@
         "主动词汇"
       ],
       "coreMemory": {
-        "chinese": "发展；培养",
-        "english": "v. to grow；v. to cause something to grow",
-        "structure": "develop a habit /dɪˈveləp ə ˈhæbət/（养成习惯）；develop a skill /dɪˈveləp ə ˈskɪl/（培养技能）；develop a plan /dɪˈveləp ə ˈplæn/（制定方案）；develop an interest in /dɪˈveləp ˈæn ˈɪntrəst ɪn/（培养对……的兴趣）",
+        "chinese": "发展；成长；形成；开发；研制；培养；逐渐产生；患上；冲洗（胶片或照片）",
+        "english": "v. to grow or change into a more advanced, mature, or complete form；v. to create or improve a product, idea, skill, or system over time；v. to begin to have a quality, habit, illness, or problem；v. to process a photographic image so that it becomes visible",
+        "structure": "develop a skill /dɪˈveləp ə ˈskɪl/（培养技能）；develop a product /dɪˈveləp ə ˈprɑdəkt/（开发产品）；develop a plan /dɪˈveləp ə ˈplæn/（制定计划）；develop an interest in something /dɪˈveləp ˈæn ˈɪntrəst ɪn ˈsʌmθɪŋ/（对某事产生兴趣）",
         "structures": [
-          {
-            "phrase": "develop a habit",
-            "phonetic": "/dɪˈveləp ə ˈhæbət/",
-            "chinese": "养成习惯"
-          },
           {
             "phrase": "develop a skill",
             "phonetic": "/dɪˈveləp ə ˈskɪl/",
             "chinese": "培养技能"
           },
           {
+            "phrase": "develop a product",
+            "phonetic": "/dɪˈveləp ə ˈprɑdəkt/",
+            "chinese": "开发产品"
+          },
+          {
             "phrase": "develop a plan",
             "phonetic": "/dɪˈveləp ə ˈplæn/",
-            "chinese": "制定方案"
+            "chinese": "制定计划"
           },
           {
-            "phrase": "develop an interest in",
-            "phonetic": "/dɪˈveləp ˈæn ˈɪntrəst ɪn/",
-            "chinese": "培养对……的兴趣"
+            "phrase": "develop an interest in something",
+            "phonetic": "/dɪˈveləp ˈæn ˈɪntrəst ɪn ˈsʌmθɪŋ/",
+            "chinese": "对某事产生兴趣"
           }
         ],
-        "commonError": "❌ develop an interest at → ✅ develop an interest in；❌ develop at time → ✅ develop over time",
+        "commonError": "❌ She developed to a skilled surgeon. → ✅ She developed into a skilled surgeon.；❌ The symptoms developed themselves overnight. → ✅ The symptoms developed overnight.",
         "commonErrors": [
           {
-            "wrong": "develop an interest at",
-            "wrongPhonetic": "/dɪˈveləp ˈæn ˈɪntrəst ˈæt/",
-            "right": "develop an interest in",
-            "rightPhonetic": "/dɪˈveləp ˈæn ˈɪntrəst ɪn/",
-            "note": "在“develop an interest in”所表达的这个具体含义中，要用介词 in；换成 at 会破坏这个固定结构或改变原意。"
+            "wrong": "She developed to a skilled surgeon.",
+            "wrongPhonetic": "/ˈʃiː dɪˈvɛləpt ˈtuː ə ˈskɪld ˈsɝːdʒən/",
+            "right": "She developed into a skilled surgeon.",
+            "rightPhonetic": "/ˈʃiː dɪˈvɛləpt ˈɪntu ə ˈskɪld ˈsɝːdʒən/",
+            "note": "表示逐渐成长或演变为某身份用 develop into。"
           },
           {
-            "wrong": "develop at time",
-            "wrongPhonetic": "/dɪˈveləp ˈæt ˈtaɪm/",
-            "right": "develop over time",
-            "rightPhonetic": "/dɪˈveləp ˈoʊvɚ ˈtaɪm/",
-            "note": "在“develop over time”所表达的这个具体含义中，要用介词 over；换成 at 会破坏这个固定结构或改变原意。"
+            "wrong": "The symptoms developed themselves overnight.",
+            "wrongPhonetic": "/ðə ˈsɪmptəmz dɪˈvɛləpt ðɛmˈsɛlvz ˌoʊvɚˈnaɪt/",
+            "right": "The symptoms developed overnight.",
+            "rightPhonetic": "/ðə ˈsɪmptəmz dɪˈvɛləpt ˌoʊvɚˈnaɪt/",
+            "note": "develop 表示症状出现时是不及物用法，不加反身代词。"
           }
         ],
-        "directSynonym": "build /ˈbɪld/（发展；逐步建立）；grow /ˈɡroʊ/（种植；使长满）；create /kriːˈeɪt/（创造；建造；引起）；improve /ˌɪˈmpruːv/（改良；提高...的价值；改善）",
-        "directAntonym": "decline /dɪˈklaɪn/（衰退；下降）",
-        "derivatives": "development · developmental",
+        "directSynonym": "grow /ˈɡroʊ/（发展；成长）；create /kriˈeɪt/（开发）；form /ˈfɔːrm/（形成）；expand /ɪkˈspænd/（扩展）；cultivate /ˈkʌltəˌveɪt/（培养）",
+        "directAntonym": "stagnate /ˈstæɡˌneɪt/（停滞）；decline /dɪˈklaɪn/（衰退）",
+        "derivatives": "developer · development · developmental · developed · developing",
         "example": "She developed a habit of reading every night.",
         "exampleChinese": "她养成了每晚阅读的习惯。"
       },
       "meanings": [
         {
           "partOfSpeech": "v.",
-          "english": "to grow",
-          "chinese": "发展",
-          "example": "Trust develops over time.",
-          "translation": "信任是逐步建立起来的。"
+          "english": "to grow or change into a more advanced, mature, or complete form",
+          "chinese": "发展；成长；形成",
+          "example": "The town developed rapidly after the railway opened.",
+          "translation": "铁路开通后，这座城镇迅速发展。"
         },
         {
           "partOfSpeech": "v.",
-          "english": "to cause something to grow",
-          "chinese": "培养",
-          "example": "Daily conversation can help you develop speaking skills.",
-          "translation": "每天对话可以帮助你培养口语技能。"
+          "english": "to create or improve a product, idea, skill, or system over time",
+          "chinese": "开发；研制；培养",
+          "example": "The team is developing a new learning tool.",
+          "translation": "团队正在开发一种新的学习工具。"
+        },
+        {
+          "partOfSpeech": "v.",
+          "english": "to begin to have a quality, habit, illness, or problem",
+          "chinese": "逐渐产生；患上",
+          "example": "He developed a strong interest in history.",
+          "translation": "他逐渐对历史产生了浓厚兴趣。"
+        },
+        {
+          "partOfSpeech": "v.",
+          "english": "to process a photographic image so that it becomes visible",
+          "chinese": "冲洗（胶片或照片）",
+          "example": "The studio develops film on site.",
+          "translation": "这家工作室在现场冲洗胶片。"
         }
       ],
       "contextPhrases": [
         {
-          "category": "核心动作与结构",
+          "category": "技能与能力",
           "items": [
             {
-              "phrase": "develop a habit",
-              "phonetic": "/dɪˈveləp ə ˈhæbət/",
-              "chinese": "养成习惯"
+              "phrase": "develop strong writing skills",
+              "phonetic": "/dɪˈveləp ˈstrɔːŋ ˈraɪtɪŋ ˈskɪlz/",
+              "chinese": "培养扎实的写作能力"
             },
             {
-              "phrase": "develop a skill",
-              "phonetic": "/dɪˈveləp ə ˈskɪl/",
-              "chinese": "培养技能"
+              "phrase": "develop confidence through practice",
+              "phonetic": "/dɪˈveləp ˈkɑnfədəns ˈθruː ˈpræktəs/",
+              "chinese": "通过练习建立信心"
             },
             {
-              "phrase": "develop a plan",
-              "phonetic": "/dɪˈveləp ə ˈplæn/",
-              "chinese": "制定方案"
+              "phrase": "develop a better understanding",
+              "phonetic": "/dɪˈveləp ə ˈbɛtɚ ˌʌndɚˈstændɪŋ/",
+              "chinese": "加深理解"
+            },
+            {
+              "phrase": "develop fluency in conversation",
+              "phonetic": "/dɪˈveləp ˈfluːənsi ɪn ˌkɑnvɚˈseɪʃən/",
+              "chinese": "培养会话流利度"
             }
           ]
         },
         {
-          "category": "日常与工作语境",
+          "category": "产品与系统",
           "items": [
             {
-              "phrase": "develop an interest in something",
-              "phonetic": "/dɪˈveləp ˈæn ˈɪntrəst ɪn ˈsʌmθɪŋ/",
-              "chinese": "培养对……的兴趣"
+              "phrase": "develop affordable software",
+              "phonetic": "/dɪˈveləp əˈfɔːrdəbəl ˈsɔːfˌtwɛr/",
+              "chinese": "开发价格亲民的软件"
             },
             {
-              "phrase": "develop over time",
-              "phonetic": "/dɪˈveləp ˈoʊvɚ ˈtaɪm/",
-              "chinese": "逐步发展"
+              "phrase": "develop a safer battery",
+              "phonetic": "/dɪˈveləp ə ˈseɪfɚ ˈbætɚi/",
+              "chinese": "研制更安全的电池"
             },
             {
-              "phrase": "research and development",
-              "phonetic": "/riːˈsɝːtʃ ənd dɪˈvɛləpmənt/",
-              "chinese": "研究与开发"
+              "phrase": "develop a long-term strategy",
+              "phonetic": "/dɪˈveləp ə ˈlɔːŋˌtɝːm ˈstrætədʒi/",
+              "chinese": "制定长期战略"
+            },
+            {
+              "phrase": "develop a low-cost vaccine",
+              "phonetic": "/dɪˈveləp ə ˈloʊˌkɑːst ˌvækˈsiːn/",
+              "chinese": "研制低成本疫苗"
             }
           ]
         },
         {
-          "category": "高频扩展表达",
+          "category": "变化与问题",
           "items": [
             {
-              "phrase": "develop political awareness",
-              "phonetic": "/dɪˈveləp pəˈlɪtəkəl əˈwɛrnəs/",
-              "chinese": "培养政治意识"
+              "phrase": "develop symptoms overnight",
+              "phonetic": "/dɪˈveləp ˈsɪmptəmz ˌoʊvɚˈnaɪt/",
+              "chinese": "一夜之间出现症状"
             },
             {
-              "phrase": "develop its natural resources",
-              "phonetic": "/dɪˈveləp ˈɪts ˈnætʃɚəl ˈriːsɔːrsɪz/",
-              "chinese": "国家必须开发自然资源"
+              "phrase": "develop into a major industry",
+              "phonetic": "/dɪˈveləp ˈɪntu ə ˈmeɪdʒɚ ˈɪndəstri/",
+              "chinese": "发展成主要产业"
             },
             {
-              "phrase": "develop into a typhoon",
-              "phonetic": "/dɪˈveləp ˈɪntuː ə ˌtaɪˈfuːn/",
-              "chinese": "发展成了一个台风"
+              "phrase": "develop cracks under pressure",
+              "phonetic": "/dɪˈveləp ˈkræks ˈʌndɚ ˈprɛʃɚ/",
+              "chinese": "在压力下出现裂缝"
+            },
+            {
+              "phrase": "develop resistance to treatment",
+              "phonetic": "/dɪˈveləp rɪˈzɪstəns ˈtuː ˈtriːtmənt/",
+              "chinese": "逐渐产生耐药性"
             }
           ]
         },
         {
-          "category": "补充常用语境",
+          "category": "土地与资源",
           "items": [
             {
-              "phrase": "develop an application",
-              "phonetic": "/dɪˈveləp ˈæn ˌæpləˈkeɪʃən/",
-              "chinese": "开发应用程序"
+              "phrase": "develop unused land responsibly",
+              "phonetic": "/dɪˈveləp əˈnjuːzd ˈlænd rɪˈspɑnsəbli/",
+              "chinese": "负责任地开发闲置土地"
+            },
+            {
+              "phrase": "develop renewable energy sources",
+              "phonetic": "/dɪˈveləp riˈnuːəbəl ˈɛnɚdʒi ˈsɔːrsəz/",
+              "chinese": "开发可再生能源"
+            },
+            {
+              "phrase": "develop local infrastructure",
+              "phonetic": "/dɪˈveləp ˈloʊkəl ˌɪnfrəˈstrʌktʃɚ/",
+              "chinese": "发展当地基础设施"
+            },
+            {
+              "phrase": "develop the riverfront carefully",
+              "phonetic": "/dɪˈveləp ðə ˈrɪvɚˌfrʌnt ˈkɛrfəli/",
+              "chinese": "谨慎开发滨水区域"
             }
           ]
         }
       ],
       "fixedPhrases": [
         {
-          "phrase": "develop a habit",
-          "phonetic": "/dɪˈveləp ə ˈhæbət/",
-          "chinese": "养成习惯",
-          "example": "It takes time to develop a healthy habit.",
-          "translation": "养成健康习惯需要时间。"
-        },
-        {
           "phrase": "develop a skill",
           "phonetic": "/dɪˈveləp ə ˈskɪl/",
           "chinese": "培养技能",
-          "example": "Daily conversation can help you develop speaking skills.",
-          "translation": "每天对话可以帮助你培养口语技能。"
+          "example": "Daily conversation practice helped her develop greater fluency.",
+          "translation": "每天练习会话帮助她提高了流利度。"
+        },
+        {
+          "phrase": "develop a product",
+          "phonetic": "/dɪˈveləp ə ˈprɑdəkt/",
+          "chinese": "开发产品",
+          "example": "The engineers developed a low-cost water filter for rural homes.",
+          "translation": "工程师开发了一款供农村家庭使用的低成本净水器。"
         },
         {
           "phrase": "develop a plan",
           "phonetic": "/dɪˈveləp ə ˈplæn/",
-          "chinese": "制定方案",
-          "example": "The team developed a practical plan for the next stage.",
-          "translation": "团队为下一阶段制定了一个切实可行的计划。"
+          "chinese": "制定计划",
+          "example": "The council developed a plan to protect homes from flooding.",
+          "translation": "市政委员会制定了一项保护住宅免受洪水侵袭的计划。"
         },
         {
           "phrase": "develop an interest in something",
           "phonetic": "/dɪˈveləp ˈæn ˈɪntrəst ɪn ˈsʌmθɪŋ/",
-          "chinese": "培养对……的兴趣",
-          "example": "She developed an interest in photography at college.",
-          "translation": "她在大学时培养了对摄影的兴趣。"
+          "chinese": "对某事产生兴趣",
+          "example": "He developed an interest in astronomy after visiting the observatory.",
+          "translation": "参观天文台后，他对天文学产生了兴趣。"
+        },
+        {
+          "phrase": "develop symptoms",
+          "phonetic": "/dɪˈveləp ˈsɪmptəmz/",
+          "chinese": "出现症状",
+          "example": "Contact a doctor if you develop symptoms after the trip.",
+          "translation": "旅行后如出现症状，请联系医生。"
+        },
+        {
+          "phrase": "develop a habit",
+          "phonetic": "/dɪˈveləp ə ˈhæbət/",
+          "chinese": "养成习惯",
+          "example": "She developed a habit of reviewing her notes each evening.",
+          "translation": "她养成了每天晚上复习笔记的习惯。"
+        },
+        {
+          "phrase": "develop a theory",
+          "phonetic": "/dɪˈveləp ə ˈθɪri/",
+          "chinese": "提出并发展理论",
+          "example": "Researchers developed a theory to explain the unusual migration pattern.",
+          "translation": "研究人员提出并发展了一套理论，用来解释异常的迁徙模式。"
+        },
+        {
+          "phrase": "develop software",
+          "phonetic": "/dɪˈveləp ˈsɔːfˌtwɛr/",
+          "chinese": "开发软件",
+          "example": "The company develops software for small medical clinics.",
+          "translation": "这家公司为小型诊所开发软件。"
+        },
+        {
+          "phrase": "develop land",
+          "phonetic": "/dɪˈveləp ˈlænd/",
+          "chinese": "开发土地",
+          "example": "The authority refused permission to develop the protected land.",
+          "translation": "有关部门拒绝批准开发这片保护用地。"
+        },
+        {
+          "phrase": "develop film",
+          "phonetic": "/dɪˈveləp ˈfɪlm/",
+          "chinese": "冲洗胶片",
+          "example": "The photographer still develops black-and-white film in her darkroom.",
+          "translation": "这位摄影师仍在暗房里冲洗黑白胶片。"
+        },
+        {
+          "phrase": "develop into something",
+          "phonetic": "/dɪˈveləp ˈɪntu ˈsʌmθɪŋ/",
+          "chinese": "发展成为某事物",
+          "example": "The local workshop developed into a successful manufacturing business.",
+          "translation": "这家本地作坊发展成了一家成功的制造企业。"
         },
         {
           "phrase": "develop over time",
           "phonetic": "/dɪˈveləp ˈoʊvɚ ˈtaɪm/",
-          "chinese": "逐步发展",
-          "example": "Trust develops over time.",
-          "translation": "信任是逐步建立起来的。"
-        },
-        {
-          "phrase": "research and development",
-          "phonetic": "/riːˈsɝːtʃ ənd dɪˈvɛləpmənt/",
-          "chinese": "研究与开发",
-          "example": "The company invests heavily in research and development.",
-          "translation": "公司在研发方面投入了大量资金。"
-        },
-        {
-          "phrase": "develop political awareness",
-          "phonetic": "/dɪˈveləp pəˈlɪtəkəl əˈwɛrnəs/",
-          "chinese": "培养政治意识",
-          "example": "It takes time to develop political awareness.",
-          "translation": "培养政治意识要花费时间。"
-        },
-        {
-          "phrase": "develop its natural resources",
-          "phonetic": "/dɪˈveləp ˈɪts ˈnætʃɚəl ˈriːsɔːrsɪz/",
-          "chinese": "国家必须开发自然资源",
-          "example": "Our country must develop its natural resources.",
-          "translation": "我们国家必须开发自然资源。"
-        },
-        {
-          "phrase": "develop into a typhoon",
-          "phonetic": "/dɪˈveləp ˈɪntuː ə ˌtaɪˈfuːn/",
-          "chinese": "发展成了一个台风",
-          "example": "The storm developed into a typhoon.",
-          "translation": "暴风雨发展成了一个台风。"
-        },
-        {
-          "phrase": "develop an application",
-          "phonetic": "/dɪˈveləp ˈæn ˌæpləˈkeɪʃən/",
-          "chinese": "开发应用程序",
-          "example": "I'm developing an Android application.",
-          "translation": "我正在开发一个安卓应用。"
+          "chinese": "随时间发展",
+          "example": "Trust develops over time through honest communication.",
+          "translation": "信任通过坦诚沟通逐渐建立。"
         }
       ],
       "synonyms": [
         {
-          "word": "build",
-          "phonetic": "/ˈbɪld/",
-          "partOfSpeech": "v.",
-          "chinese": "发展；逐步建立",
-          "difference": "build 表示“发展；逐步建立”，与 develop 的“发展”义相近。build 强调逐步积累形成；develop 还可表示自然成长、培养能力或开发产品。"
-        },
-        {
           "word": "grow",
           "phonetic": "/ˈɡroʊ/",
           "partOfSpeech": "v.",
-          "chinese": "种植；使长满",
-          "difference": "grow 常表示“种植；使长满”，与 develop 的“发展”义有重合。grow 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+          "chinese": "发展；成长",
+          "difference": "可不及物，也可指逐渐增强；develop 可及物，表示培养能力或开发产品。"
         },
         {
           "word": "create",
-          "phonetic": "/kriːˈeɪt/",
+          "phonetic": "/kriˈeɪt/",
           "partOfSpeech": "v.",
-          "chinese": "创造；建造；引起",
-          "difference": "create 常表示“创造；建造；引起”，与 develop 的“发展”义有重合。create 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+          "chinese": "开发",
+          "difference": "强调创造新产品或系统；develop 强调逐步形成，create 可表示一次性创造。"
         },
         {
-          "word": "improve",
-          "phonetic": "/ˌɪˈmpruːv/",
+          "word": "form",
+          "phonetic": "/ˈfɔːrm/",
           "partOfSpeech": "v.",
-          "chinese": "改良；提高...的价值；改善",
-          "difference": "improve 常表示“改良；提高...的价值；改善”，与 develop 的“发展”义有重合。improve 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+          "chinese": "形成",
+          "difference": "强调某种特征、习惯或结构出现；develop 还可主动培养或开发，不只自行形成。"
+        },
+        {
+          "word": "expand",
+          "phonetic": "/ɪkˈspænd/",
+          "partOfSpeech": "v.",
+          "chinese": "扩展",
+          "difference": "强调规模、范围或业务变大；develop 不一定扩大规模，也可提高质量或形成症状。"
+        },
+        {
+          "word": "cultivate",
+          "phonetic": "/ˈkʌltəˌveɪt/",
+          "partOfSpeech": "v.",
+          "chinese": "培养",
+          "difference": "强调长期培养技能、兴趣或关系；develop 可用于产品、疾病和照片，不限长期培养。"
         }
       ],
       "antonyms": [
         {
+          "word": "stagnate",
+          "phonetic": "/ˈstæɡˌneɪt/",
+          "partOfSpeech": "v.",
+          "chinese": "停滞",
+          "usage": "与持续发展或进步相对；develop 表示持续形成进展，stagnate 表示停滞不前。"
+        },
+        {
           "word": "decline",
           "phonetic": "/dɪˈklaɪn/",
           "partOfSpeech": "v.",
-          "chinese": "衰退；下降",
-          "usage": "decline 表示“衰退；下降”，与 develop 的“发展”义形成对比。develop 表示成长或进步；decline 表示逐渐变弱或变差。"
+          "chinese": "衰退",
+          "usage": "与成长、改善的义项相对；develop 可逐步改善，decline 则表示质量或规模下降。"
         }
       ],
       "derivatives": [
         {
+          "word": "developer",
+          "phonetic": "/dɪˈvɛləpɚ/",
+          "partOfSpeech": "n.",
+          "chinese": "开发者；开发商",
+          "note": "指开发软件、产品或房地产的人或公司。"
+        },
+        {
           "word": "development",
           "phonetic": "/dɪˈvɛləpmənt/",
           "partOfSpeech": "n.",
-          "chinese": "发展；成长；开发",
-          "note": "表示发展过程或形成的新成果。"
+          "chinese": "发展；开发；新进展",
+          "note": "常见于 economic development 和 product development。"
         },
         {
           "word": "developmental",
-          "phonetic": "/dɪˌvɛləˈpmɛntəl/",
+          "phonetic": "/dɪˌvɛləpˈmɛntəl/",
           "partOfSpeech": "adj.",
           "chinese": "发展的；发育的",
-          "note": "常描述成长或发展阶段，如 developmental needs。"
+          "note": "常用于 developmental stage 和 developmental disorder。"
+        },
+        {
+          "word": "developed",
+          "phonetic": "/dɪˈvɛləpt/",
+          "partOfSpeech": "adj.",
+          "chinese": "发达的；成熟的",
+          "note": "可形容经济体、系统或已经形成的能力。"
+        },
+        {
+          "word": "developing",
+          "phonetic": "/dɪˈvɛləpɪŋ/",
+          "partOfSpeech": "adj.",
+          "chinese": "发展中的；逐渐形成的",
+          "note": "常见于 developing countries 和 a developing problem。"
         }
       ],
       "confusables": [],
       "relatedVocabulary": [
         {
-          "category": "同一语义场的高频词",
+          "category": "产品创新",
           "items": [
             {
-              "word": "grow",
-              "phonetic": "/ˈɡroʊ/",
-              "partOfSpeech": "v.",
-              "chinese": "成长；发展"
+              "word": "prototype",
+              "phonetic": "/ˈproʊtəˌtaɪp/",
+              "partOfSpeech": "n.",
+              "chinese": "原型"
+            },
+            {
+              "word": "design",
+              "phonetic": "/dɪˈzaɪn/",
+              "partOfSpeech": "n.",
+              "chinese": "设计"
+            },
+            {
+              "word": "technology",
+              "phonetic": "/tɛkˈnɑlədʒi/",
+              "partOfSpeech": "n.",
+              "chinese": "技术"
+            },
+            {
+              "word": "research",
+              "phonetic": "/ˈriːsɝːtʃ/",
+              "partOfSpeech": "n.",
+              "chinese": "研究"
+            }
+          ]
+        },
+        {
+          "category": "成长阶段",
+          "items": [
+            {
+              "word": "stage",
+              "phonetic": "/ˈsteɪdʒ/",
+              "partOfSpeech": "n.",
+              "chinese": "阶段"
+            },
+            {
+              "word": "maturity",
+              "phonetic": "/məˈtʃʊrəti/",
+              "partOfSpeech": "n.",
+              "chinese": "成熟"
+            },
+            {
+              "word": "capacity",
+              "phonetic": "/kəˈpæsəti/",
+              "partOfSpeech": "n.",
+              "chinese": "能力；容量"
             },
             {
               "word": "progress",
-              "phonetic": "/ˈprɑˌɡrɛs/",
-              "partOfSpeech": "n. / v.",
-              "chinese": "进步；进展"
-            },
-            {
-              "word": "decline",
-              "phonetic": "/dɪˈklaɪn/",
-              "partOfSpeech": "v. / n.",
-              "chinese": "衰退"
-            }
-          ]
-        },
-        {
-          "category": "近义表达分类",
-          "items": [
-            {
-              "word": "build",
-              "phonetic": "/ˈbɪld/",
-              "partOfSpeech": "v.",
-              "chinese": "发展；逐步建立"
-            },
-            {
-              "word": "grow",
-              "phonetic": "/ˈɡroʊ/",
-              "partOfSpeech": "v.",
-              "chinese": "种植；使长满"
-            },
-            {
-              "word": "create",
-              "phonetic": "/kriːˈeɪt/",
-              "partOfSpeech": "v.",
-              "chinese": "创造；建造；引起"
-            },
-            {
-              "word": "improve",
-              "phonetic": "/ˌɪˈmpruːv/",
-              "partOfSpeech": "v.",
-              "chinese": "改良；提高...的价值；改善"
-            }
-          ]
-        },
-        {
-          "category": "对比与易混表达分类",
-          "items": [
-            {
-              "word": "decline",
-              "phonetic": "/dɪˈklaɪn/",
-              "partOfSpeech": "v.",
-              "chinese": "衰退；下降"
-            },
-            {
-              "word": "development",
-              "phonetic": "/dɪˈvɛləpmənt/",
+              "phonetic": "/ˈprɑːɡrɛs/",
               "partOfSpeech": "n.",
-              "chinese": "发展；成长；开发"
-            },
-            {
-              "word": "developmental",
-              "phonetic": "/dɪˌvɛləˈpmɛntəl/",
-              "partOfSpeech": "adj.",
-              "chinese": "发展的；发育的"
+              "chinese": "进展"
             }
           ]
         },
         {
-          "category": "常用词族分类",
+          "category": "建设资源",
           "items": [
             {
-              "word": "development",
-              "phonetic": "/dɪˈvɛləpmənt/",
+              "word": "infrastructure",
+              "phonetic": "/ˌɪnfrəˈstrʌktʃɚ/",
               "partOfSpeech": "n.",
-              "chinese": "发展；成长；开发"
+              "chinese": "基础设施"
             },
             {
-              "word": "developmental",
-              "phonetic": "/dɪˌvɛləˈpmɛntəl/",
-              "partOfSpeech": "adj.",
-              "chinese": "发展的；发育的"
+              "word": "investment",
+              "phonetic": "/ˌɪnˈvɛstmənt/",
+              "partOfSpeech": "n.",
+              "chinese": "投资"
+            },
+            {
+              "word": "land",
+              "phonetic": "/ˈlænd/",
+              "partOfSpeech": "n.",
+              "chinese": "土地"
+            },
+            {
+              "word": "industry",
+              "phonetic": "/ˈɪndəstri/",
+              "partOfSpeech": "n.",
+              "chinese": "产业"
             }
           ]
         }
@@ -1761,144 +2046,154 @@
           "chinese": "她养成了每晚阅读的习惯。"
         },
         {
-          "scene": "日常使用",
-          "english": "It takes time to develop a healthy habit.",
-          "chinese": "养成健康习惯需要时间。"
-        },
-        {
-          "scene": "工作或学习",
-          "english": "Daily conversation can help you develop speaking skills.",
-          "chinese": "每天对话可以帮助你培养口语技能。"
-        },
-        {
-          "scene": "常见搭配",
-          "english": "The team developed a practical plan for the next stage.",
-          "chinese": "团队为下一阶段制定了一个切实可行的计划。"
-        },
-        {
-          "scene": "真实语境",
-          "english": "She developed an interest in photography at college.",
-          "chinese": "她在大学时培养了对摄影的兴趣。"
-        },
-        {
-          "scene": "易错结构",
-          "english": "Trust develops over time.",
-          "chinese": "信任是逐步建立起来的。"
-        },
-        {
-          "scene": "主动表达",
-          "english": "The company invests heavily in research and development.",
-          "chinese": "公司在研发方面投入了大量资金。"
+          "scene": "日常交流",
+          "english": "Daily conversation practice helped her develop greater fluency.",
+          "chinese": "每天练习会话帮助她提高了流利度。"
         },
         {
           "scene": "工作沟通",
-          "english": "It takes time to develop political awareness.",
-          "chinese": "培养政治意识要花费时间。"
+          "english": "The engineers developed a low-cost water filter for rural homes.",
+          "chinese": "工程师开发了一款供农村家庭使用的低成本净水器。"
         },
         {
           "scene": "学习表达",
-          "english": "Our country must develop its natural resources.",
-          "chinese": "我们国家必须开发自然资源。"
+          "english": "The council developed a plan to protect homes from flooding.",
+          "chinese": "市政委员会制定了一项保护住宅免受洪水侵袭的计划。"
         },
         {
           "scene": "书面表达",
-          "english": "The storm developed into a typhoon.",
-          "chinese": "暴风雨发展成了一个台风。"
+          "english": "He developed an interest in astronomy after visiting the observatory.",
+          "chinese": "参观天文台后，他对天文学产生了兴趣。"
+        },
+        {
+          "scene": "日常交流",
+          "english": "Contact a doctor if you develop symptoms after the trip.",
+          "chinese": "旅行后如出现症状，请联系医生。"
+        },
+        {
+          "scene": "工作沟通",
+          "english": "She developed a habit of reviewing her notes each evening.",
+          "chinese": "她养成了每天晚上复习笔记的习惯。"
+        },
+        {
+          "scene": "学习表达",
+          "english": "Researchers developed a theory to explain the unusual migration pattern.",
+          "chinese": "研究人员提出并发展了一套理论，用来解释异常的迁徙模式。"
+        },
+        {
+          "scene": "书面表达",
+          "english": "The company develops software for small medical clinics.",
+          "chinese": "这家公司为小型诊所开发软件。"
+        },
+        {
+          "scene": "日常交流",
+          "english": "The authority refused permission to develop the protected land.",
+          "chinese": "有关部门拒绝批准开发这片保护用地。"
+        },
+        {
+          "scene": "工作沟通",
+          "english": "The photographer still develops black-and-white film in her darkroom.",
+          "chinese": "这位摄影师仍在暗房里冲洗黑白胶片。"
+        },
+        {
+          "scene": "学习表达",
+          "english": "The local workshop developed into a successful manufacturing business.",
+          "chinese": "这家本地作坊发展成了一家成功的制造企业。"
         }
       ],
       "studyFocus": {
-        "coreMeaning": "先掌握“发展”这个核心义，再对比另外 1 个常用义项，辨别不同语境。",
+        "coreMeaning": "先掌握“发展；成长；形成”这个核心义，再对比另外 3 个常用义项，辨别不同语境。",
         "keyCollocation": "把“develop a habit”连同介词、宾语和动词形式作为整个句块记忆。",
-        "commonMistake": "在“develop an interest in”所表达的这个具体含义中，要用介词 in；换成 at 会破坏这个固定结构或改变原意。",
+        "commonMistake": "表示逐渐成长或演变为某身份用 develop into。",
         "mustUseExample": "She developed a habit of reading every night.（她养成了每晚阅读的习惯。）"
       },
       "questions": [
         {
           "id": "develop-v-meaning-core",
           "type": "meaning_choice",
-          "prompt": "“develop”最核心的中文含义是？",
+          "prompt": "“develop”最常见的核心中文义是哪一项？",
           "options": [
             "实现",
             "找到",
-            "发展"
+            "发展；成长；形成"
           ],
-          "answer": "发展",
+          "answer": "发展；成长；形成",
           "stage": "T0",
           "ai": false
         },
         {
           "id": "develop-v-meaning-english",
           "type": "meaning_choice",
-          "prompt": "哪一项英文释义最符合词卡中的 “develop”？",
+          "prompt": "“develop”最常见的英文释义是哪一项？",
           "options": [
             "to discover, locate, or form an opinion after experience",
-            "to grow",
+            "to grow or change into a more advanced, mature, or complete form",
             "to succeed in reaching a goal"
           ],
-          "answer": "to grow",
+          "answer": "to grow or change into a more advanced, mature, or complete form",
           "stage": "T0",
           "ai": false
         },
         {
           "id": "develop-v-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "核心结构辨析：哪一项既表示“养成习惯”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+          "prompt": "核心结构辨析：哪一项既表示“培养技能”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "develop a skill",
+            "develop a product",
             "develop a plan",
-            "develop an interest in",
-            "develop a habit"
+            "develop an interest in something",
+            "develop a skill"
           ],
-          "answer": "develop a habit",
+          "answer": "develop a skill",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "develop-v-synonym-choice",
           "type": "meaning_choice",
-          "prompt": "哪个词是词卡中列出的 “develop” 最直接近义词？",
+          "prompt": "在“发展；成长”这个义项下，哪个词与“develop”意思最接近？",
           "options": [
-            "achieve",
-            "find",
-            "build",
-            "decline"
+            "have",
+            "do",
+            "grow",
+            "be"
           ],
-          "answer": "build",
+          "answer": "grow",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "develop-v-antonym-choice",
           "type": "meaning_choice",
-          "prompt": "哪个词是词卡中列出的 “develop” 最直接反义词？",
+          "prompt": "在“发展；成长；形成”这个义项下，哪个词与“develop”意思相反？",
           "options": [
-            "find",
-            "decline",
-            "build",
-            "achieve"
+            "do",
+            "stagnate",
+            "be",
+            "have"
           ],
-          "answer": "decline",
+          "answer": "stagnate",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "develop-v-contrast-choice",
           "type": "meaning_choice",
-          "prompt": "根据本词卡辨析，哪个词被列为 “develop” 的派生词？",
+          "prompt": "哪一项是“develop”的常用派生词？",
           "options": [
-            "development",
-            "build",
-            "decline",
-            "achieve"
+            "developer",
+            "increase",
+            "admission",
+            "affection"
           ],
-          "answer": "development",
+          "answer": "developer",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "develop-v-recall-definition",
           "type": "recall",
-          "prompt": "根据英文释义写出目标词：to grow",
+          "prompt": "根据英文释义写出对应单词：to grow or change into a more advanced, mature, or complete form",
           "answer": "develop",
           "stage": "T1",
           "ai": false
@@ -1906,7 +2201,7 @@
         {
           "id": "develop-v-recall-chinese",
           "type": "recall",
-          "prompt": "写出符合“发展”（v.）的本课目标词。",
+          "prompt": "写出表示“发展；成长；形成”（v.）的英文单词。",
           "answer": "develop",
           "stage": "T1",
           "ai": false
@@ -1922,27 +2217,21 @@
         {
           "id": "develop-v-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "句型应用：哪一项既表示“培养技能”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+          "prompt": "句型应用：哪一项既表示“开发产品”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "develop an interest in",
+            "develop an interest in something",
+            "develop a product",
             "develop a skill",
-            "develop a habit",
             "develop a plan"
           ],
-          "answer": "develop a skill",
+          "answer": "develop a product",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "develop-v-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：She developed a _____ of reading every night.（中文：她养成了每晚阅读的习惯。）",
-          "options": [
-            "habit",
-            "big",
-            "answer",
-            "slight"
-          ],
+          "prompt": "根据完整句意和中文提示补全原句：She developed a _____ of reading every night.（中文：她养成了每晚阅读的习惯。）",
           "answer": "habit",
           "stage": "T2",
           "ai": false
@@ -1950,43 +2239,43 @@
         {
           "id": "develop-v-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "用法辨析：哪一项既表示“养成习惯”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+          "prompt": "用法辨析：哪一项既表示“出现症状”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "develop a skill",
+            "develop a product",
             "develop a plan",
-            "develop an interest in something",
-            "develop a habit"
+            "develop symptoms"
           ],
-          "answer": "develop a habit",
+          "answer": "develop symptoms",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "develop-v-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "搭配辨析：哪一项既表示“培养技能”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+          "prompt": "搭配辨析：哪一项既表示“养成习惯”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "develop a product",
             "develop a plan",
-            "develop an interest in something",
-            "develop a skill",
-            "develop a habit"
+            "develop a habit",
+            "develop a skill"
           ],
-          "answer": "develop a skill",
+          "answer": "develop a habit",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "develop-v-example-cloze",
           "type": "collocation",
-          "prompt": "根据句意补全词卡核心例句：She _____ a habit of reading every night.（填写 develop 的正确形式）",
-          "answer": "developed",
+          "prompt": "根据句意和中文提示补全另一个常用例句：Daily conversation practice helped her _____ greater fluency.（填写 develop 的正确形式）（中文：每天练习会话帮助她提高了流利度。）",
+          "answer": "develop",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "develop-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “develop” 写一个自然、真实的英文句子，含义必须符合词卡核心义“发展”。",
+          "prompt": "请用 “develop” 写一个自然、真实的英文句子，含义必须符合核心义“发展；成长；形成”。",
           "answer": "",
           "stage": "T2",
           "ai": true
@@ -1994,7 +2283,7 @@
         {
           "id": "develop-v-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请使用 “develop a habit” 结构写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “develop symptoms” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2002,7 +2291,7 @@
         {
           "id": "develop-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “develop” 和 “develop a habit” 结构，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “develop” 和 “develop strong writing skills” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2060,10 +2349,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "template-complete",
-      "templateVersion": "learning-template-2026.09.10.3",
-      "contentVersion": "2026.09.10.3",
-      "reviewed": false,
+      "detailLevel": "template-curated",
+      "templateVersion": "learning-template-2026.09.10.4",
+      "contentVersion": "2026.09.10.4",
+      "reviewed": true,
+      "curationSource": "manual-semantic-pack-2026.09.10.4",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -2102,65 +2392,79 @@
         "主动词汇"
       ],
       "coreMemory": {
-        "chinese": "分享；共同拥有；一份；份额",
-        "english": "v. to give part of something to others；n. one part of something that is divided among people",
-        "structure": "share something with someone /ʃer ˈsʌmθɪŋ ˈwɪð ˈsʌˌmwʌn/（与某人分享某物）；share an opinion /ʃer ˈæn əˈpɪnjən/（分享观点）；share the cost /ʃer ðə ˈkɑst/（分摊费用）；have something in common /ˈhæv ˈsʌmθɪŋ ɪn ˈkɑmən/（有共同之处）",
+        "chinese": "共用；共有；共同经历；分给；分享；讲述；一份；份额",
+        "english": "v. to use, have, or experience something together with others；v. to give part of something to another person；v. to tell others about an idea, feeling, or information；n. one of the parts into which something is divided",
+        "structure": "share a room /ʃer ə ˈruːm/（合住房间）；share a meal /ʃer ə ˈmiːl/（一起用餐）；share the cost /ʃer ðə ˈkɑst/（分担费用）；share information /ʃer ˌɪnfɚˈmeɪʃən/（分享信息）",
         "structures": [
           {
-            "phrase": "share something with someone",
-            "phonetic": "/ʃer ˈsʌmθɪŋ ˈwɪð ˈsʌˌmwʌn/",
-            "chinese": "与某人分享某物"
+            "phrase": "share a room",
+            "phonetic": "/ʃer ə ˈruːm/",
+            "chinese": "合住房间"
           },
           {
-            "phrase": "share an opinion",
-            "phonetic": "/ʃer ˈæn əˈpɪnjən/",
-            "chinese": "分享观点"
+            "phrase": "share a meal",
+            "phonetic": "/ʃer ə ˈmiːl/",
+            "chinese": "一起用餐"
           },
           {
             "phrase": "share the cost",
             "phonetic": "/ʃer ðə ˈkɑst/",
-            "chinese": "分摊费用"
+            "chinese": "分担费用"
           },
           {
-            "phrase": "have something in common",
-            "phonetic": "/ˈhæv ˈsʌmθɪŋ ɪn ˈkɑmən/",
-            "chinese": "有共同之处"
+            "phrase": "share information",
+            "phonetic": "/ʃer ˌɪnfɚˈmeɪʃən/",
+            "chinese": "分享信息"
           }
         ],
-        "commonError": "❌ share something at someone → ✅ share something with someone；❌ have something at common → ✅ have something in common",
+        "commonError": "❌ Please share the file to me. → ✅ Please share the file with me.；❌ She shared me her concerns. → ✅ She shared her concerns with me.",
         "commonErrors": [
           {
-            "wrong": "share something at someone",
-            "wrongPhonetic": "/ʃer ˈsʌmθɪŋ ˈæt ˈsʌˌmwʌn/",
-            "right": "share something with someone",
-            "rightPhonetic": "/ʃer ˈsʌmθɪŋ ˈwɪð ˈsʌˌmwʌn/",
-            "note": "在“share something with someone”所表达的这个具体含义中，要用介词 with；换成 at 会破坏这个固定结构或改变原意。"
+            "wrong": "Please share the file to me.",
+            "wrongPhonetic": "/ˈpliːz ʃer ðə ˈfaɪl ˈtuː ˈmiː/",
+            "right": "Please share the file with me.",
+            "rightPhonetic": "/ˈpliːz ʃer ðə ˈfaɪl ˈwɪð ˈmiː/",
+            "note": "与某人分享某物用 share something with someone。"
           },
           {
-            "wrong": "have something at common",
-            "wrongPhonetic": "/ˈhæv ˈsʌmθɪŋ ˈæt ˈkɑmən/",
-            "right": "have something in common",
-            "rightPhonetic": "/ˈhæv ˈsʌmθɪŋ ɪn ˈkɑmən/",
-            "note": "在“have something in common”所表达的这个具体含义中，要用介词 in；换成 at 会破坏这个固定结构或改变原意。"
+            "wrong": "She shared me her concerns.",
+            "wrongPhonetic": "/ˈʃiː ˈʃɛrd ˈmiː ˈhɝː kənˈsɝːnz/",
+            "right": "She shared her concerns with me.",
+            "rightPhonetic": "/ˈʃiː ˈʃɛrd ˈhɝː kənˈsɝːnz ˈwɪð ˈmiː/",
+            "note": "share 通常不接双宾语，接收者用 with 引出。"
           }
         ],
-        "directSynonym": "distribute /dɪˈstrɪbjuːt/（分发；分配）；divide /dɪˈvaɪd/（分配；分水岭）；tell /ˈtɛl/（告诉；说；吩咐）；communicate /kəˈmjuːnəˌkeɪt/（显露；传达；感染）",
-        "directAntonym": "keep /ˈkiːp/（保留；不分享）",
-        "derivatives": "本词暂无需额外强记的高频派生词",
+        "directSynonym": "have in common /ˈhæv ɪn ˈkɑmən/（共同拥有；有共同点）；use jointly /juːz ˈdʒɔɪntli/（共同使用）；divide /dɪˈvaɪd/（分配；分开）；distribute /dɪˈstrɪbjut/（分发；分配）；communicate /kəˈmjuːnəˌkeɪt/（传达；交流）",
+        "directAntonym": "keep to oneself /ˈkiːp ˈtuː ˌwʌnˈsɛlf/（独自保留；不与人分享）；withhold /wɪθˈhoʊld/（扣留；不予提供）",
+        "derivatives": "shareholder · sharing · shared · shareable",
         "example": "She shared a useful study tip with me.",
         "exampleChinese": "她和我分享了一个实用的学习技巧。"
       },
       "meanings": [
         {
           "partOfSpeech": "v.",
-          "english": "to give part of something to others",
-          "chinese": "分享；共同拥有",
-          "example": "I shared the news with my family.",
-          "translation": "我把这个消息告诉了家人。"
+          "english": "to use, have, or experience something together with others",
+          "chinese": "共用；共有；共同经历",
+          "example": "The two teams share the same office.",
+          "translation": "两个团队共用同一间办公室。"
+        },
+        {
+          "partOfSpeech": "v.",
+          "english": "to give part of something to another person",
+          "chinese": "分给；分享",
+          "example": "She shared her lunch with me.",
+          "translation": "她把午餐分给我吃。"
+        },
+        {
+          "partOfSpeech": "v.",
+          "english": "to tell others about an idea, feeling, or information",
+          "chinese": "分享；讲述",
+          "example": "Please share your findings with the group.",
+          "translation": "请向小组分享你的调查结果。"
         },
         {
           "partOfSpeech": "n.",
-          "english": "one part of something that is divided among people",
+          "english": "one of the parts into which something is divided",
           "chinese": "一份；份额",
           "example": "Everyone paid an equal share of the cost.",
           "translation": "每个人都支付了同等份额的费用。"
@@ -2168,250 +2472,369 @@
       ],
       "contextPhrases": [
         {
-          "category": "核心动作与结构",
+          "category": "物品与资源",
           "items": [
             {
-              "phrase": "share something with someone",
-              "phonetic": "/ʃer ˈsʌmθɪŋ ˈwɪð ˈsʌˌmwʌn/",
-              "chinese": "与某人分享某物"
+              "phrase": "share office space with another team",
+              "phonetic": "/ʃer ˈɔːfɪs ˈspeɪs ˈwɪð əˈnʌðɚ ˈtiːm/",
+              "chinese": "与另一个团队共用办公空间"
             },
             {
-              "phrase": "share an opinion",
-              "phonetic": "/ʃer ˈæn əˈpɪnjən/",
-              "chinese": "分享观点"
+              "phrase": "share the cost equally",
+              "phonetic": "/ʃer ðə ˈkɑst ˈiːkwəli/",
+              "chinese": "平均分担费用"
             },
             {
-              "phrase": "share the cost",
-              "phonetic": "/ʃer ðə ˈkɑst/",
-              "chinese": "分摊费用"
+              "phrase": "share food with neighbors",
+              "phonetic": "/ʃer ˈfuːd ˈwɪð ˈneɪbɚz/",
+              "chinese": "与邻居分享食物"
+            },
+            {
+              "phrase": "share laboratory equipment",
+              "phonetic": "/ʃer ˈlæbrəˌtɔːri ɪˈkwɪpmənt/",
+              "chinese": "共用实验室设备"
             }
           ]
         },
         {
-          "category": "日常与工作语境",
+          "category": "信息与想法",
           "items": [
             {
-              "phrase": "have something in common",
-              "phonetic": "/ˈhæv ˈsʌmθɪŋ ɪn ˈkɑmən/",
-              "chinese": "有共同之处"
+              "phrase": "share useful feedback privately",
+              "phonetic": "/ʃer ˈjuːsfəl ˈfiːdˌbæk ˈpraɪvətli/",
+              "chinese": "私下分享有用反馈"
             },
             {
-              "phrase": "a fair share",
-              "phonetic": "/ə ˈfɛr ʃer/",
-              "chinese": "公平的一份"
+              "phrase": "share your screen during the call",
+              "phonetic": "/ʃer ˈjɔːr ˈskriːn ˈdʊrɪŋ ðə ˈkɔːl/",
+              "chinese": "通话时共享屏幕"
             },
             {
-              "phrase": "market share",
-              "phonetic": "/ˈmɑrkət ʃer/",
-              "chinese": "市场份额"
+              "phrase": "share a personal experience",
+              "phonetic": "/ʃer ə ˈpɝːsɪnəl ɪkˈspɪriəns/",
+              "chinese": "分享个人经历"
+            },
+            {
+              "phrase": "share research findings openly",
+              "phonetic": "/ʃer ˈriːsɝːtʃ ˈfaɪndɪŋz ˈoʊpənli/",
+              "chinese": "公开分享研究结果"
             }
           ]
         },
         {
-          "category": "高频扩展表达",
+          "category": "责任与感受",
           "items": [
             {
-              "phrase": "share a room with someone",
-              "phonetic": "/ʃer ə ˈruːm ˈwɪð ˈsʌˌmwʌn/",
-              "chinese": "与某人合住一间房"
+              "phrase": "share responsibility for the outcome",
+              "phonetic": "/ʃer riˌspɑnsəˈbɪləti ˈfɔːr ðə ˈaʊtˌkʌm/",
+              "chinese": "共同承担结果责任"
             },
             {
-              "phrase": "share characteristics with someone",
-              "phonetic": "/ʃer ˌkɛrəktɚˈɪstɪks ˈwɪð ˈsʌˌmwʌn/",
-              "chinese": "与某人具有共同特征"
+              "phrase": "share someone’s concern about safety",
+              "phonetic": "/ʃer ˈsʌmˌwʌnz kənˈsɝːn əˈbaʊt ˈseɪfti/",
+              "chinese": "同样担心安全问题"
             },
             {
-              "phrase": "share the housework",
-              "phonetic": "/ʃer ðə ˈhaʊˌswɝːk/",
-              "chinese": "同意分担家务"
+              "phrase": "share the workload fairly",
+              "phonetic": "/ʃer ðə ˈwɝːˌkloʊd ˈfɛrli/",
+              "chinese": "公平分担工作量"
+            },
+            {
+              "phrase": "share the duty of care",
+              "phonetic": "/ʃer ðə ˈduːti ˈʌv ˈkɛr/",
+              "chinese": "共同承担照护责任"
             }
           ]
         },
         {
-          "category": "补充常用语境",
+          "category": "社交与公开发布",
           "items": [
             {
-              "phrase": "share a room",
-              "phonetic": "/ʃer ə ˈruːm/",
-              "chinese": "共住一个房间"
+              "phrase": "share a photo on social media",
+              "phonetic": "/ʃer ə ˈfoʊˌtoʊ ˈɑn ˈsoʊʃəl ˈmiːdiə/",
+              "chinese": "在社交媒体分享照片"
+            },
+            {
+              "phrase": "share the news with close friends",
+              "phonetic": "/ʃer ðə ˈnuːz ˈwɪð ˈkloʊs ˈfrɛndz/",
+              "chinese": "把消息告诉密友"
+            },
+            {
+              "phrase": "share a link with the class",
+              "phonetic": "/ʃer ə ˈlɪŋk ˈwɪð ðə ˈklæs/",
+              "chinese": "把链接分享给全班"
+            },
+            {
+              "phrase": "share updates in the group chat",
+              "phonetic": "/ʃer əpˈdeɪts ɪn ðə ˈɡruːp ˈtʃæt/",
+              "chinese": "在群聊中分享最新消息"
             }
           ]
         }
       ],
       "fixedPhrases": [
         {
-          "phrase": "share something with someone",
-          "phonetic": "/ʃer ˈsʌmθɪŋ ˈwɪð ˈsʌˌmwʌn/",
-          "chinese": "与某人分享某物",
-          "example": "I shared the news with my family.",
-          "translation": "我把这个消息告诉了家人。"
+          "phrase": "share a room",
+          "phonetic": "/ʃer ə ˈruːm/",
+          "chinese": "合住房间",
+          "example": "The two interns shared a room near the hospital.",
+          "translation": "两名实习生合住在医院附近的一个房间里。"
         },
         {
-          "phrase": "share an opinion",
-          "phonetic": "/ʃer ˈæn əˈpɪnjən/",
-          "chinese": "分享观点",
-          "example": "Would you like to share your opinion?",
-          "translation": "你愿意分享一下你的看法吗？"
+          "phrase": "share a meal",
+          "phonetic": "/ʃer ə ˈmiːl/",
+          "chinese": "一起用餐",
+          "example": "Neighbors shared a meal after repairing the community garden.",
+          "translation": "邻居们修好社区花园后一起吃了顿饭。"
         },
         {
           "phrase": "share the cost",
           "phonetic": "/ʃer ðə ˈkɑst/",
-          "chinese": "分摊费用",
-          "example": "We agreed to share the cost of the taxi.",
-          "translation": "我们同意分摊出租车费。"
+          "chinese": "分担费用",
+          "example": "Four families agreed to share the cost of the new fence.",
+          "translation": "四户家庭同意分担新围栏的费用。"
         },
         {
-          "phrase": "have something in common",
-          "phonetic": "/ˈhæv ˈsʌmθɪŋ ɪn ˈkɑmən/",
-          "chinese": "有共同之处",
-          "example": "We shared our experiences and found that we had something in common.",
-          "translation": "我们分享了各自的经历，并发现彼此有共同之处。"
+          "phrase": "share information",
+          "phonetic": "/ʃer ˌɪnfɚˈmeɪʃən/",
+          "chinese": "分享信息",
+          "example": "Clinics share information only with the patient's consent.",
+          "translation": "诊所只有在患者同意后才会共享信息。"
         },
         {
-          "phrase": "a fair share",
-          "phonetic": "/ə ˈfɛr ʃer/",
-          "chinese": "公平的一份",
-          "example": "Everyone did a fair share of the work.",
-          "translation": "每个人都承担了公平的一份工作。"
+          "phrase": "share an opinion",
+          "phonetic": "/ʃer ˈæn əˈpɪnjən/",
+          "chinese": "发表看法",
+          "example": "Each student had two minutes to share an opinion on the proposal.",
+          "translation": "每名学生有两分钟发表对提案的看法。"
         },
         {
-          "phrase": "market share",
-          "phonetic": "/ˈmɑrkət ʃer/",
-          "chinese": "市场份额",
-          "example": "The company increased its market share last year.",
-          "translation": "公司去年提高了市场份额。"
+          "phrase": "share a concern",
+          "phonetic": "/ʃer ə kənˈsɝːn/",
+          "chinese": "有同样的担忧",
+          "example": "Several parents share the concern about traffic near the school.",
+          "translation": "几位家长同样担心学校附近的交通问题。"
         },
         {
-          "phrase": "share a room with someone",
-          "phonetic": "/ʃer ə ˈruːm ˈwɪð ˈsʌˌmwʌn/",
-          "chinese": "与某人合住一间房",
-          "example": "I share a bedroom with my sister.",
-          "translation": "我跟我姐姐共用同一间卧房。"
+          "phrase": "share responsibility",
+          "phonetic": "/ʃer riˌspɑnsəˈbɪləti/",
+          "chinese": "共同承担责任",
+          "example": "Parents and teachers share responsibility for children's online safety.",
+          "translation": "家长和教师共同承担保护儿童网络安全的责任。"
         },
         {
-          "phrase": "share characteristics with someone",
-          "phonetic": "/ʃer ˌkɛrəktɚˈɪstɪks ˈwɪð ˈsʌˌmwʌn/",
-          "chinese": "与某人具有共同特征",
-          "example": "Pigs share certain characteristics with human beings.",
-          "translation": "猪与人类的一些特性相同。"
+          "phrase": "share a link",
+          "phonetic": "/ʃer ə ˈlɪŋk/",
+          "chinese": "分享链接",
+          "example": "The coordinator shared the registration link with new volunteers.",
+          "translation": "协调员把注册链接分享给了新志愿者。"
         },
         {
-          "phrase": "share the housework",
-          "phonetic": "/ʃer ðə ˈhaʊˌswɝːk/",
-          "chinese": "同意分担家务",
-          "example": "We agreed to share the housework.",
-          "translation": "我们同意分担家务。"
+          "phrase": "share something with a group",
+          "phonetic": "/ʃer ˈsʌmθɪŋ ˈwɪð ə ˈɡruːp/",
+          "chinese": "与小组分享某事",
+          "example": "Lena shared her field notes with the research group.",
+          "translation": "莉娜把实地笔记分享给了研究小组。"
         },
         {
-          "phrase": "share a room",
-          "phonetic": "/ʃer ə ˈruːm/",
-          "chinese": "共住一个房间",
-          "example": "Do you share a room?",
-          "translation": "你共住一个房间吗？"
+          "phrase": "share equally",
+          "phonetic": "/ʃer ˈiːkwəli/",
+          "chinese": "平均分配",
+          "example": "The three partners agreed to share the profits equally.",
+          "translation": "三位合伙人同意平均分配利润。"
+        },
+        {
+          "phrase": "share common interests",
+          "phonetic": "/ʃer ˈkɑmən ˈɪntrəsts/",
+          "chinese": "有共同兴趣",
+          "example": "The neighbors became friends because they shared common interests.",
+          "translation": "这些邻居因为有共同兴趣而成了朋友。"
+        },
+        {
+          "phrase": "share something on social media",
+          "phonetic": "/ʃer ˈsʌmθɪŋ ˈɑn ˈsoʊʃəl ˈmiːdiə/",
+          "chinese": "在社交媒体上分享某物",
+          "example": "The museum shared photographs of the restored painting on social media.",
+          "translation": "博物馆在社交媒体上分享了修复后画作的照片。"
         }
       ],
       "synonyms": [
         {
-          "word": "distribute",
-          "phonetic": "/dɪˈstrɪbjuːt/",
-          "partOfSpeech": "v.",
-          "chinese": "分发；分配",
-          "difference": "distribute 表示“分发；分配”，与 share 的“分享”义相近。distribute 强调有计划地分给多人；share 也可共同拥有或分享想法和经历。"
+          "word": "have in common",
+          "phonetic": "/ˈhæv ɪn ˈkɑmən/",
+          "partOfSpeech": "phr.v.",
+          "chinese": "共同拥有；有共同点",
+          "difference": "表示两人或多方拥有相同特征、兴趣或经历；share 还可主动把物品或信息给别人。"
+        },
+        {
+          "word": "use jointly",
+          "phonetic": "/juːz ˈdʒɔɪntli/",
+          "partOfSpeech": "phr.v.",
+          "chinese": "共同使用",
+          "difference": "明确表示多人合用同一资源；share 还可分出一部分，或向他人讲述信息和感受。"
         },
         {
           "word": "divide",
           "phonetic": "/dɪˈvaɪd/",
-          "partOfSpeech": "n.",
-          "chinese": "分配；分水岭",
-          "difference": "divide 常表示“分配；分水岭”，与 share 的“分享”义有重合。divide 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+          "partOfSpeech": "v.",
+          "chinese": "分配；分开",
+          "difference": "强调把整体分成若干份；share 可以共同使用而不把整体实际分开。"
         },
         {
-          "word": "tell",
-          "phonetic": "/ˈtɛl/",
+          "word": "distribute",
+          "phonetic": "/dɪˈstrɪbjut/",
           "partOfSpeech": "v.",
-          "chinese": "告诉；说；吩咐",
-          "difference": "tell 常表示“告诉；说；吩咐”，与 share 的“分享”义有重合。tell 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+          "chinese": "分发；分配",
+          "difference": "强调有组织地把物品发给多人；share 可只与一个人共用，也不要求正式分发。"
         },
         {
           "word": "communicate",
           "phonetic": "/kəˈmjuːnəˌkeɪt/",
           "partOfSpeech": "v.",
-          "chinese": "显露；传达；感染",
-          "difference": "communicate 常表示“显露；传达；感染”，与 share 的“分享”义有重合。communicate 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+          "chinese": "传达；交流",
+          "difference": "只接近 share 信息或想法的义项；share 还可表示共用资源、分担责任或分配份额。"
         }
       ],
       "antonyms": [
         {
-          "word": "keep",
-          "phonetic": "/ˈkiːp/",
+          "word": "keep to oneself",
+          "phonetic": "/ˈkiːp ˈtuː ˌwʌnˈsɛlf/",
+          "partOfSpeech": "phr.v.",
+          "chinese": "独自保留；不与人分享",
+          "usage": "share 表示让别人共同使用或知道某物；keep something to oneself 表示只留给自己。"
+        },
+        {
+          "word": "withhold",
+          "phonetic": "/wɪθˈhoʊld/",
           "partOfSpeech": "v.",
-          "chinese": "保留；不分享",
-          "usage": "keep 表示“保留；不分享”，与 share 的“分享”义形成对比。share 表示让他人共同获得；keep 在此语境中表示留给自己。"
+          "chinese": "扣留；不予提供",
+          "usage": "只与 share 信息或资源的义项相对；withhold 强调有意不给本可提供的东西。"
         }
       ],
-      "derivatives": [],
-      "confusables": [],
+      "derivatives": [
+        {
+          "word": "shareholder",
+          "phonetic": "/ˈʃerˌhoʊldər/",
+          "partOfSpeech": "n.",
+          "chinese": "股东",
+          "note": "指持有公司股份的人或机构。"
+        },
+        {
+          "word": "sharing",
+          "phonetic": "/ˈʃɛrɪŋ/",
+          "partOfSpeech": "n. / adj.",
+          "chinese": "分享；共享的",
+          "note": "常见于 file sharing 和 a sharing economy。"
+        },
+        {
+          "word": "shared",
+          "phonetic": "/ˈʃɛrd/",
+          "partOfSpeech": "adj.",
+          "chinese": "共同的；共享的",
+          "note": "常修饰 interest、responsibility 和 space。"
+        },
+        {
+          "word": "shareable",
+          "phonetic": "/ˈʃerəbəl/",
+          "partOfSpeech": "adj.",
+          "chinese": "可分享的；可共享的",
+          "note": "常形容链接、文件或适合多人分食的食物。"
+        }
+      ],
+      "confusables": [
+        {
+          "word": "shear",
+          "phonetic": "/ˈʃɪr/",
+          "partOfSpeech": "v.",
+          "chinese": "剪羊毛；剪切",
+          "difference": "share 表示分享、共用或分担；shear 表示用剪具剪羊毛或切断，两词拼写和元音发音不同。"
+        }
+      ],
       "relatedVocabulary": [
         {
-          "category": "同一语义场的高频词",
+          "category": "共同资源",
           "items": [
             {
-              "word": "divide",
-              "phonetic": "/dɪˈvaɪd/",
-              "partOfSpeech": "v.",
-              "chinese": "分配；分开"
-            },
-            {
-              "word": "common",
-              "phonetic": "/ˈkɑmən/",
-              "partOfSpeech": "adj.",
-              "chinese": "共同的"
-            },
-            {
-              "word": "keep",
-              "phonetic": "/ˈkiːp/",
-              "partOfSpeech": "v.",
-              "chinese": "保留"
-            }
-          ]
-        },
-        {
-          "category": "近义表达分类",
-          "items": [
-            {
-              "word": "distribute",
-              "phonetic": "/dɪˈstrɪbjuːt/",
-              "partOfSpeech": "v.",
-              "chinese": "分发；分配"
-            },
-            {
-              "word": "divide",
-              "phonetic": "/dɪˈvaɪd/",
+              "word": "access",
+              "phonetic": "/ˈækˌsɛs/",
               "partOfSpeech": "n.",
-              "chinese": "分配；分水岭"
+              "chinese": "使用权"
             },
             {
-              "word": "tell",
-              "phonetic": "/ˈtɛl/",
-              "partOfSpeech": "v.",
-              "chinese": "告诉；说；吩咐"
+              "word": "workspace",
+              "phonetic": "/ˈwɝːkˌspeɪs/",
+              "partOfSpeech": "n.",
+              "chinese": "工作空间"
             },
             {
-              "word": "communicate",
-              "phonetic": "/kəˈmjuːnəˌkeɪt/",
-              "partOfSpeech": "v.",
-              "chinese": "显露；传达；感染"
+              "word": "resource",
+              "phonetic": "/ˈriːsɔːrs/",
+              "partOfSpeech": "n.",
+              "chinese": "资源"
+            },
+            {
+              "word": "ownership",
+              "phonetic": "/ˈoʊnɚˌʃɪp/",
+              "partOfSpeech": "n.",
+              "chinese": "所有权"
             }
           ]
         },
         {
-          "category": "对比与易混表达分类",
+          "category": "信息传播",
           "items": [
             {
-              "word": "keep",
-              "phonetic": "/ˈkiːp/",
-              "partOfSpeech": "v.",
-              "chinese": "保留；不分享"
+              "word": "message",
+              "phonetic": "/ˈmɛsədʒ/",
+              "partOfSpeech": "n.",
+              "chinese": "消息"
+            },
+            {
+              "word": "link",
+              "phonetic": "/ˈlɪŋk/",
+              "partOfSpeech": "n.",
+              "chinese": "链接"
+            },
+            {
+              "word": "audience",
+              "phonetic": "/ˈɑdiəns/",
+              "partOfSpeech": "n.",
+              "chinese": "受众"
+            },
+            {
+              "word": "privacy",
+              "phonetic": "/ˈpraɪvəsi/",
+              "partOfSpeech": "n.",
+              "chinese": "隐私"
+            }
+          ]
+        },
+        {
+          "category": "合作责任",
+          "items": [
+            {
+              "word": "workload",
+              "phonetic": "/ˈwɝːˌkloʊd/",
+              "partOfSpeech": "n.",
+              "chinese": "工作量"
+            },
+            {
+              "word": "partnership",
+              "phonetic": "/ˈpɑrtnɚˌʃɪp/",
+              "partOfSpeech": "n.",
+              "chinese": "合作关系"
+            },
+            {
+              "word": "contribution",
+              "phonetic": "/ˌkɑntrəˈbjuːʃən/",
+              "partOfSpeech": "n.",
+              "chinese": "贡献"
+            },
+            {
+              "word": "cooperation",
+              "phonetic": "/koʊˌɑpɚˈeɪʃən/",
+              "partOfSpeech": "n.",
+              "chinese": "合作"
             }
           ]
         }
@@ -2423,144 +2846,154 @@
           "chinese": "她和我分享了一个实用的学习技巧。"
         },
         {
-          "scene": "日常使用",
-          "english": "I shared the news with my family.",
-          "chinese": "我把这个消息告诉了家人。"
-        },
-        {
-          "scene": "工作或学习",
-          "english": "Would you like to share your opinion?",
-          "chinese": "你愿意分享一下你的看法吗？"
-        },
-        {
-          "scene": "常见搭配",
-          "english": "We agreed to share the cost of the taxi.",
-          "chinese": "我们同意分摊出租车费。"
-        },
-        {
-          "scene": "真实语境",
-          "english": "We shared our experiences and found that we had something in common.",
-          "chinese": "我们分享了各自的经历，并发现彼此有共同之处。"
-        },
-        {
-          "scene": "易错结构",
-          "english": "Everyone did a fair share of the work.",
-          "chinese": "每个人都承担了公平的一份工作。"
-        },
-        {
-          "scene": "主动表达",
-          "english": "The company increased its market share last year.",
-          "chinese": "公司去年提高了市场份额。"
+          "scene": "日常交流",
+          "english": "The two interns shared a room near the hospital.",
+          "chinese": "两名实习生合住在医院附近的一个房间里。"
         },
         {
           "scene": "工作沟通",
-          "english": "I share a bedroom with my sister.",
-          "chinese": "我跟我姐姐共用同一间卧房。"
+          "english": "Neighbors shared a meal after repairing the community garden.",
+          "chinese": "邻居们修好社区花园后一起吃了顿饭。"
         },
         {
           "scene": "学习表达",
-          "english": "Pigs share certain characteristics with human beings.",
-          "chinese": "猪与人类的一些特性相同。"
+          "english": "Four families agreed to share the cost of the new fence.",
+          "chinese": "四户家庭同意分担新围栏的费用。"
         },
         {
           "scene": "书面表达",
-          "english": "We agreed to share the housework.",
-          "chinese": "我们同意分担家务。"
+          "english": "Clinics share information only with the patient's consent.",
+          "chinese": "诊所只有在患者同意后才会共享信息。"
+        },
+        {
+          "scene": "日常交流",
+          "english": "Each student had two minutes to share an opinion on the proposal.",
+          "chinese": "每名学生有两分钟发表对提案的看法。"
+        },
+        {
+          "scene": "工作沟通",
+          "english": "Several parents share the concern about traffic near the school.",
+          "chinese": "几位家长同样担心学校附近的交通问题。"
+        },
+        {
+          "scene": "学习表达",
+          "english": "Parents and teachers share responsibility for children's online safety.",
+          "chinese": "家长和教师共同承担保护儿童网络安全的责任。"
+        },
+        {
+          "scene": "书面表达",
+          "english": "The coordinator shared the registration link with new volunteers.",
+          "chinese": "协调员把注册链接分享给了新志愿者。"
+        },
+        {
+          "scene": "日常交流",
+          "english": "Lena shared her field notes with the research group.",
+          "chinese": "莉娜把实地笔记分享给了研究小组。"
+        },
+        {
+          "scene": "工作沟通",
+          "english": "The three partners agreed to share the profits equally.",
+          "chinese": "三位合伙人同意平均分配利润。"
+        },
+        {
+          "scene": "学习表达",
+          "english": "The neighbors became friends because they shared common interests.",
+          "chinese": "这些邻居因为有共同兴趣而成了朋友。"
         }
       ],
       "studyFocus": {
-        "coreMeaning": "先掌握“分享；共同拥有”这个核心义，再对比另外 1 个常用义项，辨别不同语境。",
+        "coreMeaning": "先掌握“共用；共有；共同经历”这个核心义，再对比另外 3 个常用义项，辨别不同语境。",
         "keyCollocation": "把“share an idea”连同介词、宾语和动词形式作为整个句块记忆。",
-        "commonMistake": "在“share something with someone”所表达的这个具体含义中，要用介词 with；换成 at 会破坏这个固定结构或改变原意。",
+        "commonMistake": "与某人分享某物用 share something with someone。",
         "mustUseExample": "She shared a useful study tip with me.（她和我分享了一个实用的学习技巧。）"
       },
       "questions": [
         {
           "id": "share-v-meaning-core",
           "type": "meaning_choice",
-          "prompt": "“share”最核心的中文含义是？",
+          "prompt": "“share”最常见的核心中文义是哪一项？",
           "options": [
             "给",
-            "分享；共同拥有",
+            "共用；共有；共同经历",
             "表达"
           ],
-          "answer": "分享；共同拥有",
+          "answer": "共用；共有；共同经历",
           "stage": "T0",
           "ai": false
         },
         {
           "id": "share-v-meaning-english",
           "type": "meaning_choice",
-          "prompt": "哪一项英文释义最符合词卡中的 “share”？",
+          "prompt": "“share”最常见的英文释义是哪一项？",
           "options": [
-            "to give part of something to others",
+            "to use, have, or experience something together with others",
             "to show a thought or feeling in words or actions",
             "to transfer, provide, or cause someone to receive something"
           ],
-          "answer": "to give part of something to others",
+          "answer": "to use, have, or experience something together with others",
           "stage": "T0",
           "ai": false
         },
         {
           "id": "share-v-structure-choice-v3",
           "type": "meaning_choice",
-          "prompt": "核心结构辨析：哪一项既表示“与某人分享某物”，又符合这个形式线索：完整搭配中使用介词 with？",
+          "prompt": "核心结构辨析：哪一项既表示“合住房间”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
             "share the cost",
-            "have something in common",
-            "share something with someone",
-            "share an opinion"
+            "share information",
+            "share a room",
+            "share a meal"
           ],
-          "answer": "share something with someone",
+          "answer": "share a room",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "share-v-synonym-choice",
           "type": "meaning_choice",
-          "prompt": "哪个词是词卡中列出的 “share” 最直接近义词？",
+          "prompt": "在“分配；分开”这个义项下，哪个词与“share”意思最接近？",
           "options": [
-            "give",
-            "distribute",
-            "keep",
-            "express"
+            "do",
+            "divide",
+            "be",
+            "have"
           ],
-          "answer": "distribute",
+          "answer": "divide",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "share-v-antonym-choice",
           "type": "meaning_choice",
-          "prompt": "哪个词是词卡中列出的 “share” 最直接反义词？",
+          "prompt": "在“共用；共有；共同经历”这个义项下，哪个词与“share”意思相反？",
           "options": [
-            "keep",
-            "distribute",
-            "express",
-            "give"
+            "withhold",
+            "be",
+            "have",
+            "do"
           ],
-          "answer": "keep",
+          "answer": "withhold",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "share-v-contrast-choice",
           "type": "meaning_choice",
-          "prompt": "根据本词卡辨析，哪个词被列为 “share” 的相关近义词？",
+          "prompt": "结合拼写、发音和用法，哪一项需要与“share”重点区分？",
           "options": [
-            "keep",
-            "express",
-            "give",
-            "distribute"
+            "be",
+            "have",
+            "do",
+            "shear"
           ],
-          "answer": "distribute",
+          "answer": "shear",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "share-v-recall-definition",
           "type": "recall",
-          "prompt": "根据英文释义写出目标词：to give part of something to others",
+          "prompt": "根据英文释义写出对应单词：to use, have, or experience something together with others",
           "answer": "share",
           "stage": "T1",
           "ai": false
@@ -2568,7 +3001,7 @@
         {
           "id": "share-v-recall-chinese",
           "type": "recall",
-          "prompt": "写出符合“分享；共同拥有”（v.）的本课目标词。",
+          "prompt": "写出表示“共用；共有；共同经历”（v.）的英文单词。",
           "answer": "share",
           "stage": "T1",
           "ai": false
@@ -2584,27 +3017,21 @@
         {
           "id": "share-v-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "句型应用：哪一项既表示“分享观点”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+          "prompt": "句型应用：哪一项既表示“一起用餐”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "share an opinion",
-            "share something with someone",
+            "share a meal",
+            "share a room",
             "share the cost",
-            "have something in common"
+            "share information"
           ],
-          "answer": "share an opinion",
+          "answer": "share a meal",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "share-v-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：She shared a _____ study tip with me.（中文：她和我分享了一个实用的学习技巧。）",
-          "options": [
-            "idea",
-            "some",
-            "plan",
-            "useful"
-          ],
+          "prompt": "根据完整句意和中文提示补全原句：She shared a _____ study tip with me.（中文：她和我分享了一个实用的学习技巧。）",
           "answer": "useful",
           "stage": "T2",
           "ai": false
@@ -2612,35 +3039,35 @@
         {
           "id": "share-v-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "搭配辨析：哪一项既表示“与某人分享某物”，又符合这个形式线索：完整搭配中使用介词 with？",
+          "prompt": "搭配辨析：哪一项既表示“发表看法”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
+            "share a meal",
             "share the cost",
-            "have something in common",
-            "share something with someone",
-            "share an opinion"
+            "share an opinion",
+            "share a room"
           ],
-          "answer": "share something with someone",
+          "answer": "share an opinion",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "share-v-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "用法辨析：哪一项既表示“分享观点”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+          "prompt": "用法辨析：哪一项既表示“有同样的担忧”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "have something in common",
-            "share an opinion",
-            "share something with someone",
-            "share the cost"
+            "share the cost",
+            "share a concern",
+            "share a room",
+            "share a meal"
           ],
-          "answer": "share an opinion",
+          "answer": "share a concern",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "share-v-example-cloze",
           "type": "collocation",
-          "prompt": "根据句意补全词卡核心例句：She _____ a useful study tip with me.（填写 share 的正确形式）",
+          "prompt": "根据句意和中文提示补全另一个常用例句：The two interns _____ a room near the hospital.（填写 share 的正确形式）（中文：两名实习生合住在医院附近的一个房间里。）",
           "answer": "shared",
           "stage": "T3",
           "ai": false
@@ -2648,7 +3075,7 @@
         {
           "id": "share-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “share” 写一个自然、真实的英文句子，含义必须符合词卡核心义“分享；共同拥有”。",
+          "prompt": "请用 “share” 写一个自然、真实的英文句子，含义必须符合核心义“共用；共有；共同经历”。",
           "answer": "",
           "stage": "T2",
           "ai": true
@@ -2656,7 +3083,7 @@
         {
           "id": "share-v-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请使用 “share something with someone” 结构写一个与自己有关的自然英文句子；someone 要替换成实际的人或代词；something 要替换成实际的事物或内容。",
+          "prompt": "请使用 “share an opinion” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -2664,7 +3091,7 @@
         {
           "id": "share-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “share” 和 “share an opinion” 结构，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “share” 和 “share office space with another team” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -2722,10 +3149,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "template-complete",
-      "templateVersion": "learning-template-2026.09.10.3",
-      "contentVersion": "2026.09.10.3",
-      "reviewed": false,
+      "detailLevel": "template-curated",
+      "templateVersion": "learning-template-2026.09.10.4",
+      "contentVersion": "2026.09.10.4",
+      "reviewed": true,
+      "curationSource": "manual-semantic-pack-2026.09.10.4",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -2758,138 +3186,182 @@
         "主动词汇"
       ],
       "coreMemory": {
-        "chinese": "意识到；明白；实现；使成真",
-        "english": "v. to suddenly understand or become aware of something；v. to achieve something that you hoped or planned for",
-        "structure": "realize that /ˈriːəlaɪz ˈðæt/（意识到……）；realize a dream /ˈriːəlaɪz ə ˈdriːm/（实现梦想）；suddenly realize /ˈsʌdənliː ˈriːəlaɪz/（突然意识到）；fail to realize /ˈfeɪl ˈtuː ˈriːəlaɪz/（没有意识到）",
+        "chinese": "意识到；明白；实现；达成；使成为现实；落实；变现；实现收益",
+        "english": "v. to become aware of or understand a fact；v. to achieve something that you hoped or planned to do；v. to make an idea, plan, or design become real；v. to obtain money or profit from an asset or investment",
+        "structure": "realize that + clause /ˈriːəlaɪz ˈðæt ˈklɔːz/（意识到……）；realize the importance of something /ˈriːəlaɪz ðə ˌɪmˈpɔːrtəns ˈʌv ˈsʌmθɪŋ/（认识到某事的重要性）；realize what has happened /ˈriːəlaɪz ˈwʌt ˈhæz ˈhæpənd/（意识到发生了什么）；realize a dream /ˈriːəlaɪz ə ˈdriːm/（实现梦想）",
         "structures": [
           {
-            "phrase": "realize that",
-            "phonetic": "/ˈriːəlaɪz ˈðæt/",
+            "phrase": "realize that + clause",
+            "phonetic": "/ˈriːəlaɪz ˈðæt ˈklɔːz/",
             "chinese": "意识到……"
+          },
+          {
+            "phrase": "realize the importance of something",
+            "phonetic": "/ˈriːəlaɪz ðə ˌɪmˈpɔːrtəns ˈʌv ˈsʌmθɪŋ/",
+            "chinese": "认识到某事的重要性"
+          },
+          {
+            "phrase": "realize what has happened",
+            "phonetic": "/ˈriːəlaɪz ˈwʌt ˈhæz ˈhæpənd/",
+            "chinese": "意识到发生了什么"
           },
           {
             "phrase": "realize a dream",
             "phonetic": "/ˈriːəlaɪz ə ˈdriːm/",
             "chinese": "实现梦想"
-          },
-          {
-            "phrase": "suddenly realize",
-            "phonetic": "/ˈsʌdənliː ˈriːəlaɪz/",
-            "chinese": "突然意识到"
-          },
-          {
-            "phrase": "fail to realize",
-            "phonetic": "/ˈfeɪl ˈtuː ˈriːəlaɪz/",
-            "chinese": "没有意识到"
           }
         ],
-        "commonError": "❌ can to realize → ✅ can realize；❌ to realizing → ✅ to realize",
+        "commonError": "❌ I realized about my mistake later. → ✅ I realized my mistake later.；❌ She realized to be wrong. → ✅ She realized that she was wrong.",
         "commonErrors": [
           {
-            "wrong": "can to realize",
-            "wrongPhonetic": "/ˈkæn ˈtuː ˈriːəlaɪz/",
-            "right": "can realize",
-            "rightPhonetic": "/ˈkæn ˈriːəlaɪz/",
-            "note": "情态动词 can 后面直接接 realize 的原形，不加 to。"
+            "wrong": "I realized about my mistake later.",
+            "wrongPhonetic": "/ˈaɪ ˈriːəˌlaɪzd əˈbaʊt ˈmaɪ mɪˈsteɪk ˈleɪtɚ/",
+            "right": "I realized my mistake later.",
+            "rightPhonetic": "/ˈaɪ ˈriːəˌlaɪzd ˈmaɪ mɪˈsteɪk ˈleɪtɚ/",
+            "note": "realize 表示意识到时直接接名词或从句，不加 about。"
           },
           {
-            "wrong": "to realizing",
-            "wrongPhonetic": "/ˈtuː ˈriːəˌlaɪzɪŋ/",
-            "right": "to realize",
-            "rightPhonetic": "/ˈtuː ˈriːəlaɪz/",
-            "note": "这里的 to 是不定式标记，后面要用 realize 的原形，不能改成 realizing。"
+            "wrong": "She realized to be wrong.",
+            "wrongPhonetic": "/ˈʃiː ˈriːəˌlaɪzd ˈtuː ˈbiː ˈrɔːŋ/",
+            "right": "She realized that she was wrong.",
+            "rightPhonetic": "/ˈʃiː ˈriːəˌlaɪzd ˈðæt ˈʃiː ˈwɑz ˈrɔːŋ/",
+            "note": "realize 后表达认识到某事实通常接 that 从句，不接 to be。"
           }
         ],
-        "directSynonym": "recognize /ˈrɛkəˌɡnaɪz/（意识到；认出）；understand /ˌʌndɚˈstænd/（理解；了解；领会）；achieve /əˈtʃiːv/（完成；达到）；become aware of /bɪˈkʌm əˈwɛr ˈʌv/（意识到；察觉）",
-        "directAntonym": "overlook /ˈoʊvɚˌlʊk/（忽略；未注意到）",
-        "derivatives": "realization",
+        "directSynonym": "become aware of /bɪˈkʌm əˈwɛr ˈʌv/（意识到）；understand /ˌʌndɚˈstænd/（明白）；appreciate /əˈpriːʃiˌeɪt/（认识到）；achieve /əˈtʃiːv/（实现）；fulfill /fʊlˈfɪl/（实现；履行）",
+        "directAntonym": "",
+        "derivatives": "realization · realizable · unrealized",
         "example": "I realized that I had used the wrong word.",
         "exampleChinese": "我意识到自己用错了词。"
       },
       "meanings": [
         {
           "partOfSpeech": "v.",
-          "english": "to suddenly understand or become aware of something",
+          "english": "to become aware of or understand a fact",
           "chinese": "意识到；明白",
-          "example": "I realized that I had left my keys at home.",
-          "translation": "我意识到自己把钥匙落在家里了。"
+          "example": "I realized that I had left my keys at work.",
+          "translation": "我意识到自己把钥匙落在单位了。"
         },
         {
           "partOfSpeech": "v.",
-          "english": "to achieve something that you hoped or planned for",
-          "chinese": "实现；使成真",
-          "example": "She finally realized her dream of becoming a doctor.",
-          "translation": "她终于实现了当医生的梦想。"
+          "english": "to achieve something that you hoped or planned to do",
+          "chinese": "实现；达成",
+          "example": "She realized her dream of opening a bakery.",
+          "translation": "她实现了开面包店的梦想。"
+        },
+        {
+          "partOfSpeech": "v.",
+          "english": "to make an idea, plan, or design become real",
+          "chinese": "使成为现实；落实",
+          "example": "The architect realized the design with local materials.",
+          "translation": "建筑师用当地材料把设计变成了现实。"
+        },
+        {
+          "partOfSpeech": "v.",
+          "english": "to obtain money or profit from an asset or investment",
+          "chinese": "变现；实现收益",
+          "example": "The fund sold several shares to realize a profit.",
+          "translation": "这只基金卖出几只股票以实现收益。"
         }
       ],
       "contextPhrases": [
         {
-          "category": "核心动作与结构",
+          "category": "发现事实",
           "items": [
             {
-              "phrase": "realize that + clause",
-              "phonetic": "/ˈriːəlaɪz ˈðæt ˈklɔːz/",
-              "chinese": "意识到……"
+              "phrase": "realize the truth too late",
+              "phonetic": "/ˈriːəlaɪz ðə ˈtruːθ ˈtuː ˈleɪt/",
+              "chinese": "太晚才意识到真相"
             },
             {
-              "phrase": "realize a dream",
-              "phonetic": "/ˈriːəlaɪz ə ˈdriːm/",
-              "chinese": "实现梦想"
+              "phrase": "realize something is missing",
+              "phonetic": "/ˈriːəlaɪz ˈsʌmθɪŋ ˈɪz ˈmɪsɪŋ/",
+              "chinese": "意识到少了东西"
             },
             {
-              "phrase": "suddenly realize",
-              "phonetic": "/ˈsʌdənliː ˈriːəlaɪz/",
-              "chinese": "突然意识到"
+              "phrase": "realize where the error began",
+              "phonetic": "/ˈriːəlaɪz ˈwɛr ðə ˈɛrɚ bɪˈɡæn/",
+              "chinese": "弄清错误从哪里开始"
+            },
+            {
+              "phrase": "realize why the test failed",
+              "phonetic": "/ˈriːəlaɪz ˈwaɪ ðə ˈtɛst ˈfeɪld/",
+              "chinese": "明白测试失败的原因"
             }
           ]
         },
         {
-          "category": "日常与工作语境",
+          "category": "理解影响",
           "items": [
             {
-              "phrase": "fail to realize",
-              "phonetic": "/ˈfeɪl ˈtuː ˈriːəlaɪz/",
-              "chinese": "没有意识到"
+              "phrase": "realize the seriousness of the risk",
+              "phonetic": "/ˈriːəlaɪz ðə ˈsɪriəsnəs ˈʌv ðə ˈrɪsk/",
+              "chinese": "认识到风险的严重性"
             },
             {
-              "phrase": "make someone realize",
-              "phonetic": "/ˈmeɪk ˈsʌˌmwʌn ˈriːəlaɪz/",
-              "chinese": "使某人明白"
+              "phrase": "realize how much support matters",
+              "phonetic": "/ˈriːəlaɪz ˈhaʊ ˈmʌtʃ səˈpɔːrt ˈmætɚz/",
+              "chinese": "认识到支持有多重要"
             },
             {
-              "phrase": "fully realize the importance",
-              "phonetic": "/ˈfʊliː ˈriːəlaɪz ðə ˌɪˈmpɔːrtəns/",
-              "chinese": "充分认识重要性"
+              "phrase": "realize the consequences of delay",
+              "phonetic": "/ˈriːəlaɪz ðə ˈkɑnsəˌkwɛnsəz ˈʌv dɪˈleɪ/",
+              "chinese": "认识到拖延的后果"
+            },
+            {
+              "phrase": "realize the scale of the challenge",
+              "phonetic": "/ˈriːəlaɪz ðə ˈskeɪl ˈʌv ðə ˈtʃæləndʒ/",
+              "chinese": "认识到挑战的规模"
             }
           ]
         },
         {
-          "category": "高频扩展表达",
+          "category": "梦想与潜力",
           "items": [
             {
-              "phrase": "realize the importance of something",
-              "phonetic": "/ˈriːəlaɪz ðə ˌɪˈmpɔːrtəns ˈʌv ˈsʌmθɪŋ/",
-              "chinese": "意识到某事的重要性"
+              "phrase": "realize a lifelong ambition",
+              "phonetic": "/ˈriːəlaɪz ə ˈlaɪfˌlɔːŋ æmˈbɪʃən/",
+              "chinese": "实现终身抱负"
             },
             {
-              "phrase": "realize what something means",
-              "phonetic": "/ˈriːəlaɪz ˈwʌt ˈsʌmθɪŋ ˈmiːnz/",
-              "chinese": "意识到某事意味着什么"
+              "phrase": "realize the project’s full potential",
+              "phonetic": "/ˈriːəlaɪz ðə ˈprɑdʒɛkts ˈfʊl pəˈtɛnʃəl/",
+              "chinese": "充分发挥项目潜力"
             },
             {
-              "phrase": "come to realize something",
-              "phonetic": "/ˈkʌm ˈtuː ˈriːəlaɪz ˈsʌmθɪŋ/",
-              "chinese": "逐渐认识到某事"
+              "phrase": "realize a shared vision",
+              "phonetic": "/ˈriːəlaɪz ə ˈʃɛrd ˈvɪʒən/",
+              "chinese": "实现共同愿景"
+            },
+            {
+              "phrase": "realize a childhood dream",
+              "phonetic": "/ˈriːəlaɪz ə ˈtʃaɪldˌhʊd ˈdriːm/",
+              "chinese": "实现童年梦想"
             }
           ]
         },
         {
-          "category": "补充常用语境",
+          "category": "设计与收益",
           "items": [
             {
-              "phrase": "realize wh- + clause",
-              "phonetic": "/ˈriːəlaɪz wh ˈklɔːz/",
-              "chinese": "生活开始了"
+              "phrase": "realize an idea in practice",
+              "phonetic": "/ˈriːəlaɪz ˈæn aɪˈdiːə ɪn ˈpræktəs/",
+              "chinese": "把想法付诸实践"
+            },
+            {
+              "phrase": "realize gains from the investment",
+              "phonetic": "/ˈriːəlaɪz ˈɡeɪnz ˈfrʌm ðə ˌɪnˈvɛstmənt/",
+              "chinese": "实现投资收益"
+            },
+            {
+              "phrase": "realize a design at full scale",
+              "phonetic": "/ˈriːəlaɪz ə dɪˈzaɪn ˈæt ˈfʊl ˈskeɪl/",
+              "chinese": "按完整规模实现设计"
+            },
+            {
+              "phrase": "realize value from unused assets",
+              "phonetic": "/ˈriːəlaɪz ˈvælju ˈfrʌm əˈnjuːzd ˈæˌsɛts/",
+              "chinese": "从闲置资产中实现价值"
             }
           ]
         }
@@ -2899,125 +3371,160 @@
           "phrase": "realize that + clause",
           "phonetic": "/ˈriːəlaɪz ˈðæt ˈklɔːz/",
           "chinese": "意识到……",
-          "example": "I realized that I had left my keys at home.",
-          "translation": "我意识到自己把钥匙落在家里了。"
+          "example": "He realized that the back door had been left unlocked.",
+          "translation": "他意识到后门一直没有锁。"
+        },
+        {
+          "phrase": "realize the importance of something",
+          "phonetic": "/ˈriːəlaɪz ðə ˌɪmˈpɔːrtəns ˈʌv ˈsʌmθɪŋ/",
+          "chinese": "认识到某事的重要性",
+          "example": "The drought made everyone realize the importance of clean water.",
+          "translation": "这场干旱让所有人认识到清洁用水的重要性。"
+        },
+        {
+          "phrase": "realize what has happened",
+          "phonetic": "/ˈriːəlaɪz ˈwʌt ˈhæz ˈhæpənd/",
+          "chinese": "意识到发生了什么",
+          "example": "She needed a moment to realize what had happened.",
+          "translation": "她过了一会儿才意识到发生了什么。"
         },
         {
           "phrase": "realize a dream",
           "phonetic": "/ˈriːəlaɪz ə ˈdriːm/",
           "chinese": "实现梦想",
-          "example": "She worked for years to realize her dream.",
-          "translation": "她努力多年以实现梦想。"
+          "example": "After years of training, he realized his dream of becoming a pilot.",
+          "translation": "经过多年训练，他实现了成为飞行员的梦想。"
         },
         {
-          "phrase": "suddenly realize",
-          "phonetic": "/ˈsʌdənliː ˈriːəlaɪz/",
-          "chinese": "突然意识到",
-          "example": "He suddenly realized why the door was locked.",
-          "translation": "他突然明白门为什么锁着。"
+          "phrase": "realize a goal",
+          "phonetic": "/ˈriːəlaɪz ə ˈɡoʊl/",
+          "chinese": "实现目标",
+          "example": "The savings plan helped them realize their goal of buying a home.",
+          "translation": "储蓄计划帮助他们实现了购房目标。"
         },
         {
-          "phrase": "fail to realize",
-          "phonetic": "/ˈfeɪl ˈtuː ˈriːəlaɪz/",
-          "chinese": "没有意识到",
-          "example": "Many people fail to realize how much time the task takes.",
-          "translation": "许多人没有意识到这项任务要花多少时间。"
+          "phrase": "realize an ambition",
+          "phonetic": "/ˈriːəlaɪz ˈæn æmˈbɪʃən/",
+          "chinese": "实现抱负",
+          "example": "She moved abroad to realize her ambition of conducting medical research.",
+          "translation": "她移居国外，以实现从事医学研究的抱负。"
         },
         {
-          "phrase": "make someone realize",
-          "phonetic": "/ˈmeɪk ˈsʌˌmwʌn ˈriːəlaɪz/",
-          "chinese": "使某人明白",
-          "example": "The mistake made me realize the value of checking my work.",
-          "translation": "这个错误让我意识到检查工作的重要性。"
+          "phrase": "realize your full potential",
+          "phonetic": "/ˈriːəlaɪz ˈjɔːr ˈfʊl pəˈtɛnʃəl/",
+          "chinese": "充分发挥潜力",
+          "example": "Individual coaching can help young athletes realize their full potential.",
+          "translation": "一对一指导可以帮助年轻运动员充分发挥潜力。"
         },
         {
-          "phrase": "fully realize the importance",
-          "phonetic": "/ˈfʊliː ˈriːəlaɪz ðə ˌɪˈmpɔːrtəns/",
-          "chinese": "充分认识重要性",
-          "example": "We fully realize the importance of data privacy.",
-          "translation": "我们充分认识到数据隐私的重要性。"
+          "phrase": "realize a plan",
+          "phonetic": "/ˈriːəlaɪz ə ˈplæn/",
+          "chinese": "落实计划；使计划成为现实",
+          "example": "The village lacked the funding needed to realize its flood-control plan.",
+          "translation": "村里缺少落实防洪计划所需的资金。"
         },
         {
-          "phrase": "realize that + clause",
-          "phonetic": "/ˈriːəlaɪz ˈðæt ˈklɔːz/",
-          "chinese": "意识到某事",
-          "example": "I suddenly realized that I had left my keys at home.",
-          "translation": "我突然意识到钥匙落在家里了。"
+          "phrase": "realize the value of something",
+          "phonetic": "/ˈriːəlaɪz ðə ˈvælju ˈʌv ˈsʌmθɪŋ/",
+          "chinese": "认识到某物的价值",
+          "example": "I did not realize the value of the training until an emergency occurred.",
+          "translation": "直到发生紧急情况，我才认识到那次培训的价值。"
         },
         {
-          "phrase": "realize the importance of something",
-          "phonetic": "/ˈriːəlaɪz ðə ˌɪˈmpɔːrtəns ˈʌv ˈsʌmθɪŋ/",
-          "chinese": "意识到某事的重要性",
-          "example": "I did not realize the importance of clear instructions.",
-          "translation": "我没有意识到清晰说明的重要性。"
+          "phrase": "realize your mistake",
+          "phonetic": "/ˈriːəlaɪz ˈjɔːr mɪˈsteɪk/",
+          "chinese": "意识到自己的错误",
+          "example": "She realized her mistake as soon as she checked the original figures.",
+          "translation": "她一核对原始数据就意识到了自己的错误。"
         },
         {
-          "phrase": "realize what something means",
-          "phonetic": "/ˈriːəlaɪz ˈwʌt ˈsʌmθɪŋ ˈmiːnz/",
-          "chinese": "意识到某事意味着什么",
-          "example": "Do you realize what this change means?",
-          "translation": "你意识到这项变化意味着什么吗？"
+          "phrase": "fail to realize something",
+          "phonetic": "/ˈfeɪl ˈtuː ˈriːəlaɪz ˈsʌmθɪŋ/",
+          "chinese": "没有意识到某事",
+          "example": "Many buyers fail to realize how quickly maintenance costs accumulate.",
+          "translation": "许多买家没有意识到维护费用累积得有多快。"
         },
         {
-          "phrase": "come to realize something",
-          "phonetic": "/ˈkʌm ˈtuː ˈriːəlaɪz ˈsʌmθɪŋ/",
-          "chinese": "逐渐认识到某事",
-          "example": "Over time, she came to realize the value of patience.",
-          "translation": "慢慢地，她开始认识到耐心的价值。"
+          "phrase": "suddenly realize something",
+          "phonetic": "/ˈsʌdənli ˈriːəlaɪz ˈsʌmθɪŋ/",
+          "chinese": "突然意识到某事",
+          "example": "Halfway home, I suddenly realized that my passport was still at the hotel.",
+          "translation": "回家途中走到一半，我突然意识到护照还在酒店。"
         }
       ],
       "synonyms": [
         {
-          "word": "recognize",
-          "phonetic": "/ˈrɛkəˌɡnaɪz/",
-          "partOfSpeech": "v.",
-          "chinese": "意识到；认出",
-          "difference": "recognize 表示“意识到；认出”，与 realize 的“意识到”义相近。recognize 常指认出或承认已存在的事实；realize 强调突然清楚地意识到。"
+          "word": "become aware of",
+          "phonetic": "/bɪˈkʌm əˈwɛr ˈʌv/",
+          "partOfSpeech": "phr.v.",
+          "chinese": "意识到",
+          "difference": "强调开始知道此前未注意的事实；realize 常带突然觉察意味，也可表示实现目标。"
         },
         {
           "word": "understand",
           "phonetic": "/ˌʌndɚˈstænd/",
           "partOfSpeech": "v.",
-          "chinese": "理解；了解；领会",
-          "difference": "understand 常表示“理解；了解；领会”，与 realize 的“意识到”义有重合。understand 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+          "chinese": "明白",
+          "difference": "强调理解含义、原因或情况；realize 强调从未知到意识到，understand 可是持续状态。"
+        },
+        {
+          "word": "appreciate",
+          "phonetic": "/əˈpriːʃiˌeɪt/",
+          "partOfSpeech": "v.",
+          "chinese": "认识到",
+          "difference": "常指充分理解重要性、困难或价值；realize 还可指计划落实或收益变现，不限理解价值。"
         },
         {
           "word": "achieve",
           "phonetic": "/əˈtʃiːv/",
           "partOfSpeech": "v.",
-          "chinese": "完成；达到",
-          "difference": "achieve 常表示“完成；达到”，与 realize 的“意识到”义有重合。achieve 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+          "chinese": "实现",
+          "difference": "只对应梦想、目标或潜力变为现实；realize 也能接事实从句和资产收益，不只目标。"
         },
         {
-          "word": "become aware of",
-          "phonetic": "/bɪˈkʌm əˈwɛr ˈʌv/",
-          "partOfSpeech": "phr.",
-          "chinese": "意识到；察觉",
-          "difference": "become aware of 常表示“意识到；察觉”，与 realize 的“意识到”义有重合。become aware of 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
-        }
-      ],
-      "antonyms": [
-        {
-          "word": "overlook",
-          "phonetic": "/ˈoʊvɚˌlʊk/",
+          "word": "fulfill",
+          "phonetic": "/fʊlˈfɪl/",
           "partOfSpeech": "v.",
-          "chinese": "忽略；未注意到",
-          "usage": "overlook 表示“忽略；未注意到”，与 realize 的“意识到”义形成对比。realize 表示意识到某事；overlook 表示没有注意到。"
+          "chinese": "实现；履行",
+          "difference": "fulfill 常接 promise、obligation 或 duty，强调履行；realize 可接事实从句、梦想、设计和资产收益。"
         }
       ],
+      "antonyms": [],
       "derivatives": [
         {
           "word": "realization",
-          "phonetic": "/ˈriːləˈzeɪʃən/",
+          "phonetic": "/ˌriːələˈzeɪʃən/",
           "partOfSpeech": "n.",
-          "chinese": "实现；领悟；实得",
-          "note": "realization 是 realize 的常用词族形式；作 n. 时表示“实现；领悟；实得”。"
+          "chinese": "意识；实现；变现",
+          "note": "可指突然意识到，也可指计划实现或资产变现。"
+        },
+        {
+          "word": "realizable",
+          "phonetic": "/ˌriːəˈlaɪzəbəl/",
+          "partOfSpeech": "adj.",
+          "chinese": "可实现的；可变现的",
+          "note": "常形容目标可以实现，或资产价值能够通过出售变现。"
+        },
+        {
+          "word": "unrealized",
+          "phonetic": "/ˌʌnˈriːəlaɪzd/",
+          "partOfSpeech": "adj.",
+          "chinese": "未实现的；未变现的",
+          "note": "常修饰 potential、profit 或 gain。"
         }
       ],
-      "confusables": [],
+      "confusables": [
+        {
+          "word": "recognize",
+          "phonetic": "/ˈrɛkəɡˌnaɪz/",
+          "partOfSpeech": "v.",
+          "chinese": "认出；意识到",
+          "difference": "recognize 常指认出已有对象，realize 常指突然意识到事实或实现目标"
+        }
+      ],
       "relatedVocabulary": [
         {
-          "category": "同一语义场的高频词",
+          "category": "认知过程",
           "items": [
             {
               "word": "awareness",
@@ -3026,73 +3533,80 @@
               "chinese": "意识"
             },
             {
-              "word": "recognize",
-              "phonetic": "/ˈrɛkəˌɡnaɪz/",
-              "partOfSpeech": "v.",
-              "chinese": "认出；意识到"
-            },
-            {
-              "word": "overlook",
-              "phonetic": "/ˈoʊvɚˌlʊk/",
-              "partOfSpeech": "v.",
-              "chinese": "忽略"
-            }
-          ]
-        },
-        {
-          "category": "近义表达分类",
-          "items": [
-            {
-              "word": "recognize",
-              "phonetic": "/ˈrɛkəˌɡnaɪz/",
-              "partOfSpeech": "v.",
-              "chinese": "意识到；认出"
-            },
-            {
-              "word": "understand",
-              "phonetic": "/ˌʌndɚˈstænd/",
-              "partOfSpeech": "v.",
-              "chinese": "理解；了解；领会"
-            },
-            {
-              "word": "achieve",
-              "phonetic": "/əˈtʃiːv/",
-              "partOfSpeech": "v.",
-              "chinese": "完成；达到"
-            },
-            {
-              "word": "become aware of",
-              "phonetic": "/bɪˈkʌm əˈwɛr ˈʌv/",
-              "partOfSpeech": "phr.",
-              "chinese": "意识到；察觉"
-            }
-          ]
-        },
-        {
-          "category": "对比与易混表达分类",
-          "items": [
-            {
-              "word": "overlook",
-              "phonetic": "/ˈoʊvɚˌlʊk/",
-              "partOfSpeech": "v.",
-              "chinese": "忽略；未注意到"
-            },
-            {
-              "word": "realization",
-              "phonetic": "/ˈriːləˈzeɪʃən/",
+              "word": "insight",
+              "phonetic": "/ˈɪnˌsaɪt/",
               "partOfSpeech": "n.",
-              "chinese": "实现；领悟；实得"
+              "chinese": "洞察"
+            },
+            {
+              "word": "understanding",
+              "phonetic": "/ˌʌndɚˈstændɪŋ/",
+              "partOfSpeech": "n.",
+              "chinese": "理解"
+            },
+            {
+              "word": "recognition",
+              "phonetic": "/ˌrɛkəɡˈnɪʃən/",
+              "partOfSpeech": "n.",
+              "chinese": "认识"
             }
           ]
         },
         {
-          "category": "常用词族分类",
+          "category": "目标愿景",
           "items": [
             {
-              "word": "realization",
-              "phonetic": "/ˈriːləˈzeɪʃən/",
+              "word": "dream",
+              "phonetic": "/ˈdriːm/",
               "partOfSpeech": "n.",
-              "chinese": "实现；领悟；实得"
+              "chinese": "梦想"
+            },
+            {
+              "word": "ambition",
+              "phonetic": "/æmˈbɪʃən/",
+              "partOfSpeech": "n.",
+              "chinese": "抱负"
+            },
+            {
+              "word": "vision",
+              "phonetic": "/ˈvɪʒən/",
+              "partOfSpeech": "n.",
+              "chinese": "愿景"
+            },
+            {
+              "word": "potential",
+              "phonetic": "/pəˈtɛnʃəl/",
+              "partOfSpeech": "n.",
+              "chinese": "潜力"
+            }
+          ]
+        },
+        {
+          "category": "落实条件",
+          "items": [
+            {
+              "word": "resource",
+              "phonetic": "/ˈriːsɔːrs/",
+              "partOfSpeech": "n.",
+              "chinese": "资源"
+            },
+            {
+              "word": "funding",
+              "phonetic": "/ˈfʌndɪŋ/",
+              "partOfSpeech": "n.",
+              "chinese": "资金"
+            },
+            {
+              "word": "design",
+              "phonetic": "/dɪˈzaɪn/",
+              "partOfSpeech": "n.",
+              "chinese": "设计"
+            },
+            {
+              "word": "implementation",
+              "phonetic": "/ˌɪmpləmɛnˈteɪʃən/",
+              "partOfSpeech": "n.",
+              "chinese": "实施"
             }
           ]
         }
@@ -3104,62 +3618,72 @@
           "chinese": "我意识到自己用错了词。"
         },
         {
-          "scene": "日常使用",
-          "english": "I realized that I had left my keys at home.",
-          "chinese": "我意识到自己把钥匙落在家里了。"
-        },
-        {
-          "scene": "工作或学习",
-          "english": "She worked for years to realize her dream.",
-          "chinese": "她努力多年以实现梦想。"
-        },
-        {
-          "scene": "常见搭配",
-          "english": "He suddenly realized why the door was locked.",
-          "chinese": "他突然明白门为什么锁着。"
-        },
-        {
-          "scene": "真实语境",
-          "english": "Many people fail to realize how much time the task takes.",
-          "chinese": "许多人没有意识到这项任务要花多少时间。"
-        },
-        {
-          "scene": "易错结构",
-          "english": "The mistake made me realize the value of checking my work.",
-          "chinese": "这个错误让我意识到检查工作的重要性。"
-        },
-        {
-          "scene": "主动表达",
-          "english": "We fully realize the importance of data privacy.",
-          "chinese": "我们充分认识到数据隐私的重要性。"
+          "scene": "日常交流",
+          "english": "He realized that the back door had been left unlocked.",
+          "chinese": "他意识到后门一直没有锁。"
         },
         {
           "scene": "工作沟通",
-          "english": "I suddenly realized that I had left my keys at home.",
-          "chinese": "我突然意识到钥匙落在家里了。"
+          "english": "The drought made everyone realize the importance of clean water.",
+          "chinese": "这场干旱让所有人认识到清洁用水的重要性。"
         },
         {
           "scene": "学习表达",
-          "english": "I did not realize the importance of clear instructions.",
-          "chinese": "我没有意识到清晰说明的重要性。"
+          "english": "She needed a moment to realize what had happened.",
+          "chinese": "她过了一会儿才意识到发生了什么。"
         },
         {
           "scene": "书面表达",
-          "english": "Do you realize what this change means?",
-          "chinese": "你意识到这项变化意味着什么吗？"
+          "english": "After years of training, he realized his dream of becoming a pilot.",
+          "chinese": "经过多年训练，他实现了成为飞行员的梦想。"
+        },
+        {
+          "scene": "日常交流",
+          "english": "The savings plan helped them realize their goal of buying a home.",
+          "chinese": "储蓄计划帮助他们实现了购房目标。"
+        },
+        {
+          "scene": "工作沟通",
+          "english": "She moved abroad to realize her ambition of conducting medical research.",
+          "chinese": "她移居国外，以实现从事医学研究的抱负。"
+        },
+        {
+          "scene": "学习表达",
+          "english": "Individual coaching can help young athletes realize their full potential.",
+          "chinese": "一对一指导可以帮助年轻运动员充分发挥潜力。"
+        },
+        {
+          "scene": "书面表达",
+          "english": "The village lacked the funding needed to realize its flood-control plan.",
+          "chinese": "村里缺少落实防洪计划所需的资金。"
+        },
+        {
+          "scene": "日常交流",
+          "english": "I did not realize the value of the training until an emergency occurred.",
+          "chinese": "直到发生紧急情况，我才认识到那次培训的价值。"
+        },
+        {
+          "scene": "工作沟通",
+          "english": "She realized her mistake as soon as she checked the original figures.",
+          "chinese": "她一核对原始数据就意识到了自己的错误。"
+        },
+        {
+          "scene": "学习表达",
+          "english": "Many buyers fail to realize how quickly maintenance costs accumulate.",
+          "chinese": "许多买家没有意识到维护费用累积得有多快。"
         }
       ],
       "studyFocus": {
-        "coreMeaning": "先掌握“意识到；明白”这个核心义，再对比另外 1 个常用义项，辨别不同语境。",
+        "coreMeaning": "先掌握“意识到；明白”这个核心义，再对比另外 3 个常用义项，辨别不同语境。",
         "keyCollocation": "把“realize that”连同介词、宾语和动词形式作为整个句块记忆。",
-        "commonMistake": "情态动词 can 后面直接接 realize 的原形，不加 to。",
+        "commonMistake": "realize 表示意识到时直接接名词或从句，不加 about。",
         "mustUseExample": "I realized that I had used the wrong word.（我意识到自己用错了词。）"
       },
       "questions": [
         {
           "id": "realize-v-meaning-core",
           "type": "meaning_choice",
-          "prompt": "“realize”最核心的中文含义是？",
+          "prompt": "“realize”最常见的核心中文义是哪一项？",
           "options": [
             "意识到；明白",
             "鼓励",
@@ -3172,13 +3696,13 @@
         {
           "id": "realize-v-meaning-english",
           "type": "meaning_choice",
-          "prompt": "哪一项英文释义最符合词卡中的 “realize”？",
+          "prompt": "“realize”最常见的英文释义是哪一项？",
           "options": [
             "to give someone confidence or support",
             "to require something because it is necessary",
-            "to suddenly understand or become aware of something"
+            "to become aware of or understand a fact"
           ],
-          "answer": "to suddenly understand or become aware of something",
+          "answer": "to become aware of or understand a fact",
           "stage": "T0",
           "ai": false
         },
@@ -3187,61 +3711,61 @@
           "type": "meaning_choice",
           "prompt": "核心结构辨析：哪一项既表示“意识到……”，又符合这个形式线索：使用 that 引导一个主谓完整的从句？",
           "options": [
-            "fail to realize",
-            "realize that",
             "realize a dream",
-            "suddenly realize"
+            "realize that + clause",
+            "realize the importance of something",
+            "realize what has happened"
           ],
-          "answer": "realize that",
+          "answer": "realize that + clause",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "realize-v-synonym-choice",
           "type": "meaning_choice",
-          "prompt": "哪个词是词卡中列出的 “realize” 最直接近义词？",
+          "prompt": "在“明白”这个义项下，哪个词与“realize”意思最接近？",
           "options": [
-            "recognize",
-            "overlook",
-            "encourage",
-            "need"
+            "understand",
+            "be",
+            "have",
+            "do"
           ],
-          "answer": "recognize",
+          "answer": "understand",
           "stage": "T2",
           "ai": false
         },
         {
-          "id": "realize-v-antonym-choice",
+          "id": "realize-v-synonym-choice-2",
           "type": "meaning_choice",
-          "prompt": "哪个词是词卡中列出的 “realize” 最直接反义词？",
+          "prompt": "除“understand”外，在“认识到”这个义项下，哪个词也与“realize”意思接近？",
           "options": [
-            "recognize",
-            "encourage",
-            "need",
-            "overlook"
+            "be",
+            "have",
+            "do",
+            "appreciate"
           ],
-          "answer": "overlook",
+          "answer": "appreciate",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "realize-v-contrast-choice",
           "type": "meaning_choice",
-          "prompt": "根据本词卡辨析，哪个词被列为 “realize” 的派生词？",
+          "prompt": "结合拼写、发音和用法，哪一项需要与“realize”重点区分？",
           "options": [
-            "overlook",
-            "encourage",
-            "realization",
-            "recognize"
+            "have",
+            "do",
+            "recognize",
+            "be"
           ],
-          "answer": "realization",
+          "answer": "recognize",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "realize-v-recall-definition",
           "type": "recall",
-          "prompt": "根据英文释义写出目标词：to suddenly understand or become aware of something",
+          "prompt": "根据英文释义写出对应单词：to become aware of or understand a fact",
           "answer": "realize",
           "stage": "T1",
           "ai": false
@@ -3249,7 +3773,7 @@
         {
           "id": "realize-v-recall-chinese",
           "type": "recall",
-          "prompt": "写出符合“意识到；明白”（v.）的本课目标词。",
+          "prompt": "写出表示“意识到；明白”（v.）的英文单词。",
           "answer": "realize",
           "stage": "T1",
           "ai": false
@@ -3265,27 +3789,21 @@
         {
           "id": "realize-v-collocation-structure-meaning-v3",
           "type": "collocation",
-          "prompt": "句型应用：哪一项既表示“实现梦想”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+          "prompt": "句型应用：哪一项既表示“认识到某事的重要性”，又符合这个形式线索：完整搭配中使用介词 of？",
           "options": [
-            "realize that",
-            "suddenly realize",
-            "fail to realize",
-            "realize a dream"
+            "realize that + clause",
+            "realize what has happened",
+            "realize a dream",
+            "realize the importance of something"
           ],
-          "answer": "realize a dream",
+          "answer": "realize the importance of something",
           "stage": "T1",
           "ai": false
         },
         {
           "id": "realize-v-collocation-example-context-v3",
           "type": "collocation",
-          "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：I realized that I had _____ the wrong word.（中文：我意识到自己用错了词。）",
-          "options": [
-            "more",
-            "short",
-            "used",
-            "speak"
-          ],
+          "prompt": "根据完整句意和中文提示补全原句：I realized that I had _____ the wrong word.（中文：我意识到自己用错了词。）",
           "answer": "used",
           "stage": "T2",
           "ai": false
@@ -3293,35 +3811,35 @@
         {
           "id": "realize-v-collocation-fixed-1-v3",
           "type": "collocation",
-          "prompt": "用法辨析：哪一项既表示“意识到……”，又符合这个形式线索：使用 that 引导一个主谓完整的从句？",
+          "prompt": "用法辨析：哪一项既表示“实现目标”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "fail to realize",
+            "realize what has happened",
+            "realize a goal",
             "realize that + clause",
-            "realize a dream",
-            "suddenly realize"
+            "realize the importance of something"
           ],
-          "answer": "realize that + clause",
+          "answer": "realize a goal",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "realize-v-collocation-fixed-2-v3",
           "type": "collocation",
-          "prompt": "搭配辨析：哪一项既表示“实现梦想”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+          "prompt": "搭配辨析：哪一项既表示“实现抱负”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
           "options": [
-            "realize a dream",
+            "realize an ambition",
             "realize that + clause",
-            "suddenly realize",
-            "fail to realize"
+            "realize the importance of something",
+            "realize what has happened"
           ],
-          "answer": "realize a dream",
+          "answer": "realize an ambition",
           "stage": "T3",
           "ai": false
         },
         {
           "id": "realize-v-example-cloze",
           "type": "collocation",
-          "prompt": "根据句意补全词卡核心例句：I _____ that I had used the wrong word.（填写 realize 的正确形式）",
+          "prompt": "根据句意和中文提示补全另一个常用例句：He _____ that the back door had been left unlocked.（填写 realize 的正确形式）（中文：他意识到后门一直没有锁。）",
           "answer": "realized",
           "stage": "T3",
           "ai": false
@@ -3329,7 +3847,7 @@
         {
           "id": "realize-v-sentence-core",
           "type": "free_sentence",
-          "prompt": "请用 “realize” 写一个自然、真实的英文句子，含义必须符合词卡核心义“意识到；明白”。",
+          "prompt": "请用 “realize” 写一个自然、真实的英文句子，含义必须符合核心义“意识到；明白”。",
           "answer": "",
           "stage": "T2",
           "ai": true
@@ -3337,7 +3855,7 @@
         {
           "id": "realize-v-sentence-phrase",
           "type": "free_sentence",
-          "prompt": "请使用 “realize that + clause” 结构写一个与自己有关的自然英文句子。",
+          "prompt": "请使用 “realize a goal” 结构写一个与自己有关的自然英文句子。",
           "answer": "",
           "stage": "T3",
           "ai": true
@@ -3345,7 +3863,7 @@
         {
           "id": "realize-v-dialogue",
           "type": "dialogue",
-          "prompt": "写一段 2–4 轮真实对话，自然使用 “realize” 和 “realize that + clause” 结构，并避免中文直译。",
+          "prompt": "写一段 2–4 轮真实对话，自然使用 “realize” 和 “realize the truth too late” 结构，并避免中文直译。",
           "answer": "",
           "stage": "T4",
           "ai": true
@@ -3403,10 +3921,11 @@
           "dialogue"
         ]
       },
-      "detailLevel": "template-complete",
-      "templateVersion": "learning-template-2026.09.10.3",
-      "contentVersion": "2026.09.10.3",
-      "reviewed": false,
+      "detailLevel": "template-curated",
+      "templateVersion": "learning-template-2026.09.10.4",
+      "contentVersion": "2026.09.10.4",
+      "reviewed": true,
+      "curationSource": "manual-semantic-pack-2026.09.10.4",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     }
   ]

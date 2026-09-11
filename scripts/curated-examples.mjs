@@ -135,6 +135,7 @@ export const curatedExamples = {
     ['I strongly suggest checking the details again.', '我强烈建议再核对一遍细节。'],
     ['The evidence suggests that the method is effective.', '证据表明这个方法有效。'],
     ['Could you suggest an alternative to this route?', '你能为这条路线提出一个替代方案吗？'],
+    ['She suggested a practical solution to the problem.', '她为这个问题提出了一个切实可行的解决办法。'],
     ['May I suggest a simpler way to organize the notes?', '我可以建议一种更简单的笔记整理方法吗？']
   ],
   require: [

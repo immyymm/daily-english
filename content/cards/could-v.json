@@ -28,226 +28,263 @@
     "高频表达"
   ],
   "coreMemory": {
-    "chinese": "过去能；过去会；可能；可以；能否；可以（礼貌请求或建议）；本来可以；原本可能",
-    "english": "aux. used to express ability in the past；aux. used to express a present or future possibility；aux. used for polite requests and suggestions；aux. used with have for a possible but unreal past action",
-    "structure": "could do something /ˈkʊd ˈduː ˈsʌmθɪŋ/（可以做某事）；could you do something /ˈkʊd ˈjuː ˈduː ˈsʌmθɪŋ/（你能做某事吗）；could be true /ˈkʊd ˈbiː ˈtruː/（可能是真的）；could have done something /ˈkʊd ˈhæv ˈdʌn ˈsʌmθɪŋ/（本来可以做某事）",
+    "chinese": "过去能；过去会；可能；可以；能否；可以（委婉请求）",
+    "english": "modal v. used to express ability in the past；modal v. used to express possibility or a suggestion；modal v. used to make a polite request",
+    "structure": "could have done something /ˈkʊd ˈhæv ˈdʌn ˈsʌmθɪŋ/（本来可能或本来能够做某事）；could not have done something /ˈkʊd ˈnɑt ˈhæv ˈdʌn ˈsʌmθɪŋ/（不可能做过；无法完成）；could well do something /ˈkʊd ˈwɛl ˈduː ˈsʌmθɪŋ/（很可能做某事）；could easily do something /ˈkʊd ˈiːzəli ˈduː ˈsʌmθɪŋ/（很容易就可能做某事）",
     "structures": [
-      {
-        "phrase": "could do something",
-        "phonetic": "/ˈkʊd ˈduː ˈsʌmθɪŋ/",
-        "chinese": "可以做某事"
-      },
-      {
-        "phrase": "could you do something",
-        "phonetic": "/ˈkʊd ˈjuː ˈduː ˈsʌmθɪŋ/",
-        "chinese": "你能做某事吗"
-      },
-      {
-        "phrase": "could be true",
-        "phonetic": "/ˈkʊd ˈbiː ˈtruː/",
-        "chinese": "可能是真的"
-      },
       {
         "phrase": "could have done something",
         "phonetic": "/ˈkʊd ˈhæv ˈdʌn ˈsʌmθɪŋ/",
-        "chinese": "本来可以做某事"
-      }
-    ],
-    "commonError": "❌ could not help to doing something → ✅ could not help doing something；❌ could to do something → ✅ could do something",
-    "commonErrors": [
-      {
-        "wrong": "could not help to doing something",
-        "wrongPhonetic": "/ˈkʊd ˈnɑt ˈhɛlp ˈtuː ˈduːɪŋ ˈsʌmθɪŋ/",
-        "right": "could not help doing something",
-        "rightPhonetic": "/ˈkʊd ˈnɑt ˈhɛlp ˈduːɪŋ ˈsʌmθɪŋ/",
-        "note": "“could not help doing something”在本义下要求动词 -ing 形式；doing 是语法占位符，应换成具体动词的 -ing 形式，前面不要额外加 to。"
+        "chinese": "本来可能或本来能够做某事"
       },
       {
-        "wrong": "could to do something",
-        "wrongPhonetic": "/ˈkʊd ˈtuː ˈduː ˈsʌmθɪŋ/",
-        "right": "could do something",
-        "rightPhonetic": "/ˈkʊd ˈduː ˈsʌmθɪŋ/",
-        "note": "情态动词 could 后面直接接动词原形，不加 to；如果结构中出现 do 或 something，需要按具体语境替换成真实内容。"
+        "phrase": "could not have done something",
+        "phonetic": "/ˈkʊd ˈnɑt ˈhæv ˈdʌn ˈsʌmθɪŋ/",
+        "chinese": "不可能做过；无法完成"
+      },
+      {
+        "phrase": "could well do something",
+        "phonetic": "/ˈkʊd ˈwɛl ˈduː ˈsʌmθɪŋ/",
+        "chinese": "很可能做某事"
+      },
+      {
+        "phrase": "could easily do something",
+        "phonetic": "/ˈkʊd ˈiːzəli ˈduː ˈsʌmθɪŋ/",
+        "chinese": "很容易就可能做某事"
       }
     ],
-    "directSynonym": "was able to /ˈwɑz ˈeɪbəl ˈtuː/（过去能够）；might /ˈmaɪt/（可能；也许）；would be able to /ˈwʊd ˈbiː ˈeɪbəl ˈtuː/（将能够；会有能力）；managed to /ˈmænədʒd ˈtuː/（设法做成了）",
-    "directAntonym": "could not /ˈkʊd ˈnɑt/（不能；不可能）",
+    "commonError": "❌ When I was five, I can read simple books. → ✅ When I was five, I could read simple books.；❌ Could you to check this figure? → ✅ Could you check this figure?",
+    "commonErrors": [
+      {
+        "wrong": "When I was five, I can read simple books.",
+        "wrongPhonetic": "/ˈwɛn ˈaɪ ˈwɑz ˈfaɪv ˈaɪ ˈkæn riːd ˈsɪmpəl ˈbʊks/",
+        "right": "When I was five, I could read simple books.",
+        "rightPhonetic": "/ˈwɛn ˈaɪ ˈwɑz ˈfaɪv ˈaɪ ˈkʊd riːd ˈsɪmpəl ˈbʊks/",
+        "note": "回顾过去持续具备的能力用 could，不用现在时 can。"
+      },
+      {
+        "wrong": "Could you to check this figure?",
+        "wrongPhonetic": "/ˈkʊd ˈjuː ˈtuː ˈtʃɛk ˈðɪs ˈfɪɡjɚ/",
+        "right": "Could you check this figure?",
+        "rightPhonetic": "/ˈkʊd ˈjuː ˈtʃɛk ˈðɪs ˈfɪɡjɚ/",
+        "note": "could 是情态动词，后面直接接动词原形 check，不再加不定式标记 to。"
+      }
+    ],
+    "directSynonym": "was able to /ˈwɑz ˈeɪbəl ˈtuː/（当时能够）；might /ˈmaɪt/（可能）；would be able to /ˈwʊd ˈbiː ˈeɪbəl ˈtuː/（将能够；会有能力）；managed to /ˈmænədʒd ˈtuː/（设法做成）；be possible to /ˈbiː ˈpɑsəbəl ˈtuː/（有可能做）",
+    "directAntonym": "be unable to /ˈbiː əˈneɪbəl ˈtuː/（无法做）",
     "derivatives": "本词暂无需额外强记的高频派生词",
     "example": "We could take the earlier train tomorrow.",
     "exampleChinese": "我们明天可以乘坐较早的那班火车。"
   },
   "meanings": [
     {
-      "partOfSpeech": "aux.",
+      "partOfSpeech": "modal v.",
       "english": "used to express ability in the past",
       "chinese": "过去能；过去会",
-      "example": "I could hardly understand the recording at first.",
-      "translation": "一开始我几乎听不懂这段录音。"
+      "example": "At six, she could already read.",
+      "translation": "她六岁时已经会阅读了。"
     },
     {
-      "partOfSpeech": "aux.",
-      "english": "used to express a present or future possibility",
+      "partOfSpeech": "modal v.",
+      "english": "used to express possibility or a suggestion",
       "chinese": "可能；可以",
-      "example": "Your explanation could be true, but we need evidence.",
-      "translation": "你的解释可能是真的，但我们需要证据。"
+      "example": "A short break could help.",
+      "translation": "短暂休息可能会有帮助。"
     },
     {
-      "partOfSpeech": "aux.",
-      "english": "used for polite requests and suggestions",
-      "chinese": "能否；可以（礼貌请求或建议）",
-      "example": "Could you read the example aloud?",
-      "translation": "你能朗读这个例句吗？"
-    },
-    {
-      "partOfSpeech": "aux.",
-      "english": "used with have for a possible but unreal past action",
-      "chinese": "本来可以；原本可能",
-      "example": "I could have saved more time by planning ahead.",
-      "translation": "如果提前计划，我本可以节省更多时间。"
+      "partOfSpeech": "modal v.",
+      "english": "used to make a polite request",
+      "chinese": "能否；可以（委婉请求）",
+      "example": "Could you repeat that, please?",
+      "translation": "请你再说一遍好吗？"
     }
   ],
   "contextPhrases": [
     {
-      "category": "核心动作与结构",
+      "category": "过去能力",
       "items": [
         {
-          "phrase": "could do something",
-          "phonetic": "/ˈkʊd ˈduː ˈsʌmθɪŋ/",
-          "chinese": "可以做某事"
+          "phrase": "could swim before school age",
+          "phonetic": "/ˈkʊd ˈswɪm bɪˈfɔːr ˈskuːl ˈeɪdʒ/",
+          "chinese": "上学前就会游泳"
         },
         {
-          "phrase": "could you do something",
-          "phonetic": "/ˈkʊd ˈjuː ˈduː ˈsʌmθɪŋ/",
-          "chinese": "你能做某事吗"
+          "phrase": "could hear every word",
+          "phonetic": "/ˈkʊd hɪr ˈɛvɚi ˈwɝːd/",
+          "chinese": "过去能听清每个字"
         },
         {
-          "phrase": "could be true",
-          "phonetic": "/ˈkʊd ˈbiː ˈtruː/",
-          "chinese": "可能是真的"
+          "phrase": "could lift it alone",
+          "phonetic": "/ˈkʊd ˈlɪft ˈɪt əˈloʊn/",
+          "chinese": "过去能独自抬起它"
+        },
+        {
+          "phrase": "could speak three languages",
+          "phonetic": "/ˈkʊd ˈspiːk ˈθriː ˈlæŋɡwədʒəz/",
+          "chinese": "过去会说三种语言"
         }
       ]
     },
     {
-      "category": "日常与工作语境",
+      "category": "现实可能",
       "items": [
         {
-          "phrase": "could have done something",
-          "phonetic": "/ˈkʊd ˈhæv ˈdʌn ˈsʌmθɪŋ/",
-          "chinese": "本来可以做某事"
+          "phrase": "could lead to delays",
+          "phonetic": "/ˈkʊd liːd ˈtuː dɪˈleɪz/",
+          "chinese": "可能导致延误"
         },
         {
-          "phrase": "could hardly do something",
-          "phonetic": "/ˈkʊd ˈhɑrdliː ˈduː ˈsʌmθɪŋ/",
-          "chinese": "几乎不能做某事"
+          "phrase": "could happen anywhere",
+          "phonetic": "/ˈkʊd ˈhæpən ˈɛniˌwɛr/",
+          "chinese": "可能在任何地方发生"
         },
         {
-          "phrase": "could not help doing something",
-          "phonetic": "/ˈkʊd ˈnɑt ˈhɛlp ˈduːɪŋ ˈsʌmθɪŋ/",
-          "chinese": "忍不住做某事"
+          "phrase": "could be the right answer",
+          "phonetic": "/ˈkʊd ˈbiː ðə ˈraɪt ˈænsɚ/",
+          "chinese": "可能是正确答案"
+        },
+        {
+          "phrase": "could still change",
+          "phonetic": "/ˈkʊd ˈstɪl ˈtʃeɪndʒ/",
+          "chinese": "仍有可能改变"
         }
       ]
     },
     {
-      "category": "高频扩展表达",
+      "category": "建议方案",
       "items": [
         {
-          "phrase": "could you call someone back",
-          "phonetic": "/ˈkʊd ˈjuː ˈkɔːl ˈsʌˌmwʌn ˈbæk/",
-          "chinese": "能否给某人回电话"
+          "phrase": "could try a different route",
+          "phonetic": "/ˈkʊd ˈtraɪ ə ˈdɪfɚənt ˈruːt/",
+          "chinese": "可以尝试另一条路线"
         },
         {
-          "phrase": "could you cook something longer",
-          "phonetic": "/ˈkʊd ˈjuː ˈkʊk ˈsʌmθɪŋ ˈlɔːŋɡɚ/",
-          "chinese": "能否把某物再煮久一点"
+          "phrase": "could ask for advice",
+          "phonetic": "/ˈkʊd ˈæsk ˈfɔːr ædˈvaɪs/",
+          "chinese": "可以寻求建议"
         },
         {
-          "phrase": "could you keep something",
-          "phonetic": "/ˈkʊd ˈjuː ˈkiːp ˈsʌmθɪŋ/",
-          "chinese": "能否保管某物"
+          "phrase": "could start with the basics",
+          "phonetic": "/ˈkʊd ˈstɑrt ˈwɪð ðə ˈbeɪsɪks/",
+          "chinese": "可以从基础开始"
+        },
+        {
+          "phrase": "could meet online instead",
+          "phonetic": "/ˈkʊd ˈmiːt ˈɔːnˌlaɪn ˌɪnˈstɛd/",
+          "chinese": "可以改为线上见面"
         }
       ]
     },
     {
-      "category": "补充常用语境",
+      "category": "礼貌请求",
       "items": [
         {
-          "phrase": "could you please not do something",
-          "phonetic": "/ˈkʊd ˈjuː ˈpliːz ˈnɑt ˈduː ˈsʌmθɪŋ/",
-          "chinese": "能否请你不要做某事"
+          "phrase": "could I borrow your charger",
+          "phonetic": "/ˈkʊd ˈaɪ ˈbɑˌroʊ ˈjɔːr ˈtʃɑrdʒɚ/",
+          "chinese": "礼貌请求借用充电器"
+        },
+        {
+          "phrase": "could you lower your voice",
+          "phonetic": "/ˈkʊd ˈjuː ˈloʊɚ ˈjɔːr ˈvɔɪs/",
+          "chinese": "请对方放低音量"
+        },
+        {
+          "phrase": "could we move the meeting",
+          "phonetic": "/ˈkʊd ˈwiː ˈmuːv ðə ˈmiːtɪŋ/",
+          "chinese": "提议调整会议时间"
+        },
+        {
+          "phrase": "could someone open the gate",
+          "phonetic": "/ˈkʊd ˈsʌmˌwʌn ˈoʊpən ðə ˈɡeɪt/",
+          "chinese": "请人打开大门"
         }
       ]
     }
   ],
   "fixedPhrases": [
     {
-      "phrase": "could do something",
-      "phonetic": "/ˈkʊd ˈduː ˈsʌmθɪŋ/",
-      "chinese": "可以做某事",
-      "example": "We could take the earlier train tomorrow.",
-      "translation": "我们明天可以乘坐较早的那班火车。"
-    },
-    {
-      "phrase": "could you do something",
-      "phonetic": "/ˈkʊd ˈjuː ˈduː ˈsʌmθɪŋ/",
-      "chinese": "你能做某事吗",
-      "example": "Could you read the example aloud?",
-      "translation": "你能朗读这个例句吗？"
-    },
-    {
-      "phrase": "could be true",
-      "phonetic": "/ˈkʊd ˈbiː ˈtruː/",
-      "chinese": "可能是真的",
-      "example": "Your explanation could be true, but we need evidence.",
-      "translation": "你的解释可能是真的，但我们需要证据。"
-    },
-    {
       "phrase": "could have done something",
       "phonetic": "/ˈkʊd ˈhæv ˈdʌn ˈsʌmθɪŋ/",
-      "chinese": "本来可以做某事",
-      "example": "I could have saved more time by planning ahead.",
-      "translation": "如果提前计划，我本可以节省更多时间。"
+      "chinese": "本来可能或本来能够做某事",
+      "example": "We could have taken an earlier train.",
+      "translation": "我们本来可以坐更早的火车。"
     },
     {
-      "phrase": "could hardly do something",
-      "phonetic": "/ˈkʊd ˈhɑrdliː ˈduː ˈsʌmθɪŋ/",
-      "chinese": "几乎不能做某事",
-      "example": "I could hardly understand the recording at first.",
-      "translation": "一开始我几乎听不懂这段录音。"
+      "phrase": "could not have done something",
+      "phonetic": "/ˈkʊd ˈnɑt ˈhæv ˈdʌn ˈsʌmθɪŋ/",
+      "chinese": "不可能做过；无法完成",
+      "example": "I could not have finished without your help.",
+      "translation": "没有你的帮助我不可能完成。"
+    },
+    {
+      "phrase": "could well do something",
+      "phonetic": "/ˈkʊd ˈwɛl ˈduː ˈsʌmθɪŋ/",
+      "chinese": "很可能做某事",
+      "example": "The delay could well continue all week.",
+      "translation": "延误很可能持续整周。"
+    },
+    {
+      "phrase": "could easily do something",
+      "phonetic": "/ˈkʊd ˈiːzəli ˈduː ˈsʌmθɪŋ/",
+      "chinese": "很容易就可能做某事",
+      "example": "The mistake could easily happen again.",
+      "translation": "这个错误很容易再次发生。"
+    },
+    {
+      "phrase": "could do with something",
+      "phonetic": "/ˈkʊd ˈduː ˈwɪð ˈsʌmθɪŋ/",
+      "chinese": "需要或想要某物",
+      "example": "I could do with a cup of tea.",
+      "translation": "我想喝杯茶。"
+    },
+    {
+      "phrase": "could not care less",
+      "phonetic": "/ˈkʊd ˈnɑt ˈkɛr ˈlɛs/",
+      "chinese": "毫不在乎",
+      "example": "He could not care less about fashion.",
+      "translation": "他一点也不在乎时尚。"
+    },
+    {
+      "phrase": "could be mistaken",
+      "phonetic": "/ˈkʊd ˈbiː mɪˈsteɪkən/",
+      "chinese": "可能弄错",
+      "example": "I could be mistaken, but this is not our train.",
+      "translation": "我可能弄错了，但这不是我们的车。"
+    },
+    {
+      "phrase": "could use some help",
+      "phonetic": "/ˈkʊd juːz ˈsʌm ˈhɛlp/",
+      "chinese": "需要一些帮助",
+      "example": "We could use some help with these boxes.",
+      "translation": "这些箱子我们需要有人帮忙搬。"
+    },
+    {
+      "phrase": "could you possibly do something",
+      "phonetic": "/ˈkʊd ˈjuː ˈpɑsəbli ˈduː ˈsʌmθɪŋ/",
+      "chinese": "能否劳驾做某事",
+      "example": "Could you possibly send it today?",
+      "translation": "能劳驾你今天发出吗？"
     },
     {
       "phrase": "could not help doing something",
       "phonetic": "/ˈkʊd ˈnɑt ˈhɛlp ˈduːɪŋ ˈsʌmθɪŋ/",
       "chinese": "忍不住做某事",
-      "example": "I could not help smiling at the example.",
-      "translation": "看到这个例子，我忍不住笑了。"
+      "example": "I could not help laughing.",
+      "translation": "我忍不住笑了。"
     },
     {
-      "phrase": "could you call someone back",
-      "phonetic": "/ˈkʊd ˈjuː ˈkɔːl ˈsʌˌmwʌn ˈbæk/",
-      "chinese": "能否给某人回电话",
-      "example": "Could you call me back a bit later?",
-      "translation": "你可以稍后回电给我吗?"
+      "phrase": "how could someone do something",
+      "phonetic": "/ˈhaʊ ˈkʊd ˈsʌmˌwʌn ˈduː ˈsʌmθɪŋ/",
+      "chinese": "某人怎么能做某事",
+      "example": "How could you forget her birthday?",
+      "translation": "你怎么能忘记她的生日？"
     },
     {
-      "phrase": "could you cook something longer",
-      "phonetic": "/ˈkʊd ˈjuː ˈkʊk ˈsʌmθɪŋ ˈlɔːŋɡɚ/",
-      "chinese": "能否把某物再煮久一点",
-      "example": "Could you cook this meat a little more?",
-      "translation": "你能多烧一点这个肉吗?"
-    },
-    {
-      "phrase": "could you keep something",
-      "phonetic": "/ˈkʊd ˈjuː ˈkiːp ˈsʌmθɪŋ/",
-      "chinese": "能否保管某物",
-      "example": "Could you keep this luggage until 3 p.m.?",
-      "translation": "你可以保管这个行李直到下午三点吗？"
-    },
-    {
-      "phrase": "could you please not do something",
-      "phonetic": "/ˈkʊd ˈjuː ˈpliːz ˈnɑt ˈduː ˈsʌmθɪŋ/",
-      "chinese": "能否请你不要做某事",
-      "example": "Could you please not smoke in this room?",
-      "translation": "请问你能不在房间里吸烟吗？"
+      "phrase": "as fast as someone could",
+      "phonetic": "/ˈæz ˈfæst ˈæz ˈsʌmˌwʌn ˈkʊd/",
+      "chinese": "尽某人所能地快",
+      "example": "She ran as fast as she could.",
+      "translation": "她尽全力快跑。"
     }
   ],
   "synonyms": [
@@ -255,38 +292,45 @@
       "word": "was able to",
       "phonetic": "/ˈwɑz ˈeɪbəl ˈtuː/",
       "partOfSpeech": "phr.",
-      "chinese": "过去能够",
-      "difference": "was able to 表示“过去能够”，与 could 的“能”义相近。was able to 常强调某次具体情境中成功做到；could 更常表示过去的一般能力。"
+      "chinese": "当时能够",
+      "difference": "用于一次实际成功的过去事件通常比 could 更合适。"
     },
     {
       "word": "might",
       "phonetic": "/ˈmaɪt/",
-      "partOfSpeech": "aux.",
-      "chinese": "可能；也许",
-      "difference": "might 表示“可能；也许”，与 could 的“能”义相近。might 只对应 could 表示不确定可能性的义项，不表示过去能力。"
+      "partOfSpeech": "modal v.",
+      "chinese": "可能",
+      "difference": "只对应较弱的可能性，不表示过去能力或请求。"
     },
     {
       "word": "would be able to",
       "phonetic": "/ˈwʊd ˈbiː ˈeɪbəl ˈtuː/",
       "partOfSpeech": "phr.",
       "chinese": "将能够；会有能力",
-      "difference": "would be able to 表示“将能够；会有能力”，与 could 的“能”义相近。would be able to 常用于假设条件下的能力；could 更简洁，也可用于委婉请求。"
+      "difference": "常用于条件结果，明确表达某条件下的能力。"
     },
     {
       "word": "managed to",
       "phonetic": "/ˈmænədʒd ˈtuː/",
       "partOfSpeech": "phr.",
-      "chinese": "设法做成了",
-      "difference": "managed to 表示“设法做成了”，与 could 的“能”义相近。managed to 强调某次具体行动最终成功；could 常表示过去的一般能力。"
+      "chinese": "设法做成",
+      "difference": "强调克服困难后实际成功，而 could 常表示一般能力。"
+    },
+    {
+      "word": "be possible to",
+      "phonetic": "/ˈbiː ˈpɑsəbəl ˈtuː/",
+      "partOfSpeech": "phr.",
+      "chinese": "有可能做",
+      "difference": "非人称地表达可行性，不带 could 的委婉请求功能。"
     }
   ],
   "antonyms": [
     {
-      "word": "could not",
-      "phonetic": "/ˈkʊd ˈnɑt/",
+      "word": "be unable to",
+      "phonetic": "/ˈbiː əˈneɪbəl ˈtuː/",
       "partOfSpeech": "phr.",
-      "chinese": "不能；不可能",
-      "usage": "could not 表示“不能；不可能”，与 could 的“能”义形成对比。could 表示过去能力、可能性或委婉请求；could not 否定对应能力或可能性。"
+      "chinese": "无法做",
+      "usage": "与 could 的实际能力义相反；过去时可说 was unable to。"
     }
   ],
   "derivatives": [],
@@ -294,91 +338,103 @@
     {
       "word": "would",
       "phonetic": "/ˈwʊd/",
-      "partOfSpeech": "v.",
-      "chinese": "将；愿意",
-      "difference": "would 表示“将；愿意”，而 could 在“could do something”中表示“能”。两者容易因拼写、发音或相近语境而混淆，使用时要根据完整句义和固定搭配区分。"
+      "partOfSpeech": "modal v.",
+      "chinese": "会；愿意",
+      "difference": "would 侧重意愿或条件结果；could 侧重能力、可行性或可能性。"
     },
     {
       "word": "can",
       "phonetic": "/ˈkæn/",
-      "partOfSpeech": "v.",
-      "chinese": "装罐",
-      "difference": "can 表示“装罐”，而 could 在“could do something”中表示“能”。两者容易因拼写、发音或相近语境而混淆，使用时要根据完整句义和固定搭配区分。"
+      "partOfSpeech": "modal v.",
+      "chinese": "能；可以",
+      "difference": "can 通常直接表示现在能力或许可；could 可表过去的一般能力，也能使请求更委婉。"
     }
   ],
   "relatedVocabulary": [
     {
-      "category": "同一语义场的高频词",
+      "category": "过去能力",
       "items": [
         {
-          "word": "past ability",
-          "phonetic": "/ˈpæst əˈbɪləˌtiː/",
-          "partOfSpeech": "phr.",
-          "chinese": "过去的能力"
-        },
-        {
-          "word": "possibility",
-          "phonetic": "/ˌpɑsəˈbɪləˌtiː/",
+          "word": "childhood",
+          "phonetic": "/ˈtʃaɪldˌhʊd/",
           "partOfSpeech": "n.",
-          "chinese": "可能性"
+          "chinese": "童年"
         },
         {
-          "word": "polite request",
-          "phonetic": "/pəˈlaɪt rɪˈkwɛst/",
-          "partOfSpeech": "phr.",
-          "chinese": "礼貌请求"
+          "word": "talent",
+          "phonetic": "/ˈtælənt/",
+          "partOfSpeech": "n.",
+          "chinese": "天赋"
+        },
+        {
+          "word": "training",
+          "phonetic": "/ˈtreɪnɪŋ/",
+          "partOfSpeech": "n.",
+          "chinese": "训练"
+        },
+        {
+          "word": "achievement",
+          "phonetic": "/əˈtʃiːvmənt/",
+          "partOfSpeech": "n.",
+          "chinese": "成就"
         }
       ]
     },
     {
-      "category": "近义表达分类",
+      "category": "可能建议",
       "items": [
         {
-          "word": "was able to",
-          "phonetic": "/ˈwɑz ˈeɪbəl ˈtuː/",
-          "partOfSpeech": "phr.",
-          "chinese": "过去能够"
+          "word": "chance",
+          "phonetic": "/ˈtʃæns/",
+          "partOfSpeech": "n.",
+          "chinese": "可能性；机会"
         },
         {
-          "word": "might",
-          "phonetic": "/ˈmaɪt/",
-          "partOfSpeech": "aux.",
-          "chinese": "可能；也许"
+          "word": "option",
+          "phonetic": "/ˈɑpʃən/",
+          "partOfSpeech": "n.",
+          "chinese": "选项"
         },
         {
-          "word": "would be able to",
-          "phonetic": "/ˈwʊd ˈbiː ˈeɪbəl ˈtuː/",
-          "partOfSpeech": "phr.",
-          "chinese": "将能够；会有能力"
+          "word": "alternative",
+          "phonetic": "/ɔːlˈtɝːnətɪv/",
+          "partOfSpeech": "n.",
+          "chinese": "替代方案"
         },
         {
-          "word": "managed to",
-          "phonetic": "/ˈmænədʒd ˈtuː/",
-          "partOfSpeech": "phr.",
-          "chinese": "设法做成了"
+          "word": "uncertain",
+          "phonetic": "/ənˈsɝːtən/",
+          "partOfSpeech": "adj.",
+          "chinese": "不确定的"
         }
       ]
     },
     {
-      "category": "对比与易混表达分类",
+      "category": "礼貌程度",
       "items": [
         {
-          "word": "could not",
-          "phonetic": "/ˈkʊd ˈnɑt/",
-          "partOfSpeech": "phr.",
-          "chinese": "不能；不可能"
+          "word": "polite",
+          "phonetic": "/pəˈlaɪt/",
+          "partOfSpeech": "adj.",
+          "chinese": "礼貌的"
         },
         {
-          "word": "would",
-          "phonetic": "/ˈwʊd/",
-          "partOfSpeech": "v.",
-          "chinese": "将；愿意"
+          "word": "indirect",
+          "phonetic": "/ˌɪndɚˈɛkt/",
+          "partOfSpeech": "adj.",
+          "chinese": "间接的"
         },
         {
-          "word": "can",
-          "phonetic": "/ˈkæn/",
-          "partOfSpeech": "v.",
-          "chinese": "装罐"
+          "word": "favor",
+          "phonetic": "/ˈfeɪvɚ/",
+          "partOfSpeech": "n.",
+          "chinese": "帮忙；恩惠"
+        },
+        {
+          "word": "courtesy",
+          "phonetic": "/ˈkɝːtəsi/",
+          "partOfSpeech": "n.",
+          "chinese": "礼貌"
         }
       ]
     }
@@ -390,62 +446,72 @@
       "chinese": "我们明天可以乘坐较早的那班火车。"
     },
     {
-      "scene": "工作或学习",
-      "english": "Could you read the example aloud?",
-      "chinese": "你能朗读这个例句吗？"
-    },
-    {
-      "scene": "常见搭配",
-      "english": "Your explanation could be true, but we need evidence.",
-      "chinese": "你的解释可能是真的，但我们需要证据。"
-    },
-    {
-      "scene": "真实语境",
-      "english": "I could have saved more time by planning ahead.",
-      "chinese": "如果提前计划，我本可以节省更多时间。"
-    },
-    {
-      "scene": "易错结构",
-      "english": "I could hardly understand the recording at first.",
-      "chinese": "一开始我几乎听不懂这段录音。"
-    },
-    {
-      "scene": "主动表达",
-      "english": "I could not help smiling at the example.",
-      "chinese": "看到这个例子，我忍不住笑了。"
-    },
-    {
       "scene": "日常交流",
-      "english": "Could you call me back a bit later?",
-      "chinese": "你可以稍后回电给我吗?"
+      "english": "We could have taken an earlier train.",
+      "chinese": "我们本来可以坐更早的火车。"
     },
     {
       "scene": "工作沟通",
-      "english": "Could you cook this meat a little more?",
-      "chinese": "你能多烧一点这个肉吗?"
+      "english": "I could not have finished without your help.",
+      "chinese": "没有你的帮助我不可能完成。"
     },
     {
       "scene": "学习表达",
-      "english": "Could you keep this luggage until 3 p.m.?",
-      "chinese": "你可以保管这个行李直到下午三点吗？"
+      "english": "The delay could well continue all week.",
+      "chinese": "延误很可能持续整周。"
     },
     {
       "scene": "书面表达",
-      "english": "Could you please not smoke in this room?",
-      "chinese": "请问你能不在房间里吸烟吗？"
+      "english": "The mistake could easily happen again.",
+      "chinese": "这个错误很容易再次发生。"
+    },
+    {
+      "scene": "日常交流",
+      "english": "I could do with a cup of tea.",
+      "chinese": "我想喝杯茶。"
+    },
+    {
+      "scene": "工作沟通",
+      "english": "He could not care less about fashion.",
+      "chinese": "他一点也不在乎时尚。"
+    },
+    {
+      "scene": "学习表达",
+      "english": "I could be mistaken, but this is not our train.",
+      "chinese": "我可能弄错了，但这不是我们的车。"
+    },
+    {
+      "scene": "书面表达",
+      "english": "We could use some help with these boxes.",
+      "chinese": "这些箱子我们需要有人帮忙搬。"
+    },
+    {
+      "scene": "日常交流",
+      "english": "Could you possibly send it today?",
+      "chinese": "能劳驾你今天发出吗？"
+    },
+    {
+      "scene": "工作沟通",
+      "english": "I could not help laughing.",
+      "chinese": "我忍不住笑了。"
+    },
+    {
+      "scene": "学习表达",
+      "english": "How could you forget her birthday?",
+      "chinese": "你怎么能忘记她的生日？"
     }
   ],
   "studyFocus": {
-    "coreMeaning": "先掌握“过去能；过去会”这个核心义，再对比另外 3 个常用义项，辨别不同语境。",
+    "coreMeaning": "先掌握“过去能；过去会”这个核心义，再对比另外 2 个常用义项，辨别不同语境。",
     "keyCollocation": "把“could do something”连同介词、宾语和动词形式作为整个句块记忆。",
-    "commonMistake": "“could not help doing something”在本义下要求动词 -ing 形式；doing 是语法占位符，应换成具体动词的 -ing 形式，前面不要额外加 to。",
+    "commonMistake": "回顾过去持续具备的能力用 could，不用现在时 can。",
     "mustUseExample": "We could take the earlier train tomorrow.（我们明天可以乘坐较早的那班火车。）"
   },
   "questions": [
     {
       "id": "could-v-meaning-core",
       "type": "meaning_choice",
-      "prompt": "“could”最核心的中文含义是？",
+      "prompt": "“could”最常见的核心中文义是哪一项？",
       "options": [
         "保持",
         "支付",
@@ -458,7 +524,7 @@
     {
       "id": "could-v-meaning-english",
       "type": "meaning_choice",
-      "prompt": "哪一项英文释义最符合词卡中的 “could”？",
+      "prompt": "“could”最常见的英文释义是哪一项？",
       "options": [
         "to give money, attention, or a particular cost",
         "used to express ability in the past",
@@ -471,26 +537,26 @@
     {
       "id": "could-v-structure-choice-v3",
       "type": "meaning_choice",
-      "prompt": "核心结构辨析：哪一项既表示“可以做某事”，又符合这个形式线索：情态动词结构中使用动词原形；do 是语法占位符，要换成具体动词原形？",
+      "prompt": "核心结构辨析：哪一项既表示“本来可能或本来能够做某事”，又符合这个形式线索：完整结构中的 done 是语法占位符，要换成符合语境的过去分词？",
       "options": [
-        "could be true",
+        "could well do something",
+        "could easily do something",
         "could have done something",
-        "could do something",
-        "could you do something"
+        "could not have done something"
       ],
-      "answer": "could do something",
+      "answer": "could have done something",
       "stage": "T1",
       "ai": false
     },
     {
       "id": "could-v-synonym-choice",
       "type": "meaning_choice",
-      "prompt": "哪个词是词卡中列出的 “could” 最直接近义词？",
+      "prompt": "在“当时能够”这个义项下，哪个词与“could”意思最接近？",
       "options": [
-        "keep",
+        "be bound to",
         "was able to",
-        "could not",
-        "would"
+        "account for",
+        "be aware of"
       ],
       "answer": "was able to",
       "stage": "T2",
@@ -499,35 +565,21 @@
     {
       "id": "could-v-antonym-choice",
       "type": "meaning_choice",
-      "prompt": "哪个词是词卡中列出的 “could” 最直接反义词？",
+      "prompt": "在“过去能；过去会”这个义项下，哪个词与“could”意思相反？",
       "options": [
-        "could not",
-        "was able to",
-        "would",
-        "keep"
+        "be unable to",
+        "be convinced",
+        "be necessary",
+        "bear in mind"
       ],
-      "answer": "could not",
+      "answer": "be unable to",
       "stage": "T2",
-      "ai": false
-    },
-    {
-      "id": "could-v-contrast-choice",
-      "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “could” 的易混词？",
-      "options": [
-        "was able to",
-        "could not",
-        "keep",
-        "would"
-      ],
-      "answer": "would",
-      "stage": "T3",
       "ai": false
     },
     {
       "id": "could-v-recall-definition",
       "type": "recall",
-      "prompt": "根据英文释义写出目标词：used to express ability in the past",
+      "prompt": "根据英文释义写出对应单词：used to express ability in the past",
       "answer": "could",
       "stage": "T1",
       "ai": false
@@ -535,7 +587,7 @@
     {
       "id": "could-v-recall-chinese",
       "type": "recall",
-      "prompt": "写出符合“过去能；过去会”（aux.）的本课目标词。",
+      "prompt": "写出表示“过去能；过去会”（modal v.）的英文单词。",
       "answer": "could",
       "stage": "T1",
       "ai": false
@@ -551,27 +603,21 @@
     {
       "id": "could-v-collocation-structure-meaning-v3",
       "type": "collocation",
-      "prompt": "句型应用：哪一项既表示“你能做某事吗”，又符合这个形式线索：情态动词结构中使用动词原形；do 是语法占位符，要换成具体动词原形？",
+      "prompt": "句型应用：哪一项既表示“不可能做过；无法完成”，又符合这个形式线索：完整结构中的 done 是语法占位符，要换成符合语境的过去分词？",
       "options": [
-        "could you do something",
-        "could do something",
-        "could be true",
-        "could have done something"
+        "could not have done something",
+        "could have done something",
+        "could well do something",
+        "could easily do something"
       ],
-      "answer": "could you do something",
+      "answer": "could not have done something",
       "stage": "T1",
       "ai": false
     },
     {
       "id": "could-v-collocation-example-context-v3",
       "type": "collocation",
-      "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：We could _____ the earlier train tomorrow.（中文：我们明天可以乘坐较早的那班火车。）",
-      "options": [
-        "practicing",
-        "books",
-        "home",
-        "take"
-      ],
+      "prompt": "根据完整句意和中文提示补全原句：We could _____ the earlier train tomorrow.（中文：我们明天可以乘坐较早的那班火车。）",
       "answer": "take",
       "stage": "T2",
       "ai": false
@@ -579,35 +625,35 @@
     {
       "id": "could-v-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“可以做某事”，又符合这个形式线索：情态动词结构中使用动词原形；do 是语法占位符，要换成具体动词原形？",
+      "prompt": "搭配辨析：哪一项既表示“需要或想要某物”，又符合这个形式线索：情态或准情态结构后接动词原形？",
       "options": [
-        "could be true",
-        "could have done something",
-        "could do something",
-        "could you do something"
+        "could not have done something",
+        "could well do something",
+        "could do with something",
+        "could have done something"
       ],
-      "answer": "could do something",
+      "answer": "could do with something",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "could-v-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“你能做某事吗”，又符合这个形式线索：情态动词结构中使用动词原形；do 是语法占位符，要换成具体动词原形？",
+      "prompt": "用法辨析：哪一项既表示“毫不在乎”，又符合这个形式线索：情态或准情态结构后接动词原形？",
       "options": [
+        "could well do something",
+        "could not care less",
         "could have done something",
-        "could you do something",
-        "could do something",
-        "could be true"
+        "could not have done something"
       ],
-      "answer": "could you do something",
+      "answer": "could not care less",
       "stage": "T3",
       "ai": false
     },
     {
       "id": "could-v-example-cloze",
       "type": "collocation",
-      "prompt": "根据句意补全词卡核心例句：We _____ take the earlier train tomorrow.（填写 could 的正确形式）",
+      "prompt": "根据句意和中文提示补全另一个常用例句：We _____ have taken an earlier train.（填写 could 的正确形式）（中文：我们本来可以坐更早的火车。）",
       "answer": "could",
       "stage": "T3",
       "ai": false
@@ -615,7 +661,7 @@
     {
       "id": "could-v-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “could” 写一个自然、真实的英文句子，含义必须符合词卡核心义“过去能；过去会”。",
+      "prompt": "请用 “could” 写一个自然、真实的英文句子，含义必须符合核心义“过去能；过去会”。",
       "answer": "",
       "stage": "T2",
       "ai": true
@@ -623,7 +669,7 @@
     {
       "id": "could-v-sentence-phrase",
       "type": "free_sentence",
-      "prompt": "请使用 “could do something” 结构写一个与自己有关的自然英文句子；something 要替换成实际的事物或内容。",
+      "prompt": "请使用 “could do with something” 结构写一个与自己有关的自然英文句子；something 要替换成实际的事物或内容。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -631,7 +677,7 @@
     {
       "id": "could-v-dialogue",
       "type": "dialogue",
-      "prompt": "写一段 2–4 轮真实对话，自然使用 “could” 和 “could you do something” 结构，并避免中文直译；something 要替换成实际的事物或内容。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “could” 和 “could swim before school age” 结构，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -689,9 +735,10 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-complete",
-  "templateVersion": "learning-template-2026.09.10.3",
-  "contentVersion": "2026.09.10.3",
-  "reviewed": false,
+  "detailLevel": "template-curated",
+  "templateVersion": "learning-template-2026.09.10.4",
+  "contentVersion": "2026.09.10.4",
+  "reviewed": true,
+  "curationSource": "manual-semantic-pack-2026.09.10.4",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

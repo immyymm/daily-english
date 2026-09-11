@@ -34,14 +34,19 @@
     "主动词汇"
   ],
   "coreMemory": {
-    "chinese": "爱；非常喜欢",
-    "english": "v. to feel deep affection, greatly enjoy something",
-    "structure": "love doing something /ˈlʌv ˈduːɪŋ ˈsʌmθɪŋ/（喜欢做某事）；love to do something /ˈlʌv ˈtuː ˈduː ˈsʌmθɪŋ/（喜欢做某事）；love someone deeply /ˈlʌv ˈsʌˌmwʌn ˈdiːpliː/（深爱某人）；would love to do something /ˈwʊd ˈlʌv ˈtuː ˈduː ˈsʌmθɪŋ/（很想做某事）",
+    "chinese": "爱；深爱；非常喜欢",
+    "english": "v. to feel deep affection for someone；v. to like or enjoy something very much",
+    "structure": "love someone deeply /ˈlʌv ˈsʌmˌwʌn ˈdiːpli/（深爱某人）；love doing something /ˈlʌv ˈduːɪŋ ˈsʌmθɪŋ/（很喜欢做某事）；love to do something /ˈlʌv ˈtuː ˈduː ˈsʌmθɪŋ/（喜欢做某事）；would love to do something /ˈwʊd ˈlʌv ˈtuː ˈduː ˈsʌmθɪŋ/（很愿意；很想做某事）",
     "structures": [
+      {
+        "phrase": "love someone deeply",
+        "phonetic": "/ˈlʌv ˈsʌmˌwʌn ˈdiːpli/",
+        "chinese": "深爱某人"
+      },
       {
         "phrase": "love doing something",
         "phonetic": "/ˈlʌv ˈduːɪŋ ˈsʌmθɪŋ/",
-        "chinese": "喜欢做某事"
+        "chinese": "很喜欢做某事"
       },
       {
         "phrase": "love to do something",
@@ -49,190 +54,236 @@
         "chinese": "喜欢做某事"
       },
       {
-        "phrase": "love someone deeply",
-        "phonetic": "/ˈlʌv ˈsʌˌmwʌn ˈdiːpliː/",
-        "chinese": "深爱某人"
-      },
-      {
         "phrase": "would love to do something",
         "phonetic": "/ˈwʊd ˈlʌv ˈtuː ˈduː ˈsʌmθɪŋ/",
-        "chinese": "很想做某事"
+        "chinese": "很愿意；很想做某事"
       }
     ],
-    "commonError": "❌ love to doing something → ✅ love doing something；❌ love to does something → ✅ love to do something",
+    "commonError": "❌ love to doing it → ✅ love to do it / love doing it；❌ I very love it → ✅ I really love it",
     "commonErrors": [
       {
-        "wrong": "love to doing something",
-        "wrongPhonetic": "/ˈlʌv ˈtuː ˈduːɪŋ ˈsʌmθɪŋ/",
-        "right": "love doing something",
-        "rightPhonetic": "/ˈlʌv ˈduːɪŋ ˈsʌmθɪŋ/",
-        "note": "“love doing something”在本义下要求动词 -ing 形式；doing 是语法占位符，应换成具体动词的 -ing 形式，前面不要额外加 to。"
+        "wrong": "love to doing it",
+        "wrongPhonetic": "/ˈlʌv ˈtuː ˈduːɪŋ ˈɪt/",
+        "right": "love to do it / love doing it",
+        "rightPhonetic": "/ˈlʌv ˈtuː ˈduː ˈɪt ˈlʌv ˈduːɪŋ ˈɪt/",
+        "note": "love 可接 to do 或 doing，不可用 to doing"
       },
       {
-        "wrong": "love to does something",
-        "wrongPhonetic": "/ˈlʌv ˈtuː ˈdʌz ˈsʌmθɪŋ/",
-        "right": "love to do something",
-        "rightPhonetic": "/ˈlʌv ˈtuː ˈduː ˈsʌmθɪŋ/",
-        "note": "在“love to do something”中，这个 to 是不定式标记，后面必须接动词原形。do 只是语法占位符，真实表达要把它换成 finish、check 等符合语境的动词原形。"
+        "wrong": "I very love it",
+        "wrongPhonetic": "/ˈaɪ ˈvɛri ˈlʌv ˈɪt/",
+        "right": "I really love it",
+        "rightPhonetic": "/ˈaɪ ˈrɪli ˈlʌv ˈɪt/",
+        "note": "修饰动词 love 通常用 really/absolutely，不直接用 very"
       }
     ],
-    "directSynonym": "adore /əˈdɔːr/（热爱；非常喜欢）；cherish /ˈtʃɛrɪʃ/（珍爱；怀有；爱护）；like /ˈlaɪk/（喜欢；愿意；想）；care for /ˈkɛr ˈfɔːr/（喜爱；照料）",
-    "directAntonym": "hate /ˈheɪt/（讨厌；憎恨）",
-    "derivatives": "loving · lovable · lovely",
+    "directSynonym": "adore /əˈdɔːr/（非常喜爱）；cherish /ˈtʃɛrɪʃ/（珍爱）；be fond of /ˈbiː ˈfɑnd ˈʌv/（喜欢）；enjoy /ˌɛnˈdʒɔɪ/（喜欢；享受）；care deeply for /ˈkɛr ˈdiːpli ˈfɔːr/（深爱；十分关心）",
+    "directAntonym": "hate /ˈheɪt/（憎恨；非常不喜欢）",
+    "derivatives": "lover · loving · lovable · lovingly",
     "example": "I love learning expressions that I can use immediately.",
     "exampleChinese": "我喜欢学习能立刻使用的表达。"
   },
   "meanings": [
     {
       "partOfSpeech": "v.",
-      "english": "to feel deep affection, greatly enjoy something",
-      "chinese": "爱；非常喜欢",
-      "example": "I love learning expressions that I can use immediately.",
-      "translation": "我喜欢学习能立刻使用的表达。"
+      "english": "to feel deep affection for someone",
+      "chinese": "爱；深爱",
+      "example": "He loves his children deeply.",
+      "translation": "他深爱自己的孩子。"
+    },
+    {
+      "partOfSpeech": "v.",
+      "english": "to like or enjoy something very much",
+      "chinese": "非常喜欢",
+      "example": "I love walking by the sea.",
+      "translation": "我很喜欢在海边散步。"
     }
   ],
   "contextPhrases": [
     {
-      "category": "核心动作与结构",
+      "category": "亲情与关系",
       "items": [
         {
-          "phrase": "love doing something",
-          "phonetic": "/ˈlʌv ˈduːɪŋ ˈsʌmθɪŋ/",
-          "chinese": "喜欢做某事"
+          "phrase": "love one's adopted child deeply",
+          "phonetic": "/ˈlʌv ˈwʌnz əˈdɑptɪd ˈtʃaɪld ˈdiːpli/",
+          "chinese": "深爱自己的养子女"
         },
         {
-          "phrase": "love to do something",
-          "phonetic": "/ˈlʌv ˈtuː ˈduː ˈsʌmθɪŋ/",
-          "chinese": "喜欢做某事"
+          "phrase": "love and support each other",
+          "phonetic": "/ˈlʌv ənd səˈpɔːrt ˈiːtʃ ˈʌðɚ/",
+          "chinese": "彼此关爱与支持"
         },
         {
-          "phrase": "love someone deeply",
-          "phonetic": "/ˈlʌv ˈsʌˌmwʌn ˈdiːpliː/",
-          "chinese": "深爱某人"
+          "phrase": "love one's family deeply",
+          "phonetic": "/ˈlʌv ˈwʌnz ˈfæməli ˈdiːpli/",
+          "chinese": "深爱家人"
+        },
+        {
+          "phrase": "feel loved and accepted",
+          "phonetic": "/ˈfiːl ˈlʌvd ənd ækˈsɛptɪd/",
+          "chinese": "感到被爱和被接纳"
         }
       ]
     },
     {
-      "category": "日常与工作语境",
+      "category": "偏好与享受",
       "items": [
         {
-          "phrase": "would love to do something",
-          "phonetic": "/ˈwʊd ˈlʌv ˈtuː ˈduː ˈsʌmθɪŋ/",
-          "chinese": "很想做某事"
+          "phrase": "love spicy food",
+          "phonetic": "/ˈlʌv ˈspaɪsi ˈfuːd/",
+          "chinese": "非常喜欢辣食"
         },
         {
-          "phrase": "love something about someone",
-          "phonetic": "/ˈlʌv ˈsʌmθɪŋ əˈbaʊt ˈsʌˌmwʌn/",
-          "chinese": "喜欢某人的某个方面"
+          "phrase": "love spending time outdoors",
+          "phonetic": "/ˈlʌv ˈspɛndɪŋ ˈtaɪm ˌaʊtˈdɔːrz/",
+          "chinese": "很喜欢待在户外"
         },
         {
-          "phrase": "fall in love with something",
-          "phonetic": "/ˈfɔːl ɪn ˈlʌv ˈwɪð ˈsʌmθɪŋ/",
-          "chinese": "爱上某人或某物"
+          "phrase": "love the sound of rain",
+          "phonetic": "/ˈlʌv ðə ˈsaʊnd ˈʌv ˈreɪn/",
+          "chinese": "很喜欢雨声"
+        },
+        {
+          "phrase": "love learning new things",
+          "phonetic": "/ˈlʌv ˈlɝːnɪŋ ˈnuː ˈθɪŋz/",
+          "chinese": "热爱学习新事物"
         }
       ]
     },
     {
-      "category": "高频扩展表达",
+      "category": "口语愿望",
       "items": [
         {
-          "phrase": "love something for something",
-          "phonetic": "/ˈlʌv ˈsʌmθɪŋ ˈfɔːr ˈsʌmθɪŋ/",
-          "chinese": "因为某事物的特点而喜欢它"
+          "phrase": "would love to join",
+          "phonetic": "/ˈwʊd ˈlʌv ˈtuː ˈdʒɔɪn/",
+          "chinese": "很愿意加入"
         },
         {
-          "phrase": "love having someone over",
-          "phonetic": "/ˈlʌv ˈhævɪŋ ˈsʌˌmwʌn ˈoʊvɚ/",
-          "chinese": "喜欢邀请朋友来家里"
+          "phrase": "love the idea of another chance",
+          "phonetic": "/ˈlʌv ðə aɪˈdiːə ˈʌv əˈnʌðɚ ˈtʃæns/",
+          "chinese": "很希望再有一次机会"
         },
         {
-          "phrase": "love someone",
-          "phonetic": "/ˈlʌv ˈsʌˌmwʌn/",
-          "chinese": "爱某人"
+          "phrase": "I'd love you to come",
+          "phonetic": "/ˈaɪd ˈlʌv ˈjuː ˈtuː ˈkʌm/",
+          "chinese": "我很希望你来"
+        },
+        {
+          "phrase": "love nothing more than reading",
+          "phonetic": "/ˈlʌv ˈnʌθɪŋ ˈmɔːr ˈðæn ˈriːdɪŋ/",
+          "chinese": "最喜欢的就是阅读"
         }
       ]
     },
     {
-      "category": "补充常用语境",
+      "category": "喜爱程度与称呼",
       "items": [
         {
-          "phrase": "love to sing with a band",
-          "phonetic": "/ˈlʌv ˈtuː ˈsɪŋ ˈwɪð ə ˈbænd/",
-          "chinese": "喜欢和乐队一起唱歌"
+          "phrase": "love a partner without trying to change them",
+          "phonetic": "/ˈlʌv ə ˈpɑrtnɚ wɪˈθaʊt ˈtraɪɪŋ ˈtuː ˈtʃeɪndʒ ˈðɛm/",
+          "chinese": "爱伴侣而不试图改变对方"
+        },
+        {
+          "phrase": "fall deeply in love",
+          "phonetic": "/ˈfɔːl ˈdiːpli ɪn ˈlʌv/",
+          "chinese": "深深爱上"
+        },
+        {
+          "phrase": "send warm love to someone",
+          "phonetic": "/ˈsɛnd ˈwɔːrm ˈlʌv ˈtuː ˈsʌmˌwʌn/",
+          "chinese": "向某人送上深情问候"
+        },
+        {
+          "phrase": "love every minute of the trip",
+          "phonetic": "/ˈlʌv ˈɛvɚi ˈmɪnət ˈʌv ðə ˈtrɪp/",
+          "chinese": "非常享受旅程的每一分钟"
         }
       ]
     }
   ],
   "fixedPhrases": [
     {
+      "phrase": "love someone deeply",
+      "phonetic": "/ˈlʌv ˈsʌmˌwʌn ˈdiːpli/",
+      "chinese": "深爱某人",
+      "example": "She loves her children deeply.",
+      "translation": "她深爱自己的孩子。"
+    },
+    {
       "phrase": "love doing something",
       "phonetic": "/ˈlʌv ˈduːɪŋ ˈsʌmθɪŋ/",
-      "chinese": "喜欢做某事",
-      "example": "I love learning expressions that I can use immediately.",
-      "translation": "我喜欢学习能立刻使用的表达。"
+      "chinese": "很喜欢做某事",
+      "example": "I love walking beside the sea.",
+      "translation": "我很喜欢在海边散步。"
     },
     {
       "phrase": "love to do something",
       "phonetic": "/ˈlʌv ˈtuː ˈduː ˈsʌmθɪŋ/",
       "chinese": "喜欢做某事",
-      "example": "We love to walk by the river after dinner.",
-      "translation": "我们喜欢晚饭后沿河散步。"
-    },
-    {
-      "phrase": "love someone deeply",
-      "phonetic": "/ˈlʌv ˈsʌˌmwʌn ˈdiːpliː/",
-      "chinese": "深爱某人",
-      "example": "She loves her family deeply.",
-      "translation": "她深爱自己的家人。"
+      "example": "They love to cook for friends.",
+      "translation": "他们喜欢给朋友做饭。"
     },
     {
       "phrase": "would love to do something",
       "phonetic": "/ˈwʊd ˈlʌv ˈtuː ˈduː ˈsʌmθɪŋ/",
-      "chinese": "很想做某事",
-      "example": "I would love to visit the museum this weekend.",
-      "translation": "我这周末很想去参观博物馆。"
+      "chinese": "很愿意；很想做某事",
+      "example": "We would love to visit again.",
+      "translation": "我们很愿意再来。"
     },
     {
-      "phrase": "love something about someone",
-      "phonetic": "/ˈlʌv ˈsʌmθɪŋ əˈbaʊt ˈsʌˌmwʌn/",
-      "chinese": "喜欢某人的某个方面",
-      "example": "I love the way she explains difficult ideas.",
-      "translation": "我喜欢她解释难点的方式。"
-    },
-    {
-      "phrase": "fall in love with something",
-      "phonetic": "/ˈfɔːl ɪn ˈlʌv ˈwɪð ˈsʌmθɪŋ/",
-      "chinese": "爱上某人或某物",
+      "phrase": "fall in love with",
+      "phonetic": "/ˈfɔːl ɪn ˈlʌv ˈwɪð/",
+      "chinese": "爱上……",
       "example": "He fell in love with the city during his first visit.",
-      "translation": "他第一次到访时就爱上了这座城市。"
+      "translation": "他第一次来访就爱上了这座城市。"
     },
     {
-      "phrase": "love something for something",
-      "phonetic": "/ˈlʌv ˈsʌmθɪŋ ˈfɔːr ˈsʌmθɪŋ/",
-      "chinese": "因为某事物的特点而喜欢它",
-      "example": "I love this city for its quiet parks.",
-      "translation": "我喜欢这座城市安静的公园。"
+      "phrase": "be in love with",
+      "phonetic": "/ˈbiː ɪn ˈlʌv ˈwɪð/",
+      "chinese": "爱着……",
+      "example": "They have been in love for many years.",
+      "translation": "他们相爱多年。"
     },
     {
-      "phrase": "love having someone over",
-      "phonetic": "/ˈlʌv ˈhævɪŋ ˈsʌˌmwʌn ˈoʊvɚ/",
-      "chinese": "喜欢邀请朋友来家里",
-      "example": "She loves having friends over for dinner.",
-      "translation": "她喜欢邀请朋友来家里吃饭。"
+      "phrase": "love someone for something",
+      "phonetic": "/ˈlʌv ˈsʌmˌwʌn ˈfɔːr ˈsʌmθɪŋ/",
+      "chinese": "因某特点而爱某人",
+      "example": "I love her for her honesty.",
+      "translation": "我因她的坦诚而爱她。"
     },
     {
-      "phrase": "love someone",
-      "phonetic": "/ˈlʌv ˈsʌˌmwʌn/",
-      "chinese": "爱某人",
-      "example": "I love him, but he loves someone else.",
-      "translation": "我爱他，但他有了心上人。"
+      "phrase": "love every minute of",
+      "phonetic": "/ˈlʌv ˈɛvɚi ˈmɪnət ˈʌv/",
+      "chinese": "尽情享受……的每一刻",
+      "example": "We loved every minute of the concert.",
+      "translation": "我们尽情享受了音乐会的每一刻。"
     },
     {
-      "phrase": "love someone deeply",
-      "phonetic": "/ˈlʌv ˈsʌˌmwʌn ˈdiːpliː/",
-      "chinese": "深爱某人",
-      "example": "I love you more than you love me.",
-      "translation": "我爱你多于你爱我。"
+      "phrase": "love nothing more than",
+      "phonetic": "/ˈlʌv ˈnʌθɪŋ ˈmɔːr ˈðæn/",
+      "chinese": "最喜欢的莫过于",
+      "example": "She loves nothing more than a quiet morning.",
+      "translation": "她最喜欢的莫过于宁静的清晨。"
+    },
+    {
+      "phrase": "send someone one's love",
+      "phonetic": "/ˈsɛnd ˈsʌmˌwʌn ˈwʌnz ˈlʌv/",
+      "chinese": "向某人转达关爱",
+      "example": "Send your parents our love.",
+      "translation": "请向你父母转达我们的关爱。"
+    },
+    {
+      "phrase": "love someone unconditionally",
+      "phonetic": "/ˈlʌv ˈsʌmˌwʌn ˌʌnkənˈdɪʃənəli/",
+      "chinese": "无条件地爱某人",
+      "example": "Good parents love their children unconditionally.",
+      "translation": "好父母无条件地爱孩子。"
+    },
+    {
+      "phrase": "for the love of",
+      "phonetic": "/ˈfɔːr ðə ˈlʌv ˈʌv/",
+      "chinese": "出于对……的热爱",
+      "example": "He teaches music for the love of it.",
+      "translation": "他因热爱音乐而教音乐。"
     }
   ],
   "synonyms": [
@@ -240,29 +291,36 @@
       "word": "adore",
       "phonetic": "/əˈdɔːr/",
       "partOfSpeech": "v.",
-      "chinese": "热爱；非常喜欢",
-      "difference": "adore 表示“热爱；非常喜欢”，与 love 的“爱”义相近。两词只有在这一义项重合时才能互换；love 的其他常用义不一定适用。"
+      "chinese": "非常喜爱",
+      "difference": "感情色彩比 love 更强烈；情感强度及可接人物、事物或活动的结构不同"
     },
     {
       "word": "cherish",
       "phonetic": "/ˈtʃɛrɪʃ/",
       "partOfSpeech": "v.",
-      "chinese": "珍爱；怀有；爱护",
-      "difference": "cherish 常表示“珍爱；怀有；爱护”，与 love 的“爱”义有重合。cherish 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+      "chinese": "珍爱",
+      "difference": "强调长期珍视人、关系或回忆；情感强度及可接人物、事物或活动的结构不同"
     },
     {
-      "word": "like",
-      "phonetic": "/ˈlaɪk/",
-      "partOfSpeech": "v.",
-      "chinese": "喜欢；愿意；想",
-      "difference": "like 常表示“喜欢；愿意；想”，与 love 的“爱”义有重合。like 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
-    },
-    {
-      "word": "care for",
-      "phonetic": "/ˈkɛr ˈfɔːr/",
+      "word": "be fond of",
+      "phonetic": "/ˈbiː ˈfɑnd ˈʌv/",
       "partOfSpeech": "phr.",
-      "chinese": "喜爱；照料",
-      "difference": "care for 常表示“喜爱；照料”，与 love 的“爱”义有重合。care for 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+      "chinese": "喜欢",
+      "difference": "语气温和，常指稳定偏好；情感强度及可接人物、事物或活动的结构不同"
+    },
+    {
+      "word": "enjoy",
+      "phonetic": "/ˌɛnˈdʒɔɪ/",
+      "partOfSpeech": "v.",
+      "chinese": "喜欢；享受",
+      "difference": "侧重从活动或事物中获得乐趣；情感强度及可接人物、事物或活动的结构不同"
+    },
+    {
+      "word": "care deeply for",
+      "phonetic": "/ˈkɛr ˈdiːpli ˈfɔːr/",
+      "partOfSpeech": "phr.",
+      "chinese": "深爱；十分关心",
+      "difference": "强调深厚感情和关怀；情感强度及可接人物、事物或活动的结构不同"
     }
   ],
   "antonyms": [
@@ -270,136 +328,134 @@
       "word": "hate",
       "phonetic": "/ˈheɪt/",
       "partOfSpeech": "v.",
-      "chinese": "讨厌；憎恨",
-      "usage": "hate 表示“讨厌；憎恨”，与 love 的“爱”义形成对比。这种反义关系只适用于上述明确义项。"
+      "chinese": "憎恨；非常不喜欢",
+      "usage": "与爱或强烈喜欢的义项相反；情感强度及可接人物、事物或活动的结构不同"
     }
   ],
   "derivatives": [
     {
+      "word": "lover",
+      "phonetic": "/ˈlʌvɚ/",
+      "partOfSpeech": "n.",
+      "chinese": "爱好者；恋人",
+      "note": "指热爱某事物的人或恋爱伴侣"
+    },
+    {
       "word": "loving",
       "phonetic": "/ˈlʌvɪŋ/",
       "partOfSpeech": "adj.",
-      "chinese": "充满爱的；慈爱的",
-      "note": "常形容家庭关系或行为。"
+      "chinese": "充满爱意的",
+      "note": "强调对家人或伴侣表现出的亲切、持续关爱态度"
     },
     {
       "word": "lovable",
       "phonetic": "/ˈlʌvəbəl/",
       "partOfSpeech": "adj.",
-      "chinese": "可爱的；讨人喜欢的",
-      "note": "表示值得被喜爱。"
+      "chinese": "惹人喜爱的",
+      "note": "表示值得被爱或容易令人喜爱"
     },
     {
-      "word": "lovely",
-      "phonetic": "/ˈlʌvliː/",
-      "partOfSpeech": "adj.",
-      "chinese": "美好的；可爱的",
-      "note": "常用于人、天气、事物。"
+      "word": "lovingly",
+      "phonetic": "/ˈlʌvɪŋli/",
+      "partOfSpeech": "adv.",
+      "chinese": "充满爱意地",
+      "note": "常修饰 care for、restore 或 prepare 等带有爱意的动作"
     }
   ],
-  "confusables": [],
+  "confusables": [
+    {
+      "word": "like",
+      "phonetic": "/ˈlaɪk/",
+      "partOfSpeech": "v.",
+      "chinese": "喜欢",
+      "difference": "like 表一般偏好；love 通常表达更强烈的感情或喜爱"
+    }
+  ],
   "relatedVocabulary": [
     {
-      "category": "同一语义场的高频词",
+      "category": "亲密情感",
       "items": [
         {
           "word": "affection",
           "phonetic": "/əˈfɛkʃən/",
           "partOfSpeech": "n.",
-          "chinese": "喜爱；感情"
+          "chinese": "喜爱；爱意"
         },
         {
-          "word": "care",
-          "phonetic": "/ˈkɛr/",
-          "partOfSpeech": "n. / v.",
-          "chinese": "关心；照顾"
+          "word": "devotion",
+          "phonetic": "/dɪˈvoʊʃən/",
+          "partOfSpeech": "n.",
+          "chinese": "挚爱；奉献"
         },
         {
-          "word": "hate",
-          "phonetic": "/ˈheɪt/",
-          "partOfSpeech": "v. / n.",
-          "chinese": "憎恨"
+          "word": "tenderness",
+          "phonetic": "/ˈtɛndɚnəs/",
+          "partOfSpeech": "n.",
+          "chinese": "温柔；慈爱"
+        },
+        {
+          "word": "attachment",
+          "phonetic": "/əˈtætʃmənt/",
+          "partOfSpeech": "n.",
+          "chinese": "依恋"
         }
       ]
     },
     {
-      "category": "近义表达分类",
+      "category": "亲密关系",
       "items": [
         {
-          "word": "adore",
-          "phonetic": "/əˈdɔːr/",
-          "partOfSpeech": "v.",
-          "chinese": "热爱；非常喜欢"
+          "word": "partner",
+          "phonetic": "/ˈpɑrtnɚ/",
+          "partOfSpeech": "n.",
+          "chinese": "伴侣"
         },
         {
-          "word": "cherish",
-          "phonetic": "/ˈtʃɛrɪʃ/",
-          "partOfSpeech": "v.",
-          "chinese": "珍爱；怀有；爱护"
+          "word": "romance",
+          "phonetic": "/roʊˈmæns/",
+          "partOfSpeech": "n.",
+          "chinese": "浪漫关系"
         },
         {
-          "word": "like",
-          "phonetic": "/ˈlaɪk/",
-          "partOfSpeech": "v.",
-          "chinese": "喜欢；愿意；想"
+          "word": "intimacy",
+          "phonetic": "/ˈɪntəməsi/",
+          "partOfSpeech": "n.",
+          "chinese": "亲密"
         },
         {
-          "word": "care for",
-          "phonetic": "/ˈkɛr ˈfɔːr/",
-          "partOfSpeech": "phr.",
-          "chinese": "喜爱；照料"
+          "word": "trust",
+          "phonetic": "/ˈtrʌst/",
+          "partOfSpeech": "n.",
+          "chinese": "信任"
         }
       ]
     },
     {
-      "category": "对比与易混表达分类",
+      "category": "喜欢的事物",
       "items": [
         {
-          "word": "hate",
-          "phonetic": "/ˈheɪt/",
-          "partOfSpeech": "v.",
-          "chinese": "讨厌；憎恨"
+          "word": "passion",
+          "phonetic": "/ˈpæʃən/",
+          "partOfSpeech": "n.",
+          "chinese": "热爱；酷爱"
         },
         {
-          "word": "loving",
-          "phonetic": "/ˈlʌvɪŋ/",
-          "partOfSpeech": "adj.",
-          "chinese": "充满爱的；慈爱的"
+          "word": "favorite",
+          "phonetic": "/ˈfeɪvɚɪt/",
+          "partOfSpeech": "n./adj.",
+          "chinese": "最喜爱的人或事物"
         },
         {
-          "word": "lovable",
-          "phonetic": "/ˈlʌvəbəl/",
-          "partOfSpeech": "adj.",
-          "chinese": "可爱的；讨人喜欢的"
+          "word": "enjoyment",
+          "phonetic": "/ˌɛnˈdʒɔɪmənt/",
+          "partOfSpeech": "n.",
+          "chinese": "享受；乐趣"
         },
         {
-          "word": "lovely",
-          "phonetic": "/ˈlʌvliː/",
-          "partOfSpeech": "adj.",
-          "chinese": "美好的；可爱的"
-        }
-      ]
-    },
-    {
-      "category": "常用词族分类",
-      "items": [
-        {
-          "word": "loving",
-          "phonetic": "/ˈlʌvɪŋ/",
-          "partOfSpeech": "adj.",
-          "chinese": "充满爱的；慈爱的"
-        },
-        {
-          "word": "lovable",
-          "phonetic": "/ˈlʌvəbəl/",
-          "partOfSpeech": "adj.",
-          "chinese": "可爱的；讨人喜欢的"
-        },
-        {
-          "word": "lovely",
-          "phonetic": "/ˈlʌvliː/",
-          "partOfSpeech": "adj.",
-          "chinese": "美好的；可爱的"
+          "word": "enthusiasm",
+          "phonetic": "/ɪnˈθuːziˌæzəm/",
+          "partOfSpeech": "n.",
+          "chinese": "热情"
         }
       ]
     }
@@ -411,107 +467,117 @@
       "chinese": "我喜欢学习能立刻使用的表达。"
     },
     {
-      "scene": "工作或学习",
-      "english": "We love to walk by the river after dinner.",
-      "chinese": "我们喜欢晚饭后沿河散步。"
-    },
-    {
-      "scene": "常见搭配",
-      "english": "She loves her family deeply.",
-      "chinese": "她深爱自己的家人。"
-    },
-    {
-      "scene": "真实语境",
-      "english": "I would love to visit the museum this weekend.",
-      "chinese": "我这周末很想去参观博物馆。"
-    },
-    {
-      "scene": "易错结构",
-      "english": "I love the way she explains difficult ideas.",
-      "chinese": "我喜欢她解释难点的方式。"
-    },
-    {
-      "scene": "主动表达",
-      "english": "He fell in love with the city during his first visit.",
-      "chinese": "他第一次到访时就爱上了这座城市。"
-    },
-    {
       "scene": "日常交流",
-      "english": "I love this city for its quiet parks.",
-      "chinese": "我喜欢这座城市安静的公园。"
+      "english": "She loves her children deeply.",
+      "chinese": "她深爱自己的孩子。"
     },
     {
       "scene": "工作沟通",
-      "english": "She loves having friends over for dinner.",
-      "chinese": "她喜欢邀请朋友来家里吃饭。"
+      "english": "I love walking beside the sea.",
+      "chinese": "我很喜欢在海边散步。"
     },
     {
       "scene": "学习表达",
-      "english": "I love him, but he loves someone else.",
-      "chinese": "我爱他，但他有了心上人。"
+      "english": "They love to cook for friends.",
+      "chinese": "他们喜欢给朋友做饭。"
     },
     {
       "scene": "书面表达",
-      "english": "I love you more than you love me.",
-      "chinese": "我爱你多于你爱我。"
+      "english": "We would love to visit again.",
+      "chinese": "我们很愿意再来。"
+    },
+    {
+      "scene": "日常交流",
+      "english": "He fell in love with the city during his first visit.",
+      "chinese": "他第一次来访就爱上了这座城市。"
+    },
+    {
+      "scene": "工作沟通",
+      "english": "They have been in love for many years.",
+      "chinese": "他们相爱多年。"
+    },
+    {
+      "scene": "学习表达",
+      "english": "I love her for her honesty.",
+      "chinese": "我因她的坦诚而爱她。"
+    },
+    {
+      "scene": "书面表达",
+      "english": "We loved every minute of the concert.",
+      "chinese": "我们尽情享受了音乐会的每一刻。"
+    },
+    {
+      "scene": "日常交流",
+      "english": "She loves nothing more than a quiet morning.",
+      "chinese": "她最喜欢的莫过于宁静的清晨。"
+    },
+    {
+      "scene": "工作沟通",
+      "english": "Send your parents our love.",
+      "chinese": "请向你父母转达我们的关爱。"
+    },
+    {
+      "scene": "学习表达",
+      "english": "Good parents love their children unconditionally.",
+      "chinese": "好父母无条件地爱孩子。"
     }
   ],
   "studyFocus": {
-    "coreMeaning": "先掌握“爱；非常喜欢”这个核心义，再用高频固定搭配和真实例句巩固这个义项。",
+    "coreMeaning": "先掌握“爱；深爱”这个核心义，再对比另外 1 个常用义项，辨别不同语境。",
     "keyCollocation": "把“love doing something”连同介词、宾语和动词形式作为整个句块记忆。",
-    "commonMistake": "“love doing something”在本义下要求动词 -ing 形式；doing 是语法占位符，应换成具体动词的 -ing 形式，前面不要额外加 to。",
+    "commonMistake": "love 可接 to do 或 doing，不可用 to doing",
     "mustUseExample": "I love learning expressions that I can use immediately.（我喜欢学习能立刻使用的表达。）"
   },
   "questions": [
     {
       "id": "love-v-meaning-core",
       "type": "meaning_choice",
-      "prompt": "“love”最核心的中文含义是？",
+      "prompt": "“love”最常见的核心中文义是哪一项？",
       "options": [
         "包括",
         "服务",
-        "爱；非常喜欢"
+        "爱；深爱"
       ],
-      "answer": "爱；非常喜欢",
+      "answer": "爱；深爱",
       "stage": "T0",
       "ai": false
     },
     {
       "id": "love-v-meaning-english",
       "type": "meaning_choice",
-      "prompt": "哪一项英文释义最符合词卡中的 “love”？",
+      "prompt": "“love”最常见的英文释义是哪一项？",
       "options": [
         "to provide help or food, perform a duty, or be useful for a purpose",
-        "to feel deep affection, greatly enjoy something",
+        "to feel deep affection for someone",
         "to have something as part of a whole"
       ],
-      "answer": "to feel deep affection, greatly enjoy something",
+      "answer": "to feel deep affection for someone",
       "stage": "T0",
       "ai": false
     },
     {
       "id": "love-v-structure-choice-v3",
       "type": "meaning_choice",
-      "prompt": "核心结构辨析：哪一项既表示“喜欢做某事”，又符合这个形式线索：完整结构中的 doing 是语法占位符，要换成符合语境的动词 -ing 形式？",
+      "prompt": "核心结构辨析：哪一项既表示“深爱某人”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "love doing something",
         "love to do something",
-        "love someone deeply",
         "would love to do something",
-        "love doing something"
+        "love someone deeply"
       ],
-      "answer": "love doing something",
+      "answer": "love someone deeply",
       "stage": "T1",
       "ai": false
     },
     {
       "id": "love-v-synonym-choice",
       "type": "meaning_choice",
-      "prompt": "哪个词是词卡中列出的 “love” 最直接近义词？",
+      "prompt": "在“非常喜爱”这个义项下，哪个词与“love”意思最接近？",
       "options": [
-        "include",
-        "serve",
+        "have",
+        "do",
         "adore",
-        "hate"
+        "be"
       ],
       "answer": "adore",
       "stage": "T2",
@@ -520,12 +586,12 @@
     {
       "id": "love-v-antonym-choice",
       "type": "meaning_choice",
-      "prompt": "哪个词是词卡中列出的 “love” 最直接反义词？",
+      "prompt": "在“爱；深爱”这个义项下，哪个词与“love”意思相反？",
       "options": [
-        "serve",
+        "do",
         "hate",
-        "adore",
-        "include"
+        "be",
+        "have"
       ],
       "answer": "hate",
       "stage": "T2",
@@ -534,21 +600,21 @@
     {
       "id": "love-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “love” 的派生词？",
+      "prompt": "结合拼写、发音和用法，哪一项需要与“love”重点区分？",
       "options": [
-        "loving",
-        "adore",
-        "hate",
-        "include"
+        "like",
+        "be",
+        "have",
+        "do"
       ],
-      "answer": "loving",
+      "answer": "like",
       "stage": "T3",
       "ai": false
     },
     {
       "id": "love-v-recall-definition",
       "type": "recall",
-      "prompt": "根据英文释义写出目标词：to feel deep affection, greatly enjoy something",
+      "prompt": "根据英文释义写出对应单词：to feel deep affection for someone",
       "answer": "love",
       "stage": "T1",
       "ai": false
@@ -556,7 +622,7 @@
     {
       "id": "love-v-recall-chinese",
       "type": "recall",
-      "prompt": "写出符合“爱；非常喜欢”（v.）的本课目标词。",
+      "prompt": "写出表示“爱；深爱”（v.）的英文单词。",
       "answer": "love",
       "stage": "T1",
       "ai": false
@@ -576,8 +642,8 @@
       "options": [
         "would love to do something",
         "love to do something",
-        "love doing something",
-        "love someone deeply"
+        "love someone deeply",
+        "love doing something"
       ],
       "answer": "love to do something",
       "stage": "T1",
@@ -586,13 +652,7 @@
     {
       "id": "love-v-collocation-example-context-v3",
       "type": "collocation",
-      "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：I love _____ expressions that I can use immediately.（中文：我喜欢学习能立刻使用的表达。）",
-      "options": [
-        "learning",
-        "breakfast",
-        "every",
-        "warm"
-      ],
+      "prompt": "根据完整句意和中文提示补全原句：I love _____ expressions that I can use immediately.（中文：我喜欢学习能立刻使用的表达。）",
       "answer": "learning",
       "stage": "T2",
       "ai": false
@@ -600,43 +660,43 @@
     {
       "id": "love-v-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“喜欢做某事”，又符合这个形式线索：完整结构中的 doing 是语法占位符，要换成符合语境的动词 -ing 形式？",
+      "prompt": "用法辨析：哪一项既表示“爱上……”，又符合这个形式线索：完整搭配中使用介词 in？",
       "options": [
-        "love to do something",
         "love someone deeply",
-        "would love to do something",
-        "love doing something"
+        "love doing something",
+        "love to do something",
+        "fall in love with"
       ],
-      "answer": "love doing something",
+      "answer": "fall in love with",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "love-v-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“喜欢做某事”，又符合这个形式线索：完整结构中使用 to + 动词原形；do 只是语法占位符，要换成符合语境的具体动词原形？",
+      "prompt": "搭配辨析：哪一项既表示“爱着……”，又符合这个形式线索：完整搭配中使用介词 in？",
       "options": [
-        "love someone deeply",
-        "would love to do something",
+        "love doing something",
         "love to do something",
-        "love doing something"
+        "be in love with",
+        "love someone deeply"
       ],
-      "answer": "love to do something",
+      "answer": "be in love with",
       "stage": "T3",
       "ai": false
     },
     {
       "id": "love-v-example-cloze",
       "type": "collocation",
-      "prompt": "根据句意补全词卡核心例句：I _____ learning expressions that I can use immediately.（填写 love 的正确形式）",
-      "answer": "love",
+      "prompt": "根据句意和中文提示补全另一个常用例句：She _____ her children deeply.（填写 love 的正确形式）（中文：她深爱自己的孩子。）",
+      "answer": "loves",
       "stage": "T3",
       "ai": false
     },
     {
       "id": "love-v-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “love” 写一个自然、真实的英文句子，含义必须符合词卡核心义“爱；非常喜欢”。",
+      "prompt": "请用 “love” 写一个自然、真实的英文句子，含义必须符合核心义“爱；深爱”。",
       "answer": "",
       "stage": "T2",
       "ai": true
@@ -644,7 +704,7 @@
     {
       "id": "love-v-sentence-phrase",
       "type": "free_sentence",
-      "prompt": "请使用 “love doing something” 结构写一个与自己有关的自然英文句子；doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing；something 要替换成实际的事物或内容。",
+      "prompt": "请使用 “fall in love with” 结构写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -652,7 +712,7 @@
     {
       "id": "love-v-dialogue",
       "type": "dialogue",
-      "prompt": "写一段 2–4 轮真实对话，自然使用 “love” 和 “love someone deeply” 结构，并避免中文直译；someone 要替换成实际的人或代词。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “love” 和 “love one's adopted child deeply” 结构，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -710,9 +770,10 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-complete",
-  "templateVersion": "learning-template-2026.09.10.3",
-  "contentVersion": "2026.09.10.3",
-  "reviewed": false,
+  "detailLevel": "template-curated",
+  "templateVersion": "learning-template-2026.09.10.4",
+  "contentVersion": "2026.09.10.4",
+  "reviewed": true,
+  "curationSource": "manual-semantic-pack-2026.09.10.4",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

@@ -28,9 +28,9 @@
     "主动词汇"
   ],
   "coreMemory": {
-    "chinese": "服务；接待；供应；端上；起作用；可用作；任职；履行职责",
-    "english": "v. to help customers or provide a service；v. to provide food or drink；v. to be useful for a particular purpose；v. to perform a particular duty or role",
-    "structure": "serve a customer /ˈsɝːv ə ˈkʌstəmɚ/（为顾客服务）；serve food /ˈsɝːv ˈfuːd/（上菜；供应食物）；serve as something /ˈsɝːv ˈæz ˈsʌmθɪŋ/（充当；担任）；serve a purpose /ˈsɝːv ə ˈpɝːpəs/（发挥作用；达到目的）",
+    "chinese": "服务；供应；起作用；充当；任职；服役",
+    "english": "v. to provide food, goods, help, or service to someone；v. to have a particular function or be used as something；v. to work for an organization or hold an official role",
+    "structure": "serve a customer /ˈsɝːv ə ˈkʌstəmɚ/（为顾客服务）；serve food /ˈsɝːv ˈfuːd/（供应食物；上菜）；serve something to someone /ˈsɝːv ˈsʌmθɪŋ ˈtuː ˈsʌmˌwʌn/（给某人端上某物）；serve as something /ˈsɝːv ˈæz ˈsʌmθɪŋ/（充当；用作）",
     "structures": [
       {
         "phrase": "serve a customer",
@@ -40,140 +40,163 @@
       {
         "phrase": "serve food",
         "phonetic": "/ˈsɝːv ˈfuːd/",
-        "chinese": "上菜；供应食物"
+        "chinese": "供应食物；上菜"
+      },
+      {
+        "phrase": "serve something to someone",
+        "phonetic": "/ˈsɝːv ˈsʌmθɪŋ ˈtuː ˈsʌmˌwʌn/",
+        "chinese": "给某人端上某物"
       },
       {
         "phrase": "serve as something",
         "phonetic": "/ˈsɝːv ˈæz ˈsʌmθɪŋ/",
-        "chinese": "充当；担任"
-      },
-      {
-        "phrase": "serve a purpose",
-        "phonetic": "/ˈsɝːv ə ˈpɝːpəs/",
-        "chinese": "发挥作用；达到目的"
+        "chinese": "充当；用作"
       }
     ],
-    "commonError": "❌ serve at a committee → ✅ serve on a committee；❌ to serving → ✅ to serve",
+    "commonError": "❌ serve for customers → ✅ serve customers；❌ serve as a meal to guests → ✅ serve a meal to guests / serve guests a meal",
     "commonErrors": [
       {
-        "wrong": "serve at a committee",
-        "wrongPhonetic": "/ˈsɝːv ˈæt ə kəˈmɪtiː/",
-        "right": "serve on a committee",
-        "rightPhonetic": "/ˈsɝːv ˈɑn ə kəˈmɪtiː/",
-        "note": "在“serve on a committee”所表达的这个具体含义中，要用介词 on；换成 at 会破坏这个固定结构或改变原意。"
+        "wrong": "serve for customers",
+        "wrongPhonetic": "/ˈsɝːv ˈfɔːr ˈkʌstəmɚz/",
+        "right": "serve customers",
+        "rightPhonetic": "/ˈsɝːv ˈkʌstəmɚz/",
+        "note": "serve 表示为顾客提供服务时直接接宾语，不加 for"
       },
       {
-        "wrong": "to serving",
-        "wrongPhonetic": "/ˈtuː ˈsɝːvɪŋ/",
-        "right": "to serve",
-        "rightPhonetic": "/ˈtuː ˈsɝːv/",
-        "note": "这里的 to 是不定式标记，后面要用 serve 的原形，不能改成 serving。"
+        "wrong": "serve as a meal to guests",
+        "wrongPhonetic": "/ˈsɝːv ˈæz ə ˈmiːl ˈtuː ˈɡɛsts/",
+        "right": "serve a meal to guests / serve guests a meal",
+        "rightPhonetic": "/ˈsɝːv ə ˈmiːl ˈtuː ˈɡɛsts ˈsɝːv ˈɡɛsts ə ˈmiːl/",
+        "note": "serve as 表示“担任；起作用”，不用来引出被端上的食物"
       }
     ],
-    "directSynonym": "assist /əˈsɪst/（帮助；协助）；provide /prəˈvaɪd/（提供；供应；规定）；function /ˈfʌŋkʃən/（官能；职务；功能）；help /ˈhɛlp/（帮助；帮忙；接济）",
-    "directAntonym": "neglect /nəˈɡlɛkt/（疏忽；不服务）",
-    "derivatives": "service · serving",
+    "directSynonym": "assist /əˈsɪst/（服务；协助）；attend to /əˈtɛnd ˈtuː/（接待；照料）；provide for /prəˈvaɪd ˈfɔːr/（供应；满足需要）；function as /ˈfʌŋkʃən ˈæz/（起……作用）；supply /səˈplaɪ/（供应）",
+    "directAntonym": "",
+    "derivatives": "service · servant · server · serving · serviceable",
     "example": "Good staff serve every customer politely.",
     "exampleChinese": "优秀员工会礼貌地服务每位顾客。"
   },
   "meanings": [
     {
       "partOfSpeech": "v.",
-      "english": "to help customers or provide a service",
-      "chinese": "服务；接待",
-      "example": "Good staff serve every customer politely.",
-      "translation": "优秀员工会礼貌地服务每位顾客。"
+      "english": "to provide food, goods, help, or service to someone",
+      "chinese": "服务；供应",
+      "example": "The cafe serves lunch from noon.",
+      "translation": "这家咖啡馆中午开始供应午餐。"
     },
     {
       "partOfSpeech": "v.",
-      "english": "to provide food or drink",
-      "chinese": "供应；端上",
-      "example": "The restaurant serves breakfast until ten.",
-      "translation": "这家餐厅供应早餐到十点。"
+      "english": "to have a particular function or be used as something",
+      "chinese": "起作用；充当",
+      "example": "The room serves as a library.",
+      "translation": "这个房间用作图书馆。"
     },
     {
       "partOfSpeech": "v.",
-      "english": "to be useful for a particular purpose",
-      "chinese": "起作用；可用作",
-      "example": "This sentence can serve as a useful model.",
-      "translation": "这个句子可以作为实用范例。"
-    },
-    {
-      "partOfSpeech": "v.",
-      "english": "to perform a particular duty or role",
-      "chinese": "任职；履行职责",
-      "example": "She served as team leader for two years.",
-      "translation": "她担任了两年团队负责人。"
+      "english": "to work for an organization or hold an official role",
+      "chinese": "任职；服役",
+      "example": "She served on the council for six years.",
+      "translation": "她在市议会任职六年。"
     }
   ],
   "contextPhrases": [
     {
-      "category": "核心动作与结构",
+      "category": "服务与任职",
       "items": [
         {
-          "phrase": "serve a customer",
-          "phonetic": "/ˈsɝːv ə ˈkʌstəmɚ/",
-          "chinese": "为顾客服务"
+          "phrase": "serve customers politely",
+          "phonetic": "/ˈsɝːv ˈkʌstəmɚz pəˈlaɪtli/",
+          "chinese": "礼貌地服务顾客"
         },
         {
-          "phrase": "serve food",
-          "phonetic": "/ˈsɝːv ˈfuːd/",
-          "chinese": "上菜；供应食物"
+          "phrase": "serve on the school board",
+          "phonetic": "/ˈsɝːv ˈɑn ðə ˈskuːl ˈbɔːrd/",
+          "chinese": "担任校董会成员"
         },
         {
-          "phrase": "serve as something",
-          "phonetic": "/ˈsɝːv ˈæz ˈsʌmθɪŋ/",
-          "chinese": "充当；担任"
+          "phrase": "serve as team captain",
+          "phonetic": "/ˈsɝːv ˈæz ˈtiːm ˈkæptən/",
+          "chinese": "担任队长"
+        },
+        {
+          "phrase": "serve one's country abroad",
+          "phonetic": "/ˈsɝːv ˈwʌnz ˈkʌntri əˈbrɔːd/",
+          "chinese": "在海外为国服务"
         }
       ]
     },
     {
-      "category": "日常与工作语境",
+      "category": "餐饮与供应",
       "items": [
         {
-          "phrase": "serve a purpose",
-          "phonetic": "/ˈsɝːv ə ˈpɝːpəs/",
-          "chinese": "发挥作用；达到目的"
+          "phrase": "serve breakfast until ten",
+          "phonetic": "/ˈsɝːv ˈbrɛkfəst ənˈtɪl ˈtɛn/",
+          "chinese": "早餐供应到十点"
         },
         {
-          "phrase": "serve on a committee",
-          "phonetic": "/ˈsɝːv ˈɑn ə kəˈmɪtiː/",
-          "chinese": "在委员会任职"
+          "phrase": "serve the soup hot",
+          "phonetic": "/ˈsɝːv ðə ˈsuːp ˈhɑt/",
+          "chinese": "趁热端上汤"
         },
         {
-          "phrase": "serve someone well",
-          "phonetic": "/ˈsɝːv ˈsʌˌmwʌn ˈwɛl/",
-          "chinese": "对某人很有帮助"
+          "phrase": "serve four people comfortably",
+          "phonetic": "/ˈsɝːv ˈfɔːr ˈpiːpəl ˈkʌmfɚtəbli/",
+          "chinese": "足够四人舒适使用"
+        },
+        {
+          "phrase": "serve wine with dinner",
+          "phonetic": "/ˈsɝːv ˈwaɪn ˈwɪð ˈdɪnɚ/",
+          "chinese": "晚餐时上葡萄酒"
         }
       ]
     },
     {
-      "category": "高频扩展表达",
+      "category": "用途与法律",
       "items": [
         {
-          "phrase": "serve a drink",
-          "phonetic": "/ˈsɝːv ə ˈdrɪŋk/",
-          "chinese": "端上一杯饮料"
+          "phrase": "serve a useful purpose",
+          "phonetic": "/ˈsɝːv ə ˈjuːsfəl ˈpɝːpəs/",
+          "chinese": "起到有用的作用"
         },
         {
-          "phrase": "serve two masters",
-          "phonetic": "/ˈsɝːv ˈtuː ˈmæstɚz/",
-          "chinese": "可以共侍二主"
+          "phrase": "serve the local community",
+          "phonetic": "/ˈsɝːv ðə ˈloʊkəl kəˈmjuːnəti/",
+          "chinese": "为当地社区服务"
         },
         {
-          "phrase": "serve someone a meal",
-          "phonetic": "/ˈsɝːv ˈsʌˌmwʌn ə ˈmiːl/",
-          "chinese": "给某人上餐"
+          "phrase": "serve a prison sentence",
+          "phonetic": "/ˈsɝːv ə ˈprɪzən ˈsɛntəns/",
+          "chinese": "服刑"
+        },
+        {
+          "phrase": "serve notice on a tenant",
+          "phonetic": "/ˈsɝːv ˈnoʊtəs ˈɑn ə ˈtɛnənt/",
+          "chinese": "向租客送达正式通知"
         }
       ]
     },
     {
-      "category": "补充常用语境",
+      "category": "运动与可供使用",
       "items": [
         {
-          "phrase": "serve lunch",
-          "phonetic": "/ˈsɝːv ˈlʌntʃ/",
-          "chinese": "旅馆不提供午餐"
+          "phrase": "serve the ball powerfully",
+          "phonetic": "/ˈsɝːv ðə ˈbɔːl ˈpaʊɚfli/",
+          "chinese": "大力发球"
+        },
+        {
+          "phrase": "serve as a useful reminder",
+          "phonetic": "/ˈsɝːv ˈæz ə ˈjuːsfəl riˈmaɪndɚ/",
+          "chinese": "起到有用的提醒作用"
+        },
+        {
+          "phrase": "serve two neighboring towns",
+          "phonetic": "/ˈsɝːv ˈtuː ˈneɪbɚɪŋ ˈtaʊnz/",
+          "chinese": "为两个相邻城镇提供服务"
+        },
+        {
+          "phrase": "serve someone with legal papers",
+          "phonetic": "/ˈsɝːv ˈsʌmˌwʌn ˈwɪð ˈliːɡəl ˈpeɪpɚz/",
+          "chinese": "向某人送达法律文书"
         }
       ]
     }
@@ -183,71 +206,85 @@
       "phrase": "serve a customer",
       "phonetic": "/ˈsɝːv ə ˈkʌstəmɚ/",
       "chinese": "为顾客服务",
-      "example": "Good staff serve every customer politely.",
-      "translation": "优秀员工会礼貌地服务每位顾客。"
+      "example": "A trainee served us politely and efficiently.",
+      "translation": "一名实习员工礼貌高效地接待了我们。"
     },
     {
       "phrase": "serve food",
       "phonetic": "/ˈsɝːv ˈfuːd/",
-      "chinese": "上菜；供应食物",
-      "example": "The restaurant serves breakfast until ten.",
-      "translation": "这家餐厅供应早餐到十点。"
+      "chinese": "供应食物；上菜",
+      "example": "The cafe serves breakfast until eleven.",
+      "translation": "这家咖啡馆供应早餐到十一点。"
+    },
+    {
+      "phrase": "serve something to someone",
+      "phonetic": "/ˈsɝːv ˈsʌmθɪŋ ˈtuː ˈsʌmˌwʌn/",
+      "chinese": "给某人端上某物",
+      "example": "They served hot soup to the volunteers.",
+      "translation": "他们给志愿者端上了热汤。"
     },
     {
       "phrase": "serve as something",
       "phonetic": "/ˈsɝːv ˈæz ˈsʌmθɪŋ/",
-      "chinese": "充当；担任",
-      "example": "This sentence can serve as a useful model.",
-      "translation": "这个句子可以作为实用范例。"
+      "chinese": "充当；用作",
+      "example": "The old station now serves as an art gallery.",
+      "translation": "旧车站现在用作美术馆。"
     },
     {
       "phrase": "serve a purpose",
       "phonetic": "/ˈsɝːv ə ˈpɝːpəs/",
-      "chinese": "发挥作用；达到目的",
-      "example": "Every question should serve a clear learning purpose.",
-      "translation": "每道题都应该有明确的学习目的。"
+      "chinese": "发挥作用",
+      "example": "Each question should serve a clear purpose.",
+      "translation": "每个问题都应发挥明确作用。"
+    },
+    {
+      "phrase": "serve someone's needs",
+      "phonetic": "/ˈsɝːv ˈsʌmˌwʌnz ˈniːdz/",
+      "chinese": "满足某人的需求",
+      "example": "The new timetable better serves commuters' needs.",
+      "translation": "新时刻表更好地满足了通勤者的需求。"
     },
     {
       "phrase": "serve on a committee",
-      "phonetic": "/ˈsɝːv ˈɑn ə kəˈmɪtiː/",
+      "phonetic": "/ˈsɝːv ˈɑn ə kəˈmɪti/",
       "chinese": "在委员会任职",
-      "example": "She serves on the school’s safety committee.",
-      "translation": "她在学校安全委员会任职。"
+      "example": "She serves on the hospital ethics committee.",
+      "translation": "她在医院伦理委员会任职。"
+    },
+    {
+      "phrase": "serve a sentence",
+      "phonetic": "/ˈsɝːv ə ˈsɛntəns/",
+      "chinese": "服刑",
+      "example": "He served a three-year prison sentence.",
+      "translation": "他服了三年徒刑。"
+    },
+    {
+      "phrase": "serve in the army",
+      "phonetic": "/ˈsɝːv ɪn ðə ˈɑrmi/",
+      "chinese": "在军队服役",
+      "example": "Her grandfather served in the army for twenty years.",
+      "translation": "她祖父在军队服役二十年。"
     },
     {
       "phrase": "serve someone well",
-      "phonetic": "/ˈsɝːv ˈsʌˌmwʌn ˈwɛl/",
+      "phonetic": "/ˈsɝːv ˈsʌmˌwʌn ˈwɛl/",
       "chinese": "对某人很有帮助",
-      "example": "This habit will serve you well in future conversations.",
-      "translation": "这个习惯会在今后的对话中给你很大帮助。"
+      "example": "These communication skills will serve you well.",
+      "translation": "这些沟通技能会让你受益。"
     },
     {
-      "phrase": "serve a drink",
-      "phonetic": "/ˈsɝːv ə ˈdrɪŋk/",
-      "chinese": "端上一杯饮料",
-      "example": "It's better to chill white wine before you serve it.",
-      "translation": "在你侍酒前最好先将白葡萄酒冷却一下。"
+      "phrase": "serve up something",
+      "phonetic": "/ˈsɝːv ˈʌp ˈsʌmθɪŋ/",
+      "chinese": "端上；提供某物",
+      "example": "The kitchen serves up simple seasonal dishes.",
+      "translation": "这间厨房供应简单的时令菜肴。"
     },
     {
-      "phrase": "serve two masters",
-      "phonetic": "/ˈsɝːv ˈtuː ˈmæstɚz/",
-      "chinese": "可以共侍二主",
-      "example": "No man can serve two masters.",
-      "translation": "没有人可以共侍二主。"
-    },
-    {
-      "phrase": "serve someone a meal",
-      "phonetic": "/ˈsɝːv ˈsʌˌmwʌn ə ˈmiːl/",
-      "chinese": "给某人上餐",
-      "example": "Please serve him his meal first.",
-      "translation": "请先为他上菜。"
-    },
-    {
-      "phrase": "serve lunch",
-      "phonetic": "/ˈsɝːv ˈlʌntʃ/",
-      "chinese": "旅馆不提供午餐",
-      "example": "This hotel does not serve lunch.",
-      "translation": "这家旅馆不提供午餐。"
+      "phrase": "first come, first served",
+      "phonetic": "/ˈfɝːst ˈkʌm ˈfɝːst ˈsɝːvd/",
+      "chinese": "先到先得",
+      "example": "Seats are available on a first-come, first-served basis.",
+      "translation": "座位先到先得。"
     }
   ],
   "synonyms": [
@@ -255,147 +292,162 @@
       "word": "assist",
       "phonetic": "/əˈsɪst/",
       "partOfSpeech": "v.",
-      "chinese": "帮助；协助",
-      "difference": "assist 表示“帮助；协助”，与 serve 的“服务”义相近。两词只有在这一义项重合时才能互换；serve 的其他常用义不一定适用。"
+      "chinese": "服务；协助",
+      "difference": "强调帮助人完成事情；服务对象、供给内容和充当某功能的结构不同"
     },
     {
-      "word": "provide",
-      "phonetic": "/prəˈvaɪd/",
+      "word": "attend to",
+      "phonetic": "/əˈtɛnd ˈtuː/",
+      "partOfSpeech": "phr.",
+      "chinese": "接待；照料",
+      "difference": "强调处理顾客或病人的需要；服务对象、供给内容和充当某功能的结构不同"
+    },
+    {
+      "word": "provide for",
+      "phonetic": "/prəˈvaɪd ˈfɔːr/",
+      "partOfSpeech": "phr.",
+      "chinese": "供应；满足需要",
+      "difference": "对应为群体提供所需之物；服务对象、供给内容和充当某功能的结构不同"
+    },
+    {
+      "word": "function as",
+      "phonetic": "/ˈfʌŋkʃən ˈæz/",
+      "partOfSpeech": "phr.",
+      "chinese": "起……作用",
+      "difference": "只对应 serve as；服务对象、供给内容和充当某功能的结构不同"
+    },
+    {
+      "word": "supply",
+      "phonetic": "/səˈplaɪ/",
       "partOfSpeech": "v.",
-      "chinese": "提供；供应；规定",
-      "difference": "provide 常表示“提供；供应；规定”，与 serve 的“服务”义有重合。provide 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
-    },
-    {
-      "word": "function",
-      "phonetic": "/ˈfʌŋkʃən/",
-      "partOfSpeech": "n.",
-      "chinese": "官能；职务；功能",
-      "difference": "function 常表示“官能；职务；功能”，与 serve 的“服务”义有重合。function 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
-    },
-    {
-      "word": "help",
-      "phonetic": "/ˈhɛlp/",
-      "partOfSpeech": "v.",
-      "chinese": "帮助；帮忙；接济",
-      "difference": "help 常表示“帮助；帮忙；接济”，与 serve 的“服务”义有重合。help 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+      "chinese": "供应",
+      "difference": "对应提供食物、饮料或资源；服务对象、供给内容和充当某功能的结构不同"
     }
   ],
-  "antonyms": [
-    {
-      "word": "neglect",
-      "phonetic": "/nəˈɡlɛkt/",
-      "partOfSpeech": "v.",
-      "chinese": "疏忽；不服务",
-      "usage": "neglect 表示“疏忽；不服务”，与 serve 的“服务”义形成对比。这种反义关系只适用于上述明确义项。"
-    }
-  ],
+  "antonyms": [],
   "derivatives": [
     {
       "word": "service",
       "phonetic": "/ˈsɝːvəs/",
       "partOfSpeech": "n.",
-      "chinese": "服务；公共事业服务",
-      "note": "表示为他人提供帮助或满足需要的活动。"
+      "chinese": "服务；维修；公用系统",
+      "note": "可指为他人做事、设备维护或公共供应"
+    },
+    {
+      "word": "servant",
+      "phonetic": "/ˈsɝːvənt/",
+      "partOfSpeech": "n.",
+      "chinese": "仆人；公职人员",
+      "note": "现代日常用作家仆时需注意语境；public servant 指公职人员"
+    },
+    {
+      "word": "server",
+      "phonetic": "/ˈsɝːvɚ/",
+      "partOfSpeech": "n.",
+      "chinese": "服务员；服务器",
+      "note": "可指餐厅中为顾客服务的人，也指向其他设备提供数据或功能的计算机。"
     },
     {
       "word": "serving",
       "phonetic": "/ˈsɝːvɪŋ/",
       "partOfSpeech": "n.",
-      "chinese": "一份食物；服务行为",
-      "note": "常见于 serving size，表示一次食用的份量。"
+      "chinese": "一份食物；一人份",
+      "note": "常用于食品说明或点餐，表示一次给一人的食物数量。"
+    },
+    {
+      "word": "serviceable",
+      "phonetic": "/ˈsɝːvəsəbəl/",
+      "partOfSpeech": "adj.",
+      "chinese": "可用的；耐用的",
+      "note": "表示虽不一定出色，但足以满足用途"
     }
   ],
   "confusables": [],
   "relatedVocabulary": [
     {
-      "category": "同一语义场的高频词",
+      "category": "餐饮服务",
       "items": [
         {
-          "word": "service",
-          "phonetic": "/ˈsɝːvəs/",
+          "word": "menu",
+          "phonetic": "/ˈmɛnju/",
           "partOfSpeech": "n.",
-          "chinese": "服务"
+          "chinese": "菜单"
         },
         {
-          "word": "help",
-          "phonetic": "/ˈhɛlp/",
-          "partOfSpeech": "v.",
-          "chinese": "帮助"
+          "word": "dish",
+          "phonetic": "/ˈdɪʃ/",
+          "partOfSpeech": "n.",
+          "chinese": "菜肴"
         },
         {
-          "word": "provide",
-          "phonetic": "/prəˈvaɪd/",
-          "partOfSpeech": "v.",
-          "chinese": "提供"
+          "word": "tray",
+          "phonetic": "/ˈtreɪ/",
+          "partOfSpeech": "n.",
+          "chinese": "托盘"
+        },
+        {
+          "word": "guest",
+          "phonetic": "/ˈɡɛst/",
+          "partOfSpeech": "n.",
+          "chinese": "客人"
         }
       ]
     },
     {
-      "category": "近义表达分类",
+      "category": "公共机构",
       "items": [
         {
-          "word": "assist",
-          "phonetic": "/əˈsɪst/",
-          "partOfSpeech": "v.",
-          "chinese": "帮助；协助"
-        },
-        {
-          "word": "provide",
-          "phonetic": "/prəˈvaɪd/",
-          "partOfSpeech": "v.",
-          "chinese": "提供；供应；规定"
-        },
-        {
-          "word": "function",
-          "phonetic": "/ˈfʌŋkʃən/",
+          "word": "community",
+          "phonetic": "/kəˈmjuːnəti/",
           "partOfSpeech": "n.",
-          "chinese": "官能；职务；功能"
+          "chinese": "社区"
         },
         {
-          "word": "help",
-          "phonetic": "/ˈhɛlp/",
-          "partOfSpeech": "v.",
-          "chinese": "帮助；帮忙；接济"
+          "word": "board",
+          "phonetic": "/ˈbɔːrd/",
+          "partOfSpeech": "n.",
+          "chinese": "委员会；董事会"
+        },
+        {
+          "word": "office",
+          "phonetic": "/ˈɔːfɪs/",
+          "partOfSpeech": "n.",
+          "chinese": "公职"
+        },
+        {
+          "word": "term",
+          "phonetic": "/ˈtɝːm/",
+          "partOfSpeech": "n.",
+          "chinese": "任期"
         }
       ]
     },
     {
-      "category": "对比与易混表达分类",
+      "category": "法律职责",
       "items": [
         {
-          "word": "neglect",
-          "phonetic": "/nəˈɡlɛkt/",
-          "partOfSpeech": "v.",
-          "chinese": "疏忽；不服务"
+          "word": "sentence",
+          "phonetic": "/ˈsɛntəns/",
+          "partOfSpeech": "n.",
+          "chinese": "刑期；判决"
         },
         {
-          "word": "service",
-          "phonetic": "/ˈsɝːvəs/",
+          "word": "notice",
+          "phonetic": "/ˈnoʊtəs/",
           "partOfSpeech": "n.",
-          "chinese": "服务；公共事业服务"
+          "chinese": "正式通知"
         },
         {
-          "word": "serving",
-          "phonetic": "/ˈsɝːvɪŋ/",
+          "word": "duty",
+          "phonetic": "/ˈduːti/",
           "partOfSpeech": "n.",
-          "chinese": "一份食物；服务行为"
-        }
-      ]
-    },
-    {
-      "category": "常用词族分类",
-      "items": [
-        {
-          "word": "service",
-          "phonetic": "/ˈsɝːvəs/",
-          "partOfSpeech": "n.",
-          "chinese": "服务；公共事业服务"
+          "chinese": "职责"
         },
         {
-          "word": "serving",
-          "phonetic": "/ˈsɝːvɪŋ/",
+          "word": "tenant",
+          "phonetic": "/ˈtɛnənt/",
           "partOfSpeech": "n.",
-          "chinese": "一份食物；服务行为"
+          "chinese": "租户"
         }
       ]
     }
@@ -407,81 +459,91 @@
       "chinese": "优秀员工会礼貌地服务每位顾客。"
     },
     {
-      "scene": "工作或学习",
-      "english": "The restaurant serves breakfast until ten.",
-      "chinese": "这家餐厅供应早餐到十点。"
-    },
-    {
-      "scene": "常见搭配",
-      "english": "This sentence can serve as a useful model.",
-      "chinese": "这个句子可以作为实用范例。"
-    },
-    {
-      "scene": "真实语境",
-      "english": "Every question should serve a clear learning purpose.",
-      "chinese": "每道题都应该有明确的学习目的。"
-    },
-    {
-      "scene": "易错结构",
-      "english": "She serves on the school’s safety committee.",
-      "chinese": "她在学校安全委员会任职。"
-    },
-    {
-      "scene": "主动表达",
-      "english": "This habit will serve you well in future conversations.",
-      "chinese": "这个习惯会在今后的对话中给你很大帮助。"
-    },
-    {
       "scene": "日常交流",
-      "english": "It's better to chill white wine before you serve it.",
-      "chinese": "在你侍酒前最好先将白葡萄酒冷却一下。"
+      "english": "A trainee served us politely and efficiently.",
+      "chinese": "一名实习员工礼貌高效地接待了我们。"
     },
     {
       "scene": "工作沟通",
-      "english": "No man can serve two masters.",
-      "chinese": "没有人可以共侍二主。"
+      "english": "The cafe serves breakfast until eleven.",
+      "chinese": "这家咖啡馆供应早餐到十一点。"
     },
     {
       "scene": "学习表达",
-      "english": "Please serve him his meal first.",
-      "chinese": "请先为他上菜。"
+      "english": "They served hot soup to the volunteers.",
+      "chinese": "他们给志愿者端上了热汤。"
     },
     {
       "scene": "书面表达",
-      "english": "This hotel does not serve lunch.",
-      "chinese": "这家旅馆不提供午餐。"
+      "english": "The old station now serves as an art gallery.",
+      "chinese": "旧车站现在用作美术馆。"
+    },
+    {
+      "scene": "日常交流",
+      "english": "Each question should serve a clear purpose.",
+      "chinese": "每个问题都应发挥明确作用。"
+    },
+    {
+      "scene": "工作沟通",
+      "english": "The new timetable better serves commuters' needs.",
+      "chinese": "新时刻表更好地满足了通勤者的需求。"
+    },
+    {
+      "scene": "学习表达",
+      "english": "She serves on the hospital ethics committee.",
+      "chinese": "她在医院伦理委员会任职。"
+    },
+    {
+      "scene": "书面表达",
+      "english": "He served a three-year prison sentence.",
+      "chinese": "他服了三年徒刑。"
+    },
+    {
+      "scene": "日常交流",
+      "english": "Her grandfather served in the army for twenty years.",
+      "chinese": "她祖父在军队服役二十年。"
+    },
+    {
+      "scene": "工作沟通",
+      "english": "These communication skills will serve you well.",
+      "chinese": "这些沟通技能会让你受益。"
+    },
+    {
+      "scene": "学习表达",
+      "english": "The kitchen serves up simple seasonal dishes.",
+      "chinese": "这间厨房供应简单的时令菜肴。"
     }
   ],
   "studyFocus": {
-    "coreMeaning": "先掌握“服务；接待”这个核心义，再对比另外 3 个常用义项，辨别不同语境。",
+    "coreMeaning": "先掌握“服务；供应”这个核心义，再对比另外 2 个常用义项，辨别不同语境。",
     "keyCollocation": "把“serve a customer”连同介词、宾语和动词形式作为整个句块记忆。",
-    "commonMistake": "在“serve on a committee”所表达的这个具体含义中，要用介词 on；换成 at 会破坏这个固定结构或改变原意。",
+    "commonMistake": "serve 表示为顾客提供服务时直接接宾语，不加 for",
     "mustUseExample": "Good staff serve every customer politely.（优秀员工会礼貌地服务每位顾客。）"
   },
   "questions": [
     {
       "id": "serve-v-meaning-core",
       "type": "meaning_choice",
-      "prompt": "“serve”最核心的中文含义是？",
+      "prompt": "“serve”最常见的核心中文义是哪一项？",
       "options": [
         "改善",
-        "服务；接待",
+        "服务；供应",
         "驾驶"
       ],
-      "answer": "服务；接待",
+      "answer": "服务；供应",
       "stage": "T0",
       "ai": false
     },
     {
       "id": "serve-v-meaning-english",
       "type": "meaning_choice",
-      "prompt": "哪一项英文释义最符合词卡中的 “serve”？",
+      "prompt": "“serve”最常见的英文释义是哪一项？",
       "options": [
-        "to help customers or provide a service",
+        "to provide food, goods, help, or service to someone",
         "to control a vehicle, power a process, or strongly motivate someone",
         "to make something better"
       ],
-      "answer": "to help customers or provide a service",
+      "answer": "to provide food, goods, help, or service to someone",
       "stage": "T0",
       "ai": false
     },
@@ -492,8 +554,8 @@
       "options": [
         "serve a customer",
         "serve food",
-        "serve as something",
-        "serve a purpose"
+        "serve something to someone",
+        "serve as something"
       ],
       "answer": "serve a customer",
       "stage": "T1",
@@ -502,11 +564,11 @@
     {
       "id": "serve-v-synonym-choice",
       "type": "meaning_choice",
-      "prompt": "哪个词是词卡中列出的 “serve” 最直接近义词？",
+      "prompt": "在“服务；协助”这个义项下，哪个词与“serve”意思最接近？",
       "options": [
-        "neglect",
-        "drive",
-        "improve",
+        "be",
+        "have",
+        "do",
         "assist"
       ],
       "answer": "assist",
@@ -514,28 +576,28 @@
       "ai": false
     },
     {
-      "id": "serve-v-antonym-choice",
+      "id": "serve-v-synonym-choice-2",
       "type": "meaning_choice",
-      "prompt": "哪个词是词卡中列出的 “serve” 最直接反义词？",
+      "prompt": "除“assist”外，在“供应”这个义项下，哪个词也与“serve”意思接近？",
       "options": [
-        "drive",
-        "improve",
-        "neglect",
-        "assist"
+        "have",
+        "do",
+        "supply",
+        "be"
       ],
-      "answer": "neglect",
+      "answer": "supply",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "serve-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “serve” 的派生词？",
+      "prompt": "哪一项是“serve”的常用派生词？",
       "options": [
-        "drive",
+        "absence",
         "service",
-        "assist",
-        "neglect"
+        "increase",
+        "ability"
       ],
       "answer": "service",
       "stage": "T3",
@@ -544,7 +606,7 @@
     {
       "id": "serve-v-recall-definition",
       "type": "recall",
-      "prompt": "根据英文释义写出目标词：to help customers or provide a service",
+      "prompt": "根据英文释义写出对应单词：to provide food, goods, help, or service to someone",
       "answer": "serve",
       "stage": "T1",
       "ai": false
@@ -552,7 +614,7 @@
     {
       "id": "serve-v-recall-chinese",
       "type": "recall",
-      "prompt": "写出符合“服务；接待”（v.）的本课目标词。",
+      "prompt": "写出表示“服务；供应”（v.）的英文单词。",
       "answer": "serve",
       "stage": "T1",
       "ai": false
@@ -568,10 +630,10 @@
     {
       "id": "serve-v-collocation-structure-meaning-v3",
       "type": "collocation",
-      "prompt": "句型应用：哪一项既表示“上菜；供应食物”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "句型应用：哪一项既表示“供应食物；上菜”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "serve something to someone",
         "serve as something",
-        "serve a purpose",
         "serve food",
         "serve a customer"
       ],
@@ -582,13 +644,7 @@
     {
       "id": "serve-v-collocation-example-context-v3",
       "type": "collocation",
-      "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：Good staff serve _____ customer politely.（中文：优秀员工会礼貌地服务每位顾客。）",
-      "options": [
-        "improve",
-        "every",
-        "car",
-        "speaking"
-      ],
+      "prompt": "根据完整句意和中文提示补全原句：Good staff serve _____ customer politely.（中文：优秀员工会礼貌地服务每位顾客。）",
       "answer": "every",
       "stage": "T2",
       "ai": false
@@ -596,43 +652,43 @@
     {
       "id": "serve-v-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“为顾客服务”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "搭配辨析：哪一项既表示“发挥作用”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
+        "serve a purpose",
         "serve a customer",
         "serve food",
-        "serve as something",
-        "serve a purpose"
+        "serve something to someone"
       ],
-      "answer": "serve a customer",
+      "answer": "serve a purpose",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "serve-v-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“上菜；供应食物”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "用法辨析：哪一项既表示“满足某人的需求”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
         "serve a customer",
-        "serve as something",
-        "serve a purpose",
-        "serve food"
+        "serve food",
+        "serve something to someone",
+        "serve someone's needs"
       ],
-      "answer": "serve food",
+      "answer": "serve someone's needs",
       "stage": "T3",
       "ai": false
     },
     {
       "id": "serve-v-example-cloze",
       "type": "collocation",
-      "prompt": "根据句意补全词卡核心例句：Good staff _____ every customer politely.（填写 serve 的正确形式）",
-      "answer": "serve",
+      "prompt": "根据句意和中文提示补全另一个常用例句：A trainee _____ us politely and efficiently.（填写 serve 的正确形式）（中文：一名实习员工礼貌高效地接待了我们。）",
+      "answer": "served",
       "stage": "T3",
       "ai": false
     },
     {
       "id": "serve-v-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “serve” 写一个自然、真实的英文句子，含义必须符合词卡核心义“服务；接待”。",
+      "prompt": "请用 “serve” 写一个自然、真实的英文句子，含义必须符合核心义“服务；供应”。",
       "answer": "",
       "stage": "T2",
       "ai": true
@@ -640,7 +696,7 @@
     {
       "id": "serve-v-sentence-phrase",
       "type": "free_sentence",
-      "prompt": "请使用 “serve a customer” 结构写一个与自己有关的自然英文句子。",
+      "prompt": "请使用 “serve a purpose” 结构写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -648,7 +704,7 @@
     {
       "id": "serve-v-dialogue",
       "type": "dialogue",
-      "prompt": "写一段 2–4 轮真实对话，自然使用 “serve” 和 “serve a customer” 结构，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “serve” 和 “serve customers politely” 结构，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -706,9 +762,10 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-complete",
-  "templateVersion": "learning-template-2026.09.10.3",
-  "contentVersion": "2026.09.10.3",
-  "reviewed": false,
+  "detailLevel": "template-curated",
+  "templateVersion": "learning-template-2026.09.10.4",
+  "contentVersion": "2026.09.10.4",
+  "reviewed": true,
+  "curationSource": "manual-semantic-pack-2026.09.10.4",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

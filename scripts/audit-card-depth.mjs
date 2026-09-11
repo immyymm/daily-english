@@ -1,4 +1,6 @@
 import fs from 'node:fs';
+import { fixedExampleIssue } from './quality-sections.mjs';
+import { relationNoteSpecificityIssue } from './quality-relations.mjs';
 
 const catalog = JSON.parse(fs.readFileSync(new URL('../public/data/all-cards.json', import.meta.url), 'utf8'));
 const templateLock = JSON.parse(fs.readFileSync(new URL('../content/templates/template-lock.json', import.meta.url), 'utf8'));
@@ -37,17 +39,17 @@ for (const card of cards) {
   if (row.examples < minimums.highFrequencyExamples) failures.push(`${card.word}: fewer than ${minimums.highFrequencyExamples} natural bilingual examples`);
   const relationEntries = [...card.synonyms, ...card.antonyms, ...card.confusables];
   if (relationEntries.some((entry) => !entry.chinese || !entry.partOfSpeech || !entry.phonetic)) failures.push(`${card.word}: incomplete relation metadata`);
-  // The locked work example intentionally uses concise Chinese comparison notes.
-  // Generated cards must clear the longer anti-filler floor; reviewed/reference
-  // cards may be shorter, but still need an explicit semantic boundary marker.
-  const generated = card.detailLevel === 'template-complete';
-  const boundaryMarker = /(?:强调|表示|用于|常用|常指|多指|侧重|区别|相反|对应|不能|不一定|不表示|可以|要说|是|主动|直接|比|与|而|但|只|范围|结构|发音|拼写|词性)/;
-  if (card.synonyms.some((entry) => !entry.difference || entry.difference.length < (generated ? 35 : 18) || !boundaryMarker.test(entry.difference))) failures.push(`${card.word}: synonym distinction is incomplete`);
-  if (card.antonyms.some((entry) => !entry.usage || entry.usage.length < (generated ? 30 : 14) || !boundaryMarker.test(entry.usage))) failures.push(`${card.word}: antonym contrast is incomplete`);
-  if (card.confusables.some((entry) => !entry.difference || entry.difference.length < (generated ? 35 : 24) || !boundaryMarker.test(entry.difference))) failures.push(`${card.word}: confusable distinction is incomplete`);
+  // Reuse the same semantic-specificity gate as the strict validator. A raw
+  // character-count/keyword heuristic rejects concise but precise notes such as
+  // “raise 是及物动词，rise 是不及物动词”, while allowing long filler. The
+  // shared gate requires an anchored, concrete sense/grammar/register boundary.
+  if (card.synonyms.some((entry) => relationNoteSpecificityIssue({ baseWord: card.word, relationWord: entry.word, note: entry.difference, kind: 'synonym' }))) failures.push(`${card.word}: synonym distinction is incomplete`);
+  if (card.antonyms.some((entry) => relationNoteSpecificityIssue({ baseWord: card.word, relationWord: entry.word, note: entry.usage, kind: 'antonym' }))) failures.push(`${card.word}: antonym contrast is incomplete`);
+  if (card.confusables.some((entry) => relationNoteSpecificityIssue({ baseWord: card.word, relationWord: entry.word, note: entry.difference, kind: 'confusable' }))) failures.push(`${card.word}: confusable distinction is incomplete`);
   if (card.coreMemory.structures.length < templateLock.qualityContract.coreStructures) failures.push(`${card.word}: too few core structures`);
   if (card.coreMemory.commonErrors.length < templateLock.qualityContract.commonErrorPairs) failures.push(`${card.word}: too few concrete error pairs`);
   if (card.fixedPhrases.some((entry) => !entry.phrase || !entry.chinese || !entry.phonetic || !entry.example || !entry.translation)) failures.push(`${card.word}: incomplete fixed phrase row`);
+  if (card.fixedPhrases.filter((entry) => fixedExampleIssue(entry.example, entry.phrase)).length >= 3) failures.push(`${card.word}: repeated mechanical carrier templates found in fixed-phrase examples`);
   const contexts = card.contextPhrases.flatMap((group) => group.items);
   if (contexts.some((entry) => !entry.phrase || !entry.chinese || !entry.phonetic || /[。！？!?；;]$/.test(entry.chinese.trim()))) failures.push(`${card.word}: context row is not a concise bilingual phrase`);
   if (contexts.some((entry) => [...entry.chinese.replace(/\s/g, '')].length > templateLock.qualityContract.contextChineseMaxCharacters)) failures.push(`${card.word}: context Chinese exceeds the locked phrase-gloss length limit`);

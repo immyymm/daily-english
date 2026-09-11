@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { loadContent } from '../data/content';
+import { loadContent, watchForContentUpdates } from '../data/content';
 import { resolveDailyLearningPlan } from '../learning/dailyPlan';
 import { calculateMasteryProfile, dimensionsFromEvaluation } from '../learning/mastery';
 import { applyLateEvaluation, applyReviewScore, isPendingReview, toLocalDateKey } from '../learning/reviewEngine';
@@ -112,6 +112,12 @@ export function useAppData() {
   useEffect(() => {
     void refresh();
   }, [refresh]);
+
+  useEffect(() => watchForContentUpdates((content) => {
+    // A catalog refresh is intentionally state-only: learning progress, attempts,
+    // review sessions and settings in IndexedDB must survive every deployment.
+    setState((current) => ({ ...current, cards: content.cards, error: undefined }));
+  }), []);
 
   const todayRecommendation = state.dailyRecommendations.find((item) => item.date === toLocalDateKey());
 

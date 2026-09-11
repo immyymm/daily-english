@@ -28,9 +28,9 @@
     "主动词汇"
   ],
   "coreMemory": {
-    "chinese": "收到；接收；受到；获得；接待；迎接",
-    "english": "v. to get something that is sent or given；v. to experience or be given attention, help, or treatment；v. to welcome or greet a guest",
-    "structure": "receive a message /rəˈsiːv ə ˈmɛsədʒ/（收到消息）；receive something from someone /rəˈsiːv ˈsʌmθɪŋ ˈfrʌm ˈsʌˌmwʌn/（从某人处收到某物）；receive help /rəˈsiːv ˈhɛlp/（获得帮助）；receive attention /rəˈsiːv əˈtɛnʃən/（受到关注）",
+    "chinese": "收到；得到；接受；受到；接待；迎接",
+    "english": "v. to get or be given something；v. to experience or be given treatment, attention, or a reaction；v. to welcome or formally meet a visitor",
+    "structure": "receive a message /rəˈsiːv ə ˈmɛsədʒ/（收到消息）；receive a letter from someone /rəˈsiːv ə ˈlɛtɚ ˈfrʌm ˈsʌmˌwʌn/（收到某人的来信）；receive payment /rəˈsiːv ˈpeɪmənt/（收到付款）；receive an award /rəˈsiːv ˈæn əˈwɔːrd/（获得奖项）",
     "structures": [
       {
         "phrase": "receive a message",
@@ -38,135 +38,165 @@
         "chinese": "收到消息"
       },
       {
-        "phrase": "receive something from someone",
-        "phonetic": "/rəˈsiːv ˈsʌmθɪŋ ˈfrʌm ˈsʌˌmwʌn/",
-        "chinese": "从某人处收到某物"
+        "phrase": "receive a letter from someone",
+        "phonetic": "/rəˈsiːv ə ˈlɛtɚ ˈfrʌm ˈsʌmˌwʌn/",
+        "chinese": "收到某人的来信"
       },
       {
-        "phrase": "receive help",
-        "phonetic": "/rəˈsiːv ˈhɛlp/",
-        "chinese": "获得帮助"
+        "phrase": "receive payment",
+        "phonetic": "/rəˈsiːv ˈpeɪmənt/",
+        "chinese": "收到付款"
       },
       {
-        "phrase": "receive attention",
-        "phonetic": "/rəˈsiːv əˈtɛnʃən/",
-        "chinese": "受到关注"
+        "phrase": "receive an award",
+        "phonetic": "/rəˈsiːv ˈæn əˈwɔːrd/",
+        "chinese": "获得奖项"
       }
     ],
-    "commonError": "❌ receive something at someone → ✅ receive something from someone；❌ to receiving → ✅ to receive",
+    "commonError": "❌ I received a letter by my bank. → ✅ I received a letter from my bank.；❌ We received to your application yesterday. → ✅ We received your application yesterday.",
     "commonErrors": [
       {
-        "wrong": "receive something at someone",
-        "wrongPhonetic": "/rəˈsiːv ˈsʌmθɪŋ ˈæt ˈsʌˌmwʌn/",
-        "right": "receive something from someone",
-        "rightPhonetic": "/rəˈsiːv ˈsʌmθɪŋ ˈfrʌm ˈsʌˌmwʌn/",
-        "note": "在“receive something from someone”所表达的这个具体含义中，要用介词 from；换成 at 会破坏这个固定结构或改变原意。"
+        "wrong": "I received a letter by my bank.",
+        "wrongPhonetic": "/ˈaɪ rəˈsiːvd ə ˈlɛtɚ ˈbaɪ ˈmaɪ ˈbæŋk/",
+        "right": "I received a letter from my bank.",
+        "rightPhonetic": "/ˈaɪ rəˈsiːvd ə ˈlɛtɚ ˈfrʌm ˈmaɪ ˈbæŋk/",
+        "note": "表示发送者来源用 receive something from someone。"
       },
       {
-        "wrong": "to receiving",
-        "wrongPhonetic": "/ˈtuː rəˈsiːvɪŋ/",
-        "right": "to receive",
-        "rightPhonetic": "/ˈtuː rəˈsiːv/",
-        "note": "这里的 to 是不定式标记，后面要用 receive 的原形，不能改成 receiving。"
+        "wrong": "We received to your application yesterday.",
+        "wrongPhonetic": "/ˈwiː rəˈsiːvd ˈtuː ˈjɔːr ˌæpləˈkeɪʃən ˈjɛstɚˌdeɪ/",
+        "right": "We received your application yesterday.",
+        "rightPhonetic": "/ˈwiː rəˈsiːvd ˈjɔːr ˌæpləˈkeɪʃən ˈjɛstɚˌdeɪ/",
+        "note": "receive 是及物动词，宾语前不加 to。"
       }
     ],
-    "directSynonym": "get /ˈɡɛt/（收到；得到）；accept /æˈksɛpt/（接受；承认；同意）；obtain /əˈbteɪn/（获得；达到）；take delivery of /ˈteɪk dɪˈlɪvɚiː ˈʌv/（接收；收货）",
-    "directAntonym": "send /ˈsɛnd/（发送；寄出）",
-    "derivatives": "receiver · reception · receipt",
+    "directSynonym": "get /ˈɡɛt/（收到）；obtain /əbˈteɪn/（获得）；accept /ækˈsɛpt/（接受）；welcome /ˈwɛlkəm/（迎接）；collect /kəˈlɛkt/（领取）",
+    "directAntonym": "send /ˈsɛnd/（发送）",
+    "derivatives": "receiver · recipient · reception · receipt · receptive",
     "example": "I received your message this morning.",
     "exampleChinese": "我今天早上收到了你的消息。"
   },
   "meanings": [
     {
       "partOfSpeech": "v.",
-      "english": "to get something that is sent or given",
-      "chinese": "收到；接收",
-      "example": "I received your message this morning.",
-      "translation": "我今天早上收到了你的消息。"
+      "english": "to get or be given something",
+      "chinese": "收到；得到",
+      "example": "We received your application yesterday.",
+      "translation": "我们昨天收到了你的申请。"
     },
     {
       "partOfSpeech": "v.",
-      "english": "to experience or be given attention, help, or treatment",
-      "chinese": "受到；获得",
-      "example": "The issue did not receive enough attention at first.",
-      "translation": "这个问题起初没有得到足够重视。"
+      "english": "to experience or be given treatment, attention, or a reaction",
+      "chinese": "接受；受到",
+      "example": "The patient received immediate care.",
+      "translation": "患者立即接受了治疗。"
     },
     {
       "partOfSpeech": "v.",
-      "english": "to welcome or greet a guest",
+      "english": "to welcome or formally meet a visitor",
       "chinese": "接待；迎接",
-      "example": "The host family received us warmly.",
-      "translation": "寄宿家庭热情地接待了我们。"
+      "example": "The ambassador received the delegation.",
+      "translation": "大使接待了代表团。"
     }
   ],
   "contextPhrases": [
     {
-      "category": "核心动作与结构",
+      "category": "通信与文件",
       "items": [
         {
-          "phrase": "receive a message",
-          "phonetic": "/rəˈsiːv ə ˈmɛsədʒ/",
-          "chinese": "收到消息"
+          "phrase": "receive an email confirmation",
+          "phonetic": "/rəˈsiːv ˈæn iˈmeɪl ˌkɑnfɚˈmeɪʃən/",
+          "chinese": "收到确认邮件"
         },
         {
-          "phrase": "receive something from someone",
-          "phonetic": "/rəˈsiːv ˈsʌmθɪŋ ˈfrʌm ˈsʌˌmwʌn/",
-          "chinese": "从某人处收到某物"
+          "phrase": "receive the signed contract",
+          "phonetic": "/rəˈsiːv ðə ˈsaɪnd ˈkɑːntrækt/",
+          "chinese": "收到已签署的合同"
         },
         {
-          "phrase": "receive help",
-          "phonetic": "/rəˈsiːv ˈhɛlp/",
-          "chinese": "获得帮助"
+          "phrase": "receive regular updates",
+          "phonetic": "/rəˈsiːv ˈrɛɡjəlɚ əpˈdeɪts/",
+          "chinese": "定期收到最新消息"
+        },
+        {
+          "phrase": "receive an official notice",
+          "phonetic": "/rəˈsiːv ˈæn əˈfɪʃəl ˈnoʊtəs/",
+          "chinese": "收到正式通知"
         }
       ]
     },
     {
-      "category": "日常与工作语境",
+      "category": "服务与医疗",
       "items": [
         {
-          "phrase": "receive attention",
-          "phonetic": "/rəˈsiːv əˈtɛnʃən/",
-          "chinese": "受到关注"
+          "phrase": "receive emergency care",
+          "phonetic": "/rəˈsiːv ɪˈmɝːdʒənsi ˈkɛr/",
+          "chinese": "接受急救"
         },
         {
-          "phrase": "receive someone warmly",
-          "phonetic": "/rəˈsiːv ˈsʌˌmwʌn ˈwɔːrmliː/",
-          "chinese": "热情接待某人"
+          "phrase": "receive legal advice",
+          "phonetic": "/rəˈsiːv ˈliːɡəl ædˈvaɪs/",
+          "chinese": "获得法律建议"
         },
         {
-          "phrase": "be well received",
-          "phonetic": "/ˈbiː ˈwɛl rəˈsiːvd/",
-          "chinese": "受到好评"
+          "phrase": "receive technical assistance",
+          "phonetic": "/rəˈsiːv ˈtɛknɪkəl əˈsɪstəns/",
+          "chinese": "获得技术协助"
+        },
+        {
+          "phrase": "receive specialist treatment",
+          "phonetic": "/rəˈsiːv ˈspɛʃələst ˈtriːtmənt/",
+          "chinese": "接受专科治疗"
         }
       ]
     },
     {
-      "category": "高频扩展表达",
+      "category": "荣誉与评价",
       "items": [
         {
-          "phrase": "receive the reward",
-          "phonetic": "/rəˈsiːv ðə rɪˈwɔːrd/",
-          "chinese": "有权得到奖励"
+          "phrase": "receive public recognition",
+          "phonetic": "/rəˈsiːv ˈpʌblɪk ˌrɛkəɡˈnɪʃən/",
+          "chinese": "获得公众认可"
         },
         {
-          "phrase": "receive many telephone calls from abroad",
-          "phonetic": "/rəˈsiːv ˈmɛniː ˈtɛləˌfoʊn ˈkɔːlz ˈfrʌm əˈbrɔːd/",
-          "chinese": "接到许多来自国外的电话"
+          "phrase": "receive positive feedback",
+          "phonetic": "/rəˈsiːv ˈpɑzətɪv ˈfiːdˌbæk/",
+          "chinese": "收到积极反馈"
         },
         {
-          "phrase": "receive many letters",
-          "phonetic": "/rəˈsiːv ˈmɛniː ˈlɛtɚz/",
-          "chinese": "收到许多信件"
+          "phrase": "receive the highest score",
+          "phonetic": "/rəˈsiːv ðə ˈhaɪəst ˈskɔːr/",
+          "chinese": "获得最高分"
+        },
+        {
+          "phrase": "receive an excellent review",
+          "phonetic": "/rəˈsiːv ˈæn ˈɛksələnt ˌriːˈvjuː/",
+          "chinese": "获得优秀评价"
         }
       ]
     },
     {
-      "category": "补充常用语境",
+      "category": "物品与款项",
       "items": [
         {
-          "phrase": "have received a letter from something",
-          "phonetic": "/ˈhæv rəˈsiːvd ə ˈlɛtɚ ˈfrʌm ˈsʌmθɪŋ/",
-          "chinese": "收到了朋友的一封信"
+          "phrase": "receive a replacement device",
+          "phonetic": "/rəˈsiːv ə rɪˈpleɪsmənt dɪˈvaɪs/",
+          "chinese": "收到替换设备"
+        },
+        {
+          "phrase": "receive funds electronically",
+          "phonetic": "/rəˈsiːv ˈfʌndz ˌɪˌlɛkˈtrɑnɪkəˌliː/",
+          "chinese": "以电子方式收到款项"
+        },
+        {
+          "phrase": "receive the delivery before noon",
+          "phonetic": "/rəˈsiːv ðə dɪˈlɪvɚi bɪˈfɔːr ˈnuːn/",
+          "chinese": "中午前收到送货"
+        },
+        {
+          "phrase": "receive the refund within five days",
+          "phonetic": "/rəˈsiːv ðə ˈriːfʌnd wɪˈðɪn ˈfaɪv ˈdeɪz/",
+          "chinese": "五天内收到退款"
         }
       ]
     }
@@ -176,71 +206,85 @@
       "phrase": "receive a message",
       "phonetic": "/rəˈsiːv ə ˈmɛsədʒ/",
       "chinese": "收到消息",
-      "example": "I received your message this morning.",
-      "translation": "我今天早上收到了你的消息。"
+      "example": "I received a message confirming the appointment.",
+      "translation": "我收到了一条确认预约的消息。"
     },
     {
-      "phrase": "receive something from someone",
-      "phonetic": "/rəˈsiːv ˈsʌmθɪŋ ˈfrʌm ˈsʌˌmwʌn/",
-      "chinese": "从某人处收到某物",
-      "example": "You will receive a confirmation email from the school.",
-      "translation": "你会收到学校发来的确认邮件。"
+      "phrase": "receive a letter from someone",
+      "phonetic": "/rəˈsiːv ə ˈlɛtɚ ˈfrʌm ˈsʌmˌwʌn/",
+      "chinese": "收到某人的来信",
+      "example": "She received a letter from her former teacher in June.",
+      "translation": "她六月收到了以前老师的来信。"
     },
     {
-      "phrase": "receive help",
-      "phonetic": "/rəˈsiːv ˈhɛlp/",
-      "chinese": "获得帮助",
-      "example": "Every learner should receive help when a problem repeats.",
-      "translation": "问题反复出现时，每位学习者都应该得到帮助。"
+      "phrase": "receive payment",
+      "phonetic": "/rəˈsiːv ˈpeɪmənt/",
+      "chinese": "收到付款",
+      "example": "Small suppliers must receive payment within thirty days.",
+      "translation": "小型供应商必须在三十天内收到付款。"
     },
     {
-      "phrase": "receive attention",
-      "phonetic": "/rəˈsiːv əˈtɛnʃən/",
-      "chinese": "受到关注",
-      "example": "The issue did not receive enough attention at first.",
-      "translation": "这个问题起初没有得到足够重视。"
+      "phrase": "receive an award",
+      "phonetic": "/rəˈsiːv ˈæn əˈwɔːrd/",
+      "chinese": "获得奖项",
+      "example": "The scientist received an award for her work on clean energy.",
+      "translation": "这位科学家因清洁能源研究获得了奖项。"
     },
     {
-      "phrase": "receive someone warmly",
-      "phonetic": "/rəˈsiːv ˈsʌˌmwʌn ˈwɔːrmliː/",
-      "chinese": "热情接待某人",
-      "example": "The host family received us warmly.",
-      "translation": "寄宿家庭热情地接待了我们。"
+      "phrase": "receive treatment",
+      "phonetic": "/rəˈsiːv ˈtriːtmənt/",
+      "chinese": "接受治疗",
+      "example": "The injured cyclist received treatment at the scene.",
+      "translation": "受伤的骑车人在现场接受了治疗。"
     },
     {
-      "phrase": "be well received",
-      "phonetic": "/ˈbiː ˈwɛl rəˈsiːvd/",
-      "chinese": "受到好评",
-      "example": "The new lesson format was well received by students.",
-      "translation": "新的课程形式很受学生欢迎。"
+      "phrase": "receive permission",
+      "phonetic": "/rəˈsiːv pɚˈmɪʃən/",
+      "chinese": "获得许可",
+      "example": "The team received permission to examine the archive.",
+      "translation": "团队获准查阅档案。"
     },
     {
-      "phrase": "receive the reward",
-      "phonetic": "/rəˈsiːv ðə rɪˈwɔːrd/",
-      "chinese": "有权得到奖励",
-      "example": "He is entitled to receive the reward.",
-      "translation": "他有权得到奖励。"
+      "phrase": "receive a warm welcome",
+      "phonetic": "/rəˈsiːv ə ˈwɔːrm ˈwɛlkəm/",
+      "chinese": "受到热烈欢迎",
+      "example": "The visiting musicians received a warm welcome from the village.",
+      "translation": "来访的音乐家受到了村民的热烈欢迎。"
     },
     {
-      "phrase": "receive many telephone calls from abroad",
-      "phonetic": "/rəˈsiːv ˈmɛniː ˈtɛləˌfoʊn ˈkɔːlz ˈfrʌm əˈbrɔːd/",
-      "chinese": "接到许多来自国外的电话",
-      "example": "We receive many telephone calls from abroad.",
-      "translation": "我们接到许多来自国外的电话。"
+      "phrase": "receive complaints",
+      "phonetic": "/rəˈsiːv kəmˈpleɪnts/",
+      "chinese": "收到投诉",
+      "example": "The airline received numerous complaints about the cancellation.",
+      "translation": "航空公司收到了大量有关航班取消的投诉。"
     },
     {
-      "phrase": "receive many letters",
-      "phonetic": "/rəˈsiːv ˈmɛniː ˈlɛtɚz/",
-      "chinese": "收到许多信件",
-      "example": "He received quite a few letters this morning.",
-      "translation": "今天早上他收到好多信。"
+      "phrase": "receive information about something",
+      "phonetic": "/rəˈsiːv ˌɪnfɚˈmeɪʃən əˈbaʊt ˈsʌmθɪŋ/",
+      "chinese": "收到有关某事的信息",
+      "example": "Applicants will receive information about the interview by email.",
+      "translation": "申请人将通过电子邮件收到面试相关信息。"
     },
     {
-      "phrase": "have received a letter from something",
-      "phonetic": "/ˈhæv rəˈsiːvd ə ˈlɛtɚ ˈfrʌm ˈsʌmθɪŋ/",
-      "chinese": "收到了朋友的一封信",
-      "example": "I have received a letter from a friend.",
-      "translation": "我收到了朋友的一封信。"
+      "phrase": "receive something in good condition",
+      "phonetic": "/rəˈsiːv ˈsʌmθɪŋ ɪn ˈɡʊd kənˈdɪʃən/",
+      "chinese": "完好地收到某物",
+      "example": "Customers should contact the supplier if they do not receive the equipment in good condition.",
+      "translation": "顾客如果收到的设备有损坏，应联系供应商。"
+    },
+    {
+      "phrase": "receive guests",
+      "phonetic": "/rəˈsiːv ˈɡɛsts/",
+      "chinese": "接待客人",
+      "example": "The mayor received foreign guests at city hall.",
+      "translation": "市长在市政厅接待了外宾。"
+    },
+    {
+      "phrase": "receive a package",
+      "phonetic": "/rəˈsiːv ə ˈpækədʒ/",
+      "chinese": "收到包裹",
+      "example": "No one was home to receive the package yesterday.",
+      "translation": "昨天家里没人签收包裹。"
     }
   ],
   "synonyms": [
@@ -248,29 +292,36 @@
       "word": "get",
       "phonetic": "/ˈɡɛt/",
       "partOfSpeech": "v.",
-      "chinese": "收到；得到",
-      "difference": "get 表示“收到；得到”，与 receive 的“收到”义相近。两词只有在这一义项重合时才能互换；receive 的其他常用义不一定适用。"
-    },
-    {
-      "word": "accept",
-      "phonetic": "/æˈksɛpt/",
-      "partOfSpeech": "v.",
-      "chinese": "接受；承认；同意",
-      "difference": "accept 常表示“接受；承认；同意”，与 receive 的“收到”义有重合。accept 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+      "chinese": "收到",
+      "difference": "最常见口语表达，范围很广；receive 较正式，并突出成为传递动作的接收方。"
     },
     {
       "word": "obtain",
-      "phonetic": "/əˈbteɪn/",
+      "phonetic": "/əbˈteɪn/",
       "partOfSpeech": "v.",
-      "chinese": "获得；达到",
-      "difference": "obtain 常表示“获得；达到”，与 receive 的“收到”义有重合。obtain 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+      "chinese": "获得",
+      "difference": "强调通过努力或程序取得；receive 不要求付出努力或经过主动获取程序。"
     },
     {
-      "word": "take delivery of",
-      "phonetic": "/ˈteɪk dɪˈlɪvɚiː ˈʌv/",
-      "partOfSpeech": "phr.",
-      "chinese": "接收；收货",
-      "difference": "take delivery of 常表示“接收；收货”，与 receive 的“收到”义有重合。take delivery of 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。"
+      "word": "accept",
+      "phonetic": "/ækˈsɛpt/",
+      "partOfSpeech": "v.",
+      "chinese": "接受",
+      "difference": "强调愿意接收，与被动收到不同；receive 不表示同意，收到后仍可拒绝接受。"
+    },
+    {
+      "word": "welcome",
+      "phonetic": "/ˈwɛlkəm/",
+      "partOfSpeech": "v.",
+      "chinese": "迎接",
+      "difference": "对应友好接待来访者；receive 可正式接见来宾，不必表达热情欢迎。"
+    },
+    {
+      "word": "collect",
+      "phonetic": "/kəˈlɛkt/",
+      "partOfSpeech": "v.",
+      "chinese": "领取",
+      "difference": "强调亲自取走已准备好的物品；receive 可由邮件或快递送达，不要求亲自领取。"
     }
   ],
   "antonyms": [
@@ -278,8 +329,8 @@
       "word": "send",
       "phonetic": "/ˈsɛnd/",
       "partOfSpeech": "v.",
-      "chinese": "发送；寄出",
-      "usage": "send 表示“发送；寄出”，与 receive 的“收到”义形成对比。这种反义关系只适用于上述明确义项。"
+      "chinese": "发送",
+      "usage": "在信息或物品传递方向上相对；receive 位于传递终点，send 则从来源把信息或物品发出。"
     }
   ],
   "derivatives": [
@@ -287,127 +338,124 @@
       "word": "receiver",
       "phonetic": "/rəˈsiːvɚ/",
       "partOfSpeech": "n.",
-      "chinese": "接收者；听筒",
-      "note": "可指接收信息的人或设备部件。"
+      "chinese": "接收者；听筒；接收器",
+      "note": "可指收取物品的人、电话听筒或信号接收设备。"
+    },
+    {
+      "word": "recipient",
+      "phonetic": "/rəˈsɪpiənt/",
+      "partOfSpeech": "n.",
+      "chinese": "接收者；收件人；获奖者",
+      "note": "常指邮件、款项、奖项或服务的接受者。"
     },
     {
       "word": "reception",
       "phonetic": "/rɪˈsɛpʃən/",
       "partOfSpeech": "n.",
-      "chinese": "接待；接收；反响",
-      "note": "常见于 reception desk、warm reception。"
+      "chinese": "接收；接待；反响",
+      "note": "可指接待处、信号接收或公众反应。"
     },
     {
       "word": "receipt",
       "phonetic": "/rɪˈsiːt/",
       "partOfSpeech": "n.",
       "chinese": "收据；收到",
-      "note": "常指付款凭证。"
+      "note": "常见于 proof of receipt 和 sales receipt。"
+    },
+    {
+      "word": "receptive",
+      "phonetic": "/rɪˈsɛptɪv/",
+      "partOfSpeech": "adj.",
+      "chinese": "乐于接受的",
+      "note": "常用 be receptive to ideas。"
     }
   ],
   "confusables": [],
   "relatedVocabulary": [
     {
-      "category": "同一语义场的高频词",
+      "category": "通信渠道",
       "items": [
         {
-          "word": "send",
-          "phonetic": "/ˈsɛnd/",
-          "partOfSpeech": "v.",
-          "chinese": "发送"
-        },
-        {
-          "word": "accept",
-          "phonetic": "/æˈksɛpt/",
-          "partOfSpeech": "v.",
-          "chinese": "接受"
-        },
-        {
-          "word": "delivery",
-          "phonetic": "/dɪˈlɪvɚiː/",
+          "word": "email",
+          "phonetic": "/iˈmeɪl/",
           "partOfSpeech": "n.",
-          "chinese": "递送；交付"
+          "chinese": "电子邮件"
+        },
+        {
+          "word": "letter",
+          "phonetic": "/ˈlɛtɚ/",
+          "partOfSpeech": "n.",
+          "chinese": "信件"
+        },
+        {
+          "word": "parcel",
+          "phonetic": "/ˈpɑrsəl/",
+          "partOfSpeech": "n.",
+          "chinese": "包裹"
+        },
+        {
+          "word": "notification",
+          "phonetic": "/ˌnoʊtəfəˈkeɪʃən/",
+          "partOfSpeech": "n.",
+          "chinese": "通知"
         }
       ]
     },
     {
-      "category": "近义表达分类",
+      "category": "服务与待遇",
       "items": [
         {
-          "word": "get",
-          "phonetic": "/ˈɡɛt/",
-          "partOfSpeech": "v.",
-          "chinese": "收到；得到"
+          "word": "treatment",
+          "phonetic": "/ˈtriːtmənt/",
+          "partOfSpeech": "n.",
+          "chinese": "治疗；待遇"
         },
         {
-          "word": "accept",
-          "phonetic": "/æˈksɛpt/",
-          "partOfSpeech": "v.",
-          "chinese": "接受；承认；同意"
+          "word": "assistance",
+          "phonetic": "/əˈsɪstəns/",
+          "partOfSpeech": "n.",
+          "chinese": "协助"
         },
         {
-          "word": "obtain",
-          "phonetic": "/əˈbteɪn/",
-          "partOfSpeech": "v.",
-          "chinese": "获得；达到"
+          "word": "care",
+          "phonetic": "/ˈkɛr/",
+          "partOfSpeech": "n.",
+          "chinese": "照护；照料"
         },
         {
-          "word": "take delivery of",
-          "phonetic": "/ˈteɪk dɪˈlɪvɚiː ˈʌv/",
-          "partOfSpeech": "phr.",
-          "chinese": "接收；收货"
+          "word": "hospitality",
+          "phonetic": "/ˌhɑspəˈtæləti/",
+          "partOfSpeech": "n.",
+          "chinese": "款待"
         }
       ]
     },
     {
-      "category": "对比与易混表达分类",
+      "category": "款项与凭证",
       "items": [
         {
-          "word": "send",
-          "phonetic": "/ˈsɛnd/",
-          "partOfSpeech": "v.",
-          "chinese": "发送；寄出"
+          "word": "payment",
+          "phonetic": "/ˈpeɪmənt/",
+          "partOfSpeech": "n.",
+          "chinese": "付款"
         },
         {
-          "word": "receiver",
-          "phonetic": "/rəˈsiːvɚ/",
+          "word": "invoice",
+          "phonetic": "/ˈɪnvɔɪs/",
           "partOfSpeech": "n.",
-          "chinese": "接收者；听筒"
+          "chinese": "发票"
         },
         {
-          "word": "reception",
-          "phonetic": "/rɪˈsɛpʃən/",
+          "word": "deposit",
+          "phonetic": "/dəˈpɑzɪt/",
           "partOfSpeech": "n.",
-          "chinese": "接待；接收；反响"
+          "chinese": "定金"
         },
         {
-          "word": "receipt",
-          "phonetic": "/rɪˈsiːt/",
+          "word": "confirmation",
+          "phonetic": "/ˌkɑnfɚˈmeɪʃən/",
           "partOfSpeech": "n.",
-          "chinese": "收据；收到"
-        }
-      ]
-    },
-    {
-      "category": "常用词族分类",
-      "items": [
-        {
-          "word": "receiver",
-          "phonetic": "/rəˈsiːvɚ/",
-          "partOfSpeech": "n.",
-          "chinese": "接收者；听筒"
-        },
-        {
-          "word": "reception",
-          "phonetic": "/rɪˈsɛpʃən/",
-          "partOfSpeech": "n.",
-          "chinese": "接待；接收；反响"
-        },
-        {
-          "word": "receipt",
-          "phonetic": "/rɪˈsiːt/",
-          "partOfSpeech": "n.",
-          "chinese": "收据；收到"
+          "chinese": "确认"
         }
       ]
     }
@@ -419,81 +467,91 @@
       "chinese": "我今天早上收到了你的消息。"
     },
     {
-      "scene": "工作或学习",
-      "english": "You will receive a confirmation email from the school.",
-      "chinese": "你会收到学校发来的确认邮件。"
-    },
-    {
-      "scene": "常见搭配",
-      "english": "Every learner should receive help when a problem repeats.",
-      "chinese": "问题反复出现时，每位学习者都应该得到帮助。"
-    },
-    {
-      "scene": "真实语境",
-      "english": "The issue did not receive enough attention at first.",
-      "chinese": "这个问题起初没有得到足够重视。"
-    },
-    {
-      "scene": "易错结构",
-      "english": "The host family received us warmly.",
-      "chinese": "寄宿家庭热情地接待了我们。"
-    },
-    {
-      "scene": "主动表达",
-      "english": "The new lesson format was well received by students.",
-      "chinese": "新的课程形式很受学生欢迎。"
-    },
-    {
       "scene": "日常交流",
-      "english": "He is entitled to receive the reward.",
-      "chinese": "他有权得到奖励。"
+      "english": "I received a message confirming the appointment.",
+      "chinese": "我收到了一条确认预约的消息。"
     },
     {
       "scene": "工作沟通",
-      "english": "It is more blessed to give than to receive.",
-      "chinese": "赠与比接受更让人觉得幸福。"
+      "english": "She received a letter from her former teacher in June.",
+      "chinese": "她六月收到了以前老师的来信。"
     },
     {
       "scene": "学习表达",
-      "english": "We receive many telephone calls from abroad.",
-      "chinese": "我们接到许多来自国外的电话。"
+      "english": "Small suppliers must receive payment within thirty days.",
+      "chinese": "小型供应商必须在三十天内收到付款。"
     },
     {
       "scene": "书面表达",
-      "english": "He received quite a few letters this morning.",
-      "chinese": "今天早上他收到好多信。"
+      "english": "The scientist received an award for her work on clean energy.",
+      "chinese": "这位科学家因清洁能源研究获得了奖项。"
+    },
+    {
+      "scene": "日常交流",
+      "english": "The injured cyclist received treatment at the scene.",
+      "chinese": "受伤的骑车人在现场接受了治疗。"
+    },
+    {
+      "scene": "工作沟通",
+      "english": "The team received permission to examine the archive.",
+      "chinese": "团队获准查阅档案。"
+    },
+    {
+      "scene": "学习表达",
+      "english": "The visiting musicians received a warm welcome from the village.",
+      "chinese": "来访的音乐家受到了村民的热烈欢迎。"
+    },
+    {
+      "scene": "书面表达",
+      "english": "The airline received numerous complaints about the cancellation.",
+      "chinese": "航空公司收到了大量有关航班取消的投诉。"
+    },
+    {
+      "scene": "日常交流",
+      "english": "Applicants will receive information about the interview by email.",
+      "chinese": "申请人将通过电子邮件收到面试相关信息。"
+    },
+    {
+      "scene": "工作沟通",
+      "english": "Customers should contact the supplier if they do not receive the equipment in good condition.",
+      "chinese": "顾客如果收到的设备有损坏，应联系供应商。"
+    },
+    {
+      "scene": "学习表达",
+      "english": "The mayor received foreign guests at city hall.",
+      "chinese": "市长在市政厅接待了外宾。"
     }
   ],
   "studyFocus": {
-    "coreMeaning": "先掌握“收到；接收”这个核心义，再对比另外 2 个常用义项，辨别不同语境。",
+    "coreMeaning": "先掌握“收到；得到”这个核心义，再对比另外 2 个常用义项，辨别不同语境。",
     "keyCollocation": "把“receive a message”连同介词、宾语和动词形式作为整个句块记忆。",
-    "commonMistake": "在“receive something from someone”所表达的这个具体含义中，要用介词 from；换成 at 会破坏这个固定结构或改变原意。",
+    "commonMistake": "表示发送者来源用 receive something from someone。",
     "mustUseExample": "I received your message this morning.（我今天早上收到了你的消息。）"
   },
   "questions": [
     {
       "id": "receive-v-meaning-core",
       "type": "meaning_choice",
-      "prompt": "“receive”最核心的中文含义是？",
+      "prompt": "“receive”最常见的核心中文义是哪一项？",
       "options": [
         "意识到",
         "得到",
-        "收到；接收"
+        "收到；得到"
       ],
-      "answer": "收到；接收",
+      "answer": "收到；得到",
       "stage": "T0",
       "ai": false
     },
     {
       "id": "receive-v-meaning-english",
       "type": "meaning_choice",
-      "prompt": "哪一项英文释义最符合词卡中的 “receive”？",
+      "prompt": "“receive”最常见的英文释义是哪一项？",
       "options": [
         "to obtain, reach, receive, or become something",
-        "to get something that is sent or given",
+        "to get or be given something",
         "to suddenly understand something clearly"
       ],
-      "answer": "to get something that is sent or given",
+      "answer": "to get or be given something",
       "stage": "T0",
       "ai": false
     },
@@ -502,10 +560,10 @@
       "type": "meaning_choice",
       "prompt": "核心结构辨析：哪一项既表示“收到消息”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "receive help",
-        "receive attention",
+        "receive payment",
+        "receive an award",
         "receive a message",
-        "receive something from someone"
+        "receive a letter from someone"
       ],
       "answer": "receive a message",
       "stage": "T1",
@@ -514,11 +572,12 @@
     {
       "id": "receive-v-synonym-choice",
       "type": "meaning_choice",
-      "prompt": "哪个词是词卡中列出的 “receive” 最直接近义词？",
+      "prompt": "在“收到”这个义项下，哪个词与“receive”意思最接近？",
       "options": [
-        "send",
-        "realize",
-        "get"
+        "do",
+        "get",
+        "be",
+        "have"
       ],
       "answer": "get",
       "stage": "T2",
@@ -527,11 +586,12 @@
     {
       "id": "receive-v-antonym-choice",
       "type": "meaning_choice",
-      "prompt": "哪个词是词卡中列出的 “receive” 最直接反义词？",
+      "prompt": "在“收到；得到”这个义项下，哪个词与“receive”意思相反？",
       "options": [
-        "realize",
         "send",
-        "get"
+        "be",
+        "have",
+        "do"
       ],
       "answer": "send",
       "stage": "T2",
@@ -540,11 +600,11 @@
     {
       "id": "receive-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "根据本词卡辨析，哪个词被列为 “receive” 的派生词？",
+      "prompt": "哪一项是“receive”的常用派生词？",
       "options": [
-        "get",
-        "send",
-        "realize",
+        "increase",
+        "accident",
+        "accuracy",
         "receiver"
       ],
       "answer": "receiver",
@@ -554,7 +614,7 @@
     {
       "id": "receive-v-recall-definition",
       "type": "recall",
-      "prompt": "根据英文释义写出目标词：to get something that is sent or given",
+      "prompt": "根据英文释义写出对应单词：to get or be given something",
       "answer": "receive",
       "stage": "T1",
       "ai": false
@@ -562,7 +622,7 @@
     {
       "id": "receive-v-recall-chinese",
       "type": "recall",
-      "prompt": "写出符合“收到；接收”（v.）的本课目标词。",
+      "prompt": "写出表示“收到；得到”（v.）的英文单词。",
       "answer": "receive",
       "stage": "T1",
       "ai": false
@@ -578,27 +638,21 @@
     {
       "id": "receive-v-collocation-structure-meaning-v3",
       "type": "collocation",
-      "prompt": "句型应用：哪一项既表示“从某人处收到某物”，又符合这个形式线索：完整搭配中使用介词 from？",
+      "prompt": "句型应用：哪一项既表示“收到某人的来信”，又符合这个形式线索：完整搭配中使用介词 from？",
       "options": [
-        "receive something from someone",
+        "receive a letter from someone",
         "receive a message",
-        "receive help",
-        "receive attention"
+        "receive payment",
+        "receive an award"
       ],
-      "answer": "receive something from someone",
+      "answer": "receive a letter from someone",
       "stage": "T1",
       "ai": false
     },
     {
       "id": "receive-v-collocation-example-context-v3",
       "type": "collocation",
-      "prompt": "根据完整句意和中文提示，选出唯一能补全原句意思的词：I received your _____ this morning.（中文：我今天早上收到了你的消息。）",
-      "options": [
-        "used",
-        "better",
-        "lot",
-        "message"
-      ],
+      "prompt": "根据完整句意和中文提示补全原句：I received your _____ this morning.（中文：我今天早上收到了你的消息。）",
       "answer": "message",
       "stage": "T2",
       "ai": false
@@ -606,35 +660,35 @@
     {
       "id": "receive-v-collocation-fixed-1-v3",
       "type": "collocation",
-      "prompt": "搭配辨析：哪一项既表示“收到消息”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
+      "prompt": "搭配辨析：哪一项既表示“接受治疗”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "receive help",
-        "receive attention",
-        "receive a message",
-        "receive something from someone"
+        "receive a letter from someone",
+        "receive payment",
+        "receive treatment",
+        "receive a message"
       ],
-      "answer": "receive a message",
+      "answer": "receive treatment",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "receive-v-collocation-fixed-2-v3",
       "type": "collocation",
-      "prompt": "用法辨析：哪一项既表示“从某人处收到某物”，又符合这个形式线索：完整搭配中使用介词 from？",
+      "prompt": "用法辨析：哪一项既表示“获得许可”，又符合这个形式线索：选择与该中文含义和词性同时匹配的完整句块？",
       "options": [
-        "receive attention",
-        "receive something from someone",
+        "receive payment",
+        "receive permission",
         "receive a message",
-        "receive help"
+        "receive a letter from someone"
       ],
-      "answer": "receive something from someone",
+      "answer": "receive permission",
       "stage": "T3",
       "ai": false
     },
     {
       "id": "receive-v-example-cloze",
       "type": "collocation",
-      "prompt": "根据句意补全词卡核心例句：I _____ your message this morning.（填写 receive 的正确形式）",
+      "prompt": "根据句意和中文提示补全另一个常用例句：I _____ a message confirming the appointment.（填写 receive 的正确形式）（中文：我收到了一条确认预约的消息。）",
       "answer": "received",
       "stage": "T3",
       "ai": false
@@ -642,7 +696,7 @@
     {
       "id": "receive-v-sentence-core",
       "type": "free_sentence",
-      "prompt": "请用 “receive” 写一个自然、真实的英文句子，含义必须符合词卡核心义“收到；接收”。",
+      "prompt": "请用 “receive” 写一个自然、真实的英文句子，含义必须符合核心义“收到；得到”。",
       "answer": "",
       "stage": "T2",
       "ai": true
@@ -650,7 +704,7 @@
     {
       "id": "receive-v-sentence-phrase",
       "type": "free_sentence",
-      "prompt": "请使用 “receive a message” 结构写一个与自己有关的自然英文句子。",
+      "prompt": "请使用 “receive treatment” 结构写一个与自己有关的自然英文句子。",
       "answer": "",
       "stage": "T3",
       "ai": true
@@ -658,7 +712,7 @@
     {
       "id": "receive-v-dialogue",
       "type": "dialogue",
-      "prompt": "写一段 2–4 轮真实对话，自然使用 “receive” 和 “receive a message” 结构，并避免中文直译。",
+      "prompt": "写一段 2–4 轮真实对话，自然使用 “receive” 和 “receive an email confirmation” 结构，并避免中文直译。",
       "answer": "",
       "stage": "T4",
       "ai": true
@@ -716,9 +770,10 @@
       "dialogue"
     ]
   },
-  "detailLevel": "template-complete",
-  "templateVersion": "learning-template-2026.09.10.3",
-  "contentVersion": "2026.09.10.3",
-  "reviewed": false,
+  "detailLevel": "template-curated",
+  "templateVersion": "learning-template-2026.09.10.4",
+  "contentVersion": "2026.09.10.4",
+  "reviewed": true,
+  "curationSource": "manual-semantic-pack-2026.09.10.4",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

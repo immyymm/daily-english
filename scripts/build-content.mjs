@@ -1,4 +1,5 @@
 import fs from 'node:fs/promises';
+import { createHash } from 'node:crypto';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { lexicon } from './lexicon.mjs';
@@ -18,6 +19,25 @@ import { manualConfusableWords, manualDerivativePacks, manualMeaningPacks, manua
 import { directRelationPacks } from './relation-packs.mjs';
 import { curatedSynonymWords, semanticFallbackSynonyms, semanticPhraseChinese } from './semantic-fallbacks.mjs';
 import tatoebaExampleData from './tatoeba-examples.json' with { type: 'json' };
+import { finalizeMeaningRows } from './common-noun-senses.mjs';
+import { semanticRelatedPacks } from './semantic-related-packs.mjs';
+import { manualCardPacks } from './manual-card-packs.mjs';
+import {
+  buildSecondaryMeaningChoiceQuestion,
+  buildFixedPhrases,
+  buildSemanticRelatedVocabulary,
+  classifyContextPhrase,
+  isConcisePhraseGloss,
+  mechanicalContextIssue,
+  phraseContainsTarget,
+  reusablePhraseIssue,
+  rewriteLearnerQuestionPrompts,
+  selectRelationQuestionAnswer,
+  selectSecondaryRelationQuestionAnswer,
+  selectTeachingDistractors,
+  slotGuidance,
+  structureFormClue
+} from './quality-sections.mjs';
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(scriptDir, '..');
@@ -99,7 +119,10 @@ const manualSupplementalExamples = {
     ['Be careful not to break the glass.', '小心别打碎玻璃。']
   ],
   affect: [
-    ['The delay affected everyone on the team.', '这次延误影响了团队中的每个人。']
+    ['The delay affected everyone on the team.', '这次延误影响了团队中的每个人。'],
+    ['Noise can affect your concentration.', '噪声会影响你的注意力。', '影响某人的注意力', "affect someone's concentration"],
+    ['The new rule may affect how we work.', '新规定可能会影响我们的工作方式。', '影响某人的工作方式', 'affect how someone works'],
+    ['The medicine did not affect my sleep.', '这种药没有影响我的睡眠。', '影响某人的睡眠', "affect someone's sleep"]
   ],
   describe: [
     ['She described the process in simple terms.', '她用简单的语言描述了这个过程。']
@@ -181,6 +204,22 @@ const manualSupplementalExamples = {
   hope: [
     ['We hope for better weather tomorrow.', '我们希望明天天气更好。'],
     ['I hope to hear from you soon.', '我希望很快收到你的消息。']
+  ],
+  listen: [
+    ['Please listen to what she has to say.', '请听听她要说什么。', '听某人说话', 'listen to what someone says'],
+    ['We listened in silence while he explained the plan.', '他解释计划时，我们静静地听着。', '静静聆听', 'listen in silence'],
+    ['Try to listen without interrupting the speaker.', '尽量听完，不要打断说话者。', '倾听而不打断', 'listen without interrupting']
+  ],
+  develop: [
+    ['The team developed a clear strategy for the launch.', '团队为发布制定了明确的策略。', '制定策略', 'develop a strategy'],
+    ['Some patients develop mild symptoms within a day.', '一些患者会在一天内出现轻微症状。', '出现症状', 'develop symptoms'],
+    ['They are developing software for small businesses.', '他们正在为小企业开发软件。', '开发软件', 'develop software'],
+    ['It takes time to develop a strong relationship.', '建立牢固的关系需要时间。', '建立关系', 'develop a relationship']
+  ],
+  prefer: [
+    ['I prefer working from home to commuting every day.', '比起每天通勤，我更喜欢在家工作。', '更喜欢做某事而非另一件事', 'prefer doing something to doing something else'],
+    ['Most guests prefer tea over coffee.', '大多数客人比起咖啡更喜欢茶。', '比起某物更喜欢另一物', 'prefer something over something else'],
+    ['She prefers not to drive at night.', '她更愿意不在夜间开车。', '宁愿不做某事', 'prefer not to do something']
   ],
   expect: [
     ['We expect strong demand this summer.', '我们预计今年夏天需求旺盛。', '预计需求旺盛', 'expect strong demand'],
@@ -272,6 +311,13 @@ const verbIpaOverrides = {
   use: '/juːz/',
   live: '/lɪv/',
   lead: '/liːd/'
+};
+const publishedHeadwordIpaOverrides = {
+  use: '/juːz/（动词）；/juːs/（名词）',
+  live: '/lɪv/（动词）；/laɪv/（形容词/副词）',
+  // increase is common as both a verb and a noun, with a stress shift that
+  // learners must see rather than having the noun reading silently omitted.
+  increase: '/ɪnˈkriːs/（动词）；/ˈɪnkriːs/（名词）'
 };
 const summarizeChineseMeanings = (meanings) => {
   const seen = new Set();
@@ -453,6 +499,7 @@ function syllableHint(word) {
     accept: 'ac·cept', prefer: 'pre·fer', discover: 'dis·cov·er', protect: 'pro·tect',
     encourage: 'en·cour·age', express: 'ex·press', begin: 'be·gin', open: 'o·pen', appear: 'ap·pear',
     agree: 'a·gree', report: 're·port', receive: 're·ceive', return: 're·turn',
+    follow: 'fol·low', allow: 'al·low', listen: 'lis·ten',
     ability: 'a·bil·i·ty', opportunity: 'op·por·tu·ni·ty', relationship: 're·la·tion·ship',
     environment: 'en·vi·ron·ment', information: 'in·for·ma·tion', community: 'com·mu·ni·ty',
     important: 'im·por·tant', available: 'a·vail·a·ble', possible: 'pos·si·ble',
@@ -600,18 +647,28 @@ function phraseSpecificError(item, phrase, fallbackIndex) {
 }
 
 function generatedErrors(item, tuples) {
-  const source = [...tuples].sort((left, right) => {
-    const score = (phrase) => /\b(to do|someone do|someone doing|that \+ clause|doing something)\b/i.test(phrase) ? 2 : /\b(on|in|at|for|with|by|from|of|about|into|over|through)\b/i.test(phrase) ? 1 : 0;
-    return score(right[0]) - score(left[0]);
-  });
-  const rows = source.slice(0, 4).map(([phrase], index) => phraseSpecificError(item, phrase, index));
-  const seen = new Set();
-  return rows.filter(([wrong, right]) => {
-    const key = `${wrong}|${right}`.toLowerCase();
-    if (seen.has(key)) return false;
-    seen.add(key);
-    return true;
-  }).slice(0, 2);
+  const modals = new Set(['can', 'could', 'may', 'might', 'must', 'should', 'will', 'would']);
+  if (modals.has(item.w)) {
+    return [
+      [`${item.w} to work`, `${item.w} work`, `情态动词 ${item.w} 后直接接动词原形 work，不加 to。`],
+      [`${item.w} works`, `${item.w} work`, `情态动词 ${item.w} 后的实义动词不随主语变化，必须使用原形 work。`]
+    ];
+  }
+  const thirdPerson = item.w === 'be'
+    ? 'is'
+    : item.w === 'have'
+      ? 'has'
+      : item.w === 'do'
+        ? 'does'
+        : /(?:s|x|z|ch|sh|o)$/.test(item.w)
+          ? `${item.w}es`
+          : /[^aeiou]y$/.test(item.w)
+            ? `${item.w.slice(0, -1)}ies`
+            : `${item.w}s`;
+  return [
+    [`can to ${item.w}`, `can ${item.w}`, `情态动词 can 后直接接 ${item.w} 的原形，不加 to。`],
+    [`to ${thirdPerson}`, `to ${item.w}`, `不定式标记 to 后使用 ${item.w} 的原形，不能使用第三人称单数形式 ${thirdPerson}。`]
+  ];
 }
 
 const definitionHeadWords = new Set([
@@ -725,12 +782,16 @@ function selectMeaningExample(english, chinese, pool, usedIndexes) {
 
 function normalizeMeanings(item, override) {
   if (override?.meanings) {
-    return override.meanings.map(([partOfSpeech, english, chinese, example, translation]) => ({ partOfSpeech, english, chinese, example, translation }));
+    return finalizeMeaningRows(
+      item.w,
+      override.meanings.map(([partOfSpeech, english, chinese, example, translation]) => ({ partOfSpeech, english, chinese, example, translation })),
+      { authoritative: Boolean(override.manualSemanticPack) }
+    );
   }
   const examplePool = meaningExamplePool(item);
   const manual = manualMeaningPacks[item.w];
   if (manual) {
-    return manual.map(([partOfSpeech, english, chinese, exampleIndex, customExample, customTranslation]) => {
+    return finalizeMeaningRows(item.w, manual.map(([partOfSpeech, english, chinese, exampleIndex, customExample, customTranslation]) => {
       const evidence = examplePool[exampleIndex] ?? examplePool[0];
       return {
         partOfSpeech,
@@ -739,7 +800,7 @@ function normalizeMeanings(item, override) {
         example: customExample ?? evidence.example,
         translation: customTranslation ?? evidence.translation
       };
-    });
+    }));
   }
   const englishSenses = limitEnglishSensesToChinese(splitEnglishSenses(item.en), item.zh);
   const chineseGroups = chineseGroupsForSenses(item.zh, englishSenses);
@@ -758,12 +819,12 @@ function normalizeMeanings(item, override) {
   const secondary = secondarySenses[item.w];
   if (secondary && !rows.some((entry) => entry.english.toLowerCase() === secondary.english.toLowerCase())) rows.push(secondary);
   const seen = new Set();
-  return rows.filter((entry) => {
+  return finalizeMeaningRows(item.w, rows.filter((entry) => {
     const key = `${entry.english}|${entry.chinese}`.toLowerCase().replace(/[^a-z\u4e00-\u9fff]+/g, ' ').trim();
     if (!entry.english || !entry.chinese || seen.has(key)) return false;
     seen.add(key);
     return true;
-  }).slice(0, 4);
+  }).slice(0, 4));
 }
 
 function normalizeStructures(item, override, tuples) {
@@ -1214,113 +1275,259 @@ function normalizePhraseGloss(chinese) {
   return chinese.trim().replace(/[。！？!?；;]+$/g, '');
 }
 
-function normalizeContexts(item, override, tuples) {
-  const contextLabels = item.p.startsWith('v.')
-    ? ['核心动作与结构', '日常与工作语境', '高频扩展表达', '补充常用语境']
-    : item.p.startsWith('n.')
-      ? ['核心名词搭配', '日常与工作语境', '高频扩展表达', '补充常用语境']
-      : ['核心用法', '日常与工作语境', '高频扩展表达', '补充常用语境'];
+function compactContextGloss(item, chinese, prefix = '') {
+  const cleaned = normalizePhraseGloss(String(chinese ?? ''))
+    .replace(/^(?:我|我们|你|你们|他|她|他们|她们|这个|这项|该)\s*/u, '')
+    .replace(/[，,。！？!?].*$/u, '')
+    .trim();
+  const shortestUseful = cleaned.split(/[；;]/).map((part) => part.trim()).find((part) => part && [...part].length <= 12)
+    ?? firstMeaning(item.zh);
+  const result = `${prefix}${shortestUseful}`.replace(/；+/g, '；').replace(/[。！？!?；;]+$/g, '');
+  return [...result].length <= 14 ? result : firstMeaning(item.zh).slice(0, 14);
+}
+
+function contextCategoryFor(phrase, sourceCategory = '') {
+  if (sourceCategory && !/^(?:核心动作与结构|核心名词搭配|核心用法|日常与工作语境|高频扩展表达|补充常用语境)$/.test(sourceCategory)) {
+    return sourceCategory;
+  }
+  if (/\b(?:never|not|no longer|hardly|without|unable|cannot|can't|couldn't|won't|wouldn't|mustn't|shouldn't)\b/i.test(phrase)) return '否定与限制';
+  if (/\b(?:always|often|usually|sometimes|still|already|yet|again|daily|every|soon|later|time|day|week|year)\b/i.test(phrase)) return '时间与频率';
+  if (/\b(?:can|could|may|might|must|should|will|would|need to|have to)\b/i.test(phrase)) return '情态与必要性';
+  if (/\b(?:that \+ clause|wh- \+ clause|whether|if)\b/i.test(phrase)) return '从句与判断';
+  if (/\b(?:someone|people|person|team|family|friend|customer|student)\b/i.test(phrase)) return '人际互动';
+  if (/\b(?:to do|doing something|do something)\b/i.test(phrase)) return '动词补语结构';
+  if (/\b(?:about|against|as|at|by|for|from|in|into|of|on|over|through|to|with|without)\b/i.test(phrase)) return '介词与延伸';
+  return classifyContextPhrase({ phrase }, 'v.');
+}
+
+function sentenceContextChunk(item, sentence) {
+  const words = wordsWithOffsets(String(sentence ?? ''));
+  const forms = inflectedForms(item.w.toLowerCase());
+  const targetIndex = words.findIndex((entry) => forms.has(entry.text.toLowerCase()));
+  if (targetIndex < 0) return '';
+  let start = targetIndex;
+  const previous = words[targetIndex - 1]?.text.toLowerCase();
+  const twoBack = words[targetIndex - 2]?.text.toLowerCase();
+  if (/^(?:always|often|usually|sometimes|never|still|already|also|can|could|may|might|must|should|will|would|to)$/i.test(previous ?? '')) start -= 1;
+  if (previous === 'to' && /^(?:need|want|try|plan|learn|decide|continue|begin|start|help)$/i.test(twoBack ?? '')) start -= 2;
+  const selected = words.slice(start, Math.min(words.length, start + 8));
+  while (selected.length > 2 && /^(?:a|an|the|my|your|his|her|our|their|to|of|for|with|on|in|at|from|by|as|and|or)$/i.test(selected.at(-1).text)) selected.pop();
+  return selected.map((entry) => entry.text).join(' ').replace(/[.,;:!?]+$/g, '').trim();
+}
+
+function contextualVariant(item, phrase, modifier) {
+  const forms = inflectedForms(item.w.toLowerCase());
+  const words = phrase.split(/\s+/);
+  let targetIndex = words.findIndex((word) => forms.has(word.toLowerCase().replace(/[^a-z']/g, '')));
+  if (targetIndex < 0) return '';
+  const modals = new Set(['can', 'could', 'may', 'might', 'must', 'should', 'will', 'would']);
+  if (modals.has(item.w)) {
+    words.splice(targetIndex + 1, 0, modifier);
+    return words.join(' ');
+  }
+  const startsWithTarget = targetIndex === 0;
+  const startsWithToTarget = targetIndex === 1 && words[0].toLowerCase() === 'to';
+  if (!startsWithTarget && !startsWithToTarget) return '';
+  if (startsWithToTarget) {
+    words.shift();
+    targetIndex -= 1;
+  }
+  words[targetIndex] = item.w;
+  if (modifier === 'not') return ['do', 'not', ...words].join(' ');
+  if (modifier === 'can') return ['can', ...words].join(' ');
+  if (modifier === 'need to') return ['need', 'to', ...words].join(' ');
+  return [modifier, ...words].join(' ');
+}
+
+function normalizeContexts(item, override, tuples, fixedPhrases) {
   if (override?.contexts) {
-    return override.contexts.filter(([, items]) => items.length).map(([category, items]) => ({
-      category,
-      items: items.map(([phrase, chinese]) => {
-        const normalized = reviewedContextEntry(item, phrase, chinese);
-        return { phrase: normalized.phrase, phonetic: ipaFor(normalized.phrase, item.w, item.ipa), chinese: normalized.chinese };
-      })
-    }));
+    if (item.w === 'work') {
+      return override.contexts.filter(([, items]) => items.length).map(([category, items]) => ({
+        category,
+        items: items.map(([phrase, chinese]) => ({
+          phrase,
+          phonetic: ipaFor(phrase, item.w, item.ipa),
+          chinese
+        }))
+      }));
+    }
+    const fixedKeys = new Set(fixedPhrases.map((entry) => entry.phrase.toLowerCase().replace(/[^a-z']+/g, ' ').trim()));
+    const seen = new Set();
+    const groups = override.contexts.map(([category, items]) => {
+      if (!category || /^(?:核心动作与结构|日常与工作语境|高频扩展表达|补充常用语境|其他|综合)$/.test(category)) {
+        throw new Error(`${item.w}: curated context category must name a concrete usage setting: ${category}`);
+      }
+      return {
+        category,
+        items: items.map(([rawPhrase, rawChinese]) => {
+          const { phrase, chinese } = override.manualSemanticPack
+            ? { phrase: rawPhrase.trim(), chinese: normalizePhraseGloss(rawChinese) }
+            : reviewedContextEntry(item, rawPhrase, rawChinese);
+          const key = phrase.toLowerCase().replace(/[^a-z']+/g, ' ').trim();
+          if (!key || seen.has(key) || fixedKeys.has(key)) {
+            throw new Error(`${item.w}: curated context phrase is duplicate or repeats fixedPhrases: ${phrase}`);
+          }
+          if (!phraseContainsTarget(phrase, item.w) || reusablePhraseIssue(phrase)) {
+            throw new Error(`${item.w}: curated context phrase is incomplete or misses the target: ${phrase}`);
+          }
+          if (!isConcisePhraseGloss(chinese, 14)) {
+            throw new Error(`${item.w}: curated context gloss is not a concise phrase meaning: ${chinese}`);
+          }
+          if (mechanicalContextIssue(phrase, item.w)) {
+            throw new Error(`${item.w}: curated contexts must not use mechanical modal, frequency, or negative padding: ${phrase}`);
+          }
+          seen.add(key);
+          return { phrase, phonetic: ipaFor(phrase, item.w, item.ipa), chinese };
+        })
+      };
+    });
+    const itemCount = groups.reduce((sum, group) => sum + group.items.length, 0);
+    if (groups.length < 4 || itemCount < 16) {
+      throw new Error(`${item.w}: curated contexts need at least 4 concrete categories and 16 independent phrases.`);
+    }
+    return groups;
   }
-  const examples = priorityEntries[item.w]?.uses
-    ?? (curatedExamples[item.w] ?? [[item.ex, item.exZh]]).map(([example, translation], index) => [
-      tuples[index]?.[0] ?? item.coll,
-      tuples[index]?.[1] ?? item.collZh,
-      example,
-      translation
-    ]);
-  // The source packs contain reviewed, reusable chunks. Keep those chunks as
-  // context labels and reserve the complete sentences for fixed-phrase examples.
-  const contextItems = examples.map((entry, index) => {
-    const normalized = reviewedContextEntry(item, entry[0], entry[1]);
-    return [normalized.phrase, normalized.chinese, index];
-  })
-    .filter(([phrase], index, source) => source.findIndex(([candidate]) => candidate.toLowerCase() === phrase.toLowerCase()) === index);
-  const seenPhrases = new Set(contextItems.map(([phrase]) => phrase.toLowerCase().replace(/[^a-z']+/g, ' ').trim()));
-  for (const entry of supplementalPhraseRows(item)) {
-    const normalized = reviewedContextEntry(item, entry.phrase, entry.phraseChinese);
+  const fixedKeys = new Set(fixedPhrases.map((entry) => entry.phrase.toLowerCase().replace(/[^a-z']+/g, ' ').trim()));
+  const candidates = [];
+  if (override?.contexts) {
+    for (const [category, items] of override.contexts) {
+      for (const [phrase, chinese] of items) candidates.push({ phrase, chinese, sourceCategory: category });
+    }
+  }
+  for (const entry of fixedPhrases) {
+    candidates.push({ phrase: sentenceContextChunk(item, entry.example), chinese: entry.chinese });
+  }
+  const exampleRows = priorityEntries[item.w]?.uses
+    ?? (curatedExamples[item.w] ?? [[item.ex, item.exZh]]).map(([example, translation], index) => [tuples[index]?.[0] ?? item.coll, tuples[index]?.[1] ?? item.collZh, example, translation]);
+  for (const [phrase, chinese, example] of exampleRows) {
+    candidates.push({ phrase: sentenceContextChunk(item, example), chinese });
+    candidates.push({ phrase, chinese });
+  }
+  const seen = new Set();
+  const accepted = [];
+  const add = ({ phrase, chinese, sourceCategory, prefix = '' }) => {
+    const normalized = reviewedContextEntry(item, phrase ?? '', chinese ?? firstMeaning(item.zh));
     const key = normalized.phrase.toLowerCase().replace(/[^a-z']+/g, ' ').trim();
-    if (seenPhrases.has(key)) continue;
-    contextItems.push([normalized.phrase, normalized.chinese, contextItems.length]);
-    seenPhrases.add(key);
-    if (contextItems.length >= 10) break;
+    if (!key || fixedKeys.has(key) || seen.has(key) || !wordsWithOffsets(normalized.phrase).some((word) => inflectedForms(item.w).has(word.text.toLowerCase()))) return;
+    const wordCount = normalized.phrase.split(/\s+/).length;
+    if (wordCount > 8 || reusablePhraseIssue(normalized.phrase)) return;
+    if (wordCount > 6 && /^(?:i|you|we|they|he|she|the|a|an)\b/i.test(normalized.phrase)) return;
+    const finalChinese = compactContextGloss(item, normalized.chinese, prefix);
+    if (!isConcisePhraseGloss(finalChinese, 24)) return;
+    let phonetic;
+    try {
+      phonetic = ipaFor(normalized.phrase, item.w, item.ipa);
+    } catch {
+      return;
+    }
+    seen.add(key);
+    accepted.push({
+      phrase: normalized.phrase,
+      phonetic,
+      chinese: finalChinese,
+      category: contextCategoryFor(normalized.phrase, sourceCategory)
+    });
+  };
+  candidates.forEach(add);
+  const bases = fixedPhrases.map((entry) => ({ phrase: entry.phrase, chinese: entry.chinese }));
+  const modifiers = new Set(['can', 'could', 'may', 'might', 'must', 'should', 'will', 'would']).has(item.w)
+    ? [['still', '仍然', '时间与频率'], ['not', '不', '否定与限制'], ['also', '也', '并列与补充'], ['always', '始终', '时间与频率']]
+    : [['often', '经常', '时间与频率'], ['usually', '通常', '时间与频率'], ['can', '可以', '情态与必要性'], ['need to', '需要', '情态与必要性'], ['not', '不', '否定与限制']];
+  for (const [modifier, chinesePrefix, sourceCategory] of modifiers) {
+    for (const base of bases) {
+      add({ phrase: contextualVariant(item, base.phrase, modifier), chinese: base.chinese, prefix: chinesePrefix, sourceCategory });
+    }
   }
-  const groupSize = Math.ceil(contextItems.length / contextLabels.length);
-  const source = contextLabels.map((label, index) => [
-    label,
-    contextItems.slice(index * groupSize, index * groupSize + groupSize).map(([phrase, chinese]) => [phrase, chinese])
-  ]);
-  return source.filter(([, items]) => items.length).map(([category, items]) => ({
-    category,
-    items: items.map(([phrase, chinese]) => {
-      const normalized = reviewedContextEntry(item, phrase, chinese);
-      return { phrase: normalized.phrase, phonetic: ipaFor(normalized.phrase, item.w, item.ipa), chinese: normalized.chinese };
-    })
-  }));
+  if (accepted.length < 12) throw new Error(`${item.w}: only ${accepted.length}/12 independent context phrases survived review.`);
+  const availableGroups = new Map();
+  for (const entry of accepted) {
+    if (!availableGroups.has(entry.category)) availableGroups.set(entry.category, []);
+    availableGroups.get(entry.category).push(entry);
+  }
+  if (availableGroups.size < 4) throw new Error(`${item.w}: only ${availableGroups.size}/4 concrete context categories survived review.`);
+  const selectedGroups = [...availableGroups].map(([category]) => ({ category, items: [] }));
+  let remaining = 12;
+  let itemIndex = 0;
+  while (remaining > 0) {
+    let added = false;
+    for (let groupIndex = 0; groupIndex < selectedGroups.length && remaining > 0; groupIndex += 1) {
+      const entry = availableGroups.get(selectedGroups[groupIndex].category)[itemIndex];
+      if (!entry) continue;
+      selectedGroups[groupIndex].items.push({ phrase: entry.phrase, phonetic: entry.phonetic, chinese: entry.chinese });
+      remaining -= 1;
+      added = true;
+    }
+    if (!added) break;
+    itemIndex += 1;
+  }
+  return selectedGroups.filter((group) => group.items.length);
 }
 
 function normalizeFixedPhrases(item, override, tuples) {
-  if (override?.phrases) {
-    const source = [...override.phrases];
-    if (item.w !== 'work') {
-      const seenPhrases = new Set(source.map(([phrase]) => phrase.toLowerCase().replace(/[^a-z']+/g, ' ').trim()));
-      const seenExamples = new Set(source.map(([, , example]) => example.toLowerCase().replace(/\s+/g, ' ').trim()));
-      for (const entry of supplementalPhraseRows(item)) {
-        const phraseKey = entry.phrase.toLowerCase().replace(/[^a-z']+/g, ' ').trim();
-        const exampleKey = entry.english.toLowerCase().replace(/\s+/g, ' ').trim();
-        if (seenPhrases.has(phraseKey) || seenExamples.has(exampleKey)) continue;
-        source.push([entry.phrase, entry.phraseChinese, entry.english, entry.chinese]);
-        seenPhrases.add(phraseKey);
-        seenExamples.add(exampleKey);
-        if (source.length >= 10) break;
-      }
-    }
-    return source.map(([phrase, chinese, example, translation]) => {
-      const normalized = reviewedContextEntry(item, phrase, chinese);
-      return {
-        phrase: normalized.phrase,
-        phonetic: ipaFor(normalized.phrase, item.w, item.ipa),
-        chinese: normalized.chinese,
-        example,
-        translation
-      };
+  if (item.w === 'work' && override?.phrases) {
+    return override.phrases.map(([phrase, chinese, example, translation]) => ({
+      phrase,
+      phonetic: ipaFor(phrase, item.w, item.ipa),
+      chinese,
+      example,
+      translation
+    }));
+  }
+  if (override?.manualSemanticPack) {
+    const source = override.phrases.map(([phrase, chinese, example, translation]) => ({
+      phrase: phrase.trim(),
+      chinese: normalizePhraseGloss(chinese),
+      example: example.trim(),
+      translation: translation.trim(),
+      phonetic: ipaFor(phrase, item.w, item.ipa)
+    }));
+    const result = buildFixedPhrases({
+      word: item.w,
+      candidates: source,
+      ipaFor: (phrase) => ipaFor(phrase, item.w, item.ipa),
+      minimumItems: 12,
+      maximumItems: source.length
     });
+    if (result.length !== source.length) {
+      throw new Error(`${item.w}: every manual fixed phrase must survive unchanged; ${result.length}/${source.length} passed.`);
+    }
+    return result;
   }
   const priorityExamples = priorityEntries[item.w]?.uses?.map((entry) => [entry[2], entry[3]]);
   const examples = priorityExamples ?? curatedExamples[item.w] ?? [[item.ex, item.exZh]];
-  const source = tuples.slice(0, examples.length).map(([phrase, chinese], index) => [
-    phrase,
-    chinese,
-    examples[index][0],
-    examples[index][1]
-  ]);
-  const seenPhrases = new Set(source.map(([phrase]) => phrase.toLowerCase().replace(/[^a-z']+/g, ' ').trim()));
-  const seenExamples = new Set(source.map(([, , example]) => example.toLowerCase().replace(/\s+/g, ' ').trim()));
-  for (const entry of supplementalPhraseRows(item)) {
-    const phraseKey = entry.phrase.toLowerCase().replace(/[^a-z']+/g, ' ').trim();
-    const exampleKey = entry.english.toLowerCase().replace(/\s+/g, ' ').trim();
-    if (seenPhrases.has(phraseKey) || seenExamples.has(exampleKey)) continue;
-    source.push([entry.phrase, entry.phraseChinese, entry.english, entry.chinese]);
-    seenPhrases.add(phraseKey);
-    seenExamples.add(exampleKey);
-    if (source.length >= 10) break;
-  }
-  return source.map(([phrase, chinese, example, translation]) => {
+  const source = (override?.phrases ?? tuples.slice(0, examples.length).map(([phrase, chinese], index) => [
+    phrase, chinese, examples[index][0], examples[index][1]
+  ])).map(([phrase, chinese, example, translation]) => {
     const normalized = reviewedContextEntry(item, phrase, chinese);
     return {
       phrase: normalized.phrase,
-      phonetic: ipaFor(normalized.phrase, item.w, item.ipa),
-      chinese: normalized.chinese,
+      chinese: compactContextGloss(item, normalized.chinese),
       example,
       translation
     };
+  });
+  for (const entry of supplementalPhraseRows(item)) {
+    const normalized = reviewedContextEntry(item, entry.phrase, entry.phraseChinese);
+    source.push({
+      phrase: normalized.phrase,
+      chinese: compactContextGloss(item, normalized.chinese),
+      example: entry.english,
+      translation: entry.chinese
+    });
+  }
+  const pronounceableSource = source.flatMap((entry) => {
+    try {
+      return [{ ...entry, phonetic: ipaFor(entry.phrase, item.w, item.ipa) }];
+    } catch {
+      return [];
+    }
+  });
+  return buildFixedPhrases({
+    word: item.w,
+    candidates: pronounceableSource,
+    ipaFor: (phrase) => ipaFor(phrase, item.w, item.ipa),
+    minimumItems: 12,
+    maximumItems: 12
   });
 }
 
@@ -1329,7 +1536,7 @@ function normalizeRelations(item, override, key) {
     const noteKey = key === 'synonyms' || key === 'confusables' ? 'difference' : key === 'antonyms' ? 'usage' : 'note';
     return override[key].map(([word, partOfSpeech, chinese, note]) => ({
       word,
-      phonetic: ipaFor(word),
+      phonetic: ipaFor(word, '', '', { partOfSpeech, chinese }),
       partOfSpeech,
       chinese,
       [noteKey]: note
@@ -1343,7 +1550,7 @@ function normalizeRelations(item, override, key) {
   const fallback = key === 'synonyms' ? (semanticFallbackSynonyms[item.w] ?? []) : [];
   const anchors = [...direct, ...fallback].map(([word, partOfSpeech, chinese, note]) => ({
     word,
-    phonetic: ipaFor(word),
+    phonetic: ipaFor(word, '', '', { partOfSpeech, chinese }),
     partOfSpeech,
     chinese: chinese || conciseChinese(word, key === 'synonyms' ? '相近表达' : '相反表达'),
     [noteKey]: key === 'synonyms'
@@ -1356,7 +1563,7 @@ function normalizeRelations(item, override, key) {
       const chinese = semanticPhraseChinese[word] ?? conciseChineseForPartOfSpeech(word, partOfSpeech, '相近的常用表达');
       return {
         word,
-        phonetic: ipaFor(word),
+        phonetic: ipaFor(word, '', '', { partOfSpeech, chinese }),
         partOfSpeech,
         chinese,
         difference: `${word} 常表示“${chinese}”，与 ${item.w} 的“${firstMeaning(item.zh)}”义有重合。${word} 只覆盖其中一个义项；是否能够替换取决于两词各自的宾语、介词和语体。`
@@ -1418,7 +1625,7 @@ function finalizeDerivatives(item, entries) {
     .slice(0, 8)
     .map((entry) => ({
       word: entry.word,
-      phonetic: entry.phonetic ?? ipaFor(entry.word),
+      phonetic: entry.phonetic ?? ipaFor(entry.word, '', '', { partOfSpeech: entry.partOfSpeech, chinese: entry.chinese }),
       partOfSpeech: entry.partOfSpeech,
       chinese: entry.chinese ?? conciseChinese(entry.word, '与本词同词族'),
       note: entry.note ?? `${entry.word} 是 ${item.w} 的常用词族形式；作 ${entry.partOfSpeech} 时表示“${entry.chinese ?? conciseChinese(entry.word, '相关含义')}”。`
@@ -1430,7 +1637,13 @@ function normalizeDerivatives(item, override) {
   if (override?.derivatives) {
     return finalizeDerivatives(item, override.derivatives
       .filter(([word]) => word.toLowerCase() !== item.w.toLowerCase())
-      .map(([word, partOfSpeech, chinese, note]) => ({ word, phonetic: ipaFor(word), partOfSpeech, chinese, note })));
+      .map(([word, partOfSpeech, chinese, note, phonetic]) => ({
+        word,
+        phonetic: phonetic ?? ipaFor(word, '', '', { partOfSpeech, chinese }),
+        partOfSpeech,
+        chinese,
+        note
+      })));
   }
   const hasLockedDerivativePack = Object.hasOwn(manualDerivativePacks, item.w);
   const curated = (hasLockedDerivativePack ? manualDerivativePacks[item.w] : (priorityDerivatives ?? []))
@@ -1501,7 +1714,7 @@ function normalizeConfusables(item, override, synonyms = [], antonyms = []) {
     const chinese = specialChinese[word] ?? manualEntry?.[2] ?? conciseChineseForPartOfSpeech(word, partOfSpeech, `与 ${item.w} 容易混淆的表达`);
     return {
       word,
-      phonetic: ipaFor(word),
+      phonetic: ipaFor(word, '', '', { partOfSpeech, chinese }),
       partOfSpeech,
       chinese,
       difference: `${word} 表示“${chinese}”，而 ${item.w} 在“${item.coll}”中表示“${firstMeaning(item.zh)}”。两者容易因拼写、发音或相近语境而混淆，使用时要根据完整句义和固定搭配区分。`
@@ -1510,62 +1723,121 @@ function normalizeConfusables(item, override, synonyms = [], antonyms = []) {
 }
 
 function normalizeRelated(item, index, override, derivatives, synonyms, antonyms, confusableItems) {
+  const excluded = [...synonyms, ...antonyms, ...derivatives, ...confusableItems].map((entry) => entry.word);
+  const existingGroups = (override?.related ?? []).map(([category, items]) => ({
+    category,
+    items: items.map(([word, partOfSpeech, chinese]) => ({ word, partOfSpeech, chinese }))
+  }));
   if (override?.related) {
-    return override.related.map(([category, items]) => ({
-      category,
-      items: items.map(([word, partOfSpeech, chinese]) => ({ word, phonetic: ipaFor(word), partOfSpeech, chinese }))
-    }));
+    return buildSemanticRelatedVocabulary({
+      word: item.w,
+      groups: existingGroups,
+      semanticCandidates: [],
+      relationWords: [synonyms, antonyms, derivatives, confusableItems],
+      ipaFor: (word, partOfSpeech, chinese) => ipaFor(word, '', '', { partOfSpeech, chinese }),
+      minimumItems: 12,
+      minimumCategories: 3,
+      maximumItems: item.w === 'work' ? 12 : 12
+    });
   }
-  const makeItems = (entries, limit = 4) => {
-    const used = new Set([item.w.toLowerCase()]);
-    return entries.filter((entry) => {
-    const word = entry.word.toLowerCase();
-    if (!word || used.has(word)) return false;
-    used.add(word);
-    return true;
-    }).slice(0, limit).map((entry) => ({
-    word: entry.word,
-    phonetic: ipaFor(entry.word),
-    partOfSpeech: entry.partOfSpeech ?? ecdictPartOfSpeech(entry.word, 'v.'),
-    chinese: entry.chinese ?? conciseChineseForPartOfSpeech(entry.word, entry.partOfSpeech ?? 'v.', `与 ${item.w} 处于同一常用语义场`)
-    }));
-  };
-  const reviewedRelated = (manualRelatedPacks[item.w] ?? []).map(([word, partOfSpeech, chinese]) => ({ word, partOfSpeech, chinese }));
-  const contrastNeighbors = [...antonyms, ...confusableItems, ...derivatives];
-  const groups = [
-    ['同一语义场的高频词', reviewedRelated],
-    ['近义表达分类', synonyms],
-    ['对比与易混表达分类', contrastNeighbors],
-    ['常用词族分类', derivatives]
-  ].map(([category, entries]) => ({ category, items: makeItems(entries) }))
-    .filter((group) => group.items.length);
-  return groups.slice(0, 4);
+  const reviewedRelated = (manualRelatedPacks[item.w] ?? []).map(([word, partOfSpeech, chinese]) => ({
+    word,
+    partOfSpeech,
+    chinese,
+    categoryHint: /n\./.test(partOfSpeech) ? '相关事物与概念'
+      : /(?:adj|adv)\./.test(partOfSpeech) ? '相关特征与方式'
+        : '关联动作'
+  }));
+  const wordnet = wordnetEntries[item.w] ?? {};
+  const wordnetCandidates = selectCommonCandidates([
+    ...(wordnet.hypernyms ?? []),
+    ...(wordnet.hyponyms ?? []),
+    ...(wordnet.related ?? [])
+  ], excluded, 80).flatMap((entry) => {
+    const partOfSpeech = entry.partOfSpeech ?? ecdictPartOfSpeech(entry.word, 'v.');
+    const chinese = conciseChineseForPartOfSpeech(entry.word, partOfSpeech);
+    if (!chinese) return [];
+    let phonetic;
+    try {
+      phonetic = ipaFor(entry.word, '', '', { partOfSpeech, chinese });
+    } catch {
+      return [];
+    }
+    return [{
+      ...entry,
+      phonetic,
+      partOfSpeech,
+      chinese,
+      categoryHint: `${classifyContextPhrase({ phrase: `${entry.sourceDefinition ?? ''} ${entry.definition ?? ''}` }, partOfSpeech)} · ${entry.relation === '@' ? '上位概念' : entry.relation === '~' ? '具体表达' : '语义关联'}`,
+      cocaRank: Math.min(...(cocaRankData[entry.word] ?? []).map((rank) => rank.rank), Number.MAX_SAFE_INTEGER)
+    }];
+  });
+  const semanticCandidates = [
+    ...(semanticRelatedPacks[item.w] ?? []),
+    ...reviewedRelated,
+    ...wordnetCandidates
+  ];
+  return buildSemanticRelatedVocabulary({
+    word: item.w,
+    groups: existingGroups,
+    semanticCandidates,
+    relationWords: [synonyms, antonyms, derivatives, confusableItems],
+    ipaFor: (word, partOfSpeech, chinese) => ipaFor(word, '', '', { partOfSpeech, chinese }),
+    minimumItems: 12,
+    minimumCategories: 3,
+    maximumItems: 12
+  });
 }
 
-function normalizeExamples(item, override) {
-  if (override?.examples) {
+function normalizeExamples(item, override, fixedPhrases = []) {
+  if (item.w === 'work' && override?.examples) {
     return override.examples.map(([scene, english, chinese]) => ({ scene, english, chinese }));
   }
+  const reviewedExamples = override?.examples?.map(([scene, english, chinese]) => ({ scene, english, chinese })) ?? [];
   const priorityExamples = priorityEntries[item.w]?.uses?.map((entry) => [entry[2], entry[3]]);
   const generated = (priorityExamples ?? curatedExamples[item.w] ?? []).map(([english, chinese], index) => ({
     scene: ['日常使用', '工作或学习', '常见搭配', '真实语境', '易错结构', '主动表达'][index] ?? '高频表达',
     english,
     chinese
   }));
-  const result = [
-    { scene: '核心真实用法', english: item.ex, chinese: item.exZh },
-    ...generated.filter((entry) => entry.english !== item.ex)
-  ];
-  const seen = new Set(result.map((entry) => entry.english.toLowerCase().replace(/\s+/g, ' ').trim()));
+  const result = [];
+  const seen = new Set();
+  const add = (entry) => {
+    const key = entry.english.toLowerCase().replace(/\s+/g, ' ').trim();
+    if (!entry.chinese?.trim() || seen.has(key) || !phraseContainsTarget(entry.english, item.w)) return;
+    result.push(entry);
+    seen.add(key);
+  };
+  add({ scene: '核心真实用法', english: item.ex, chinese: item.exZh });
+  reviewedExamples.forEach(add);
+  fixedPhrases.forEach((entry, index) => add({
+    scene: ['日常交流', '工作沟通', '学习表达', '书面表达'][index % 4],
+    english: entry.example,
+    chinese: entry.translation
+  }));
+  generated.forEach(add);
   const sceneLabels = ['日常交流', '工作沟通', '学习表达', '书面表达', '常见场景'];
   for (const entry of supplementalExamplesFor(item.w)) {
-    const key = entry.english.toLowerCase().replace(/\s+/g, ' ').trim();
-    if (seen.has(key)) continue;
-    result.push({ scene: sceneLabels[(result.length - 6) % sceneLabels.length], english: entry.english, chinese: entry.chinese });
-    seen.add(key);
-    if (result.length >= 10) break;
+    add({ scene: sceneLabels[Math.max(0, result.length - 6) % sceneLabels.length], english: entry.english, chinese: entry.chinese });
+    if (result.length >= 12) break;
   }
-  return result;
+  if (result.length < 12) throw new Error(`${item.w}: only ${result.length}/12 target-bearing bilingual examples survived review.`);
+  return result.slice(0, 12);
+}
+
+function deduplicateRelationSections(relations) {
+  const used = new Set();
+  const takeUnique = (entries) => entries.filter((entry) => {
+    const key = entry.word.toLowerCase().replace(/[^a-z']+/g, ' ').trim();
+    if (!key || used.has(key)) return false;
+    used.add(key);
+    return true;
+  });
+  const derivatives = takeUnique(relations.derivatives);
+  const synonyms = takeUnique(relations.synonyms);
+  const antonyms = takeUnique(relations.antonyms);
+  const confusables = takeUnique(relations.confusables);
+  return { synonyms, antonyms, derivatives, confusables };
 }
 
 function rotateOptions(options, seed) {
@@ -1577,6 +1849,16 @@ function rotateOptions(options, seed) {
 function relationOptions(answer, candidates, index) {
   const distractors = [...new Set(candidates.filter((candidate) => candidate && candidate !== answer))].slice(0, 3);
   return rotateOptions([answer, ...distractors], index);
+}
+
+function teachingRelationOptions(answer, relationEntries, candidates, index) {
+  const distractors = selectTeachingDistractors({
+    answer,
+    candidates,
+    count: 3,
+    excluded: relationEntries
+  });
+  return rotateOptions([answer.word, ...distractors.map((entry) => entry.word)], index);
 }
 
 const irregularForms = {
@@ -1627,33 +1909,14 @@ function clozeTargetQuestion(id, promptPrefix, text, targetWord, stage) {
   return {
     id,
     type: 'collocation',
-    prompt: promptPrefix + blankWord(text, matched) + '（填写 ' + targetWord + ' 的正确形式）' + slotGuidance(text),
+    prompt: promptPrefix + blankWord(text, matched) + '（填写 ' + targetWord + ' 的正确形式）' + slotGuidance(text, {
+      targetWord,
+      isTemplate: !/[.!?]/.test(text)
+    }),
     answer: matched.text,
     stage,
     ai: false
   };
-}
-
-function structureFormClue(phrase) {
-  const normalized = phrase.replace(/\s+/g, ' ').trim();
-  if (/^it\s+is\b.*\bthat\b/i.test(normalized)) return '使用形式主语 it，后面接 that 完整从句';
-  if (/\bsomeone\s+doing\b/i.test(normalized)) return '宾语后接动词 -ing 形式，强调看到或感知正在进行的动作';
-  if (/\bsomeone\s+do\b/i.test(normalized)) return '宾语后接动词原形，强调看到或感知完整动作';
-  if (/\bto\s+do\b/i.test(normalized)) return '完整结构中使用 to + 动词原形；do 只是语法占位符，要换成符合语境的具体动词原形';
-  if (/\bdoing\b/i.test(normalized)) return '完整结构中的 doing 是语法占位符，要换成符合语境的动词 -ing 形式';
-  if (/\bdone\b/i.test(normalized)) return '完整结构中的 done 是语法占位符，要换成符合语境的过去分词';
-  if (/\bto\s+be\b/i.test(normalized)) return '完整结构中使用 to be，后面接名词、形容词或其他补语';
-  if (/^(?:can|could|may|might|must|should|will|would)\s+(?:you\s+)?(?:rather\s+)?do\b/i.test(normalized)) return '情态动词结构中使用动词原形；do 是语法占位符，要换成具体动词原形';
-  if (/\bfrom\b.*\bto\b/i.test(normalized)) return '同时使用 from 和 to，表示范围或变化的起点与终点';
-  if (/\bmore\b.*\bto\b/i.test(normalized)) return '使用 more 构成比较级，后面再接 to + 动词原形';
-  if (/\bless\b.*\bto\b/i.test(normalized)) return '使用 less 表示较低可能性，后面再接 to + 动词原式';
-  if (/^be\s+likely\s+to\b/i.test(normalized)) return '使用 be + likely + to + 动词原式，不加 more 或 less 构成比较';
-  if (/\bthat\b/i.test(normalized)) return '使用 that 引导一个主谓完整的从句';
-  const preposition = normalized.match(/\b(on|in|at|for|with|by|from|of|about|into|over|through|to|as|along|against|without|within)\b/i)?.[1];
-  if (preposition) return `完整搭配中使用介词 ${preposition.toLowerCase()}`;
-  if (/\bsomething\b/i.test(normalized)) return '结构中直接带有事物宾语，不在目标词与宾语之间增加介词';
-  if (/^be\b/i.test(normalized)) return '使用 be 的正确形式后接目标表达';
-  return '选择与该中文含义和词性同时匹配的完整句块';
 }
 
 function structurePrompt(entry, label = '结构辨析') {
@@ -1691,14 +1954,13 @@ function contextualCompanionWord(english, targetWord) {
   return afterTarget ?? [...words].reverse().find(isUsefulCompanion);
 }
 
-function contextualCompanionQuestion(id, english, chinese, targetWord, distractors, stage, index) {
+function contextualCompanionQuestion(id, english, chinese, targetWord, _distractors, stage, _index) {
   const selected = contextualCompanionWord(english, targetWord);
   if (!selected) throw new Error(id + ': example needs a meaningful non-target context word');
   return {
     id,
     type: 'collocation',
-    prompt: '根据完整句意和中文提示，选出唯一能补全原句意思的词：' + blankWord(english, selected) + '（中文：' + chinese + '）',
-    options: relationOptions(selected.text, distractors, index),
+    prompt: '根据完整句意和中文提示补全原句：' + blankWord(english, selected) + '（中文：' + chinese + '）',
     answer: selected.text,
     stage,
     ai: false
@@ -1717,18 +1979,6 @@ function phraseMeaningQuestion(id, entry, candidates, stage, index) {
   };
 }
 
-function slotGuidance(phrase) {
-  const notes = [];
-  if (/\bto do\b/i.test(phrase)) notes.push('do 代表任意合适的动词原形，不要求写出单词 do');
-  if (/\bdoing\b/i.test(phrase)) notes.push('doing 代表符合语境的动词 -ing 形式，不要求写出单词 doing');
-  if (/\bdone\b/i.test(phrase)) notes.push('done 代表符合语境的过去分词，不要求写出单词 done');
-  if (/\bsomeone\b/i.test(phrase)) notes.push('someone 要替换成实际的人或代词');
-  if (/\bsomething\b/i.test(phrase)) notes.push('something 要替换成实际的事物或内容');
-  if (/\byourself\b/i.test(phrase)) notes.push('yourself 要替换成与主语一致的 myself、yourself、herself 等正确形式');
-  if (/\bA\b/.test(phrase) || /\bB\b/.test(phrase)) notes.push('A、B 要替换成实际比较内容');
-  return notes.length ? '；' + notes.join('；') : '';
-}
-
 function hasConcreteContextWord(phrase, targetWord) {
   const ignored = new Set(['a', 'an', 'the', 'to', 'do', 'doing', 'done', 'someone', 'something', 'yourself', 'of', 'in', 'on', 'for', 'with', 'at', 'by', 'from', 'as', 'and', 'or']);
   const forms = inflectedForms(targetWord.toLowerCase());
@@ -1743,7 +1993,32 @@ function hasObjectiveStructureWord(phrase, targetWord) {
 
 function makeCard(item, index) {
   const id = slug(item.w + '-' + primaryPos(item.p));
-  const override = cardOverrides[item.w];
+  const semanticPack = manualCardPacks[item.w];
+  if (item.w !== 'work') {
+    if (!semanticPack) throw new Error(`${item.w}: no human-reviewed semantic pack; publication fallback is forbidden.`);
+    const requiredPackKeys = ['meanings', 'fixedPhrases', 'contexts', 'synonyms', 'antonyms', 'derivatives', 'confusables', 'related', 'commonErrors'];
+    const missingKeys = requiredPackKeys.filter((key) => !Object.hasOwn(semanticPack, key) || !Array.isArray(semanticPack[key]));
+    if (missingKeys.length) throw new Error(`${item.w}: semantic pack is missing explicit review fields: ${missingKeys.join(', ')}`);
+    const manualContextCount = semanticPack.contexts.flatMap(([, entries]) => entries).length;
+    const manualRelatedCount = semanticPack.related.flatMap(([, entries]) => entries).length;
+    const incompleteFloor = [];
+    if (semanticPack.meanings.length < 1) incompleteFloor.push('meanings < 1');
+    if (semanticPack.fixedPhrases.length < 12) incompleteFloor.push('fixedPhrases < 12');
+    if (semanticPack.contexts.length < 4 || manualContextCount < 16) incompleteFloor.push('contexts < 4 categories/16 items');
+    if (semanticPack.synonyms.length < 5) incompleteFloor.push('synonyms < 5');
+    if (semanticPack.related.length < 3 || manualRelatedCount < 12) incompleteFloor.push('related < 3 categories/12 items');
+    if (semanticPack.commonErrors.length < 2) incompleteFloor.push('commonErrors < 2');
+    if (incompleteFloor.length) throw new Error(`${item.w}: manual semantic pack is below the locked detail floor: ${incompleteFloor.join(', ')}`);
+  }
+  const override = item.w === 'work' ? cardOverrides.work : {
+    ...(cardOverrides[item.w] ?? {}),
+    ...semanticPack,
+    phrases: semanticPack.fixedPhrases,
+    errors: semanticPack.commonErrors,
+    structures: semanticPack.structures ?? semanticPack.fixedPhrases.slice(0, 4).map(([phrase, chinese]) => [phrase, chinese]),
+    focus: semanticPack.focus,
+    manualSemanticPack: true
+  };
   const priorityPhrases = priorityEntries[item.w]?.uses?.map((entry) => [entry[0], entry[1]]);
   if (!override && (priorityPhrases ?? curatedPhrases[item.w] ?? []).length < 6) {
     throw new Error(item.w + ': curated generation requires at least six curated phrase entries.');
@@ -1757,19 +2032,31 @@ function makeCard(item, index) {
   const structures = normalizeStructures(item, override, tuples);
   const commonErrors = normalizeErrors(item, override, tuples);
   const meanings = normalizeMeanings(item, override);
-  const contextPhrases = normalizeContexts(item, override, tuples);
   const fixedPhrases = normalizeFixedPhrases(item, override, tuples);
-  const synonyms = normalizeRelations(item, override, 'synonyms');
-  const antonyms = normalizeRelations(item, override, 'antonyms');
-  const derivatives = normalizeDerivatives(item, override);
-  const confusableItems = normalizeConfusables(item, override, synonyms, antonyms);
+  const contextPhrases = normalizeContexts(item, override, tuples, fixedPhrases);
+  const rawSynonyms = normalizeRelations(item, override, 'synonyms');
+  const rawAntonyms = normalizeRelations(item, override, 'antonyms');
+  const rawDerivatives = normalizeDerivatives(item, override);
+  const rawConfusableItems = normalizeConfusables(item, override, rawSynonyms, rawAntonyms);
+  const normalizedRelations = {
+    synonyms: rawSynonyms,
+    antonyms: rawAntonyms,
+    derivatives: rawDerivatives,
+    confusables: rawConfusableItems
+  };
+  const {
+    synonyms,
+    antonyms,
+    derivatives,
+    confusables: confusableItems
+  } = normalizedRelations;
   const relatedVocabulary = normalizeRelated(item, index, override, derivatives, synonyms, antonyms, confusableItems);
-  const examples = normalizeExamples(item, override);
-  if (!override) {
+  const examples = normalizeExamples(item, override, fixedPhrases);
+  if (item.w !== 'work') {
     const contextItemCount = contextPhrases.reduce((sum, group) => sum + group.items.length, 0);
     const relatedItemCount = relatedVocabulary.reduce((sum, group) => sum + group.items.length, 0);
-    if (contextPhrases.length < 4 || contextItemCount < 10 || fixedPhrases.length < 10
-      || synonyms.length < 4 || relatedVocabulary.length < 3 || relatedItemCount < 8 || examples.length < 10) {
+    if (contextPhrases.length < 4 || contextItemCount < 16 || fixedPhrases.length < 12
+      || synonyms.length < 5 || relatedVocabulary.length < 3 || relatedItemCount < 12 || examples.length < 12) {
       detailFloorFailures.push(`${item.w}: ${contextPhrases.length} context groups/${contextItemCount} contexts, ${fixedPhrases.length} fixed phrases, ${synonyms.length} synonyms, ${relatedVocabulary.length} related groups/${relatedItemCount} related words, ${examples.length} examples`);
     }
   }
@@ -1798,13 +2085,38 @@ function makeCard(item, index) {
     ...structures.slice(1).map((entry) => entry.phrase),
     ...fixedPhrases.slice(0, 2).map((entry) => entry.phrase)
   ], index + 2);
-  const synonymAnswer = synonyms[0].word;
-  const antonymAnswer = antonyms[0].word;
-  const synonymOptions = relationOptions(synonymAnswer, [antonymAnswer, confusableItems[0]?.word, next.w, nextTwo.w], index + 3);
-  const antonymOptions = relationOptions(antonymAnswer, [synonymAnswer, confusableItems[0]?.word, next.w, nextTwo.w], index + 4);
-  const contrast = confusableItems[0] ?? derivatives[0] ?? synonyms[0];
-  const contrastKind = confusableItems[0] ? '易混词' : derivatives[0] ? '派生词' : '相关近义词';
-  const contrastOptions = relationOptions(contrast.word, [synonymAnswer, antonymAnswer, next.w, nextTwo.w], index + 5);
+  const allRelationEntries = [...synonyms, ...antonyms, ...derivatives, ...confusableItems];
+  // Keep the locked work card on its core “工作；任职” sense. Composite POS
+  // labels such as `v. / n.` remain eligible rather than being skipped by an
+  // exact single-label regular expression.
+  const synonymAnswerEntry = selectRelationQuestionAnswer(synonyms, {
+    preferredWord: item.w === 'work'
+      ? 'labor'
+      : item.w === 'could'
+        ? 'was able to'
+        : item.w === 'would'
+          ? 'was willing to'
+          : item.w === 'may'
+            ? 'be allowed to'
+            : ''
+  });
+  const antonymAnswerEntry = selectRelationQuestionAnswer(antonyms, {
+    preferredWord: item.w === 'work' ? 'rest' : ''
+  });
+  const synonymAnswer = synonymAnswerEntry.word;
+  const antonymAnswer = antonymAnswerEntry?.word;
+  const synonymOptions = relationOptions(synonymAnswer, allRelationEntries.map((entry) => entry.word), index + 3);
+  const antonymOptions = antonymAnswer ? relationOptions(antonymAnswer, allRelationEntries.map((entry) => entry.word), index + 4) : [];
+  const secondarySynonymAnswerEntry = selectSecondaryRelationQuestionAnswer(synonyms, synonymAnswerEntry);
+  const secondarySynonymAnswer = secondarySynonymAnswerEntry?.word;
+  const secondarySynonymOptions = secondarySynonymAnswerEntry
+    ? relationOptions(secondarySynonymAnswerEntry.word, allRelationEntries.map((entry) => entry.word), index + 4)
+    : [];
+  const quizReadyConfusables = confusableItems.filter((entry) => /^(?:aux|v|n|adj|adv)\.$/.test(entry.partOfSpeech));
+  const contrastSource = quizReadyConfusables.length ? quizReadyConfusables : derivatives;
+  const contrast = contrastSource.length ? selectRelationQuestionAnswer(contrastSource) : undefined;
+  const contrastKind = quizReadyConfusables.length ? '易混词' : '派生词';
+  const contrastOptions = contrast ? relationOptions(contrast.word, allRelationEntries.map((entry) => entry.word), index + 5) : [];
   const firstContextEntry = contextPhrases
     .flatMap((group) => group.items)
     .find((entry) => hasConcreteContextWord(entry.phrase, item.w))
@@ -1814,19 +2126,49 @@ function makeCard(item, index) {
   const objectiveStructure = structures.slice(1).find((entry) => hasObjectiveStructureWord(entry.phrase, item.w))
     ?? structures[1]
     ?? structures[0];
-  const firstFixedEntry = fixedPhrases[0] ?? { phrase: item.coll, chinese: item.collZh };
+  // Core structures already get two dedicated questions.  Pull the fixed-
+  // phrase questions from different entries so a large card never spends
+  // four question slots testing the same two chunks under different labels.
+  const structurePhraseKeys = new Set(structures.map((entry) => entry.phrase.toLowerCase().replace(/\s+/g, ' ').trim()));
+  const fixedQuestionCandidates = fixedPhrases.filter((entry) => !structurePhraseKeys.has(entry.phrase.toLowerCase().replace(/\s+/g, ' ').trim()));
+  const firstFixedEntry = fixedQuestionCandidates[0]
+    ?? fixedPhrases.find((entry) => entry.phrase !== structures[0]?.phrase)
+    ?? fixedPhrases[0]
+    ?? { phrase: item.coll, chinese: item.collZh };
   const firstFixedPhrase = firstFixedEntry.phrase;
-  const secondFixedEntry = fixedPhrases.find((entry) => entry.phrase !== firstFixedPhrase)
+  const secondFixedEntry = fixedQuestionCandidates.find((entry) => entry.phrase !== firstFixedPhrase)
+    ?? fixedPhrases.find((entry) => entry.phrase !== firstFixedPhrase && entry.phrase !== structures[0]?.phrase)
     ?? { phrase: structures[1]?.phrase ?? item.coll, chinese: structures[1]?.chinese ?? item.collZh };
+  const targetForms = inflectedForms(item.w.toLowerCase());
+  const additionalExampleEntry = fixedPhrases.find((entry) => (
+    entry.example.trim().toLowerCase() !== item.ex.trim().toLowerCase()
+    && wordsWithOffsets(entry.example).some((word) => targetForms.has(word.text.toLowerCase()))
+  ));
+  if (!additionalExampleEntry) throw new Error(`${item.w}: a distinct fixed-phrase example is required for the second cloze question.`);
+  const additionalExampleQuestion = clozeTargetQuestion(
+    id + '-example-cloze',
+    '根据句意和中文提示补全另一个常用例句：',
+    additionalExampleEntry.example,
+    item.w,
+    'T3'
+  );
+  additionalExampleQuestion.prompt += `（中文：${additionalExampleEntry.translation}）`;
   const contextualDistractors = [next, nextTwo, orderedLexicon[(index + 67) % orderedLexicon.length]]
     .map((candidate) => contextualCompanionWord(candidate.ex, candidate.w)?.text ?? candidate.w);
-  const questions = [
+  const rawQuestions = [
     { id: id + '-meaning-core', type: 'meaning_choice', prompt: '“' + item.w + '”最核心的中文含义是？', options: meaningOptions, answer: meanings[0].chinese, stage: 'T0', ai: false },
     { id: id + '-meaning-english', type: 'meaning_choice', prompt: '哪一项英文释义最符合词卡中的 “' + item.w + '”？', options: englishMeaningOptions, answer: meanings[0].english, stage: 'T0', ai: false },
+    ...(item.w === 'would'
+      ? [buildSecondaryMeaningChoiceQuestion({ id: id + '-meaning-secondary', word: item.w, meanings, stage: 'T1', seed: index + 11 })].filter(Boolean)
+      : []),
     { id: id + '-structure-choice-v3', type: 'meaning_choice', prompt: structurePrompt(structures[0], '核心结构辨析'), options: structureOptions, answer: structures[0].phrase, stage: 'T1', ai: false },
     { id: id + '-synonym-choice', type: 'meaning_choice', prompt: '哪个词是词卡中列出的 “' + item.w + '” 最直接近义词？', options: synonymOptions, answer: synonymAnswer, stage: 'T2', ai: false },
-    { id: id + '-antonym-choice', type: 'meaning_choice', prompt: '哪个词是词卡中列出的 “' + item.w + '” 最直接反义词？', options: antonymOptions, answer: antonymAnswer, stage: 'T2', ai: false },
-    { id: id + '-contrast-choice', type: 'meaning_choice', prompt: '根据本词卡辨析，哪个词被列为 “' + item.w + '” 的' + contrastKind + '？', options: contrastOptions, answer: contrast.word, stage: 'T3', ai: false },
+    ...(antonymAnswer
+      ? [{ id: id + '-antonym-choice', type: 'meaning_choice', prompt: '哪个词与 “' + item.w + '” 的当前义项形成直接反义？', options: antonymOptions, answer: antonymAnswer, stage: 'T2', ai: false }]
+      : secondarySynonymAnswer
+        ? [{ id: id + '-synonym-choice-2', type: 'meaning_choice', prompt: '除 “' + synonymAnswer + '” 外，哪个词也与 “' + item.w + '” 的当前义项接近？', options: secondarySynonymOptions, answer: secondarySynonymAnswer, stage: 'T2', ai: false }]
+        : []),
+    ...(contrast ? [{ id: id + '-contrast-choice', type: 'meaning_choice', prompt: '根据词义和用法，哪个词是 “' + item.w + '” 的' + contrastKind + '？', options: contrastOptions, answer: contrast.word, stage: 'T3', ai: false }] : []),
     { id: id + '-recall-definition', type: 'recall', prompt: '根据英文释义写出目标词：' + meanings[0].english, answer: item.w, stage: 'T1', ai: false },
     { id: id + '-recall-chinese', type: 'recall', prompt: '写出符合“' + meanings[0].chinese + '”（' + meanings[0].partOfSpeech + '）的本课目标词。', answer: item.w, stage: 'T1', ai: false },
     clozeTargetQuestion(id + '-collocation-core', '补全高频搭配：', item.coll, item.w, 'T0'),
@@ -1834,11 +2176,23 @@ function makeCard(item, index) {
     contextualCompanionQuestion(id + '-collocation-example-context-v3', item.ex, item.exZh, item.w, contextualDistractors, 'T2', index + 9),
     phraseMeaningQuestion(id + '-collocation-fixed-1-v3', firstFixedEntry, fixedPhrases, 'T2', index + 6),
     phraseMeaningQuestion(id + '-collocation-fixed-2-v3', secondFixedEntry, fixedPhrases, 'T3', index + 7),
-    clozeTargetQuestion(id + '-example-cloze', '根据句意补全词卡核心例句：', item.ex, item.w, 'T3'),
+    additionalExampleQuestion,
     { id: id + '-sentence-core', type: 'free_sentence', prompt: '请用 “' + item.w + '” 写一个自然、真实的英文句子，含义必须符合词卡核心义“' + meanings[0].chinese + '”。', answer: '', stage: 'T2', ai: true },
-    { id: id + '-sentence-phrase', type: 'free_sentence', prompt: '请使用 “' + firstFixedPhrase + '” 结构写一个与自己有关的自然英文句子' + slotGuidance(firstFixedPhrase) + '。', answer: '', stage: 'T3', ai: true },
-    { id: id + '-dialogue', type: 'dialogue', prompt: '写一段 2–4 轮真实对话，自然使用 “' + item.w + '” 和 “' + firstContextPhrase + '” 结构，并避免中文直译' + slotGuidance(firstContextPhrase) + '。', answer: '', stage: 'T4', ai: true }
+    { id: id + '-sentence-phrase', type: 'free_sentence', prompt: '请使用 “' + firstFixedPhrase + '” 结构写一个与自己有关的自然英文句子' + slotGuidance(firstFixedPhrase, { targetWord: item.w }) + '。', answer: '', stage: 'T3', ai: true },
+    { id: id + '-dialogue', type: 'dialogue', prompt: '写一段 2–4 轮真实对话，自然使用 “' + item.w + '” 和 “' + firstContextPhrase + '” 结构，并避免中文直译' + slotGuidance(firstContextPhrase, { targetWord: item.w }) + '。', answer: '', stage: 'T4', ai: true }
   ];
+  const questions = rewriteLearnerQuestionPrompts(rawQuestions, {
+    word: item.w,
+    coreMeaning: meanings[0].chinese,
+    partOfSpeech: meanings[0].partOfSpeech,
+    synonymMeaning: synonymAnswerEntry.chinese,
+    secondarySynonymMeaning: secondarySynonymAnswerEntry?.chinese,
+    antonymMeaning: item.w === 'mean'
+      ? '刻薄的；吝啬的'
+      : item.w === 'ask'
+        ? '问；询问'
+        : meanings[0].chinese
+  });
 
   return {
     id,
@@ -1847,7 +2201,7 @@ function makeCard(item, index) {
     cocaRanks: ranks,
     cocaRankLabel,
     learningPriority: learningPriority(item, index + 1, cocaRankData),
-    phonetic: item.ipa,
+    phonetic: publishedHeadwordIpaOverrides[item.w] ?? item.ipa,
     syllables: syllableHint(item.w),
     partOfSpeech: item.p,
     frequencyBand: 'COCA 高频精选 · ' + cocaRankLabel,
@@ -1890,31 +2244,81 @@ function makeCard(item, index) {
       T6: ['meaning_choice', 'recall', 'collocation', 'free_sentence', 'dialogue'],
       T7: ['meaning_choice', 'recall', 'collocation', 'free_sentence', 'dialogue']
     },
-    detailLevel: item.w === 'work' ? 'template-reference' : override ? 'template-curated' : 'template-complete',
+    detailLevel: item.w === 'work' ? 'template-reference' : 'template-curated',
     templateVersion,
     contentVersion,
-    reviewed: Boolean(override),
+    reviewed: true,
+    curationSource: item.w === 'work' ? 'locked-reference-example' : 'manual-semantic-pack-2026.09.10.4',
     sourceNote: '词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。'
   };
+}
+
+function finalizeRelationQuestionOptions(cards) {
+  const canonicalPool = cards.flatMap((card) => [
+    {
+      word: card.word,
+      partOfSpeech: card.partOfSpeech,
+      chinese: card.coreMemory.chinese,
+      cocaRank: Math.min(...card.cocaRanks.map((entry) => entry.rank), Number.MAX_SAFE_INTEGER)
+    },
+    ...card.synonyms,
+    ...card.antonyms,
+    ...card.derivatives,
+    ...card.confusables,
+    ...card.relatedVocabulary.flatMap((group) => group.items.map((item) => ({
+      ...item,
+      semanticField: group.category
+    })))
+  ]);
+  cards.forEach((card, cardIndex) => {
+    const ownRelations = [...card.synonyms, ...card.antonyms, ...card.derivatives, ...card.confusables];
+    card.questions = card.questions.map((question, questionIndex) => {
+      if (!/(?:synonym|antonym|contrast)-choice/.test(question.id)) return question;
+      const answer = ownRelations.find((entry) => entry.word.toLowerCase() === question.answer.toLowerCase());
+      if (!answer) throw new Error(`${card.word}: ${question.id} answer is not present in a relation section.`);
+      return {
+        ...question,
+        options: teachingRelationOptions(
+          answer,
+          [{ word: card.word }, ...ownRelations],
+          canonicalPool,
+          cardIndex * 17 + questionIndex
+        )
+      };
+    });
+  });
 }
 
 function formatDate(date) {
   return new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Shanghai', year: 'numeric', month: '2-digit', day: '2-digit' }).format(date);
 }
 
+const generationFailures = [];
+const cards = [];
+orderedLexicon.forEach((item, index) => {
+  try {
+    cards.push(makeCard(item, index));
+  } catch (error) {
+    generationFailures.push(`${item.w}: ${error instanceof Error ? error.message : String(error)}`);
+  }
+});
+if (generationFailures.length) {
+  throw new Error(`Card generation failed for ${generationFailures.length}/${orderedLexicon.length} cards:\n${generationFailures.join('\n')}`);
+}
+finalizeRelationQuestionOptions(cards);
+if (detailFloorFailures.length) {
+  throw new Error(`Published detail floor failed:\n${detailFloorFailures.join('\n')}`);
+}
+
+// Never destroy the last valid catalog before the complete replacement has
+// been generated and passed every in-memory quality gate above.
 await fs.mkdir(contentCardsDir, { recursive: true });
 await fs.mkdir(publicDailyDir, { recursive: true });
-
 for (const directory of [contentCardsDir, publicDailyDir]) {
   const entries = await fs.readdir(directory, { withFileTypes: true });
   await Promise.all(entries
     .filter((entry) => entry.isFile() && entry.name.endsWith('.json'))
     .map((entry) => fs.unlink(path.join(directory, entry.name))));
-}
-
-const cards = orderedLexicon.map(makeCard);
-if (detailFloorFailures.length) {
-  throw new Error(`Published detail floor failed:\n${detailFloorFailures.join('\n')}`);
 }
 for (const card of cards) {
   await fs.writeFile(path.join(contentCardsDir, card.id + '.json'), JSON.stringify(card, null, 2) + '\n', 'utf8');
@@ -1933,13 +2337,17 @@ for (let dayIndex = 0; dayIndex < totalDays; dayIndex += 1) {
   dailyFiles.push({ dayNumber: dayIndex + 1, date: dateKey, file: 'data/daily/' + fileName, cardIds: dailyCards.map((card) => card.id) });
 }
 
-await fs.writeFile(path.join(publicDataDir, 'all-cards.json'), JSON.stringify({ contentVersion, templateVersion, total: cards.length, cards }, null, 2) + '\n', 'utf8');
+const catalogJson = JSON.stringify({ contentVersion, templateVersion, total: cards.length, cards }, null, 2) + '\n';
+const catalogHash = createHash('sha256').update(catalogJson).digest('hex').toUpperCase();
+const releaseId = release.releaseVersion;
+await fs.writeFile(path.join(publicDataDir, 'all-cards.json'), catalogJson, 'utf8');
 await fs.writeFile(path.join(publicDataDir, 'manifest.json'), JSON.stringify({
-  appName: '每日英语', contentVersion, templateVersion, totalCards: cards.length, totalDays: dailyFiles.length,
+  appName: '每日英语', contentVersion, templateVersion, catalogHash, releaseId,
+  totalCards: cards.length, totalDays: dailyFiles.length,
   cardsPerDay: 5, scheduleStart: formatDate(launchDate), dailyFiles
 }, null, 2) + '\n', 'utf8');
 await fs.writeFile(path.join(root, 'content', 'content-manifest.json'), JSON.stringify({
-  source: 'COCA词频单词表.xlsx', generatedAt: '2026-09-10', contentVersion, templateVersion,
+  source: 'COCA词频单词表.xlsx', generatedAt: '2026-09-10', contentVersion, templateVersion, catalogHash, releaseId,
   generationMode: 'one-time-static',
   orderingPolicy: 'verbs-only-then-coca-verb-rank',
   detailLevel: 'template-complete',
