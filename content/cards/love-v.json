@@ -77,7 +77,7 @@
       }
     ],
     "directSynonym": "adore /əˈdɔːr/（非常喜爱）；cherish /ˈtʃɛrɪʃ/（珍爱）；be fond of /ˈbiː ˈfɑnd ˈʌv/（喜欢）；enjoy /ˌɛnˈdʒɔɪ/（喜欢；享受）；care deeply for /ˈkɛr ˈdiːpli ˈfɔːr/（深爱；十分关心）",
-    "directAntonym": "hate /ˈheɪt/（憎恨；非常不喜欢）",
+    "directAntonym": "hate /ˈheɪt/（憎恨；非常不喜欢）；dislike /dɪˈslaɪk/（不喜欢）；be indifferent to /ˈbiː ˌɪnˈdɪfrənt ˈtuː/（对……无动于衷）",
     "derivatives": "lover · loving · lovable · lovingly",
     "example": "I love learning expressions that I can use immediately.",
     "exampleChinese": "我喜欢学习能立刻使用的表达。"
@@ -330,6 +330,20 @@
       "partOfSpeech": "v.",
       "chinese": "憎恨；非常不喜欢",
       "usage": "与爱或强烈喜欢的义项相反；情感强度及可接人物、事物或活动的结构不同"
+    },
+    {
+      "word": "dislike",
+      "phonetic": "/dɪˈslaɪk/",
+      "partOfSpeech": "v.",
+      "chinese": "不喜欢",
+      "usage": "love 表示强烈喜爱时，dislike 表示对同一人或事物持负面偏好，对立限于情感义。"
+    },
+    {
+      "word": "be indifferent to",
+      "phonetic": "/ˈbiː ˌɪnˈdɪfrənt ˈtuː/",
+      "partOfSpeech": "phr.",
+      "chinese": "对……无动于衷",
+      "usage": "love 表示有强烈情感投入，be indifferent to 表示对该对象既不喜爱也不关心。"
     }
   ],
   "derivatives": [
@@ -364,11 +378,18 @@
   ],
   "confusables": [
     {
-      "word": "like",
-      "phonetic": "/ˈlaɪk/",
+      "word": "glove",
+      "phonetic": "/ˈɡlʌv/",
+      "partOfSpeech": "n.",
+      "chinese": "手套",
+      "difference": "love /lʌv/ 与 glove /ɡlʌv/ 只差开头的 /ɡ/ 音；love 表示爱或喜爱，glove 是戴在手上的名词。"
+    },
+    {
+      "word": "leave",
+      "phonetic": "/ˈliːv/",
       "partOfSpeech": "v.",
-      "chinese": "喜欢",
-      "difference": "like 表一般偏好；love 通常表达更强烈的感情或喜爱"
+      "chinese": "离开；留下",
+      "difference": "love /lʌv/ 与 leave /liːv/ 拼写接近但元音不同；love 表示爱或喜爱，leave 表示离开或留下。"
     }
   ],
   "relatedVocabulary": [
@@ -602,12 +623,12 @@
       "type": "meaning_choice",
       "prompt": "结合拼写、发音和用法，哪一项需要与“love”重点区分？",
       "options": [
-        "like",
-        "be",
-        "have",
-        "do"
+        "glove",
+        "increase",
+        "actor",
+        "alarm"
       ],
-      "answer": "like",
+      "answer": "glove",
       "stage": "T3",
       "ai": false
     },
@@ -771,9 +792,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

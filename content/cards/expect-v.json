@@ -71,7 +71,7 @@
       }
     ],
     "directSynonym": "anticipate /ænˈtɪsəˌpeɪt/（预期）；predict /prɪˈdɪkt/（预测）；await /əˈweɪt/（等待）；require /ˌriːˈkwaɪɚ/（要求）；suppose /səˈpoʊz/（认为；料想）",
-    "directAntonym": "",
+    "directAntonym": "doubt /ˈdaʊt/（怀疑）；rule out /ˈruːl ˈaʊt/（排除……的可能）；be surprised by /ˈbiː sɚˈpraɪzd ˈbaɪ/（对……感到意外）",
     "derivatives": "expectation · expectancy · expected · unexpected · expectant · unexpectedly",
     "example": "We expect the results next week.",
     "exampleChinese": "我们预计下周会有结果。"
@@ -317,7 +317,29 @@
       "difference": "把握较弱，常用于非正式推测；预期概率、规范要求和等待来访者的含义不可混用"
     }
   ],
-  "antonyms": [],
+  "antonyms": [
+    {
+      "word": "doubt",
+      "phonetic": "/ˈdaʊt/",
+      "partOfSpeech": "v.",
+      "chinese": "怀疑",
+      "usage": "expect an outcome 表示认为该结果很可能发生，doubt it 表示认为它可能不会发生。"
+    },
+    {
+      "word": "rule out",
+      "phonetic": "/ˈruːl ˈaʊt/",
+      "partOfSpeech": "phr.",
+      "chinese": "排除……的可能",
+      "usage": "expect something 是把它视为可能或很可能的结果，rule it out 是判定该结果不可能。"
+    },
+    {
+      "word": "be surprised by",
+      "phonetic": "/ˈbiː sɚˈpraɪzd ˈbaɪ/",
+      "partOfSpeech": "phr.",
+      "chinese": "对……感到意外",
+      "usage": "expect an event 表示事先已将它纳入预期，be surprised by it 表示它发生时与原有预期不符。"
+    }
+  ],
   "derivatives": [
     {
       "word": "expectation",
@@ -369,6 +391,13 @@
       "partOfSpeech": "v.",
       "chinese": "希望",
       "difference": "expect 表示根据信息认为某事很可能发生；hope 表示希望好事发生，不代表判断概率"
+    },
+    {
+      "word": "wait for",
+      "phonetic": "/ˈweɪt ˈfɔːr/",
+      "partOfSpeech": "phr.",
+      "chinese": "等待",
+      "difference": "expect 是判断某事将发生，可不含等待动作；wait for 强调在对象到来前经过时间。"
     }
   ],
   "relatedVocabulary": [
@@ -584,16 +613,16 @@
       "ai": false
     },
     {
-      "id": "expect-v-synonym-choice-2",
+      "id": "expect-v-antonym-choice",
       "type": "meaning_choice",
-      "prompt": "除“anticipate”外，在“预测”这个义项下，哪个词也与“expect”意思接近？",
+      "prompt": "在“预料；预计”这个义项下，哪个词与“expect”意思相反？",
       "options": [
         "do",
-        "predict",
+        "doubt",
         "be",
         "have"
       ],
-      "answer": "predict",
+      "answer": "doubt",
       "stage": "T2",
       "ai": false
     },
@@ -771,9 +800,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

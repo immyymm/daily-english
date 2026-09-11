@@ -1,8 +1,8 @@
 {
   "date": "2026-09-06",
   "dayNumber": 21,
-  "contentVersion": "2026.09.10.4",
-  "templateVersion": "learning-template-2026.09.10.4",
+  "contentVersion": "2026.09.11.1",
+  "templateVersion": "learning-template-2026.09.11.1",
   "cards": [
     {
       "id": "end-v",
@@ -83,7 +83,7 @@
           }
         ],
         "directSynonym": "finish /ˈfɪnɪʃ/（结束）；stop /ˈstɑp/（停止）；conclude /kənˈkluːd/（结束）；terminate /ˈtɝːməˌneɪt/（终止）；cease /ˈsiːs/（停止）",
-        "directAntonym": "begin /bɪˈɡɪn/（开始）；continue /kənˈtɪnju/（继续）",
+        "directAntonym": "begin /bɪˈɡɪn/（开始）；continue /kənˈtɪnju/（继续）；prolong /prəˈlɔːŋ/（延长；拖长）",
         "derivatives": "ending · endpoint · endless · endlessly",
         "example": "Let us end the meeting with a clear decision.",
         "exampleChinese": "让我们以一个明确决定结束会议。"
@@ -350,6 +350,13 @@
           "partOfSpeech": "v.",
           "chinese": "继续",
           "usage": "强调活动不结束而持续；end 表示到达终点，continue 则让同一活动保持进行。"
+        },
+        {
+          "word": "prolong",
+          "phonetic": "/prəˈlɔːŋ/",
+          "partOfSpeech": "v.",
+          "chinese": "延长；拖长",
+          "usage": "只与 end an activity/process 的使其终止义相对；prolong 表示使同一活动或过程持续更久。"
         }
       ],
       "derivatives": [
@@ -382,7 +389,22 @@
           "note": "说明动作持续很久，似乎没有尽头。"
         }
       ],
-      "confusables": [],
+      "confusables": [
+        {
+          "word": "and",
+          "phonetic": "/ənd/",
+          "partOfSpeech": "conj.",
+          "chinese": "和；并且",
+          "difference": "end /ɛnd/ 是“结束”，and /ænd/ 是连接词；两词拼写和元音接近，但语法作用完全不同。"
+        },
+        {
+          "word": "end up",
+          "phonetic": "/ˈɛnd ˈʌp/",
+          "partOfSpeech": "phr.v.",
+          "chinese": "最终处于；结果是",
+          "difference": "end 表示结束某事；end up 后接地点、形容词或 -ing，强调最终出现的结果，不等于主动终止。"
+        }
+      ],
       "relatedVocabulary": [
         {
           "category": "时间边界",
@@ -783,10 +805,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -862,7 +884,7 @@
           }
         ],
         "directSynonym": "need /ˈniːd/（需要）；demand /dɪˈmænd/（强烈要求）；necessitate /nəˈsɛsəˌteɪt/（使成为必要）；call for /ˈkɔːl ˈfɔːr/（需要）；entail /ɛnˈteɪl/（必然涉及）",
-        "directAntonym": "",
+        "directAntonym": "waive /ˈweɪv/（免除；放弃执行）；exempt /ɪɡˈzɛmpt/（免除；豁免）；make optional /ˈmeɪk ˈɑpʃənəl/（改为可选）",
         "derivatives": "requirement · required",
         "example": "This task requires careful planning.",
         "exampleChinese": "这个任务需要仔细规划。"
@@ -1108,7 +1130,29 @@
           "difference": "强调某事不可避免地带来要求或后果；require 聚焦所需条件，entail 强调随之而来的结果。"
         }
       ],
-      "antonyms": [],
+      "antonyms": [
+        {
+          "word": "waive",
+          "phonetic": "/ˈweɪv/",
+          "partOfSpeech": "v.",
+          "chinese": "免除；放弃执行",
+          "usage": "只在规则义上相对：require a fee/document 是规定必须提供，waive the fee/requirement 是正式免除同一要求。"
+        },
+        {
+          "word": "exempt",
+          "phonetic": "/ɪɡˈzɛmpt/",
+          "partOfSpeech": "v.",
+          "chinese": "免除；豁免",
+          "usage": "只在对人的义务上相对：require someone to comply 是要求履行，exempt someone from it 是免除该义务。"
+        },
+        {
+          "word": "make optional",
+          "phonetic": "/ˈmeɪk ˈɑpʃənəl/",
+          "partOfSpeech": "v. phr.",
+          "chinese": "改为可选",
+          "usage": "只在强制要求上相对：require 表示必须具备或完成，make optional 表示允许自行选择。"
+        }
+      ],
       "derivatives": [
         {
           "word": "requirement",
@@ -1132,6 +1176,13 @@
           "partOfSpeech": "v.",
           "chinese": "请求",
           "difference": "request 是提出请求，require 是认为必要或正式规定"
+        },
+        {
+          "word": "inquire",
+          "phonetic": "/ˌɪnˈkwaɪr/",
+          "partOfSpeech": "v.",
+          "chinese": "询问；打听",
+          "difference": "require /rɪˈkwaɪr/ 表示需要或要求；inquire /ɪnˈkwaɪr/ 表示询问信息，拼写相近但宾语和目的不同。"
         }
       ],
       "relatedVocabulary": [
@@ -1347,16 +1398,16 @@
           "ai": false
         },
         {
-          "id": "require-v-synonym-choice-2",
+          "id": "require-v-antonym-choice",
           "type": "meaning_choice",
-          "prompt": "除“need”外，在“强烈要求”这个义项下，哪个词也与“require”意思接近？",
+          "prompt": "在“需要；有赖于”这个义项下，哪个词与“require”意思相反？",
           "options": [
             "be",
             "have",
             "do",
-            "demand"
+            "waive"
           ],
-          "answer": "demand",
+          "answer": "waive",
           "stage": "T2",
           "ai": false
         },
@@ -1534,10 +1585,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -1613,7 +1664,7 @@
           }
         ],
         "directSynonym": "pay attention to /ˈpeɪ əˈtɛnʃən ˈtuː/（专心听；注意）；lend an ear to /ˈlɛnd ˈæn ˈiːr ˈtuː/（倾听）；heed /ˈhiːd/（听从）；tune in to /ˈtuːn ɪn ˈtuː/（收听；关注）；attend to /əˈtɛnd ˈtuː/（专心听；注意）",
-        "directAntonym": "ignore /ˌɪɡˈnɔːr/（不理会）",
+        "directAntonym": "disobey /ˌdɪsəˈbeɪ/（不听从；违抗）；tune out /ˈtuːn ˈaʊt/（不再听；走神）；turn a deaf ear to /ˈtɝːn ə ˈdɛf ˈiːr ˈtuː/（对……置若罔闻）",
         "derivatives": "listener · listening",
         "example": "Listen to the whole sentence before answering.",
         "exampleChinese": "回答前先听完整个句子。"
@@ -1861,11 +1912,25 @@
       ],
       "antonyms": [
         {
-          "word": "ignore",
-          "phonetic": "/ˌɪɡˈnɔːr/",
+          "word": "disobey",
+          "phonetic": "/ˌdɪsəˈbeɪ/",
           "partOfSpeech": "v.",
-          "chinese": "不理会",
-          "usage": "在注意或听从意见的义项上相对；listen 是主动给予注意，ignore 则有意或无意不理会。"
+          "chinese": "不听从；违抗",
+          "usage": "只与 listen to advice/instructions 表示听取并照做的义项相对；disobey 表示明知要求却不遵从"
+        },
+        {
+          "word": "tune out",
+          "phonetic": "/ˈtuːn ˈaʊt/",
+          "partOfSpeech": "phr.v.",
+          "chinese": "不再听；走神",
+          "usage": "只与主动听取信息的 listen 相对；tune out 表示注意力离开正在播放或讲述的内容。"
+        },
+        {
+          "word": "turn a deaf ear to",
+          "phonetic": "/ˈtɝːn ə ˈdɛf ˈiːr ˈtuː/",
+          "partOfSpeech": "v. phr.",
+          "chinese": "对……置若罔闻",
+          "usage": "只与 listen to advice/appeals 的听取义相对，turn a deaf ear to 强调有意拒绝听取。"
         }
       ],
       "derivatives": [
@@ -2119,10 +2184,10 @@
           "options": [
             "have",
             "do",
-            "ignore",
+            "disobey",
             "be"
           ],
-          "answer": "ignore",
+          "answer": "disobey",
           "stage": "T2",
           "ai": false
         },
@@ -2300,10 +2365,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -2379,7 +2444,7 @@
           }
         ],
         "directSynonym": "consent /kənˈsɛnt/（同意；准许）；approve /əˈpruːv/（赞成；批准）；concur /kənˈkɝː/（同意）；be of the same mind /ˈbiː ˈʌv ðə ˈseɪm ˈmaɪnd/（意见一致）；settle /ˈsɛtəl/（商定；解决）",
-        "directAntonym": "object /əbˈdʒɛkt/（反对；不赞成）；oppose /əˈpoʊz/（反对；抵制）",
+        "directAntonym": "object /əbˈdʒɛkt/（反对；不赞成）；back out of /ˈbæk ˈaʊt ˈʌv/（退出；反悔）；conflict with /ˈkɑnflɪkt ˈwɪð/（与……冲突；不一致）",
         "derivatives": "disagree · agreement · disagreement · agreeable",
         "example": "I agree with you about the need for clearer examples.",
         "exampleChinese": "我同意你关于需要更清楚例句的看法。"
@@ -2648,11 +2713,18 @@
           "usage": "常用 object to something，表示明确提出异议；agree 表示同意或意见一致。"
         },
         {
-          "word": "oppose",
-          "phonetic": "/əˈpoʊz/",
-          "partOfSpeech": "v.",
-          "chinese": "反对；抵制",
-          "usage": "语气强于 disagree，常指主动反对计划、政策或行动。"
+          "word": "back out of",
+          "phonetic": "/ˈbæk ˈaʊt ˈʌv/",
+          "partOfSpeech": "phr.v.",
+          "chinese": "退出；反悔",
+          "usage": "只与 agree to an arrangement/commitment 的承诺义相对；agree to 表示接受安排，back out of 则在承诺后退出。"
+        },
+        {
+          "word": "conflict with",
+          "phonetic": "/ˈkɑnflɪkt ˈwɪð/",
+          "partOfSpeech": "v. phr.",
+          "chinese": "与……冲突；不一致",
+          "usage": "只与 figures/accounts agree 的相符义相对；conflict with 表示两组事实、说法或要求彼此不一致。"
         }
       ],
       "derivatives": [
@@ -2692,6 +2764,13 @@
           "partOfSpeech": "v.",
           "chinese": "接受",
           "difference": "accept 接受事物或事实，agree 表示观点一致或同意安排"
+        },
+        {
+          "word": "agree with",
+          "phonetic": "/əˈɡriː ˈwɪð/",
+          "partOfSpeech": "phr.v.",
+          "chinese": "同意某人或观点；与……相符",
+          "difference": "agree with 后接人、观点或表示相符；agree to 后接提议或安排，agree on 后接共同商定的事项。"
         }
       ],
       "relatedVocabulary": [
@@ -3094,10 +3173,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -3179,7 +3258,7 @@
           }
         ],
         "directSynonym": "slice /ˈslaɪs/（切片）；chop /ˈtʃɑp/（剁碎）；trim /ˈtrɪm/（修剪）；reduce /rəˈduːs/（减少）；sever /ˈsɛvɚ/（切断）",
-        "directAntonym": "join /ˈdʒɔɪn/（接合；连接）；increase /ɪnˈkriːs/（增加；提高）",
+        "directAntonym": "join /ˈdʒɔɪn/（接合；连接）；increase /ɪnˈkriːs/（增加；提高）；lengthen /ˈlɛŋθən/（延长；加长）",
         "derivatives": "cutter · cutting · uncut",
         "example": "Cut the apple into small pieces.",
         "exampleChinese": "把苹果切成小块。"
@@ -3446,6 +3525,13 @@
           "partOfSpeech": "v.",
           "chinese": "增加；提高",
           "usage": "只在 cut 表示削减数量、成本或预算的义项下相反；increase 使同一数值上升。"
+        },
+        {
+          "word": "lengthen",
+          "phonetic": "/ˈlɛŋθən/",
+          "partOfSpeech": "v.",
+          "chinese": "延长；加长",
+          "usage": "只与 cut 表示缩短时间、篇幅或物体的义项相对；lengthen 表示使同一对象变长。"
         }
       ],
       "derivatives": [
@@ -3478,6 +3564,13 @@
           "partOfSpeech": "adj.",
           "chinese": "可爱的",
           "difference": "仅拼写相近，cute 多一个 e 且读音为 /kjuːt/"
+        },
+        {
+          "word": "cut out",
+          "phonetic": "/ˈkʌt ˈaʊt/",
+          "partOfSpeech": "phr.v.",
+          "chinese": "剪下；停止；删除",
+          "difference": "cut 是一般切割；cut out 可表示剪下形状、停止习惯或停止运转，不能只按 cut 的字面义理解。"
         }
       ],
       "relatedVocabulary": [
@@ -3711,9 +3804,9 @@
           "type": "meaning_choice",
           "prompt": "结合拼写、发音和用法，哪一项需要与“cut”重点区分？",
           "options": [
+            "bold",
             "calm",
-            "dead",
-            "deaf",
+            "cold",
             "cute"
           ],
           "answer": "cute",
@@ -3880,10 +3973,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     }
   ]

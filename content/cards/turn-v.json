@@ -76,9 +76,9 @@
         "note": "变成某个名词用 turn into。"
       }
     ],
-    "directSynonym": "rotate /ˈroʊˌteɪt/（旋转）；veer /ˈvɪr/（突然转向）；reverse /rɪˈvɝːs/（逆转）；change /ˈtʃeɪndʒ/（改变）；become /bɪˈkʌm/（变成）",
-    "directAntonym": "",
-    "derivatives": "return · turning · turnover · turnaround",
+    "directSynonym": "rotate /ˈroʊˌteɪt/（旋转）；veer /ˈvɪr/（突然转向）；reverse /rɪˈvɝːs/（逆转）；change /ˈtʃeɪndʒ/（改变）；pivot /ˈpɪvət/（转动；转变方向）",
+    "directAntonym": "go straight /ˈɡoʊ ˈstreɪt/（直行；继续向前）；remain unchanged /rɪˈmeɪn ənˈtʃeɪndʒd/（保持不变）；switch off /ˈswɪtʃ ˈɔːf/（关掉；切断）",
+    "derivatives": "turning · turnover · turnaround",
     "example": "Turn left at the next traffic light.",
     "exampleChinese": "在下一个红绿灯处左转。"
   },
@@ -323,22 +323,37 @@
       "difference": "只对应状态变化；不能覆盖 turn 的方向旋转、开关调节、状态变化或轮次名词义。"
     },
     {
-      "word": "become",
-      "phonetic": "/bɪˈkʌm/",
+      "word": "pivot",
+      "phonetic": "/ˈpɪvət/",
       "partOfSpeech": "v.",
-      "chinese": "变成",
-      "difference": "turn + 形容词常用于颜色和明显状态。"
+      "chinese": "转动；转变方向",
+      "difference": "pivot 强调围绕一个支点转动，也可比喻改变策略；turn 是更通用的旋转或转向用词。"
     }
   ],
-  "antonyms": [],
-  "derivatives": [
+  "antonyms": [
     {
-      "word": "return",
-      "phonetic": "/rɪˈtɝːn/",
-      "partOfSpeech": "v. / n.",
-      "chinese": "返回；归还",
-      "note": "加前缀 re- 后含义发展为回到原处。"
+      "word": "go straight",
+      "phonetic": "/ˈɡoʊ ˈstreɪt/",
+      "partOfSpeech": "phr.v.",
+      "chinese": "直行；继续向前",
+      "usage": "只与 turn 表示在路口或路线上改变方向的义项相对；turn 要转向，go straight 则保持当前方向前进。"
     },
+    {
+      "word": "remain unchanged",
+      "phonetic": "/rɪˈmeɪn ənˈtʃeɪndʒd/",
+      "partOfSpeech": "phr.v.",
+      "chinese": "保持不变",
+      "usage": "只与 turn 作系动词表示状态发生变化的义项相对；turn 进入新状态，remain unchanged 则继续保持原状态。"
+    },
+    {
+      "word": "switch off",
+      "phonetic": "/ˈswɪtʃ ˈɔːf/",
+      "partOfSpeech": "phr.v.",
+      "chinese": "关掉；切断",
+      "usage": "只对应 turn on 表示开启设备、灯光或功能的常用短语义；turn on 启动，switch off 则将同一设备关闭。"
+    }
+  ],
+  "derivatives": [
     {
       "word": "turning",
       "phonetic": "/ˈtɝːnɪŋ/",
@@ -361,7 +376,22 @@
       "note": "可指业绩逆转或完成服务所需时间。"
     }
   ],
-  "confusables": [],
+  "confusables": [
+    {
+      "word": "turn to",
+      "phonetic": "/ˈtɝːn ˈtuː/",
+      "partOfSpeech": "phr.v.",
+      "chinese": "向……求助；转向",
+      "difference": "turn 单独可表示转动或转弯；turn to 后接人或事物，常表示向其求助或把注意力转向，介词不能随意省略。"
+    },
+    {
+      "word": "become",
+      "phonetic": "/bɪˈkʌm/",
+      "partOfSpeech": "v.",
+      "chinese": "变成；成为",
+      "difference": "turn 和 become 都可接表状态的补语，但 turn 只与颜色、年龄或明显变化等有限搭配自然，become 适用范围更广。"
+    }
+  ],
   "relatedVocabulary": [
     {
       "category": "方向道路",
@@ -575,30 +605,30 @@
       "ai": false
     },
     {
-      "id": "turn-v-synonym-choice-2",
+      "id": "turn-v-antonym-choice",
       "type": "meaning_choice",
-      "prompt": "除“rotate”外，在“突然转向”这个义项下，哪个词也与“turn”意思接近？",
+      "prompt": "在“转动；转弯”这个义项下，哪个词与“turn”意思相反？",
       "options": [
-        "do",
-        "veer",
-        "be",
-        "have"
+        "be assigned",
+        "go straight",
+        "account for",
+        "back out of"
       ],
-      "answer": "veer",
+      "answer": "go straight",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "turn-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "哪一项是“turn”的常用派生词？",
+      "prompt": "结合拼写、发音和用法，哪一项需要与“turn”重点区分？",
       "options": [
-        "return",
+        "become",
         "be",
         "have",
         "do"
       ],
-      "answer": "return",
+      "answer": "become",
       "stage": "T3",
       "ai": false
     },
@@ -762,9 +792,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

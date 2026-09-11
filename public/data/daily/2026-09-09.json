@@ -1,8 +1,8 @@
 {
   "date": "2026-09-09",
   "dayNumber": 24,
-  "contentVersion": "2026.09.10.4",
-  "templateVersion": "learning-template-2026.09.10.4",
+  "contentVersion": "2026.09.11.1",
+  "templateVersion": "learning-template-2026.09.11.1",
   "cards": [
     {
       "id": "drive-v",
@@ -83,7 +83,7 @@
           }
         ],
         "directSynonym": "steer /ˈstɪr/（驾驶；操纵方向）；operate /ˈɑpɚˌeɪt/（操作）；transport /trænˈspɔːrt/（运送）；propel /prəˈpɛl/（推动）；motivate /ˈmoʊtəˌveɪt/（驱动）",
-        "directAntonym": "",
+        "directAntonym": "park /ˈpɑrk/（停车；停放）；dissuade /dɪˈsweɪd/（劝阻；使打消念头）；halt /ˈhɔːlt/（使停止；停下）",
         "derivatives": "driver · driving · driven",
         "example": "I drive a car to work twice a week.",
         "exampleChinese": "我每周开车上班两次。"
@@ -343,7 +343,29 @@
           "difference": "只对应促使人采取行动的比喻义；drive 可表示外部力量驱使，motivate 常涉及心理动力。"
         }
       ],
-      "antonyms": [],
+      "antonyms": [
+        {
+          "word": "park",
+          "phonetic": "/ˈpɑrk/",
+          "partOfSpeech": "v.",
+          "chinese": "停车；停放",
+          "usage": "只与 drive a vehicle 的行驶义相对；park 表示把同一车辆停稳并结束行驶。"
+        },
+        {
+          "word": "dissuade",
+          "phonetic": "/dɪˈsweɪd/",
+          "partOfSpeech": "v.",
+          "chinese": "劝阻；使打消念头",
+          "usage": "只与 drive someone to act 的驱使义相对；dissuade 表示劝说同一个人不要采取该行动。"
+        },
+        {
+          "word": "halt",
+          "phonetic": "/ˈhɔːlt/",
+          "partOfSpeech": "v.",
+          "chinese": "使停止；停下",
+          "usage": "只与 drive a machine/process forward 的推动义相对；halt 表示使该运行或进程停止。"
+        }
+      ],
       "derivatives": [
         {
           "word": "driver",
@@ -374,6 +396,13 @@
           "partOfSpeech": "v.",
           "chinese": "骑；乘坐",
           "difference": "drive 强调操控汽车，ride 用于骑车或作为乘客乘坐"
+        },
+        {
+          "word": "dive",
+          "phonetic": "/ˈdaɪv/",
+          "partOfSpeech": "v. / n.",
+          "chinese": "潜水；俯冲",
+          "difference": "drive /draɪv/ 表示驾驶或推动；dive /daɪv/ 表示潜入或俯冲，拼写接近但辅音和含义不同。"
         }
       ],
       "relatedVocabulary": [
@@ -589,16 +618,16 @@
           "ai": false
         },
         {
-          "id": "drive-v-synonym-choice-2",
+          "id": "drive-v-antonym-choice",
           "type": "meaning_choice",
-          "prompt": "除“steer”外，在“操作”这个义项下，哪个词也与“drive”意思接近？",
+          "prompt": "在“驾驶；开车”这个义项下，哪个词与“drive”意思相反？",
           "options": [
             "do",
-            "operate",
+            "park",
             "be",
             "have"
           ],
-          "answer": "operate",
+          "answer": "park",
           "stage": "T2",
           "ai": false
         },
@@ -776,10 +805,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -861,7 +890,7 @@
           }
         ],
         "directSynonym": "get to /ˈɡɛt ˈtuː/（到达）；attain /əˈteɪn/（达到）；achieve /əˈtʃiːv/（实现）；contact /ˈkɑnˌtækt/（联系到）；extend /ɪkˈstɛnd/（延伸）",
-        "directAntonym": "miss /ˈmɪs/（未赶上；未达到）",
+        "directAntonym": "miss /ˈmɪs/（未赶上；未达到）；fall short of /ˈfɔːl ˈʃɔːrt ˈʌv/（未达到）；lose contact with /ˈluːz ˈkɑnˌtækt ˈwɪð/（与……失去联系）",
         "derivatives": "overreach · outreach · reachability · reachable · unreachable · far-reaching",
         "example": "We finally reached an agreement.",
         "exampleChinese": "我们终于达成了协议。"
@@ -1128,6 +1157,20 @@
           "partOfSpeech": "v.",
           "chinese": "未赶上；未达到",
           "usage": "对应未能到达目标、班次或标准；reach 表示成功到达，miss 表示未赶上或未达到。"
+        },
+        {
+          "word": "fall short of",
+          "phonetic": "/ˈfɔːl ˈʃɔːrt ˈʌv/",
+          "partOfSpeech": "phr.v.",
+          "chinese": "未达到",
+          "usage": "只与 reach a goal/standard 的达到义相对；fall short of 表示结果低于同一目标或标准。"
+        },
+        {
+          "word": "lose contact with",
+          "phonetic": "/ˈluːz ˈkɑnˌtækt ˈwɪð/",
+          "partOfSpeech": "v. phr.",
+          "chinese": "与……失去联系",
+          "usage": "只与 reach/contact someone 的联系义相对；lose contact with 表示沟通渠道中断。"
         }
       ],
       "derivatives": [
@@ -1181,6 +1224,13 @@
           "partOfSpeech": "v.",
           "chinese": "到达",
           "difference": "reach 直接接地点，arrive 后要用 at 或 in"
+        },
+        {
+          "word": "teach",
+          "phonetic": "/ˈtiːtʃ/",
+          "partOfSpeech": "v.",
+          "chinese": "教授；教会",
+          "difference": "reach /riːtʃ/ 表示到达或够到；teach /tiːtʃ/ 表示教授，拼写只差首字母但主语和动作不同。"
         }
       ],
       "relatedVocabulary": [
@@ -1583,10 +1633,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -1662,7 +1712,7 @@
           }
         ],
         "directSynonym": "stay /ˈsteɪ/（保持；留下）；continue /kənˈtɪnju/（继续）；persist /pɚˈsɪst/（持续存在）；last /ˈlæst/（持续）；linger /ˈlɪŋɡɚ/（逗留；残留）",
-        "directAntonym": "leave /ˈliːv/（离开）；change /ˈtʃeɪndʒ/（改变）",
+        "directAntonym": "leave /ˈliːv/（离开）；change /ˈtʃeɪndʒ/（改变）；disappear /ˌdɪsəˈpɪr/（消失；不再存在）",
         "derivatives": "remainder · remaining",
         "example": "Please remain calm and try again.",
         "exampleChinese": "请保持冷静并再试一次。"
@@ -1936,6 +1986,13 @@
           "partOfSpeech": "v.",
           "chinese": "改变",
           "usage": "只与保持某状态不变的义项相对；remain 可保持原状态，change 表示进入不同状态。"
+        },
+        {
+          "word": "disappear",
+          "phonetic": "/ˌdɪsəˈpɪr/",
+          "partOfSpeech": "v.",
+          "chinese": "消失；不再存在",
+          "usage": "只与 something remains 的剩余义相对；disappear 表示该对象不再留存或可见。"
         }
       ],
       "derivatives": [
@@ -1961,6 +2018,13 @@
           "partOfSpeech": "v.",
           "chinese": "提醒",
           "difference": "remain 表示保持或留下，remind 表示使某人想起"
+        },
+        {
+          "word": "retain",
+          "phonetic": "/rɪˈteɪn/",
+          "partOfSpeech": "v.",
+          "chinese": "保留；保持",
+          "difference": "remain 通常不及物，表示某物继续处于状态；retain 是及物动词，后面直接接被保留的对象。"
         }
       ],
       "relatedVocabulary": [
@@ -2363,10 +2427,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -2442,7 +2506,7 @@
           }
         ],
         "directSynonym": "clarify /ˈklɛrəˌfaɪ/（澄清）；spell out /ˈspɛl ˈaʊt/（详细说明）；interpret /ˌɪnˈtɝːprət/（解释）；account for /əˈkaʊnt ˈfɔːr/（解释原因）；illustrate /ˈɪləˌstreɪt/（阐明）",
-        "directAntonym": "obscure /əbˈskjʊr/（使含糊）",
+        "directAntonym": "obscure /əbˈskjʊr/（使含糊）；confuse /kənˈfjuːz/（使困惑；混淆）；mislead /mɪˈsliːd/（误导；使产生错误理解）",
         "derivatives": "explanation · explainable · unexplained · self-explanatory · explanatory",
         "example": "Could you explain this phrase to me?",
         "exampleChinese": "你能给我解释一下这个短语吗？"
@@ -2695,6 +2759,20 @@
           "partOfSpeech": "v.",
           "chinese": "使含糊",
           "usage": "与使意义清楚的 explain 相对"
+        },
+        {
+          "word": "confuse",
+          "phonetic": "/kənˈfjuːz/",
+          "partOfSpeech": "v.",
+          "chinese": "使困惑；混淆",
+          "usage": "只与 explain an idea clearly 的说明义相对；confuse 表示让同一概念更难理解。"
+        },
+        {
+          "word": "mislead",
+          "phonetic": "/mɪˈsliːd/",
+          "partOfSpeech": "v.",
+          "chinese": "误导；使产生错误理解",
+          "usage": "只与 explain something accurately 的说明义相对；mislead 表示让听者对同一事实形成错误理解。"
         }
       ],
       "derivatives": [
@@ -2741,6 +2819,13 @@
           "partOfSpeech": "v.",
           "chinese": "描述",
           "difference": "explain 使原因或意义清楚，describe 说明外观、特征或过程"
+        },
+        {
+          "word": "exclaim",
+          "phonetic": "/ɪksˈkleɪm/",
+          "partOfSpeech": "v.",
+          "chinese": "惊呼；大声说",
+          "difference": "explain /ɪkˈspleɪn/ 表示解释；exclaim /ɪkˈskleɪm/ 表示惊呼，拼写相近但辅音群和说话目的不同。"
         }
       ],
       "relatedVocabulary": [
@@ -3143,10 +3228,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -3228,7 +3313,7 @@
           }
         ],
         "directSynonym": "strike /ˈstraɪk/（击打）；bang /ˈbæŋ/（猛撞）；collide /kəˈlaɪd/（相撞）；reach /ˈriːtʃ/（达到）；affect /əˈfɛkt/（影响）",
-        "directAntonym": "miss /ˈmɪs/（未击中）",
+        "directAntonym": "miss /ˈmɪs/（未击中）；dodge /ˈdɑdʒ/（躲开；闪避）；spare /ˈspɛr/（使免受；未波及）",
         "derivatives": "hitter",
         "example": "Try to hit the ball with the center of the racket.",
         "exampleChinese": "尽量用球拍中心击球。"
@@ -3488,6 +3573,20 @@
           "partOfSpeech": "v.",
           "chinese": "未击中",
           "usage": "只与击中目标的义项直接相对；hit 表示击中指定目标，miss 表示没有碰到或达到目标。"
+        },
+        {
+          "word": "dodge",
+          "phonetic": "/ˈdɑdʒ/",
+          "partOfSpeech": "v.",
+          "chinese": "躲开；闪避",
+          "usage": "只在击打或投射的互动中相对：hit 表示击中，dodge 表示及时移动以免被击中。"
+        },
+        {
+          "word": "spare",
+          "phonetic": "/ˈspɛr/",
+          "partOfSpeech": "v.",
+          "chinese": "使免受；未波及",
+          "usage": "只与 a disaster hits an area 的波及义相对；spare 表示灾害没有伤及同一地区或人。"
         }
       ],
       "derivatives": [
@@ -3506,6 +3605,13 @@
           "partOfSpeech": "v.",
           "chinese": "反复击打；打败",
           "difference": "hit 可指一次击中，beat 常指反复击打或战胜对手"
+        },
+        {
+          "word": "heat",
+          "phonetic": "/ˈhiːt/",
+          "partOfSpeech": "n. / v.",
+          "chinese": "热；加热",
+          "difference": "hit /hɪt/ 表示击中，heat /hiːt/ 表示热或加热；拼写相近但元音长短和含义不同。"
         }
       ],
       "relatedVocabulary": [
@@ -3908,10 +4014,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     }
   ]

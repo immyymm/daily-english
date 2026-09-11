@@ -71,7 +71,7 @@
       }
     ],
     "directSynonym": "get under way /ˈɡɛt ˈʌndɚ ˈweɪ/（开始进行）；commence /kəˈmɛns/（开始）；initiate /ˌɪˈnɪʃiˌeɪt/（发起）；launch /ˈlɔːntʃ/（启动；推出）；open /ˈoʊpən/（开始；开幕）",
-    "directAntonym": "end /ˈɛnd/（结束）；finish /ˈfɪnɪʃ/（完成；结束）",
+    "directAntonym": "end /ˈɛnd/（结束）；cancel /ˈkænsəl/（取消）；postpone /poʊstˈpoʊn/（推迟；延期）",
     "derivatives": "beginning · beginner",
     "example": "I begin to understand the pattern after seeing two examples.",
     "exampleChinese": "看过两个例子后，我开始理解这个句型。"
@@ -323,14 +323,21 @@
       "phonetic": "/ˈɛnd/",
       "partOfSpeech": "v.",
       "chinese": "结束",
-      "usage": "与开始一个活动或过程相反；能否接机器、项目或动作补语取决于各自动词搭配"
+      "usage": "在过程的时间边界上，begin 标志起点，end 标志终点"
     },
     {
-      "word": "finish",
-      "phonetic": "/ˈfɪnɪʃ/",
+      "word": "cancel",
+      "phonetic": "/ˈkænsəl/",
       "partOfSpeech": "v.",
-      "chinese": "完成；结束",
-      "usage": "强调做到终点，与 begin 相对"
+      "chinese": "取消",
+      "usage": "对已安排但尚未启动的活动，begin 是让它开始，cancel 是撤销安排使其不再开始"
+    },
+    {
+      "word": "postpone",
+      "phonetic": "/poʊstˈpoʊn/",
+      "partOfSpeech": "v.",
+      "chinese": "推迟；延期",
+      "usage": "begin an activity 是让它现在进入起点，postpone it 是把开始时间推到以后。"
     }
   ],
   "derivatives": [
@@ -351,11 +358,18 @@
   ],
   "confusables": [
     {
-      "word": "start",
-      "phonetic": "/ˈstɑrt/",
-      "partOfSpeech": "v.",
-      "chinese": "开始",
-      "difference": "多数场景可互换；start 还常用于机器启动，begin 通常不说 begin a car"
+      "word": "behind",
+      "phonetic": "/bɪˈhaɪnd/",
+      "partOfSpeech": "prep. / adv.",
+      "chinese": "在……后面；落后",
+      "difference": "begin /bɪˈɡɪn/ 与 behind /bɪˈhaɪnd/ 都以 be- 开头，但重读音节和词性不同；behind 表示位置或进度落后。"
+    },
+    {
+      "word": "being",
+      "phonetic": "/ˈbiːɪŋ/",
+      "partOfSpeech": "n.",
+      "chinese": "存在；生物",
+      "difference": "begin /bɪˈɡɪn/ 中 g 在 i 前，being /ˈbiːɪŋ/ 由 be 构成；两词字母顺序、读音和词性都不同。"
     }
   ],
   "relatedVocabulary": [
@@ -589,12 +603,12 @@
       "type": "meaning_choice",
       "prompt": "结合拼写、发音和用法，哪一项需要与“begin”重点区分？",
       "options": [
-        "do",
-        "start",
-        "be",
-        "have"
+        "alarm",
+        "being",
+        "increase",
+        "actor"
       ],
-      "answer": "start",
+      "answer": "being",
       "stage": "T3",
       "ai": false
     },
@@ -758,9 +772,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

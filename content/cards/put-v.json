@@ -71,7 +71,7 @@
       }
     ],
     "directSynonym": "place /ˈpleɪs/（放置）；set /ˈsɛt/（放置；设置）；position /pəˈzɪʃən/（安置；定位）；lay /ˈleɪ/（平放）；express /ɪkˈsprɛs/（表达）",
-    "directAntonym": "remove /riˈmuːv/（移走）",
+    "directAntonym": "remove /riˈmuːv/（移走）；take away /ˈteɪk əˈweɪ/（拿走；移除）；pick up /ˈpɪk ˈʌp/（拿起；捡起）",
     "derivatives": "本词暂无需额外强记的高频派生词",
     "example": "Put the new phrase in your own example sentence.",
     "exampleChinese": "把新短语用在你自己的例句里。"
@@ -324,6 +324,20 @@
       "partOfSpeech": "v.",
       "chinese": "移走",
       "usage": "与把物品放到某处相反；只与把具体物品放到某处的义项构成反向关系。"
+    },
+    {
+      "word": "take away",
+      "phonetic": "/ˈteɪk əˈweɪ/",
+      "partOfSpeech": "phr.v.",
+      "chinese": "拿走；移除",
+      "usage": "只与 put 表示把物品放到某处的义项相对；put 将物品放入该位置，take away 则将其从该位置拿走。"
+    },
+    {
+      "word": "pick up",
+      "phonetic": "/ˈpɪk ˈʌp/",
+      "partOfSpeech": "phr.v.",
+      "chinese": "拿起；捡起",
+      "usage": "只对应 put down 表示把手中物品放下的义项；put down 使物品落位，pick up 则将它从表面拿起。"
     }
   ],
   "derivatives": [],
@@ -334,6 +348,13 @@
       "partOfSpeech": "v. / n.",
       "chinese": "轻击高尔夫球；推杆",
       "difference": "put 读 /pʊt/ 且表示放置；putt 读 /pʌt/ 并专指高尔夫推杆。"
+    },
+    {
+      "word": "wear",
+      "phonetic": "/ˈwɛr/",
+      "partOfSpeech": "v.",
+      "chinese": "穿着；戴着",
+      "difference": "put on 强调穿上衣物或戴上配饰的动作，wear 强调穿戴后的状态；不能用 wear on 表示‘穿上’。"
     }
   ],
   "relatedVocabulary": [
@@ -563,6 +584,20 @@
       "ai": false
     },
     {
+      "id": "put-v-contrast-choice",
+      "type": "meaning_choice",
+      "prompt": "结合拼写、发音和用法，哪一项需要与“put”重点区分？",
+      "options": [
+        "wear",
+        "be",
+        "have",
+        "do"
+      ],
+      "answer": "wear",
+      "stage": "T3",
+      "ai": false
+    },
+    {
       "id": "put-v-recall-definition",
       "type": "recall",
       "prompt": "根据英文释义写出对应单词：to move or place something in a particular position",
@@ -722,9 +757,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

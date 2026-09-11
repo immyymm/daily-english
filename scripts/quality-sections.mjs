@@ -136,6 +136,9 @@ export function partOfSpeechClasses(value = '') {
   if (/\bphr\.?\b/.test(normalized)) classes.push('phr');
   if (/\bprep\.?\b/.test(normalized)) classes.push('prep');
   if (/\bconj\.?\b/.test(normalized)) classes.push('conj');
+  if (/\bpron\.?\b/.test(normalized)) classes.push('pron');
+  if (/\bdet\.?\b/.test(normalized)) classes.push('det');
+  if (/\bnum\.?\b/.test(normalized)) classes.push('num');
   return classes;
 }
 

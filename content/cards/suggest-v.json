@@ -71,7 +71,7 @@
       }
     ],
     "directSynonym": "propose /prəˈpoʊz/（提议）；recommend /ˌrɛkəˈmɛnd/（推荐）；put forward /ˈpʊt ˈfɔːrwɚd/（提出）；indicate /ˈɪndəˌkeɪt/（表明）；imply /ˌɪmˈplaɪ/（暗示）",
-    "directAntonym": "",
+    "directAntonym": "advise against /ædˈvaɪz əˈɡɛnst/（劝阻；建议不要）；rule out /ˈruːl ˈaʊt/（排除……的可能）；contradict /ˌkɑntrəˈdɪkt/（与……矛盾；反驳）",
     "derivatives": "suggestion · suggestive · suggestively",
     "example": "I suggest reviewing the difficult words first.",
     "exampleChinese": "我建议先复习困难的单词。"
@@ -324,7 +324,29 @@
       "difference": "表示没有直接说出某意思；suggest 可明确提出建议，imply 则是不明说。"
     }
   ],
-  "antonyms": [],
+  "antonyms": [
+    {
+      "word": "advise against",
+      "phonetic": "/ædˈvaɪz əˈɡɛnst/",
+      "partOfSpeech": "phr.v.",
+      "chinese": "劝阻；建议不要",
+      "usage": "只与 suggest doing a specific action 的建议义相对；advise against 表示明确建议不要采取该行动。"
+    },
+    {
+      "word": "rule out",
+      "phonetic": "/ˈruːl ˈaʊt/",
+      "partOfSpeech": "phr.v.",
+      "chinese": "排除……的可能",
+      "usage": "只与 evidence suggests a possibility 的暗示义相对；rule out 表示证据排除了同一可能。"
+    },
+    {
+      "word": "contradict",
+      "phonetic": "/ˌkɑntrəˈdɪkt/",
+      "partOfSpeech": "v.",
+      "chinese": "与……矛盾；反驳",
+      "usage": "只与数据 suggest a conclusion 的证据义相对；contradict 表示数据与该结论直接不符。"
+    }
+  ],
   "derivatives": [
     {
       "word": "suggestion",
@@ -355,6 +377,13 @@
       "partOfSpeech": "v.",
       "chinese": "建议",
       "difference": "advise 可用 advise someone to do，suggest 不能这样接"
+    },
+    {
+      "word": "suppose",
+      "phonetic": "/səˈpoʊz/",
+      "partOfSpeech": "v.",
+      "chinese": "假定；认为",
+      "difference": "suggest 表示提出建议或由证据暗示；suppose 表示暂时假定某事为真，不能接宾语表示“建议某人”。"
     }
   ],
   "relatedVocabulary": [
@@ -570,16 +599,16 @@
       "ai": false
     },
     {
-      "id": "suggest-v-synonym-choice-2",
+      "id": "suggest-v-antonym-choice",
       "type": "meaning_choice",
-      "prompt": "除“propose”外，在“推荐”这个义项下，哪个词也与“suggest”意思接近？",
+      "prompt": "在“建议；提议”这个义项下，哪个词与“suggest”意思相反？",
       "options": [
         "be",
         "have",
         "do",
-        "recommend"
+        "contradict"
       ],
-      "answer": "recommend",
+      "answer": "contradict",
       "stage": "T2",
       "ai": false
     },
@@ -757,9 +786,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

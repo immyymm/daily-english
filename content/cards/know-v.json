@@ -71,7 +71,7 @@
       }
     ],
     "directSynonym": "understand /ˌʌndɚˈstænd/（理解）；recognize /ˈrɛkəɡˌnaɪz/（认出；承认）；be aware of /ˈbiː əˈwɛr ˈʌv/（意识到；知道）；realize /ˈriːəˌlaɪz/（意识到；领悟）；comprehend /ˌkɑmpriˈhɛnd/（理解；领会）",
-    "directAntonym": "be unaware of /ˈbiː ˌʌnəˈwɛr ˈʌv/（没有意识到；不知道）",
+    "directAntonym": "be unaware of /ˈbiː ˌʌnəˈwɛr ˈʌv/（没有意识到；不知道）；misunderstand /ˌmɪsəndɚˈstænd/（误解；理解错误）；forget /fɚˈɡɛt/（忘记；不再记得）",
     "derivatives": "knowledge · unknown · knowledgeable · known · knowingly",
     "example": "I know the answer, but I need time to explain it.",
     "exampleChinese": "我知道答案，但需要时间解释。"
@@ -331,6 +331,20 @@
       "partOfSpeech": "phr.",
       "chinese": "没有意识到；不知道",
       "usage": "与 know/be aware of 某事实的义项相反。"
+    },
+    {
+      "word": "misunderstand",
+      "phonetic": "/ˌmɪsəndɚˈstænd/",
+      "partOfSpeech": "v.",
+      "chinese": "误解；理解错误",
+      "usage": "只与 know 表示正确理解信息的义项相对；know 表示掌握事实或含义，misunderstand 表示将其理解错了。"
+    },
+    {
+      "word": "forget",
+      "phonetic": "/fɚˈɡɛt/",
+      "partOfSpeech": "v.",
+      "chinese": "忘记；不再记得",
+      "usage": "只对应 know 表示已掌握某项信息的状态；know 是知道，forget 则是原有信息无法再想起。"
     }
   ],
   "derivatives": [
@@ -377,6 +391,13 @@
       "partOfSpeech": "v.",
       "chinese": "学习；得知",
       "difference": "learn 强调获得新知识的过程；know 描述已经知道或掌握的状态。"
+    },
+    {
+      "word": "no",
+      "phonetic": "/ˈnoʊ/",
+      "partOfSpeech": "det. / adv.",
+      "chinese": "没有；不",
+      "difference": "know 是动词，表示知道；no 是限定词或否定回答，两词都读 /noʊ/，但拼写和句法作用不同。"
     }
   ],
   "relatedVocabulary": [
@@ -596,12 +617,12 @@
       "type": "meaning_choice",
       "prompt": "在“知道；了解；懂得”这个义项下，哪个词与“know”意思相反？",
       "options": [
-        "be impossible",
-        "be unaware of",
-        "be allowed to",
-        "be capable of"
+        "do",
+        "misunderstand",
+        "be",
+        "have"
       ],
-      "answer": "be unaware of",
+      "answer": "misunderstand",
       "stage": "T2",
       "ai": false
     },
@@ -779,9 +800,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

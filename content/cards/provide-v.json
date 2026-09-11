@@ -71,7 +71,7 @@
       }
     ],
     "directSynonym": "render /ˈrɛndɚ/（提供；给予）；furnish /ˈfɝːnɪʃ/（提供；配备）；give /ˈɡɪv/（给）；equip /ɪˈkwɪp/（配备）；make available /ˈmeɪk əˈveɪləbəl/（使可获得）",
-    "directAntonym": "withhold /wɪθˈhoʊld/（拒绝提供；扣留）",
+    "directAntonym": "withhold /wɪθˈhoʊld/（拒绝提供；扣留）；deny /dɪˈnaɪ/（拒绝给予）；withdraw /wɪðˈdrɔː/（撤回；停止提供）",
     "derivatives": "provider · provision · provisional · provisionally",
     "example": "The course provides students with useful tools.",
     "exampleChinese": "这门课程为学生提供实用工具。"
@@ -331,6 +331,20 @@
       "partOfSpeech": "v.",
       "chinese": "拒绝提供；扣留",
       "usage": "与向他人提供所需事物相反；主客体句型和所提供资源的类别并不相同"
+    },
+    {
+      "word": "deny",
+      "phonetic": "/dɪˈnaɪ/",
+      "partOfSpeech": "v.",
+      "chinese": "拒绝给予",
+      "usage": "provide someone with something 表示给予所需资源，deny someone something 表示拒绝给予该资源。"
+    },
+    {
+      "word": "withdraw",
+      "phonetic": "/wɪðˈdrɔː/",
+      "partOfSpeech": "v.",
+      "chinese": "撤回；停止提供",
+      "usage": "在服务或支持义上，provide 是把资源提供出来，withdraw 是把原已提供的资源撤回。"
     }
   ],
   "derivatives": [
@@ -365,11 +379,18 @@
   ],
   "confusables": [
     {
-      "word": "supply",
-      "phonetic": "/səˈplaɪ/",
+      "word": "divide",
+      "phonetic": "/dɪˈvaɪd/",
       "partOfSpeech": "v.",
-      "chinese": "供应；提供",
-      "difference": "provide 是通用的“提供”；supply 更强调持续提供所需物资"
+      "chinese": "分开；除以",
+      "difference": "provide /prəˈvaɪd/ 与 divide /dɪˈvaɪd/ 结尾读音和拼写相近；provide 表示提供，divide 表示分开或除以。"
+    },
+    {
+      "word": "province",
+      "phonetic": "/ˈprɑvəns/",
+      "partOfSpeech": "n.",
+      "chinese": "省；领域",
+      "difference": "provide /prəˈvaɪd/ 与 province /ˈprɑːvɪns/ 开头拼写接近；provide 是提供的动词，province 是行政区或领域。"
     }
   ],
   "relatedVocabulary": [
@@ -606,9 +627,9 @@
         "be",
         "have",
         "do",
-        "supply"
+        "divide"
       ],
-      "answer": "supply",
+      "answer": "divide",
       "stage": "T3",
       "ai": false
     },
@@ -772,9 +793,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

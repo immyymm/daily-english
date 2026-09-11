@@ -5,7 +5,33 @@ import { relationNoteSpecificityIssue } from './quality-relations.mjs';
 const catalog = JSON.parse(fs.readFileSync(new URL('../public/data/all-cards.json', import.meta.url), 'utf8'));
 const templateLock = JSON.parse(fs.readFileSync(new URL('../content/templates/template-lock.json', import.meta.url), 'utf8'));
 const cards = catalog.cards;
-const minimums = templateLock.publishedCardMinimums;
+const CODE_RELATION_MINIMUMS = Object.freeze({ antonyms: 3, confusables: 2 });
+const CODE_REFERENCE_RELATION_MINIMUMS = Object.freeze({ antonyms: 4, confusables: 4 });
+const configuredMinimums = templateLock.publishedCardMinimums ?? {};
+const minimums = {
+  ...configuredMinimums,
+  antonyms: Math.max(CODE_RELATION_MINIMUMS.antonyms, configuredMinimums.antonyms ?? 0),
+  confusables: Math.max(CODE_RELATION_MINIMUMS.confusables, configuredMinimums.confusables ?? 0)
+};
+const failures = [];
+for (const [field, codeFloor] of Object.entries(CODE_RELATION_MINIMUMS)) {
+  const qualityField = field === 'antonyms' ? 'minimumAntonymsPerCard' : 'minimumConfusablesPerCard';
+  for (const [source, value] of [
+    ['publishedCardMinimums', templateLock.publishedCardMinimums?.[field]],
+    ['curatedCardMinimums', templateLock.curatedCardMinimums?.[field]],
+    ['qualityContract', templateLock.qualityContract?.[qualityField]]
+  ]) {
+    if (!Number.isInteger(value) || value < codeFloor) failures.push(`template lock: ${source}.${source === 'qualityContract' ? qualityField : field} is below immutable code floor ${codeFloor}`);
+  }
+  if (Object.hasOwn(templateLock.adaptiveSections ?? {}, field)) failures.push(`template lock: mandatory ${field} section cannot be adaptive`);
+}
+if (templateLock.referenceCard?.word !== 'work' || templateLock.referenceCard?.cardId !== 'work-v') {
+  failures.push('template lock: work-v must remain the immutable reference card');
+}
+for (const [field, codeFloor] of Object.entries(CODE_REFERENCE_RELATION_MINIMUMS)) {
+  const value = templateLock.referenceCard?.recordedShape?.[field];
+  if (!Number.isInteger(value) || value < codeFloor) failures.push(`template lock: referenceCard.recordedShape.${field} is below immutable reference floor ${codeFloor}`);
+}
 const metrics = (card) => ({
   word: card.word,
   meanings: card.meanings.length,
@@ -26,7 +52,6 @@ const summary = Object.fromEntries(fields.map((field) => [field, {
   average: Number((rows.reduce((sum, row) => sum + row[field], 0) / rows.length).toFixed(2)),
   max: Math.max(...rows.map((row) => row[field]))
 }]));
-const failures = [];
 const incompletePhraseEnding = /\b(?:a|an|the|my|your|his|her|our|their|is|are|was|were|has|had|one more|about|until|wherever|what|who|why|how|when|looking|new)$/i;
 const acceptedCompleteIdioms = new Set(['if you will', 'stay the same']);
 const forbiddenLearnerCopy = /(?:本卡|目标词|答题时|词卡结构|人工精校|AI 生成|自动生成|JSON 对象|confidence:|vocabulary notebook|The phrase [“"].+[”"] is useful)/i;
@@ -35,6 +60,15 @@ for (const card of cards) {
   if (card.contextPhrases.length < minimums.contextCategories || row.contexts < minimums.contextItems) failures.push(`${card.word}: context detail floor failed (${card.contextPhrases.length} groups/${row.contexts} items)`);
   if (row.fixed < minimums.fixedPhrases) failures.push(`${card.word}: fewer than ${minimums.fixedPhrases} fixed phrases`);
   if (row.synonyms < minimums.synonyms) failures.push(`${card.word}: fewer than ${minimums.synonyms} sense-specific synonyms`);
+  const referenceShape = card.id === templateLock.referenceCard?.cardId ? templateLock.referenceCard?.recordedShape ?? {} : {};
+  const requiredAntonyms = card.id === templateLock.referenceCard?.cardId
+    ? Math.max(minimums.antonyms, CODE_REFERENCE_RELATION_MINIMUMS.antonyms, referenceShape.antonyms)
+    : minimums.antonyms;
+  const requiredConfusables = card.id === templateLock.referenceCard?.cardId
+    ? Math.max(minimums.confusables, CODE_REFERENCE_RELATION_MINIMUMS.confusables, referenceShape.confusables)
+    : minimums.confusables;
+  if (row.antonyms < requiredAntonyms) failures.push(`${card.word}: fewer than ${requiredAntonyms} sense-anchored antonyms`);
+  if (row.confusables < requiredConfusables) failures.push(`${card.word}: fewer than ${requiredConfusables} genuinely confusable items`);
   if (row.relatedGroups < minimums.relatedCategories || row.relatedItems < minimums.relatedItems) failures.push(`${card.word}: related taxonomy is too small (${row.relatedGroups} groups/${row.relatedItems} items)`);
   if (row.examples < minimums.highFrequencyExamples) failures.push(`${card.word}: fewer than ${minimums.highFrequencyExamples} natural bilingual examples`);
   const relationEntries = [...card.synonyms, ...card.antonyms, ...card.confusables];

@@ -77,7 +77,7 @@
       }
     ],
     "directSynonym": "choose /ˈtʃuːz/（选择）；select /səˈlɛkt/（挑选）；pluck /ˈplʌk/（采摘）；collect /kəˈlɛkt/（接取）；nominate /ˈnɑmənət/（选定）",
-    "directAntonym": "",
+    "directAntonym": "reject /rɪˈdʒɛkt/（拒绝选用；淘汰）；put down /ˈpʊt ˈdaʊn/（放下）；lock /ˈlɑk/（锁上；使无法开启）",
     "derivatives": "picker · picking · pickiness · picky",
     "example": "Read every choice before you pick an option.",
     "exampleChinese": "选择前把每个选项都读一遍。"
@@ -351,7 +351,29 @@
       "difference": "指正式提名人担任职位或获奖；pick 可选物也可选人，不一定构成正式提名。"
     }
   ],
-  "antonyms": [],
+  "antonyms": [
+    {
+      "word": "reject",
+      "phonetic": "/rɪˈdʒɛkt/",
+      "partOfSpeech": "v.",
+      "chinese": "拒绝选用；淘汰",
+      "usage": "只与 pick/select a candidate or option 的选择义相对；reject 表示明确不选同一候选项。"
+    },
+    {
+      "word": "put down",
+      "phonetic": "/ˈpʊt ˈdaʊn/",
+      "partOfSpeech": "phr.v.",
+      "chinese": "放下",
+      "usage": "只与 pick up 表示拿起的义项相对；put down 表示把同一物体从手中放回表面。"
+    },
+    {
+      "word": "lock",
+      "phonetic": "/ˈlɑk/",
+      "partOfSpeech": "v.",
+      "chinese": "锁上；使无法开启",
+      "usage": "只与 pick a lock 表示无钥匙开锁的义项相对；lock 表示把同一扇门或锁具重新锁住。"
+    }
+  ],
   "derivatives": [
     {
       "word": "picker",
@@ -389,6 +411,13 @@
       "partOfSpeech": "v.",
       "chinese": "啄；轻吻",
       "difference": "pick /pɪk/ 表示挑选、采摘或拿取；peck /pɛk/ 表示鸟用喙啄，或快速轻吻。"
+    },
+    {
+      "word": "pick out",
+      "phonetic": "/ˈpɪk ˈaʊt/",
+      "partOfSpeech": "phr.v.",
+      "chinese": "挑出；辨认出",
+      "difference": "pick 可泛指选择或采摘；pick out 强调从一组中挑出或在人群中辨认，不能省略 out 后保持所有义项。"
     }
   ],
   "relatedVocabulary": [
@@ -604,16 +633,16 @@
       "ai": false
     },
     {
-      "id": "pick-v-synonym-choice-2",
+      "id": "pick-v-antonym-choice",
       "type": "meaning_choice",
-      "prompt": "除“choose”外，在“挑选”这个义项下，哪个词也与“pick”意思接近？",
+      "prompt": "在“选择；挑选”这个义项下，哪个词与“pick”意思相反？",
       "options": [
         "have",
         "do",
-        "select",
+        "reject",
         "be"
       ],
-      "answer": "select",
+      "answer": "reject",
       "stage": "T2",
       "ai": false
     },
@@ -791,9 +820,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

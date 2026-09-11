@@ -71,7 +71,7 @@
       }
     ],
     "directSynonym": "emerge /ɪˈmɝːdʒ/（出现；显现）；surface /ˈsɝːfəs/（露面；浮现）；come into view /ˈkʌm ˈɪntu ˈvjuː/（进入视野；显现）；look /ˈlʊk/（看起来）；materialize /məˈtɪriəˌlaɪz/（突然出现；实现）",
-    "directAntonym": "disappear /ˌdɪsəˈpɪr/（消失）",
+    "directAntonym": "disappear /ˌdɪsəˈpɪr/（消失）；be absent /ˈbiː ˈæbsənt/（缺席；未到场）；prove otherwise /ˈpruːv ˈʌðɚˌwaɪz/（证明并非如此）",
     "derivatives": "reappear · appearance · apparent · apparently",
     "example": "Her name appears on the screen during the opening credits.",
     "exampleChinese": "片头字幕出现时，她的名字会显示在屏幕上。"
@@ -323,7 +323,21 @@
       "phonetic": "/ˌdɪsəˈpɪr/",
       "partOfSpeech": "v.",
       "chinese": "消失",
-      "usage": "与变得可见相反；实际出现、看似某状态与突然现身的补语结构不同"
+      "usage": "在可见性上，appear 是进入视野，disappear 是从视野中消失"
+    },
+    {
+      "word": "be absent",
+      "phonetic": "/ˈbiː ˈæbsənt/",
+      "partOfSpeech": "phr.",
+      "chinese": "缺席；未到场",
+      "usage": "appear at a hearing or in court 表示按要求到场，be absent 表示在该时间和地点没有出席。"
+    },
+    {
+      "word": "prove otherwise",
+      "phonetic": "/ˈpruːv ˈʌðɚˌwaɪz/",
+      "partOfSpeech": "phr.",
+      "chinese": "证明并非如此",
+      "usage": "appear to be true 只表示从表面看似为真，prove otherwise 表示后续证据确认实际情况与该印象相反。"
     }
   ],
   "derivatives": [
@@ -358,11 +372,18 @@
   ],
   "confusables": [
     {
-      "word": "seem",
-      "phonetic": "/ˈsiːm/",
-      "partOfSpeech": "v.",
-      "chinese": "似乎；看来",
-      "difference": "appear 可表示真实出现，也可作系动词；seem 只表示根据印象所作的判断"
+      "word": "apparel",
+      "phonetic": "/əˈpærəl/",
+      "partOfSpeech": "n.",
+      "chinese": "服装；衣服",
+      "difference": "appear /əˈpɪr/ 与 apparel /əˈpærəl/ 开头拼写相近；appear 表示出现或显得，apparel 是服装的正式名词。"
+    },
+    {
+      "word": "appeal",
+      "phonetic": "/əˈpiːl/",
+      "partOfSpeech": "v. / n.",
+      "chinese": "呼吁；吸引力",
+      "difference": "appear /əˈpɪr/ 和 appeal /əˈpiːl/ 开头相近，但 appear 是出现或显得，appeal 是呼吁或具有吸引力。"
     }
   ],
   "relatedVocabulary": [
@@ -596,12 +617,12 @@
       "type": "meaning_choice",
       "prompt": "结合拼写、发音和用法，哪一项需要与“appear”重点区分？",
       "options": [
-        "have",
-        "do",
-        "seem",
-        "be"
+        "ability",
+        "absence",
+        "apparel",
+        "increase"
       ],
-      "answer": "seem",
+      "answer": "apparel",
       "stage": "T3",
       "ai": false
     },
@@ -765,9 +786,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

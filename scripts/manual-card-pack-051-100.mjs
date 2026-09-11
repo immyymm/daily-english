@@ -49,7 +49,7 @@ export const manualCardPacks051100 = {
       C("进展与情感", ["move the discussion forward", "推进讨论"], ["move quickly on the proposal", "迅速处理这项提议"], ["move the audience deeply", "深深打动观众"], ["move beyond past mistakes", "走出过去的错误"]),
     ],
     derivatives: [["mover", "n.", "搬运工；推动者", "可指搬家公司员工，也可指推动某项计划或变化的人"], ["movement", "n.", "移动；运动", "可指位置变化、社会运动或音乐乐章"], ["moving", "adj.", "感人的；移动中的", "常见于 a moving story 和 moving vehicle"], ["movable", "adj.", "可移动的", "强调物体可被移动"]],
-    confusables: [["remove", "v.", "移走；去除", "move 只表示改变位置；remove 强调从原处拿开或消除"]],
+    confusables: [["mood", "n.", "心情；情绪", "move /muːv/ 与 mood /muːd/ 只有末尾辅音不同；move 表示移动，mood 是心情或情绪。"]],
     related: [
       R("方向与路径", ["forward", "adv.", "向前"], ["backward", "adv.", "向后"], ["sideways", "adv.", "向侧面"], ["route", "n.", "路线"]),
       R("运动特征", ["speed", "n.", "速度"], ["direction", "n.", "方向"], ["motion", "n.", "运动"], ["distance", "n.", "距离"]),
@@ -164,7 +164,7 @@ export const manualCardPacks051100 = {
     ],
     fixedPhrases: [["provide something", "提供某物", "The hotel provides free breakfast.", "这家酒店提供免费早餐。"], ["provide something for someone", "为某人提供某物", "The school provides lunch for its students.", "学校为学生提供午餐。"], ["provide someone with something", "向某人提供某物", "We will provide you with all the necessary information.", "我们会向你提供所有必要信息。"], ["provide access to", "提供访问权限", "Your password provides access to the database.", "你的密码可以用来访问数据库。"], ["provide evidence for", "为……提供证据", "The study provides evidence for the new theory.", "该研究为新理论提供了证据。"], ["provide support for", "为……提供支持", "Volunteers provide support for older residents.", "志愿者为老年居民提供支持。"], ["provide a service", "提供服务", "The clinic provides a valuable service to the community.", "这家诊所为社区提供宝贵服务。"], ["provide for someone", "赡养某人", "She works two jobs to provide for her family.", "她做两份工来养家。"], ["provide for something", "为某事做准备；规定", "The contract provides for annual reviews.", "合同规定每年进行评审。"], ["provided that", "只要；如果", "You may leave early provided that your work is finished.", "只要工作做完，你可以早点离开。"]],
     derivatives: [["provider", "n.", "提供者；供应商", "常用于 service/content/healthcare provider"], ["provision", "n.", "提供；供应；条款", "可指供给行为、储备或法律条款"], ["provisional", "adj.", "临时的；暂定的", "常见于 provisional result/agreement"], ["provisionally", "adv.", "临时地；暂定地", "表示尚待最终确认"]],
-    confusables: [["supply", "v.", "供应；提供", "provide 是通用的“提供”；supply 更强调持续提供所需物资"]],
+    confusables: [["divide", "v.", "分开；除以", "provide /prəˈvaɪd/ 与 divide /dɪˈvaɪd/ 结尾读音和拼写相近；provide 表示提供，divide 表示分开或除以。"]],
     related: [R("服务交付", ["service", "n.", "服务"], ["assistance", "n.", "帮助"], ["facility", "n.", "设施"], ["resource", "n.", "资源"]), R("物资保障", ["stock", "n.", "库存"], ["inventory", "n.", "存货"], ["ration", "n.", "配给量"], ["distribution", "n.", "分发；配送"]), R("受益与权限", ["recipient", "n.", "接收者"], ["beneficiary", "n.", "受益人"], ["eligibility", "n.", "资格"], ["entitlement", "n.", "应享权利"])],
     commonErrors: [["provide someone something", "provide someone with something", "标准结构是 provide someone with something，或 provide something for someone"], ["provide to someone with something", "provide someone with something", "provide 的两个结构不能混用，不要同时加 to 和 with"]],
   },
@@ -210,7 +210,7 @@ export const manualCardPacks051100 = {
   watch: {
     contexts: [C("观看与观察", ["watch a live broadcast", "观看直播"], ["watch birds through binoculars", "用望远镜观察鸟类"], ["watch someone cross the street", "看着某人过马路"], ["watch closely for changes", "密切观察变化"]), C("照看与看守", ["watch the children tonight", "今晚照看孩子"], ["watch the front desk", "看守前台"], ["watch someone's belongings", "替某人照看随身物品"], ["watch over a patient", "守护病人"]), C("警惕与注意", ["watch for falling rocks", "当心落石"], ["watch what you say", "注意你说的话"], ["watch one's step", "小心脚下"], ["watch the time", "留意时间"])],
     derivatives: [["watcher", "n.", "观察者；看守者", "常出现在 birdwatcher/clock-watcher 等复合词中"], ["watchfulness", "n.", "警觉；留心", "指持续留意潜在危险、变化或异常情况的状态"], ["watchful", "adj.", "警觉的；留心的", "强调持续注意潜在危险"]],
-    confusables: [["look at", "phr.", "看向；查看", "look at 强调将目光转向某物；watch 强调持续观看有运动或变化的对象"]],
+    confusables: [["wash", "v.", "洗；清洗", "watch /wɑːtʃ/ 与 wash /wɑːʃ/ 只有词尾是否含 /t/ 的差别；watch 表示观看，wash 表示清洗。"]],
     related: [R("影视内容", ["film", "n.", "电影"], ["episode", "n.", "一集"], ["broadcast", "n.", "广播；播出"], ["screen", "n.", "屏幕"]), R("观察工具", ["binoculars", "n.", "双筒望远镜"], ["camera", "n.", "摄像机"], ["monitor", "n.", "监视器"], ["viewpoint", "n.", "观察点"]), R("安全与警戒", ["warning", "n.", "警告"], ["danger", "n.", "危险"], ["guard", "n.", "守卫"], ["surveillance", "n.", "监控"])],
     commonErrors: [["watch to the screen", "watch the screen", "watch 是及物动词，直接接观看对象，不加 to"], ["watch a picture", "look at a picture", "看静态图片通常用 look at；watch 更强调持续观察有运动或变化的事物"]],
   },
@@ -261,7 +261,7 @@ export const manualCardPacks051100 = {
     meanings: [["v.", "to keep a person, place, or experience in your mind", "记得；回想起", "I still remember my first teacher.", "我仍然记得我的第一位老师。"], ["v.", "to not forget to do something that is needed", "记着去做", "Remember to lock the door.", "记得锁门。"], ["v.", "to give someone a greeting, gift, or special thought", "向……致意；纪念", "Please remember me to your parents.", "请代我向你父母问好。"]],
     contexts: [C("记忆与回想", ["remember someone's face clearly", "清楚记得某人的脸"], ["remember a childhood journey", "记得一次童年旅行"], ["remember the location of the spare key", "记得备用钥匙的位置"], ["remember seeing the sign", "记得看见过那个标志"]), C("待办与提醒", ["remember to charge the phone", "记得给手机充电"], ["remember to bring identification", "记得带身份证件"], ["remember not to interrupt", "记住不要打断别人"], ["always remember to check", "始终记得检查"]), C("纪念与致意", ["remember those who helped", "记住曾经帮助过的人"], ["remember the victims in silence", "默哀纪念遇难者"], ["be remembered for one's kindness", "因善良而被人铭记"], ["remember someone in one's will", "在遗嘱中给某人留下遗赠"])],
     derivatives: [["remembrance", "n.", "记忆；纪念", "多用于对过去人或事的纪念"], ["memorable", "adj.", "值得记忆的；难忘的", "与 memory 同词族，表示令人印象深刻"], ["memorably", "adv.", "令人难忘地", "修饰给人留下深刻印象的表现"]],
-    confusables: [["remind", "v.", "提醒；使想起", "remember 是自己记得；remind 是使别人想起，常用 remind someone to do/of something"]],
+    confusables: [["resemble", "v.", "与……相像", "remember /rɪˈmɛmbər/ 与 resemble /rɪˈzɛmbəl/ 拼写节奏接近；remember 表示记得，resemble 表示外观或特征相像。"]],
     related: [R("记忆内容", ["memory", "n.", "记忆；回忆"], ["detail", "n.", "细节"], ["image", "n.", "形象"], ["experience", "n.", "经历"]), R("记忆辅助", ["note", "n.", "笔记"], ["calendar", "n.", "日历"], ["alarm", "n.", "提醒闹钟"], ["checklist", "n.", "核对清单"]), R("纪念与遗忘", ["memorial", "n.", "纪念物；纪念仪式"], ["anniversary", "n.", "周年纪念"], ["tribute", "n.", "致敬"], ["forgetfulness", "n.", "健忘"])],
     commonErrors: [["remember to meet him yesterday", "remember meeting him yesterday", "remember to do 表示记得去做尚未做的事；remember doing 表示记得做过的事"], ["remind to call me", "remember to call me / remind me to call", "remember 的主语是需要记住的人；remind 后必须说明提醒谁"]],
   },
@@ -282,7 +282,7 @@ export const manualCardPacks051100 = {
   allow: {
     contexts: [C("许可与禁止", ["allow visitors to enter", "允许访客进入"], ["allow pets inside", "允许宠物进入室内"], ["not allow smoking indoors", "不允许室内吸烟"], ["allow someone one more chance", "再给某人一次机会"]), C("使成为可能", ["allow users to customize settings", "允许用户自定义设置"], ["allow air to circulate", "使空气得以流通"], ["allow enough time for recovery", "留出足够的恢复时间"], ["allow for seasonal variation", "考虑季节性变化"]), C("限额与规则", ["allow two items per person", "每人允许两件物品"], ["allow up to three attempts", "最多允许尝试三次"], ["allow twenty minutes for questions", "留二十分钟提问"], ["allow exceptions in rare cases", "在少数情况下允许例外"])],
     derivatives: [["disallow", "v.", "不准许；判定无效", "表示正式拒绝许可，体育语境也可指裁判判定进球或得分无效"], ["allowance", "n.", "津贴；限额；允许的量", "可指定期零用钱、费用补贴或允许额度"], ["allowable", "adj.", "允许的；可接受的", "常用于法规、工程或税务上的可许可范围"]],
-    confusables: [["admit", "v.", "准许进入；承认", "allow 是允许某行为；admit 可指准许进入某地，也常指承认事实"]],
+    confusables: [["allot", "v.", "分配；拨给", "allow /əˈlaʊ/ 与 allot /əˈlɑːt/ 开头拼写和重音相近；allow 表示准许，allot 表示按份额分配。"]],
     related: [R("许可文件", ["license", "n.", "许可证"], ["permit", "n.", "许可证"], ["authorization", "n.", "授权"], ["consent", "n.", "同意"]), R("规则与限制", ["policy", "n.", "政策"], ["restriction", "n.", "限制"], ["exception", "n.", "例外"], ["quota", "n.", "限额"]), R("时间与空间", ["margin", "n.", "余地；幅度"], ["capacity", "n.", "容量"], ["interval", "n.", "间隔"], ["flexibility", "n.", "灵活性"])],
     commonErrors: [["allow someone do it", "allow someone to do it", "allow 后接人再接动作时用 allow someone to do"], ["allow to smoke", "allow smoking / be allowed to smoke", "allow 不能直接用主动形式接 to do；可用 allow doing 或 be allowed to do"]],
   },
@@ -296,14 +296,14 @@ export const manualCardPacks051100 = {
   lead: {
     contexts: [C("引导与方向", ["lead visitors through the museum", "带领游客参观博物馆"], ["lead the horse to water", "把马牵到水边"], ["lead the way upstairs", "在前面带路上楼"], ["lead someone safely home", "安全地带某人回家"]), C("领导与管理", ["lead a research team", "领导研究团队"], ["lead by example", "以身作则"], ["lead negotiations with suppliers", "主导与供应商的谈判"], ["lead the company through change", "带领公司度过变革"]), C("导致与处于首位", ["lead to better outcomes", "导致更好结果"], ["lead the market in sales", "在销量上领先市场"], ["lead by three points", "以三分领先"], ["lead a busy life", "过着忙碌的生活"])],
     derivatives: [["leader", "n.", "领导者；领先者", "指带领团体或处于领先地位的人或组织"], ["leadership", "n.", "领导；领导力；领导层", "可指能力、行为或集体"], ["leading", "adj.", "领先的；主要的", "常见于 leading expert/company/cause"]],
-    confusables: [["led", "v.", "lead 的过去式和过去分词", "动词 lead /liːd/ 的过去式是 led /lɛd/；不要写成 leaded（特定材料义除外）"]],
+    confusables: [["lid", "n.", "盖子", "lead 作动词读 /liːd/，与 lid /lɪd/ 只有元音不同；lead 表示带领，lid 是容器的盖子。"]],
     related: [R("团队与角色", ["manager", "n.", "管理者"], ["captain", "n.", "队长"], ["director", "n.", "主管；导演"], ["member", "n.", "成员"]), R("方向与路线", ["guide", "n.", "向导"], ["path", "n.", "路径"], ["destination", "n.", "目的地"], ["route", "n.", "路线"]), R("原因与结果", ["cause", "n.", "原因"], ["effect", "n.", "结果；影响"], ["outcome", "n.", "结果"], ["consequence", "n.", "后果"])],
     commonErrors: [["lead a busy living", "lead a busy life", "表示“过着……的生活”的固定搭配是 lead a ... life"], ["It leaded to a delay", "It led to a delay", "lead 的普通过去式是 led，不是 leaded"]],
   },
   continue: {
     contexts: [C("继续动作", ["continue reading after dinner", "晚饭后继续阅读"], ["continue to improve steadily", "继续稳步改善"], ["continue working from home", "继续居家工作"], ["continue despite strong criticism", "尽管遭到强烈批评仍继续"]), C("过程与路线", ["continue for another hour", "再持续一小时"], ["continue until further notice", "继续至另行通知"], ["continue along the coast", "沿海岸继续前行"], ["continue from the previous chapter", "从上一章接着讲"]), C("恢复与延续", ["continue the discussion tomorrow", "明天继续讨论"], ["continue one's education abroad", "在国外继续深造"], ["be continued next week", "下周续篇"], ["continue a family tradition", "延续家庭传统"])],
     derivatives: [["continuation", "n.", "继续；延续部分", "指动作的延续或故事、道路等的接续部分"], ["continuous", "adj.", "连续不断的", "强调中间没有停顿"], ["continual", "adj.", "频繁反复的", "常指一再发生，中间可有间断"], ["continuously", "adv.", "连续不断地", "修饰无间断过程"]],
-    confusables: [["resume", "v.", "恢复；重新开始", "continue 表示不停顿地继续；resume 表示暂停之后恢复"]],
+    confusables: [["continent", "n.", "大陆；洲", "continue /kənˈtɪnjuː/ 与 continent /ˈkɑːntənənt/ 开头拼写相近；continue 是动词，continent 是表示洲的名词。"]],
     related: [R("持续时间", ["duration", "n.", "持续时间"], ["interval", "n.", "间隔"], ["sequence", "n.", "序列"], ["period", "n.", "时期"]), R("进展阶段", ["progress", "n.", "进展"], ["phase", "n.", "阶段"], ["momentum", "n.", "势头"], ["completion", "n.", "完成"]), R("中断与恢复", ["pause", "n.", "暂停"], ["interruption", "n.", "中断"], ["restart", "n.", "重新开始"], ["renewal", "n.", "恢复；续期"])],
     commonErrors: [["continue to working", "continue to work / continue working", "continue 可接 to do 或 doing，不可混成 to doing"], ["We continued from the break at two.", "We continued after the break at two.", "continue after a break 表示休息后接着进行；from 需引出明确的内容或中断位置"]],
   },
@@ -319,13 +319,13 @@ export const manualCardPacks051100 = {
     contexts: [C("停留与居住", ["stay at a small hotel", "住在一家小酒店"], ["stay with relatives", "住在亲戚家"], ["stay overnight in Boston", "在波士顿过夜"], ["stay for another week", "再待一周"]), C("保持状态", ["stay calm under pressure", "在压力下保持冷静"], ["stay awake during the lecture", "讲座期间保持清醒"], ["stay focused on the task", "集中注意力做任务"], ["stay healthy through exercise", "通过锻炼保持健康"]), C("位置与限制", ["stay away from the edge", "远离边缘"], ["stay within the budget", "不超出预算"], ["stay behind after class", "下课后留下"], ["stay out of trouble", "避免惹麻烦"])],
     derivatives: [],
     related: [R("住宿场所", ["hotel", "n.", "酒店"], ["hostel", "n.", "青年旅舍"], ["guesthouse", "n.", "宾馆"], ["accommodation", "n.", "住宿"]), R("持续状态", ["calm", "adj.", "冷静的"], ["awake", "adj.", "醒着的"], ["alert", "adj.", "警觉的"], ["stable", "adj.", "稳定的"]), R("时间与停留", ["visit", "n.", "停留；拜访"], ["night", "n.", "夜晚"], ["duration", "n.", "持续时间"], ["departure", "n.", "离开；出发"])],
-    confusables: [["remain", "v.", "仍然是；留下", "stay 更日常，可指暂住或保持状态；remain 较正式，强调在变化后仍然不变"]],
+    confusables: [["say", "v.", "说；说出", "stay /steɪ/ 比 say /seɪ/ 多 /t/ 音和字母 t；stay 表示停留或保持，say 表示说出内容。"]],
     commonErrors: [["stay in home", "stay at home", "固定表达是 stay at home；说待在房子里可用 stay in the house"], ["stay to be calm", "stay calm", "stay 作系动词表示保持状态时直接接形容词，不加 to be"]],
   },
   add: {
     contexts: [C("数量与成分", ["add two cups of flour", "加入两杯面粉"], ["add a little more salt", "再加一点盐"], ["add water gradually", "逐渐加水"], ["add a new column", "添加一列"]), C("计算与合计", ["add the figures together", "把数字加在一起"], ["add ten percent to the price", "在价格上加百分之十"], ["add up the monthly expenses", "合计每月开支"], ["add to a total of fifty", "合计为五十"]), C("说明与效果", ["add a brief explanation", "补充简短解释"], ["add someone's name to the list", "把某人的名字加入名单"], ["add value to the product", "增加产品价值"], ["add that no decision was final", "补充说尚未有最终决定"])],
     derivatives: [["addition", "n.", "增加；加法；新增的人或物", "常见于 in addition to 和 a new addition"], ["additional", "adj.", "额外的；附加的", "位于名词前说明增加部分"], ["additionally", "adv.", "此外；另外", "常用作句子连接副词"], ["additive", "n./adj.", "添加剂；附加的", "名词用法常见于 food additive"]],
-    confusables: [["plus", "prep./conj.", "加；加上", "add 是动词，需随时态变化；plus 在数学或口语补充中通常不作普通动词"]],
+    confusables: [["aid", "n. / v.", "帮助；援助", "add /æd/ 与 aid /eɪd/ 拼写接近但元音不同；add 表示增加，aid 表示帮助或援助。"]],
     related: [R("数学运算", ["sum", "n.", "总和"], ["total", "n.", "总数"], ["number", "n.", "数字"], ["calculation", "n.", "计算"]), R("食谱成分", ["ingredient", "n.", "原料"], ["flour", "n.", "面粉"], ["seasoning", "n.", "调味料"], ["mixture", "n.", "混合物"]), R("文档修订", ["comment", "n.", "评论；注释"], ["appendix", "n.", "附录"], ["column", "n.", "列"], ["entry", "n.", "条目"])],
     commonErrors: [["add something in the list", "add something to the list", "表示将新项加入现有整体用 add something to"], ["add up ten to twenty", "add ten to twenty", "add A to B 表示 A+B；add up 表示把多个数合计，不用 add up A to B"]],
   },
@@ -341,7 +341,7 @@ export const manualCardPacks051100 = {
     contexts: [C("日常购物", ["buy fresh vegetables locally", "在当地购买新鲜蔬菜"], ["buy a ticket online", "在线买票"], ["buy groceries in bulk", "批量购买日用食品"], ["buy someone a birthday gift", "给某人买生日礼物"]), C("交易与价格", ["buy a house with cash", "用现金买房"], ["buy shares at a discount", "折价买入股票"], ["buy directly from farmers", "直接从农民处购买"], ["buy something for half price", "以半价购买某物"]), C("接受与赢得时间", ["not buy someone's excuse", "不相信某人的借口"], ["buy into a popular myth", "相信流行迷思"], ["buy time during negotiations", "谈判中争取时间"], ["money cannot buy trust", "金钱买不来信任"])],
     derivatives: [["buyer", "n.", "买方；购买者", "可指消费者或企业中负责采购的人"], ["buying", "n.", "购买；采购", "常见于 buying power/habit/decision"], ["buyout", "n.", "收购；买断", "指购买一家公司或买断某人的权益"]],
     related: [R("商店与商品", ["store", "n.", "商店"], ["product", "n.", "商品"], ["cart", "n.", "购物车"], ["checkout", "n.", "收银台；结账"]), R("价格与支付", ["discount", "n.", "折扣"], ["cash", "n.", "现金"], ["receipt", "n.", "收据"], ["refund", "n.", "退款"]), R("房产与投资", ["property", "n.", "房产；资产"], ["share", "n.", "股份"], ["mortgage", "n.", "按揭贷款"], ["investment", "n.", "投资"])],
-    confusables: [["shop for", "phr.v.", "选购；为……购物", "shop for 强调比较和挑选商品的过程；buy 强调付款后完成购买这一结果"]],
+    confusables: [["by", "prep. / adv.", "在……旁边；通过", "buy /baɪ/ 与 by /baɪ/ 同音；buy 是购买的动词，by 常作介词表示方式、位置或施事者。"]],
     commonErrors: [["buy it by ten dollars", "buy it for ten dollars", "表示购买价格用 for + 金额，不用 by"], ["buy something to someone", "buy something for someone / buy someone something", "buy 的双宾语结构用 for，不用 to"]],
   },
   send: {
@@ -377,7 +377,7 @@ export const manualCardPacks051100 = {
   consider: {
     contexts: [C("思考与选择", ["consider all available options", "考虑所有可用选项"], ["consider moving abroad", "考虑搬到国外"], ["carefully consider the consequences", "仔细考虑后果"], ["consider whether to appeal", "考虑是否上诉"]), C("将……视为", ["consider someone a close friend", "把某人视为挚友"], ["be considered safe for children", "被认为对儿童安全"], ["consider the plan unrealistic", "认为计划不现实"], ["widely considered the best", "被广泛认为是最佳"]), C("体谅与注意", ["consider the needs of others", "考虑他人的需要"], ["consider someone's feelings", "顾及某人的感受"], ["all things considered", "总的来说"], ["consider the matter closed", "认为此事已经了结"])],
     derivatives: [["consideration", "n.", "考虑；体谅；考虑因素", "常见于 take into consideration/out of consideration"], ["considered", "adj.", "经过深思熟虑的", "常见于 a considered opinion/response"], ["considerate", "adj.", "体贴的；为他人着想的", "与 of/toward 连用，不表示“考虑中的”"], ["considerably", "adv.", "相当大地；非常", "来自 considerable，形态同族但现代含义不是“考虑地”"]],
-    confusables: [["regard", "v.", "将……视为；看待", "consider someone something 可直接接补语；regard 通常用 regard someone as something"]],
+    confusables: [["conserve", "v.", "节约；保护", "consider /kənˈsɪdər/ 与 conserve /kənˈsɝːv/ 开头拼写相近；consider 表示考虑，conserve 表示节约资源或保护环境。"]],
     related: [R("决策因素", ["option", "n.", "选项"], ["alternative", "n.", "可选方案"], ["consequence", "n.", "后果"], ["priority", "n.", "优先事项"]), R("判断与评价", ["opinion", "n.", "意见"], ["judgment", "n.", "判断"], ["criterion", "n.", "标准"], ["evidence", "n.", "证据"]), R("他人需求", ["feeling", "n.", "感受"], ["interest", "n.", "利益；兴趣"], ["circumstance", "n.", "情况"], ["welfare", "n.", "福祉"])],
     commonErrors: [["consider to move", "consider moving", "consider 表示考虑做某事时接 doing，不接 to do"], ["consider him as a friend", "consider him a friend / regard him as a friend", "consider 的宾语补足语前通常不加 as；regard 则要用 as"]],
   },
@@ -391,7 +391,7 @@ export const manualCardPacks051100 = {
   offer: {
     contexts: [C("提供与帮助", ["offer practical advice", "提供实用建议"], ["offer someone a seat", "给某人让座"], ["offer to carry the bags", "主动提出拿行李"], ["offer help without being asked", "不等别人开口就主动帮忙"]), C("交易与报价", ["offer a fair price", "出一个公道的价格"], ["offer fifty dollars for the chair", "出五十美元买这把椅子"], ["offer the job to an internal candidate", "把职位给内部候选人"], ["offer a full refund", "提供全额退款"]), C("服务与机会", ["offer free delivery", "提供免费配送"], ["offer evening classes", "开设晚课"], ["offer a wide range of choices", "提供多种选择"], ["offer protection against fraud", "提供防欺诈保护"])],
     derivatives: [["offering", "n.", "提供的产品或服务；供品", "商务中指公司提供的产品或服务组合"], ["counteroffer", "n./v.", "还价；提出还价", "谈判中指针对原报价提出条件不同的新报价，也可作动词"]],
-    confusables: [["provide", "v.", "提供", "offer 强调主动提出，对方可接受或拒绝；provide 强调实际提供所需之物"]],
+    confusables: [["office", "n.", "办公室；办事处", "offer /ˈɔːfər/ 与 office /ˈɔːfɪs/ 开头拼写和重读音节接近；offer 是提出或提供，office 是办公场所。"]],
     related: [R("建议与接受", ["proposal", "n.", "提案；建议"], ["invitation", "n.", "邀请"], ["acceptance", "n.", "接受"], ["refusal", "n.", "拒绝"]), R("商业报价", ["bid", "n.", "出价；投标"], ["quote", "n.", "报价"], ["discount", "n.", "折扣"], ["refund", "n.", "退款"]), R("服务内容", ["delivery", "n.", "配送"], ["warranty", "n.", "保修"], ["course", "n.", "课程"], ["choice", "n.", "选择"])],
     commonErrors: [["offer to someone help", "offer someone help / offer help to someone", "offer 可用双宾语，或用 offer something to someone，不把 to someone 放在动词后再接宾语"], ["offer doing it", "offer to do it", "offer 表示主动愿意做某事时接 to do，不接 doing"]],
   },
@@ -400,7 +400,7 @@ export const manualCardPacks051100 = {
     contexts: [C("建筑与制造", ["build a house from timber", "用木材建房"], ["build a wall around the garden", "在花园周围砌墙"], ["build a working prototype", "制作可运作的原型"], ["build the parts by hand", "手工组装部件"]), C("能力与关系", ["build professional experience", "积累职业经验"], ["build trust with customers", "与客户建立信任"], ["build a strong team", "打造强大团队"], ["build confidence through practice", "通过练习建立自信"]), C("增强与软件", ["tension begins to build", "紧张气氛开始增强"], ["build on earlier research", "以早期研究为基础继续发展"], ["build an application from source", "从源代码构建应用"], ["build support for reform", "为改革积聚支持"])],
     derivatives: [["builder", "n.", "建筑者；建造商", "可指建筑工人、承建商或构建工具"], ["building", "n.", "建筑物；建设", "可数时指建筑，不可数时指建设过程"], ["rebuild", "v.", "重建；重新建立", "可指物理重建或恢复关系、信任"]],
     related: [R("建筑材料", ["brick", "n.", "砖"], ["timber", "n.", "木材"], ["concrete", "n.", "混凝土"], ["steel", "n.", "钢"]), R("工程过程", ["foundation", "n.", "地基"], ["framework", "n.", "框架"], ["construction", "n.", "施工"], ["site", "n.", "工地"]), R("能力与累积", ["experience", "n.", "经验"], ["trust", "n.", "信任"], ["confidence", "n.", "自信"], ["momentum", "n.", "势头"])],
-    confusables: [["establish", "v.", "建立；设立", "build 强调逐步累积和发展；establish 更正式，强调使机构、制度或事实稳固存在"]],
+    confusables: [["bold", "adj.", "大胆的；粗体的", "build /bɪld/ 与 bold /boʊld/ 拼写接近但元音不同；build 是建造的动词，bold 表示大胆或粗体。"]],
     commonErrors: [["build up a house", "build a house", "建造具体建筑直接用 build；build up 强调逐渐增强、积累"], ["build experience by years", "build experience over the years", "表示经验在多年间逐渐累积用 over the years，不用 by years"]],
   },
   expect: {
@@ -420,7 +420,7 @@ export const manualCardPacks051100 = {
   appear: {
     contexts: [C("出现与露面", ["appear suddenly in the doorway", "突然出现在门口"], ["appear on the television screen", "出现在电视屏幕上"], ["appear before a judge", "出庭面见法官"], ["appear in public rarely", "很少公开露面"]), C("看起来与似乎", ["appear calm and confident", "看起来冷静自信"], ["appear to know the answer", "似乎知道答案"], ["it appears that no one was hurt", "看来没有人受伤"], ["appear likely to succeed", "看起来很可能成功"]), C("发表与记录", ["appear in a leading journal", "刊登在权威期刊上"], ["appear on the guest list", "出现在客人名单上"], ["appear under a different name", "以不同名称出现"], ["appear in court next week", "下周出庭"])],
     derivatives: [["appearance", "n.", "出现；外表；露面", "可指出现的事实、外观或演出露面"], ["apparent", "adj.", "显然的；表面上的", "可表示显而易见，也可暗示只是表面现象"], ["apparently", "adv.", "显然；据说；似乎", "常用来表示根据现有信息做出的判断"], ["reappear", "v.", "再次出现", "表示消失后重新露面或重新在文本中出现"]],
-    confusables: [["seem", "v.", "似乎；看来", "appear 可表示真实出现，也可作系动词；seem 只表示根据印象所作的判断"]],
+    confusables: [["apparel", "n.", "服装；衣服", "appear /əˈpɪr/ 与 apparel /əˈpærəl/ 开头拼写相近；appear 表示出现或显得，apparel 是服装的正式名词。"]],
     related: [R("视觉外观", ["image", "n.", "形象；图像"], ["shape", "n.", "形状"], ["outline", "n.", "轮廓"], ["visibility", "n.", "能见度"]), R("公开露面", ["stage", "n.", "舞台"], ["screen", "n.", "屏幕"], ["court", "n.", "法庭"], ["audience", "n.", "观众"]), R("印刷与列表", ["journal", "n.", "期刊"], ["edition", "n.", "版本"], ["entry", "n.", "条目"], ["listing", "n.", "列表项"]),
     ],
     commonErrors: [["appear that it is true", "it appears that it is true", "appear that 从句需要形式主语 it，不能直接以 appear 开头"], ["he appears as tired", "he appears tired / he appears to be tired", "appear 作系动词时直接接形容词，或用 appear to be，不加 as"]],
@@ -1336,15 +1336,15 @@ manualCardPacks051100.serve.derivatives.push(["server","n.","服务员；服务�
 
 const antonymPacks = {
   write: [["erase","v.","擦除；删除","只与写下或记录内容的义项相反"]], bring: [], move: [["stay","v.","停留","与改变位置的义项相反"]], must: [["need not","modal phr.","不必","表示没有必要，与 must 的必要义相反"]],
-  begin: [["end","v.","结束","与开始一个活动或过程相反"],["finish","v.","完成；结束","强调做到终点，与 begin 相对"]], love: [["hate","v.","憎恨；非常不喜欢","与爱或强烈喜欢的义项相反"]], hold: [["release","v.","松开；释放","与握住或拘留的义项相反"],["drop","v.","放开使落下","与手中拿住的义项相反"]], read: [["skip","v.","跳过不读","仅与阅读某段内容的行为相对"]],
+  begin: [["end","v.","结束","在过程的时间边界上，begin 标志起点，end 标志终点"],["cancel","v.","取消","对已安排但尚未启动的活动，begin 是让它开始，cancel 是撤销安排使其不再开始"]], love: [["hate","v.","憎恨；非常不喜欢","与爱或强烈喜欢的义项相反"]], hold: [["release","v.","松开；释放","在抓握或拘留义上，hold 是继续控制，release 是松开或恢复自由"],["relinquish","v.","放弃；交出","在职位、权利或控制权义上，hold 表示持有，relinquish 表示主动交出"]], read: [["skip","v.","跳过不读","仅与阅读某段内容的行为相对"]],
   stop: [["continue","v.","继续","与停止活动或过程相反"],["start","v.","开始","与使机器或活动停止相反"]], pay: [["receive","v.","收款；收到","只在交易角色上与付款相对，并非所有义项反义词"]], provide: [["withhold","v.","拒绝提供；扣留","与向他人提供所需事物相反"]], lose: [["find","v.","找回；找到","与遗失物品义项相对"],["win","v.","赢","与比赛中输掉相反"]],
-  understand: [["misunderstand","v.","误解","与正确理解相反"]], wait: [["proceed","v.","继续行动","只与暂缓行动的义项相对"]], meet: [["miss","v.","错过；未达到","可与见到或达到目标两种义项相对"]], thank: [], change: [["remain","v.","保持不变","与发生改变的义项相对"]], watch: [["ignore","v.","忽视","与持续留意或观察相反"]], sit: [["stand","v.","站立","与身体坐姿相对"]],
+  understand: [["misunderstand","v.","误解","在话语、规则或意图义上，understand 是正确领会，misunderstand 是形成错误理解"]], wait: [["proceed","v.","继续行动","只与暂缓行动的义项相对"]], meet: [["miss","v.","错过；未达到","可与见到或达到目标两种义项相对"]], thank: [], change: [["remain","v.","保持不变","与发生改变的义项相对"]], watch: [["ignore","v.","忽视","与持续留意或观察相反"]], sit: [["stand","v.","站立","在身体姿势上，sit 是臀部受支撑的坐姿，stand 是双脚支撑的直立姿势"]],
   create: [["destroy","v.","摧毁","与使事物存在的创造义相反"]], learn: [["forget","v.","忘记","与学会并保留知识的结果相反"]], kill: [["save","v.","挽救生命","与导致死亡相反"]], include: [["exclude","v.","排除；不包括","与纳入整体或活动相反"]], stand: [["sit","v.","坐","只与身体站立义项相反"]], follow: [["precede","v.","先于；走在前面","只对应 follow 表示在路线上走在后面或在时间顺序上接续出现的义项；precede 强调走在前面或先发生。"]],
-  remember: [["forget","v.","忘记","与记得信息或事情相反"]], speak: [["remain silent","phr.","保持沉默","与开口说话相对"]], set: [["unset","v.","取消设置","仅在技术设置语境中与 set 相反"],["remove","v.","移开","只与把物体放置到某处的义项相对"]], allow: [["forbid","v.","禁止","与给予许可相反"],["prevent","v.","阻止","与使某事得以发生相反"]], win: [["lose","v.","输；失去","与赢得比赛或奖项相反"]],
-  lead: [["follow","v.","跟随","只在行进顺序或角色上与 lead 相对"]], continue: [["stop","v.","停止","与继续活动或过程相反"],["cease","v.","终止","较正式，与持续发生相反"]], spend: [["save","v.","节省；储蓄","与花掉金钱或资源相反"]], stay: [["leave","v.","离开","与留在某地相反"]], add: [["subtract","v.","减去","在数学运算中与相加相反"],["remove","v.","移除","与把某物加入整体相反"]],
+  remember: [["forget","v.","忘记","与记得信息或事情相反"]], speak: [["remain silent","phr.","保持沉默","在是否开口的层面，speak 表示发声说话，remain silent 表示不发言"]], set: [["unset","v.","取消设置","在软件选项或标志位语境中，set 是设定或启用，unset 是撤销该设置"],["clear the table","phr.","收拾餐桌","在餐桌布置义上，set the table 是摆好餐具，clear the table 是用餐后将餐具收走"]], allow: [["forbid","v.","禁止","与给予许可相反"],["prevent","v.","阻止","与使某事得以发生相反"]], win: [["lose","v.","输；失去","在比赛、选举或竞争中，win 是取得胜利，lose 是未能获胜"]],
+  lead: [["follow","v.","跟随","只在行进顺序或角色上与 lead 相对"]], continue: [["stop","v.","停止","与继续活动或过程相反"],["suspend","v.","暂停；中止","continue an activity 表示让活动持续进行，suspend it 表示正式决定暂时中止。"]], spend: [["save","v.","节省；储蓄","与花掉金钱或资源相反"]], stay: [["leave","v.","离开","与留在某地相反"]], add: [["subtract","v.","减去","在数学运算中与相加相反"],["remove","v.","移除","与把某物加入整体相反"]],
   die: [["survive","v.","幸存；活下来","与死亡相反，尤其指经历危险或疾病后仍活着"]], buy: [["sell","v.","出售","在交易双方行为上与购买相反"]], send: [["receive","v.","接收；收到","与从起点发送相对"]], walk: [["stand still","phr.","站着不动","与步行移动相对"]], grow: [["shrink","v.","缩小；萎缩","与尺寸或规模增长相反"],["decline","v.","下降；衰退","与数量或业务增长相反"]],
   open: [["shut","v.","关上；关闭","与打开门、容器或营业相反"]], consider: [["disregard","v.","不考虑；忽视","与认真纳入考虑相反"]], hope: [["despair","v.","绝望","与怀有希望相反"]], offer: [["withdraw","v.","撤回","与提出提议或报价相反"],["refuse","v.","拒绝","只在给予与拒绝提供的行为上相对"]], build: [["demolish","v.","拆毁","与建造实体结构相反"],["dismantle","v.","拆解；瓦解","与组装或逐步建立相反"]],
-  expect: [], fall: [["rise","v.","上升；起身","与向下掉落或数值下降相反"]], appear: [["disappear","v.","消失","与变得可见相反"]], serve: [], break: [["repair","v.","修理","与弄坏物体或机器相反"],["mend","v.","修补","与造成裂损相反"]],
+  expect: [], fall: [["rise","v.","上升；起身","在数量、价格或位置方向上，fall 表示下降，rise 表示上升"]], appear: [["disappear","v.","消失","在可见性上，appear 是进入视野，disappear 是从视野中消失"]], serve: [], break: [["repair","v.","修理","在物体或机器功能义上，break 使其损坏或失效，repair 使其恢复可用"],["continue","v.","继续","在连续活动或状态义上，break 是使过程中断，continue 是使其不中断地继续"]],
 };
 
 for (const [word, antonyms] of Object.entries(antonymPacks)) {
@@ -1352,19 +1352,19 @@ for (const [word, antonyms] of Object.entries(antonymPacks)) {
 }
 
 const confusablePacks = {
-  must: [["have to","modal phr.","不得不；必须","have to 可变时态并常强调外部要求；must 常体现说话者判断或正式规定"]],
-  begin: [["start","v.","开始","多数场景可互换；start 还常用于机器启动，begin 通常不说 begin a car"]],
-  love: [["like","v.","喜欢","like 表一般偏好；love 通常表达更强烈的感情或喜爱"]],
-  hold: [["keep","v.","保留；保持","hold 常强调手持、容纳或举行；keep 强调持续拥有或维持状态"]],
-  read: [["study","v.","学习；研读","read 强调处理文字；study 强调以掌握知识为目的，可不以阅读为主"]],
-  stop: [["quit","v.","停止；退出","stop 可临时停止任何动作；quit 常指永久放弃习惯、工作或活动"]],
-  understand: [["know","v.","知道","know 表示拥有事实信息；understand 强调掌握含义、原因或原理"]],
+  must: [["most","det. / pron.","大多数；最多","must /mʌst/ 与 most /moʊst/ 拼写接近，但元音不同；must 是情态动词，most 表示数量或程度最高。"]],
+  begin: [["behind","prep. / adv.","在……后面；落后","begin /bɪˈɡɪn/ 与 behind /bɪˈhaɪnd/ 都以 be- 开头，但重读音节和词性不同；behind 表示位置或进度落后。"]],
+  love: [["glove","n.","手套","love /lʌv/ 与 glove /ɡlʌv/ 只差开头的 /ɡ/ 音；love 表示爱或喜爱，glove 是戴在手上的名词。"]],
+  hold: [["cold","adj. / n.","寒冷的；寒冷","hold /hoʊld/ 与 cold /koʊld/ 只差开头辅音；hold 是握住或保持，cold 表示低温或感冒。"]],
+  read: [["reed","n.","芦苇；簧片","read 的现在时 /riːd/ 与 reed /riːd/ 同音，但 reed 是表示芦苇或簧片的名词。"]],
+  stop: [["step","n. / v.","脚步；迈步","stop /stɑːp/ 与 step /stɛp/ 拼写只差元音字母；stop 表示停止，step 表示脚步或迈步。"]],
+  understand: [["understate","v.","轻描淡写；低估地陈述","understand 与 understate 拼写接近；understand 表示理解，understate 表示把数量或严重程度说得偏低。"]],
   wait: [["await","v.","等待","wait 通常接 for；await 是正式及物动词，直接接宾语"]],
-  thank: [["appreciate","v.","感激；欣赏","thank 后接人再用 for；appreciate 通常直接接事或 doing"]],
+  thank: [["tank","n.","坦克；储罐","thank /θæŋk/ 与 tank /tæŋk/ 只差开头的 /h/ 音；thank 表示感谢，tank 是坦克或储罐。"]],
   sit: [["seat","v.","使就座；可容纳","sit 通常是不及物的“坐”；seat 通常是及物的“让某人坐”"]],
-  create: [["invent","v.","发明","create 范围广；invent 专指首次设计出此前没有的装置、方法等"]],
-  kill: [["murder","v.","谋杀","kill 是使死亡的通称；murder 特指非法且故意杀人"]],
-  stand: [["stay","v.","停留；保持","stand 强调直立或容忍；stay 强调留在地点或状态中"]],
+  create: [["curate","v.","策划；精选并编排","create /kriˈeɪt/ 与 curate /ˈkjʊreɪt/ 拼写和结尾读音接近；create 是创造，curate 是精选并组织内容。"]],
+  kill: [["skill","n.","技能；技巧","kill /kɪl/ 与 skill /skɪl/ 只差开头的 /s/ 音；kill 是使死亡，skill 是通过训练获得的技能。"]],
+  stand: [["stain","n. / v.","污渍；弄脏","stand /stænd/ 与 stain /steɪn/ 拼写接近但元音和末尾辅音不同；stain 表示污渍或弄脏。"]],
   follow: [],
 };
 
@@ -1531,4 +1531,459 @@ for (const [word, replacements] of Object.entries(contextPhraseReplacements)) {
   for (const group of manualCardPacks051100[word].contexts) {
     group[1] = group[1].map((item) => replacements[item[0]] ?? item);
   }
+}
+
+// The original adaptive relation pass left most cards with only one comparison.
+// These batch-owned additions restore useful depth without copying synonyms,
+// derivatives, or related-vocabulary entries into either relation section.
+const relationDepthSupplements = {
+  write: {
+    antonyms: [
+      ["delete", "v.", "删除", "在电子文本中，write 把内容写入文件，delete 则把已写内容删去；只对应记录结果。"],
+      ["leave blank", "phr.", "留空不填", "在表格或答题栏的填写义上，write 是写下内容，leave blank 是刻意不写。"],
+    ],
+    confusables: [
+      ["rite", "n.", "仪式；典礼", "rite 与 write 同音 /raɪt/，但 rite 是表示宗教或传统仪式的名词，write 是动词“写”。"],
+    ],
+  },
+  bring: {
+    antonyms: [
+      ["remove", "v.", "移走；拿开", "在物体与参照地的方向上，bring 把东西带到此处，remove 把它从此处移开。"],
+      ["send away", "phr.", "打发走；送走", "对人的移动而言，bring someone here 是使其到来，send away 则是使其离开。"],
+      ["leave behind", "phr.", "不带走；留下", "在出行携带义上，bring something along 是随身带来，leave behind 是不带而留在原处。"],
+    ],
+    confusables: [
+      ["brink", "n.", "边缘；危险关头", "bring /brɪŋ/ 以 /ŋ/ 结尾，brink /brɪŋk/ 多一个 /k/ 音和字母 k，且 brink 只作名词。"],
+    ],
+  },
+  move: {
+    antonyms: [
+      ["stop", "v.", "停止移动", "在人或物体的运动义上，move 表示位置继续改变，stop 表示这一运动终止。"],
+      ["be unmoved by", "phr.", "不受……感动", "move someone 在情感义上表示使某人感动，be unmoved by something 表示情绪未受它影响。"],
+    ],
+    confusables: [
+      ["movie", "n.", "电影", "movie 比 move 多字母 i，读 /ˈmuːvi/；move 读 /muːv/ 并主要作动词表示移动。"],
+    ],
+  },
+  must: {
+    antonyms: [
+      ["be forbidden", "phr.", "被禁止", "在规则许可范围内，must do 表示被要求执行某事，be forbidden 表示规则不准执行该事。"],
+      ["cannot be", "modal phr.", "不可能是", "在推断义上，must be 表示证据支持某结论，cannot be 表示证据排除该结论。"],
+    ],
+    confusables: [
+      ["mist", "n.", "薄雾；水汽", "must /mʌst/ 与 mist /mɪst/ 只有元音不同；must 是情态动词，mist 是表示薄雾或水汽的名词。"],
+    ],
+  },
+  begin: {
+    antonyms: [
+      ["postpone", "v.", "推迟；延期", "begin an activity 是让它现在进入起点，postpone it 是把开始时间推到以后。"],
+    ],
+    confusables: [
+      ["being", "n.", "存在；生物", "begin /bɪˈɡɪn/ 中 g 在 i 前，being /ˈbiːɪŋ/ 由 be 构成；两词字母顺序、读音和词性都不同。"],
+    ],
+  },
+  love: {
+    antonyms: [
+      ["dislike", "v.", "不喜欢", "love 表示强烈喜爱时，dislike 表示对同一人或事物持负面偏好，对立限于情感义。"],
+      ["be indifferent to", "phr.", "对……无动于衷", "love 表示有强烈情感投入，be indifferent to 表示对该对象既不喜爱也不关心。"],
+    ],
+    confusables: [
+      ["leave", "v.", "离开；留下", "love /lʌv/ 与 leave /liːv/ 拼写接近但元音不同；love 表示爱或喜爱，leave 表示离开或留下。"],
+    ],
+  },
+  hold: {
+    antonyms: [
+      ["cancel", "v.", "取消", "hold a meeting 表示按计划举行会议，cancel the meeting 表示撤销安排、不再举行。"],
+    ],
+    confusables: [
+      ["carry", "v.", "携带；搬运", "hold 可只表示把物体拿在手中不动；carry 强调带着物体从一处移到另一处。"],
+    ],
+  },
+  read: {
+    antonyms: [
+      ["misinterpret", "v.", "误解；误读", "在图表、数据或表情的解读义上，read 表示正确读懂，misinterpret 表示读出错误含义。"],
+      ["leave unread", "phr.", "留着未读", "read a message 表示已处理文字内容，leave it unread 表示使消息保持未读状态。"],
+    ],
+    confusables: [
+      ["red", "adj.", "红色的", "read 的过去式读 /rɛd/ 时与 red 同音，但 red 是颜色形容词；read 仍写作 read。"],
+    ],
+  },
+  stop: {
+    antonyms: [
+      ["allow", "v.", "允许；使得以进行", "在 stop someone from doing 的阻止义上，stop 使对方无法继续，allow 是给予许可或条件让其进行。"],
+    ],
+    confusables: [
+      ["stop to do", "phr.", "停下当前事去做另一事", "stop to do 表示停下原动作以去做新动作；stop doing 表示把 doing 所指的动作停掉。"],
+    ],
+  },
+  pay: {
+    antonyms: [
+      ["withhold payment", "phr.", "拒绝付款；暂扣款项", "pay a bill 是履行付款义务，withhold payment 是因争议或未满足条件而暂不付款。"],
+      ["refund", "v.", "退款", "pay 使金钱从顾客流向商家，refund 则在取消或退货时把已付金额退回。"],
+    ],
+    confusables: [
+      ["spend", "v.", "花费", "pay 常用 pay someone/for something 说明收款方或用途；spend 用 spend money on something。"],
+    ],
+  },
+  provide: {
+    antonyms: [
+      ["deny", "v.", "拒绝给予", "provide someone with something 表示给予所需资源，deny someone something 表示拒绝给予该资源。"],
+      ["withdraw", "v.", "撤回；停止提供", "在服务或支持义上，provide 是把资源提供出来，withdraw 是把原已提供的资源撤回。"],
+    ],
+    confusables: [
+      ["province", "n.", "省；领域", "provide /prəˈvaɪd/ 与 province /ˈprɑːvɪns/ 开头拼写接近；provide 是提供的动词，province 是行政区或领域。"],
+    ],
+  },
+  lose: {
+    antonyms: [
+      ["keep", "v.", "保留；不失去", "在所有或保有义上，lose 表示不再拥有某物，keep 表示继续保留它。"],
+    ],
+    confusables: [
+      ["miss", "v.", "错过；未赶上", "lose 常指失去已有事物或输掉比赛；miss 常指未赶上、未见到或未击中。"],
+    ],
+  },
+  understand: {
+    antonyms: [
+      ["remain unaware of", "phr.", "仍不知道；仍未意识到", "understand a fact 表示已掌握其含义和原因，remain unaware of it 表示连该事实都尚未进入认知。"],
+      ["be puzzled by", "phr.", "对……感到困惑", "understand a rule 表示规则已经清楚，be puzzled by it 表示对其原因或含义仍然困惑。"],
+    ],
+    confusables: [
+      ["undertake", "v.", "承担；着手做", "understand 与 undertake 都以 under- 开头；understand 表示理解，undertake 表示承担任务或着手进行。"],
+    ],
+  },
+  wait: {
+    antonyms: [
+      ["interrupt", "v.", "打断；插话", "wait one's turn 是在顺序中等到自己再行动，interrupt 是不等轮到就中途打断他人。"],
+      ["leave immediately", "phr.", "立即离开", "在某地等候的义项上，wait 是留在原地，leave immediately 是不等而马上离开。"],
+    ],
+    confusables: [
+      ["expect", "v.", "预料；期待", "wait 强调在一段时间内不行动，常接 for；expect 表示认为某事很可能发生。"],
+    ],
+  },
+  meet: {
+    antonyms: [
+      ["part company", "phr.", "分开；分道扬镳", "在人际会面义上，meet 表示人们来到一起，part company 表示他们分开或结束同行。"],
+      ["fall short of", "phr.", "未达到", "meet a standard 表示达到标准，fall short of the standard 表示结果低于该标准。"],
+    ],
+    confusables: [
+      ["know", "v.", "认识；了解", "meet someone 通常指初次见面或安排见面；know someone 表示已经认识并对其有所了解。"],
+    ],
+  },
+  thank: {
+    antonyms: [
+      ["blame", "v.", "责怪；归咎", "thank someone for a result 是将好处归功于对方，blame someone for it 是将坏结果归咎于对方。"],
+      ["criticize", "v.", "批评", "thank 用言语表达对帮助或付出的感激，criticize 则针对行为或结果表达不满。"],
+      ["take for granted", "phr.", "把……当作理所当然", "thank 表明说话者看到并认可对方的付出，take for granted 表示接受好处却不表示感激。"],
+    ],
+    confusables: [
+      ["think", "v.", "思考；认为", "thank /θæŋk/ 和 think /θɪŋk/ 的元音不同；thank 表示感谢，think 表示思考或认为。"],
+    ],
+  },
+  change: {
+    antonyms: [
+      ["restore", "v.", "恢复原状；还原", "change a setting 是使它离开原来状态，restore the setting 是撤销该改动并恢复原状。"],
+      ["preserve", "v.", "保持；保存", "change something 是改动对象原有状态，preserve it 是保护该状态不被改动。"],
+    ],
+    confusables: [
+      ["chance", "n.", "机会；可能性", "change /tʃeɪndʒ/ 中有 /dʒ/ 结尾，chance /tʃæns/ 以 /ns/ 结尾；两词字形相近但含义不同。"],
+    ],
+  },
+  watch: {
+    antonyms: [
+      ["look away", "phr.", "把视线移开", "watch 表示持续把注意力放在变化的对象上，look away 表示主动把目光从对象移开。"],
+      ["miss", "v.", "错过；没看到", "watch a live event 表示实际观看过程，miss the event 表示未能看到该过程。"],
+    ],
+    confusables: [
+      ["witch", "n.", "女巫；巫婆", "watch /wɑːtʃ/ 与 witch /wɪtʃ/ 辅音相同但元音不同；watch 表示观看，witch 是女巫。"],
+    ],
+  },
+  sit: {
+    antonyms: [
+      ["vacate the seat", "phr.", "离开座位；让出座位", "sit in a seat 表示人占据座位坐着，vacate the seat 表示离开并使该座位空出。"],
+      ["adjourn", "v.", "休会；暂停庭审", "在法院或委员会 sits 表示正式开会的语境中，adjourn 表示结束或暂停本次会议。"],
+    ],
+    confusables: [
+      ["set", "v.", "放置；设定", "sit /sɪt/ 多为不及物动词，表示人坐着；set /sɛt/ 可直接接宾语，表示放置或设定。"],
+    ],
+  },
+  create: {
+    antonyms: [
+      ["eliminate", "v.", "消除；淘汰", "create 使一个事物或机会开始存在，eliminate 则使已存在的对象消失或被移除。"],
+      ["abolish", "v.", "废除", "在制度、职位或规则上，create 表示设立，abolish 表示通过正式决定将其废除。"],
+    ],
+    confusables: [
+      ["crate", "n.", "大木箱；塑料周转箱", "create /kriˈeɪt/ 有三个音节，crate /kreɪt/ 只有一个音节；crate 是名词，create 是动词。"],
+    ],
+  },
+  learn: {
+    antonyms: [
+      ["remain unaware of", "phr.", "仍不知道", "learn a fact 表示获知一条信息，remain unaware of it 表示该信息仍未进入个人认知。"],
+      ["fail to master", "phr.", "未能掌握", "learn a skill 可表示经练习后掌握技能，fail to master it 表示学习过程没有达到掌握结果。"],
+    ],
+    confusables: [
+      ["earn", "v.", "赚得；获得", "learn /lɝːn/ 比 earn /ɝːn/ 多开头的 /l/ 音和字母 l；learn 是学习，earn 是通过工作获得。"],
+    ],
+  },
+  kill: {
+    antonyms: [
+      ["revive", "v.", "使复苏；使恢复", "kill a project or proposal 表示使它失去继续推进的可能，revive it 表示重新提起并恢复推进；这里不指死者复生。"],
+      ["pass", "v.", "通过（议案）", "kill a bill 表示阻止议案进入下一阶段，pass the bill 表示表决通过并使其继续立法程序。"],
+    ],
+    confusables: [
+      ["die", "v.", "死亡", "kill 是及物动词，主语使别人或生物死亡；die 是不及物动词，主语自身死亡。"],
+    ],
+  },
+  include: {
+    antonyms: [
+      ["omit", "v.", "省略；遗漏", "include 表示把一项纳入列表、文本或整体，omit 表示不写入或遗漏该项。"],
+      ["charge separately for", "phr.", "对……另行收费", "the price includes breakfast 表示早餐已算入总价，charge separately for breakfast 表示它不在总价内并需单独付费。"],
+    ],
+    confusables: [
+      ["consist of", "phr.", "由……组成", "include 的主语是整体并可只列部分成员；consist of 后通常列出构成整体的全部成分。"],
+    ],
+  },
+  stand: {
+    antonyms: [
+      ["lie down", "phr.", "躺下", "在身体姿态上，stand 是保持直立，lie down 是把身体放到水平躺卧位置。"],
+      ["fall", "v.", "跌倒；倒下", "stand 表示人或物稳定地直立，fall 在姿态义上表示失去平衡而倒下。"],
+    ],
+    confusables: [
+      ["strand", "v. / n.", "使滞留；岸滩", "stand /stænd/ 与 strand /strænd/ 拼写只差 r；stand 表示站立，strand 作动词表示使人受困滞留。"],
+    ],
+  },
+  follow: {
+    antonyms: [
+      ["disobey", "v.", "不服从；不遵守", "follow an instruction 表示按指令行动，disobey it 表示明知要求却采取不符合指令的行动。"],
+      ["unsubscribe from", "phr.", "取消订阅；不再关注", "follow an account 表示订阅它的更新，unsubscribe from the account 表示取消订阅，不再持续接收动态。"],
+    ],
+    confusables: [
+      ["flow", "v.", "流动", "follow /ˈfɑːloʊ/ 有两个音节并含双写 l，flow /floʊ/ 只有一个音节，表示液体或人流移动。"],
+      ["fellow", "n. / adj.", "同伴；同类的", "follow /ˈfɑːloʊ/ 是动词，fellow /ˈfɛloʊ/ 中间元音不同，常作名词表示同伴或作定语表示同类。"],
+    ],
+  },
+  remember: {
+    antonyms: [
+      ["overlook", "v.", "忽略；未注意", "remember a required detail 是想起并按要求处理它，overlook the detail 是因疏忽而没有想起或处理。"],
+      ["leave out of one's will", "phr.", "不在遗嘱中给……留遗产", "remember someone in one's will 表示在遗嘱中给其留下财产，leave that person out of one's will 表示明确不作该继承安排。"],
+    ],
+    confusables: [
+      ["remainder", "n.", "剩余部分；余数", "remember 与 remainder 开头和结尾拼写相近；remember 是记得的动词，remainder 是剩余部分或数学余数。"],
+    ],
+  },
+  speak: {
+    antonyms: [
+      ["withdraw one's statement", "phr.", "撤回发言；收回声明", "speak on the record 是公开表达立场，withdraw one's statement 是正式撤回先前已表达的内容。"],
+      ["refuse to comment", "phr.", "拒绝置评", "speak about an issue 是公开就该事发言，refuse to comment 是明确拒绝就该事表态。"],
+    ],
+    confusables: [
+      ["sneak", "v. / n.", "偷偷走；偷偷摸摸的人", "speak /spiːk/ 与 sneak /sniːk/ 只差中间辅音；speak 表示说话，sneak 表示悄悄移动。"],
+    ],
+  },
+  set: {
+    antonyms: [
+      ["cancel", "v.", "取消", "set a date or appointment 是确定其举行时间，cancel it 是撤销安排，使原定时间不再生效。"],
+    ],
+    confusables: [
+      ["seat", "v.", "使就座；可容纳", "set /sɛt/ 表示放置或设定；seat /siːt/ 作动词时表示安排某人就座，元音和宾语类型不同。"],
+    ],
+  },
+  allow: {
+    antonyms: [
+      ["deny", "v.", "拒绝准许", "allow someone to do 是给予许可，deny someone permission 是明确拒绝给予同一许可。"],
+    ],
+    confusables: [
+      ["aloud", "adv.", "出声地", "allow /əˈlaʊ/ 是表示允许的动词，aloud /əˈlaʊd/ 多一个 /d/ 音，是表示“出声地”的副词。"],
+    ],
+  },
+  win: {
+    antonyms: [
+      ["alienate", "v.", "使疏远；失去支持", "win people over 表示逐步赢得他们的好感或支持，alienate them 表示言行使他们疏远并失去其支持。"],
+      ["forfeit", "v.", "因违规而失去", "win a prize 是获得奖项，forfeit it 是因违规、缺席或未履行条件而失去资格或奖项。"],
+    ],
+    confusables: [
+      ["wine", "n.", "葡萄酒", "win /wɪn/ 与 wine /waɪn/ 拼写只差末尾 e，但元音不同；win 是赢得，wine 是葡萄酒。"],
+    ],
+  },
+  lead: {
+    antonyms: [
+      ["lag behind", "phr.", "落后", "lead 在比赛或进度义上表示位于前列，lag behind 表示进度慢而落在后面。"],
+      ["prevent", "v.", "阻止", "lead to a result 表示某因素促成该结果，prevent the result 表示阻止它发生。"],
+    ],
+    confusables: [
+      ["read", "v.", "阅读", "lead 作动词读 /liːd/，read 现在式读 /riːd/；两词韵母相同但开头辅音、拼写和含义不同。"],
+    ],
+  },
+  continue: {
+    antonyms: [
+      ["abandon", "v.", "放弃；中止", "continue a task 表示仍投入并推进它，abandon the task 表示在完成前决定不再进行。"],
+    ],
+    confusables: [
+      ["contain", "v.", "包含；容纳", "continue /kənˈtɪnjuː/ 与 contain /kənˈteɪn/ 开头和拼写相近；continue 表示继续，contain 表示包含或容纳。"],
+    ],
+  },
+  spend: {
+    antonyms: [
+      ["earn", "v.", "赚得", "在金钱流向上，spend 是把所有金钱付出，earn 是通过工作或投资获得金钱。"],
+      ["replenish", "v.", "补充；重新充足", "spend energy or supplies 表示在活动中消耗资源，replenish them 表示在消耗后把数量补充回来。"],
+    ],
+    confusables: [
+      ["pay", "v.", "付款", "spend 用 spend money/time on something 说明资源用途；pay 常用 pay for something 说明付款对象。"],
+    ],
+  },
+  stay: {
+    antonyms: [
+      ["panic", "v.", "惊慌", "stay calm 表示继续保持冷静状态，panic 表示因恐惧而突然失去冷静。"],
+      ["fall asleep", "phr.", "入睡", "stay awake 表示持续清醒，fall asleep 表示从清醒转入睡眠状态。"],
+    ],
+    confusables: [
+      ["state", "n. / v.", "状态；陈述", "stay /steɪ/ 与 state /steɪt/ 拼写和读音接近，但 state 末尾多 /t/，表示状态或正式陈述，不表示停留。"],
+    ],
+  },
+  add: {
+    antonyms: [
+      ["omit", "v.", "省略；遗漏", "add a detail 表示把信息写入内容，omit the detail 表示不把该信息列入。"],
+    ],
+    confusables: [
+      ["ad", "n.", "广告", "ad 是 advertisement 的常用缩写，与 add / æd / 同音；add 是表示增加的动词。"],
+    ],
+  },
+  die: {
+    antonyms: [
+      ["be born", "phr.", "出生", "be born 标志生命开始，die 标志生命结束；二者只在生命周期起点和终点这一范围内构成对立。"],
+      ["start up", "phr.", "启动；开始运转", "a machine dies 表示它停止运转，it starts up 表示设备从停机状态进入运行状态。"],
+    ],
+    confusables: [
+      ["dine", "v.", "进餐；用餐", "die /daɪ/ 与 dine /daɪn/ 拼写只差 n；die 表示死亡，dine 是较正式的进餐动词。"],
+    ],
+  },
+  buy: {
+    antonyms: [
+      ["give away", "phr.", "送掉；赠送", "buy 通过付款获得物品所有权，give away 不收钱地把自己的物品转给别人。"],
+      ["return", "v.", "退回；退货", "buy an item 是完成购买并取得商品，return it 是将商品交回卖方以撤销交易。"],
+    ],
+    confusables: [
+      ["bye", "interj. / n.", "再见；告别", "buy /baɪ/ 与 bye /baɪ/ 同音；buy 是购买的动词，bye 用于告别，也可作名词表示轮空。"],
+    ],
+  },
+  send: {
+    antonyms: [
+      ["keep", "v.", "留下；不发出", "send a document 是让文件离开发件人并到达收件人，keep it 是把文件留在自己这里。"],
+      ["recall", "v.", "召回；撤回发送", "send a message or parcel 是使其离开发件方，recall it 是在送达或生效前尝试撤回。"],
+    ],
+    confusables: [
+      ["sand", "n.", "沙；沙子", "send /sɛnd/ 与 sand /sænd/ 只有元音不同；send 是发送动作，sand 是不可数名词，表示沙子。"],
+    ],
+  },
+  walk: {
+    antonyms: [
+      ["ride", "v.", "骑；乘坐", "在出行方式上，walk 是双脚行走，ride 是骑车、骑马或作为乘客乘车。"],
+      ["drive", "v.", "驾驶", "walk to a place 表示步行到达，drive there 表示操控汽车到达；对立限于交通方式。"],
+    ],
+    confusables: [
+      ["woke", "v.", "醒来了；唤醒了", "walk /wɔːk/ 与 woke /woʊk/ 元音不同；woke 是 wake 的过去式，walk 则表示步行。"],
+    ],
+  },
+  grow: {
+    antonyms: [
+      ["wither", "v.", "枯萎；衰败", "grow 在植物义上表示继续生长，wither 表示因缺水或受损而枯萎、失去生长活力。"],
+    ],
+    confusables: [
+      ["glow", "v. / n.", "发光；光亮", "grow /ɡroʊ/ 与 glow /ɡloʊ/ 只差中间辅音；grow 表示生长或增加，glow 表示发出稳定的光。"],
+    ],
+  },
+  open: {
+    antonyms: [
+      ["block", "v.", "堵住；阻断", "open a passage 是使通道可以通行，block the passage 是用障碍物阻断通行；对立限于通道义。"],
+      ["lock", "v.", "锁住", "open a door 表示使通道可以通行，lock the door 表示用锁阻止它被打开。"],
+    ],
+    confusables: [
+      ["oven", "n.", "烤箱；烤炉", "open /ˈoʊpən/ 与 oven /ˈʌvən/ 拼写相近，但中间辅音和元音不同；oven 是烘烤食物的名词。"],
+    ],
+  },
+  consider: {
+    antonyms: [
+      ["act impulsively", "phr.", "冲动行事", "consider a choice 表示先评估后果再决定，act impulsively 表示未经评估便立即行动。"],
+      ["reject without review", "phr.", "未经审查就拒绝", "consider a proposal 表示审查其优缺点，reject it without review 表示不进入评估过程就否决。"],
+    ],
+    confusables: [
+      ["consist", "v.", "由……组成；存在于", "consider /kənˈsɪdər/ 表示考虑，consist /kənˈsɪst/ 常与 of 连用表示组成；两词词尾和搭配不同。"],
+    ],
+  },
+  hope: {
+    antonyms: [
+      ["dread", "v.", "惧怕；担心……发生", "hope for an outcome 表示希望该结果发生，dread the outcome 表示因害怕而希望它不要发生。"],
+      ["rule out", "phr.", "排除……的可能", "hope for recovery 含有好转仍可能发生的信念，rule out recovery 则是判定这一期望结果不可能实现。"],
+    ],
+    confusables: [
+      ["expect", "v.", "预料；预期", "hope 表示说话者想要某事发生；expect 表示根据信息判断某事很可能发生。"],
+    ],
+  },
+  offer: {
+    antonyms: [
+      ["demand", "v.", "要求；索取", "offer help or payment 是主动向对方给出资源，demand help or payment 是站在接收方立场强烈要求对方给出。"],
+    ],
+    confusables: [
+      ["suggest", "v.", "建议；提出", "offer to do 表示主动愿意亲自行动；suggest doing 只是提出建议，不表示自己必然执行。"],
+    ],
+  },
+  build: {
+    antonyms: [
+      ["undermine", "v.", "削弱；破坏", "build trust 表示逐步增强信任，undermine trust 表示通过行为削弱已有信任。"],
+    ],
+    confusables: [
+      ["bill", "n. / v.", "账单；开账单", "build /bɪld/ 比 bill /bɪl/ 多末尾 /d/ 音；build 表示建造，bill 表示账单或向某人收费。"],
+    ],
+  },
+  expect: {
+    antonyms: [
+      ["doubt", "v.", "怀疑", "expect an outcome 表示认为该结果很可能发生，doubt it 表示认为它可能不会发生。"],
+      ["rule out", "phr.", "排除……的可能", "expect something 是把它视为可能或很可能的结果，rule it out 是判定该结果不可能。"],
+      ["be surprised by", "phr.", "对……感到意外", "expect an event 表示事先已将它纳入预期，be surprised by it 表示它发生时与原有预期不符。"],
+    ],
+    confusables: [
+      ["wait for", "phr.", "等待", "expect 是判断某事将发生，可不含等待动作；wait for 强调在对象到来前经过时间。"],
+    ],
+  },
+  fall: {
+    antonyms: [
+      ["stabilize", "v.", "使稳定；趋稳", "prices fall 表示价格持续向下变化，prices stabilize 表示价格停止下降并保持在相对稳定的水平。"],
+      ["remain upright", "phr.", "保持直立", "fall over 表示失去平衡而倒下，remain upright 表示在外力下仍维持直立状态。"],
+    ],
+    confusables: [
+      ["fail", "v.", "失败；未能做到", "fall /fɔːl/ 与 fail /feɪl/ 拼写接近但元音不同；fall 表示下落，fail 表示未成功或未达到要求。"],
+    ],
+  },
+  appear: {
+    antonyms: [
+      ["be absent", "phr.", "缺席；未到场", "appear at a hearing or in court 表示按要求到场，be absent 表示在该时间和地点没有出席。"],
+      ["prove otherwise", "phr.", "证明并非如此", "appear to be true 只表示从表面看似为真，prove otherwise 表示后续证据确认实际情况与该印象相反。"],
+    ],
+    confusables: [
+      ["appeal", "v. / n.", "呼吁；吸引力", "appear /əˈpɪr/ 和 appeal /əˈpiːl/ 开头相近，但 appear 是出现或显得，appeal 是呼吁或具有吸引力。"],
+    ],
+  },
+  serve: {
+    antonyms: [
+      ["refuse service to", "phr.", "拒绝为……服务", "serve a customer 是向顾客提供餐饮或帮助，refuse service to them 是明确拒绝提供该服务。"],
+      ["receive", "v.", "接发球；接收", "在网球等运动中，serve 是发球开始一分，receive 是在对面接返该发球。"],
+      ["hinder", "v.", "阻碍", "serve a purpose 表示对目标有用并推动它，hinder the purpose 表示增加阻力使目标更难实现。"],
+    ],
+    confusables: [
+      ["save", "v.", "拯救；节省；保存", "serve /sɝːrv/ 比 save /seɪv/ 多 /r/ 音；serve 表示服务或供应，save 表示拯救、节省或保存。"],
+      ["deserve", "v.", "应得；值得", "deserve /dɪˈzɝːrv/ 虽含有 serve 的字母串，但表示因品质或行为而应得某结果，不表示服务。"],
+    ],
+  },
+  break: {
+    antonyms: [
+      ["obey", "v.", "遵守；服从", "break a rule 表示违反规则，obey the rule 表示按其要求行事。"],
+    ],
+    confusables: [
+      ["breach", "v. / n.", "违反；破口", "break a rule 是日常说法，breach a contract/security 是法律或技术语境的正式搭配；breach 不用于普通打碎物品。"],
+    ],
+  },
+};
+
+for (const [word, additions] of Object.entries(relationDepthSupplements)) {
+  manualCardPacks051100[word].antonyms.push(...additions.antonyms);
+  manualCardPacks051100[word].confusables.push(...additions.confusables);
 }

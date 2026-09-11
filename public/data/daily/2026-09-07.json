@@ -1,8 +1,8 @@
 {
   "date": "2026-09-07",
   "dayNumber": 22,
-  "contentVersion": "2026.09.10.4",
-  "templateVersion": "learning-template-2026.09.10.4",
+  "contentVersion": "2026.09.11.1",
+  "templateVersion": "learning-template-2026.09.11.1",
   "cards": [
     {
       "id": "decide-v",
@@ -77,7 +77,7 @@
           }
         ],
         "directSynonym": "choose /ˈtʃuːz/（选择）；determine /dəˈtɝːmən/（决定）；resolve /riˈzɑlv/（决定）；settle /ˈsɛtəl/（确定）；rule /ˈruːl/（裁定）",
-        "directAntonym": "hesitate /ˈhɛzəˌteɪt/（犹豫）",
+        "directAntonym": "hesitate /ˈhɛzəˌteɪt/（犹豫）；defer /dɪˈfɝː/（推迟决定；延期）；leave open /ˈliːv ˈoʊpən/（暂不决定；保留可能）",
         "derivatives": "decision · indecision · decisive · indecisive · decisively",
         "example": "I decided to start with five words a day.",
         "exampleChinese": "我决定从每天五个单词开始。"
@@ -330,6 +330,20 @@
           "partOfSpeech": "v.",
           "chinese": "犹豫",
           "usage": "decide 表示考虑后形成选择；hesitate 表示迟疑、暂未作出决定，只在决策过程上构成对照。"
+        },
+        {
+          "word": "defer",
+          "phonetic": "/dɪˈfɝː/",
+          "partOfSpeech": "v.",
+          "chinese": "推迟决定；延期",
+          "usage": "只在作出决定的时间上相对：decide 是形成结论，defer 是把决定留到以后。"
+        },
+        {
+          "word": "leave open",
+          "phonetic": "/ˈliːv ˈoʊpən/",
+          "partOfSpeech": "v. phr.",
+          "chinese": "暂不决定；保留可能",
+          "usage": "只与 decide/settle an issue 相对；leave it open 表示暂时不作结论并保留选择。"
         }
       ],
       "derivatives": [
@@ -369,7 +383,22 @@
           "note": "说明行动或判断迅速明确，并能最终决定结果。"
         }
       ],
-      "confusables": [],
+      "confusables": [
+        {
+          "word": "divide",
+          "phonetic": "/dɪˈvaɪd/",
+          "partOfSpeech": "v.",
+          "chinese": "分开；除以",
+          "difference": "decide /dɪˈsaɪd/ 表示作决定；divide /dɪˈvaɪd/ 表示分割或做除法，拼写节奏相近但含义不同。"
+        },
+        {
+          "word": "decide on",
+          "phonetic": "/ˌdɪˈsaɪd ˈɑn/",
+          "partOfSpeech": "phr.v.",
+          "chinese": "选定；决定采用",
+          "difference": "decide on 后接名词或 -ing 表示选定方案；decide to 后接动词原形表示决定采取动作。"
+        }
+      ],
       "relatedVocabulary": [
         {
           "category": "选择依据",
@@ -599,14 +628,14 @@
         {
           "id": "decide-v-contrast-choice",
           "type": "meaning_choice",
-          "prompt": "哪一项是“decide”的常用派生词？",
+          "prompt": "结合拼写、发音和用法，哪一项需要与“decide”重点区分？",
           "options": [
-            "accident",
-            "accuracy",
-            "decision",
-            "increase"
+            "have",
+            "do",
+            "divide",
+            "be"
           ],
-          "answer": "decision",
+          "answer": "divide",
           "stage": "T3",
           "ai": false
         },
@@ -770,10 +799,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -855,7 +884,7 @@
           }
         ],
         "directSynonym": "go past /ˈɡoʊ ˈpæst/（经过；超过）；clear /ˈklɪr/（通过）；hand /ˈhænd/（递给）；elapse /ɪˈlæps/（流逝）；approve /əˈpruːv/（批准；通过）",
-        "directAntonym": "fail /ˈfeɪl/（未通过）",
+        "directAntonym": "fail /ˈfeɪl/（未通过）；block /ˈblɑk/（阻挡；阻止通过）；keep /ˈkiːp/（保留；不递出）",
         "derivatives": "passage · passing · passable",
         "example": "Regular practice can help you pass the test.",
         "exampleChinese": "规律练习能帮助你通过考试。"
@@ -1129,6 +1158,20 @@
           "partOfSpeech": "v.",
           "chinese": "未通过",
           "usage": "仅与通过考试、检查的义项相对；pass 表示达到合格标准，fail 表示没有达到该标准。"
+        },
+        {
+          "word": "block",
+          "phonetic": "/ˈblɑk/",
+          "partOfSpeech": "v.",
+          "chinese": "阻挡；阻止通过",
+          "usage": "只与 pass 表示通过入口、道路或程序的义项相对；block 表示使同一路径或程序无法通过。"
+        },
+        {
+          "word": "keep",
+          "phonetic": "/ˈkiːp/",
+          "partOfSpeech": "v.",
+          "chinese": "保留；不递出",
+          "usage": "只与 pass someone an object 的传递义相对；keep 表示把同一物品留在自己手中。"
         }
       ],
       "derivatives": [
@@ -1161,6 +1204,13 @@
           "partOfSpeech": "prep./adj./n.",
           "chinese": "经过；过去的；过去",
           "difference": "pass 是动词，past 通常不是动词，注意词性和拼写"
+        },
+        {
+          "word": "pass out",
+          "phonetic": "/ˈpæs ˈaʊt/",
+          "partOfSpeech": "phr.v.",
+          "chinese": "昏倒；分发",
+          "difference": "pass 表示经过、通过或递交；pass out 可表示昏倒，也可表示逐一分发，意义由宾语决定。"
         }
       ],
       "relatedVocabulary": [
@@ -1563,10 +1613,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -1642,7 +1692,7 @@
           }
         ],
         "directSynonym": "consume /kənˈsuːm/（食用）；have /ˈhæv/（吃；喝）；devour /dɪˈvaʊɚ/（狼吞虎咽）；dine /ˈdaɪn/（用餐）；feed on /ˈfiːd ˈɑn/（以……为食）",
-        "directAntonym": "fast /ˈfæst/（禁食）",
+        "directAntonym": "fast /ˈfæst/（禁食）；skip a meal /ˈskɪp ə ˈmiːl/（不吃一餐）；spit out /ˈspɪt ˈaʊt/（吐出）",
         "derivatives": "eater · eating",
         "example": "I eat breakfast before I begin studying.",
         "exampleChinese": "我开始学习前吃早餐。"
@@ -1895,6 +1945,20 @@
           "partOfSpeech": "v.",
           "chinese": "禁食",
           "usage": "指在一段时间内有意不吃食物；eat 是摄入食物，fast 则在限定时间主动停止进食。"
+        },
+        {
+          "word": "skip a meal",
+          "phonetic": "/ˈskɪp ə ˈmiːl/",
+          "partOfSpeech": "v. phr.",
+          "chinese": "不吃一餐",
+          "usage": "只在一次用餐上相对：eat a meal 表示进餐，skip a meal 表示有意错过这一餐。"
+        },
+        {
+          "word": "spit out",
+          "phonetic": "/ˈspɪt ˈaʊt/",
+          "partOfSpeech": "phr.v.",
+          "chinese": "吐出",
+          "usage": "只在食物进入口中的方向上相对：eat 强调吞食，spit out 表示把口中的食物吐出。"
         }
       ],
       "derivatives": [
@@ -1920,6 +1984,13 @@
           "partOfSpeech": "v.",
           "chinese": "喂养",
           "difference": "eat 的主语进食，feed 的主语把食物给人或动物"
+        },
+        {
+          "word": "ate",
+          "phonetic": "/ˈeɪt/",
+          "partOfSpeech": "v.",
+          "chinese": "eat 的过去式；吃了",
+          "difference": "eat /iːt/ 是原形，ate /eɪt/ 是不规则过去式；有明确过去时间时不能继续用 eat。"
         }
       ],
       "relatedVocabulary": [
@@ -2322,10 +2393,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -2407,7 +2478,7 @@
           }
         ],
         "directSynonym": "announce /əˈnaʊns/（宣布）；describe /dɪˈskraɪb/（描述）；document /ˈdɑkjəmɛnt/（记录；用文件证明）；notify /ˈnoʊtəˌfaɪ/（正式通知）；cover /ˈkʌvɚ/（采访报道）",
-        "directAntonym": "",
+        "directAntonym": "conceal /kənˈsiːl/（隐瞒；隐藏）；retract /riˈtrækt/（撤回；收回）；distort /dɪˈstɔːrt/（歪曲；曲解）",
         "derivatives": "reporter · reporting · reportable · reportedly",
         "example": "Please report the problem as soon as it happens.",
         "exampleChinese": "问题发生后请尽快报告。"
@@ -2674,7 +2745,29 @@
           "difference": "新闻语境中指持续采访并报道事件；report 也可用于非新闻的工作汇报、报案和报到。"
         }
       ],
-      "antonyms": [],
+      "antonyms": [
+        {
+          "word": "conceal",
+          "phonetic": "/kənˈsiːl/",
+          "partOfSpeech": "v.",
+          "chinese": "隐瞒；隐藏",
+          "usage": "只与 report an incident/fact 的如实报告义相对；conceal 表示有意不让同一事实被知道。"
+        },
+        {
+          "word": "retract",
+          "phonetic": "/riˈtrækt/",
+          "partOfSpeech": "v.",
+          "chinese": "撤回；收回",
+          "usage": "只与 report/publish a claim 的公开陈述义相对；retract 表示公开收回先前报告的同一说法。"
+        },
+        {
+          "word": "distort",
+          "phonetic": "/dɪˈstɔːrt/",
+          "partOfSpeech": "v.",
+          "chinese": "歪曲；曲解",
+          "usage": "只与 report facts/findings accurately 的如实报道义相对；distort 表示选择性呈现或改写，使同一事实失真。"
+        }
+      ],
       "derivatives": [
         {
           "word": "reporter",
@@ -2705,7 +2798,22 @@
           "note": "用于转述尚未由说话人亲自证实的消息。"
         }
       ],
-      "confusables": [],
+      "confusables": [
+        {
+          "word": "inform",
+          "phonetic": "/ˌɪnˈfɔːrm/",
+          "partOfSpeech": "v.",
+          "chinese": "通知；告知",
+          "difference": "report 通常是 report something to someone；inform 要说 inform someone of/about something，宾语顺序不同。"
+        },
+        {
+          "word": "rapport",
+          "phonetic": "/ræˈpɔːr/",
+          "partOfSpeech": "n.",
+          "chinese": "融洽关系；默契",
+          "difference": "report /rɪˈpɔːrt/ 表示报告；rapport /ræˈpɔːr/ 表示融洽关系，拼写近似但重音、开头元音和词性不同。"
+        }
+      ],
       "relatedVocabulary": [
         {
           "category": "事实与来源",
@@ -2919,30 +3027,30 @@
           "ai": false
         },
         {
-          "id": "report-v-synonym-choice-2",
+          "id": "report-v-antonym-choice",
           "type": "meaning_choice",
-          "prompt": "除“announce”外，在“描述”这个义项下，哪个词也与“report”意思接近？",
+          "prompt": "在“报告；汇报”这个义项下，哪个词与“report”意思相反？",
           "options": [
-            "describe",
+            "conceal",
             "be",
             "have",
             "do"
           ],
-          "answer": "describe",
+          "answer": "conceal",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "report-v-contrast-choice",
           "type": "meaning_choice",
-          "prompt": "哪一项是“report”的常用派生词？",
+          "prompt": "结合拼写、发音和用法，哪一项需要与“report”重点区分？",
           "options": [
-            "increase",
-            "accident",
-            "accuracy",
-            "reporter"
+            "be",
+            "have",
+            "do",
+            "inform"
           ],
-          "answer": "reporter",
+          "answer": "inform",
           "stage": "T3",
           "ai": false
         },
@@ -3106,10 +3214,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -3185,7 +3293,7 @@
           }
         ],
         "directSynonym": "propose /prəˈpoʊz/（提议）；recommend /ˌrɛkəˈmɛnd/（推荐）；put forward /ˈpʊt ˈfɔːrwɚd/（提出）；indicate /ˈɪndəˌkeɪt/（表明）；imply /ˌɪmˈplaɪ/（暗示）",
-        "directAntonym": "",
+        "directAntonym": "advise against /ædˈvaɪz əˈɡɛnst/（劝阻；建议不要）；rule out /ˈruːl ˈaʊt/（排除……的可能）；contradict /ˌkɑntrəˈdɪkt/（与……矛盾；反驳）",
         "derivatives": "suggestion · suggestive · suggestively",
         "example": "I suggest reviewing the difficult words first.",
         "exampleChinese": "我建议先复习困难的单词。"
@@ -3438,7 +3546,29 @@
           "difference": "表示没有直接说出某意思；suggest 可明确提出建议，imply 则是不明说。"
         }
       ],
-      "antonyms": [],
+      "antonyms": [
+        {
+          "word": "advise against",
+          "phonetic": "/ædˈvaɪz əˈɡɛnst/",
+          "partOfSpeech": "phr.v.",
+          "chinese": "劝阻；建议不要",
+          "usage": "只与 suggest doing a specific action 的建议义相对；advise against 表示明确建议不要采取该行动。"
+        },
+        {
+          "word": "rule out",
+          "phonetic": "/ˈruːl ˈaʊt/",
+          "partOfSpeech": "phr.v.",
+          "chinese": "排除……的可能",
+          "usage": "只与 evidence suggests a possibility 的暗示义相对；rule out 表示证据排除了同一可能。"
+        },
+        {
+          "word": "contradict",
+          "phonetic": "/ˌkɑntrəˈdɪkt/",
+          "partOfSpeech": "v.",
+          "chinese": "与……矛盾；反驳",
+          "usage": "只与数据 suggest a conclusion 的证据义相对；contradict 表示数据与该结论直接不符。"
+        }
+      ],
       "derivatives": [
         {
           "word": "suggestion",
@@ -3469,6 +3599,13 @@
           "partOfSpeech": "v.",
           "chinese": "建议",
           "difference": "advise 可用 advise someone to do，suggest 不能这样接"
+        },
+        {
+          "word": "suppose",
+          "phonetic": "/səˈpoʊz/",
+          "partOfSpeech": "v.",
+          "chinese": "假定；认为",
+          "difference": "suggest 表示提出建议或由证据暗示；suppose 表示暂时假定某事为真，不能接宾语表示“建议某人”。"
         }
       ],
       "relatedVocabulary": [
@@ -3684,16 +3821,16 @@
           "ai": false
         },
         {
-          "id": "suggest-v-synonym-choice-2",
+          "id": "suggest-v-antonym-choice",
           "type": "meaning_choice",
-          "prompt": "除“propose”外，在“推荐”这个义项下，哪个词也与“suggest”意思接近？",
+          "prompt": "在“建议；提议”这个义项下，哪个词与“suggest”意思相反？",
           "options": [
             "be",
             "have",
             "do",
-            "recommend"
+            "contradict"
           ],
-          "answer": "recommend",
+          "answer": "contradict",
           "stage": "T2",
           "ai": false
         },
@@ -3871,10 +4008,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     }
   ]

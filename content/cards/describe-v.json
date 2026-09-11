@@ -71,7 +71,7 @@
       }
     ],
     "directSynonym": "depict /dɪˈpɪkt/（描绘）；portray /pɔːrˈtreɪ/（刻画）；characterize /ˈkɛrəktɚˌaɪz/（描述特征）；outline /ˈaʊtˌlaɪn/（概述）；explain /ɪkˈspleɪn/（说明）",
-    "directAntonym": "",
+    "directAntonym": "conceal /kənˈsiːl/（隐瞒；不描述）；omit /oʊˈmɪt/（省略；漏掉）；misrepresent /mɪsˌrɛprəˈzɛnt/（歪曲；不实描述）",
     "derivatives": "description · descriptive · indescribable · indescribably",
     "example": "How would you describe your ideal weekend?",
     "exampleChinese": "你会怎样描述理想的周末？"
@@ -324,7 +324,29 @@
       "difference": "重在使原因或过程易懂，不等同于外观描述；describe 侧重是什么样，explain 侧重为什么或如何。"
     }
   ],
-  "antonyms": [],
+  "antonyms": [
+    {
+      "word": "conceal",
+      "phonetic": "/kənˈsiːl/",
+      "partOfSpeech": "v.",
+      "chinese": "隐瞒；不描述",
+      "usage": "只与 describe details openly 的说明义相对；conceal 表示有意不让这些细节被知道。"
+    },
+    {
+      "word": "omit",
+      "phonetic": "/oʊˈmɪt/",
+      "partOfSpeech": "v.",
+      "chinese": "省略；漏掉",
+      "usage": "只与 describe/include a feature 的列举义相对；omit 表示描述时不提同一特征。"
+    },
+    {
+      "word": "misrepresent",
+      "phonetic": "/mɪsˌrɛprəˈzɛnt/",
+      "partOfSpeech": "v.",
+      "chinese": "歪曲；不实描述",
+      "usage": "只与 describe something accurately 的准确描写义相对；misrepresent 表示给出误导性描写。"
+    }
+  ],
   "derivatives": [
     {
       "word": "description",
@@ -362,6 +384,13 @@
       "partOfSpeech": "v.",
       "chinese": "开具；规定",
       "difference": "describe 是描述，prescribe 是医生开药或正式规定"
+    },
+    {
+      "word": "ascribe",
+      "phonetic": "/əˈskraɪb/",
+      "partOfSpeech": "v.",
+      "chinese": "把……归因于；认为属于",
+      "difference": "describe 表示说明事物特征；ascribe 常用 ascribe something to a cause，表示归因或归属。"
     }
   ],
   "relatedVocabulary": [
@@ -577,16 +606,16 @@
       "ai": false
     },
     {
-      "id": "describe-v-synonym-choice-2",
+      "id": "describe-v-antonym-choice",
       "type": "meaning_choice",
-      "prompt": "除“depict”外，在“刻画”这个义项下，哪个词也与“describe”意思接近？",
+      "prompt": "在“描述；形容”这个义项下，哪个词与“describe”意思相反？",
       "options": [
         "have",
         "do",
-        "portray",
+        "conceal",
         "be"
       ],
-      "answer": "portray",
+      "answer": "conceal",
       "stage": "T2",
       "ai": false
     },
@@ -764,9 +793,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

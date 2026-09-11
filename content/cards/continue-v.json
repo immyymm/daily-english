@@ -71,7 +71,7 @@
       }
     ],
     "directSynonym": "persist /pɚˈsɪst/（持续；坚持）；proceed /prəˈsiːd/（继续进行；前进）；carry on /ˈkæri ˈɑn/（继续）；maintain /meɪnˈteɪn/（维持）；keep up /ˈkiːp ˈʌp/（继续保持）",
-    "directAntonym": "stop /ˈstɑp/（停止）；cease /ˈsiːs/（终止）",
+    "directAntonym": "stop /ˈstɑp/（停止）；suspend /səˈspɛnd/（暂停；中止）；abandon /əˈbændən/（放弃；中止）",
     "derivatives": "continuation · continuous · continual · continuously",
     "example": "Please continue reading from page ten.",
     "exampleChinese": "请从第十页继续读。"
@@ -326,11 +326,18 @@
       "usage": "与继续活动或过程相反；是否含中断、及物结构和持续状态均不相同"
     },
     {
-      "word": "cease",
-      "phonetic": "/ˈsiːs/",
+      "word": "suspend",
+      "phonetic": "/səˈspɛnd/",
       "partOfSpeech": "v.",
-      "chinese": "终止",
-      "usage": "较正式，与持续发生相反；是否含中断、及物结构和持续状态均不相同"
+      "chinese": "暂停；中止",
+      "usage": "continue an activity 表示让活动持续进行，suspend it 表示正式决定暂时中止。"
+    },
+    {
+      "word": "abandon",
+      "phonetic": "/əˈbændən/",
+      "partOfSpeech": "v.",
+      "chinese": "放弃；中止",
+      "usage": "continue a task 表示仍投入并推进它，abandon the task 表示在完成前决定不再进行。"
     }
   ],
   "derivatives": [
@@ -365,11 +372,18 @@
   ],
   "confusables": [
     {
-      "word": "resume",
-      "phonetic": "/rɪˈzuːm/",
+      "word": "continent",
+      "phonetic": "/ˈkɑntənənt/",
+      "partOfSpeech": "n.",
+      "chinese": "大陆；洲",
+      "difference": "continue /kənˈtɪnjuː/ 与 continent /ˈkɑːntənənt/ 开头拼写相近；continue 是动词，continent 是表示洲的名词。"
+    },
+    {
+      "word": "contain",
+      "phonetic": "/kənˈteɪn/",
       "partOfSpeech": "v.",
-      "chinese": "恢复；重新开始",
-      "difference": "continue 表示不停顿地继续；resume 表示暂停之后恢复"
+      "chinese": "包含；容纳",
+      "difference": "continue /kənˈtɪnjuː/ 与 contain /kənˈteɪn/ 开头和拼写相近；continue 表示继续，contain 表示包含或容纳。"
     }
   ],
   "relatedVocabulary": [
@@ -603,12 +617,12 @@
       "type": "meaning_choice",
       "prompt": "结合拼写、发音和用法，哪一项需要与“continue”重点区分？",
       "options": [
-        "have",
-        "do",
-        "resume",
-        "be"
+        "admission",
+        "affection",
+        "continent",
+        "increase"
       ],
-      "answer": "resume",
+      "answer": "continent",
       "stage": "T3",
       "ai": false
     },
@@ -772,9 +786,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

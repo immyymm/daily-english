@@ -71,7 +71,7 @@
       }
     ],
     "directSynonym": "assist /əˈsɪst/（服务；协助）；attend to /əˈtɛnd ˈtuː/（接待；照料）；provide for /prəˈvaɪd ˈfɔːr/（供应；满足需要）；function as /ˈfʌŋkʃən ˈæz/（起……作用）；supply /səˈplaɪ/（供应）",
-    "directAntonym": "",
+    "directAntonym": "refuse service to /rəˈfjuːz ˈsɝːvəs ˈtuː/（拒绝为……服务）；receive /rəˈsiːv/（接发球；接收）；hinder /ˈhɪndɚ/（阻碍）",
     "derivatives": "service · servant · server · serving · serviceable",
     "example": "Good staff serve every customer politely.",
     "exampleChinese": "优秀员工会礼貌地服务每位顾客。"
@@ -324,7 +324,29 @@
       "difference": "对应提供食物、饮料或资源；服务对象、供给内容和充当某功能的结构不同"
     }
   ],
-  "antonyms": [],
+  "antonyms": [
+    {
+      "word": "refuse service to",
+      "phonetic": "/rəˈfjuːz ˈsɝːvəs ˈtuː/",
+      "partOfSpeech": "phr.",
+      "chinese": "拒绝为……服务",
+      "usage": "serve a customer 是向顾客提供餐饮或帮助，refuse service to them 是明确拒绝提供该服务。"
+    },
+    {
+      "word": "receive",
+      "phonetic": "/rəˈsiːv/",
+      "partOfSpeech": "v.",
+      "chinese": "接发球；接收",
+      "usage": "在网球等运动中，serve 是发球开始一分，receive 是在对面接返该发球。"
+    },
+    {
+      "word": "hinder",
+      "phonetic": "/ˈhɪndɚ/",
+      "partOfSpeech": "v.",
+      "chinese": "阻碍",
+      "usage": "serve a purpose 表示对目标有用并推动它，hinder the purpose 表示增加阻力使目标更难实现。"
+    }
+  ],
   "derivatives": [
     {
       "word": "service",
@@ -362,7 +384,22 @@
       "note": "表示虽不一定出色，但足以满足用途"
     }
   ],
-  "confusables": [],
+  "confusables": [
+    {
+      "word": "save",
+      "phonetic": "/ˈseɪv/",
+      "partOfSpeech": "v.",
+      "chinese": "拯救；节省；保存",
+      "difference": "serve /sɝːrv/ 比 save /seɪv/ 多 /r/ 音；serve 表示服务或供应，save 表示拯救、节省或保存。"
+    },
+    {
+      "word": "deserve",
+      "phonetic": "/dɪˈzɝːv/",
+      "partOfSpeech": "v.",
+      "chinese": "应得；值得",
+      "difference": "deserve /dɪˈzɝːrv/ 虽含有 serve 的字母串，但表示因品质或行为而应得某结果，不表示服务。"
+    }
+  ],
   "relatedVocabulary": [
     {
       "category": "餐饮服务",
@@ -576,30 +613,30 @@
       "ai": false
     },
     {
-      "id": "serve-v-synonym-choice-2",
+      "id": "serve-v-antonym-choice",
       "type": "meaning_choice",
-      "prompt": "除“assist”外，在“供应”这个义项下，哪个词也与“serve”意思接近？",
+      "prompt": "在“服务；供应”这个义项下，哪个词与“serve”意思相反？",
       "options": [
         "have",
         "do",
-        "supply",
+        "receive",
         "be"
       ],
-      "answer": "supply",
+      "answer": "receive",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "serve-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "哪一项是“serve”的常用派生词？",
+      "prompt": "结合拼写、发音和用法，哪一项需要与“serve”重点区分？",
       "options": [
-        "absence",
-        "service",
-        "increase",
-        "ability"
+        "do",
+        "save",
+        "be",
+        "have"
       ],
-      "answer": "service",
+      "answer": "save",
       "stage": "T3",
       "ai": false
     },
@@ -763,9 +800,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

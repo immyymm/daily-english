@@ -71,7 +71,7 @@
       }
     ],
     "directSynonym": "administer /ədˈmɪnəstɚ/（管理）；run /ˈrʌn/（经营）；supervise /ˈsuːpɚˌvaɪz/（监督）；handle /ˈhændəl/（处理）；cope /ˈkoʊp/（应付）",
-    "directAntonym": "",
+    "directAntonym": "fail /ˈfeɪl/（未能做到；失败）；lose control of /ˈluːz kənˈtroʊl ˈʌv/（失去对……的控制）；be overwhelmed by /ˈbiː ˌoʊvɚˈwɛlmd ˈbaɪ/（被……压垮；无力应付）",
     "derivatives": "mismanage · manager · management · mismanagement · manageable · unmanageable",
     "example": "She managed to finish the report on time.",
     "exampleChinese": "她设法按时完成了报告。"
@@ -324,7 +324,29 @@
       "difference": "cope 是不及物动词，常用 cope with 表示在困难处境中应付；manage 可直接接项目、团队或工作量，还可用 manage to do。"
     }
   ],
-  "antonyms": [],
+  "antonyms": [
+    {
+      "word": "fail",
+      "phonetic": "/ˈfeɪl/",
+      "partOfSpeech": "v.",
+      "chinese": "未能做到；失败",
+      "usage": "只与 manage to do 表示设法成功的义项相对；fail to do 明确表示没有完成同一动作。"
+    },
+    {
+      "word": "lose control of",
+      "phonetic": "/ˈluːz kənˈtroʊl ˈʌv/",
+      "partOfSpeech": "v. phr.",
+      "chinese": "失去对……的控制",
+      "usage": "只与 manage a team/process 的管理义相对；lose control of 表示无法继续控制同一对象。"
+    },
+    {
+      "word": "be overwhelmed by",
+      "phonetic": "/ˈbiː ˌoʊvɚˈwɛlmd ˈbaɪ/",
+      "partOfSpeech": "v. phr.",
+      "chinese": "被……压垮；无力应付",
+      "usage": "只与 manage a workload/crisis 的应付义相对；be overwhelmed by 表示工作量或危机超出应对能力。"
+    }
+  ],
   "derivatives": [
     {
       "word": "mismanage",
@@ -369,7 +391,22 @@
       "note": "表示规模、行为或问题超出控制。"
     }
   ],
-  "confusables": [],
+  "confusables": [
+    {
+      "word": "try",
+      "phonetic": "/ˈtraɪ/",
+      "partOfSpeech": "v.",
+      "chinese": "尝试；努力",
+      "difference": "try to do 只说明付出努力，manage to do 明确表示最终成功；结果未知时不能用 manage 代替 try。"
+    },
+    {
+      "word": "maintain",
+      "phonetic": "/meɪnˈteɪn/",
+      "partOfSpeech": "v.",
+      "chinese": "维持；保养；坚持声称",
+      "difference": "manage 表示管理人员、资源或应付任务；maintain 表示让状态持续或保养设备，常见中文译法相近但宾语不同。"
+    }
+  ],
   "relatedVocabulary": [
     {
       "category": "项目管理",
@@ -583,30 +620,30 @@
       "ai": false
     },
     {
-      "id": "manage-v-synonym-choice-2",
+      "id": "manage-v-antonym-choice",
       "type": "meaning_choice",
-      "prompt": "除“administer”外，在“经营”这个义项下，哪个词也与“manage”意思接近？",
+      "prompt": "在“管理；经营”这个义项下，哪个词与“manage”意思相反？",
       "options": [
-        "run",
+        "fail",
         "be",
         "have",
         "do"
       ],
-      "answer": "run",
+      "answer": "fail",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "manage-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "哪一项是“manage”的常用派生词？",
+      "prompt": "结合拼写、发音和用法，哪一项需要与“manage”重点区分？",
       "options": [
         "be",
         "have",
         "do",
-        "mismanage"
+        "try"
       ],
-      "answer": "mismanage",
+      "answer": "try",
       "stage": "T3",
       "ai": false
     },
@@ -770,9 +807,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

@@ -77,7 +77,7 @@
       }
     ],
     "directSynonym": "stroll /ˈstroʊl/（散步）；stride /ˈstraɪd/（大步走）；hike /ˈhaɪk/（远足）；pace /ˈpeɪs/（踱步）；proceed on foot /prəˈsiːd ˈɑn ˈfʊt/（步行前进）",
-    "directAntonym": "stand still /ˈstænd ˈstɪl/（站着不动）",
+    "directAntonym": "stand still /ˈstænd ˈstɪl/（站着不动）；ride /ˈraɪd/（骑；乘坐）；drive /ˈdraɪv/（驾驶）",
     "derivatives": "walker · walking · walkway · walkable",
     "example": "I walk to work when the weather is good.",
     "exampleChinese": "天气好时我步行上班。"
@@ -337,6 +337,20 @@
       "partOfSpeech": "phr.",
       "chinese": "站着不动",
       "usage": "与步行移动相对；步态、速度、距离和是否休闲都有语义限制"
+    },
+    {
+      "word": "ride",
+      "phonetic": "/ˈraɪd/",
+      "partOfSpeech": "v.",
+      "chinese": "骑；乘坐",
+      "usage": "在出行方式上，walk 是双脚行走，ride 是骑车、骑马或作为乘客乘车。"
+    },
+    {
+      "word": "drive",
+      "phonetic": "/ˈdraɪv/",
+      "partOfSpeech": "v.",
+      "chinese": "驾驶",
+      "usage": "walk to a place 表示步行到达，drive there 表示操控汽车到达；对立限于交通方式。"
     }
   ],
   "derivatives": [
@@ -376,6 +390,13 @@
       "partOfSpeech": "v./n.",
       "chinese": "工作；起作用",
       "difference": "walk /wɔːk/ 与 work /wɝːrk/ 拼写相近但元音、含义均不同"
+    },
+    {
+      "word": "woke",
+      "phonetic": "/ˈwoʊk/",
+      "partOfSpeech": "v.",
+      "chinese": "醒来了；唤醒了",
+      "difference": "walk /wɔːk/ 与 woke /woʊk/ 元音不同；woke 是 wake 的过去式，walk 则表示步行。"
     }
   ],
   "relatedVocabulary": [
@@ -595,26 +616,26 @@
       "type": "meaning_choice",
       "prompt": "在“走；步行”这个义项下，哪个词与“walk”意思相反？",
       "options": [
-        "stand still",
-        "account for",
-        "be aware of",
-        "be bound to"
+        "ride",
+        "be",
+        "have",
+        "do"
       ],
-      "answer": "stand still",
+      "answer": "ride",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "walk-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "哪一项是“walk”的常用派生词？",
+      "prompt": "结合拼写、发音和用法，哪一项需要与“walk”重点区分？",
       "options": [
-        "increase",
-        "accent",
-        "access",
-        "walker"
+        "be",
+        "have",
+        "do",
+        "woke"
       ],
-      "answer": "walker",
+      "answer": "woke",
       "stage": "T3",
       "ai": false
     },
@@ -778,9 +799,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

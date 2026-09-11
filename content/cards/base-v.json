@@ -77,7 +77,7 @@
       }
     ],
     "directSynonym": "ground /ˈɡraʊnd/（以……为依据）；locate /ˈloʊˌkeɪt/（把……设在）；station /ˈsteɪʃən/（驻扎；安置）；situate /ˈsɪtʃuˌeɪt/（使位于）；root /ˈruːt/（使根植于）",
-    "directAntonym": "",
+    "directAntonym": "disregard /ˌdɪsrɪˈɡɑrd/（不考虑；忽视）；relocate /ˌriːˈloʊkeɪt/（迁走；另设地点）；leave unsupported /ˈliːv ˌʌnsəˈpɔːrtɪd/（不给依据；使缺乏支撑）",
     "derivatives": "basis · based · basic · baseless · basically",
     "example": "Base your answer on the complete sentence, not one isolated word.",
     "exampleChinese": "回答要以完整句子为依据，而不是孤立的一个词。"
@@ -323,7 +323,29 @@
       "difference": "root 常用 be rooted in 说明历史、文化或原因上的深层根源；base 可指当下决策的直接依据。"
     }
   ],
-  "antonyms": [],
+  "antonyms": [
+    {
+      "word": "disregard",
+      "phonetic": "/ˌdɪsrɪˈɡɑrd/",
+      "partOfSpeech": "v.",
+      "chinese": "不考虑；忽视",
+      "usage": "只与 base a decision on evidence 的依据义相对；disregard 表示作决定时不考虑同一证据。"
+    },
+    {
+      "word": "relocate",
+      "phonetic": "/ˌriːˈloʊkeɪt/",
+      "partOfSpeech": "v.",
+      "chinese": "迁走；另设地点",
+      "usage": "只与 base staff/operations at a place 的驻地义相对；relocate 表示把人员或业务迁离该地点。"
+    },
+    {
+      "word": "leave unsupported",
+      "phonetic": "/ˈliːv ˌʌnsəˈpɔːrtɪd/",
+      "partOfSpeech": "v. phr.",
+      "chinese": "不给依据；使缺乏支撑",
+      "usage": "只与 base a claim on evidence 的依据义相对；leave unsupported 表示没有为同一主张提供证据基础。"
+    }
+  ],
   "derivatives": [
     {
       "word": "basis",
@@ -368,6 +390,13 @@
       "partOfSpeech": "n.",
       "chinese": "低音；低音乐器",
       "difference": "表示低音时 bass 与 base 同音；base 指基础或以……为依据。"
+    },
+    {
+      "word": "bias",
+      "phonetic": "/ˈbaɪəs/",
+      "partOfSpeech": "v. / n.",
+      "chinese": "使有偏见；偏见",
+      "difference": "base /beɪs/ 表示以……为依据；bias /ˈbaɪəs/ 表示使判断偏向一方，拼写相近但发音和作用不同。"
     }
   ],
   "relatedVocabulary": [
@@ -583,16 +612,16 @@
       "ai": false
     },
     {
-      "id": "base-v-synonym-choice-2",
+      "id": "base-v-antonym-choice",
       "type": "meaning_choice",
-      "prompt": "除“ground”外，在“把……设在”这个义项下，哪个词也与“base”意思接近？",
+      "prompt": "在“以……为依据；以……为基础”这个义项下，哪个词与“base”意思相反？",
       "options": [
         "be",
         "have",
         "do",
-        "locate"
+        "disregard"
       ],
-      "answer": "locate",
+      "answer": "disregard",
       "stage": "T2",
       "ai": false
     },
@@ -770,9 +799,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

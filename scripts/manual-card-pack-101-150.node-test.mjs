@@ -45,6 +45,8 @@ test('every card explicitly satisfies the complete-detail contract', () => {
     assert.equal(card.contexts.flatMap(([, rows]) => rows).length, 16,
       `${word} must have 16 context phrases`);
     assert.ok(card.synonyms.length >= 5, `${word} must have at least 5 synonyms`);
+    assert.ok(card.antonyms.length >= 3, `${word} must have at least 3 sense-scoped antonyms`);
+    assert.ok(card.confusables.length >= 2, `${word} must have at least 2 concrete confusables`);
     assert.ok(card.related.length >= 3, `${word} must have at least 3 related categories`);
     assert.equal(card.related.flatMap(([, rows]) => rows).length, 12,
       `${word} must have 12 related words`);

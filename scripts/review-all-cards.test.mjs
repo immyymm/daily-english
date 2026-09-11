@@ -89,13 +89,20 @@ function makeCard(index) {
     chinese: `近义动作${relationIndex + 1}`,
     difference: `synonym${index + 1}-${relationIndex + 1} 侧重具体方式；${word} 表示一般动作，两者的宾语范围不同。`
   }));
-  const antonyms = [{
-    word: `antonym${index + 1}`,
+  const antonyms = Array.from({ length: index === 0 ? 4 : 3 }, (_, relationIndex) => ({
+    word: `antonym${index + 1}-${relationIndex + 1}`,
     phonetic: '/ˈæntəˌnɪm/',
     partOfSpeech: 'v.',
-    chinese: '反向动作',
-    usage: `${word} 表示完成该动作；antonym${index + 1} 表示相反结果，二者只在这个义项上对立。`
-  }];
+    chinese: `反向动作${relationIndex + 1}`,
+    usage: `${word} 表示完成第${relationIndex + 1}类动作；antonym${index + 1}-${relationIndex + 1} 表示该义项的相反结果，适用范围不同。`
+  }));
+  const confusables = Array.from({ length: index === 0 ? 4 : 2 }, (_, relationIndex) => ({
+    word: `confusable${index + 1}-${relationIndex + 1}`,
+    phonetic: '/kənˈfjuːzəbəl/',
+    partOfSpeech: 'v.',
+    chinese: `易混动作${relationIndex + 1}`,
+    difference: `${word} 表示复核信息；confusable${index + 1}-${relationIndex + 1} 表示处理信息，二者的宾语和动作结果不同。`
+  }));
   const relatedVocabulary = Array.from({ length: 3 }, (_, groupIndex) => ({
     category: `语义领域${groupIndex + 1}`,
     items: Array.from({ length: 4 }, (_, itemIndex) => ({
@@ -123,7 +130,7 @@ function makeCard(index) {
     templateVersion: 'test-template-1',
     contentVersion: 'test-content-1',
     detailLevel: index === 0 ? 'template-reference' : 'template-curated',
-    curationSource: index === 0 ? 'locked-reference-example' : 'manual-semantic-pack-2026.09.10.4',
+    curationSource: index === 0 ? 'locked-reference-example' : 'manual-semantic-pack-test-template-1',
     reviewed: true,
     coreMemory: {
       chinese: '复核',
@@ -155,7 +162,7 @@ function makeCard(index) {
     synonyms,
     antonyms,
     derivatives: [],
-    confusables: [],
+    confusables,
     relatedVocabulary,
     examples: Array.from({ length: 12 }, (_, exampleIndex) => ({
       scene: `场景${exampleIndex + 1}`,
@@ -188,9 +195,9 @@ function makeFixture() {
         contextItems: 16,
         fixedPhrases: 12,
         synonyms: 5,
-        antonyms: 1,
+        antonyms: 4,
         derivatives: 0,
-        confusables: 0,
+        confusables: 4,
         relatedCategories: 3,
         relatedItems: 12,
         highFrequencyExamples: 12
@@ -201,6 +208,8 @@ function makeFixture() {
       contextItems: 16,
       fixedPhrases: 12,
       synonyms: 5,
+      antonyms: 3,
+      confusables: 2,
       relatedCategories: 3,
       relatedItems: 12,
       highFrequencyExamples: 12
@@ -210,14 +219,27 @@ function makeFixture() {
       contextItems: 16,
       fixedPhrases: 12,
       synonyms: 5,
+      antonyms: 3,
+      confusables: 2,
       relatedCategories: 3,
       relatedItems: 12,
       highFrequencyExamples: 12
     },
-    qualityContract: { coreStructures: 3, commonErrorPairs: 2 }
+    qualityContract: {
+      coreStructures: 3,
+      commonErrorPairs: 2,
+      minimumAntonymsPerCard: 3,
+      minimumConfusablesPerCard: 2
+    }
   };
   return {
     catalog: { contentVersion: 'test-content-1', templateVersion: 'test-template-1', total: cards.length, cards },
+    release: {
+      releaseVersion: 'test-content-1',
+      contentVersion: 'test-content-1',
+      templateVersion: 'test-template-1',
+      templateLockVersion: 'test-template-1'
+    },
     manifest: {
       contentVersion: 'test-content-1',
       templateVersion: 'test-template-1',
@@ -257,7 +279,7 @@ describe('full 150-card review', () => {
     expect(packageJson.scripts['predeploy:production']).toBe('pnpm run verify');
   });
 
-  it('uses explicit curated floors and does not inherit adaptive counts from published cards', () => {
+  it('keeps explicit floors while allowing omitted adaptive counts to resolve to zero', () => {
     const fixture = makeFixture();
     fixture.templateLock.publishedCardMinimums.contextItems = 14;
     fixture.templateLock.publishedCardMinimums.derivatives = 3;
@@ -267,15 +289,21 @@ describe('full 150-card review', () => {
     fixture.templateLock.qualityContract.curatedContextCategories = 4;
     fixture.templateLock.adaptiveSections = {
       meaningRows: 'semantic',
-      derivatives: 'semantic'
+      derivatives: 'semantic',
+      antonyms: 'legacy-conflict-must-not-disable-an-explicit-floor',
+      confusables: 'legacy-conflict-must-not-disable-an-explicit-floor'
     };
     const minimums = resolveReviewMinimums(fixture.templateLock);
     expect(minimums.published.contextItems).toBe(14);
     expect(minimums.curated.contextItems).toBe(10);
     expect(minimums.curated.contextCategories).toBe(4);
-    expect(minimums.published.derivatives).toBe(0);
+    expect(minimums.published.derivatives).toBe(3);
     expect(minimums.curated.derivatives).toBe(0);
     expect(minimums.curated.meaningRows).toBe(1);
+    expect(minimums.published.antonyms).toBe(3);
+    expect(minimums.curated.antonyms).toBe(3);
+    expect(minimums.published.confusables).toBe(2);
+    expect(minimums.curated.confusables).toBe(2);
   });
 
   it('emits one explicit passing row for each of 150 unique, complete cards', () => {
@@ -289,6 +317,55 @@ describe('full 150-card review', () => {
     expect(new Set(report.cards.map((card) => card.cardId)).size).toBe(EXPECTED_CARD_COUNT);
     expect(report.cards.every((card) => card.status === 'pass' && card.issues.length === 0)).toBe(true);
     expect(exitCodeForReport(report)).toBe(0);
+  });
+
+  it('fails a card when either mandatory relation section falls below the locked floor', () => {
+    const fixture = makeFixture();
+    fixture.catalog.cards[1].antonyms = fixture.catalog.cards[1].antonyms.slice(0, 2);
+    fixture.catalog.cards[1].confusables = fixture.catalog.cards[1].confusables.slice(0, 1);
+
+    const report = reviewCatalog({ ...fixture, generatedAt: '2026-09-11T00:00:00.000Z' });
+    const reviewed = report.cards[1];
+    expect(report.status).toBe('fail');
+    expect(reviewed.issues).toEqual(expect.arrayContaining([
+      expect.objectContaining({ code: 'SECTION_COUNT_BELOW_MINIMUM', path: 'antonyms' }),
+      expect.objectContaining({ code: 'SECTION_COUNT_BELOW_MINIMUM', path: 'confusables' })
+    ]));
+  });
+
+  it('rejects a coordinated lock downgrade and still enforces the immutable 3/2 relation floor', () => {
+    const fixture = makeFixture();
+    for (const shape of [
+      fixture.templateLock.publishedCardMinimums,
+      fixture.templateLock.curatedCardMinimums,
+      fixture.templateLock.referenceCard.recordedShape
+    ]) {
+      shape.antonyms = 1;
+      shape.confusables = 1;
+    }
+    fixture.templateLock.qualityContract.minimumAntonymsPerCard = 1;
+    fixture.templateLock.qualityContract.minimumConfusablesPerCard = 1;
+    fixture.catalog.cards[1].antonyms = fixture.catalog.cards[1].antonyms.slice(0, 1);
+    fixture.catalog.cards[1].confusables = fixture.catalog.cards[1].confusables.slice(0, 1);
+
+    const minimums = resolveReviewMinimums(fixture.templateLock);
+    expect(minimums.published.antonyms).toBe(3);
+    expect(minimums.curated.antonyms).toBe(3);
+    expect(minimums.reference.antonyms).toBe(4);
+    expect(minimums.published.confusables).toBe(2);
+    expect(minimums.curated.confusables).toBe(2);
+    expect(minimums.reference.confusables).toBe(4);
+
+    const report = reviewCatalog({ ...fixture, generatedAt: '2026-09-11T00:00:00.000Z' });
+    expect(report.status).toBe('fail');
+    expect(report.collectionIssues).toEqual(expect.arrayContaining([
+      expect.objectContaining({ code: 'QUALITY_CONTRACT_MISSING_OR_INVALID' }),
+      expect.objectContaining({ code: 'TEMPLATE_MINIMUM_MISSING_OR_INVALID' })
+    ]));
+    expect(report.cards[1].issues).toEqual(expect.arrayContaining([
+      expect.objectContaining({ code: 'SECTION_COUNT_BELOW_MINIMUM', path: 'antonyms' }),
+      expect.objectContaining({ code: 'SECTION_COUNT_BELOW_MINIMUM', path: 'confusables' })
+    ]));
   });
 
   it('passes the card headword into relation review for concise two-sided distinctions', () => {
@@ -364,10 +441,11 @@ describe('full 150-card review', () => {
   it('requires the real production catalog and saved review to prove all 150 cards pass', async () => {
     const catalog = JSON.parse(await fs.readFile(DEFAULT_REVIEW_PATHS.catalog, 'utf8'));
     const manifest = JSON.parse(await fs.readFile(DEFAULT_REVIEW_PATHS.manifest, 'utf8'));
+    const release = JSON.parse(await fs.readFile(DEFAULT_REVIEW_PATHS.release, 'utf8'));
     const templateLock = JSON.parse(await fs.readFile(DEFAULT_REVIEW_PATHS.templateLock, 'utf8'));
     const appliedTemplatePath = path.resolve(projectRoot, templateLock.appliedSpecification.path);
     const appliedTemplate = await fs.readFile(appliedTemplatePath, 'utf8');
-    const report = reviewCatalog({ catalog, manifest, templateLock, templateText: appliedTemplate });
+    const report = reviewCatalog({ catalog, manifest, release, templateLock, templateText: appliedTemplate });
     expect(report.status).toBe('pass');
     expect(report.summary.passed).toBe(EXPECTED_CARD_COUNT);
     expect(report.summary.failed).toBe(0);
@@ -395,6 +473,7 @@ describe('full 150-card review', () => {
     const paths = {
       catalog: path.join(directory, 'all-cards.json'),
       manifest: path.join(directory, 'content-manifest.json'),
+      release: path.join(directory, 'release.json'),
       templateLock: path.join(directory, 'template-lock.json'),
       template: path.join(directory, 'template.md'),
       manualPacks: path.join(directory, 'manual-card-packs.mjs'),
@@ -404,6 +483,7 @@ describe('full 150-card review', () => {
     await Promise.all([
       fs.writeFile(paths.catalog, JSON.stringify(fixture.catalog), 'utf8'),
       fs.writeFile(paths.manifest, JSON.stringify(fixture.manifest), 'utf8'),
+      fs.writeFile(paths.release, JSON.stringify(fixture.release), 'utf8'),
       fs.writeFile(paths.templateLock, JSON.stringify(fixture.templateLock), 'utf8'),
       fs.writeFile(paths.template, fixture.templateText, 'utf8'),
       fs.writeFile(paths.manualPacks, "export { fixturePack } from './manual-card-pack-fixture.mjs';\n", 'utf8'),
@@ -412,7 +492,7 @@ describe('full 150-card review', () => {
 
     const result = await runCardReview({ paths, generatedAt: '2026-09-10T00:00:00.000Z' });
     expect(result.exitCode).toBe(0);
-    for (const key of ['allCards', 'manifest', 'templateLock', 'manualPacks']) {
+    for (const key of ['allCards', 'manifest', 'release', 'templateLock', 'manualPacks', 'template']) {
       expect(result.report.sourceDigests[key].sha256).toMatch(/^[A-F0-9]{64}$/);
     }
     expect(result.report.sourceDigests.manualPacks.fileCount).toBe(2);
@@ -430,6 +510,20 @@ describe('full 150-card review', () => {
     expect(stale.mismatches).toEqual(expect.arrayContaining([
       expect.objectContaining({ key: 'manualPacks', reason: 'digest-mismatch' })
     ]));
+
+    await fs.appendFile(paths.template, '\n<!-- changed -->\n', 'utf8');
+    const staleTemplate = await checkReviewReportFreshness(result.report, { paths, templatePath: paths.template });
+    expect(staleTemplate.fresh).toBe(false);
+    expect(staleTemplate.mismatches).toEqual(expect.arrayContaining([
+      expect.objectContaining({ key: 'template', reason: 'digest-mismatch' })
+    ]));
+
+    await fs.appendFile(paths.release, '\n', 'utf8');
+    const staleRelease = await checkReviewReportFreshness(result.report, { paths, templatePath: paths.template });
+    expect(staleRelease.fresh).toBe(false);
+    expect(staleRelease.mismatches).toEqual(expect.arrayContaining([
+      expect.objectContaining({ key: 'release', reason: 'digest-mismatch' })
+    ]));
   });
 
   it('writes the requested JSON artifact and returns a nonzero exit code for a failed run', async () => {
@@ -440,6 +534,7 @@ describe('full 150-card review', () => {
     const paths = {
       catalog: path.join(directory, 'all-cards.json'),
       manifest: path.join(directory, 'content-manifest.json'),
+      release: path.join(directory, 'release.json'),
       templateLock: path.join(directory, 'template-lock.json'),
       template: path.join(directory, 'template.md'),
       manualPacks: path.join(directory, 'manual-card-packs.mjs'),
@@ -448,6 +543,7 @@ describe('full 150-card review', () => {
     await Promise.all([
       fs.writeFile(paths.catalog, JSON.stringify(fixture.catalog), 'utf8'),
       fs.writeFile(paths.manifest, JSON.stringify(fixture.manifest), 'utf8'),
+      fs.writeFile(paths.release, JSON.stringify(fixture.release), 'utf8'),
       fs.writeFile(paths.templateLock, JSON.stringify(fixture.templateLock), 'utf8'),
       fs.writeFile(paths.template, fixture.templateText, 'utf8'),
       fs.writeFile(paths.manualPacks, 'export const manualCardPacks = {};\n', 'utf8')

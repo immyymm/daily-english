@@ -71,7 +71,7 @@
       }
     ],
     "directSynonym": "slay /ˈsleɪ/（杀死）；execute /ˈɛksəˌkjuːt/（处决）；destroy /dɪˈstrɔɪ/（摧毁）；eliminate /ɪˈlɪməˌneɪt/（消除；淘汰）；put to death /ˈpʊt ˈtuː ˈdɛθ/（处死）",
-    "directAntonym": "save /ˈseɪv/（挽救生命）",
+    "directAntonym": "save /ˈseɪv/（挽救生命）；revive /rɪˈvaɪv/（使复苏；使恢复）；pass /ˈpæs/（通过（议案））",
     "derivatives": "killer · killing · overkill",
     "example": "I read short articles to kill time on the train.",
     "exampleChinese": "我在火车上读短文消磨时间。"
@@ -324,6 +324,20 @@
       "partOfSpeech": "v.",
       "chinese": "挽救生命",
       "usage": "与导致死亡相反；死亡对象、故意性和比喻破坏义都有严格限制"
+    },
+    {
+      "word": "revive",
+      "phonetic": "/rɪˈvaɪv/",
+      "partOfSpeech": "v.",
+      "chinese": "使复苏；使恢复",
+      "usage": "kill a project or proposal 表示使它失去继续推进的可能，revive it 表示重新提起并恢复推进；这里不指死者复生。"
+    },
+    {
+      "word": "pass",
+      "phonetic": "/ˈpæs/",
+      "partOfSpeech": "v.",
+      "chinese": "通过（议案）",
+      "usage": "kill a bill 表示阻止议案进入下一阶段，pass the bill 表示表决通过并使其继续立法程序。"
     }
   ],
   "derivatives": [
@@ -351,11 +365,18 @@
   ],
   "confusables": [
     {
-      "word": "murder",
-      "phonetic": "/ˈmɝːdɚ/",
+      "word": "skill",
+      "phonetic": "/ˈskɪl/",
+      "partOfSpeech": "n.",
+      "chinese": "技能；技巧",
+      "difference": "kill /kɪl/ 与 skill /skɪl/ 只差开头的 /s/ 音；kill 是使死亡，skill 是通过训练获得的技能。"
+    },
+    {
+      "word": "die",
+      "phonetic": "/ˈdaɪ/",
       "partOfSpeech": "v.",
-      "chinese": "谋杀",
-      "difference": "kill 是使死亡的通称；murder 特指非法且故意杀人"
+      "chinese": "死亡",
+      "difference": "kill 是及物动词，主语使别人或生物死亡；die 是不及物动词，主语自身死亡。"
     }
   ],
   "relatedVocabulary": [
@@ -589,12 +610,12 @@
       "type": "meaning_choice",
       "prompt": "结合拼写、发音和用法，哪一项需要与“kill”重点区分？",
       "options": [
-        "murder",
-        "be",
-        "have",
-        "do"
+        "skill",
+        "increase",
+        "actor",
+        "alarm"
       ],
-      "answer": "murder",
+      "answer": "skill",
       "stage": "T3",
       "ai": false
     },
@@ -758,9 +779,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

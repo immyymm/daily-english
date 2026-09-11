@@ -77,7 +77,7 @@
       }
     ],
     "directSynonym": "have in common /ˈhæv ɪn ˈkɑmən/（共同拥有；有共同点）；use jointly /juːz ˈdʒɔɪntli/（共同使用）；divide /dɪˈvaɪd/（分配；分开）；distribute /dɪˈstrɪbjut/（分发；分配）；communicate /kəˈmjuːnəˌkeɪt/（传达；交流）",
-    "directAntonym": "keep to oneself /ˈkiːp ˈtuː ˌwʌnˈsɛlf/（独自保留；不与人分享）；withhold /wɪθˈhoʊld/（扣留；不予提供）",
+    "directAntonym": "keep to oneself /ˈkiːp ˈtuː ˌwʌnˈsɛlf/（独自保留；不与人分享）；own exclusively /ˈoʊn ɪksˈkluːsɪvli/（独占；专有）；bear sole responsibility for /ˈbɛr ˈsoʊl riˌspɑnsəˈbɪləti ˈfɔːr/（独自承担全部责任）",
     "derivatives": "shareholder · sharing · shared · shareable",
     "example": "She shared a useful study tip with me.",
     "exampleChinese": "她和我分享了一个实用的学习技巧。"
@@ -341,16 +341,23 @@
     {
       "word": "keep to oneself",
       "phonetic": "/ˈkiːp ˈtuː ˌwʌnˈsɛlf/",
-      "partOfSpeech": "phr.v.",
+      "partOfSpeech": "v. phr.",
       "chinese": "独自保留；不与人分享",
-      "usage": "share 表示让别人共同使用或知道某物；keep something to oneself 表示只留给自己。"
+      "usage": "只与 share information/feelings 的告知义相对；keep something to oneself 表示把同一信息或感受留给自己。"
     },
     {
-      "word": "withhold",
-      "phonetic": "/wɪθˈhoʊld/",
-      "partOfSpeech": "v.",
-      "chinese": "扣留；不予提供",
-      "usage": "只与 share 信息或资源的义项相对；withhold 强调有意不给本可提供的东西。"
+      "word": "own exclusively",
+      "phonetic": "/ˈoʊn ɪksˈkluːsɪvli/",
+      "partOfSpeech": "v. phr.",
+      "chinese": "独占；专有",
+      "usage": "只与 share a resource/property 的共同使用或共有义相对；own exclusively 表示由一方单独拥有。"
+    },
+    {
+      "word": "bear sole responsibility for",
+      "phonetic": "/ˈbɛr ˈsoʊl riˌspɑnsəˈbɪləti ˈfɔːr/",
+      "partOfSpeech": "v. phr.",
+      "chinese": "独自承担全部责任",
+      "usage": "只与 share responsibility for a task 的共同承担义相对；bear sole responsibility for 表示责任完全由一方承担。"
     }
   ],
   "derivatives": [
@@ -390,6 +397,13 @@
       "partOfSpeech": "v.",
       "chinese": "剪羊毛；剪切",
       "difference": "share 表示分享、共用或分担；shear 表示用剪具剪羊毛或切断，两词拼写和元音发音不同。"
+    },
+    {
+      "word": "chair",
+      "phonetic": "/ˈtʃɛr/",
+      "partOfSpeech": "n. / v.",
+      "chinese": "椅子；主持",
+      "difference": "share /ʃɛr/ 与 chair /tʃɛr/ 只差起始辅音；share 表示分享，chair 表示椅子或主持会议。"
     }
   ],
   "relatedVocabulary": [
@@ -609,12 +623,12 @@
       "type": "meaning_choice",
       "prompt": "在“共用；共有；共同经历”这个义项下，哪个词与“share”意思相反？",
       "options": [
-        "withhold",
+        "keep to oneself",
         "be",
         "have",
         "do"
       ],
-      "answer": "withhold",
+      "answer": "keep to oneself",
       "stage": "T2",
       "ai": false
     },
@@ -792,9 +806,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

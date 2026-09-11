@@ -1,8 +1,8 @@
 {
   "date": "2026-09-14",
   "dayNumber": 29,
-  "contentVersion": "2026.09.10.4",
-  "templateVersion": "learning-template-2026.09.10.4",
+  "contentVersion": "2026.09.11.1",
+  "templateVersion": "learning-template-2026.09.11.1",
   "cards": [
     {
       "id": "manage-v",
@@ -77,7 +77,7 @@
           }
         ],
         "directSynonym": "administer /ədˈmɪnəstɚ/（管理）；run /ˈrʌn/（经营）；supervise /ˈsuːpɚˌvaɪz/（监督）；handle /ˈhændəl/（处理）；cope /ˈkoʊp/（应付）",
-        "directAntonym": "",
+        "directAntonym": "fail /ˈfeɪl/（未能做到；失败）；lose control of /ˈluːz kənˈtroʊl ˈʌv/（失去对……的控制）；be overwhelmed by /ˈbiː ˌoʊvɚˈwɛlmd ˈbaɪ/（被……压垮；无力应付）",
         "derivatives": "mismanage · manager · management · mismanagement · manageable · unmanageable",
         "example": "She managed to finish the report on time.",
         "exampleChinese": "她设法按时完成了报告。"
@@ -330,7 +330,29 @@
           "difference": "cope 是不及物动词，常用 cope with 表示在困难处境中应付；manage 可直接接项目、团队或工作量，还可用 manage to do。"
         }
       ],
-      "antonyms": [],
+      "antonyms": [
+        {
+          "word": "fail",
+          "phonetic": "/ˈfeɪl/",
+          "partOfSpeech": "v.",
+          "chinese": "未能做到；失败",
+          "usage": "只与 manage to do 表示设法成功的义项相对；fail to do 明确表示没有完成同一动作。"
+        },
+        {
+          "word": "lose control of",
+          "phonetic": "/ˈluːz kənˈtroʊl ˈʌv/",
+          "partOfSpeech": "v. phr.",
+          "chinese": "失去对……的控制",
+          "usage": "只与 manage a team/process 的管理义相对；lose control of 表示无法继续控制同一对象。"
+        },
+        {
+          "word": "be overwhelmed by",
+          "phonetic": "/ˈbiː ˌoʊvɚˈwɛlmd ˈbaɪ/",
+          "partOfSpeech": "v. phr.",
+          "chinese": "被……压垮；无力应付",
+          "usage": "只与 manage a workload/crisis 的应付义相对；be overwhelmed by 表示工作量或危机超出应对能力。"
+        }
+      ],
       "derivatives": [
         {
           "word": "mismanage",
@@ -375,7 +397,22 @@
           "note": "表示规模、行为或问题超出控制。"
         }
       ],
-      "confusables": [],
+      "confusables": [
+        {
+          "word": "try",
+          "phonetic": "/ˈtraɪ/",
+          "partOfSpeech": "v.",
+          "chinese": "尝试；努力",
+          "difference": "try to do 只说明付出努力，manage to do 明确表示最终成功；结果未知时不能用 manage 代替 try。"
+        },
+        {
+          "word": "maintain",
+          "phonetic": "/meɪnˈteɪn/",
+          "partOfSpeech": "v.",
+          "chinese": "维持；保养；坚持声称",
+          "difference": "manage 表示管理人员、资源或应付任务；maintain 表示让状态持续或保养设备，常见中文译法相近但宾语不同。"
+        }
+      ],
       "relatedVocabulary": [
         {
           "category": "项目管理",
@@ -589,30 +626,30 @@
           "ai": false
         },
         {
-          "id": "manage-v-synonym-choice-2",
+          "id": "manage-v-antonym-choice",
           "type": "meaning_choice",
-          "prompt": "除“administer”外，在“经营”这个义项下，哪个词也与“manage”意思接近？",
+          "prompt": "在“管理；经营”这个义项下，哪个词与“manage”意思相反？",
           "options": [
-            "run",
+            "fail",
             "be",
             "have",
             "do"
           ],
-          "answer": "run",
+          "answer": "fail",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "manage-v-contrast-choice",
           "type": "meaning_choice",
-          "prompt": "哪一项是“manage”的常用派生词？",
+          "prompt": "结合拼写、发音和用法，哪一项需要与“manage”重点区分？",
           "options": [
             "be",
             "have",
             "do",
-            "mismanage"
+            "try"
           ],
-          "answer": "mismanage",
+          "answer": "try",
           "stage": "T3",
           "ai": false
         },
@@ -776,10 +813,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -855,7 +892,7 @@
           }
         ],
         "directSynonym": "enhance /ɛnˈhæns/（提升）；refine /rəˈfaɪn/（改进）；upgrade /əpˈɡreɪd/（升级）；better /ˈbɛtɚ/（改善）；advance /ədˈvæns/（推进）",
-        "directAntonym": "worsen /ˈwɝːsən/（使恶化；变得更差）；deteriorate /dɪˈtɪriɚˌeɪt/（恶化）",
+        "directAntonym": "worsen /ˈwɝːsən/（使恶化；变得更差）；stagnate /ˈstæɡˌneɪt/（停滞；没有进步）；erase previous gains /ɪˈreɪs ˈpriːviəs ˈɡeɪnz/（抹去先前进步；使成果丧失）",
         "derivatives": "improvement · improved · improving",
         "example": "Daily practice will improve your speaking.",
         "exampleChinese": "每天练习会提高你的口语。"
@@ -1110,11 +1147,18 @@
           "usage": "可及物或不及物，是 improve 的直接质量反向"
         },
         {
-          "word": "deteriorate",
-          "phonetic": "/dɪˈtɪriɚˌeɪt/",
+          "word": "stagnate",
+          "phonetic": "/ˈstæɡˌneɪt/",
           "partOfSpeech": "v.",
-          "chinese": "恶化",
-          "usage": "不及物，强调状况逐渐变差；improve 表示逐步变好，deteriorate 表示状况逐步恶化。"
+          "chinese": "停滞；没有进步",
+          "usage": "只与能力、表现或状况逐步 improve 的义项相对；stagnate 表示长期停在原水平"
+        },
+        {
+          "word": "erase previous gains",
+          "phonetic": "/ɪˈreɪs ˈpriːviəs ˈɡeɪnz/",
+          "partOfSpeech": "v. phr.",
+          "chinese": "抹去先前进步；使成果丧失",
+          "usage": "只与 improve over time 所积累的进步义相对；erase previous gains 表示一次倒退使先前改善成果消失。"
         }
       ],
       "derivatives": [
@@ -1147,6 +1191,13 @@
           "partOfSpeech": "v.",
           "chinese": "即兴创作",
           "difference": "improve 是改善，improvise 是没有准备而即兴完成"
+        },
+        {
+          "word": "approve",
+          "phonetic": "/əˈpruːv/",
+          "partOfSpeech": "v.",
+          "chinese": "批准；赞成",
+          "difference": "improve /ɪmˈpruːv/ 表示改善，approve /əˈpruːv/ 表示批准或赞成；拼写结尾相近但宾语不同。"
         }
       ],
       "relatedVocabulary": [
@@ -1549,10 +1600,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -1628,7 +1679,7 @@
           }
         ],
         "directSynonym": "find /ˈfaɪnd/（发现）；uncover /ənˈkʌvɚ/（揭示）；detect /dɪˈtɛkt/（查出）；learn /ˈlɝːn/（得知）；identify /aɪˈdɛntəˌfaɪ/（确认）",
-        "directAntonym": "overlook /ˈoʊvɚˌlʊk/（未发现）",
+        "directAntonym": "overlook /ˈoʊvɚˌlʊk/（未发现）；conceal /kənˈsiːl/（隐藏；隐瞒）；lose /ˈluːz/（丢失；失去踪迹）",
         "derivatives": "discoverer · discovery · discoverable · undiscovered",
         "example": "You may discover a better way to remember it.",
         "exampleChinese": "你可能会发现更好的记忆方法。"
@@ -1888,6 +1939,20 @@
           "partOfSpeech": "v.",
           "chinese": "未发现",
           "usage": "discover 表示找到或得知原已存在的事物；overlook 表示因疏忽没有发现同一线索、细节或问题。"
+        },
+        {
+          "word": "conceal",
+          "phonetic": "/kənˈsiːl/",
+          "partOfSpeech": "v.",
+          "chinese": "隐藏；隐瞒",
+          "usage": "只与 discover/uncover information 的发现义相对；conceal 表示使同一信息不被发现。"
+        },
+        {
+          "word": "lose",
+          "phonetic": "/ˈluːz/",
+          "partOfSpeech": "v.",
+          "chinese": "丢失；失去踪迹",
+          "usage": "只与 discover/find a missing object 的找到义相对；lose 表示不再知道该物体所在。"
         }
       ],
       "derivatives": [
@@ -1927,6 +1992,13 @@
           "partOfSpeech": "v.",
           "chinese": "发明",
           "difference": "discover 是发现已存在的事物，invent 是创造此前没有的东西"
+        },
+        {
+          "word": "recover",
+          "phonetic": "/rɪˈkʌvɚ/",
+          "partOfSpeech": "v.",
+          "chinese": "找回；恢复",
+          "difference": "discover 表示首次发现或得知；recover 表示重新找回曾拥有的东西或从不良状态恢复。"
         }
       ],
       "relatedVocabulary": [
@@ -2329,10 +2401,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -2414,7 +2486,7 @@
           }
         ],
         "directSynonym": "manage /ˈmænədʒ/（处理）；deal with /ˈdiːl ˈwɪð/（处理）；operate /ˈɑpɚˌeɪt/（操作）；touch /ˈtʌtʃ/（拿；碰）；process /ˈprɑˌsɛs/（处理）",
-        "directAntonym": "botch /ˈbɑtʃ/（把……搞砸）",
+        "directAntonym": "botch /ˈbɑtʃ/（把……搞砸）；avoid /əˈvɔɪd/（回避；不处理）；drop /ˈdrɑp/（失手掉落；放下）",
         "derivatives": "mishandle · handler · handling · mishandling",
         "example": "She handled the difficult question well.",
         "exampleChinese": "她很好地应对了那个难题。"
@@ -2681,6 +2753,20 @@
           "partOfSpeech": "v.",
           "chinese": "把……搞砸",
           "usage": "handle 强调妥善处理；botch 指因粗心或能力不足而把工作做坏。"
+        },
+        {
+          "word": "avoid",
+          "phonetic": "/əˈvɔɪd/",
+          "partOfSpeech": "v.",
+          "chinese": "回避；不处理",
+          "usage": "只与 handle a problem/request 的处理义相对；avoid 表示不去面对或处理同一事项。"
+        },
+        {
+          "word": "drop",
+          "phonetic": "/ˈdrɑp/",
+          "partOfSpeech": "v.",
+          "chinese": "失手掉落；放下",
+          "usage": "只与 handle/hold an object securely 的拿持义相对；drop 表示物体脱手落下。"
         }
       ],
       "derivatives": [
@@ -2713,7 +2799,22 @@
           "note": "指错误处置事务、证据或物品。"
         }
       ],
-      "confusables": [],
+      "confusables": [
+        {
+          "word": "hand",
+          "phonetic": "/ˈhænd/",
+          "partOfSpeech": "n. / v.",
+          "chinese": "手；递交",
+          "difference": "handle 可作名词表示把手，也可作动词表示处理；hand 主要指手或亲手递交，不能表示处理问题。"
+        },
+        {
+          "word": "candle",
+          "phonetic": "/ˈkændəl/",
+          "partOfSpeech": "n.",
+          "chinese": "蜡烛",
+          "difference": "handle /ˈhændəl/ 表示处理或把手，candle /ˈkændəl/ 表示蜡烛；两词只差起始辅音，词性和含义不同。"
+        }
+      ],
       "relatedVocabulary": [
         {
           "category": "服务事务",
@@ -2943,14 +3044,14 @@
         {
           "id": "handle-v-contrast-choice",
           "type": "meaning_choice",
-          "prompt": "哪一项是“handle”的常用派生词？",
+          "prompt": "结合拼写、发音和用法，哪一项需要与“handle”重点区分？",
           "options": [
-            "mishandle",
-            "be",
-            "have",
-            "do"
+            "candle",
+            "increase",
+            "accent",
+            "access"
           ],
-          "answer": "mishandle",
+          "answer": "candle",
           "stage": "T3",
           "ai": false
         },
@@ -3114,10 +3215,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -3193,7 +3294,7 @@
           }
         ],
         "directSynonym": "accomplish /əˈkɑmplɪʃ/（完成）；attain /əˈteɪn/（达到）；reach /ˈriːtʃ/（达到）；realize /ˈriːəˌlaɪz/（实现）；fulfill /fʊlˈfɪl/（实现）",
-        "directAntonym": "fail /ˈfeɪl/（未能做到）",
+        "directAntonym": "fail /ˈfeɪl/（未能做到）；fall short of /ˈfɔːl ˈʃɔːrt ˈʌv/（未达到；不符合）；abandon /əˈbændən/（放弃；中止追求）",
         "derivatives": "achiever · achievement · achievable · unachievable",
         "example": "Small steps can help you achieve a big goal.",
         "exampleChinese": "小步前进可以帮助你实现大目标。"
@@ -3439,6 +3540,20 @@
           "partOfSpeech": "v.",
           "chinese": "未能做到",
           "usage": "通常要用 fail to achieve 或 fail to do 表达未实现目标"
+        },
+        {
+          "word": "fall short of",
+          "phonetic": "/ˈfɔːl ˈʃɔːrt ˈʌv/",
+          "partOfSpeech": "phr.v.",
+          "chinese": "未达到；不符合",
+          "usage": "只与 achieve a target/standard 的达到义相对；fall short of 表示结果低于同一目标或标准。"
+        },
+        {
+          "word": "abandon",
+          "phonetic": "/əˈbændən/",
+          "partOfSpeech": "v.",
+          "chinese": "放弃；中止追求",
+          "usage": "只与 achieve a goal through effort 的结果义相对；abandon 表示在达成前停止追求同一目标。"
         }
       ],
       "derivatives": [
@@ -3471,7 +3586,22 @@
           "note": "指目标在现有条件下无法达到。"
         }
       ],
-      "confusables": [],
+      "confusables": [
+        {
+          "word": "acquire",
+          "phonetic": "/əˈkwaɪɚ/",
+          "partOfSpeech": "v.",
+          "chinese": "获得；习得",
+          "difference": "achieve 表示通过努力达到目标或结果；acquire 表示获得物品、公司、知识或技能，宾语范围不同。"
+        },
+        {
+          "word": "receive",
+          "phonetic": "/rəˈsiːv/",
+          "partOfSpeech": "v.",
+          "chinese": "收到；接收",
+          "difference": "achieve 表示通过努力取得结果；receive 表示从别人或系统处收到事物，两词都有 ie/ei 拼写但宾语来源不同。"
+        }
+      ],
       "relatedVocabulary": [
         {
           "category": "目标规划",
@@ -3701,14 +3831,14 @@
         {
           "id": "achieve-v-contrast-choice",
           "type": "meaning_choice",
-          "prompt": "哪一项是“achieve”的常用派生词？",
+          "prompt": "结合拼写、发音和用法，哪一项需要与“achieve”重点区分？",
           "options": [
-            "increase",
-            "accident",
-            "accuracy",
-            "achiever"
+            "be",
+            "have",
+            "do",
+            "acquire"
           ],
-          "answer": "achiever",
+          "answer": "acquire",
           "stage": "T3",
           "ai": false
         },
@@ -3872,10 +4002,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     }
   ]

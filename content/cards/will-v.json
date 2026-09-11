@@ -77,7 +77,7 @@
       }
     ],
     "directSynonym": "be going to /ˈbiː ˈɡoʊɪŋ ˈtuː/（将要；打算）；be set to /ˈbiː ˈsɛt ˈtuː/（预计将；即将）；intend to /ˌɪnˈtɛnd ˈtuː/（打算做）；plan to /ˈplæn ˈtuː/（计划做）；be willing to /ˈbiː ˈwɪlɪŋ ˈtuː/（愿意做）",
-    "directAntonym": "",
+    "directAntonym": "refuse to /rəˈfjuːz ˈtuː/（拒绝做）；be forced to /ˈbiː ˈfɔːrst ˈtuː/（被迫做）；lack resolve /ˈlæk riˈzɑlv/（缺乏决心）",
     "derivatives": "willpower · willing · unwilling · willingly · unwillingly",
     "example": "I will review the new verbs after dinner.",
     "exampleChinese": "我晚饭后会复习这些新动词。"
@@ -344,7 +344,29 @@
       "difference": "只对应 will 的意愿义，不表示一般未来。"
     }
   ],
-  "antonyms": [],
+  "antonyms": [
+    {
+      "word": "refuse to",
+      "phonetic": "/rəˈfjuːz ˈtuː/",
+      "partOfSpeech": "phr.v.",
+      "chinese": "拒绝做",
+      "usage": "只与 will 表示愿意做某事的义项相对；will 说明主动意愿，refuse to 说明明确拒绝该行动。"
+    },
+    {
+      "word": "be forced to",
+      "phonetic": "/ˈbiː ˈfɔːrst ˈtuː/",
+      "partOfSpeech": "phr.",
+      "chinese": "被迫做",
+      "usage": "只与 will 表示出于自主意愿采取行动的义项相对；will 强调本人愿意或决定做，be forced to 表示行动来自外部强制。"
+    },
+    {
+      "word": "lack resolve",
+      "phonetic": "/ˈlæk riˈzɑlv/",
+      "partOfSpeech": "phr.v.",
+      "chinese": "缺乏决心",
+      "usage": "只与 will 作名词表示意志和决心的义项相对；a strong will 强调意志坚定＋lack resolve 表示缺乏坚持的决心。"
+    }
+  ],
   "derivatives": [
     {
       "word": "willpower",
@@ -389,6 +411,13 @@
       "partOfSpeech": "modal v.",
       "chinese": "会；愿意；将（过去视角）",
       "difference": "would 可表示假设、委婉或过去将来；will 通常指真实将来或直接意愿。"
+    },
+    {
+      "word": "well",
+      "phonetic": "/ˈwɛl/",
+      "partOfSpeech": "adv. / adj.",
+      "chinese": "好地；健康的",
+      "difference": "will /wɪl/ 是情态动词或名词；well /wɛl/ 是副词或形容词，元音、拼写和句法作用都不同。"
     }
   ],
   "relatedVocabulary": [
@@ -594,26 +623,26 @@
       "type": "meaning_choice",
       "prompt": "在“将要；打算”这个义项下，哪个词与“will”意思最接近？",
       "options": [
-        "be bound to",
+        "be assigned",
         "be going to",
         "account for",
-        "be aware of"
+        "back out of"
       ],
       "answer": "be going to",
       "stage": "T2",
       "ai": false
     },
     {
-      "id": "will-v-synonym-choice-2",
+      "id": "will-v-antonym-choice",
       "type": "meaning_choice",
-      "prompt": "除“be going to”外，在“预计将；即将”这个义项下，哪个词也与“will”意思接近？",
+      "prompt": "在“将；会”这个义项下，哪个词与“will”意思相反？",
       "options": [
-        "be set to",
+        "refuse to",
         "attend to",
-        "be seated",
-        "carry out"
+        "be absent",
+        "be seated"
       ],
-      "answer": "be set to",
+      "answer": "refuse to",
       "stage": "T2",
       "ai": false
     },
@@ -791,9 +820,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

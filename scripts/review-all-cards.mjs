@@ -24,6 +24,7 @@ export const projectRoot = path.resolve(scriptDirectory, '..');
 export const DEFAULT_REVIEW_PATHS = Object.freeze({
   catalog: path.join(projectRoot, 'public', 'data', 'all-cards.json'),
   manifest: path.join(projectRoot, 'content', 'content-manifest.json'),
+  release: path.join(projectRoot, 'content', 'release.json'),
   templateLock: path.join(projectRoot, 'content', 'templates', 'template-lock.json'),
   manualPacks: path.join(projectRoot, 'scripts', 'manual-card-packs.mjs'),
   report: path.join(projectRoot, 'content', 'card-review-report.json')
@@ -37,9 +38,9 @@ const BASE_MINIMUMS = Object.freeze({
   contextItems: 16,
   fixedPhrases: 12,
   synonyms: 5,
-  antonyms: 0,
+  antonyms: 3,
   derivatives: 0,
-  confusables: 0,
+  confusables: 2,
   relatedCategories: 3,
   relatedItems: 8,
   highFrequencyExamples: 12,
@@ -49,6 +50,7 @@ const BASE_MINIMUMS = Object.freeze({
   coreStructures: 3,
   commonErrorPairs: 2
 });
+const BASE_REFERENCE_RELATION_MINIMUMS = Object.freeze({ antonyms: 4, confusables: 4 });
 
 const REQUIRED_QUESTION_TYPES = Object.freeze([
   'meaning_choice',
@@ -138,7 +140,7 @@ const compact = (value = '') => String(value ?? '').replace(/\s+/g, ' ').trim();
 const nonEmpty = (value) => typeof value === 'string' && compact(value).length > 0;
 const safeArray = (value) => Array.isArray(value) ? value : [];
 const sha256 = (value) => crypto.createHash('sha256').update(value).digest('hex').toUpperCase();
-const REQUIRED_SOURCE_DIGESTS = Object.freeze(['allCards', 'manifest', 'templateLock', 'manualPacks']);
+const REQUIRED_SOURCE_DIGESTS = Object.freeze(['allCards', 'manifest', 'release', 'templateLock', 'manualPacks', 'template']);
 const LOCAL_MODULE_SPECIFIER = /\b(?:import|export)\s+(?:(?:[^'\"]*?\sfrom\s*)?)['\"](\.{1,2}\/[^'\"]+)['\"]/g;
 
 async function resolveLocalModulePath(importerPath, specifier) {
@@ -214,9 +216,10 @@ async function digestManualPackGraph(entryPath) {
 
 export async function computeReviewSourceDigests({ paths = DEFAULT_REVIEW_PATHS, templatePath } = {}) {
   const resolvedTemplate = templatePath ?? paths.template;
-  const [allCards, manifest, templateLock, manualPacks, template] = await Promise.all([
+  const [allCards, manifest, release, templateLock, manualPacks, template] = await Promise.all([
     digestFile(paths.catalog ?? DEFAULT_REVIEW_PATHS.catalog),
     digestFile(paths.manifest ?? DEFAULT_REVIEW_PATHS.manifest),
+    digestFile(paths.release ?? DEFAULT_REVIEW_PATHS.release),
     digestFile(paths.templateLock ?? DEFAULT_REVIEW_PATHS.templateLock),
     digestManualPackGraph(paths.manualPacks ?? DEFAULT_REVIEW_PATHS.manualPacks),
     resolvedTemplate ? digestFile(resolvedTemplate) : Promise.resolve(undefined)
@@ -224,6 +227,7 @@ export async function computeReviewSourceDigests({ paths = DEFAULT_REVIEW_PATHS,
   return {
     allCards,
     manifest,
+    release,
     templateLock,
     manualPacks,
     ...(template ? { template } : {})
@@ -287,15 +291,19 @@ export function resolveReviewMinimums(templateLock = {}) {
   const quality = templateLock.qualityContract ?? {};
   const adaptive = new Set(Object.keys(templateLock.adaptiveSections ?? {}));
   const questions = templateLock.questionMinimums ?? {};
+  const relationFloors = {
+    antonyms: Math.max(BASE_MINIMUMS.antonyms, numericMinimum(quality.minimumAntonymsPerCard, BASE_MINIMUMS.antonyms)),
+    confusables: Math.max(BASE_MINIMUMS.confusables, numericMinimum(quality.minimumConfusablesPerCard, BASE_MINIMUMS.confusables))
+  };
   const fromShape = (shape = {}, fallback = BASE_MINIMUMS) => ({
     meaningRows: numericMinimum(shape.meaningRows, fallback.meaningRows),
     contextCategories: numericMinimum(shape.contextCategories, fallback.contextCategories),
     contextItems: numericMinimum(shape.contextItems, fallback.contextItems),
     fixedPhrases: numericMinimum(shape.fixedPhrases, fallback.fixedPhrases),
     synonyms: numericMinimum(shape.synonyms, fallback.synonyms),
-    antonyms: numericMinimum(shape.antonyms, fallback.antonyms),
+    antonyms: Math.max(numericMinimum(shape.antonyms, fallback.antonyms), relationFloors.antonyms),
     derivatives: numericMinimum(shape.derivatives, fallback.derivatives),
-    confusables: numericMinimum(shape.confusables, fallback.confusables),
+    confusables: Math.max(numericMinimum(shape.confusables, fallback.confusables), relationFloors.confusables),
     relatedCategories: numericMinimum(shape.relatedCategories, fallback.relatedCategories),
     relatedItems: numericMinimum(shape.relatedItems, fallback.relatedItems),
     highFrequencyExamples: numericMinimum(shape.highFrequencyExamples, fallback.highFrequencyExamples),
@@ -313,18 +321,22 @@ export function resolveReviewMinimums(templateLock = {}) {
   };
   const curatedMinimums = fromShape(curatedShape, {
     ...publishedMinimums,
-    antonyms: 0,
-    derivatives: 0,
-    confusables: 0
+    derivatives: 0
   });
-  // The lock, not historical defaults, identifies sections whose cardinality
-  // is semantic. Meanings still need one complete row; other adaptive sections
-  // may legitimately be empty instead of being padded with fake relations.
+  // Adaptive sections may omit a count only when the applicable shape does not
+  // define an explicit floor. This prevents an adaptive label from silently
+  // disabling a published relation threshold.
   for (const field of adaptive) {
-    if (Object.hasOwn(publishedMinimums, field)) publishedMinimums[field] = field === 'meaningRows' ? 1 : 0;
-    if (Object.hasOwn(curatedMinimums, field)) curatedMinimums[field] = field === 'meaningRows' ? 1 : 0;
+    if (Object.hasOwn(publishedMinimums, field) && !Object.hasOwn(published, field)) {
+      publishedMinimums[field] = Math.max(field === 'meaningRows' ? 1 : 0, relationFloors[field] ?? 0);
+    }
+    if (Object.hasOwn(curatedMinimums, field) && !Object.hasOwn(curated, field)) {
+      curatedMinimums[field] = Math.max(field === 'meaningRows' ? 1 : 0, relationFloors[field] ?? 0);
+    }
   }
   const referenceMinimums = fromShape(templateLock.referenceCard?.recordedShape ?? {}, curatedMinimums);
+  referenceMinimums.antonyms = Math.max(referenceMinimums.antonyms, BASE_REFERENCE_RELATION_MINIMUMS.antonyms);
+  referenceMinimums.confusables = Math.max(referenceMinimums.confusables, BASE_REFERENCE_RELATION_MINIMUMS.confusables);
   return { published: publishedMinimums, curated: curatedMinimums, reference: referenceMinimums };
 }
 
@@ -540,7 +552,7 @@ function checkCardMetadata(issues, card, templateLock, activeTemplateVersion, ac
   }
   const referenceId = templateLock.referenceCard?.cardId;
   const expectedDetailLevel = card?.id === referenceId ? 'template-reference' : 'template-curated';
-  const expectedCurationSource = card?.id === referenceId ? 'locked-reference-example' : 'manual-semantic-pack-2026.09.10.4';
+  const expectedCurationSource = card?.id === referenceId ? 'locked-reference-example' : `manual-semantic-pack-${templateLock.lockVersion}`;
   if (card?.reviewed === true && card?.detailLevel !== expectedDetailLevel) {
     pushIssue(issues, {
       code: 'REVIEWED_DETAIL_LEVEL_MISMATCH',
@@ -1140,7 +1152,7 @@ function duplicateSet(values, normalize = compact) {
   return new Set([...counts.entries()].filter(([, count]) => count > 1).map(([key]) => key));
 }
 
-function checkTemplateAndManifest(collectionIssues, { catalog, manifest, templateLock, templateText }) {
+function checkTemplateAndManifest(collectionIssues, { catalog, manifest, release, templateLock, templateText }) {
   const cards = safeArray(catalog?.cards);
   const cardIds = cards.map((card) => compact(card?.id));
   const manifestIds = safeArray(manifest?.cardIds).map(compact);
@@ -1151,6 +1163,8 @@ function checkTemplateAndManifest(collectionIssues, { catalog, manifest, templat
     'contextItems',
     'fixedPhrases',
     'synonyms',
+    'antonyms',
+    'confusables',
     'relatedCategories',
     'relatedItems',
     'highFrequencyExamples'
@@ -1170,6 +1184,16 @@ function checkTemplateAndManifest(collectionIssues, { catalog, manifest, templat
       evidence: { immutable: templateLock?.immutable, lockVersion: templateLock?.lockVersion }
     });
   }
+  for (const field of ['antonyms', 'confusables']) {
+    if (Object.hasOwn(templateLock?.adaptiveSections ?? {}, field)) {
+      pushIssue(collectionIssues, {
+        code: 'MANDATORY_RELATION_MARKED_ADAPTIVE',
+        path: `templateLock.adaptiveSections.${field}`,
+        message: 'Mandatory relation sections cannot be disabled through adaptive-section metadata.',
+        evidence: templateLock.adaptiveSections[field]
+      });
+    }
+  }
   if (!nonEmpty(templateLock?.appliedSpecification?.path)
     || !/^[A-F0-9]{64}$/i.test(String(templateLock?.appliedSpecification?.sha256 ?? ''))) {
     pushIssue(collectionIssues, {
@@ -1181,11 +1205,16 @@ function checkTemplateAndManifest(collectionIssues, { catalog, manifest, templat
   }
   for (const field of requiredMinimumFields) {
     const value = templateLock?.publishedCardMinimums?.[field];
-    if (!Number.isInteger(value) || value < 0) {
+    const hardFloor = field === 'antonyms'
+      ? Math.max(BASE_MINIMUMS.antonyms, templateLock?.qualityContract?.minimumAntonymsPerCard ?? 0)
+      : field === 'confusables'
+        ? Math.max(BASE_MINIMUMS.confusables, templateLock?.qualityContract?.minimumConfusablesPerCard ?? 0)
+        : 0;
+    if (!Number.isInteger(value) || value < hardFloor) {
       pushIssue(collectionIssues, {
         code: 'TEMPLATE_MINIMUM_MISSING_OR_INVALID',
         path: `templateLock.publishedCardMinimums.${field}`,
-        message: 'Required published-card count floor must be an explicit non-negative integer.',
+        message: 'Required published-card count floor must be explicit and no weaker than its quality-contract floor.',
         evidence: value
       });
     }
@@ -1197,6 +1226,8 @@ function checkTemplateAndManifest(collectionIssues, { catalog, manifest, templat
     contextItems: templateLock?.curatedCardMinimums?.contextItems,
     fixedPhrases: templateLock?.curatedCardMinimums?.fixedPhrases,
     synonyms: templateLock?.curatedCardMinimums?.synonyms,
+    antonyms: templateLock?.curatedCardMinimums?.antonyms,
+    confusables: templateLock?.curatedCardMinimums?.confusables,
     relatedCategories: templateLock?.curatedCardMinimums?.relatedCategories
       ?? templateLock?.qualityContract?.curatedRelatedCategories
       ?? templateLock?.publishedCardMinimums?.relatedCategories,
@@ -1204,33 +1235,48 @@ function checkTemplateAndManifest(collectionIssues, { catalog, manifest, templat
     highFrequencyExamples: templateLock?.curatedCardMinimums?.highFrequencyExamples
   };
   for (const [field, value] of Object.entries(curatedMinimumSources)) {
-      if (!Number.isInteger(value) || value < 0) {
+      const hardFloor = field === 'antonyms'
+        ? Math.max(BASE_MINIMUMS.antonyms, templateLock?.qualityContract?.minimumAntonymsPerCard ?? 0)
+        : field === 'confusables'
+          ? Math.max(BASE_MINIMUMS.confusables, templateLock?.qualityContract?.minimumConfusablesPerCard ?? 0)
+          : 0;
+      if (!Number.isInteger(value) || value < hardFloor) {
         pushIssue(collectionIssues, {
           code: 'TEMPLATE_MINIMUM_MISSING_OR_INVALID',
           path: `templateLock.curatedCardMinimums.${field}`,
-          message: 'Required curated-card count floor must resolve to a non-negative integer from the active lock.',
+          message: 'Required curated-card count floor must resolve to a value no weaker than the quality-contract floor.',
           evidence: value
         });
       }
   }
   for (const field of referenceShapeFields) {
     const value = templateLock?.referenceCard?.recordedShape?.[field];
-    if (!Number.isInteger(value) || value < 0) {
+    const hardFloor = field === 'antonyms'
+      ? BASE_REFERENCE_RELATION_MINIMUMS.antonyms
+      : field === 'confusables'
+        ? BASE_REFERENCE_RELATION_MINIMUMS.confusables
+        : 0;
+    if (!Number.isInteger(value) || value < hardFloor) {
       pushIssue(collectionIssues, {
         code: 'REFERENCE_SHAPE_MISSING_OR_INVALID',
         path: `templateLock.referenceCard.recordedShape.${field}`,
-        message: 'Reference-card shape must explicitly record every learner-facing section count.',
+        message: `Reference-card shape must explicitly record every learner-facing section count and preserve the ${hardFloor} floor.`,
         evidence: value
       });
     }
   }
-  for (const field of ['coreStructures', 'commonErrorPairs']) {
+  for (const field of ['coreStructures', 'commonErrorPairs', 'minimumAntonymsPerCard', 'minimumConfusablesPerCard']) {
     const value = templateLock?.qualityContract?.[field];
-    if (!Number.isInteger(value) || value < 1) {
+    const hardFloor = field === 'minimumAntonymsPerCard'
+      ? BASE_MINIMUMS.antonyms
+      : field === 'minimumConfusablesPerCard'
+        ? BASE_MINIMUMS.confusables
+        : 1;
+    if (!Number.isInteger(value) || value < hardFloor) {
       pushIssue(collectionIssues, {
         code: 'QUALITY_CONTRACT_MISSING_OR_INVALID',
         path: `templateLock.qualityContract.${field}`,
-        message: 'Core template quality floor must be an explicit positive integer.',
+        message: `Core template quality floor must be an explicit integer no lower than ${hardFloor}.`,
         evidence: value
       });
     }
@@ -1294,6 +1340,28 @@ function checkTemplateAndManifest(collectionIssues, { catalog, manifest, templat
       evidence: { catalog: catalog?.contentVersion, manifest: manifest?.contentVersion }
     });
   }
+  if (!release || typeof release !== 'object' || Array.isArray(release)
+    || release.contentVersion !== catalog?.contentVersion
+    || release.contentVersion !== manifest?.contentVersion
+    || release.templateVersion !== catalog?.templateVersion
+    || release.templateVersion !== manifest?.templateVersion
+    || release.templateLockVersion !== templateLock?.lockVersion) {
+    pushIssue(collectionIssues, {
+      code: 'RELEASE_VERSION_MISMATCH',
+      path: 'release/catalog/manifest/templateLock',
+      message: 'Release, catalog, manifest, and template lock versions must form one immutable publication unit.',
+      evidence: {
+        releaseContent: release?.contentVersion,
+        catalogContent: catalog?.contentVersion,
+        manifestContent: manifest?.contentVersion,
+        releaseTemplate: release?.templateVersion,
+        catalogTemplate: catalog?.templateVersion,
+        manifestTemplate: manifest?.templateVersion,
+        releaseLock: release?.templateLockVersion,
+        lockVersion: templateLock?.lockVersion
+      }
+    });
+  }
   const appliedTemplateVersion = templateLock?.appliedSpecification?.path
     ? path.basename(templateLock.appliedSpecification.path, path.extname(templateLock.appliedSpecification.path))
     : '';
@@ -1353,6 +1421,7 @@ function summarizeIssues(cardReports, collectionIssues) {
 export function reviewCatalog({
   catalog,
   manifest,
+  release,
   templateLock,
   templateText,
   generatedAt = new Date().toISOString(),
@@ -1388,6 +1457,7 @@ export function reviewCatalog({
   checkTemplateAndManifest(collectionIssues, {
     catalog: safeCatalog,
     manifest: safeManifest,
+    release,
     templateLock: safeTemplateLock,
     templateText: String(templateText ?? '')
   });
@@ -1499,6 +1569,7 @@ export async function runCardReview({
   const resolvedPaths = {
     catalog: path.resolve(paths.catalog ?? DEFAULT_REVIEW_PATHS.catalog),
     manifest: path.resolve(paths.manifest ?? DEFAULT_REVIEW_PATHS.manifest),
+    release: path.resolve(paths.release ?? DEFAULT_REVIEW_PATHS.release),
     templateLock: path.resolve(paths.templateLock ?? DEFAULT_REVIEW_PATHS.templateLock),
     manualPacks: path.resolve(paths.manualPacks ?? DEFAULT_REVIEW_PATHS.manualPacks),
     report: path.resolve(paths.report ?? DEFAULT_REVIEW_PATHS.report)
@@ -1507,9 +1578,10 @@ export async function runCardReview({
   let sourceDigests = {};
   let report;
   try {
-    const [catalog, manifest, templateLock] = await Promise.all([
+    const [catalog, manifest, release, templateLock] = await Promise.all([
       readJson(resolvedPaths.catalog, 'catalog'),
       readJson(resolvedPaths.manifest, 'content manifest'),
+      readJson(resolvedPaths.release, 'release manifest'),
       readJson(resolvedPaths.templateLock, 'template lock')
     ]);
     const templatePath = paths.template
@@ -1524,6 +1596,7 @@ export async function runCardReview({
     report = reviewCatalog({
       catalog,
       manifest,
+      release,
       templateLock,
       templateText,
       generatedAt,
@@ -1572,6 +1645,7 @@ function parseArguments(argv) {
   const keys = new Map([
     ['--catalog', 'catalog'],
     ['--manifest', 'manifest'],
+    ['--release', 'release'],
     ['--template-lock', 'templateLock'],
     ['--manual-packs', 'manualPacks'],
     ['--template', 'template'],

@@ -71,7 +71,7 @@
       }
     ],
     "directSynonym": "recall /rɪˈkɔːl/（回想起）；recollect /ˌrɛkəˈlɛkt/（忆起）；retain /rɪˈteɪn/（记住；保留）；bear in mind /ˈbɛr ɪn ˈmaɪnd/（牢记）；commemorate /kəˈmɛmɚˌeɪt/（纪念）",
-    "directAntonym": "forget /fɚˈɡɛt/（忘记）",
+    "directAntonym": "forget /fɚˈɡɛt/（忘记）；overlook /ˈoʊvɚˌlʊk/（忽略；未注意）；leave out of one's will /ˈliːv ˈaʊt ˈʌv ˈwʌnz ˈwɪl/（不在遗嘱中给……留遗产）",
     "derivatives": "remembrance · memorable · memorably",
     "example": "Remember to save your work before you leave.",
     "exampleChinese": "离开前记得保存工作。"
@@ -331,6 +331,20 @@
       "partOfSpeech": "v.",
       "chinese": "忘记",
       "usage": "与记得信息或事情相反；回忆经历、记住事项和纪念人物的结构不同"
+    },
+    {
+      "word": "overlook",
+      "phonetic": "/ˈoʊvɚˌlʊk/",
+      "partOfSpeech": "v.",
+      "chinese": "忽略；未注意",
+      "usage": "remember a required detail 是想起并按要求处理它，overlook the detail 是因疏忽而没有想起或处理。"
+    },
+    {
+      "word": "leave out of one's will",
+      "phonetic": "/ˈliːv ˈaʊt ˈʌv ˈwʌnz ˈwɪl/",
+      "partOfSpeech": "phr.",
+      "chinese": "不在遗嘱中给……留遗产",
+      "usage": "remember someone in one's will 表示在遗嘱中给其留下财产，leave that person out of one's will 表示明确不作该继承安排。"
     }
   ],
   "derivatives": [
@@ -358,11 +372,18 @@
   ],
   "confusables": [
     {
-      "word": "remind",
-      "phonetic": "/riˈmaɪnd/",
+      "word": "resemble",
+      "phonetic": "/rɪˈzɛmbəl/",
       "partOfSpeech": "v.",
-      "chinese": "提醒；使想起",
-      "difference": "remember 是自己记得；remind 是使别人想起，常用 remind someone to do/of something"
+      "chinese": "与……相像",
+      "difference": "remember /rɪˈmɛmbər/ 与 resemble /rɪˈzɛmbəl/ 拼写节奏接近；remember 表示记得，resemble 表示外观或特征相像。"
+    },
+    {
+      "word": "remainder",
+      "phonetic": "/rɪˈmeɪndɚ/",
+      "partOfSpeech": "n.",
+      "chinese": "剩余部分；余数",
+      "difference": "remember 与 remainder 开头和结尾拼写相近；remember 是记得的动词，remainder 是剩余部分或数学余数。"
     }
   ],
   "relatedVocabulary": [
@@ -596,12 +617,12 @@
       "type": "meaning_choice",
       "prompt": "结合拼写、发音和用法，哪一项需要与“remember”重点区分？",
       "options": [
-        "remind",
+        "resemble",
         "be",
         "have",
         "do"
       ],
-      "answer": "remind",
+      "answer": "resemble",
       "stage": "T3",
       "ai": false
     },
@@ -765,9 +786,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

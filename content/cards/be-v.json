@@ -71,7 +71,7 @@
       }
     ],
     "directSynonym": "exist /ɪɡˈzɪst/（存在）；remain /rɪˈmeɪn/（仍然是；保持）；constitute /ˈkɑnstəˌtuːt/（构成；相当于）；equal /ˈiːkwəl/（等于；相当于）；serve as /ˈsɝːv ˈæz/（担任；用作）",
-    "directAntonym": "cease to exist /ˈsiːs ˈtuː ɪɡˈzɪst/（不复存在）",
+    "directAntonym": "cease to exist /ˈsiːs ˈtuː ɪɡˈzɪst/（不复存在）；disappear /ˌdɪsəˈpɪr/（消失；不再出现）；be absent /ˈbiː ˈæbsənt/（缺席；不在场）",
     "derivatives": "being",
     "example": "Please be ready before the lesson starts.",
     "exampleChinese": "请在课程开始前准备好。"
@@ -331,6 +331,20 @@
       "partOfSpeech": "phr.",
       "chinese": "不复存在",
       "usage": "仅与 be 的‘存在’义形成明确对比。"
+    },
+    {
+      "word": "disappear",
+      "phonetic": "/ˌdɪsəˈpɪr/",
+      "partOfSpeech": "v.",
+      "chinese": "消失；不再出现",
+      "usage": "只在 be 表示‘存在或在场’的常用义上相对；be 表示仍然存在，disappear 表示变得看不见或不再出现。"
+    },
+    {
+      "word": "be absent",
+      "phonetic": "/ˈbiː ˈæbsənt/",
+      "partOfSpeech": "phr.",
+      "chinese": "缺席；不在场",
+      "usage": "只对应 be present 的在场义；be 表示人或物在某处，be absent 表示该人或物不在场。"
     }
   ],
   "derivatives": [
@@ -575,12 +589,12 @@
       "type": "meaning_choice",
       "prompt": "在“存在；有”这个义项下，哪个词与“be”意思相反？",
       "options": [
-        "cease to exist",
-        "be conceivable",
-        "be expected to",
-        "be grateful to"
+        "disappear",
+        "have",
+        "do",
+        "say"
       ],
-      "answer": "cease to exist",
+      "answer": "disappear",
       "stage": "T2",
       "ai": false
     },
@@ -758,9 +772,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

@@ -120,6 +120,8 @@ describe('quality section helpers', () => {
     ];
     expect(partOfSpeechCompatible('v. / n.', 'v.')).toBe(true);
     expect(partOfSpeechCompatible('v. / n.', 'n.')).toBe(true);
+    expect(partOfSpeechCompatible('det. / pron.', 'pron.')).toBe(true);
+    expect(partOfSpeechCompatible('num.', 'num.')).toBe(true);
     expect(selectRelationQuestionAnswer(synonyms, { preferredWord: 'labor' })?.word).toBe('labor');
     expect(selectRelationQuestionAnswer(antonyms, { preferredWord: 'rest' })?.word).toBe('rest');
     const couldSynonyms = [

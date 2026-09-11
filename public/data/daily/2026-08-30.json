@@ -1,8 +1,8 @@
 {
   "date": "2026-08-30",
   "dayNumber": 14,
-  "contentVersion": "2026.09.10.4",
-  "templateVersion": "learning-template-2026.09.10.4",
+  "contentVersion": "2026.09.11.1",
+  "templateVersion": "learning-template-2026.09.11.1",
   "cards": [
     {
       "id": "thank-v",
@@ -77,7 +77,7 @@
           }
         ],
         "directSynonym": "show gratitude to /ˈʃoʊ ˈɡrætəˌtuːd ˈtuː/（向……表示感激）；express gratitude to /ɪkˈsprɛs ˈɡrætəˌtuːd ˈtuː/（向……表达感激）；give thanks to /ˈɡɪv ˈθæŋks ˈtuː/（向……致谢）；acknowledge /ækˈnɑlɪdʒ/（致谢；承认）；be grateful to /ˈbiː ˈɡreɪtfəl ˈtuː/（感激某人）",
-        "directAntonym": "",
+        "directAntonym": "blame /ˈbleɪm/（责怪；归咎）；criticize /ˈkrɪtɪˌsaɪz/（批评）；take for granted /ˈteɪk ˈfɔːr ˈɡræntəd/（把……当作理所当然）",
         "derivatives": "thanks · thankfulness · thankful · thankless · thankfully",
         "example": "I want to thank you for your detailed feedback.",
         "exampleChinese": "我想感谢你的详细反馈。"
@@ -316,7 +316,29 @@
           "difference": "形容词结构，常接 for；宾语是受谢者还是受益事项会决定所用句型"
         }
       ],
-      "antonyms": [],
+      "antonyms": [
+        {
+          "word": "blame",
+          "phonetic": "/ˈbleɪm/",
+          "partOfSpeech": "v.",
+          "chinese": "责怪；归咎",
+          "usage": "thank someone for a result 是将好处归功于对方，blame someone for it 是将坏结果归咎于对方。"
+        },
+        {
+          "word": "criticize",
+          "phonetic": "/ˈkrɪtɪˌsaɪz/",
+          "partOfSpeech": "v.",
+          "chinese": "批评",
+          "usage": "thank 用言语表达对帮助或付出的感激，criticize 则针对行为或结果表达不满。"
+        },
+        {
+          "word": "take for granted",
+          "phonetic": "/ˈteɪk ˈfɔːr ˈɡræntəd/",
+          "partOfSpeech": "phr.",
+          "chinese": "把……当作理所当然",
+          "usage": "thank 表明说话者看到并认可对方的付出，take for granted 表示接受好处却不表示感激。"
+        }
+      ],
       "derivatives": [
         {
           "word": "thanks",
@@ -356,11 +378,18 @@
       ],
       "confusables": [
         {
-          "word": "appreciate",
-          "phonetic": "/əˈpriːʃiˌeɪt/",
+          "word": "tank",
+          "phonetic": "/ˈtæŋk/",
+          "partOfSpeech": "n.",
+          "chinese": "坦克；储罐",
+          "difference": "thank /θæŋk/ 与 tank /tæŋk/ 只差开头的 /h/ 音；thank 表示感谢，tank 是坦克或储罐。"
+        },
+        {
+          "word": "think",
+          "phonetic": "/ˈθɪŋk/",
           "partOfSpeech": "v.",
-          "chinese": "感激；欣赏",
-          "difference": "thank 后接人再用 for；appreciate 通常直接接事或 doing"
+          "chinese": "思考；认为",
+          "difference": "thank /θæŋk/ 和 think /θɪŋk/ 的元音不同；thank 表示感谢，think 表示思考或认为。"
         }
       ],
       "relatedVocabulary": [
@@ -576,16 +605,30 @@
           "ai": false
         },
         {
-          "id": "thank-v-contrast-choice",
+          "id": "thank-v-antonym-choice",
           "type": "meaning_choice",
-          "prompt": "结合拼写、发音和用法，哪一项需要与“thank”重点区分？",
+          "prompt": "在“感谢；致谢”这个义项下，哪个词与“thank”意思相反？",
           "options": [
             "be",
             "have",
             "do",
-            "appreciate"
+            "blame"
           ],
-          "answer": "appreciate",
+          "answer": "blame",
+          "stage": "T2",
+          "ai": false
+        },
+        {
+          "id": "thank-v-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "结合拼写、发音和用法，哪一项需要与“thank”重点区分？",
+          "options": [
+            "ball",
+            "bass",
+            "tank",
+            "increase"
+          ],
+          "answer": "tank",
           "stage": "T3",
           "ai": false
         },
@@ -749,10 +792,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -834,7 +877,7 @@
           }
         ],
         "directSynonym": "alter /ˈɔːltɚ/（改变）；modify /ˈmɑdəˌfaɪ/（修改；调整）；transform /trænsˈfɔːrm/（彻底改变）；switch /ˈswɪtʃ/（切换；更换）；vary /ˈvɛri/（变化；使不同）",
-        "directAntonym": "remain /rɪˈmeɪn/（保持不变）",
+        "directAntonym": "remain /rɪˈmeɪn/（保持不变）；restore /rɪˈstɔːr/（恢复原状；还原）；preserve /prəˈzɝːv/（保持；保存）",
         "derivatives": "changeable · unchanged · changing",
         "example": "A small habit can change your whole day.",
         "exampleChinese": "一个小习惯可以改变你的一整天。"
@@ -1094,6 +1137,20 @@
           "partOfSpeech": "v.",
           "chinese": "保持不变",
           "usage": "与发生改变的义项相对；改变幅度、及物性和结果状态都有语义限制"
+        },
+        {
+          "word": "restore",
+          "phonetic": "/rɪˈstɔːr/",
+          "partOfSpeech": "v.",
+          "chinese": "恢复原状；还原",
+          "usage": "change a setting 是使它离开原来状态，restore the setting 是撤销该改动并恢复原状。"
+        },
+        {
+          "word": "preserve",
+          "phonetic": "/prəˈzɝːv/",
+          "partOfSpeech": "v.",
+          "chinese": "保持；保存",
+          "usage": "change something 是改动对象原有状态，preserve it 是保护该状态不被改动。"
         }
       ],
       "derivatives": [
@@ -1126,6 +1183,13 @@
           "partOfSpeech": "v.",
           "chinese": "交换；兑换",
           "difference": "change 可指一方状态改变；exchange 强调双方互换"
+        },
+        {
+          "word": "chance",
+          "phonetic": "/ˈtʃæns/",
+          "partOfSpeech": "n.",
+          "chinese": "机会；可能性",
+          "difference": "change /tʃeɪndʒ/ 中有 /dʒ/ 结尾，chance /tʃæns/ 以 /ns/ 结尾；两词字形相近但含义不同。"
         }
       ],
       "relatedVocabulary": [
@@ -1528,10 +1592,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -1613,7 +1677,7 @@
           }
         ],
         "directSynonym": "observe /əbˈzɝːv/（观察）；view /ˈvjuː/（观看；查看）；monitor /ˈmɑnətɚ/（监测）；supervise /ˈsuːpɚˌvaɪz/（监督；照看）；keep an eye on /ˈkiːp ˈæn ˈaɪ ˈɑn/（留意；照看）",
-        "directAntonym": "ignore /ˌɪɡˈnɔːr/（忽视）",
+        "directAntonym": "ignore /ˌɪɡˈnɔːr/（忽视）；look away /ˈlʊk əˈweɪ/（把视线移开）；miss /ˈmɪs/（错过；没看到）",
         "derivatives": "watcher · watchfulness · watchful",
         "example": "Watch the video once without reading the subtitles.",
         "exampleChinese": "先不看字幕把视频看一遍。"
@@ -1873,6 +1937,20 @@
           "partOfSpeech": "v.",
           "chinese": "忽视",
           "usage": "与持续留意或观察相反；观看时长、观察目的和是否持续监测均不同"
+        },
+        {
+          "word": "look away",
+          "phonetic": "/ˈlʊk əˈweɪ/",
+          "partOfSpeech": "phr.",
+          "chinese": "把视线移开",
+          "usage": "watch 表示持续把注意力放在变化的对象上，look away 表示主动把目光从对象移开。"
+        },
+        {
+          "word": "miss",
+          "phonetic": "/ˈmɪs/",
+          "partOfSpeech": "v.",
+          "chinese": "错过；没看到",
+          "usage": "watch a live event 表示实际观看过程，miss the event 表示未能看到该过程。"
         }
       ],
       "derivatives": [
@@ -1900,11 +1978,18 @@
       ],
       "confusables": [
         {
-          "word": "look at",
-          "phonetic": "/ˈlʊk ˈæt/",
-          "partOfSpeech": "phr.",
-          "chinese": "看向；查看",
-          "difference": "look at 强调将目光转向某物；watch 强调持续观看有运动或变化的对象"
+          "word": "wash",
+          "phonetic": "/ˈwɑʃ/",
+          "partOfSpeech": "v.",
+          "chinese": "洗；清洗",
+          "difference": "watch /wɑːtʃ/ 与 wash /wɑːʃ/ 只有词尾是否含 /t/ 的差别；watch 表示观看，wash 表示清洗。"
+        },
+        {
+          "word": "witch",
+          "phonetic": "/ˈwɪtʃ/",
+          "partOfSpeech": "n.",
+          "chinese": "女巫；巫婆",
+          "difference": "watch /wɑːtʃ/ 与 witch /wɪtʃ/ 辅音相同但元音不同；watch 表示观看，witch 是女巫。"
         }
       ],
       "relatedVocabulary": [
@@ -2136,14 +2221,14 @@
         {
           "id": "watch-v-contrast-choice",
           "type": "meaning_choice",
-          "prompt": "哪一项是“watch”的常用派生词？",
+          "prompt": "结合拼写、发音和用法，哪一项需要与“watch”重点区分？",
           "options": [
-            "watcher",
-            "increase",
-            "ability",
-            "absence"
+            "wash",
+            "be",
+            "have",
+            "do"
           ],
-          "answer": "watcher",
+          "answer": "wash",
           "stage": "T3",
           "ai": false
         },
@@ -2307,10 +2392,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -2386,7 +2471,7 @@
           }
         ],
         "directSynonym": "be seated /ˈbiː ˈsiːtɪd/（坐着；请坐）；take a seat /ˈteɪk ə ˈsiːt/（坐下）；perch /ˈpɝːtʃ/（坐在边缘或高处）；settle /ˈsɛtəl/（安坐下来）；remain /rɪˈmeɪn/（处于；位于）",
-        "directAntonym": "stand /ˈstænd/（站立）",
+        "directAntonym": "stand /ˈstænd/（站立）；vacate the seat /ˈveɪkeɪt ðə ˈsiːt/（离开座位；让出座位）；adjourn /əˈdʒɝːn/（休会；暂停庭审）",
         "derivatives": "sitter · sitting · seated",
         "example": "Please sit down and make yourself comfortable.",
         "exampleChinese": "请坐，让自己舒服一点。"
@@ -2645,7 +2730,21 @@
           "phonetic": "/ˈstænd/",
           "partOfSpeech": "v.",
           "chinese": "站立",
-          "usage": "与身体坐姿相对；须区分坐下动作、坐着状态和临时停留位置"
+          "usage": "在身体姿势上，sit 是臀部受支撑的坐姿，stand 是双脚支撑的直立姿势"
+        },
+        {
+          "word": "vacate the seat",
+          "phonetic": "/ˈveɪkeɪt ðə ˈsiːt/",
+          "partOfSpeech": "phr.",
+          "chinese": "离开座位；让出座位",
+          "usage": "sit in a seat 表示人占据座位坐着，vacate the seat 表示离开并使该座位空出。"
+        },
+        {
+          "word": "adjourn",
+          "phonetic": "/əˈdʒɝːn/",
+          "partOfSpeech": "v.",
+          "chinese": "休会；暂停庭审",
+          "usage": "在法院或委员会 sits 表示正式开会的语境中，adjourn 表示结束或暂停本次会议。"
         }
       ],
       "derivatives": [
@@ -2678,6 +2777,13 @@
           "partOfSpeech": "v.",
           "chinese": "使就座；可容纳",
           "difference": "sit 通常是不及物的“坐”；seat 通常是及物的“让某人坐”"
+        },
+        {
+          "word": "set",
+          "phonetic": "/ˈsɛt/",
+          "partOfSpeech": "v.",
+          "chinese": "放置；设定",
+          "difference": "sit /sɪt/ 多为不及物动词，表示人坐着；set /sɛt/ 可直接接宾语，表示放置或设定。"
         }
       ],
       "relatedVocabulary": [
@@ -3080,10 +3186,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -3159,7 +3265,7 @@
           }
         ],
         "directSynonym": "make /ˈmeɪk/（制作；创造）；produce /prəˈduːs/（生产；创作）；generate /ˈdʒɛnɚˌeɪt/（产生）；design /dɪˈzaɪn/（设计）；establish /ɪˈstæblɪʃ/（建立）",
-        "directAntonym": "destroy /dɪˈstrɔɪ/（摧毁）",
+        "directAntonym": "destroy /dɪˈstrɔɪ/（摧毁）；eliminate /ɪˈlɪməˌneɪt/（消除；淘汰）；abolish /əˈbɑlɪʃ/（废除）",
         "derivatives": "creation · creator · creativity · creative · creatively",
         "example": "Good questions can create meaningful conversations.",
         "exampleChinese": "好的问题可以促成有意义的对话。"
@@ -3412,6 +3518,20 @@
           "partOfSpeech": "v.",
           "chinese": "摧毁",
           "usage": "与使事物存在的创造义相反；创造对象及是否强调从无到有的范围不同"
+        },
+        {
+          "word": "eliminate",
+          "phonetic": "/ɪˈlɪməˌneɪt/",
+          "partOfSpeech": "v.",
+          "chinese": "消除；淘汰",
+          "usage": "create 使一个事物或机会开始存在，eliminate 则使已存在的对象消失或被移除。"
+        },
+        {
+          "word": "abolish",
+          "phonetic": "/əˈbɑlɪʃ/",
+          "partOfSpeech": "v.",
+          "chinese": "废除",
+          "usage": "在制度、职位或规则上，create 表示设立，abolish 表示通过正式决定将其废除。"
         }
       ],
       "derivatives": [
@@ -3453,11 +3573,18 @@
       ],
       "confusables": [
         {
-          "word": "invent",
-          "phonetic": "/ˌɪnˈvɛnt/",
+          "word": "curate",
+          "phonetic": "/ˈkjʊrət/",
           "partOfSpeech": "v.",
-          "chinese": "发明",
-          "difference": "create 范围广；invent 专指首次设计出此前没有的装置、方法等"
+          "chinese": "策划；精选并编排",
+          "difference": "create /kriˈeɪt/ 与 curate /ˈkjʊreɪt/ 拼写和结尾读音接近；create 是创造，curate 是精选并组织内容。"
+        },
+        {
+          "word": "crate",
+          "phonetic": "/ˈkreɪt/",
+          "partOfSpeech": "n.",
+          "chinese": "大木箱；塑料周转箱",
+          "difference": "create /kriˈeɪt/ 有三个音节，crate /kreɪt/ 只有一个音节；crate 是名词，create 是动词。"
         }
       ],
       "relatedVocabulary": [
@@ -3693,10 +3820,10 @@
           "options": [
             "have",
             "do",
-            "invent",
+            "curate",
             "be"
           ],
-          "answer": "invent",
+          "answer": "curate",
           "stage": "T3",
           "ai": false
         },
@@ -3860,10 +3987,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     }
   ]

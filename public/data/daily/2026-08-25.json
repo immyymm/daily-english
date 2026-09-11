@@ -1,8 +1,8 @@
 {
   "date": "2026-08-25",
   "dayNumber": 9,
-  "contentVersion": "2026.09.10.4",
-  "templateVersion": "learning-template-2026.09.10.4",
+  "contentVersion": "2026.09.11.1",
+  "templateVersion": "learning-template-2026.09.11.1",
   "cards": [
     {
       "id": "happen-v",
@@ -77,7 +77,7 @@
           }
         ],
         "directSynonym": "occur /əˈkɝː/（发生）；take place /ˈteɪk ˈpleɪs/（发生；举行）；arise /ɚˈaɪz/（出现；产生）；come about /ˈkʌm əˈbaʊt/（发生；产生）；transpire /trænˈspaɪɚ/（发生；后来得知）",
-        "directAntonym": "fail to occur /ˈfeɪl ˈtuː əˈkɝː/（没有发生）",
+        "directAntonym": "fail to occur /ˈfeɪl ˈtuː əˈkɝː/（没有发生）；be prevented /ˈbiː prɪˈvɛntɪd/（被阻止；未得以发生）；be canceled /ˈbiː ˈkænsəld/（被取消；不再举行）",
         "derivatives": "happening",
         "example": "What happened during the meeting?",
         "exampleChinese": "会议期间发生了什么？"
@@ -330,6 +330,20 @@
           "partOfSpeech": "phr.",
           "chinese": "没有发生",
           "usage": "与某事件实际发生相反；只与某个具体事件实际发生的义项构成反向关系。"
+        },
+        {
+          "word": "be prevented",
+          "phonetic": "/ˈbiː prɪˈvɛntɪd/",
+          "partOfSpeech": "phr.",
+          "chinese": "被阻止；未得以发生",
+          "usage": "只与 happen 表示某个事件实际发生的义项相对；happen 说明事件成为事实，be prevented 说明它被阻止而未发生。"
+        },
+        {
+          "word": "be canceled",
+          "phonetic": "/ˈbiː ˈkænsəld/",
+          "partOfSpeech": "phr.",
+          "chinese": "被取消；不再举行",
+          "usage": "只对应 happen 表示已安排的活动如期举行的义项；happen 表示活动发生，be canceled 表示安排被撤销。"
         }
       ],
       "derivatives": [
@@ -348,6 +362,13 @@
           "partOfSpeech": "phr.",
           "chinese": "被想到",
           "difference": "occur to someone 是某人想到；happen to do 是碰巧做。"
+        },
+        {
+          "word": "happen to",
+          "phonetic": "/ˈhæpən ˈtuː/",
+          "partOfSpeech": "phr.v.",
+          "chinese": "碰巧做；发生在……身上",
+          "difference": "happen 单独表示事件发生；happen to do 表示碰巧做某事，happen to someone 则表示某事降临在某人身上。"
         }
       ],
       "relatedVocabulary": [
@@ -568,9 +589,9 @@
           "prompt": "在“发生；出现”这个义项下，哪个词与“happen”意思相反？",
           "options": [
             "fail to occur",
+            "be accidental",
             "be allowed to",
-            "be capable of",
-            "be impossible"
+            "be capable of"
           ],
           "answer": "fail to occur",
           "stage": "T2",
@@ -750,10 +771,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -835,7 +856,7 @@
           }
         ],
         "directSynonym": "display /dɪˈspleɪ/（陈列；显示）；demonstrate /ˈdɛmənˌstreɪt/（示范；证明）；reveal /rɪˈviːl/（揭示）；present /prɪˈzɛnt/（呈现；展示）；indicate /ˈɪndəˌkeɪt/（表明）",
-        "directAntonym": "hide /ˈhaɪd/（隐藏）",
+        "directAntonym": "hide /ˈhaɪd/（隐藏）；disprove /dɪˈspruːv/（证明……为错）；suppress /səˈprɛs/（压下；不予公开）",
         "derivatives": "showcase · showing · showiness · showy",
         "example": "Please show me the sentence you want to improve.",
         "exampleChinese": "请给我看你想改进的句子。"
@@ -1095,6 +1116,20 @@
           "partOfSpeech": "v.",
           "chinese": "隐藏",
           "usage": "与让人看见或揭示信息相反；只与让别人看见事物或揭示信息的义项构成反向关系。"
+        },
+        {
+          "word": "disprove",
+          "phonetic": "/dɪˈspruːv/",
+          "partOfSpeech": "v.",
+          "chinese": "证明……为错",
+          "usage": "只与 show 表示证据显示某个结论成立的义项相对；show that 用证据支持结论，disprove 则用证据证明同一结论为错。"
+        },
+        {
+          "word": "suppress",
+          "phonetic": "/səˈprɛs/",
+          "partOfSpeech": "v.",
+          "chinese": "压下；不予公开",
+          "usage": "只对应 show 表示公开证据、数据或情感的义项；show 将内容显示出来，suppress 则压下不让其显现。"
         }
       ],
       "derivatives": [
@@ -1134,6 +1169,13 @@
           "partOfSpeech": "v.",
           "chinese": "证明",
           "difference": "show 可以出示事物或用迹象表明某种可能；prove 要求证据足以确立结论为真，证明强度更高。"
+        },
+        {
+          "word": "tell",
+          "phonetic": "/ˈtɛl/",
+          "partOfSpeech": "v.",
+          "chinese": "告诉；讲述",
+          "difference": "show someone how 强调通过示范或证据让人看明白；tell someone how 强调用语言或指令把信息说出来。"
         }
       ],
       "relatedVocabulary": [
@@ -1536,10 +1578,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -1615,7 +1657,7 @@
           }
         ],
         "directSynonym": "appear /əˈpɪr/（似乎；显得）；look /ˈlʊk/（看起来）；sound /ˈsaʊnd/（听起来）；give the impression of /ˈɡɪv ðə ˌɪmˈprɛʃən ˈʌv/（给人……印象）；strike someone as /ˈstraɪk ˈsʌmˌwʌn ˈæz/（给某人以……感觉）",
-        "directAntonym": "",
+        "directAntonym": "be certain /ˈbiː ˈsɝːtən/（确定无疑）；be evident /ˈbiː ˈɛvədənt/（显而易见；明确可证）；turn out not to be /ˈtɝːn ˈaʊt ˈnɑt ˈtuː ˈbiː/（结果并非；后来证明不是）",
         "derivatives": "seeming · seemingly",
         "example": "The task seems difficult at first.",
         "exampleChinese": "这个任务起初看起来很难。"
@@ -1854,7 +1896,29 @@
           "difference": "强调某人的即时主观判断；不能覆盖 seem to do、it seems that 或 there seems to be 等完整结构。"
         }
       ],
-      "antonyms": [],
+      "antonyms": [
+        {
+          "word": "be certain",
+          "phonetic": "/ˈbiː ˈsɝːtən/",
+          "partOfSpeech": "phr.",
+          "chinese": "确定无疑",
+          "usage": "只与 seem 表示依据印象作出不确定判断的义项相对；seem 保留不确定性，be certain 表示证据足以确定。"
+        },
+        {
+          "word": "be evident",
+          "phonetic": "/ˈbiː ˈɛvədənt/",
+          "partOfSpeech": "phr.",
+          "chinese": "显而易见；明确可证",
+          "usage": "只对应 seem 的表面印象义；seem 说明结论只是看起来如此，be evident 说明事实由明确证据显示出来。"
+        },
+        {
+          "word": "turn out not to be",
+          "phonetic": "/ˈtɝːn ˈaʊt ˈnɑt ˈtuː ˈbiː/",
+          "partOfSpeech": "phr.v.",
+          "chinese": "结果并非；后来证明不是",
+          "usage": "只与 seem to be 所表达的表面判断相对；seem to be 说明当时印象如此，turn out not to be 说明后来事实否定该印象。"
+        }
+      ],
       "derivatives": [
         {
           "word": "seeming",
@@ -1878,6 +1942,13 @@
           "partOfSpeech": "n.",
           "chinese": "缝；接缝",
           "difference": "seem 读 /siːm/ 且表示“似乎”；seam 同音，却是表示接缝的名词。"
+        },
+        {
+          "word": "seem like",
+          "phonetic": "/ˈsiːm ˈlaɪk/",
+          "partOfSpeech": "phr.v.",
+          "chinese": "似乎像；看来像",
+          "difference": "seem 可直接接形容词或 to do；seem like 通常接名词、名词短语或从句，不能在形容词前随意加 like。"
         }
       ],
       "relatedVocabulary": [
@@ -2093,16 +2164,16 @@
           "ai": false
         },
         {
-          "id": "seem-v-synonym-choice-2",
+          "id": "seem-v-antonym-choice",
           "type": "meaning_choice",
-          "prompt": "除“appear”外，在“看起来”这个义项下，哪个词也与“seem”意思接近？",
+          "prompt": "在“似乎；看起来”这个义项下，哪个词与“seem”意思相反？",
           "options": [
-            "have",
-            "do",
-            "look",
-            "be"
+            "be able to",
+            "be deaf to",
+            "be certain",
+            "agree with"
           ],
-          "answer": "look",
+          "answer": "be certain",
           "stage": "T2",
           "ai": false
         },
@@ -2280,10 +2351,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -2359,7 +2430,7 @@
           }
         ],
         "directSynonym": "may /ˈmeɪ/（可能）；could possibly /ˈkʊd ˈpɑsəbli/（有可能）；perhaps /pɚˈhæps/（也许）；possibly /ˈpɑsəbli/（可能地）；be conceivable /ˈbiː kənˈsiːvəbəl/（可以想象；有可能）",
-        "directAntonym": "be impossible /ˈbiː ˌɪmˈpɑsəbəl/（不可能）",
+        "directAntonym": "be impossible /ˈbiː ˌɪmˈpɑsəbəl/（不可能）；weakness /ˈwiːknəs/（虚弱；力量不足）；be certain to /ˈbiː ˈsɝːtən ˈtuː/（一定会；确定将）",
         "derivatives": "mighty · mightily",
         "example": "You might remember the word better after using it.",
         "exampleChinese": "使用这个词后你可能会记得更牢。"
@@ -2619,6 +2690,20 @@
           "partOfSpeech": "phr.",
           "chinese": "不可能",
           "usage": "与 might 的可能性义形成对比。"
+        },
+        {
+          "word": "weakness",
+          "phonetic": "/ˈwiːknəs/",
+          "partOfSpeech": "n.",
+          "chinese": "虚弱；力量不足",
+          "usage": "只与 might 作名词表示强大力量或权势的义项相对；might 强调强大的力量，weakness 表示缺乏力量或能力。"
+        },
+        {
+          "word": "be certain to",
+          "phonetic": "/ˈbiː ˈsɝːtən ˈtuː/",
+          "partOfSpeech": "phr.",
+          "chinese": "一定会；确定将",
+          "usage": "只对应 might 表示不确定推测的义项；might 说明只是可能，be certain to 则表示结果几乎确定会发生。"
         }
       ],
       "derivatives": [
@@ -2644,6 +2729,13 @@
           "partOfSpeech": "n.",
           "chinese": "螨；极少量",
           "difference": "might 是情态动词或“力量”名词；mite 与之同音，表示微小的螨。"
+        },
+        {
+          "word": "might have",
+          "phonetic": "/ˈmaɪt ˈhæv/",
+          "partOfSpeech": "modal phr.",
+          "chinese": "可能已经",
+          "difference": "might 加动词原形通常推测现在或将来；might have 后必须接过去分词，用于推测过去可能发生的事。"
         }
       ],
       "relatedVocabulary": [
@@ -2863,12 +2955,12 @@
           "type": "meaning_choice",
           "prompt": "在“可能；也许”这个义项下，哪个词与“might”意思相反？",
           "options": [
-            "be obliged to",
-            "be impossible",
-            "be allowed to",
-            "be capable of"
+            "accuracy",
+            "weakness",
+            "increase",
+            "accident"
           ],
-          "answer": "be impossible",
+          "answer": "weakness",
           "stage": "T2",
           "ai": false
         },
@@ -3046,10 +3138,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -3125,7 +3217,7 @@
           }
         ],
         "directSynonym": "perceive /pɚˈsiːv/（感知）；catch /ˈkætʃ/（听清；听见）；learn /ˈlɝːn/（得知）；listen to /ˈlɪsən ˈtuː/（听）；overhear /ˌoʊvɚˈhɪr/（无意听到）",
-        "directAntonym": "miss /ˈmɪs/（没听见；漏听）",
+        "directAntonym": "miss /ˈmɪs/（没听见；漏听）；ignore /ˌɪɡˈnɔːr/（忽视；不听取）；be deaf to /ˈbiː ˈdɛf ˈtuː/（对……充耳不闻）",
         "derivatives": "hearing · hearsay · unheard",
         "example": "I can hear a slight difference between the two vowels.",
         "exampleChinese": "我能听出这两个元音之间的细微差异。"
@@ -3385,6 +3477,20 @@
           "partOfSpeech": "v.",
           "chinese": "没听见；漏听",
           "usage": "与听清具体声音或信息相反；只与听清具体声音或言语信息的义项构成反向关系。"
+        },
+        {
+          "word": "ignore",
+          "phonetic": "/ˌɪɡˈnɔːr/",
+          "partOfSpeech": "v.",
+          "chinese": "忽视；不听取",
+          "usage": "只与 hear 表示听取某人的意见、证词或请求的义项相对；hear 表示接收并考虑，ignore 则不予理会。"
+        },
+        {
+          "word": "be deaf to",
+          "phonetic": "/ˈbiː ˈdɛf ˈtuː/",
+          "partOfSpeech": "phr.",
+          "chinese": "对……充耳不闻",
+          "usage": "只对应 hear 表示听到或听取声音和警告的义项；hear 表示能够感知，be deaf to 表示对该声音或警告没有反应。"
         }
       ],
       "derivatives": [
@@ -3417,6 +3523,13 @@
           "partOfSpeech": "v.",
           "chinese": "听；倾听",
           "difference": "listen 强调主动，通常接 to；hear 强调感知结果。"
+        },
+        {
+          "word": "here",
+          "phonetic": "/ˈhiːr/",
+          "partOfSpeech": "adv.",
+          "chinese": "在这里；到这里",
+          "difference": "hear 是动词‘听见’，here 是地点副词‘在这里’；两词都读 /hɪr/，但拼写和句法位置不同。"
         }
       ],
       "relatedVocabulary": [
@@ -3819,10 +3932,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     }
   ]

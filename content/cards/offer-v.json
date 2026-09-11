@@ -77,7 +77,7 @@
       }
     ],
     "directSynonym": "propose /prəˈpoʊz/（提议）；tender /ˈtɛndɚ/（正式提出；递交）；extend /ɪkˈstɛnd/（提出；给予）；volunteer /ˌvɑlənˈtɪr/（主动提出）；bid /ˈbɪd/（出价）",
-    "directAntonym": "withdraw /wɪðˈdrɔː/（撤回）；refuse /rəˈfjuːz/（拒绝）",
+    "directAntonym": "withdraw /wɪðˈdrɔː/（撤回）；refuse /rəˈfjuːz/（拒绝）；demand /dɪˈmænd/（要求；索取）",
     "derivatives": "counteroffer · offering",
     "example": "He offered to help me with the project.",
     "exampleChinese": "他主动提出帮我做这个项目。"
@@ -344,6 +344,13 @@
       "partOfSpeech": "v.",
       "chinese": "拒绝",
       "usage": "只在给予与拒绝提供的行为上相对；主动提出、正式提议和商业出价的场景不同"
+    },
+    {
+      "word": "demand",
+      "phonetic": "/dɪˈmænd/",
+      "partOfSpeech": "v.",
+      "chinese": "要求；索取",
+      "usage": "offer help or payment 是主动向对方给出资源，demand help or payment 是站在接收方立场强烈要求对方给出。"
     }
   ],
   "derivatives": [
@@ -364,11 +371,18 @@
   ],
   "confusables": [
     {
-      "word": "provide",
-      "phonetic": "/prəˈvaɪd/",
+      "word": "office",
+      "phonetic": "/ˈɔːfɪs/",
+      "partOfSpeech": "n.",
+      "chinese": "办公室；办事处",
+      "difference": "offer /ˈɔːfər/ 与 office /ˈɔːfɪs/ 开头拼写和重读音节接近；offer 是提出或提供，office 是办公场所。"
+    },
+    {
+      "word": "suggest",
+      "phonetic": "/səˈdʒɛst/",
       "partOfSpeech": "v.",
-      "chinese": "提供",
-      "difference": "offer 强调主动提出，对方可接受或拒绝；provide 强调实际提供所需之物"
+      "chinese": "建议；提出",
+      "difference": "offer to do 表示主动愿意亲自行动；suggest doing 只是提出建议，不表示自己必然执行。"
     }
   ],
   "relatedVocabulary": [
@@ -602,12 +616,12 @@
       "type": "meaning_choice",
       "prompt": "结合拼写、发音和用法，哪一项需要与“offer”重点区分？",
       "options": [
-        "have",
-        "do",
-        "provide",
-        "be"
+        "accent",
+        "access",
+        "office",
+        "increase"
       ],
-      "answer": "provide",
+      "answer": "office",
       "stage": "T3",
       "ai": false
     },
@@ -771,9 +785,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

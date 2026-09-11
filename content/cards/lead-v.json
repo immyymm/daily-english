@@ -77,7 +77,7 @@
       }
     ],
     "directSynonym": "guide /ˈɡaɪd/（引导）；direct /dɚˈɛkt/（指挥；指导）；head /ˈhɛd/（领导）；command /kəˈmænd/（指挥；统率）；cause /ˈkɑz/（导致）",
-    "directAntonym": "follow /ˈfɑloʊ/（跟随）",
+    "directAntonym": "follow /ˈfɑloʊ/（跟随）；lag behind /ˈlæɡ bɪˈhaɪnd/（落后）；prevent /prɪˈvɛnt/（阻止）",
     "derivatives": "leader · leadership · leading",
     "example": "She leads a small design team.",
     "exampleChinese": "她带领一个小型设计团队。"
@@ -337,6 +337,20 @@
       "partOfSpeech": "v.",
       "chinese": "跟随",
       "usage": "只在行进顺序或角色上与 lead 相对"
+    },
+    {
+      "word": "lag behind",
+      "phonetic": "/ˈlæɡ bɪˈhaɪnd/",
+      "partOfSpeech": "phr.",
+      "chinese": "落后",
+      "usage": "lead 在比赛或进度义上表示位于前列，lag behind 表示进度慢而落在后面。"
+    },
+    {
+      "word": "prevent",
+      "phonetic": "/prɪˈvɛnt/",
+      "partOfSpeech": "v.",
+      "chinese": "阻止",
+      "usage": "lead to a result 表示某因素促成该结果，prevent the result 表示阻止它发生。"
     }
   ],
   "derivatives": [
@@ -364,11 +378,18 @@
   ],
   "confusables": [
     {
-      "word": "led",
-      "phonetic": "/ˈlɛd/",
+      "word": "lid",
+      "phonetic": "/ˈlɪd/",
+      "partOfSpeech": "n.",
+      "chinese": "盖子",
+      "difference": "lead 作动词读 /liːd/，与 lid /lɪd/ 只有元音不同；lead 表示带领，lid 是容器的盖子。"
+    },
+    {
+      "word": "read",
+      "phonetic": "/riːd/",
       "partOfSpeech": "v.",
-      "chinese": "lead 的过去式和过去分词",
-      "difference": "动词 lead /liːd/ 的过去式是 led /lɛd/；不要写成 leaded（特定材料义除外）"
+      "chinese": "阅读",
+      "difference": "lead 作动词读 /liːd/，read 现在式读 /riːd/；两词韵母相同但开头辅音、拼写和含义不同。"
     }
   ],
   "relatedVocabulary": [
@@ -602,12 +623,12 @@
       "type": "meaning_choice",
       "prompt": "结合拼写、发音和用法，哪一项需要与“lead”重点区分？",
       "options": [
-        "be",
-        "have",
-        "do",
-        "led"
+        "increase",
+        "age",
+        "aid",
+        "lid"
       ],
-      "answer": "led",
+      "answer": "lid",
       "stage": "T3",
       "ai": false
     },
@@ -771,9 +792,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

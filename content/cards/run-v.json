@@ -77,7 +77,7 @@
       }
     ],
     "directSynonym": "jog /ˈdʒɑɡ/（慢跑）；sprint /ˈsprɪnt/（短距离冲刺）；operate /ˈɑpɚˌeɪt/（运行；操作）；manage /ˈmænədʒ/（管理）；flow /ˈfloʊ/（流动）",
-    "directAntonym": "stand still /ˈstænd ˈstɪl/（静止不动）",
+    "directAntonym": "stand still /ˈstænd ˈstɪl/（静止不动）；be idle /ˈbiː ˈaɪdəl/（闲置；未运行）；shut down /ˈʃʌt ˈdaʊn/（关闭；停止运转）",
     "derivatives": "rerun · runner · running · runaway",
     "example": "She runs a small online business from home.",
     "exampleChinese": "她在家经营一家小型网店。"
@@ -344,6 +344,20 @@
       "partOfSpeech": "phr.",
       "chinese": "静止不动",
       "usage": "与脚下移动的跑步义相反；只与人在地面上跑动或向前移动的义项构成反向关系。"
+    },
+    {
+      "word": "be idle",
+      "phonetic": "/ˈbiː ˈaɪdəl/",
+      "partOfSpeech": "phr.",
+      "chinese": "闲置；未运行",
+      "usage": "只与 run 表示机器、车辆或程序正在工作的义项相对；run 表示正在运行，be idle 表示设备暂时闲置未执行任务。"
+    },
+    {
+      "word": "shut down",
+      "phonetic": "/ˈʃʌt ˈdaʊn/",
+      "partOfSpeech": "phr.v.",
+      "chinese": "关闭；停止运转",
+      "usage": "只对应 run 表示机器、系统或业务正常运转的义项；run 使其继续运转，shut down 则关闭系统或停止经营。"
     }
   ],
   "derivatives": [
@@ -376,7 +390,22 @@
       "note": "常见于 runaway child、runaway growth。"
     }
   ],
-  "confusables": [],
+  "confusables": [
+    {
+      "word": "sun",
+      "phonetic": "/ˈsʌn/",
+      "partOfSpeech": "n.",
+      "chinese": "太阳；阳光",
+      "difference": "run /rʌn/ 与 sun /sʌn/ 只有开头辅音不同；run 是跑或运行的动词，sun 是太阳或阳光的名词。"
+    },
+    {
+      "word": "run out",
+      "phonetic": "/ˈrʌn ˈaʊt/",
+      "partOfSpeech": "phr.v.",
+      "chinese": "用完；耗尽",
+      "difference": "run 单独表示跑、运行或经营；run out 是整体短语动词，表示供应耗尽，接耗尽的对象时要用 run out of。"
+    }
+  ],
   "relatedVocabulary": [
     {
       "category": "跑步运动",
@@ -596,8 +625,8 @@
       "options": [
         "stand still",
         "account for",
-        "be aware of",
-        "be bound to"
+        "back out of",
+        "be assigned"
       ],
       "answer": "stand still",
       "stage": "T2",
@@ -606,14 +635,14 @@
     {
       "id": "run-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "哪一项是“run”的常用派生词？",
+      "prompt": "结合拼写、发音和用法，哪一项需要与“run”重点区分？",
       "options": [
-        "be",
-        "have",
-        "do",
-        "rerun"
+        "increase",
+        "age",
+        "aid",
+        "sun"
       ],
-      "answer": "rerun",
+      "answer": "sun",
       "stage": "T3",
       "ai": false
     },
@@ -777,9 +806,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

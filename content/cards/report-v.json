@@ -77,7 +77,7 @@
       }
     ],
     "directSynonym": "announce /əˈnaʊns/（宣布）；describe /dɪˈskraɪb/（描述）；document /ˈdɑkjəmɛnt/（记录；用文件证明）；notify /ˈnoʊtəˌfaɪ/（正式通知）；cover /ˈkʌvɚ/（采访报道）",
-    "directAntonym": "",
+    "directAntonym": "conceal /kənˈsiːl/（隐瞒；隐藏）；retract /riˈtrækt/（撤回；收回）；distort /dɪˈstɔːrt/（歪曲；曲解）",
     "derivatives": "reporter · reporting · reportable · reportedly",
     "example": "Please report the problem as soon as it happens.",
     "exampleChinese": "问题发生后请尽快报告。"
@@ -344,7 +344,29 @@
       "difference": "新闻语境中指持续采访并报道事件；report 也可用于非新闻的工作汇报、报案和报到。"
     }
   ],
-  "antonyms": [],
+  "antonyms": [
+    {
+      "word": "conceal",
+      "phonetic": "/kənˈsiːl/",
+      "partOfSpeech": "v.",
+      "chinese": "隐瞒；隐藏",
+      "usage": "只与 report an incident/fact 的如实报告义相对；conceal 表示有意不让同一事实被知道。"
+    },
+    {
+      "word": "retract",
+      "phonetic": "/riˈtrækt/",
+      "partOfSpeech": "v.",
+      "chinese": "撤回；收回",
+      "usage": "只与 report/publish a claim 的公开陈述义相对；retract 表示公开收回先前报告的同一说法。"
+    },
+    {
+      "word": "distort",
+      "phonetic": "/dɪˈstɔːrt/",
+      "partOfSpeech": "v.",
+      "chinese": "歪曲；曲解",
+      "usage": "只与 report facts/findings accurately 的如实报道义相对；distort 表示选择性呈现或改写，使同一事实失真。"
+    }
+  ],
   "derivatives": [
     {
       "word": "reporter",
@@ -375,7 +397,22 @@
       "note": "用于转述尚未由说话人亲自证实的消息。"
     }
   ],
-  "confusables": [],
+  "confusables": [
+    {
+      "word": "inform",
+      "phonetic": "/ˌɪnˈfɔːrm/",
+      "partOfSpeech": "v.",
+      "chinese": "通知；告知",
+      "difference": "report 通常是 report something to someone；inform 要说 inform someone of/about something，宾语顺序不同。"
+    },
+    {
+      "word": "rapport",
+      "phonetic": "/ræˈpɔːr/",
+      "partOfSpeech": "n.",
+      "chinese": "融洽关系；默契",
+      "difference": "report /rɪˈpɔːrt/ 表示报告；rapport /ræˈpɔːr/ 表示融洽关系，拼写近似但重音、开头元音和词性不同。"
+    }
+  ],
   "relatedVocabulary": [
     {
       "category": "事实与来源",
@@ -589,30 +626,30 @@
       "ai": false
     },
     {
-      "id": "report-v-synonym-choice-2",
+      "id": "report-v-antonym-choice",
       "type": "meaning_choice",
-      "prompt": "除“announce”外，在“描述”这个义项下，哪个词也与“report”意思接近？",
+      "prompt": "在“报告；汇报”这个义项下，哪个词与“report”意思相反？",
       "options": [
-        "describe",
+        "conceal",
         "be",
         "have",
         "do"
       ],
-      "answer": "describe",
+      "answer": "conceal",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "report-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "哪一项是“report”的常用派生词？",
+      "prompt": "结合拼写、发音和用法，哪一项需要与“report”重点区分？",
       "options": [
-        "increase",
-        "accident",
-        "accuracy",
-        "reporter"
+        "be",
+        "have",
+        "do",
+        "inform"
       ],
-      "answer": "reporter",
+      "answer": "inform",
       "stage": "T3",
       "ai": false
     },
@@ -776,9 +813,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

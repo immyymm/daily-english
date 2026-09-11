@@ -71,7 +71,7 @@
       }
     ],
     "directSynonym": "need /ˈniːd/（需要）；demand /dɪˈmænd/（强烈要求）；necessitate /nəˈsɛsəˌteɪt/（使成为必要）；call for /ˈkɔːl ˈfɔːr/（需要）；entail /ɛnˈteɪl/（必然涉及）",
-    "directAntonym": "",
+    "directAntonym": "waive /ˈweɪv/（免除；放弃执行）；exempt /ɪɡˈzɛmpt/（免除；豁免）；make optional /ˈmeɪk ˈɑpʃənəl/（改为可选）",
     "derivatives": "requirement · required",
     "example": "This task requires careful planning.",
     "exampleChinese": "这个任务需要仔细规划。"
@@ -317,7 +317,29 @@
       "difference": "强调某事不可避免地带来要求或后果；require 聚焦所需条件，entail 强调随之而来的结果。"
     }
   ],
-  "antonyms": [],
+  "antonyms": [
+    {
+      "word": "waive",
+      "phonetic": "/ˈweɪv/",
+      "partOfSpeech": "v.",
+      "chinese": "免除；放弃执行",
+      "usage": "只在规则义上相对：require a fee/document 是规定必须提供，waive the fee/requirement 是正式免除同一要求。"
+    },
+    {
+      "word": "exempt",
+      "phonetic": "/ɪɡˈzɛmpt/",
+      "partOfSpeech": "v.",
+      "chinese": "免除；豁免",
+      "usage": "只在对人的义务上相对：require someone to comply 是要求履行，exempt someone from it 是免除该义务。"
+    },
+    {
+      "word": "make optional",
+      "phonetic": "/ˈmeɪk ˈɑpʃənəl/",
+      "partOfSpeech": "v. phr.",
+      "chinese": "改为可选",
+      "usage": "只在强制要求上相对：require 表示必须具备或完成，make optional 表示允许自行选择。"
+    }
+  ],
   "derivatives": [
     {
       "word": "requirement",
@@ -341,6 +363,13 @@
       "partOfSpeech": "v.",
       "chinese": "请求",
       "difference": "request 是提出请求，require 是认为必要或正式规定"
+    },
+    {
+      "word": "inquire",
+      "phonetic": "/ˌɪnˈkwaɪr/",
+      "partOfSpeech": "v.",
+      "chinese": "询问；打听",
+      "difference": "require /rɪˈkwaɪr/ 表示需要或要求；inquire /ɪnˈkwaɪr/ 表示询问信息，拼写相近但宾语和目的不同。"
     }
   ],
   "relatedVocabulary": [
@@ -556,16 +585,16 @@
       "ai": false
     },
     {
-      "id": "require-v-synonym-choice-2",
+      "id": "require-v-antonym-choice",
       "type": "meaning_choice",
-      "prompt": "除“need”外，在“强烈要求”这个义项下，哪个词也与“require”意思接近？",
+      "prompt": "在“需要；有赖于”这个义项下，哪个词与“require”意思相反？",
       "options": [
         "be",
         "have",
         "do",
-        "demand"
+        "waive"
       ],
-      "answer": "demand",
+      "answer": "waive",
       "stage": "T2",
       "ai": false
     },
@@ -743,9 +772,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

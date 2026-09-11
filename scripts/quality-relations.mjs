@@ -246,6 +246,8 @@ const POS_ALIASES = Object.freeze({
   prep: 'prep.', preposition: 'prep.',
   conj: 'conj.', conjunction: 'conj.',
   pron: 'pron.', pronoun: 'pron.',
+  det: 'det.', determiner: 'det.',
+  num: 'num.', numeral: 'num.', number: 'num.',
   aux: 'aux.', auxiliary: 'aux.',
   phrase: 'phr.', phr: 'phr.'
 });

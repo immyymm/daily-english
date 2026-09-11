@@ -71,7 +71,7 @@
       }
     ],
     "directSynonym": "append /əˈpɛnd/（附加）；attach /əˈtætʃ/（附上；连接）；insert /ˌɪnˈsɝːt/（插入）；include /ˌɪnˈkluːd/（包括；加入）；increase /ɪnˈkriːs/（增加）",
-    "directAntonym": "subtract /səbˈtrækt/（减去）；remove /riˈmuːv/（移除）",
+    "directAntonym": "subtract /səbˈtrækt/（减去）；remove /riˈmuːv/（移除）；omit /oʊˈmɪt/（省略；遗漏）",
     "derivatives": "addition · additive · additional · additionally",
     "example": "Add one natural example to each new phrase.",
     "exampleChinese": "给每个新短语加一个自然例句。"
@@ -338,6 +338,13 @@
       "partOfSpeech": "v.",
       "chinese": "移除",
       "usage": "与把某物加入整体相反；加入物、添加位置与数值增加的结构不可混用"
+    },
+    {
+      "word": "omit",
+      "phonetic": "/oʊˈmɪt/",
+      "partOfSpeech": "v.",
+      "chinese": "省略；遗漏",
+      "usage": "add a detail 表示把信息写入内容，omit the detail 表示不把该信息列入。"
     }
   ],
   "derivatives": [
@@ -372,11 +379,18 @@
   ],
   "confusables": [
     {
-      "word": "plus",
-      "phonetic": "/ˈplʌs/",
-      "partOfSpeech": "prep./conj.",
-      "chinese": "加；加上",
-      "difference": "add 是动词，需随时态变化；plus 在数学或口语补充中通常不作普通动词"
+      "word": "aid",
+      "phonetic": "/ˈeɪd/",
+      "partOfSpeech": "n. / v.",
+      "chinese": "帮助；援助",
+      "difference": "add /æd/ 与 aid /eɪd/ 拼写接近但元音不同；add 表示增加，aid 表示帮助或援助。"
+    },
+    {
+      "word": "ad",
+      "phonetic": "/ˈæd/",
+      "partOfSpeech": "n.",
+      "chinese": "广告",
+      "difference": "ad 是 advertisement 的常用缩写，与 add / æd / 同音；add 是表示增加的动词。"
     }
   ],
   "relatedVocabulary": [
@@ -608,14 +622,14 @@
     {
       "id": "add-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "哪一项是“add”的常用派生词？",
+      "prompt": "结合拼写、发音和用法，哪一项需要与“add”重点区分？",
       "options": [
-        "accident",
-        "accuracy",
-        "achiever",
-        "addition"
+        "age",
+        "ban",
+        "bat",
+        "ad"
       ],
-      "answer": "addition",
+      "answer": "ad",
       "stage": "T3",
       "ai": false
     },
@@ -779,9 +793,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

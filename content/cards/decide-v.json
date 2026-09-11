@@ -71,7 +71,7 @@
       }
     ],
     "directSynonym": "choose /ˈtʃuːz/（选择）；determine /dəˈtɝːmən/（决定）；resolve /riˈzɑlv/（决定）；settle /ˈsɛtəl/（确定）；rule /ˈruːl/（裁定）",
-    "directAntonym": "hesitate /ˈhɛzəˌteɪt/（犹豫）",
+    "directAntonym": "hesitate /ˈhɛzəˌteɪt/（犹豫）；defer /dɪˈfɝː/（推迟决定；延期）；leave open /ˈliːv ˈoʊpən/（暂不决定；保留可能）",
     "derivatives": "decision · indecision · decisive · indecisive · decisively",
     "example": "I decided to start with five words a day.",
     "exampleChinese": "我决定从每天五个单词开始。"
@@ -324,6 +324,20 @@
       "partOfSpeech": "v.",
       "chinese": "犹豫",
       "usage": "decide 表示考虑后形成选择；hesitate 表示迟疑、暂未作出决定，只在决策过程上构成对照。"
+    },
+    {
+      "word": "defer",
+      "phonetic": "/dɪˈfɝː/",
+      "partOfSpeech": "v.",
+      "chinese": "推迟决定；延期",
+      "usage": "只在作出决定的时间上相对：decide 是形成结论，defer 是把决定留到以后。"
+    },
+    {
+      "word": "leave open",
+      "phonetic": "/ˈliːv ˈoʊpən/",
+      "partOfSpeech": "v. phr.",
+      "chinese": "暂不决定；保留可能",
+      "usage": "只与 decide/settle an issue 相对；leave it open 表示暂时不作结论并保留选择。"
     }
   ],
   "derivatives": [
@@ -363,7 +377,22 @@
       "note": "说明行动或判断迅速明确，并能最终决定结果。"
     }
   ],
-  "confusables": [],
+  "confusables": [
+    {
+      "word": "divide",
+      "phonetic": "/dɪˈvaɪd/",
+      "partOfSpeech": "v.",
+      "chinese": "分开；除以",
+      "difference": "decide /dɪˈsaɪd/ 表示作决定；divide /dɪˈvaɪd/ 表示分割或做除法，拼写节奏相近但含义不同。"
+    },
+    {
+      "word": "decide on",
+      "phonetic": "/ˌdɪˈsaɪd ˈɑn/",
+      "partOfSpeech": "phr.v.",
+      "chinese": "选定；决定采用",
+      "difference": "decide on 后接名词或 -ing 表示选定方案；decide to 后接动词原形表示决定采取动作。"
+    }
+  ],
   "relatedVocabulary": [
     {
       "category": "选择依据",
@@ -593,14 +622,14 @@
     {
       "id": "decide-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "哪一项是“decide”的常用派生词？",
+      "prompt": "结合拼写、发音和用法，哪一项需要与“decide”重点区分？",
       "options": [
-        "accident",
-        "accuracy",
-        "decision",
-        "increase"
+        "have",
+        "do",
+        "divide",
+        "be"
       ],
-      "answer": "decision",
+      "answer": "divide",
       "stage": "T3",
       "ai": false
     },
@@ -764,9 +793,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

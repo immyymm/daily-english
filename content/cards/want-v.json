@@ -71,7 +71,7 @@
       }
     ],
     "directSynonym": "desire /dɪˈzaɪɚ/（渴望；想要）；wish /ˈwɪʃ/（希望；愿望）；need /ˈniːd/（需要）；seek /ˈsiːk/（寻求；设法获得）；would like /ˈwʊd ˈlaɪk/（想要）",
-    "directAntonym": "",
+    "directAntonym": "reject /rɪˈdʒɛkt/（拒绝；不要）；do without /ˈduː wɪˈθaʊt/（没有……也能应付）；be satisfied with /ˈbiː ˈsætəsˌfaɪd ˈwɪð/（对……感到满足）",
     "derivatives": "wanted · unwanted · wanting",
     "example": "I want to improve my speaking this month.",
     "exampleChinese": "这个月我想提高口语。"
@@ -317,7 +317,29 @@
       "difference": "是 want 的礼貌表达，适合点餐、请求和正式交际。"
     }
   ],
-  "antonyms": [],
+  "antonyms": [
+    {
+      "word": "reject",
+      "phonetic": "/rɪˈdʒɛkt/",
+      "partOfSpeech": "v.",
+      "chinese": "拒绝；不要",
+      "usage": "只与 want 表示想要某个具体选项的义项相对；want 表示愿意得到，reject 表示明确不接受该选项。"
+    },
+    {
+      "word": "do without",
+      "phonetic": "/ˈduː wɪˈθaʊt/",
+      "partOfSpeech": "phr.v.",
+      "chinese": "没有……也能应付",
+      "usage": "只对应 want 表示需要某物的义项；want 表示希望获得它，do without 表示没有它也可以应付。"
+    },
+    {
+      "word": "be satisfied with",
+      "phonetic": "/ˈbiː ˈsætəsˌfaɪd ˈwɪð/",
+      "partOfSpeech": "phr.",
+      "chinese": "对……感到满足",
+      "usage": "只与 want 表示希望获得更多或换一个选项的义项相对；want 表示尚有欲求，be satisfied with 表示对现状已满足。"
+    }
+  ],
   "derivatives": [
     {
       "word": "wanted",
@@ -348,6 +370,13 @@
       "partOfSpeech": "modal v.",
       "chinese": "将不；不愿",
       "difference": "won't 是 will not 的缩写；want /wɑːnt/ 表示想要，拼写和发音都不同。"
+    },
+    {
+      "word": "went",
+      "phonetic": "/ˈwɛnt/",
+      "partOfSpeech": "v.",
+      "chinese": "去了（go 的过去式）",
+      "difference": "want /wɑːnt/ 表示想要；went /wɛnt/ 是 go 的过去式，两词元音、拼写和句中时态功能不同。"
     }
   ],
   "relatedVocabulary": [
@@ -563,30 +592,30 @@
       "ai": false
     },
     {
-      "id": "want-v-synonym-choice-2",
+      "id": "want-v-antonym-choice",
       "type": "meaning_choice",
-      "prompt": "除“desire”外，在“希望；愿望”这个义项下，哪个词也与“want”意思接近？",
+      "prompt": "在“想要；希望”这个义项下，哪个词与“want”意思相反？",
       "options": [
         "do",
-        "wish",
+        "reject",
         "be",
         "have"
       ],
-      "answer": "wish",
+      "answer": "reject",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "want-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "哪一项是“want”的常用派生词？",
+      "prompt": "结合拼写、发音和用法，哪一项需要与“want”重点区分？",
       "options": [
-        "wanted",
-        "absent",
-        "asking",
-        "canned"
+        "went",
+        "be",
+        "have",
+        "do"
       ],
-      "answer": "wanted",
+      "answer": "went",
       "stage": "T3",
       "ai": false
     },
@@ -750,9 +779,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

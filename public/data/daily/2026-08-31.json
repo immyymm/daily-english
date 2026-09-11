@@ -1,8 +1,8 @@
 {
   "date": "2026-08-31",
   "dayNumber": 15,
-  "contentVersion": "2026.09.10.4",
-  "templateVersion": "learning-template-2026.09.10.4",
+  "contentVersion": "2026.09.11.1",
+  "templateVersion": "learning-template-2026.09.11.1",
   "cards": [
     {
       "id": "learn-v",
@@ -77,7 +77,7 @@
           }
         ],
         "directSynonym": "study /ˈstʌdi/（学习；研究）；master /ˈmæstɚ/（掌握）；acquire /əˈkwaɪɚ/（习得；获得）；discover /dɪˈskʌvɚ/（得知；发现）；find out /ˈfaɪnd ˈaʊt/（查明；得知）",
-        "directAntonym": "forget /fɚˈɡɛt/（忘记）",
+        "directAntonym": "forget /fɚˈɡɛt/（忘记）；remain unaware of /rɪˈmeɪn ˌʌnəˈwɛr ˈʌv/（仍不知道）；fail to master /ˈfeɪl ˈtuː ˈmæstɚ/（未能掌握）",
         "derivatives": "unlearn · learner · learning",
         "example": "We learn faster when feedback is specific.",
         "exampleChinese": "反馈具体时，我们学得更快。"
@@ -330,6 +330,20 @@
           "partOfSpeech": "v.",
           "chinese": "忘记",
           "usage": "与学会并保留知识的结果相反；须区分学习过程、掌握结果和获知事实三类义项"
+        },
+        {
+          "word": "remain unaware of",
+          "phonetic": "/rɪˈmeɪn ˌʌnəˈwɛr ˈʌv/",
+          "partOfSpeech": "phr.",
+          "chinese": "仍不知道",
+          "usage": "learn a fact 表示获知一条信息，remain unaware of it 表示该信息仍未进入个人认知。"
+        },
+        {
+          "word": "fail to master",
+          "phonetic": "/ˈfeɪl ˈtuː ˈmæstɚ/",
+          "partOfSpeech": "phr.",
+          "chinese": "未能掌握",
+          "usage": "learn a skill 可表示经练习后掌握技能，fail to master it 表示学习过程没有达到掌握结果。"
         }
       ],
       "derivatives": [
@@ -362,6 +376,13 @@
           "partOfSpeech": "v.",
           "chinese": "教；教授",
           "difference": "learn 的主语是学习者；teach 的主语是教学者，常用 teach someone something"
+        },
+        {
+          "word": "earn",
+          "phonetic": "/ˈɝːn/",
+          "partOfSpeech": "v.",
+          "chinese": "赚得；获得",
+          "difference": "learn /lɝːn/ 比 earn /ɝːn/ 多开头的 /l/ 音和字母 l；learn 是学习，earn 是通过工作获得。"
         }
       ],
       "relatedVocabulary": [
@@ -764,10 +785,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -843,7 +864,7 @@
           }
         ],
         "directSynonym": "slay /ˈsleɪ/（杀死）；execute /ˈɛksəˌkjuːt/（处决）；destroy /dɪˈstrɔɪ/（摧毁）；eliminate /ɪˈlɪməˌneɪt/（消除；淘汰）；put to death /ˈpʊt ˈtuː ˈdɛθ/（处死）",
-        "directAntonym": "save /ˈseɪv/（挽救生命）",
+        "directAntonym": "save /ˈseɪv/（挽救生命）；revive /rɪˈvaɪv/（使复苏；使恢复）；pass /ˈpæs/（通过（议案））",
         "derivatives": "killer · killing · overkill",
         "example": "I read short articles to kill time on the train.",
         "exampleChinese": "我在火车上读短文消磨时间。"
@@ -1096,6 +1117,20 @@
           "partOfSpeech": "v.",
           "chinese": "挽救生命",
           "usage": "与导致死亡相反；死亡对象、故意性和比喻破坏义都有严格限制"
+        },
+        {
+          "word": "revive",
+          "phonetic": "/rɪˈvaɪv/",
+          "partOfSpeech": "v.",
+          "chinese": "使复苏；使恢复",
+          "usage": "kill a project or proposal 表示使它失去继续推进的可能，revive it 表示重新提起并恢复推进；这里不指死者复生。"
+        },
+        {
+          "word": "pass",
+          "phonetic": "/ˈpæs/",
+          "partOfSpeech": "v.",
+          "chinese": "通过（议案）",
+          "usage": "kill a bill 表示阻止议案进入下一阶段，pass the bill 表示表决通过并使其继续立法程序。"
         }
       ],
       "derivatives": [
@@ -1123,11 +1158,18 @@
       ],
       "confusables": [
         {
-          "word": "murder",
-          "phonetic": "/ˈmɝːdɚ/",
+          "word": "skill",
+          "phonetic": "/ˈskɪl/",
+          "partOfSpeech": "n.",
+          "chinese": "技能；技巧",
+          "difference": "kill /kɪl/ 与 skill /skɪl/ 只差开头的 /s/ 音；kill 是使死亡，skill 是通过训练获得的技能。"
+        },
+        {
+          "word": "die",
+          "phonetic": "/ˈdaɪ/",
           "partOfSpeech": "v.",
-          "chinese": "谋杀",
-          "difference": "kill 是使死亡的通称；murder 特指非法且故意杀人"
+          "chinese": "死亡",
+          "difference": "kill 是及物动词，主语使别人或生物死亡；die 是不及物动词，主语自身死亡。"
         }
       ],
       "relatedVocabulary": [
@@ -1361,12 +1403,12 @@
           "type": "meaning_choice",
           "prompt": "结合拼写、发音和用法，哪一项需要与“kill”重点区分？",
           "options": [
-            "murder",
-            "be",
-            "have",
-            "do"
+            "skill",
+            "increase",
+            "actor",
+            "alarm"
           ],
-          "answer": "murder",
+          "answer": "skill",
           "stage": "T3",
           "ai": false
         },
@@ -1530,10 +1572,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -1609,7 +1651,7 @@
           }
         ],
         "directSynonym": "cover /ˈkʌvɚ/（包括；涉及）；comprise /kəmˈpraɪz/（由……组成；包括）；incorporate /ˌɪnˈkɔːrpɚˌeɪt/（纳入；合并）；encompass /ɛnˈkʌmpəs/（涵盖）；involve /ˌɪnˈvɑlv/（包含；涉及）",
-        "directAntonym": "exclude /ɪksˈkluːd/（排除；不包括）",
+        "directAntonym": "exclude /ɪksˈkluːd/（排除；不包括）；omit /oʊˈmɪt/（省略；遗漏）；charge separately for /ˈtʃɑrdʒ ˈsɛpɚətli ˈfɔːr/（对……另行收费）",
         "derivatives": "inclusion · inclusivity · inclusive",
         "example": "The price includes breakfast and Wi-Fi.",
         "exampleChinese": "价格包括早餐和无线网络。"
@@ -1862,6 +1904,20 @@
           "partOfSpeech": "v.",
           "chinese": "排除；不包括",
           "usage": "与纳入整体或活动相反；整体与部分的主语安排及书面语域限制不同"
+        },
+        {
+          "word": "omit",
+          "phonetic": "/oʊˈmɪt/",
+          "partOfSpeech": "v.",
+          "chinese": "省略；遗漏",
+          "usage": "include 表示把一项纳入列表、文本或整体，omit 表示不写入或遗漏该项。"
+        },
+        {
+          "word": "charge separately for",
+          "phonetic": "/ˈtʃɑrdʒ ˈsɛpɚətli ˈfɔːr/",
+          "partOfSpeech": "phr.",
+          "chinese": "对……另行收费",
+          "usage": "the price includes breakfast 表示早餐已算入总价，charge separately for breakfast 表示它不在总价内并需单独付费。"
         }
       ],
       "derivatives": [
@@ -1894,6 +1950,13 @@
           "partOfSpeech": "v.",
           "chinese": "包含；容纳",
           "difference": "include 表示将某人或某物列为整体的一部分；contain 强调内部实际容有"
+        },
+        {
+          "word": "consist of",
+          "phonetic": "/kənˈsɪst ˈʌv/",
+          "partOfSpeech": "phr.",
+          "chinese": "由……组成",
+          "difference": "include 的主语是整体并可只列部分成员；consist of 后通常列出构成整体的全部成分。"
         }
       ],
       "relatedVocabulary": [
@@ -2296,10 +2359,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -2381,7 +2444,7 @@
           }
         ],
         "directSynonym": "remain upright /rɪˈmeɪn əˈpraɪt/（保持直立）；rise /ˈraɪz/（起立）；endure /ɛnˈdjʊr/（忍受；经受）；tolerate /ˈtɑlɚˌeɪt/（容忍）；represent /ˌrɛprɪˈzɛnt/（代表）",
-        "directAntonym": "sit /ˈsɪt/（坐）",
+        "directAntonym": "sit /ˈsɪt/（坐）；lie down /ˈlaɪ ˈdaʊn/（躺下）；fall /ˈfɔːl/（跌倒；倒下）",
         "derivatives": "standing · standpoint · standstill",
         "example": "Stand still while I adjust the camera.",
         "exampleChinese": "我调整相机时请站着别动。"
@@ -2648,6 +2711,20 @@
           "partOfSpeech": "v.",
           "chinese": "坐",
           "usage": "只与身体站立义项相反；只覆盖直立、忍受或代表等指定的 stand 义项"
+        },
+        {
+          "word": "lie down",
+          "phonetic": "/ˈlaɪ ˈdaʊn/",
+          "partOfSpeech": "phr.",
+          "chinese": "躺下",
+          "usage": "在身体姿态上，stand 是保持直立，lie down 是把身体放到水平躺卧位置。"
+        },
+        {
+          "word": "fall",
+          "phonetic": "/ˈfɔːl/",
+          "partOfSpeech": "v.",
+          "chinese": "跌倒；倒下",
+          "usage": "stand 表示人或物稳定地直立，fall 在姿态义上表示失去平衡而倒下。"
         }
       ],
       "derivatives": [
@@ -2675,11 +2752,18 @@
       ],
       "confusables": [
         {
-          "word": "stay",
-          "phonetic": "/ˈsteɪ/",
-          "partOfSpeech": "v.",
-          "chinese": "停留；保持",
-          "difference": "stand 强调直立或容忍；stay 强调留在地点或状态中"
+          "word": "stain",
+          "phonetic": "/ˈsteɪn/",
+          "partOfSpeech": "n. / v.",
+          "chinese": "污渍；弄脏",
+          "difference": "stand /stænd/ 与 stain /steɪn/ 拼写接近但元音和末尾辅音不同；stain 表示污渍或弄脏。"
+        },
+        {
+          "word": "strand",
+          "phonetic": "/ˈstrænd/",
+          "partOfSpeech": "v. / n.",
+          "chinese": "使滞留；岸滩",
+          "difference": "stand /stænd/ 与 strand /strænd/ 拼写只差 r；stand 表示站立，strand 作动词表示使人受困滞留。"
         }
       ],
       "relatedVocabulary": [
@@ -2911,14 +2995,14 @@
         {
           "id": "stand-v-contrast-choice",
           "type": "meaning_choice",
-          "prompt": "结合拼写、发音和用法，哪一项需要与“stand”重点区分？",
+          "prompt": "哪一项是“stand”的常用派生词？",
           "options": [
-            "have",
-            "do",
-            "stay",
-            "be"
+            "accident",
+            "accuracy",
+            "standing",
+            "increase"
           ],
-          "answer": "stay",
+          "answer": "standing",
           "stage": "T3",
           "ai": false
         },
@@ -3082,10 +3166,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -3161,7 +3245,7 @@
           }
         ],
         "directSynonym": "accompany /əˈkʌmpəni/（陪同）；pursue /pɚˈsuː/（追赶；追求）；obey /oʊˈbeɪ/（遵守；服从）；track /ˈtræk/（跟踪）；understand /ˌʌndɚˈstænd/（听懂；理解）",
-        "directAntonym": "precede /prɪˈsiːd/（先于；走在前面）",
+        "directAntonym": "precede /prɪˈsiːd/（先于；走在前面）；disobey /ˌdɪsəˈbeɪ/（不服从；不遵守）；unsubscribe from /ənsəbˈskraɪb ˈfrʌm/（取消订阅；不再关注）",
         "derivatives": "follower · following · follow-up",
         "example": "Follow these steps to make the soup.",
         "exampleChinese": "按照这些步骤做这道汤。"
@@ -3421,6 +3505,20 @@
           "partOfSpeech": "v.",
           "chinese": "先于；走在前面",
           "usage": "只对应 follow 表示在路线上走在后面或在时间顺序上接续出现的义项；precede 强调走在前面或先发生。"
+        },
+        {
+          "word": "disobey",
+          "phonetic": "/ˌdɪsəˈbeɪ/",
+          "partOfSpeech": "v.",
+          "chinese": "不服从；不遵守",
+          "usage": "follow an instruction 表示按指令行动，disobey it 表示明知要求却采取不符合指令的行动。"
+        },
+        {
+          "word": "unsubscribe from",
+          "phonetic": "/ənsəbˈskraɪb ˈfrʌm/",
+          "partOfSpeech": "phr.",
+          "chinese": "取消订阅；不再关注",
+          "usage": "follow an account 表示订阅它的更新，unsubscribe from the account 表示取消订阅，不再持续接收动态。"
         }
       ],
       "derivatives": [
@@ -3446,7 +3544,22 @@
           "note": "作名词或定语时通常加连字符"
         }
       ],
-      "confusables": [],
+      "confusables": [
+        {
+          "word": "flow",
+          "phonetic": "/ˈfloʊ/",
+          "partOfSpeech": "v.",
+          "chinese": "流动",
+          "difference": "follow /ˈfɑːloʊ/ 有两个音节并含双写 l，flow /floʊ/ 只有一个音节，表示液体或人流移动。"
+        },
+        {
+          "word": "fellow",
+          "phonetic": "/ˈfɛloʊ/",
+          "partOfSpeech": "n. / adj.",
+          "chinese": "同伴；同类的",
+          "difference": "follow /ˈfɑːloʊ/ 是动词，fellow /ˈfɛloʊ/ 中间元音不同，常作名词表示同伴或作定语表示同类。"
+        }
+      ],
       "relatedVocabulary": [
         {
           "category": "路线与方向",
@@ -3676,14 +3789,14 @@
         {
           "id": "follow-v-contrast-choice",
           "type": "meaning_choice",
-          "prompt": "哪一项是“follow”的常用派生词？",
+          "prompt": "结合拼写、发音和用法，哪一项需要与“follow”重点区分？",
           "options": [
-            "accuracy",
-            "follower",
-            "increase",
-            "accident"
+            "do",
+            "flow",
+            "be",
+            "have"
           ],
-          "answer": "follower",
+          "answer": "flow",
           "stage": "T3",
           "ai": false
         },
@@ -3847,10 +3960,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     }
   ]

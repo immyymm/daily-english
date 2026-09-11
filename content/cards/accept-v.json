@@ -71,7 +71,7 @@
       }
     ],
     "directSynonym": "receive /rəˈsiːv/（接收）；take /ˈteɪk/（接受）；approve /əˈpruːv/（批准）；acknowledge /ækˈnɑlɪdʒ/（承认）；embrace /ɛmˈbreɪs/（欣然接受）",
-    "directAntonym": "reject /rɪˈdʒɛkt/（拒绝）；decline /dɪˈklaɪn/（婉拒）",
+    "directAntonym": "reject /rɪˈdʒɛkt/（拒绝）；contest /ˈkɑntɛst/（质疑；对……提出异议）；deny /dɪˈnaɪ/（否认；拒绝承认）",
     "derivatives": "acceptance · acceptability · acceptable · unacceptable · acceptably",
     "example": "He accepted responsibility for the mistake.",
     "exampleChinese": "他为这个错误承担了责任。"
@@ -333,11 +333,18 @@
       "usage": "与接受提议、申请或物品直接相对；accept 表示同意接纳，reject 表示明确不接受。"
     },
     {
-      "word": "decline",
-      "phonetic": "/dɪˈklaɪn/",
+      "word": "contest",
+      "phonetic": "/ˈkɑntɛst/",
       "partOfSpeech": "v.",
-      "chinese": "婉拒",
-      "usage": "较礼貌地拒绝邀请或提议；accept 可收下邀请或提议，decline 是礼貌谢绝。"
+      "chinese": "质疑；对……提出异议",
+      "usage": "只与 accept a ruling/decision 表示认可裁定的义项相对；contest 表示正式质疑同一裁定"
+    },
+    {
+      "word": "deny",
+      "phonetic": "/dɪˈnaɪ/",
+      "partOfSpeech": "v.",
+      "chinese": "否认；拒绝承认",
+      "usage": "只与 accept a fact/responsibility 的承认义相对；deny 表示声称同一事实不真实或拒绝承担责任。"
     }
   ],
   "derivatives": [
@@ -384,6 +391,13 @@
       "partOfSpeech": "prep./conj.",
       "chinese": "除……之外",
       "difference": "accept 是动词“接受”，except 表示排除，发音和拼写不同"
+    },
+    {
+      "word": "expect",
+      "phonetic": "/ɪkˈspɛkt/",
+      "partOfSpeech": "v.",
+      "chinese": "预期；期待",
+      "difference": "accept /əkˈsɛpt/ 表示接受，expect /ɪkˈspɛkt/ 表示预期；与 except 构成常见拼写混淆组。"
     }
   ],
   "relatedVocabulary": [
@@ -615,14 +629,14 @@
     {
       "id": "accept-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "哪一项是“accept”的常用派生词？",
+      "prompt": "结合拼写、发音和用法，哪一项需要与“accept”重点区分？",
       "options": [
-        "acceptance",
-        "increase",
-        "adjustment",
-        "appearance"
+        "expect",
+        "be",
+        "have",
+        "do"
       ],
-      "answer": "acceptance",
+      "answer": "expect",
       "stage": "T3",
       "ai": false
     },
@@ -786,9 +800,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

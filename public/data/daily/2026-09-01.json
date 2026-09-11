@@ -1,8 +1,8 @@
 {
   "date": "2026-09-01",
   "dayNumber": 16,
-  "contentVersion": "2026.09.10.4",
-  "templateVersion": "learning-template-2026.09.10.4",
+  "contentVersion": "2026.09.11.1",
+  "templateVersion": "learning-template-2026.09.11.1",
   "cards": [
     {
       "id": "remember-v",
@@ -77,7 +77,7 @@
           }
         ],
         "directSynonym": "recall /rɪˈkɔːl/（回想起）；recollect /ˌrɛkəˈlɛkt/（忆起）；retain /rɪˈteɪn/（记住；保留）；bear in mind /ˈbɛr ɪn ˈmaɪnd/（牢记）；commemorate /kəˈmɛmɚˌeɪt/（纪念）",
-        "directAntonym": "forget /fɚˈɡɛt/（忘记）",
+        "directAntonym": "forget /fɚˈɡɛt/（忘记）；overlook /ˈoʊvɚˌlʊk/（忽略；未注意）；leave out of one's will /ˈliːv ˈaʊt ˈʌv ˈwʌnz ˈwɪl/（不在遗嘱中给……留遗产）",
         "derivatives": "remembrance · memorable · memorably",
         "example": "Remember to save your work before you leave.",
         "exampleChinese": "离开前记得保存工作。"
@@ -337,6 +337,20 @@
           "partOfSpeech": "v.",
           "chinese": "忘记",
           "usage": "与记得信息或事情相反；回忆经历、记住事项和纪念人物的结构不同"
+        },
+        {
+          "word": "overlook",
+          "phonetic": "/ˈoʊvɚˌlʊk/",
+          "partOfSpeech": "v.",
+          "chinese": "忽略；未注意",
+          "usage": "remember a required detail 是想起并按要求处理它，overlook the detail 是因疏忽而没有想起或处理。"
+        },
+        {
+          "word": "leave out of one's will",
+          "phonetic": "/ˈliːv ˈaʊt ˈʌv ˈwʌnz ˈwɪl/",
+          "partOfSpeech": "phr.",
+          "chinese": "不在遗嘱中给……留遗产",
+          "usage": "remember someone in one's will 表示在遗嘱中给其留下财产，leave that person out of one's will 表示明确不作该继承安排。"
         }
       ],
       "derivatives": [
@@ -364,11 +378,18 @@
       ],
       "confusables": [
         {
-          "word": "remind",
-          "phonetic": "/riˈmaɪnd/",
+          "word": "resemble",
+          "phonetic": "/rɪˈzɛmbəl/",
           "partOfSpeech": "v.",
-          "chinese": "提醒；使想起",
-          "difference": "remember 是自己记得；remind 是使别人想起，常用 remind someone to do/of something"
+          "chinese": "与……相像",
+          "difference": "remember /rɪˈmɛmbər/ 与 resemble /rɪˈzɛmbəl/ 拼写节奏接近；remember 表示记得，resemble 表示外观或特征相像。"
+        },
+        {
+          "word": "remainder",
+          "phonetic": "/rɪˈmeɪndɚ/",
+          "partOfSpeech": "n.",
+          "chinese": "剩余部分；余数",
+          "difference": "remember 与 remainder 开头和结尾拼写相近；remember 是记得的动词，remainder 是剩余部分或数学余数。"
         }
       ],
       "relatedVocabulary": [
@@ -602,12 +623,12 @@
           "type": "meaning_choice",
           "prompt": "结合拼写、发音和用法，哪一项需要与“remember”重点区分？",
           "options": [
-            "remind",
+            "resemble",
             "be",
             "have",
             "do"
           ],
-          "answer": "remind",
+          "answer": "resemble",
           "stage": "T3",
           "ai": false
         },
@@ -771,10 +792,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -850,7 +871,7 @@
           }
         ],
         "directSynonym": "talk /ˈtɔːk/（说话；交谈）；say /ˈseɪ/（说出）；address /əˈdrɛs/（向……讲话）；converse /kənˈvɝːs/（交谈）；express /ɪkˈsprɛs/（表达）",
-        "directAntonym": "remain silent /rɪˈmeɪn ˈsaɪlənt/（保持沉默）",
+        "directAntonym": "remain silent /rɪˈmeɪn ˈsaɪlənt/（保持沉默）；withdraw one's statement /wɪðˈdrɔː ˈwʌnz ˈsteɪtmənt/（撤回发言；收回声明）；refuse to comment /rəˈfjuːz ˈtuː ˈkɑmɛnt/（拒绝置评）",
         "derivatives": "speaker · speech · spoken · speechless",
         "example": "Try to speak in complete sentences.",
         "exampleChinese": "试着用完整句子说话。"
@@ -1109,7 +1130,21 @@
           "phonetic": "/rɪˈmeɪn ˈsaɪlənt/",
           "partOfSpeech": "phr.",
           "chinese": "保持沉默",
-          "usage": "与开口说话相对；说话方式、内容宾语和正式发言句型并不相同"
+          "usage": "在是否开口的层面，speak 表示发声说话，remain silent 表示不发言"
+        },
+        {
+          "word": "withdraw one's statement",
+          "phonetic": "/wɪðˈdrɔː ˈwʌnz ˈsteɪtmənt/",
+          "partOfSpeech": "phr.",
+          "chinese": "撤回发言；收回声明",
+          "usage": "speak on the record 是公开表达立场，withdraw one's statement 是正式撤回先前已表达的内容。"
+        },
+        {
+          "word": "refuse to comment",
+          "phonetic": "/rəˈfjuːz ˈtuː ˈkɑmɛnt/",
+          "partOfSpeech": "phr.",
+          "chinese": "拒绝置评",
+          "usage": "speak about an issue 是公开就该事发言，refuse to comment 是明确拒绝就该事表态。"
         }
       ],
       "derivatives": [
@@ -1149,6 +1184,13 @@
           "partOfSpeech": "v.",
           "chinese": "告诉；讲述",
           "difference": "speak 强调说话或使用语言；tell 通常接人作宾语，如 tell me the truth"
+        },
+        {
+          "word": "sneak",
+          "phonetic": "/ˈsniːk/",
+          "partOfSpeech": "v. / n.",
+          "chinese": "偷偷走；偷偷摸摸的人",
+          "difference": "speak /spiːk/ 与 sneak /sniːk/ 只差中间辅音；speak 表示说话，sneak 表示悄悄移动。"
         }
       ],
       "relatedVocabulary": [
@@ -1369,9 +1411,9 @@
           "prompt": "在“说话；交谈”这个义项下，哪个词与“speak”意思相反？",
           "options": [
             "remain silent",
+            "be accidental",
             "be allowed to",
-            "be capable of",
-            "be impossible"
+            "be capable of"
           ],
           "answer": "remain silent",
           "stage": "T2",
@@ -1551,10 +1593,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -1636,7 +1678,7 @@
           }
         ],
         "directSynonym": "place /ˈpleɪs/（放置）；position /pəˈzɪʃən/（安放；定位）；establish /ɪˈstæblɪʃ/（建立；确立）；adjust /əˈdʒʌst/（调节）；fix /ˈfɪks/（确定）",
-        "directAntonym": "unset /ənˈsɛt/（取消设置）；remove /riˈmuːv/（移开）",
+        "directAntonym": "unset /ənˈsɛt/（取消设置）；clear the table /ˈklɪr ðə ˈteɪbəl/（收拾餐桌）；cancel /ˈkænsəl/（取消）",
         "derivatives": "reset · setting · setback",
         "example": "Set a realistic goal for this week.",
         "exampleChinese": "为本周设定一个现实目标。"
@@ -1902,14 +1944,21 @@
           "phonetic": "/ənˈsɛt/",
           "partOfSpeech": "v.",
           "chinese": "取消设置",
-          "usage": "仅在技术设置语境中与 set 相反"
+          "usage": "在软件选项或标志位语境中，set 是设定或启用，unset 是撤销该设置"
         },
         {
-          "word": "remove",
-          "phonetic": "/riˈmuːv/",
+          "word": "clear the table",
+          "phonetic": "/ˈklɪr ðə ˈteɪbəl/",
+          "partOfSpeech": "phr.",
+          "chinese": "收拾餐桌",
+          "usage": "在餐桌布置义上，set the table 是摆好餐具，clear the table 是用餐后将餐具收走"
+        },
+        {
+          "word": "cancel",
+          "phonetic": "/ˈkænsəl/",
           "partOfSpeech": "v.",
-          "chinese": "移开",
-          "usage": "只与把物体放置到某处的义项相对；放置物体、设定参数和确定日期的宾语不可混用"
+          "chinese": "取消",
+          "usage": "set a date or appointment 是确定其举行时间，cancel it 是撤销安排，使原定时间不再生效。"
         }
       ],
       "derivatives": [
@@ -1942,6 +1991,13 @@
           "partOfSpeech": "v.",
           "chinese": "坐；处于",
           "difference": "set /sɛt/ 常表示放置或设定；sit /sɪt/ 表示坐下，两词元音不同"
+        },
+        {
+          "word": "seat",
+          "phonetic": "/ˈsiːt/",
+          "partOfSpeech": "v.",
+          "chinese": "使就座；可容纳",
+          "difference": "set /sɛt/ 表示放置或设定；seat /siːt/ 作动词时表示安排某人就座，元音和宾语类型不同。"
         }
       ],
       "relatedVocabulary": [
@@ -2344,10 +2400,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -2423,7 +2479,7 @@
           }
         ],
         "directSynonym": "permit /pɚˈmɪt/（允许）；let /ˈlɛt/（让）；authorize /ˈɔːθɚˌaɪz/（授权）；enable /ɛˈneɪbəl/（使能够）；grant permission to /ˈɡrænt pɚˈmɪʃən ˈtuː/（准许某人做某事）",
-        "directAntonym": "forbid /fɚˈbɪd/（禁止）；prevent /prɪˈvɛnt/（阻止）",
+        "directAntonym": "forbid /fɚˈbɪd/（禁止）；prevent /prɪˈvɛnt/（阻止）；deny /dɪˈnaɪ/（拒绝准许）",
         "derivatives": "disallow · allowance · allowable",
         "example": "The ticket allows you to enter the museum.",
         "exampleChinese": "这张票允许你进入博物馆。"
@@ -2690,6 +2746,13 @@
           "partOfSpeech": "v.",
           "chinese": "阻止",
           "usage": "与使某事得以发生相反；须区分给予许可、提供条件和准许进入等义项"
+        },
+        {
+          "word": "deny",
+          "phonetic": "/dɪˈnaɪ/",
+          "partOfSpeech": "v.",
+          "chinese": "拒绝准许",
+          "usage": "allow someone to do 是给予许可，deny someone permission 是明确拒绝给予同一许可。"
         }
       ],
       "derivatives": [
@@ -2717,11 +2780,18 @@
       ],
       "confusables": [
         {
-          "word": "admit",
-          "phonetic": "/ədˈmɪt/",
+          "word": "allot",
+          "phonetic": "/əˈlɑt/",
           "partOfSpeech": "v.",
-          "chinese": "准许进入；承认",
-          "difference": "allow 是允许某行为；admit 可指准许进入某地，也常指承认事实"
+          "chinese": "分配；拨给",
+          "difference": "allow /əˈlaʊ/ 与 allot /əˈlɑːt/ 开头拼写和重音相近；allow 表示准许，allot 表示按份额分配。"
+        },
+        {
+          "word": "aloud",
+          "phonetic": "/əˈlaʊd/",
+          "partOfSpeech": "adv.",
+          "chinese": "出声地",
+          "difference": "allow /əˈlaʊ/ 是表示允许的动词，aloud /əˈlaʊd/ 多一个 /d/ 音，是表示“出声地”的副词。"
         }
       ],
       "relatedVocabulary": [
@@ -2956,11 +3026,11 @@
           "prompt": "结合拼写、发音和用法，哪一项需要与“allow”重点区分？",
           "options": [
             "do",
-            "admit",
+            "allot",
             "be",
             "have"
           ],
-          "answer": "admit",
+          "answer": "allot",
           "stage": "T3",
           "ai": false
         },
@@ -3124,10 +3194,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -3209,7 +3279,7 @@
           }
         ],
         "directSynonym": "prevail /prɪˈveɪl/（获胜；占优势）；triumph /ˈtraɪəmf/（获胜）；succeed /səkˈsiːd/（成功）；earn /ˈɝːn/（赢得；获得）；secure /sɪˈkjʊr/（取得；赢得）",
-        "directAntonym": "lose /ˈluːz/（输；失去）",
+        "directAntonym": "lose /ˈluːz/（输；失去）；alienate /ˈeɪljəˌneɪt/（使疏远；失去支持）；forfeit /ˈfɔːrfɪt/（因违规而失去）",
         "derivatives": "winner · winnings · winning",
         "example": "Our team hopes to win the game tonight.",
         "exampleChinese": "我们队希望今晚赢得比赛。"
@@ -3461,7 +3531,21 @@
           "phonetic": "/ˈluːz/",
           "partOfSpeech": "v.",
           "chinese": "输；失去",
-          "usage": "与赢得比赛或奖项相反；比赛获胜、赢得对象与成功做事的句型不同"
+          "usage": "在比赛、选举或竞争中，win 是取得胜利，lose 是未能获胜"
+        },
+        {
+          "word": "alienate",
+          "phonetic": "/ˈeɪljəˌneɪt/",
+          "partOfSpeech": "v.",
+          "chinese": "使疏远；失去支持",
+          "usage": "win people over 表示逐步赢得他们的好感或支持，alienate them 表示言行使他们疏远并失去其支持。"
+        },
+        {
+          "word": "forfeit",
+          "phonetic": "/ˈfɔːrfɪt/",
+          "partOfSpeech": "v.",
+          "chinese": "因违规而失去",
+          "usage": "win a prize 是获得奖项，forfeit it 是因违规、缺席或未履行条件而失去资格或奖项。"
         }
       ],
       "derivatives": [
@@ -3494,6 +3578,13 @@
           "partOfSpeech": "v.",
           "chinese": "击败",
           "difference": "win 的宾语通常是比赛、奖项或胜利；beat 的宾语通常是对手"
+        },
+        {
+          "word": "wine",
+          "phonetic": "/ˈwaɪn/",
+          "partOfSpeech": "n.",
+          "chinese": "葡萄酒",
+          "difference": "win /wɪn/ 与 wine /waɪn/ 拼写只差末尾 e，但元音不同；win 是赢得，wine 是葡萄酒。"
         }
       ],
       "relatedVocabulary": [
@@ -3896,10 +3987,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     }
   ]

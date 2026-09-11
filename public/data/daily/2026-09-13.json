@@ -1,8 +1,8 @@
 {
   "date": "2026-09-13",
   "dayNumber": 28,
-  "contentVersion": "2026.09.10.4",
-  "templateVersion": "learning-template-2026.09.10.4",
+  "contentVersion": "2026.09.11.1",
+  "templateVersion": "learning-template-2026.09.11.1",
   "cards": [
     {
       "id": "accept-v",
@@ -77,7 +77,7 @@
           }
         ],
         "directSynonym": "receive /rəˈsiːv/（接收）；take /ˈteɪk/（接受）；approve /əˈpruːv/（批准）；acknowledge /ækˈnɑlɪdʒ/（承认）；embrace /ɛmˈbreɪs/（欣然接受）",
-        "directAntonym": "reject /rɪˈdʒɛkt/（拒绝）；decline /dɪˈklaɪn/（婉拒）",
+        "directAntonym": "reject /rɪˈdʒɛkt/（拒绝）；contest /ˈkɑntɛst/（质疑；对……提出异议）；deny /dɪˈnaɪ/（否认；拒绝承认）",
         "derivatives": "acceptance · acceptability · acceptable · unacceptable · acceptably",
         "example": "He accepted responsibility for the mistake.",
         "exampleChinese": "他为这个错误承担了责任。"
@@ -339,11 +339,18 @@
           "usage": "与接受提议、申请或物品直接相对；accept 表示同意接纳，reject 表示明确不接受。"
         },
         {
-          "word": "decline",
-          "phonetic": "/dɪˈklaɪn/",
+          "word": "contest",
+          "phonetic": "/ˈkɑntɛst/",
           "partOfSpeech": "v.",
-          "chinese": "婉拒",
-          "usage": "较礼貌地拒绝邀请或提议；accept 可收下邀请或提议，decline 是礼貌谢绝。"
+          "chinese": "质疑；对……提出异议",
+          "usage": "只与 accept a ruling/decision 表示认可裁定的义项相对；contest 表示正式质疑同一裁定"
+        },
+        {
+          "word": "deny",
+          "phonetic": "/dɪˈnaɪ/",
+          "partOfSpeech": "v.",
+          "chinese": "否认；拒绝承认",
+          "usage": "只与 accept a fact/responsibility 的承认义相对；deny 表示声称同一事实不真实或拒绝承担责任。"
         }
       ],
       "derivatives": [
@@ -390,6 +397,13 @@
           "partOfSpeech": "prep./conj.",
           "chinese": "除……之外",
           "difference": "accept 是动词“接受”，except 表示排除，发音和拼写不同"
+        },
+        {
+          "word": "expect",
+          "phonetic": "/ɪkˈspɛkt/",
+          "partOfSpeech": "v.",
+          "chinese": "预期；期待",
+          "difference": "accept /əkˈsɛpt/ 表示接受，expect /ɪkˈspɛkt/ 表示预期；与 except 构成常见拼写混淆组。"
         }
       ],
       "relatedVocabulary": [
@@ -621,14 +635,14 @@
         {
           "id": "accept-v-contrast-choice",
           "type": "meaning_choice",
-          "prompt": "哪一项是“accept”的常用派生词？",
+          "prompt": "结合拼写、发音和用法，哪一项需要与“accept”重点区分？",
           "options": [
-            "acceptance",
-            "increase",
-            "adjustment",
-            "appearance"
+            "expect",
+            "be",
+            "have",
+            "do"
           ],
-          "answer": "acceptance",
+          "answer": "expect",
           "stage": "T3",
           "ai": false
         },
@@ -792,10 +806,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -871,7 +885,7 @@
           }
         ],
         "directSynonym": "ready /ˈrɛdi/（使准备好）；arrange /ɚˈeɪndʒ/（安排）；plan /ˈplæn/（计划）；equip /ɪˈkwɪp/（使有准备）；rehearse /riˈhɝːs/（排练）",
-        "directAntonym": "",
+        "directAntonym": "neglect /nəˈɡlɛkt/（疏于准备；忽视）；improvise /ˈɪmprəˌvaɪz/（临时应变；即兴处理）；go in cold /ˈɡoʊ ɪn ˈkoʊld/（毫无准备地开始）",
         "derivatives": "preparation · preparedness · prepared · unprepared · preparatory",
         "example": "She prepared for the interview by practicing aloud.",
         "exampleChinese": "她通过大声练习为面试做准备。"
@@ -1117,7 +1131,29 @@
           "difference": "只对应为演出、陈述或情境练习；prepare 可用于任何事件，不限表演或演练。"
         }
       ],
-      "antonyms": [],
+      "antonyms": [
+        {
+          "word": "neglect",
+          "phonetic": "/nəˈɡlɛkt/",
+          "partOfSpeech": "v.",
+          "chinese": "疏于准备；忽视",
+          "usage": "只与 prepare for a known task 的事先准备义相对；neglect 表示该做准备却没有做。"
+        },
+        {
+          "word": "improvise",
+          "phonetic": "/ˈɪmprəˌvaɪz/",
+          "partOfSpeech": "v.",
+          "chinese": "临时应变；即兴处理",
+          "usage": "只在做事方式上对比：prepare 是预先安排，improvise 是没有充分准备时临场处理。"
+        },
+        {
+          "word": "go in cold",
+          "phonetic": "/ˈɡoʊ ɪn ˈkoʊld/",
+          "partOfSpeech": "v. phr.",
+          "chinese": "毫无准备地开始",
+          "usage": "只与 prepare beforehand 的事先准备义相对；go in cold 表示没有预演或资料便直接开始。"
+        }
+      ],
       "derivatives": [
         {
           "word": "preparation",
@@ -1162,6 +1198,13 @@
           "partOfSpeech": "v.",
           "chinese": "修理",
           "difference": "prepare /prɪˈpɛr/ 表示准备，常接任务、材料或人员；repair /rɪˈpɛr/ 表示修复损坏的人或物。"
+        },
+        {
+          "word": "prepare for",
+          "phonetic": "/priˈpɛr ˈfɔːr/",
+          "partOfSpeech": "phr.v.",
+          "chinese": "为……做准备",
+          "difference": "prepare for 后接将发生的事件；prepare something 表示把某物准备好，不能在直接宾语前一律加 for。"
         }
       ],
       "relatedVocabulary": [
@@ -1377,16 +1420,16 @@
           "ai": false
         },
         {
-          "id": "prepare-v-synonym-choice-2",
+          "id": "prepare-v-antonym-choice",
           "type": "meaning_choice",
-          "prompt": "除“ready”外，在“安排”这个义项下，哪个词也与“prepare”意思接近？",
+          "prompt": "在“准备；预备”这个义项下，哪个词与“prepare”意思相反？",
           "options": [
-            "arrange",
+            "neglect",
             "be",
             "have",
             "do"
           ],
-          "answer": "arrange",
+          "answer": "neglect",
           "stage": "T2",
           "ai": false
         },
@@ -1564,10 +1607,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -1643,7 +1686,7 @@
           }
         ],
         "directSynonym": "sidestep /ˈsaɪdˌstɛp/（回避）；evade /ɪˈveɪd/（逃避）；dodge /ˈdɑdʒ/（躲避）；shun /ˈʃʌn/（避开）；steer clear of /ˈstɪr ˈklɪr ˈʌv/（避开）",
-        "directAntonym": "confront /kənˈfrʌnt/（面对）；seek /ˈsiːk/（寻求）",
+        "directAntonym": "confront /kənˈfrʌnt/（面对）；seek /ˈsiːk/（寻求）；embrace /ɛmˈbreɪs/（欣然接受；主动面对）",
         "derivatives": "avoidance · avoidable · unavoidable · unavoidably",
         "example": "Avoid translating every sentence word for word.",
         "exampleChinese": "避免逐字翻译每个句子。"
@@ -1903,6 +1946,13 @@
           "partOfSpeech": "v.",
           "chinese": "寻求",
           "usage": "avoid 表示有意不接触某人或某物；seek 表示主动寻找或争取同一对象，只在“避开／寻找”这一义项上相对。"
+        },
+        {
+          "word": "embrace",
+          "phonetic": "/ɛmˈbreɪs/",
+          "partOfSpeech": "v.",
+          "chinese": "欣然接受；主动面对",
+          "usage": "只与 avoid a change/opportunity 的回避义相对；embrace 表示主动接受并投入同一变化或机会。"
         }
       ],
       "derivatives": [
@@ -1942,6 +1992,13 @@
           "partOfSpeech": "v.",
           "chinese": "防止",
           "difference": "avoid 后接要避开的事物，prevent 常用 prevent someone from doing"
+        },
+        {
+          "word": "void",
+          "phonetic": "/ˈvɔɪd/",
+          "partOfSpeech": "v. / adj. / n.",
+          "chinese": "使无效；无效的；空缺",
+          "difference": "avoid /əˈvɔɪd/ 表示避开，void /vɔɪd/ 表示使无效或空缺；avoid 多一个起始音节且含义不同。"
         }
       ],
       "relatedVocabulary": [
@@ -2344,10 +2401,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -2429,7 +2486,7 @@
           }
         ],
         "directSynonym": "observe /əbˈzɝːv/（观察到）；spot /ˈspɑt/（发现）；detect /dɪˈtɛkt/（察觉）；perceive /pɚˈsiːv/（感知）；register /ˈrɛdʒɪstɚ/（察觉到；意识到）",
-        "directAntonym": "overlook /ˈoʊvɚˌlʊk/（忽略；未注意到）",
+        "directAntonym": "overlook /ˈoʊvɚˌlʊk/（忽略；未注意到）；ignore /ˌɪɡˈnɔːr/（不理会；忽视）；concealment /kənˈsiːlmənt/（隐瞒；保密）",
         "derivatives": "notification · noticeable · unnoticed · noticeably",
         "example": "Did you notice a change in her voice?",
         "exampleChinese": "你注意到她声音的变化了吗？"
@@ -2696,6 +2753,20 @@
           "partOfSpeech": "v.",
           "chinese": "忽略；未注意到",
           "usage": "对应没有发现本可注意到的细节；notice 表示察觉到细节，overlook 表示漏看或未注意到。"
+        },
+        {
+          "word": "ignore",
+          "phonetic": "/ˌɪɡˈnɔːr/",
+          "partOfSpeech": "v.",
+          "chinese": "不理会；忽视",
+          "usage": "只与 notice/pay attention to something 的留意义相对；ignore 表示即使察觉也选择不理会。"
+        },
+        {
+          "word": "concealment",
+          "phonetic": "/kənˈsiːlmənt/",
+          "partOfSpeech": "n.",
+          "chinese": "隐瞒；保密",
+          "usage": "只与 notice 作名词表示公开告示或预先通知的义项相对；notice 让信息公开可见，concealment 则有意不公开。"
         }
       ],
       "derivatives": [
@@ -2735,6 +2806,13 @@
           "partOfSpeech": "v.",
           "chinese": "通知",
           "difference": "notice 是自己注意到，notify 是主动把消息告诉别人"
+        },
+        {
+          "word": "notion",
+          "phonetic": "/ˈnoʊʃən/",
+          "partOfSpeech": "n.",
+          "chinese": "概念；看法",
+          "difference": "notice /ˈnoʊtɪs/ 表示注意或通知，notion /ˈnoʊʃən/ 表示概念；拼写开头相近但后半发音和词性不同。"
         }
       ],
       "relatedVocabulary": [
@@ -3137,10 +3215,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -3216,7 +3294,7 @@
           }
         ],
         "directSynonym": "influence /ˈɪnfluəns/（影响）；impact /ɪmˈpækt/（影响）；alter /ˈɔːltɚ/（改变）；touch /ˈtʌtʃ/（打动）；move /ˈmuːv/（感动）",
-        "directAntonym": "",
+        "directAntonym": "leave unchanged /ˈliːv ənˈtʃeɪndʒd/（不产生改变）；spare /ˈspɛr/（使免受；未波及）；resist /rɪˈzɪst/（抵抗；不受影响）",
         "derivatives": "affected · unaffected · affective",
         "example": "Poor sleep can affect your memory.",
         "exampleChinese": "睡眠不足会影响记忆力。"
@@ -3469,7 +3547,29 @@
           "difference": "只指引起强烈情绪；affect 的情感义不要求使人流泪或受到强烈感动。"
         }
       ],
-      "antonyms": [],
+      "antonyms": [
+        {
+          "word": "leave unchanged",
+          "phonetic": "/ˈliːv ənˈtʃeɪndʒd/",
+          "partOfSpeech": "v. phr.",
+          "chinese": "不产生改变",
+          "usage": "只与 affect 表示改变结果或状态的义项相对；leave unchanged 表示同一对象没有受到改变。"
+        },
+        {
+          "word": "spare",
+          "phonetic": "/ˈspɛr/",
+          "partOfSpeech": "v.",
+          "chinese": "使免受；未波及",
+          "usage": "只与 an event affects a group 的波及义相对；spare 表示事件没有影响同一群体。"
+        },
+        {
+          "word": "resist",
+          "phonetic": "/rɪˈzɪst/",
+          "partOfSpeech": "v.",
+          "chinese": "抵抗；不受影响",
+          "usage": "只与 an influence affects behavior/results 的作用义相对；resist 表示同一对象抵抗该影响而不随之改变。"
+        }
+      ],
       "derivatives": [
         {
           "word": "affected",
@@ -3500,6 +3600,13 @@
           "partOfSpeech": "n.",
           "chinese": "影响；效果",
           "difference": "affect 通常作动词，直接接受影响的对象；effect 通常作名词，常用 have an effect on。"
+        },
+        {
+          "word": "infect",
+          "phonetic": "/ˌɪnˈfɛkt/",
+          "partOfSpeech": "v.",
+          "chinese": "感染；传染",
+          "difference": "affect /əˈfɛkt/ 表示影响，infect /ɪnˈfɛkt/ 表示感染；拼写结尾相同但 infect 只用于病原体等传播。"
         }
       ],
       "relatedVocabulary": [
@@ -3715,16 +3822,16 @@
           "ai": false
         },
         {
-          "id": "affect-v-synonym-choice-2",
+          "id": "affect-v-antonym-choice",
           "type": "meaning_choice",
-          "prompt": "除“influence”外，在“影响”这个义项下，哪个词也与“affect”意思接近？",
+          "prompt": "在“影响；对……产生作用”这个义项下，哪个词与“affect”意思相反？",
           "options": [
             "do",
-            "impact",
+            "spare",
             "be",
             "have"
           ],
-          "answer": "impact",
+          "answer": "spare",
           "stage": "T2",
           "ai": false
         },
@@ -3902,10 +4009,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     }
   ]

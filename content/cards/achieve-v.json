@@ -71,7 +71,7 @@
       }
     ],
     "directSynonym": "accomplish /əˈkɑmplɪʃ/（完成）；attain /əˈteɪn/（达到）；reach /ˈriːtʃ/（达到）；realize /ˈriːəˌlaɪz/（实现）；fulfill /fʊlˈfɪl/（实现）",
-    "directAntonym": "fail /ˈfeɪl/（未能做到）",
+    "directAntonym": "fail /ˈfeɪl/（未能做到）；fall short of /ˈfɔːl ˈʃɔːrt ˈʌv/（未达到；不符合）；abandon /əˈbændən/（放弃；中止追求）",
     "derivatives": "achiever · achievement · achievable · unachievable",
     "example": "Small steps can help you achieve a big goal.",
     "exampleChinese": "小步前进可以帮助你实现大目标。"
@@ -317,6 +317,20 @@
       "partOfSpeech": "v.",
       "chinese": "未能做到",
       "usage": "通常要用 fail to achieve 或 fail to do 表达未实现目标"
+    },
+    {
+      "word": "fall short of",
+      "phonetic": "/ˈfɔːl ˈʃɔːrt ˈʌv/",
+      "partOfSpeech": "phr.v.",
+      "chinese": "未达到；不符合",
+      "usage": "只与 achieve a target/standard 的达到义相对；fall short of 表示结果低于同一目标或标准。"
+    },
+    {
+      "word": "abandon",
+      "phonetic": "/əˈbændən/",
+      "partOfSpeech": "v.",
+      "chinese": "放弃；中止追求",
+      "usage": "只与 achieve a goal through effort 的结果义相对；abandon 表示在达成前停止追求同一目标。"
     }
   ],
   "derivatives": [
@@ -349,7 +363,22 @@
       "note": "指目标在现有条件下无法达到。"
     }
   ],
-  "confusables": [],
+  "confusables": [
+    {
+      "word": "acquire",
+      "phonetic": "/əˈkwaɪɚ/",
+      "partOfSpeech": "v.",
+      "chinese": "获得；习得",
+      "difference": "achieve 表示通过努力达到目标或结果；acquire 表示获得物品、公司、知识或技能，宾语范围不同。"
+    },
+    {
+      "word": "receive",
+      "phonetic": "/rəˈsiːv/",
+      "partOfSpeech": "v.",
+      "chinese": "收到；接收",
+      "difference": "achieve 表示通过努力取得结果；receive 表示从别人或系统处收到事物，两词都有 ie/ei 拼写但宾语来源不同。"
+    }
+  ],
   "relatedVocabulary": [
     {
       "category": "目标规划",
@@ -579,14 +608,14 @@
     {
       "id": "achieve-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "哪一项是“achieve”的常用派生词？",
+      "prompt": "结合拼写、发音和用法，哪一项需要与“achieve”重点区分？",
       "options": [
-        "increase",
-        "accident",
-        "accuracy",
-        "achiever"
+        "be",
+        "have",
+        "do",
+        "acquire"
       ],
-      "answer": "achiever",
+      "answer": "acquire",
       "stage": "T3",
       "ai": false
     },
@@ -750,9 +779,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

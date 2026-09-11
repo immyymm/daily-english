@@ -1,8 +1,8 @@
 {
   "date": "2026-08-24",
   "dayNumber": 8,
-  "contentVersion": "2026.09.10.4",
-  "templateVersion": "learning-template-2026.09.10.4",
+  "contentVersion": "2026.09.11.1",
+  "templateVersion": "learning-template-2026.09.11.1",
   "cards": [
     {
       "id": "put-v",
@@ -77,7 +77,7 @@
           }
         ],
         "directSynonym": "place /ˈpleɪs/（放置）；set /ˈsɛt/（放置；设置）；position /pəˈzɪʃən/（安置；定位）；lay /ˈleɪ/（平放）；express /ɪkˈsprɛs/（表达）",
-        "directAntonym": "remove /riˈmuːv/（移走）",
+        "directAntonym": "remove /riˈmuːv/（移走）；take away /ˈteɪk əˈweɪ/（拿走；移除）；pick up /ˈpɪk ˈʌp/（拿起；捡起）",
         "derivatives": "本词暂无需额外强记的高频派生词",
         "example": "Put the new phrase in your own example sentence.",
         "exampleChinese": "把新短语用在你自己的例句里。"
@@ -330,6 +330,20 @@
           "partOfSpeech": "v.",
           "chinese": "移走",
           "usage": "与把物品放到某处相反；只与把具体物品放到某处的义项构成反向关系。"
+        },
+        {
+          "word": "take away",
+          "phonetic": "/ˈteɪk əˈweɪ/",
+          "partOfSpeech": "phr.v.",
+          "chinese": "拿走；移除",
+          "usage": "只与 put 表示把物品放到某处的义项相对；put 将物品放入该位置，take away 则将其从该位置拿走。"
+        },
+        {
+          "word": "pick up",
+          "phonetic": "/ˈpɪk ˈʌp/",
+          "partOfSpeech": "phr.v.",
+          "chinese": "拿起；捡起",
+          "usage": "只对应 put down 表示把手中物品放下的义项；put down 使物品落位，pick up 则将它从表面拿起。"
         }
       ],
       "derivatives": [],
@@ -340,6 +354,13 @@
           "partOfSpeech": "v. / n.",
           "chinese": "轻击高尔夫球；推杆",
           "difference": "put 读 /pʊt/ 且表示放置；putt 读 /pʌt/ 并专指高尔夫推杆。"
+        },
+        {
+          "word": "wear",
+          "phonetic": "/ˈwɛr/",
+          "partOfSpeech": "v.",
+          "chinese": "穿着；戴着",
+          "difference": "put on 强调穿上衣物或戴上配饰的动作，wear 强调穿戴后的状态；不能用 wear on 表示‘穿上’。"
         }
       ],
       "relatedVocabulary": [
@@ -569,6 +590,20 @@
           "ai": false
         },
         {
+          "id": "put-v-contrast-choice",
+          "type": "meaning_choice",
+          "prompt": "结合拼写、发音和用法，哪一项需要与“put”重点区分？",
+          "options": [
+            "wear",
+            "be",
+            "have",
+            "do"
+          ],
+          "answer": "wear",
+          "stage": "T3",
+          "ai": false
+        },
+        {
           "id": "put-v-recall-definition",
           "type": "recall",
           "prompt": "根据英文释义写出对应单词：to move or place something in a particular position",
@@ -728,10 +763,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -837,7 +872,7 @@
           }
         ],
         "directSynonym": "enjoy /ˌɛnˈdʒɔɪ/（享受；喜欢）；favor /ˈfeɪvɚ/（偏爱；支持）；prefer /prəˈfɝː/（更喜欢）；appreciate /əˈpriːʃiˌeɪt/（欣赏；感激）；be fond of /ˈbiː ˈfɑnd ˈʌv/（喜爱）",
-        "directAntonym": "dislike /dɪˈslaɪk/（不喜欢）",
+        "directAntonym": "dislike /dɪˈslaɪk/（不喜欢）；hate /ˈheɪt/（憎恨；非常不喜欢）；be indifferent to /ˈbiː ˌɪnˈdɪfrənt ˈtuː/（对……漠不关心）",
         "derivatives": "liking · likeness · likable · unlike",
         "example": "I like reviewing words in short sessions.",
         "exampleChinese": "我喜欢用短时段复习单词。"
@@ -1104,6 +1139,20 @@
           "partOfSpeech": "v.",
           "chinese": "不喜欢",
           "usage": "与喜欢某人或某事的义相反；只与喜欢某人或某事的动词义项构成反向关系。"
+        },
+        {
+          "word": "hate",
+          "phonetic": "/ˈheɪt/",
+          "partOfSpeech": "v.",
+          "chinese": "憎恨；非常不喜欢",
+          "usage": "只与 like 作动词表示喜欢某人或某事的义项相对；like 表示好感，hate 表示强烈反感。"
+        },
+        {
+          "word": "be indifferent to",
+          "phonetic": "/ˈbiː ˌɪnˈdɪfrənt ˈtuː/",
+          "partOfSpeech": "phr.",
+          "chinese": "对……漠不关心",
+          "usage": "只对应 like 表示对人、事或活动有积极偏好的义项；like 表示有好感，be indifferent to 表示没有明显好恶。"
         }
       ],
       "derivatives": [
@@ -1143,6 +1192,13 @@
           "partOfSpeech": "prep. / conj.",
           "chinese": "作为；如同",
           "difference": "like 作介词时表示‘像’，只说相似性；as 可表示某人或某物的真实身份、功能或作用。"
+        },
+        {
+          "word": "alike",
+          "phonetic": "/əˈlaɪk/",
+          "partOfSpeech": "adj. / adv.",
+          "chinese": "相像的；相似地",
+          "difference": "like 作介词时放在名词前，如 look like her；alike 通常作表语放在 be 后，如 the two are alike。"
         }
       ],
       "relatedVocabulary": [
@@ -1545,10 +1601,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -1630,7 +1686,7 @@
           }
         ],
         "directSynonym": "assist /əˈsɪst/（协助）；aid /ˈeɪd/（援助）；support /səˈpɔːrt/（支持）；facilitate /fəˈsɪləˌteɪt/（促进；使便利）；lend a hand /ˈlɛnd ə ˈhænd/（搭把手）",
-        "directAntonym": "hinder /ˈhɪndɚ/（阻碍）",
+        "directAntonym": "hinder /ˈhɪndɚ/（阻碍）；withhold assistance /wɪθˈhoʊld əˈsɪstəns/（拒绝施助；不提供帮助）；harm /ˈhɑrm/（伤害；损害）",
         "derivatives": "helper · helpful · helpless · helpfully · helplessly",
         "example": "Clear examples help learners understand the structure.",
         "exampleChinese": "清晰的例句帮助学习者理解结构。"
@@ -1897,6 +1953,20 @@
           "partOfSpeech": "v.",
           "chinese": "阻碍",
           "usage": "与使事情更容易的 help 义相反。"
+        },
+        {
+          "word": "withhold assistance",
+          "phonetic": "/wɪθˈhoʊld əˈsɪstəns/",
+          "partOfSpeech": "phr.v.",
+          "chinese": "拒绝施助；不提供帮助",
+          "usage": "只与 help 表示向有需要的人提供支持的义项相对；help 是实际提供帮助，withhold assistance 是有意不施助。"
+        },
+        {
+          "word": "harm",
+          "phonetic": "/ˈhɑrm/",
+          "partOfSpeech": "v.",
+          "chinese": "伤害；损害",
+          "usage": "只对应 help 表示改善人的状况或使事情变好的义项；help 产生益处，harm 则造成伤害或损失。"
         }
       ],
       "derivatives": [
@@ -1943,6 +2013,13 @@
           "partOfSpeech": "v.",
           "chinese": "希望",
           "difference": "help 表示提供帮助或使事情更容易；hope 表示期望某事发生，两者拼写相近但结构不同。"
+        },
+        {
+          "word": "cannot help doing",
+          "phonetic": "/ˈkænɑt ˈhɛlp ˈduːɪŋ/",
+          "partOfSpeech": "phr.v.",
+          "chinese": "忍不住做；不得不做",
+          "difference": "help someone do 表示帮助某人完成动作；cannot help doing 是固定结构，表示无法控制自己不去做某事。"
         }
       ],
       "relatedVocabulary": [
@@ -2345,10 +2422,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -2429,8 +2506,8 @@
             "note": "一次开始时间用 in；since 常配完成时表示持续。"
           }
         ],
-        "directSynonym": "begin /bɪˈɡɪn/（开始）；commence /kəˈmɛns/（开始）；initiate /ˌɪˈnɪʃiˌeɪt/（发起）；launch /ˈlɔːntʃ/（启动；推出）；establish /ɪˈstæblɪʃ/（创办；建立）",
-        "directAntonym": "finish /ˈfɪnɪʃ/（结束；完成）",
+        "directSynonym": "set in motion /ˈsɛt ɪn ˈmoʊʃən/（启动；使开始运作）；commence /kəˈmɛns/（开始）；initiate /ˌɪˈnɪʃiˌeɪt/（发起）；launch /ˈlɔːntʃ/（启动；推出）；establish /ɪˈstæblɪʃ/（创办；建立）",
+        "directAntonym": "finish /ˈfɪnɪʃ/（结束；完成）；switch off /ˈswɪtʃ ˈɔːf/（关掉；关闭）；close down /ˈkloʊs ˈdaʊn/（停业；关闭）",
         "derivatives": "restart · starter · starting",
         "example": "I start reviewing as soon as I finish breakfast.",
         "exampleChinese": "我吃完早餐就开始复习。"
@@ -2648,11 +2725,11 @@
       ],
       "synonyms": [
         {
-          "word": "begin",
-          "phonetic": "/bɪˈɡɪn/",
-          "partOfSpeech": "v.",
-          "chinese": "开始",
-          "difference": "最通用，常可与 start 互换；不能覆盖 start 的时间起点、启动设备、创办事业或惊跳名词义。"
+          "word": "set in motion",
+          "phonetic": "/ˈsɛt ɪn ˈmoʊʃən/",
+          "partOfSpeech": "phr.v.",
+          "chinese": "启动；使开始运作",
+          "difference": "set in motion 强调主动启动一个过程或计划；start 适用范围更广，也可不及物地表示事情开始。"
         },
         {
           "word": "commence",
@@ -2690,6 +2767,20 @@
           "partOfSpeech": "v.",
           "chinese": "结束；完成",
           "usage": "与开始活动或过程相反；只与活动、过程或设备开始运作的义项构成反向关系。"
+        },
+        {
+          "word": "switch off",
+          "phonetic": "/ˈswɪtʃ ˈɔːf/",
+          "partOfSpeech": "phr.v.",
+          "chinese": "关掉；关闭",
+          "usage": "只与 start a machine 表示启动设备的常用义相对；start 使设备开始运转，switch off 则切断运行。"
+        },
+        {
+          "word": "close down",
+          "phonetic": "/ˈkloʊs ˈdaʊn/",
+          "partOfSpeech": "phr.v.",
+          "chinese": "停业；关闭",
+          "usage": "只与 start a business 表示创办企业的义项相对；start 使企业开始经营，close down 表示终止经营。"
         }
       ],
       "derivatives": [
@@ -2722,6 +2813,13 @@
           "partOfSpeech": "v.",
           "chinese": "使吃惊",
           "difference": "start 可作名词表示突然惊跳；startle 是及物动词，表示使某人吃惊。"
+        },
+        {
+          "word": "star",
+          "phonetic": "/ˈstɑr/",
+          "partOfSpeech": "n.",
+          "chinese": "星；恒星",
+          "difference": "start /stɑːrt/ 比 star /stɑːr/ 末尾多 /t/ 音和字母 t；start 表示开始，star 是星或明星的名词。"
         }
       ],
       "relatedVocabulary": [
@@ -2930,9 +3028,9 @@
             "be",
             "have",
             "do",
-            "begin"
+            "commence"
           ],
-          "answer": "begin",
+          "answer": "commence",
           "stage": "T2",
           "ai": false
         },
@@ -3124,10 +3222,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -3203,7 +3301,7 @@
           }
         ],
         "directSynonym": "grow /ˈɡroʊ/（逐渐变得）；turn /ˈtɝːn/（变成）；get /ˈɡɛt/（变得）；develop into /dɪˈvɛləp ˈɪntu/（发展成为）；transform into /trænsˈfɔːrm ˈɪntu/（转变成）",
-        "directAntonym": "remain /rɪˈmeɪn/（仍然；保持）",
+        "directAntonym": "remain /rɪˈmeɪn/（仍然；保持）；not suit /ˈnɑt ˈsuːt/（不适合；不衬）；cease to be /ˈsiːs ˈtuː ˈbiː/（不再是；停止成为）",
         "derivatives": "becoming · unbecoming",
         "example": "Speaking becomes easier with practice.",
         "exampleChinese": "通过练习，口语会变得更容易。"
@@ -3456,6 +3554,20 @@
           "partOfSpeech": "v.",
           "chinese": "仍然；保持",
           "usage": "与状态发生变化相反；只与状态或身份发生变化的义项构成反向关系。"
+        },
+        {
+          "word": "not suit",
+          "phonetic": "/ˈnɑt ˈsuːt/",
+          "partOfSpeech": "phr.v.",
+          "chinese": "不适合；不衬",
+          "usage": "只与 become 作及物动词表示服饰、颜色或举止很适合某人的义项相对；become someone 是很衬对方，not suit 是不合适。"
+        },
+        {
+          "word": "cease to be",
+          "phonetic": "/ˈsiːs ˈtuː ˈbiː/",
+          "partOfSpeech": "phr.v.",
+          "chinese": "不再是；停止成为",
+          "usage": "只对应 become 表示获得某种身份或状态的义项；become 表示进入该身份，cease to be 表示不再保有它。"
         }
       ],
       "derivatives": [
@@ -3481,6 +3593,13 @@
           "partOfSpeech": "v.",
           "chinese": "开始",
           "difference": "begin 表示活动或过程开始，后接名词、to do 或 -ing；become 是系动词，后接名词或形容词表状态转变。"
+        },
+        {
+          "word": "be",
+          "phonetic": "/ˈbiː/",
+          "partOfSpeech": "v.",
+          "chinese": "是；处于",
+          "difference": "be 连接补语时只描述当前身份或状态；become 强调从原状态转变为新身份或新状态的过程。"
         }
       ],
       "relatedVocabulary": [
@@ -3686,10 +3805,10 @@
           "type": "meaning_choice",
           "prompt": "在“逐渐变得”这个义项下，哪个词与“become”意思最接近？",
           "options": [
-            "have",
             "do",
+            "say",
             "grow",
-            "be"
+            "have"
           ],
           "answer": "grow",
           "stage": "T2",
@@ -3700,10 +3819,10 @@
           "type": "meaning_choice",
           "prompt": "在“变得；成为”这个义项下，哪个词与“become”意思相反？",
           "options": [
-            "do",
+            "say",
             "remain",
-            "be",
-            "have"
+            "have",
+            "do"
           ],
           "answer": "remain",
           "stage": "T2",
@@ -3715,9 +3834,9 @@
           "prompt": "结合拼写、发音和用法，哪一项需要与“become”重点区分？",
           "options": [
             "begin",
-            "be",
             "have",
-            "do"
+            "do",
+            "say"
           ],
           "answer": "begin",
           "stage": "T3",
@@ -3883,10 +4002,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     }
   ]

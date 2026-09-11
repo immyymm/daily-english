@@ -1,8 +1,8 @@
 {
   "date": "2026-08-17",
   "dayNumber": 1,
-  "contentVersion": "2026.09.10.4",
-  "templateVersion": "learning-template-2026.09.10.4",
+  "contentVersion": "2026.09.11.1",
+  "templateVersion": "learning-template-2026.09.11.1",
   "cards": [
     {
       "id": "be-v",
@@ -77,7 +77,7 @@
           }
         ],
         "directSynonym": "exist /ɪɡˈzɪst/（存在）；remain /rɪˈmeɪn/（仍然是；保持）；constitute /ˈkɑnstəˌtuːt/（构成；相当于）；equal /ˈiːkwəl/（等于；相当于）；serve as /ˈsɝːv ˈæz/（担任；用作）",
-        "directAntonym": "cease to exist /ˈsiːs ˈtuː ɪɡˈzɪst/（不复存在）",
+        "directAntonym": "cease to exist /ˈsiːs ˈtuː ɪɡˈzɪst/（不复存在）；disappear /ˌdɪsəˈpɪr/（消失；不再出现）；be absent /ˈbiː ˈæbsənt/（缺席；不在场）",
         "derivatives": "being",
         "example": "Please be ready before the lesson starts.",
         "exampleChinese": "请在课程开始前准备好。"
@@ -337,6 +337,20 @@
           "partOfSpeech": "phr.",
           "chinese": "不复存在",
           "usage": "仅与 be 的‘存在’义形成明确对比。"
+        },
+        {
+          "word": "disappear",
+          "phonetic": "/ˌdɪsəˈpɪr/",
+          "partOfSpeech": "v.",
+          "chinese": "消失；不再出现",
+          "usage": "只在 be 表示‘存在或在场’的常用义上相对；be 表示仍然存在，disappear 表示变得看不见或不再出现。"
+        },
+        {
+          "word": "be absent",
+          "phonetic": "/ˈbiː ˈæbsənt/",
+          "partOfSpeech": "phr.",
+          "chinese": "缺席；不在场",
+          "usage": "只对应 be present 的在场义；be 表示人或物在某处，be absent 表示该人或物不在场。"
         }
       ],
       "derivatives": [
@@ -581,12 +595,12 @@
           "type": "meaning_choice",
           "prompt": "在“存在；有”这个义项下，哪个词与“be”意思相反？",
           "options": [
-            "cease to exist",
-            "be conceivable",
-            "be expected to",
-            "be grateful to"
+            "disappear",
+            "have",
+            "do",
+            "say"
           ],
-          "answer": "cease to exist",
+          "answer": "disappear",
           "stage": "T2",
           "ai": false
         },
@@ -764,10 +778,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -843,7 +857,7 @@
           }
         ],
         "directSynonym": "possess /pəˈzɛs/（拥有；具有）；own /ˈoʊn/（拥有）；hold /ˈhoʊld/（持有；容纳）；contain /kənˈteɪn/（包含；容纳）；experience /ɪkˈspɪriəns/（经历；感受）",
-        "directAntonym": "lack /ˈlæk/（缺少）",
+        "directAntonym": "lack /ˈlæk/（缺少）；be without /ˈbiː wɪˈθaʊt/（没有；缺少）；lose /ˈluːz/（失去；不再拥有）",
         "derivatives": "本词暂无需额外强记的高频派生词",
         "example": "I have enough time to review five words tonight.",
         "exampleChinese": "我今晚有足够时间复习五个单词。"
@@ -1110,6 +1124,20 @@
           "partOfSpeech": "v.",
           "chinese": "缺少",
           "usage": "与 have 的‘拥有所需事物’义相反，后面直接接宾语。"
+        },
+        {
+          "word": "be without",
+          "phonetic": "/ˈbiː wɪˈθaʊt/",
+          "partOfSpeech": "phr.",
+          "chinese": "没有；缺少",
+          "usage": "只与 have 表示拥有某物的义项相对；have 说明持有，be without 说明处于没有该物的状态。"
+        },
+        {
+          "word": "lose",
+          "phonetic": "/ˈluːz/",
+          "partOfSpeech": "v.",
+          "chinese": "失去；不再拥有",
+          "usage": "只对应 have 的拥有义；have 描述当前持有，lose 表示原先拥有的东西已不再拥有。"
         }
       ],
       "derivatives": [],
@@ -1120,6 +1148,13 @@
           "partOfSpeech": "phr.",
           "chinese": "有；存在",
           "difference": "there is 用来引出某处存在的事物；have 表示主语拥有或经历某事。"
+        },
+        {
+          "word": "have to",
+          "phonetic": "/ˈhæv ˈtuː/",
+          "partOfSpeech": "semi-modal v.",
+          "chinese": "必须；不得不",
+          "difference": "have 单独作实义动词常表示拥有或经历；have to 后接动词原形，表示必要或外部要求。"
         }
       ],
       "relatedVocabulary": [
@@ -1508,10 +1543,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -1587,7 +1622,7 @@
           }
         ],
         "directSynonym": "perform /pɚˈfɔːrm/（执行；完成；表演）；carry out /ˈkæri ˈaʊt/（执行；实施）；execute /ˈɛksəˌkjuːt/（执行；实施）；accomplish /əˈkɑmplɪʃ/（完成；实现）；undertake /ˈʌndɚˌteɪk/（承担；着手进行）",
-        "directAntonym": "neglect /nəˈɡlɛkt/（疏于做；忽视）",
+        "directAntonym": "neglect /nəˈɡlɛkt/（疏于做；忽视）；fail /ˈfeɪl/（失败；未能做好）；leave undone /ˈliːv ənˈdʌn/（留下未做；搁置）",
         "derivatives": "redo · undo · overdo · doer · doing · doable",
         "example": "Just do your best and learn from each mistake.",
         "exampleChinese": "尽力去做，并从每个错误中学习。"
@@ -1847,6 +1882,20 @@
           "partOfSpeech": "v.",
           "chinese": "疏于做；忽视",
           "usage": "与 do one's duty/work 的履行义形成对比。"
+        },
+        {
+          "word": "fail",
+          "phonetic": "/ˈfeɪl/",
+          "partOfSpeech": "v.",
+          "chinese": "失败；未能做好",
+          "usage": "只与 do 表示完成任务或表现得好的常用义相对；do the job 表示完成工作，fail 表示未达到要求或未能完成。"
+        },
+        {
+          "word": "leave undone",
+          "phonetic": "/ˈliːv ənˈdʌn/",
+          "partOfSpeech": "phr.",
+          "chinese": "留下未做；搁置",
+          "usage": "只对应 do the work 这类执行义；do 表示实际完成动作，leave undone 表示该事尚未处理。"
         }
       ],
       "derivatives": [
@@ -1900,6 +1949,13 @@
           "partOfSpeech": "v.",
           "chinese": "制作；创造；促成",
           "difference": "do 通常与 task、work、research 等活动或任务搭配；make 则强调制作产物或形成 decision、plan、result。"
+        },
+        {
+          "word": "due",
+          "phonetic": "/ˈduː/",
+          "partOfSpeech": "adj.",
+          "chinese": "到期的；应付的",
+          "difference": "do 是动词，常读 /duː/；due 是形容词，也读 /duː/，表示到期、预定或应付，拼写和词性不同。"
         }
       ],
       "relatedVocabulary": [
@@ -2302,10 +2358,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -2380,8 +2436,8 @@
             "note": "表示吩咐某人做事用 tell someone to do，不用 say someone to do。"
           }
         ],
-        "directSynonym": "state /ˈsteɪt/（陈述；说明）；tell /ˈtɛl/（告诉；讲述）；express /ɪkˈsprɛs/（表达）；mention /ˈmɛnʃən/（提到）；declare /dɪˈklɛr/（宣布；声明）",
-        "directAntonym": "remain silent /rɪˈmeɪn ˈsaɪlənt/（保持沉默；不说）",
+        "directSynonym": "state /ˈsteɪt/（陈述；说明）；utter /ˈʌtɚ/（说出；发出声音）；express /ɪkˈsprɛs/（表达）；mention /ˈmɛnʃən/（提到）；declare /dɪˈklɛr/（宣布；声明）",
+        "directAntonym": "remain silent /rɪˈmeɪn ˈsaɪlənt/（保持沉默；不说）；deny /dɪˈnaɪ/（否认；不承认）；retract /riˈtrækt/（撤回；收回所说的话）",
         "derivatives": "saying · unsaid",
         "example": "Please say the sentence clearly and at a natural speed.",
         "exampleChinese": "请以自然语速清楚地说出这个句子。"
@@ -2606,11 +2662,11 @@
           "difference": "比 say 正式，强调清楚明确地给出事实或立场。"
         },
         {
-          "word": "tell",
-          "phonetic": "/ˈtɛl/",
+          "word": "utter",
+          "phonetic": "/ˈʌtɚ/",
           "partOfSpeech": "v.",
-          "chinese": "告诉；讲述",
-          "difference": "通常要接听话对象，如 tell me；say 后常直接接说出的内容。"
+          "chinese": "说出；发出声音",
+          "difference": "utter 强调把词语或声音实际说出口；say 更常引出所说的具体内容或完整陈述。"
         },
         {
           "word": "express",
@@ -2641,6 +2697,20 @@
           "partOfSpeech": "phr.",
           "chinese": "保持沉默；不说",
           "usage": "只对应 say 表示把话说出口的核心义；remain silent 强调选择不发言。"
+        },
+        {
+          "word": "deny",
+          "phonetic": "/dɪˈnaɪ/",
+          "partOfSpeech": "v.",
+          "chinese": "否认；不承认",
+          "usage": "只在 say 表示声称某事为真的语境中相对；say 把说法表达出来，deny 则明确否认该说法。"
+        },
+        {
+          "word": "retract",
+          "phonetic": "/riˈtrækt/",
+          "partOfSpeech": "v.",
+          "chinese": "撤回；收回所说的话",
+          "usage": "只对应 say 表示公开说出声明的义项；say 发布言论，retract 表示事后正式收回该言论。"
         }
       ],
       "derivatives": [
@@ -2666,6 +2736,13 @@
           "partOfSpeech": "v.",
           "chinese": "说话；发言",
           "difference": "speak 强调说话行为或语言能力；say 强调说出的具体内容。"
+        },
+        {
+          "word": "tell",
+          "phonetic": "/ˈtɛl/",
+          "partOfSpeech": "v.",
+          "chinese": "告诉；讲述",
+          "difference": "say 通常直接接说出的内容；tell 常先接听者，用 tell someone something，不能照搬 say something。"
         }
       ],
       "relatedVocabulary": [
@@ -2885,12 +2962,12 @@
           "type": "meaning_choice",
           "prompt": "在“说；讲；表达”这个义项下，哪个词与“say”意思相反？",
           "options": [
-            "be impossible",
-            "remain silent",
-            "be allowed to",
-            "be capable of"
+            "do",
+            "deny",
+            "be",
+            "have"
           ],
-          "answer": "remain silent",
+          "answer": "deny",
           "stage": "T2",
           "ai": false
         },
@@ -3068,10 +3145,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -3147,7 +3224,7 @@
           }
         ],
         "directSynonym": "travel /ˈtrævəl/（旅行；行进）；move /ˈmuːv/（移动；搬迁）；proceed /prəˈsiːd/（继续进行；前往）；depart /dɪˈpɑrt/（离开；出发）；head /ˈhɛd/（朝……前进）",
-        "directAntonym": "stay /ˈsteɪ/（停留；留下）",
+        "directAntonym": "stay /ˈsteɪ/（停留；留下）；stop /ˈstɑp/（停止；不再前进）；fail /ˈfeɪl/（失灵；未奏效）",
         "derivatives": "goer · going · ongoing · outgoing",
         "example": "I usually go to work by subway.",
         "exampleChinese": "我通常乘地铁去上班。"
@@ -3414,6 +3491,20 @@
           "partOfSpeech": "v.",
           "chinese": "停留；留下",
           "usage": "与 go 的‘离开并前往别处’义形成直接对比。"
+        },
+        {
+          "word": "stop",
+          "phonetic": "/ˈstɑp/",
+          "partOfSpeech": "v.",
+          "chinese": "停止；不再前进",
+          "usage": "只与 go 表示移动或进程持续的义项相对；go 表示继续前进，stop 表示移动或进程中止。"
+        },
+        {
+          "word": "fail",
+          "phonetic": "/ˈfeɪl/",
+          "partOfSpeech": "v.",
+          "chinese": "失灵；未奏效",
+          "usage": "只与 go 表示机器正常运转或办法能奏效的常用义相对；go 表示系统能运行，fail 表示机器失灵或方案未奏效。"
         }
       ],
       "derivatives": [
@@ -3862,10 +3953,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     }
   ]

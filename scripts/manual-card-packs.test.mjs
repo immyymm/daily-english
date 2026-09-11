@@ -3,8 +3,8 @@ import { manualCardPacks } from './manual-card-packs.mjs';
 import { containsForbiddenRelationText, isLowValueDerivative, relationNoteSpecificityIssue } from './quality-relations.mjs';
 import { fixedExampleIssue, isConcisePhraseGloss, mechanicalContextIssue, phraseContainsTarget, reusablePhraseIssue } from './quality-sections.mjs';
 
-const adaptiveKeys = ['derivatives', 'antonyms', 'confusables'];
-const mandatoryKeys = ['meanings', 'fixedPhrases', 'contexts', 'synonyms', 'related', 'commonErrors'];
+const adaptiveKeys = ['derivatives'];
+const mandatoryKeys = ['meanings', 'fixedPhrases', 'contexts', 'synonyms', 'antonyms', 'confusables', 'related', 'commonErrors'];
 const normalize = (value) => String(value ?? '').toLowerCase().replace(/[‘’]/g, "'").replace(/[^a-z0-9']+/g, ' ').trim();
 const genericCategory = /^(?:相关|常用|其他|综合|补充|近义|对比|词族|同类)(?:词汇|表达|内容|分类|语境)?$/;
 
@@ -15,7 +15,7 @@ describe('manual semantic packs', () => {
     expect(words).not.toContain('work');
   });
 
-  it('makes every mandatory section explicit and keeps adaptive review decisions explicit', () => {
+  it('makes every mandatory section non-empty and keeps derivative review decisions explicit', () => {
     for (const [word, pack] of Object.entries(manualCardPacks)) {
       for (const key of mandatoryKeys) {
         expect(pack, `${word}.${key}`).toHaveProperty(key);
@@ -29,12 +29,14 @@ describe('manual semantic packs', () => {
     }
   });
 
-  it('matches the visible completeness floor without padding adaptive sections', () => {
+  it('matches every locked visible-completeness floor without relation padding', () => {
     for (const [word, pack] of Object.entries(manualCardPacks)) {
       expect(pack.fixedPhrases.length, `${word}.fixedPhrases`).toBeGreaterThanOrEqual(12);
       expect(pack.contexts.length, `${word}.contexts categories`).toBeGreaterThanOrEqual(4);
       expect(pack.contexts.flatMap(([, items]) => items).length, `${word}.contexts items`).toBeGreaterThanOrEqual(16);
       expect(pack.synonyms.length, `${word}.synonyms`).toBeGreaterThanOrEqual(5);
+      expect(pack.antonyms.length, `${word}.antonyms`).toBeGreaterThanOrEqual(3);
+      expect(pack.confusables.length, `${word}.confusables`).toBeGreaterThanOrEqual(2);
       expect(pack.related.length, `${word}.related categories`).toBeGreaterThanOrEqual(3);
       expect(pack.related.flatMap(([, items]) => items).length, `${word}.related items`).toBeGreaterThanOrEqual(12);
       expect(pack.commonErrors.length, `${word}.commonErrors`).toBeGreaterThanOrEqual(2);

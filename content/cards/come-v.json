@@ -70,8 +70,8 @@
         "note": "come 后接普通目的地名词时要用 to；只有 home、here、there 等方向副词前不加 to。"
       }
     ],
-    "directSynonym": "arrive /ɚˈaɪv/（到达）；approach /əˈproʊtʃ/（接近）；reach /ˈriːtʃ/（到达；达到）；return /rɪˈtɝːn/（回来；返回）；occur /əˈkɝː/（发生）",
-    "directAntonym": "go /ˈɡoʊ/（去；离开）",
+    "directSynonym": "show up /ˈʃoʊ ˈʌp/（到场；出现）；approach /əˈproʊtʃ/（接近）；reach /ˈriːtʃ/（到达；达到）；return /rɪˈtɝːn/（回来；返回）；occur /əˈkɝː/（发生）",
+    "directAntonym": "go /ˈɡoʊ/（去；离开）；leave /ˈliːv/（离开；出发）；stay away /ˈsteɪ əˈweɪ/（不来；避开）",
     "derivatives": "coming · newcomer",
     "example": "Please come home before the storm begins.",
     "exampleChinese": "请在暴风雨开始前回家。"
@@ -289,11 +289,11 @@
   ],
   "synonyms": [
     {
-      "word": "arrive",
-      "phonetic": "/ɚˈaɪv/",
-      "partOfSpeech": "v.",
-      "chinese": "到达",
-      "difference": "强调到达终点，通常与 at/in 连用；come 体现朝参照点移动。"
+      "word": "show up",
+      "phonetic": "/ˈʃoʊ ˈʌp/",
+      "partOfSpeech": "phr.v.",
+      "chinese": "到场；出现",
+      "difference": "show up 是较口语的到场或出现，常突出某人是否露面；come 是更中性的朝参照点移动或到来。"
     },
     {
       "word": "approach",
@@ -331,6 +331,20 @@
       "partOfSpeech": "v.",
       "chinese": "去；离开",
       "usage": "以说话者或明确参照点为中心时，come 表示朝该参照点靠近，go 则表示从该参照点离开。"
+    },
+    {
+      "word": "leave",
+      "phonetic": "/ˈliːv/",
+      "partOfSpeech": "v.",
+      "chinese": "离开；出发",
+      "usage": "只与 come 表示向说话者或参照点靠近的义项相对；come 是到来，leave 是从该地点离开。"
+    },
+    {
+      "word": "stay away",
+      "phonetic": "/ˈsteɪ əˈweɪ/",
+      "partOfSpeech": "phr.v.",
+      "chinese": "不来；避开",
+      "usage": "只与 come 表示到某地或参加某活动的义项相对；come 表示到场，stay away 表示主动不到场或远离该地点。"
     }
   ],
   "derivatives": [
@@ -356,6 +370,13 @@
       "partOfSpeech": "v.",
       "chinese": "变成",
       "difference": "come + 形容词只用于少数固定变化；become 可广泛表示身份或状态转变。"
+    },
+    {
+      "word": "arrive",
+      "phonetic": "/ɚˈaɪv/",
+      "partOfSpeech": "v.",
+      "chinese": "到达",
+      "difference": "come 强调朝说话者或参照点移动，常接 to；arrive 强调抵达结果，普通地点前用 arrive at/in，不能说 arrive to the station。"
     }
   ],
   "relatedVocabulary": [
@@ -559,14 +580,14 @@
     {
       "id": "come-v-synonym-choice",
       "type": "meaning_choice",
-      "prompt": "在“到达”这个义项下，哪个词与“come”意思最接近？",
+      "prompt": "在“接近”这个义项下，哪个词与“come”意思最接近？",
       "options": [
-        "arrive",
+        "approach",
         "be",
         "have",
         "do"
       ],
-      "answer": "arrive",
+      "answer": "approach",
       "stage": "T2",
       "ai": false
     },
@@ -758,9 +779,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

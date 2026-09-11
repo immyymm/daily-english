@@ -71,7 +71,7 @@
       }
     ],
     "directSynonym": "ready /ˈrɛdi/（使准备好）；arrange /ɚˈeɪndʒ/（安排）；plan /ˈplæn/（计划）；equip /ɪˈkwɪp/（使有准备）；rehearse /riˈhɝːs/（排练）",
-    "directAntonym": "",
+    "directAntonym": "neglect /nəˈɡlɛkt/（疏于准备；忽视）；improvise /ˈɪmprəˌvaɪz/（临时应变；即兴处理）；go in cold /ˈɡoʊ ɪn ˈkoʊld/（毫无准备地开始）",
     "derivatives": "preparation · preparedness · prepared · unprepared · preparatory",
     "example": "She prepared for the interview by practicing aloud.",
     "exampleChinese": "她通过大声练习为面试做准备。"
@@ -317,7 +317,29 @@
       "difference": "只对应为演出、陈述或情境练习；prepare 可用于任何事件，不限表演或演练。"
     }
   ],
-  "antonyms": [],
+  "antonyms": [
+    {
+      "word": "neglect",
+      "phonetic": "/nəˈɡlɛkt/",
+      "partOfSpeech": "v.",
+      "chinese": "疏于准备；忽视",
+      "usage": "只与 prepare for a known task 的事先准备义相对；neglect 表示该做准备却没有做。"
+    },
+    {
+      "word": "improvise",
+      "phonetic": "/ˈɪmprəˌvaɪz/",
+      "partOfSpeech": "v.",
+      "chinese": "临时应变；即兴处理",
+      "usage": "只在做事方式上对比：prepare 是预先安排，improvise 是没有充分准备时临场处理。"
+    },
+    {
+      "word": "go in cold",
+      "phonetic": "/ˈɡoʊ ɪn ˈkoʊld/",
+      "partOfSpeech": "v. phr.",
+      "chinese": "毫无准备地开始",
+      "usage": "只与 prepare beforehand 的事先准备义相对；go in cold 表示没有预演或资料便直接开始。"
+    }
+  ],
   "derivatives": [
     {
       "word": "preparation",
@@ -362,6 +384,13 @@
       "partOfSpeech": "v.",
       "chinese": "修理",
       "difference": "prepare /prɪˈpɛr/ 表示准备，常接任务、材料或人员；repair /rɪˈpɛr/ 表示修复损坏的人或物。"
+    },
+    {
+      "word": "prepare for",
+      "phonetic": "/priˈpɛr ˈfɔːr/",
+      "partOfSpeech": "phr.v.",
+      "chinese": "为……做准备",
+      "difference": "prepare for 后接将发生的事件；prepare something 表示把某物准备好，不能在直接宾语前一律加 for。"
     }
   ],
   "relatedVocabulary": [
@@ -577,16 +606,16 @@
       "ai": false
     },
     {
-      "id": "prepare-v-synonym-choice-2",
+      "id": "prepare-v-antonym-choice",
       "type": "meaning_choice",
-      "prompt": "除“ready”外，在“安排”这个义项下，哪个词也与“prepare”意思接近？",
+      "prompt": "在“准备；预备”这个义项下，哪个词与“prepare”意思相反？",
       "options": [
-        "arrange",
+        "neglect",
         "be",
         "have",
         "do"
       ],
-      "answer": "arrange",
+      "answer": "neglect",
       "stage": "T2",
       "ai": false
     },
@@ -764,9 +793,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

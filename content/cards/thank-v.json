@@ -71,7 +71,7 @@
       }
     ],
     "directSynonym": "show gratitude to /ˈʃoʊ ˈɡrætəˌtuːd ˈtuː/（向……表示感激）；express gratitude to /ɪkˈsprɛs ˈɡrætəˌtuːd ˈtuː/（向……表达感激）；give thanks to /ˈɡɪv ˈθæŋks ˈtuː/（向……致谢）；acknowledge /ækˈnɑlɪdʒ/（致谢；承认）；be grateful to /ˈbiː ˈɡreɪtfəl ˈtuː/（感激某人）",
-    "directAntonym": "",
+    "directAntonym": "blame /ˈbleɪm/（责怪；归咎）；criticize /ˈkrɪtɪˌsaɪz/（批评）；take for granted /ˈteɪk ˈfɔːr ˈɡræntəd/（把……当作理所当然）",
     "derivatives": "thanks · thankfulness · thankful · thankless · thankfully",
     "example": "I want to thank you for your detailed feedback.",
     "exampleChinese": "我想感谢你的详细反馈。"
@@ -310,7 +310,29 @@
       "difference": "形容词结构，常接 for；宾语是受谢者还是受益事项会决定所用句型"
     }
   ],
-  "antonyms": [],
+  "antonyms": [
+    {
+      "word": "blame",
+      "phonetic": "/ˈbleɪm/",
+      "partOfSpeech": "v.",
+      "chinese": "责怪；归咎",
+      "usage": "thank someone for a result 是将好处归功于对方，blame someone for it 是将坏结果归咎于对方。"
+    },
+    {
+      "word": "criticize",
+      "phonetic": "/ˈkrɪtɪˌsaɪz/",
+      "partOfSpeech": "v.",
+      "chinese": "批评",
+      "usage": "thank 用言语表达对帮助或付出的感激，criticize 则针对行为或结果表达不满。"
+    },
+    {
+      "word": "take for granted",
+      "phonetic": "/ˈteɪk ˈfɔːr ˈɡræntəd/",
+      "partOfSpeech": "phr.",
+      "chinese": "把……当作理所当然",
+      "usage": "thank 表明说话者看到并认可对方的付出，take for granted 表示接受好处却不表示感激。"
+    }
+  ],
   "derivatives": [
     {
       "word": "thanks",
@@ -350,11 +372,18 @@
   ],
   "confusables": [
     {
-      "word": "appreciate",
-      "phonetic": "/əˈpriːʃiˌeɪt/",
+      "word": "tank",
+      "phonetic": "/ˈtæŋk/",
+      "partOfSpeech": "n.",
+      "chinese": "坦克；储罐",
+      "difference": "thank /θæŋk/ 与 tank /tæŋk/ 只差开头的 /h/ 音；thank 表示感谢，tank 是坦克或储罐。"
+    },
+    {
+      "word": "think",
+      "phonetic": "/ˈθɪŋk/",
       "partOfSpeech": "v.",
-      "chinese": "感激；欣赏",
-      "difference": "thank 后接人再用 for；appreciate 通常直接接事或 doing"
+      "chinese": "思考；认为",
+      "difference": "thank /θæŋk/ 和 think /θɪŋk/ 的元音不同；thank 表示感谢，think 表示思考或认为。"
     }
   ],
   "relatedVocabulary": [
@@ -570,16 +599,30 @@
       "ai": false
     },
     {
-      "id": "thank-v-contrast-choice",
+      "id": "thank-v-antonym-choice",
       "type": "meaning_choice",
-      "prompt": "结合拼写、发音和用法，哪一项需要与“thank”重点区分？",
+      "prompt": "在“感谢；致谢”这个义项下，哪个词与“thank”意思相反？",
       "options": [
         "be",
         "have",
         "do",
-        "appreciate"
+        "blame"
       ],
-      "answer": "appreciate",
+      "answer": "blame",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "thank-v-contrast-choice",
+      "type": "meaning_choice",
+      "prompt": "结合拼写、发音和用法，哪一项需要与“thank”重点区分？",
+      "options": [
+        "ball",
+        "bass",
+        "tank",
+        "increase"
+      ],
+      "answer": "tank",
       "stage": "T3",
       "ai": false
     },
@@ -743,9 +786,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

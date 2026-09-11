@@ -71,7 +71,7 @@
       }
     ],
     "directSynonym": "appear /əˈpɪr/（似乎；显得）；look /ˈlʊk/（看起来）；sound /ˈsaʊnd/（听起来）；give the impression of /ˈɡɪv ðə ˌɪmˈprɛʃən ˈʌv/（给人……印象）；strike someone as /ˈstraɪk ˈsʌmˌwʌn ˈæz/（给某人以……感觉）",
-    "directAntonym": "",
+    "directAntonym": "be certain /ˈbiː ˈsɝːtən/（确定无疑）；be evident /ˈbiː ˈɛvədənt/（显而易见；明确可证）；turn out not to be /ˈtɝːn ˈaʊt ˈnɑt ˈtuː ˈbiː/（结果并非；后来证明不是）",
     "derivatives": "seeming · seemingly",
     "example": "The task seems difficult at first.",
     "exampleChinese": "这个任务起初看起来很难。"
@@ -310,7 +310,29 @@
       "difference": "强调某人的即时主观判断；不能覆盖 seem to do、it seems that 或 there seems to be 等完整结构。"
     }
   ],
-  "antonyms": [],
+  "antonyms": [
+    {
+      "word": "be certain",
+      "phonetic": "/ˈbiː ˈsɝːtən/",
+      "partOfSpeech": "phr.",
+      "chinese": "确定无疑",
+      "usage": "只与 seem 表示依据印象作出不确定判断的义项相对；seem 保留不确定性，be certain 表示证据足以确定。"
+    },
+    {
+      "word": "be evident",
+      "phonetic": "/ˈbiː ˈɛvədənt/",
+      "partOfSpeech": "phr.",
+      "chinese": "显而易见；明确可证",
+      "usage": "只对应 seem 的表面印象义；seem 说明结论只是看起来如此，be evident 说明事实由明确证据显示出来。"
+    },
+    {
+      "word": "turn out not to be",
+      "phonetic": "/ˈtɝːn ˈaʊt ˈnɑt ˈtuː ˈbiː/",
+      "partOfSpeech": "phr.v.",
+      "chinese": "结果并非；后来证明不是",
+      "usage": "只与 seem to be 所表达的表面判断相对；seem to be 说明当时印象如此，turn out not to be 说明后来事实否定该印象。"
+    }
+  ],
   "derivatives": [
     {
       "word": "seeming",
@@ -334,6 +356,13 @@
       "partOfSpeech": "n.",
       "chinese": "缝；接缝",
       "difference": "seem 读 /siːm/ 且表示“似乎”；seam 同音，却是表示接缝的名词。"
+    },
+    {
+      "word": "seem like",
+      "phonetic": "/ˈsiːm ˈlaɪk/",
+      "partOfSpeech": "phr.v.",
+      "chinese": "似乎像；看来像",
+      "difference": "seem 可直接接形容词或 to do；seem like 通常接名词、名词短语或从句，不能在形容词前随意加 like。"
     }
   ],
   "relatedVocabulary": [
@@ -549,16 +578,16 @@
       "ai": false
     },
     {
-      "id": "seem-v-synonym-choice-2",
+      "id": "seem-v-antonym-choice",
       "type": "meaning_choice",
-      "prompt": "除“appear”外，在“看起来”这个义项下，哪个词也与“seem”意思接近？",
+      "prompt": "在“似乎；看起来”这个义项下，哪个词与“seem”意思相反？",
       "options": [
-        "have",
-        "do",
-        "look",
-        "be"
+        "be able to",
+        "be deaf to",
+        "be certain",
+        "agree with"
       ],
-      "answer": "look",
+      "answer": "be certain",
       "stage": "T2",
       "ai": false
     },
@@ -736,9 +765,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

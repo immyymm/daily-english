@@ -83,7 +83,7 @@
       }
     ],
     "directSynonym": "signify /ˈsɪɡnəˌfaɪ/（表示；意味着）；indicate /ˈɪndəˌkeɪt/（表明）；represent /ˌrɛprɪˈzɛnt/（代表；象征）；intend /ˌɪnˈtɛnd/（打算；意指）；matter /ˈmætɚ/（重要）",
-    "directAntonym": "kind /ˈkaɪnd/（友善的；体贴的）；generous /ˈdʒɛnɚəs/（慷慨的；大方的）",
+    "directAntonym": "kind /ˈkaɪnd/（友善的；体贴的）；generous /ˈdʒɛnɚəs/（慷慨的；大方的）；be accidental /ˈbiː ˌæksəˈdɛntəl/（是无意的；是偶然的）",
     "derivatives": "meaning · meaningful · meaningless · meaningfully",
     "example": "Your support means a lot to me.",
     "exampleChinese": "你的支持对我意义重大。"
@@ -392,6 +392,13 @@
       "partOfSpeech": "adj.",
       "chinese": "慷慨的；大方的",
       "usage": "只对应 mean 表示‘吝啬、不愿给予’的形容词义；generous 表示愿意充分给予。"
+    },
+    {
+      "word": "be accidental",
+      "phonetic": "/ˈbiː ˌæksəˈdɛntəl/",
+      "partOfSpeech": "phr.",
+      "chinese": "是无意的；是偶然的",
+      "usage": "只与 mean to do 表示有意或打算做某事的义项相对；mean to do 表示有意图，be accidental 表示结果并非有意造成。"
     }
   ],
   "derivatives": [
@@ -426,11 +433,18 @@
   ],
   "confusables": [
     {
-      "word": "means",
-      "phonetic": "/ˈmiːnz/",
-      "partOfSpeech": "n.",
-      "chinese": "方法；手段",
-      "difference": "means 表示“方法”时单复数同形；mean 可作动词表示“意思是”。"
+      "word": "main",
+      "phonetic": "/ˈmeɪn/",
+      "partOfSpeech": "adj.",
+      "chinese": "主要的；最重要的",
+      "difference": "mean /miːn/ 与 main /meɪn/ 拼写接近但元音不同；mean 表示意思是或平均的，main 表示主要的。"
+    },
+    {
+      "word": "mind",
+      "phonetic": "/ˈmaɪnd/",
+      "partOfSpeech": "v. / n.",
+      "chinese": "介意；留心；头脑",
+      "difference": "mean 用来询问或说明意图、含义；mind 常表示介意并接 -ing，如 Do you mind waiting?，不能用 mean 替换。"
     }
   ],
   "relatedVocabulary": [
@@ -650,9 +664,9 @@
       "type": "meaning_choice",
       "prompt": "在“刻薄的；吝啬的”这个义项下，哪个词与“mean”意思相反？",
       "options": [
+        "bold",
         "calm",
-        "cute",
-        "dead",
+        "cold",
         "kind"
       ],
       "answer": "kind",
@@ -664,12 +678,12 @@
       "type": "meaning_choice",
       "prompt": "结合拼写、发音和用法，哪一项需要与“mean”重点区分？",
       "options": [
-        "actor",
-        "alarm",
-        "means",
-        "increase"
+        "calm",
+        "cold",
+        "main",
+        "bold"
       ],
-      "answer": "means",
+      "answer": "main",
       "stage": "T3",
       "ai": false
     },
@@ -833,9 +847,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

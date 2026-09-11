@@ -77,7 +77,7 @@
       }
     ],
     "directSynonym": "observe /əbˈzɝːv/（观察）；view /ˈvjuː/（观看；查看）；monitor /ˈmɑnətɚ/（监测）；supervise /ˈsuːpɚˌvaɪz/（监督；照看）；keep an eye on /ˈkiːp ˈæn ˈaɪ ˈɑn/（留意；照看）",
-    "directAntonym": "ignore /ˌɪɡˈnɔːr/（忽视）",
+    "directAntonym": "ignore /ˌɪɡˈnɔːr/（忽视）；look away /ˈlʊk əˈweɪ/（把视线移开）；miss /ˈmɪs/（错过；没看到）",
     "derivatives": "watcher · watchfulness · watchful",
     "example": "Watch the video once without reading the subtitles.",
     "exampleChinese": "先不看字幕把视频看一遍。"
@@ -337,6 +337,20 @@
       "partOfSpeech": "v.",
       "chinese": "忽视",
       "usage": "与持续留意或观察相反；观看时长、观察目的和是否持续监测均不同"
+    },
+    {
+      "word": "look away",
+      "phonetic": "/ˈlʊk əˈweɪ/",
+      "partOfSpeech": "phr.",
+      "chinese": "把视线移开",
+      "usage": "watch 表示持续把注意力放在变化的对象上，look away 表示主动把目光从对象移开。"
+    },
+    {
+      "word": "miss",
+      "phonetic": "/ˈmɪs/",
+      "partOfSpeech": "v.",
+      "chinese": "错过；没看到",
+      "usage": "watch a live event 表示实际观看过程，miss the event 表示未能看到该过程。"
     }
   ],
   "derivatives": [
@@ -364,11 +378,18 @@
   ],
   "confusables": [
     {
-      "word": "look at",
-      "phonetic": "/ˈlʊk ˈæt/",
-      "partOfSpeech": "phr.",
-      "chinese": "看向；查看",
-      "difference": "look at 强调将目光转向某物；watch 强调持续观看有运动或变化的对象"
+      "word": "wash",
+      "phonetic": "/ˈwɑʃ/",
+      "partOfSpeech": "v.",
+      "chinese": "洗；清洗",
+      "difference": "watch /wɑːtʃ/ 与 wash /wɑːʃ/ 只有词尾是否含 /t/ 的差别；watch 表示观看，wash 表示清洗。"
+    },
+    {
+      "word": "witch",
+      "phonetic": "/ˈwɪtʃ/",
+      "partOfSpeech": "n.",
+      "chinese": "女巫；巫婆",
+      "difference": "watch /wɑːtʃ/ 与 witch /wɪtʃ/ 辅音相同但元音不同；watch 表示观看，witch 是女巫。"
     }
   ],
   "relatedVocabulary": [
@@ -600,14 +621,14 @@
     {
       "id": "watch-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "哪一项是“watch”的常用派生词？",
+      "prompt": "结合拼写、发音和用法，哪一项需要与“watch”重点区分？",
       "options": [
-        "watcher",
-        "increase",
-        "ability",
-        "absence"
+        "wash",
+        "be",
+        "have",
+        "do"
       ],
-      "answer": "watcher",
+      "answer": "wash",
       "stage": "T3",
       "ai": false
     },
@@ -771,9 +792,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

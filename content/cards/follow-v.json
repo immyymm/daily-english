@@ -71,7 +71,7 @@
       }
     ],
     "directSynonym": "accompany /əˈkʌmpəni/（陪同）；pursue /pɚˈsuː/（追赶；追求）；obey /oʊˈbeɪ/（遵守；服从）；track /ˈtræk/（跟踪）；understand /ˌʌndɚˈstænd/（听懂；理解）",
-    "directAntonym": "precede /prɪˈsiːd/（先于；走在前面）",
+    "directAntonym": "precede /prɪˈsiːd/（先于；走在前面）；disobey /ˌdɪsəˈbeɪ/（不服从；不遵守）；unsubscribe from /ənsəbˈskraɪb ˈfrʌm/（取消订阅；不再关注）",
     "derivatives": "follower · following · follow-up",
     "example": "Follow these steps to make the soup.",
     "exampleChinese": "按照这些步骤做这道汤。"
@@ -331,6 +331,20 @@
       "partOfSpeech": "v.",
       "chinese": "先于；走在前面",
       "usage": "只对应 follow 表示在路线上走在后面或在时间顺序上接续出现的义项；precede 强调走在前面或先发生。"
+    },
+    {
+      "word": "disobey",
+      "phonetic": "/ˌdɪsəˈbeɪ/",
+      "partOfSpeech": "v.",
+      "chinese": "不服从；不遵守",
+      "usage": "follow an instruction 表示按指令行动，disobey it 表示明知要求却采取不符合指令的行动。"
+    },
+    {
+      "word": "unsubscribe from",
+      "phonetic": "/ənsəbˈskraɪb ˈfrʌm/",
+      "partOfSpeech": "phr.",
+      "chinese": "取消订阅；不再关注",
+      "usage": "follow an account 表示订阅它的更新，unsubscribe from the account 表示取消订阅，不再持续接收动态。"
     }
   ],
   "derivatives": [
@@ -356,7 +370,22 @@
       "note": "作名词或定语时通常加连字符"
     }
   ],
-  "confusables": [],
+  "confusables": [
+    {
+      "word": "flow",
+      "phonetic": "/ˈfloʊ/",
+      "partOfSpeech": "v.",
+      "chinese": "流动",
+      "difference": "follow /ˈfɑːloʊ/ 有两个音节并含双写 l，flow /floʊ/ 只有一个音节，表示液体或人流移动。"
+    },
+    {
+      "word": "fellow",
+      "phonetic": "/ˈfɛloʊ/",
+      "partOfSpeech": "n. / adj.",
+      "chinese": "同伴；同类的",
+      "difference": "follow /ˈfɑːloʊ/ 是动词，fellow /ˈfɛloʊ/ 中间元音不同，常作名词表示同伴或作定语表示同类。"
+    }
+  ],
   "relatedVocabulary": [
     {
       "category": "路线与方向",
@@ -586,14 +615,14 @@
     {
       "id": "follow-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "哪一项是“follow”的常用派生词？",
+      "prompt": "结合拼写、发音和用法，哪一项需要与“follow”重点区分？",
       "options": [
-        "accuracy",
-        "follower",
-        "increase",
-        "accident"
+        "do",
+        "flow",
+        "be",
+        "have"
       ],
-      "answer": "follower",
+      "answer": "flow",
       "stage": "T3",
       "ai": false
     },
@@ -757,9 +786,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

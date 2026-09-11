@@ -1,8 +1,8 @@
 {
   "date": "2026-08-27",
   "dayNumber": 11,
-  "contentVersion": "2026.09.10.4",
-  "templateVersion": "learning-template-2026.09.10.4",
+  "contentVersion": "2026.09.11.1",
+  "templateVersion": "learning-template-2026.09.11.1",
   "cards": [
     {
       "id": "write-v",
@@ -77,7 +77,7 @@
           }
         ],
         "directSynonym": "compose /kəmˈpoʊz/（撰写；创作）；draft /ˈdræft/（起草）；record /rɪˈkɔːrd/（记录）；author /ˈɔːθɚ/（创作；撰写）；put down /ˈpʊt ˈdaʊn/（写下）",
-        "directAntonym": "erase /ɪˈreɪs/（擦除；删除）",
+        "directAntonym": "erase /ɪˈreɪs/（擦除；删除）；delete /dɪˈliːt/（删除）；leave blank /ˈliːv ˈblæŋk/（留空不填）",
         "derivatives": "rewrite · writer · writing · written · writable",
         "example": "Write down one sentence using the new word.",
         "exampleChinese": "写下一个使用新单词的句子。"
@@ -330,6 +330,20 @@
           "partOfSpeech": "v.",
           "chinese": "擦除；删除",
           "usage": "只与写下或记录内容的义项相反；不覆盖 write to、write down 或编写代码等结构"
+        },
+        {
+          "word": "delete",
+          "phonetic": "/dɪˈliːt/",
+          "partOfSpeech": "v.",
+          "chinese": "删除",
+          "usage": "在电子文本中，write 把内容写入文件，delete 则把已写内容删去；只对应记录结果。"
+        },
+        {
+          "word": "leave blank",
+          "phonetic": "/ˈliːv ˈblæŋk/",
+          "partOfSpeech": "phr.",
+          "chinese": "留空不填",
+          "usage": "在表格或答题栏的填写义上，write 是写下内容，leave blank 是刻意不写。"
         }
       ],
       "derivatives": [
@@ -376,6 +390,13 @@
           "partOfSpeech": "adj./adv./n.",
           "chinese": "正确的；向右；权利",
           "difference": "与 write 部分同音，但拼写、词性和含义不同"
+        },
+        {
+          "word": "rite",
+          "phonetic": "/ˈraɪt/",
+          "partOfSpeech": "n.",
+          "chinese": "仪式；典礼",
+          "difference": "rite 与 write 同音 /raɪt/，但 rite 是表示宗教或传统仪式的名词，write 是动词“写”。"
         }
       ],
       "relatedVocabulary": [
@@ -607,14 +628,14 @@
         {
           "id": "write-v-contrast-choice",
           "type": "meaning_choice",
-          "prompt": "哪一项是“write”的常用派生词？",
+          "prompt": "结合拼写、发音和用法，哪一项需要与“write”重点区分？",
           "options": [
-            "do",
-            "rewrite",
-            "be",
-            "have"
+            "bass",
+            "rite",
+            "increase",
+            "ball"
           ],
-          "answer": "rewrite",
+          "answer": "rite",
           "stage": "T3",
           "ai": false
         },
@@ -778,10 +799,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -857,7 +878,7 @@
           }
         ],
         "directSynonym": "carry /ˈkæri/（携带）；fetch /ˈfɛtʃ/（去取来）；deliver /dɪˈlɪvɚ/（递送）；take along /ˈteɪk əˈlɔːŋ/（随身带着）；cause /ˈkɑz/（带来；导致）",
-        "directAntonym": "",
+        "directAntonym": "remove /riˈmuːv/（移走；拿开）；send away /ˈsɛnd əˈweɪ/（打发走；送走）；leave behind /ˈliːv bɪˈhaɪnd/（不带走；留下）",
         "derivatives": "upbringing",
         "example": "Bring your notes with you to the study session.",
         "exampleChinese": "参加学习活动时请带上笔记。"
@@ -1103,7 +1124,29 @@
           "difference": "仅对应 bring about 或 bring + 结果的致使义"
         }
       ],
-      "antonyms": [],
+      "antonyms": [
+        {
+          "word": "remove",
+          "phonetic": "/riˈmuːv/",
+          "partOfSpeech": "v.",
+          "chinese": "移走；拿开",
+          "usage": "在物体与参照地的方向上，bring 把东西带到此处，remove 把它从此处移开。"
+        },
+        {
+          "word": "send away",
+          "phonetic": "/ˈsɛnd əˈweɪ/",
+          "partOfSpeech": "phr.",
+          "chinese": "打发走；送走",
+          "usage": "对人的移动而言，bring someone here 是使其到来，send away 则是使其离开。"
+        },
+        {
+          "word": "leave behind",
+          "phonetic": "/ˈliːv bɪˈhaɪnd/",
+          "partOfSpeech": "phr.",
+          "chinese": "不带走；留下",
+          "usage": "在出行携带义上，bring something along 是随身带来，leave behind 是不带而留在原处。"
+        }
+      ],
       "derivatives": [
         {
           "word": "upbringing",
@@ -1120,6 +1163,13 @@
           "partOfSpeech": "v.",
           "chinese": "带走；拿走",
           "difference": "bring 强调朝说话者或目标地带来；take 强调从当前地点带走"
+        },
+        {
+          "word": "brink",
+          "phonetic": "/ˈbrɪŋk/",
+          "partOfSpeech": "n.",
+          "chinese": "边缘；危险关头",
+          "difference": "bring /brɪŋ/ 以 /ŋ/ 结尾，brink /brɪŋk/ 多一个 /k/ 音和字母 k，且 brink 只作名词。"
         }
       ],
       "relatedVocabulary": [
@@ -1335,16 +1385,16 @@
           "ai": false
         },
         {
-          "id": "bring-v-synonym-choice-2",
+          "id": "bring-v-antonym-choice",
           "type": "meaning_choice",
-          "prompt": "除“carry”外，在“去取来”这个义项下，哪个词也与“bring”意思接近？",
+          "prompt": "在“带来；拿来”这个义项下，哪个词与“bring”意思相反？",
           "options": [
             "do",
-            "fetch",
+            "remove",
             "be",
             "have"
           ],
-          "answer": "fetch",
+          "answer": "remove",
           "stage": "T2",
           "ai": false
         },
@@ -1522,10 +1572,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -1607,7 +1657,7 @@
           }
         ],
         "directSynonym": "shift /ˈʃɪft/（挪动；转变）；relocate /ˌriːˈloʊkeɪt/（搬迁）；transfer /trænsˈfɝː/（转移；调动）；advance /ədˈvæns/（推进）；stir /ˈstɝː/（打动；使活动）",
-        "directAntonym": "stay /ˈsteɪ/（停留）",
+        "directAntonym": "stay /ˈsteɪ/（停留）；stop /ˈstɑp/（停止移动）；be unmoved by /ˈbiː ənˈmuːvd ˈbaɪ/（不受……感动）",
         "derivatives": "mover · movement · moving · movable",
         "example": "We plan to move to a quieter neighborhood.",
         "exampleChinese": "我们打算搬到一个更安静的社区。"
@@ -1867,6 +1917,20 @@
           "partOfSpeech": "v.",
           "chinese": "停留",
           "usage": "与改变位置的义项相反；须区分位置移动、搬迁、事务推进和情感触动"
+        },
+        {
+          "word": "stop",
+          "phonetic": "/ˈstɑp/",
+          "partOfSpeech": "v.",
+          "chinese": "停止移动",
+          "usage": "在人或物体的运动义上，move 表示位置继续改变，stop 表示这一运动终止。"
+        },
+        {
+          "word": "be unmoved by",
+          "phonetic": "/ˈbiː ənˈmuːvd ˈbaɪ/",
+          "partOfSpeech": "phr.",
+          "chinese": "不受……感动",
+          "usage": "move someone 在情感义上表示使某人感动，be unmoved by something 表示情绪未受它影响。"
         }
       ],
       "derivatives": [
@@ -1901,11 +1965,18 @@
       ],
       "confusables": [
         {
-          "word": "remove",
-          "phonetic": "/riˈmuːv/",
-          "partOfSpeech": "v.",
-          "chinese": "移走；去除",
-          "difference": "move 只表示改变位置；remove 强调从原处拿开或消除"
+          "word": "mood",
+          "phonetic": "/ˈmuːd/",
+          "partOfSpeech": "n.",
+          "chinese": "心情；情绪",
+          "difference": "move /muːv/ 与 mood /muːd/ 只有末尾辅音不同；move 表示移动，mood 是心情或情绪。"
+        },
+        {
+          "word": "movie",
+          "phonetic": "/ˈmuːvi/",
+          "partOfSpeech": "n.",
+          "chinese": "电影",
+          "difference": "movie 比 move 多字母 i，读 /ˈmuːvi/；move 读 /muːv/ 并主要作动词表示移动。"
         }
       ],
       "relatedVocabulary": [
@@ -2139,12 +2210,12 @@
           "type": "meaning_choice",
           "prompt": "结合拼写、发音和用法，哪一项需要与“move”重点区分？",
           "options": [
-            "be",
-            "have",
-            "do",
-            "remove"
+            "increase",
+            "ball",
+            "bass",
+            "mood"
           ],
-          "answer": "remove",
+          "answer": "mood",
           "stage": "T3",
           "ai": false
         },
@@ -2308,10 +2379,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -2387,7 +2458,7 @@
           }
         ],
         "directSynonym": "be compelled to /ˈbiː kəmˈpɛld ˈtuː/（被迫必须）；be required to /ˈbiː rɪˈkwaɪrd ˈtuː/（被要求必须）；need to /ˈniːd ˈtuː/（需要做）；be obliged to /ˈbiː əˈblaɪdʒd ˈtuː/（有义务做）；be bound to /ˈbiː ˈbaʊnd ˈtuː/（一定会）",
-        "directAntonym": "need not /ˈniːd ˈnɑt/（不必）",
+        "directAntonym": "need not /ˈniːd ˈnɑt/（不必）；be forbidden /ˈbiː ˈfɔːrbɪdən/（被禁止）；cannot be /ˈkænɑt ˈbiː/（不可能是）",
         "derivatives": "must-have",
         "example": "You must wear a seat belt in the car.",
         "exampleChinese": "坐车时必须系安全带。"
@@ -2640,6 +2711,20 @@
           "partOfSpeech": "modal phr.",
           "chinese": "不必",
           "usage": "表示没有必要，与 must 的必要义相反"
+        },
+        {
+          "word": "be forbidden",
+          "phonetic": "/ˈbiː ˈfɔːrbɪdən/",
+          "partOfSpeech": "phr.",
+          "chinese": "被禁止",
+          "usage": "在规则许可范围内，must do 表示被要求执行某事，be forbidden 表示规则不准执行该事。"
+        },
+        {
+          "word": "cannot be",
+          "phonetic": "/ˈkænɑt ˈbiː/",
+          "partOfSpeech": "modal phr.",
+          "chinese": "不可能是",
+          "usage": "在推断义上，must be 表示证据支持某结论，cannot be 表示证据排除该结论。"
         }
       ],
       "derivatives": [
@@ -2653,11 +2738,18 @@
       ],
       "confusables": [
         {
-          "word": "have to",
-          "phonetic": "/ˈhæv ˈtuː/",
-          "partOfSpeech": "modal phr.",
-          "chinese": "不得不；必须",
-          "difference": "have to 可变时态并常强调外部要求；must 常体现说话者判断或正式规定"
+          "word": "most",
+          "phonetic": "/ˈmoʊst/",
+          "partOfSpeech": "det. / pron.",
+          "chinese": "大多数；最多",
+          "difference": "must /mʌst/ 与 most /moʊst/ 拼写接近，但元音不同；must 是情态动词，most 表示数量或程度最高。"
+        },
+        {
+          "word": "mist",
+          "phonetic": "/ˈmɪst/",
+          "partOfSpeech": "n.",
+          "chinese": "薄雾；水汽",
+          "difference": "must /mʌst/ 与 mist /mɪst/ 只有元音不同；must 是情态动词，mist 是表示薄雾或水汽的名词。"
         }
       ],
       "relatedVocabulary": [
@@ -2864,9 +2956,9 @@
           "prompt": "在“被迫必须”这个义项下，哪个词与“must”意思最接近？",
           "options": [
             "be compelled to",
+            "act impulsively",
             "be advisable to",
-            "be permitted to",
-            "become aware of"
+            "be forbidden to"
           ],
           "answer": "be compelled to",
           "stage": "T2",
@@ -2889,14 +2981,14 @@
         {
           "id": "must-v-contrast-choice",
           "type": "meaning_choice",
-          "prompt": "哪一项是“must”的常用派生词？",
+          "prompt": "结合拼写、发音和用法，哪一项需要与“must”重点区分？",
           "options": [
-            "admission",
-            "affection",
-            "must-have",
+            "ball",
+            "bass",
+            "mist",
             "increase"
           ],
-          "answer": "must-have",
+          "answer": "mist",
           "stage": "T3",
           "ai": false
         },
@@ -3060,10 +3152,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -3139,7 +3231,7 @@
           }
         ],
         "directSynonym": "get under way /ˈɡɛt ˈʌndɚ ˈweɪ/（开始进行）；commence /kəˈmɛns/（开始）；initiate /ˌɪˈnɪʃiˌeɪt/（发起）；launch /ˈlɔːntʃ/（启动；推出）；open /ˈoʊpən/（开始；开幕）",
-        "directAntonym": "end /ˈɛnd/（结束）；finish /ˈfɪnɪʃ/（完成；结束）",
+        "directAntonym": "end /ˈɛnd/（结束）；cancel /ˈkænsəl/（取消）；postpone /poʊstˈpoʊn/（推迟；延期）",
         "derivatives": "beginning · beginner",
         "example": "I begin to understand the pattern after seeing two examples.",
         "exampleChinese": "看过两个例子后，我开始理解这个句型。"
@@ -3391,14 +3483,21 @@
           "phonetic": "/ˈɛnd/",
           "partOfSpeech": "v.",
           "chinese": "结束",
-          "usage": "与开始一个活动或过程相反；能否接机器、项目或动作补语取决于各自动词搭配"
+          "usage": "在过程的时间边界上，begin 标志起点，end 标志终点"
         },
         {
-          "word": "finish",
-          "phonetic": "/ˈfɪnɪʃ/",
+          "word": "cancel",
+          "phonetic": "/ˈkænsəl/",
           "partOfSpeech": "v.",
-          "chinese": "完成；结束",
-          "usage": "强调做到终点，与 begin 相对"
+          "chinese": "取消",
+          "usage": "对已安排但尚未启动的活动，begin 是让它开始，cancel 是撤销安排使其不再开始"
+        },
+        {
+          "word": "postpone",
+          "phonetic": "/poʊstˈpoʊn/",
+          "partOfSpeech": "v.",
+          "chinese": "推迟；延期",
+          "usage": "begin an activity 是让它现在进入起点，postpone it 是把开始时间推到以后。"
         }
       ],
       "derivatives": [
@@ -3419,11 +3518,18 @@
       ],
       "confusables": [
         {
-          "word": "start",
-          "phonetic": "/ˈstɑrt/",
-          "partOfSpeech": "v.",
-          "chinese": "开始",
-          "difference": "多数场景可互换；start 还常用于机器启动，begin 通常不说 begin a car"
+          "word": "behind",
+          "phonetic": "/bɪˈhaɪnd/",
+          "partOfSpeech": "prep. / adv.",
+          "chinese": "在……后面；落后",
+          "difference": "begin /bɪˈɡɪn/ 与 behind /bɪˈhaɪnd/ 都以 be- 开头，但重读音节和词性不同；behind 表示位置或进度落后。"
+        },
+        {
+          "word": "being",
+          "phonetic": "/ˈbiːɪŋ/",
+          "partOfSpeech": "n.",
+          "chinese": "存在；生物",
+          "difference": "begin /bɪˈɡɪn/ 中 g 在 i 前，being /ˈbiːɪŋ/ 由 be 构成；两词字母顺序、读音和词性都不同。"
         }
       ],
       "relatedVocabulary": [
@@ -3657,12 +3763,12 @@
           "type": "meaning_choice",
           "prompt": "结合拼写、发音和用法，哪一项需要与“begin”重点区分？",
           "options": [
-            "do",
-            "start",
-            "be",
-            "have"
+            "alarm",
+            "being",
+            "increase",
+            "actor"
           ],
-          "answer": "start",
+          "answer": "being",
           "stage": "T3",
           "ai": false
         },
@@ -3826,10 +3932,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     }
   ]

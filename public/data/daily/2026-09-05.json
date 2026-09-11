@@ -1,8 +1,8 @@
 {
   "date": "2026-09-05",
   "dayNumber": 20,
-  "contentVersion": "2026.09.10.4",
-  "templateVersion": "learning-template-2026.09.10.4",
+  "contentVersion": "2026.09.11.1",
+  "templateVersion": "learning-template-2026.09.11.1",
   "cards": [
     {
       "id": "expect-v",
@@ -77,7 +77,7 @@
           }
         ],
         "directSynonym": "anticipate /ænˈtɪsəˌpeɪt/（预期）；predict /prɪˈdɪkt/（预测）；await /əˈweɪt/（等待）；require /ˌriːˈkwaɪɚ/（要求）；suppose /səˈpoʊz/（认为；料想）",
-        "directAntonym": "",
+        "directAntonym": "doubt /ˈdaʊt/（怀疑）；rule out /ˈruːl ˈaʊt/（排除……的可能）；be surprised by /ˈbiː sɚˈpraɪzd ˈbaɪ/（对……感到意外）",
         "derivatives": "expectation · expectancy · expected · unexpected · expectant · unexpectedly",
         "example": "We expect the results next week.",
         "exampleChinese": "我们预计下周会有结果。"
@@ -323,7 +323,29 @@
           "difference": "把握较弱，常用于非正式推测；预期概率、规范要求和等待来访者的含义不可混用"
         }
       ],
-      "antonyms": [],
+      "antonyms": [
+        {
+          "word": "doubt",
+          "phonetic": "/ˈdaʊt/",
+          "partOfSpeech": "v.",
+          "chinese": "怀疑",
+          "usage": "expect an outcome 表示认为该结果很可能发生，doubt it 表示认为它可能不会发生。"
+        },
+        {
+          "word": "rule out",
+          "phonetic": "/ˈruːl ˈaʊt/",
+          "partOfSpeech": "phr.",
+          "chinese": "排除……的可能",
+          "usage": "expect something 是把它视为可能或很可能的结果，rule it out 是判定该结果不可能。"
+        },
+        {
+          "word": "be surprised by",
+          "phonetic": "/ˈbiː sɚˈpraɪzd ˈbaɪ/",
+          "partOfSpeech": "phr.",
+          "chinese": "对……感到意外",
+          "usage": "expect an event 表示事先已将它纳入预期，be surprised by it 表示它发生时与原有预期不符。"
+        }
+      ],
       "derivatives": [
         {
           "word": "expectation",
@@ -375,6 +397,13 @@
           "partOfSpeech": "v.",
           "chinese": "希望",
           "difference": "expect 表示根据信息认为某事很可能发生；hope 表示希望好事发生，不代表判断概率"
+        },
+        {
+          "word": "wait for",
+          "phonetic": "/ˈweɪt ˈfɔːr/",
+          "partOfSpeech": "phr.",
+          "chinese": "等待",
+          "difference": "expect 是判断某事将发生，可不含等待动作；wait for 强调在对象到来前经过时间。"
         }
       ],
       "relatedVocabulary": [
@@ -590,16 +619,16 @@
           "ai": false
         },
         {
-          "id": "expect-v-synonym-choice-2",
+          "id": "expect-v-antonym-choice",
           "type": "meaning_choice",
-          "prompt": "除“anticipate”外，在“预测”这个义项下，哪个词也与“expect”意思接近？",
+          "prompt": "在“预料；预计”这个义项下，哪个词与“expect”意思相反？",
           "options": [
             "do",
-            "predict",
+            "doubt",
             "be",
             "have"
           ],
-          "answer": "predict",
+          "answer": "doubt",
           "stage": "T2",
           "ai": false
         },
@@ -777,10 +806,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -862,7 +891,7 @@
           }
         ],
         "directSynonym": "plunge /ˈplʌndʒ/（骤降；猛跌）；descend /dɪˈsɛnd/（下降）；decline /dɪˈklaɪn/（下降；衰退）；tumble /ˈtʌmbəl/（跌倒；暴跌）；collapse /kəˈlæps/（倒塌；崩溃）",
-        "directAntonym": "rise /ˈraɪz/（上升；起身）",
+        "directAntonym": "rise /ˈraɪz/（上升；起身）；stabilize /ˈsteɪbəˌlaɪz/（使稳定；趋稳）；remain upright /rɪˈmeɪn əˈpraɪt/（保持直立）",
         "derivatives": "fallout · downfall · fallen · falling",
         "example": "Be careful not to fall to the ground on the icy path.",
         "exampleChinese": "结冰的路上小心别摔倒。"
@@ -1121,7 +1150,21 @@
           "phonetic": "/ˈraɪz/",
           "partOfSpeech": "v.",
           "chinese": "上升；起身",
-          "usage": "与向下掉落或数值下降相反；物体下落、数值下降与进入状态的主语限制不同"
+          "usage": "在数量、价格或位置方向上，fall 表示下降，rise 表示上升"
+        },
+        {
+          "word": "stabilize",
+          "phonetic": "/ˈsteɪbəˌlaɪz/",
+          "partOfSpeech": "v.",
+          "chinese": "使稳定；趋稳",
+          "usage": "prices fall 表示价格持续向下变化，prices stabilize 表示价格停止下降并保持在相对稳定的水平。"
+        },
+        {
+          "word": "remain upright",
+          "phonetic": "/rɪˈmeɪn əˈpraɪt/",
+          "partOfSpeech": "phr.",
+          "chinese": "保持直立",
+          "usage": "fall over 表示失去平衡而倒下，remain upright 表示在外力下仍维持直立状态。"
         }
       ],
       "derivatives": [
@@ -1161,6 +1204,13 @@
           "partOfSpeech": "v.",
           "chinese": "落下；使掉下；下降",
           "difference": "fall 通常是不及物动词，主语自己下落；drop 可不及物，也可及物表示使某物掉下"
+        },
+        {
+          "word": "fail",
+          "phonetic": "/ˈfeɪl/",
+          "partOfSpeech": "v.",
+          "chinese": "失败；未能做到",
+          "difference": "fall /fɔːl/ 与 fail /feɪl/ 拼写接近但元音不同；fall 表示下落，fail 表示未成功或未达到要求。"
         }
       ],
       "relatedVocabulary": [
@@ -1563,10 +1613,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -1642,7 +1692,7 @@
           }
         ],
         "directSynonym": "emerge /ɪˈmɝːdʒ/（出现；显现）；surface /ˈsɝːfəs/（露面；浮现）；come into view /ˈkʌm ˈɪntu ˈvjuː/（进入视野；显现）；look /ˈlʊk/（看起来）；materialize /məˈtɪriəˌlaɪz/（突然出现；实现）",
-        "directAntonym": "disappear /ˌdɪsəˈpɪr/（消失）",
+        "directAntonym": "disappear /ˌdɪsəˈpɪr/（消失）；be absent /ˈbiː ˈæbsənt/（缺席；未到场）；prove otherwise /ˈpruːv ˈʌðɚˌwaɪz/（证明并非如此）",
         "derivatives": "reappear · appearance · apparent · apparently",
         "example": "Her name appears on the screen during the opening credits.",
         "exampleChinese": "片头字幕出现时，她的名字会显示在屏幕上。"
@@ -1894,7 +1944,21 @@
           "phonetic": "/ˌdɪsəˈpɪr/",
           "partOfSpeech": "v.",
           "chinese": "消失",
-          "usage": "与变得可见相反；实际出现、看似某状态与突然现身的补语结构不同"
+          "usage": "在可见性上，appear 是进入视野，disappear 是从视野中消失"
+        },
+        {
+          "word": "be absent",
+          "phonetic": "/ˈbiː ˈæbsənt/",
+          "partOfSpeech": "phr.",
+          "chinese": "缺席；未到场",
+          "usage": "appear at a hearing or in court 表示按要求到场，be absent 表示在该时间和地点没有出席。"
+        },
+        {
+          "word": "prove otherwise",
+          "phonetic": "/ˈpruːv ˈʌðɚˌwaɪz/",
+          "partOfSpeech": "phr.",
+          "chinese": "证明并非如此",
+          "usage": "appear to be true 只表示从表面看似为真，prove otherwise 表示后续证据确认实际情况与该印象相反。"
         }
       ],
       "derivatives": [
@@ -1929,11 +1993,18 @@
       ],
       "confusables": [
         {
-          "word": "seem",
-          "phonetic": "/ˈsiːm/",
-          "partOfSpeech": "v.",
-          "chinese": "似乎；看来",
-          "difference": "appear 可表示真实出现，也可作系动词；seem 只表示根据印象所作的判断"
+          "word": "apparel",
+          "phonetic": "/əˈpærəl/",
+          "partOfSpeech": "n.",
+          "chinese": "服装；衣服",
+          "difference": "appear /əˈpɪr/ 与 apparel /əˈpærəl/ 开头拼写相近；appear 表示出现或显得，apparel 是服装的正式名词。"
+        },
+        {
+          "word": "appeal",
+          "phonetic": "/əˈpiːl/",
+          "partOfSpeech": "v. / n.",
+          "chinese": "呼吁；吸引力",
+          "difference": "appear /əˈpɪr/ 和 appeal /əˈpiːl/ 开头相近，但 appear 是出现或显得，appeal 是呼吁或具有吸引力。"
         }
       ],
       "relatedVocabulary": [
@@ -2167,12 +2238,12 @@
           "type": "meaning_choice",
           "prompt": "结合拼写、发音和用法，哪一项需要与“appear”重点区分？",
           "options": [
-            "have",
-            "do",
-            "seem",
-            "be"
+            "ability",
+            "absence",
+            "apparel",
+            "increase"
           ],
-          "answer": "seem",
+          "answer": "apparel",
           "stage": "T3",
           "ai": false
         },
@@ -2336,10 +2407,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -2415,7 +2486,7 @@
           }
         ],
         "directSynonym": "assist /əˈsɪst/（服务；协助）；attend to /əˈtɛnd ˈtuː/（接待；照料）；provide for /prəˈvaɪd ˈfɔːr/（供应；满足需要）；function as /ˈfʌŋkʃən ˈæz/（起……作用）；supply /səˈplaɪ/（供应）",
-        "directAntonym": "",
+        "directAntonym": "refuse service to /rəˈfjuːz ˈsɝːvəs ˈtuː/（拒绝为……服务）；receive /rəˈsiːv/（接发球；接收）；hinder /ˈhɪndɚ/（阻碍）",
         "derivatives": "service · servant · server · serving · serviceable",
         "example": "Good staff serve every customer politely.",
         "exampleChinese": "优秀员工会礼貌地服务每位顾客。"
@@ -2668,7 +2739,29 @@
           "difference": "对应提供食物、饮料或资源；服务对象、供给内容和充当某功能的结构不同"
         }
       ],
-      "antonyms": [],
+      "antonyms": [
+        {
+          "word": "refuse service to",
+          "phonetic": "/rəˈfjuːz ˈsɝːvəs ˈtuː/",
+          "partOfSpeech": "phr.",
+          "chinese": "拒绝为……服务",
+          "usage": "serve a customer 是向顾客提供餐饮或帮助，refuse service to them 是明确拒绝提供该服务。"
+        },
+        {
+          "word": "receive",
+          "phonetic": "/rəˈsiːv/",
+          "partOfSpeech": "v.",
+          "chinese": "接发球；接收",
+          "usage": "在网球等运动中，serve 是发球开始一分，receive 是在对面接返该发球。"
+        },
+        {
+          "word": "hinder",
+          "phonetic": "/ˈhɪndɚ/",
+          "partOfSpeech": "v.",
+          "chinese": "阻碍",
+          "usage": "serve a purpose 表示对目标有用并推动它，hinder the purpose 表示增加阻力使目标更难实现。"
+        }
+      ],
       "derivatives": [
         {
           "word": "service",
@@ -2706,7 +2799,22 @@
           "note": "表示虽不一定出色，但足以满足用途"
         }
       ],
-      "confusables": [],
+      "confusables": [
+        {
+          "word": "save",
+          "phonetic": "/ˈseɪv/",
+          "partOfSpeech": "v.",
+          "chinese": "拯救；节省；保存",
+          "difference": "serve /sɝːrv/ 比 save /seɪv/ 多 /r/ 音；serve 表示服务或供应，save 表示拯救、节省或保存。"
+        },
+        {
+          "word": "deserve",
+          "phonetic": "/dɪˈzɝːv/",
+          "partOfSpeech": "v.",
+          "chinese": "应得；值得",
+          "difference": "deserve /dɪˈzɝːrv/ 虽含有 serve 的字母串，但表示因品质或行为而应得某结果，不表示服务。"
+        }
+      ],
       "relatedVocabulary": [
         {
           "category": "餐饮服务",
@@ -2920,30 +3028,30 @@
           "ai": false
         },
         {
-          "id": "serve-v-synonym-choice-2",
+          "id": "serve-v-antonym-choice",
           "type": "meaning_choice",
-          "prompt": "除“assist”外，在“供应”这个义项下，哪个词也与“serve”意思接近？",
+          "prompt": "在“服务；供应”这个义项下，哪个词与“serve”意思相反？",
           "options": [
             "have",
             "do",
-            "supply",
+            "receive",
             "be"
           ],
-          "answer": "supply",
+          "answer": "receive",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "serve-v-contrast-choice",
           "type": "meaning_choice",
-          "prompt": "哪一项是“serve”的常用派生词？",
+          "prompt": "结合拼写、发音和用法，哪一项需要与“serve”重点区分？",
           "options": [
-            "absence",
-            "service",
-            "increase",
-            "ability"
+            "do",
+            "save",
+            "be",
+            "have"
           ],
-          "answer": "service",
+          "answer": "save",
           "stage": "T3",
           "ai": false
         },
@@ -3107,10 +3215,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -3192,7 +3300,7 @@
           }
         ],
         "directSynonym": "shatter /ˈʃætɚ/（打碎）；fracture /ˈfræktʃɚ/（使骨折；断裂）；violate /ˈvaɪəleɪt/（违反）；interrupt /ˌɪntɚˈʌpt/（中断）；decipher /dɪˈsaɪfɚ/（破解）",
-        "directAntonym": "repair /rɪˈpɛr/（修理）；mend /ˈmɛnd/（修补）",
+        "directAntonym": "repair /rɪˈpɛr/（修理）；continue /kənˈtɪnju/（继续）；obey /oʊˈbeɪ/（遵守；服从）",
         "derivatives": "breakage · breakdown · breakable · unbreakable",
         "example": "Do not break the rule just because the task feels difficult.",
         "exampleChinese": "不要因为任务困难就违反规则。"
@@ -3451,14 +3559,21 @@
           "phonetic": "/rɪˈpɛr/",
           "partOfSpeech": "v.",
           "chinese": "修理",
-          "usage": "与弄坏物体或机器相反；破坏物体、违反规则与中断过程的宾语不可混用"
+          "usage": "在物体或机器功能义上，break 使其损坏或失效，repair 使其恢复可用"
         },
         {
-          "word": "mend",
-          "phonetic": "/ˈmɛnd/",
+          "word": "continue",
+          "phonetic": "/kənˈtɪnju/",
           "partOfSpeech": "v.",
-          "chinese": "修补",
-          "usage": "与造成裂损相反；破坏物体、违反规则与中断过程的宾语不可混用"
+          "chinese": "继续",
+          "usage": "在连续活动或状态义上，break 是使过程中断，continue 是使其不中断地继续"
+        },
+        {
+          "word": "obey",
+          "phonetic": "/oʊˈbeɪ/",
+          "partOfSpeech": "v.",
+          "chinese": "遵守；服从",
+          "usage": "break a rule 表示违反规则，obey the rule 表示按其要求行事。"
         }
       ],
       "derivatives": [
@@ -3498,6 +3613,13 @@
           "partOfSpeech": "v./n.",
           "chinese": "刹车；刹车装置",
           "difference": "break 和 brake 同音，但 break 表示打破或中断，brake 表示刹车"
+        },
+        {
+          "word": "breach",
+          "phonetic": "/ˈbriːtʃ/",
+          "partOfSpeech": "v. / n.",
+          "chinese": "违反；破口",
+          "difference": "break a rule 是日常说法，breach a contract/security 是法律或技术语境的正式搭配；breach 不用于普通打碎物品。"
         }
       ],
       "relatedVocabulary": [
@@ -3900,10 +4022,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     }
   ]

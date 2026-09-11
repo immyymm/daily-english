@@ -1,8 +1,8 @@
 {
   "date": "2026-08-28",
   "dayNumber": 12,
-  "contentVersion": "2026.09.10.4",
-  "templateVersion": "learning-template-2026.09.10.4",
+  "contentVersion": "2026.09.11.1",
+  "templateVersion": "learning-template-2026.09.11.1",
   "cards": [
     {
       "id": "love-v",
@@ -83,7 +83,7 @@
           }
         ],
         "directSynonym": "adore /əˈdɔːr/（非常喜爱）；cherish /ˈtʃɛrɪʃ/（珍爱）；be fond of /ˈbiː ˈfɑnd ˈʌv/（喜欢）；enjoy /ˌɛnˈdʒɔɪ/（喜欢；享受）；care deeply for /ˈkɛr ˈdiːpli ˈfɔːr/（深爱；十分关心）",
-        "directAntonym": "hate /ˈheɪt/（憎恨；非常不喜欢）",
+        "directAntonym": "hate /ˈheɪt/（憎恨；非常不喜欢）；dislike /dɪˈslaɪk/（不喜欢）；be indifferent to /ˈbiː ˌɪnˈdɪfrənt ˈtuː/（对……无动于衷）",
         "derivatives": "lover · loving · lovable · lovingly",
         "example": "I love learning expressions that I can use immediately.",
         "exampleChinese": "我喜欢学习能立刻使用的表达。"
@@ -336,6 +336,20 @@
           "partOfSpeech": "v.",
           "chinese": "憎恨；非常不喜欢",
           "usage": "与爱或强烈喜欢的义项相反；情感强度及可接人物、事物或活动的结构不同"
+        },
+        {
+          "word": "dislike",
+          "phonetic": "/dɪˈslaɪk/",
+          "partOfSpeech": "v.",
+          "chinese": "不喜欢",
+          "usage": "love 表示强烈喜爱时，dislike 表示对同一人或事物持负面偏好，对立限于情感义。"
+        },
+        {
+          "word": "be indifferent to",
+          "phonetic": "/ˈbiː ˌɪnˈdɪfrənt ˈtuː/",
+          "partOfSpeech": "phr.",
+          "chinese": "对……无动于衷",
+          "usage": "love 表示有强烈情感投入，be indifferent to 表示对该对象既不喜爱也不关心。"
         }
       ],
       "derivatives": [
@@ -370,11 +384,18 @@
       ],
       "confusables": [
         {
-          "word": "like",
-          "phonetic": "/ˈlaɪk/",
+          "word": "glove",
+          "phonetic": "/ˈɡlʌv/",
+          "partOfSpeech": "n.",
+          "chinese": "手套",
+          "difference": "love /lʌv/ 与 glove /ɡlʌv/ 只差开头的 /ɡ/ 音；love 表示爱或喜爱，glove 是戴在手上的名词。"
+        },
+        {
+          "word": "leave",
+          "phonetic": "/ˈliːv/",
           "partOfSpeech": "v.",
-          "chinese": "喜欢",
-          "difference": "like 表一般偏好；love 通常表达更强烈的感情或喜爱"
+          "chinese": "离开；留下",
+          "difference": "love /lʌv/ 与 leave /liːv/ 拼写接近但元音不同；love 表示爱或喜爱，leave 表示离开或留下。"
         }
       ],
       "relatedVocabulary": [
@@ -608,12 +629,12 @@
           "type": "meaning_choice",
           "prompt": "结合拼写、发音和用法，哪一项需要与“love”重点区分？",
           "options": [
-            "like",
-            "be",
-            "have",
-            "do"
+            "glove",
+            "increase",
+            "actor",
+            "alarm"
           ],
-          "answer": "like",
+          "answer": "glove",
           "stage": "T3",
           "ai": false
         },
@@ -777,10 +798,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -862,7 +883,7 @@
           }
         ],
         "directSynonym": "grip /ˈɡrɪp/（紧握）；grasp /ˈɡræsp/（抓牢）；retain /rɪˈteɪn/（保留；保持）；contain /kənˈteɪn/（容纳）；host /ˈhoʊst/（主办；主持）",
-        "directAntonym": "release /riˈliːs/（松开；释放）；drop /ˈdrɑp/（放开使落下）",
+        "directAntonym": "release /riˈliːs/（松开；释放）；relinquish /rɪˈlɪŋkwɪʃ/（放弃；交出）；cancel /ˈkænsəl/（取消）",
         "derivatives": "holder · holding · holdings",
         "example": "Hold the phone firmly while you record your answer.",
         "exampleChinese": "录制答案时请拿稳手机。"
@@ -1142,14 +1163,21 @@
           "phonetic": "/riˈliːs/",
           "partOfSpeech": "v.",
           "chinese": "松开；释放",
-          "usage": "与握住或拘留的义项相反；只覆盖抓握、保留、容纳或举行活动中的指定一义"
+          "usage": "在抓握或拘留义上，hold 是继续控制，release 是松开或恢复自由"
         },
         {
-          "word": "drop",
-          "phonetic": "/ˈdrɑp/",
+          "word": "relinquish",
+          "phonetic": "/rɪˈlɪŋkwɪʃ/",
           "partOfSpeech": "v.",
-          "chinese": "放开使落下",
-          "usage": "与手中拿住的义项相反；只覆盖抓握、保留、容纳或举行活动中的指定一义"
+          "chinese": "放弃；交出",
+          "usage": "在职位、权利或控制权义上，hold 表示持有，relinquish 表示主动交出"
+        },
+        {
+          "word": "cancel",
+          "phonetic": "/ˈkænsəl/",
+          "partOfSpeech": "v.",
+          "chinese": "取消",
+          "usage": "hold a meeting 表示按计划举行会议，cancel the meeting 表示撤销安排、不再举行。"
         }
       ],
       "derivatives": [
@@ -1177,11 +1205,18 @@
       ],
       "confusables": [
         {
-          "word": "keep",
-          "phonetic": "/ˈkiːp/",
+          "word": "cold",
+          "phonetic": "/ˈkoʊld/",
+          "partOfSpeech": "adj. / n.",
+          "chinese": "寒冷的；寒冷",
+          "difference": "hold /hoʊld/ 与 cold /koʊld/ 只差开头辅音；hold 是握住或保持，cold 表示低温或感冒。"
+        },
+        {
+          "word": "carry",
+          "phonetic": "/ˈkæri/",
           "partOfSpeech": "v.",
-          "chinese": "保留；保持",
-          "difference": "hold 常强调手持、容纳或举行；keep 强调持续拥有或维持状态"
+          "chinese": "携带；搬运",
+          "difference": "hold 可只表示把物体拿在手中不动；carry 强调带着物体从一处移到另一处。"
         }
       ],
       "relatedVocabulary": [
@@ -1418,9 +1453,9 @@
             "be",
             "have",
             "do",
-            "keep"
+            "carry"
           ],
-          "answer": "keep",
+          "answer": "carry",
           "stage": "T3",
           "ai": false
         },
@@ -1584,10 +1619,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -1663,7 +1698,7 @@
           }
         ],
         "directSynonym": "peruse /pɚˈuːz/（细读）；go through /ˈɡoʊ ˈθruː/（通读；仔细检查）；scan /ˈskæn/（快速浏览）；interpret /ˌɪnˈtɝːprət/（解读）；read aloud /riːd əˈlaʊd/（朗读）",
-        "directAntonym": "skip /ˈskɪp/（跳过不读）",
+        "directAntonym": "skip /ˈskɪp/（跳过不读）；misinterpret /mɪsɪnˈtɝːprət/（误解；误读）；leave unread /ˈliːv ənˈrɛd/（留着未读）",
         "derivatives": "reader · reading · readership · readable",
         "example": "Read the example aloud twice.",
         "exampleChinese": "把例句大声读两遍。"
@@ -1930,6 +1965,20 @@
           "partOfSpeech": "v.",
           "chinese": "跳过不读",
           "usage": "仅与阅读某段内容的行为相对；阅读深度、浏览速度和被解读对象都有明确限制"
+        },
+        {
+          "word": "misinterpret",
+          "phonetic": "/mɪsɪnˈtɝːprət/",
+          "partOfSpeech": "v.",
+          "chinese": "误解；误读",
+          "usage": "在图表、数据或表情的解读义上，read 表示正确读懂，misinterpret 表示读出错误含义。"
+        },
+        {
+          "word": "leave unread",
+          "phonetic": "/ˈliːv ənˈrɛd/",
+          "partOfSpeech": "phr.",
+          "chinese": "留着未读",
+          "usage": "read a message 表示已处理文字内容，leave it unread 表示使消息保持未读状态。"
         }
       ],
       "derivatives": [
@@ -1964,11 +2013,18 @@
       ],
       "confusables": [
         {
-          "word": "study",
-          "phonetic": "/ˈstʌdi/",
-          "partOfSpeech": "v.",
-          "chinese": "学习；研读",
-          "difference": "read 强调处理文字；study 强调以掌握知识为目的，可不以阅读为主"
+          "word": "reed",
+          "phonetic": "/ˈriːd/",
+          "partOfSpeech": "n.",
+          "chinese": "芦苇；簧片",
+          "difference": "read 的现在时 /riːd/ 与 reed /riːd/ 同音，但 reed 是表示芦苇或簧片的名词。"
+        },
+        {
+          "word": "red",
+          "phonetic": "/ˈrɛd/",
+          "partOfSpeech": "adj.",
+          "chinese": "红色的",
+          "difference": "read 的过去式读 /rɛd/ 时与 red 同音，但 red 是颜色形容词；read 仍写作 read。"
         }
       ],
       "relatedVocabulary": [
@@ -2202,12 +2258,12 @@
           "type": "meaning_choice",
           "prompt": "结合拼写、发音和用法，哪一项需要与“read”重点区分？",
           "options": [
-            "have",
-            "do",
-            "study",
-            "be"
+            "ball",
+            "bass",
+            "reed",
+            "increase"
           ],
-          "answer": "study",
+          "answer": "reed",
           "stage": "T3",
           "ai": false
         },
@@ -2371,10 +2427,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -2456,7 +2512,7 @@
           }
         ],
         "directSynonym": "cease /ˈsiːs/（停止）；halt /ˈhɔːlt/（使停下；停下）；discontinue /dɪskənˈtɪnju/（停止提供或进行）；prevent /prɪˈvɛnt/（阻止）；end /ˈɛnd/（结束）",
-        "directAntonym": "continue /kənˈtɪnju/（继续）；start /ˈstɑrt/（开始）",
+        "directAntonym": "continue /kənˈtɪnju/（继续）；start /ˈstɑrt/（开始）；allow /əˈlaʊ/（允许；使得以进行）",
         "derivatives": "stoppage · stopper · unstoppable",
         "example": "Stop translating every word before you understand the sentence.",
         "exampleChinese": "不要在理解句子前逐字翻译。"
@@ -2723,6 +2779,13 @@
           "partOfSpeech": "v.",
           "chinese": "开始",
           "usage": "与使机器或活动停止相反；须区分主动停止、阻止他人和终止供应等结构"
+        },
+        {
+          "word": "allow",
+          "phonetic": "/əˈlaʊ/",
+          "partOfSpeech": "v.",
+          "chinese": "允许；使得以进行",
+          "usage": "在 stop someone from doing 的阻止义上，stop 使对方无法继续，allow 是给予许可或条件让其进行。"
         }
       ],
       "derivatives": [
@@ -2750,11 +2813,18 @@
       ],
       "confusables": [
         {
-          "word": "quit",
-          "phonetic": "/ˈkwɪt/",
-          "partOfSpeech": "v.",
-          "chinese": "停止；退出",
-          "difference": "stop 可临时停止任何动作；quit 常指永久放弃习惯、工作或活动"
+          "word": "step",
+          "phonetic": "/ˈstɛp/",
+          "partOfSpeech": "n. / v.",
+          "chinese": "脚步；迈步",
+          "difference": "stop /stɑːp/ 与 step /stɛp/ 拼写只差元音字母；stop 表示停止，step 表示脚步或迈步。"
+        },
+        {
+          "word": "stop to do",
+          "phonetic": "/ˈstɑp ˈtuː ˈduː/",
+          "partOfSpeech": "phr.",
+          "chinese": "停下当前事去做另一事",
+          "difference": "stop to do 表示停下原动作以去做新动作；stop doing 表示把 doing 所指的动作停掉。"
         }
       ],
       "relatedVocabulary": [
@@ -2986,14 +3056,14 @@
         {
           "id": "stop-v-contrast-choice",
           "type": "meaning_choice",
-          "prompt": "结合拼写、发音和用法，哪一项需要与“stop”重点区分？",
+          "prompt": "哪一项是“stop”的常用派生词？",
           "options": [
-            "do",
-            "quit",
-            "be",
-            "have"
+            "accuracy",
+            "stoppage",
+            "increase",
+            "accident"
           ],
-          "answer": "quit",
+          "answer": "stoppage",
           "stage": "T3",
           "ai": false
         },
@@ -3157,10 +3227,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -3242,7 +3312,7 @@
           }
         ],
         "directSynonym": "settle /ˈsɛtəl/（结清）；compensate /ˈkɑmpənˌseɪt/（补偿；付报酬）；remunerate /rɪˌmjuːnɚˈeɪt/（给报酬）；reimburse /ˌriːɪmˈbɝːs/（报销；偿还）；repay /riˈpeɪ/（偿还）",
-        "directAntonym": "receive /rəˈsiːv/（收款；收到）",
+        "directAntonym": "receive /rəˈsiːv/（收款；收到）；withhold payment /wɪθˈhoʊld ˈpeɪmənt/（拒绝付款；暂扣款项）；refund /rɪˈfʌnd/（退款）",
         "derivatives": "payment · payer · payable",
         "example": "I usually pay for books online.",
         "exampleChinese": "我通常在网上购买并支付书款。"
@@ -3502,6 +3572,20 @@
           "partOfSpeech": "v.",
           "chinese": "收款；收到",
           "usage": "只在交易角色上与付款相对，并非所有义项反义词"
+        },
+        {
+          "word": "withhold payment",
+          "phonetic": "/wɪθˈhoʊld ˈpeɪmənt/",
+          "partOfSpeech": "phr.",
+          "chinese": "拒绝付款；暂扣款项",
+          "usage": "pay a bill 是履行付款义务，withhold payment 是因争议或未满足条件而暂不付款。"
+        },
+        {
+          "word": "refund",
+          "phonetic": "/rɪˈfʌnd/",
+          "partOfSpeech": "v.",
+          "chinese": "退款",
+          "usage": "pay 使金钱从顾客流向商家，refund 则在取消或退货时把已付金额退回。"
         }
       ],
       "derivatives": [
@@ -3534,6 +3618,13 @@
           "partOfSpeech": "v.",
           "chinese": "价格为；使付出代价",
           "difference": "pay 的主语通常是付钱的人；cost 的主语通常是商品或事情"
+        },
+        {
+          "word": "spend",
+          "phonetic": "/ˈspɛnd/",
+          "partOfSpeech": "v.",
+          "chinese": "花费",
+          "difference": "pay 常用 pay someone/for something 说明收款方或用途；spend 用 spend money on something。"
         }
       ],
       "relatedVocabulary": [
@@ -3936,10 +4027,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     }
   ]

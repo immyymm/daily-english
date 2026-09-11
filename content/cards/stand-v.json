@@ -77,7 +77,7 @@
       }
     ],
     "directSynonym": "remain upright /rɪˈmeɪn əˈpraɪt/（保持直立）；rise /ˈraɪz/（起立）；endure /ɛnˈdjʊr/（忍受；经受）；tolerate /ˈtɑlɚˌeɪt/（容忍）；represent /ˌrɛprɪˈzɛnt/（代表）",
-    "directAntonym": "sit /ˈsɪt/（坐）",
+    "directAntonym": "sit /ˈsɪt/（坐）；lie down /ˈlaɪ ˈdaʊn/（躺下）；fall /ˈfɔːl/（跌倒；倒下）",
     "derivatives": "standing · standpoint · standstill",
     "example": "Stand still while I adjust the camera.",
     "exampleChinese": "我调整相机时请站着别动。"
@@ -344,6 +344,20 @@
       "partOfSpeech": "v.",
       "chinese": "坐",
       "usage": "只与身体站立义项相反；只覆盖直立、忍受或代表等指定的 stand 义项"
+    },
+    {
+      "word": "lie down",
+      "phonetic": "/ˈlaɪ ˈdaʊn/",
+      "partOfSpeech": "phr.",
+      "chinese": "躺下",
+      "usage": "在身体姿态上，stand 是保持直立，lie down 是把身体放到水平躺卧位置。"
+    },
+    {
+      "word": "fall",
+      "phonetic": "/ˈfɔːl/",
+      "partOfSpeech": "v.",
+      "chinese": "跌倒；倒下",
+      "usage": "stand 表示人或物稳定地直立，fall 在姿态义上表示失去平衡而倒下。"
     }
   ],
   "derivatives": [
@@ -371,11 +385,18 @@
   ],
   "confusables": [
     {
-      "word": "stay",
-      "phonetic": "/ˈsteɪ/",
-      "partOfSpeech": "v.",
-      "chinese": "停留；保持",
-      "difference": "stand 强调直立或容忍；stay 强调留在地点或状态中"
+      "word": "stain",
+      "phonetic": "/ˈsteɪn/",
+      "partOfSpeech": "n. / v.",
+      "chinese": "污渍；弄脏",
+      "difference": "stand /stænd/ 与 stain /steɪn/ 拼写接近但元音和末尾辅音不同；stain 表示污渍或弄脏。"
+    },
+    {
+      "word": "strand",
+      "phonetic": "/ˈstrænd/",
+      "partOfSpeech": "v. / n.",
+      "chinese": "使滞留；岸滩",
+      "difference": "stand /stænd/ 与 strand /strænd/ 拼写只差 r；stand 表示站立，strand 作动词表示使人受困滞留。"
     }
   ],
   "relatedVocabulary": [
@@ -607,14 +628,14 @@
     {
       "id": "stand-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "结合拼写、发音和用法，哪一项需要与“stand”重点区分？",
+      "prompt": "哪一项是“stand”的常用派生词？",
       "options": [
-        "have",
-        "do",
-        "stay",
-        "be"
+        "accident",
+        "accuracy",
+        "standing",
+        "increase"
       ],
-      "answer": "stay",
+      "answer": "standing",
       "stage": "T3",
       "ai": false
     },
@@ -778,9 +799,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

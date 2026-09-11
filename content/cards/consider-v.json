@@ -71,7 +71,7 @@
       }
     ],
     "directSynonym": "contemplate /ˈkɑntəmˌpleɪt/（仔细考虑）；weigh /ˈweɪ/（权衡）；examine /ɪɡˈzæmɪn/（审视）；deem /ˈdiːm/（认为；视为）；take into account /ˈteɪk ˈɪntu əˈkaʊnt/（把……考虑在内）",
-    "directAntonym": "disregard /ˌdɪsrɪˈɡɑrd/（不考虑；忽视）",
+    "directAntonym": "disregard /ˌdɪsrɪˈɡɑrd/（不考虑；忽视）；act impulsively /ˈækt ˌɪmˈpʌlsɪvli/（冲动行事）；reject without review /rɪˈdʒɛkt wɪˈθaʊt ˌriːˈvjuː/（未经审查就拒绝）",
     "derivatives": "consideration · considered · considerate · considerably",
     "example": "You should consider taking a short break.",
     "exampleChinese": "你应该考虑短暂休息一下。"
@@ -324,6 +324,20 @@
       "partOfSpeech": "v.",
       "chinese": "不考虑；忽视",
       "usage": "与认真纳入考虑相反；深入思考、权衡利弊与视为某状态的句型不同"
+    },
+    {
+      "word": "act impulsively",
+      "phonetic": "/ˈækt ˌɪmˈpʌlsɪvli/",
+      "partOfSpeech": "phr.",
+      "chinese": "冲动行事",
+      "usage": "consider a choice 表示先评估后果再决定，act impulsively 表示未经评估便立即行动。"
+    },
+    {
+      "word": "reject without review",
+      "phonetic": "/rɪˈdʒɛkt wɪˈθaʊt ˌriːˈvjuː/",
+      "partOfSpeech": "phr.",
+      "chinese": "未经审查就拒绝",
+      "usage": "consider a proposal 表示审查其优缺点，reject it without review 表示不进入评估过程就否决。"
     }
   ],
   "derivatives": [
@@ -358,11 +372,18 @@
   ],
   "confusables": [
     {
-      "word": "regard",
-      "phonetic": "/rɪˈɡɑrd/",
+      "word": "conserve",
+      "phonetic": "/kənˈsɝːv/",
       "partOfSpeech": "v.",
-      "chinese": "将……视为；看待",
-      "difference": "consider someone something 可直接接补语；regard 通常用 regard someone as something"
+      "chinese": "节约；保护",
+      "difference": "consider /kənˈsɪdər/ 与 conserve /kənˈsɝːv/ 开头拼写相近；consider 表示考虑，conserve 表示节约资源或保护环境。"
+    },
+    {
+      "word": "consist",
+      "phonetic": "/kənˈsɪst/",
+      "partOfSpeech": "v.",
+      "chinese": "由……组成；存在于",
+      "difference": "consider /kənˈsɪdər/ 表示考虑，consist /kənˈsɪst/ 常与 of 连用表示组成；两词词尾和搭配不同。"
     }
   ],
   "relatedVocabulary": [
@@ -596,12 +617,12 @@
       "type": "meaning_choice",
       "prompt": "结合拼写、发音和用法，哪一项需要与“consider”重点区分？",
       "options": [
-        "regard",
+        "conserve",
         "be",
         "have",
         "do"
       ],
-      "answer": "regard",
+      "answer": "conserve",
       "stage": "T3",
       "ai": false
     },
@@ -765,9 +786,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

@@ -71,7 +71,7 @@
       }
     ],
     "directSynonym": "become aware of /bɪˈkʌm əˈwɛr ˈʌv/（意识到）；understand /ˌʌndɚˈstænd/（明白）；appreciate /əˈpriːʃiˌeɪt/（认识到）；achieve /əˈtʃiːv/（实现）；fulfill /fʊlˈfɪl/（实现；履行）",
-    "directAntonym": "",
+    "directAntonym": "overlook /ˈoʊvɚˌlʊk/（未注意到；忽略）；abandon /əˈbændən/（放弃；不再实现）；forfeit /ˈfɔːrfɪt/（丧失；放弃收益）",
     "derivatives": "realization · realizable · unrealized",
     "example": "I realized that I had used the wrong word.",
     "exampleChinese": "我意识到自己用错了词。"
@@ -331,7 +331,29 @@
       "difference": "fulfill 常接 promise、obligation 或 duty，强调履行；realize 可接事实从句、梦想、设计和资产收益。"
     }
   ],
-  "antonyms": [],
+  "antonyms": [
+    {
+      "word": "overlook",
+      "phonetic": "/ˈoʊvɚˌlʊk/",
+      "partOfSpeech": "v.",
+      "chinese": "未注意到；忽略",
+      "usage": "只与 realize a fact 的意识到义相对；overlook 表示没有察觉同一事实。"
+    },
+    {
+      "word": "abandon",
+      "phonetic": "/əˈbændən/",
+      "partOfSpeech": "v.",
+      "chinese": "放弃；不再实现",
+      "usage": "只与 realize a plan/dream 的实现义相对；abandon 表示在实现前放弃同一计划。"
+    },
+    {
+      "word": "forfeit",
+      "phonetic": "/ˈfɔːrfɪt/",
+      "partOfSpeech": "v.",
+      "chinese": "丧失；放弃收益",
+      "usage": "只与 realize a gain/value 的变现义相对；forfeit 表示因放弃或违规而失去该收益。"
+    }
+  ],
   "derivatives": [
     {
       "word": "realization",
@@ -362,6 +384,13 @@
       "partOfSpeech": "v.",
       "chinese": "认出；意识到",
       "difference": "recognize 常指认出已有对象，realize 常指突然意识到事实或实现目标"
+    },
+    {
+      "word": "release",
+      "phonetic": "/riˈliːs/",
+      "partOfSpeech": "v.",
+      "chinese": "释放；发布",
+      "difference": "realize /ˈriːəlaɪz/ 表示意识到或实现；release /rɪˈliːs/ 表示释放或发布，拼写节奏相近但含义不同。"
     }
   ],
   "relatedVocabulary": [
@@ -577,16 +606,16 @@
       "ai": false
     },
     {
-      "id": "realize-v-synonym-choice-2",
+      "id": "realize-v-antonym-choice",
       "type": "meaning_choice",
-      "prompt": "除“understand”外，在“认识到”这个义项下，哪个词也与“realize”意思接近？",
+      "prompt": "在“意识到；明白”这个义项下，哪个词与“realize”意思相反？",
       "options": [
         "be",
         "have",
         "do",
-        "appreciate"
+        "overlook"
       ],
-      "answer": "appreciate",
+      "answer": "overlook",
       "stage": "T2",
       "ai": false
     },
@@ -764,9 +793,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

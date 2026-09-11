@@ -1,8 +1,8 @@
 {
   "date": "2026-08-20",
   "dayNumber": 4,
-  "contentVersion": "2026.09.10.4",
-  "templateVersion": "learning-template-2026.09.10.4",
+  "contentVersion": "2026.09.11.1",
+  "templateVersion": "learning-template-2026.09.11.1",
   "cards": [
     {
       "id": "want-v",
@@ -77,7 +77,7 @@
           }
         ],
         "directSynonym": "desire /dɪˈzaɪɚ/（渴望；想要）；wish /ˈwɪʃ/（希望；愿望）；need /ˈniːd/（需要）；seek /ˈsiːk/（寻求；设法获得）；would like /ˈwʊd ˈlaɪk/（想要）",
-        "directAntonym": "",
+        "directAntonym": "reject /rɪˈdʒɛkt/（拒绝；不要）；do without /ˈduː wɪˈθaʊt/（没有……也能应付）；be satisfied with /ˈbiː ˈsætəsˌfaɪd ˈwɪð/（对……感到满足）",
         "derivatives": "wanted · unwanted · wanting",
         "example": "I want to improve my speaking this month.",
         "exampleChinese": "这个月我想提高口语。"
@@ -323,7 +323,29 @@
           "difference": "是 want 的礼貌表达，适合点餐、请求和正式交际。"
         }
       ],
-      "antonyms": [],
+      "antonyms": [
+        {
+          "word": "reject",
+          "phonetic": "/rɪˈdʒɛkt/",
+          "partOfSpeech": "v.",
+          "chinese": "拒绝；不要",
+          "usage": "只与 want 表示想要某个具体选项的义项相对；want 表示愿意得到，reject 表示明确不接受该选项。"
+        },
+        {
+          "word": "do without",
+          "phonetic": "/ˈduː wɪˈθaʊt/",
+          "partOfSpeech": "phr.v.",
+          "chinese": "没有……也能应付",
+          "usage": "只对应 want 表示需要某物的义项；want 表示希望获得它，do without 表示没有它也可以应付。"
+        },
+        {
+          "word": "be satisfied with",
+          "phonetic": "/ˈbiː ˈsætəsˌfaɪd ˈwɪð/",
+          "partOfSpeech": "phr.",
+          "chinese": "对……感到满足",
+          "usage": "只与 want 表示希望获得更多或换一个选项的义项相对；want 表示尚有欲求，be satisfied with 表示对现状已满足。"
+        }
+      ],
       "derivatives": [
         {
           "word": "wanted",
@@ -354,6 +376,13 @@
           "partOfSpeech": "modal v.",
           "chinese": "将不；不愿",
           "difference": "won't 是 will not 的缩写；want /wɑːnt/ 表示想要，拼写和发音都不同。"
+        },
+        {
+          "word": "went",
+          "phonetic": "/ˈwɛnt/",
+          "partOfSpeech": "v.",
+          "chinese": "去了（go 的过去式）",
+          "difference": "want /wɑːnt/ 表示想要；went /wɛnt/ 是 go 的过去式，两词元音、拼写和句中时态功能不同。"
         }
       ],
       "relatedVocabulary": [
@@ -569,30 +598,30 @@
           "ai": false
         },
         {
-          "id": "want-v-synonym-choice-2",
+          "id": "want-v-antonym-choice",
           "type": "meaning_choice",
-          "prompt": "除“desire”外，在“希望；愿望”这个义项下，哪个词也与“want”意思接近？",
+          "prompt": "在“想要；希望”这个义项下，哪个词与“want”意思相反？",
           "options": [
             "do",
-            "wish",
+            "reject",
             "be",
             "have"
           ],
-          "answer": "wish",
+          "answer": "reject",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "want-v-contrast-choice",
           "type": "meaning_choice",
-          "prompt": "哪一项是“want”的常用派生词？",
+          "prompt": "结合拼写、发音和用法，哪一项需要与“want”重点区分？",
           "options": [
-            "wanted",
-            "absent",
-            "asking",
-            "canned"
+            "went",
+            "be",
+            "have",
+            "do"
           ],
-          "answer": "wanted",
+          "answer": "went",
           "stage": "T3",
           "ai": false
         },
@@ -756,10 +785,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -835,7 +864,7 @@
           }
         ],
         "directSynonym": "was able to /ˈwɑz ˈeɪbəl ˈtuː/（当时能够）；might /ˈmaɪt/（可能）；would be able to /ˈwʊd ˈbiː ˈeɪbəl ˈtuː/（将能够；会有能力）；managed to /ˈmænədʒd ˈtuː/（设法做成）；be possible to /ˈbiː ˈpɑsəbəl ˈtuː/（有可能做）",
-        "directAntonym": "be unable to /ˈbiː əˈneɪbəl ˈtuː/（无法做）",
+        "directAntonym": "be unable to /ˈbiː əˈneɪbəl ˈtuː/（无法做）；be forbidden to /ˈbiː ˈfɔːrbɪdən ˈtuː/（被禁止做）；be impossible to /ˈbiː ˌɪmˈpɑsəbəl ˈtuː/（不可能做到）",
         "derivatives": "本词暂无需额外强记的高频派生词",
         "example": "We could take the earlier train tomorrow.",
         "exampleChinese": "我们明天可以乘坐较早的那班火车。"
@@ -1095,6 +1124,20 @@
           "partOfSpeech": "phr.",
           "chinese": "无法做",
           "usage": "与 could 的实际能力义相反；过去时可说 was unable to。"
+        },
+        {
+          "word": "be forbidden to",
+          "phonetic": "/ˈbiː ˈfɔːrbɪdən ˈtuː/",
+          "partOfSpeech": "phr.",
+          "chinese": "被禁止做",
+          "usage": "只与 could 表示得到许可的义项相对；could 在过去或委婉语境中表示可以做，be forbidden to 表示不准做。"
+        },
+        {
+          "word": "be impossible to",
+          "phonetic": "/ˈbiː ˌɪmˈpɑsəbəl ˈtuː/",
+          "partOfSpeech": "phr.",
+          "chinese": "不可能做到",
+          "usage": "只对应 could 表示某事有可能发生的义项；could 保留可能性，be impossible to 表示该可能性不存在。"
         }
       ],
       "derivatives": [],
@@ -1317,10 +1360,10 @@
           "type": "meaning_choice",
           "prompt": "在“当时能够”这个义项下，哪个词与“could”意思最接近？",
           "options": [
-            "be bound to",
+            "be assigned",
             "was able to",
             "account for",
-            "be aware of"
+            "back out of"
           ],
           "answer": "was able to",
           "stage": "T2",
@@ -1333,8 +1376,8 @@
           "options": [
             "be unable to",
             "be convinced",
-            "be necessary",
-            "bear in mind"
+            "be forbidden",
+            "be forced to"
           ],
           "answer": "be unable to",
           "stage": "T2",
@@ -1500,10 +1543,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -1585,7 +1628,7 @@
           }
         ],
         "directSynonym": "watch /ˈwɑtʃ/（观看；注视）；see /ˈsiː/（看见）；observe /əbˈzɝːv/（观察）；appear /əˈpɪr/（显得；似乎）；glance /ˈɡlæns/（瞥一眼）",
-        "directAntonym": "ignore /ˌɪɡˈnɔːr/（忽视；不理会）",
+        "directAntonym": "ignore /ˌɪɡˈnɔːr/（忽视；不理会）；avert one's eyes /əˈvɝːt ˈwʌnz ˈaɪz/（移开目光；避开不看）；disregard /ˌdɪsrɪˈɡɑrd/（忽视；不考虑）",
         "derivatives": "outlook · onlooker",
         "example": "Look at the whole sentence before choosing an answer.",
         "exampleChinese": "选择答案前先看完整句子。"
@@ -1866,6 +1909,20 @@
           "partOfSpeech": "v.",
           "chinese": "忽视；不理会",
           "usage": "与主动查看或关注某事的 look at 义形成对比。"
+        },
+        {
+          "word": "avert one's eyes",
+          "phonetic": "/əˈvɝːt ˈwʌnz ˈaɪz/",
+          "partOfSpeech": "phr.v.",
+          "chinese": "移开目光；避开不看",
+          "usage": "只与 look at 表示把目光投向某物的义项相对；look at 是注视对象，avert one's eyes 是主动把目光移开。"
+        },
+        {
+          "word": "disregard",
+          "phonetic": "/ˌdɪsrɪˈɡɑrd/",
+          "partOfSpeech": "v.",
+          "chinese": "忽视；不考虑",
+          "usage": "只对应 look at 表示考察某个问题或因素的义项；look at 将它纳入分析，disregard 则把它排除在考量之外。"
         }
       ],
       "derivatives": [
@@ -1891,6 +1948,13 @@
           "partOfSpeech": "v.",
           "chinese": "搜索；搜查",
           "difference": "search 可直接接地点；look for 后接要寻找的目标。"
+        },
+        {
+          "word": "find",
+          "phonetic": "/ˈfaɪnd/",
+          "partOfSpeech": "v.",
+          "chinese": "找到；发现",
+          "difference": "look for 强调正在寻找的过程，find 强调寻找成功后已找到的结果，不能用 find for 表示‘寻找’。"
         }
       ],
       "relatedVocabulary": [
@@ -2293,10 +2357,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -2378,7 +2442,7 @@
           }
         ],
         "directSynonym": "employ /ɛmˈplɔɪ/（使用；采用）；utilize /ˈjuːtəˌlaɪz/（利用）；apply /əˈplaɪ/（应用；运用）；operate /ˈɑpɚˌeɪt/（操作；运行）；consume /kənˈsuːm/（消耗；耗用）",
-        "directAntonym": "leave unused /ˈliːv əˈnjuːzd/（闲置不用）",
+        "directAntonym": "leave unused /ˈliːv əˈnjuːzd/（闲置不用）；discard /dɪˈskɑrd/（丢弃；废弃不用）；preserve /prəˈzɝːv/（保留；节省不消耗）",
         "derivatives": "reuse · user · usage · usable · useful · useless · usefully",
         "example": "Use this key to open the back door.",
         "exampleChinese": "用这把钥匙打开后门。"
@@ -2638,6 +2702,20 @@
           "partOfSpeech": "phr.",
           "chinese": "闲置不用",
           "usage": "只对应 use 表示为某个目的使用物品的义项；leave unused 表示放着不用。"
+        },
+        {
+          "word": "discard",
+          "phonetic": "/dɪˈskɑrd/",
+          "partOfSpeech": "v.",
+          "chinese": "丢弃；废弃不用",
+          "usage": "只与 use 表示保留某物并用于目的的义项相对；use 让物品发挥作用，discard 则将它丢弃不再使用。"
+        },
+        {
+          "word": "preserve",
+          "phonetic": "/prəˈzɝːv/",
+          "partOfSpeech": "v.",
+          "chinese": "保留；节省不消耗",
+          "usage": "只与 use 表示消耗时间、能源或材料的义项相对；use 会消耗资源，preserve 强调保存资源不被消耗。"
         }
       ],
       "derivatives": [
@@ -2698,6 +2776,13 @@
           "partOfSpeech": "phr.",
           "chinese": "过去常常",
           "difference": "used to + 动词原形表示过去习惯；be used to + 名词/-ing 表示习惯于。"
+        },
+        {
+          "word": "be used to",
+          "phonetic": "/ˈbiː ˈjuːzd ˈtuː/",
+          "partOfSpeech": "phr.",
+          "chinese": "习惯于",
+          "difference": "used to 加动词原形表示过去常常做；be used to 后接名词或 -ing，表示已经习惯于某事。"
         }
       ],
       "relatedVocabulary": [
@@ -2917,12 +3002,12 @@
           "type": "meaning_choice",
           "prompt": "在“使用；运用”这个义项下，哪个词与“use”意思相反？",
           "options": [
-            "be necessary",
-            "be unable to",
-            "leave unused",
-            "be convinced"
+            "have",
+            "do",
+            "discard",
+            "be"
           ],
-          "answer": "leave unused",
+          "answer": "discard",
           "stage": "T2",
           "ai": false
         },
@@ -3100,10 +3185,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -3178,8 +3263,8 @@
             "note": "tell 可接双宾语，中间不加 to。"
           }
         ],
-        "directSynonym": "inform /ˌɪnˈfɔːrm/（通知；告知）；say /ˈseɪ/（说）；notify /ˈnoʊtəˌfaɪ/（正式通知）；relate /rɪˈleɪt/（讲述）；distinguish /dɪˈstɪŋɡwɪʃ/（区分）",
-        "directAntonym": "conceal /kənˈsiːl/（隐瞒）",
+        "directSynonym": "inform /ˌɪnˈfɔːrm/（通知；告知）；explain /ɪkˈspleɪn/（解释；说明）；notify /ˈnoʊtəˌfaɪ/（正式通知）；relate /rɪˈleɪt/（讲述）；distinguish /dɪˈstɪŋɡwɪʃ/（区分）",
+        "directAntonym": "conceal /kənˈsiːl/（隐瞒）；confuse /kənˈfjuːz/（混淆；弄错）；mislead /mɪˈsliːd/（误导；使产生错误理解）",
         "derivatives": "retell · teller · storyteller · storytelling · telling · untold · telltale",
         "example": "Please tell me the reason for your choice.",
         "exampleChinese": "请告诉我你选择的理由。"
@@ -3411,11 +3496,11 @@
           "difference": "正式，通常用 inform someone of/about something，不用双宾语。"
         },
         {
-          "word": "say",
-          "phonetic": "/ˈseɪ/",
+          "word": "explain",
+          "phonetic": "/ɪkˈspleɪn/",
           "partOfSpeech": "v.",
-          "chinese": "说",
-          "difference": "say 后接说出的内容；tell 通常要接听话对象。"
+          "chinese": "解释；说明",
+          "difference": "explain 强调使原因、意义或方法变得清楚；tell 范围更广，也可直接告知事实、讲故事或命令某人。"
         },
         {
           "word": "notify",
@@ -3446,6 +3531,20 @@
           "partOfSpeech": "v.",
           "chinese": "隐瞒",
           "usage": "与 tell/reveal information 的义项相反，强调有意隐藏。"
+        },
+        {
+          "word": "confuse",
+          "phonetic": "/kənˈfjuːz/",
+          "partOfSpeech": "v.",
+          "chinese": "混淆；弄错",
+          "usage": "只与 tell A from B 表示分辨两者的义项相对；能 tell them apart 是能区分，confuse A with B 则是把两者弄混。"
+        },
+        {
+          "word": "mislead",
+          "phonetic": "/mɪˈsliːd/",
+          "partOfSpeech": "v.",
+          "chinese": "误导；使产生错误理解",
+          "usage": "只在 tell 表示如实说明事实或指引方向时相对；tell 给出正确信息，mislead 则使听者得出错误结论。"
         }
       ],
       "derivatives": [
@@ -3506,6 +3605,13 @@
           "partOfSpeech": "v.",
           "chinese": "交谈",
           "difference": "tell 强调把信息传给某人，常用 tell someone something；talk 强调双向交谈过程，常与 to、with、about 连用。"
+        },
+        {
+          "word": "say",
+          "phonetic": "/ˈseɪ/",
+          "partOfSpeech": "v.",
+          "chinese": "说；表达",
+          "difference": "tell 常用 tell someone something，先接听者；say 通常直接接说出的内容，提及听者时用 say something to someone。"
         }
       ],
       "relatedVocabulary": [
@@ -3908,10 +4014,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     }
   ]

@@ -71,7 +71,7 @@
       }
     ],
     "directSynonym": "peruse /pɚˈuːz/（细读）；go through /ˈɡoʊ ˈθruː/（通读；仔细检查）；scan /ˈskæn/（快速浏览）；interpret /ˌɪnˈtɝːprət/（解读）；read aloud /riːd əˈlaʊd/（朗读）",
-    "directAntonym": "skip /ˈskɪp/（跳过不读）",
+    "directAntonym": "skip /ˈskɪp/（跳过不读）；misinterpret /mɪsɪnˈtɝːprət/（误解；误读）；leave unread /ˈliːv ənˈrɛd/（留着未读）",
     "derivatives": "reader · reading · readership · readable",
     "example": "Read the example aloud twice.",
     "exampleChinese": "把例句大声读两遍。"
@@ -338,6 +338,20 @@
       "partOfSpeech": "v.",
       "chinese": "跳过不读",
       "usage": "仅与阅读某段内容的行为相对；阅读深度、浏览速度和被解读对象都有明确限制"
+    },
+    {
+      "word": "misinterpret",
+      "phonetic": "/mɪsɪnˈtɝːprət/",
+      "partOfSpeech": "v.",
+      "chinese": "误解；误读",
+      "usage": "在图表、数据或表情的解读义上，read 表示正确读懂，misinterpret 表示读出错误含义。"
+    },
+    {
+      "word": "leave unread",
+      "phonetic": "/ˈliːv ənˈrɛd/",
+      "partOfSpeech": "phr.",
+      "chinese": "留着未读",
+      "usage": "read a message 表示已处理文字内容，leave it unread 表示使消息保持未读状态。"
     }
   ],
   "derivatives": [
@@ -372,11 +386,18 @@
   ],
   "confusables": [
     {
-      "word": "study",
-      "phonetic": "/ˈstʌdi/",
-      "partOfSpeech": "v.",
-      "chinese": "学习；研读",
-      "difference": "read 强调处理文字；study 强调以掌握知识为目的，可不以阅读为主"
+      "word": "reed",
+      "phonetic": "/ˈriːd/",
+      "partOfSpeech": "n.",
+      "chinese": "芦苇；簧片",
+      "difference": "read 的现在时 /riːd/ 与 reed /riːd/ 同音，但 reed 是表示芦苇或簧片的名词。"
+    },
+    {
+      "word": "red",
+      "phonetic": "/ˈrɛd/",
+      "partOfSpeech": "adj.",
+      "chinese": "红色的",
+      "difference": "read 的过去式读 /rɛd/ 时与 red 同音，但 red 是颜色形容词；read 仍写作 read。"
     }
   ],
   "relatedVocabulary": [
@@ -610,12 +631,12 @@
       "type": "meaning_choice",
       "prompt": "结合拼写、发音和用法，哪一项需要与“read”重点区分？",
       "options": [
-        "have",
-        "do",
-        "study",
-        "be"
+        "ball",
+        "bass",
+        "reed",
+        "increase"
       ],
-      "answer": "study",
+      "answer": "reed",
       "stage": "T3",
       "ai": false
     },
@@ -779,9 +800,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

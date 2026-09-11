@@ -71,7 +71,7 @@
       }
     ],
     "directSynonym": "grow /ˈɡroʊ/（发展；成长）；create /kriˈeɪt/（开发）；form /ˈfɔːrm/（形成）；expand /ɪkˈspænd/（扩展）；cultivate /ˈkʌltəˌveɪt/（培养）",
-    "directAntonym": "stagnate /ˈstæɡˌneɪt/（停滞）；decline /dɪˈklaɪn/（衰退）",
+    "directAntonym": "stagnate /ˈstæɡˌneɪt/（停滞）；decline /dɪˈklaɪn/（衰退）；recover from /rɪˈkʌvɚ ˈfrʌm/（从……恢复）",
     "derivatives": "developer · development · developmental · developed · developing",
     "example": "She developed a habit of reading every night.",
     "exampleChinese": "她养成了每晚阅读的习惯。"
@@ -345,6 +345,13 @@
       "partOfSpeech": "v.",
       "chinese": "衰退",
       "usage": "与成长、改善的义项相对；develop 可逐步改善，decline 则表示质量或规模下降。"
+    },
+    {
+      "word": "recover from",
+      "phonetic": "/rɪˈkʌvɚ ˈfrʌm/",
+      "partOfSpeech": "v. phr.",
+      "chinese": "从……恢复",
+      "usage": "只与 develop an illness/problem 的逐渐患上义相对；recover from 表示从同一疾病或问题中恢复。"
     }
   ],
   "derivatives": [
@@ -384,7 +391,22 @@
       "note": "常见于 developing countries 和 a developing problem。"
     }
   ],
-  "confusables": [],
+  "confusables": [
+    {
+      "word": "devise",
+      "phonetic": "/dɪˈvaɪz/",
+      "partOfSpeech": "v.",
+      "chinese": "设计；想出",
+      "difference": "develop 表示逐步完善产品、能力或计划；devise 强调先构思出一个新方法或方案。"
+    },
+    {
+      "word": "envelop",
+      "phonetic": "/ɪnˈvɛləp/",
+      "partOfSpeech": "v.",
+      "chinese": "包住；笼罩",
+      "difference": "develop /dɪˈvɛləp/ 表示发展；envelop /ɪnˈvɛləp/ 表示包住，拼写尾部相近但前缀和含义不同。"
+    }
+  ],
   "relatedVocabulary": [
     {
       "category": "产品创新",
@@ -614,14 +636,14 @@
     {
       "id": "develop-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "哪一项是“develop”的常用派生词？",
+      "prompt": "结合拼写、发音和用法，哪一项需要与“develop”重点区分？",
       "options": [
-        "developer",
-        "increase",
-        "admission",
-        "affection"
+        "devise",
+        "be",
+        "have",
+        "do"
       ],
-      "answer": "developer",
+      "answer": "devise",
       "stage": "T3",
       "ai": false
     },
@@ -785,9 +807,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

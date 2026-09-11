@@ -71,7 +71,7 @@
       }
     ],
     "directSynonym": "favor /ˈfeɪvɚ/（更喜欢）；like better /ˈlaɪk ˈbɛtɚ/（更喜欢）；choose /ˈtʃuːz/（选择）；opt for /ˈɑpt ˈfɔːr/（选择）；would rather /ˈwʊd ˈræðɚ/（宁愿）",
-    "directAntonym": "",
+    "directAntonym": "reject /rɪˈdʒɛkt/（拒绝选用）；dislike /dɪˈslaɪk/（不喜欢；反感）；be indifferent to /ˈbiː ˌɪnˈdɪfrənt ˈtuː/（对……无偏好）",
     "derivatives": "preference · preferable · preferred · preferably",
     "example": "I prefer walking to taking a taxi.",
     "exampleChinese": "比起乘出租车，我更喜欢走路。"
@@ -317,7 +317,29 @@
       "difference": "后接动词原形，用来比较行为偏好；prefer 还能直接接名词；would rather 只能接动词原形。"
     }
   ],
-  "antonyms": [],
+  "antonyms": [
+    {
+      "word": "reject",
+      "phonetic": "/rɪˈdʒɛkt/",
+      "partOfSpeech": "v.",
+      "chinese": "拒绝选用",
+      "usage": "只与 prefer/choose a particular option 的选择义相对；reject 表示明确排除同一选项。"
+    },
+    {
+      "word": "dislike",
+      "phonetic": "/dɪˈslaɪk/",
+      "partOfSpeech": "v.",
+      "chinese": "不喜欢；反感",
+      "usage": "只与 prefer/like a particular option 的偏好义相对；dislike 表示对同一选项持负面态度。"
+    },
+    {
+      "word": "be indifferent to",
+      "phonetic": "/ˈbiː ˌɪnˈdɪfrənt ˈtuː/",
+      "partOfSpeech": "v. phr.",
+      "chinese": "对……无偏好",
+      "usage": "只与 prefer one option over another 的比较偏好义相对；be indifferent to 表示两者对自己没有差别。"
+    }
+  ],
   "derivatives": [
     {
       "word": "preference",
@@ -355,6 +377,13 @@
       "partOfSpeech": "v.",
       "chinese": "提到；查阅",
       "difference": "prefer /prɪˈfɝ/ 表示偏爱，常用 prefer A to B；refer /rɪˈfɝ/ 表示提到、查阅或转介，常用 refer to。"
+    },
+    {
+      "word": "defer",
+      "phonetic": "/dɪˈfɝː/",
+      "partOfSpeech": "v.",
+      "chinese": "推迟；听从",
+      "difference": "prefer /prɪˈfɝ/ 表示偏爱，defer /dɪˈfɝ/ 表示推迟或听从；两词结尾发音相近但搭配不同。"
     }
   ],
   "relatedVocabulary": [
@@ -570,16 +599,16 @@
       "ai": false
     },
     {
-      "id": "prefer-v-synonym-choice-2",
+      "id": "prefer-v-antonym-choice",
       "type": "meaning_choice",
-      "prompt": "除“favor”外，在“更喜欢”这个义项下，哪个词也与“prefer”意思接近？",
+      "prompt": "在“更喜欢；偏爱”这个义项下，哪个词与“prefer”意思相反？",
       "options": [
-        "like better",
+        "reject",
         "be",
         "have",
         "do"
       ],
-      "answer": "like better",
+      "answer": "reject",
       "stage": "T2",
       "ai": false
     },
@@ -757,9 +786,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

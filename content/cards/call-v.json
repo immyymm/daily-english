@@ -77,7 +77,7 @@
       }
     ],
     "directSynonym": "phone /ˈfoʊn/（打电话）；contact /ˈkɑnˌtækt/（联系）；summon /ˈsʌmən/（召唤；传唤）；name /ˈneɪm/（命名）；announce /əˈnaʊns/（宣布）",
-    "directAntonym": "",
+    "directAntonym": "dismiss /dɪˈsmɪs/（让……离开；解散）；cancel /ˈkænsəl/（取消；撤销）；hang up /ˈhæŋ ˈʌp/（挂断电话）",
     "derivatives": "caller · calling · callback",
     "example": "I will call you back after the meeting.",
     "exampleChinese": "会议结束后我会给你回电话。"
@@ -337,7 +337,29 @@
       "difference": "只对应正式宣布决定或结果；不能覆盖 call 的命名、召唤、宣布、判定或短语动词用法。"
     }
   ],
-  "antonyms": [],
+  "antonyms": [
+    {
+      "word": "dismiss",
+      "phonetic": "/dɪˈsmɪs/",
+      "partOfSpeech": "v.",
+      "chinese": "让……离开；解散",
+      "usage": "只与 call 表示召集某人到场的义项相对；call 把人召来，dismiss 则让已到场的人离开或解散。"
+    },
+    {
+      "word": "cancel",
+      "phonetic": "/ˈkænsəl/",
+      "partOfSpeech": "v.",
+      "chinese": "取消；撤销",
+      "usage": "只与 call 表示召集会议、选举或活动的义项相对；call a meeting/election 是宣布举行，cancel it 则撤销安排。"
+    },
+    {
+      "word": "hang up",
+      "phonetic": "/ˈhæŋ ˈʌp/",
+      "partOfSpeech": "phr.v.",
+      "chinese": "挂断电话",
+      "usage": "只对应 call 表示正在进行电话交谈的义项；call 建立或维持通话，hang up 则将通话终止。"
+    }
+  ],
   "derivatives": [
     {
       "word": "caller",
@@ -361,7 +383,22 @@
       "note": "电话语境指回电，招聘/表演指再次面试。"
     }
   ],
-  "confusables": [],
+  "confusables": [
+    {
+      "word": "coal",
+      "phonetic": "/ˈkoʊl/",
+      "partOfSpeech": "n.",
+      "chinese": "煤；煤块",
+      "difference": "call /kɔːl/ 与 coal /koʊl/ 拼写接近但元音不同；call 表示呼叫或打电话，coal 是煤的名词。"
+    },
+    {
+      "word": "call for",
+      "phonetic": "/ˈkɔːl ˈfɔːr/",
+      "partOfSpeech": "phr.v.",
+      "chinese": "需要；要求",
+      "difference": "call 单独多表示呼叫、打电话或命名；call for 强调情况需要某物，也可表示公开要求采取行动。"
+    }
+  ],
   "relatedVocabulary": [
     {
       "category": "电话通信",
@@ -575,30 +612,30 @@
       "ai": false
     },
     {
-      "id": "call-v-synonym-choice-2",
+      "id": "call-v-antonym-choice",
       "type": "meaning_choice",
-      "prompt": "除“phone”外，在“联系”这个义项下，哪个词也与“call”意思接近？",
+      "prompt": "在“打电话；呼喊”这个义项下，哪个词与“call”意思相反？",
       "options": [
         "do",
-        "contact",
+        "dismiss",
         "be",
         "have"
       ],
-      "answer": "contact",
+      "answer": "dismiss",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "call-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "哪一项是“call”的常用派生词？",
+      "prompt": "结合拼写、发音和用法，哪一项需要与“call”重点区分？",
       "options": [
-        "caller",
+        "coal",
         "increase",
-        "accent",
-        "access"
+        "ball",
+        "bass"
       ],
-      "answer": "caller",
+      "answer": "coal",
       "stage": "T3",
       "ai": false
     },
@@ -762,9 +799,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

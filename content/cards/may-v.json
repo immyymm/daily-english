@@ -77,7 +77,7 @@
       }
     ],
     "directSynonym": "might /ˈmaɪt/（可能）；possibly /ˈpɑsəbli/（可能地）；be allowed to /ˈbiː əˈlaʊd ˈtuː/（获准）；perhaps /pɚˈhæps/（也许）；can /ˈkæn/（可以；可能）",
-    "directAntonym": "",
+    "directAntonym": "be forbidden to /ˈbiː ˈfɔːrbɪdən ˈtuː/（被禁止做）；cannot /ˈkænɑt/（不可能；不允许）；be certain not to /ˈbiː ˈsɝːtən ˈnɑt ˈtuː/（确定不会）",
     "derivatives": "本词暂无需额外强记的高频派生词",
     "example": "You may see this verb in both formal and informal writing.",
     "exampleChinese": "你可能会在正式和非正式写作中看到这个动词。"
@@ -330,7 +330,29 @@
       "difference": "许可更口语；can 的可能义常指一般规律。"
     }
   ],
-  "antonyms": [],
+  "antonyms": [
+    {
+      "word": "be forbidden to",
+      "phonetic": "/ˈbiː ˈfɔːrbɪdən ˈtuː/",
+      "partOfSpeech": "phr.",
+      "chinese": "被禁止做",
+      "usage": "只与 may 表示正式获准做某事的义项相对；may 给予许可，be forbidden to 表示规则或权威不准该行动。"
+    },
+    {
+      "word": "cannot",
+      "phonetic": "/ˈkænɑt/",
+      "partOfSpeech": "modal v.",
+      "chinese": "不可能；不允许",
+      "usage": "只对应 may 的可能性或许可义；may 保留发生或获准的可能，cannot 在相同语境中排除该可能或许可。"
+    },
+    {
+      "word": "be certain not to",
+      "phonetic": "/ˈbiː ˈsɝːtən ˈnɑt ˈtuː/",
+      "partOfSpeech": "phr.",
+      "chinese": "确定不会",
+      "usage": "只与 may 表示某事不确定地可能发生的义项相对；may 表示存在可能，be certain not to 表示确定不会发生。"
+    }
+  ],
   "derivatives": [],
   "confusables": [
     {
@@ -339,6 +361,13 @@
       "partOfSpeech": "adv.",
       "chinese": "也许；可能",
       "difference": "maybe 是副词，可修饰整句；may 是情态动词，后面必须接动词原形。"
+    },
+    {
+      "word": "may be",
+      "phonetic": "/ˈmeɪ ˈbiː/",
+      "partOfSpeech": "modal phr.",
+      "chinese": "可能是",
+      "difference": "may be 是两个词，may 作情态动词后接 be；maybe 是一个副词，通常位于句首或修饰整句。"
     }
   ],
   "relatedVocabulary": [
@@ -544,12 +573,26 @@
       "type": "meaning_choice",
       "prompt": "在“获准”这个义项下，哪个词与“may”意思最接近？",
       "options": [
-        "be obliged to",
+        "be certain to",
         "be allowed to",
-        "be capable of",
-        "be impossible"
+        "be accidental",
+        "be capable of"
       ],
       "answer": "be allowed to",
+      "stage": "T2",
+      "ai": false
+    },
+    {
+      "id": "may-v-antonym-choice",
+      "type": "meaning_choice",
+      "prompt": "在“可能；也许”这个义项下，哪个词与“may”意思相反？",
+      "options": [
+        "cannot",
+        "be",
+        "have",
+        "do"
+      ],
+      "answer": "cannot",
       "stage": "T2",
       "ai": false
     },
@@ -558,10 +601,10 @@
       "type": "meaning_choice",
       "prompt": "结合拼写、发音和用法，哪一项需要与“may”重点区分？",
       "options": [
-        "maybe",
+        "alike",
         "along",
         "aloud",
-        "first"
+        "maybe"
       ],
       "answer": "maybe",
       "stage": "T3",
@@ -727,9 +770,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

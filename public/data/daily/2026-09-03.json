@@ -1,8 +1,8 @@
 {
   "date": "2026-09-03",
   "dayNumber": 18,
-  "contentVersion": "2026.09.10.4",
-  "templateVersion": "learning-template-2026.09.10.4",
+  "contentVersion": "2026.09.11.1",
+  "templateVersion": "learning-template-2026.09.11.1",
   "cards": [
     {
       "id": "die-v",
@@ -77,7 +77,7 @@
           }
         ],
         "directSynonym": "pass away /ˈpæs əˈweɪ/（去世）；perish /ˈpɛrɪʃ/（死亡；毁灭）；expire /ɪkˈspaɪr/（死亡；期满）；succumb /səˈkʌm/（不敌而死）；cease functioning /ˈsiːs ˈfʌŋkʃənɪŋ/（停止运转）",
-        "directAntonym": "survive /sɚˈvaɪv/（幸存；活下来）",
+        "directAntonym": "survive /sɚˈvaɪv/（幸存；活下来）；be born /ˈbiː ˈbɔːrn/（出生）；start up /ˈstɑrt ˈʌp/（启动；开始运转）",
         "derivatives": "death · dead · deadly · deathly",
         "example": "Many people still die of preventable diseases.",
         "exampleChinese": "仍有许多人死于可预防的疾病。"
@@ -330,6 +330,20 @@
           "partOfSpeech": "v.",
           "chinese": "幸存；活下来",
           "usage": "与死亡相反，尤其指经历危险或疾病后仍活着"
+        },
+        {
+          "word": "be born",
+          "phonetic": "/ˈbiː ˈbɔːrn/",
+          "partOfSpeech": "phr.",
+          "chinese": "出生",
+          "usage": "be born 标志生命开始，die 标志生命结束；二者只在生命周期起点和终点这一范围内构成对立。"
+        },
+        {
+          "word": "start up",
+          "phonetic": "/ˈstɑrt ˈʌp/",
+          "partOfSpeech": "phr.",
+          "chinese": "启动；开始运转",
+          "usage": "a machine dies 表示它停止运转，it starts up 表示设备从停机状态进入运行状态。"
         }
       ],
       "derivatives": [
@@ -369,6 +383,13 @@
           "partOfSpeech": "v./n.",
           "chinese": "染色；染料",
           "difference": "die 和 dye 同音，但 die 表示死亡，dye 表示给物品染色"
+        },
+        {
+          "word": "dine",
+          "phonetic": "/ˈdaɪn/",
+          "partOfSpeech": "v.",
+          "chinese": "进餐；用餐",
+          "difference": "die /daɪ/ 与 dine /daɪn/ 拼写只差 n；die 表示死亡，dine 是较正式的进餐动词。"
         }
       ],
       "relatedVocabulary": [
@@ -600,14 +621,14 @@
         {
           "id": "die-v-contrast-choice",
           "type": "meaning_choice",
-          "prompt": "哪一项是“die”的常用派生词？",
+          "prompt": "结合拼写、发音和用法，哪一项需要与“die”重点区分？",
           "options": [
-            "actor",
-            "alarm",
-            "death",
-            "increase"
+            "have",
+            "do",
+            "dine",
+            "be"
           ],
-          "answer": "death",
+          "answer": "dine",
           "stage": "T3",
           "ai": false
         },
@@ -771,10 +792,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -850,7 +871,7 @@
           }
         ],
         "directSynonym": "purchase /ˈpɝːtʃəs/（购买）；acquire /əˈkwaɪɚ/（购得；获得）；obtain /əbˈteɪn/（获得）；procure /proʊˈkjʊr/（采购；设法获得）；invest in /ˌɪnˈvɛst ɪn/（投资购买）",
-        "directAntonym": "sell /ˈsɛl/（出售）",
+        "directAntonym": "sell /ˈsɛl/（出售）；give away /ˈɡɪv əˈweɪ/（送掉；赠送）；return /rɪˈtɝːn/（退回；退货）",
         "derivatives": "buyer · buying · buyout",
         "example": "I usually buy books online.",
         "exampleChinese": "我通常在网上买书。"
@@ -1103,6 +1124,20 @@
           "partOfSpeech": "v.",
           "chinese": "出售",
           "usage": "在交易双方行为上与购买相反；付钱购买、设法取得和相信说法并非同一结构"
+        },
+        {
+          "word": "give away",
+          "phonetic": "/ˈɡɪv əˈweɪ/",
+          "partOfSpeech": "phr.",
+          "chinese": "送掉；赠送",
+          "usage": "buy 通过付款获得物品所有权，give away 不收钱地把自己的物品转给别人。"
+        },
+        {
+          "word": "return",
+          "phonetic": "/rɪˈtɝːn/",
+          "partOfSpeech": "v.",
+          "chinese": "退回；退货",
+          "usage": "buy an item 是完成购买并取得商品，return it 是将商品交回卖方以撤销交易。"
         }
       ],
       "derivatives": [
@@ -1130,11 +1165,18 @@
       ],
       "confusables": [
         {
-          "word": "shop for",
-          "phonetic": "/ˈʃɑp ˈfɔːr/",
-          "partOfSpeech": "phr.v.",
-          "chinese": "选购；为……购物",
-          "difference": "shop for 强调比较和挑选商品的过程；buy 强调付款后完成购买这一结果"
+          "word": "by",
+          "phonetic": "/ˈbaɪ/",
+          "partOfSpeech": "prep. / adv.",
+          "chinese": "在……旁边；通过",
+          "difference": "buy /baɪ/ 与 by /baɪ/ 同音；buy 是购买的动词，by 常作介词表示方式、位置或施事者。"
+        },
+        {
+          "word": "bye",
+          "phonetic": "/ˈbaɪ/",
+          "partOfSpeech": "interj. / n.",
+          "chinese": "再见；告别",
+          "difference": "buy /baɪ/ 与 bye /baɪ/ 同音；buy 是购买的动词，bye 用于告别，也可作名词表示轮空。"
         }
       ],
       "relatedVocabulary": [
@@ -1537,10 +1579,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -1616,7 +1658,7 @@
           }
         ],
         "directSynonym": "dispatch /dɪˈspætʃ/（派遣；发送）；mail /ˈmeɪl/（邮寄）；transmit /trænzˈmɪt/（传输）；forward /ˈfɔːrwɚd/（转发；转寄）；direct /dɚˈɛkt/（派往；引导）",
-        "directAntonym": "receive /rəˈsiːv/（接收；收到）",
+        "directAntonym": "receive /rəˈsiːv/（接收；收到）；keep /ˈkiːp/（留下；不发出）；recall /rɪˈkɔːl/（召回；撤回发送）",
         "derivatives": "resend · sender · sending",
         "example": "Please send me a message when you arrive.",
         "exampleChinese": "到达后请给我发消息。"
@@ -1876,6 +1918,20 @@
           "partOfSpeech": "v.",
           "chinese": "接收；收到",
           "usage": "与从起点发送相对；寄送物品、传输信号和派遣人员的结构不同"
+        },
+        {
+          "word": "keep",
+          "phonetic": "/ˈkiːp/",
+          "partOfSpeech": "v.",
+          "chinese": "留下；不发出",
+          "usage": "send a document 是让文件离开发件人并到达收件人，keep it 是把文件留在自己这里。"
+        },
+        {
+          "word": "recall",
+          "phonetic": "/rɪˈkɔːl/",
+          "partOfSpeech": "v.",
+          "chinese": "召回；撤回发送",
+          "usage": "send a message or parcel 是使其离开发件方，recall it 是在送达或生效前尝试撤回。"
         }
       ],
       "derivatives": [
@@ -1908,6 +1964,13 @@
           "partOfSpeech": "v.",
           "chinese": "送达；投递",
           "difference": "send 强调从起点发出；deliver 强调成功送到收件人手中"
+        },
+        {
+          "word": "sand",
+          "phonetic": "/ˈsænd/",
+          "partOfSpeech": "n.",
+          "chinese": "沙；沙子",
+          "difference": "send /sɛnd/ 与 sand /sænd/ 只有元音不同；send 是发送动作，sand 是不可数名词，表示沙子。"
         }
       ],
       "relatedVocabulary": [
@@ -2310,10 +2373,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -2395,7 +2458,7 @@
           }
         ],
         "directSynonym": "stroll /ˈstroʊl/（散步）；stride /ˈstraɪd/（大步走）；hike /ˈhaɪk/（远足）；pace /ˈpeɪs/（踱步）；proceed on foot /prəˈsiːd ˈɑn ˈfʊt/（步行前进）",
-        "directAntonym": "stand still /ˈstænd ˈstɪl/（站着不动）",
+        "directAntonym": "stand still /ˈstænd ˈstɪl/（站着不动）；ride /ˈraɪd/（骑；乘坐）；drive /ˈdraɪv/（驾驶）",
         "derivatives": "walker · walking · walkway · walkable",
         "example": "I walk to work when the weather is good.",
         "exampleChinese": "天气好时我步行上班。"
@@ -2655,6 +2718,20 @@
           "partOfSpeech": "phr.",
           "chinese": "站着不动",
           "usage": "与步行移动相对；步态、速度、距离和是否休闲都有语义限制"
+        },
+        {
+          "word": "ride",
+          "phonetic": "/ˈraɪd/",
+          "partOfSpeech": "v.",
+          "chinese": "骑；乘坐",
+          "usage": "在出行方式上，walk 是双脚行走，ride 是骑车、骑马或作为乘客乘车。"
+        },
+        {
+          "word": "drive",
+          "phonetic": "/ˈdraɪv/",
+          "partOfSpeech": "v.",
+          "chinese": "驾驶",
+          "usage": "walk to a place 表示步行到达，drive there 表示操控汽车到达；对立限于交通方式。"
         }
       ],
       "derivatives": [
@@ -2694,6 +2771,13 @@
           "partOfSpeech": "v./n.",
           "chinese": "工作；起作用",
           "difference": "walk /wɔːk/ 与 work /wɝːrk/ 拼写相近但元音、含义均不同"
+        },
+        {
+          "word": "woke",
+          "phonetic": "/ˈwoʊk/",
+          "partOfSpeech": "v.",
+          "chinese": "醒来了；唤醒了",
+          "difference": "walk /wɔːk/ 与 woke /woʊk/ 元音不同；woke 是 wake 的过去式，walk 则表示步行。"
         }
       ],
       "relatedVocabulary": [
@@ -2913,26 +2997,26 @@
           "type": "meaning_choice",
           "prompt": "在“走；步行”这个义项下，哪个词与“walk”意思相反？",
           "options": [
-            "stand still",
-            "account for",
-            "be aware of",
-            "be bound to"
+            "ride",
+            "be",
+            "have",
+            "do"
           ],
-          "answer": "stand still",
+          "answer": "ride",
           "stage": "T2",
           "ai": false
         },
         {
           "id": "walk-v-contrast-choice",
           "type": "meaning_choice",
-          "prompt": "哪一项是“walk”的常用派生词？",
+          "prompt": "结合拼写、发音和用法，哪一项需要与“walk”重点区分？",
           "options": [
-            "increase",
-            "accent",
-            "access",
-            "walker"
+            "be",
+            "have",
+            "do",
+            "woke"
           ],
-          "answer": "walker",
+          "answer": "woke",
           "stage": "T3",
           "ai": false
         },
@@ -3096,10 +3180,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -3175,7 +3259,7 @@
           }
         ],
         "directSynonym": "increase /ɪnˈkriːs/（增长）；expand /ɪkˈspænd/（扩大）；develop /dɪˈvɛləp/（发展；成长）；mature /məˈtʃʊr/（成熟）；cultivate /ˈkʌltəˌveɪt/（栽培）",
-        "directAntonym": "shrink /ˈʃrɪŋk/（缩小；萎缩）；decline /dɪˈklaɪn/（下降；衰退）",
+        "directAntonym": "shrink /ˈʃrɪŋk/（缩小；萎缩）；decline /dɪˈklaɪn/（下降；衰退）；wither /ˈwɪðɚ/（枯萎；衰败）",
         "derivatives": "growth · grower · growing · grown",
         "example": "The small company continues to grow quickly.",
         "exampleChinese": "这家小公司继续快速发展。"
@@ -3449,6 +3533,13 @@
           "partOfSpeech": "v.",
           "chinese": "下降；衰退",
           "usage": "与数量或业务增长相反；自然生长、数量增加与人为栽培的及物性不同"
+        },
+        {
+          "word": "wither",
+          "phonetic": "/ˈwɪðɚ/",
+          "partOfSpeech": "v.",
+          "chinese": "枯萎；衰败",
+          "usage": "grow 在植物义上表示继续生长，wither 表示因缺水或受损而枯萎、失去生长活力。"
         }
       ],
       "derivatives": [
@@ -3488,6 +3579,13 @@
           "partOfSpeech": "v.",
           "chinese": "提高；养育；种植",
           "difference": "grow 可不及物表示自然增长；raise 是及物动词，后面必须有被提高或养育的对象"
+        },
+        {
+          "word": "glow",
+          "phonetic": "/ˈɡloʊ/",
+          "partOfSpeech": "v. / n.",
+          "chinese": "发光；光亮",
+          "difference": "grow /ɡroʊ/ 与 glow /ɡloʊ/ 只差中间辅音；grow 表示生长或增加，glow 表示发出稳定的光。"
         }
       ],
       "relatedVocabulary": [
@@ -3890,10 +3988,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     }
   ]

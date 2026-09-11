@@ -77,7 +77,7 @@
       }
     ],
     "directSynonym": "unlock /ənˈlɑk/（开锁；解锁）；uncover /ənˈkʌvɚ/（揭开）；launch /ˈlɔːntʃ/（开办；推出）；establish /ɪˈstæblɪʃ/（开设；建立）；begin /bɪˈɡɪn/（开始）",
-    "directAntonym": "shut /ˈʃʌt/（关上；关闭）",
+    "directAntonym": "shut /ˈʃʌt/（关上；关闭）；block /ˈblɑk/（堵住；阻断）；lock /ˈlɑk/（锁住）",
     "derivatives": "reopen · opening · openness · openly",
     "example": "Please open the door slowly.",
     "exampleChinese": "请慢慢开门。"
@@ -351,6 +351,20 @@
       "partOfSpeech": "v.",
       "chinese": "关上；关闭",
       "usage": "与打开门、容器或营业相反；开锁、揭开、开办机构与活动开场的宾语各异"
+    },
+    {
+      "word": "block",
+      "phonetic": "/ˈblɑk/",
+      "partOfSpeech": "v.",
+      "chinese": "堵住；阻断",
+      "usage": "open a passage 是使通道可以通行，block the passage 是用障碍物阻断通行；对立限于通道义。"
+    },
+    {
+      "word": "lock",
+      "phonetic": "/ˈlɑk/",
+      "partOfSpeech": "v.",
+      "chinese": "锁住",
+      "usage": "open a door 表示使通道可以通行，lock the door 表示用锁阻止它被打开。"
     }
   ],
   "derivatives": [
@@ -390,6 +404,13 @@
       "partOfSpeech": "phr.",
       "chinese": "打开电器或开关",
       "difference": "open 用于门、容器、文件等；启动灯、电视、机器通常用 turn on"
+    },
+    {
+      "word": "oven",
+      "phonetic": "/ˈʌvən/",
+      "partOfSpeech": "n.",
+      "chinese": "烤箱；烤炉",
+      "difference": "open /ˈoʊpən/ 与 oven /ˈʌvən/ 拼写相近，但中间辅音和元音不同；oven 是烘烤食物的名词。"
     }
   ],
   "relatedVocabulary": [
@@ -621,14 +642,14 @@
     {
       "id": "open-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "哪一项是“open”的常用派生词？",
+      "prompt": "结合拼写、发音和用法，哪一项需要与“open”重点区分？",
       "options": [
-        "do",
-        "reopen",
-        "be",
-        "have"
+        "bass",
+        "oven",
+        "increase",
+        "ball"
       ],
-      "answer": "reopen",
+      "answer": "oven",
       "stage": "T3",
       "ai": false
     },
@@ -792,9 +813,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

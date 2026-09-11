@@ -71,7 +71,7 @@
       }
     ],
     "directSynonym": "pass away /ˈpæs əˈweɪ/（去世）；perish /ˈpɛrɪʃ/（死亡；毁灭）；expire /ɪkˈspaɪr/（死亡；期满）；succumb /səˈkʌm/（不敌而死）；cease functioning /ˈsiːs ˈfʌŋkʃənɪŋ/（停止运转）",
-    "directAntonym": "survive /sɚˈvaɪv/（幸存；活下来）",
+    "directAntonym": "survive /sɚˈvaɪv/（幸存；活下来）；be born /ˈbiː ˈbɔːrn/（出生）；start up /ˈstɑrt ˈʌp/（启动；开始运转）",
     "derivatives": "death · dead · deadly · deathly",
     "example": "Many people still die of preventable diseases.",
     "exampleChinese": "仍有许多人死于可预防的疾病。"
@@ -324,6 +324,20 @@
       "partOfSpeech": "v.",
       "chinese": "幸存；活下来",
       "usage": "与死亡相反，尤其指经历危险或疾病后仍活着"
+    },
+    {
+      "word": "be born",
+      "phonetic": "/ˈbiː ˈbɔːrn/",
+      "partOfSpeech": "phr.",
+      "chinese": "出生",
+      "usage": "be born 标志生命开始，die 标志生命结束；二者只在生命周期起点和终点这一范围内构成对立。"
+    },
+    {
+      "word": "start up",
+      "phonetic": "/ˈstɑrt ˈʌp/",
+      "partOfSpeech": "phr.",
+      "chinese": "启动；开始运转",
+      "usage": "a machine dies 表示它停止运转，it starts up 表示设备从停机状态进入运行状态。"
     }
   ],
   "derivatives": [
@@ -363,6 +377,13 @@
       "partOfSpeech": "v./n.",
       "chinese": "染色；染料",
       "difference": "die 和 dye 同音，但 die 表示死亡，dye 表示给物品染色"
+    },
+    {
+      "word": "dine",
+      "phonetic": "/ˈdaɪn/",
+      "partOfSpeech": "v.",
+      "chinese": "进餐；用餐",
+      "difference": "die /daɪ/ 与 dine /daɪn/ 拼写只差 n；die 表示死亡，dine 是较正式的进餐动词。"
     }
   ],
   "relatedVocabulary": [
@@ -594,14 +615,14 @@
     {
       "id": "die-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "哪一项是“die”的常用派生词？",
+      "prompt": "结合拼写、发音和用法，哪一项需要与“die”重点区分？",
       "options": [
-        "actor",
-        "alarm",
-        "death",
-        "increase"
+        "have",
+        "do",
+        "dine",
+        "be"
       ],
-      "answer": "death",
+      "answer": "dine",
       "stage": "T3",
       "ai": false
     },
@@ -765,9 +786,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

@@ -2452,7 +2452,7 @@ for (const card of Object.values(manualCardPacks101150)) {
 
 const antonymPacks = {
   end: 'begin|v.|开始|只在事件或活动的起止义上与 end 相对;continue|v.|继续|强调活动不结束而持续',
-  listen: 'ignore|v.|不理会|在注意或听从意见的义项上相对',
+  listen: 'disobey|v.|不听从；违抗|只与 listen to advice/instructions 表示听取并照做的义项相对；disobey 表示明知要求却不遵从',
   agree: 'disagree|v.|不同意|对应观点不一致，常用 disagree with;oppose|v.|反对|语气更强，表示主动抵制计划或观点',
   decide: 'hesitate|v.|犹豫|表示迟迟不能作出决定，并非所有语境的严格反义词',
   pass: 'fail|v.|未通过|仅与通过考试、检查的义项相对',
@@ -2472,20 +2472,20 @@ const antonymPacks = {
   join: 'leave|v.|退出|与加入团体的义项相对;separate|v.|分开|与连接两个部分的义项相对',
   develop: 'stagnate|v.|停滞|与持续发展或进步相对;decline|v.|衰退|与成长、改善的义项相对',
   share: 'withhold|v.|不予提供|与向他人分享信息或资源的义项相对;keep|v.|独自保留|强调不与他人共用或分给他人',
-  increase: 'decrease|v.|减少；下降|可及物或不及物，是 increase 的直接数量反向;reduce|v.|减少|及物用法，与 increase something 相对',
+  increase: 'decrease|v.|减少；下降|可及物或不及物，是 increase 的直接数量反向;remain constant|v. phr.|保持不变|只与 increase 表示数量或水平上升的义项相对；remain constant 表示同一数值既不上升也不下降',
   protect: 'endanger|v.|危及|使人或事物处于危险，与保护相对;expose|v.|使暴露|与 shield 或 protect from danger 的义项相对',
   reduce: 'increase|v.|增加；提高|在数量、水平或程度上直接相对;expand|v.|扩大|只与缩小尺寸、范围的义项相对',
-  accept: 'reject|v.|拒绝|与接受提议、申请或物品直接相对;decline|v.|婉拒|较礼貌地拒绝邀请或提议',
+  accept: 'reject|v.|拒绝|与接受提议、申请或物品直接相对;contest|v.|质疑；对……提出异议|只与 accept a ruling/decision 表示认可裁定的义项相对；contest 表示正式质疑同一裁定',
   avoid: 'confront|v.|面对|与回避问题或困难的义项相对;seek|v.|寻求|只在主动寻找与避开某物的语境中相对',
   notice: 'overlook|v.|忽略；未注意到|对应没有发现本可注意到的细节',
-  improve: 'worsen|v.|使恶化；变得更差|可及物或不及物，是 improve 的直接质量反向;deteriorate|v.|恶化|不及物，强调状况逐渐变差',
+  improve: 'worsen|v.|使恶化；变得更差|可及物或不及物，是 improve 的直接质量反向;stagnate|v.|停滞；没有进步|只与能力、表现或状况逐步 improve 的义项相对；stagnate 表示长期停在原水平',
   discover: 'overlook|v.|未发现|指因疏忽没有注意到本可发现的事物',
   handle: 'mishandle|v.|处理不当|表示错误或不熟练地处理问题、物品或信息',
   achieve: 'fail|v.|未能做到|通常要用 fail to achieve 或 fail to do 表达未实现目标',
-  express: 'suppress|v.|压抑；抑制|与公开表达感受或观点相对;conceal|v.|隐藏|与表达、显露信息或情绪相对',
+  express: 'suppress|v.|压抑；抑制|与公开表达感受或观点相对;obscure|v.|使含糊；遮蔽|只与 express an idea/relationship clearly 的清楚表述义相对；obscure 表示使同一内容难以理解',
   encourage: 'discourage|v.|劝阻；使泄气|与鼓励某人做事或增强信心直接相对',
   depend: 'be independent of|v.|不依赖|与 depend on 在依赖关系上相对',
-  solve: 'complicate|v.|使复杂化|与使问题得到解决相对，但不是所有 solve 义项的严格反义词'
+  solve: 'miscalculate|v.|算错；误算|只与 solve an equation 表示正确求得未知量的数学义相对；miscalculate 表示运算错误并得到错误结果'
 };
 
 const confusablePacks = {
@@ -2907,6 +2907,7 @@ manualCardPacks101150.listen.confusables.push([
 ]);
 
 replaceRelatedItem('remain', 'remainder', ['remnant', 'n.', '残余；遗留部分']);
+replaceRelatedItem('return', 'refund', ['replacement', 'n.', '替换品；替代品']);
 replaceContextItem('pass', 'pass slowly during the winter', ['time passes slowly during the winter', '冬季里时间过得很慢']);
 replaceContextItem('sell', 'sell strongly in urban areas', ['sell especially well in urban areas', '在城市地区尤其畅销']);
 replaceContextItem('base', 'base staff at regional offices', ['base staff in regional offices', '把员工派驻地区办事处']);
@@ -2925,7 +2926,7 @@ replaceContextItem('solve', 'solve bottlenecks through automation', ['solve recu
 // stay empty when there is no genuinely useful contrast to teach.
 manualCardPacks101150.agree.antonyms = [
   ['object', 'v.', '反对；不赞成', '常用 object to something，表示明确提出异议；agree 表示同意或意见一致。'],
-  ['oppose', 'v.', '反对；抵制', '语气强于 disagree，常指主动反对计划、政策或行动。']
+  ['back out of', 'phr.v.', '退出；反悔', '只与 agree to an arrangement/commitment 的承诺义相对；agree to 表示接受安排，back out of 则在承诺后退出。']
 ];
 manualCardPacks101150.handle.antonyms = [
   ['botch', 'v.', '把……搞砸', 'handle 强调妥善处理；botch 指因粗心或能力不足而把工作做坏。']
@@ -3512,8 +3513,8 @@ manualCardPacks101150.share.synonyms = [
   ['communicate', 'v.', '传达；交流', '只接近 share 信息或想法的义项；share 还可表示共用资源、分担责任或分配份额。']
 ];
 manualCardPacks101150.share.antonyms = [
-  ['keep to oneself', 'phr.v.', '独自保留；不与人分享', 'share 表示让别人共同使用或知道某物；keep something to oneself 表示只留给自己。'],
-  ['withhold', 'v.', '扣留；不予提供', '只与 share 信息或资源的义项相对；withhold 强调有意不给本可提供的东西。']
+  ['keep to oneself', 'v. phr.', '独自保留；不与人分享', '只与 share information/feelings 的告知义相对；keep something to oneself 表示把同一信息或感受留给自己。'],
+  ['own exclusively', 'v. phr.', '独占；专有', '只与 share a resource/property 的共同使用或共有义相对；own exclusively 表示由一方单独拥有。']
 ];
 manualCardPacks101150.share.confusables = [
   ['shear', 'v.', '剪羊毛；剪切', 'share 表示分享、共用或分担；shear 表示用剪具剪羊毛或切断，两词拼写和元音发音不同。']
@@ -3617,6 +3618,474 @@ manualCardPacks101150.depend.derivatives.splice(
 );
 manualCardPacks101150.prefer.confusables[0][3] =
   'prefer /prɪˈfɝ/ 表示偏爱，常用 prefer A to B；refer /rɪˈfɝ/ 表示提到、查阅或转介，常用 refer to。';
+
+// Batch-owned relation supplements. Antonyms are scoped to one of the common
+// senses documented above; they are not presented as universal opposites.
+// Confusables record a concrete spelling, sound, grammar, or collocation trap
+// and deliberately avoid words already used by another section on the card.
+const relationSupplements101150 = {
+  end: {
+    antonyms: [
+      ['prolong', 'v.', '延长；拖长', '只与 end an activity/process 的使其终止义相对；prolong 表示使同一活动或过程持续更久。']
+    ],
+    confusables: [
+      ['and', 'conj.', '和；并且', 'end /ɛnd/ 是“结束”，and /ænd/ 是连接词；两词拼写和元音接近，但语法作用完全不同。'],
+      ['end up', 'phr.v.', '最终处于；结果是', 'end 表示结束某事；end up 后接地点、形容词或 -ing，强调最终出现的结果，不等于主动终止。']
+    ]
+  },
+  require: {
+    antonyms: [
+      ['waive', 'v.', '免除；放弃执行', '只在规则义上相对：require a fee/document 是规定必须提供，waive the fee/requirement 是正式免除同一要求。'],
+      ['exempt', 'v.', '免除；豁免', '只在对人的义务上相对：require someone to comply 是要求履行，exempt someone from it 是免除该义务。'],
+      ['make optional', 'v. phr.', '改为可选', '只在强制要求上相对：require 表示必须具备或完成，make optional 表示允许自行选择。']
+    ],
+    confusables: [
+      ['inquire', 'v.', '询问；打听', 'require /rɪˈkwaɪr/ 表示需要或要求；inquire /ɪnˈkwaɪr/ 表示询问信息，拼写相近但宾语和目的不同。']
+    ]
+  },
+  listen: {
+    antonyms: [
+      ['tune out', 'phr.v.', '不再听；走神', '只与主动听取信息的 listen 相对；tune out 表示注意力离开正在播放或讲述的内容。'],
+      ['turn a deaf ear to', 'v. phr.', '对……置若罔闻', '只与 listen to advice/appeals 的听取义相对，turn a deaf ear to 强调有意拒绝听取。']
+    ],
+    confusables: []
+  },
+  agree: {
+    antonyms: [
+      ['conflict with', 'v. phr.', '与……冲突；不一致', '只与 figures/accounts agree 的相符义相对；conflict with 表示两组事实、说法或要求彼此不一致。']
+    ],
+    confusables: [
+      ['agree with', 'phr.v.', '同意某人或观点；与……相符', 'agree with 后接人、观点或表示相符；agree to 后接提议或安排，agree on 后接共同商定的事项。']
+    ]
+  },
+  cut: {
+    antonyms: [
+      ['lengthen', 'v.', '延长；加长', '只与 cut 表示缩短时间、篇幅或物体的义项相对；lengthen 表示使同一对象变长。']
+    ],
+    confusables: [
+      ['cut out', 'phr.v.', '剪下；停止；删除', 'cut 是一般切割；cut out 可表示剪下形状、停止习惯或停止运转，不能只按 cut 的字面义理解。']
+    ]
+  },
+  decide: {
+    antonyms: [
+      ['defer', 'v.', '推迟决定；延期', '只在作出决定的时间上相对：decide 是形成结论，defer 是把决定留到以后。'],
+      ['leave open', 'v. phr.', '暂不决定；保留可能', '只与 decide/settle an issue 相对；leave it open 表示暂时不作结论并保留选择。']
+    ],
+    confusables: [
+      ['divide', 'v.', '分开；除以', 'decide /dɪˈsaɪd/ 表示作决定；divide /dɪˈvaɪd/ 表示分割或做除法，拼写节奏相近但含义不同。'],
+      ['decide on', 'phr.v.', '选定；决定采用', 'decide on 后接名词或 -ing 表示选定方案；decide to 后接动词原形表示决定采取动作。']
+    ]
+  },
+  pass: {
+    antonyms: [
+      ['block', 'v.', '阻挡；阻止通过', '只与 pass 表示通过入口、道路或程序的义项相对；block 表示使同一路径或程序无法通过。'],
+      ['keep', 'v.', '保留；不递出', '只与 pass someone an object 的传递义相对；keep 表示把同一物品留在自己手中。']
+    ],
+    confusables: [
+      ['pass out', 'phr.v.', '昏倒；分发', 'pass 表示经过、通过或递交；pass out 可表示昏倒，也可表示逐一分发，意义由宾语决定。']
+    ]
+  },
+  eat: {
+    antonyms: [
+      ['skip a meal', 'v. phr.', '不吃一餐', '只在一次用餐上相对：eat a meal 表示进餐，skip a meal 表示有意错过这一餐。'],
+      ['spit out', 'phr.v.', '吐出', '只在食物进入口中的方向上相对：eat 强调吞食，spit out 表示把口中的食物吐出。']
+    ],
+    confusables: [
+      ['ate', 'v.', 'eat 的过去式；吃了', 'eat /iːt/ 是原形，ate /eɪt/ 是不规则过去式；有明确过去时间时不能继续用 eat。']
+    ]
+  },
+  report: {
+    antonyms: [
+      ['conceal', 'v.', '隐瞒；隐藏', '只与 report an incident/fact 的如实报告义相对；conceal 表示有意不让同一事实被知道。'],
+      ['retract', 'v.', '撤回；收回', '只与 report/publish a claim 的公开陈述义相对；retract 表示公开收回先前报告的同一说法。'],
+      ['distort', 'v.', '歪曲；曲解', '只与 report facts/findings accurately 的如实报道义相对；distort 表示选择性呈现或改写，使同一事实失真。']
+    ],
+    confusables: [
+      ['inform', 'v.', '通知；告知', 'report 通常是 report something to someone；inform 要说 inform someone of/about something，宾语顺序不同。'],
+      ['rapport', 'n.', '融洽关系；默契', 'report /rɪˈpɔːrt/ 表示报告；rapport /ræˈpɔːr/ 表示融洽关系，拼写近似但重音、开头元音和词性不同。']
+    ]
+  },
+  suggest: {
+    antonyms: [
+      ['advise against', 'phr.v.', '劝阻；建议不要', '只与 suggest doing a specific action 的建议义相对；advise against 表示明确建议不要采取该行动。'],
+      ['rule out', 'phr.v.', '排除……的可能', '只与 evidence suggests a possibility 的暗示义相对；rule out 表示证据排除了同一可能。'],
+      ['contradict', 'v.', '与……矛盾；反驳', '只与数据 suggest a conclusion 的证据义相对；contradict 表示数据与该结论直接不符。']
+    ],
+    confusables: [
+      ['suppose', 'v.', '假定；认为', 'suggest 表示提出建议或由证据暗示；suppose 表示暂时假定某事为真，不能接宾语表示“建议某人”。']
+    ]
+  },
+  sell: {
+    antonyms: [
+      ['withdraw from sale', 'v. phr.', '撤回出售；停止销售', '只与 offer/sell an item 的在售义相对；withdraw from sale 表示决定不再出售同一物品。'],
+      ['retain ownership of', 'v. phr.', '保留……的所有权', '只与 sell an asset 的所有权转移义相对；retain ownership of 表示继续拥有同一资产而不转让。']
+    ],
+    confusables: [
+      ['sail', 'v. / n.', '航行；帆', 'sell /sɛl/ 表示出售；sail /seɪl/ 表示航行或帆，拼写相近但元音和含义不同。']
+    ]
+  },
+  support: {
+    antonyms: [
+      ['abandon', 'v.', '放弃支持；抛弃', '只与 support a person/cause 的持续帮助义相对；abandon 表示停止帮助并离开同一对象。']
+    ],
+    confusables: [
+      ['sport', 'n. / v.', '运动；炫耀地穿戴', 'support /səˈpɔːrt/ 表示支持或支撑；sport /spɔːrt/ 表示运动，拼写相近但音节数和含义不同。']
+    ]
+  },
+  receive: {
+    antonyms: [
+      ['refuse', 'v.', '拒收；拒绝接受', '只在接收所提供事物的义项上相对：receive 表示收下，refuse 表示明确不收。'],
+      ['return', 'v.', '退回；归还', '只在物品流转上相对：receive 表示物品到手，return 表示把该物品送回来源处。']
+    ],
+    confusables: [
+      ['deceive', 'v.', '欺骗', 'receive /rɪˈsiːv/ 表示收到；deceive /dɪˈsiːv/ 表示欺骗，两词结尾相同但前缀和含义不同。'],
+      ['retrieve', 'v.', '取回；检索', 'receive 表示从别人处收到，retrieve 表示主动找回或从系统检索；拼写相近但动作来源不同。']
+    ]
+  },
+  base: {
+    antonyms: [
+      ['disregard', 'v.', '不考虑；忽视', '只与 base a decision on evidence 的依据义相对；disregard 表示作决定时不考虑同一证据。'],
+      ['relocate', 'v.', '迁走；另设地点', '只与 base staff/operations at a place 的驻地义相对；relocate 表示把人员或业务迁离该地点。'],
+      ['leave unsupported', 'v. phr.', '不给依据；使缺乏支撑', '只与 base a claim on evidence 的依据义相对；leave unsupported 表示没有为同一主张提供证据基础。']
+    ],
+    confusables: [
+      ['bias', 'v. / n.', '使有偏见；偏见', 'base /beɪs/ 表示以……为依据；bias /ˈbaɪəs/ 表示使判断偏向一方，拼写相近但发音和作用不同。']
+    ]
+  },
+  pick: {
+    antonyms: [
+      ['reject', 'v.', '拒绝选用；淘汰', '只与 pick/select a candidate or option 的选择义相对；reject 表示明确不选同一候选项。'],
+      ['put down', 'phr.v.', '放下', '只与 pick up 表示拿起的义项相对；put down 表示把同一物体从手中放回表面。'],
+      ['lock', 'v.', '锁上；使无法开启', '只与 pick a lock 表示无钥匙开锁的义项相对；lock 表示把同一扇门或锁具重新锁住。']
+    ],
+    confusables: [
+      ['pick out', 'phr.v.', '挑出；辨认出', 'pick 可泛指选择或采摘；pick out 强调从一组中挑出或在人群中辨认，不能省略 out 后保持所有义项。']
+    ]
+  },
+  drive: {
+    antonyms: [
+      ['park', 'v.', '停车；停放', '只与 drive a vehicle 的行驶义相对；park 表示把同一车辆停稳并结束行驶。'],
+      ['dissuade', 'v.', '劝阻；使打消念头', '只与 drive someone to act 的驱使义相对；dissuade 表示劝说同一个人不要采取该行动。'],
+      ['halt', 'v.', '使停止；停下', '只与 drive a machine/process forward 的推动义相对；halt 表示使该运行或进程停止。']
+    ],
+    confusables: [
+      ['dive', 'v. / n.', '潜水；俯冲', 'drive /draɪv/ 表示驾驶或推动；dive /daɪv/ 表示潜入或俯冲，拼写接近但辅音和含义不同。']
+    ]
+  },
+  reach: {
+    antonyms: [
+      ['fall short of', 'phr.v.', '未达到', '只与 reach a goal/standard 的达到义相对；fall short of 表示结果低于同一目标或标准。'],
+      ['lose contact with', 'v. phr.', '与……失去联系', '只与 reach/contact someone 的联系义相对；lose contact with 表示沟通渠道中断。']
+    ],
+    confusables: [
+      ['teach', 'v.', '教授；教会', 'reach /riːtʃ/ 表示到达或够到；teach /tiːtʃ/ 表示教授，拼写只差首字母但主语和动作不同。']
+    ]
+  },
+  remain: {
+    antonyms: [
+      ['disappear', 'v.', '消失；不再存在', '只与 something remains 的剩余义相对；disappear 表示该对象不再留存或可见。']
+    ],
+    confusables: [
+      ['retain', 'v.', '保留；保持', 'remain 通常不及物，表示某物继续处于状态；retain 是及物动词，后面直接接被保留的对象。']
+    ]
+  },
+  explain: {
+    antonyms: [
+      ['confuse', 'v.', '使困惑；混淆', '只与 explain an idea clearly 的说明义相对；confuse 表示让同一概念更难理解。'],
+      ['mislead', 'v.', '误导；使产生错误理解', '只与 explain something accurately 的说明义相对；mislead 表示让听者对同一事实形成错误理解。']
+    ],
+    confusables: [
+      ['exclaim', 'v.', '惊呼；大声说', 'explain /ɪkˈspleɪn/ 表示解释；exclaim /ɪkˈskleɪm/ 表示惊呼，拼写相近但辅音群和说话目的不同。']
+    ]
+  },
+  hit: {
+    antonyms: [
+      ['dodge', 'v.', '躲开；闪避', '只在击打或投射的互动中相对：hit 表示击中，dodge 表示及时移动以免被击中。'],
+      ['spare', 'v.', '使免受；未波及', '只与 a disaster hits an area 的波及义相对；spare 表示灾害没有伤及同一地区或人。']
+    ],
+    confusables: [
+      ['heat', 'n. / v.', '热；加热', 'hit /hɪt/ 表示击中，heat /hiːt/ 表示热或加热；拼写相近但元音长短和含义不同。']
+    ]
+  },
+  pull: {
+    antonyms: [
+      ['release', 'v.', '松开；释放', '只与 pull/hold something under tension 的拉紧义相对；release 表示解除同一拉力或控制。'],
+      ['repel', 'v.', '排斥；推开', '只与 pull 表示吸引物体或人群的义项相对；repel 表示产生相反方向的排斥。']
+    ],
+    confusables: [
+      ['pool', 'n. / v.', '水池；汇集', 'pull /pʊl/ 表示拉，pool /puːl/ 表示水池或汇集；拼写接近但元音长度和含义不同。'],
+      ['pull over', 'phr.v.', '靠边停车', 'pull 表示拉动；pull over 在驾驶语境表示靠边停车，不能按“把某物拉过来”逐词理解。']
+    ]
+  },
+  raise: {
+    antonyms: [
+      ['cut', 'v.', '削减；降低', '只与 raise a price/salary/limit 的提高义相对；cut 表示削减同一数值或额度。'],
+      ['drop', 'v.', '放下；不再提出', '只与 raise a hand/subject 的举起或提出义相对；drop 表示放下手或停止讨论该事项。']
+    ],
+    confusables: [
+      ['raze', 'v.', '夷平；彻底摧毁', 'raise 和 raze 都读 /reɪz/；raise 表示抬高或增加，raze 表示把建筑彻底拆平。']
+    ]
+  },
+  wear: {
+    antonyms: [
+      ['conceal', 'v.', '掩饰；隐藏', '只与 wear/display an expression 的显露义相对；conceal 表示不让同一感情或态度显现出来。'],
+      ['preserve', 'v.', '保护；使免于磨损', '只与 use wears something down/out 的磨损义相对；preserve 表示避免同一物品损耗。']
+    ],
+    confusables: [
+      ['ware', 'n.', '制品；器皿', 'wear、where 和 ware 都读 /wɛr/；ware 是“制品、器皿”，通常出现在 software、tableware 等词中。']
+    ]
+  },
+  return: {
+    antonyms: [
+      ['ignore', 'v.', '不回应；置之不理', '只与 return a call/message 的回应义相对；ignore 表示收到同一联系后不作回应。']
+    ],
+    confusables: [
+      ['refund', 'v. / n.', '退款；退还款项', 'return an item 表示把商品退回；refund the customer/the payment 表示退还钱款，不能说 refund the item 来表示退货。']
+    ]
+  },
+  choose: {
+    antonyms: [
+      ['reject', 'v.', '拒绝选择；淘汰', '只与 choose an option/candidate 的选定义相对；reject 表示明确排除同一选项。'],
+      ['be assigned', 'v. phr.', '被分配；由别人指定', '只与 choose a role/task 的自主选择义相对；be assigned 表示该角色或任务由别人决定。'],
+      ['leave undecided', 'v. phr.', '暂不决定', '只与 choose between alternatives 的决策义相对；leave undecided 表示暂时不作选择。']
+    ],
+    confusables: [
+      ['chews', 'v.', '咀嚼（第三人称单数）', 'choose /tʃuːz/ 与 chews /tʃuːz/ 同音；choose 表示选择，chews 是 chew 的第三人称单数。']
+    ]
+  },
+  cause: {
+    antonyms: [
+      ['counteract', 'v.', '抵消；对抗影响', '只与 cause an effect/change 的致使义相对；counteract 表示施加相反作用以抵消同一影响。'],
+      ['undo', 'v.', '消除影响；撤销', '只与 cause a change/damage 的结果义相对；undo 表示撤销或消除已经造成的同一变化。']
+    ],
+    confusables: [
+      ['course', 'n. / v.', '课程；路线；流动', 'cause /kɔːz/ 表示原因或导致；course /kɔːrs/ 表示课程或路线，拼写和读音接近但含义不同。']
+    ]
+  },
+  join: {
+    antonyms: [
+      ['exclude', 'v.', '排除；不准加入', '只与 join/admit someone to a group 的成员义相对；exclude 表示不让同一人进入该群体。']
+    ],
+    confusables: [
+      ['join in', 'phr.v.', '参加；加入活动', 'join 可直接接 group/person；join in 通常接 activity 或单独使用，不能说 join in the club 表示成为会员。']
+    ]
+  },
+  develop: {
+    antonyms: [
+      ['recover from', 'v. phr.', '从……恢复', '只与 develop an illness/problem 的逐渐患上义相对；recover from 表示从同一疾病或问题中恢复。']
+    ],
+    confusables: [
+      ['devise', 'v.', '设计；想出', 'develop 表示逐步完善产品、能力或计划；devise 强调先构思出一个新方法或方案。'],
+      ['envelop', 'v.', '包住；笼罩', 'develop /dɪˈvɛləp/ 表示发展；envelop /ɪnˈvɛləp/ 表示包住，拼写尾部相近但前缀和含义不同。']
+    ]
+  },
+  share: {
+    antonyms: [
+      ['bear sole responsibility for', 'v. phr.', '独自承担全部责任', '只与 share responsibility for a task 的共同承担义相对；bear sole responsibility for 表示责任完全由一方承担。']
+    ],
+    confusables: [
+      ['chair', 'n. / v.', '椅子；主持', 'share /ʃɛr/ 与 chair /tʃɛr/ 只差起始辅音；share 表示分享，chair 表示椅子或主持会议。']
+    ]
+  },
+  realize: {
+    antonyms: [
+      ['overlook', 'v.', '未注意到；忽略', '只与 realize a fact 的意识到义相对；overlook 表示没有察觉同一事实。'],
+      ['abandon', 'v.', '放弃；不再实现', '只与 realize a plan/dream 的实现义相对；abandon 表示在实现前放弃同一计划。'],
+      ['forfeit', 'v.', '丧失；放弃收益', '只与 realize a gain/value 的变现义相对；forfeit 表示因放弃或违规而失去该收益。']
+    ],
+    confusables: [
+      ['release', 'v.', '释放；发布', 'realize /ˈriːəlaɪz/ 表示意识到或实现；release /rɪˈliːs/ 表示释放或发布，拼写节奏相近但含义不同。']
+    ]
+  },
+  describe: {
+    antonyms: [
+      ['conceal', 'v.', '隐瞒；不描述', '只与 describe details openly 的说明义相对；conceal 表示有意不让这些细节被知道。'],
+      ['omit', 'v.', '省略；漏掉', '只与 describe/include a feature 的列举义相对；omit 表示描述时不提同一特征。'],
+      ['misrepresent', 'v.', '歪曲；不实描述', '只与 describe something accurately 的准确描写义相对；misrepresent 表示给出误导性描写。']
+    ],
+    confusables: [
+      ['ascribe', 'v.', '把……归因于；认为属于', 'describe 表示说明事物特征；ascribe 常用 ascribe something to a cause，表示归因或归属。']
+    ]
+  },
+  increase: {
+    antonyms: [
+      ['cap', 'v.', '限制上限；封顶', '只与 increase a price/output without limit 的增长义相对；cap 表示给同一数值设定最高限度。']
+    ],
+    confusables: [
+      ['increase by', 'v. phr.', '增加了某个差额', 'increase by 后接变化量；increase to 后接最终数值，例如 increase by ten 与 increase to ten 含义不同。']
+    ]
+  },
+  protect: {
+    antonyms: [
+      ['abandon', 'v.', '弃置；停止保护', '只与 protect a person/place 的持续防护义相对；abandon 表示撤去照顾并让同一对象独自面对风险。']
+    ],
+    confusables: [
+      ['protest', 'v. / n.', '抗议；反对', 'protect /prəˈtɛkt/ 表示保护，protest /prəˈtɛst/ 表示抗议；拼写相近但末尾辅音和含义不同。']
+    ]
+  },
+  compare: {
+    antonyms: [
+      ['differ from', 'phr.v.', '与……不同', '只与 compare A to B 表示认为相似的义项相对；differ from 强调两者存在差异。'],
+      ['judge in isolation', 'v. phr.', '孤立地判断', '只与 compare alternatives side by side 的比较方法相对；judge in isolation 表示不借助参照物单独判断。'],
+      ['fall short of', 'phr.v.', '比不上；未达到', '只与 something compares with a standard 表示可媲美的义项相对；fall short of 表示达不到该标准。']
+    ],
+    confusables: [
+      ['comprise', 'v.', '包括；由……组成', 'compare /kəmˈpɛr/ 表示比较，comprise /kəmˈpraɪz/ 表示包括；拼写开头相近但发音、宾语关系和含义不同。']
+    ]
+  },
+  reduce: {
+    antonyms: [
+      ['restore', 'v.', '恢复；补回', '只与 reduce a level/amount 的降低义相对；restore 表示把同一数值或供应恢复到原水平。']
+    ],
+    confusables: [
+      ['deduce', 'v.', '推断；演绎', 'reduce /rɪˈduːs/ 表示减少，deduce /dɪˈduːs/ 表示推断；拼写结尾相同但前缀和思维动作不同。']
+    ]
+  },
+  accept: {
+    antonyms: [
+      ['deny', 'v.', '否认；拒绝承认', '只与 accept a fact/responsibility 的承认义相对；deny 表示声称同一事实不真实或拒绝承担责任。']
+    ],
+    confusables: [
+      ['expect', 'v.', '预期；期待', 'accept /əkˈsɛpt/ 表示接受，expect /ɪkˈspɛkt/ 表示预期；与 except 构成常见拼写混淆组。']
+    ]
+  },
+  prepare: {
+    antonyms: [
+      ['neglect', 'v.', '疏于准备；忽视', '只与 prepare for a known task 的事先准备义相对；neglect 表示该做准备却没有做。'],
+      ['improvise', 'v.', '临时应变；即兴处理', '只在做事方式上对比：prepare 是预先安排，improvise 是没有充分准备时临场处理。'],
+      ['go in cold', 'v. phr.', '毫无准备地开始', '只与 prepare beforehand 的事先准备义相对；go in cold 表示没有预演或资料便直接开始。']
+    ],
+    confusables: [
+      ['prepare for', 'phr.v.', '为……做准备', 'prepare for 后接将发生的事件；prepare something 表示把某物准备好，不能在直接宾语前一律加 for。']
+    ]
+  },
+  avoid: {
+    antonyms: [
+      ['embrace', 'v.', '欣然接受；主动面对', '只与 avoid a change/opportunity 的回避义相对；embrace 表示主动接受并投入同一变化或机会。']
+    ],
+    confusables: [
+      ['void', 'v. / adj. / n.', '使无效；无效的；空缺', 'avoid /əˈvɔɪd/ 表示避开，void /vɔɪd/ 表示使无效或空缺；avoid 多一个起始音节且含义不同。']
+    ]
+  },
+  notice: {
+    antonyms: [
+      ['ignore', 'v.', '不理会；忽视', '只与 notice/pay attention to something 的留意义相对；ignore 表示即使察觉也选择不理会。'],
+      ['concealment', 'n.', '隐瞒；保密', '只与 notice 作名词表示公开告示或预先通知的义项相对；notice 让信息公开可见，concealment 则有意不公开。']
+    ],
+    confusables: [
+      ['notion', 'n.', '概念；看法', 'notice /ˈnoʊtɪs/ 表示注意或通知，notion /ˈnoʊʃən/ 表示概念；拼写开头相近但后半发音和词性不同。']
+    ]
+  },
+  affect: {
+    antonyms: [
+      ['leave unchanged', 'v. phr.', '不产生改变', '只与 affect 表示改变结果或状态的义项相对；leave unchanged 表示同一对象没有受到改变。'],
+      ['spare', 'v.', '使免受；未波及', '只与 an event affects a group 的波及义相对；spare 表示事件没有影响同一群体。'],
+      ['resist', 'v.', '抵抗；不受影响', '只与 an influence affects behavior/results 的作用义相对；resist 表示同一对象抵抗该影响而不随之改变。']
+    ],
+    confusables: [
+      ['infect', 'v.', '感染；传染', 'affect /əˈfɛkt/ 表示影响，infect /ɪnˈfɛkt/ 表示感染；拼写结尾相同但 infect 只用于病原体等传播。']
+    ]
+  },
+  manage: {
+    antonyms: [
+      ['fail', 'v.', '未能做到；失败', '只与 manage to do 表示设法成功的义项相对；fail to do 明确表示没有完成同一动作。'],
+      ['lose control of', 'v. phr.', '失去对……的控制', '只与 manage a team/process 的管理义相对；lose control of 表示无法继续控制同一对象。'],
+      ['be overwhelmed by', 'v. phr.', '被……压垮；无力应付', '只与 manage a workload/crisis 的应付义相对；be overwhelmed by 表示工作量或危机超出应对能力。']
+    ],
+    confusables: [
+      ['try', 'v.', '尝试；努力', 'try to do 只说明付出努力，manage to do 明确表示最终成功；结果未知时不能用 manage 代替 try。'],
+      ['maintain', 'v.', '维持；保养；坚持声称', 'manage 表示管理人员、资源或应付任务；maintain 表示让状态持续或保养设备，常见中文译法相近但宾语不同。']
+    ]
+  },
+  improve: {
+    antonyms: [
+      ['erase previous gains', 'v. phr.', '抹去先前进步；使成果丧失', '只与 improve over time 所积累的进步义相对；erase previous gains 表示一次倒退使先前改善成果消失。']
+    ],
+    confusables: [
+      ['approve', 'v.', '批准；赞成', 'improve /ɪmˈpruːv/ 表示改善，approve /əˈpruːv/ 表示批准或赞成；拼写结尾相近但宾语不同。']
+    ]
+  },
+  discover: {
+    antonyms: [
+      ['conceal', 'v.', '隐藏；隐瞒', '只与 discover/uncover information 的发现义相对；conceal 表示使同一信息不被发现。'],
+      ['lose', 'v.', '丢失；失去踪迹', '只与 discover/find a missing object 的找到义相对；lose 表示不再知道该物体所在。']
+    ],
+    confusables: [
+      ['recover', 'v.', '找回；恢复', 'discover 表示首次发现或得知；recover 表示重新找回曾拥有的东西或从不良状态恢复。']
+    ]
+  },
+  handle: {
+    antonyms: [
+      ['avoid', 'v.', '回避；不处理', '只与 handle a problem/request 的处理义相对；avoid 表示不去面对或处理同一事项。'],
+      ['drop', 'v.', '失手掉落；放下', '只与 handle/hold an object securely 的拿持义相对；drop 表示物体脱手落下。']
+    ],
+    confusables: [
+      ['hand', 'n. / v.', '手；递交', 'handle 可作名词表示把手，也可作动词表示处理；hand 主要指手或亲手递交，不能表示处理问题。'],
+      ['candle', 'n.', '蜡烛', 'handle /ˈhændəl/ 表示处理或把手，candle /ˈkændəl/ 表示蜡烛；两词只差起始辅音，词性和含义不同。']
+    ]
+  },
+  achieve: {
+    antonyms: [
+      ['fall short of', 'phr.v.', '未达到；不符合', '只与 achieve a target/standard 的达到义相对；fall short of 表示结果低于同一目标或标准。'],
+      ['abandon', 'v.', '放弃；中止追求', '只与 achieve a goal through effort 的结果义相对；abandon 表示在达成前停止追求同一目标。']
+    ],
+    confusables: [
+      ['acquire', 'v.', '获得；习得', 'achieve 表示通过努力达到目标或结果；acquire 表示获得物品、公司、知识或技能，宾语范围不同。'],
+      ['receive', 'v.', '收到；接收', 'achieve 表示通过努力取得结果；receive 表示从别人或系统处收到事物，两词都有 ie/ei 拼写但宾语来源不同。']
+    ]
+  },
+  express: {
+    antonyms: [
+      ['misrepresent', 'v.', '歪曲表达；失实表示', '只与 express an idea/quantity accurately 的准确表示义相对；misrepresent 表示用错误形式呈现同一内容。']
+    ],
+    confusables: [
+      ['explain', 'v.', '解释；说明原因', 'express 强调把想法或感情呈现出来；explain 强调让原因、概念或过程变得容易理解。']
+    ]
+  },
+  encourage: {
+    antonyms: [
+      ['sap motivation', 'v. phr.', '削弱动力', '只与 encourage someone to act 的激励义相对；sap motivation 表示逐渐削弱同一个人的行动动力。'],
+      ['inhibit', 'v.', '抑制；阻碍发展', '只与 encourage growth/participation 的促进义相对；inhibit 表示限制同一发展或参与。']
+    ],
+    confusables: [
+      ['enable', 'v.', '使能够；使成为可能', 'encourage 是给予信心或促进意愿；enable 是提供实际能力或条件，某人有意愿但仍可能未被 enable。']
+    ]
+  },
+  depend: {
+    antonyms: [
+      ['be settled', 'v. phr.', '已经确定；不再悬而未决', '只与 it depends 表示答案仍随条件而变化的用法相对；be settled 表示结果已经确定，不再等待条件决定。'],
+      ['be unaffected by', 'v. phr.', '不受……影响', '只与 an outcome depends on a factor 的取决义相对；be unaffected by 表示该因素不会改变结果。']
+    ],
+    confusables: [
+      ['defend', 'v.', '保卫；辩护', 'depend /dɪˈpɛnd/ 表示依赖或取决于，defend /dɪˈfɛnd/ 表示保卫或辩护；拼写节奏相近但动作不同。'],
+      ['deepen', 'v.', '加深；深化', 'depend /dɪˈpɛnd/ 表示依靠，deepen /ˈdiːpən/ 表示使更深；字母组合相近但重音和语法结构不同。']
+    ]
+  },
+  prefer: {
+    antonyms: [
+      ['reject', 'v.', '拒绝选用', '只与 prefer/choose a particular option 的选择义相对；reject 表示明确排除同一选项。'],
+      ['dislike', 'v.', '不喜欢；反感', '只与 prefer/like a particular option 的偏好义相对；dislike 表示对同一选项持负面态度。'],
+      ['be indifferent to', 'v. phr.', '对……无偏好', '只与 prefer one option over another 的比较偏好义相对；be indifferent to 表示两者对自己没有差别。']
+    ],
+    confusables: [
+      ['defer', 'v.', '推迟；听从', 'prefer /prɪˈfɝ/ 表示偏爱，defer /dɪˈfɝ/ 表示推迟或听从；两词结尾发音相近但搭配不同。']
+    ]
+  },
+  solve: {
+    antonyms: [
+      ['create', 'v.', '制造；产生', '只与 solve a problem 的解决义相对；create a problem 表示使原本不存在的同类问题产生。'],
+      ['leave unresolved', 'v. phr.', '使仍未解决', '只与 solve an issue/case 的完成义相对；leave unresolved 表示问题经过处理后仍没有答案。']
+    ],
+    confusables: [
+      ['evolve', 'v.', '逐渐发展；演变', 'solve /sɑːlv/ 表示解决问题，evolve /ɪˈvɑːlv/ 表示逐渐发展；两词结尾相近但动作过程和宾语不同。']
+    ]
+  }
+};
+
+for (const [headword, supplements] of Object.entries(relationSupplements101150)) {
+  manualCardPacks101150[headword].antonyms.push(...supplements.antonyms);
+  manualCardPacks101150[headword].confusables.push(...supplements.confusables);
+}
 
 // A relation note must state the usable boundary against the headword, not
 // merely define the neighboring word. These are individually reviewed rather

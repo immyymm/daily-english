@@ -71,7 +71,7 @@
       }
     ],
     "directSynonym": "may /ˈmeɪ/（可能）；could possibly /ˈkʊd ˈpɑsəbli/（有可能）；perhaps /pɚˈhæps/（也许）；possibly /ˈpɑsəbli/（可能地）；be conceivable /ˈbiː kənˈsiːvəbəl/（可以想象；有可能）",
-    "directAntonym": "be impossible /ˈbiː ˌɪmˈpɑsəbəl/（不可能）",
+    "directAntonym": "be impossible /ˈbiː ˌɪmˈpɑsəbəl/（不可能）；weakness /ˈwiːknəs/（虚弱；力量不足）；be certain to /ˈbiː ˈsɝːtən ˈtuː/（一定会；确定将）",
     "derivatives": "mighty · mightily",
     "example": "You might remember the word better after using it.",
     "exampleChinese": "使用这个词后你可能会记得更牢。"
@@ -331,6 +331,20 @@
       "partOfSpeech": "phr.",
       "chinese": "不可能",
       "usage": "与 might 的可能性义形成对比。"
+    },
+    {
+      "word": "weakness",
+      "phonetic": "/ˈwiːknəs/",
+      "partOfSpeech": "n.",
+      "chinese": "虚弱；力量不足",
+      "usage": "只与 might 作名词表示强大力量或权势的义项相对；might 强调强大的力量，weakness 表示缺乏力量或能力。"
+    },
+    {
+      "word": "be certain to",
+      "phonetic": "/ˈbiː ˈsɝːtən ˈtuː/",
+      "partOfSpeech": "phr.",
+      "chinese": "一定会；确定将",
+      "usage": "只对应 might 表示不确定推测的义项；might 说明只是可能，be certain to 则表示结果几乎确定会发生。"
     }
   ],
   "derivatives": [
@@ -356,6 +370,13 @@
       "partOfSpeech": "n.",
       "chinese": "螨；极少量",
       "difference": "might 是情态动词或“力量”名词；mite 与之同音，表示微小的螨。"
+    },
+    {
+      "word": "might have",
+      "phonetic": "/ˈmaɪt ˈhæv/",
+      "partOfSpeech": "modal phr.",
+      "chinese": "可能已经",
+      "difference": "might 加动词原形通常推测现在或将来；might have 后必须接过去分词，用于推测过去可能发生的事。"
     }
   ],
   "relatedVocabulary": [
@@ -575,12 +596,12 @@
       "type": "meaning_choice",
       "prompt": "在“可能；也许”这个义项下，哪个词与“might”意思相反？",
       "options": [
-        "be obliged to",
-        "be impossible",
-        "be allowed to",
-        "be capable of"
+        "accuracy",
+        "weakness",
+        "increase",
+        "accident"
       ],
-      "answer": "be impossible",
+      "answer": "weakness",
       "stage": "T2",
       "ai": false
     },
@@ -758,9 +779,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

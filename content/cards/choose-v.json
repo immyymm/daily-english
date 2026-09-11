@@ -71,7 +71,7 @@
       }
     ],
     "directSynonym": "select /səˈlɛkt/（挑选）；pick /ˈpɪk/（挑选）；opt for /ˈɑpt ˈfɔːr/（选择）；elect /ɪˈlɛkt/（选举；选择）；decide on /ˌdɪˈsaɪd ˈɑn/（选定）",
-    "directAntonym": "",
+    "directAntonym": "reject /rɪˈdʒɛkt/（拒绝选择；淘汰）；be assigned /ˈbiː əˈsaɪnd/（被分配；由别人指定）；leave undecided /ˈliːv ˌʌndɪˈsaɪdɪd/（暂不决定）",
     "derivatives": "choice · chosen · choosy",
     "example": "Choose the most natural answer.",
     "exampleChinese": "选择最自然的答案。"
@@ -317,7 +317,29 @@
       "difference": "强调考虑后确定某一方案；choose 可表示偏好或决定行动，decide on 聚焦最终确定。"
     }
   ],
-  "antonyms": [],
+  "antonyms": [
+    {
+      "word": "reject",
+      "phonetic": "/rɪˈdʒɛkt/",
+      "partOfSpeech": "v.",
+      "chinese": "拒绝选择；淘汰",
+      "usage": "只与 choose an option/candidate 的选定义相对；reject 表示明确排除同一选项。"
+    },
+    {
+      "word": "be assigned",
+      "phonetic": "/ˈbiː əˈsaɪnd/",
+      "partOfSpeech": "v. phr.",
+      "chinese": "被分配；由别人指定",
+      "usage": "只与 choose a role/task 的自主选择义相对；be assigned 表示该角色或任务由别人决定。"
+    },
+    {
+      "word": "leave undecided",
+      "phonetic": "/ˈliːv ˌʌndɪˈsaɪdɪd/",
+      "partOfSpeech": "v. phr.",
+      "chinese": "暂不决定",
+      "usage": "只与 choose between alternatives 的决策义相对；leave undecided 表示暂时不作选择。"
+    }
+  ],
   "derivatives": [
     {
       "word": "choice",
@@ -348,6 +370,13 @@
       "partOfSpeech": "v.",
       "chinese": "选择了",
       "difference": "choose 是原形，chose 是一般过去式"
+    },
+    {
+      "word": "chews",
+      "phonetic": "/ˈtʃuːz/",
+      "partOfSpeech": "v.",
+      "chinese": "咀嚼（第三人称单数）",
+      "difference": "choose /tʃuːz/ 与 chews /tʃuːz/ 同音；choose 表示选择，chews 是 chew 的第三人称单数。"
     }
   ],
   "relatedVocabulary": [
@@ -563,16 +592,16 @@
       "ai": false
     },
     {
-      "id": "choose-v-synonym-choice-2",
+      "id": "choose-v-antonym-choice",
       "type": "meaning_choice",
-      "prompt": "除“select”外，在“挑选”这个义项下，哪个词也与“choose”意思接近？",
+      "prompt": "在“选择；挑选”这个义项下，哪个词与“choose”意思相反？",
       "options": [
-        "pick",
+        "reject",
         "be",
         "have",
         "do"
       ],
-      "answer": "pick",
+      "answer": "reject",
       "stage": "T2",
       "ai": false
     },
@@ -750,9 +779,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

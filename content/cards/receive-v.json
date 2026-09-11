@@ -71,7 +71,7 @@
       }
     ],
     "directSynonym": "get /ˈɡɛt/（收到）；obtain /əbˈteɪn/（获得）；accept /ækˈsɛpt/（接受）；welcome /ˈwɛlkəm/（迎接）；collect /kəˈlɛkt/（领取）",
-    "directAntonym": "send /ˈsɛnd/（发送）",
+    "directAntonym": "send /ˈsɛnd/（发送）；refuse /rəˈfjuːz/（拒收；拒绝接受）；return /rɪˈtɝːn/（退回；归还）",
     "derivatives": "receiver · recipient · reception · receipt · receptive",
     "example": "I received your message this morning.",
     "exampleChinese": "我今天早上收到了你的消息。"
@@ -331,6 +331,20 @@
       "partOfSpeech": "v.",
       "chinese": "发送",
       "usage": "在信息或物品传递方向上相对；receive 位于传递终点，send 则从来源把信息或物品发出。"
+    },
+    {
+      "word": "refuse",
+      "phonetic": "/rəˈfjuːz/",
+      "partOfSpeech": "v.",
+      "chinese": "拒收；拒绝接受",
+      "usage": "只在接收所提供事物的义项上相对：receive 表示收下，refuse 表示明确不收。"
+    },
+    {
+      "word": "return",
+      "phonetic": "/rɪˈtɝːn/",
+      "partOfSpeech": "v.",
+      "chinese": "退回；归还",
+      "usage": "只在物品流转上相对：receive 表示物品到手，return 表示把该物品送回来源处。"
     }
   ],
   "derivatives": [
@@ -370,7 +384,22 @@
       "note": "常用 be receptive to ideas。"
     }
   ],
-  "confusables": [],
+  "confusables": [
+    {
+      "word": "deceive",
+      "phonetic": "/dɪˈsiːv/",
+      "partOfSpeech": "v.",
+      "chinese": "欺骗",
+      "difference": "receive /rɪˈsiːv/ 表示收到；deceive /dɪˈsiːv/ 表示欺骗，两词结尾相同但前缀和含义不同。"
+    },
+    {
+      "word": "retrieve",
+      "phonetic": "/rɪˈtriːv/",
+      "partOfSpeech": "v.",
+      "chinese": "取回；检索",
+      "difference": "receive 表示从别人处收到，retrieve 表示主动找回或从系统检索；拼写相近但动作来源不同。"
+    }
+  ],
   "relatedVocabulary": [
     {
       "category": "通信渠道",
@@ -600,14 +629,14 @@
     {
       "id": "receive-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "哪一项是“receive”的常用派生词？",
+      "prompt": "结合拼写、发音和用法，哪一项需要与“receive”重点区分？",
       "options": [
-        "increase",
-        "accident",
-        "accuracy",
-        "receiver"
+        "be",
+        "have",
+        "do",
+        "deceive"
       ],
-      "answer": "receiver",
+      "answer": "deceive",
       "stage": "T3",
       "ai": false
     },
@@ -771,9 +800,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

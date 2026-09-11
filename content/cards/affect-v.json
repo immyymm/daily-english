@@ -71,7 +71,7 @@
       }
     ],
     "directSynonym": "influence /ˈɪnfluəns/（影响）；impact /ɪmˈpækt/（影响）；alter /ˈɔːltɚ/（改变）；touch /ˈtʌtʃ/（打动）；move /ˈmuːv/（感动）",
-    "directAntonym": "",
+    "directAntonym": "leave unchanged /ˈliːv ənˈtʃeɪndʒd/（不产生改变）；spare /ˈspɛr/（使免受；未波及）；resist /rɪˈzɪst/（抵抗；不受影响）",
     "derivatives": "affected · unaffected · affective",
     "example": "Poor sleep can affect your memory.",
     "exampleChinese": "睡眠不足会影响记忆力。"
@@ -324,7 +324,29 @@
       "difference": "只指引起强烈情绪；affect 的情感义不要求使人流泪或受到强烈感动。"
     }
   ],
-  "antonyms": [],
+  "antonyms": [
+    {
+      "word": "leave unchanged",
+      "phonetic": "/ˈliːv ənˈtʃeɪndʒd/",
+      "partOfSpeech": "v. phr.",
+      "chinese": "不产生改变",
+      "usage": "只与 affect 表示改变结果或状态的义项相对；leave unchanged 表示同一对象没有受到改变。"
+    },
+    {
+      "word": "spare",
+      "phonetic": "/ˈspɛr/",
+      "partOfSpeech": "v.",
+      "chinese": "使免受；未波及",
+      "usage": "只与 an event affects a group 的波及义相对；spare 表示事件没有影响同一群体。"
+    },
+    {
+      "word": "resist",
+      "phonetic": "/rɪˈzɪst/",
+      "partOfSpeech": "v.",
+      "chinese": "抵抗；不受影响",
+      "usage": "只与 an influence affects behavior/results 的作用义相对；resist 表示同一对象抵抗该影响而不随之改变。"
+    }
+  ],
   "derivatives": [
     {
       "word": "affected",
@@ -355,6 +377,13 @@
       "partOfSpeech": "n.",
       "chinese": "影响；效果",
       "difference": "affect 通常作动词，直接接受影响的对象；effect 通常作名词，常用 have an effect on。"
+    },
+    {
+      "word": "infect",
+      "phonetic": "/ˌɪnˈfɛkt/",
+      "partOfSpeech": "v.",
+      "chinese": "感染；传染",
+      "difference": "affect /əˈfɛkt/ 表示影响，infect /ɪnˈfɛkt/ 表示感染；拼写结尾相同但 infect 只用于病原体等传播。"
     }
   ],
   "relatedVocabulary": [
@@ -570,16 +599,16 @@
       "ai": false
     },
     {
-      "id": "affect-v-synonym-choice-2",
+      "id": "affect-v-antonym-choice",
       "type": "meaning_choice",
-      "prompt": "除“influence”外，在“影响”这个义项下，哪个词也与“affect”意思接近？",
+      "prompt": "在“影响；对……产生作用”这个义项下，哪个词与“affect”意思相反？",
       "options": [
         "do",
-        "impact",
+        "spare",
         "be",
         "have"
       ],
-      "answer": "impact",
+      "answer": "spare",
       "stage": "T2",
       "ai": false
     },
@@ -757,9 +786,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

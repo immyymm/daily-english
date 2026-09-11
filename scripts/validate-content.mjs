@@ -153,7 +153,7 @@ const expectedSnapshotHashes = {
   'canonical-template': '9A5AB81BC487F47015B7D3C74E732089481A14E49120C63FACEDA082AE67141A',
   'canonical-example': 'DF9D024B49143DFDE1C53AE3C40EE77B86CDE5BC1A1A7CD3382980E260447CFD'
 };
-const expectedAppliedSpecificationHash = 'B8321515077C1942009C865975F24D2E7CB067A827EF30D3E4C84A82D1CCA189';
+const expectedAppliedSpecificationHash = '0A180D2A870DDD9077C897F43B0D1578F264C71DFF9DE091660C6A0940D6DFBA';
 
 for (const [key, value] of Object.entries(release)) {
   if (!runtimeRelease.includes(`${key}: '${value}'`)) {
@@ -195,6 +195,8 @@ const expectedCuratedCardMinimums = {
   contextItems: 16,
   fixedPhrases: 12,
   synonyms: 5,
+  antonyms: 3,
+  confusables: 2,
   relatedItems: 12,
   highFrequencyExamples: 12
 };
@@ -240,9 +242,14 @@ if (templateLock.appliedSpecification?.path !== `content/templates/${expectedTem
   errors.push('Applied eight-section specification is not hash-locked to the approved release.');
 }
 if (JSON.stringify(curatedCardMinimums) !== JSON.stringify(expectedCuratedCardMinimums)) {
-  errors.push('Curated-card minima must match the locked structural floor and must not impose counts on adaptive sections.');
+  errors.push('Curated-card minima must match the locked structural floor, including the antonym and confusable hard floors.');
 }
-if (!publishedCardMinimums || publishedCardMinimums.contextItems < 16 || publishedCardMinimums.fixedPhrases < 12 || publishedCardMinimums.synonyms < 5 || publishedCardMinimums.relatedItems < 12 || publishedCardMinimums.highFrequencyExamples < 12) {
+if (Object.hasOwn(templateLock.adaptiveSections ?? {}, 'antonyms') || Object.hasOwn(templateLock.adaptiveSections ?? {}, 'confusables')) {
+  errors.push('Antonyms and confusables are mandatory publication sections and cannot be marked adaptive.');
+}
+if (!publishedCardMinimums || publishedCardMinimums.contextItems < 16 || publishedCardMinimums.fixedPhrases < 12
+  || publishedCardMinimums.synonyms < 5 || publishedCardMinimums.antonyms < 3 || publishedCardMinimums.confusables < 2
+  || publishedCardMinimums.relatedItems < 12 || publishedCardMinimums.highFrequencyExamples < 12) {
   errors.push('Published-card detail floor is missing or weaker than the approved complete-card benchmark.');
 }
 const expectedLearnerOrder = ['核心记忆', '固定搭配和短语', '常用语境词组', '派生词', '近义词', '反义词', '易混词', '同类词汇分类'];
@@ -269,6 +276,8 @@ if (!templateLock.qualityContract?.allPublishedCardsReviewed
   || !templateLock.qualityContract?.forbidWordNetRelatedFallback
   || !templateLock.qualityContract?.requireWordSpecificCommonErrors
   || !templateLock.qualityContract?.requireManualRelationNotes
+  || templateLock.qualityContract?.minimumAntonymsPerCard !== 3
+  || templateLock.qualityContract?.minimumConfusablesPerCard !== 2
   || !templateLock.qualityContract?.forbidGenericFixedExampleCarriers) {
   errors.push('The immutable semantic-quality contract is incomplete.');
 }
@@ -343,7 +352,7 @@ for (const [cardIndex, card] of allCards.cards.entries()) {
   if (card.word === 'work' && card.detailLevel !== 'template-reference') errors.push(card.id + ': locked work card must be template-reference.');
   if (card.word !== 'work' && card.detailLevel !== 'template-curated') errors.push(card.id + ': every non-reference card must be template-curated after per-card review.');
   if (card.word === 'work' && card.curationSource !== 'locked-reference-example') errors.push(card.id + ': reference card must retain locked-example provenance.');
-  if (card.word !== 'work' && card.curationSource !== 'manual-semantic-pack-2026.09.10.4') errors.push(card.id + ': published card does not prove manual semantic-pack provenance.');
+  if (card.word !== 'work' && card.curationSource !== `manual-semantic-pack-${release.templateLockVersion}`) errors.push(card.id + ': published card does not prove manual semantic-pack provenance.');
   const semanticPack = manualCardPacks[card.word];
   if (card.word !== 'work' && !semanticPack) {
     errors.push(card.id + ': no manual semantic pack exists; automatic publication fallback is forbidden.');
@@ -503,6 +512,8 @@ for (const [cardIndex, card] of allCards.cards.entries()) {
     if (card.contextPhrases.reduce((sum, group) => sum + group.items.length, 0) < curatedCardMinimums.contextItems) errors.push(card.id + ': reviewed card needs at least ' + curatedCardMinimums.contextItems + ' curated context phrases.');
     if (card.fixedPhrases.length < curatedCardMinimums.fixedPhrases) errors.push(card.id + ': reviewed card needs at least ' + curatedCardMinimums.fixedPhrases + ' fixed phrases with real examples.');
     if (card.synonyms.length < curatedCardMinimums.synonyms) errors.push(card.id + ': reviewed card needs at least ' + curatedCardMinimums.synonyms + ' useful semantic comparisons.');
+    if (card.antonyms.length < curatedCardMinimums.antonyms) errors.push(card.id + ': reviewed card needs at least ' + curatedCardMinimums.antonyms + ' sense-anchored antonyms.');
+    if (card.confusables.length < curatedCardMinimums.confusables) errors.push(card.id + ': reviewed card needs at least ' + curatedCardMinimums.confusables + ' genuinely confusable words or expressions.');
     if (card.relatedVocabulary.length < templateLock.qualityContract.curatedRelatedCategories) errors.push(card.id + ': reviewed card needs at least ' + templateLock.qualityContract.curatedRelatedCategories + ' semantic categories.');
     if (card.relatedVocabulary.reduce((sum, group) => sum + group.items.length, 0) < curatedCardMinimums.relatedItems) errors.push(card.id + ': reviewed card needs at least ' + curatedCardMinimums.relatedItems + ' genuinely related words.');
     if (card.examples.length < curatedCardMinimums.highFrequencyExamples) errors.push(card.id + ': reviewed card needs at least ' + curatedCardMinimums.highFrequencyExamples + ' natural high-frequency examples.');
@@ -512,6 +523,9 @@ for (const [cardIndex, card] of allCards.cards.entries()) {
     if (card.contextPhrases.length < publishedCardMinimums.contextCategories) errors.push(card.id + ': template-detailed card needs four real context categories.');
     if (card.contextPhrases.reduce((sum, group) => sum + group.items.length, 0) < publishedCardMinimums.contextItems) errors.push(card.id + ': template-detailed card needs at least sixteen evidence-backed context phrases.');
     if (card.fixedPhrases.length < publishedCardMinimums.fixedPhrases) errors.push(card.id + ': template-detailed card needs at least twelve fixed phrases with real examples.');
+    if (card.synonyms.length < publishedCardMinimums.synonyms) errors.push(card.id + ': template-detailed card needs the locked synonym floor.');
+    if (card.antonyms.length < publishedCardMinimums.antonyms) errors.push(card.id + ': template-detailed card needs the locked antonym floor.');
+    if (card.confusables.length < publishedCardMinimums.confusables) errors.push(card.id + ': template-detailed card needs the locked confusable floor.');
     if (card.examples.length < publishedCardMinimums.highFrequencyExamples) errors.push(card.id + ': template-detailed card needs at least twelve natural bilingual examples.');
     if (card.fixedPhrases.some((entry) => !phraseContainsTarget(entry.example, card.word))) errors.push(card.id + ': every fixed-phrase example must use the target word or an inflected form.');
     if (card.examples.some((entry) => !phraseContainsTarget(entry.english, card.word))) errors.push(card.id + ': every high-frequency example must use the target word or an inflected form.');
@@ -935,7 +949,7 @@ const metrics = Object.keys(shapeFor(allCards.cards[0])).reduce((summary, key) =
 }, {});
 await fs.writeFile(qualityReportPath, JSON.stringify({
   contentVersion: release.contentVersion,
-  generatedAt: '2026-09-10',
+  generatedAt: '2026-09-11',
   totalCards: allCards.cards.length,
   lexicalSources: ['user-provided COCA word list', 'Princeton WordNet via wordnet-db@3.1.14', 'ECDICT', 'Tatoeba Mandarin Chinese-English selected export via ManyThings (CC BY 2.0 France)'],
   checks: {

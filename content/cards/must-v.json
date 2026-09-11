@@ -71,7 +71,7 @@
       }
     ],
     "directSynonym": "be compelled to /ˈbiː kəmˈpɛld ˈtuː/（被迫必须）；be required to /ˈbiː rɪˈkwaɪrd ˈtuː/（被要求必须）；need to /ˈniːd ˈtuː/（需要做）；be obliged to /ˈbiː əˈblaɪdʒd ˈtuː/（有义务做）；be bound to /ˈbiː ˈbaʊnd ˈtuː/（一定会）",
-    "directAntonym": "need not /ˈniːd ˈnɑt/（不必）",
+    "directAntonym": "need not /ˈniːd ˈnɑt/（不必）；be forbidden /ˈbiː ˈfɔːrbɪdən/（被禁止）；cannot be /ˈkænɑt ˈbiː/（不可能是）",
     "derivatives": "must-have",
     "example": "You must wear a seat belt in the car.",
     "exampleChinese": "坐车时必须系安全带。"
@@ -324,6 +324,20 @@
       "partOfSpeech": "modal phr.",
       "chinese": "不必",
       "usage": "表示没有必要，与 must 的必要义相反"
+    },
+    {
+      "word": "be forbidden",
+      "phonetic": "/ˈbiː ˈfɔːrbɪdən/",
+      "partOfSpeech": "phr.",
+      "chinese": "被禁止",
+      "usage": "在规则许可范围内，must do 表示被要求执行某事，be forbidden 表示规则不准执行该事。"
+    },
+    {
+      "word": "cannot be",
+      "phonetic": "/ˈkænɑt ˈbiː/",
+      "partOfSpeech": "modal phr.",
+      "chinese": "不可能是",
+      "usage": "在推断义上，must be 表示证据支持某结论，cannot be 表示证据排除该结论。"
     }
   ],
   "derivatives": [
@@ -337,11 +351,18 @@
   ],
   "confusables": [
     {
-      "word": "have to",
-      "phonetic": "/ˈhæv ˈtuː/",
-      "partOfSpeech": "modal phr.",
-      "chinese": "不得不；必须",
-      "difference": "have to 可变时态并常强调外部要求；must 常体现说话者判断或正式规定"
+      "word": "most",
+      "phonetic": "/ˈmoʊst/",
+      "partOfSpeech": "det. / pron.",
+      "chinese": "大多数；最多",
+      "difference": "must /mʌst/ 与 most /moʊst/ 拼写接近，但元音不同；must 是情态动词，most 表示数量或程度最高。"
+    },
+    {
+      "word": "mist",
+      "phonetic": "/ˈmɪst/",
+      "partOfSpeech": "n.",
+      "chinese": "薄雾；水汽",
+      "difference": "must /mʌst/ 与 mist /mɪst/ 只有元音不同；must 是情态动词，mist 是表示薄雾或水汽的名词。"
     }
   ],
   "relatedVocabulary": [
@@ -548,9 +569,9 @@
       "prompt": "在“被迫必须”这个义项下，哪个词与“must”意思最接近？",
       "options": [
         "be compelled to",
+        "act impulsively",
         "be advisable to",
-        "be permitted to",
-        "become aware of"
+        "be forbidden to"
       ],
       "answer": "be compelled to",
       "stage": "T2",
@@ -573,14 +594,14 @@
     {
       "id": "must-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "哪一项是“must”的常用派生词？",
+      "prompt": "结合拼写、发音和用法，哪一项需要与“must”重点区分？",
       "options": [
-        "admission",
-        "affection",
-        "must-have",
+        "ball",
+        "bass",
+        "mist",
         "increase"
       ],
-      "answer": "must-have",
+      "answer": "mist",
       "stage": "T3",
       "ai": false
     },
@@ -744,9 +765,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

@@ -77,7 +77,7 @@
       }
     ],
     "directSynonym": "cease /ˈsiːs/（停止）；halt /ˈhɔːlt/（使停下；停下）；discontinue /dɪskənˈtɪnju/（停止提供或进行）；prevent /prɪˈvɛnt/（阻止）；end /ˈɛnd/（结束）",
-    "directAntonym": "continue /kənˈtɪnju/（继续）；start /ˈstɑrt/（开始）",
+    "directAntonym": "continue /kənˈtɪnju/（继续）；start /ˈstɑrt/（开始）；allow /əˈlaʊ/（允许；使得以进行）",
     "derivatives": "stoppage · stopper · unstoppable",
     "example": "Stop translating every word before you understand the sentence.",
     "exampleChinese": "不要在理解句子前逐字翻译。"
@@ -344,6 +344,13 @@
       "partOfSpeech": "v.",
       "chinese": "开始",
       "usage": "与使机器或活动停止相反；须区分主动停止、阻止他人和终止供应等结构"
+    },
+    {
+      "word": "allow",
+      "phonetic": "/əˈlaʊ/",
+      "partOfSpeech": "v.",
+      "chinese": "允许；使得以进行",
+      "usage": "在 stop someone from doing 的阻止义上，stop 使对方无法继续，allow 是给予许可或条件让其进行。"
     }
   ],
   "derivatives": [
@@ -371,11 +378,18 @@
   ],
   "confusables": [
     {
-      "word": "quit",
-      "phonetic": "/ˈkwɪt/",
-      "partOfSpeech": "v.",
-      "chinese": "停止；退出",
-      "difference": "stop 可临时停止任何动作；quit 常指永久放弃习惯、工作或活动"
+      "word": "step",
+      "phonetic": "/ˈstɛp/",
+      "partOfSpeech": "n. / v.",
+      "chinese": "脚步；迈步",
+      "difference": "stop /stɑːp/ 与 step /stɛp/ 拼写只差元音字母；stop 表示停止，step 表示脚步或迈步。"
+    },
+    {
+      "word": "stop to do",
+      "phonetic": "/ˈstɑp ˈtuː ˈduː/",
+      "partOfSpeech": "phr.",
+      "chinese": "停下当前事去做另一事",
+      "difference": "stop to do 表示停下原动作以去做新动作；stop doing 表示把 doing 所指的动作停掉。"
     }
   ],
   "relatedVocabulary": [
@@ -607,14 +621,14 @@
     {
       "id": "stop-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "结合拼写、发音和用法，哪一项需要与“stop”重点区分？",
+      "prompt": "哪一项是“stop”的常用派生词？",
       "options": [
-        "do",
-        "quit",
-        "be",
-        "have"
+        "accuracy",
+        "stoppage",
+        "increase",
+        "accident"
       ],
-      "answer": "quit",
+      "answer": "stoppage",
       "stage": "T3",
       "ai": false
     },
@@ -778,9 +792,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

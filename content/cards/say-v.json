@@ -70,8 +70,8 @@
         "note": "表示吩咐某人做事用 tell someone to do，不用 say someone to do。"
       }
     ],
-    "directSynonym": "state /ˈsteɪt/（陈述；说明）；tell /ˈtɛl/（告诉；讲述）；express /ɪkˈsprɛs/（表达）；mention /ˈmɛnʃən/（提到）；declare /dɪˈklɛr/（宣布；声明）",
-    "directAntonym": "remain silent /rɪˈmeɪn ˈsaɪlənt/（保持沉默；不说）",
+    "directSynonym": "state /ˈsteɪt/（陈述；说明）；utter /ˈʌtɚ/（说出；发出声音）；express /ɪkˈsprɛs/（表达）；mention /ˈmɛnʃən/（提到）；declare /dɪˈklɛr/（宣布；声明）",
+    "directAntonym": "remain silent /rɪˈmeɪn ˈsaɪlənt/（保持沉默；不说）；deny /dɪˈnaɪ/（否认；不承认）；retract /riˈtrækt/（撤回；收回所说的话）",
     "derivatives": "saying · unsaid",
     "example": "Please say the sentence clearly and at a natural speed.",
     "exampleChinese": "请以自然语速清楚地说出这个句子。"
@@ -296,11 +296,11 @@
       "difference": "比 say 正式，强调清楚明确地给出事实或立场。"
     },
     {
-      "word": "tell",
-      "phonetic": "/ˈtɛl/",
+      "word": "utter",
+      "phonetic": "/ˈʌtɚ/",
       "partOfSpeech": "v.",
-      "chinese": "告诉；讲述",
-      "difference": "通常要接听话对象，如 tell me；say 后常直接接说出的内容。"
+      "chinese": "说出；发出声音",
+      "difference": "utter 强调把词语或声音实际说出口；say 更常引出所说的具体内容或完整陈述。"
     },
     {
       "word": "express",
@@ -331,6 +331,20 @@
       "partOfSpeech": "phr.",
       "chinese": "保持沉默；不说",
       "usage": "只对应 say 表示把话说出口的核心义；remain silent 强调选择不发言。"
+    },
+    {
+      "word": "deny",
+      "phonetic": "/dɪˈnaɪ/",
+      "partOfSpeech": "v.",
+      "chinese": "否认；不承认",
+      "usage": "只在 say 表示声称某事为真的语境中相对；say 把说法表达出来，deny 则明确否认该说法。"
+    },
+    {
+      "word": "retract",
+      "phonetic": "/riˈtrækt/",
+      "partOfSpeech": "v.",
+      "chinese": "撤回；收回所说的话",
+      "usage": "只对应 say 表示公开说出声明的义项；say 发布言论，retract 表示事后正式收回该言论。"
     }
   ],
   "derivatives": [
@@ -356,6 +370,13 @@
       "partOfSpeech": "v.",
       "chinese": "说话；发言",
       "difference": "speak 强调说话行为或语言能力；say 强调说出的具体内容。"
+    },
+    {
+      "word": "tell",
+      "phonetic": "/ˈtɛl/",
+      "partOfSpeech": "v.",
+      "chinese": "告诉；讲述",
+      "difference": "say 通常直接接说出的内容；tell 常先接听者，用 tell someone something，不能照搬 say something。"
     }
   ],
   "relatedVocabulary": [
@@ -575,12 +596,12 @@
       "type": "meaning_choice",
       "prompt": "在“说；讲；表达”这个义项下，哪个词与“say”意思相反？",
       "options": [
-        "be impossible",
-        "remain silent",
-        "be allowed to",
-        "be capable of"
+        "do",
+        "deny",
+        "be",
+        "have"
       ],
-      "answer": "remain silent",
+      "answer": "deny",
       "stage": "T2",
       "ai": false
     },
@@ -758,9 +779,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

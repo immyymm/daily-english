@@ -71,7 +71,7 @@
       }
     ],
     "directSynonym": "rely on /rɪˈlaɪ ˈɑn/（依赖）；count on /ˈkaʊnt ˈɑn/（指望）；hinge on /ˈhɪndʒ ˈɑn/（取决于）；be determined by /ˈbiː dɪˈtɝːmənd ˈbaɪ/（由……决定）；rest on /ˈrɛst ˈɑn/（取决于；以……为基础）",
-    "directAntonym": "do without /ˈduː wɪˈθaʊt/（无需；没有……也能应付）",
+    "directAntonym": "do without /ˈduː wɪˈθaʊt/（无需；没有……也能应付）；be settled /ˈbiː ˈsɛtəld/（已经确定；不再悬而未决）；be unaffected by /ˈbiː ˌʌnəˈfɛktɪd ˈbaɪ/（不受……影响）",
     "derivatives": "dependence · dependency · independence · dependent · dependable · independent · independently",
     "example": "The best choice depends on the situation.",
     "exampleChinese": "最好的选择取决于具体情况。"
@@ -324,6 +324,20 @@
       "partOfSpeech": "phr.v.",
       "chinese": "无需；没有……也能应付",
       "usage": "depend on 表示需要某人或某物提供支持；do without 表示缺少同一对象仍能正常应付。"
+    },
+    {
+      "word": "be settled",
+      "phonetic": "/ˈbiː ˈsɛtəld/",
+      "partOfSpeech": "v. phr.",
+      "chinese": "已经确定；不再悬而未决",
+      "usage": "只与 it depends 表示答案仍随条件而变化的用法相对；be settled 表示结果已经确定，不再等待条件决定。"
+    },
+    {
+      "word": "be unaffected by",
+      "phonetic": "/ˈbiː ˌʌnəˈfɛktɪd ˈbaɪ/",
+      "partOfSpeech": "v. phr.",
+      "chinese": "不受……影响",
+      "usage": "只与 an outcome depends on a factor 的取决义相对；be unaffected by 表示该因素不会改变结果。"
     }
   ],
   "derivatives": [
@@ -377,7 +391,22 @@
       "note": "说明在无帮助或彼此分开的情况下行动。"
     }
   ],
-  "confusables": [],
+  "confusables": [
+    {
+      "word": "defend",
+      "phonetic": "/dɪˈfɛnd/",
+      "partOfSpeech": "v.",
+      "chinese": "保卫；辩护",
+      "difference": "depend /dɪˈpɛnd/ 表示依赖或取决于，defend /dɪˈfɛnd/ 表示保卫或辩护；拼写节奏相近但动作不同。"
+    },
+    {
+      "word": "deepen",
+      "phonetic": "/ˈdiːpən/",
+      "partOfSpeech": "v.",
+      "chinese": "加深；深化",
+      "difference": "depend /dɪˈpɛnd/ 表示依靠，deepen /ˈdiːpən/ 表示使更深；字母组合相近但重音和语法结构不同。"
+    }
+  ],
   "relatedVocabulary": [
     {
       "category": "决定条件",
@@ -581,10 +610,10 @@
       "type": "meaning_choice",
       "prompt": "在“依赖”这个义项下，哪个词与“depend”意思最接近？",
       "options": [
-        "give up",
-        "go past",
+        "be born",
+        "be dead",
         "rely on",
-        "be numb"
+        "ask for"
       ],
       "answer": "rely on",
       "stage": "T2",
@@ -595,10 +624,10 @@
       "type": "meaning_choice",
       "prompt": "在“取决于；视……而定”这个义项下，哪个词与“depend”意思相反？",
       "options": [
-        "come about",
+        "be certain",
         "do without",
-        "be able to",
-        "be fond of"
+        "agree with",
+        "be able to"
       ],
       "answer": "do without",
       "stage": "T2",
@@ -607,14 +636,14 @@
     {
       "id": "depend-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "哪一项是“depend”的常用派生词？",
+      "prompt": "结合拼写、发音和用法，哪一项需要与“depend”重点区分？",
       "options": [
-        "dependence",
-        "increase",
-        "acceptance",
-        "adjustment"
+        "defend",
+        "be",
+        "have",
+        "do"
       ],
-      "answer": "dependence",
+      "answer": "defend",
       "stage": "T3",
       "ai": false
     },
@@ -778,9 +807,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

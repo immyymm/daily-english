@@ -77,7 +77,7 @@
       }
     ],
     "directSynonym": "employ /ɛmˈplɔɪ/（使用；采用）；utilize /ˈjuːtəˌlaɪz/（利用）；apply /əˈplaɪ/（应用；运用）；operate /ˈɑpɚˌeɪt/（操作；运行）；consume /kənˈsuːm/（消耗；耗用）",
-    "directAntonym": "leave unused /ˈliːv əˈnjuːzd/（闲置不用）",
+    "directAntonym": "leave unused /ˈliːv əˈnjuːzd/（闲置不用）；discard /dɪˈskɑrd/（丢弃；废弃不用）；preserve /prəˈzɝːv/（保留；节省不消耗）",
     "derivatives": "reuse · user · usage · usable · useful · useless · usefully",
     "example": "Use this key to open the back door.",
     "exampleChinese": "用这把钥匙打开后门。"
@@ -337,6 +337,20 @@
       "partOfSpeech": "phr.",
       "chinese": "闲置不用",
       "usage": "只对应 use 表示为某个目的使用物品的义项；leave unused 表示放着不用。"
+    },
+    {
+      "word": "discard",
+      "phonetic": "/dɪˈskɑrd/",
+      "partOfSpeech": "v.",
+      "chinese": "丢弃；废弃不用",
+      "usage": "只与 use 表示保留某物并用于目的的义项相对；use 让物品发挥作用，discard 则将它丢弃不再使用。"
+    },
+    {
+      "word": "preserve",
+      "phonetic": "/prəˈzɝːv/",
+      "partOfSpeech": "v.",
+      "chinese": "保留；节省不消耗",
+      "usage": "只与 use 表示消耗时间、能源或材料的义项相对；use 会消耗资源，preserve 强调保存资源不被消耗。"
     }
   ],
   "derivatives": [
@@ -397,6 +411,13 @@
       "partOfSpeech": "phr.",
       "chinese": "过去常常",
       "difference": "used to + 动词原形表示过去习惯；be used to + 名词/-ing 表示习惯于。"
+    },
+    {
+      "word": "be used to",
+      "phonetic": "/ˈbiː ˈjuːzd ˈtuː/",
+      "partOfSpeech": "phr.",
+      "chinese": "习惯于",
+      "difference": "used to 加动词原形表示过去常常做；be used to 后接名词或 -ing，表示已经习惯于某事。"
     }
   ],
   "relatedVocabulary": [
@@ -616,12 +637,12 @@
       "type": "meaning_choice",
       "prompt": "在“使用；运用”这个义项下，哪个词与“use”意思相反？",
       "options": [
-        "be necessary",
-        "be unable to",
-        "leave unused",
-        "be convinced"
+        "have",
+        "do",
+        "discard",
+        "be"
       ],
-      "answer": "leave unused",
+      "answer": "discard",
       "stage": "T2",
       "ai": false
     },
@@ -799,9 +820,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

@@ -77,7 +77,7 @@
       }
     ],
     "directSynonym": "shift /ˈʃɪft/（挪动；转变）；relocate /ˌriːˈloʊkeɪt/（搬迁）；transfer /trænsˈfɝː/（转移；调动）；advance /ədˈvæns/（推进）；stir /ˈstɝː/（打动；使活动）",
-    "directAntonym": "stay /ˈsteɪ/（停留）",
+    "directAntonym": "stay /ˈsteɪ/（停留）；stop /ˈstɑp/（停止移动）；be unmoved by /ˈbiː ənˈmuːvd ˈbaɪ/（不受……感动）",
     "derivatives": "mover · movement · moving · movable",
     "example": "We plan to move to a quieter neighborhood.",
     "exampleChinese": "我们打算搬到一个更安静的社区。"
@@ -337,6 +337,20 @@
       "partOfSpeech": "v.",
       "chinese": "停留",
       "usage": "与改变位置的义项相反；须区分位置移动、搬迁、事务推进和情感触动"
+    },
+    {
+      "word": "stop",
+      "phonetic": "/ˈstɑp/",
+      "partOfSpeech": "v.",
+      "chinese": "停止移动",
+      "usage": "在人或物体的运动义上，move 表示位置继续改变，stop 表示这一运动终止。"
+    },
+    {
+      "word": "be unmoved by",
+      "phonetic": "/ˈbiː ənˈmuːvd ˈbaɪ/",
+      "partOfSpeech": "phr.",
+      "chinese": "不受……感动",
+      "usage": "move someone 在情感义上表示使某人感动，be unmoved by something 表示情绪未受它影响。"
     }
   ],
   "derivatives": [
@@ -371,11 +385,18 @@
   ],
   "confusables": [
     {
-      "word": "remove",
-      "phonetic": "/riˈmuːv/",
-      "partOfSpeech": "v.",
-      "chinese": "移走；去除",
-      "difference": "move 只表示改变位置；remove 强调从原处拿开或消除"
+      "word": "mood",
+      "phonetic": "/ˈmuːd/",
+      "partOfSpeech": "n.",
+      "chinese": "心情；情绪",
+      "difference": "move /muːv/ 与 mood /muːd/ 只有末尾辅音不同；move 表示移动，mood 是心情或情绪。"
+    },
+    {
+      "word": "movie",
+      "phonetic": "/ˈmuːvi/",
+      "partOfSpeech": "n.",
+      "chinese": "电影",
+      "difference": "movie 比 move 多字母 i，读 /ˈmuːvi/；move 读 /muːv/ 并主要作动词表示移动。"
     }
   ],
   "relatedVocabulary": [
@@ -609,12 +630,12 @@
       "type": "meaning_choice",
       "prompt": "结合拼写、发音和用法，哪一项需要与“move”重点区分？",
       "options": [
-        "be",
-        "have",
-        "do",
-        "remove"
+        "increase",
+        "ball",
+        "bass",
+        "mood"
       ],
-      "answer": "remove",
+      "answer": "mood",
       "stage": "T3",
       "ai": false
     },
@@ -778,9 +799,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

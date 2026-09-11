@@ -62,6 +62,8 @@ test("contexts contain four concrete categories and sixteen independent phrases"
 test("relations are precise, sufficient, and not count padding", () => {
   for (const [word, pack] of Object.entries(manualCardPacks051100)) {
     assert.ok(pack.synonyms.length >= 5, `${word}.synonyms must contain at least 5 reviewed items`);
+    assert.ok(pack.antonyms.length >= 3, `${word}.antonyms must contain at least 3 reviewed items`);
+    assert.ok(pack.confusables.length >= 2, `${word}.confusables must contain at least 2 reviewed items`);
     pack.synonyms.forEach((item) => assertTuple(word, "synonyms", item, 4));
     assert.equal(new Set(pack.synonyms.map((item) => normalized(item[0]))).size, pack.synonyms.length, `${word}.synonyms contains duplicates`);
     const vagueNotes = /^(?:近义词|意思接近|与.+意思接近|可替换|含义相近)$/;

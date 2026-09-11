@@ -72,6 +72,8 @@ test("every card meets the locked visible-completeness contract", () => {
     assertRows(word, "derivatives", card.derivatives, [4, 5]);
     ["synonyms", "antonyms", "confusables"].forEach((key) => assertRows(word, key, card[key], 4));
     assert.ok(card.synonyms.length >= 5, `${word}: at least five sense-specific synonyms required`);
+    assert.ok(card.antonyms.length >= 3, `${word}: at least three sense-specific antonyms required`);
+    assert.ok(card.confusables.length >= 2, `${word}: at least two useful confusables required`);
     assert.equal(new Set(card.synonyms.map((row) => norm(row[0]))).size, card.synonyms.length, `${word}: duplicate synonym`);
 
     assert.ok(card.related.length >= 3, `${word}: related needs at least three categories`);

@@ -77,7 +77,7 @@
       }
     ],
     "directSynonym": "participate /pɑrˈtɪsəˌpeɪt/（参加）；compete /kəmˈpiːt/（竞争；比赛）；perform /pɚˈfɔːrm/（表演）；act /ˈækt/（扮演；表演）；reproduce /ˌriːprəˈduːs/（播放；重现）",
-    "directAntonym": "sit out /ˈsɪt ˈaʊt/（不参加）",
+    "directAntonym": "sit out /ˈsɪt ˈaʊt/（不参加）；work /ˈwɝːk/（工作；劳动）；pause /ˈpɔːz/（暂停；暂停播放）",
     "derivatives": "replay · player · playground · playful · playfully",
     "example": "We play a short word game at the end of class.",
     "exampleChinese": "我们在下课前玩一个简短的单词游戏。"
@@ -351,6 +351,20 @@
       "partOfSpeech": "phr.",
       "chinese": "不参加",
       "usage": "与参加某场游戏或活动相反；只与参加某场比赛、游戏或活动的义项构成反向关系。"
+    },
+    {
+      "word": "work",
+      "phonetic": "/ˈwɝːk/",
+      "partOfSpeech": "v. / n.",
+      "chinese": "工作；劳动",
+      "usage": "只与 play 表示休闲玩耍的常用义相对；play 是为娱乐而活动，work 是履行工作或劳动任务。"
+    },
+    {
+      "word": "pause",
+      "phonetic": "/ˈpɔːz/",
+      "partOfSpeech": "v.",
+      "chinese": "暂停；暂停播放",
+      "usage": "只与 play 表示开始或继续播放录音、视频的义项相对；play 使媒体继续播放，pause 则暂时中止但保留当前位置。"
     }
   ],
   "derivatives": [
@@ -390,7 +404,22 @@
       "note": "描述以顽皮或开玩笑的方式说话、微笑或行动。"
     }
   ],
-  "confusables": [],
+  "confusables": [
+    {
+      "word": "place",
+      "phonetic": "/ˈpleɪs/",
+      "partOfSpeech": "v. / n.",
+      "chinese": "放置；地方",
+      "difference": "play /pleɪ/ 表示玩、比赛或演奏；place /pleɪs/ 表示放置或地方，末尾多读 /s/，拼写也多一个 c。"
+    },
+    {
+      "word": "pray",
+      "phonetic": "/ˈpreɪ/",
+      "partOfSpeech": "v.",
+      "chinese": "祈祷；祈求",
+      "difference": "play /pleɪ/ 表示玩、比赛或演奏，pray /preɪ/ 表示祈祷；/l/ 和 /r/ 的辅音不同，拼写和宾语也不同。"
+    }
+  ],
   "relatedVocabulary": [
     {
       "category": "体育比赛",
@@ -608,26 +637,26 @@
       "type": "meaning_choice",
       "prompt": "在“玩；参加比赛”这个义项下，哪个词与“play”意思相反？",
       "options": [
-        "give up",
-        "go past",
-        "sit out",
-        "be numb"
+        "have",
+        "do",
+        "work",
+        "be"
       ],
-      "answer": "sit out",
+      "answer": "work",
       "stage": "T2",
       "ai": false
     },
     {
       "id": "play-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "哪一项是“play”的常用派生词？",
+      "prompt": "结合拼写、发音和用法，哪一项需要与“play”重点区分？",
       "options": [
         "do",
-        "replay",
+        "pray",
         "be",
         "have"
       ],
-      "answer": "replay",
+      "answer": "pray",
       "stage": "T3",
       "ai": false
     },
@@ -791,9 +820,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

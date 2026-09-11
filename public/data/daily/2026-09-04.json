@@ -1,8 +1,8 @@
 {
   "date": "2026-09-04",
   "dayNumber": 19,
-  "contentVersion": "2026.09.10.4",
-  "templateVersion": "learning-template-2026.09.10.4",
+  "contentVersion": "2026.09.11.1",
+  "templateVersion": "learning-template-2026.09.11.1",
   "cards": [
     {
       "id": "open-v",
@@ -83,7 +83,7 @@
           }
         ],
         "directSynonym": "unlock /ənˈlɑk/（开锁；解锁）；uncover /ənˈkʌvɚ/（揭开）；launch /ˈlɔːntʃ/（开办；推出）；establish /ɪˈstæblɪʃ/（开设；建立）；begin /bɪˈɡɪn/（开始）",
-        "directAntonym": "shut /ˈʃʌt/（关上；关闭）",
+        "directAntonym": "shut /ˈʃʌt/（关上；关闭）；block /ˈblɑk/（堵住；阻断）；lock /ˈlɑk/（锁住）",
         "derivatives": "reopen · opening · openness · openly",
         "example": "Please open the door slowly.",
         "exampleChinese": "请慢慢开门。"
@@ -357,6 +357,20 @@
           "partOfSpeech": "v.",
           "chinese": "关上；关闭",
           "usage": "与打开门、容器或营业相反；开锁、揭开、开办机构与活动开场的宾语各异"
+        },
+        {
+          "word": "block",
+          "phonetic": "/ˈblɑk/",
+          "partOfSpeech": "v.",
+          "chinese": "堵住；阻断",
+          "usage": "open a passage 是使通道可以通行，block the passage 是用障碍物阻断通行；对立限于通道义。"
+        },
+        {
+          "word": "lock",
+          "phonetic": "/ˈlɑk/",
+          "partOfSpeech": "v.",
+          "chinese": "锁住",
+          "usage": "open a door 表示使通道可以通行，lock the door 表示用锁阻止它被打开。"
         }
       ],
       "derivatives": [
@@ -396,6 +410,13 @@
           "partOfSpeech": "phr.",
           "chinese": "打开电器或开关",
           "difference": "open 用于门、容器、文件等；启动灯、电视、机器通常用 turn on"
+        },
+        {
+          "word": "oven",
+          "phonetic": "/ˈʌvən/",
+          "partOfSpeech": "n.",
+          "chinese": "烤箱；烤炉",
+          "difference": "open /ˈoʊpən/ 与 oven /ˈʌvən/ 拼写相近，但中间辅音和元音不同；oven 是烘烤食物的名词。"
         }
       ],
       "relatedVocabulary": [
@@ -627,14 +648,14 @@
         {
           "id": "open-v-contrast-choice",
           "type": "meaning_choice",
-          "prompt": "哪一项是“open”的常用派生词？",
+          "prompt": "结合拼写、发音和用法，哪一项需要与“open”重点区分？",
           "options": [
-            "do",
-            "reopen",
-            "be",
-            "have"
+            "bass",
+            "oven",
+            "increase",
+            "ball"
           ],
-          "answer": "reopen",
+          "answer": "oven",
           "stage": "T3",
           "ai": false
         },
@@ -798,10 +819,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -877,7 +898,7 @@
           }
         ],
         "directSynonym": "contemplate /ˈkɑntəmˌpleɪt/（仔细考虑）；weigh /ˈweɪ/（权衡）；examine /ɪɡˈzæmɪn/（审视）；deem /ˈdiːm/（认为；视为）；take into account /ˈteɪk ˈɪntu əˈkaʊnt/（把……考虑在内）",
-        "directAntonym": "disregard /ˌdɪsrɪˈɡɑrd/（不考虑；忽视）",
+        "directAntonym": "disregard /ˌdɪsrɪˈɡɑrd/（不考虑；忽视）；act impulsively /ˈækt ˌɪmˈpʌlsɪvli/（冲动行事）；reject without review /rɪˈdʒɛkt wɪˈθaʊt ˌriːˈvjuː/（未经审查就拒绝）",
         "derivatives": "consideration · considered · considerate · considerably",
         "example": "You should consider taking a short break.",
         "exampleChinese": "你应该考虑短暂休息一下。"
@@ -1130,6 +1151,20 @@
           "partOfSpeech": "v.",
           "chinese": "不考虑；忽视",
           "usage": "与认真纳入考虑相反；深入思考、权衡利弊与视为某状态的句型不同"
+        },
+        {
+          "word": "act impulsively",
+          "phonetic": "/ˈækt ˌɪmˈpʌlsɪvli/",
+          "partOfSpeech": "phr.",
+          "chinese": "冲动行事",
+          "usage": "consider a choice 表示先评估后果再决定，act impulsively 表示未经评估便立即行动。"
+        },
+        {
+          "word": "reject without review",
+          "phonetic": "/rɪˈdʒɛkt wɪˈθaʊt ˌriːˈvjuː/",
+          "partOfSpeech": "phr.",
+          "chinese": "未经审查就拒绝",
+          "usage": "consider a proposal 表示审查其优缺点，reject it without review 表示不进入评估过程就否决。"
         }
       ],
       "derivatives": [
@@ -1164,11 +1199,18 @@
       ],
       "confusables": [
         {
-          "word": "regard",
-          "phonetic": "/rɪˈɡɑrd/",
+          "word": "conserve",
+          "phonetic": "/kənˈsɝːv/",
           "partOfSpeech": "v.",
-          "chinese": "将……视为；看待",
-          "difference": "consider someone something 可直接接补语；regard 通常用 regard someone as something"
+          "chinese": "节约；保护",
+          "difference": "consider /kənˈsɪdər/ 与 conserve /kənˈsɝːv/ 开头拼写相近；consider 表示考虑，conserve 表示节约资源或保护环境。"
+        },
+        {
+          "word": "consist",
+          "phonetic": "/kənˈsɪst/",
+          "partOfSpeech": "v.",
+          "chinese": "由……组成；存在于",
+          "difference": "consider /kənˈsɪdər/ 表示考虑，consist /kənˈsɪst/ 常与 of 连用表示组成；两词词尾和搭配不同。"
         }
       ],
       "relatedVocabulary": [
@@ -1402,12 +1444,12 @@
           "type": "meaning_choice",
           "prompt": "结合拼写、发音和用法，哪一项需要与“consider”重点区分？",
           "options": [
-            "regard",
+            "conserve",
             "be",
             "have",
             "do"
           ],
-          "answer": "regard",
+          "answer": "conserve",
           "stage": "T3",
           "ai": false
         },
@@ -1571,10 +1613,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -1656,7 +1698,7 @@
           }
         ],
         "directSynonym": "long for /ˈlɔːŋ ˈfɔːr/（渴望；盼望）；desire /dɪˈzaɪɚ/（渴望）；look forward to /ˈlʊk ˈfɔːrwɚd ˈtuː/（期待）；trust /ˈtrʌst/（希望并相信）；aspire /əˈspaɪr/（立志）",
-        "directAntonym": "despair /dɪˈspɛr/（绝望）",
+        "directAntonym": "despair /dɪˈspɛr/（绝望）；dread /ˈdrɛd/（惧怕；担心……发生）；rule out /ˈruːl ˈaʊt/（排除……的可能）",
         "derivatives": "hopeful · hopeless · hopefully · hopelessly",
         "example": "I hope to finish today’s review before dinner.",
         "exampleChinese": "我希望在晚饭前完成今天的复习。"
@@ -1909,6 +1951,20 @@
           "partOfSpeech": "v.",
           "chinese": "绝望",
           "usage": "与怀有希望相反；现实可能性、语气和后接不定式或从句的规则不同"
+        },
+        {
+          "word": "dread",
+          "phonetic": "/ˈdrɛd/",
+          "partOfSpeech": "v.",
+          "chinese": "惧怕；担心……发生",
+          "usage": "hope for an outcome 表示希望该结果发生，dread the outcome 表示因害怕而希望它不要发生。"
+        },
+        {
+          "word": "rule out",
+          "phonetic": "/ˈruːl ˈaʊt/",
+          "partOfSpeech": "phr.",
+          "chinese": "排除……的可能",
+          "usage": "hope for recovery 含有好转仍可能发生的信念，rule out recovery 则是判定这一期望结果不可能实现。"
         }
       ],
       "derivatives": [
@@ -1948,6 +2004,13 @@
           "partOfSpeech": "v.",
           "chinese": "希望；愿望",
           "difference": "hope 通常针对有现实可能的未来；wish 常用于难以实现或与现实相反的愿望"
+        },
+        {
+          "word": "expect",
+          "phonetic": "/ɪkˈspɛkt/",
+          "partOfSpeech": "v.",
+          "chinese": "预料；预期",
+          "difference": "hope 表示说话者想要某事发生；expect 表示根据信息判断某事很可能发生。"
         }
       ],
       "relatedVocabulary": [
@@ -2350,10 +2413,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -2435,7 +2498,7 @@
           }
         ],
         "directSynonym": "propose /prəˈpoʊz/（提议）；tender /ˈtɛndɚ/（正式提出；递交）；extend /ɪkˈstɛnd/（提出；给予）；volunteer /ˌvɑlənˈtɪr/（主动提出）；bid /ˈbɪd/（出价）",
-        "directAntonym": "withdraw /wɪðˈdrɔː/（撤回）；refuse /rəˈfjuːz/（拒绝）",
+        "directAntonym": "withdraw /wɪðˈdrɔː/（撤回）；refuse /rəˈfjuːz/（拒绝）；demand /dɪˈmænd/（要求；索取）",
         "derivatives": "counteroffer · offering",
         "example": "He offered to help me with the project.",
         "exampleChinese": "他主动提出帮我做这个项目。"
@@ -2702,6 +2765,13 @@
           "partOfSpeech": "v.",
           "chinese": "拒绝",
           "usage": "只在给予与拒绝提供的行为上相对；主动提出、正式提议和商业出价的场景不同"
+        },
+        {
+          "word": "demand",
+          "phonetic": "/dɪˈmænd/",
+          "partOfSpeech": "v.",
+          "chinese": "要求；索取",
+          "usage": "offer help or payment 是主动向对方给出资源，demand help or payment 是站在接收方立场强烈要求对方给出。"
         }
       ],
       "derivatives": [
@@ -2722,11 +2792,18 @@
       ],
       "confusables": [
         {
-          "word": "provide",
-          "phonetic": "/prəˈvaɪd/",
+          "word": "office",
+          "phonetic": "/ˈɔːfɪs/",
+          "partOfSpeech": "n.",
+          "chinese": "办公室；办事处",
+          "difference": "offer /ˈɔːfər/ 与 office /ˈɔːfɪs/ 开头拼写和重读音节接近；offer 是提出或提供，office 是办公场所。"
+        },
+        {
+          "word": "suggest",
+          "phonetic": "/səˈdʒɛst/",
           "partOfSpeech": "v.",
-          "chinese": "提供",
-          "difference": "offer 强调主动提出，对方可接受或拒绝；provide 强调实际提供所需之物"
+          "chinese": "建议；提出",
+          "difference": "offer to do 表示主动愿意亲自行动；suggest doing 只是提出建议，不表示自己必然执行。"
         }
       ],
       "relatedVocabulary": [
@@ -2960,12 +3037,12 @@
           "type": "meaning_choice",
           "prompt": "结合拼写、发音和用法，哪一项需要与“offer”重点区分？",
           "options": [
-            "have",
-            "do",
-            "provide",
-            "be"
+            "accent",
+            "access",
+            "office",
+            "increase"
           ],
-          "answer": "provide",
+          "answer": "office",
           "stage": "T3",
           "ai": false
         },
@@ -3129,10 +3206,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -3208,7 +3285,7 @@
           }
         ],
         "directSynonym": "construct /kənˈstrʌkt/（建造）；assemble /əˈsɛmbəl/（组装）；develop /dɪˈvɛləp/（发展；建立）；form /ˈfɔːrm/（组成；建立）；accumulate /əˈkjuːmjəˌleɪt/（积累）",
-        "directAntonym": "demolish /dɪˈmɑlɪʃ/（拆毁）；dismantle /dɪˈsmæntəl/（拆解；瓦解）",
+        "directAntonym": "demolish /dɪˈmɑlɪʃ/（拆毁）；dismantle /dɪˈsmæntəl/（拆解；瓦解）；undermine /ˈʌndɚˌmaɪn/（削弱；破坏）",
         "derivatives": "rebuild · builder · building",
         "example": "They plan to build a small house near the lake.",
         "exampleChinese": "他们计划在湖边建一座小房子。"
@@ -3475,6 +3552,13 @@
           "partOfSpeech": "v.",
           "chinese": "拆解；瓦解",
           "usage": "与组装或逐步建立相反；实体建造、零件组装和抽象积累所接宾语不同"
+        },
+        {
+          "word": "undermine",
+          "phonetic": "/ˈʌndɚˌmaɪn/",
+          "partOfSpeech": "v.",
+          "chinese": "削弱；破坏",
+          "usage": "build trust 表示逐步增强信任，undermine trust 表示通过行为削弱已有信任。"
         }
       ],
       "derivatives": [
@@ -3502,11 +3586,18 @@
       ],
       "confusables": [
         {
-          "word": "establish",
-          "phonetic": "/ɪˈstæblɪʃ/",
-          "partOfSpeech": "v.",
-          "chinese": "建立；设立",
-          "difference": "build 强调逐步累积和发展；establish 更正式，强调使机构、制度或事实稳固存在"
+          "word": "bold",
+          "phonetic": "/ˈboʊld/",
+          "partOfSpeech": "adj.",
+          "chinese": "大胆的；粗体的",
+          "difference": "build /bɪld/ 与 bold /boʊld/ 拼写接近但元音不同；build 是建造的动词，bold 表示大胆或粗体。"
+        },
+        {
+          "word": "bill",
+          "phonetic": "/ˈbɪl/",
+          "partOfSpeech": "n. / v.",
+          "chinese": "账单；开账单",
+          "difference": "build /bɪld/ 比 bill /bɪl/ 多末尾 /d/ 音；build 表示建造，bill 表示账单或向某人收费。"
         }
       ],
       "relatedVocabulary": [
@@ -3740,12 +3831,12 @@
           "type": "meaning_choice",
           "prompt": "结合拼写、发音和用法，哪一项需要与“build”重点区分？",
           "options": [
-            "do",
-            "establish",
-            "be",
-            "have"
+            "cute",
+            "bold",
+            "calm",
+            "cold"
           ],
-          "answer": "establish",
+          "answer": "bold",
           "stage": "T3",
           "ai": false
         },
@@ -3909,10 +4000,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     }
   ]

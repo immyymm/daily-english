@@ -138,6 +138,449 @@ const supplements = {
   },
 };
 
+// Reviewed relation expansion for learning-priority cards 1-50.  Antonyms are
+// deliberately tied to one common sense of the headword; confusables are kept
+// for spelling, pronunciation, grammar, construction, or usage contrasts that
+// learners actually need to distinguish.  `work` is the locked reference card
+// and is not part of this batch-owned map.
+const relationExpansions001050 = {
+  be: {
+    antonyms: [
+      ["disappear", "v.", "消失；不再出现", "只在 be 表示‘存在或在场’的常用义上相对；be 表示仍然存在，disappear 表示变得看不见或不再出现。"],
+      ["be absent", "phr.", "缺席；不在场", "只对应 be present 的在场义；be 表示人或物在某处，be absent 表示该人或物不在场。"],
+    ],
+    confusables: [],
+  },
+  have: {
+    antonyms: [
+      ["be without", "phr.", "没有；缺少", "只与 have 表示拥有某物的义项相对；have 说明持有，be without 说明处于没有该物的状态。"],
+      ["lose", "v.", "失去；不再拥有", "只对应 have 的拥有义；have 描述当前持有，lose 表示原先拥有的东西已不再拥有。"],
+    ],
+    confusables: [
+      ["have to", "semi-modal v.", "必须；不得不", "have 单独作实义动词常表示拥有或经历；have to 后接动词原形，表示必要或外部要求。"],
+    ],
+  },
+  do: {
+    antonyms: [
+      ["fail", "v.", "失败；未能做好", "只与 do 表示完成任务或表现得好的常用义相对；do the job 表示完成工作，fail 表示未达到要求或未能完成。"],
+      ["leave undone", "phr.", "留下未做；搁置", "只对应 do the work 这类执行义；do 表示实际完成动作，leave undone 表示该事尚未处理。"],
+    ],
+    confusables: [
+      ["due", "adj.", "到期的；应付的", "do 是动词，常读 /duː/；due 是形容词，也读 /duː/，表示到期、预定或应付，拼写和词性不同。"],
+    ],
+  },
+  say: {
+    antonyms: [
+      ["deny", "v.", "否认；不承认", "只在 say 表示声称某事为真的语境中相对；say 把说法表达出来，deny 则明确否认该说法。"],
+      ["retract", "v.", "撤回；收回所说的话", "只对应 say 表示公开说出声明的义项；say 发布言论，retract 表示事后正式收回该言论。"],
+    ],
+    confusables: [
+      ["tell", "v.", "告诉；讲述", "say 通常直接接说出的内容；tell 常先接听者，用 tell someone something，不能照搬 say something。"],
+    ],
+  },
+  go: {
+    antonyms: [
+      ["stop", "v.", "停止；不再前进", "只与 go 表示移动或进程持续的义项相对；go 表示继续前进，stop 表示移动或进程中止。"],
+      ["fail", "v.", "失灵；未奏效", "只与 go 表示机器正常运转或办法能奏效的常用义相对；go 表示系统能运行，fail 表示机器失灵或方案未奏效。"],
+    ],
+    confusables: [],
+  },
+  get: {
+    antonyms: [
+      ["give up", "phr.v.", "放弃；交出", "只与 get 表示获得或设法取得的义项相对；get 强调得到，give up 则表示放弃追求或交出已有的东西。"],
+      ["remain", "v.", "仍然是；保持不变", "只对应 get 加形容词表示状态变化的用法；get 强调进入新状态，remain 强调原状态持续。"],
+    ],
+    confusables: [
+      ["have", "v.", "有；拥有", "get 表示获得的动作或结果；have 描述已经拥有的状态，不能用 have 代替 get 表示取得过程。"],
+    ],
+  },
+  can: {
+    antonyms: [
+      ["be prohibited from", "phr.", "被禁止做", "只与 can 表示获准做某事的许可义相对；can 表示允许，be prohibited from 表示规则明确禁止。"],
+      ["be impossible", "phr.", "不可能", "只与 can 表示某事在理论或实际上可以发生的义项相对；can 表示存在可能，be impossible 表示该可能性被排除。"],
+    ],
+    confusables: [],
+  },
+  know: {
+    antonyms: [
+      ["misunderstand", "v.", "误解；理解错误", "只与 know 表示正确理解信息的义项相对；know 表示掌握事实或含义，misunderstand 表示将其理解错了。"],
+      ["forget", "v.", "忘记；不再记得", "只对应 know 表示已掌握某项信息的状态；know 是知道，forget 则是原有信息无法再想起。"],
+    ],
+    confusables: [
+      ["no", "det. / adv.", "没有；不", "know 是动词，表示知道；no 是限定词或否定回答，两词都读 /noʊ/，但拼写和句法作用不同。"],
+    ],
+  },
+  will: {
+    antonyms: [
+      ["refuse to", "phr.v.", "拒绝做", "只与 will 表示愿意做某事的义项相对；will 说明主动意愿，refuse to 说明明确拒绝该行动。"],
+      ["be forced to", "phr.", "被迫做", "只与 will 表示出于自主意愿采取行动的义项相对；will 强调本人愿意或决定做，be forced to 表示行动来自外部强制。"],
+      ["lack resolve", "phr.v.", "缺乏决心", "只与 will 作名词表示意志和决心的义项相对；a strong will 强调意志坚定＋lack resolve 表示缺乏坚持的决心。"],
+    ],
+    confusables: [
+      ["well", "adv. / adj.", "好地；健康的", "will /wɪl/ 是情态动词或名词；well /wɛl/ 是副词或形容词，元音、拼写和句法作用都不同。"],
+    ],
+  },
+  would: {
+    antonyms: [
+      ["be ruled out", "phr.", "被排除；不可能发生", "只对应 would 表示某结果在假设条件下会发生的用法；would 把它列为条件成立后的结果，be ruled out 则排除该结果。"],
+      ["refuse to", "phr.v.", "拒绝做", "只在 would 表示过去愿意做某事时相对；would 说明当时的意愿，refuse to 表示当时明确不肯做。"],
+      ["did not use to", "phr.", "过去并不常常", "只与 would 表示过去反复习惯的义项相对；would 说明过去经常会做某事，did not use to 说明过去没有该习惯。"],
+    ],
+    confusables: [],
+  },
+  make: {
+    antonyms: [
+      ["dismantle", "v.", "拆卸；拆散", "只与 make 表示制作或组装实物的义项相对；make 将部件组成成品，dismantle 则把成品拆成部件。"],
+      ["undo", "v.", "撤销；消除已做的结果", "只对应 make 表示造成某个结果或改变的义项；make 产生结果，undo 则撤销或消除该结果。"],
+    ],
+    confusables: [
+      ["let", "v.", "允许；让", "make someone do 表示迫使某人做，let someone do 表示允许某人做；两者都接不带 to 的动词原形，但含义相反。"],
+    ],
+  },
+  think: {
+    antonyms: [
+      ["act impulsively", "phr.v.", "冲动行事", "只与 think 表示行动前认真考虑后果的义项相对；think before acting 强调先思考，act impulsively 表示未充分考虑就行动。"],
+      ["forget", "v.", "忘记；没想起", "只对应 think of 表示想起某人某事的义项；think of 表示它进入意识，forget 则表示未能想起。"],
+    ],
+    confusables: [
+      ["thing", "n.", "事情；东西", "think /θɪŋk/ 是动词‘思考’，thing /θɪŋ/ 是名词‘事物’；thing 末尾没有 /k/，拼写和词性也不同。"],
+    ],
+  },
+  see: {
+    antonyms: [
+      ["overlook", "v.", "漏看；未注意到", "只与 see 表示看见或察觉到的义项相对；see 说明已感知到目标，overlook 表示本应发现却漏掉了。"],
+      ["ignore", "v.", "忽视；不理会", "只对应 see 表示注意或理会某事的义项；see 表示留意并处理，ignore 表示有意不理会。"],
+    ],
+    confusables: [],
+  },
+  come: {
+    antonyms: [
+      ["leave", "v.", "离开；出发", "只与 come 表示向说话者或参照点靠近的义项相对；come 是到来，leave 是从该地点离开。"],
+      ["stay away", "phr.v.", "不来；避开", "只与 come 表示到某地或参加某活动的义项相对；come 表示到场，stay away 表示主动不到场或远离该地点。"],
+    ],
+    confusables: [
+      ["arrive", "v.", "到达", "come 强调朝说话者或参照点移动，常接 to；arrive 强调抵达结果，普通地点前用 arrive at/in，不能说 arrive to the station。"],
+    ],
+  },
+  take: {
+    antonyms: [
+      ["give", "v.", "给予；交出", "只与 take 表示从他人或某处取得物品的义项相对；take 把物品取来，give 把物品交给别人。"],
+      ["leave", "v.", "留下；不带走", "只对应 take 表示随身带走人或物的义项；take 将对象带离原处，leave 则把对象留在原处。"],
+    ],
+    confusables: [
+      ["cost", "v. / n.", "花费；价钱", "take 表示某事需要多少时间时常以事作主语；cost 多表示需要多少金钱，常见 it takes time 与 it costs money。"],
+    ],
+  },
+  want: {
+    antonyms: [
+      ["reject", "v.", "拒绝；不要", "只与 want 表示想要某个具体选项的义项相对；want 表示愿意得到，reject 表示明确不接受该选项。"],
+      ["do without", "phr.v.", "没有……也能应付", "只对应 want 表示需要某物的义项；want 表示希望获得它，do without 表示没有它也可以应付。"],
+      ["be satisfied with", "phr.", "对……感到满足", "只与 want 表示希望获得更多或换一个选项的义项相对；want 表示尚有欲求，be satisfied with 表示对现状已满足。"],
+    ],
+    confusables: [
+      ["went", "v.", "去了（go 的过去式）", "want /wɑːnt/ 表示想要；went /wɛnt/ 是 go 的过去式，两词元音、拼写和句中时态功能不同。"],
+    ],
+  },
+  could: {
+    antonyms: [
+      ["be forbidden to", "phr.", "被禁止做", "只与 could 表示得到许可的义项相对；could 在过去或委婉语境中表示可以做，be forbidden to 表示不准做。"],
+      ["be impossible to", "phr.", "不可能做到", "只对应 could 表示某事有可能发生的义项；could 保留可能性，be impossible to 表示该可能性不存在。"],
+    ],
+    confusables: [],
+  },
+  look: {
+    antonyms: [
+      ["avert one's eyes", "phr.v.", "移开目光；避开不看", "只与 look at 表示把目光投向某物的义项相对；look at 是注视对象，avert one's eyes 是主动把目光移开。"],
+      ["disregard", "v.", "忽视；不考虑", "只对应 look at 表示考察某个问题或因素的义项；look at 将它纳入分析，disregard 则把它排除在考量之外。"],
+    ],
+    confusables: [
+      ["find", "v.", "找到；发现", "look for 强调正在寻找的过程，find 强调寻找成功后已找到的结果，不能用 find for 表示‘寻找’。"],
+    ],
+  },
+  use: {
+    antonyms: [
+      ["discard", "v.", "丢弃；废弃不用", "只与 use 表示保留某物并用于目的的义项相对；use 让物品发挥作用，discard 则将它丢弃不再使用。"],
+      ["preserve", "v.", "保留；节省不消耗", "只与 use 表示消耗时间、能源或材料的义项相对；use 会消耗资源，preserve 强调保存资源不被消耗。"],
+    ],
+    confusables: [
+      ["be used to", "phr.", "习惯于", "used to 加动词原形表示过去常常做；be used to 后接名词或 -ing，表示已经习惯于某事。"],
+    ],
+  },
+  tell: {
+    antonyms: [
+      ["confuse", "v.", "混淆；弄错", "只与 tell A from B 表示分辨两者的义项相对；能 tell them apart 是能区分，confuse A with B 则是把两者弄混。"],
+      ["mislead", "v.", "误导；使产生错误理解", "只在 tell 表示如实说明事实或指引方向时相对；tell 给出正确信息，mislead 则使听者得出错误结论。"],
+    ],
+    confusables: [
+      ["say", "v.", "说；表达", "tell 常用 tell someone something，先接听者；say 通常直接接说出的内容，提及听者时用 say something to someone。"],
+    ],
+  },
+  find: {
+    antonyms: [
+      ["overlook", "v.", "漏掉；未发现", "只与 find 表示成功发现某个线索、细节或问题的义项相对；find 是发现，overlook 是本应发现却漏掉。"],
+      ["miss", "v.", "未找到；错过", "只对应 find 表示找到目标或注意到要点的义项；find 说明成功定位，miss 说明未能找到或看出。"],
+    ],
+    confusables: [
+      ["look for", "phr.v.", "寻找；寻求", "look for 只说明正在寻找的过程，find 说明已经找到的结果；因此可以 look for something 却最终 not find it。"],
+    ],
+  },
+  give: {
+    antonyms: [
+      ["withhold", "v.", "扣留；拒绝给予", "只与 give 表示向某人提供信息、资源或许可的义项相对；give 是提供，withhold 是有意扣下不给。"],
+      ["receive", "v.", "接收；收到", "只在 give 表示物品或信息转移时形成方向对照；give 从提供方向外交付，receive 从接收方得到。"],
+    ],
+    confusables: [
+      ["five", "num.", "五", "give /ɡɪv/ 与 five /faɪv/ 拼写结尾相同，但开头辅音和元音均不同；give 是给予的动词，five 是数字五。"],
+    ],
+  },
+  need: {
+    antonyms: [
+      ["have enough", "phr.v.", "已有足够；不再需要", "只与 need 表示缺少必要数量的义项相对；need 说明仍有缺口，have enough 表示所需数量已满足。"],
+      ["be optional", "phr.", "可选；并非必须", "只对应 need 表示规则或情况要求某事的义项；need 说明有必要，be optional 说明做不做均可。"],
+    ],
+    confusables: [
+      ["knead", "v.", "揉；捏（面团）", "need 表示需要，knead 表示用手揉捏面团；两词都读 /niːd/，但拼写、宾语和意义完全不同。"],
+    ],
+  },
+  should: {
+    antonyms: [
+      ["be unlikely to", "phr.", "不太可能", "只与 should 表示按当前证据预期某事会发生的义项相对；should 表示结果很可能出现，be unlikely to 表示出现概率很低。"],
+      ["be exempt from", "phr.", "被免除；无须承担", "只与 should 表示职责或规则上应履行某事的义项相对；should 说明有履行责任，be exempt from 表示该人已被免除责任。"],
+    ],
+    confusables: [
+      ["could", "modal v.", "可能；能够", "should 主要表示建议、义务或预期；could 主要表示过去能力、可能性或委婉请求，语气功能不同。"],
+    ],
+  },
+  try: {
+    antonyms: [
+      ["avoid attempting", "phr.v.", "避免尝试", "只与 try 表示开始尝试完成任务的义项相对；try 会付诸行动，avoid attempting 则有意不开始该尝试。"],
+      ["take off", "phr.v.", "脱下；摘下", "只对应 try on 表示穿戴衣物或配饰查看是否合适的义项；try on 把物品穿上试用，take off 则把它脱下或摘下。"],
+    ],
+    confusables: [
+      ["try doing", "phr.v.", "试着做（作为办法）", "try to do 强调努力完成某事，try doing 强调把某种做法当作解决问题的试验，后接形式改变含义。"],
+    ],
+  },
+  let: {
+    antonyms: [
+      ["forbid", "v.", "禁止；不准", "只与 let 表示允许某人做某事的义项相对；let 给予许可，forbid 则明确不准该行动。"],
+      ["require", "v.", "要求；规定必须", "只与 let someone choose 这类允许自主决定的义项相对；let 保留选择，require 则要求必须按指定方式做。"],
+    ],
+    confusables: [
+      ["let's", "phr.", "让我们……吧", "let 是动词，后接宾语和动词原形；let's 是 let us 的缩写，用于提议共同行动，擅自去掉擇号会改变结构。"],
+    ],
+  },
+  call: {
+    antonyms: [
+      ["dismiss", "v.", "让……离开；解散", "只与 call 表示召集某人到场的义项相对；call 把人召来，dismiss 则让已到场的人离开或解散。"],
+      ["cancel", "v.", "取消；撤销", "只与 call 表示召集会议、选举或活动的义项相对；call a meeting/election 是宣布举行，cancel it 则撤销安排。"],
+      ["hang up", "phr.v.", "挂断电话", "只对应 call 表示正在进行电话交谈的义项；call 建立或维持通话，hang up 则将通话终止。"],
+    ],
+    confusables: [
+      ["coal", "n.", "煤；煤块", "call /kɔːl/ 与 coal /koʊl/ 拼写接近但元音不同；call 表示呼叫或打电话，coal 是煤的名词。"],
+      ["call for", "phr.v.", "需要；要求", "call 单独多表示呼叫、打电话或命名；call for 强调情况需要某物，也可表示公开要求采取行动。"],
+    ],
+  },
+  may: {
+    antonyms: [
+      ["be forbidden to", "phr.", "被禁止做", "只与 may 表示正式获准做某事的义项相对；may 给予许可，be forbidden to 表示规则或权威不准该行动。"],
+      ["cannot", "modal v.", "不可能；不允许", "只对应 may 的可能性或许可义；may 保留发生或获准的可能，cannot 在相同语境中排除该可能或许可。"],
+      ["be certain not to", "phr.", "确定不会", "只与 may 表示某事不确定地可能发生的义项相对；may 表示存在可能，be certain not to 表示确定不会发生。"],
+    ],
+    confusables: [
+      ["may be", "modal phr.", "可能是", "may be 是两个词，may 作情态动词后接 be；maybe 是一个副词，通常位于句首或修饰整句。"],
+    ],
+  },
+  mean: {
+    antonyms: [
+      ["be accidental", "phr.", "是无意的；是偶然的", "只与 mean to do 表示有意或打算做某事的义项相对；mean to do 表示有意图，be accidental 表示结果并非有意造成。"],
+    ],
+    confusables: [
+      ["mind", "v. / n.", "介意；留心；头脑", "mean 用来询问或说明意图、含义；mind 常表示介意并接 -ing，如 Do you mind waiting?，不能用 mean 替换。"],
+    ],
+  },
+  feel: {
+    antonyms: [
+      ["be unaware of", "phr.", "未察觉；没意识到", "只与 feel 表示察觉到气氛、变化或情绪的义项相对；feel 表示已感知，be unaware of 表示完全未察觉。"],
+      ["doubt", "v.", "怀疑；不相信", "只对应 feel that 表示相信或倾向某个看法的义项；feel that 表达主观判断，doubt 则对该判断的真实性持怀疑态度。"],
+    ],
+    confusables: [
+      ["fell", "v.", "落下了（fall 的过去式）", "feel /fiːl/ 表示感觉，fell /fɛl/ 是 fall 的过去式；两词只相差一个字母，但元音、意义和时态功能不同。"],
+    ],
+  },
+  ask: {
+    antonyms: [
+      ["offer", "v.", "主动提供；给予", "只在 ask for 表示向他人索要物品或帮助时形成方向对照；ask for 由需求方提出，offer 由提供方主动给出。"],
+    ],
+    confusables: [
+      ["ask for", "phr.v.", "索要；请求得到", "ask about 后接想了解的信息主题，ask for 后接想得到的物品、服务或人，介词不同会改变所求内容。"],
+    ],
+  },
+  talk: {
+    antonyms: [
+      ["break off talks", "phr.v.", "中断谈判；终止会谈", "只与 talk 表示通过会谈继续协商的义项相对；continue talks 是保持协商，break off talks 则主动终止协商。"],
+      ["withhold comment", "phr.v.", "不发表评论", "只与 talk 表示愿意公开谈论某个话题的义项相对；talk 表示进行讨论，withhold comment 表示选择不对该话题表态。"],
+    ],
+    confusables: [
+      ["walk", "v. / n.", "步行；散步", "talk 读 /tɔːk/，表示说话；walk 读 /wɔːk/，表示步行，两词都不发字母 l，但词首辅音和意义不同。"],
+    ],
+  },
+  keep: {
+    antonyms: [
+      ["release", "v.", "释放；放开", "只与 keep 表示扣留、控制或继续持有某物的义项相对；keep 保持控制，release 则放开或释放该对象。"],
+      ["lose", "v.", "失去；没能保住", "只对应 keep 表示保有物品、权利或状态的义项；keep 说明成功保住，lose 说明该物或状态已失去。"],
+    ],
+    confusables: [
+      ["keen", "adj.", "热切的；敏锐的", "keep /kiːp/ 与 keen /kiːn/ 只有末尾辅音不同；keep 是保留或持续的动词，keen 是表示热切或敏锐的形容词。"],
+    ],
+  },
+  leave: {
+    antonyms: [
+      ["stay", "v.", "留下；不离开", "只与 leave 表示从某个地点离开的义项相对；leave 是出发离去，stay 则继续留在原地。"],
+      ["take along", "phr.v.", "随身带上", "只与 leave 表示把某人或某物留在原处的义项相对；leave something behind 是不带走，take it along 是随身带上。"],
+    ],
+    confusables: [
+      ["let", "v.", "允许；让", "leave 表示离开或把某物留下；let 表示允许，并用 let someone do 而不是 leave someone do。"],
+    ],
+  },
+  put: {
+    antonyms: [
+      ["take away", "phr.v.", "拿走；移除", "只与 put 表示把物品放到某处的义项相对；put 将物品放入该位置，take away 则将其从该位置拿走。"],
+      ["pick up", "phr.v.", "拿起；捡起", "只对应 put down 表示把手中物品放下的义项；put down 使物品落位，pick up 则将它从表面拿起。"],
+    ],
+    confusables: [
+      ["wear", "v.", "穿着；戴着", "put on 强调穿上衣物或戴上配饰的动作，wear 强调穿戴后的状态；不能用 wear on 表示‘穿上’。"],
+    ],
+  },
+  like: {
+    antonyms: [
+      ["hate", "v.", "憎恨；非常不喜欢", "只与 like 作动词表示喜欢某人或某事的义项相对；like 表示好感，hate 表示强烈反感。"],
+      ["be indifferent to", "phr.", "对……漠不关心", "只对应 like 表示对人、事或活动有积极偏好的义项；like 表示有好感，be indifferent to 表示没有明显好恶。"],
+    ],
+    confusables: [
+      ["alike", "adj. / adv.", "相像的；相似地", "like 作介词时放在名词前，如 look like her；alike 通常作表语放在 be 后，如 the two are alike。"],
+    ],
+  },
+  help: {
+    antonyms: [
+      ["withhold assistance", "phr.v.", "拒绝施助；不提供帮助", "只与 help 表示向有需要的人提供支持的义项相对；help 是实际提供帮助，withhold assistance 是有意不施助。"],
+      ["harm", "v.", "伤害；损害", "只对应 help 表示改善人的状况或使事情变好的义项；help 产生益处，harm 则造成伤害或损失。"],
+    ],
+    confusables: [
+      ["cannot help doing", "phr.v.", "忍不住做；不得不做", "help someone do 表示帮助某人完成动作；cannot help doing 是固定结构，表示无法控制自己不去做某事。"],
+    ],
+  },
+  start: {
+    antonyms: [
+      ["switch off", "phr.v.", "关掉；关闭", "只与 start a machine 表示启动设备的常用义相对；start 使设备开始运转，switch off 则切断运行。"],
+      ["close down", "phr.v.", "停业；关闭", "只与 start a business 表示创办企业的义项相对；start 使企业开始经营，close down 表示终止经营。"],
+    ],
+    confusables: [
+      ["star", "n.", "星；恒星", "start /stɑːrt/ 比 star /stɑːr/ 末尾多 /t/ 音和字母 t；start 表示开始，star 是星或明星的名词。"],
+    ],
+  },
+  become: {
+    antonyms: [
+      ["not suit", "phr.v.", "不适合；不衬", "只与 become 作及物动词表示服饰、颜色或举止很适合某人的义项相对；become someone 是很衬对方，not suit 是不合适。"],
+      ["cease to be", "phr.v.", "不再是；停止成为", "只对应 become 表示获得某种身份或状态的义项；become 表示进入该身份，cease to be 表示不再保有它。"],
+    ],
+    confusables: [
+      ["be", "v.", "是；处于", "be 连接补语时只描述当前身份或状态；become 强调从原状态转变为新身份或新状态的过程。"],
+    ],
+  },
+  happen: {
+    antonyms: [
+      ["be prevented", "phr.", "被阻止；未得以发生", "只与 happen 表示某个事件实际发生的义项相对；happen 说明事件成为事实，be prevented 说明它被阻止而未发生。"],
+      ["be canceled", "phr.", "被取消；不再举行", "只对应 happen 表示已安排的活动如期举行的义项；happen 表示活动发生，be canceled 表示安排被撤销。"],
+    ],
+    confusables: [
+      ["happen to", "phr.v.", "碰巧做；发生在……身上", "happen 单独表示事件发生；happen to do 表示碰巧做某事，happen to someone 则表示某事降临在某人身上。"],
+    ],
+  },
+  show: {
+    antonyms: [
+      ["disprove", "v.", "证明……为错", "只与 show 表示证据显示某个结论成立的义项相对；show that 用证据支持结论，disprove 则用证据证明同一结论为错。"],
+      ["suppress", "v.", "压下；不予公开", "只对应 show 表示公开证据、数据或情感的义项；show 将内容显示出来，suppress 则压下不让其显现。"],
+    ],
+    confusables: [
+      ["tell", "v.", "告诉；讲述", "show someone how 强调通过示范或证据让人看明白；tell someone how 强调用语言或指令把信息说出来。"],
+    ],
+  },
+  seem: {
+    antonyms: [
+      ["be certain", "phr.", "确定无疑", "只与 seem 表示依据印象作出不确定判断的义项相对；seem 保留不确定性，be certain 表示证据足以确定。"],
+      ["be evident", "phr.", "显而易见；明确可证", "只对应 seem 的表面印象义；seem 说明结论只是看起来如此，be evident 说明事实由明确证据显示出来。"],
+      ["turn out not to be", "phr.v.", "结果并非；后来证明不是", "只与 seem to be 所表达的表面判断相对；seem to be 说明当时印象如此，turn out not to be 说明后来事实否定该印象。"],
+    ],
+    confusables: [
+      ["seem like", "phr.v.", "似乎像；看来像", "seem 可直接接形容词或 to do；seem like 通常接名词、名词短语或从句，不能在形容词前随意加 like。"],
+    ],
+  },
+  might: {
+    antonyms: [
+      ["weakness", "n.", "虚弱；力量不足", "只与 might 作名词表示强大力量或权势的义项相对；might 强调强大的力量，weakness 表示缺乏力量或能力。"],
+      ["be certain to", "phr.", "一定会；确定将", "只对应 might 表示不确定推测的义项；might 说明只是可能，be certain to 则表示结果几乎确定会发生。"],
+    ],
+    confusables: [
+      ["might have", "modal phr.", "可能已经", "might 加动词原形通常推测现在或将来；might have 后必须接过去分词，用于推测过去可能发生的事。"],
+    ],
+  },
+  hear: {
+    antonyms: [
+      ["ignore", "v.", "忽视；不听取", "只与 hear 表示听取某人的意见、证词或请求的义项相对；hear 表示接收并考虑，ignore 则不予理会。"],
+      ["be deaf to", "phr.", "对……充耳不闻", "只对应 hear 表示听到或听取声音和警告的义项；hear 表示能够感知，be deaf to 表示对该声音或警告没有反应。"],
+    ],
+    confusables: [
+      ["here", "adv.", "在这里；到这里", "hear 是动词‘听见’，here 是地点副词‘在这里’；两词都读 /hɪr/，但拼写和句法位置不同。"],
+    ],
+  },
+  believe: {
+    antonyms: [
+      ["distrust", "v.", "不信任；怀疑其可靠性", "只与 believe someone 表示相信某人所说内容或其可靠性的义项相对；believe 表示信任，distrust 则认为对方不可靠。"],
+    ],
+    confusables: [
+      ["believe in", "phr.v.", "信仰；信任……的价值", "believe someone 表示相信某人所说的话；believe in someone 表示信任其能力或价值，believe in 某事还可表示相信其存在。"],
+    ],
+  },
+  play: {
+    antonyms: [
+      ["work", "v. / n.", "工作；劳动", "只与 play 表示休闲玩耍的常用义相对；play 是为娱乐而活动，work 是履行工作或劳动任务。"],
+      ["pause", "v.", "暂停；暂停播放", "只与 play 表示开始或继续播放录音、视频的义项相对；play 使媒体继续播放，pause 则暂时中止但保留当前位置。"],
+    ],
+    confusables: [
+      ["place", "v. / n.", "放置；地方", "play /pleɪ/ 表示玩、比赛或演奏；place /pleɪs/ 表示放置或地方，末尾多读 /s/，拼写也多一个 c。"],
+      ["pray", "v.", "祈祷；祈求", "play /pleɪ/ 表示玩、比赛或演奏，pray /preɪ/ 表示祈祷；/l/ 和 /r/ 的辅音不同，拼写和宾语也不同。"],
+    ],
+  },
+  turn: {
+    antonyms: [
+      ["go straight", "phr.v.", "直行；继续向前", "只与 turn 表示在路口或路线上改变方向的义项相对；turn 要转向，go straight 则保持当前方向前进。"],
+      ["remain unchanged", "phr.v.", "保持不变", "只与 turn 作系动词表示状态发生变化的义项相对；turn 进入新状态，remain unchanged 则继续保持原状态。"],
+      ["switch off", "phr.v.", "关掉；切断", "只对应 turn on 表示开启设备、灯光或功能的常用短语义；turn on 启动，switch off 则将同一设备关闭。"],
+    ],
+    confusables: [
+      ["turn to", "phr.v.", "向……求助；转向", "turn 单独可表示转动或转弯；turn to 后接人或事物，常表示向其求助或把注意力转向，介词不能随意省略。"],
+      ["become", "v.", "变成；成为", "turn 和 become 都可接表状态的补语，但 turn 只与颜色、年龄或明显变化等有限搭配自然，become 适用范围更广。"],
+    ],
+  },
+  run: {
+    antonyms: [
+      ["be idle", "phr.", "闲置；未运行", "只与 run 表示机器、车辆或程序正在工作的义项相对；run 表示正在运行，be idle 表示设备暂时闲置未执行任务。"],
+      ["shut down", "phr.v.", "关闭；停止运转", "只对应 run 表示机器、系统或业务正常运转的义项；run 使其继续运转，shut down 则关闭系统或停止经营。"],
+    ],
+    confusables: [
+      ["sun", "n.", "太阳；阳光", "run /rʌn/ 与 sun /sʌn/ 只有开头辅音不同；run 是跑或运行的动词，sun 是太阳或阳光的名词。"],
+      ["run out", "phr.v.", "用完；耗尽", "run 单独表示跑、运行或经营；run out 是整体短语动词，表示供应耗尽，接耗尽的对象时要用 run out of。"],
+    ],
+  },
+  live: {
+    antonyms: [
+      ["be dead", "phr.", "处于死亡状态", "只与 live 表示人或生物仍然活着的义项相对；live 描述有生命的状态，be dead 描述生命已经结束的状态。"],
+      ["cease to exist", "phr.v.", "不复存在", "只对应 live 表示传统、思想或记忆继续存在的引申义；live 表示延续，cease to exist 表示完全消失不再延续。"],
+    ],
+    confusables: [],
+  },
+};
+
 const repairCard = (word, card) => {
   const extra = supplements[word];
   let meanings = card.meanings;
@@ -600,7 +1043,7 @@ const repairCard = (word, card) => {
   if (word === "live") {
     confusables = card.confusables
       .filter(([relationWord]) => relationWord !== "live")
-      .concat([["life", "n.", "生命；生活", "life 是名词 /laɪf/；live 作动词读 /lɪv/，表示居住或活着。"]]);
+      .concat([["love", "v. / n.", "爱；喜爱", "live 作动词读 /lɪv/，love 读 /lʌv/；两词拼写只差元音字母，但 live 表示生活或居住，love 表示爱。"]]);
     related = card.related.map(([category, rows]) => [category, rows.map((row) =>
       row[0] === "life" ? ["vitality", "n.", "生命力；活力"] : row
     )]);
@@ -629,7 +1072,7 @@ const repairCard = (word, card) => {
     )]);
   }
   const confusableRepairs = {
-    mean: [["means", "n.", "方法；手段", "means 表示“方法”时单复数同形；mean 可作动词表示“意思是”。"]],
+    mean: [["main", "adj.", "主要的；最重要的", "mean /miːn/ 与 main /meɪn/ 拼写接近但元音不同；mean 表示意思是或平均的，main 表示主要的。"]],
     ask: [["say", "v.", "说；表达", "ask 用于提问、请求或邀请；say 用于陈述具体话语或观点。"]],
     keep: [["hold", "v.", "拿着；保持", "hold 侧重用手支撑或在某位置保持；keep 更常表保留或持续状态。"]],
     help: [["hope", "v.", "希望", "help 表示提供帮助或使事情更容易；hope 表示期望某事发生，两者拼写相近但结构不同。"]],
@@ -952,6 +1395,52 @@ const repairCard = (word, card) => {
     ],
   };
   if (commonErrorRepairs[word]) commonErrors = commonErrorRepairs[word];
+
+  // A few high-value distinctions previously sat in the synonym/derivative
+  // sections.  Move them instead of duplicating one lexical item across two
+  // learner-facing relation sections.
+  const synonymMoves = {
+    say: {
+      from: "tell",
+      to: ["utter", "v.", "说出；发出声音", "utter 强调把词语或声音实际说出口；say 更常引出所说的具体内容或完整陈述。"],
+    },
+    tell: {
+      from: "say",
+      to: ["explain", "v.", "解释；说明", "explain 强调使原因、意义或方法变得清楚；tell 范围更广，也可直接告知事实、讲故事或命令某人。"],
+    },
+    come: {
+      from: "arrive",
+      to: ["show up", "phr.v.", "到场；出现", "show up 是较口语的到场或出现，常突出某人是否露面；come 是更中性的朝参照点移动或到来。"],
+    },
+    start: {
+      from: "begin",
+      to: ["set in motion", "phr.v.", "启动；使开始运作", "set in motion 强调主动启动一个过程或计划；start 适用范围更广，也可不及物地表示事情开始。"],
+    },
+    turn: {
+      from: "become",
+      to: ["pivot", "v.", "转动；转变方向", "pivot 强调围绕一个支点转动，也可比喻改变策略；turn 是更通用的旋转或转向用词。"],
+    },
+  };
+  const synonymMove = synonymMoves[word];
+  if (synonymMove) {
+    synonyms = synonyms.map((row) => row[0] === synonymMove.from ? synonymMove.to : row);
+  }
+  if (word === "ask") {
+    antonyms = antonyms.map((row) => row[0] === "reply"
+      ? ["withdraw a request", "v. phr.", "撤回请求", "只与 ask 表示正式提出请求的义项相对；ask 提交请求，withdraw a request 则在对方决定前将该请求撤回。"]
+      : row);
+  }
+  if (word === "turn") {
+    derivatives = derivatives.filter(([relationWord]) => relationWord !== "return");
+  }
+
+  const relationExpansion = relationExpansions001050[word];
+  if (!relationExpansion) throw new Error(`${word}: reviewed relation expansion is missing.`);
+  antonyms = [...antonyms, ...relationExpansion.antonyms];
+  confusables = [...confusables, ...relationExpansion.confusables];
+  if (antonyms.length < 3 || confusables.length < 2) {
+    throw new Error(`${word}: reviewed relation expansion must yield at least 3 antonyms and 2 confusables.`);
+  }
 
   return {
     ...card,

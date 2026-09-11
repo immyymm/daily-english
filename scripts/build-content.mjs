@@ -47,7 +47,39 @@ const publicDataDir = path.join(root, 'public', 'data');
 const launchDate = new Date('2026-08-17T12:00:00+08:00');
 const release = JSON.parse(await fs.readFile(path.join(root, 'content', 'release.json'), 'utf8'));
 const { contentVersion, templateVersion } = release;
+const templateLock = JSON.parse(await fs.readFile(path.join(root, 'content', 'templates', 'template-lock.json'), 'utf8'));
+const CODE_RELATION_MINIMUMS = Object.freeze({ antonyms: 3, confusables: 2 });
+const CODE_REFERENCE_RELATION_MINIMUMS = Object.freeze({ antonyms: 4, confusables: 4 });
+const publishedMinimums = templateLock.publishedCardMinimums;
+const curatedMinimums = templateLock.curatedCardMinimums ?? {};
+const qualityMinimums = {
+  antonyms: templateLock.qualityContract?.minimumAntonymsPerCard,
+  confusables: templateLock.qualityContract?.minimumConfusablesPerCard
+};
+const minimumAntonyms = Math.max(CODE_RELATION_MINIMUMS.antonyms, publishedMinimums?.antonyms ?? 0, qualityMinimums.antonyms ?? 0);
+const minimumConfusables = Math.max(CODE_RELATION_MINIMUMS.confusables, publishedMinimums?.confusables ?? 0, qualityMinimums.confusables ?? 0);
 const detailFloorFailures = [];
+
+for (const [field, codeFloor] of Object.entries(CODE_RELATION_MINIMUMS)) {
+  const qualityField = field === 'antonyms' ? 'minimumAntonymsPerCard' : 'minimumConfusablesPerCard';
+  if (!Number.isInteger(publishedMinimums?.[field]) || publishedMinimums[field] < codeFloor
+    || !Number.isInteger(curatedMinimums?.[field]) || curatedMinimums[field] < codeFloor
+    || !Number.isInteger(templateLock.qualityContract?.[qualityField]) || templateLock.qualityContract[qualityField] < codeFloor) {
+    throw new Error(`Template lock ${field} floors cannot be weaker than the immutable code minimum of ${codeFloor}.`);
+  }
+  if (Object.hasOwn(templateLock.adaptiveSections ?? {}, field)) {
+    throw new Error(`Template lock cannot mark mandatory ${field} as adaptive.`);
+  }
+}
+if (templateLock.referenceCard?.word !== 'work' || templateLock.referenceCard?.cardId !== 'work-v') {
+  throw new Error('Template lock must preserve work-v as the immutable reference card.');
+}
+for (const [field, codeFloor] of Object.entries(CODE_REFERENCE_RELATION_MINIMUMS)) {
+  const value = templateLock.referenceCard?.recordedShape?.[field];
+  if (!Number.isInteger(value) || value < codeFloor) {
+    throw new Error(`Reference-card ${field} shape cannot be weaker than the immutable code minimum of ${codeFloor}.`);
+  }
+}
 
 // Sparse verbs need a few additional, hand-checked examples so every published
 // card can meet the same visible detail floor without fabricating relations.
@@ -2006,6 +2038,8 @@ function makeCard(item, index) {
     if (semanticPack.fixedPhrases.length < 12) incompleteFloor.push('fixedPhrases < 12');
     if (semanticPack.contexts.length < 4 || manualContextCount < 16) incompleteFloor.push('contexts < 4 categories/16 items');
     if (semanticPack.synonyms.length < 5) incompleteFloor.push('synonyms < 5');
+    if (semanticPack.antonyms.length < minimumAntonyms) incompleteFloor.push(`antonyms < ${minimumAntonyms}`);
+    if (semanticPack.confusables.length < minimumConfusables) incompleteFloor.push(`confusables < ${minimumConfusables}`);
     if (semanticPack.related.length < 3 || manualRelatedCount < 12) incompleteFloor.push('related < 3 categories/12 items');
     if (semanticPack.commonErrors.length < 2) incompleteFloor.push('commonErrors < 2');
     if (incompleteFloor.length) throw new Error(`${item.w}: manual semantic pack is below the locked detail floor: ${incompleteFloor.join(', ')}`);
@@ -2052,12 +2086,23 @@ function makeCard(item, index) {
   } = normalizedRelations;
   const relatedVocabulary = normalizeRelated(item, index, override, derivatives, synonyms, antonyms, confusableItems);
   const examples = normalizeExamples(item, override, fixedPhrases);
+  const referenceShape = templateLock.referenceCard?.recordedShape ?? {};
+  const requiredAntonyms = item.w === templateLock.referenceCard?.word
+    ? Math.max(minimumAntonyms, CODE_REFERENCE_RELATION_MINIMUMS.antonyms, referenceShape.antonyms)
+    : minimumAntonyms;
+  const requiredConfusables = item.w === templateLock.referenceCard?.word
+    ? Math.max(minimumConfusables, CODE_REFERENCE_RELATION_MINIMUMS.confusables, referenceShape.confusables)
+    : minimumConfusables;
+  if (antonyms.length < requiredAntonyms || confusableItems.length < requiredConfusables) {
+    detailFloorFailures.push(`${item.w}: ${antonyms.length} antonyms/${requiredAntonyms} required, ${confusableItems.length} confusables/${requiredConfusables} required`);
+  }
   if (item.w !== 'work') {
     const contextItemCount = contextPhrases.reduce((sum, group) => sum + group.items.length, 0);
     const relatedItemCount = relatedVocabulary.reduce((sum, group) => sum + group.items.length, 0);
     if (contextPhrases.length < 4 || contextItemCount < 16 || fixedPhrases.length < 12
-      || synonyms.length < 5 || relatedVocabulary.length < 3 || relatedItemCount < 12 || examples.length < 12) {
-      detailFloorFailures.push(`${item.w}: ${contextPhrases.length} context groups/${contextItemCount} contexts, ${fixedPhrases.length} fixed phrases, ${synonyms.length} synonyms, ${relatedVocabulary.length} related groups/${relatedItemCount} related words, ${examples.length} examples`);
+      || synonyms.length < 5
+      || relatedVocabulary.length < 3 || relatedItemCount < 12 || examples.length < 12) {
+      detailFloorFailures.push(`${item.w}: ${contextPhrases.length} context groups/${contextItemCount} contexts, ${fixedPhrases.length} fixed phrases, ${synonyms.length} synonyms, ${antonyms.length} antonyms, ${confusableItems.length} confusables, ${relatedVocabulary.length} related groups/${relatedItemCount} related words, ${examples.length} examples`);
     }
   }
   const wordFamily = derivatives.map((entry) => entry.word);
@@ -2248,7 +2293,7 @@ function makeCard(item, index) {
     templateVersion,
     contentVersion,
     reviewed: true,
-    curationSource: item.w === 'work' ? 'locked-reference-example' : 'manual-semantic-pack-2026.09.10.4',
+    curationSource: item.w === 'work' ? 'locked-reference-example' : `manual-semantic-pack-${release.templateLockVersion}`,
     sourceNote: '词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。'
   };
 }
@@ -2347,7 +2392,7 @@ await fs.writeFile(path.join(publicDataDir, 'manifest.json'), JSON.stringify({
   cardsPerDay: 5, scheduleStart: formatDate(launchDate), dailyFiles
 }, null, 2) + '\n', 'utf8');
 await fs.writeFile(path.join(root, 'content', 'content-manifest.json'), JSON.stringify({
-  source: 'COCA词频单词表.xlsx', generatedAt: '2026-09-10', contentVersion, templateVersion, catalogHash, releaseId,
+  source: 'COCA词频单词表.xlsx', generatedAt: '2026-09-11', contentVersion, templateVersion, catalogHash, releaseId,
   generationMode: 'one-time-static',
   orderingPolicy: 'verbs-only-then-coca-verb-rank',
   detailLevel: 'template-complete',

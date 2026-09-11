@@ -77,7 +77,7 @@
       }
     ],
     "directSynonym": "grip /ˈɡrɪp/（紧握）；grasp /ˈɡræsp/（抓牢）；retain /rɪˈteɪn/（保留；保持）；contain /kənˈteɪn/（容纳）；host /ˈhoʊst/（主办；主持）",
-    "directAntonym": "release /riˈliːs/（松开；释放）；drop /ˈdrɑp/（放开使落下）",
+    "directAntonym": "release /riˈliːs/（松开；释放）；relinquish /rɪˈlɪŋkwɪʃ/（放弃；交出）；cancel /ˈkænsəl/（取消）",
     "derivatives": "holder · holding · holdings",
     "example": "Hold the phone firmly while you record your answer.",
     "exampleChinese": "录制答案时请拿稳手机。"
@@ -357,14 +357,21 @@
       "phonetic": "/riˈliːs/",
       "partOfSpeech": "v.",
       "chinese": "松开；释放",
-      "usage": "与握住或拘留的义项相反；只覆盖抓握、保留、容纳或举行活动中的指定一义"
+      "usage": "在抓握或拘留义上，hold 是继续控制，release 是松开或恢复自由"
     },
     {
-      "word": "drop",
-      "phonetic": "/ˈdrɑp/",
+      "word": "relinquish",
+      "phonetic": "/rɪˈlɪŋkwɪʃ/",
       "partOfSpeech": "v.",
-      "chinese": "放开使落下",
-      "usage": "与手中拿住的义项相反；只覆盖抓握、保留、容纳或举行活动中的指定一义"
+      "chinese": "放弃；交出",
+      "usage": "在职位、权利或控制权义上，hold 表示持有，relinquish 表示主动交出"
+    },
+    {
+      "word": "cancel",
+      "phonetic": "/ˈkænsəl/",
+      "partOfSpeech": "v.",
+      "chinese": "取消",
+      "usage": "hold a meeting 表示按计划举行会议，cancel the meeting 表示撤销安排、不再举行。"
     }
   ],
   "derivatives": [
@@ -392,11 +399,18 @@
   ],
   "confusables": [
     {
-      "word": "keep",
-      "phonetic": "/ˈkiːp/",
+      "word": "cold",
+      "phonetic": "/ˈkoʊld/",
+      "partOfSpeech": "adj. / n.",
+      "chinese": "寒冷的；寒冷",
+      "difference": "hold /hoʊld/ 与 cold /koʊld/ 只差开头辅音；hold 是握住或保持，cold 表示低温或感冒。"
+    },
+    {
+      "word": "carry",
+      "phonetic": "/ˈkæri/",
       "partOfSpeech": "v.",
-      "chinese": "保留；保持",
-      "difference": "hold 常强调手持、容纳或举行；keep 强调持续拥有或维持状态"
+      "chinese": "携带；搬运",
+      "difference": "hold 可只表示把物体拿在手中不动；carry 强调带着物体从一处移到另一处。"
     }
   ],
   "relatedVocabulary": [
@@ -633,9 +647,9 @@
         "be",
         "have",
         "do",
-        "keep"
+        "carry"
       ],
-      "answer": "keep",
+      "answer": "carry",
       "stage": "T3",
       "ai": false
     },
@@ -799,9 +813,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

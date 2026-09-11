@@ -77,7 +77,7 @@
       }
     ],
     "directSynonym": "sense /ˈsɛns/（感觉到）；experience /ɪkˈspɪriəns/（经历；感受到）；perceive /pɚˈsiːv/（察觉；认为）；touch /ˈtʌtʃ/（触摸）；believe /bɪˈliːv/（认为；相信）",
-    "directAntonym": "be numb /ˈbiː ˈnʌm/（麻木；没有感觉）",
+    "directAntonym": "be numb /ˈbiː ˈnʌm/（麻木；没有感觉）；be unaware of /ˈbiː ˌʌnəˈwɛr ˈʌv/（未察觉；没意识到）；doubt /ˈdaʊt/（怀疑；不相信）",
     "derivatives": "feeling · heartfelt · unfeeling",
     "example": "I feel more confident about speaking after regular practice.",
     "exampleChinese": "规律练习后，我对口语更有信心。"
@@ -351,6 +351,20 @@
       "partOfSpeech": "phr.",
       "chinese": "麻木；没有感觉",
       "usage": "与身体感受到触觉或疼痛相反；只与身体能够感受触觉、温度或疼痛的义项相反。"
+    },
+    {
+      "word": "be unaware of",
+      "phonetic": "/ˈbiː ˌʌnəˈwɛr ˈʌv/",
+      "partOfSpeech": "phr.",
+      "chinese": "未察觉；没意识到",
+      "usage": "只与 feel 表示察觉到气氛、变化或情绪的义项相对；feel 表示已感知，be unaware of 表示完全未察觉。"
+    },
+    {
+      "word": "doubt",
+      "phonetic": "/ˈdaʊt/",
+      "partOfSpeech": "v.",
+      "chinese": "怀疑；不相信",
+      "usage": "只对应 feel that 表示相信或倾向某个看法的义项；feel that 表达主观判断，doubt 则对该判断的真实性持怀疑态度。"
     }
   ],
   "derivatives": [
@@ -383,6 +397,13 @@
       "partOfSpeech": "v.",
       "chinese": "装满",
       "difference": "feel /fiːl/ 表示感觉、触摸或系动词‘给人某种感觉’；fill /fɪl/ 是及物动词，表示把容器装满。"
+    },
+    {
+      "word": "fell",
+      "phonetic": "/ˈfɛl/",
+      "partOfSpeech": "v.",
+      "chinese": "落下了（fall 的过去式）",
+      "difference": "feel /fiːl/ 表示感觉，fell /fɛl/ 是 fall 的过去式；两词只相差一个字母，但元音、意义和时态功能不同。"
     }
   ],
   "relatedVocabulary": [
@@ -602,12 +623,12 @@
       "type": "meaning_choice",
       "prompt": "在“感到；感觉”这个义项下，哪个词与“feel”意思相反？",
       "options": [
-        "go past",
-        "have to",
-        "be numb",
-        "give up"
+        "have",
+        "do",
+        "doubt",
+        "be"
       ],
-      "answer": "be numb",
+      "answer": "doubt",
       "stage": "T2",
       "ai": false
     },
@@ -785,9 +806,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

@@ -1,8 +1,8 @@
 {
   "date": "2026-09-12",
   "dayNumber": 27,
-  "contentVersion": "2026.09.10.4",
-  "templateVersion": "learning-template-2026.09.10.4",
+  "contentVersion": "2026.09.11.1",
+  "templateVersion": "learning-template-2026.09.11.1",
   "cards": [
     {
       "id": "describe-v",
@@ -77,7 +77,7 @@
           }
         ],
         "directSynonym": "depict /dɪˈpɪkt/（描绘）；portray /pɔːrˈtreɪ/（刻画）；characterize /ˈkɛrəktɚˌaɪz/（描述特征）；outline /ˈaʊtˌlaɪn/（概述）；explain /ɪkˈspleɪn/（说明）",
-        "directAntonym": "",
+        "directAntonym": "conceal /kənˈsiːl/（隐瞒；不描述）；omit /oʊˈmɪt/（省略；漏掉）；misrepresent /mɪsˌrɛprəˈzɛnt/（歪曲；不实描述）",
         "derivatives": "description · descriptive · indescribable · indescribably",
         "example": "How would you describe your ideal weekend?",
         "exampleChinese": "你会怎样描述理想的周末？"
@@ -330,7 +330,29 @@
           "difference": "重在使原因或过程易懂，不等同于外观描述；describe 侧重是什么样，explain 侧重为什么或如何。"
         }
       ],
-      "antonyms": [],
+      "antonyms": [
+        {
+          "word": "conceal",
+          "phonetic": "/kənˈsiːl/",
+          "partOfSpeech": "v.",
+          "chinese": "隐瞒；不描述",
+          "usage": "只与 describe details openly 的说明义相对；conceal 表示有意不让这些细节被知道。"
+        },
+        {
+          "word": "omit",
+          "phonetic": "/oʊˈmɪt/",
+          "partOfSpeech": "v.",
+          "chinese": "省略；漏掉",
+          "usage": "只与 describe/include a feature 的列举义相对；omit 表示描述时不提同一特征。"
+        },
+        {
+          "word": "misrepresent",
+          "phonetic": "/mɪsˌrɛprəˈzɛnt/",
+          "partOfSpeech": "v.",
+          "chinese": "歪曲；不实描述",
+          "usage": "只与 describe something accurately 的准确描写义相对；misrepresent 表示给出误导性描写。"
+        }
+      ],
       "derivatives": [
         {
           "word": "description",
@@ -368,6 +390,13 @@
           "partOfSpeech": "v.",
           "chinese": "开具；规定",
           "difference": "describe 是描述，prescribe 是医生开药或正式规定"
+        },
+        {
+          "word": "ascribe",
+          "phonetic": "/əˈskraɪb/",
+          "partOfSpeech": "v.",
+          "chinese": "把……归因于；认为属于",
+          "difference": "describe 表示说明事物特征；ascribe 常用 ascribe something to a cause，表示归因或归属。"
         }
       ],
       "relatedVocabulary": [
@@ -583,16 +612,16 @@
           "ai": false
         },
         {
-          "id": "describe-v-synonym-choice-2",
+          "id": "describe-v-antonym-choice",
           "type": "meaning_choice",
-          "prompt": "除“depict”外，在“刻画”这个义项下，哪个词也与“describe”意思接近？",
+          "prompt": "在“描述；形容”这个义项下，哪个词与“describe”意思相反？",
           "options": [
             "have",
             "do",
-            "portray",
+            "conceal",
             "be"
           ],
-          "answer": "portray",
+          "answer": "conceal",
           "stage": "T2",
           "ai": false
         },
@@ -770,10 +799,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -855,7 +884,7 @@
           }
         ],
         "directSynonym": "rise /ˈraɪz/（上升）；grow /ˈɡroʊ/（增长）；heighten /ˈhaɪtən/（增强；提高）；expand /ɪkˈspænd/（扩大）；boost /ˈbuːst/（提升）",
-        "directAntonym": "decrease /dɪˈkriːs/（减少；下降）；reduce /rəˈduːs/（减少）",
+        "directAntonym": "decrease /dɪˈkriːs/（减少；下降）；remain constant /rɪˈmeɪn ˈkɑnstənt/（保持不变）；cap /ˈkæp/（限制上限；封顶）",
         "derivatives": "increasing · increased · increasingly",
         "example": "Regular speaking practice increases confidence.",
         "exampleChinese": "经常练习口语会增强信心。"
@@ -1117,11 +1146,18 @@
           "usage": "可及物或不及物，是 increase 的直接数量反向"
         },
         {
-          "word": "reduce",
-          "phonetic": "/rəˈduːs/",
+          "word": "remain constant",
+          "phonetic": "/rɪˈmeɪn ˈkɑnstənt/",
+          "partOfSpeech": "v. phr.",
+          "chinese": "保持不变",
+          "usage": "只与 increase 表示数量或水平上升的义项相对；remain constant 表示同一数值既不上升也不下降"
+        },
+        {
+          "word": "cap",
+          "phonetic": "/ˈkæp/",
           "partOfSpeech": "v.",
-          "chinese": "减少",
-          "usage": "及物用法，与 increase something 相对"
+          "chinese": "限制上限；封顶",
+          "usage": "只与 increase a price/output without limit 的增长义相对；cap 表示给同一数值设定最高限度。"
         }
       ],
       "derivatives": [
@@ -1154,6 +1190,13 @@
           "partOfSpeech": "v.",
           "chinese": "提高",
           "difference": "increase 可及物或不及物，raise 必须有被提高的宾语"
+        },
+        {
+          "word": "increase by",
+          "phonetic": "/ɪnˈkriːs ˈbaɪ/",
+          "partOfSpeech": "v. phr.",
+          "chinese": "增加了某个差额",
+          "difference": "increase by 后接变化量；increase to 后接最终数值，例如 increase by ten 与 increase to ten 含义不同。"
         }
       ],
       "relatedVocabulary": [
@@ -1556,10 +1599,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -1635,7 +1678,7 @@
           }
         ],
         "directSynonym": "defend /dɪˈfɛnd/（保卫）；guard /ˈɡɑrd/（守护）；safeguard /ˈseɪfˌɡɑrd/（保护）；shield /ˈʃiːld/（遮护）；preserve /prəˈzɝːv/（保存）",
-        "directAntonym": "endanger /ɛnˈdeɪndʒɚ/（危及）；expose /ɪkˈspoʊz/（使暴露）",
+        "directAntonym": "endanger /ɛnˈdeɪndʒɚ/（危及）；expose /ɪkˈspoʊz/（使暴露）；abandon /əˈbændən/（弃置；停止保护）",
         "derivatives": "protector · protection · protective · unprotected · protectively",
         "example": "A strong password protects your account.",
         "exampleChinese": "强密码可以保护你的账户。"
@@ -1895,6 +1938,13 @@
           "partOfSpeech": "v.",
           "chinese": "使暴露",
           "usage": "protect 表示使人或物免受危险；expose 表示使同一对象失去遮护并接触风险，只在防护义项上相对。"
+        },
+        {
+          "word": "abandon",
+          "phonetic": "/əˈbændən/",
+          "partOfSpeech": "v.",
+          "chinese": "弃置；停止保护",
+          "usage": "只与 protect a person/place 的持续防护义相对；abandon 表示撤去照顾并让同一对象独自面对风险。"
         }
       ],
       "derivatives": [
@@ -1941,6 +1991,13 @@
           "partOfSpeech": "v.",
           "chinese": "防止",
           "difference": "protect 的宾语是被保护者，prevent 的宾语是要阻止的事件或人"
+        },
+        {
+          "word": "protest",
+          "phonetic": "/ˈproʊˌtɛst/",
+          "partOfSpeech": "v. / n.",
+          "chinese": "抗议；反对",
+          "difference": "protect /prəˈtɛkt/ 表示保护，protest /prəˈtɛst/ 表示抗议；拼写相近但末尾辅音和含义不同。"
         }
       ],
       "relatedVocabulary": [
@@ -2343,10 +2400,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -2422,7 +2479,7 @@
           }
         ],
         "directSynonym": "juxtapose /ˌdʒʌkstəˈpoʊz/（并置比较）；match /ˈmætʃ/（比对）；liken /ˈlaɪkən/（比作）；evaluate /ɪˈvæljuˌeɪt/（评估）；benchmark /ˈbɛntʃˌmɑrk/（对标）",
-        "directAntonym": "",
+        "directAntonym": "differ from /ˈdɪfɚ ˈfrʌm/（与……不同）；judge in isolation /ˈdʒʌdʒ ɪn ˌaɪsəˈleɪʃən/（孤立地判断）；fall short of /ˈfɔːl ˈʃɔːrt ˈʌv/（比不上；未达到）",
         "derivatives": "comparison · comparability · comparative · comparable · comparatively",
         "example": "Compare the two examples before you answer.",
         "exampleChinese": "回答前比较这两个例子。"
@@ -2675,7 +2732,29 @@
           "difference": "按既定基准衡量表现；compare 不一定依据固定行业基准。"
         }
       ],
-      "antonyms": [],
+      "antonyms": [
+        {
+          "word": "differ from",
+          "phonetic": "/ˈdɪfɚ ˈfrʌm/",
+          "partOfSpeech": "phr.v.",
+          "chinese": "与……不同",
+          "usage": "只与 compare A to B 表示认为相似的义项相对；differ from 强调两者存在差异。"
+        },
+        {
+          "word": "judge in isolation",
+          "phonetic": "/ˈdʒʌdʒ ɪn ˌaɪsəˈleɪʃən/",
+          "partOfSpeech": "v. phr.",
+          "chinese": "孤立地判断",
+          "usage": "只与 compare alternatives side by side 的比较方法相对；judge in isolation 表示不借助参照物单独判断。"
+        },
+        {
+          "word": "fall short of",
+          "phonetic": "/ˈfɔːl ˈʃɔːrt ˈʌv/",
+          "partOfSpeech": "phr.v.",
+          "chinese": "比不上；未达到",
+          "usage": "只与 something compares with a standard 表示可媲美的义项相对；fall short of 表示达不到该标准。"
+        }
+      ],
       "derivatives": [
         {
           "word": "comparison",
@@ -2720,6 +2799,13 @@
           "partOfSpeech": "v.",
           "chinese": "对比",
           "difference": "compare 可看相同点和不同点，contrast 重点突出差异"
+        },
+        {
+          "word": "comprise",
+          "phonetic": "/kəmˈpraɪz/",
+          "partOfSpeech": "v.",
+          "chinese": "包括；由……组成",
+          "difference": "compare /kəmˈpɛr/ 表示比较，comprise /kəmˈpraɪz/ 表示包括；拼写开头相近但发音、宾语关系和含义不同。"
         }
       ],
       "relatedVocabulary": [
@@ -2935,16 +3021,16 @@
           "ai": false
         },
         {
-          "id": "compare-v-synonym-choice-2",
+          "id": "compare-v-antonym-choice",
           "type": "meaning_choice",
-          "prompt": "除“juxtapose”外，在“比对”这个义项下，哪个词也与“compare”意思接近？",
+          "prompt": "在“比较；对照”这个义项下，哪个词与“compare”意思相反？",
           "options": [
-            "be",
-            "have",
-            "do",
-            "match"
+            "account for",
+            "back out of",
+            "be assigned",
+            "differ from"
           ],
-          "answer": "match",
+          "answer": "differ from",
           "stage": "T2",
           "ai": false
         },
@@ -3122,10 +3208,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -3201,7 +3287,7 @@
           }
         ],
         "directSynonym": "curtail /kɚˈteɪl/（削减；缩短）；lower /ˈloʊɚ/（降低）；cut /ˈkʌt/（削减）；lessen /ˈlɛsən/（减轻）；diminish /dɪˈmɪnɪʃ/（减弱；缩小）",
-        "directAntonym": "increase /ɪnˈkriːs/（增加；提高）；expand /ɪkˈspænd/（扩大）",
+        "directAntonym": "increase /ɪnˈkriːs/（增加；提高）；expand /ɪkˈspænd/（扩大）；restore /rɪˈstɔːr/（恢复；补回）",
         "derivatives": "reduction · reducible · reduced",
         "example": "A clear plan can reduce unnecessary stress.",
         "exampleChinese": "清晰的计划可以减少不必要的压力。"
@@ -3468,6 +3554,13 @@
           "partOfSpeech": "v.",
           "chinese": "扩大",
           "usage": "只与缩小尺寸、范围的义项相对；reduce 可缩小尺寸或范围，expand 则扩大同一维度。"
+        },
+        {
+          "word": "restore",
+          "phonetic": "/rɪˈstɔːr/",
+          "partOfSpeech": "v.",
+          "chinese": "恢复；补回",
+          "usage": "只与 reduce a level/amount 的降低义相对；restore 表示把同一数值或供应恢复到原水平。"
         }
       ],
       "derivatives": [
@@ -3500,6 +3593,13 @@
           "partOfSpeech": "v.",
           "chinese": "减少",
           "difference": "reduce 通常及物，decrease 可及物也可不及物"
+        },
+        {
+          "word": "deduce",
+          "phonetic": "/dɪˈduːs/",
+          "partOfSpeech": "v.",
+          "chinese": "推断；演绎",
+          "difference": "reduce /rɪˈduːs/ 表示减少，deduce /dɪˈduːs/ 表示推断；拼写结尾相同但前缀和思维动作不同。"
         }
       ],
       "relatedVocabulary": [
@@ -3902,10 +4002,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     }
   ]

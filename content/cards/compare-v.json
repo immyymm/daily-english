@@ -71,7 +71,7 @@
       }
     ],
     "directSynonym": "juxtapose /ˌdʒʌkstəˈpoʊz/（并置比较）；match /ˈmætʃ/（比对）；liken /ˈlaɪkən/（比作）；evaluate /ɪˈvæljuˌeɪt/（评估）；benchmark /ˈbɛntʃˌmɑrk/（对标）",
-    "directAntonym": "",
+    "directAntonym": "differ from /ˈdɪfɚ ˈfrʌm/（与……不同）；judge in isolation /ˈdʒʌdʒ ɪn ˌaɪsəˈleɪʃən/（孤立地判断）；fall short of /ˈfɔːl ˈʃɔːrt ˈʌv/（比不上；未达到）",
     "derivatives": "comparison · comparability · comparative · comparable · comparatively",
     "example": "Compare the two examples before you answer.",
     "exampleChinese": "回答前比较这两个例子。"
@@ -324,7 +324,29 @@
       "difference": "按既定基准衡量表现；compare 不一定依据固定行业基准。"
     }
   ],
-  "antonyms": [],
+  "antonyms": [
+    {
+      "word": "differ from",
+      "phonetic": "/ˈdɪfɚ ˈfrʌm/",
+      "partOfSpeech": "phr.v.",
+      "chinese": "与……不同",
+      "usage": "只与 compare A to B 表示认为相似的义项相对；differ from 强调两者存在差异。"
+    },
+    {
+      "word": "judge in isolation",
+      "phonetic": "/ˈdʒʌdʒ ɪn ˌaɪsəˈleɪʃən/",
+      "partOfSpeech": "v. phr.",
+      "chinese": "孤立地判断",
+      "usage": "只与 compare alternatives side by side 的比较方法相对；judge in isolation 表示不借助参照物单独判断。"
+    },
+    {
+      "word": "fall short of",
+      "phonetic": "/ˈfɔːl ˈʃɔːrt ˈʌv/",
+      "partOfSpeech": "phr.v.",
+      "chinese": "比不上；未达到",
+      "usage": "只与 something compares with a standard 表示可媲美的义项相对；fall short of 表示达不到该标准。"
+    }
+  ],
   "derivatives": [
     {
       "word": "comparison",
@@ -369,6 +391,13 @@
       "partOfSpeech": "v.",
       "chinese": "对比",
       "difference": "compare 可看相同点和不同点，contrast 重点突出差异"
+    },
+    {
+      "word": "comprise",
+      "phonetic": "/kəmˈpraɪz/",
+      "partOfSpeech": "v.",
+      "chinese": "包括；由……组成",
+      "difference": "compare /kəmˈpɛr/ 表示比较，comprise /kəmˈpraɪz/ 表示包括；拼写开头相近但发音、宾语关系和含义不同。"
     }
   ],
   "relatedVocabulary": [
@@ -584,16 +613,16 @@
       "ai": false
     },
     {
-      "id": "compare-v-synonym-choice-2",
+      "id": "compare-v-antonym-choice",
       "type": "meaning_choice",
-      "prompt": "除“juxtapose”外，在“比对”这个义项下，哪个词也与“compare”意思接近？",
+      "prompt": "在“比较；对照”这个义项下，哪个词与“compare”意思相反？",
       "options": [
-        "be",
-        "have",
-        "do",
-        "match"
+        "account for",
+        "back out of",
+        "be assigned",
+        "differ from"
       ],
-      "answer": "match",
+      "answer": "differ from",
       "stage": "T2",
       "ai": false
     },
@@ -771,9 +800,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

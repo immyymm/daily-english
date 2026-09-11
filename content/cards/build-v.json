@@ -71,7 +71,7 @@
       }
     ],
     "directSynonym": "construct /kənˈstrʌkt/（建造）；assemble /əˈsɛmbəl/（组装）；develop /dɪˈvɛləp/（发展；建立）；form /ˈfɔːrm/（组成；建立）；accumulate /əˈkjuːmjəˌleɪt/（积累）",
-    "directAntonym": "demolish /dɪˈmɑlɪʃ/（拆毁）；dismantle /dɪˈsmæntəl/（拆解；瓦解）",
+    "directAntonym": "demolish /dɪˈmɑlɪʃ/（拆毁）；dismantle /dɪˈsmæntəl/（拆解；瓦解）；undermine /ˈʌndɚˌmaɪn/（削弱；破坏）",
     "derivatives": "rebuild · builder · building",
     "example": "They plan to build a small house near the lake.",
     "exampleChinese": "他们计划在湖边建一座小房子。"
@@ -338,6 +338,13 @@
       "partOfSpeech": "v.",
       "chinese": "拆解；瓦解",
       "usage": "与组装或逐步建立相反；实体建造、零件组装和抽象积累所接宾语不同"
+    },
+    {
+      "word": "undermine",
+      "phonetic": "/ˈʌndɚˌmaɪn/",
+      "partOfSpeech": "v.",
+      "chinese": "削弱；破坏",
+      "usage": "build trust 表示逐步增强信任，undermine trust 表示通过行为削弱已有信任。"
     }
   ],
   "derivatives": [
@@ -365,11 +372,18 @@
   ],
   "confusables": [
     {
-      "word": "establish",
-      "phonetic": "/ɪˈstæblɪʃ/",
-      "partOfSpeech": "v.",
-      "chinese": "建立；设立",
-      "difference": "build 强调逐步累积和发展；establish 更正式，强调使机构、制度或事实稳固存在"
+      "word": "bold",
+      "phonetic": "/ˈboʊld/",
+      "partOfSpeech": "adj.",
+      "chinese": "大胆的；粗体的",
+      "difference": "build /bɪld/ 与 bold /boʊld/ 拼写接近但元音不同；build 是建造的动词，bold 表示大胆或粗体。"
+    },
+    {
+      "word": "bill",
+      "phonetic": "/ˈbɪl/",
+      "partOfSpeech": "n. / v.",
+      "chinese": "账单；开账单",
+      "difference": "build /bɪld/ 比 bill /bɪl/ 多末尾 /d/ 音；build 表示建造，bill 表示账单或向某人收费。"
     }
   ],
   "relatedVocabulary": [
@@ -603,12 +617,12 @@
       "type": "meaning_choice",
       "prompt": "结合拼写、发音和用法，哪一项需要与“build”重点区分？",
       "options": [
-        "do",
-        "establish",
-        "be",
-        "have"
+        "cute",
+        "bold",
+        "calm",
+        "cold"
       ],
-      "answer": "establish",
+      "answer": "bold",
       "stage": "T3",
       "ai": false
     },
@@ -772,9 +786,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

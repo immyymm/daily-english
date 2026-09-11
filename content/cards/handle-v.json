@@ -77,7 +77,7 @@
       }
     ],
     "directSynonym": "manage /ˈmænədʒ/（处理）；deal with /ˈdiːl ˈwɪð/（处理）；operate /ˈɑpɚˌeɪt/（操作）；touch /ˈtʌtʃ/（拿；碰）；process /ˈprɑˌsɛs/（处理）",
-    "directAntonym": "botch /ˈbɑtʃ/（把……搞砸）",
+    "directAntonym": "botch /ˈbɑtʃ/（把……搞砸）；avoid /əˈvɔɪd/（回避；不处理）；drop /ˈdrɑp/（失手掉落；放下）",
     "derivatives": "mishandle · handler · handling · mishandling",
     "example": "She handled the difficult question well.",
     "exampleChinese": "她很好地应对了那个难题。"
@@ -344,6 +344,20 @@
       "partOfSpeech": "v.",
       "chinese": "把……搞砸",
       "usage": "handle 强调妥善处理；botch 指因粗心或能力不足而把工作做坏。"
+    },
+    {
+      "word": "avoid",
+      "phonetic": "/əˈvɔɪd/",
+      "partOfSpeech": "v.",
+      "chinese": "回避；不处理",
+      "usage": "只与 handle a problem/request 的处理义相对；avoid 表示不去面对或处理同一事项。"
+    },
+    {
+      "word": "drop",
+      "phonetic": "/ˈdrɑp/",
+      "partOfSpeech": "v.",
+      "chinese": "失手掉落；放下",
+      "usage": "只与 handle/hold an object securely 的拿持义相对；drop 表示物体脱手落下。"
     }
   ],
   "derivatives": [
@@ -376,7 +390,22 @@
       "note": "指错误处置事务、证据或物品。"
     }
   ],
-  "confusables": [],
+  "confusables": [
+    {
+      "word": "hand",
+      "phonetic": "/ˈhænd/",
+      "partOfSpeech": "n. / v.",
+      "chinese": "手；递交",
+      "difference": "handle 可作名词表示把手，也可作动词表示处理；hand 主要指手或亲手递交，不能表示处理问题。"
+    },
+    {
+      "word": "candle",
+      "phonetic": "/ˈkændəl/",
+      "partOfSpeech": "n.",
+      "chinese": "蜡烛",
+      "difference": "handle /ˈhændəl/ 表示处理或把手，candle /ˈkændəl/ 表示蜡烛；两词只差起始辅音，词性和含义不同。"
+    }
+  ],
   "relatedVocabulary": [
     {
       "category": "服务事务",
@@ -606,14 +635,14 @@
     {
       "id": "handle-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "哪一项是“handle”的常用派生词？",
+      "prompt": "结合拼写、发音和用法，哪一项需要与“handle”重点区分？",
       "options": [
-        "mishandle",
-        "be",
-        "have",
-        "do"
+        "candle",
+        "increase",
+        "accent",
+        "access"
       ],
-      "answer": "mishandle",
+      "answer": "candle",
       "stage": "T3",
       "ai": false
     },
@@ -777,9 +806,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

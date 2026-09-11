@@ -1,8 +1,8 @@
 {
   "date": "2026-08-23",
   "dayNumber": 7,
-  "contentVersion": "2026.09.10.4",
-  "templateVersion": "learning-template-2026.09.10.4",
+  "contentVersion": "2026.09.11.1",
+  "templateVersion": "learning-template-2026.09.11.1",
   "cards": [
     {
       "id": "feel-v",
@@ -83,7 +83,7 @@
           }
         ],
         "directSynonym": "sense /ˈsɛns/（感觉到）；experience /ɪkˈspɪriəns/（经历；感受到）；perceive /pɚˈsiːv/（察觉；认为）；touch /ˈtʌtʃ/（触摸）；believe /bɪˈliːv/（认为；相信）",
-        "directAntonym": "be numb /ˈbiː ˈnʌm/（麻木；没有感觉）",
+        "directAntonym": "be numb /ˈbiː ˈnʌm/（麻木；没有感觉）；be unaware of /ˈbiː ˌʌnəˈwɛr ˈʌv/（未察觉；没意识到）；doubt /ˈdaʊt/（怀疑；不相信）",
         "derivatives": "feeling · heartfelt · unfeeling",
         "example": "I feel more confident about speaking after regular practice.",
         "exampleChinese": "规律练习后，我对口语更有信心。"
@@ -357,6 +357,20 @@
           "partOfSpeech": "phr.",
           "chinese": "麻木；没有感觉",
           "usage": "与身体感受到触觉或疼痛相反；只与身体能够感受触觉、温度或疼痛的义项相反。"
+        },
+        {
+          "word": "be unaware of",
+          "phonetic": "/ˈbiː ˌʌnəˈwɛr ˈʌv/",
+          "partOfSpeech": "phr.",
+          "chinese": "未察觉；没意识到",
+          "usage": "只与 feel 表示察觉到气氛、变化或情绪的义项相对；feel 表示已感知，be unaware of 表示完全未察觉。"
+        },
+        {
+          "word": "doubt",
+          "phonetic": "/ˈdaʊt/",
+          "partOfSpeech": "v.",
+          "chinese": "怀疑；不相信",
+          "usage": "只对应 feel that 表示相信或倾向某个看法的义项；feel that 表达主观判断，doubt 则对该判断的真实性持怀疑态度。"
         }
       ],
       "derivatives": [
@@ -389,6 +403,13 @@
           "partOfSpeech": "v.",
           "chinese": "装满",
           "difference": "feel /fiːl/ 表示感觉、触摸或系动词‘给人某种感觉’；fill /fɪl/ 是及物动词，表示把容器装满。"
+        },
+        {
+          "word": "fell",
+          "phonetic": "/ˈfɛl/",
+          "partOfSpeech": "v.",
+          "chinese": "落下了（fall 的过去式）",
+          "difference": "feel /fiːl/ 表示感觉，fell /fɛl/ 是 fall 的过去式；两词只相差一个字母，但元音、意义和时态功能不同。"
         }
       ],
       "relatedVocabulary": [
@@ -608,12 +629,12 @@
           "type": "meaning_choice",
           "prompt": "在“感到；感觉”这个义项下，哪个词与“feel”意思相反？",
           "options": [
-            "go past",
-            "have to",
-            "be numb",
-            "give up"
+            "have",
+            "do",
+            "doubt",
+            "be"
           ],
-          "answer": "be numb",
+          "answer": "doubt",
           "stage": "T2",
           "ai": false
         },
@@ -791,10 +812,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -870,7 +891,7 @@
           }
         ],
         "directSynonym": "inquire /ˌɪnˈkwaɪr/（询问）；question /ˈkwɛstʃən/（提问；质疑）；request /rɪˈkwɛst/（请求）；seek /ˈsiːk/（寻求）；invite /ˌɪnˈvaɪt/（邀请）",
-        "directAntonym": "answer /ˈænsɚ/（回答；答复）；reply /rɪˈplaɪ/（回答；回应）",
+        "directAntonym": "answer /ˈænsɚ/（回答；答复）；withdraw a request /wɪðˈdrɔː ə rɪˈkwɛst/（撤回请求）；offer /ˈɔːfɚ/（主动提供；给予）",
         "derivatives": "asking · unasked",
         "example": "Do not be afraid to ask a specific question.",
         "exampleChinese": "不要害怕提出具体问题。"
@@ -1125,11 +1146,18 @@
           "usage": "只在问答这一明确交际关系中形成对应；ask 是提出问题，answer 是给出答案。"
         },
         {
-          "word": "reply",
-          "phonetic": "/rɪˈplaɪ/",
+          "word": "withdraw a request",
+          "phonetic": "/wɪðˈdrɔː ə rɪˈkwɛst/",
+          "partOfSpeech": "v. phr.",
+          "chinese": "撤回请求",
+          "usage": "只与 ask 表示正式提出请求的义项相对；ask 提交请求，withdraw a request 则在对方决定前将该请求撤回。"
+        },
+        {
+          "word": "offer",
+          "phonetic": "/ˈɔːfɚ/",
           "partOfSpeech": "v.",
-          "chinese": "回答；回应",
-          "usage": "只对应 ask 表示向某人提问的义项；reply 强调对已收到的问题或话语作出回应。"
+          "chinese": "主动提供；给予",
+          "usage": "只在 ask for 表示向他人索要物品或帮助时形成方向对照；ask for 由需求方提出，offer 由提供方主动给出。"
         }
       ],
       "derivatives": [
@@ -1155,6 +1183,13 @@
           "partOfSpeech": "v.",
           "chinese": "说；表达",
           "difference": "ask 用于提问、请求或邀请；say 用于陈述具体话语或观点。"
+        },
+        {
+          "word": "ask for",
+          "phonetic": "/ˈæsk ˈfɔːr/",
+          "partOfSpeech": "phr.v.",
+          "chinese": "索要；请求得到",
+          "difference": "ask about 后接想了解的信息主题，ask for 后接想得到的物品、服务或人，介词不同会改变所求内容。"
         }
       ],
       "relatedVocabulary": [
@@ -1557,10 +1592,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -1642,7 +1677,7 @@
           }
         ],
         "directSynonym": "speak /ˈspiːk/（说话；发言）；discuss /dɪˈskʌs/（讨论）；converse /kənˈvɝːs/（交谈）；chat /ˈtʃæt/（闲聊）；negotiate /nəˈɡoʊʃiˌeɪt/（谈判）",
-        "directAntonym": "remain silent /rɪˈmeɪn ˈsaɪlənt/（保持沉默）",
+        "directAntonym": "remain silent /rɪˈmeɪn ˈsaɪlənt/（保持沉默）；break off talks /ˈbreɪk ˈɔːf ˈtɔːks/（中断谈判；终止会谈）；withhold comment /wɪθˈhoʊld ˈkɑmɛnt/（不发表评论）",
         "derivatives": "talker · talkativeness · talkative",
         "example": "I need to talk to my teacher about this mistake.",
         "exampleChinese": "我需要和老师谈谈这个错误。"
@@ -1895,6 +1930,20 @@
           "partOfSpeech": "phr.",
           "chinese": "保持沉默",
           "usage": "与开口交谈的义相反；只与开口交谈或进行双向讨论的义项构成反向关系。"
+        },
+        {
+          "word": "break off talks",
+          "phonetic": "/ˈbreɪk ˈɔːf ˈtɔːks/",
+          "partOfSpeech": "phr.v.",
+          "chinese": "中断谈判；终止会谈",
+          "usage": "只与 talk 表示通过会谈继续协商的义项相对；continue talks 是保持协商，break off talks 则主动终止协商。"
+        },
+        {
+          "word": "withhold comment",
+          "phonetic": "/wɪθˈhoʊld ˈkɑmɛnt/",
+          "partOfSpeech": "phr.v.",
+          "chinese": "不发表评论",
+          "usage": "只与 talk 表示愿意公开谈论某个话题的义项相对；talk 表示进行讨论，withhold comment 表示选择不对该话题表态。"
         }
       ],
       "derivatives": [
@@ -1927,6 +1976,13 @@
           "partOfSpeech": "v.",
           "chinese": "告诉",
           "difference": "tell 强调传递信息且常接人；talk 强调交谈过程。"
+        },
+        {
+          "word": "walk",
+          "phonetic": "/ˈwɔːk/",
+          "partOfSpeech": "v. / n.",
+          "chinese": "步行；散步",
+          "difference": "talk 读 /tɔːk/，表示说话；walk 读 /wɔːk/，表示步行，两词都不发字母 l，但词首辅音和意义不同。"
         }
       ],
       "relatedVocabulary": [
@@ -2147,9 +2203,9 @@
           "prompt": "在“交谈；谈论”这个义项下，哪个词与“talk”意思相反？",
           "options": [
             "remain silent",
+            "be accidental",
             "be allowed to",
-            "be capable of",
-            "be impossible"
+            "be capable of"
           ],
           "answer": "remain silent",
           "stage": "T2",
@@ -2329,10 +2385,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -2408,7 +2464,7 @@
           }
         ],
         "directSynonym": "retain /rɪˈteɪn/（保留）；continue /kənˈtɪnju/（继续）；maintain /meɪnˈteɪn/（维持）；preserve /prəˈzɝːv/（保存；保护）；store /ˈstɔːr/（储存）",
-        "directAntonym": "discard /dɪˈskɑrd/（丢弃）",
+        "directAntonym": "discard /dɪˈskɑrd/（丢弃）；release /riˈliːs/（释放；放开）；lose /ˈluːz/（失去；没能保住）",
         "derivatives": "keeper · keeping · keepsake",
         "example": "Keep practicing even when a word feels difficult.",
         "exampleChinese": "即使某个词很难，也要继续练习。"
@@ -2675,6 +2731,20 @@
           "partOfSpeech": "v.",
           "chinese": "丢弃",
           "usage": "与保留某物的义相反；只与保留某个具体物品而不丢弃的义项相反。"
+        },
+        {
+          "word": "release",
+          "phonetic": "/riˈliːs/",
+          "partOfSpeech": "v.",
+          "chinese": "释放；放开",
+          "usage": "只与 keep 表示扣留、控制或继续持有某物的义项相对；keep 保持控制，release 则放开或释放该对象。"
+        },
+        {
+          "word": "lose",
+          "phonetic": "/ˈluːz/",
+          "partOfSpeech": "v.",
+          "chinese": "失去；没能保住",
+          "usage": "只对应 keep 表示保有物品、权利或状态的义项；keep 说明成功保住，lose 说明该物或状态已失去。"
         }
       ],
       "derivatives": [
@@ -2707,6 +2777,13 @@
           "partOfSpeech": "v.",
           "chinese": "拿着；保持",
           "difference": "hold 侧重用手支撑或在某位置保持；keep 更常表保留或持续状态。"
+        },
+        {
+          "word": "keen",
+          "phonetic": "/ˈkiːn/",
+          "partOfSpeech": "adj.",
+          "chinese": "热切的；敏锐的",
+          "difference": "keep /kiːp/ 与 keen /kiːn/ 只有末尾辅音不同；keep 是保留或持续的动词，keen 是表示热切或敏锐的形容词。"
         }
       ],
       "relatedVocabulary": [
@@ -3109,10 +3186,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -3194,7 +3271,7 @@
           }
         ],
         "directSynonym": "depart /dɪˈpɑrt/（离开；出发）；exit /ˈɛɡzɪt/（退出；离开）；abandon /əˈbændən/（抛弃；放弃）；omit /oʊˈmɪt/（遗漏）；entrust /ɛnˈtrʌst/（委托）",
-        "directAntonym": "arrive /ɚˈaɪv/（到达）",
+        "directAntonym": "arrive /ɚˈaɪv/（到达）；stay /ˈsteɪ/（留下；不离开）；take along /ˈteɪk əˈlɔːŋ/（随身带上）",
         "derivatives": "leftover",
         "example": "I usually leave home at seven thirty.",
         "exampleChinese": "我通常七点半离开家。"
@@ -3461,6 +3538,20 @@
           "partOfSpeech": "v.",
           "chinese": "到达",
           "usage": "与从地点离开的义相反；只与从某个地点离开或出发的义项构成方向对照。"
+        },
+        {
+          "word": "stay",
+          "phonetic": "/ˈsteɪ/",
+          "partOfSpeech": "v.",
+          "chinese": "留下；不离开",
+          "usage": "只与 leave 表示从某个地点离开的义项相对；leave 是出发离去，stay 则继续留在原地。"
+        },
+        {
+          "word": "take along",
+          "phonetic": "/ˈteɪk əˈlɔːŋ/",
+          "partOfSpeech": "phr.v.",
+          "chinese": "随身带上",
+          "usage": "只与 leave 表示把某人或某物留在原处的义项相对；leave something behind 是不带走，take it along 是随身带上。"
         }
       ],
       "derivatives": [
@@ -3479,6 +3570,13 @@
           "partOfSpeech": "v.",
           "chinese": "居住；生活",
           "difference": "leave /liːv/ 是动词，表示离开或留下；live 作动词读 /lɪv/，表示居住或生活。"
+        },
+        {
+          "word": "let",
+          "phonetic": "/ˈlɛt/",
+          "partOfSpeech": "v.",
+          "chinese": "允许；让",
+          "difference": "leave 表示离开或把某物留下；let 表示允许，并用 let someone do 而不是 leave someone do。"
         }
       ],
       "relatedVocabulary": [
@@ -3881,10 +3979,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     }
   ]

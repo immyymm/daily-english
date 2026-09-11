@@ -1,8 +1,8 @@
 {
   "date": "2026-09-02",
   "dayNumber": 17,
-  "contentVersion": "2026.09.10.4",
-  "templateVersion": "learning-template-2026.09.10.4",
+  "contentVersion": "2026.09.11.1",
+  "templateVersion": "learning-template-2026.09.11.1",
   "cards": [
     {
       "id": "lead-v",
@@ -83,7 +83,7 @@
           }
         ],
         "directSynonym": "guide /ˈɡaɪd/（引导）；direct /dɚˈɛkt/（指挥；指导）；head /ˈhɛd/（领导）；command /kəˈmænd/（指挥；统率）；cause /ˈkɑz/（导致）",
-        "directAntonym": "follow /ˈfɑloʊ/（跟随）",
+        "directAntonym": "follow /ˈfɑloʊ/（跟随）；lag behind /ˈlæɡ bɪˈhaɪnd/（落后）；prevent /prɪˈvɛnt/（阻止）",
         "derivatives": "leader · leadership · leading",
         "example": "She leads a small design team.",
         "exampleChinese": "她带领一个小型设计团队。"
@@ -343,6 +343,20 @@
           "partOfSpeech": "v.",
           "chinese": "跟随",
           "usage": "只在行进顺序或角色上与 lead 相对"
+        },
+        {
+          "word": "lag behind",
+          "phonetic": "/ˈlæɡ bɪˈhaɪnd/",
+          "partOfSpeech": "phr.",
+          "chinese": "落后",
+          "usage": "lead 在比赛或进度义上表示位于前列，lag behind 表示进度慢而落在后面。"
+        },
+        {
+          "word": "prevent",
+          "phonetic": "/prɪˈvɛnt/",
+          "partOfSpeech": "v.",
+          "chinese": "阻止",
+          "usage": "lead to a result 表示某因素促成该结果，prevent the result 表示阻止它发生。"
         }
       ],
       "derivatives": [
@@ -370,11 +384,18 @@
       ],
       "confusables": [
         {
-          "word": "led",
-          "phonetic": "/ˈlɛd/",
+          "word": "lid",
+          "phonetic": "/ˈlɪd/",
+          "partOfSpeech": "n.",
+          "chinese": "盖子",
+          "difference": "lead 作动词读 /liːd/，与 lid /lɪd/ 只有元音不同；lead 表示带领，lid 是容器的盖子。"
+        },
+        {
+          "word": "read",
+          "phonetic": "/riːd/",
           "partOfSpeech": "v.",
-          "chinese": "lead 的过去式和过去分词",
-          "difference": "动词 lead /liːd/ 的过去式是 led /lɛd/；不要写成 leaded（特定材料义除外）"
+          "chinese": "阅读",
+          "difference": "lead 作动词读 /liːd/，read 现在式读 /riːd/；两词韵母相同但开头辅音、拼写和含义不同。"
         }
       ],
       "relatedVocabulary": [
@@ -608,12 +629,12 @@
           "type": "meaning_choice",
           "prompt": "结合拼写、发音和用法，哪一项需要与“lead”重点区分？",
           "options": [
-            "be",
-            "have",
-            "do",
-            "led"
+            "increase",
+            "age",
+            "aid",
+            "lid"
           ],
-          "answer": "led",
+          "answer": "lid",
           "stage": "T3",
           "ai": false
         },
@@ -777,10 +798,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -856,7 +877,7 @@
           }
         ],
         "directSynonym": "persist /pɚˈsɪst/（持续；坚持）；proceed /prəˈsiːd/（继续进行；前进）；carry on /ˈkæri ˈɑn/（继续）；maintain /meɪnˈteɪn/（维持）；keep up /ˈkiːp ˈʌp/（继续保持）",
-        "directAntonym": "stop /ˈstɑp/（停止）；cease /ˈsiːs/（终止）",
+        "directAntonym": "stop /ˈstɑp/（停止）；suspend /səˈspɛnd/（暂停；中止）；abandon /əˈbændən/（放弃；中止）",
         "derivatives": "continuation · continuous · continual · continuously",
         "example": "Please continue reading from page ten.",
         "exampleChinese": "请从第十页继续读。"
@@ -1111,11 +1132,18 @@
           "usage": "与继续活动或过程相反；是否含中断、及物结构和持续状态均不相同"
         },
         {
-          "word": "cease",
-          "phonetic": "/ˈsiːs/",
+          "word": "suspend",
+          "phonetic": "/səˈspɛnd/",
           "partOfSpeech": "v.",
-          "chinese": "终止",
-          "usage": "较正式，与持续发生相反；是否含中断、及物结构和持续状态均不相同"
+          "chinese": "暂停；中止",
+          "usage": "continue an activity 表示让活动持续进行，suspend it 表示正式决定暂时中止。"
+        },
+        {
+          "word": "abandon",
+          "phonetic": "/əˈbændən/",
+          "partOfSpeech": "v.",
+          "chinese": "放弃；中止",
+          "usage": "continue a task 表示仍投入并推进它，abandon the task 表示在完成前决定不再进行。"
         }
       ],
       "derivatives": [
@@ -1150,11 +1178,18 @@
       ],
       "confusables": [
         {
-          "word": "resume",
-          "phonetic": "/rɪˈzuːm/",
+          "word": "continent",
+          "phonetic": "/ˈkɑntənənt/",
+          "partOfSpeech": "n.",
+          "chinese": "大陆；洲",
+          "difference": "continue /kənˈtɪnjuː/ 与 continent /ˈkɑːntənənt/ 开头拼写相近；continue 是动词，continent 是表示洲的名词。"
+        },
+        {
+          "word": "contain",
+          "phonetic": "/kənˈteɪn/",
           "partOfSpeech": "v.",
-          "chinese": "恢复；重新开始",
-          "difference": "continue 表示不停顿地继续；resume 表示暂停之后恢复"
+          "chinese": "包含；容纳",
+          "difference": "continue /kənˈtɪnjuː/ 与 contain /kənˈteɪn/ 开头和拼写相近；continue 表示继续，contain 表示包含或容纳。"
         }
       ],
       "relatedVocabulary": [
@@ -1388,12 +1423,12 @@
           "type": "meaning_choice",
           "prompt": "结合拼写、发音和用法，哪一项需要与“continue”重点区分？",
           "options": [
-            "have",
-            "do",
-            "resume",
-            "be"
+            "admission",
+            "affection",
+            "continent",
+            "increase"
           ],
-          "answer": "resume",
+          "answer": "continent",
           "stage": "T3",
           "ai": false
         },
@@ -1557,10 +1592,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -1636,7 +1671,7 @@
           }
         ],
         "directSynonym": "expend /ɪkˈspɛnd/（花费；消耗）；consume /kənˈsuːm/（消耗；耗费）；devote /dɪˈvoʊt/（投入）；pass /ˈpæs/（度过）；disburse /dɪsˈbɝːs/（支付；拨付）",
-        "directAntonym": "save /ˈseɪv/（节省；储蓄）",
+        "directAntonym": "save /ˈseɪv/（节省；储蓄）；earn /ˈɝːn/（赚得）；replenish /riˈplɛnɪʃ/（补充；重新充足）",
         "derivatives": "overspend · spending · spender · spendable",
         "example": "I spend twenty minutes reviewing words each day.",
         "exampleChinese": "我每天花二十分钟复习单词。"
@@ -1889,6 +1924,20 @@
           "partOfSpeech": "v.",
           "chinese": "节省；储蓄",
           "usage": "与花掉金钱或资源相反；花钱、花时间与拨付资金所要求的宾语不同"
+        },
+        {
+          "word": "earn",
+          "phonetic": "/ˈɝːn/",
+          "partOfSpeech": "v.",
+          "chinese": "赚得",
+          "usage": "在金钱流向上，spend 是把所有金钱付出，earn 是通过工作或投资获得金钱。"
+        },
+        {
+          "word": "replenish",
+          "phonetic": "/riˈplɛnɪʃ/",
+          "partOfSpeech": "v.",
+          "chinese": "补充；重新充足",
+          "usage": "spend energy or supplies 表示在活动中消耗资源，replenish them 表示在消耗后把数量补充回来。"
         }
       ],
       "derivatives": [
@@ -1928,6 +1977,13 @@
           "partOfSpeech": "v.",
           "chinese": "价格为；使付出代价",
           "difference": "spend 的主语是花时间或金钱的人；cost 的主语是事物，如 The trip cost me $50"
+        },
+        {
+          "word": "pay",
+          "phonetic": "/ˈpeɪ/",
+          "partOfSpeech": "v.",
+          "chinese": "付款",
+          "difference": "spend 用 spend money/time on something 说明资源用途；pay 常用 pay for something 说明付款对象。"
         }
       ],
       "relatedVocabulary": [
@@ -2330,10 +2386,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -2415,7 +2471,7 @@
           }
         ],
         "directSynonym": "stop over /ˈstɑp ˈoʊvɚ/（中途短暂停留）；reside /rɪˈzaɪd/（居住）；lodge /ˈlɑdʒ/（暂住）；linger /ˈlɪŋɡɚ/（逗留）；keep /ˈkiːp/（保持）",
-        "directAntonym": "leave /ˈliːv/（离开）",
+        "directAntonym": "leave /ˈliːv/（离开）；panic /ˈpænɪk/（惊慌）；fall asleep /ˈfɔːl əˈsliːp/（入睡）",
         "derivatives": "本词暂无需额外强记的高频派生词",
         "example": "I usually stay at home on rainy evenings.",
         "exampleChinese": "下雨的晚上我通常待在家里。"
@@ -2668,16 +2724,37 @@
           "partOfSpeech": "v.",
           "chinese": "离开",
           "usage": "与留在某地相反；地点停留、短期住宿和状态保持所接补语不同"
+        },
+        {
+          "word": "panic",
+          "phonetic": "/ˈpænɪk/",
+          "partOfSpeech": "v.",
+          "chinese": "惊慌",
+          "usage": "stay calm 表示继续保持冷静状态，panic 表示因恐惧而突然失去冷静。"
+        },
+        {
+          "word": "fall asleep",
+          "phonetic": "/ˈfɔːl əˈsliːp/",
+          "partOfSpeech": "phr.",
+          "chinese": "入睡",
+          "usage": "stay awake 表示持续清醒，fall asleep 表示从清醒转入睡眠状态。"
         }
       ],
       "derivatives": [],
       "confusables": [
         {
-          "word": "remain",
-          "phonetic": "/rɪˈmeɪn/",
+          "word": "say",
+          "phonetic": "/ˈseɪ/",
           "partOfSpeech": "v.",
-          "chinese": "仍然是；留下",
-          "difference": "stay 更日常，可指暂住或保持状态；remain 较正式，强调在变化后仍然不变"
+          "chinese": "说；说出",
+          "difference": "stay /steɪ/ 比 say /seɪ/ 多 /t/ 音和字母 t；stay 表示停留或保持，say 表示说出内容。"
+        },
+        {
+          "word": "state",
+          "phonetic": "/ˈsteɪt/",
+          "partOfSpeech": "n. / v.",
+          "chinese": "状态；陈述",
+          "difference": "stay /steɪ/ 与 state /steɪt/ 拼写和读音接近，但 state 末尾多 /t/，表示状态或正式陈述，不表示停留。"
         }
       ],
       "relatedVocabulary": [
@@ -2911,12 +2988,12 @@
           "type": "meaning_choice",
           "prompt": "结合拼写、发音和用法，哪一项需要与“stay”重点区分？",
           "options": [
-            "remain",
+            "say",
             "be",
             "have",
             "do"
           ],
-          "answer": "remain",
+          "answer": "say",
           "stage": "T3",
           "ai": false
         },
@@ -3080,10 +3157,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     },
     {
@@ -3159,7 +3236,7 @@
           }
         ],
         "directSynonym": "append /əˈpɛnd/（附加）；attach /əˈtætʃ/（附上；连接）；insert /ˌɪnˈsɝːt/（插入）；include /ˌɪnˈkluːd/（包括；加入）；increase /ɪnˈkriːs/（增加）",
-        "directAntonym": "subtract /səbˈtrækt/（减去）；remove /riˈmuːv/（移除）",
+        "directAntonym": "subtract /səbˈtrækt/（减去）；remove /riˈmuːv/（移除）；omit /oʊˈmɪt/（省略；遗漏）",
         "derivatives": "addition · additive · additional · additionally",
         "example": "Add one natural example to each new phrase.",
         "exampleChinese": "给每个新短语加一个自然例句。"
@@ -3426,6 +3503,13 @@
           "partOfSpeech": "v.",
           "chinese": "移除",
           "usage": "与把某物加入整体相反；加入物、添加位置与数值增加的结构不可混用"
+        },
+        {
+          "word": "omit",
+          "phonetic": "/oʊˈmɪt/",
+          "partOfSpeech": "v.",
+          "chinese": "省略；遗漏",
+          "usage": "add a detail 表示把信息写入内容，omit the detail 表示不把该信息列入。"
         }
       ],
       "derivatives": [
@@ -3460,11 +3544,18 @@
       ],
       "confusables": [
         {
-          "word": "plus",
-          "phonetic": "/ˈplʌs/",
-          "partOfSpeech": "prep./conj.",
-          "chinese": "加；加上",
-          "difference": "add 是动词，需随时态变化；plus 在数学或口语补充中通常不作普通动词"
+          "word": "aid",
+          "phonetic": "/ˈeɪd/",
+          "partOfSpeech": "n. / v.",
+          "chinese": "帮助；援助",
+          "difference": "add /æd/ 与 aid /eɪd/ 拼写接近但元音不同；add 表示增加，aid 表示帮助或援助。"
+        },
+        {
+          "word": "ad",
+          "phonetic": "/ˈæd/",
+          "partOfSpeech": "n.",
+          "chinese": "广告",
+          "difference": "ad 是 advertisement 的常用缩写，与 add / æd / 同音；add 是表示增加的动词。"
         }
       ],
       "relatedVocabulary": [
@@ -3696,14 +3787,14 @@
         {
           "id": "add-v-contrast-choice",
           "type": "meaning_choice",
-          "prompt": "哪一项是“add”的常用派生词？",
+          "prompt": "结合拼写、发音和用法，哪一项需要与“add”重点区分？",
           "options": [
-            "accident",
-            "accuracy",
-            "achiever",
-            "addition"
+            "age",
+            "ban",
+            "bat",
+            "ad"
           ],
-          "answer": "addition",
+          "answer": "ad",
           "stage": "T3",
           "ai": false
         },
@@ -3867,10 +3958,10 @@
         ]
       },
       "detailLevel": "template-curated",
-      "templateVersion": "learning-template-2026.09.10.4",
-      "contentVersion": "2026.09.10.4",
+      "templateVersion": "learning-template-2026.09.11.1",
+      "contentVersion": "2026.09.11.1",
       "reviewed": true,
-      "curationSource": "manual-semantic-pack-2026.09.10.4",
+      "curationSource": "manual-semantic-pack-2026.09.11.1",
       "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
     }
   ]

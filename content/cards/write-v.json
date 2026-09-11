@@ -71,7 +71,7 @@
       }
     ],
     "directSynonym": "compose /kəmˈpoʊz/（撰写；创作）；draft /ˈdræft/（起草）；record /rɪˈkɔːrd/（记录）；author /ˈɔːθɚ/（创作；撰写）；put down /ˈpʊt ˈdaʊn/（写下）",
-    "directAntonym": "erase /ɪˈreɪs/（擦除；删除）",
+    "directAntonym": "erase /ɪˈreɪs/（擦除；删除）；delete /dɪˈliːt/（删除）；leave blank /ˈliːv ˈblæŋk/（留空不填）",
     "derivatives": "rewrite · writer · writing · written · writable",
     "example": "Write down one sentence using the new word.",
     "exampleChinese": "写下一个使用新单词的句子。"
@@ -324,6 +324,20 @@
       "partOfSpeech": "v.",
       "chinese": "擦除；删除",
       "usage": "只与写下或记录内容的义项相反；不覆盖 write to、write down 或编写代码等结构"
+    },
+    {
+      "word": "delete",
+      "phonetic": "/dɪˈliːt/",
+      "partOfSpeech": "v.",
+      "chinese": "删除",
+      "usage": "在电子文本中，write 把内容写入文件，delete 则把已写内容删去；只对应记录结果。"
+    },
+    {
+      "word": "leave blank",
+      "phonetic": "/ˈliːv ˈblæŋk/",
+      "partOfSpeech": "phr.",
+      "chinese": "留空不填",
+      "usage": "在表格或答题栏的填写义上，write 是写下内容，leave blank 是刻意不写。"
     }
   ],
   "derivatives": [
@@ -370,6 +384,13 @@
       "partOfSpeech": "adj./adv./n.",
       "chinese": "正确的；向右；权利",
       "difference": "与 write 部分同音，但拼写、词性和含义不同"
+    },
+    {
+      "word": "rite",
+      "phonetic": "/ˈraɪt/",
+      "partOfSpeech": "n.",
+      "chinese": "仪式；典礼",
+      "difference": "rite 与 write 同音 /raɪt/，但 rite 是表示宗教或传统仪式的名词，write 是动词“写”。"
     }
   ],
   "relatedVocabulary": [
@@ -601,14 +622,14 @@
     {
       "id": "write-v-contrast-choice",
       "type": "meaning_choice",
-      "prompt": "哪一项是“write”的常用派生词？",
+      "prompt": "结合拼写、发音和用法，哪一项需要与“write”重点区分？",
       "options": [
-        "do",
-        "rewrite",
-        "be",
-        "have"
+        "bass",
+        "rite",
+        "increase",
+        "ball"
       ],
-      "answer": "rewrite",
+      "answer": "rite",
       "stage": "T3",
       "ai": false
     },
@@ -772,9 +793,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }

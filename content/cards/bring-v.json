@@ -71,7 +71,7 @@
       }
     ],
     "directSynonym": "carry /ˈkæri/（携带）；fetch /ˈfɛtʃ/（去取来）；deliver /dɪˈlɪvɚ/（递送）；take along /ˈteɪk əˈlɔːŋ/（随身带着）；cause /ˈkɑz/（带来；导致）",
-    "directAntonym": "",
+    "directAntonym": "remove /riˈmuːv/（移走；拿开）；send away /ˈsɛnd əˈweɪ/（打发走；送走）；leave behind /ˈliːv bɪˈhaɪnd/（不带走；留下）",
     "derivatives": "upbringing",
     "example": "Bring your notes with you to the study session.",
     "exampleChinese": "参加学习活动时请带上笔记。"
@@ -317,7 +317,29 @@
       "difference": "仅对应 bring about 或 bring + 结果的致使义"
     }
   ],
-  "antonyms": [],
+  "antonyms": [
+    {
+      "word": "remove",
+      "phonetic": "/riˈmuːv/",
+      "partOfSpeech": "v.",
+      "chinese": "移走；拿开",
+      "usage": "在物体与参照地的方向上，bring 把东西带到此处，remove 把它从此处移开。"
+    },
+    {
+      "word": "send away",
+      "phonetic": "/ˈsɛnd əˈweɪ/",
+      "partOfSpeech": "phr.",
+      "chinese": "打发走；送走",
+      "usage": "对人的移动而言，bring someone here 是使其到来，send away 则是使其离开。"
+    },
+    {
+      "word": "leave behind",
+      "phonetic": "/ˈliːv bɪˈhaɪnd/",
+      "partOfSpeech": "phr.",
+      "chinese": "不带走；留下",
+      "usage": "在出行携带义上，bring something along 是随身带来，leave behind 是不带而留在原处。"
+    }
+  ],
   "derivatives": [
     {
       "word": "upbringing",
@@ -334,6 +356,13 @@
       "partOfSpeech": "v.",
       "chinese": "带走；拿走",
       "difference": "bring 强调朝说话者或目标地带来；take 强调从当前地点带走"
+    },
+    {
+      "word": "brink",
+      "phonetic": "/ˈbrɪŋk/",
+      "partOfSpeech": "n.",
+      "chinese": "边缘；危险关头",
+      "difference": "bring /brɪŋ/ 以 /ŋ/ 结尾，brink /brɪŋk/ 多一个 /k/ 音和字母 k，且 brink 只作名词。"
     }
   ],
   "relatedVocabulary": [
@@ -549,16 +578,16 @@
       "ai": false
     },
     {
-      "id": "bring-v-synonym-choice-2",
+      "id": "bring-v-antonym-choice",
       "type": "meaning_choice",
-      "prompt": "除“carry”外，在“去取来”这个义项下，哪个词也与“bring”意思接近？",
+      "prompt": "在“带来；拿来”这个义项下，哪个词与“bring”意思相反？",
       "options": [
         "do",
-        "fetch",
+        "remove",
         "be",
         "have"
       ],
-      "answer": "fetch",
+      "answer": "remove",
       "stage": "T2",
       "ai": false
     },
@@ -736,9 +765,9 @@
     ]
   },
   "detailLevel": "template-curated",
-  "templateVersion": "learning-template-2026.09.10.4",
-  "contentVersion": "2026.09.10.4",
+  "templateVersion": "learning-template-2026.09.11.1",
+  "contentVersion": "2026.09.11.1",
   "reviewed": true,
-  "curationSource": "manual-semantic-pack-2026.09.10.4",
+  "curationSource": "manual-semantic-pack-2026.09.11.1",
   "sourceNote": "词条来自 COCA 高频词表，释义、搭配和例句按实际学习场景整理，音标按美式发音展示。"
 }
